@@ -1,0 +1,85 @@
+<p class="lede">The Layers panel is the map of a document: every layer, group and object in one list, stacked in the order they sit on the page. Use it to show and hide, lock, rename, reorder and select, and to see at a glance which layer any object lives on.</p>
+
+<p>Shortcuts below are written in their macOS form. On Windows and Linux, read <kbd>&#8984;</kbd> as Ctrl, <kbd>&#8997;</kbd> as Alt and <kbd>&#8679;</kbd> as Shift.</p>
+
+<h2 id="layers-panel">The Layers panel</h2>
+<p>Open it from <strong>Window &rsaquo; Layers</strong> (<kbd>F7</kbd>). The list holds your layers at the top level, with the contents of each layer nested beneath it: groups, paths, type, images and pixel layers, drawn as a tree you can open and close. A container (a layer or a group) carries a small triangle at the left of its row; click it to fold the container away or open it up. Deep documents stay readable because you can collapse the parts you are not working on.</p>
+<p>Two buttons sit at the foot of the panel. <strong>Create New Layer</strong> adds an empty layer just above the one that is currently active and makes the new one active. <strong>Delete Selection</strong> removes whatever is selected; a document always keeps at least one layer, so the last remaining layer cannot be deleted this way. To rename any layer, group or object, double-click its name in the list, type, and press <kbd>Enter</kbd>. Naming the parts of a busy document is the quickest way to keep it navigable.</p>
+
+<h3 id="layers-row">What each row shows</h3>
+<p>Reading a row left to right:</p>
+<table>
+  <thead><tr><th>Part</th><th>What it does</th></tr></thead>
+  <tbody>
+    <tr><td>Eye</td><td>Shows or hides that layer, group or object. A row with the eye off is not drawn and not printed or exported.</td></tr>
+    <tr><td>Lock</td><td>Locks or unlocks the row. A locked object cannot be selected or edited on the canvas.</td></tr>
+    <tr><td>Colour chip</td><td>On layer rows only: the layer's colour label, used to tint that layer's selection marks and highlights.</td></tr>
+    <tr><td>Triangle</td><td>On containers only: opens or closes the layer or group to reveal what is inside.</td></tr>
+    <tr><td>Kind icon</td><td>Marks groups and clip groups (a clip group is drawn with a dashed outline).</td></tr>
+    <tr><td>Name</td><td>The name, or a placeholder in angle brackets such as <code>&lt;Path&gt;</code> or <code>&lt;Group&gt;</code> when a thing is unnamed. Double-click to rename.</td></tr>
+    <tr><td>Selection square</td><td>At the right edge: a small square in the layer's colour that appears on any row holding part of the current selection.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="layers-groups">Layers and groups</h2>
+<p>Layers are the top-level bins of a document. They exist to keep unrelated parts of the artwork apart: a background on one layer, the main drawing on another, labels on a third. Because a layer sits at the root of the tree, hiding, locking or reordering it moves everything it holds in one step.</p>
+<p>A group is a smaller container that lives inside a layer (or inside another group) and travels with the artwork. Grouping is how you tie the parts of one thing together, the pieces of a logo or an icon, so they move, scale and stack as a unit. Groups open and close in the panel with their own triangle, exactly as layers do.</p>
+<p>Layers and groups behave alike in one important way: each can be shown or hidden, locked or unlocked, and each can carry its own opacity and blend mode that apply to everything inside it. The difference is one of role. Layers organise the whole document; groups bind individual objects.</p>
+
+<h3 id="layers-grouping">Grouping and ungrouping</h3>
+<p>Select two or more objects and choose <strong>Object &rsaquo; Group</strong> (<kbd>&#8984;G</kbd>) to collect them into a group. <strong>Object &rsaquo; Ungroup</strong> (<kbd>&#8679;&#8984;G</kbd>) takes the objects of a selected group back out again. Groups can be nested, so a group of groups is fine; each <kbd>&#8679;&#8984;G</kbd> peels off one level. Reach for a group whenever you find yourself selecting the same handful of objects over and over.</p>
+
+<h2 id="layers-stacking">Stacking order: front and back</h2>
+<p>Objects are drawn back to front, so an object nearer the front covers the ones behind it where they overlap. The panel shows this order directly: the topmost row is the frontmost object, and the bottom row is the one furthest back. Reordering an object changes what covers what.</p>
+<p>The quickest way to reorder is to drag: grab a row and drop it higher or lower in the list to move it through the stack, or drop it onto a layer or group to move the object <em>into</em> it. Dragging is also how you move a selected object onto a different layer — no cutting and pasting.</p>
+<p>Move a selection through the stack with <strong>Object &rsaquo; Arrange</strong>:</p>
+<table>
+  <thead><tr><th>Command</th><th>Shortcut</th><th>Effect</th></tr></thead>
+  <tbody>
+    <tr><td>Bring to Front</td><td><kbd>&#8679;&#8984;]</kbd></td><td>All the way to the front of its layer.</td></tr>
+    <tr><td>Bring Forward</td><td><kbd>&#8984;]</kbd></td><td>One step towards the front.</td></tr>
+    <tr><td>Send Backward</td><td><kbd>&#8984;[</kbd></td><td>One step towards the back.</td></tr>
+    <tr><td>Send to Back</td><td><kbd>&#8679;&#8984;[</kbd></td><td>All the way to the back of its layer.</td></tr>
+  </tbody>
+</table>
+<p>Use these when a shape you need is hidden behind another, or when a background has ended up on top of the drawing. To work through objects that sit one on top of another, <strong>Select &rsaquo; Next Object Above</strong> (<kbd>&#8997;&#8984;]</kbd>) and <strong>Next Object Below</strong> (<kbd>&#8997;&#8984;[</kbd>) step the selection up and down the stack, which is handy for reaching something buried under other artwork.</p>
+
+<h2 id="layers-visibility">Showing and hiding</h2>
+<p>Click the eye on any row to hide that layer, group or object; click again to bring it back. A hidden row takes no part in drawing, printing or export, so hiding is the safe way to get something out of the way without deleting it. Use it to compare two versions of a detail, or to clear a crowded canvas down to the part you are working on.</p>
+<p>The menu offers the same for the current selection: <strong>Object &rsaquo; Hide &rsaquo; Selection</strong> (<kbd>&#8984;3</kbd>) hides what is selected, and <strong>Object &rsaquo; Show All</strong> (<kbd>&#8997;&#8984;3</kbd>) reveals everything that was hidden.</p>
+
+<h2 id="layers-locking">Locking</h2>
+<p>Click the lock on a row to lock it. A locked object stays visible but cannot be selected or changed on the canvas, so it is out of harm's way while you work around it. Locking a layer protects everything on it at once. Lock the background while you draw over it, or lock a finished element so a stray drag cannot move it.</p>
+<p>From the menu, <strong>Object &rsaquo; Lock &rsaquo; Selection</strong> (<kbd>&#8984;2</kbd>) locks what is selected, and <strong>Object &rsaquo; Unlock All</strong> (<kbd>&#8997;&#8984;2</kbd>) frees everything again. Locking a selected object also drops it from the selection, since a locked thing is no longer something you can act on.</p>
+
+<h2 id="layers-selecting">Selecting and the active layer</h2>
+<p>Click an object's row in the panel to select that object on the canvas. Hold <kbd>&#8679;</kbd>, <kbd>&#8984;</kbd> or <kbd>Ctrl</kbd> while you click to add another object to the selection, so you can build up a selection from the list without hunting for small shapes on the page.</p>
+<p>Clicking a <em>layer</em> row does something different: it makes that layer the active layer, marked with a coloured bar down its left edge. New artwork you draw, place or paste is added to the active layer, so clicking a layer before you begin decides where that work lands. Creating a new layer makes it active straight away.</p>
+<p>The selection square at the right of each row ties the panel to the canvas. It appears, in the layer's colour, on every row that holds part of the current selection, and it is filled on the exact objects that are selected. Because the mark travels up the tree, a glance down the list shows both what is selected and which layers and groups those objects sit in.</p>
+
+<h2 id="layers-colours">Colour labels</h2>
+<p>Every layer is given a colour from a fixed sequence (light blue, red, green, blue, yellow and so on, twelve in all, cycling as you add more layers). That colour is the layer's label. It shows as the chip beside the layer's name, and it tints the selection marks in the panel along with the selection highlights and bounding box drawn on the canvas for objects on that layer. The point is quick identification: when you select something and its box comes up green, you know at once it belongs to the green layer. Spreading a document across a few well-named, differently coloured layers makes it far easier to keep track of where everything is.</p>
+
+<h2 id="layers-masks">Clipping and opacity masks</h2>
+<p>A layer or a group can carry its own opacity and blend mode, both set in the <strong>Transparency</strong> panel (<strong>Window &rsaquo; Transparency</strong>, <kbd>&#8679;&#8984;F10</kbd>). The same panel holds <strong>Contain blending to group</strong>, which keeps a group's blend modes mixing only with each other rather than with what lies below, and <strong>Knockout Group</strong>, where each object in the group hides the ones behind it instead of showing through them. Masks go a step further and let one object control where, or how strongly, other artwork shows.</p>
+
+<h3 id="layers-clip">Clipping masks</h3>
+<p>A clipping mask crops artwork to a shape. Select two or more objects and choose <strong>Object &rsaquo; Clipping Mask &rsaquo; Make</strong> (<kbd>&#8984;7</kbd>). The topmost selected object becomes the clipping path, and everything below it is shown only inside that shape; the rest is clipped away. The result is a clip group, drawn in the panel with a dashed icon. <strong>Release</strong> (<kbd>&#8997;&#8984;7</kbd>) undoes it and gives the objects back. Reach for this to crop a photograph or a busy pattern to a circle, a letter, or any outline you draw over the top.</p>
+
+<h3 id="layers-opacity-mask">Opacity masks</h3>
+<p>An opacity mask fades artwork according to the lightness of another object. Select two or more objects and choose <strong>Object &rsaquo; Clipping Mask &rsaquo; Make Opacity Mask</strong>, or use <strong>Make Mask</strong> in the Transparency panel. The topmost object becomes the mask: where it is light the artwork below shows in full, where it is dark the artwork fades to nothing, with the greys in between giving partial transparency. <strong>Release Opacity Mask</strong> takes it apart again. Use a white-to-black gradient as the mask to fade a picture out to one edge, or to build the soft vignettes and blends that a single flat opacity value cannot give.</p>
+
+<h2 id="layers-organising">Organising a document</h2>
+<p>A little structure early saves a lot of hunting later. A few habits that pay off:</p>
+<dl>
+  <dt>One layer per concern</dt>
+  <dd>Keep the background, the main artwork and the type on separate, named layers. You can then hide, lock or reorder a whole part of the drawing in a single click.</dd>
+  <dt>Lock what you are not touching</dt>
+  <dd>Lock the layers around the one you are working on so a stray click or drag cannot disturb them, and unlock them again with <kbd>&#8997;&#8984;2</kbd> when you need to.</dd>
+  <dt>Group the things that move together</dt>
+  <dd>Bind the parts of a single element into a group so it behaves as one object, and reserve layers for the larger divisions of the document.</dd>
+  <dt>Set the active layer before you draw</dt>
+  <dd>Click the layer you want to add to first, so new artwork lands in the right place rather than on top of whatever was there.</dd>
+  <dt>Let the colours guide you</dt>
+  <dd>Lean on the layer colours: when a selection's highlight matches a layer's chip, you know exactly where that object lives without opening a thing.</dd>
+</dl>

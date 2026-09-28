@@ -1,0 +1,39 @@
+<p class="lede">Three tools in Scissor do the repetitive work for you: <strong>Actions</strong> record a sequence of commands and replay it, <strong>Variables</strong> swap text and visibility from a table of data so one design becomes many, and <strong>Scripts</strong> drive the whole editor from JavaScript. None of them needs an account or a server — like the rest of Scissor they run on your own machine.</p>
+
+<h2 id="automation-actions">Actions: record once, replay anywhere</h2>
+<p>The <strong>Actions</strong> panel (Window &rsaquo; Actions) records what you do and plays it back on a new selection. Press <strong>Record</strong>, run the commands you want to capture — align, offset, add a shadow, whatever the sequence is — then press <strong>Stop</strong> and give the action a name. It joins the list, showing how many steps it holds.</p>
+<p>Click an action to <strong>play</strong> it on whatever is selected now; <kbd>&#8997;</kbd>-click one to delete it. Because an action is just a list of commands, it repeats an exact routine across many objects without you clicking through it each time.</p>
+
+<h2 id="automation-variables">Variables: one design, many versions</h2>
+<p>The <strong>Variables</strong> panel (Window &rsaquo; Variables) turns a fixed design into a template driven by data. Two things on an object can be made dynamic:</p>
+<dl>
+  <dt>Make Text Dynamic</dt><dd>Binds a type object's words to a variable, so different data sets can put different text in the same place.</dd>
+  <dt>Make Visibility Dynamic</dt><dd>Binds whether an object shows, so a set can turn parts of the design on or off.</dd>
+</dl>
+<p><strong>Unbind</strong> makes a bound object fixed again.</p>
+
+<h3 id="automation-datasets">Data sets</h3>
+<p>A <strong>data set</strong> is one row of values for those variables — one badge, one card, one frame. <strong>Capture</strong> saves the current values as a new set; the arrows step from one set to the next and the design updates to match. <strong>Import CSV…</strong> reads a whole batch at once — one column per variable, one row per set — and <strong>Export CSV</strong> writes the sets back out to edit in a spreadsheet.</p>
+
+<h3 id="automation-batch">Exporting every set at once</h3>
+<p><strong>Export Data Sets…</strong> renders the active board once for every data set and writes them all in a single pass, as PNG, JPEG, WebP or SVG. A sheet of name badges, a set of localized banners or a run of social cards comes out as a tidy batch of files, each with its own data filled in.</p>
+
+<h2 id="automation-scripts">Scripts: drive Scissor from JavaScript</h2>
+<p>For anything a menu cannot express, a script can. <strong>File &rsaquo; Scripts &rsaquo; Script Console…</strong> opens an editor where you write JavaScript and run it against the open document; <strong>Other Script…</strong> (<kbd>&#8984;F12</kbd>) runs a <code>.js</code> file from disk. A script runs in a Web Worker, away from the page, so it cannot touch the interface or your files except through the <code>scissor</code> object it is given — every call is carried out on the engine and answered back.</p>
+<p>The <code>scissor</code> object covers the common ground:</p>
+<dl>
+  <dt>Make shapes and type</dt><dd><code>scissor.rect</code>, <code>roundedRect</code>, <code>ellipse</code>, <code>polygon</code>, <code>star</code>, <code>path</code> and <code>text</code> draw artwork; each takes a position and size and an options object for <code>fill</code>, <code>stroke</code> and <code>strokeWidth</code> (colours are any CSS colour).</dd>
+  <dt>Read the document</dt><dd><code>await scissor.document()</code> returns the app, selection, layers and artboards as the panels see them; <code>scissor.selection()</code> returns just what is selected.</dd>
+  <dt>Act on it</dt><dd><code>scissor.select</code>, <code>group</code> and <code>undo</code>, and <code>scissor.run(command)</code> for any engine command at all — the same commands the menus send.</dd>
+  <dt>Talk back</dt><dd><code>scissor.log</code> prints to the console; <code>scissor.alert</code> shows a message.</dd>
+</dl>
+<p>A short example — a ring of coloured dots and a caption:</p>
+<pre><code>const doc = await scissor.document();
+scissor.log('Boards:', doc.artboards.length);
+for (let i = 0; i &lt; 12; i++) {
+  const a = (i / 12) * Math.PI * 2;
+  await scissor.ellipse(300 + Math.cos(a) * 120, 260 + Math.sin(a) * 120, 36, 36,
+    { fill: `hsl(${i * 30} 80% 60%)` });
+}
+await scissor.text(230, 270, 'Hello, Scissor', { size: 24 });</code></pre>
+<p>The Script Console keeps the last code you ran, so a working script is there when you come back to it.</p>

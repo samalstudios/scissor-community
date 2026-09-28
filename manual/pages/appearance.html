@@ -1,0 +1,134 @@
+<p class="lede">How a shape looks is its <em>appearance</em>: the fill inside its outline, the stroke drawn along it, and the opacity and blending that decide how it sits over whatever is behind. Each of those can be a flat colour, a gradient or a pattern, and an object can carry more than one of each at once. This page covers the paint controls, the colour models, swatches, gradients, strokes, transparency, the Paint Stack panel and graphic styles.</p>
+
+<p>Shortcuts below are written in their macOS form. On Windows, read <kbd>&#8984;</kbd> as Ctrl, <kbd>&#8997;</kbd> as Alt and <kbd>&#8679;</kbd> as Shift.</p>
+
+<figure class="shot">
+  <img src="img/artwork-landscape.png" width="1700" height="967" loading="lazy"
+       alt="A vector landscape of mountains, sky and a lake, built from flat-filled shapes in Scissor." />
+  <figcaption>A whole scene built from filled shapes. Each band of colour is a path with its own fill.</figcaption>
+</figure>
+
+<h2 id="appearance-fill-and-stroke">Fills and strokes</h2>
+<p>A path, shape or piece of type can hold a <strong>fill</strong>, the paint inside its outline, and a <strong>stroke</strong>, the line drawn along that outline. A fill can be a solid colour, a gradient or a pattern; a stroke can be a solid colour or a gradient, with its own weight and dash. Either side can also be set to none, so you can draw a shape with only a stroke, or only a fill.</p>
+
+<h3 id="appearance-the-paint-chips">The fill and stroke chips</h3>
+<p>Two overlapping chips at the foot of the toolbar hold the fill and the stroke. Click either to open a colour picker; the one in front is the side that the keys and the Colour, Gradient and Swatches panels act on. Press <kbd>X</kbd> to bring the other side forward, <kbd>&#8679;X</kbd> to swap the two paints, <kbd>/</kbd> to set the front side to none, and <kbd>D</kbd> to return to the defaults: a white fill, a black stroke and a 1 pt weight. The same fill, stroke, weight, opacity and blending mode also sit together in the Properties panel, which is handy when you want them all in one place.</p>
+<p>With nothing selected, these controls set the style that the next object you draw will take, so you can choose a colour before you draw rather than after.</p>
+
+<h3 id="appearance-eyedropper">Copying paint with the Eyedropper</h3>
+<p>The Eyedropper (<kbd>I</kbd>) copies a whole appearance from the object you click onto the selection. Hold <kbd>&#8679;</kbd> to take only its fill or stroke colour into the active side, or <kbd>&#8997;</kbd> to push the selection's appearance onto the object under the pointer instead. Clicking a placed image or a pixel layer samples the colour under the pointer into the active side, so you can lift a colour straight out of a photo. Reach for the Eyedropper when two objects should match: sample one, and the other takes the same paint in a single click.</p>
+
+<h2 id="appearance-colour">Colour</h2>
+<p>Colour is chosen in the small pop-up picker on each chip, or, with more control, in the Color panel.</p>
+
+<h3 id="appearance-color-panel">The Color panel</h3>
+<p>The <strong>Color</strong> panel (<kbd>F6</kbd>) shows the active side's paint as a set of sliders, a hexadecimal field and a spectrum. Fill and stroke chips at the top choose which side you are editing. The spectrum runs hues across, white at the top and black at the bottom; click or drag in it to pick. Three quick swatches beside it set None, White and Black in one click, and the <em>Invert</em> and <em>Complement</em> buttons rework the current colour (Complement turns its hue half way round while keeping its saturation and brightness).</p>
+<p>The colour model menu sets which sliders the panel shows. The choice is kept for the session, and new swatches are made in it.</p>
+<dl>
+  <dt>Grayscale</dt><dd>A single K slider, from white at 0% to black at 100%.</dd>
+  <dt>RGB</dt><dd>Red, green and blue from 0 to 255, the model for screen work.</dd>
+  <dt>HSB</dt><dd>Hue in degrees, then saturation and brightness as percentages: often the quickest way to nudge a colour without losing its character.</dd>
+  <dt>CMYK</dt><dd>Cyan, magenta, yellow and black as percentages, for print.</dd>
+  <dt>Web Safe RGB</dt><dd>RGB snapped to the 216 web-safe colours. When the current colour is not one of them a warning triangle appears; click it to snap to the nearest web-safe colour.</dd>
+</dl>
+<p>When the active side is painted with a global swatch, a tint row appears above the sliders: it names the swatch and lets you set a tint from 0% to 100% rather than editing the colour outright, so the artwork stays linked to the swatch.</p>
+
+<h2 id="appearance-swatches">Swatches and colour groups</h2>
+<p>A swatch is a named colour saved with the document. Painting from swatches rather than typing values keeps a palette consistent and, for global swatches, lets you restyle a whole document by editing one colour.</p>
+
+<h3 id="appearance-swatches-panel">The Swatches panel</h3>
+<p>The <strong>Swatches</strong> panel (open it from <strong>Window &rsaquo; Swatches</strong>) lists the document's swatches as a grid or as a list; the list view also shows each swatch's colour model. A plain click paints the active side. <kbd>&#8679;</kbd>-click picks a run of swatches and <kbd>&#8984;</kbd>-click adds or removes one from the selection, so you can act on several at once. The footer holds buttons to switch view, open the panel menu, show swatch options, make a colour group, make a new swatch and delete what is picked.</p>
+<p>The panel menu adds more: <em>Add Used Colors</em> and <em>Add Selected Colors</em> turn the colours already in the document, or just in the selection, into swatches; <em>Select All Unused</em> picks out every swatch nothing is painted with, ready to delete; and <em>Remap Colours&#8230;</em> opens the recolouring dialog described below.</p>
+
+<h3 id="appearance-process-spot-global">Process, spot and global swatches</h3>
+<p>Double-click a swatch for Swatch Options, where you set what kind of colour it is.</p>
+<dl>
+  <dt>Process</dt><dd>An ordinary colour, mixed for the job. A plain process swatch is just a stored colour: editing it does not touch artwork already painted with it.</dd>
+  <dt>Global</dt><dd>A process swatch marked Global keeps the artwork linked to it, so recolouring the swatch repaints everything painted with it at once. Global swatches can be applied as a tint.</dd>
+  <dt>Spot</dt><dd>A named ink, meant to print on its own plate. Spot colours are always global.</dd>
+</dl>
+<p>Every document also starts with a fixed <strong>[Registration]</strong> swatch, which has no colour type of its own and cannot be deleted or dragged. Use a global or spot swatch when a colour appears many times and might change: one edit updates every object, rather than hunting them down by hand.</p>
+
+<h3 id="appearance-colour-groups">Colour groups</h3>
+<p>Colour groups file related swatches together, such as one shade family or one project's palette. Drag swatches onto a group to file them, or select some and make a group from them with the panel's New Color Group button. Double-click a group's header for its options. In the colour picker on each chip, each group shows as one row, so a family reads as a ramp of shades rather than a wall of chips.</p>
+
+<h2 id="appearance-gradients">Gradients</h2>
+<p>A gradient blends between two or more colours. Scissor makes linear, radial and freeform gradients, and either the panel or the on-canvas tool can build and shape them. Reach for a gradient to give a flat shape depth, a background a soft wash, or a button a sheen.</p>
+
+<h3 id="appearance-gradient-panel">The Gradient panel</h3>
+<p>The <strong>Gradient</strong> panel (<kbd>&#8984;F9</kbd>) drives the whole gradient. Click the thumbnail to fill the active side, choose Linear, Radial or Freeform from the type menu, and use the reverse button to flip the ramp end for end. The ramp itself carries the stops: click it to add a stop in the colour it already has there, drag a stop to move it, and drag a diamond between two stops to shift where the two colours meet. The selected stop has its own colour swatch, an <em>Opacity</em> field and a <em>Location</em> field, and <em>Delete Stop</em> removes it. <em>Angle</em> turns a linear or radial gradient, and <em>Aspect</em> (radial only) squashes a radial gradient into an ellipse.</p>
+<figure class="shot">
+  <img src="img/gradient.gif" width="340" height="340" loading="lazy"
+       alt="A rounded square filled with a blue-to-amber linear gradient whose direction sweeps around." />
+  <figcaption>A linear gradient from blue to amber. Dragging the gradient axis, or changing its angle, sweeps the blend around the shape.</figcaption>
+</figure>
+
+<h3 id="appearance-gradient-tool">The Gradient tool</h3>
+<p>With the Gradient tool (<kbd>G</kbd>) the same controls sit on the artwork. Drag across an object to lay down the axis, holding <kbd>&#8679;</kbd> to hold it to 45&deg; steps. The axis shows a round knob at the start and a square knob at the end; drag either to move that end. Click the axis to add a stop in the colour it already has there, drag a stop along it, and pull a stop well clear of the axis to throw it away. Drag a diamond to move the midpoint. <kbd>Delete</kbd> removes the stop you last touched.</p>
+
+<h3 id="appearance-freeform">Freeform gradients</h3>
+<p>A freeform gradient places colour points anywhere on the shape rather than along one axis, so the blend can follow the artwork's form. With the Gradient tool, click the artwork to drop a colour point, drag one to move it, and press <kbd>Delete</kbd> to take it away. Tick <em>String the points into lines</em> in the panel to join the points into lines, which spreads a colour along a run rather than out from a single dot. Use a freeform gradient for soft, organic shading that a straight ramp cannot give.</p>
+
+<h2 id="appearance-patterns">Patterns</h2>
+<p>A pattern is artwork repeated as a tile and used as a fill. Turn a selection into a tile with <strong>Object &rsaquo; Pattern &rsaquo; Make</strong>, then fill any shape with it from the <strong>Patterns</strong> panel: click a tile to fill, double-click to edit it, and <kbd>&#8997;</kbd>-click to delete it. <em>Tile Options</em> sets the tile type, the brick offset, the size and the spacing, and whether the tile sizes and moves with the art. <strong>Edit Pattern</strong> opens the tile in place with its copies repeating around it as you work; click <em>Done Editing</em> in the Patterns panel when the tile is right. Patterns suit repeating textures, such as stripes, dots, weaves and backgrounds, that would be tedious to draw by hand.</p>
+
+<h2 id="appearance-strokes">Strokes</h2>
+<p>The <strong>Stroke</strong> panel (<kbd>&#8984;F10</kbd>) shapes the line drawn along a path.</p>
+
+<h3 id="appearance-stroke-options">Weight, caps, joins and alignment</h3>
+<p><em>Weight</em> sets the stroke's thickness in points. The <em>Cap</em> buttons decide how an open path ends: butt (cut off square at the anchor), round, or projecting (square, but reaching past the anchor by half the weight). The <em>Corner</em> buttons decide how a stroke turns a corner: mitre (a sharp point), round, or bevel (a flat cut), with a mitre <em>Limit</em> that bevels the sharpest points so they do not spike out. <em>Align</em> places the stroke on the centre of the path, or wholly inside or outside it, which matters when a shape has to butt up exactly to its neighbours.</p>
+
+<h3 id="appearance-dashes">Dashed lines</h3>
+<p>Tick <em>Dashed Line</em> to break the stroke into dashes. The three dash-and-gap pairs below set the pattern: the first field is a dash length, the next a gap, and so on, repeating around the path. Leave later pairs empty for a simple even dash.</p>
+
+<h3 id="appearance-width-profiles">Width profiles and the Width tool</h3>
+<p>A width profile tapers the stroke along its length rather than holding it to one weight. Pick a profile from the panel's menu and a small preview shows the shape it makes; the buttons beside it run the profile the other way, save the current stroke as a new profile, or delete a profile you made. A stroke you have shaped by hand shows as <em>Custom</em> in the menu.</p>
+<p>The Width tool (<kbd>&#8679;W</kbd>) shapes a stroke directly on the canvas: drag away from the path to widen it at that point, or towards it to narrow it, leaving a width point behind that you can drag again later. Use it to give a drawn line the swell and taper of a brush or nib.</p>
+
+<h3 id="appearance-brushes">Brushes</h3>
+<p>The <strong>Brushes</strong> panel (<kbd>F5</kbd>) paints strokes with a shape rather than a plain line. It holds calligraphic, scatter, art, bristle and pattern brushes. Click a brush to apply it to the selected paths; the Paintbrush uses whichever brush is current. Double-click a brush for its options, use <em>New Brush&#8230;</em> to make one (scatter, art and pattern brushes are built from selected artwork), and <em>Remove Brush</em> to return a stroke to a plain line.</p>
+
+<h2 id="appearance-opacity-blending">Opacity and blending</h2>
+<p>Opacity and the blending mode decide how an object combines with whatever lies beneath it. They sit in the <strong>Transparency</strong> panel (<kbd>&#8679;&#8984;F10</kbd>), and also in the Properties panel.</p>
+
+<h3 id="appearance-blend-modes">The blending modes</h3>
+<p>Opacity runs from 0% (invisible) to 100% (solid). The mode menu offers sixteen blending modes, which fall into groups: modes that darken, modes that lighten, contrast modes, comparison modes, and the four that borrow one part of a colour.</p>
+<table>
+  <thead><tr><th>Mode</th><th>What it does</th></tr></thead>
+  <tbody>
+    <tr><td>Normal</td><td>Paints over what is below, with no blending.</td></tr>
+    <tr><td>Darken</td><td>Keeps whichever colour is darker, channel by channel.</td></tr>
+    <tr><td>Multiply</td><td>Multiplies the two colours, always darkening; white leaves the base unchanged.</td></tr>
+    <tr><td>Color Burn</td><td>Darkens the base to take on the blend colour.</td></tr>
+    <tr><td>Lighten</td><td>Keeps whichever colour is lighter.</td></tr>
+    <tr><td>Screen</td><td>The inverse of Multiply, always lightening; black leaves the base unchanged.</td></tr>
+    <tr><td>Color Dodge</td><td>Brightens the base to take on the blend colour.</td></tr>
+    <tr><td>Overlay</td><td>Multiplies or screens depending on the base, raising contrast.</td></tr>
+    <tr><td>Soft Light</td><td>A gentle dodge or burn, as though a soft light were shone on the artwork.</td></tr>
+    <tr><td>Hard Light</td><td>Multiplies or screens depending on the blend colour, like a harsh spotlight.</td></tr>
+    <tr><td>Difference</td><td>Subtracts the darker colour from the lighter; white inverts the base, black has no effect.</td></tr>
+    <tr><td>Exclusion</td><td>Like Difference, but softer and lower in contrast.</td></tr>
+    <tr><td>Hue</td><td>The hue of the blend with the saturation and brightness of the base.</td></tr>
+    <tr><td>Saturation</td><td>The saturation of the blend with the hue and brightness of the base.</td></tr>
+    <tr><td>Color</td><td>The hue and saturation of the blend with the brightness of the base: good for tinting greyscale artwork.</td></tr>
+    <tr><td>Luminosity</td><td>The brightness of the blend with the hue and saturation of the base.</td></tr>
+  </tbody>
+</table>
+<p>For a group, two switches change how it blends. <em>Contain blending to group</em> keeps the group's modes inside itself, so its members blend with one another but not with the artwork behind the group. <em>Knockout Group</em> makes each member hide the ones below it within the group rather than blending down through them.</p>
+
+<h3 id="appearance-opacity-masks">Opacity masks</h3>
+<p>An opacity mask fades artwork by tone. Select the artwork and, on top of it, the shape to mask with, then click <em>Make Mask</em> (also <strong>Object &rsaquo; Clipping Mask &rsaquo; Make Opacity Mask</strong>). The top object becomes the mask: where it is light the artwork shows, and where it is dark the artwork fades out, so a white-to-black gradient makes a smooth fade. <em>Release</em> gives the two objects back. Use a mask for a soft edge or a vignette that a hard clip cannot make.</p>
+
+<h2 id="appearance-appearance-panel">The Paint Stack panel</h2>
+<p>The <strong>Paint Stack</strong> panel (<kbd>&#8679;F6</kbd>) lists everything painted onto one object: its fills and its strokes, with any live effects above them. Because an object can hold several fills and strokes, this is where you stack them, for instance a wide dark stroke under a thin light one to make an outline, or two fills at different opacities.</p>
+<p>The stack is drawn top first, matching the order it paints. Each fill or stroke row has an eye to hide it, a paint chip that opens the colour picker, an opacity field, a weight field for strokes, and arrows to move it up or down the stack, plus a button to remove it. <em>Add Fill</em> and <em>Add Stroke</em> put another one on top. Effects show above the fills and strokes with an <em>fx</em> badge; click an effect to edit its options, or remove it from its row. When the layered look is finished, <strong>Object &rsaquo; Expand Appearance</strong> bakes the whole stack down into plain artwork.</p>
+
+<h2 id="appearance-graphic-styles">Graphic Styles</h2>
+<p>A graphic style is a saved appearance you can apply to other objects. The <strong>Graphic Styles</strong> panel (<kbd>&#8679;F5</kbd>) keeps them as chips, each showing its fill with its stroke as the chip's border. Select an object and click <em>New Style</em> to save its fills and strokes; click a chip to apply that style to the selection, and <kbd>&#8997;</kbd>-click a chip to delete it. Styles are worth making when the same look, such as a house button treatment or a label style, has to go on many objects and stay consistent.</p>
+
+<h2 id="appearance-overprint">Overprint</h2>
+<p>The <strong>Attributes</strong> panel (<kbd>&#8984;F11</kbd>) sets overprinting for print work. <em>Overprint Fill</em> and <em>Overprint Stroke</em> make that ink print on top of the colours beneath it instead of knocking them out, which is used for trapping and for effects like a black that prints over rather than replacing what is under it. Turn on <strong>View &rsaquo; Overprint Preview</strong> to see it on screen; PDF export keeps the setting.</p>
+
+<h2 id="appearance-recolour">Recolouring artwork</h2>
+<p><strong>Edit &rsaquo; Edit Colors &rsaquo; Remap Colours&#8230;</strong> lists every colour in the selection with how often it is used. Click the chip on the right of a row to choose what that colour becomes, or the arrow between the two chips to leave that colour alone. Hue, Saturation and Brightness sliders shift the whole set together, and two buttons randomly reorder the new colours or randomise their saturation and brightness, which is a fast way to try variations. The artwork updates as you go, and <em>Reset</em> returns to the colours it started with.</p>
+<p>The same submenu also offers one-step changes: <em>Blend Front to Back</em> spreads a run of colours between the front and back objects, <em>Convert to Grayscale</em> drops all colour, <em>Invert Colors</em> flips each one, and <em>Saturate&#8230;</em> raises or lowers saturation across the selection.</p>

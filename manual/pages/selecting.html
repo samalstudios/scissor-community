@@ -1,0 +1,34 @@
+<p class="lede">Before you can change anything you have to say what to change. This page is about choosing artwork: the quick clicks with the selection tools, and the whole <strong>Select</strong> menu that picks objects by what they are made of, steps through the stack, and stores a selection to bring back later. In the shortcuts below, <kbd>&#8984;</kbd> is <kbd>Ctrl</kbd> on Windows and Linux, <kbd>&#8997;</kbd> is <kbd>Alt</kbd> and <kbd>&#8679;</kbd> is Shift.</p>
+
+<h2 id="selecting-basics">Clicking and marqueeing</h2>
+<p>The <strong>Selection tool</strong> (<kbd>V</kbd>) is where most selecting starts. Click an object to select it; hold <kbd>&#8679;</kbd> and click another to add it, or click a selected one to drop it. Drag across empty canvas to pull a <em>marquee</em>, and everything it touches is selected. The <strong>Direct Selection tool</strong> (<kbd>A</kbd>) reaches inside instead: it picks individual anchor points and path segments rather than whole objects, and the <strong>Group Selection tool</strong> steps into a group one level at a time. These tools are covered on the <a href="/manual/tools/">Tools</a> and <a href="/manual/paths/">Paths</a> pages; the rest of this page is the Select menu, which does the picking that clicking cannot.</p>
+
+<h2 id="selecting-whole-document">All, none and inverse</h2>
+<table>
+  <thead><tr><th>Command</th><th>Shortcut</th><th>What it selects</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Select &rsaquo; All</strong></td><td><kbd>&#8984;A</kbd></td><td>Every unlocked object in the document.</td></tr>
+    <tr><td><strong>All on Active Board</strong></td><td><kbd>&#8997;&#8984;A</kbd></td><td>Only the artwork on the board you are working on — the fast way to grab one page of a multi-board file.</td></tr>
+    <tr><td><strong>Deselect</strong></td><td><kbd>&#8679;&#8984;A</kbd></td><td>Nothing; clears the current selection.</td></tr>
+    <tr><td><strong>Inverse</strong></td><td></td><td>Swaps the selection for everything that was <em>not</em> selected.</td></tr>
+    <tr><td><strong>Reselect</strong></td><td><kbd>&#8984;6</kbd></td><td>Brings back the selection you had just before you cleared it.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="selecting-stack">Stepping through the stack</h2>
+<p>When objects overlap, <strong>Select &rsaquo; Next Object Above</strong> (<kbd>&#8997;&#8984;]</kbd>) and <strong>Next Object Below</strong> (<kbd>&#8997;&#8984;[</kbd>) move the selection up or down through the pile at the same spot, one object at a time. It is the reliable way to reach a shape buried under others without dragging the ones on top out of the way.</p>
+
+<h2 id="selecting-same">Select Same: picking by what things share</h2>
+<p>Select one object, then <strong>Select &rsaquo; Same</strong> gathers every other object in the document that matches it on one trait. Use it to recolour every shape of one fill in a single sweep, or to grab all the thin strokes at once.</p>
+<dl>
+  <dt>Appearance</dt><dd>The whole look — the same stack of fills, strokes and effects.</dd>
+  <dt>Fill &amp; Stroke</dt><dd>The same fill and the same stroke together.</dd>
+  <dt>Fill Color / Stroke Color</dt><dd>The same fill colour, or the same stroke colour.</dd>
+  <dt>Stroke Weight</dt><dd>The same stroke width.</dd>
+  <dt>Opacity</dt><dd>The same opacity.</dd>
+  <dt>Blending Mode</dt><dd>The same blend mode.</dd>
+  <dt>Shape</dt><dd>The same kind of object — all the ellipses, say, or all the type.</dd>
+</dl>
+
+<h2 id="selecting-saved">Saving a selection</h2>
+<p>A fiddly selection is worth keeping. <strong>Select &rsaquo; Save Selection…</strong> stores the current set under a name; it then appears under <strong>Select &rsaquo; Saved Selections</strong>, and choosing it there selects exactly those objects again, however you have clicked around since. <strong>Edit Selection…</strong> renames or removes the ones you have saved. Saved selections travel inside the <code>.cut</code> document, so they are still there the next time you open the file.</p>

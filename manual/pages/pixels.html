@@ -1,0 +1,118 @@
+<p class="lede">A Scissor document can hold painted pixels alongside its drawn paths and type, so a single file can carry a soft brushed texture, a photograph and a crisp logo together. This page covers what a pixel layer is, how to paint on one, and how it behaves as an object in the document.</p>
+
+<h2 id="pixels-vector-vs-raster">Pixels versus vector artwork</h2>
+<p>A Scissor document holds two kinds of artwork side by side. Paths and type are <em>drawn</em>: they stay sharp at any size because they are described by their shape, and Scissor redraws them whenever you zoom or scale. A <strong>pixel layer</strong> is <em>painted</em>: it is a grid of coloured dots, like a photograph or a brush painting, and enlarging it makes those dots bigger rather than adding detail. One document can hold as many of each as you like, in any order, and they stack in the Layers panel together.</p>
+<p>Reach for a pixel layer when a shape alone will not do: a hand-painted shadow, a rough texture behind clean type, a splash of colour that does not need to be an editable path, or retouching over a placed photograph. Keep logos, diagrams and anything you will resize later as vectors, and use pixels for the parts that want the feel of paint.</p>
+<p>A placed photograph is a related but separate thing. <strong>File &gt; Place…</strong> (<kbd>&#8679;&#8984;P</kbd>) brings an existing image into the document as an embedded picture; a pixel layer is a surface you paint on from scratch inside Scissor. Both are made of pixels and both can be sampled with the eyedropper, but only a pixel layer takes brush strokes.</p>
+
+<h2 id="pixels-new">Making a pixel layer</h2>
+<p><strong>Object &gt; Pixel Layer &gt; New Pixel Layer</strong> adds an empty surface covering the active board. You do not have to make one first, though: pick the Brush and paint, and Scissor creates the layer for you the moment the first stroke lands. Either way the layer maps onto the board, so the pixels line up with the artboard whatever resolution they were made at.</p>
+<p>That resolution comes from the <strong>Raster Effects</strong> setting in <strong>File &gt; Document Setup…</strong> (<kbd>&#8997;&#8984;P</kbd>): Screen (72&nbsp;ppi), Medium (150&nbsp;ppi) or High (300&nbsp;ppi). A higher setting gives a new pixel layer more dots per point, so brushwork stays smooth when the piece is printed or viewed large. Set it before you make the layer, since the pixel count is fixed when the surface is created.</p>
+<p>In the modern shell you can also add a layer from the tool options bar: with the Brush or Pixel Eraser active, a <strong>New pixel layer</strong> button sits at the end of the bar.</p>
+<p><strong>Placing a picture makes a pixel layer too.</strong> Drop an image onto the canvas, use <strong>File &gt; Place…</strong>, or paste one from the clipboard, and it comes in as an editable pixel layer at its own size rather than a locked picture — so you can paint on it, mask it, adjust and filter it straight away. Opening an image with <strong>File &gt; Open</strong> makes a new document one board the size of the picture, filled by the pixel layer. Very large photos are scaled down to fit the pixel budget. An <strong>SVG</strong> stays vector — its paths remain editable — so only bitmap images (PNG, JPEG, GIF, WebP, and the like) become pixel layers.</p>
+<p>A <strong>Photoshop <code>.psd</code></strong> comes in richer: opening one rebuilds its stack as separate pixel layers, keeping each layer's <strong>mask</strong>, and bringing type, shapes and layer effects across so the file lands close to how it looked in Photoshop rather than as one flat picture. It is the fullest way into pixel work, and everything on this page then applies to the layers that arrive.</p>
+
+<h2 id="pixels-painting">Painting</h2>
+
+<h3 id="pixels-brush">The Brush and the Pixel Eraser</h3>
+<p>Two tools work on pixel layers.</p>
+<table>
+  <thead><tr><th>Tool</th><th>Where it lives</th><th>What it does</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Brush Tool</strong></td><td>Shares a slot with the Paintbrush (<kbd>B</kbd>) and Fill Brush (<kbd>&#8679;B</kbd>)</td><td>Lays down colour that becomes part of the picture</td></tr>
+    <tr><td><strong>Pixel Eraser Tool</strong></td><td>Shares a slot with the Eraser (<kbd>&#8679;E</kbd>), Scissors and Knife</td><td>Rubs paint away so whatever sits below shows through</td></tr>
+  </tbody>
+</table>
+<p>To reach either, press and hold the visible tool in the toolbar, or right-click it, and choose the pixel tool from the list. Do not confuse them with their vector neighbours: the Paintbrush draws a path you can reshape afterwards, while the Brush paints pixels that cannot be re-pointed. Both pixel tools show a ring on the canvas at the size they will paint, and both use a crosshair pointer.</p>
+<p>Drag to paint or erase. The mark follows the pointer without gaps however fast you move, because Scissor lays a run of round dabs along the stroke and keeps them evenly spaced even when the pointer jumps. The Pixel Eraser takes alpha away rather than painting over, so what it clears goes fully transparent; a tile erased back to nothing is dropped, so erasing does not leave weight behind.</p>
+
+<h3 id="pixels-colour">Painting in the fill colour</h3>
+<p>The Brush paints in the current <strong>fill</strong> colour. Set it the way you set any fill: the Colour panel, a swatch, or, when the Brush is active in the modern shell, the <strong>Colour</strong> chip in the tool options bar. If the fill is empty the Brush falls back to the stroke colour, and to black if there is no colour at all. Pick a colour straight off a pixel layer with the Eyedropper when you want to match paint that is already down.</p>
+
+<h3 id="pixels-controls">Size, hardness and flow</h3>
+<p>When the Brush or Pixel Eraser is active, the tool options bar carries the settings that shape the mark. They also live in your preferences, so they carry from one session to the next.</p>
+<dl>
+  <dt>Size</dt><dd>The brush diameter, from 1 up to 2500 pixels. Press <kbd>[</kbd> to make the brush smaller and <kbd>]</kbd> to make it larger; each press changes the size by a fifth, so the step grows with the brush. The ring on the canvas shows the current size.</dd>
+  <dt>Hardness</dt><dd>Where the edge starts to fade, as a percentage. At 100% the edge is crisp; lower it and the dab softens towards its rim with a smooth falloff and no visible ring. Use a soft brush for shadows and glows, a hard one for solid shapes.</dd>
+  <dt>Flow</dt><dd>How much paint each dab puts down, for the Brush only. Below 100% the colour builds up gradually as you pass over an area again, which suits shading and slow blends. The Pixel Eraser has no flow control.</dd>
+</dl>
+
+<h2 id="pixels-retouch">Dodging, burning and sponging</h2>
+<p>Three retouch brushes work into the pixels that are already there rather than laying down a colour, sharing one slot in the toolbar. They paint like the Brush — the same size, hardness and canvas ring — and build up as you pass over an area again, so a light touch is gradual and a firm one is quick.</p>
+<dl>
+  <dt>Dodge</dt><dd>Lightens wherever you paint, lifting shadows and adding highlights.</dd>
+  <dt>Burn</dt><dd>Darkens wherever you paint, deepening shadows and edges.</dd>
+  <dt>Sponge</dt><dd>Lifts saturation, making colours richer the more you go over them.</dd>
+</dl>
+<p>Each leaves transparent pixels untouched, stays inside a selection when one is set, and the whole stroke undoes in a single step.</p>
+
+<h2 id="pixels-more-tools">Bucket, shapes and gradients</h2>
+<p>Painting is not only the Brush. On a pixel layer three more tools lay down colour: the <strong>Paint Bucket</strong> floods a contiguous area of similar colour from where you click; the <strong>shape tools</strong> stamp a rectangle, ellipse, star or polygon straight into the pixels instead of drawing a path; and the <strong>Gradient tool</strong> paints a linear or radial blend across the surface. Each respects the current selection, so you can confine a fill or a gradient to a chosen region.</p>
+
+<h2 id="pixels-selecting">Selecting pixels</h2>
+<p>A <strong>pixel selection</strong> — a marquee — limits every paint and edit to the region inside it, the way a stencil does. Three tools make one, sharing the pixel-selection slot: the <strong>Rectangular</strong> and <strong>Elliptical Marquee</strong>, and a freehand <strong>Lasso Marquee</strong> you trace by hand. Drag to draw a selection; a plain drag replaces the current one.</p>
+<p>The <strong>Auto-Select</strong> selects by colour instead of by shape: click a pixel layer and it takes the connected patch of colour around where you clicked, tracing a marching-ants outline around it — handy for lifting a flat background or one coloured area. How near a colour must be to be taken is the <strong>Tolerance</strong> on the Auto-Select options, the same setting it uses on vector objects; raise it to gather more, lower it to keep to a close match. Holes in the patch are left out of the selection.</p>
+<p>Selections combine, so a shape can be built from several strokes or clicks: hold <kbd>&#8679;</kbd> to <strong>add</strong> to the selection, <kbd>&#8997;</kbd> to <strong>subtract</strong>, and both together to keep only the <strong>overlap</strong> — the marquees and the Auto-Select all combine the same way. <strong>Select &gt; All</strong> (<kbd>&#8984;A</kbd>) selects every pixel, <strong>Select &gt; Inverse</strong> flips the marquee, and <strong>Deselect</strong> — <kbd>&#8984;D</kbd> on a pixel layer — drops it. A marching-ants outline shows the selection on the canvas.</p>
+
+<h2 id="pixels-editing-selection">Moving, cutting and copying pixels</h2>
+<p>With a selection set, the Selection tool moves the pixels inside it: drag from within the marquee and the selected paint lifts and travels, clearing where it was and carrying the marquee along. Hold <kbd>&#8997;</kbd> while dragging to leave the original in place and move a <strong>copy</strong>.</p>
+<p>The <strong>Object &gt; Pixel Layer</strong> menu carries the clipboard commands — <strong>Copy</strong>, <strong>Cut</strong> and <strong>Paste</strong> the selected pixels — and the selection also drives the surface commands: <strong>Fill with Fill Colour</strong> fills only the selected region, <strong>Clear</strong> and <strong>Delete</strong> erase it, and with no selection each acts on the whole layer.</p>
+
+<h2 id="pixels-adjustments">Adjustments</h2>
+<p>The <strong>Object &gt; Pixel Layer &gt; Adjustments</strong> submenu retouches the colour of a pixel layer, confined to the selection when one is set. Each opens a dialog that previews on the canvas as you drag.</p>
+<dl>
+  <dt>Brightness / Contrast, Levels</dt><dd>Set the overall lightness and contrast, or remap the black point, white point and gamma for finer tonal control.</dd>
+  <dt>Hue / Saturation, Vibrance</dt><dd>Shift the hue and lift or drop saturation across the board, or use Vibrance to boost the muted colours while leaving the already-vivid ones alone.</dd>
+  <dt>Colour Balance</dt><dd>Push the midtones towards cyan or red, magenta or green, yellow or blue.</dd>
+  <dt>Gradient Map</dt><dd>Recolour the layer by its brightness, mapping the shadows to one colour and the highlights to another.</dd>
+  <dt>Desaturate, Invert</dt><dd>Drop all colour to grey, or flip every colour to its opposite.</dd>
+  <dt>Threshold, Posterize</dt><dd>Reduce the image to pure black and white at a chosen level, or to a small number of tones per channel.</dd>
+</dl>
+
+<h2 id="pixels-filters">Filters</h2>
+<p>The <strong>Filters</strong> submenu reshapes the pixels themselves, again within the selection.</p>
+<dl>
+  <dt>Gaussian Blur</dt><dd>Softens the layer by an even, adjustable amount.</dd>
+  <dt>Sharpen, Unsharp Mask</dt><dd>Crisp the detail — Unsharp Mask gives control over the radius, amount and a threshold that spares flat areas and fine noise.</dd>
+  <dt>Pixelate</dt><dd>Blocks the image into square tiles for a mosaic.</dd>
+  <dt>Add Noise</dt><dd>Scatters grain across the paint.</dd>
+  <dt>Find Edges, Emboss</dt><dd>Trace where the colour changes as bright lines on dark, or as a grey relief.</dd>
+</dl>
+<p><strong>Filters &gt; Effect Previews</strong> opens a grid of live thumbnails, each showing your layer with one adjustment or filter already applied, so you can pick by eye rather than by name. Clicking a thumbnail opens that effect's dialog to fine-tune it — or applies it straight away for the ones with nothing to set, like Desaturate, Invert, Find Edges and Emboss.</p>
+
+<h2 id="pixels-undo">Fast, tile-based undo</h2>
+<p>A whole stroke undoes in one step, however long it was: press <kbd>&#8984;Z</kbd> once and the last mark is gone, and <kbd>&#8679;&#8984;Z</kbd> brings it back. If the first stroke had to create its layer, that layer goes back with the stroke rather than being left behind empty.</p>
+<p>Behind the scenes a pixel layer is kept as a grid of small tiles, and a stroke only ever copies the tiles it actually touched. Undoing keeps whole document snapshots, but a stroke costs only its own tiles rather than the whole surface, so painting on a large layer stays quick and a long session of brushwork does not fill up memory. Flat areas of one colour are stored compactly, so a layer that is mostly a single colour takes almost no room.</p>
+
+<h2 id="pixels-treating">Treating a pixel layer like any object</h2>
+<p>A pixel layer is an object in the document, so everything you already know applies. Select it, move it, and scale, rotate, reflect or shear it from <strong>Object &gt; Transform</strong> or the bounding box; the paint you lay down afterwards follows the layer's transform, so a rotated layer takes strokes in its own orientation. Set its opacity and give it any of the sixteen blend modes from the Transparency panel to sit painted colour over the drawn artwork below. Clicking picks the layer only where it has paint, so a transparent corner lets you click straight through to whatever is underneath. <strong>Duplicate</strong> copies a pixel layer like any object — cheaply, since the copy shares its tiles until one of them is painted.</p>
+<p><strong>Object &gt; Pixel Layer &gt; Merge Down</strong> flattens a pixel layer onto the pixel layer directly beneath it and removes the top one, leaving a single layer with the two composited together. If the layers sit under different transforms — say one has been rotated — the top is resampled into the bottom's grid as it merges.</p>
+<p>Two commands act on the whole surface at once:</p>
+<dl>
+  <dt>Object &gt; Pixel Layer &gt; Fill with Fill Colour</dt><dd>Floods the entire surface with the current fill colour. Reach for it to lay a base coat before painting over it, or to flood a layer set behind other art.</dd>
+  <dt>Object &gt; Pixel Layer &gt; Clear</dt><dd>Empties the surface without removing the layer, so you can start the painting again while keeping the layer's place, transform, opacity and blend mode.</dd>
+</dl>
+<p>Both commands also appear under <strong>Effect &gt; Pixel Layer</strong>.</p>
+
+<h2 id="pixels-masks">Layer masks</h2>
+<p>A <strong>layer mask</strong> hides parts of a pixel layer without deleting them: the layer shows through where the mask is white and is hidden where it is black, with greys in between for partial transparency. Because nothing is erased, you can paint the mask back and forth as often as you like. The commands are under <strong>Object &gt; Pixel Layer</strong>.</p>
+<dl>
+  <dt>Add Layer Mask</dt><dd>Attaches a mask that reveals everything to start with, ready to paint on.</dd>
+  <dt>Add Layer Mask from Selection</dt><dd>Builds the mask from the current pixel selection: what is inside stays, what is outside is hidden. A quick way to cut a shape out of a photo non-destructively.</dd>
+  <dt>Edit Mask</dt><dd>Turns mask painting on and off. While it is on, the Brush, Eraser and Paint Bucket paint the mask instead of the layer: paint with black (or a dark colour) to hide, white to reveal, grey to fade. The brush uses the lightness of the current fill colour, so black hides and white shows.</dd>
+  <dt>Apply Layer Mask</dt><dd>Bakes the mask into the layer for good — the hidden pixels become transparent — and removes the mask.</dd>
+  <dt>Delete Layer Mask</dt><dd>Throws the mask away and shows the whole layer again, untouched.</dd>
+</dl>
+<p>A masked layer exports and saves with the mask already applied, and blends and transforms like any other layer.</p>
+
+<h2 id="pixels-rasterize">Turning vector art into pixels: Rasterize</h2>
+<p><strong>Object &gt; Rasterize</strong> replaces the current selection with an embedded picture of itself, baking the paths, type and any effects into fixed pixels. Use this when you want a vector result to stop being editable, when an effect is easier to treat as a flat image, or to hand off a piece that should look the same everywhere without carrying its live construction. The result is an embedded image rather than a paintable pixel layer, so keep a copy of the original artwork if you may need to edit it again. <strong>View &gt; Pixel Preview</strong> (<kbd>&#8997;&#8984;Y</kbd>) lets you check how vector art will land on the pixel grid before you commit.</p>
+
+<h2 id="pixels-saving">Saving and exporting</h2>
+<p><code>.cut</code> documents keep pixel layers with the rest of the artwork, packed so that flat areas take almost no room and reopen exactly as painted.</p>
+<p>How pixel layers leave the document depends on the format:</p>
+<dl>
+  <dt>PNG, JPEG and WebP</dt><dd>Flatten the whole document to pixels, so painted and drawn work merge into one bitmap. PNG can keep transparency; export at @2x for a sharper result.</dd>
+  <dt>SVG and PDF</dt><dd>Write the painted surface out as an embedded picture set among the vector art, so a document that mixes drawn and painted work travels as one file with its shapes still crisp.</dd>
+</dl>
+<p>Because raster and vector live in the same document and export together, you can build a piece the natural way: clean shapes and type as vectors, and the parts that want the feel of paint, a soft glow, a textured wash, a retouched photograph, as pixel layers stacked among them.</p>

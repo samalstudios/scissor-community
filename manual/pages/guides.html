@@ -1,0 +1,46 @@
+<p class="lede">Rulers, guides and snapping are how you line work up precisely. Rulers put a measured scale down the top and left edges of the canvas, guides give you lines to build against, smart guides show alignment and spacing as you drag, and the Measure tool reads back the distance and angle between two points. None of these mark the artwork itself: guides never print or export, and turning any of them off changes only what you see.</p>
+
+<h2 id="guides-rulers">Rulers</h2>
+<p>Turn rulers on with <strong>View &rsaquo; Rulers &rsaquo; Show Rulers</strong> (<kbd>&#8984;R</kbd>). A horizontal ruler runs along the top of the canvas and a vertical one down the left side. Both are marked with major ticks at labelled intervals and shorter minor ticks between them; as you zoom in and out the spacing of the labelled ticks adjusts so they stay readable.</p>
+<p>Positions are measured from the top-left corner of the active artboard, and the numbers grow to the right and downwards. Because the zero point sits on the active board, switching to a different board moves it: select another board and the rulers re-read from that board's corner. As you move the pointer over the canvas, a thin indicator line tracks its position on each ruler, so you can read the current coordinate at a glance without a panel.</p>
+<p>When the view is turned (with the Rotate View tool) there is no straight horizontal or vertical document axis left to measure, so the rulers stay in place but show no ticks until you reset the rotation.</p>
+
+<h3 id="guides-units">Units</h3>
+<p>The rulers read in the document's unit. Set it in <strong>File &rsaquo; Document Setup</strong> (<kbd>&#8997;&#8984;P</kbd>), which offers pixels, points, millimetres, centimetres, inches and picas. Choose the unit that matches your output: pixels or points for screen work, millimetres or inches for print. Changing the unit re-labels the rulers straight away; it does not resize anything.</p>
+
+<h2 id="guides-ruler-guides">Ruler guides</h2>
+<p>With rulers showing, drag out of a ruler to pull a guide onto the canvas. Drag down from the top ruler for a horizontal guide, or across from the left ruler for a vertical one. The guide follows the pointer while you hold the button, and drops where you release. Pulling a guide out turns <strong>Show Guides</strong> on if it was off, so the new guide is visible at once. If you decide against it, drop it back on the ruler and it is abandoned.</p>
+<p>A guide is a long straight line that reaches well past the artwork, so it reads as if it runs the width or height of the document. Each one appears in the Layers panel as a <em>Horizontal Guide</em> or <em>Vertical Guide</em> object.</p>
+<p>To move a guide later, click along its line with the Selection tool and drag, or nudge it with the arrow keys. A guide moves like any other object, so snapping applies while you drag it: this makes it straightforward to drop a guide exactly onto an object's edge or an anchor. A use case: pull a vertical guide to the left edge of a heading, then align a column of buttons to it so their left sides all meet the same line.</p>
+
+<h2 id="guides-managing">Hiding, locking and clearing guides</h2>
+<p><strong>View &rsaquo; Guides &rsaquo; Show Guides</strong> (<kbd>&#8984;;</kbd>) hides and shows every guide at once. Hide them while you check how a design reads without the scaffolding, then bring them back to keep working.</p>
+<p>To stop a guide being moved by accident, treat it as the object it is: select it and lock it with <strong>Object &rsaquo; Lock &rsaquo; Selection</strong> (<kbd>&#8984;2</kbd>), or lock or hide it from the Layers panel. <strong>Object &rsaquo; Unlock All</strong> (<kbd>&#8997;&#8984;2</kbd>) releases it again, and <strong>Object &rsaquo; Hide &rsaquo; Selection</strong> (<kbd>&#8984;3</kbd>) hides a single guide without touching the others.</p>
+<p>When you have finished with them, <strong>View &rsaquo; Guides &rsaquo; Clear Guides</strong> removes every guide in the document in one step.</p>
+
+<h2 id="guides-make">Making guides from objects</h2>
+<p>A guide need not be a plain horizontal or vertical line. Draw any path or shape, select it, and choose <strong>View &rsaquo; Guides &rsaquo; Make Guides</strong> (<kbd>&#8984;5</kbd>) to turn it into a guide. A circle becomes a circular guide, a diagonal line a slanted one, so you can build against curves and angles the straight ruler guides cannot give you. Use it to set up a circular guide for arranging elements around a dial, or a diagonal one to keep a run of shapes on a consistent slope.</p>
+<p><strong>View &rsaquo; Guides &rsaquo; Release Guides</strong> (<kbd>&#8997;&#8984;5</kbd>) turns a selected guide back into an ordinary editable path, so you can recover a shape you converted, or reuse the geometry as artwork.</p>
+
+<h2 id="guides-smart">Smart guides</h2>
+<p><strong>View &rsaquo; Smart Guides</strong> (<kbd>&#8984;U</kbd>) shows alignment feedback while you draw, move or resize. As the pointer nears something worth lining up to, a magenta line and a small label appear and the point is pulled onto it. Smart guides read from the edges, centres and corners of other objects, from their anchor points, and from the artboard edges, so a shape you are placing can be made to line up with what is already there without any manual measuring.</p>
+<p>Smart guides also help while drawing a straight drag: when the direction you are dragging comes close to a construction angle (every 45&deg; from the constrain angle set in preferences), the drag snaps onto that angle and a line with the angle label is drawn along it. This keeps lines and moves truly horizontal, vertical or diagonal.</p>
+
+<h3 id="guides-spacing">Spacing objects evenly</h3>
+<p>When you drag an object past two or more others that sit in a row or column, smart guides look for the position where the gaps come out equal: either continuing an evenly spaced run, or centring the object in the gap between two neighbours. When it finds one, it snaps the object there and draws the two matching gaps with end caps and a measurement, so you can space a row of items evenly by eye and let the guide confirm the fit, rather than aligning and distributing them afterwards.</p>
+
+<h2 id="guides-snapping">Snap to Point and Snap to Grid</h2>
+<p>Two snapping switches sit in the <strong>View</strong> menu and work independently of each other and of smart guides.</p>
+<dl>
+  <dt>Snap to Point (<kbd>&#8997;&#8984;'</kbd>)</dt>
+  <dd>Pulls the point you are placing onto the points of other objects: their anchors, corners and centres, and the artboard edges. Use it when a new shape has to meet an existing one exactly, such as starting a path on the corner of a box.</dd>
+  <dt>Snap to Grid (<kbd>&#8679;&#8984;'</kbd>)</dt>
+  <dd>Rounds points and dragged objects onto the active board's grid. Each board carries its own grid, so what a point lands on depends on which board you are working on; the grids themselves are covered under Grids. While Snap to Grid is on it takes over, so points fall on grid lines rather than on other objects' points.</dd>
+</dl>
+
+<h3 id="guides-ignore">Ignoring snapping for one drag</h3>
+<p>Hold <kbd>&#8997;</kbd> (Alt) while you drag and snapping is suspended for that gesture only. Let go and it resumes. This works while drawing shapes, dragging objects and moving anchor points, and it leaves your snapping switches unchanged, so you can nudge one point free of the grid or a guide without turning anything off and back on.</p>
+
+<h2 id="guides-measure">The Measure tool</h2>
+<p>The Measure tool reads the distance and angle between two points. It shares a slot in the toolbar with the Eyedropper, so hold the Eyedropper to reveal it. Drag from one point to another and a label shows the distance (<code>D</code>), the angle, and the horizontal (<code>X</code>) and vertical (<code>Y</code>) offsets between the two ends. The line and its reading stay on screen until your next drag, so you can note a measurement and carry on.</p>
+<p>The endpoints snap to the same points smart guides and Snap to Point use, so you can measure from one object's corner to another's exactly. Hold <kbd>&#8679;</kbd> while dragging to constrain the measuring line to 45&deg; steps. Use it to check the gap between two columns before you commit to spacing, or to read the length and slope of an edge you are about to match.</p>

@@ -1,0 +1,161 @@
+<p class="lede">Everything that changes where an object sits, how big it is or which way it faces lives here: moving and scaling by hand, exact numeric transforms, aligning and stacking, live repeats, morphs, envelopes and turning a flat shape into a solid.</p>
+
+<p>Shortcuts below are written in their macOS form. On Windows and Linux, read <kbd>⌘</kbd> as Ctrl, <kbd>⌥</kbd> as Alt and <kbd>⇧</kbd> as Shift.</p>
+
+<h2 id="transform-select-move">Selecting and moving</h2>
+<p>Before you can transform anything you have to say what. Reach for these first: the selection tools decide what a drag, a numeric command or a panel field will act on.</p>
+
+<h3 id="transform-selection-tools">The selection tools</h3>
+<table>
+  <thead><tr><th>Tool</th><th>Shortcut</th><th>What it picks</th></tr></thead>
+  <tbody>
+    <tr><td>Selection Tool</td><td><kbd>V</kbd></td><td>Whole objects and groups.</td></tr>
+    <tr><td>Direct Selection Tool</td><td><kbd>A</kbd></td><td>Individual anchor points and path segments.</td></tr>
+    <tr><td>Group Selection Tool</td><td></td><td>One object inside a group; each further click widens to the group around it.</td></tr>
+  </tbody>
+</table>
+<p>Shift-click adds an object to the selection or drops it again. Drag on empty canvas to marquee a rectangle, and hold <kbd>⇧</kbd> to add whatever the marquee catches to what is already selected. Double-clicking a group with the Selection Tool steps inside it so you can work on one member without ungrouping.</p>
+
+<h3 id="transform-moving">Moving a selection</h3>
+<p>Drag a selected object to move it. Holding <kbd>⌥</kbd> leaves a copy behind and drags that instead, which is the quick way to duplicate in place and reposition in one motion. Holding <kbd>⇧</kbd> constrains the move to 45° steps measured from the constrain angle set in Preferences, and turns snapping off; without <kbd>⇧</kbd> the selection snaps to nearby edges, centres and angles. Arrow keys nudge by the keyboard increment, <kbd>⇧</kbd> with an arrow nudges by ten times that, and <kbd>⌥</kbd> with an arrow nudges a copy.</p>
+
+<h3 id="transform-bounding-box">The bounding box: scaling and rotating by hand</h3>
+<p>The selection's bounding box carries eight handles. Drag one to scale: <kbd>⇧</kbd> keeps the proportions and <kbd>⌥</kbd> scales about the centre rather than about the opposite handle. Just outside a corner the pointer enters the rotation zone; drag there to turn the selection about the box's centre, with <kbd>⇧</kbd> snapping to 45°. After a rotation the box is left tilted with the artwork. <strong>Object &rsaquo; Transform &rsaquo; Reset Bounding Box</strong> squares it up again so later width and height edits read along the page axes.</p>
+
+<h2 id="transform-numeric">Numeric transforms</h2>
+<p>Dragging is fast but approximate. When a value has to be exact, or the same on many objects, type it. The Transform panel holds the live figures for the selection, and the <strong>Object &rsaquo; Transform</strong> submenu holds one-shot commands with a Copy option.</p>
+
+<h3 id="transform-panel">The Transform panel</h3>
+<p>The Transform panel (<kbd>⇧F8</kbd>) shows X, Y, W and H in pixels for the selection; type a value and press Return to set it. Below them, the ⟳ field rotates the selection by an angle and the ⧄ field shears it by one, each returning to zero once applied. The panel needs something selected; with nothing chosen it dims and says so.</p>
+<p>The Properties panel repeats X, Y, W and H with a rotation field and two buttons that flip the selection horizontally or vertically about its own centre, so the most common moves are to hand without opening a second panel.</p>
+
+<h3 id="transform-commands">Move, Rotate, Reflect, Scale and Shear</h3>
+<p><strong>Object &rsaquo; Transform</strong> holds the numeric commands. Each opens a small dialog, and each (except Move, which is a straight displacement) transforms about the reference point. The Copy box in every dialog applies the change to a duplicate and leaves the original untouched, which is how you build a mirrored pair or a scaled echo in one step.</p>
+<table>
+  <thead><tr><th>Command</th><th>Shortcut</th><th>Fields</th></tr></thead>
+  <tbody>
+    <tr><td>Move…</td><td><kbd>⇧⌘M</kbd></td><td>Horizontal, Vertical, Copy.</td></tr>
+    <tr><td>Rotate…</td><td></td><td>Angle, Copy.</td></tr>
+    <tr><td>Reflect…</td><td></td><td>Axis (Horizontal or Vertical), Angle, Copy.</td></tr>
+    <tr><td>Scale…</td><td></td><td>Horizontal %, Vertical %, Copy.</td></tr>
+    <tr><td>Shear…</td><td></td><td>Shear Angle, Axis Angle, Copy.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="transform-each-again">Transform Each and Transform Again</h3>
+<p><strong>Transform Each…</strong> (<kbd>⌥⇧⌘D</kbd>) scales, moves, rotates and reflects every selected object about <em>its own</em> centre rather than the selection's shared centre. Its dialog takes Scale H and V, Move H and V, a Rotate angle, Reflect X and Reflect Y checkboxes, and Copy. Reach for it to jitter or fan out a set of objects so each one turns and grows in place instead of orbiting the group.</p>
+<p><strong>Transform Again</strong> (<kbd>⌘D</kbd>) repeats the last transform on the current selection. Move an object, then press <kbd>⌘D</kbd> a few times, and you get an evenly stepped row; combine it with <kbd>⌥</kbd>-dragging a copy to build repeating patterns by hand.</p>
+
+<h2 id="transform-tools">The transform tools and the reference point</h2>
+<p>The Rotate (<kbd>R</kbd>), Reflect (<kbd>O</kbd>), Scale (<kbd>S</kbd>) and Shear tools each work about a reference point, drawn as a small crosshair. It starts at the centre of the selection; click anywhere on the canvas to move it there, and selecting something else puts it back at the new centre. Then drag on the canvas to turn, mirror, scale or skew about that point.</p>
+<p><kbd>⇧</kbd> constrains each tool: 45° steps for Rotate and Reflect, equal horizontal and vertical for Scale, one axis for Shear. Holding <kbd>⌥</kbd> during the drag transforms a copy and leaves the original. <kbd>⌥</kbd>-clicking places the reference point and opens that tool's numeric dialog with the point already set, so you can spin a shape about a corner by an exact angle.</p>
+
+<h2 id="transform-free">The Free Transform tool</h2>
+<p>The Free Transform Tool (<kbd>E</kbd>) puts moving, scaling, rotating, shearing and two kinds of distortion on one bounding box. Drag inside the box to move it, drag a handle to scale, and drag just outside a corner to rotate, with <kbd>⇧</kbd> snapping to 45°. Use it when you want to try several kinds of change in one gesture without switching tools between each.</p>
+
+<h3 id="transform-free-widget">The widget</h3>
+<p>A small widget floats beside the box with four buttons, each naming itself when you hover over it: <strong>Constrain</strong>, <strong>Free Transform</strong>, <strong>Perspective Distort</strong> and <strong>Free Distort</strong>. Constrain makes scaling proportional without holding <kbd>⇧</kbd>; with it on, <kbd>⇧</kbd> frees the proportions instead. The two distortion modes leave only the four corner handles to pull on.</p>
+
+<h3 id="transform-free-keys">Distorting from the keyboard</h3>
+<p>You can reach the same distortions without leaving the default mode. Hold <kbd>⌘</kbd> on an edge handle to shear along that edge. Hold <kbd>⌘</kbd> on a corner to distort it freely on its own; add <kbd>⇧</kbd> to constrain the corner's travel to 45°. Hold <kbd>⌘⌥⇧</kbd> on a corner for perspective, where the neighbouring corner mirrors the drag. Pressing or releasing a modifier part way through a drag switches the action at once, and the name it ends on, Scale, Shear, Perspective Distort or Free Distort, is what the step is called in the History panel afterwards. Type, placed images and symbol instances cannot be distorted; they are left as they are, and Scissor tells you so when a drag skips them.</p>
+
+<h3 id="transform-free-reference">The reference point</h3>
+<p>The reference point sits in the middle of the box as a crosshair, and you can drag it anywhere; on its own it moves nothing. The box then rotates and scales about it, and it travels with the artwork when you move the selection. Drop it near one of the box's nine points (the four corners, the four edge midpoints or the centre) and it settles onto that point. Holding <kbd>⌥</kbd> while scaling ignores a placed reference point and scales about the centre.</p>
+
+<h2 id="transform-align-arrange">Aligning, arranging and grouping</h2>
+<p>These commands set how objects line up with one another, which sits in front of which, and which ones are collected, locked away or hidden while you work on the rest.</p>
+
+<h3 id="transform-align">Align and distribute</h3>
+<p>The Align panel (<kbd>⇧F7</kbd>) has three rows. <strong>Align Objects</strong> lines the selection up left, centre or right, and top, middle or bottom. <strong>Distribute Objects</strong> spreads three or more objects so their tops, centres, bottoms, left edges, centres or right edges fall at even intervals. <strong>Distribute Spacing</strong> sets an equal gap between them vertically or horizontally. The menu on the panel chooses whether everything aligns to the selection or to the board. Aligning needs at least one object (a single object aligns to the board); distributing needs three, and the panel greys those buttons until you have them. The six alignments also appear under <strong>Object &rsaquo; Align</strong>.</p>
+
+<h3 id="transform-arrange">Arrange: stacking order</h3>
+<p>Every object sits at a level in the stack, and <strong>Object &rsaquo; Arrange</strong> moves the selection through it.</p>
+<table>
+  <thead><tr><th>Command</th><th>Shortcut</th></tr></thead>
+  <tbody>
+    <tr><td>Bring to Front</td><td><kbd>⇧⌘]</kbd></td></tr>
+    <tr><td>Bring Forward</td><td><kbd>⌘]</kbd></td></tr>
+    <tr><td>Send Backward</td><td><kbd>⌘[</kbd></td></tr>
+    <tr><td>Send to Back</td><td><kbd>⇧⌘[</kbd></td></tr>
+  </tbody>
+</table>
+
+<h3 id="transform-grouping">Grouping, locking and hiding</h3>
+<dl>
+  <dt><strong>Group</strong> (<kbd>⌘G</kbd>) and <strong>Ungroup</strong> (<kbd>⇧⌘G</kbd>)</dt>
+  <dd>Collect objects so they move and transform as one, or release them again. A group can be entered by double-clicking it with the Selection Tool.</dd>
+  <dt><strong>Lock &rsaquo; Selection</strong> (<kbd>⌘2</kbd>) and <strong>Unlock All</strong> (<kbd>⌥⌘2</kbd>)</dt>
+  <dd>Locking makes objects unpickable so they stay put while you work over them; Unlock All frees everything that was locked.</dd>
+  <dt><strong>Hide &rsaquo; Selection</strong> (<kbd>⌘3</kbd>) and <strong>Show All</strong> (<kbd>⌥⌘3</kbd>)</dt>
+  <dd>Hiding takes objects off the canvas without deleting them, which clears a busy scene down to the part you are editing; Show All brings them back.</dd>
+</dl>
+
+<h2 id="transform-repeat">Live repeats</h2>
+<p><strong>Object &rsaquo; Repeat</strong> builds many copies from one object and keeps them live: edit the original and every copy follows. Reach for a repeat when the artwork is regular, a flower of identical petals or a tiled grid of icons, so you can shape one element and let the rest track it.</p>
+<dl>
+  <dt><strong>Radial…</strong></dt>
+  <dd>Rings the copies around a centre. The dialog sets Instances and Radius.</dd>
+  <dt><strong>Grid…</strong></dt>
+  <dd>Lays the copies in rows and columns. The dialog sets Columns, Rows, Horizontal Spacing and Vertical Spacing.</dd>
+  <dt><strong>Mirror…</strong></dt>
+  <dd>Reflects the copies across an axis. The dialog sets the axis (vertical or horizontal) and an Offset.</dd>
+</dl>
+<p>With a repeat selected, the Properties panel exposes the same controls for later tuning: instances and radius for a radial repeat; columns, rows and horizontal and vertical spacing for a grid; and the offset and mirror axis for a mirror. <strong>Release</strong> turns the copies into ordinary, separately editable artwork when you are done.</p>
+<figure class="shot">
+  <img src="img/repeat.gif" width="640" height="640" loading="lazy"
+       alt="A single blue petal repeated around a centre by a radial repeat, filling in to a twelve-petal flower as the count rises." />
+  <figcaption>One petal and a radial repeat. As the count climbs from one to twelve the flower fills in; reshape the single petal and the whole thing changes with it.</figcaption>
+</figure>
+
+<h2 id="transform-morph">Morphs</h2>
+<p>A morph fills the gap between two objects with a series of in-between shapes, each a step closer to the next. It is the tool for shaded transitions between colours and for evenly spaced repeats along a path.</p>
+<p>The Morph Tool (<kbd>W</kbd>) morphs one object into another: click the first, then the second. Clicking a third carries the chain on, and clicking into an existing morph adds that object to it. <strong>Object &rsaquo; Morph</strong> holds the rest:</p>
+<table>
+  <thead><tr><th>Command</th><th>Shortcut</th><th>What it does</th></tr></thead>
+  <tbody>
+    <tr><td>Make</td><td><kbd>⌥⌘B</kbd></td><td>Morphs the selected objects together.</td></tr>
+    <tr><td>Release</td><td><kbd>⌥⇧⌘B</kbd></td><td>Gives back the key objects and drops the steps.</td></tr>
+    <tr><td>Morph Options…</td><td></td><td>Sets spacing and orientation (see below).</td></tr>
+    <tr><td>Expand</td><td></td><td>Turns the in-between steps into real, editable objects.</td></tr>
+    <tr><td>Replace Spine</td><td></td><td>Bends the run of steps along a selected path.</td></tr>
+    <tr><td>Reverse Spine</td><td></td><td>Swaps which end of the spine each key object sits at.</td></tr>
+    <tr><td>Reverse Front to Back</td><td></td><td>Flips the stacking order of the steps.</td></tr>
+  </tbody>
+</table>
+<p><strong>Morph Options…</strong> sets Spacing to Specified Steps (a fixed number of in-betweens), Specified Distance (a fixed gap in pixels, filling as many as fit) or Smooth Color (as many steps as it takes for a smooth colour blend), and sets Orientation to Align to Page or Align to Path. A morph stays live and follows its key objects, so editing either end reflows the whole run.</p>
+<figure class="shot">
+  <img src="img/morph.gif" width="760" height="316" loading="lazy"
+       alt="A blue star morphing into an amber circle through a growing row of in-between shapes." />
+  <figcaption>A morph from a star to a circle. As the step count rises, more in-between shapes fill the gap, each a little closer to the next.</figcaption>
+</figure>
+
+<h2 id="transform-envelope">Shape Warp</h2>
+<p><strong>Object &rsaquo; Shape Warp</strong> bends artwork to fit a shape while keeping it editable underneath. Use it to fit a logo to a banner, curve a line of type, or push a flat pattern into a bulge. There are three ways to make one.</p>
+<dl>
+  <dt><strong>Make with Warp…</strong> (<kbd>⌥⇧⌘W</kbd>)</dt>
+  <dd>Bends the selection with one of the built-in warp styles (Arc, Arch, Bulge, Flag, Wave, Fish, Rise, Fisheye, Inflate, Squeeze and the shell and arc variants), controlled by Bend, Horizontal and Vertical amounts.</dd>
+  <dt><strong>Make with Top Object</strong> (<kbd>⌥⌘C</kbd>)</dt>
+  <dd>Uses the frontmost selected shape as the envelope and pours everything below it into that outline. Needs two or more objects: the container on top, the artwork beneath.</dd>
+  <dt><strong>Make with Mesh…</strong> (<kbd>⌥⌘M</kbd>)</dt>
+  <dd>Lays a grid of the rows and columns you ask for over the selection. It stays live: switch to the Direct Selection Tool (<kbd>A</kbd>) and drag any crossing of the mesh to bend what it holds, as often as you like.</dd>
+</dl>
+<p><strong>Release</strong> gives the artwork back as it was, along with the envelope shape; <strong>Expand</strong> keeps the bend and drops the envelope, leaving distorted paths.</p>
+
+<h2 id="transform-3d">3D from a vector shape</h2>
+<p><strong>Effect &rsaquo; 3D and Materials</strong> turns a flat shape into a solid. It stays a live effect, so the original path is still there to edit, and the copy on screen rebuilds whenever you change it.</p>
+<dl>
+  <dt><strong>Extrude &amp; Bevel</strong></dt>
+  <dd>Gives the shape depth, with a bevelled edge if you want one.</dd>
+  <dt><strong>Revolve</strong></dt>
+  <dd>Spins a profile around an axis into a turned form.</dd>
+  <dt><strong>Inflate</strong></dt>
+  <dd>Puffs the shape up as though it were filled.</dd>
+  <dt><strong>Plane</strong></dt>
+  <dd>Tilts the flat shape in space without adding depth.</dd>
+</dl>
+<p>The 3D and Materials panel turns the object on the X, Y and Z axes, sets the light's rotation and height, and picks a plastic, matte or metal surface, with Depth and Bevel fields for the extrude.</p>
+<figure class="shot">
+  <img src="img/3d-extrude.gif" width="620" height="620" loading="lazy"
+       alt="A flat vector star being extruded into a three-dimensional star and turned to show its depth." />
+  <figcaption>Extrude &amp; Bevel builds depth from a flat shape, live. The star stays an editable path underneath.</figcaption>
+</figure>

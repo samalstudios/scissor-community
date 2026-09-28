@@ -1,0 +1,160 @@
+<p class="lede">Scissor fills the browser window with a single editing surface: a menu bar across the top, a control bar and document tabs beneath it, the tool palette down the left, the drawing canvas in the middle, and the panel dock on the right. Everything runs on your own machine, so a document stays where you put it and nothing is sent away to be opened.</p>
+
+  <p>Shortcuts on this page are written in the macOS form. On Windows and Linux, read <kbd>⌘</kbd> as <kbd>Ctrl</kbd> and <kbd>⌥</kbd> as <kbd>Alt</kbd>; <kbd>⇧</kbd> is Shift and <kbd>⌃</kbd> is Control.</p>
+
+  <h2 id="interface-at-a-glance">The workspace at a glance</h2>
+  <p>The window is built from a few regions that each answer a different question. Learn where they are once and the rest of the manual reads more easily.</p>
+  <dl>
+    <dt>Menu bar</dt>
+    <dd>The row of menus along the very top, with undo and redo and a command search at its right end. This is the full list of everything the editor can do.</dd>
+    <dt>Control bar</dt>
+    <dd>The strip just below the menus. It shows the current tool and the handful of controls that matter for whatever you have selected right now.</dd>
+    <dt>Document tabs</dt>
+    <dd>To the left of the control bar, one tab per open document. The panels button sits at the far right of the same row.</dd>
+    <dt>Tool palette</dt>
+    <dd>The narrow column of tools down the left edge, with the fill and stroke control at its foot.</dd>
+    <dt>Canvas and pasteboard</dt>
+    <dd>The large area in the middle where you draw. The white rectangles are boards; the grey surround is the pasteboard.</dd>
+    <dt>Panel dock</dt>
+    <dd>The column of panels on the right. It slides in over the canvas when you need it and gives the room back when you close it.</dd>
+    <dt>Status bar</dt>
+    <dd>The thin line along the foot of the window, reporting the current tool, the selection and the last undoable action.</dd>
+  </dl>
+  <figure class="shot">
+    <img src="img/app-light.png" width="1900" height="1082" loading="lazy"
+         alt="The whole Scissor window: menu bar, control bar, tool palette, canvas and panel dock." />
+    <figcaption>The whole window. Scissor follows your system light or dark setting, and this screenshot follows it too.</figcaption>
+  </figure>
+
+  <h2 id="interface-menu-bar">The menu bar</h2>
+  <p>Ten menus run along the top. They gather every command in the program, grouped by the kind of work you are doing rather than by where a feature happens to live inside the engine.</p>
+  <table>
+    <thead><tr><th>Menu</th><th>What it holds</th></tr></thead>
+    <tbody>
+      <tr><td>File</td><td>New, open, close, save, place, export, scripts, document setup and print.</td></tr>
+      <tr><td>Edit</td><td>Undo and redo, the clipboard commands, the whole <strong>Select</strong> menu as a submenu, colour editing, and Preferences.</td></tr>
+      <tr><td>Arrange</td><td>Transform, stacking order, alignment, grouping, and locking and hiding.</td></tr>
+      <tr><td>Path</td><td>Path and compound-path commands, morph, Shape Warp and perspective, clipping masks, text wrap and expanding.</td></tr>
+      <tr><td>Create</td><td>Patterns, repeats, Region Fill, Vectorize, gradient mesh, boards, slices and the pixel-layer commands.</td></tr>
+      <tr><td>Effects</td><td>Live effects: the vector set (3D, distort and transform, Combine Shapes, stylize, warp and more) and a Raster submenu below them.</td></tr>
+      <tr><td>Text</td><td>Font, size and glyphs, create outlines, change case, text flow and character insertion.</td></tr>
+      <tr><td>View</td><td>Appearance (light and dark), outline and pixel preview, zoom, rotate view, rulers, guides, the grid and snapping.</td></tr>
+      <tr><td>Workspace</td><td>The panels: the six you open most, a Type submenu, a More Panels submenu for the rest, and Reset Panels.</td></tr>
+      <tr><td>Help</td><td>What&#8217;s New, the user manual, install, the Terms of Use and About, with a search field at the top.</td></tr>
+    </tbody>
+  </table>
+  <p>A tick beside an item means that setting is on. An item drawn in grey cannot be used at the moment, usually because nothing is selected or no document is open. Where a command has a shortcut, it is shown down the right side of the menu.</p>
+
+  <h3 id="interface-command-search">Finding a command</h3>
+  <p>You do not have to remember which menu holds what. The search button at the right of the menu bar, labelled <em>Search or type a command</em>, opens the command palette; <kbd>⌘K</kbd> opens it from the keyboard. Type a few letters and it lists every matching command with its menu path and shortcut, and every matching tool. Use <kbd>↑</kbd> and <kbd>↓</kbd> to move through the results, <kbd>Enter</kbd> to run the highlighted one, and <kbd>Esc</kbd> to close. Reach for this when you know what you want but not where it is, or when a shortcut is faster to type than to hunt for. The Help menu carries its own search field that does the same across the menus.</p>
+
+  <h3 id="interface-undo-redo">Undo and redo</h3>
+  <p>The curved arrows near the right of the menu bar undo and redo, the same as <kbd>⌘Z</kbd> and <kbd>⇧⌘Z</kbd>. Each button names the step it would reverse when you hover it, and the status bar shows the same at the foot of the window, so you can always see what one more press would undo.</p>
+
+  <h2 id="interface-tool-palette">The tool palette</h2>
+  <p>The tools sit in a single column down the left edge. They are arranged into families: Select, Draw, Type, Line, Shape, Paint, Reshape, Build, Sample, Symbols, Boards and View. The column shows one tool from each family at a time; rest the pointer on a slot and the rest of that family fans out to the right, so you can pick a sibling without the column shifting under your hand. A slot keeps showing whichever member of its family you last used.</p>
+  <p>Click a slot to choose the tool it shows. Its tooltip gives the tool's name and its single-key shortcut, for example <kbd>V</kbd> for the Selection tool, <kbd>P</kbd> for the Pen or <kbd>T</kbd> for Type. When you switch tools with the keyboard, the matching slot lights up for a moment so you can see which one is now active. To see everything at once, a button near the command search, drawn as three dots, opens a browser of every tool, grouped by family and filtered as you type.</p>
+
+  <h3 id="interface-fill-stroke">Fill and stroke</h3>
+  <p>Below the tools is the fill and stroke control: a filled square for the fill, set inside a band that stands for the stroke, with a small pair of arrows to swap them. Because it sits here rather than only in the control bar, you can choose a colour before you pick a tool, and it becomes what the next object is drawn with. Click the fill or the band to open the colour, swatches and gradient tabs.</p>
+  <table>
+    <thead><tr><th>Key</th><th>Action</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>X</kbd></td><td>Move focus between fill and stroke</td></tr>
+      <tr><td><kbd>⇧X</kbd></td><td>Swap the fill and the stroke</td></tr>
+      <tr><td><kbd>D</kbd></td><td>Return to the default: white fill, black stroke</td></tr>
+      <tr><td><kbd>/</kbd></td><td>Set the active side to none</td></tr>
+    </tbody>
+  </table>
+
+  <h3 id="interface-rail-panels">Panels beside the rail</h3>
+  <p>Between the fill and stroke control and the tools, the palette offers a short row of panel buttons chosen for the tool you are holding: the drawing tools bring the swatches and stroke panels within reach, the type tools bring the type and paragraph panels, and so on. These open a single panel right where your hand already is. A further button opens the full dock. On a short window the row folds into one Panels button that lists the same choices, so the palette never runs off the bottom edge.</p>
+
+  <h2 id="interface-control-bar">The control bar</h2>
+  <p>The strip under the menus changes with what you are doing. It names the current tool at its left, and to the right it shows only the controls that can act on the current selection: the fill, stroke and stroke weight; the X, Y, W and H of the selection; and the actions that make sense, such as align, the boolean shape modes, stacking order, group, ungroup and duplicate. When there is more than fits, a final button collects the rest into a menu, so the bar never reflows as you use it.</p>
+  <p>Type into any number field and press <kbd>Enter</kbd>, or leave the field, to apply the value; <kbd>↑</kbd> and <kbd>↓</kbd> step it, with <kbd>⇧</kbd> for ten times the step and <kbd>⌥</kbd> for a tenth. The small label beside a field is a scrubber: drag it left or right to change the value by feel. Hover the tool's name to reveal that tool's first few options; click the name to open its full options below the bar, with all its switches and numbers.</p>
+  <p>The control bar is docked in the tabs row by default, but you can drag its handle to float it over the canvas, and double-click the handle (or use its dock button) to put it back. Alongside it, a compact bar can appear next to a selected object carrying just its fill, stroke and weight, so colour is right beside the artwork rather than across the window.</p>
+
+  <h2 id="interface-canvas">The canvas and pasteboard</h2>
+  <p>The middle of the window is the canvas. Boards are the white rectangles that hold the artwork you mean to keep; the grey surround is the pasteboard. The pasteboard is part of the document, so a sketch, an offcut or a colour test parked there is saved with the file, but when you export a board only what falls inside that board's rectangle is written out.</p>
+
+  <h3 id="interface-pan-zoom">Panning and zooming</h3>
+  <p>Hold <kbd>Space</kbd> to switch to the Hand tool for as long as you hold it, then drag to pan; let go and your tool comes back. Dragging with the middle mouse button pans as well. The wheel scrolls, and the wheel with <kbd>⌘</kbd> or <kbd>⌥</kbd> held zooms about the pointer.</p>
+  <table>
+    <thead><tr><th>Shortcut</th><th>Zoom</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>⌘=</kbd> / <kbd>⌘-</kbd></td><td>In and out</td></tr>
+      <tr><td><kbd>⌘0</kbd></td><td>Fit the active board in the window</td></tr>
+      <tr><td><kbd>⌥⌘0</kbd></td><td>Fit all boards in the window</td></tr>
+      <tr><td><kbd>⌘1</kbd></td><td>Actual size</td></tr>
+    </tbody>
+  </table>
+  <p>A zoom control sits over the canvas with minus, plus and fit buttons and the current percentage; click the percentage for the same fit and actual-size commands as a menu.</p>
+
+  <h3 id="interface-rulers-guides">Rulers and guides</h3>
+  <p><kbd>⌘R</kbd> shows and hides the rulers, which measure in the document's units from the top left corner of the active board and carry a marker that follows the pointer. Drag out of a ruler to pull a guide onto the artwork, and drop a guide back on a ruler to be rid of it. You can also turn a selected path into a guide with Make Guides (<kbd>⌘5</kbd>) and turn it back with Release Guides (<kbd>⌥⌘5</kbd>). Show or hide all guides with <kbd>⌘;</kbd>. Smart Guides (<kbd>⌘U</kbd>) show alignment and measurement hints as you draw and drag.</p>
+
+  <h3 id="interface-grid">The grid</h3>
+  <p>The grid is drawn per board and set from View › Grid or from the Grid panel. Show or hide it with <kbd>⌘'</kbd> and toggle snapping to it with <kbd>⇧⌘'</kbd>. Each board can use one of six kinds of grid: Orthogonal, Isometric, Hexagonal, Oblique, Golden Ratio and Perspective. Choosing a kind turns the grid on so you can see it at once. The grid is described in full on its own page.</p>
+
+  <h3 id="interface-history-strip">The history strip</h3>
+  <p>A column of small ticks appears in a corner of the canvas when you move the pointer near it: this is the document's history. Hover a tick to name that step, click one to walk straight there, or press and slide down the ticks to run the document backwards and forwards so you can watch a change come and go. The History panel in the dock lists the same steps as text.</p>
+
+  <h2 id="interface-boards">Boards and the board strip</h2>
+  <p>Boards are what Scissor calls artboards. Each carries its name above its top left corner, and the active board is drawn with a stronger frame than the rest. If a board has a bleed, it is shown around it as a red dashed rectangle. Add one from Create › Boards › New Board, draw and reshape boards with the Board tool (<kbd>⇧O</kbd>), and set a board's size and name in Board Options. Rearrange All Boards tidies them into a row.</p>
+  <p>A strip of board thumbnails sits over the canvas, one small preview per board plus an add button at the end. Click a thumbnail to make that board active and fit it in the window; click the name under it to jump to that board and pick up the Board tool ready to edit it. The Boards panel in the dock lists them as well.</p>
+
+  <h2 id="interface-tabs">Document tabs</h2>
+  <p>Open documents appear as tabs to the left of the control bar. A tab shows the document's name, with a dot in front of it while it has unsaved changes. Click a tab to switch to that document, or the × to close it; closing a document with unsaved work asks first. Middle-click a tab to close it straight away, and drag a tab onto another to reorder the open documents. New (<kbd>⌥⌘N</kbd>), Open (<kbd>⌘O</kbd>) and Save (<kbd>⌘S</kbd>) live in the File menu, and Close is <kbd>⌥⌘W</kbd>.</p>
+  <p>The tabs sit across the top by default. To dock them down the side instead, turn on <strong>View &rsaquo; Document Tabs on Side</strong> (also in Preferences); the side strip can be dragged wider or narrower by its right edge, and the choice is remembered.</p>
+
+  <h2 id="interface-status-bar">The status bar</h2>
+  <p>The line along the foot of the window reports, from left to right: a ready indicator, the name of the current tool, the size of the selection (nothing selected, one object, or a count), and the action that <kbd>⌘Z</kbd> would undo. It is a quiet place to confirm what you have picked up and what the next undo will reverse.</p>
+
+  <h2 id="interface-dock">The panel dock</h2>
+  <p>Panels live in the column on the right. At rest the canvas has the whole window; asking for a panel slides the dock in over the canvas, and closing it gives the room straight back. The panels button at the right of the tabs row, and the Escape key, open and close the dock; the Window and Workspace menus and the command palette open a specific panel.</p>
+  <figure class="shot">
+    <img src="img/editing.png" width="1900" height="1176" loading="lazy"
+         alt="A document open in Scissor with artwork on the board and the Layers and Swatches panels open in the dock." />
+    <figcaption>A document being edited, with the Layers and Swatches panels open in the dock.</figcaption>
+  </figure>
+
+  <h3 id="interface-dock-groups">The docked panel groups</h3>
+  <p>Panels are stacked in groups, each group a column of small icon tabs down its own edge. Rest the pointer on a tab to see the panel's name, and the open panel names itself above its contents. By default the groups gather panels that tend to be used together:</p>
+  <ul>
+    <li><strong>Properties, Layers, Boards, Grid</strong>: the document's structure.</li>
+    <li><strong>Color, Swatches, Gradient, Stroke</strong>: how things are painted.</li>
+    <li><strong>Type, Paragraph, Glyphs</strong>: text.</li>
+    <li><strong>Align, Combine Shapes, Transform, Paint Stack, Transparency, 3D</strong>: shaping and arranging.</li>
+    <li><strong>Styles, Brushes, Symbols, Patterns</strong>: reusable looks and objects.</li>
+    <li><strong>Navigator, Info, Document Info, History, Actions</strong>: moving around and measuring.</li>
+    <li><strong>Assets, Variables, Auto-Select, Vectorize, Attributes</strong>: the rest.</li>
+  </ul>
+
+  <h3 id="interface-rearranging">Rearranging panels</h3>
+  <p>The layout is yours to change. Drag a tab along its own strip to reorder it, drag it onto another group's strip to move it there, or drag it clear of the dock to leave it floating over the canvas. Drag the empty part of a strip to lift a whole group out, and drop it back over the dock to put it home; a gap between groups accepts a dropped tab as a new group of its own. Right-click a tab for the same moves by menu, including Close Panel. The × at the top of a strip closes that group, and dragging the divider between two groups gives height to one and takes it from the other. A floating group can be resized from its corner.</p>
+
+  <h3 id="interface-gating">Panels that wait for something to do</h3>
+  <p>A panel that has nothing to act on right now does not vanish: its tab stays, only dimmed, and its body shows a line saying what it is waiting for, such as selecting an object or picking the Type tool. So that the dock does not reshuffle under your hand, this waiting is held while the pointer is inside the dock and catches up once the pointer leaves.</p>
+
+  <h3 id="interface-workspace">Opening, hiding and resetting panels</h3>
+  <p>Open a panel from the Workspace menu, where the six most-used sit at the top and the rest are under More Panels, or from the Window menu in the classic chrome. Many panels have a shortcut:</p>
+  <table>
+    <thead><tr><th>Panel</th><th>Shortcut</th><th>Panel</th><th>Shortcut</th></tr></thead>
+    <tbody>
+      <tr><td>Layers</td><td><kbd>F7</kbd></td><td>Colour</td><td><kbd>F6</kbd></td></tr>
+      <tr><td>Paint Stack</td><td><kbd>⇧F6</kbd></td><td>Info</td><td><kbd>F8</kbd></td></tr>
+      <tr><td>Align</td><td><kbd>⇧F7</kbd></td><td>Transform</td><td><kbd>⇧F8</kbd></td></tr>
+      <tr><td>Stroke</td><td><kbd>⌘F10</kbd></td><td>Gradient</td><td><kbd>⌘F9</kbd></td></tr>
+      <tr><td>Combine Shapes</td><td><kbd>⇧⌘F9</kbd></td><td>Transparency</td><td><kbd>⇧⌘F10</kbd></td></tr>
+      <tr><td>Graphic Styles</td><td><kbd>⇧F5</kbd></td><td>Brushes</td><td><kbd>F5</kbd></td></tr>
+      <tr><td>Attributes</td><td><kbd>⌘F11</kbd></td><td>Symbols</td><td><kbd>⇧⌘F11</kbd></td></tr>
+      <tr><td>Character</td><td><kbd>⌘T</kbd></td><td>Paragraph</td><td><kbd>⌥⌘T</kbd></td></tr>
+      <tr><td>Glyphs</td><td><kbd>⌥⇧F11</kbd></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+  <p>The dock can be widened by dragging its left edge, from a comfortable two-fields-to-a-row width up to a good deal wider. Your arrangement, and how wide you left the dock, are remembered between sessions. When the dock is closed, sweeping the pointer to the right edge of the window peeks it out, as long as there is no artwork under the pointer. To undo all your changes to the layout, choose Reset Panels, which puts every group back to its starting place.</p>
+  <p><kbd>Tab</kbd> hides the tool palette, the control bar, the document tabs, the status bar, the panels and the other on-canvas chrome so that only the artwork and the menu bar are left; press it again to bring them all back.</p>
+
+  <h2 id="interface-appearance">Light and dark</h2>
+  <p>Scissor follows your system setting for light and dark. To fix it one way, choose View › Appearance and pick System, Light or Dark. The choice is remembered, and it carries through to the canvas as well as the chrome: the pasteboard, the rulers and the board labels are all drawn to suit the theme you are in.</p>

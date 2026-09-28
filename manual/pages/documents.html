@@ -1,0 +1,78 @@
+<p class="lede">A document is what you open, draw in and save. Every document holds one or more boards: the rectangles that mark out the artwork that prints or exports. This page covers starting a document and setting its size, changing that setup later, and working with boards, from a single page to a set of them in one file. In the shortcuts below, <kbd>&#8984;</kbd> is <kbd>Ctrl</kbd> on Windows and Linux, and <kbd>&#8997;</kbd> is <kbd>Alt</kbd>.</p>
+
+<h2 id="documents-new">Starting a new document</h2>
+<p><strong>File &rsaquo; New&hellip;</strong> (<kbd>&#8997;&#8984;N</kbd>) opens the New Document dialog. The left of the dialog is a shelf of ready-made presets; the right, under <strong>Preset Details</strong>, is where you name the document and set its exact size, units, orientation, number of boards, bleed and colour handling. Pick a preset to fill those fields, adjust anything you want, then press <strong>Create</strong>. <strong>Close</strong> leaves without making a document.</p>
+
+<figure class="shot">
+  <img src="img/new-document.png" width="1500" height="928" loading="lazy"
+       alt="The New Document dialog: preset tabs and cards on the left, and Preset Details on the right with name, size, units, orientation, boards, bleed and colour fields." />
+  <figcaption>The New Document dialog. Preset cards on the left fill in the size; the Preset Details panel on the right is where you set the exact width, height, units, board count and bleed before pressing Create.</figcaption>
+</figure>
+
+<h3 id="documents-presets">Blank document presets</h3>
+<p>The tabs across the top group the presets by the kind of work they suit. Click a tab to show its cards, then click a card to load its size, units and (for print) its bleed. Double-clicking a card creates the document straight away.</p>
+<table>
+  <thead><tr><th>Group</th><th>What it holds</th></tr></thead>
+  <tbody>
+    <tr><td>Print</td><td>Letter, Legal, Tabloid, A3, A4, A5 and Business Card, in inches or millimetres, each with a standard print bleed already set.</td></tr>
+    <tr><td>Web</td><td>Common screen and desktop sizes in pixels: 1366 &times; 768, Full HD (1920 &times; 1080), a laptop size, a large web size, and square and tall social sizes (1080 &times; 1080 and 1080 &times; 1920).</td></tr>
+    <tr><td>Mobile</td><td>Phone, large phone, tablet, large tablet and watch sizes in pixels, for interface work.</td></tr>
+    <tr><td>Film &amp; Video</td><td>HDTV 1080p, HD 720p, UHD 4K and Cinema 2K frame sizes.</td></tr>
+    <tr><td>Art &amp; Illustration</td><td>Poster, Postcard, a 1000 &times; 1000 square canvas, a 512 &times; 512 icon and a square sketchbook page.</td></tr>
+  </tbody>
+</table>
+<p>The presets are only a starting point. Nothing stops you typing a size no preset lists; leaving the fields as you set them simply means no card stays highlighted.</p>
+
+<h3 id="documents-size">Name, size, units and orientation</h3>
+<p>The <strong>Name</strong> field sets what the document is called in its tab and in the exported file names. Below it, <strong>W</strong> and <strong>H</strong> are the width and height of a board. The <strong>Units</strong> menu chooses how those and the other measurements read: pixels, points, millimetres, centimetres, inches or picas. Changing units converts the numbers already in the fields rather than clearing them, so switching from millimetres to inches keeps the same real size.</p>
+<p>The two orientation buttons, portrait and landscape, turn the size on its side. Pressing the one that does not match the current width and height swaps them; typing a new width and height that reverse the shape flips the orientation marker to match. Use this to lay out, say, an A4 page the tall way or the wide way without retyping the numbers.</p>
+
+<h3 id="documents-boards-columns">Boards, Columns and Spacing</h3>
+<p>A document can start with more than one board. <strong>Boards</strong> sets how many to make, all the same size. <strong>Columns</strong> sets how many sit side by side before the next row begins, and <strong>Spacing</strong> is the gap left between them. Four boards with two columns make a two-by-two block; the same four with one column make a single stack. Each board is named <em>Board 1</em>, <em>Board 2</em> and so on, and you can rename and rearrange them later.</p>
+<p>This is how you begin a job that is really several pages or several sizes at once: a six-page booklet, or one file that carries a phone, a tablet and a desktop version of the same screen so they stay together and export in one pass.</p>
+
+<h3 id="documents-bleed">Bleed</h3>
+<p>Bleed is an extra margin around a board, meant for print: artwork that runs to the edge is drawn out into the bleed so that when the paper is trimmed there is no white sliver left along the cut. The four fields set the top, bottom, left and right bleed separately. The link button between them, on by default, keeps all four equal, so typing one value fills the others; switch it off to set a different bleed on each side. The print presets come with a bleed already filled in; screen and video work usually needs none, so leave it at zero.</p>
+
+<h3 id="documents-advanced">Advanced: colour mode and raster effects</h3>
+<p>Under <strong>Advanced</strong> are two choices that set the tone of the document. The colour mode is either RGB, for anything shown on a screen, or CMYK, for work headed to a commercial printer. <strong>Raster Effects</strong> sets the resolution at which effects that have to become pixels, such as a drop shadow, a blur or a glow, are rendered: Screen (72 ppi) for on-screen work, Medium (150 ppi), or High (300 ppi) for print. Set it to match where the artwork will end up so those effects are neither coarse nor needlessly heavy.</p>
+
+<h2 id="documents-setup">Changing the setup later</h2>
+<p>None of these choices are locked in at creation. <strong>File &rsaquo; Document Setup&hellip;</strong> (<kbd>&#8997;&#8984;P</kbd>) reopens the main settings for the document you are in: the units, the colour mode, the width and height of the active board, a single bleed value applied to all four sides, and the raster-effects resolution. Use it when a job changes shape partway through, for example when a screen mock-up needs to go to print and you switch it to CMYK, or when a board turns out to be the wrong size. To add boards, resize individual boards or set different bleeds per side after the fact, use the board tools described below rather than this dialog.</p>
+
+<h2 id="documents-boards">Boards</h2>
+<p>A board (an artboard) is a rectangle that defines a finished piece: its edges are what a print or an export is cropped to. Everything you draw lives on the shared canvas, but only what sits on a board is output. A document always has at least one board, and can have as many as the work needs. Several boards in one file is the way to keep related pieces together: the pages of a brochure, a poster and its social cut-downs, or a whole set of icons, all sharing the same colours, styles and symbols.</p>
+
+<h3 id="documents-board-tool">The Board tool</h3>
+<p>The Board tool (<kbd>&#8679;O</kbd>) edits boards directly on the canvas, the way the selection tool edits artwork. With it active:</p>
+<dl>
+  <dt>Add a board</dt>
+  <dd>Drag out a rectangle on an empty part of the canvas. Hold <kbd>&#8679;</kbd> to keep it square as you drag, or <kbd>&#8997;</kbd> to draw it from the centre. A running size read-out follows the corner. A drag too small to be a board is discarded.</dd>
+  <dt>Move a board</dt>
+  <dd>Drag from inside a board to move it, with everything on it. Hold <kbd>&#8679;</kbd> to keep the move to one axis.</dd>
+  <dt>Resize a board</dt>
+  <dd>Drag one of the handles on the active board's edges or corners. Hold <kbd>&#8679;</kbd> on a corner to keep the board's proportions.</dd>
+  <dt>Make a board active</dt>
+  <dd>Click any board to select it. The active board shows its handles and its size.</dd>
+  <dt>Delete a board</dt>
+  <dd>With a board active, press <kbd>Delete</kbd> or <kbd>Backspace</kbd>. The last remaining board cannot be deleted, so a document always keeps one.</dd>
+</dl>
+<p>Double-clicking the Board tool opens the Board Options dialog for the active board, described below.</p>
+
+<h3 id="documents-boards-panel">The Boards panel</h3>
+<p>Open it from its tab in the panel dock. It lists every board by number, name and pixel size. Click a row to make that board active and fit it in the window at once, which is the quickest way to jump between the pages of a multi-board document. Double-click a row to open Board Options for it. The buttons at the foot of the panel add a new board and rearrange them all. New Board is also on the <strong>Create &rsaquo; Boards</strong> menu, which places a fresh board of the last one's size just to its right.</p>
+
+<h3 id="documents-board-options">Board Options</h3>
+<p>Board Options sets one board's details by number rather than by dragging. It gives the board's <strong>Name</strong>, a <strong>Preset</strong> menu that resizes it to any of the built-in sizes, its <strong>Width</strong> and <strong>Height</strong>, its <strong>X</strong> and <strong>Y</strong> position on the canvas, and an orientation choice. Reach it by double-clicking the board's row in the Boards panel, by double-clicking the Board tool, or from <strong>Create &rsaquo; Boards &rsaquo; Board Options&hellip;</strong>. Naming boards well is worth the moment it takes: the names become part of the file names when you export, so <em>cover</em> and <em>back</em> export more usefully than <em>Board 1</em> and <em>Board 2</em>.</p>
+
+<h3 id="documents-active">The active board</h3>
+<p>One board is always the active one, and several commands work on it alone. <strong>Select &rsaquo; All on Active Board</strong> (<kbd>&#8997;&#8984;A</kbd>) picks up only the artwork on it. Each board carries its own grid, so the grid you set applies to the active board (see the <a href="/manual/grids/">Grids</a> page). Printing prints the active board. Clicking a board with the Board tool, or a row in the Boards panel, is how you change which board is active.</p>
+
+<h3 id="documents-rearrange">Rearranging boards</h3>
+<p><strong>Create &rsaquo; Boards &rsaquo; Rearrange All Boards&hellip;</strong>, or the Rearrange button in the Boards panel, tidies every board into a neat arrangement in one step, carrying each board's artwork along so nothing is left behind. The <strong>Layout</strong> menu offers a grid filled by row or by column, or a single row or column. <strong>Columns</strong> sets how many boards sit across a grid, and <strong>Spacing</strong> the gap between them. It is the way to bring order back to a file whose boards have drifted apart while you worked, or to line up a set that was drawn in no particular place.</p>
+
+<h3 id="documents-fit">Fitting a board in the view</h3>
+<p>To frame a board on screen, use <strong>View &rsaquo; Fit Board in Window</strong> (<kbd>&#8984;0</kbd>), which zooms the active board to fill the window. <strong>Fit All in Window</strong> (<kbd>&#8997;&#8984;0</kbd>) pulls back to show every board at once, handy for seeing a whole multi-board document. <strong>Actual Size</strong> (<kbd>&#8984;1</kbd>) sets the zoom to 100%, so a pixel on the board is a pixel on screen.</p>
+
+<h2 id="documents-export">Each board exports on its own</h2>
+<p>Boards are the unit of output: an export writes one file per board, each cropped to that board's edges and named after it. That is what makes a multi-board file worthwhile. A set of icons drawn on their own small boards, or a phone, tablet and desktop layout on three boards, comes out as a tidy set of separate files in a single pass. Choosing formats and scales, exporting selected boards, and printing are all covered on the <a href="/manual/files/">Open &amp; export</a> page; Export for Screens in particular lists your boards so you can write them all out together.</p>

@@ -1,0 +1,357 @@
+<p class="lede">The toolbar runs down the left of the window and holds every drawing, editing and viewing tool. Each slot is a single tool or a group of related ones; this page lists them all, in the order they sit in the toolbar, with the key that picks each one and what it is for.</p>
+
+<p>Press and hold a slot, or right-click it, to open its flyout and choose another tool from the group. A tool's shortcut is a single key press, and it works whenever you are not typing into text or a field.</p>
+
+<p>The shortcuts below are written in the macOS form. On Windows, read <kbd>&#8997;</kbd> as Alt, <kbd>&#8984;</kbd> as Ctrl and <kbd>&#8679;</kbd> as Shift.</p>
+
+<p>Three habits apply to nearly every tool:</p>
+<ul>
+<li>Hold the space bar to borrow the Hand tool, and let go to return to what you were using.</li>
+<li>Hold <kbd>&#8984;</kbd> to borrow the Selection tool in the same way. The Free Transform tool is the exception: it reads <kbd>&#8984;</kbd> itself.</li>
+<li><kbd>Esc</kbd> abandons a drag or a path you are part way through drawing, leaving the artwork as it was.</li>
+</ul>
+
+<p>Two slots (the Reshape and Print Tiling tools) are listed for completeness but have no behaviour behind them yet. The toolbar marks those as coming soon and the engine turns them down.</p>
+
+<h2 id="tools-selecting">Selection tools</h2>
+<p>These four pick out what you want to work on next. Reach for the Selection tool for whole objects, the Direct Selection tool for the anchors and segments inside a path, the Auto-Select to gather up everything painted alike, and the Lasso to sweep up a cluster of anchors by hand.</p>
+
+<h3 id="tools-selection">Selection</h3>
+<table>
+<thead><tr><th>Tool</th><th>Shortcut</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td>Selection Tool</td><td><kbd>V</kbd></td><td>Click an object to select it whole, <kbd>&#8679;</kbd>-click to add or remove one, and drag across empty canvas for a marquee. Drag inside the selection to move it, with <kbd>&#8679;</kbd> holding the move to 45&deg; steps and <kbd>&#8997;</kbd> leaving a copy behind.</td></tr>
+</tbody>
+</table>
+<p>With an object selected, the bounding box carries eight handles. Drag a handle to scale, holding <kbd>&#8679;</kbd> to keep the proportions and <kbd>&#8997;</kbd> to scale about the centre; drag just outside a corner to rotate, with <kbd>&#8679;</kbd> snapping to 45&deg;. Double-click steps into a group and works inside it, double-click text to edit it, double-click a symbol instance to edit the symbol every instance draws, and double-click away from the artwork to step back out.</p>
+<p>Editable shapes carry their own widgets: drag a corner widget to round every corner of the shape at once, or <kbd>&#8997;</kbd>-click it to step the corner on to the next kind. This is the tool you will spend the most time in, so it is worth learning its handles well.</p>
+
+<h3 id="tools-direct-selection">Direct Selection and Group Selection</h3>
+<table>
+<thead><tr><th>Tool</th><th>Shortcut</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td>Direct Selection Tool</td><td><kbd>A</kbd></td><td>Click an anchor, a handle or a segment, and drag it to reshape the path; a marquee over empty canvas picks up the anchors inside it. <kbd>&#8679;</kbd> adds to what is picked and holds a drag to 45&deg;, and <kbd>&#8997;</kbd> while dragging a handle breaks the pair so the anchor becomes a corner.</td></tr>
+<tr><td>Group Selection Tool</td><td>&ndash;</td><td>Click an object to select it; click it again to take in the group it belongs to, and again for the group above that.</td></tr>
+</tbody>
+</table>
+<p>Use the Direct Selection tool to fine-tune a shape after it is drawn: nudge one anchor, pull a single handle, or reshape a curve. It also drags the crossings of an envelope's mesh, bending what the envelope holds, and it rounds one corner of a live shape at a time rather than all of them. The Group Selection tool is the quick way to reach an object buried inside nested groups without stepping in and out of them.</p>
+
+<h3 id="tools-magic-wand">Auto-Select</h3>
+<table>
+<thead><tr><th>Tool</th><th>Shortcut</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td>Auto-Select Tool</td><td><kbd>Y</kbd></td><td>Click an object to select every object painted like it. What counts as alike (fill, stroke, stroke weight, opacity, blending mode) is set in the Auto-Select panel, and <kbd>&#8679;</kbd> adds the new matches to the selection.</td></tr>
+</tbody>
+</table>
+<p>Reach for this when you want to change every shape of one colour at once: click a red one, then recolour the whole selection in a single step.</p>
+
+<h3 id="tools-lasso">Lasso</h3>
+<table>
+<thead><tr><th>Tool</th><th>Shortcut</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td>Lasso Tool</td><td><kbd>Q</kbd></td><td>Drag a freeform loop to select the anchors inside it. <kbd>&#8679;</kbd> adds them to the anchors already picked.</td></tr>
+</tbody>
+</table>
+<p>Use it when the anchors you want do not sit in a tidy rectangle, so a marquee would catch too much or too little.</p>
+<p>This slot also holds the pixel-selection tools — the <strong>Rectangular Marquee</strong>, <strong>Elliptical Marquee</strong> and <strong>Lasso Marquee</strong> — which draw a marching-ants selection on a pixel layer rather than picking vector anchors. They are covered on the <a href="/manual/pixels/">Pixel layers</a> page.</p>
+
+<h2 id="tools-pen-type">The pen, curvature and type</h2>
+<p>The tools that lay down new paths and text. The pen family gives you exact control over every anchor and handle, the Curvature tool fits a smooth line through points you drop, and the Type tools set point, area, path and vertical text.</p>
+
+<h3 id="tools-pen">The pen family</h3>
+<table>
+<thead><tr><th>Tool</th><th>Shortcut</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td>Pen Tool</td><td><kbd>P</kbd></td><td>Click to drop a corner point, or press and drag to pull smooth handles out of it; click the first anchor to close the path. <kbd>&#8679;</kbd> holds the new point or the handle to 45&deg;, and <kbd>&#8997;</kbd> while dragging breaks the handles so the path leaves the anchor at its own angle.</td></tr>
+<tr><td>Add Anchor Point Tool</td><td><kbd>+</kbd></td><td>Click a segment to add an anchor there, without changing the shape of the path.</td></tr>
+<tr><td>Delete Anchor Point Tool</td><td><kbd>&#8722;</kbd></td><td>Click an anchor to take it out, joining the segments either side of it.</td></tr>
+<tr><td>Anchor Point Tool</td><td><kbd>&#8679;C</kbd></td><td>Drag an anchor to pull a matched pair of handles out of it, or click it to pull the handles back in and leave a corner. Drag one handle on its own to move that side alone; <kbd>&#8679;</kbd> holds it to 45&deg;.</td></tr>
+</tbody>
+</table>
+<p>The Pen tool is the workhorse for precise drawing, from a logo outline to a lettering path. While it has a path on the go, <kbd>Enter</kbd> or <kbd>Esc</kbd> finishes it and <kbd>Backspace</kbd> takes back the last anchor. The three helpers add, remove and convert anchors on a finished path; the pen and pencil are covered in more depth on the <a href="/manual/paths/">Paths</a> page.</p>
+
+<h3 id="tools-curvature">Curvature</h3>
+<table>
+<thead><tr><th>Tool</th><th>Shortcut</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td>Curve Tool</td><td><kbd>&#8679;~</kbd></td><td>Click to drop points and a smooth curve is fitted through them; <kbd>&#8997;</kbd>-click drops a corner point instead. Drag a point to move it, double-click a point to switch it between smooth and corner, click the first point to close the path, and double-click away from it to finish.</td></tr>
+</tbody>
+</table>
+<p>Reach for the Curvature tool when you want a flowing line and would rather place points and let Scissor work out the handles than pull each one yourself.</p>
+
+<h3 id="tools-type">Type</h3>
+<table>
+<thead><tr><th>Tool</th><th>Shortcut</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td>Type Tool</td><td><kbd>T</kbd></td><td>Click for point type, drag out a box for area type, and click existing text to edit it. Clicking an open path sets the type running along that path.</td></tr>
+<tr><td>Area Type Tool</td><td>&ndash;</td><td>Drag out the box the type flows inside.</td></tr>
+<tr><td>Type on a Path Tool</td><td>&ndash;</td><td>Click a path and the type runs along it. The path becomes the baseline, so it stops being artwork in its own right.</td></tr>
+<tr><td>Vertical Type Tool</td><td>&ndash;</td><td>The same as the Type tool, except the line of type runs down the page rather than across it.</td></tr>
+<tr><td>Glyph Edit Tool</td><td><kbd>&#8679;T</kbd></td><td>Click a character to pick it out of its line, then drag it to move it, drag a corner knob to resize it or the knob above it to turn it. <kbd>&#8679;</kbd> keeps a corner resize proportional and snaps the turn to 11.25&deg; steps, and <kbd>Delete</kbd> puts the character back where the text set it.</td></tr>
+</tbody>
+</table>
+<p>The Type tool alone covers most work: click for a heading, drag a box for a paragraph. The side knobs of the Glyph Edit box stretch the character one way only, across for width and along for height, so you can pull individual letters around for a title without breaking them out of the text. Text is covered in full on the <a href="/manual/type/">Type</a> page.</p>
+
+<h2 id="tools-lines-shapes">Lines and shapes</h2>
+<p>Everything that draws a ready-made form: straight lines, arcs and spirals, grids of lines, and the rectangles, ellipses, polygons and stars you build a drawing from.</p>
+
+<h3 id="tools-lines">Lines, arcs, spirals and grids</h3>
+<table>
+<thead><tr><th>Tool</th><th>Shortcut</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td>Line Segment Tool</td><td><kbd>\</kbd></td><td>Drag to draw a straight line. <kbd>&#8679;</kbd> holds it to 45&deg; steps and <kbd>&#8997;</kbd> draws it out from its middle rather than its end.</td></tr>
+<tr><td>Arc Tool</td><td>&ndash;</td><td>Drag out the box the arc fills; <kbd>&#8679;</kbd> squares that box off. The arrow keys bend the arc flatter or fuller, <kbd>C</kbd> closes and opens it, and <kbd>F</kbd> or <kbd>X</kbd> flips which way it bows.</td></tr>
+<tr><td>Spiral Tool</td><td>&ndash;</td><td>Drag out from the centre: the distance sets the radius and the direction sets where the spiral starts. <kbd>&#8997;</kbd> reverses the winding, <kbd>R</kbd> reverses it for good, and the arrow keys add and remove segments.</td></tr>
+<tr><td>Rectangular Grid Tool</td><td>&ndash;</td><td>Drag out the grid, with <kbd>&#8997;</kbd> drawing from the centre and <kbd>&#8679;</kbd> keeping it square. The up and down arrows change the number of rows, left and right the columns.</td></tr>
+<tr><td>Polar Grid Tool</td><td>&ndash;</td><td>Drag out the grid, with <kbd>&#8997;</kbd> drawing from the centre and <kbd>&#8679;</kbd> keeping it round. The up and down arrows change the concentric rings, left and right the radial spokes.</td></tr>
+</tbody>
+</table>
+<p>The two grid tools make one path per line, so every line stays selectable on its own: use the Rectangular Grid for tables, calendars and layout scaffolds, and the Polar Grid for dartboards, radar charts and clock faces. They draw grid artwork you keep. That is a different thing from the board's background grid, the on-screen drawing aid you switch on with <strong>View &rsaquo; Grid &rsaquo; Show Grid</strong>, which never prints and comes in seven kinds (square, isometric, hexagonal, oblique, golden ratio, pattern and perspective). The background grids are covered on the <a href="/manual/grids/">Grids</a> page. A separate <strong>Grid Shape Tool</strong> (<kbd>&#8679;G</kbd>) builds a filled path by clicking or dragging across the cells of that background grid — a quick way to lay solid blocks onto an isometric or hexagonal grid.</p>
+
+<h3 id="tools-shapes">Rectangles, ellipses and other shapes</h3>
+<table>
+<thead><tr><th>Tool</th><th>Shortcut</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td>Rectangle Tool</td><td><kbd>M</kbd></td><td>Drag to draw a rectangle. <kbd>&#8679;</kbd> keeps it square and <kbd>&#8997;</kbd> draws it out from its centre.</td></tr>
+<tr><td>Rounded Rectangle Tool</td><td>&ndash;</td><td>The same drag, with rounded corners; the up and down arrows grow and shrink the corner radius as you draw.</td></tr>
+<tr><td>Ellipse Tool</td><td><kbd>L</kbd></td><td>Drag to draw an ellipse, with <kbd>&#8679;</kbd> for a circle and <kbd>&#8997;</kbd> to draw from the centre.</td></tr>
+<tr><td>Polygon Tool</td><td>&ndash;</td><td>Drag out from the centre; the direction of the drag turns the polygon, and <kbd>&#8679;</kbd> keeps it upright. The arrow keys add and remove sides.</td></tr>
+<tr><td>Star Tool</td><td>&ndash;</td><td>Drag out from the centre, turning the star as you go, with <kbd>&#8679;</kbd> holding it upright. The arrow keys add and remove points.</td></tr>
+<tr><td>Flare Tool</td><td>&ndash;</td><td>Drag once to set the centre and size of the flare's halo, then drag a second time to string its rings across the artwork. While you drag, the left and right arrows change the number of rings and the up and down arrows the number of rays.</td></tr>
+</tbody>
+</table>
+<p>These make live shapes: they keep their parameters, so you can change a rectangle's size or a star's point count long after drawing it. A click rather than a drag with any of them opens a dialog, so you can give the shape exact measurements instead. The Flare tool answers a click with a flare the size its options ask for.</p>
+
+<h2 id="tools-brush-erase">Brushes, pencil and erasers</h2>
+<p>The freehand tools. Paint a stroke that follows the pointer, sketch a rough path and let Scissor tidy it, tend and mend existing paths, or rub artwork away. Two slots here also reach the raster side of a document: the Brush paints pixels and the Pixel Eraser clears them.</p>
+
+<h3 id="tools-brushes">Brushes</h3>
+<table>
+<thead><tr><th>Tool</th><th>Shortcut</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td>Paintbrush Tool</td><td><kbd>B</kbd></td><td>Drag to draw freehand; the stroke is smoothed as it is fitted to curves, and it keeps the current brush and stroke.</td></tr>
+<tr><td>Fill Brush Tool</td><td><kbd>&#8679;B</kbd></td><td>Draws the same stroke, but outlines it into a filled shape and merges it with any artwork it touches that shares its fill.</td></tr>
+<tr><td>Brush Tool</td><td>&ndash;</td><td>Paints raster colour straight onto a pixel layer in the current fill colour, making a pixel layer first if there is none. Unlike the Paintbrush, the mark is not a path you can reshape later: it becomes part of the picture.</td></tr>
+</tbody>
+</table>
+<p>Use the Paintbrush for expressive, calligraphic strokes that stay editable, and the Fill Brush when you would rather build up a solid filled shape than a stroked line. <kbd>[</kbd> and <kbd>]</kbd> make the brush smaller and larger. The Brush Tool shares this slot but paints pixels rather than a path, for shading and texture, and the <strong>Paint Bucket</strong> shares it too, flooding a connected area of a pixel layer with the fill colour. Painting on pixel layers is covered on the <a href="/manual/pixels/">Pixel layers</a> page.</p>
+
+<h3 id="tools-pencil">Pencil and the path menders</h3>
+<table>
+<thead><tr><th>Tool</th><th>Shortcut</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td>Sketch Tool</td><td><kbd>&#8679;N</kbd></td><td>Draw roughly and the stroke becomes the crisp shape you meant. Scribbling over artwork punches out what the scribble covers instead.</td></tr>
+<tr><td>Pencil Tool</td><td><kbd>N</kbd></td><td>Draw freehand and the stroke is fitted to smooth curves. Hold <kbd>&#8997;</kbd> as you let go to close the path, which also happens on its own if you finish close to where you started.</td></tr>
+<tr><td>Smooth Tool</td><td>&ndash;</td><td>Brush along a path to even out its handles and drop the anchors that barely bend it; a bigger brush smooths harder.</td></tr>
+<tr><td>Path Eraser Tool</td><td>&ndash;</td><td>Brush along a path to rub out the part you cover.</td></tr>
+<tr><td>Join Tool</td><td>&ndash;</td><td>Brush across two loose ends to join them into one path.</td></tr>
+</tbody>
+</table>
+<p>The Pencil is the quick way to sketch a shape by hand; the Shaper is for when you want a rough gesture read as a clean rectangle, ellipse or line. The last three tend existing paths: <kbd>[</kbd> and <kbd>]</kbd> resize the Smooth, Path Eraser and Join brushes. With artwork selected these three work on the selection alone; with nothing selected they work on any path they reach.</p>
+
+<h3 id="tools-cutting">Erasing and cutting</h3>
+<table>
+<thead><tr><th>Tool</th><th>Shortcut</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td>Eraser Tool</td><td><kbd>&#8679;E</kbd></td><td>Drag a round brush to subtract from objects. With a selection only the selected objects are erased; otherwise every unlocked path is, and <kbd>[</kbd> and <kbd>]</kbd> resize the brush.</td></tr>
+<tr><td>Pixel Eraser Tool</td><td>&ndash;</td><td>Rubs paint off a pixel layer, clearing it to transparent so whatever sits below shows through. It works on pixel layers where the Eraser works on vector paths; <kbd>[</kbd> and <kbd>]</kbd> resize the brush.</td></tr>
+<tr><td>Scissors Tool</td><td><kbd>C</kbd></td><td>Click a segment or an anchor to cut the path there. A closed path opens at the cut; an open path splits into two objects.</td></tr>
+<tr><td>Knife</td><td>&ndash;</td><td>Drag across objects to slice them into separate pieces. <kbd>&#8997;</kbd> cuts in a straight line and <kbd>&#8679;</kbd> holds that line to 45&deg; steps.</td></tr>
+</tbody>
+</table>
+<p>The Eraser carves shapes out of filled artwork like rubbing out pencil; the Scissors makes a single clean cut at a point; the Knife slices whole objects into pieces along the line you drag. The Pixel Eraser shares the Eraser's slot but belongs to the raster side, on the <a href="/manual/pixels/">Pixel layers</a> page.</p>
+<p>One more toolbar slot is entirely raster: the <strong>Dodge</strong>, <strong>Burn</strong> and <strong>Sponge</strong> retouch brushes lighten, darken and saturate the pixels already on a layer. They paint like the Brush and are covered, with the rest of pixel editing, on the <a href="/manual/pixels/">Pixel layers</a> page.</p>
+
+<h2 id="tools-transform">Transforming</h2>
+<p>The tools that move, turn, mirror, scale, slant, distort and reshape what is already drawn. Each transform tool works about a reference point, which starts at the middle of the selection; <kbd>&#8997;</kbd>-clicking sets that point where you click and opens the tool's dialog for exact values. With individual anchors selected, these tools transform those anchors rather than whole objects.</p>
+
+<h3 id="tools-rotate-reflect">Rotate and Reflect</h3>
+<table>
+<thead><tr><th>Tool</th><th>Shortcut</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td>Rotate Tool</td><td><kbd>R</kbd></td><td>Drag around the reference point to turn the selection, with <kbd>&#8679;</kbd> snapping to 45&deg; and <kbd>&#8997;</kbd> turning a copy and leaving the original. <kbd>&#8997;</kbd>-click puts the reference point where you clicked and opens the Rotate dialog.</td></tr>
+<tr><td>Reflect Tool</td><td><kbd>O</kbd></td><td>Drag to swing the mirror axis through the reference point, with <kbd>&#8679;</kbd> snapping it to 45&deg;. <kbd>&#8997;</kbd>-click sets the reference point and opens the Reflect dialog, and <kbd>&#8997;</kbd> while dragging mirrors a copy.</td></tr>
+</tbody>
+</table>
+<p>Reach for the Rotate tool to turn artwork about a chosen pivot rather than its own centre, and the Reflect tool to build a symmetrical drawing: mirror a copy across a chosen axis and the two halves stay matched. Both tools start from the middle of the selection, and choosing something else puts the reference point back there.</p>
+
+<h3 id="tools-scale-shear">Scale, Shear and Reshape</h3>
+<table>
+<thead><tr><th>Tool</th><th>Shortcut</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td>Scale Tool</td><td><kbd>S</kbd></td><td>Drag away from the reference point to grow the selection and towards it to shrink it; <kbd>&#8679;</kbd> keeps the proportions and <kbd>&#8997;</kbd> scales a copy. <kbd>&#8997;</kbd>-click sets the reference point and opens the Scale dialog.</td></tr>
+<tr><td>Shear Tool</td><td>&ndash;</td><td>Drag to slant the selection about the reference point; <kbd>&#8679;</kbd> settles the slant on whichever axis your drag leans towards. <kbd>&#8997;</kbd>-click sets the reference point and opens the Shear dialog.</td></tr>
+<tr><td>Reshape Tool</td><td>&ndash;</td><td>Listed in the toolbar but not implemented yet; the palette marks it as coming soon.</td></tr>
+</tbody>
+</table>
+<p>Use the Scale tool when you want to size artwork about a fixed point rather than a bounding-box handle, and the Shear tool to slant a shape for a cast shadow or an italic feel.</p>
+
+<h3 id="tools-width-liquify">Width and the liquify brushes</h3>
+<table>
+<thead><tr><th>Tool</th><th>Shortcut</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td>Stroke Profile Tool</td><td><kbd>&#8679;W</kbd></td><td>Drag away from a stroked path to widen it there and towards the path to narrow it, leaving a width point behind. With nothing selected it works on any editable path.</td></tr>
+<tr><td>Warp Tool</td><td><kbd>&#8679;R</kbd></td><td>Hold and drag a round brush to push the paths under it along with the pointer.</td></tr>
+<tr><td>Twirl Tool</td><td>&ndash;</td><td>Hold the brush over artwork and it keeps winding for as long as you hold it.</td></tr>
+<tr><td>Pinch Tool</td><td>&ndash;</td><td>Draws the paths under the brush in towards its centre.</td></tr>
+<tr><td>Swell Tool</td><td>&ndash;</td><td>Pushes the paths under the brush out from its centre.</td></tr>
+<tr><td>Ripple Tool</td><td>&ndash;</td><td>Adds curved scallops to the paths under the brush.</td></tr>
+<tr><td>Spike Tool</td><td>&ndash;</td><td>Adds spiked points to the paths under the brush.</td></tr>
+<tr><td>Crumple Tool</td><td>&ndash;</td><td>Ripples the paths under the brush.</td></tr>
+</tbody>
+</table>
+<p>The Width tool tapers and swells a stroke by hand, for a nib-like or brush-like line without switching brushes. The seven liquify brushes push, twist and roughen paths as you paint over them, for organic distortion that would be slow to do anchor by anchor. All seven take <kbd>[</kbd> and <kbd>]</kbd> for size, and <kbd>&#8679;</kbd> with those same keys, <kbd>{</kbd> and <kbd>}</kbd>, for how hard they push.</p>
+
+<h3 id="tools-free-transform">Free Transform and Pin Warp</h3>
+<table>
+<thead><tr><th>Tool</th><th>Shortcut</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td>Free Transform Tool</td><td><kbd>E</kbd></td><td>One box that scales, turns, shears and distorts the selection. Drag an edge or corner handle to scale, hold <kbd>&#8984;</kbd> on an edge handle to shear, drag inside the box to move it, and drag just outside a corner to turn it.</td></tr>
+<tr><td>Pin Warp Tool</td><td>&ndash;</td><td>Click the selected artwork to drop a pin, then drag the pins to bend it; the artwork keeps its shape around the pins that stay put. <kbd>&#8997;</kbd>-click a pin removes it, <kbd>&#8679;</kbd>-click picks up several, and <kbd>&#8997;</kbd>-drag just outside a pin turns the artwork about it.</td></tr>
+</tbody>
+</table>
+<p>Free Transform is the all-in-one box when you want to scale, turn and shear in one gesture rather than switching tools. It works about its reference point, which you can drag anywhere, even outside the box; drop it near one of the box's nine usual places and it settles there. While scaling, <kbd>&#8679;</kbd> keeps the proportions and <kbd>&#8997;</kbd> scales about the centre rather than the reference point; while turning, <kbd>&#8679;</kbd> snaps to 45&deg;. On a corner handle, <kbd>&#8984;</kbd> distorts that corner on its own and <kbd>&#8984;&#8997;&#8679;</kbd> distorts in perspective, with the neighbouring corner mirroring the drag; the widget beside the box sets the same two modes and the constrain switch. Changing a modifier part way through a drag switches at once, without letting go.</p>
+<p>Pin Warp is for posing and bending a single piece of artwork, like flexing a drawn arm, by pinning the parts that should hold still and dragging the rest. It reads <kbd>Delete</kbd> as removing the selected pins rather than the artwork, and <kbd>&#8984;A</kbd> as selecting every pin. Each drag is one step to undo, and undo brings the pins back with the artwork they went with. Type, images and symbol instances cannot be distorted, and are left as they are.</p>
+
+<h2 id="tools-build-perspective">Merge & Split, Region Fill and perspective</h2>
+<p>Tools that treat overlapping shapes as regions to combine and colour, and the grid that lets you draw and place artwork in perspective.</p>
+
+<h3 id="tools-builder-paint">Merge & Split and Region Fill</h3>
+<table>
+<thead><tr><th>Tool</th><th>Shortcut</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td>Merge & Split Tool</td><td><kbd>&#8679;M</kbd></td><td>With overlapping shapes selected, drag across the regions you want joined and they become one object. <kbd>&#8997;</kbd>-drag deletes the regions you cross instead.</td></tr>
+<tr><td>Region Fill Bucket</td><td><kbd>K</kbd></td><td>Click a face of a Region Fill group to fill it with the current paint; <kbd>&#8997;</kbd>-click picks up the paint already there instead of laying any down. The face under the pointer is outlined before you click.</td></tr>
+<tr><td>Region Select Tool</td><td><kbd>&#8679;L</kbd></td><td>Click a face of a Region Fill group to select it, without painting it.</td></tr>
+</tbody>
+</table>
+<p>Use the Merge & Split to draw a few overlapping shapes and then merge and trim them into the outline you want, by dragging across the pieces. Region Fill treats a set of overlapping paths as a colouring book: the Bucket floods each enclosed face with a colour, and the Selection tool picks faces and edges so you can restyle them, without first cutting the shapes apart.</p>
+
+<h3 id="tools-perspective">Perspective</h3>
+<table>
+<thead><tr><th>Tool</th><th>Shortcut</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td>Perspective Grid Tool</td><td><kbd>&#8679;P</kbd></td><td>Shows the grid and shapes it: drag the vanishing points, drag one of them up or down to move the horizon, and drag the grid's near corner. <kbd>1</kbd> to <kbd>4</kbd>, or the widget on screen, pick the plane you draw on.</td></tr>
+<tr><td>Perspective Selection Tool</td><td><kbd>&#8679;V</kbd></td><td>Select artwork and drag it along its plane. Artwork that is not on the grid yet is set down on the active plane where you drag it.</td></tr>
+</tbody>
+</table>
+<p>Reach for these to draw scenes and lettering that recede towards vanishing points, such as a street or a boxed product. While the grid is showing, the Rectangle, Rounded Rectangle, Ellipse and Rectangular Grid tools draw onto the active plane rather than flat, and <kbd>1</kbd> to <kbd>4</kbd> pick the plane from those tools too.</p>
+
+<h2 id="tools-mesh-gradient">Mesh and gradient</h2>
+<p>The two tools for painting graduated colour into a shape: a mesh of colour points across the object, or a smooth blend along an axis.</p>
+
+<h3 id="tools-mesh">Mesh</h3>
+<table>
+<thead><tr><th>Tool</th><th>Shortcut</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td>Mesh Tool</td><td><kbd>U</kbd></td><td>Click inside an object to run a mesh line each way through that spot, turning a plain path into a mesh. Click a mesh point to pick it and give it a colour from the Color panel, drag a point to move it, and <kbd>&#8997;</kbd>-click one to take away the lines through it.</td></tr>
+</tbody>
+</table>
+<p>Use a mesh for soft, freeform shading that a straight gradient cannot give, such as the rounded highlight on a piece of fruit or a face.</p>
+
+<h3 id="tools-gradient">Gradient</h3>
+<table>
+<thead><tr><th>Tool</th><th>Shortcut</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td>Gradient Tool</td><td><kbd>G</kbd></td><td>Drag across the selection to set the axis of its active paint, with <kbd>&#8679;</kbd> holding the axis to 45&deg; steps. Over artwork that already has a gradient, work the annotator instead.</td></tr>
+</tbody>
+</table>
+<p>Drag the Gradient tool to point a linear or radial blend the way you want and to set how far it runs. On the annotator, drag a stop along the axis to move it, drag a diamond to shift the blend between two stops, click the axis to add a stop in the colour it already is there, and pull a stop well off the axis to throw it away, as long as two are left. <kbd>Delete</kbd> removes the stop you last touched. On a freeform gradient the tool works in colour points instead: click the artwork to add one in the fill colour, and drag a point to move it. Gradients are covered further on the <a href="/manual/appearance/">Colour &amp; appearance</a> page.</p>
+
+<h2 id="tools-sample-morph">Sampling, measuring and morphing</h2>
+<p>Copy an appearance from one object to another, read distances and angles off the canvas, and blend between shapes in a run of steps.</p>
+
+<h3 id="tools-eyedropper">Eyedropper and Measure</h3>
+<table>
+<thead><tr><th>Tool</th><th>Shortcut</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td>Eyedropper Tool</td><td><kbd>I</kbd></td><td>Click an object to sample its whole appearance onto the selection, or onto the default style when nothing is selected. <kbd>&#8679;</kbd> samples only its fill or stroke colour into the active side, and <kbd>&#8997;</kbd> works the other way, applying the selection's appearance to the object you click.</td></tr>
+<tr><td>Measure Tool</td><td>&ndash;</td><td>Drag between two points to read the distance, the offsets and the angle; <kbd>&#8679;</kbd> holds the line to 45&deg; steps. The last measurement stays on screen until the next drag.</td></tr>
+</tbody>
+</table>
+<p>The Eyedropper is the fast way to make one object match another: pick the look you like and it lands on the selection. Use the Measure tool to check a gap or an angle without leaving a mark on the artwork.</p>
+
+<h3 id="tools-blend">Morph</h3>
+<table>
+<thead><tr><th>Tool</th><th>Shortcut</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td>Morph Tool</td><td><kbd>W</kbd></td><td>Click one object and then another to morph between them through a series of in-between steps. To take a further object into a morph, click inside the morph and then click the object you want added to it.</td></tr>
+</tbody>
+</table>
+<p>Reach for the Morph tool to blend one shape or colour into another across even steps, whether for a smooth shaded band or evenly spaced, changing copies along a path.</p>
+
+<h2 id="tools-symbols">Symbols</h2>
+<p>A symbol is a piece of artwork you can place many times, with every copy tied to one master. The symbolism brushes lay down and then work whole crowds of these instances at once.</p>
+
+<h3 id="tools-symbolism">The symbolism brushes</h3>
+<table>
+<thead><tr><th>Tool</th><th>Shortcut</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td>Symbol Scatter Tool</td><td><kbd>&#8679;S</kbd></td><td>Drag to lay down instances of the symbol chosen in the Symbols panel, as a symbol set. <kbd>&#8997;</kbd> takes instances away again.</td></tr>
+<tr><td>Symbol Nudge Tool</td><td>&ndash;</td><td>Drags the instances under the brush along with the pointer.</td></tr>
+<tr><td>Symbol Pack Tool</td><td>&ndash;</td><td>Draws the instances under the brush together; <kbd>&#8997;</kbd> spreads them apart.</td></tr>
+<tr><td>Symbol Resize Tool</td><td>&ndash;</td><td>Grows the instances under the brush; <kbd>&#8997;</kbd> shrinks them.</td></tr>
+<tr><td>Symbol Spin Tool</td><td>&ndash;</td><td>Turns the instances under the brush to follow the drag.</td></tr>
+<tr><td>Symbol Tint Tool</td><td>&ndash;</td><td>Tints the instances under the brush towards the fill colour; <kbd>&#8997;</kbd> takes the tint back out.</td></tr>
+<tr><td>Symbol Fade Tool</td><td>&ndash;</td><td>Fades the instances under the brush; <kbd>&#8997;</kbd> brings them back to full strength.</td></tr>
+<tr><td>Symbol Restyle Tool</td><td>&ndash;</td><td>Applies the graphic style chosen in the Graphic Styles panel to the instances under the brush; <kbd>&#8997;</kbd> removes it.</td></tr>
+</tbody>
+</table>
+<p>Use these to scatter and then vary a field of repeated artwork, such as trees across a hillside or stars in a sky: spray a set, then thin it, resize it, spin it and tint it so the copies do not look stamped. All eight take <kbd>[</kbd> and <kbd>]</kbd> for brush size and <kbd>{</kbd> and <kbd>}</kbd> for how hard the brush works. They act on the instances in the selection, or on every editable instance when nothing is selected.</p>
+
+<h2 id="tools-boards-slices">Boards and slices</h2>
+<p>The tools that set out the canvas for output: artboards, which are the pages your artwork sits on, and slices, which mark rectangles to export on their own.</p>
+
+<h3 id="tools-boards">Boards</h3>
+<table>
+<thead><tr><th>Tool</th><th>Shortcut</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td>Board Tool</td><td><kbd>&#8679;O</kbd></td><td>Draw, move and resize artboards straight on the canvas. Drag empty canvas for a new board, with <kbd>&#8997;</kbd> drawing from the centre and <kbd>&#8679;</kbd> keeping it square; drag inside a board to move it, with <kbd>&#8679;</kbd> holding the move to one axis; drag a corner handle with <kbd>&#8679;</kbd> to keep the board's proportions.</td></tr>
+</tbody>
+</table>
+<p>Reach for the Board tool to add pages for different sizes or versions of a design in one document, and to resize a page around what you have drawn. <kbd>Delete</kbd> removes the active board, as long as one is left.</p>
+
+<h3 id="tools-slices">Slices</h3>
+<table>
+<thead><tr><th>Tool</th><th>Shortcut</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td>Slice Tool</td><td><kbd>&#8679;K</kbd></td><td>Drag out a rectangle that exports on its own; <kbd>&#8997;</kbd> draws from the centre and <kbd>&#8679;</kbd> keeps it square. Slice edges settle on whole pixels, so what comes out is not blurred.</td></tr>
+<tr><td>Slice Selection Tool</td><td>&ndash;</td><td>Pick, move and resize slices. <kbd>Delete</kbd> removes the selected one and a double-click opens its options.</td></tr>
+</tbody>
+</table>
+<p>Use slices to carve one artboard into pieces that export separately, such as the buttons and banners of a web layout, each as its own file. Exporting is covered on the <a href="/manual/files/">Open &amp; export</a> page.</p>
+
+<h2 id="tools-navigate">Moving around</h2>
+<p>The tools that pan, turn and zoom the view. None of them change the document: they only change how you are looking at it.</p>
+
+<h3 id="tools-view">Moving the view</h3>
+<table>
+<thead><tr><th>Tool</th><th>Shortcut</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td>Hand Tool</td><td><kbd>H</kbd></td><td>Drag to pan the view. Holding the space bar borrows it from any other tool for as long as you hold it.</td></tr>
+<tr><td>Rotate View Tool</td><td><kbd>&#8679;H</kbd></td><td>Drag to turn the view about the middle of the window, with <kbd>&#8679;</kbd> snapping to 15&deg;; double-click to put it upright again. Only the view turns, never the document.</td></tr>
+<tr><td>Print Tiling Tool</td><td>&ndash;</td><td>Listed in the toolbar but not implemented yet; the palette marks it as coming soon.</td></tr>
+</tbody>
+</table>
+<p>The Hand tool scrolls a zoomed-in drawing without touching the scrollbars, and the Rotate View tool tilts the whole view so you can draw a slanted line at a comfortable angle, then set it straight again.</p>
+
+<h3 id="tools-zoom">Zoom</h3>
+<table>
+<thead><tr><th>Tool</th><th>Shortcut</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td>Zoom Tool</td><td><kbd>Z</kbd></td><td>Click to zoom in and <kbd>&#8997;</kbd>-click to zoom out. Drag a rectangle over part of the artwork to fill the window with it.</td></tr>
+</tbody>
+</table>
+
+<h2 id="tools-fill-stroke">Fill and stroke controls</h2>
+<p>At the foot of the toolbar sit the fill and stroke swatches, one in front of the other. The front swatch is the active side, the one your next colour choice lands on. A handful of single keys work them without reaching for the panels:</p>
+<table>
+<thead><tr><th>Shortcut</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td><kbd>D</kbd></td><td>Resets the fill and stroke to their defaults.</td></tr>
+<tr><td><kbd>X</kbd></td><td>Switches which of the fill or the stroke is the active side.</td></tr>
+<tr><td><kbd>&#8679;X</kbd></td><td>Swaps the fill and stroke colours.</td></tr>
+<tr><td><kbd>/</kbd></td><td>Sets the active side to no paint.</td></tr>
+</tbody>
+</table>
+<p>These make the common moves quick: <kbd>X</kbd> to jump between painting the fill and the stroke, <kbd>/</kbd> to drop the fill or the stroke to none, and <kbd>D</kbd> to get back to a plain black-and-white start. Fills, strokes and how they are set are covered on the <a href="/manual/appearance/">Colour &amp; appearance</a> page.</p>

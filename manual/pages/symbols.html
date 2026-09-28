@@ -1,0 +1,91 @@
+<p class="lede">Symbols, brushes and patterns are three ways to draw one piece of artwork once and reuse it. Change the original and every use of it changes with it, so a repeated element stays consistent and stays quick to update.</p>
+
+<p>The shortcuts below are written in their macOS form. On Windows, read <kbd>&#8984;</kbd> as <kbd>Ctrl</kbd>, <kbd>&#8997;</kbd> as <kbd>Alt</kbd> and <kbd>&#8679;</kbd> as <kbd>Shift</kbd>.</p>
+
+<h2 id="symbols-panel">The Symbols panel</h2>
+<p>A symbol is a saved piece of artwork that you can drop into the document any number of times. Each copy is an <em>instance</em>: it points back to the one definition rather than holding its own artwork, so the document stays small however many instances you place, and a change to the definition reaches all of them at once. Reach for symbols when the same element recurs, such as a tree in a landscape, a pin on a map, a bolt in an assembly drawing, or a logo that appears on several boards.</p>
+<p>Open the panel with <strong>Window &gt; Symbols</strong> (<kbd>&#8679;&#8984;F11</kbd>), or from its tab in the panel dock. It lists the symbols in the document by name. Clicking a name selects it as the active symbol, which is the one the Symbol Scatter lays down; the active symbol is highlighted.</p>
+
+<h3 id="symbols-make">Making a symbol</h3>
+<p>Select the artwork you want to reuse and click <strong>New Symbol</strong>. The selection is stored as the symbol's definition and, in its place on the canvas, is replaced by a single instance sitting exactly where the artwork was. The definition is kept out of the way, so it does not clutter the canvas or the ordinary layers. If you name nothing, the symbol is called <code>Symbol 1</code>, <code>Symbol 2</code> and so on, in the order you make them.</p>
+
+<h3 id="symbols-place">Placing instances</h3>
+<p>Double-click a symbol in the panel to drop a fresh instance at the centre of the current view. Place as many as you need. An instance behaves like any other object once it is on the canvas: select it and you can move, scale, rotate or reflect it, and set its opacity and blending, all without touching the definition, because those changes ride on the instance itself. Use this to vary the size and angle of repeated pieces while keeping them tied to the same master.</p>
+
+<h3 id="symbols-edit">Editing a symbol</h3>
+<p>Double-click an instance on the canvas with the Selection Tool (<kbd>V</kbd>) to step inside the definition. Everything else on the page dims, and you edit the artwork on its own. Double-click an empty part of the canvas to step back out. Because every instance draws the same definition, the edit you make shows up in all of them together. This is the point of a symbol: correct the artwork once and the whole document catches up, rather than hunting down each copy.</p>
+
+<h3 id="symbols-break">Breaking the link</h3>
+<p>When one instance needs to differ from the rest in a way that goes beyond position, size or opacity, select it and click <strong>Break Link</strong>. The instance is replaced by an ordinary, editable copy of the definition, at the same size and angle, no longer tied to the symbol. Changes to the symbol will no longer reach it. The button is available only while a symbol instance is selected.</p>
+<p>To remove a symbol entirely, hold <kbd>&#8997;</kbd> and click its name in the panel. Its definition and every instance of it are deleted, since an instance with no definition would draw nothing.</p>
+
+<h2 id="symbols-symbolism">The symbolism tools</h2>
+<p>The symbolism tools scatter and adjust symbol instances by the handful, under a round brush, rather than one at a time. They share one slot in the toolbar; hold the slot to choose among them. They act on the instances inside the selection, or on every editable instance in the document when nothing is selected, so you can steer a whole field of symbols at once. Hold <kbd>&#8997;</kbd> to reverse the effect of any of them.</p>
+<p>While a symbolism tool is active, <kbd>[</kbd> and <kbd>]</kbd> make the brush smaller and larger, and <kbd>{</kbd> and <kbd>}</kbd> lower and raise its intensity (how hard each pass works).</p>
+<table>
+<thead><tr><th>Tool</th><th>Shortcut</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td>Symbol Scatter</td><td><kbd>&#8679;S</kbd></td><td>Drag to lay down instances of the active symbol, spaced out as you move; the instances collect in one <em>Symbol Set</em> group. Hold <kbd>&#8997;</kbd> to lift instances back out under the brush</td></tr>
+<tr><td>Symbol Nudge</td><td></td><td>Nudges instances in the direction you drag, so you can tidy a scatter without moving each piece</td></tr>
+<tr><td>Symbol Pack</td><td></td><td>Pulls instances together towards the brush; <kbd>&#8997;</kbd> spreads them apart</td></tr>
+<tr><td>Symbol Resize</td><td></td><td>Grows instances under the brush; <kbd>&#8997;</kbd> shrinks them</td></tr>
+<tr><td>Symbol Spin</td><td></td><td>Turns instances to follow the direction of your drag</td></tr>
+<tr><td>Symbol Tint</td><td></td><td>Tints instances towards the current fill colour, for variation across a group; <kbd>&#8997;</kbd> removes the tint</td></tr>
+<tr><td>Symbol Fade</td><td></td><td>Fades instances by lowering their opacity; <kbd>&#8997;</kbd> brings them back</td></tr>
+<tr><td>Symbol Restyle</td><td></td><td>Applies the graphic style picked in the Graphic Styles panel to instances; <kbd>&#8997;</kbd> clears it</td></tr>
+</tbody>
+</table>
+<p>Three tools need something set up first. Symbol Scatter needs a symbol to spray, so make one in the Symbols panel before you start. Symbol Restyle applies whichever graphic style is chosen in the Graphic Styles panel, so pick a style there first; Symbol Tint likewise uses the current fill colour, so set the fill before tinting.</p>
+
+<h2 id="symbols-brushes">The Brushes panel</h2>
+<p>A brush decides how a stroke is drawn along a path. Instead of a plain line of even width, the path can carry a pen-nib stroke, a trail of scattered artwork, one shape stretched end to end, or a tiled band. The path stays fully editable underneath: reshape it and the brushed stroke follows. Open the panel with <strong>Window &gt; Brushes</strong> (<kbd>F5</kbd>), or from its tab in the panel dock. Each brush shows a small preview beside its name.</p>
+
+<h3 id="symbols-brush-kinds">Kinds of brush</h3>
+<p>Scissor has five kinds of brush. Two are drawn from a few numbers, and three are built from artwork you select.</p>
+<dl>
+<dt>Calligraphic</dt>
+<dd>An angled, oval nib that thickens and thins as the path turns, like a broad pen. Set its Angle, its Roundness and its Size in points. Use it for lettering strokes, signatures and any line meant to look drawn by hand.</dd>
+<dt>Bristle</dt>
+<dd>A cluster of fine strokes that reads like a loaded brush. Set the Size in points, the number of Bristles and the Paint Opacity so overlapping passes build up. Reach for it when you want a soft, painterly edge rather than a clean one.</dd>
+<dt>Scatter</dt>
+<dd>Sprinkles copies of selected artwork along the path. Set the Size of the copies, the Spacing between them, how far they Scatter off the line, and their Rotation, with options to rotate each copy relative to the path and to recolour it with the stroke colour. Use it for confetti, leaves, stars or bubbles trailing a curve.</dd>
+<dt>Art</dt>
+<dd>Stretches one piece of selected artwork along the whole length of the path. Set its Width, with an option to recolour it with the stroke colour. Use it for a tapering ink stroke, a ribbon, an arrow or a rough charcoal mark that bends with the line.</dd>
+<dt>Pattern</dt>
+<dd>Tiles selected artwork end to end along the path, like a decorative border. Set the Scale and Spacing, with an option to recolour it with the stroke colour. Use it for chain, rope, stitching or a repeating frame.</dd>
+</dl>
+
+<h3 id="symbols-brush-apply">Applying and removing a brush</h3>
+<p>Select one or more paths and click a brush to draw their strokes with it. A path with no visible stroke is given one so the brush has a line to run along. The Paintbrush Tool (<kbd>B</kbd>) draws new strokes with whichever brush is currently chosen, so pick a brush and paint straight onto the canvas. To take a brush off the selected strokes and return them to plain lines, click <strong>Remove Brush</strong>.</p>
+
+<h3 id="symbols-brush-manage">Making, editing and deleting brushes</h3>
+<p>Click <strong>New Brush&hellip;</strong>, choose one of the five kinds, and set its options. For a scatter, art or pattern brush, select the artwork it should use before you open the dialog, since that artwork becomes the brush. To change a brush later, select it and click <strong>Options&hellip;</strong> (or double-click it in the list); any stroke using it redraws with the new settings. <strong>Delete</strong> removes the selected brush, after asking; strokes that used it go back to plain lines.</p>
+
+<h2 id="symbols-patterns">The Patterns panel</h2>
+<p>A pattern is a tile of artwork that repeats to fill a shape. Define the tile once and you can pour it into any object as a fill, so a texture or motif stays uniform across the artwork and updates everywhere when you edit the tile. The panel sits in the panel dock, and the same commands live under <strong>Object &gt; Pattern</strong>.</p>
+
+<h3 id="symbols-pattern-make">Making a pattern</h3>
+<p>Select the artwork for one tile and click <strong>Make Pattern</strong> (or <strong>Object &gt; Pattern &gt; Make</strong>). A copy of the artwork is stored as a repeating tile and added to the panel; the artwork you drew stays where it is. Patterns are named <code>Pattern 1</code>, <code>Pattern 2</code> and so on as you make them.</p>
+
+<h3 id="symbols-pattern-fill">Filling with a pattern</h3>
+<p>Select a shape and click a pattern in the panel to set it as the shape's fill. With nothing selected, clicking a pattern makes it the fill colour for the next shape you draw. Because it is a fill, the pattern repeats to cover the shape and is clipped to its outline. Use this for backgrounds, fabrics, foliage, or any surface that should read as a repeat rather than a flat colour. To remove a pattern from the document, hold <kbd>&#8997;</kbd> and click it in the panel; shapes that were filled with it fall back to no fill.</p>
+
+<h3 id="symbols-pattern-edit">Editing the tile</h3>
+<p>Double-click a pattern in the panel to edit its tile. The rest of the artwork dims and you work on the tile on its own, with a <strong>Done Editing</strong> button in the panel; click it (or use <strong>Object &gt; Pattern &gt; Edit Pattern</strong> again) when you are finished. Every shape filled with the pattern updates to match. You can also start editing by selecting a shape that is filled with a pattern and choosing <strong>Edit Pattern</strong>.</p>
+
+<h3 id="symbols-pattern-options">Tile options</h3>
+<p>Click the tile-options button beside a pattern (or <strong>Object &gt; Pattern &gt; Tile Options&hellip;</strong>) to control how the tile repeats. These settings change the layout of the repeat without changing the artwork in the tile.</p>
+<dl>
+<dt>Tile Type</dt>
+<dd>How rows and columns line up: Grid, Brick by Row, Brick by Column, Hex by Column or Hex by Row. Brick offsets alternate rows or columns like brickwork; hex packs the tiles in a honeycomb.</dd>
+<dt>Brick Offset</dt>
+<dd>For the brick types, how far each alternate row or column is shifted, as a percentage of the tile.</dd>
+<dt>Size Tile to Art</dt>
+<dd>Fits the tile to the bounds of the artwork. Turn it off to set the tile Width and Height yourself.</dd>
+<dt>Width and Height</dt>
+<dd>The size of the tile in pixels, used when the tile is not sized to the art.</dd>
+<dt>Horizontal and Vertical Spacing</dt>
+<dd>Gaps left between tiles, in pixels. Positive values space the motif out; negative values overlap the tiles.</dd>
+<dt>Move Tile with Art</dt>
+<dd>Keeps the tile aligned to the artwork when it moves, so the repeat travels with the object.</dd>
+</dl>

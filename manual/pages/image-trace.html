@@ -1,0 +1,100 @@
+<p class="lede">Vectorize turns a picture into vector paths: a logo scanned from paper, a pencil sketch or a photograph becomes a set of filled shapes you can scale, recolour and edit like anything else you draw. This page covers what you can trace, the panel that runs it, the three modes and their presets, every option, and how to keep or discard the result.</p>
+
+<h2 id="image-trace-what">What tracing does, and what you can trace</h2>
+<p>A picture is made of pixels: it blurs when you enlarge it and cannot be reshaped point by point. Tracing reads those pixels and draws vector paths that follow the shapes it finds, so the result stays crisp at any size and can be edited, recoloured and combined with the rest of your artwork.</p>
+<p>You trace a <strong>pixel layer</strong>: an image you placed or pasted, a picture opened as its own board, or a layer you painted yourself. Bring an image in with <strong>File &gt; Place…</strong> (<kbd>&#8679;&#8984;P</kbd>) — it arrives as a pixel layer — select it, then run the trace. (Vector artwork is already made of paths, so there is nothing to trace; tracing reads pixels.)</p>
+<p>The trace does not throw the picture away. It builds a group named <strong>Vectorize</strong> that holds the original picture (now hidden) together with the new paths, sitting exactly over it. Because the group remembers the settings it was made with, the result stays live: reselect it, change a setting and it re-traces. When you are happy you <strong>Expand</strong> it to keep just the paths, or <strong>Release</strong> it to go back to the plain picture.</p>
+
+<h2 id="image-trace-panel">The Vectorize panel</h2>
+<p>Every setting lives in the Vectorize panel. Open it from <strong>Object &gt; Vectorize &gt; Vectorize Panel</strong>, or from its tab in the panel dock. The panel needs a picture selected before it can do anything: with nothing suitable chosen, the Trace button is disabled and the panel asks you to select a placed image.</p>
+
+<h3 id="image-trace-run">Running a trace</h3>
+<p>Select a picture, choose a preset or set the mode and options by hand, and press <strong>Trace</strong>. A line at the foot of the panel reports progress, reading <em>Tracing…</em> while it works and <em>Traced. Expand to keep just the paths.</em> when it finishes. If the picture holds nothing a shape can be made from, or cannot be read, the panel tells you so and leaves the picture untouched.</p>
+
+<h3 id="image-trace-preview">Previewing as you go</h3>
+<p>The <strong>Trace as settings change</strong> tick box, on by default, re-traces the moment you change the mode, a preset, a number or a tick box, so you can judge each adjustment against the picture straight away. On a large or busy picture the redraw takes a moment, so turn it off if you would rather set several options first and press <strong>Trace</strong> once. When you reselect an existing tracing, the panel loads the exact settings it was made with, ready to be adjusted and traced again.</p>
+
+<h3 id="image-trace-menu">The Object menu commands</h3>
+<p>The same actions sit under <strong>Object &gt; Vectorize</strong>, which is handy when the panel is closed.</p>
+<table>
+  <thead><tr><th>Command</th><th>What it does</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Make</strong></td><td>Traces the selected picture with the current settings, leaving the result live.</td></tr>
+    <tr><td><strong>Make and Expand</strong></td><td>Traces and expands in one step, so you go straight to editable paths.</td></tr>
+    <tr><td><strong>Expand</strong></td><td>Keeps the paths and drops the picture (see below).</td></tr>
+    <tr><td><strong>Release</strong></td><td>Discards the paths and returns to the picture (see below).</td></tr>
+    <tr><td><strong>Vectorize Panel</strong></td><td>Brings the panel forward.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="image-trace-modes">The three modes</h2>
+<p>The mode decides how the picture is reduced before it is drawn. It is the first choice to make, because it governs which of the options below apply.</p>
+<table>
+  <thead><tr><th>Mode</th><th>How it reduces the picture</th><th>The option it uses</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Black and White</strong></td><td>Splits everything into two tones, ink and paper, at a brightness you set.</td><td>Threshold</td></tr>
+    <tr><td><strong>Greyscale</strong></td><td>Reduces the picture to a set number of even grey levels from black to white.</td><td>Number of colours (as grey levels)</td></tr>
+    <tr><td><strong>Colour</strong></td><td>Picks a palette of the most telling colours in the picture and maps every pixel to the nearest one.</td><td>Number of colours</td></tr>
+  </tbody>
+</table>
+<p>Whichever mode you choose, one filled shape is made per tone or colour, and the shapes are stacked largest first so smaller detail sits on top. Fully transparent parts of the picture are left out, so a cut-out on a transparent background traces to its subject alone.</p>
+
+<h2 id="image-trace-presets">Presets</h2>
+<p>A preset is a named starting point that sets the mode and every option at once. Pick one from the menu at the top of the panel and, with preview on, the picture traces immediately; treat the result as a base and adjust from there. The moment you change any single option the preset menu switches to <strong>Custom</strong>, since the settings no longer match the preset.</p>
+<table>
+  <thead><tr><th>Preset</th><th>Mode</th><th>Reach for it when</th></tr></thead>
+  <tbody>
+    <tr><td><strong>High Fidelity Photo</strong></td><td>Colour</td><td>You want a photograph kept close to the original, with many colours.</td></tr>
+    <tr><td><strong>Low Fidelity Photo</strong></td><td>Colour</td><td>A photograph should read as a few broad, flat areas of colour.</td></tr>
+    <tr><td><strong>3 Colors</strong></td><td>Colour</td><td>You want a bold, poster-like result from three flat colours.</td></tr>
+    <tr><td><strong>6 Colors</strong></td><td>Colour</td><td>A flat, illustrated look with a small, tidy palette.</td></tr>
+    <tr><td><strong>16 Colors</strong></td><td>Colour</td><td>More colour range than the flat presets, short of a full photo.</td></tr>
+    <tr><td><strong>Shades of Gray</strong></td><td>Greyscale</td><td>A tonal picture should keep its shading but lose its colour.</td></tr>
+    <tr><td><strong>Black and White Logo</strong></td><td>Black and White</td><td>Turning a clean two-tone mark or logo into crisp shapes.</td></tr>
+    <tr><td><strong>Sketched Art</strong></td><td>Black and White</td><td>Capturing a pencil or ink sketch with its looser lines.</td></tr>
+    <tr><td><strong>Silhouettes</strong></td><td>Black and White</td><td>You want solid, filled silhouettes rather than fine lines.</td></tr>
+    <tr><td><strong>Line Art</strong></td><td>Black and White</td><td>A fine line drawing where thin strokes must survive.</td></tr>
+    <tr><td><strong>Technical Drawing</strong></td><td>Black and White</td><td>Crisp, faithful line work with as much detail kept as possible.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="image-trace-options">The options</h2>
+<p>Below the mode sit the controls that shape the result. Which ones are shown depends on the mode: Threshold appears only for Black and White, while the number of colours appears for Greyscale and Colour.</p>
+<dl>
+  <dt>Number of colours</dt>
+  <dd>How many colours (in Colour mode) or grey levels (in Greyscale) the picture is reduced to, from 2 up to 64. Fewer gives a flatter, more graphic result with fewer shapes; more keeps the picture closer to the original at the cost of more paths. Black and White mode ignores this, as it always has two tones.</dd>
+  <dt>Threshold</dt>
+  <dd>For Black and White only: the brightness, from 0 to 255, where the picture divides into ink and paper. Anything darker than the threshold becomes the drawn shape; anything lighter is treated as background. Raise it to pull more of the mid-tones into the shape for a heavier result, lower it to keep only the darkest marks. Use it to tune how much of a faint sketch is picked up.</dd>
+  <dt>Paths</dt>
+  <dd>How closely the paths follow the pixels, on a scale of 0 to 100. High values hug the edges tightly and keep fine wobble, with more anchor points; low values relax the fit for smoother, simpler paths that are lighter to edit. Reach for a high value when accuracy matters and a low one when you want a clean, tidy outline.</dd>
+  <dt>Corners</dt>
+  <dd>How readily a turn in the outline becomes a sharp corner rather than a smooth curve, from 0 to 100. Raise it for artwork with crisp angles, such as a logo or lettering; lower it for organic shapes that should stay rounded.</dd>
+  <dt>Noise</dt>
+  <dd>The smallest patch, in pixels, that is allowed to become its own shape. Anything smaller is absorbed into whatever surrounds it. Raise it to clear speckle and grain from a scan or photograph so stray dots do not each turn into a path; lower it to keep genuine fine detail.</dd>
+  <dt>Ignore White</dt>
+  <dd>Leaves out any shape that comes out near-white, so the paper or background is not drawn and stays transparent behind the traced marks. On by default, and shown for Black and White mode. Turn it off when a white area is part of the artwork and needs to be a real filled shape.</dd>
+  <dt>Fills</dt>
+  <dd>Gives each traced shape a solid fill in the colour it was traced as. This is the usual choice and is on by default.</dd>
+  <dt>Strokes</dt>
+  <dd>Outlines each traced shape with a stroke in its own colour instead of, or as well as, a fill. Off by default. If you turn both Fills and Strokes off the paths are still created but have nothing painting them, so leave at least one on.</dd>
+</dl>
+
+<h2 id="image-trace-finish">Keeping or reverting the result</h2>
+<p>A fresh tracing is live: the paths sit over the hidden original inside the Vectorize group, and you can keep adjusting the settings. Two commands end that state, both on the panel as buttons and under <strong>Object &gt; Vectorize</strong>. They become available once a tracing is selected.</p>
+<dl>
+  <dt>Expand</dt>
+  <dd>Keeps the paths and removes the picture, so the group becomes ordinary vector artwork. The settings no longer apply and cannot be changed, but every path is now a normal shape you can reshape, recolour, combine and arrange. Reach for this once the trace looks right and you want to work on the vectors. <strong>Make and Expand</strong> does the trace and this step together.</dd>
+  <dt>Release</dt>
+  <dd>Discards the traced paths and restores the original picture, visible again in its old place. Use it to abandon a trace and start over, or when you only needed the picture after all.</dd>
+</dl>
+
+<h2 id="image-trace-uses">Logos, sketches and photographs</h2>
+<p>The three common starting points call for different settings.</p>
+<dl>
+  <dt>A logo or clean mark</dt>
+  <dd>Start from <strong>Black and White Logo</strong>. Keep <strong>Ignore White</strong> on so the paper drops out, raise <strong>Corners</strong> for crisp angles and <strong>Paths</strong> for faithful edges, and tune <strong>Threshold</strong> until the mark is solid without filling in. Expand, then set your own fill colour.</dd>
+  <dt>A pencil or ink sketch</dt>
+  <dd>Try <strong>Sketched Art</strong> or <strong>Line Art</strong>. Lower the <strong>Threshold</strong> to keep only the drawn lines and let the paper fall away, and raise <strong>Noise</strong> a little to clear the grain of the paper. Line Art keeps thinner strokes; Sketched Art suits a looser hand.</dd>
+  <dt>A photograph</dt>
+  <dd>Use Colour mode with <strong>High Fidelity Photo</strong> for a close likeness or <strong>Low Fidelity Photo</strong> for a flatter, illustrated feel, and set the <strong>number of colours</strong> to taste. Leave <strong>Ignore White</strong> off so pale areas stay. More colours mean more shapes, so a heavy photo trace can be large: reduce the colours if the result feels unwieldy.</dd>
+</dl>

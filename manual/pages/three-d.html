@@ -1,0 +1,65 @@
+<p class="lede">3D and Materials turns a flat shape into a solid you can turn, light and give a surface to, without ever leaving your vector artwork behind. It is a live effect: the solid is drawn from the path underneath, and that path stays fully editable, so you can change the outline, the colour or the type at any time and the 3D rebuilds around it.</p>
+
+<h2 id="three-d-opening">Opening the effect</h2>
+<p>Select an object first, then choose an object type from <strong>Effect &rsaquo; 3D and Materials</strong>: <em>Plane</em>, <em>Extrude &amp; Bevel</em>, <em>Revolve</em> or <em>Inflate</em>. Each one adds the effect and opens the <strong>3D and Materials</strong> panel, where the rest of the controls live. The same panel opens on its own from <strong>Window &rsaquo; 3D and Materials</strong> or from <strong>Effect &rsaquo; 3D and Materials &rsaquo; 3D and Materials Panel</strong>.</p>
+<p>The panel needs something selected before it can do anything; with nothing selected it says so and greys its controls. Once an object has the effect, the four object-type buttons run across the top of the panel, so you can switch a shape from an extrude to a revolve in one click and keep the rotation and lighting you already set.</p>
+<p>Because it is an effect and not a conversion, you can drop it onto almost anything a path can hold: a shape, a group, an outline or live type. Editing the source, for example retyping a word or nudging an anchor, re-runs the effect on the new artwork.</p>
+
+<h2 id="three-d-types">The four object types</h2>
+<p>The object type decides how the flat shape is read as a solid. Pick the one that matches the form you are after.</p>
+
+<h3 id="three-d-plane">Plane</h3>
+<p>Plane leaves the artwork flat and places it as a card in 3D space, so all it does is let you turn and tip it. There is no depth to set. Reach for it when you want a piece of flat art to sit at an angle, such as a label lying back on a surface or a badge tilted to catch the light, without giving it any thickness.</p>
+
+<h3 id="three-d-extrude">Extrude and Bevel</h3>
+<p>Extrude pushes the shape straight back to give it thickness, turning an outline into a solid block. A bevel rounds or cuts the front and back edges so they are not left sharp. Holes are kept: a compound path such as a ring or a letter with a counter stays hollow all the way through. This is the type to use for lettering, logos, icons and badges that should read as raised or carved.</p>
+<figure class="shot">
+  <img src="img/3d-extrude.gif" width="620" height="620" loading="lazy" alt="A flat vector star extruded into a three-dimensional star and turned to show its depth." />
+  <figcaption>Extrude and Bevel builds depth from a flat shape, live. The star stays an editable path underneath.</figcaption>
+</figure>
+
+<h3 id="three-d-revolve">Revolve</h3>
+<p>Revolve sweeps the shape around its left edge, the way a profile spun on a lathe traces out a solid. Draw half of a symmetrical object, a glass, a bottle, a bowl, a chess piece, and revolve it into the round. The sweep angle can be less than a full turn to leave a cutaway that shows the inside.</p>
+
+<h3 id="three-d-inflate">Inflate</h3>
+<p>Inflate puffs the shape outward, as if it were a cushion filled with air, giving it a soft rounded face instead of a flat one. Use it for soft buttons, pillowed badges, sweets and rounded stickers where you want swell rather than a hard extruded edge.</p>
+
+<h2 id="three-d-shape">Depth, bevel and steps</h2>
+<p>The <em>Object</em> section holds the fields that shape the solid. Which ones appear depends on the object type, so the panel only ever shows the fields that do something for the type in hand.</p>
+<table>
+  <thead><tr><th>Field</th><th>Shown for</th><th>What it sets</th></tr></thead>
+  <tbody>
+    <tr><td>Depth</td><td>Extrude and Bevel, Inflate</td><td>How far the shape is pushed back, or how much it swells, in pixels.</td></tr>
+    <tr><td>Bevel</td><td>Extrude and Bevel</td><td>The size of the rounded or cut edge on the front and back, in pixels; leave it at zero for a plain square edge.</td></tr>
+    <tr><td>Angle</td><td>Revolve</td><td>How far the profile is swept, up to a full 360&deg; turn. A smaller angle leaves the object open, showing its inside.</td></tr>
+    <tr><td>Steps</td><td>Extrude and Bevel, Revolve, Inflate</td><td>How many segments build the curved parts. More steps give a smoother surface; fewer leave it faceted.</td></tr>
+  </tbody>
+</table>
+<p>Plane has none of these: it has no thickness to describe. If a curved revolve or a rounded bevel looks too angular, raise the steps; if you want a low-polygon, faceted look on purpose, lower them.</p>
+
+<h2 id="three-d-rotation">Turning the object</h2>
+<p>The <em>Rotation</em> section sets how the object faces you. The quickest way is the preview pad: drag across it to spin the object left and right, and drag up and down to tip it forward and back. For exact angles, the <em>X</em>, <em>Y</em> and <em>Z</em> fields turn the object around each axis, each from -180&deg; to 180&deg;.</p>
+<p>The rotation menu holds ready-made viewpoints, so you can drop the object straight into a standard view rather than dialling one in:</p>
+<dl>
+  <dt>Off-Axis Front, Back, Left, Right, Top, Bottom</dt><dd>Three-quarter views that show one main face along with a little of the top or side. A good default for a solid that should look like a solid.</dd>
+  <dt>Isometric Left, Right, Top, Bottom</dt><dd>True isometric views, where the three axes are foreshortened equally and lines stay parallel. Suits technical and game-style artwork that must line up.</dd>
+  <dt>Front, Back, Left, Right, Top, Bottom</dt><dd>The six straight-on views, looking square at one face. Handy for checking the shape or for a flat, head-on presentation.</dd>
+</dl>
+<p>Picking a preset fills in the X, Y and Z fields; changing any of them by hand shows the menu as <em>Custom Rotation</em>. The <em>Perspective</em> field, from 0&deg; to 160&deg;, controls how strongly the object recedes: at zero the sides stay parallel, and as you raise it the far edges pull in towards a vanishing point, the way a real object seen up close appears to taper. Add a little perspective for a lifelike three-quarter view, or leave it at zero to keep an isometric or flat-on setup exact.</p>
+
+<h2 id="three-d-lighting">Lighting</h2>
+<p>The <em>Lighting</em> section decides where the light comes from and how hard it is, which is what makes the surface read as raised, carved or rounded. A lighting menu offers four starting points, <em>Standard</em>, <em>Diffuse</em>, <em>Top Left</em> and <em>Right</em>, and any change to the fields below shows it as <em>Custom Lighting</em>.</p>
+<dl>
+  <dt>Intensity</dt><dd>The strength of the main light, as a percentage. Higher makes the lit faces brighter and the highlights stronger.</dd>
+  <dt>Ambient</dt><dd>A fill light that lifts the whole object, as a percentage, so the shadowed faces do not fall to black. Raise it for a softer, more even look; lower it for deeper contrast.</dd>
+  <dt>Rotation</dt><dd>Where the light sits around the object, from -180&deg; to 180&deg;, which moves the highlight and the shadow to the other side.</dd>
+  <dt>Height</dt><dd>How high the light is above the object, from 0&deg; (level with it, for long raking shadows) to 90&deg; (straight overhead, for even light).</dd>
+</dl>
+<p><em>Diffuse</em> gives a soft, low-contrast finish; <em>Top Left</em> and <em>Right</em> throw the light from one side for a more dramatic, sculpted look. Start from whichever preset is closest, then adjust the four fields to taste.</p>
+
+<h2 id="three-d-materials">Materials</h2>
+<p>Three material buttons set how the surface catches the light: <em>Plastic</em>, <em>Matte</em> and <em>Metal</em>. Plastic gives a soft shine with a clear highlight, the usual choice for a friendly, moulded look. Matte removes the shine for a flat, even finish, which reads as paper, clay or a printed surface. Metal gives a harder, higher-contrast sheen, for chrome, gold and other polished metals. The material works together with the lighting, so a change to one is worth checking against the other.</p>
+
+<h2 id="three-d-expand">Keeping it live, and expanding</h2>
+<p>Everything above is stored as one live effect on the object, listed in the <strong>Appearance</strong> panel (<kbd>&#8679;F6</kbd>) with an <em>fx</em> badge above the object's fills and strokes. Click that entry to reopen the 3D and Materials panel, or remove it there to take the object back to flat. Inside the panel, <em>Remove 3D</em> strips the effect off the selection.</p>
+<p>While the effect is live the artwork underneath stays a plain, editable path, which is what lets you keep tuning the shape, the colour and the type. When the look is settled and you want the result as ordinary vector artwork, for example to edit the individual faces or to hand the file on, use <em>Expand as Vector</em> in the panel (the same as <strong>Object &rsaquo; Expand Appearance</strong>). That bakes the solid down into paths and ends its life as an effect, so expand a copy if you might still want to change the depth or the angle later.</p>

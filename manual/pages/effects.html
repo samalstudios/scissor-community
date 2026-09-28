@@ -1,0 +1,94 @@
+<p class="lede">An effect changes how an object looks without changing the object itself. The path, the group or the piece of type stays exactly as you drew it, and the effect is recomputed on top every time you move a point or edit a value. Effects stack in the Paint Stack panel, so you can pile several on one object, reorder them and take any of them off again.</p>
+
+<figure class="shot">
+  <img src="img/effects-demo.png" width="1400" height="560" loading="lazy"
+       alt="Three identical blue tiles showing three effects: a drop shadow, an amber outer glow, and roughened edges." />
+  <figcaption>The same tile with three effects: a drop shadow, an outer glow and Roughen. Each is live, so the tile underneath is still a plain rounded rectangle.</figcaption>
+</figure>
+
+<h2 id="effects-live-and-stacked">Live effects and the appearance stack</h2>
+<p>Every effect in Scissor is <strong>live</strong> and <strong>non-destructive</strong>. It sits above the object's fills and strokes in the <strong>Appearance</strong> panel (<kbd>&#8679;F6</kbd>) and runs over the whole object each time the artwork or the effect changes. Because the original path is untouched underneath, you can keep editing anchor points, swap the fill colour or retype the words, and the effect follows along. Reach for an effect whenever you want a look, a shadow, a bend, a rounded corner, that you might change your mind about later, rather than committing to it by hand.</p>
+
+<h3 id="effects-order">Order matters</h3>
+<p>Effects run from the bottom of the stack upwards, and the panel lists them top first, above the fills and strokes. The order changes the result: a blur under a drop shadow softens the shape before the shadow is cast, while the same two the other way round casts a sharp shadow and then blurs the whole lot. If an effect is not doing what you expect, its position in the stack is the first thing to check.</p>
+
+<h2 id="effects-using">Adding, editing and removing effects</h2>
+<h3 id="effects-add">From the Effect menu</h3>
+<p>Select an object, then pick an effect from the <strong>Effect</strong> menu. Items that open a dialog show a <strong>Preview</strong> as you change their values, so you can judge the result on the canvas before you commit; the whole edit lands as a single step in the history rather than one step per keystroke. A short version of the menu (Drop Shadow, Outer Glow and Gaussian Blur, plus Clear Effects) also sits in the canvas right-click menu under <strong>Effect</strong>.</p>
+<h3 id="effects-appearance">In the Paint Stack panel</h3>
+<p>Each effect on the selected object gets its own row in the Paint Stack panel, marked with an <em>fx</em> badge. Click the effect's name to reopen its options and change them. Click the cross at the end of the row to remove that one effect. To strip every effect from the selection at once, use <strong>Effect &rsaquo; Clear Effects</strong>.</p>
+<h3 id="effects-panels">In the Effects panels</h3>
+<p>The <strong>Window &rsaquo; Effects</strong> group gathers the effects into one panel for each part of the Effect menu: Stylize, Blur, Distort &amp; Transform, Path, Combine Shapes and Warp, with the 3D panel alongside. Each panel lists that group's effects with a switch to turn one on or off and its settings just below, all edited live on the selection. It is a quicker way to try an effect and adjust its values than opening a dialog each time. Turning a switch off takes that effect back off the object. When an object carries more than one effect of the same kind, the panel edits the first of them and the Paint Stack panel still shows the whole stack.</p>
+
+<h2 id="effects-stylize">Stylize: shadows, glows and edges</h2>
+<p>The <strong>Effect &rsaquo; Stylize</strong> submenu holds the everyday finishing effects.</p>
+<table>
+  <thead><tr><th>Effect</th><th>What it does, and when to use it</th><th>Main options</th></tr></thead>
+  <tbody>
+    <tr><td>Drop Shadow</td><td>Casts an offset, blurred copy of the object behind it. Use it to lift a shape, a card or a piece of type off the background.</td><td>X and Y offset, Blur, Colour, Opacity.</td></tr>
+    <tr><td>Outer Glow</td><td>Spreads a soft halo of colour outward from the object's edge. Reach for it for a neon sign, a highlight, or a glow around a light source.</td><td>Blur, Colour, Opacity.</td></tr>
+    <tr><td>Inner Glow</td><td>Fades a colour inward from the edge instead of outward, so the light sits inside the shape. Use it to hollow a shape out or suggest an inset, lit rim.</td><td>Blur, Colour, Opacity.</td></tr>
+    <tr><td>Feather</td><td>Fades the object's own edge to transparent over a radius. Use it for a soft-edged shape or a simple vignette.</td><td>Feather Radius.</td></tr>
+    <tr><td>Round Corners</td><td>Rounds every corner of the path to one radius. Use it to soften the points of a star, a polygon or a hand-drawn path without redrawing it.</td><td>Radius.</td></tr>
+    <tr><td>Sketch Fill</td><td>Fills the shape with a back-and-forth run of strokes, as though sketched by hand. Good for a loose, drawn-in fill or a marker-pen look.</td><td>Angle, Spacing, Stroke Width, Variation (how much the strokes wander, 0 to 100%).</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-blur">Blur</h2>
+<p><strong>Effect &rsaquo; Blur &rsaquo; Gaussian Blur</strong> softens the whole object by a <em>Radius</em> you set in pixels. Because it stays live, you can raise or lower the radius at any time. Use it for a soft, out-of-focus background, or as a quick soft shadow shape on its own.</p>
+
+<h2 id="effects-distort">Distort and transform</h2>
+<p>The <strong>Effect &rsaquo; Distort &amp; Transform</strong> submenu reshapes the outline while keeping the underlying path editable.</p>
+<table>
+  <thead><tr><th>Effect</th><th>What it does, and when to use it</th><th>Main options</th></tr></thead>
+  <tbody>
+    <tr><td>Free Distort</td><td>Drags the four corners of the object's box in a small preview, and the artwork follows in perspective. Use it to fake a perspective, such as a label sitting on an angled surface. A Preview switch shows the result on the canvas while you drag, and Reset returns the corners to square.</td><td>The four corner handles, Preview, Reset.</td></tr>
+    <tr><td>Pinch &amp; Swell</td><td>Bends the segments between anchor points either inward, pinching the outline into spikes, or outward, swelling it into bulges. Use it for star bursts, blobs and soft petal shapes.</td><td>Amount, from pinched through to swollen.</td></tr>
+    <tr><td>Roughen</td><td>Breaks the outline into small random movements, either sharp or smoothed. Use it for a torn-paper edge or a rougher, hand-drawn line.</td><td>Size (how far points move), Detail (how densely), Points: Smooth or Corner.</td></tr>
+    <tr><td>Transform</td><td>Scales, moves and rotates the object as an effect, and can leave a set of copies behind. Use it for an editable row or ring of repeats, or to nudge and resize a shape without touching its real geometry.</td><td>Scale Horizontal and Vertical, Move Horizontal and Vertical, Rotate, Copies (0 to 200).</td></tr>
+    <tr><td>Tweak</td><td>Shifts anchor points and their control handles by a random amount. Use it to knock a too-perfect shape slightly out of true.</td><td>Horizontal and Vertical amount, and whether to move Anchor Points, Control Points, or both.</td></tr>
+    <tr><td>Twist</td><td>Turns the inside of the shape more than its edges, winding it into a swirl. Use it for a spiral or a whirlpool.</td><td>Angle.</td></tr>
+    <tr><td>Zig Zag</td><td>Turns straight segments into regular zig-zags (Corner) or waves (Smooth). Use it for a wavy underline, a ric-rac border or a jagged edge.</td><td>Size, Ridges per segment, Points: Corner or Smooth.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-path">Path</h2>
+<p>The <strong>Effect &rsaquo; Path</strong> submenu reworks the object's outline while leaving the source editable.</p>
+<table>
+  <thead><tr><th>Effect</th><th>What it does, and when to use it</th><th>Main options</th></tr></thead>
+  <tbody>
+    <tr><td>Offset Path</td><td>Grows or shrinks the outline by a set distance. A positive offset spreads it outward, a negative one pulls it in. Use it for a live outline around type or a shape that keeps pace as you edit.</td><td>Offset, Joins: Miter, Round or Bevel.</td></tr>
+    <tr><td>Outline Object</td><td>Adds an Offset Path effect set to zero, turning the object (live type included) into an outlined path so later effects have a real path to act on.</td><td>None.</td></tr>
+    <tr><td>Outline Stroke</td><td>Turns the stroke into a filled shape as an effect. Use it when you want to fill a stroke with a gradient, or feather or distort a stroke that is otherwise a plain line.</td><td>None.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-pathfinder">Combine Shapes</h2>
+<p>The <strong>Effect &rsaquo; Combine Shapes</strong> submenu combines the shapes inside a group with a shape mode, but keeps them as separate, editable paths underneath. Apply it to a group and the combined result is what you see, while each member can still be moved or recoloured. Use it to try a combination without committing to it the way the Combine Shapes panel would.</p>
+<table>
+  <thead><tr><th>Mode</th><th>Result</th></tr></thead>
+  <tbody>
+    <tr><td>Add</td><td>Merges the group's shapes into one region.</td></tr>
+    <tr><td>Intersect</td><td>Keeps only where the shapes overlap.</td></tr>
+    <tr><td>Exclude</td><td>Keeps everything except where they overlap.</td></tr>
+    <tr><td>Subtract</td><td>Removes the front shapes from the back one.</td></tr>
+    <tr><td>Minus Back</td><td>Removes the back shapes from the front one.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-warp">Warp</h2>
+<p><strong>Effect &rsaquo; Warp</strong> bends the object along one of a set of preset shapes, and stays live so you can keep editing the artwork underneath. Use it to curve a headline into an arch, wave a banner, or push a flat block into a bulge, without giving up the ability to change the words or the colours.</p>
+<p>The menu offers ten styles directly (Arc, Arch, Bulge, Flag, Wave, Fish, Rise, Fisheye, Inflate and Squeeze). <strong>Warp Options&#8230;</strong> opens the full set, which adds Arc Lower, Arc Upper, Shell Lower and Shell Upper, and lets you dial in the amount:</p>
+<dl>
+  <dt>Bend</dt><dd>How strongly the shape bends, from -100% to 100%.</dd>
+  <dt>Horizontal</dt><dd>Leans the bend to one side, from -100% to 100%.</dd>
+  <dt>Vertical</dt><dd>Tips the bend up or down, from -100% to 100%.</dd>
+</dl>
+<p>The same warp styles can be applied as a reshaping envelope instead, which changes the path itself rather than staying live: see <a href="#transform-envelope">Shape Warp</a>. The Warp tool and the other liquify tools reshape by dragging on the canvas and are covered under <a href="#tools-width-liquify">the tools reference</a>.</p>
+
+<h2 id="effects-3d">3D and Materials</h2>
+<p><strong>Effect &rsaquo; 3D and Materials</strong> turns a flat shape into a solid: a plane, an extrude and bevel, a revolve or an inflate. Like the others it is a live effect, so the flat path stays there to edit and the solid rebuilds when you change it. The depth, bevel, rotation, lighting and surface are set in the 3D and Materials panel. Because it has more controls than a single dialog, 3D has its own page: see <a href="/manual/three-d/">3D</a>.</p>
+
+<h2 id="effects-expand">Turning effects into artwork</h2>
+<p>An effect stays live for as long as you want it. When the look is settled and you need the result as plain, editable paths, for example to hand the file on or to reshape the effect's output by hand, choose <strong>Object &rsaquo; Expand Appearance</strong>. It bakes the whole appearance stack, effects included, down into ordinary artwork. This cannot be edited as an effect afterwards, so expand only once you are sure. To take effects off without baking anything, remove them one at a time in the Paint Stack panel or clear them all with <strong>Effect &rsaquo; Clear Effects</strong>.</p>
+<p>The Effect menu also lists <strong>Rasterize</strong>, which is not a live effect: it converts the selection into pixels there and then. Painting and pixel layers are covered on the <a href="/manual/pixels/">Pixel layers</a> page.</p>

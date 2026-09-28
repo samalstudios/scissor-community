@@ -1,0 +1,26 @@
+<p>Scissor opens in a browser tab. There is no account to make and nothing to install before you begin: the drawing engine is compiled to WebAssembly and runs on your own machine, so your artwork is never uploaded anywhere. On your first visit a Welcome screen greets you &mdash; the Scissor fox, a short tour of what the app does, and the Terms of Use. Tick <strong>I have read and agree to the Terms of Use</strong> and press <strong>Get Started</strong> to enter the editor. A second, optional checkbox asks whether Scissor may count visits with anonymous analytics; leaving it off loads no analytics at all. You can change that choice later under <strong>Preferences &gt; Privacy</strong>, and re-read the terms any time from <strong>Help &gt; Terms of Use&hellip;</strong>.</p>
+
+<p>Shortcuts below are written in the macOS form. On Windows and Linux, read <kbd>⌘</kbd> as Ctrl and <kbd>⌥</kbd> as Alt; <kbd>⇧</kbd> is Shift.</p>
+
+<h3 id="what-you-see">What you see</h3>
+<p>Across the top sit the menu bar and, beneath it, the Control bar, which changes with what you have selected and holds fill, stroke, weight, opacity and the X, Y, W and H of the selection. The tools run down the left edge; the panel dock is on the right. Between them is the canvas, with a tab for each open document above it and a status bar below showing the zoom level, the active board, the current tool and the name of the last undoable step.</p>
+<p>With no document open, the canvas shows a start screen with <strong>New Document…</strong> and <strong>Open…</strong>; double-clicking anywhere on it opens a file. Press <kbd>Tab</kbd> to hide the panels and give the artwork the full window, and again to bring them back. Hold the space bar at any time to pan.</p>
+
+<h3 id="first-document">Making your first document</h3>
+<p>Choose <strong>File &gt; New…</strong> (<kbd>⌥⌘N</kbd>). The dialog groups blank presets under Print, Web, Mobile, Film &amp; Video and Art &amp; Illustration; click a card to load its size, or double-click it to create the document at once. On the right you can set the document name, width and height, the units, and portrait or landscape orientation. <strong>Boards</strong>, <strong>Columns</strong> and <strong>Spacing</strong> lay out more than one board in a grid. Under <strong>Bleed</strong>, the link button keeps all four sides equal; switch it off to set them separately. <strong>Advanced</strong> holds the colour mode (RGB or CMYK) and the resolution used by raster effects. <kbd>Enter</kbd> creates the document, <kbd>Esc</kbd> closes the dialog.</p>
+<figure class="shot">
+  <img src="img/new-document.png" width="1500" height="928" loading="lazy"
+       alt="The New Document dialog in Scissor, with size presets grouped by use on the left and document settings on the right." />
+  <figcaption>The New Document dialog. Pick a preset on the left, or set the size, boards and bleed on the right.</figcaption>
+</figure>
+
+<h3 id="first-shape">Drawing a first shape</h3>
+<p>Press <kbd>M</kbd> for the Rectangle tool or <kbd>L</kbd> for the Ellipse tool and drag on the canvas. Hold <kbd>⇧</kbd> while dragging to keep the shape square or circular, and <kbd>⌥</kbd> to draw out from the centre rather than from the corner. A single click instead of a drag opens a small dialog, so you can type an exact width and height. With the Polygon or Star tool, the up and down arrow keys change the number of sides or points as you drag.</p>
+<p>The fill and stroke swatches sit at the foot of the toolbar. <kbd>X</kbd> moves the focus between them, <kbd>⇧X</kbd> swaps the two colours, <kbd>D</kbd> returns to the default white fill and black stroke, and <kbd>/</kbd> sets the focused one to none. Press <kbd>V</kbd> for the Selection tool to move and resize what you have drawn.</p>
+
+<h3 id="saving">Saving</h3>
+<p>Scissor documents are <code>.cut</code> files. <strong>File &gt; Save</strong> (<kbd>⌘S</kbd>) asks once where the file should go and, in browsers that support direct file access, writes back to that same file every time after. Browsers without it save the document to your downloads folder instead. <strong>Save As…</strong> is <kbd>⇧⌘S</kbd> and <strong>Save a Copy…</strong> is <kbd>⌥⌘S</kbd>. To hand work to another program, use <strong>File &gt; Export</strong>.</p>
+<p>While a document has unsaved changes Scissor keeps a copy in the browser's own storage every few seconds, and again whenever the tab is hidden or closed. If the tab goes away before you save, your next visit offers the work back with a <strong>Recover</strong> notice.</p>
+
+<h3 id="installing">Installing Scissor</h3>
+<p>Choose <strong>Help &gt; Install Scissor…</strong> to install it as an application. It then opens in its own window without browser chrome, works offline, and can be set as the program that opens <code>.cut</code> files. If your browser does not offer the prompt, use its own install option in the address bar or menu.</p>

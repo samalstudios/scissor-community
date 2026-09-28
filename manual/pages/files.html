@@ -1,0 +1,63 @@
+<p class="lede">Opening, saving, placing, exporting and printing all happen on your own computer. This page covers the native <code>.cut</code> document, the formats Scissor can read and write, and how artwork gets in and out.</p>
+
+<h2 id="files-device">Everything stays on your device</h2>
+<p>Scissor has no server and no account. A file you open is read in the browser, on your own machine, and a file you export is written straight back to your disk. Nothing is uploaded, and artwork never leaves the computer unless you send it somewhere yourself. That also means there is no cloud copy to fall back on, so save your work like any other desktop document.</p>
+<p>In the shortcuts below, <kbd>⌘</kbd> is <kbd>Ctrl</kbd> on Windows and Linux, and <kbd>⌥</kbd> is <kbd>Alt</kbd>.</p>
+
+<h2 id="files-native">The .cut document</h2>
+<p>Scissor's own format is <code>.cut</code>, a versioned JSON file holding the whole node tree: every layer, group, path, live shape, piece of type, placed picture, gradient, effect and artboard, exactly as you left them. It is the only format that preserves everything Scissor can do, so it is what you save while a piece is still being worked on. Reach for an export format only when the artwork needs to travel to another program or to the web.</p>
+
+<h3 id="files-save">Saving your work</h3>
+<p>Use <strong>File &gt; Save</strong> (<kbd>⌘S</kbd>) to write the document, <strong>Save As…</strong> (<kbd>⇧⌘S</kbd>) to write it under a new name, and <strong>Save a Copy…</strong> (<kbd>⌥⌘S</kbd>) to write a snapshot to one side while you carry on in the original.</p>
+<p>Where the browser supports it, Scissor keeps a handle on the file you picked, so later saves go back to the same place with no dialog, the way a desktop application would. Where it does not, each save arrives as a download of a fresh <code>.cut</code> file. If a saved file has since been moved, or its permission withdrawn, Scissor falls back to asking you where to put it again.</p>
+
+<h3 id="files-new">Starting and closing documents</h3>
+<p><strong>File &gt; New…</strong> (<kbd>⌥⌘N</kbd>) opens a blank document from the New Document dialog, where you set its size and how many artboards it starts with. <strong>File &gt; Open…</strong> (<kbd>⌘O</kbd>) reads existing files, and can take several at once. Close the active document with <strong>File &gt; Close</strong> (<kbd>⌥⌘W</kbd>).</p>
+
+<h2 id="files-open">Opening other formats</h2>
+<p><strong>File &gt; Open…</strong> (<kbd>⌘O</kbd>) reads more than Scissor's own documents. You can select several files in one go, or drag them onto the canvas. What comes through depends on the format.</p>
+<dl>
+  <dt>SVG (<code>.svg</code>)</dt>
+  <dd>Read in depth. Paths and the basic shapes (rectangle, circle, ellipse, line, polyline, polygon), groups, nested <code>svg</code>, <code>use</code> and <code>symbol</code>, and the full set of transforms come across. So do presentation attributes, inline styles and simple <code>&lt;style&gt;</code> rules (by tag, class or id), linear and radial gradients, clipping paths, basic text including type set along a path, and images whether embedded or linked. Colours are read as hex, <code>rgb</code>, <code>hsl</code> or a CSS colour name, and lengths in px, points, picas, inches, millimetres, centimetres, em or ex. Axis-aligned rectangles, circles and ellipses arrive as live shapes, so they stay editable by their handles rather than becoming frozen outlines. An SVG that carries layers opens with those layers kept, names and all, and any that were hidden or locked stay hidden and locked. Pattern fills, masks, markers and filter effects are not brought across.</dd>
+  <dt>PDF, and PDF-based <code>.ai</code></dt>
+  <dd>One artboard per page. Paths, colours, line style, clipping, form XObjects, text with its font and position, and pictures (including JPEG, indexed images and stencil masks with their soft-mask alpha) all come through. Axial and radial shadings are read whether painted directly or through a pattern fill.</dd>
+  <dt>EPS (<code>.eps</code>, <code>.epsf</code>)</dt>
+  <dd>An EPS file is a PostScript program, so Scissor runs one. Paths, transforms, clipping, grey, RGB, CMYK, HSB and spot colours, line width, caps, joins and dashes, compound paths with their holes, and text with its font all come through, and the <code>%%BoundingBox</code> comment becomes the artboard (a <code>%%HiResBoundingBox</code> wins when the file gives one). The common shorthand operators are built in, so files that rely on them read without running their own prolog, and the binary wrapper a DOS EPS carries is unwrapped first. Raster images embedded in an EPS are skipped.</dd>
+  <dt>PSD (<code>.psd</code>)</dt>
+  <dd>Pixel layers become editable pixel layers inside their groups, keeping their names, opacity, blend mode and hidden state. Layer masks are baked into the alpha; vector masks and the paths saved with the file arrive as editable paths; type layers as editable text. The layer styles that draw (drop shadows, inner shadows and glows) come through as live effects.</dd>
+</dl>
+<p>Raster pictures (<code>.png</code>, <code>.jpg</code>, <code>.gif</code>, <code>.webp</code>, <code>.bmp</code>, <code>.avif</code>) can be opened too. Opened from the file dialog, a picture becomes its own document on one artboard sized to the image; dropped onto artwork you already have open, it is placed into that document instead.</p>
+<p>A design program that keeps a closed, unpublished format of its own leaves those files unreadable to everyone else, so Scissor does not open them. Export SVG or PDF from that program instead, and Scissor reads both.</p>
+
+<h3 id="files-ai">Why .ai is read but never written</h3>
+<p>A modern <code>.ai</code> file is a PDF, which is why one opens through the PDF importer. Writing <code>.ai</code> is another matter: the extension names another program's document, and a file claiming to be one while carrying Scissor's own structure would mislead whoever opened it next. Scissor writes <code>.cut</code> for its own work, and PDF or SVG when the artwork needs to travel.</p>
+
+<h2 id="files-place">Placing artwork</h2>
+<p><strong>File &gt; Place…</strong> (<kbd>⇧⌘P</kbd>) brings SVG and raster pictures (PNG, JPEG, GIF, WebP) into the document you already have open, rather than starting a new one. Use it to drop a logo, a photo or a piece of scanned line art into a layout in progress.</p>
+<p>Placed SVG arrives as editable artwork: its shapes, paths and type land in the document as objects you can select and reshape, not as a flat picture. A raster image (PNG, JPEG, GIF, WebP) arrives as an editable <strong>pixel layer</strong> at its own size — paint on it, mask it, adjust and filter it straight away, and trace it with Vectorize. The pixels are held inside the document, so it never goes looking for a linked file that might move or go missing; a very large photo is scaled down to fit a single surface.</p>
+<p>Dragging a file onto the canvas does the same as placing it, except that a <code>.cut</code>, PDF, <code>.ai</code>, <code>.psd</code> or EPS file opens as a document of its own. Pasting a picture from the clipboard places it as well. To turn live artwork into pixels once it is finished, use <strong>Object &gt; Rasterize</strong>, which replaces the selection with a 2x image of itself.</p>
+
+<h2 id="files-clipboard">Copy, cut and paste</h2>
+<p>Copy (<kbd>⌘C</kbd>) and cut (<kbd>⌘X</kbd>) put the selection on the clipboard, and paste (<kbd>⌘V</kbd>) drops it back near the centre of the view. Scissor keeps a full-fidelity copy of its own for round trips inside the app, and also writes the selection to the system clipboard as SVG, so you can paste artwork straight into another program.</p>
+<p>Three variants control where a paste lands: <strong>Paste in Front</strong> (<kbd>⌘F</kbd>) and <strong>Paste in Back</strong> (<kbd>⌘B</kbd>) put it directly above or below the current selection in the stacking order, and <strong>Paste in Place</strong> (<kbd>⇧⌘V</kbd>) drops it at the same coordinates it was copied from. Because a copy also travels as SVG, text or artwork copied from elsewhere can be pasted in, and it arrives as editable objects.</p>
+
+<h2 id="files-export">Exporting</h2>
+<p>Exporting writes a copy of the artwork in a format made for sharing or the web, leaving the <code>.cut</code> document untouched. The <strong>File &gt; Export</strong> submenu holds the single-file commands, and two other routes handle many files at once.</p>
+
+<h3 id="files-export-one">Single files</h3>
+<p><strong>Export As SVG…</strong> writes the active artboard as SVG. The writer is thorough: live rectangles, circles and ellipses are written as real <code>&lt;rect&gt;</code>, <code>&lt;circle&gt;</code> and <code>&lt;ellipse&gt;</code> elements so they stay editable; linear and radial gradients, pattern fills, clipping and knockout groups, opacity, blend modes and isolation all come through; drop shadows, blurs, glows and feathers are written as SVG filters; and type stays as text, including type on a path, OpenType feature settings and a fill with an outline. Freeform gradients and gradient meshes, which no SVG gradient can describe, are written as many small coloured cells so any reader draws them correctly. Placed pictures and pixel layers are embedded as <code>&lt;image&gt;</code> elements.</p>
+<p><strong>Export As PNG…</strong>, <strong>Export As PNG @2x…</strong> and <strong>Export As PNG (Transparent)…</strong> render the active artboard as a PNG at one or two times its size, the last of them keeping a transparent background. <strong>Export As JPEG…</strong> and <strong>Export As WebP…</strong> write the other raster formats; JPEG has no transparency, so it always keeps the artboard background.</p>
+<p><strong>Export As PDF…</strong> writes the whole document as PDF, one page per artboard. This is an in-house writer that keeps vector paths, gradients, opacity, clipping, text and placed pictures with their transparency, so the result stays editable elsewhere rather than being a flattened picture of the artwork.</p>
+<p><strong>Export Selection…</strong> writes only the selected objects as SVG, cropped to what you picked. Reach for it when you want one icon or one shape out of a busy artboard.</p>
+
+<h3 id="files-screens">Export for Screens</h3>
+<p><strong>File &gt; Export &gt; Export for Screens…</strong> (<kbd>⌥⌘E</kbd>) writes many files in one pass, which is how you produce a set of assets at several sizes. Tick the artboards and slices you want, tick any combination of PNG, JPEG, WebP and SVG, and type the scales as a list such as <code>1x, 2x, 3x</code>. Each ticked page is written in each ticked format at each scale, so one run can produce a whole spread of files. Vector output ignores scale, since SVG has no fixed size. Where the browser allows it you pick a folder and every file is written into it; otherwise the files arrive as separate downloads.</p>
+
+<h3 id="files-slices">Slices</h3>
+<p>A slice marks out a rectangle of the canvas to export on its own, so you can cut several pieces from one artboard. Make them from <strong>Object &gt; Slice</strong>: <strong>Make</strong> turns the selection into a slice, <strong>Create from Guides</strong> cuts the board along its guides, and <strong>Create from Selection</strong> makes one slice per selected object. <strong>Slice Options…</strong> sets a slice's name, format and scale, <strong>Release</strong> removes the selected slice, and <strong>Delete All</strong> clears them. You can also draw slices by hand with the Slice tool (<kbd>⇧K</kbd>). Slices appear alongside artboards in the Export for Screens list.</p>
+
+<h3 id="files-assets">The Assets panel</h3>
+<p>The <strong>Assets</strong> panel (Window menu) exports individual pieces of artwork rather than whole boards, which suits building an icon set or a component sheet. Select some artwork and press <strong>Add Selection</strong> to add it to the list, then rename each entry: the name becomes the filename. Choose the formats (PNG, JPEG, WebP or SVG) and the scales once, then press <strong>Export</strong> to write every asset at every combination. Each asset is rendered on its own, cropped to its own bounds.</p>
+
+<h2 id="files-print">Printing</h2>
+<p><strong>File &gt; Print…</strong> (<kbd>⌘P</kbd>) sends the active artboard to the browser's own print dialog. The page is set landscape or portrait to match the artboard's proportions, with a 12&nbsp;mm margin, and the artwork is fitted inside it. Set the artboard's size first in <strong>File &gt; Document Setup…</strong> (<kbd>⌥⌘P</kbd>).</p>
