@@ -12,4 +12,4 @@ Each page is an HTML fragment in `manual/pages/`, styled by `manual/manual.css`,
 
 ---
 
-© Samal Studios. All rights reserved. The Scissor application itself is not open source.
+© Samal Studios. The manual is licensed under [CC BY-NC-ND 4.0](manual/LICENSE) and the sample files under [CC BY 4.0](samples/LICENSE); see [LICENSE.md](LICENSE.md). The Scissor application itself is proprietary.
