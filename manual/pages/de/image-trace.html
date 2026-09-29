@@ -1,0 +1,100 @@
+<p class="lede">Vektorisieren verwandelt ein Bild in Vektorpfade: ein Logo, das von Papier gescannt wurde, eine Bleistiftskizze oder ein Foto wird zu einem Satz gefüllter Formen, die Sie skalieren, neu färben und bearbeiten können wie alles andere, was Sie zeichnen. Diese Seite behandelt, was Sie vektorisiert können, das Panel, das es steuert, die drei Modi und ihre Vorlagen, jede Option und wie Sie das Ergebnis behalten oder verwerfen.</p>
+
+<h2 id="image-trace-was">Was Tracing macht und was Sie vektorisiert können</h2>
+<p>Ein Bild besteht aus Pixeln: Es verschwimmt, wenn Sie es vergrößern, und kann nicht Punkt für Punkt umgeformt werden. Tracing liest diese Pixel und zeichnet Vektorpfade, die den Formen folgen, die es findet, sodass das Ergebnis bei jeder Größe scharf bleibt und bearbeitet, neu gefärbt und mit dem Rest Ihrer Grafik kombiniert werden kann.</p>
+<p>Sie vektorisiert eine <strong>Pixel-Ebene</strong>: ein Bild, das Sie platziert oder eingefügt haben, ein Bild, das als eigenes Board geöffnet wurde, oder eine Ebene, die Sie selbst gemalt haben. Bringen Sie ein Bild mit <strong>Datei &gt; Platzieren…</strong> (<kbd>&#8679;&#8984;P</kbd>) herein – es kommt als Pixel-Ebene herein – wählen Sie es aus, dann führen Sie das Tracing aus. (Vektorgrafik besteht bereits aus Pfaden, also gibt es nichts zu vektorisieren; Tracing liest Pixel.)</p>
+<p>Das Tracing wirft das Bild nicht weg. Es baut eine Gruppe namens <strong>Vektorisieren</strong>, die das Originalbild (jetzt verborgen) zusammen mit den neuen Pfaden enthält, die genau darüber sitzen. Weil die Gruppe die Einstellungen, mit denen sie gemacht wurde, sich merkt, bleibt das Ergebnis live: Wählen Sie es erneut aus, ändern Sie eine Einstellung, und es vektorisiert erneut. Wenn Sie zufrieden sind, <strong>erweitern</strong> Sie es, um nur die Pfade zu behalten, oder <strong>freigeben</strong> Sie es, um zum gewöhnlichen Bild zurückzukehren.</p>
+
+<h2 id="image-trace-panel">Das Vektorisieren-Panel</h2>
+<p>Jede Einstellung lebt im Vektorisieren-Panel. Öffnen Sie es über <strong>Objekt &gt; Vektorisieren &gt; Vektorisieren-Panel</strong> oder von seinem Tab im Panel-Dock. Das Panel braucht ein ausgewähltes Bild, bevor es etwas tun kann; ohne etwas Passendes ist die Schaltfläche „Vektorisieren" deaktiviert, und das Panel bittet Sie, ein platziertes Bild auszuwählen.</p>
+
+<h3 id="image-trace-run">Ein Tracing ausführen</h3>
+<p>Wählen Sie ein Bild, wählen Sie eine Vorlage oder stellen Sie den Modus und die Optionen von Hand ein, und drücken Sie <strong>Vektorisieren</strong>. Eine Zeile am Fuß des Panels meldet den Fortschritt und liest <em>Vektorisieren…</em>, während es arbeitet, und <em>Vektorisiert. Erweitern, um nur die Pfade zu behalten.</em>, wenn es fertig ist. Wenn das Bild nichts enthält, woraus eine Form gemacht werden kann, oder nicht gelesen werden kann, sagt es Ihnen und lässt das Bild unberührt.</p>
+
+<h3 id="image-trace-preview">Vorschau während Sie arbeiten</h3>
+<p>Das Kontrollkästchen <strong>Bei Einstellungsänderung vektorisieren</strong>, standardmäßig aktiviert, vektorisiert in dem Moment, in dem Sie den Modus, eine Vorlage, eine Zahl oder ein Kontrollkästchen ändern, sodass Sie jede Anpassung direkt gegen das Bild beurteilen können. Auf einem großen oder belebten Bild dauert die Neuzichnung einen Moment, also schalten Sie es aus, wenn Sie lieber mehrere Optionen zuerst einstellen und einmal <strong>Vektorisieren</strong> drücken möchten. Wenn Sie ein bestehendes Tracing erneut auswählen, lädt das Panel die genauen Einstellungen, mit denen es gemacht wurde, bereit, angepasst und erneut vektorisiert zu werden.</p>
+
+<h3 id="image-trace-menu">Die Befehle im Objekt-Menü</h3>
+<p>Dieselben Aktionen sitzen unter <strong>Objekt &gt; Vektorisieren</strong>, was praktisch ist, wenn das Panel geschlossen ist.</p>
+<table>
+  <thead><tr><th>Befehl</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Erstellen</strong></td><td>Vektorisiert das ausgewählte Bild mit den aktuellen Einstellungen und lässt das Ergebnis live.</td></tr>
+    <tr><td><strong>Erstellen und erweitern</strong></td><td>Vektorisiert und erweitert in einem Schritt, sodass Sie direkt zu bearbeitbaren Pfaden gehen.</td></tr>
+    <tr><td><strong>Erweitern</strong></td><td>Behält die Pfade und lässt das Bild fallen (siehe unten).</td></tr>
+    <tr><td><strong>Freigeben</strong></td><td>Verwirft die Pfade und kehrt zum Bild zurück (siehe unten).</td></tr>
+    <tr><td><strong>Vektorisieren-Panel</strong></td><td>Bringt das Panel nach vorne.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="image-trace-modes">Die drei Modi</h2>
+<p>Der Modus entscheidet, wie das Bild reduziert wird, bevor es gezeichnet wird. Es ist die erste Entscheidung, weil er bestimmt, welche der untenstehenden Optionen gelten.</p>
+<table>
+  <thead><tr><th>Modus</th><th>Wie er das Bild reduziert</th><th>Die Option, die er verwendet</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Schwarz-Weiß</strong></td><td>Teilt alles in zwei Töne, Tusche und Papier, bei einer Helligkeit, die Sie einstellen.</td><td>Schwelle</td></tr>
+    <tr><td><strong>Graustufen</strong></td><td>Reduziert das Bild auf eine festgelegte Anzahl gleichmäßiger Graustufen von Schwarz bis Weiß.</td><td>Anzahl der Farben (als Graustufen)</td></tr>
+    <tr><td><strong>Farbe</strong></td><td>Wählt eine Palette der aussagekräftigsten Farben im Bild ab und ordnet jedes Pixel der nächsten zu.</td><td>Anzahl der Farben</td></tr>
+  </tbody>
+</table>
+<p>Welchen Modus Sie auch wählen, pro Ton oder Farbe wird eine gefüllte Form erstellt, und die Formen werden größte zuerst gestapelt, sodass kleineres Detail oben sitzt. Vollständig transparente Teile des Bildes bleiben ausgeschlossen, sodass ein Ausschnitt auf transparentem Hintergrund nur sein Motiv vektorisiert.</p>
+
+<h2 id="image-trace-presets">Vorlagen</h2>
+<p>Eine Vorlage ist ein benannter Ausgangspunkt, der den Modus und jede Option auf einmal einstellt. Wählen Sie eine aus dem Menü oben im Panel, und mit Vorschau aktiviert, vektorisiert das Bild sofort; behandeln Sie das Ergebnis als Basis und passen Sie von dort an. In dem Moment, in dem Sie eine einzige Option ändern, wechselt das Vorlagenmenü zu <strong>Benutzerdefiniert</strong>, da die Einstellungen der Vorlage nicht mehr entsprechen.</p>
+<table>
+  <thead><tr><th>Vorlage</th><th>Modus</th><th>Greifen Sie hierher, wenn</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Fotorealistisch hoch</strong></td><td>Farbe</td><td>Sie ein Foto nah am Original mit vielen Farben behalten möchten.</td></tr>
+    <tr><td><strong>Fotorealistisch niedrig</strong></td><td>Farbe</td><td>Ein Foto als einige breite, flache Farbflächen gelesen werden soll.</td></tr>
+    <tr><td><strong>3 Farben</strong></td><td>Farbe</td><td>Sie ein kräftiges, plakatartiges Ergebnis aus drei flachen Farben wollen.</td></tr>
+    <tr><td><strong>6 Farben</strong></td><td>Farbe</td><td>Ein flach aussehender, illustrierter Look mit einer kleinen, ordentlichen Palette.</td></tr>
+    <tr><td><strong>16 Farben</strong></td><td>Farbe</td><td>Mehr Farbspielraum als die flachen Vorlagen, kurz vor einem vollen Foto.</td></tr>
+    <tr><td><strong>Graustufen</strong></td><td>Graustufen</td><td>Ein tonales Bild seine Schattierungen behalten, aber seine Farbe verlieren soll.</td></tr>
+    <tr><td><strong>Schwarz-Weiß-Logo</strong></td><td>Schwarz-Weiß</td><td>Ein sauberes Zweiton-Markenzeichen oder Logo in scharfe Formen verwandeln.</td></tr>
+    <tr><td><strong>Gezeichnete Kunst</strong></td><td>Schwarz-Weiß</td><td>Eine Bleistift- oder Tintenskizze mit ihren lockeren Linien einfangen.</td></tr>
+    <td><strong>Silhouetten</strong></td><td>Schwarz-Weiß</td><td>Sie solide, gefüllte Silhouetten statt feiner Linien wollen.</td></tr>
+    <tr><td><strong>Linienzeichnung</strong></td><td>Schwarz-Weiß</td><td>Eine feine Linienzeichnung, bei der dünne Striche überleben müssen.</td></tr>
+    <tr><td><strong>Technische Zeichnung</strong></td><td>Schwarz-Weiß</td><td>Scharfe, treue Linienarbeit mit so viel Detail wie möglich.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="image-trace-options">Die Optionen</h2>
+<p>Unter dem Modus sitzen die Steuerelemente, die das Ergebnis formen. Welche gezeigt werden, hängt vom Modus ab: Die Schwelle erscheint nur für Schwarz-Weiß, während die Anzahl der Farben für Graustufen und Farbe erscheint.</p>
+<dl>
+  <dt>Anzahl der Farben</dt>
+  <dd>Wie viele Farben (im Farbmodus) oder Graustufen (im Graustufenmodus) das Bild reduziert wird, von 2 bis 64. Weniger gibt ein flacheres, grafischeres Ergebnis mit weniger Formen; mehr hält das Bild nah am Original auf Kosten von mehr Pfaden. Der Schwarz-Weiß-Modus ignoriert dies, da er immer zwei Töne hat.</dd>
+  <dt>Schwelle</dt>
+  <dd>Nur für Schwarz-Weiß: Die Helligkeit, von 0 bis 255, bei der das Bild in Tusche und Papier geteilt wird. Alles dunkler als die Schwelle wird die gezeichnete Form; alles heller wird als Hintergrund behandelt. Erhöhen Sie es, um mehr der Mitteltöne in die Form zu ziehen für ein schwereres Ergebnis, verringern Sie es, um nur die dunkelsten Markierungen zu behalten. Verwenden Sie es, um einzustellen, wie viel von einer schwachen Skizze aufgenommen wird.</dd>
+  <dt>Pfade</dt>
+  <dd>Wie eng die Pfade den Pixeln folgen, auf einer Skala von 0 bis 100. Hohe Werte umarmen die Kanten eng und halten feine Wibbel, mit mehr Ankerpunkten; niedrige Werte entspannen die Passgenauigkeit für glattere, einfachere Pfade, die leichter zu bearbeiten sind. Greifen Sie zu einem hohen Wert, wenn Genauigkeit wichtig ist, und zu einem niedrigen, wenn Sie einen sauberen, ordentlichen Umriss wollen.</dd>
+  <dt>Ecken</dt>
+  <dd>Wie bereitwillig eine Drehung im Umriss eine scharfe Ecke statt einer glatten Krümmung wird, von 0 bis 100. Erhöhen Sie es für Grafik mit scharfen Winkeln, wie ein Logo oder eine Beschriftung; verringern Sie es für organische Formen, die gerundet bleiben sollen.</dd>
+  <dt>Rauschen</dt>
+  <dd>Der kleinste Fleck, in Pixeln, der als eigene Form zugelassen wird. Alles kleiner wird in das aufgenommen, was ihn umgibt. Erhöhen Sie es, um Sprenkel und Körnung aus einem Scan oder Foto zu entfernen, damit verirrte Punkte nicht jeweils einen Pfad werden; verringern Sie es, um echtes feines Detail zu behalten.</dd>
+  <dt>Weiß ignorieren</dt>
+  <dd>Lässt jede Form, die nahe Weiß herauskommt, aus, sodass das Papier oder der Hintergrund nicht gezeichnet wird und hinter den vektorisierten Markierungen transparent bleibt. Standardmäßig aktiviert und für den Schwarz-Weiß-Modus gezeigt. Schalten Sie es aus, wenn ein weißer Bereich Teil der Grafik ist und eine echte gefüllte Form sein muss.</dd>
+  <dt>Füllungen</dt>
+  <dd>Gibt jeder vektorisierten Form eine solide Füllung in der Farbe, in der sie vektorisiert wurde. Dies ist die übliche Wahl und standardmäßig aktiviert.</dd>
+  <dt>Konturen</dt>
+  <dd>Umreißt jede vektorisiert Form mit einer Kontur in ihrer eigenen Farbe statt, oder zusätzlich zu, einer Füllung. Standardmäßig deaktiviert. Wenn Sie sowohl Füllungen als auch Konturen ausschalten, werden die Pfade trotzdem erstellt, aber nichts malt sie, also lassen Sie mindestens einen an.</dd>
+</dl>
+
+<h2 id="image-trace-finish">Das Ergebnis behalten oder zurückkehren</h2>
+<p>Ein frisches Tracing ist live: Die Pfade sitzen über dem versteckten Original innerhalb der Vektorisieren-Gruppe, und Sie können die Einstellungen weiter anpassen. Zwei Befehle beenden diesen Zustand, beide im Panel als Schaltflächen und unter <strong>Objekt &gt; Vektorisieren</strong>. Sie werden verfügbar, sobald ein Tracing ausgewählt ist.</p>
+<dl>
+  <dt>Erweitern</dt>
+  <dd>Behält die Pfade und entfernt das Bild, sodass die Gruppe gewöhnliche Vektorgrafik wird. Die Einstellungen gelten nicht mehr und können nicht geändert werden, aber jeder Pfad ist jetzt eine gewöhnliche Form, die Sie umformen, neu färben, kombinieren und anordnen können. Greifen Sie hierher, sobald das Tracing richtig aussieht und Sie an den Vektoren arbeiten wollen. <strong>Erstellen und erweitern</strong> macht das Tracing und diesen Schritt zusammen.</dd>
+  <dt>Freigeben</dt>
+  <dd>Verwirft die vektorisierten Pfade und stellt das Originalbild wieder her, das wieder an seinem alten Ort sichtbar ist. Verwenden Sie es, um ein Tracing aufzugeben und neu zu beginnen oder wenn Sie am Ende nur das Bild brauchten.</dd>
+</dl>
+
+<h2 id="image-trace-uses">Logos, Skizzen und Fotos</h2>
+<p>Die drei gängigen Ausgangspunkte verlangen unterschiedliche Einstellungen.</p>
+<dl>
+  <dt>Ein Logo oder sauberes Markenzeichen</dt>
+  <dd>Beginnen Sie mit <strong>Schwarz-Weiß-Logo</strong>. Lassen Sie <strong>Weiß ignorieren</strong> an, damit das Papier herausfällt, erhöhen Sie <strong>Ecken</strong> für scharfe Winkel und <strong>Pfade</strong> für treue Kanten, und stellen Sie die <strong>Schwelle</strong> so ein, dass die Marken solide ist, ohne sich zu füllen. Erweitern Sie, dann stellen Sie Ihre eigene Füllfarbe ein.</dd>
+  <dt>Eine Bleistift- oder Tintenskizze</dt>
+  <dd>Probieren Sie <strong>Gezeichnete Kunst</strong> oder <strong>Linienzeichnung</strong>. Verringern Sie die <strong>Schwelle</strong>, um nur die gezeichneten Linien zu behalten und das Papier fallen zu lassen, und erhöhen Sie <strong>Rauschen</strong> ein wenig, um die Körnung des Papiers zu beseitigen. Linienzeichnung behält dünnere Striche; Gezeichnete Kunst eignet sich für eine lockerere Hand.</dd>
+  <dt>Ein Foto</dt>
+  <dd>Verwenden Sie den Farbmodus mit <strong>Fotorealistisch hoch</strong> für eine enge Ähnlichkeit oder <strong>Fotorealistisch niedrig</strong> für einen flacheren, illustrierten Look, und stellen Sie die <strong>Anzahl der Farben</strong> nach Geschmack ein. Lassen Sie <strong>Weiß ignorieren</strong> aus, damit bleiche Bereiche bleiben. Mehr Farben bedeuten mehr Formen, also kann ein schweres Fototracing groß werden: Reduzieren Sie die Farben, wenn das Ergebnis unhandlich wirkt.</dd>
+</dl>

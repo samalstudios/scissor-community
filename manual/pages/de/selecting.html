@@ -1,0 +1,34 @@
+<p class="lede">Bevor Sie etwas ändern können, müssen Sie sagen, was geändert werden soll. Diese Seite behandelt die Auswahl von Grafik: die schnellen Klicks mit den Auswahl-Werkzeugen und das gesamte <strong>Auswahl</strong>-Menü, das Objekte danach auswählt, woraus sie besteht, durch den Stapel schritt und eine Auswahl speichert, um sie später wiederzubringen. In den untenstehenden Kürzeln ist <kbd>&#8984;</kbd> <kbd>Strg</kbd> unter Windows und Linux, <kbd>&#8997;</kbd> ist <kbd>Alt</kbd> und <kbd>&#8679;</kbd> ist Umschalt.</p>
+
+<h2 id="selecting-basics">Klicken und Markieren</h2>
+<p>Das <strong>Auswahl-Werkzeug</strong> (<kbd>V</kbd>) ist, wo die meisten Auswahlen beginnen. Klicken Sie auf ein Objekt, um es auszuwählen; halten Sie <kbd>&#8679;</kbd> und klicken Sie auf ein anderes, um es hinzuzufügen, oder klicken Sie auf ein ausgewähltes, um es zu entfernen. Ziehen Sie über die leere Zeichenfläche, um eine <em>Marquee</em> zu ziehen, und alles, was sie berührt, wird ausgewählt. Das <strong>Direktauswahl-Werkzeug</strong> (<kbd>A</kbd>) greift stattdessen hinein: Es wählt einzelne Ankerpunkte und Pfadsegmente statt ganzer Objekte, und das <strong>Gruppenauswahl-Werkzeug</kbd> schritt in eine Gruppe hinein, eine Ebene nach der anderen. Diese Werkzeuge werden auf den <a href="/manual/de/tools/">Werkzeuge</a>- und <a href="/manual/de/paths/">Pfade</a>-Seiten behandelt; der Rest dieser Seite ist das Auswahl-Menü, das die Auswahl trifft, die Klicken nicht kann.</p>
+
+<h2 id="selecting-whole-document">Alle, keine und umgekehrt</h2>
+<table>
+  <thead><tr><th>Befehl</th><th>Kürzel</th><th>Was es auswählt</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Auswahl &rsaquo; Alle</strong></td><td><kbd>&#8984;A</kbd></td><td>Jedes nicht gesperrte Objekt im Dokument.</td></tr>
+    <tr><td><strong>Alle auf aktivem Board</strong></td><td><kbd>&#8997;&#8984;A</kbd></td><td>Nur die Grafik auf dem Board, auf dem Sie arbeiten – der schnelle Weg, um eine Seite einer Multi-Board-Datei zu erfassen.</td></tr>
+    <tr><td><strong>Auswahl aufheben</strong></td><td><kbd>&#8679;&#8984;A</kbd></td><td>Nichts; löscht die aktuelle Auswahl.</td></tr>
+    <tr><td><strong>Umkehren</strong></td><td></td><td>Vertauscht die Auswahl mit allem, was <em>nicht</em> ausgewählt war.</td></tr>
+    <tr><td><strong>Erneut auswählen</strong></td><td><kbd>&#8984;6</kbd></td><td>Bringt die Auswahl zurück, die Sie hatten, bevor Sie sie gelöscht haben.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="selecting-stack">Durch den Stapel schreiten</h2>
+<p>Wenn Objekte sich überlappen, bewegen <strong>Auswahl &rsaquo; Nächstes Objekt darüber</strong> (<kbd>&#8997;&#8984;]</kbd>) und <strong>Nächstes Objekt darunter</strong> (<kbd>&#8997;&#8984;[</kbd>) die Auswahl um ein Objekt nach oben oder unten durch den Stapel an derselben Stelle. Es ist der zuverlässige Weg, um eine Form zu erreichen, die unter anderen begraben ist, ohne die obenliegenden aus dem Weg zu schieben.</p>
+
+<h2 id="selecting-same">Auswahl gleich: Auswahl nach dem, was Dinge gemeinsam haben</h2>
+<p>Wählen Sie ein Objekt, dann sammelt <strong>Auswahl &rsaquo; Gleich</strong> jedes andere Objekt im Dokument, das in einem Merkmal mit ihm übereinstimmt. Verwenden Sie es, um jede Form einer Füllung in einem einzigen Schritt neu zu färben oder alle dünnen Konturen auf einmal zu erfassen.</p>
+<dl>
+  <dt>Erscheinungsbild</dt><dd>Das ganze Aussehen – derselbe Stapel von Füllungen, Konturen und Effekten.</dd>
+  <dt>Füllung &amp; Kontur</dt><dd>Dieselbe Füllung und dieselbe Kontur zusammen.</dd>
+  <dt>Füllfarbe / Konturfarbe</dt><dd>Dieselbe Füllfarbe oder dieselbe Konturfarbe.</dd>
+  <dt>Konturstärke</dt><dd>Dieselbe Konturbreite.</dd>
+  <dt>Deckkraft</dt><dd>Dieselbe Deckkraft.</dd>
+  <dt>Füllmodus</dt><dd>Dieselbe Füllmodus.</dd>
+  <dt>Form</dt><dd>Dieselbe Art von Objekt – alle Ellipsen, sagen wir, oder alle Texte.</dd>
+</dl>
+
+<h2 id="selecting-saved">Eine Auswahl speichern</h2>
+<p>Eine schwierige Auswahl ist es wert, behalten zu werden. <strong>Auswahl &rsaquo; Auswahl speichern…</strong> speichert den aktuellen Satz unter einem Namen; er erscheint dann unter <strong>Auswahl &rsaquo; Gespeicherte Auswahlen</strong>, und die Auswahl dort wählt genau diese Objekte wieder, egal wie Sie seitdem geklickt haben. <strong>Auswahl bearbeiten…</strong> benennt die gespeicherten um oder entfernt sie. Gespeicherte Auswahlen reisen innerhalb des <code>.cut</code>-Dokuments, sodass sie beim nächsten Öffnen der Datei noch da sind.</p>

@@ -1,0 +1,357 @@
+<p class="lede">La barra de herramientas se extiende por la izquierda de la ventana y contiene todas las herramientas de dibujo, edición y visualización. Cada ranura es una herramienta individual o un grupo de relacionadas; esta página las lista todas, en el orden en que se sitúan en la barra de herramientas, con la tecla que selecciona cada una y para qué sirve.</p>
+
+<p>Mantén pulsada una ranura, o haz clic derecho en ella, para abrir su menú desplegable y elegir otra herramienta del grupo. El atajo de una herramienta es una pulsación de tecla única, y funciona siempre que no estés escribiendo en un texto o un campo.</p>
+
+<p>Los atajos a continuación están escritos en formato macOS. En Windows, lee <kbd>&#8997;</kbd> como Alt, <kbd>&#8984;</kbd> como Ctrl y <kbd>&#8679;</kbd> como Shift.</p>
+
+<p>Tres hábitos se aplican a casi todas las herramientas:</p>
+<ul>
+<li>Mantén pulsada la barra espaciadora para tomar prestada la herramienta Mano, y suelta para volver a lo que estabas usando.</li>
+<li>Mantén <kbd>&#8984;</kbd> para tomar prestada la herramienta Selección de la misma manera. La herramienta Transformación libre es la excepción: ella misma lee <kbd>&#8984;</kbd>.</li>
+<li><kbd>Esc</kbd> abandona un arrastre o un trazado que estás a medio dibujar, dejando la obra como estaba.</li>
+</ul>
+
+<p>Dos ranuras (las herramientas Remodelar y Mosaico de impresión) se listan por completitud pero aún no tienen comportamiento detrás. La barra de herramientas las marca como próximamente y el motor las rechaza.</p>
+
+<h2 id="tools-selecting">Herramientas de selección</h2>
+<p>Estas cuatro seleccionan lo que quieres trabajar después. Recurre a la herramienta Selección para objetos completos, a la herramienta Selección directa para los anclajes y segmentos dentro de un trazado, a la herramienta Selección automática para reunir todo lo pintado de la misma manera, y al Lazo para recoger un grupo de anclajes a mano.</p>
+
+<h3 id="tools-selection">Selección</h3>
+<table>
+<thead><tr><th>Herramienta</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+<tbody>
+<tr><td>Herramienta Selección</td><td><kbd>V</kbd></td><td>Haz clic en un objeto para seleccionarlo completo, <kbd>&#8679;</kbd>-clic para añadir o quitar uno, y arrastra sobre el lienzo vacío para un marco de selección. Arrastra dentro de la selección para moverla, con <kbd>&#8679;</kbd> limitando el movimiento a pasos de 45&deg; y <kbd>&#8997;</kbd> dejando una copia atrás.</td></tr>
+</tbody>
+</table>
+<p>Con un objeto seleccionado, el cuadro delimitador lleva ocho tiradores. Arrastra un tirador para escalar, manteniendo <kbd>&#8679;</kbd> para mantener las proporciones y <kbd>&#8997;</kbd> para escalar alrededor del centro; arrastra justo fuera de una esquina para rotar, con <kbd>&#8679;</kbd> ajustando a 45&deg;. El doble clic entra en un grupo y trabaja dentro de él, el doble clic en texto lo edita, el doble clic en una instancia de símbolo edita el símbolo que dibuja cada instancia, y el doble clic lejos de la obra sale de nuevo.</p>
+<p>Las formas editables llevan sus propios controles: arrastra un control de esquina para redondear todas las esquinas de la forma a la vez, o haz <kbd>&#8997;</kbd>-clic en él para cambiar la esquina al siguiente tipo. Es la herramienta en la que pasarás más tiempo, así que vale la pena aprender bien sus tiradores.</p>
+
+<h3 id="tools-direct-selection">Selección directa y Selección de grupo</h3>
+<table>
+<thead><tr><th>Herramienta</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+<tbody>
+<tr><td>Herramienta Selección directa</td><td><kbd>A</kbd></td><td>Haz clic en un anclaje, un tirador o un segmento, y arrástralo para remodelar el trazado; un marco sobre el lienzo vacío recoge los anclajes que contiene. <kbd>&#8679;</kbd> añade a lo seleccionado y limita un arrastre a 45&deg;, y <kbd>&#8997;</kbd> mientras arrastras un tirador rompe el par para que el anclaje se convierta en esquina.</td></tr>
+<tr><td>Herramienta Selección de grupo</td><td>&ndash;</td><td>Haz clic en un objeto para seleccionarlo; haz clic de nuevo para incluir el grupo al que pertenece, y otra vez para el grupo superior.</td></tr>
+</tbody>
+</table>
+<p>Usa la herramienta Selección directa para ajustar una forma después de dibujarla: empuja un anclaje, tira de un solo tirador, o remodela una curva. También arrastra las intersecciones de la malla de un deformador, doblando lo que contiene el deformador, y redondea una esquina de una forma viva a la vez en lugar de todas. La herramienta Selección de grupo es la manera rápida de llegar a un objeto enterrado dentro de grupos anidados sin entrar y salir de ellos.</p>
+
+<h3 id="tools-magic-wand">Selección automática</h3>
+<table>
+<thead><tr><th>Herramienta</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+<tbody>
+<tr><td>Herramienta Selección automática</td><td><kbd>Y</kbd></td><td>Haz clic en un objeto para seleccionar todos los objetos pintados como él. Lo que cuenta como igual (relleno, contorno, grosor de contorno, opacidad, modo de fusión) se establece en el panel Selección automática, y <kbd>&#8679;</kbd> añade las nuevas coincidencias a la selección.</td></tr>
+</tbody>
+</table>
+<p>Recurre a esto cuando quieras cambiar cada forma de un color a la vez: haz clic en una roja, entonces recolorea toda la selección en un solo paso.</p>
+
+<h3 id="tools-lasso">Lazo</h3>
+<table>
+<thead><tr><th>Herramienta</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+<tbody>
+<tr><td>Herramienta Lazo</td><td><kbd>Q</kbd></td><td>Arrastra un lazo de forma libre para seleccionar los anclajes que contiene. <kbd>&#8679;</kbd> los añade a los anclajes ya seleccionados.</td></tr>
+</tbody>
+</table>
+<p>Úsalo cuando los anclajes que quieres no se sitúan en un rectángulo ordenado, de modo que un marco de selección atraparía demasiado o demasiado poco.</p>
+<p>Esta ranura también contiene las herramientas de selección de píxeles — el <strong>Marco rectangular</strong>, el <strong>Marco elíptico</strong> y el <strong>Marco lazo</strong> — que dibujan una selección de hormigas marchantes en una capa de píxeles en lugar de seleccionar anclajes vectoriales. Se cubren en la página <a href="/manual/pixels/">Capas de píxeles</a>.</p>
+
+<h2 id="tools-pen-type">El bolígrafo, la curvatura y el texto</h2>
+<p>Las herramientas que establecen nuevos trazados y texto. La familia del bolígrafo te da control exacto sobre cada anclaje y tirador, la herramienta Curvatura ajusta una línea suave a través de los puntos que colocas, y las herramientas de texto establecen texto de punto, de área, en trazado y vertical.</p>
+
+<h3 id="tools-pen">La familia del bolígrafo</h3>
+<table>
+<thead><tr><th>Herramienta</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+<tbody>
+<tr><td>Herramienta Bolígrafo</td><td><kbd>P</kbd></td><td>Haz clic para colocar un punto de esquina, o mantén pulsado y arrastra para sacar tiradores suaves de él; haz clic en el primer anclaje para cerrar el trazado. <kbd>&#8679;</kbd> limita el nuevo punto o el tirador a 45&deg;, y <kbd>&#8997;</kbd> mientras arrastras rompe los tiradores para que el trazado salga del anclaje con su propio ángulo.</td></tr>
+<tr><td>Herramienta Añadir punto de anclaje</td><td><kbd>+</kbd></td><td>Haz clic en un segmento para añadir un anclaje ahí, sin cambiar la forma del trazado.</td></tr>
+<tr><td>Herramienta Eliminar punto de anclaje</td><td><kbd>&#8722;</kbd></td><td>Haz clic en un anclaje para quitarlo, uniendo los segmentos a cada lado de él.</td></tr>
+<tr><td>Herramienta Punto de anclaje</td><td><kbd>&#8679;C</kbd></td><td>Arrastra un anclaje para sacar un par de tiradores igualados de él, o haz clic en él para volver a meter los tiradores y dejar una esquina. Arrastra un tirador por separado para mover solo ese lado; <kbd>&#8679;</kbd> lo limita a 45&deg;.</td></tr>
+</tbody>
+</table>
+<p>La herramienta Bolígrafo es la herramienta principal para el dibujo preciso, desde un contorno de logotipo hasta un trazado de lettering. Mientras tiene un trazado en curso, <kbd>Enter</kbd> o <kbd>Esc</kbd> lo finaliza y <kbd>Retroceso</kbd> retira el último anclaje. Las tres ayudas añaden, eliminan y convierten anclajes en un trazado terminado; el bolígrafo y el lápiz se cubren con más detalle en la página <a href="/manual/paths/">Trazados</a>.</p>
+
+<h3 id="tools-curvature">Curvatura</h3>
+<table>
+<thead><tr><th>Herramienta</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+<tbody>
+<tr><td>Herramienta Curva</td><td><kbd>&#8679;~</kbd></td><td>Haz clic para colocar puntos y se ajusta una curva suave a través de ellos; <kbd>&#8997;</kbd>-clic coloca un punto de esquina en su lugar. Arrastra un punto para moverlo, doble clic en un punto para alternar entre suave y esquina, haz clic en el primer punto para cerrar el trazado, y doble clic lejos de él para terminar.</td></tr>
+</tbody>
+</table>
+<p>Recurre a la herramienta Curvatura cuando quieras una línea fluida y prefieras colocar puntos y dejar que Scissor calcule los tiradores en lugar de sacar cada uno tú mismo.</p>
+
+<h3 id="tools-type">Texto</h3>
+<table>
+<thead><tr><th>Herramienta</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+<tbody>
+<tr><td>Herramienta Texto</td><td><kbd>T</kbd></td><td>Haz clic para texto de punto, arrastra un cuadro para texto de área, y haz clic en texto existente para editarlo. Hacer clic en un trazado abierto hace que el texto discurra a lo largo de ese trazado.</td></tr>
+<tr><td>Herramienta Texto de área</td><td>&ndash;</td><td>Arrastra el cuadro dentro del cual fluye el texto.</td></tr>
+<tr><td>Herramienta Texto en trazado</td><td>&ndash;</td><td>Haz clic en un trazado y el texto discurra a lo largo de él. El trazado se convierte en la línea de base, por lo que deja de ser obra por derecho propio.</td></tr>
+<tr><td>Herramienta Texto vertical</td><td>&ndash;</td><td>Igual que la herramienta Texto, excepto que la línea de texto baja por la página en lugar de cruzarla.</td></tr>
+<tr><td>Herramienta Edición de glifos</td><td><kbd>&#8679;T</kbd></td><td>Haz clic en un caracter para sacarlo de su línea, luego arrástralo para moverlo, arrastra una perilla de esquina para redimensionarlo o la perilla de arriba para rotarlo. <kbd>&#8679;</kbd> mantiene una redimensión de esquina proporcional y ajusta la rotación a pasos de 11.25&deg;, y <kbd>Supr</kbd> devuelve el caracter a donde lo colocó el texto.</td></tr>
+</tbody>
+</table>
+<p>La herramienta Texto por sí sola cubre la mayor parte del trabajo: haz clic para un titular, arrastra un cuadro para un párrafo. Las perillas laterales de la caja de Edición de glifos estiran el caracter en una sola dirección, horizontal para el ancho y vertical para el alto, de modo que puedes colocar letras individuales para un titular sin sacarlas del texto. El texto se cubre en detalle en la página <a href="/manual/type/">Texto</a>.</p>
+
+<h2 id="tools-lines-shapes">Líneas y formas</h2>
+<p>Todo lo que dibuja una forma hecha: líneas rectas, arcos y espirales, rejillas de líneas, y los rectángulos, elipses, polígonos y estrellas con los que construyes un dibujo.</p>
+
+<h3 id="tools-lines">Líneas, arcos, espirales y rejillas</h3>
+<table>
+<thead><tr><th>Herramienta</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+<tbody>
+<tr><td>Herramienta Segmento de línea</td><td><kbd>\\</kbd></td><td>Arrastra para dibujar una línea recta. <kbd>&#8679;</kbd> la limita a pasos de 45&deg; y <kbd>&#8997;</kbd> la dibuja desde su centro en lugar de desde su extremo.</td></tr>
+<tr><td>Herramienta Arco</td><td>&ndash;</td><td>Arrastra el cuadro que llena el arco; <kbd>&#8679;</kbd> lo hace cuadrado. Las flechas del teclado doblan el arco más plano o más lleno, <kbd>C</kbd> lo cierra y lo abre, y <kbd>F</kbd> o <kbd>X</kbd> invierte su curvatura.</td></tr>
+<tr><td>Herramienta Espiral</td><td>&ndash;</td><td>Arrastra desde el centro: la distancia establece el radio y la dirección establece dónde empieza la espiral. <kbd>&#8997;</kbd> invierte el sentido de enrollado, <kbd>R</kbd> lo invierte de forma permanente, y las flechas del teclado añaden y eliminan segmentos.</td></tr>
+<tr><td>Herramienta Rejilla rectangular</td><td>&ndash;</td><td>Arrastra la rejilla, con <kbd>&#8997;</kbd> dibujando desde el centro y <kbd>&#8679;</kbd> manteniéndola cuadrada. Las flechas arriba y abajo cambian el número de filas, izquierda y derecha las columnas.</td></tr>
+<tr><td>Herramienta Rejilla polar</td><td>&ndash;</td><td>Arrastra la rejilla, con <kbd>&#8997;</kbd> dibujando desde el centro y <kbd>&#8679;</kbd> manteniéndola redonda. Las flechas arriba y abajo cambian los anillos concéntricos, izquierda y derecha los radios.</td></tr>
+</tbody>
+</table>
+<p>Las dos herramientas de rejilla hacen un trazado por línea, de modo que cada línea permanece seleccionable por separado: usa la Rejilla rectangular para tablas, calendarios y andamiajes de diseño, y la Rejilla polar para dardos, gráficos de radar y esferas de reloj. Dibujan obra de rejilla que conservas. Eso es algo diferente de la rejilla de fondo de la mesa, la ayuda de dibujo en pantalla que activas con <strong>Ver &rsaquo; Rejilla &rsaquo; Mostrar rejilla</strong>, que nunca se imprime y tiene siete tipos (cuadrada, isométrica, hexagonal, oblicua, proporción áurea, patrón y perspectiva). Las rejillas de fondo se cubren en la página <a href="/manual/grids/">Rejillas</a>. Una <strong>herramienta Forma de rejilla</strong> (<kbd>&#8679;G</kbd>) independiente construye un trazado relleno haciendo clic o arrastrando sobre las celdas de esa rejilla de fondo — una manera rápida de colocar bloques sólidos sobre una rejilla isométrica o hexagonal.</p>
+
+<h3 id="tools-shapes">Rectángulos, elipses y otras formas</h3>
+<table>
+<thead><tr><th>Herramienta</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+<tbody>
+<tr><td>Herramienta Rectángulo</td><td><kbd>M</kbd></td><td>Arrastra para dibujar un rectángulo. <kbd>&#8679;</kbd> lo mantiene cuadrado y <kbd>&#8997;</kbd> lo dibuja desde su centro.</td></tr>
+<tr><td>Herramienta Rectángulo redondeado</td><td>&ndash;</td><td>El mismo arrastre, con esquinas redondeadas; las flechas arriba y abajo aumentan y disminuyen el radio de las esquinas mientras dibujas.</td></tr>
+<tr><td>Herramienta Elipse</td><td><kbd>L</kbd></td><td>Arrastra para dibujar una elipse, con <kbd>&#8679;</kbd> para un círculo y <kbd>&#8997;</kbd> para dibujar desde el centro.</td></tr>
+<tr><td>Herramienta Polígono</td><td>&ndash;</td><td>Arrastra desde el centro; la dirección del arrastre gira el polígono, y <kbd>&#8679;</kbd> lo mantiene en posición vertical. Las flechas del teclado añaden y eliminan lados.</td></tr>
+<tr><td>Herramienta Estrella</td><td>&ndash;</td><td>Arrastra desde el centro, girando la estrella mientras avanzas, con <kbd>&#8679;</kbd> manteniéndola en posición vertical. Las flechas del teclado añaden y eliminan puntas.</td></tr>
+<tr><td>Herramienta Destello</td><td>&ndash;</td><td>Arrastra una vez para establecer el centro y el tamaño del halo del destello, luego arrastra una segunda vez para extender sus anillos a través de la obra. Mientras arrastras, las flechas izquierda y derecha cambian el número de anillos y las flechas arriba y abajo el número de rayos.</td></tr>
+</tbody>
+</table>
+<p>Estas crean formas vivas: mantienen sus parámetros, de modo que puedes cambiar el tamaño de un rectángulo o el número de puntas de una estrella mucho después de dibujarlo. Un clic en lugar de un arrastre con cualquiera de ellas abre un diálogo, de modo que puedes dar a la forma medidas exactas en su lugar. La herramienta Destello responde a un clic con un destello del tamaño que sus opciones piden.</p>
+
+<h2 id="tools-brush-erase">Pinceles, lápices y borradores</h2>
+<p>Las herramientas a mano alzada. Pinta un trazo que sigue al puntero, esboza un trazado tosco y deja que Scissor lo ordene, atiende y remienda trazados existentes, o elimina obra. Dos ranuras aquí también llegan al lado de trama de un documento: el Pincel pinta píxeles y el Borrador de píxeles los elimina.</p>
+
+<h3 id="tools-brushes">Pinceles</h3>
+<table>
+<thead><tr><th>Herramienta</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+<tbody>
+<tr><td>Herramienta Pincel</td><td><kbd>B</kbd></td><td>Arrastra para dibujar a mano alzada; el trazo se suaviza mientras se ajusta a las curvas, y mantiene el pincel y trazo actuales.</td></tr>
+<tr><td>Herramienta Pincel de relleno</td><td><kbd>&#8679;B</kbd></td><td>Dibuja el mismo trazo, pero lo contornea en una forma rellena y la fusiona con cualquier obra que toque que comparta su relleno.</td></tr>
+<tr><td>Herramienta Pincel de píxeles</td><td>&ndash;</td><td>Pinta color de trama directamente sobre una capa de píxeles en el color de relleno actual, creando una capa de píxeles primero si no hay ninguna. A diferencia del Pincel, la marca no es un trazado que puedas remodelar después: se convierte en parte de la imagen.</td></tr>
+</tbody>
+</table>
+<p>Usa el Pincel para trazos expresivos y caligráficos que permanecen editables, y el Pincel de relleno cuando prefieras construir una forma sólida rellena en lugar de una línea contorneada. <kbd>[</kbd> y <kbd>]</kbd> hacen el pincel más pequeño y más grande. La herramienta Pincel de píxeles comparte esta ranura pero pinta píxeles en lugar de un trazado, para sombreado y textura, y el <strong>Cubeta de pintura</strong> también la comparte, inundando un área conectada de una capa de píxeles con el color de relleno. La pintura en capas de píxeles se cubre en la página <a href="/manual/pixels/">Capas de píxeles</a>.</p>
+
+<h3 id="tools-pencil">Lápiz y las herramientas de remendar trazados</h3>
+<table>
+<thead><tr><th>Herramienta</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+<tbody>
+<tr><td>Herramienta Bosquejo</td><td><kbd>&#8679;N</kbd></td><td>Dibuja toscamente y el trazo se convierte en la forma nítida que querías. Garabatear sobre obra hace un agujero en lo que cubre el garabato.</td></tr>
+<tr><td>Herramienta Lápiz</td><td><kbd>N</kbd></td><td>Dibuja a mano alzada y el trazo se ajusta a curvas suaves. Mantén <kbd>&#8997;</kbd> mientras sueltas para cerrar el trazado, lo cual también ocurre por sí solo si terminas cerca de donde empezaste.</td></tr>
+<tr><td>Herramienta Suavizar</td><td>&ndash;</td><td>Pasa el pincel a lo largo de un trazado para uniformar sus tiradores y eliminar los anclajes que apenas lo doblan; un pincel más grande suaviza más.</td></tr>
+<tr><td>Herramienta Borrador de trazado</td><td>&ndash;</td><td>Pasa el pincel a lo largo de un trazado para borrar la parte que cubres.</td></tr>
+<tr><td>Herramienta Unir</td><td>&ndash;</td><td>Pasa el pincel sobre dos extremos sueltos para unirlos en un solo trazado.</td></tr>
+</tbody>
+</table>
+<p>El Lápiz es la manera rápida de esbozar una forma a mano alzada; el Bosquejo es para cuando quieres que un gesto tosco se lea como un rectángulo, elipse o línea limpios. Los tres últimos atienden trazados existentes: <kbd>[</kbd> y <kbd>]</kbd> redimensionan los pinceles Suavizar, Borrador de trazado y Unir. Con obra seleccionada estas tres trabajan solo sobre la selección; sin nada seleccionado trabajan sobre cualquier trazado que alcancen.</p>
+
+<h3 id="tools-cutting">Borrar y cortar</h3>
+<table>
+<thead><tr><th>Herramienta</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+<tbody>
+<tr><td>Herramienta Borrador</td><td><kbd>&#8679;E</kbd></td><td>Arrastra un pincel redondo para restar de los objetos. Con una selección solo se borran los objetos seleccionados; de lo contrario se borran todos los trazados desbloqueados, y <kbd>[</kbd> y <kbd>]</kbd> redimensionan el pincel.</td></tr>
+<tr><td>Herramienta Borrador de píxeles</td><td>&ndash;</td><td>Elimina pintura de una capa de píxeles, dejándola transparente para que lo que está debajo se vea. Funciona en capas de píxeles donde el Borrador trabaja en trazados vectoriales; <kbd>[</kbd> y <kbd>]</kbd> redimensionan el pincel.</td></tr>
+<tr><td>Herramienta Tijeras</td><td><kbd>C</kbd></td><td>Haz clic en un segmento o un anclaje para cortar el trazado ahí. Un trazado cerrado se abre en el corte; un trazado abierto se divide en dos objetos.</td></tr>
+<tr><td>Cuchilla</td><td>&ndash;</td><td>Arrastra a través de objetos para cortarlos en piezas separadas. <kbd>&#8997;</kbd> corta en línea recta y <kbd>&#8679;</kbd> limita esa línea a pasos de 45&deg;.</td></tr>
+</tbody>
+</table>
+<p>El Borrador talla formas en obra rellena como borrando a lápiz; las Tijeras hacen un solo corte limpio en un punto; la Cuchilla corta objetos completos en piezas a lo largo de la línea que arrastras. El Borrador de píxeles comparte la ranura del Borrador pero pertenece al lado de trama, en la página <a href="/manual/pixels/">Capas de píxeles</a>.</p>
+<p>Una ranura más de la barra de herramientas es completamente de trama: los pinceles de retoque <strong>Sobreexponer</strong>, <strong>Subexponer</strong> y <strong>Esponja</strong> aclaran, oscurecen y saturan los píxeles ya presentes en una capa. Pintan como el Pincel y se cubren, junto con el resto de edición de píxeles, en la página <a href="/manual/pixels/">Capas de píxeles</a>.</p>
+
+<h2 id="tools-transform">Transformar</h2>
+<p>Las herramientas que mueven, giran, reflejan, escalan, inclinan, distorsionan y remodelan lo ya dibujado. Cada herramienta de transformación trabaja alrededor de un punto de referencia, que empieza en el centro de la selección; el <kbd>&#8997;</kbd>-clic establece ese punto donde haces clic y abre el diálogo de la herramienta para valores exactos. Con anclajes individuales seleccionados, estas herramientas transforman esos anclajes en lugar de objetos completos.</p>
+
+<h3 id="tools-rotate-reflect">Rotar y Reflejar</h3>
+<table>
+<thead><tr><th>Herramienta</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+<tbody>
+<tr><td>Herramienta Rotar</td><td><kbd>R</kbd></td><td>Arrastra alrededor del punto de referencia para girar la selección, con <kbd>&#8679;</kbd> ajustando a 45&deg; y <kbd>&#8997;</kbd> girando una copia y dejando el original. <kbd>&#8997;</kbd>-clic coloca el punto de referencia donde hiciste clic y abre el diálogo Rotar.</td></tr>
+<tr><td>Herramienta Reflejar</td><td><kbd>O</kbd></td><td>Arrastra para pasar el eje de simetría a través del punto de referencia, con <kbd>&#8679;</kbd> ajustándolo a 45&deg;. <kbd>&#8997;</kbd>-clic establece el punto de referencia y abre el diálogo Reflejar, y <kbd>&#8997;</kbd> mientras arrastras refleja una copia.</td></tr>
+</tbody>
+</table>
+<p>Recurre a la herramienta Rotar para girar obra alrededor de un pivote elegido en lugar de su propio centro, y a la herramienta Reflejar para construir un dibujo simétrico: refleja una copia a través de un eje elegido y las dos mitades permanecen igualadas. Ambas herramientas empiezan desde el centro de la selección, y elegir otra cosa devuelve el punto de referencia ahí.</p>
+
+<h3 id="tools-scale-shear">Escalar, Inclinar y Remodelar</h3>
+<table>
+<thead><tr><th>Herramienta</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+<tbody>
+<tr><td>Herramienta Escalar</td><td><kbd>S</kbd></td><td>Arrastra lejos del punto de referencia para agrandar la selección y hacia él para encogerla; <kbd>&#8679;</kbd> mantiene las proporciones y <kbd>&#8997;</kbd> escala una copia. <kbd>&#8997;</kbd>-clic establece el punto de referencia y abre el diálogo Escalar.</td></tr>
+<tr><td>Herramienta Inclinar</td><td>&ndash;</td><td>Arrastra para inclinar la selección alrededor del punto de referencia; <kbd>&#8679;</kbd> asienta la inclinación en el eje al que tiende tu arrastre. <kbd>&#8997;</kbd>-clic establece el punto de referencia y abre el diálogo Inclinar.</td></tr>
+<tr><td>Herramienta Remodelar</td><td>&ndash;</td><td>Listada en la barra de herramientas pero aún no implementada; la paleta la marca como próximamente.</td></tr>
+</tbody>
+</table>
+<p>Usa la herramienta Escalar cuando quieras dimensionar obra alrededor de un punto fijo en lugar de un tirador del cuadro delimitador, y la herramienta Inclinar para inclinar una forma para una sombra proyectada o un efecto de cursiva.</p>
+
+<h3 id="tools-width-liquify">Ancho y los pinceles de licuar</h3>
+<table>
+<thead><tr><th>Herramienta</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+<tbody>
+<tr><td>Herramienta Perfil de contorno</td><td><kbd>&#8679;W</kbd></td><td>Arrastra lejos de un trazado contorneado para ensancharlo ahí y hacia el trazado para estrecharlo, dejando un punto de ancho atrás. Con nada seleccionado funciona sobre cualquier trazado editable.</td></tr>
+<tr><td>Herramienta Deformar</td><td><kbd>&#8679;R</kbd></td><td>Mantén pulsado y arrastra un pincel redondo para empujar los trazados que tiene debajo junto con el puntero.</td></tr>
+<tr><td>Herramienta Rizar</td><td>&ndash;</td><td>Mantén el pincel sobre la obra y sigue girando mientras lo mantengas.</td></tr>
+<tr><td>Herramienta Pellizcar</td><td>&ndash;</td><td>Atrae los trazados bajo el pincel hacia su centro.</td></tr>
+<tr><td>Herramienta Hinchar</td><td>&ndash;</td><td>Empuja los trazados bajo el pincel hacia afuera desde su centro.</td></tr>
+<tr><td>Herramienta Ondular</td><td>&ndash;</td><td>Añade ondulaciones curvas a los trazados bajo el pincel.</td></tr>
+<tr><td>Herramienta Picar</td><td>&ndash;</td><td>Añade puntas afiladas a los trazados bajo el pincel.</td></tr>
+<tr><td>Herramienta Arrugar</td><td>&ndash;</td><td>Ondula los trazados bajo el pincel.</td></tr>
+</tbody>
+</table>
+<p>La herramienta Ancho estrecha y ensancha un contorno a mano, para una línea de punta de pluma o de pincel sin cambiar de pincel. Los siete pinceles de licuar empujan, giran y rugosizan los trazados mientras pintas sobre ellos, para distorsión orgánica que sería lenta de hacer ancla por ancla. Los siete aceptan <kbd>[</kbd> y <kbd>]</kbd> para el tamaño, y <kbd>&#8679;</kbd> con esas mismas teclas, <kbd>{</kbd> y <kbd>}</kbd>, para la fuerza con la que empujan.</p>
+
+<h3 id="tools-free-transform">Transformación libre y Deformar con pines</h3>
+<table>
+<thead><tr><th>Herramienta</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+<tbody>
+<tr><td>Herramienta Transformación libre</td><td><kbd>E</kbd></td><td>Un solo cuadro que escala, gira, inclina y distorsiona la selección. Arrastra un tirador de borde o esquina para escalar, mantén <kbd>&#8984;</kbd> en un tirador de borde para inclinar, arrastra dentro del cuadro para moverlo, y arrastra justo fuera de una esquina para rotarlo.</td></tr>
+<tr><td>Herramienta Deformar con pines</td><td>&ndash;</td><td>Haz clic en la obra seleccionada para colocar un pin, luego arrastra los pines para doblarla; la obra mantiene su forma alrededor de los pines que permanecen quietos. <kbd>&#8997;</kbd>-clic en un pin lo elimina, <kbd>&#8679;</kbd>-clic recoge varios, y <kbd>&#8997;</kbd>-arrastre justo fuera de un pin rota la obra alrededor de él.</td></tr>
+</tbody>
+</table>
+<p>Transformación libre es el cuadro todo en uno cuando quieres escalar, girar e inclinar en un solo gesto en lugar de cambiar de herramienta. Funciona alrededor de su punto de referencia, que puedes arrastrar a cualquier sitio, incluso fuera del cuadro; suéltalo cerca de uno de los nueve puntos habituales del cuadro y se asienta ahí. Al escalar, <kbd>&#8679;</kbd> mantiene las proporciones y <kbd>&#8997;</kbd> escala alrededor del centro en lugar del punto de referencia; al rotar, <kbd>&#8679;</kbd> ajusta a 45&deg;. En un tirador de esquina, <kbd>&#8984;</kbd> distorsiona esa esquina por separado y <kbd>&#8984;&#8997;&#8679;</kbd> distorsiona en perspectiva, con la esquina vecina reflejando el arrastre; el control junto al cuadro establece los dos mismos modos y el interruptor de restricción. Cambiar un modificador a mitad de un arrastre cambia de inmediato, sin soltar.</p>
+<p>Deformar con pines es para posar y doblar una sola pieza de obra, como flexionar un brazo dibujado, fijando las partes que deben permanecer quietas y arrastrando el resto. Lee <kbd>Supr</kbd> como eliminar los pines seleccionados en lugar de la obra, y <kbd>&#8984;A</kbd> como seleccionar cada pin. Cada arrastre es un paso para deshacer, y deshacer devuelve los pines con la obra que les acompañó. El texto, las imágenes y las instancias de símbolos no se pueden distorsionar, y se dejan como están.</p>
+
+<h2 id="tools-build-perspective">Fusionar y dividir, Relleno de región y perspectiva</h2>
+<p>Herramientas que tratan las formas superpuestas como regiones a combinar y colorear, y la rejilla que te permite dibujar y colocar obra en perspectiva.</p>
+
+<h3 id="tools-builder-paint">Fusionar y dividir y Relleno de región</h3>
+<table>
+<thead><tr><th>Herramienta</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+<tbody>
+<tr><td>Herramienta Fusionar y dividir</td><td><kbd>&#8679;M</kbd></td><td>Con formas superpuestas seleccionadas, arrastra a través de las regiones que quieres unir y se convierten en un solo objeto. <kbd>&#8997;</kbd>-arrastre elimina las regiones que cruzas en su lugar.</td></tr>
+<tr><td>Cubeta de Relleno de región</td><td><kbd>K</kbd></td><td>Haz clic en una cara de un grupo de Relleno de región para rellenarla con la pintura actual; <kbd>&#8997;</kbd>-clic recoge la pintura que ya está ahí en lugar de poner ninguna. La cara bajo el puntero se contornea antes de que hagas clic.</td></tr>
+<tr><td>Herramienta Selección de región</td><td><kbd>&#8679;L</kbd></td><td>Haz clic en una cara de un grupo de Relleno de región para seleccionarla, sin pintarla.</td></tr>
+</tbody>
+</table>
+<p>Usa Fusionar y dividir para dibujar unas pocas formas superpuestas y luego fusionar y recortarlas en el contorno que quieres, arrastrando a través de las piezas. Relleno de región trata un conjunto de trazados superpuestos como un libro de colorear: la Cubeta inunda cada cara cerrada con un color, y la herramienta Selección selecciona caras y bordes para que puedas restilarlas, sin cortar primero las formas.</p>
+
+<h3 id="tools-perspective">Perspectiva</h3>
+<table>
+<thead><tr><th>Herramienta</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+<tbody>
+<tr><td>Herramienta Rejilla en perspectiva</td><td><kbd>&#8679;P</kbd></td><td>Muestra la rejilla y la forma: arrastra los puntos de fuga, arrastra uno de ellos hacia arriba o hacia abajo para mover el horizonte, y arrastra la esquina cercana de la rejilla. <kbd>1</kbd> a <kbd>4</kbd>, o el control en pantalla, elige el plano sobre el que dibujas.</td></tr>
+<tr><td>Herramienta Selección en perspectiva</td><td><kbd>&#8679;V</kbd></td><td>Selecciona obra y arrástrala a lo largo de su plano. La obra que aún no está en la rejilla se coloca en el plano activo donde la arrastres.</td></tr>
+</tbody>
+</table>
+<p>Recurre a estas para dibujar escenas y lettering que retroceden hacia puntos de fuga, como una calle o un producto en caja. Mientras la rejilla se muestra, las herramientas Rectángulo, Rectángulo redondeado, Elipse y Rejilla rectangular dibujan sobre el plano activo en lugar de en plano, y <kbd>1</kbd> a <kbd>4</kbd> elige el plano desde esas herramientas también.</p>
+
+<h2 id="tools-mesh-gradient">Malla y degradado</h2>
+<p>Las dos herramientas para pintar color gradual en una forma: una malla de puntos de color a través del objeto, o una mezcla suave a lo largo de un eje.</p>
+
+<h3 id="tools-mesh">Malla</h3>
+<table>
+<thead><tr><th>Herramienta</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+<tbody>
+<tr><td>Herramienta Malla</td><td><kbd>U</kbd></td><td>Haz clic dentro de un objeto para extender una línea de malla en cada dirección a través de ese punto, convirtiendo un trazado simple en una malla. Haz clic en un punto de malla para seleccionarlo y darle un color del panel Color, arrastra un punto para moverlo, y haz <kbd>&#8997;</kbd>-clic en uno para quitar las líneas que pasan por él.</td></tr>
+</tbody>
+</table>
+<p>Usa una malla para sombreado suave y de forma libre que un degradado recto no puede dar, como el brillo redondeado en una fruta o una cara.</p>
+
+<h3 id="tools-gradient">Degradado</h3>
+<table>
+<thead><tr><th>Herramienta</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+<tbody>
+<tr><td>Herramienta Degradado</td><td><kbd>G</kbd></td><td>Arrastra a través de la selección para establecer el eje de su pintura activa, con <kbd>&#8679;</kbd> limitando el eje a pasos de 45&deg;. Sobre obra que ya tiene un degradado, trabaja el anotador en su lugar.</td></tr>
+</tbody>
+</table>
+<p>Arrastra la herramienta Degradado para orientar una mezcla lineal o radial como quieres y establecer hasta dónde llega. En el anotador, arrastra una parada a lo largo del eje para moverla, arrastra un diamante para desplazar la mezcla entre dos paradas, haz clic en el eje para añadir una parada en el color que ya tiene ahí, y saca una parada bien lejos del eje para tirarla, siempre que queden dos. <kbd>Supr</kbd> elimina la parada que tocaste por último. En un degradado de forma libre la herramienta trabaja con puntos de color en su lugar: haz clic en la obra para añadir uno en el color de relleno, y arrastra un punto para moverlo. Los degradados se cubren más en la página <a href="/manual/appearance/">Color y apariencia</a>.</p>
+
+<h2 id="tools-sample-morph">Muestrear, medir y morfar</h2>
+<p>Copia una apariencia de un objeto a otro, lee distancias y ángulos del lienzo, y mezcla entre formas en una serie de pasos.</p>
+
+<h3 id="tools-eyedropper">Cuentagotas y Medir</h3>
+<table>
+<thead><tr><th>Herramienta</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+<tbody>
+<tr><td>Herramienta Cuentagotas</td><td><kbd>I</kbd></td><td>Haz clic en un objeto para muestrear toda su apariencia sobre la selección, o sobre el estilo por defecto cuando no hay nada seleccionado. <kbd>&#8679;</kbd> muestrea solo su color de relleno o contorno en el lado activo, y <kbd>&#8997;</kbd> hace lo contrario, aplicando la apariencia de la selección al objeto en el que haces clic.</td></tr>
+<tr><td>Herramienta Medir</td><td>&ndash;</td><td>Arrastra entre dos puntos para leer la distancia, los desplazamientos y el ángulo; <kbd>&#8679;</kbd> limita la línea a pasos de 45&deg;. La última medición permanece en pantalla hasta el próximo arrastre.</td></tr>
+</tbody>
+</table>
+<p>El Cuentagotas es la manera rápida de hacer que un objeto coincida con otro: elige el estilo que te gusta y aterriza en la selección. Usa la herramienta Medir para comprobar un hueco o un ángulo sin dejar una marca en la obra.</p>
+
+<h3 id="tools-blend">Morfar</h3>
+<table>
+<thead><tr><th>Herramienta</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+<tbody>
+<tr><td>Herramienta Morfar</td><td><kbd>W</kbd></td><td>Haz clic en un objeto y luego en otro para morfar entre ellos a través de una serie de pasos intermedios. Para incorporar un objeto adicional a un morfo, haz clic dentro del morfo y luego haz clic en el objeto que quieres añadir.</td></tr>
+</tbody>
+</table>
+<p>Recurre a la herramienta Morfar para mezclar una forma o color en otro a través de pasos uniformes, ya sea para una banda sombreada suave o copias espaciadas uniformemente y cambiantes a lo largo de un trazado.</p>
+
+<h2 id="tools-symbols">Símbolos</h2>
+<p>Un símbolo es una pieza de obra que puedes colocar muchas veces, con cada copia vinculada a un maestro. Los pinceles de simbolismo establecen y luego trabajan multitudes completas de estas instancias a la vez.</p>
+
+<h3 id="tools-symbolism">Los pinceles de simbolismo</h3>
+<table>
+<thead><tr><th>Herramienta</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+<tbody>
+<tr><td>Herramienta Dispersión de símbolos</td><td><kbd>&#8679;S</kbd></td><td>Arrastra para colocar instancias del símbolo elegido en el panel Símbolos, como un conjunto de símbolos. <kbd>&#8997;</kbd> vuelve a quitar instancias.</td></tr>
+<tr><td>Herramienta Empujar símbolo</td><td>&ndash;</td><td>Arrastra las instancias bajo el pincel junto con el puntero.</td></tr>
+<tr><td>Herramienta Agrupar símbolo</td><td>&ndash;</td><td>Junta las instancias bajo el pincel; <kbd>&#8997;</kbd> las separa.</td></tr>
+<tr><td>Herramienta Redimensionar símbolo</td><td>&ndash;</td><td>Agranda las instancias bajo el pincel; <kbd>&#8997;</kbd> las encoge.</td></tr>
+<tr><td>Herramienta Girar símbolo</td><td>&ndash;</td><td>Gira las instancias bajo el pincel para seguir el arrastre.</td></tr>
+<tr><td>Herramienta Teñir símbolo</td><td>&ndash;</td><td>Tiñe las instancias bajo el pincel hacia el color de relleno; <kbd>&#8997;</kbd> quita el tinte.</td></tr>
+<tr><td>Herramienta Fundir símbolo</td><td>&ndash;</td><td>Funde las instancias bajo el pincel; <kbd>&#8997;</kbd> las devuelve a plena intensidad.</td></tr>
+<tr><td>Herramienta Restilar símbolo</td><td>&ndash;</td><td>Aplica el estilo gráfico elegido en el panel Estilos gráficos a las instancias bajo el pincel; <kbd>&#8997;</kbd> lo elimina.</td></tr>
+</tbody>
+</table>
+<p>Usa estas para dispersar y luego variar un campo de obra repetida, como árboles en una colina o estrellas en un cielo: rocía un conjunto, luego afínalo, redimensiónalo, gíralo y tiñelo para que las copias no parezcan estampadas. Las ocho aceptan <kbd>[</kbd> y <kbd>]</kbd> para el tamaño del pincel y <kbd>{</kbd> y <kbd>}</kbd> para la fuerza con la que trabaja. Actúan sobre las instancias en la selección, o sobre cada instancia editable cuando no hay nada seleccionado.</p>
+
+<h2 id="tools-boards-slices">Mesas y cortes</h2>
+<p>Las herramientas que preparan el lienzo para la salida: mesas de trabajo, que son las páginas en las que se sitúa tu obra, y cortes, que marcar rectángulos para exportar por separado.</p>
+
+<h3 id="tools-boards">Mesas</h3>
+<table>
+<thead><tr><th>Herramienta</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+<tbody>
+<tr><td>Herramienta Mesa</td><td><kbd>&#8679;O</kbd></td><td>Dibuja, mueve y redimensiona mesas de trabajo directamente en el lienzo. Arrastra sobre el lienzo vacío para una nueva mesa, con <kbd>&#8997;</kbd> dibujando desde el centro y <kbd>&#8679;</kbd> manteniéndola cuadrada; arrastra dentro de una mesa para moverla, con <kbd>&#8679;</kbd> limitando el movimiento a un eje; arrastra un tirador de esquina con <kbd>&#8679;</kbd> para mantener las proporciones de la mesa.</td></tr>
+</tbody>
+</table>
+<p>Recurre a la herramienta Mesa para añadir páginas de diferentes tamaños o versiones de un diseño en un documento, y para redimensionar una página alrededor de lo que has dibujado. <kbd>Supr</kbd> elimina la mesa activa, siempre que quede una.</p>
+
+<h3 id="tools-slices">Cortes</h3>
+<table>
+<thead><tr><th>Herramienta</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+<tbody>
+<tr><td>Herramienta Corte</td><td><kbd>&#8679;K</kbd></td><td>Arrastra un rectángulo que se exporta por separado; <kbd>&#8997;</kbd> dibuja desde el centro y <kbd>&#8679;</kbd> lo mantiene cuadrado. Los bordes de corte se asientan en píxeles enteros, de modo que lo que sale no se difumina.</td></tr>
+<tr><td>Herramienta Selección de corte</td><td>&ndash;</td><td>Selecciona, mueve y redimensiona cortes. <kbd>Supr</kbd> elimina el seleccionado y un doble clic abre sus opciones.</td></tr>
+</tbody>
+</table>
+<p>Usa los cortes para dividir una mesa de trabajo en piezas que se exportan por separado, como los botones y banners de un diseño web, cada uno como su propio archivo. La exportación se cubre en la página <a href="/manual/files/">Abrir y exportar</a>.</p>
+
+<h2 id="tools-navigate">Moverse</h2>
+<p>Las herramientas que desplazan, giran y hacen zoom en la vista. Ninguna de ellas cambia el documento: solo cambian cómo lo estás mirando.</p>
+
+<h3 id="tools-view">Mover la vista</h3>
+<table>
+<thead><tr><th>Herramienta</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+<tbody>
+<tr><td>Herramienta Mano</td><td><kbd>H</kbd></td><td>Arrastra para desplazar la vista. Mantener la barra espaciadora la toma prestada de cualquier otra herramienta mientras la mantengas pulsada.</td></tr>
+<tr><td>Herramienta Rotar vista</td><td><kbd>&#8679;H</kbd></td><td>Arrastra para girar la vista alrededor del centro de la ventana, con <kbd>&#8679;</kbd> ajustando a 15&deg;; doble clic para volver a ponerla en vertical. Solo gira la vista, nunca el documento.</td></tr>
+<tr><td>Herramienta Mosaico de impresión</td><td>&ndash;</td><td>Listada en la barra de herramientas pero aún no implementada; la paleta la marca como próximamente.</td></tr>
+</tbody>
+</table>
+<p>La herramienta Mano desplaza un dibujo ampliado sin tocar las barras de desplazamiento, y la herramienta Rotar vista inclina toda la vista para que puedas dibujar una línea inclinada en un ángulo cómodo, luego volver a ponerla recta.</p>
+
+<h3 id="tools-zoom">Zoom</h3>
+<table>
+<thead><tr><th>Herramienta</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+<tbody>
+<tr><td>Herramienta Zoom</td><td><kbd>Z</kbd></td><td>Haz clic para acercar y <kbd>&#8997;</kbd>-clic para alejar. Arrastra un rectángulo sobre parte de la obra para llenar la ventana con ella.</td></tr>
+</tbody>
+</table>
+
+<h2 id="tools-fill-stroke">Controles de relleno y contorno</h2>
+<p>Al pie de la barra de herramientas se sitúan las muestras de relleno y contorno, una delante de la otra. La muestra frontal es el lado activo, el que recoge tu próxima elección de color. Un puñado de teclas únicas las manejan sin recurrir a los paneles:</p>
+<table>
+<thead><tr><th>Atajo</th><th>Qué hace</th></tr></thead>
+<tbody>
+<tr><td><kbd>D</kbd></td><td>Restablece el relleno y el contorno a sus valores por defecto.</td></tr>
+<tr><td><kbd>X</kbd></td><td>Alterna cuál del relleno o el contorno es el lado activo.</td></tr>
+<tr><td><kbd>&#8679;X</kbd></td><td>Intercambia los colores de relleno y contorno.</td></tr>
+<tr><td><kbd>/</kbd></td><td>Establece el lado activo en sin pintura.</td></tr>
+</tbody>
+</table>
+<p>Estas hacen rápidos los movimientos comunes: <kbd>X</kbd> para saltar entre pintar el relleno y el contorno, <kbd>/</kbd> para quitar el relleno o el contorno, y <kbd>D</kbd> para volver a un comienzo blanco y negro sencillo. Los rellenos, contornos y cómo se establecen se cubren en la página <a href="/manual/appearance/">Color y apariencia</a>.</p>

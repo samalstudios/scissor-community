@@ -1,0 +1,120 @@
+<p class="lede">Un document Scissor peut contenir des pixels peints à côté de ses tracés et textes dessinés, de sorte qu'un seul fichier peut porter une texture brossée douce, une photographie et un logo net ensemble. Cette page couvre ce qu'est un calque pixel, comment dessiner dessus, et comment il se comporte en tant qu'objet dans le document.</p>
+
+<h2 id="pixels-vector-vs-raster">Pixels versus illustration vectorielle</h2>
+<p>Un document Scissor contient deux types d'illustration côte à côte. Les tracés et le texte sont <em>dessinés</em> : ils restent nets à toute taille parce qu'ils sont décrits par leur forme, et Scissor les redessine chaque fois que vous zoomez ou mettez à l'échelle. Un <strong>calque pixel</strong> est <em>peint</em> : c'est une grille de points colorés, comme une photographie ou une peinture au pinceau, et l'agrandir rend ces points plus grands plutôt que d'ajouter des détails. Un document peut contenir autant de chacun que vous voulez, dans n'importe quel ordre, et ils s'empilent dans le panneau Calques ensemble.</p>
+<p>Utilisez un calque pixel lorsqu'une forme seule ne suffit pas : une ombre peinte à la main, une texture rugueuse derrière un texte net, une éclaboussure de couleur qui n'a pas besoin d'être un tracé modifiable, ou des retouches sur une photographie placée. Gardez les logos, les diagrammes et tout ce que vous redimensionnerez plus tard en vecteurs, et utilisez les pixels pour les parties qui veulent la sensation de la peinture.</p>
+<p>Une photographie placée est une chose liée mais distincte. <strong>Fichier &gt; Importer…</strong> (<kbd>&#8679;&#8984;P</kbd>) amène une image existante dans le document en tant qu'image intégrée ; un calque pixel est une surface sur laquelle vous peignez depuis zéro dans Scissor. Les deux sont faits de pixels et les deux peuvent être échantillonnés avec la pipette, mais seul un calque pixel accepte des coups de pinceau.</p>
+
+<h2 id="pixels-new">Créer un calque pixel</h2>
+<p><strong>Objet &gt; Calque pixel &gt; Nouveau calque pixel</strong> ajoute une surface vide couvrant le plan actif. Vous n'avez pas à en créer un d'abord, cependant : choisissez le Pinceau et peignez, et Scissor crée le calque pour vous au moment où le premier coup de pinceau atterrit. Quoi qu'il en soit, le calque se mappe sur le plan, de sorte que les pixels s'alignent avec le plan de travail quelle que soit la résolution à laquelle ils ont été créés.</p>
+<p>Cette résolution provient du réglage <strong>Effets raster</strong> dans <strong>Fichier &gt; Configuration du document…</strong> (<kbd>&#8997;&#8984;P</kbd>) : Écran (72&nbsp;ppp), Moyen (150&nbsp;ppp) ou Élevé (300&nbsp;ppp). Un réglage plus élevé donne à un nouveau calque pixel plus de points par point, de sorte que le travail au pinceau reste lisse lorsque la pièce est imprimée ou vue en grand. Définissez-le avant de créer le calque, puisque le nombre de pixels est fixe lorsque la surface est créée.</p>
+<p>Dans l'enveloppe moderne, vous pouvez également ajouter un calque depuis la barre d'options d'outil : avec le Pinceau ou la Gomme pixel actifs, un bouton <strong>Nouveau calque pixel</strong> se trouve à l'extrémité de la barre.</p>
+<p><strong>Importer une image crée aussi un calque pixel.</strong> Déposez une image sur le canevas, utilisez <strong>Fichier &gt; Importer…</strong>, ou collez-en une depuis le presse-papiers, et elle arrive en tant que calque pixel modifiable à sa propre taille plutôt qu'une image verrouillée — de sorte que vous pouvez dessiner dessus, la masquer, l'ajuster et la filtrer immédiatement. Ouvrir une image avec <strong>Fichier &gt; Ouvrir</strong> crée un nouveau document d'un plan à la taille de l'image, rempli par le calque pixel. Les très grandes photos sont réduites pour s'adapter au budget de pixels. Un <strong>SVG</strong> reste vectoriel — ses tracés restent modifiables — donc seules les images bitmap (PNG, JPEG, GIF, WebP et autres) deviennent des calques pixel.</p>
+<p>Un fichier <strong><code>.psd</code></strong> en couches arrive plus riche : en ouvrir un reconstruit sa pile en calques pixel séparés, conservant le <strong>masque</strong> de chaque calque, et amenant le texte, les formes et les effets de calque pour que le fichier atterrisse près de son apparence d'origine plutôt qu'en tant qu'image plate unique. C'est la plus complète façon d'entrer dans le travail pixel, et tout sur cette page s'applique ensuite aux calques qui arrivent.</p>
+
+<h2 id="pixels-painting">Peinture</h2>
+
+<h3 id="pixels-brush">Le Pinceau et la Gomme pixel</h3>
+<p>Deux outils travaillent sur les calques pixel.</p>
+<table>
+  <thead><tr><th>Outil</th><th>Où il se trouve</th><th>Ce qu'il fait</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Outil Pinceau</strong></td><td>Partage un emplacement avec le Pinceau (<kbd>B</kbd>) et le Pinceau de remplissage (<kbd>&#8679;B</kbd>)</td><td>Pose de la couleur qui devient partie de l'image</td></tr>
+    <tr><td><strong>Outil Gomme pixel</strong></td><td>Partage un emplacement avec la Gomme (<kbd>&#8679;E</kbd>), les Ciseaux et le Couteau</td><td>Efface la peinture pour que ce qui se trouve en dessous apparaisse</td></tr>
+  </tbody>
+</table>
+<p>Pour accéder à l'un ou l'autre, appuyez et maintenez l'outil visible dans la barre d'outils, ou cliquez avec le bouton droit dessus, et choisissez l'outil pixel dans la liste. Ne les confondez pas avec leurs voisins vectoriels : le Pinceau dessine un tracé que vous pouvez remodeler ensuite, tandis que le Pinceau pixel peint des pixels qui ne peuvent pas être repris. Les deux outils pixel affichent un anneau sur le canevas à la taille à laquelle ils peindront, et les deux utilisent un pointeur en croix.</p>
+<p>Glissez pour peindre ou effacer. La marque suit le pointeur sans lacunes quelle que soit votre vitesse, car Scissor pose une série de touches rondes le long du trait et les garde régulièrement espacées même lorsque le pointeur saute. La Gomme pixel retire l'alpha plutôt que de peindre par-dessus, donc ce qu'elle efface devient entièrement transparent ; une tuile effacée jusqu'à rien est supprimée, donc effacer ne laisse pas de poids derrière.</p>
+
+<h3 id="pixels-colour">Peindre dans la couleur de fond</h3>
+<p>Le Pinceau peint dans la couleur de <strong>fond</strong> actuelle. Définissez-la comme vous définissez n'importe quel fond : le panneau Couleur, un nuancier, ou, lorsque le Pinceau est actif dans l'enveloppe moderne, la puce <strong>Couleur</strong> dans la barre d'options d'outil. Si le fond est vide, le Pinceau se rabat sur la couleur de contour, et sur le noir s'il n'y a aucune couleur du tout. Choisissez une couleur directement sur un calque pixel avec la Pipette lorsque vous voulez correspondre à une peinture déjà posée.</p>
+
+<h3 id="pixels-controls">Taille, dureté et flux</h3>
+<p>Lorsque le Pinceau ou la Gomme pixel est actif, la barre d'options d'outil porte les réglages qui façonnent la marque. Ils vivent aussi dans vos préférences, donc ils se reportent d'une session à l'autre.</p>
+<dl>
+  <dt>Taille</dt><dd>Le diamètre du pinceau, de 1 à 2500 pixels. Appuyez sur <kbd>[</kbd> pour rendre le pinceau plus petit et <kbd>]</kbd> pour le rendre plus grand ; chaque pression change la taille d'un cinquième, donc le pas grandit avec le pinceau. L'anneau sur le canevas affiche la taille actuelle.</dd>
+  <dt>Dureté</dt><dd>Où le bord commence à s'estomper, en pourcentage. À 100 % le bord est net ; diminuez-le et la touche s'adoucit vers son pourtour avec une atténuation douce et aucun anneau visible. Utilisez un pinceau doux pour les ombres et les lueurs, un dur pour les formes pleines.</dd>
+  <dt>Flux</dt><dd>Quelle quantité de peinture chaque touche pose, pour le Pinceau uniquement. En dessous de 100 % la couleur s'accumule progressivement en repassant sur une zone, ce qui convient aux ombrages et aux mélanges lents. La Gomme pixel n'a pas de contrôle de flux.</dd>
+</dl>
+
+<h2 id="pixels-retouch">Densité, brûlure et éponge</h2>
+<p>Trois brosses de retouche travaillent dans les pixels déjà présents plutôt que de poser une couleur, partageant un seul emplacement dans la barre d'outils. Elles peignent comme le Pinceau — la même taille, dureté et anneau sur le canevas — et s'accumulent en repassant sur une zone, donc un toucher léger est graduel et un appui ferme est rapide.</p>
+<dl>
+  <dt>Densité</dt><dd>Éclaircit partout où vous peignez, enlevant les ombres et ajoutant des reflets.</dd>
+  <dt>Brûlure</dt><dd>Assombrit partout où vous peignez, approfondissant les ombres et les bords.</dd>
+  <dt>Éponge</dt><dd>Monte la saturation, rendant les couleurs plus riches à mesure que vous repassez.</dd>
+</dl>
+<p>Chacune laisse les pixels transparents intacts, reste à l'intérieur d'une sélection lorsqu'une est définie, et tout le trait s'annule en une seule étape.</p>
+
+<h2 id="pixels-more-tools">Pot, formes et dégradés</h2>
+<p>La peinture n'est pas que le Pinceau. Sur un calque pixel, trois autres outils posent de la couleur : le <strong>Pot de peinture</strong> inonde une zone contiguë de couleur similaire depuis l'endroit où vous cliquez ; les <strong>outils de forme</strong> tamponnent un rectangle, une ellipse, une étoile ou un polygone directement dans les pixels plutôt que de dessiner un tracé ; et l'<strong>outil Dégradé</strong> peint un mélange linéaire ou radial à travers la surface. Chacun respecte la sélection actuelle, de sorte que vous pouvez confiner un remplissage ou un dégradé à une région choisie.</p>
+
+<h2 id="pixels-selecting">Sélectionner des pixels</h2>
+<p>Une <strong>sélection pixel</strong> — un cadre de sélection — limite chaque peinture et modification à la région à l'intérieur, comme un pochoir. Trois outils en créent une, partageant l'emplacement de sélection pixel : les <strong>Cadres rectangulaire</strong> et <strong>elliptique</strong>, et un <strong>Cadre lasso</strong> à main levée que vous tracez à la main. Glissez pour dessiner une sélection ; un glisser simple remplace l'actuelle.</p>
+<p>La <strong>Sélection automatique</strong> choisit par couleur plutôt que par forme : cliquez sur un calque pixel et elle prend la tache de couleur connectée autour de l'endroit où vous avez cliqué, traçant un contour de fourmis en marche autour — pratique pour extraire un arrière-plan plat ou une zone colorée. La proximité qu'une couleur doit avoir pour être prise est la <strong>Tolérance</strong> dans les options de la Sélection automatique, le même réglage qu'elle utilise sur les objets vectoriels ; augmentez-la pour en rassembler plus, diminuez-la pour vous en tenir à une correspondance proche. Les trous dans la tache sont laissés hors de la sélection.</p>
+<p>Les sélections se combinent, donc une forme peut être construite à partir de plusieurs traits ou clics : maintenez <kbd>&#8679;</kbd> pour <strong>ajouter</strong> à la sélection, <kbd>&#8997;</kbd> pour <strong>soustraire</strong>, et les deux ensemble pour ne garder que le <strong>chevauchement</strong> — les cadres et la Sélection automatique se combinent tous de la même manière. <strong>Sélection &gt; Tout</strong> (<kbd>&#8984;A</kbd>) sélectionne chaque pixel, <strong>Sélection &gt; Inverser</strong> inverse le cadre, et <strong>Désélectionner</strong> — <kbd>&#8984;D</kbd> sur un calque pixel — l'abandonne. Un contour de fourmis en marche affiche la sélection sur le canevas.</p>
+
+<h2 id="pixels-editing-selection">Déplacer, couper et copier des pixels</h2>
+<p>Avec une sélection définie, l'outil Sélection déplace les pixels à l'intérieur : glissez depuis l'intérieur du cadre et la peinture sélectionnée se soulève et voyage, effaçant l'endroit où elle était et emportant le cadre avec elle. Maintenez <kbd>&#8997;</kbd> en glissant pour laisser l'original en place et déplacer une <strong>copie</strong>.</p>
+<p>Les outils de transformation travaillent aussi sur la sélection. Avec un cadre défini, la boîte englobante de l'outil Sélection et l'<strong>outil Transformation libre</strong> (<kbd>E</kbd>) enveloppent le cadre, pas le calque entier, de sorte que vous pouvez mettre à l'échelle, faire pivoter ou déplacer juste cette partie de l'image ; <strong>Objet &gt; Transformation</strong> et les flèches agissent de la même manière. Les pixels soulevés flottent au-dessus du calque pendant que vous travaillez, de sorte que vous pouvez les glisser encore et encore sans perdre de détail. Appuyez sur <kbd>Entrée</kbd>, choisissez un autre outil, ou faites une nouvelle sélection pour les poser, ce qui est une seule étape à annuler, ou appuyez sur <kbd>Échap</kbd> pour tout remettre où c'était. Un déplacement par pixels entiers les garde exactement tels qu'ils étaient ; la mise à l'échelle ou la rotation les rééchantillonne une fois, lorsqu'ils sont posés.</p>
+<p>La Transformation libre <strong>Déformation libre</strong> et <strong>Déformation perspective</strong> fonctionnent sur les pixels aussi, sur un cadre ou sur un calque entier : glissez un coin de la boîte (ou maintenez <kbd>&#8984;</kbd> en glissant un en mode Transformation libre) pour tirer l'image hors de la réalité, par exemple pour adapter une photo sur un écran ou une enseigne vue de biais. Pendant que vous glissez, Scissor affiche un aperçu rapide dimensionné à l'écran, donc cela reste fluide même sur une grande photo ; les pixels eux-mêmes sont tirés une fois, en pleine résolution, lorsque vous appuyez sur <kbd>Entrée</kbd> ou passez à autre chose, et le cadre suit la nouvelle forme.</p>
+<p>Copier (<kbd>&#8984;C</kbd>) et Couper (<kbd>&#8984;X</kbd>) fonctionnent sur les pixels à l'intérieur d'un cadre : copier laisse le calque tel qu'il est, couper en retire les pixels. Coller (<kbd>&#8984;V</kbd>) les pose sur un <strong>nouveau calque pixel</strong> juste au-dessus de celui d'où ils venaient, exactement au même endroit, prêt à être déplacé ou transformé seul. Les mêmes commandes se trouvent dans <strong>Création &gt; Calque pixel</strong>, et la sélection pilote aussi les commandes de surface : <strong>Remplir avec la couleur de fond</strong> ne remplit que la région sélectionnée, <strong>Effacer</strong> et <strong>Supprimer</strong> l'effacent, et sans sélection chacun agit sur le calque entier.</p>
+
+<h2 id="pixels-adjustments">Réglages</h2>
+<p>Le sous-menu <strong>Objet &gt; Calque pixel &gt; Réglages</strong> retouche la couleur d'un calque pixel, confiné à la sélection lorsqu'une est définie. Chacun ouvre une boîte de dialogue qui prévisualise sur le canevas pendant que vous glissez.</p>
+<dl>
+  <dt>Luminosité / Contraste, Niveaux</dt><dd>Définissent la luminosité et le contraste globaux, ou remappent le point noir, le point blanc et le gamma pour un contrôle tonal plus fin.</dd>
+  <dt>Teinte / Saturation, Vibrance</dt><dd>Décalent la teinte et montent ou baissent la saturation dans l'ensemble, ou utilisez la Vibrance pour booster les couleurs ternes tout en laissant les déjà vives tranquilles.</dd>
+  <dt>Balance des couleurs</dt><dd>Poussent les demi-teintes vers le cyan ou le rouge, le magenta ou le vert, le jaune ou le bleu.</dd>
+  <dt>Carte de dégradés</dt><dd>Recolore le calque par sa luminosité, mappant les ombres vers une couleur et les reflets vers une autre.</dd>
+  <dt>Désaturer, Inverser</dt><dd>Suppriment toute couleur en gris, ou inversent chaque couleur vers son opposée.</dd>
+  <dt>Seuil, Postériser</dt><dd>Réduisent l'image à du noir et blanc pur à un niveau choisi, ou à un petit nombre de tons par canal.</dd>
+</dl>
+
+<h2 id="pixels-filters">Filtres</h2>
+<p>Le sous-menu <strong>Filtres</strong> remodèle les pixels eux-mêmes, à nouveau dans la sélection.</p>
+<dl>
+  <dt>Flou gaussien</dt><dd>Adoucit le calque d'une quantité régulière et ajustable.</dd>
+  <dt>Netteté, Masque flou</dt><dd>Accentuent les détails — le Masque flou donne le contrôle du rayon, du montant et d'un seuil qui épargne les zones plates et le fin bruit.</dd>
+  <dt>Pixeliser</dt><dd>Bloque l'image en tuiles carrées pour une mosaïque.</dd>
+  <dt>Ajouter du bruit</dt><dd>Éparpille du grain à travers la peinture.</dd>
+  <dt>Trouver les bords, Gaufrage</dt><dd>Tracent où la couleur change en lignes claires sur sombre, ou en relief gris.</dd>
+</dl>
+<p><strong>Filtres &gt; Aperçus d'effets</strong> affiche votre calque sous forme de grille de vignettes en direct, chacune avec un réglage ou filtre appliqué, de sorte que vous puissiez choisir par l'œil plutôt que par le nom. Choisir une vignette garde la fenêtre ouverte. Les réglages de l'effet apparaissent à côté de la grille, et le canevas prévisualise le résultat pendant que vous les changez. Rien n'est appliqué jusqu'à ce que vous cliquiez sur <strong>Appliquer</strong> (ou appuyiez sur <kbd>Entrée</kbd>). <strong>Annuler</kbd> ou <kbd>Échap</kbd> remet l'image en place, et une annulation retire un effet appliqué. Vous pouvez faire glisser la fenêtre par son titre pour voir le canevas derrière.</p>
+
+<h2 id="pixels-undo">Annulation rapide par tuiles</h2>
+<p>Tout le trait s'annule en une étape, quelle que soit sa longueur : appuyez sur <kbd>&#8984;Z</kbd> une fois et la dernière marque disparaît, et <kbd>&#8679;&#8984;Z</kbd> la ramène. Si le premier trait a dû créer son calque, ce calque repart avec le trait plutôt que d'être laissé vide derrière.</p>
+<p>Dans les coulisses, un calque pixel est conservé sous forme de grille de petites tuiles, et un trait ne copie jamais que les tuiles qu'il a réellement touchées. L'annulation conserve des instantanés du document entier, mais un trait ne coûte que ses propres tuiles plutôt que la surface entière, donc peindre sur un grand calque reste rapide et une longue session de travail au pinceau ne remplit pas la mémoire. Les zones plates d'une couleur sont stockées de manière compacte, donc un calque qui est principalement d'une seule couleur prend presque aucune place.</p>
+
+<h2 id="pixels-treating">Traiter un calque pixel comme n'importe quel objet</h2>
+<p>Un calque pixel est un objet dans le document, donc tout ce que vous savez déjà s'applique. Sélectionnez-le, déplacez-le, et mettez-le à l'échelle, faites-le pivoter, reflétez-le ou cisailler-le depuis <strong>Objet &gt; Transformation</strong>, la boîte englobante ou l'outil Transformation libre. Sans cadre, la boîte enveloppe les pixels peints du calque plutôt que sa surface entière, et une transformation travaille sur ces pixels : le déplacement les laisse intacts, tandis que la mise à l'échelle ou la rotation est intégrée aux pixels lorsque vous appuyez sur <kbd>Entrée</kbd>, choisissez un autre outil ou sélectionnez autre chose, de sorte que le calque reste droit et le prochain coup de pinceau atterrit dans le bon sens. Définissez son opacité et donnez-lui l'un des seize modes de fusion depuis le panneau Transparence pour poser de la couleur peinte sur l'illustration dessinée en dessous. Cliquer ne sélectionne le calque que là où il a de la peinture, donc un coin transparent vous permet de cliquer directement à travers vers ce qui se trouve dessous. <strong>Dupliquer</strong> copie un calque pixel comme n'importe quel objet — à peu de frais, puisque la copie partage ses tuiles jusqu'à ce que l'une d'elles soit peinte.</p>
+<p><strong>Objet &gt; Calque pixel &gt; Fusionner vers le bas</strong> aplanit un calque pixel sur le calque pixel directement en dessous et retire celui du dessus, laissant un seul calque avec les deux composités ensemble. Si les calques se trouvent sous différentes transformations — disons l'un a été tourné — celui du dessus est rééchantillonné dans la grille de celui du bas lors de la fusion.</p>
+<p>Deux commandes agissent sur la surface entière à la fois :</p>
+<dl>
+  <dt>Objet &gt; Calque pixel &gt; Remplir avec la couleur de fond</dt><dd>Inonde la surface entière de la couleur de fond actuelle. Utilisez-la pour poser une couche de base avant de peindre par-dessus, ou pour inonder un calque placé derrière d'autres illustrations.</dd>
+  <dt>Objet &gt; Calque pixel &gt; Effacer</dt><dd>Vide la surface sans retirer le calque, de sorte que vous puissiez recommencer la peinture tout en conservant la place, la transformation, l'opacité et le mode de fusion du calque.</dd>
+</dl>
+<p>Les deux commandes apparaissent également sous <strong>Effet &gt; Calque pixel</strong>.</p>
+
+<h2 id="pixels-masks">Masques de calque</h2>
+<p>Un <strong>masque de calque</strong> masque des parties d'un calque pixel sans les supprimer : le calque apparaît là où le masque est blanc et est masqué là où il est noir, avec les gris entre les deux pour une transparence partielle. Parce que rien n'est effacé, vous pouvez peindre le masque dans les deux sens autant de fois que vous voulez. Les commandes se trouvent sous <strong>Objet &gt; Calque pixel</strong>.</p>
+<dl>
+  <dt>Ajouter un masque de calque</dt><dd>Attache un masque qui révèle tout au départ, prêt à être peint.</dd>
+  <dt>Ajouter un masque de calque depuis la sélection</dt><dd>Construit le masque depuis la sélection pixel actuelle : ce qui est à l'intérieur reste, ce qui est à l'extérieur est masqué. Un moyen rapide de découper une forme dans une photo de manière non destructive.</dd>
+  <dt>Modifier le masque</dt><dd>Active et désactive la peinture de masque. Pendant qu'elle est active, le Pinceau, la Gomme et le Pot de peinture peignent le masque au lieu du calque : peignez en noir (ou une couleur sombre) pour masquer, en blanc pour révéler, en gris pour estomper. Le pinceau utilise la luminosité de la couleur de fond actuelle, donc le noir masque et le blanc révèle.</dd>
+  <dt>Appliquer le masque de calque</dt><dd>Intègre le masque au calque définitivement — les pixels masqués deviennent transparents — et retire le masque.</dd>
+  <dt>Supprimer le masque de calque</dt><dd>Jette le masque et affiche à nouveau le calque entier, intact.</dd>
+</dl>
+<p>Un calque masqué s'exporte et s'enregistre avec le masque déjà appliqué, et se fusionne et se transforme comme n'importe quel autre calque.</p>
+
+<h2 id="pixels-rasterize">Transformer de l'illustration vectorielle en pixels : Rastériser</h2>
+<p><strong>Objet &gt; Rastériser</strong> remplace la sélection actuelle par une image intégrée d'elle-même, figeant les tracés, le texte et les effets en pixels fixes. Utilisez cela lorsque vous voulez qu'un résultat vectoriel cesse d'être modifiable, lorsqu'un effet est plus facile à traiter qu'image plate, ou pour transmettre une pièce qui doit être identique partout sans emporter sa construction en direct. Le résultat est une image intégrée plutôt qu'un calque pixel peignable, alors conservez une copie de l'illustration originale si vous pourrez avoir besoin de la modifier à nouveau. <strong>Affichage &gt; Aperçu pixel</strong> (<kbd>&#8997;&#8984;Y</kbd>) vous permet de vérifier comment l'illustration vectorielle atterrira sur la grille de pixels avant de vous engager.</p>
+
+<h2 id="pixels-saving">Enregistrement et export</h2>
+<p>Les documents <code>.cut</code> conservent les calques pixel avec le reste de l'illustration, emballés de sorte que les zones plates prennent presque aucune place et se rouvrent exactement comme peintes.</p>
+<p>La façon dont les calques pixel quittent le document dépend du format :</p>
+<dl>
+  <dt>PNG, JPEG et WebP</dt><dd>Aplatissent le document entier en pixels, de sorte que le travail peint et dessiné fusionne en une seule bitmap. Le PNG peut conserver la transparence ; exportez en @2x pour un résultat plus net.</dd>
+  <dt>SVG et PDF</dt><dd>Écrivent la surface peinte sous forme d'image intégrée parmi l'illustration vectorielle, de sorte qu'un document qui mélange travail dessiné et peint voyage en un seul fichier avec ses formes toujours nettes.</dd>
+</dl>
+<p>Parce que le raster et le vectoriel vivent dans le même document et s'exportent ensemble, vous pouvez construire une pièce de la façon la plus naturelle : des formes et du texte nets en vecteurs, et les parties qui veulent la sensation de la peinture, une lueur douce, un lavis texturé, une photographie retouchée, en calques pixel empilés parmi eux.</p>

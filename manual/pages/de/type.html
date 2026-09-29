@@ -1,0 +1,110 @@
+<p class="lede">Text in Scissor bleibt live. Sie können die Wörter, die Schrift und den Abstand jederzeit neu bearbeiten, und der Text wird direkt auf die Zeichenfläche gezeichnet, während Sie tippen, sodass das, was Sie bearbeiten, das ist, was gedruckt und exportiert wird.</p>
+
+<p>Die untenstehenden Kürzel sind in ihrer macOS-Form geschrieben. Unter Windows lesen Sie <kbd>&#8984;</kbd> als <kbd>Strg</kbd>, <kbd>&#8997;</kbd> als <kbd>Alt</kbd> und <kbd>&#8679;</kbd> als <kbd>Umschalt</kbd>.</p>
+
+<h2 id="type-tools">Die Textwerkzeuge</h2>
+<p>Die Textwerkzeuge teilen einen Slot in der Werkzeugleiste. Wählen Sie den Slot und halten Sie, um unter ihnen zu wählen, dann arbeiten Sie auf der Zeichenfläche.</p>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Kürzel</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td>Text-Werkzeug</td><td><kbd>T</kbd></td><td>Klicken für Punkttext, Ziehen für einen rechteckigen Rahmen für Flächentext</td></tr>
+    <tr><td>Flächentext-Werkzeug</td><td></td><td>Ziehen Sie einen Rahmen und tippen Sie hinein</td></tr>
+    <tr><td>Text-auf-Pfad-Werkzeug</td><td></td><td>Klicken Sie auf einen Pfad, um Text entlang ihm laufen zu lassen</td></tr>
+    <tr><td>Vertikaler Text-Werkzeug</td><td></td><td>Setzt aufrechte Zeichen in Spalten</td></tr>
+    <tr><td>Glyphenbearbeitung-Werkzeug</td><td><kbd>&#8679;T</kbd></td><td>Bewegt, skaliert und dreht ein Zeichen nach dem anderen</td></tr>
+  </tbody>
+</table>
+<p>Um Text zu bearbeiten, der bereits auf der Seite ist, klicken Sie mit einem der Textwerkzeuge außer Glyphenbearbeitung darauf, um den Cursor hineinzusetzen, oder doppelklicken Sie mit dem Auswahl-Werkzeug (<kbd>V</kbd>). Drücken Sie <kbd>Esc</kbd> oder klicken Sie weg, um die Bearbeitung zu beenden. Mit dem gewöhnlichen Text-Werkzeug klicken Sie auf einen offenen Pfad, um Text an diesen Pfad anzuhängen, statt einen neuen Block zu beginnen, sodass Sie nicht immer zum dedizierten Text-auf-Pfad-Werkzeug greifen müssen.</p>
+
+<h2 id="type-kinds">Punkt-, Flächen- und Pfadtext</h2>
+<p>Text kann auf drei Arten im Dokument sitzen, und der Unterschied ist, wie die Zeilen gemessen und wo sie umgebrochen werden. Alle drei bleiben bearbeitbar, nehmen dieselben Zeichen- und Absatzeinstellungen und können später in Konturen verwandelt werden.</p>
+
+<h3 id="type-point">Punkttext</h3>
+<p>Klicken Sie einmal mit dem Text-Werkzeug und tippen Sie. Der Text wächst von diesem einzelnen Punkt und bricht nur dort, wo Sie <kbd>Return</kbd> drücken: Es gibt keinen Rahmen, gegen den umgebrochen wird. Greifen Sie zu Punkttext für Überschriften, Labels, ein paar Wörter Display-Schrift oder alles, was Sie nach Augenmaß positionieren statt in eine Schütten gießen. Seine Einzüge und Absatzabstände haben nichts, gegen das sie messen könnten, also haben diese Steuerelemente keine Wirkung auf Punkttext; die Ausrichtung wird von dem Anker genommen, auf den Sie geklickt haben.</p>
+
+<h3 id="type-area">Flächentext</h3>
+<p>Ziehen Sie ein Rechteck mit dem Text-Werkzeug oder dem Flächentext-Werkzeug, und der Text bricht automatisch am rechten Rand, um in den Rahmen zu passen. Verwenden Sie Flächentext für Fließtext, Bildunterschriften oder eine Textreihe, die innerhalb einer festen Breite bleiben muss. Wenn mehr Text vorhanden ist, als der Rahmen fassen kann, wird der Überschuss verborgen und der Rahmen als überlaufend markiert; machen Sie den Rahmen größer, verkleinern Sie den Text oder fäden Sie den Überlauf in einen weiteren Rahmen ein (siehe unten). Einzüge, Erstzeileneinzug, Abstand davor und danach und Silbentrennung gelten alle für Flächentext.</p>
+
+<h3 id="type-on-a-path">Text auf einem Pfad</h3>
+<p>Klicken Sie auf einen Pfad mit dem Text-auf-Pfad-Werkzeug. Der Pfad wird zur Grundlinie und hört auf, Grafik zu sein, also wird er nicht mehr gefüllt oder konturiert. Greifen Sie hierher, um ein Etikett um einen Badge, entlang einer Kurve oder über eine Form laufen zu lassen. Wählen Sie das Ergebnis, und drei Klammern erscheinen: eine am Anfang, eine am Ende und eine in der Mitte. Ziehen Sie die Anfangs- oder Endklammer, um zu verschieben, wo der Text entlang des Pfads beginnt und endet, ziehen Sie die mittlere Klammer, um die ganze Reihe entlang zu schieben, und ziehen Sie die mittlere Klammer auf die andere Seite des Pfads, um den Text umzudrehen. Text auf einem Pfad nimmt keine Zeilenumbrüche, also tut <kbd>Return</kbd> nichts, während Sie ihn bearbeiten. Formen Sie den zugrunde liegenden Pfad um, und der Text folgt seinen neuen Biegungen.</p>
+<figure class="shot">
+  <img src="img/type-on-path.png" width="1700" height="798" loading="lazy"
+       alt="Die Worte 'Type flows along any path you draw', die den Biegungen eines welligen Pfads in Scissor folgen." />
+  <figcaption>Auf einem welligen Pfad gesetzter Text. Formen Sie den Pfad um, und der Text folgt seinen Biegungen; die Grundlinie ist hier gestrichelt gezeigt.</figcaption>
+</figure>
+
+<h2 id="type-character">Das Zeichen-Panel</h2>
+<p>Das Zeichen-Panel (<kbd>&#8984;T</kbd> oder <strong>Fenster &gt; Text &gt; Zeichen</strong>) hält alles, was für die Buchstaben selbst gilt. Mit einem Textobjekt ausgewählt decken seine Einstellungen das ganze Objekt: Ändern Sie die Schrift oder die Sperrung, und jeder Buchstabe folgt. Während Sie tippen, gelten Schrift, Gewicht, Kursiv und Größe nur für die ausgewählten Zeichen (siehe <a href="#type-mixed">Gemischte Stile in einem Text</a>). Das Panel wird ausgegraut, bis Sie Text bearbeiten oder ein Textobjekt ausgewählt haben.</p>
+
+<h3 id="type-font">Schrift, Gewicht, Stil und Größe</h3>
+<p>Das Schriftmenü ist durchsuchbar und hält die Familien, die Sie kürzlich verwendet haben, oben. Es listet die Schriften auf, mit denen Ihr Browser tatsächlich zeichnen kann, gelesen vom System, wo es sie meldet, und andernfalls aus einem Satz gängiger Familien getastet, sodass die Liste dem entspricht, was gerendert wird, statt einem festen Katalog.</p>
+<p>Das Gewichtsmenü bietet Leicht, Regulär, Mittel, Halbfett, Fett und Extra Fett, aber nur die Gewichte, die die gewählte Familie wirklich hat, sind wählbar: Die anderen sind gedimmt. Die Kursiv-Schaltfläche daneben schrägt den Stil ein und aus. Die Größe wird in Pixeln eingestellt, vom Größenfeld.</p>
+
+<h3 id="type-mixed">Gemischte Stile in einem Text</h3>
+<p>Ein Text kann Größen, Farben, Gewichte und Kursiv mischen. Während Sie tippen, wählen Sie einige Zeichen und ändern Sie sie von der Schnellleiste neben dem Text, der Optionsleiste oder dem Farb-Panel. Nur die ausgewählten Zeichen ändern sich, und der Rest des Textes behält seinen eigenen Stil. Mit nichts ausgewählt gilt die Änderung wie gewöhnlich für den ganzen Text. Die Stile wandern mit ihren Zeichen, während Sie weiter tippen, und sie werden in SVG- und PDF-Exporten behalten.</p>
+
+<h3 id="type-metrics">Zeilenabstand, Sperrung und Kerning</h3>
+<dl>
+  <dt>Zeilenabstand</dt>
+  <dd>Der Abstand von einer Grundlinie zur nächsten, in Pixeln. Lassen Sie ihn bei 0 für automatischen Zeilenabstand, der 120% der Größe ist. Stellen Sie ihn größer ein, um die Zeilen zu öffnen, oder kleiner, um eine Überschrift zu straffen.</dd>
+  <dt>Sperrung</dt>
+  <dd>Gleichmäßiger Abstand, der jedem Zeichen hinzugefügt oder abgezogen wird, gemessen in Tausendsteln eines Em (sodass er mit der Größe skaliert). Positive Werte lockern den Text auf, negative straffen ihn ein. Greifen Sie zur Sperrung, um eine Zeile an eine Breite anzupassen oder Kapitälchen zu setzen.</dd>
+  <dt>Kerning</dt>
+  <dd>Die paarweise Abstand der Schrift zwischen bestimmten Buchstaben, wie die Lücke unter einem Groß-T. Es ist standardmäßig aktiviert, auf der Kerning-Schaltfläche in der OpenType-Reihe (markiert AV). Deaktivieren Sie es, um die rohen Metriken der Schrift zu sehen.</dd>
+</dl>
+
+<h3 id="type-align">Ausrichtung</h3>
+<p>Das Zeichen-Panel hat vier Ausrichtungsschaltflächen: Links, Mitte, Rechts und Blocksatz. Links und Rechts sind relativ zur Leserichtung, also bedeuten sie Anfang und Ende: Rechts-nach-links-Text, der auf Links eingestellt ist, richtet sich am visuellen Rechts aus. Blocksatz verteilt jede Zeile, um das Maß zu füllen, also ändert er nur etwas, wo Zeilen umgebrochen werden, was Flächentext und Text auf einem Pfad bedeutet statt einzeiligen Punkttextes. Für die feineren Blocksatz-Steuerungen (wie die letzte Zeile gesetzt wird) verwenden Sie das Absatz-Panel.</p>
+
+<h3 id="type-opentype">OpenType-Funktionen und Kapitälchen</h3>
+<p>Unter der Überschrift <strong>OpenType</strong> befindet sich eine Reihe von Schaltflächen, von denen jede eine Funktion des ausgewählten Textes ein- oder ausschaltet:</p>
+<table>
+  <thead><tr><th>Schaltfläche</th><th>Funktion</th></tr></thead>
+  <tbody>
+    <tr><td>fi</td><td>Standardligaturen (standardmäßig aktiviert)</td></tr>
+    <tr><td>st</td><td>Fakultative Ligaturen</td></tr>
+    <tr><td>TT</td><td>Großschreibung</td></tr>
+    <tr><td>T&#7472;</td><td>Kapitälchen</td></tr>
+    <tr><td>T&sup1;</td><td>Hochgestellt</td></tr>
+    <tr><td>T&#8321;</td><td>Tiefgestellt</td></tr>
+    <tr><td>&frac12;</td><td>Brüche</td></tr>
+    <tr><td>1&#738;&#7511;</td><td>Ordinalzahlen</td></tr>
+    <tr><td>&#119964;</td><td>Schwung</td></tr>
+    <tr><td>AV</td><td>Kerning (standardmäßig aktiviert)</td></tr>
+  </tbody>
+</table>
+<p>Großschreibung zeichnet jeden Buchstaben als Großbuchstaben, ohne den zugrunde liegenden Text zu ändern, also ist er immer noch kleingeschrieben, wenn Sie ihn bearbeiten. Kapitälchen bittet die Schrift um ihre Kapitälchenformen. Hochgestellt und Tiefstellen zeichnen die betroffenen Zeichen kleiner und versetzen sie von der Grundlinie, für Fußnotenmarkierungen, Ordinalendungen oder chemische Formeln.</p>
+<p>Unter den Schaltflächen wählt das Zifferstil-Menü, wie Ziffern gesetzt werden: Standard, Tabulare Versalziffern, Proportionale Mediävalziffern, Proportionale Versalziffern oder Tabulare Mediävalziffern. Tabuläre Ziffern nehmen alle dieselbe Breite, sodass Spalten von Zahlen sich ausrichten; Mediävalziffern haben Auf- und Abstriche, die im Fließtext besser sitzen.</p>
+<p>Nicht jede Funktion kann auf der Zeichenfläche vorgeschaut werden. Ligaturen an oder aus, Kerning, Großschreibung, Kapitälchen und Hoch- und Tiefstellung werden gezeichnet, während Sie bearbeiten. Fakultative Ligaturen, die Zifferstile, Brüche, Ordinalzahlen und Schwung werden auf dem Text aufgezeichnet und in die exportierte <code>.svg</code> als Schriftfunktionseinstellungen geschrieben, aber die Zeichenfläche zeigt sie nicht, also behandeln Sie diese als Exportzeit-Einstellungen.</p>
+
+<h2 id="type-paragraph">Das Absatz-Panel</h2>
+<p>Das Absatz-Panel (<kbd>&#8997;&#8984;T</kbd> oder <strong>Fenster &gt; Text &gt; Absatz</strong>) steuert, wie ganze Absätze gesetzt werden. Wie bei den Zeicheneinstellungen gelten diese für jeden Absatz des Textobjekts.</p>
+<p>Sieben Ausrichtungsschaltflächen laufen oben. Die ersten drei sind gewöhnliche Links, Mitte und Rechts. Die nächsten drei blocksatzieren den Fließtext des Absatzes und setzen nur die letzte Zeile, links ausgerichtet, zentriert oder rechts. Die letzte blocksatziert jede Zeile einschließlich der letzten, und streckt sie auf das volle Maß. Blocksatz braucht einen Ort, um umzubrechen, also wirkt er in Flächentext, nicht in Punkttext.</p>
+<p>Unter den Ausrichtungsschaltflächen befinden sich die Einzüge: <strong>Links</strong> und <strong>Rechts</strong> ziehen den ganzen Absatz von den Seiten des Rahmens ein, und <strong>Erste</strong> rückt nur die erste Zeile ein. Ein negativer Erstzeileneinzug hängt die erste Zeile über die anderen hinaus, wie Sie einen hängenden Einzug machen. Die Felder <strong>Davor</strong> und <strong>Danach</strong> fügen Raum über und unter jedem Absatz hinzu, eine sauberere Art, Absätze zu trennen, als eine leere Zeile. Der <strong>Silbentrennung</strong>-Schalter lässt lange Wörter über Zeilen umbrechen, um die rechte Kante auszugleichen. Einzüge und Abstände gelten für Flächentext; Punkttext wird von seinem eigenen Anker gesetzt.</p>
+
+<h2 id="type-glyphs">Das Glyphen-Panel</h2>
+<p>Das Glyphen-Panel (<strong>Text &gt; Glyphen</strong>, <kbd>&#8997;&#8679;F11</kbd>) listet die Zeichen der aktuellen Schrift nach Satz auf, von Basis-Lateinisch über Griechisch, Kyrillisch, Hebräisch, Arabisch, Interpunktion, Währung, Pfeile und mehr, und hält die, die Sie kürzlich verwendet haben, oben. Greifen Sie hierher, um ein Zeichen einzufügen, das Ihre Tastatur nicht tippen kann, wie einen Pfeil, ein Währungszeichen oder einen akzentuierten Buchstaben. Doppelklicken Sie auf eine Glyphe, um sie an den Textcursor zu tippen. Ohne Cursor in irgendeinem Text wird die Glyphe stattdessen in die Zwischenablage kopiert, sodass Sie sie anderswo einfügen können.</p>
+
+<h2 id="type-orientation">Vertikaler und rechts-nach-links Text</h2>
+<p>Scissor kann Text sowohl senkrecht als auch waagrecht setzen und Skripte auslegen, die von rechts nach links lesen. Beide funktionieren in Punkt-, Flächen- und Pfadtext, und der On-Canvas-Editor folgt derselben Richtung wie die fertige Grafik.</p>
+
+<h3 id="type-vertical">Vertikaler Text</h3>
+<p>Das Vertikale-Text-Werkzeug setzt aufrechte Zeichen, die sich nach unten stapeln, wobei jede neue Zeile eine Spalte links von der letzten bildet. In einem vertikalen Flächenrahmen bricht eine Spalte in eine neue um, wenn sie den Boden erreicht. Um bereits gesetzten Text zwischen horizontal und vertikal zu wechseln, wählen Sie <strong>Text &gt; Textausrichtung &gt; Horizontal</strong> oder <strong>Vertikal</strong>.</p>
+
+<h3 id="type-rtl">Rechts-nach-links und Arabisch</h3>
+<p>Das Richtungsmenü des Zeichen-Panels bietet Auto, Links nach Rechts und Rechts nach Links. Bei Auto wird die Richtung aus dem Text selbst gelesen, aus seinem ersten starken Zeichen, sodass Arabisch oder Hebräisch von rechts nach links fließt, ohne dass Sie etwas einstellen müssen. Arabische Buchstaben nehmen ihre verbundenen Formen an, und eine Reihe lateinischer Wörter innerhalb einer rechts-nach-links-Zeile behält ihre eigene links-nach-rechts-Reihenfolge bei. Stellen Sie das Menü auf Links nach Rechts oder Rechts nach Links, wenn Sie die Richtung erzwingen möchten, statt sie erkennen zu lassen, zum Beispiel für eine Zeile, die mit einer Zahl oder Interpunktion beginnt.</p>
+
+<h2 id="type-touch">Glyphenbearbeitung</h2>
+<p>Das Glyphenbearbeitung-Werkzeug (<kbd>&#8679;T</kbd>) bewegt, skaliert und dreht ein Zeichen nach dem anderen, während der Text vollständig bearbeitbar bleibt. Greifen Sie hierher, um einen einzelnen Buchstaben für einen Effekt zu schieben, ohne das Wort in Konturen zu zerlegen. Wählen Sie das Werkzeug und klicken Sie auf ein Zeichen: Ein Rahmen erscheint um dieses eine Zeichen, mit einem Knopf an jeder Ecke, einem auf der rechten Seite, einem unten und einem schwebend darüber. Ziehen Sie eine Ecke, um in beiden Richtungen zu skalieren, den Seitenknopf für Breite allein, den unteren Knopf für Höhe allein und den oberen Knopf, um das Zeichen zu drehen. Halten Sie <kbd>&#8679;</kbd> während des Ziehens einer Ecke, um die Proportionen zu behalten, oder während des Drehens, um den Winkel einzufangen. <kbd>Rücktaste</kbd> oder <kbd>Entf</kbd> setzt das Zeichen dorthin zurück, wo der Text es gesetzt hat, und <kbd>Esc</kbd> lässt die Auswahl fallen. Weil der Text durchgehend Text bleibt, können Sie die Wörter um das bewegte Zeichen herum weiter bearbeiten.</p>
+
+<h2 id="type-flow">Verketten und Textumfluss</h2>
+<p>Zwei Funktionen lassen Text den Rest eines Layouts teilen: Verkettung führt eine Geschichte durch mehrere Rahmen, und Textumfluss schiebt Text von einem Objekt weg, das er überlappt.</p>
+
+<h3 id="type-threading">Verketteter Text</h3>
+<p>Wählen Sie zwei oder mehr Flächentextobjekte und wählen Sie <strong>Text &gt; Verketteter Text &gt; Erstellen</strong>. Ihr Text wird zu einer Geschichte zusammengeführt, die vom Rahmen zum Rahmen in Stapelreihenfolge, von hinten nach vorne, fließt und immer vom ersten Rahmen aus bearbeitet wird. Verwenden Sie Verkettung, um einen Artikel über Spalten oder Seiten laufen zu lassen: Während Sie Text hinzufügen oder entfernen, fließt er durch die Kette. Jeder Rahmen zeigt eine Buchse oben links und unten rechts, mit einer Linie zum Rahmen, in dem der Text weiterläuft. Ein rotes Plus anstelle der ausgehenden Buchse bedeutet, dass mehr Text vorhanden ist, als der Rahmen fassen kann. <strong>Auswahl freigeben</strong> nimmt die ausgewählten Rahmen aus ihrer Kette, und <strong>Verkettung entfernen</strong> bricht die ganze Kette, wobei jeder Rahmen den Text behält, den er zeigte.</p>
+
+<h3 id="type-wrap">Textumfluss</h3>
+<p>Um Text von einer Form wegzudrücken, wählen Sie die Form und wählen Sie <strong>Objekt &gt; Textumfluss &gt; Erstellen</strong>. Flächentext, der unter dem Objekt sitzt, fließt dann darum herum. Der Umfluss folgt dem Umriss des Objekts, nicht seinem Begrenzungsrahmen, sodass Text einen Kreis oder eine unregelmäßige Silhouette umarmen kann. <strong>Textumflussoptionen&#8230;</strong> legt den Abstand fest, der zwischen dem Objekt und dem Text gehalten wird, in Pixeln, und kann den Umfluss umkehren, sodass der Text innerhalb der Form läuft statt darum herum. <strong>Freigeben</strong> entfernt den Umfluss.</p>
+
+<h2 id="type-outlines">Text in Konturen umwandeln</h2>
+<p>Wählen Sie einen Text und wählen Sie <strong>Text &gt; Konturen erstellen</strong> (<kbd>&#8679;&#8984;O</kbd>), um ihn in Pfade zu verwandeln. Greifen Sie hierher, wenn Sie die Buchstabenformen von Hand umformen müssen, garantieren, dass der Text auf einem Gerät ohne die Schrift identisch aussieht, oder die Buchstaben als Form verwenden, um mit anderer Grafik zu kombinieren. Die Buchstabenformen werden aus den eigenen Glyphen der Schrift in hoher Auflösung nachgezeichnet, wobei die Passgenauigkeit echte Ecken scharf lässt, während sie die Kurven glättet, und das Ergebnis behält die Füllung, Kontur, den Namen, die Deckkraft und den Füllmodus des Textes. Die Wörter sind danach nicht mehr als Text bearbeitbar, also behalten Sie eine Kopie, wenn Sie sie ändern müssen, oder machen Sie mit <kbd>&#8984;Z</kbd> rückgängig.</p>

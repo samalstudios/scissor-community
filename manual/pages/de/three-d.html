@@ -1,0 +1,65 @@
+<p class="lede">3D und Materialien verwandelt eine flache Form in einen Festkörper, den Sie drehen, beleuchten und einer Oberfläche geben können, ohne jemals Ihre Vektorgrafik hinter sich zu lassen. Es ist ein Live-Effekt: Der Festkörper wird aus dem Pfad darunter gezeichnet, und dieser Pfad bleibt vollständig bearbeitbar, sodass Sie jederzeit den Umriss, die Farbe oder den Text ändern und das 3D sich darum neu aufbaut.</p>
+
+<h2 id="three-d-opening">Den Effekt öffnen</h2>
+<p>Wählen Sie zuerst ein Objekt, dann wählen Sie einen Objekttyp aus <strong>Effekt &rsaquo; 3D und Materialien</strong>: <em>Fläche</em>, <em>Extrudieren &amp; Fase</em>, <em>Drehen</em> oder <em>Aufblasen</em>. Jeder fügt den Effekt hinzu und öffnet das <strong>3D und Materialien</strong>-Panel, wo der Rest der Steuerelemente lebt. Dasselbe Panel öffnet sich von selbst über <strong>Fenster &rsaquo; 3D und Materialien</strong> oder über <strong>Effekt &rsaquo; 3D und Materialien &rsaquo; 3D und Materialien-Panel</strong>.</p>
+<p>Das Panel braucht etwas Ausgewähltes, bevor es etwas tun kann; ohne Auswahl sagt es es und greift seine Steuerelemente. Sobald ein Objekt den Effekt hat, laufen die vier Objekttyp-Schaltflächen oben durchs Panel, sodass Sie eine Form von einer Extrusion zu einer Drehung mit einem Klick wechseln und die Drehung und Beleuchtung behalten, die Sie bereits eingestellt haben.</p>
+<p>Weil es ein Effekt und keine Konvertierung ist, können Sie es auf fast alles ablegen, was ein Pfad halten kann: eine Form, eine Gruppe, einen Umriss oder live Text. Das Bearbeiten der Quelle, zum Beispiel das Neuetippen eines Wortes oder das Verschieben eines Ankers, führt den Effekt auf der neuen Grafik erneut aus.</p>
+
+<h2 id="three-d-types">Die vier Objekttypen</h2>
+<p>Der Objekttyp entscheidet, wie die flache Form als Festkörper gelesen wird. Wählen Sie denjenigen, der zu der Form passt, die Sie suchen.</p>
+
+<h3 id="three-d-plane">Fläche</h3>
+<p>Fläche lässt die Grafik flach und platziert sie als Karte im 3D-Raum, also tut es nur, dass Sie sie drehen und neigen können. Es gibt keine Tiefe einzustellen. Greifen Sie hierher, wenn Sie ein Stück flacher Grafik in einem Winkel sitzen lassen möchten, wie ein Etikett, das auf einer Fläche zurückliegt oder ein Badge, der geneigt ist, um das Licht einzufangen, ohne ihm Dicke zu geben.</p>
+
+<h3 id="three-d-extrude">Extrudieren und Fase</h3>
+<p>Extrudieren drückt die Form gerade nach hinten, um ihr Dicke zu geben, und verwandelt einen Umriss in einen Festkörper. Eine Fase rundet oder schneidet die vorderen und hinteren Kanten ab, damit sie nicht scharf bleiben. Löcher bleiben erhalten: Ein Verbundpfad wie ein Ring oder ein Buchstabe mit einem Innenraum bleibt durchgehend hohl. Dies ist der Typ für Beschriftung, Logos, Icons und Badges, die als erhaben oder geschnitzt gelesen werden sollen.</p>
+<figure class="shot">
+  <img src="img/3d-extrude.gif" width="620" height="620" loading="lazy" alt="Ein flacher Vektorstern, der in einen dreidimensionalen Stern extrudiert und gedreht wird, um seine Tiefe zu zeigen." />
+  <figcaption>Extrudieren und Fase baut Tiefe aus einer flachen Form, live. Der Stern bleibt ein bearbeitbarer Pfad darunter.</figcaption>
+</figure>
+
+<h3 id="three-d-revolve">Drehen</h3>
+<p>Drehen fegt die Form um ihre linke Kante, wie ein Profil, das auf einer Drehmaschine gedreht wird, einen Festkörper nachzeichnet. Zeichnen Sie die Hälfte eines symmetrischen Objekts, ein Glas, eine Flasche, eine Schachfigur, und drehen Sie es zur Runde. Der Drehwinkel kann weniger als eine volle Drehung sein, um einen Schnitt zu lassen, der das Innere zeigt.</p>
+
+<h3 id="three-d-inflate">Aufblasen</h3>
+<p>Aufblasen bläst die Form nach außen auf, als ob sie ein Kissen mit Luft gefüllt wäre, und gibt ihr eine weiche, gerundete Fläche statt einer flachen. Verwenden Sie es für weiche Buttons, gepolsterte Bonbons und runde Aufkleber, die eine Wölbung statt einer harten extrudierten Kante wollen.</p>
+
+<h2 id="three-d-shape">Tiefe, Fase und Schritte</h2>
+<p>Der Abschnitt <em>Objekt</em> hält die Felder, die den Festkörper formen. Welche erscheinen, hängt vom Objekttyp ab, also zeigt das Panel nur die Felder, die etwas für den vorliegenden Typ tun.</p>
+<table>
+  <thead><tr><th>Feld</th><th>Gezeigt für</th><th>Was es einstellt</th></tr></thead>
+  <tbody>
+    <tr><td>Tiefe</td><td>Extrudieren und Fase, Aufblasen</td><td>Wie weit die Form nach hinten gedrückt oder wie sehr sie aufbläht, in Pixeln.</td></tr>
+    <tr><td>Fase</td><td>Extrudieren und Fase</td><td>Die Größe der gerundeten oder geschnittenen Kante auf der Vorder- und Rückseite, in Pixeln; lassen Sie sie bei null für eine gewöhnliche quadratische Kante.</td></tr>
+    <tr><td>Winkel</td><td>Drehen</td><td>Wie weit das Profil gefegt wird, bis zu einer vollen 360&deg;-Drehung. Ein kleinerer Winkel lässt das Objekt offen und zeigt sein Innere.</td></tr>
+    <tr><td>Schritte</td><td>Extrudieren und Fase, Drehen, Aufblasen</td><td>Wie viele Segmente die gebogenen Teile bauen. Mehr Schritte geben eine glattere Oberfläche; weniger lassen sie facetten.</td></tr>
+  </tbody>
+</table>
+<p>Fläche hat keines dieser: Es hat keine Dicke zu beschreiben. Wenn eine gebogene Drehung oder eine gerundete Fase zu eckig aussieht, erhöhen Sie die Schritte; wenn Sie bewusst einen Low-Poly, facettenreichen Look wollen, verringern Sie sie.</p>
+
+<h2 id="three-d-rotation">Das Objekt drehen</h2>
+<p>Der Abschnitt <em>Drehung</em> legt fest, wie das Objekt Ihnen zugewandt ist. Der schnellste Weg ist das Vorschau-Feld: Ziehen Sie darüber, um das Objekt links und rechts zu drehen, und ziehen Sie nach oben und unten, um es vor und zurück zu neigen. Für genaue Winkle drehen die Felder <em>X</em>, <em>Y</em> und <em>Z</em> das Objekt um jede Achse, jeweils von -180&deg; bis 180&deg;.</p>
+<p>Das Drehungsmenü hält vorgefertigte Ansichten, sodass Sie das Objekt direkt in eine Standardansicht legen können, statt eine einzustellen:</p>
+<dl>
+  <dt>Achse Vorne, Hinten, Links, Rechts, Oben, Unten</dt><td>Dreiviertelansichten, die eine Hauptfläche zusammen mit ein wenig von der Ober- oder Seite zeigen. Eine gute Standardeinstellung für einen Festkörper, der wie ein Festkörper aussehen soll.</dd>
+  <dt>Isometrisch Links, Rechts, Oben, Unten</dt><td>Echte isometrische Ansichten, bei denen die drei Achsen gleich verkürzt werden und Linien parallel bleiben. Eignet sich für technische und Spielgrafik, die sich ausrichten muss.</dd>
+  <dt>Vorne, Hinten, Links, Rechts, Oben, Unten</dt><td>Die sechs geraden Ansichten, die quadratisch auf eine Fläche schauen. Praktisch, um die Form zu prüfen oder für eine flache, frontale Präsentation.</dd>
+</dl>
+<p>Das Wählen einer Vorgabe füllt die X-, Y- und Z-Felder; das manuelle Ändern eines davon zeigt das Menü als <em>Benutzerdefinierte Drehung</em>. Das Feld <em>Perspektive</em>, von 0&deg; bis 160&deg;, steuert, wie stark das Objekt zurückweicht: Bei null bleiben die Seiten parallel, und während Sie es erhöhen, ziehen die fernen Kanten sich in Richtung eines Fluchtpunkts, wie ein echtes Objekt, das von gesehen wird, zu verjüngen scheint. Fügen Sie ein wenig Perspektive für eine lebendige Dreiviertelansicht hinzu oder lassen Sie sie bei null, um eine isometrische oder flache Einstellung exakt zu halten.</p>
+
+<h2 id="three-d-lighting">Beleuchtung</h2>
+<p>Der Abschnitt <em>Beleuchtung</em> entscheidet, wo das Licht herkommt und wie hart es ist, was es ist, was die Oberfläche als erhaben, geschnitzt oder gerundet lesen lässt. Ein Beleuchtungsmenü bietet vier Ausgangspunkte, <em>Standard</em>, <em>Diffus</em>, <em>Oben Links</em> und <em>Rechts</em>, und jede Änderung der Felder darunter zeigt es als <em>Benutzerdefinierte Beleuchtung</em>.</p>
+<dl>
+  <dt>Intensität</dt><td>Die Stärke des Hauptlichts, als Prozent. Höher macht die beleuchteten Flächen heller und die Glanzlichter stärker.</dd>
+  <dt>Ambient</dt><td>Ein Fülllicht, das das ganze Objekt anhebt, als Prozent, sodass die beschatteten Flächen nicht in Schwarz fallen. Erhöhen Sie es für einen weicheren, gleichmäßigeren Look; verringern Sie es für tieferen Kontrast.</dd>
+  <dt>Drehung</dt><td>Wo das Licht um das Objekt sitzt, von -180&deg; bis 180&deg;, was das Glanzlicht und den Schatten auf die andere Seite bewegt.</dd>
+  <dt>Höhe</dt><td>Wie hoch das Licht über dem Objekt ist, von 0&deg; (auf gleicher Höhe mit ihm, für lange Schatten) bis 90&deg; (direkt von oben, für gleichmäßiges Licht).</dd>
+</dl>
+<p><em>Diffus</em> gibt einen weichen, niederkontrastigen Finish; <em>Oben Links</em> und <em>Rechts</em> werfen das Licht von einer Seite für einen dramatischeren, gemeißelten Look. Beginnen Sie mit der Vorgabe, die am nächsten liegt, dann passen Sie die vier Felder nach Geschmack an.</p>
+
+<h2 id="three-d-materials">Materialien</h2>
+<p>Drei Materialien-Schaltflächen legen fest, wie die Oberfläche das Licht einfängt: <em>Kunststoff</em>, <em>Matt</em> und <em>Metall</em>. Kunststoff gibt einen weichen Glanz mit einem klaren Glanzlicht, die übliche Wahl für einen freundlichen, geformten Look. Matt entfernt den Glanz für einen flachen, gleichmäßigen Finish, der als Papier, Ton oder bedruckte Oberfläche gelesen wird. Metall gibt einen härteren, höheren Kontrastglanz für Chrom, Gold und andere polierte Metalle. Das Material arbeitet zusammen mit der Beleuchtung, also lohnt es sich, eine Änderung des einen gegen den anderen zu prüfen.</p>
+
+<h2 id="three-d-expand">Live bleiben und erweitern</h2>
+<p>Alles oben ist als ein Live-Effekt auf dem Objekt gespeichert, aufgelistet im <strong>Erscheinungsbild</strong>-Panel (<kbd>&#8679;F6</kbd>) mit einem <em>fx</em>-Abzeichen über den Füllungen und Konturen des Objekts. Klicken Sie auf diesen Eintrag, um das 3D- und Materialien-Panel wieder zu öffnen, oder entfernen Sie ihn dort, um das Objekt wieder flach zu machen. Innerhalb des Panels streift <em>3D entfernen</strong> den Effekt von der Auswahl.</p>
+<p>Während der Effekt live ist, bleibt die Grafik darunter ein gewöhnlicher, bearbeitbarer Pfad, was es Ihnen ermöglicht, die Form, die Farbe und den Text weiter zu optimieren. Wenn der Look feststeht und Sie das Ergebnis als gewöhnliche Vektorgrafik wollen, zum Beispiel um die einzelnen Flächen zu bearbeiten oder die Datei weiterzugeben, verwenden Sie <em>Als Vektor erweitern</em> im Panel (dasselbe wie <strong>Objekt &rsaquo; Erscheinung erweitern</strong>). Das backt den Festkörper auf Pfade und beendet seine Leben als Effekt, also erweitern Sie eine Kopie, wenn Sie die Tiefe oder den Winkel später noch ändern möchten.</p>

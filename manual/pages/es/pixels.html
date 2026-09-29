@@ -1,0 +1,120 @@
+<p class="lede">Un documento de Scissor puede contener píxeles pintados junto a sus trazados y texto dibujados, de modo que un solo archivo puede llevar una textura suave pintada a pincel, una fotografía y un logotipo nítido juntos. Esta página cubre qué es una capa de píxeles, cómo pintar en una, y cómo se comporta como un objeto en el documento.</p>
+
+<h2 id="pixels-vector-vs-raster">Píxeles versus obra vectorial</h2>
+<p>Un documento de Scissor contiene dos tipos de obra lado a lado. Los trazados y el texto se <em>dibujan</em>: permanecen nítidos a cualquier tamaño porque se describen por su forma, y Scissor los redibuja cada vez que haces zoom o escalas. Una <strong>capa de píxeles</strong> se <em>pinta</em>: es una cuadrícula de puntos de color, como una fotografía o una pintura a pincel, y agrandarla hace esos puntos más grandes en lugar de añadir detalle. Un documento puede contener tantos de cada tipo como quieras, en cualquier orden, y se apilan en el panel Capas juntos.</p>
+<p>Recurre a una capa de píxeles cuando una forma sola no basta: una sombra pintada a mano, una textura tosca detrás de texto limpio, una salpicadura de color que no necesita ser un trazado editable, o retoques sobre una fotografía colocada. Mantén logotipos, diagramas y cualquier cosa que redimensionarás después como vectores, y usa píxeles para las partes que quieren la sensación de pintura.</p>
+<p>Una fotografía colocada es algo relacionado pero separado. <strong>Archivo &gt; Colocar…</strong> (<kbd>&#8679;&#8984;P</kbd>) trae una imagen existente al documento como una imagen incrustada; una capa de píxeles es una superficie sobre la que pintas desde cero dentro de Scissor. Ambas están hechas de píxeles y ambas se pueden muestrear con el cuentagotas, pero solo una capa de píxeles acepta pinceladas.</p>
+
+<h2 id="pixels-new">Crear una capa de píxeles</h2>
+<p><strong>Objeto &gt; Capa de píxeles &gt; Nueva capa de píxeles</strong> añade una superficie vacía que cubre la mesa activa. No tienes que crear una primero, sin embargo: elige el Pincel y pinta, y Scissor crea la capa por ti en el momento en que cae la primera pincelada. De cualquier manera la capa se mapea sobre la mesa, de modo que los píxeles se alinean con la mesa de trabajo sea cual sea la resolución a la que se crearon.</p>
+<p>Esa resolución proviene del ajuste <strong>Efectos de trama</strong> en <strong>Archivo &gt; Configuración de documento…</strong> (<kbd>&#8997;&#8984;P</kbd>): Pantalla (72 ppi), Media (150 ppi) o Alta (300 ppi). Un ajuste más alto da a una nueva capa de píxeles más puntos por punto, de modo que el trabajo a pincel permanece suave cuando la pieza se imprime o se ve grande. Establécelo antes de crear la capa, ya que el número de píxeles se fija cuando se crea la superficie.</p>
+<p>En el shell moderno también puedes añadir una capa desde la barra de opciones de herramienta: con el Pincel o Borrador de píxeles activos, un botón <strong>Nueva capa de píxeles</strong> se sitúa al final de la barra.</p>
+<p><strong>Colocar una imagen también crea una capa de píxeles.</strong> Suelta una imagen en el lienzo, usa <strong>Archivo &gt; Colocar…</strong>, o pega una del portapapeles, y llega como una capa de píxeles editable en su propio tamaño en lugar de una imagen bloqueada — de modo que puedes pintar sobre ella, enmascararla, ajustarla y filtrarla de inmediato. Abrir una imagen con <strong>Archivo &gt; Abrir</strong> crea un nuevo documento de una mesa del tamaño de la imagen, relleno por la capa de píxeles. Las fotos muy grandes se reducen para ajustarse al presupuesto de píxeles. Un <strong>SVG</strong> permanece vectorial — sus trazados siguen siendo editables — de modo que solo las imágenes de mapa de bits (PNG, JPEG, GIF, WebP, y similares) se convierten en capas de píxeles.</p>
+<p>Un archivo <strong><code>.psd</code></strong> con capas llega más rico: abrir uno reconstruye su pila como capas de píxeles separadas, manteniendo la <strong>máscara</strong> de cada capa, y trayendo texto, formas y efectos de capa para que el archivo aterrice cerca de cómo se veía donde se creó en lugar de como una imagen plana. Es la manera más completa de entrar en el trabajo de píxeles, y todo en esta página se aplica entonces a las capas que llegan.</p>
+
+<h2 id="pixels-painting">Pintar</h2>
+
+<h3 id="pixels-brush">El Pincel y el Borrador de píxeles</h3>
+<p>Dos herramientas trabajan en capas de píxeles.</p>
+<table>
+  <thead><tr><th>Herramienta</th><th>Dónde vive</th><th>Qué hace</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Herramienta Pincel</strong></td><td>Comparte ranura con el Pincel (<kbd>B</kbd>) y Pincel de relleno (<kbd>&#8679;B</kbd>)</td><td>Establece color que se convierte en parte de la imagen</td></tr>
+    <tr><td><strong>Herramienta Borrador de píxeles</strong></td><td>Comparte ranura con el Borrador (<kbd>&#8679;E</kbd>), Tijeras y Cuchilla</td><td>Elimina pintura para que lo que está debajo se vea</td></tr>
+  </tbody>
+</table>
+<p>Para llegar a cualquiera, mantén pulsada la herramienta visible en la barra de herramientas, o haz clic derecho en ella, y elige la herramienta de píxeles de la lista. No las confundas con sus vecinas vectoriales: el Pincel dibuja un trazado que puedes remodelar después, mientras que el Pincel de píxeles pinta píxeles que no se pueden volver a puntear. Ambas herramientas de píxeles muestran un anillo en el lienzo del tamaño al que van a pintar, y ambas usan un puntero de mira.</p>
+<p>Arrastra para pintar o borrar. La marca sigue al puntero sin huecos por más rápido que te muevas, porque Scissor extiende una serie de pinceladas redondas a lo largo del trazo y las mantiene uniformemente espaciadas incluso cuando el puntero salta. El Borrador de píxeles elimina alfa en lugar de pintar encima, de modo que lo que aclara se vuelve completamente transparente; un mosaico borrado hasta la nada se elimina, de modo que borrar no deja peso atrás.</p>
+
+<h3 id="pixels-colour">Pintar en el color de relleno</h3>
+<p>El Pincel pinta en el color de <strong>relleno</strong> actual. Establécelo como estableces cualquier relleno: el panel Color, una muestra, o, cuando el Pincel está activo en el shell moderno, la ficha <strong>Color</strong> en la barra de opciones de herramienta. Si el relleno está vacío el Pincel recurre al color de contorno, y a negro si no hay ningún color. Elige un color directamente de una capa de píxeles con el Cuentagotas cuando quieras igualar pintura que ya está puesta.</p>
+
+<h3 id="pixels-controls">Tamaño, dureza y flujo</h3>
+<p>Cuando el Pincel o Borrador de píxeles está activo, la barra de opciones de herramienta lleva los ajustes que dan forma a la marca. También viven en tus preferencias, de modo que se transmiten de una sesión a la siguiente.</p>
+<dl>
+  <dt>Tamaño</dt><dd>El diámetro del pincel, de 1 a 2500 píxeles. Pulsa <kbd>[</kbd> para hacer el pincel más pequeño y <kbd>]</kbd> para hacerlo más grande; cada pulsación cambia el tamaño en un quinto, de modo que el paso crece con el pincel. El anillo en el lienzo muestra el tamaño actual.</dd>
+  <dt>Dureza</dt><dd>Dónde el borde empieza a fundirse, como porcentaje. Al 100% el borde es nítido; bájalo y la pincelada se suaviza hacia su borde con una caída suave y sin anillo visible. Usa un pincel suave para sombras y brillos, uno duro para formas sólidas.</dd>
+  <dt>Flujo</dt><dd>Cuánta pintura deposita cada pincelada, solo para el Pincel. Por debajo del 100% el color se acumula gradualmente al pasar sobre un área de nuevo, lo cual se adapta a sombreado y mezclas lentas. El Borrador de píxeles no tiene control de flujo.</dd>
+</dl>
+
+<h2 id="pixels-retouch">Sobreexponer, subexponer y esponja</h2>
+<p>Tres pinceles de retoque trabajan sobre los píxeles ya presentes en lugar de establecer un color, compartiendo una ranura en la barra de herramientas. Pintan como el Pincel — el mismo tamaño, dureza y anillo de lienzo — y se acumulan al pasar sobre un área de nuevo, de modo que un toque ligero es gradual y uno firme es rápido.</p>
+<dl>
+  <dt>Sobreexponer</dt><dd>Aclara donde sea que pintes, levantando sombras y añadiendo brillos.</dd>
+  <dt>Subexponer</dt><dd>Oscurece donde sea que pintes, profundizando sombras y bordes.</dd>
+  <dt>Esponja</dt><dd>Eleva la saturación, haciendo los colores más ricos cuanto más pasas sobre ellos.</dd>
+</dl>
+<p>Cada uno deja los píxeles transparentes intactos, permanece dentro de una selección cuando hay una establecida, y todo el trazo se deshace de un solo paso.</p>
+
+<h2 id="pixels-more-tools">Cubeta, formas y degradados</h2>
+<p>Pintar no es solo el Pincel. En una capa de píxeles tres herramientas más establecen color: la <strong>Cubeta de pintura</strong> inunda un área contigua de color similar desde donde haces clic; las <strong>herramientas de forma</strong> estampan un rectángulo, elipse, estrella o polígono directamente en los píxeles en lugar de dibujar un trazado; y la <strong>herramienta Degradado</strong> pinta una mezcla lineal o radial a través de la superficie. Cada una respeta la selección actual, de modo que puedes confinar un relleno o un degradado a una región elegida.</p>
+
+<h2 id="pixels-selecting">Seleccionar píxeles</h2>
+<p>Una <strong>selección de píxeles</strong> — un marco — limita cada pintura y edición a la región dentro de ella, como una plantilla. Tres herramientas crean una, compartiendo la ranura de selección de píxeles: el <strong>Marco rectangular</strong> y el <strong>Marco elíptico</strong>, y un <strong>Marco lazo</strong> a mano alzada que trazas a mano. Arrastra para dibujar una selección; un arrastre simple reemplaza la actual.</p>
+<p>La <strong>Selección automática</strong> selecciona por color en lugar por forma: haz clic en una capa de píxeles y toma el parche de color conectado alrededor de donde hiciste clic, trazando un contorno de hormigas marchantes alrededor — útil para levantar un fondo plano o un área de color. Qué tan cerca debe estar un color para ser tomado es la <strong>Tolerancia</strong> en las opciones de Selección automática, el mismo ajuste que usa en objetos vectoriales; súbela para recoger más, bájala para mantener una coincidencia cercana. Los agujeros en el parche se dejan fuera de la selección.</p>
+<p>Las selecciones se combinan, de modo que una forma se puede construir a partir de varios trazos o clics: mantén <kbd>&#8679;</kbd> para <strong>añadir</strong> a la selección, <kbd>&#8997;</kbd> para <strong>restar</strong>, y ambos juntos para mantener solo la <strong>superposición</strong> — los marcos y la Selección automática se combinan todos de la misma manera. <strong>Seleccionar &gt; Todo</strong> (<kbd>&#8984;A</kbd>) selecciona cada píxel, <strong>Seleccionar &gt; Inverso</strong> invierte el marco, y <strong>Deseleccionar</strong> — <kbd>&#8984;D</kbd> en una capa de píxeles — la suelta. Un contorno de hormigas marchantes muestra la selección en el lienzo.</p>
+
+<h2 id="pixels-editing-selection">Mover, cortar y copiar píxeles</h2>
+<p>Con una selección establecida, la herramienta Selección mueve los píxeles dentro de ella: arrastra desde dentro del marco y la pintura seleccionada se levanta y viaja, aclarando donde estaba y llevando el marco consigo. Mantén <kbd>&#8997;</kbd> mientras arrastras para dejar el original en su sitio y mover una <strong>copia</strong>.</p>
+<p>Las herramientas de transformación también funcionan sobre la selección. Con un marco establecido, el cuadro delimitador de la herramienta Selección y la <strong>herramienta Transformación libre</strong> (<kbd>E</kbd>) envuelven el marco, no toda la capa, de modo que puedes escalar, rotar o mover solo esa parte de la imagen; <strong>Objeto &gt; Transformar</strong> y las flechas del teclado actúan sobre ella de la misma manera. Los píxeles levantados flotan sobre la capa mientras trabajas, de modo que puedes arrastrar una y otra vez sin perder ningún detalle. Pulsa <kbd>Enter</kbd>, elige otra herramienta, o haz una nueva selección para colocarlos, lo cual es un paso único para deshacer, o pulsa <kbd>Escape</kbd> para devolver todo a donde estaba. Un movimiento por píxeles enteros los mantiene exactamente como estaban; escalar o girar los remuestrea una vez, cuando se colocan.</p>
+<p>La <strong>Distorsión libre</strong> y la <strong>Distorsión en perspectiva</strong> de la herramienta Transformación libre también funcionan en píxeles, en un marco o en una capa completa: arrastra una esquina del cuadro (o mantén <kbd>&#8984;</kbd> mientras arrastras una en modo Transformación libre) para sacar la imagen de su escuadra, por ejemplo para ajustar una fotografía a una pantalla o un letrero visto en ángulo. Mientras arrastras, Scissor muestra una vista previa rápida dimensionada a la pantalla, de modo que permanece suave incluso en una foto grande; los píxeles mismos se estiran una vez, a resolución completa, cuando pulsas <kbd>Enter</kbd> o continúas, y el marco sigue la nueva forma.</p>
+<p>Copiar (<kbd>&#8984;C</kbd>) y Cortar (<kbd>&#8984;X</kbd>) funcionan en los píxeles dentro de un marco: copiar deja la capa como está, cortar los píxeles. Pegar (<kbd>&#8984;V</kbd>) los coloca en una <strong>nueva capa de píxeles</strong> justo encima de la que venían, exactamente en el mismo lugar, listos para mover o transformar por su cuenta. Los mismos comandos están en <strong>Crear &gt; Capa de píxeles</strong>, y la selección también controla los comandos de superficie: <strong>Rellenar con color de relleno</strong> rellena solo la región seleccionada, <strong>Limpiar</strong> y <strong>Eliminar</strong> la borran, y sin selección cada una actúa sobre toda la capa.</p>
+
+<h2 id="pixels-adjustments">Ajustes</h2>
+<p>El submenú <strong>Objeto &gt; Capa de píxeles &gt; Ajustes</strong> retoca el color de una capa de píxeles, confinado a la selección cuando hay una establecida. Cada uno abre un diálogo que previsualiza en el lienzo mientras arrastras.</p>
+<dl>
+  <dt>Brillo / Contraste, Niveles</dt><dd>Establecen la luminosidad general y el contraste, o reasignan el punto negro, el punto blanco y la gamma para un control tonal más fino.</dd>
+  <dt>Tono / Saturación, Vibración</dt><dd>Desplazan el tono y elevan o bajan la saturación en toda la mesa, o usa Vibración para potenciar los colores apagados dejando los ya vívidos en paz.</dd>
+  <dt>Balance de color</dt><dd>Empujan los tonos medios hacia cian o rojo, magenta o verde, amarillo o azul.</dd>
+  <dt>Mapa de degradado</dt><dd>Recolorea la capa por su brillo, mapeando las sombras a un color y los brillos a otro.</dd>
+  <dt>Desaturar, Invertir</dt><dd>Eliminan todo el color a gris, o invierten cada color a su opuesto.</dd>
+  <dt>Umbral, Posterizar</dt><dd>Reducen la imagen a blanco y negro puro en un nivel elegido, o a un pequeño número de tonos por canal.</dd>
+</dl>
+
+<h2 id="pixels-filters">Filtros</h2>
+<p>El submenú <strong>Filtros</strong> remodela los píxeles mismos, de nuevo dentro de la selección.</p>
+<dl>
+  <dt>Desenfoque gaussiano</dt><dd>Suaviza la capa por una cantidad uniforme y ajustable.</dd>
+  <dt>Nitidez, Máscara de nitidez</dt><dd>Nitidez el detalle — Máscara de nitidez da control sobre el radio, la cantidad y un umbral que respeta las áreas planas y el ruido fino.</dd>
+  <dt>Pixelizar</dt><dd>Bloquea la imagen en mosaicos cuadrados.</dd>
+  <dt>Añadir ruido</dt><dd>Dispersa grano a través de la pintura.</dd>
+  <dt>Buscar bordes, Relieve</dt><dd>Traza dónde cambia el color como líneas brillantes sobre oscuro, o como un relieve gris.</dd>
+</dl>
+<p><strong>Filtros &gt; Vistas previas de efectos</strong> muestra tu capa como una cuadrícula de miniaturas en vivo, cada una con un ajuste o filtro aplicado, de modo que puedes elegir a ojo en lugar por nombre. Elegir una miniatura mantiene la ventana abierta. Los ajustes del efecto aparecen junto a la cuadrícula, y el lienzo previsualiza el resultado mientras los cambias. Nada se aplica hasta que haces clic en <strong>Aplicar</strong> (o pulsas <kbd>Enter</kbd>). <strong>Cancelar</kbd> o <kbd>Esc</kbd> devuelve la imagen, y un deshacer elimina un efecto aplicado. Puedes arrastrar la ventana por su título para ver el lienzo detrás de ella.</p>
+
+<h2 id="pixels-undo">Deshacer rápido, basado en mosaicos</h2>
+<p>Un trazo completo se deshace de un paso, por largo que fuera: pulsa <kbd>&#8984;Z</kbd> una vez y la última marca desaparece, y <kbd>&#8679;&#8984;Z</kbd> la devuelve. Si el primer trazo tuvo que crear su capa, esa capa se va de vuelta con el trazo en lugar de quedarse vacía.</p>
+<p>Entre bastidores una capa de píxeles se mantiene como una cuadrícula de pequeños mosaicos, y un trazo solo copia los mosaicos que realmente tocó. Deshacer mantiene instantáneas completas del documento, pero un trazo cuesta solo sus propios mosaicos en lugar de toda la superficie, de modo que pintar en una capa grande permanece rápido y una sesión larga de trabajo a pincel no llena la memoria. Las áreas planas de un solo color se almacenan de forma compacta, de modo que una capa que es en su mayoría un solo color casi no ocupa espacio.</p>
+
+<h2 id="pixels-treating">Tratar una capa de píxeles como cualquier objeto</h2>
+<p>Una capa de píxeles es un objeto en el documento, de modo que todo lo que ya sabes se aplica. Selecciónala, muévela, y escala, rota, refleja o inclínala desde <strong>Objeto &gt; Transformar</strong>, el cuadro delimitador o la herramienta Transformación libre. Sin marco, el cuadro envuelve los píxeles pintados de la capa en lugar de toda su superficie, y una transformación trabaja sobre esos píxeles: moverlos los mantiene intactos, mientras que escalar o girar se hornea en los píxeles cuando pulsas <kbd>Enter</kbd>, eliges otra herramienta o seleccionas otra cosa, de modo que la capa permanece en vertical y la próxima pincelada cae del lado correcto. Establece su opacidad y dale cualquiera de los dieciséis modos de fusión desde el panel Transparencia para situar color pintado sobre la obra dibujada de debajo. Hacer clic selecciona la capa solo donde tiene pintura, de modo que una esquina transparenta te deja hacer clic directamente a través de lo que hay debajo. <strong>Duplicar</strong> copia una capa de píxeles como cualquier objeto — baratamente, ya que la copia comparte sus mosaicos hasta que una de ellas se pinta.</p>
+<p><strong>Objeto &gt; Capa de píxeles &gt; Fusionar hacia abajo</strong> aplana una capa de píxeles sobre la capa de píxeles directamente debajo y elimina la superior, dejando una sola capa con las dos compuestas juntas. Si las capas se sitúan bajo transformaciones diferentes — digamos una ha sido rotada — la superior se remuestra en la cuadrícula de la inferior al fusionarse.</p>
+<p>Dos comandos actúan sobre toda la superficie a la vez:</p>
+<dl>
+  <dt>Objeto &gt; Capa de píxeles &gt; Rellenar con color de relleno</dt><dd>Inunda toda la superficie con el color de relleno actual. Recurre a ella para poner una capa base antes de pintar encima, o para inundar una capa situadas detrás de otra obra.</dd>
+  <dt>Objeto &gt; Capa de píxeles &gt; Limpiar</dt><dd>Vacía la superficie sin eliminar la capa, de modo que puedes empezar la pintura de nuevo manteniendo el lugar, transformación, opacidad y modo de fusión de la capa.</dd>
+</dl>
+<p>Ambos comandos también aparecen bajo <strong>Efecto &gt; Capa de píxeles</strong>.</p>
+
+<h2 id="pixels-masks">Máscaras de capa</h2>
+<p>Una <strong>máscara de capa</strong> oculta partes de una capa de píxeles sin eliminarlas: la capa se ve a través de donde la máscara es blanca y se oculta donde es negra, con grises intermedios para transparencia parcial. Porque nada se borra, puedes pintar la máscara de un lado a otro tantas veces como quieras. Los comandos están bajo <strong>Objeto &gt; Capa de píxeles</strong>.</p>
+<dl>
+  <dt>Añadir máscara de capa</dt><dd>Adjunta una máscara que revela todo al principio, lista para pintar sobre ella.</dd>
+  <dt>Añadir máscara de capa a partir de selección</dt><dd>Construye la máscara a partir de la selección de píxeles actual: lo que está dentro permanece, lo que está fuera se oculta. Una manera rápida de cortar una forma de una fotografía de forma no destructiva.</dd>
+  <dt>Editar máscara</dt><dd>Activa y desactiva la pintura de máscara. Mientras está activada, el Pincel, Borrador y Cubeta de pintura pintan la máscara en lugar de la capa: pinta con negro (o un color oscuro) para ocultar, blanco para revelar, gris para fundir. El pincel usa la luminosidad del color de relleno actual, de modo que el negro oculta y el blanco muestra.</dd>
+  <dt>Aplicar máscara de capa</dt><dd>Hornea la máscara en la capa de forma permanente — los píxeles ocultos se vuelven transparentes — y elimina la máscara.</dd>
+  <dt>Eliminar máscara de capa</dt><dd>Tira la máscara y muestra toda la capa de nuevo, intacta.</dd>
+</dl>
+<p>Una capa enmascarada se exporta y guarda con la máscara ya aplicada, y se fusiona y transforma como cualquier otra capa.</p>
+
+<h2 id="pixels-rasterize">Convertir obra vectorial en píxeles: Convertir en píxeles</h2>
+<p><strong>Objeto &gt; Convertir en píxeles</strong> reemplaza la selección actual con una imagen incrustada de sí misma, horneando los trazados, el texto y cualquier efecto en píxeles fijos. Usa esto cuando quieras que un resultado vectorial deje de ser editable, cuando un efecto es más fácil de tratar como una imagen plana, o para entregar una pieza que debe verse igual en todas partes sin llevar su construcción en vivo. El resultado es una imagen incrustada en lugar de una capa de píxeles pintable, así que guarda una copia de la obra original si puede que necesites editarla de nuevo. <strong>Ver &gt; Vista previa de píxeles</strong> (<kbd>&#8997;&#8984;Y</kbd>) te permite comproboar cómo aterrizará la obra vectorial en la cuadrícula de píxeles antes de comprometerte.</p>
+
+<h2 id="pixels-saving">Guardar y exportar</h2>
+<p>Los documentos <code>.cut</code> conservan las capas de píxeles con el resto de la obra, empaquetados de modo que las áreas planas casi no ocupan espacio y se abren exactamente como se pintaron.</p>
+<p>Cómo las capas de píxeles salen del documento depende del formato:</p>
+<dl>
+  <dt>PNG, JPEG y WebP</dt><dd>Aplanan todo el documento a píxeles, de modo que la obra pintada y dibujada se mezclan en un solo mapa de bits. PNG puede conservar la transparencia; exporta a @2x para un resultado más nítido.</dd>
+  <dt>SVG y PDF</dt><dd>Escriben la superficie pintada como una imagen incrustada situadas entre la obra vectorial, de modo que un documento que mezcla obra dibujada y pintada viaja como un solo archivo con sus formas aún nítidas.</dd>
+</dl>
+<p>Porque trama y vector viven en el mismo documento y se exportan juntos, puedes construir una pieza de la manera natural: formas limpias y texto como vectores, y las partes que quieren la sensación de pintura, un brillo suave, un lavado texturizado, una fotografía retocada, como capas de píxeles apiladas entre ellas.</p>

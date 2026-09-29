@@ -1,0 +1,85 @@
+<p class="lede">Le panneau Calques est la carte d'un document : chaque calque, groupe et objet dans une liste, empilés dans l'ordre où ils se trouvent sur la page. Utilisez-le pour afficher et masquer, verrouiller, renommer, réorganiser et sélectionner, et pour voir d'un coup d'œil sur quel calque se trouve n'importe quel objet.</p>
+
+<p>Les raccourcis ci-dessous sont écrits sous leur forme macOS. Sur Windows et Linux, lisez <kbd>&#8984;</kbd> comme Ctrl, <kbd>&#8997;</kbd> comme Alt et <kbd>&#8679;</kbd> comme Maj.</p>
+
+<h2 id="layers-panel">Le panneau Calques</h2>
+<p>Ouvrez-le depuis <strong>Fenêtre &rsaquo; Calques</strong> (<kbd>F7</kbd>). La liste contient vos calques au niveau supérieur, avec le contenu de chaque calque imbriqué en dessous : groupes, tracés, texte, images et calques pixel, dessinés sous forme d'arbre que vous pouvez ouvrir et fermer. Un conteneur (un calque ou un groupe) porte un petit triangle à gauche de sa rangée ; cliquez dessus pour replier le conteneur ou l'ouvrir. Les documents profonds restent lisibles parce que vous pouvez replier les parties sur lesquelles vous ne travaillez pas.</p>
+<p>Deux boutons se trouvent en bas du panneau. <strong>Créer un nouveau calque</strong> ajoute un calque vide juste au-dessus de celui qui est actuellement actif et rend le nouveau actif. <strong>Supprimer la sélection</strong> retire ce qui est sélectionné ; un document conserve toujours au moins un calque, donc le dernier calque restant ne peut pas être supprimé de cette façon. Pour renommer n'importe quel calque, groupe ou objet, double-cliquez sur son nom dans la liste, tapez et appuyez sur <kbd>Entrée</kbd>. Nommer les parties d'un document chargé est le moyen le plus rapide de le garder navigable.</p>
+
+<h3 id="layers-row">Ce que chaque rangée affiche</h3>
+<p>Lecture d'une rangée de gauche à droite :</p>
+<table>
+  <thead><tr><th>Partie</th><th>Ce qu'elle fait</th></tr></thead>
+  <tbody>
+    <tr><td>Œil</td><td>Affiche ou masque ce calque, groupe ou objet. Une rangée avec l'œil fermé n'est pas dessinée et ni imprimée ni exportée.</td></tr>
+    <tr><td>Verrou</td><td>Verrouille ou déverrouille la rangée. Un objet verrouillé ne peut pas être sélectionné ou modifié sur le canevas.</td></tr>
+    <tr><td>Puce de couleur</td><td>Sur les rangées de calque uniquement : l'étiquette de couleur du calque, utilisée pour teinter les marques de sélection et les surbrillances de ce calque.</td></tr>
+    <tr><td>Triangle</td><td>Sur les conteneurs uniquement : ouvre ou ferme le calque ou le groupe pour révéler ce qui se trouve à l'intérieur.</td></tr>
+    <tr><td>Icône de type</td><td>Marque les groupes et groupes de découpe (un groupe de découpe est dessiné avec un contour en pointillés).</td></tr>
+    <tr><td>Nom</td><td>Le nom, ou un espace réservé entre crochets tels que <code>&lt;Tracé&gt;</code> ou <code>&lt;Groupe&gt;</code> lorsqu'une chose est sans nom. Double-cliquez pour renommer.</td></tr>
+    <tr><td>Carré de sélection</td><td>Sur le bord droit : un petit carré dans la couleur du calque qui apparaît sur toute rangée contenant une partie de la sélection actuelle.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="layers-groups">Calques et groupes</h2>
+<p>Les calques sont les bacs de niveau supérieur d'un document. Ils existent pour garder séparées les parties non liées de l'illustration : un arrière-plan sur un calque, le dessin principal sur un autre, des étiquettes sur un troisième. Parce qu'un calque se trouve à la racine de l'arbre, le masquer, le verrouiller ou le réorganiser déplace tout ce qu'il contient en une seule étape.</p>
+<p>Un groupe est un conteneur plus petit qui vit à l'intérieur d'un calque (ou à l'intérieur d'un autre groupe) et voyage avec l'illustration. Le regroupement est la façon de lier les parties d'une seule chose, les pièces d'un logo ou d'une icône, de sorte qu'elles se déplacent, se mettent à l'échelle et s'empilent comme une unité. Les groupes s'ouvrent et se ferment dans le panneau avec leur propre triangle, exactement comme les calques.</p>
+<p>Les calques et les groupes se comportent de la même manière sur un point important : chacun peut être affiché ou masqué, verrouillé ou déverrouillé, et chacun peut porter sa propre opacité et son propre mode de fusion qui s'appliquent à tout ce qui se trouve à l'intérieur. La différence est une question de rôle. Les calques organisent le document entier ; les groupes lient des objets individuels.</p>
+
+<h3 id="layers-grouping">Grouper et dégrouper</h3>
+<p>Sélectionnez deux objets ou plus et choisissez <strong>Objet &rsaquo; Grouper</strong> (<kbd>&#8984;G</kbd>) pour les rassembler en groupe. <strong>Objet &rsaquo; Dégrouper</strong> (<kbd>&#8679;&#8984;G</kbd>) sort à nouveau les objets d'un groupe sélectionné. Les groupes peuvent être imbriqués, donc un groupe de groupes est acceptable ; chaque <kbd>&#8679;&#8984;G</kbd> enlève un niveau. Utilisez un groupe chaque fois que vous vous retrouvez à sélectionner les mêmes quelques objets encore et encore.</p>
+
+<h2 id="layers-stacking">Ordre d'empilement : avant et arrière</h2>
+<p>Les objets sont dessinés de l'arrière vers l'avant, de sorte qu'un objet plus près de l'avant couvre ceux derrière lui là où ils se chevauchent. Le panneau affiche directement cet ordre : la rangée la plus haute est l'objet le plus en avant, et la rangée du bas est celui le plus en arrière. Réorganiser un objet change ce qui couvre quoi.</p>
+<p>Le moyen le plus rapide de réorganiser est de glisser : saisissez une rangée et déposez-la plus haut ou plus bas dans la liste pour la déplacer à travers la pile, ou déposez-la sur un calque ou un groupe pour déplacer l'objet <em>dans</em> celui-ci. Glisser est aussi la façon de déplacer un objet sélectionné vers un calque différent — sans couper ni coller.</p>
+<p>Déplacez une sélection à travers la pile avec <strong>Objet &rsaquo; Disposer</strong> :</p>
+<table>
+  <thead><tr><th>Commande</th><th>Raccourci</th><th>Effet</th></tr></thead>
+  <tbody>
+    <tr><td>Mettre au premier plan</td><td><kbd>&#8679;&#8984;]</kbd></td><td>Jusqu'au premier plan de son calque.</td></tr>
+    <tr><td>Avancer</td><td><kbd>&#8984;]</kbd></td><td>D'un pas vers l'avant.</td></tr>
+    <tr><td>Reculer</td><td><kbd>&#8984;[</kbd></td><td>D'un pas vers l'arrière.</td></tr>
+    <tr><td>Mettre en arrière-plan</td><td><kbd>&#8679;&#8984;[</kbd></td><td>Jusqu'à l'arrière-plan de son calque.</td></tr>
+  </tbody>
+</table>
+<p>Utilisez ceux-ci lorsque la forme dont vous avez besoin est masquée derrière une autre, ou lorsqu'un arrière-plan s'est retrouvé au-dessus du dessin. Pour travailler à travers des objets qui se posent les uns sur les autres, <strong>Sélection &rsaquo; Objet suivant au-dessus</strong> (<kbd>&#8997;&#8984;]</kbd>) et <strong>Objet suivant en dessous</strong> (<kbd>&#8997;&#8984;[</kbd>) déplacent la sélection vers le haut et le bas dans la pile, ce qui est pratique pour atteindre quelque chose enfoui sous d'autres illustrations.</p>
+
+<h2 id="layers-visibility">Afficher et masquer</h2>
+<p>Cliquez sur l'œil de n'importe quelle rangée pour masquer ce calque, groupe ou objet ; cliquez à nouveau pour le ramener. Une rangée masquée ne participe ni au dessin, ni à l'impression ni à l'export, donc masquer est le moyen sûr de mettre quelque chose hors du chemin sans le supprimer. Utilisez-le pour comparer deux versions d'un détail, ou pour dégager un canevas encombré jusqu'à la partie sur laquelle vous travaillez.</p>
+<p>Le menu propose la même chose pour la sélection actuelle : <strong>Objet &rsaquo; Masquer &rsaquo; Sélection</strong> (<kbd>&#8984;3</kbd>) masque ce qui est sélectionné, et <strong>Objet &rsaquo; Tout afficher</strong> (<kbd>&#8997;&#8984;3</kbd>) révèle tout ce qui était masqué.</p>
+
+<h2 id="layers-locking">Verrouillage</h2>
+<p>Cliquez sur le verrou d'une rangée pour la verrouiller. Un objet verrouillé reste visible mais ne peut pas être sélectionné ou modifié sur le canevas, donc il est hors de danger pendant que vous travaillez autour. Verrouiller un calque protège tout ce qui s'y trouve à la fois. Verrouillez l'arrière-plan pendant que vous dessinez par-dessus, ou verrouillez un élément terminé pour qu'un glisser errant ne puisse pas le déplacer.</p>
+<p>Depuis le menu, <strong>Objet &rsaquo; Verrouiller &rsaquo; Sélection</strong> (<kbd>&#8984;2</kbd>) verrouille ce qui est sélectionné, et <strong>Objet &rsaquo; Tout déverrouiller</strong> (<kbd>&#8997;&#8984;2</kbd>) libère tout à nouveau. Verrouiller un objet sélectionné le retire également de la sélection, puisqu'une chose verrouillée n'est plus quelque chose sur quoi vous pouvez agir.</p>
+
+<h2 id="layers-selecting">Sélection et calque actif</h2>
+<p>Cliquez sur la rangée d'un objet dans le panneau pour sélectionner cet objet sur le canevas. Maintenez <kbd>&#8679;</kbd>, <kbd>&#8984;</kbd> ou <kbd>Ctrl</kbd> pendant que vous cliquez pour ajouter un autre objet à la sélection, de sorte que vous pouvez construire une sélection depuis la liste sans chercher de petites formes sur la page.</p>
+<p>Cliquer sur une rangée de <em>calque</em> fait quelque chose de différent : cela rend ce calque actif, marqué d'une barre colorée le long de son bord gauche. La nouvelle illustration que vous dessinez, placez ou collez est ajoutée au calque actif, donc cliquer sur un calque avant de commencer décide où ce travail atterrit. Créer un nouveau calque le rend actif immédiatement.</p>
+<p>Le carré de sélection à droite de chaque rangée relie le panneau au canevas. Il apparaît, dans la couleur du calque, sur chaque rangée qui contient une partie de la sélection actuelle, et il est rempli sur les objets exactement sélectionnés. Parce que la marque remonte dans l'arbre, un coup d'œil le long de la liste montre à la fois ce qui est sélectionné et dans quels calques et groupes ces objets se trouvent.</p>
+
+<h2 id="layers-colours">Étiquettes de couleur</h2>
+<p>Chaque calque reçoit une couleur d'une séquence fixe (bleu clair, rouge, vert, bleu, jaune et ainsi de suite, douze au total, en cycle à mesure que vous ajoutez des calques). Cette couleur est l'étiquette du calque. Elle s'affiche comme la puce à côté du nom du calque, et elle teint les marques de sélection dans le panneau ainsi que les surbrillances de sélection et la boîte englobante dessinées sur le canevas pour les objets de ce calque. Le but est l'identification rapide : lorsque vous sélectionnez quelque chose et que sa boîte apparaît en vert, vous savez immédiatement qu'elle appartient au calque vert. Répartir un document sur quelques calques bien nommés et de couleurs différentes rend beaucoup plus facile de suivre où tout se trouve.</p>
+
+<h2 id="layers-masks">Masques de découpe et masques d'opacité</h2>
+<p>Un calque ou un groupe peut porter sa propre opacité et son propre mode de fusion, tous deux définis dans le panneau <strong>Transparence</strong> (<strong>Fenêtre &rsaquo; Transparence</strong>, <kbd>&#8679;&#8984;F10</kbd>). Le même panneau contient <strong>Limiter la fusion au groupe</strong>, qui maintient les modes de fusion d'un groupe à se mélanger uniquement entre eux plutôt qu'avec ce qui se trouve en dessous, et <strong>Groupe de knockout</strong>, où chaque objet du groupe cache ceux derrière lui plutôt que de les traverser. Les masques vont plus loin et laissent un objet contrôler où, ou à quel point fortement, une autre illustration apparaît.</p>
+
+<h3 id="layers-clip">Masques de découpe</h3>
+<p>Un masque de découpe rogne une illustration selon une forme. Sélectionnez deux objets ou plus et choisissez <strong>Objet &rsaquo; Masque de découpe &rsaquo; Créer</strong> (<kbd>&#8984;7</kbd>). L'objet sélectionné le plus en avant devient le tracé de découpe, et tout ce qui se trouve en dessous n'est affiché qu'à l'intérieur de cette forme ; le reste est rogné. Le résultat est un groupe de découpe, dessiné dans le panneau avec une icône en pointillés. <strong>Libérer</strong> (<kbd>&#8997;&#8984;7</kbd>) défait cela et rend les objets. Utilisez-le pour rogner une photographie ou un motif chargé à un cercle, une lettre, ou n'importe quel contour que vous dessinez par-dessus.</p>
+
+<h3 id="layers-opacity-mask">Masques d'opacité</h3>
+<p>Un masque d'opacité estompe une illustration selon la luminosité d'un autre objet. Sélectionnez deux objets ou plus et choisissez <strong>Objet &rsaquo; Masque de découpe &rsaquo; Créer un masque d'opacité</strong>, ou utilisez <strong>Créer un masque</strong> dans le panneau Transparence. L'objet le plus en avant devient le masque : là où il est clair, l'illustration en dessous apparaît en plein, là où il est sombre, l'illustration s'estompe jusqu'à rien, avec les gris entre les deux donnant une transparence partielle. <strong>Libérer le masque d'opacité</strong> le démonte à nouveau. Utilisez un dégradé du blanc au noir comme masque pour estomper une image vers un bord, ou pour construire les vignettages et mélanges doux qu'une seule valeur d'opacité plate ne peut pas donner.</p>
+
+<h2 id="layers-organising">Organiser un document</h2>
+<p>Un peu de structure tôt économise beaucoup de recherche plus tard. Quelques habitudes qui portent leurs fruits :</p>
+<dl>
+  <dt>Un calque par préoccupation</dt>
+  <dd>Gardez l'arrière-plan, l'illustration principale et le texte sur des calques séparés et nommés. Vous pouvez alors masquer, verrouiller ou réorganiser une partie entière du dessin en un seul clic.</dd>
+  <dt>Verrouillez ce que vous ne touchez pas</dt>
+  <dd>Verrouillez les calques autour de celui sur lequel vous travaillez pour qu'un clic ou glisser errant ne puisse pas les déranger, et déverrouillez-les à nouveau avec <kbd>&#8997;&#8984;2</kbd> lorsque vous en avez besoin.</dd>
+  <dt>Groupez les choses qui se déplacent ensemble</dt>
+  <dd>Liez les parties d'un seul élément en groupe pour qu'il se comporte comme un objet unique, et réservez les calques aux divisions plus larges du document.</dd>
+  <dt>Définissez le calque actif avant de dessiner</dt>
+  <dd>Cliquez d'abord sur le calque auquel vous voulez ajouter, pour que la nouvelle illustration atterrisse au bon endroit plutôt qu'au-dessus de ce qui s'y trouvait.</dd>
+  <dt>Laissez les couleurs vous guider</dt>
+  <dd>Appuyez-vous sur les couleurs de calque : quand la surbrillance d'une sélection correspond à la puce d'un calque, vous savez exactement où cet objet vit sans ouvrir quoi que ce soit.</dd>
+</dl></longcat_think>

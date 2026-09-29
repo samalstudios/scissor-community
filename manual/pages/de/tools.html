@@ -1,0 +1,357 @@
+<p class="lede">Die Werkzeugleiste verläuft links am Fenster und enthält jedes Zeichen-, Bearbeitungs- und Ansicht-Werkzeug. Jeder Slot ist ein einzelnes Werkzeug oder eine Gruppe verwandter; diese Seite listet sie alle in der Reihenfolge, in der sie in der Werkzeugleiste sitzen, mit der Taste, die jedes auswählt, und wofür es ist.</p>
+
+<p>Drücken und halten Sie einen Slot oder klicken Sie mit der rechten Maustaste darauf, um sein Flyout zu öffnen und ein anderes Werkzeug aus der Gruppe zu wählen. Ein Werkzeug-Kürzel ist ein einzelner Tastendruck, und es funktioniert, wann immer Sie nicht in Text oder ein Feld tippen.</p>
+
+<p>Die untenstehenden Kürzel sind in macOS-Form geschrieben. Unter Windows lesen Sie <kbd>&#8997;</kbd> als Alt, <kbd>&#8984;</kbd> als Strg und <kbd>&#8679;</kbd> als Umschalt.</p>
+
+<p>Drei Gewohnheiten gelten für fast jedes Werkzeug:</p>
+<ul>
+<li>Halten Sie die Leertaste, um das Hand-Werkzeug zu leihen, und lassen Sie los, um zu dem zurückzukehren, was Sie verwendeten.</li>
+<li>Halten Sie <kbd>&#8984;</kbd>, um das Auswahl-Werkzeug auf dieselbe Weise zu leihen. Das Freie Transformieren-Werkzeug ist die Ausnahme: Es liest <kbd>&#8984;</kbd> selbst.</li>
+<li><kbd>Esc</kbd> bricht einen Ziehen oder einen Pfad ab, den Sie mitten im Zeichnen sind, und lässt die Grafik, wie sie war.</li>
+</ul>
+
+<p>Zwei Slots (die Umformungs- und Druckkachel-Werkzeuge) sind der Vollständigkeit halber aufgelistet, haben aber noch kein Verhalten dahinter. Die Werkzeugleiste markiert diese als „Demnächst" und die Engine lehnt sie ab.</p>
+
+<h2 id="tools-selecting">Auswahlwerkzeuge</h2>
+<p>Diese vier wählen aus, was Sie als Nächstes bearbeiten möchten. Greifen Sie zum Auswahl-Werkzeug für ganze Objekte, zum Direktauswahl-Werkzeug für die Anker und Segmente innerhalb eines Pfads, zur Auto-Auswahl, um alles zusammenzusammeln, das gleich gemalt ist, und zum Lasso, um einen Haufen Anker von Hand aufzufangen.</p>
+
+<h3 id="tools-selection">Auswahl</h3>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Kürzel</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td>Auswahl-Werkzeug</td><td><kbd>V</kbd></td><td>Klicken Sie auf ein Objekt, um es ganz auszuwählen, <kbd>&#8679;</kbd>-Klick, um eines hinzuzufügen oder zu entfernen, und ziehen Sie über die leere Zeichenfläche für eine Marquee. Ziehen Sie innerhalb der Auswahl, um sie zu bewegen, wobei <kbd>&#8679;</kbd> die Bewegung auf 45&deg;-Schritte hält und <kbd>&#8997;</kbd> eine Kopie hinterlässt.</td></tr>
+  </tbody>
+</table>
+<p>Mit einem Objekt ausgewählt trägt der Begrenzungsrahmen acht Griffe. Ziehen Sie einen Griff, um zu skalieren, halten Sie <kbd>&#8679;</kbd>, um die Proportionen zu halten, und <kbd>&#8997;</kbd>, um um die Mitte zu skalieren; ziehen Sie knapp außerhalb einer Ecke, um zu drehen, wobei <kbd>&#8679;</kbd> auf 45&deg; einrastet. Ein Doppelklick steigt in eine Gruppe hinein und arbeitet innerhalb, ein Doppelklick auf Text, um ihn zu bearbeiten, ein Doppelklick auf eine Symbolinstanz, um das Symbol zu bearbeiten, das jede Instanz zeichnet, und ein Doppelklick weg von der Grafik, um wieder herauszusteigen.</p>
+<p>Bearbeitbare Formen tragen ihre eigenen Widgets: Ziehen Sie ein Ecken-Widget, um jede Ecke der Form auf einmal zu runden, oder <kbd>&#8997;</kbd>-Klick darauf, um die Ecke auf die nächste Art zu schalten. Dies ist das Werkzeug, in dem Sie die meiste Zeit verbringen, also lohnt es sich, seine Griffe gut zu lernen.</p>
+
+<h3 id="tools-direct-selection">Direktauswahl und Gruppenauswahl</h3>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Kürzel</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td>Direktauswahl-Werkzeug</td><td><kbd>A</kbd></td><td>Klicken Sie auf einen Anker, einen Griff oder ein Segment, und ziehen Sie, um den Pfad umzuformen; eine Marquee über die leere Zeichenfläche nimmt die Anker darin auf. <kbd>&#8679;</kbd> fügt zur Auswahl hinzu und hält ein Ziehen auf 45&deg;, und <kbd>&#8997;</kbd> beim Ziehen eines Griffes bricht das Paar, sodass der Anker eine Ecke wird.</td></tr>
+    <tr><td>Gruppenauswahl-Werkzeug</td><td>&ndash;</td><td>Klicken Sie auf ein Objekt, um es auszuwählen; klicken Sie erneut, um die Gruppe aufzunehmen, der es gehört, und erneut für die Gruppe darüber.</td></tr>
+  </tbody>
+</table>
+<p>Verwenden Sie das Direktauswahl-Werkzeug, um eine Form nach dem Zeichnen zu verfeinern: Schieben Sie einen Anker, ziehen Sie einen einzelnen Griff oder formen Sie eine Krümmung um. Es zieht auch die Kreuzungen eines Hüllengitters, wobei es biegt, was die Hülle hält, und es rundet eine Ecke einer live Form nach der anderen statt alle. Das Gruppenauswahl-Werkzeug ist der schnelle Weg, um ein Objekt zu erreichen, das in verschachtelten Gruppen begraben ist, ohne in sie hinein- und herauszusteigen.</p>
+
+<h3 id="tools-magic-wand">Auto-Auswahl</h3>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Kürzel</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td>Auto-Auswahl-Werkzeug</td><td><kbd>Y</kbd></td><td>Klicken Sie auf ein Objekt, um jedes Objekt auszuwählen, das gleich gemalt ist. Was als gleich gilt (Füllung, Kontur, Konturstärke, Deckkraft, Füllmodus) wird im Auto-Auswahl-Panel eingestellt, und <kbd>&#8679;</kbd> fügt die neuen Treffer zur Auswahl hinzu.</td></tr>
+  </tbody>
+</table>
+<p>Greifen Sie hierher, wenn Sie jede Form einer Farbe auf einmal ändern möchten: Klicken Sie auf eine rote, dann färben Sie die ganze Auswahl in einem Schritt neu.</p>
+
+<h3 id="tools-lasso">Lasso</h3>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Kürzel</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td>Lasso-Werkzeug</td><td><kbd>Q</kbd></td><td>Ziehen Sie eine freie Schleife, um die Anker darin auszuwählen. <kbd>&#8679;</kbd> fügt sie den bereits ausgewählten Ankern hinzu.</td></tr>
+  </tbody>
+</table>
+<p>Verwenden Sie es, wenn die Anker, die Sie wollen, nicht in einem ordentlichen Rechteck sitzen, also eine Marquee zu viel oder zu wenig fangen würde.</p>
+<p>Dieser Slot enthält auch die Pixel-Auswahl-Werkzeuge – die <strong>Rechteckige Marquee</strong>, <strong>Elliptische Marquee</strong> und <strong>Lasso-Marquee</strong> – die eine marching-ants-Auswahl auf einer Pixel-Ebene zeichnen statt Vektoranker auszuwählen. Sie werden auf der <a href="/manual/de/pixels/">Pixel-Ebenen</a>-Seite behandelt.</p>
+
+<h2 id="tools-pen-type">Stift, Krümmung und Text</h2>
+<p>Die Werkzeuge, die neue Pfade und Text legen. Die Stift-Familie gibt Ihnen genaue Kontrolle über jeden Anker und Griff, das Krümmungs-Werkzeug legt eine glatte Kurve durch Punkte, die Sie setzen, und die Text-Werkzeuge setzen Punkt-, Flächen-, Pfad- und vertikalen Text.</p>
+
+<h3 id="tools-pen">Die Stift-Familie</h3>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Kürzel</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td>Stift-Werkzeug</td><td><kbd>P</kbd></td><td>Klicken Sie, um einen Eckanker zu setzen, oder drücken und ziehen Sie, um glatte Griffe daraus zu ziehen; klicken Sie auf den ersten Anker, um den Pfad zu schließen. <kbd>&#8679;</kbd> hält den neuen Punkt oder den Griff auf 45&deg;, und <kbd>&#8997;</kbd> beim Ziehen bricht die Griffe, sodass der Pfad den Anker in seinem eigenen Winkel verlässt.</td></tr>
+    <tr><td>Ankerpunkt hinzufügen-Werkzeug</td><td><kbd>+</kbd></td><td>Klicken Sie auf ein Segment, um dort einen Anker hinzuzufügen, ohne die Form des Pfads zu ändern.</td></tr>
+    <tr><td>Ankerpunkt entfernen-Werkzeug</td><td><kbd>&#8722;</kbd></td><td>Klicken Sie auf einen Anker, um ihn herauszunehmen und die Segmente auf beiden Seiten zu verbinden.</td></tr>
+    <tr><td>Ankerpunkt-Werkzeug</td><td><kbd>&#8679;C</kbd></td><td>Ziehen Sie einen Anker, um ein passendes Paar Griffe daraus zu ziehen, oder klicken Sie darauf, um die Griffe einzuziehen und eine Ecke zu lassen. Ziehen Sie einen Griff allein, um diese Seite allein zu bewegen; <kbd>&#8679;</kbd> hält ihn auf 45&deg;.</td></tr>
+  </tbody>
+</table>
+<p>Das Stift-Werkzeug ist das Arbeitstier für präzises Zeichnen, von einem Logo-Umriss bis zu einem Beschriftungspfad. Während es einen Pfad in Arbeit hat, beendet <kbd>Enter</kbd> oder <kbd>Esc</kbd> ihn, und <kbd>Rücktaste</kbd> nimmt den letzten Anker zurück. Die drei Helfer fügen hinzu, entfernen und wandeln Anker auf einem fertigen Pfad um; Stift und Bleistift werden auf der <a href="/manual/de/paths/">Pfade</a>-Seite ausführlicher behandelt.</p>
+
+<h3 id="tools-curvature">Krümmung</h3>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Kürzel</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td>Krümmungs-Werkzeug</td><td><kbd>&#8679;~</kbd></td><td>Klicken Sie, um Punkte zu setzen, und eine glatte Kurve wird durch sie gelegt; <kbd>&#8997;</kbd>-Klick setzt stattdessen einen Eckpunkt. Ziehen Sie einen Punkt, um ihn zu bewegen, doppelklicken Sie auf einen Punkt, um ihn zwischen glatt und Ecke zu wechseln, klicken Sie auf den ersten Punkt, um den Pfad zu schließen, und doppelklicken Sie davon weg, um zu beenden.</td></tr>
+  </tbody>
+</table>
+<p>Greifen Sie zum Krümmungs-Werkzeug, wenn Sie eine fließende Linie wollen und lieber Punkte setzen und Scissor die Griffe ausrechnen lassen, als jeden selbst zu ziehen.</p>
+
+<h3 id="tools-type">Text</h3>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Kürzel</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td>Text-Werkzeug</td><td><kbd>T</kbd></td><td>Klicken für Punkttext, Ziehen für einen rechteckigen Rahmen für Flächentext, und Klicken auf bestehenden Text, um ihn zu bearbeiten. Das Klicken auf einen offenen Pfad setzt den Text entlang dieses Pfads laufen.</td></tr>
+    <tr><td>Flächentext-Werkzeug</td><td>&ndash;</td><td>Ziehen Sie den Rahmen, in dem der Text fließt.</td></tr>
+    <tr><td>Text-auf-Pfad-Werkzeug</td><td>&ndash;</td><td>Klicken Sie auf einen Pfad, und der Text läuft entlang ihm. Der Pfad wird zur Grundlinie, also hört er auf, Grafik zu sein.</td></tr>
+    <tr><td>Vertikaler Text-Werkzeug</td><td>&ndash;</td><td>Dasselbe wie das Text-Werkzeug, außer dass die Textzeile die Seite hinunterläuft statt quer.</td></tr>
+    <tr><td>Glyphenbearbeitung-Werkzeug</td><td><kbd>&#8679;T</kbd></td><td>Klicken Sie auf ein Zeichen, um es aus seiner Zeile herauszupicken, dann ziehen Sie, um es zu bewegen, ziehen Sie einen Eckknopf, um es zu skalieren, oder den Knopf darüber, um es zu drehen. <kbd>&#8679;</kbd> hält eine Eckskalierung proportional und rastet die Drehung auf 11.25&deg;-Schritte ein, und <kbd>Entf</kbd> setzt das Zeichen dorthin zurück, wo der Text es gesetzt hat.</td></tr>
+  </tbody>
+</table>
+<p>Das Text-Werkzeug allein deckt die meisten Arbeiten ab: Klicken für eine Überschrift, einen Rahmen ziehen für einen Absatz. Die Seitenknöpfe des Glyphenbearbeitungsrahmens strecken das Zeichen nur in eine Richtung, quer für Breite und längs für Höhe, sodass Sie einzelne Buchstaben für einen Titel herumziehen können, ohne sie aus dem Text zu brechen. Text wird auf der <a href="/manual/de/type/">Text</a>-Seite vollständig behandelt.</p>
+
+<h2 id="tools-lines-shapes">Linien und Formen</h2>
+<p>Alles, was eine fertige Form zeichnet: gerade Linien, Bögen und Spiralen, Gitter aus Linien und die Rechtecke, Ellipsen, Polygone und Sterne, aus denen Sie eine Zeichnung bauen.</p>
+
+<h3 id="tools-lines">Linien, Bögen, Spiralen und Gitter</h3>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Kürzel</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td>Liniensegment-Werkzeug</td><td><kbd>\</kbd></td><td>Ziehen, um eine gerade Linie zu zeichnen. <kbd>&#8679;</kbd> hält sie auf 45&deg;-Schritte, und <kbd>&#8997;</kbd> zeichnet sie von ihrer Mitte statt von ihrem Ende.</td></tr>
+    <tr><td>Bogen-Werkzeug</td><td>&ndash;</td><td>Ziehen Sie das Rechteck, das der Bogen füllt; <kbd>&#8679;</kbd> macht dieses Rechteck quadratisch. Die Pfeiltasten biegen den Bogen flacher oder voller, <kbd>C</kbd> schließt und öffnet ihn, und <kbd>F</kbd> oder <kbd>X</kbd> kehrt die Richtung um, in die er sich wölbt.</td></tr>
+    <tr><td>Spiralen-Werkzeug</td><td>&ndash;</td><td>Ziehen Sie von der Mitte aus: Die Distanz setzt den Radius, und die Richtung setzt, wo die Spirale beginnt. <kbd>&#8997;</kbd> kehrt die Windung um, <kbd>R</kbd> kehrt sie für immer um, und die Pfeiltasten fügen Segmente hinzu und entfernen sie.</td></tr>
+    <tr><td>Rechteckiges Gitter-Werkzeug</td><td>&ndash;</td><td>Ziehen Sie das Gitter, wobei <kbd>&#8997;</kbd> von der Mitte zeichnet und <kbd>&#8679;</kbd> es quadratisch hält. Die Pfeiltasten nach oben und unten ändern die Anzahl der Reihen, links und rechts die Spalten.</td></tr>
+    <tr><td>Polares Gitter-Werkzeug</td><td>&ndash;</td><td>Ziehen Sie das Gitter, wobei <kbd>&#8997;</kbd> von der Mitte zeichnet und <kbd>&#8679;</kbd> es rund hält. Die Pfeiltasten nach oben und unten ändern die konzentrischen Ringe, links und rechts die radialen Speichen.</td></tr>
+  </tbody>
+</table>
+<p>Die zwei Gitter-Werkzeuge machen einen Pfad pro Linie, also bleibt jede Linie einzeln wählbar: Verwenden Sie das Rechteckige Gitter für Tabellen, Kalender und Layout-Gerüste, und das Polare Gitter für Dartboards, Radar-Diagramme und Zifferblätter. Sie zeichnen Gitter-Grafik, die Sie behalten. Das ist eine andere Sache als das Hintergrundraster des Boards, die Bildschirm-Zeichenhilfe, die Sie mit <strong>Ansicht &rsaquo; Raster &rsaquo; Raster anzeigen</strong> einschalten, die nie druckt und in sieben Arten kommt (quadratisch, isometrisch, hexagonal, schief, goldener Schnitt, Muster und Perspektive). Die Hintergrundraster werden auf der <a href="/manual/de/grids/">Raster</a>-Seite behandelt. Ein separates <strong>Rasterform-Werkzeug</strong> (<kbd>&#8679;G</kbd>) baut einen gefüllten Pfad, indem er auf die Zellen dieses Hintergrundrasters klickt oder darüber zieht – ein schneger Weg, solide Blöcke auf ein isometrisches oder hexagonales Raster zu legen.</p>
+
+<h3 id="tools-shapes">Rechtecke, Ellipsen und andere Formen</h3>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Kürzel</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td>Rechteck-Werkzeug</td><td><kbd>M</kbd></td><td>Ziehen, um ein Rechteck zu zeichnen. <kbd>&#8679;</kbd> hält es quadratisch, und <kbd>&#8997;</kbd> zeichnet es von seiner Mitte.</td></tr>
+    <tr><td>Abgerundetes Rechteck-Werkzeug</td><td>&ndash;</td><td>Dasselbe Ziehen, mit abgerundeten Ecken; die Pfeiltasten nach oben und unten vergrößern und verkleinern den Eckenradius, während Sie zeichnen.</td></tr>
+    <tr><td>Ellipse-Werkzeug</td><td><kbd>L</kbd></td><td>Ziehen, um eine Ellipse zu zeichnen, mit <kbd>&#8679;</kbd> für einen Kreis und <kbd>&#8997;</kbd>, um von der Mitte zu zeichnen.</td></tr>
+    <tr><td>Polygon-Werkzeug</td><td>&ndash;</td><td>Ziehen Sie von der Mitte aus; die Richtung des Ziehens dreht das Polygon, und <kbd>&#8679;</kbd> hält es aufrecht. Die Pfeiltasten fügen Seiten hinzu und entfernen sie.</td></tr>
+    <tr><td>Stern-Werkzeug</td><td>&ndash;</td><td>Ziehen Sie von der Mitte aus, wobei Sie den Stern drehen, während Sie gehen, und <kbd>&#8679;</kbd> hält ihn aufrecht. Die Pfeiltasten fügen Punkte hinzu und entfernen sie.</td></tr>
+    <tr><td>Glühen-Werkzeug</td><td>&ndash;</td><td>Ziehen Sie einmal, um die Mitte und Größe des Halos des Glühens festzulegen, dann ziehen Sie ein zweites Mal, um seine Ringe über die Grafik zu spannen. Während Sie ziehen, ändern die Pfeiltasten nach links und rechts die Anzahl der Ringe und die nach oben und unten die Anzahl der Strahlen.</td></tr>
+  </tbody>
+</table>
+<p>Diese machen live Formen: Sie behalten ihre Parameter, also können Sie die Größe eines Rechtecks oder die Punktzahl eines Sterns lange nach dem Zeichnen ändern. Ein Klick statt eines Ziehens mit irgendeinem öffnet einen Dialog, sodass Sie der Form genaue Maße geben können. Das Glühen-Werkzeug antwortet auf einen Klick mit einem Glühen in der Größe, die seine Optionen verlangen.</p>
+
+<h2 id="tools-brush-erase">Pinsel, Bleistift und Radierer</h2>
+<p>Die Freihand-Werkzeuge. Malen Sie einen Strich, der dem Zeiger folgt, skizzieren Sie einen groben Pfad und lassen Sie Scissor ihn aufräumen, pflegen und reparieren Sie bestehende Pfade oder reiben Sie Grafik weg. Zwei Slots hier greifen auch auf die Rasterseite eines Dokuments zu: Der Pinsel malt Pixel, und der Pixel-Radierer löscht sie.</p>
+
+<h3 id="tools-brushes">Pinsel</h3>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Kürzel</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td>Malpinsel-Werkzeug</td><td><kbd>B</kbd></td><td>Ziehen, um frei zu malen; der Strich wird geglättet, er an Kurven angepasst wird, und er behält den aktuellen Pinsel und die aktuelle Kontur.</td></tr>
+    <tr><td>Füllpinsel-Werkzeug</td><td><kbd>&#8679;B</kbd></td><td>Zeichnet denselben Strich, umreißt ihn aber in eine gefüllte Form und führt sie mit jeder Grafik zusammen, die er berührt und seine Füllung teilt.</td></tr>
+    <tr><td>Pinsel-Werkzeug</td><td>&ndash;</td><td>Malt Rasterfarbe direkt auf eine Pixel-Ebene in der aktuellen Füllfarbe und erstellt zuerst eine Pixel-Ebene, wenn es keine gibt. Anders als der Malpinsel ist die Markierung kein Pfad, den Sie später umformen können: Sie wird Teil des Bildes.</td></tr>
+  </tbody>
+</table>
+<p>Verwenden Sie den Malpinsel für ausdrucksstarke, kalligrafische Striche, die bearbeitbar bleiben, und den Füllpinsel, wenn Sie lieber eine solide gefüllte Form aufbauen als eine konturierte Linie. <kbd>[</kbd> und <kbd>]</kbd> machen den Pinsel kleiner und größer. Das Pinsel-Werkzeug teilt diesen Slot, malt aber Pixel statt eines Pfads, für Schattierung und Textur, und der <strong>Farbeimer</strong> teilt ihn auch, wobei er einen zusammenhängenden Bereich einer Pixel-Ebene mit der Füllfarbe überflutet. Das Malen auf Pixel-Ebenen wird auf der <a href="/manual/de/pixels/">Pixel-Ebenen</a>-Seite behandelt.</p>
+
+<h3 id="tools-pencil">Bleistift und die Pfadpfleger</h3>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Kürzel</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td>Skizzen-Werkzeug</td><td><kbd>&#8679;N</kbd></td><td>Zeichnen Sie grob, und der Strich wird die scharfe Form, die Sie meinten. Kritzeln über Grafik stanzt aus, was das Kritzel abdeckt.</td></tr>
+    <tr><td>Bleistift-Werkzeug</td><td><kbd>N</kbd></td><td>Zeichnen Sie frei, und der Strich wird an glatte Kurven angepasst. Halten Sie <kbd>&#8997;</kbd>, während Sie loslassen, um den Pfad zu schließen, was auch von selbst passiert, wenn Sie nahe dem Endpunkt beenden.</td></tr>
+    <tr><td>Glätten-Werkzeug</td><td>&ndash;</td><td>Pinseln Sie entlang eines Pfads, um seine Griffe auszugleichen und die Anker zu entfernen, die ihn kaum biegen; ein größerer Pinsel glättet härter.</td></tr>
+    <tr><td>Pfadradierer-Werkzeug</td><td>&ndash;</td><td>Pinseln Sie entlang eines Pfads, um den Teil wegzureiben, den Sie abdecken.</td></tr>
+    <tr><td>Verbinden-Werkzeug</td><td>&ndash;</td><td>Pinseln Sie über zwei lose Enden, um sie zu einem Pfad zu verbinden.</td></tr>
+  </tbody>
+</table>
+<p>Der Bleistift ist der schnelle Weg, um eine Form von Hand zu skizzieren; der Skizzen-Werkzeug ist dafür da, wenn Sie eine grobe Geste als sauberes Rechteck, Ellipse oder Linie lesen lassen wollen. Die letzten drei pflegen bestehende Pfade: <kbd>[</kbd> und <kbd>]</kbd> skalieren den Glätten-, Pfadradierer- und Verbinden-Pinsel. Mit Grafik ausgewählt wirken diese drei nur auf die Auswahl; ohne Auswahl wirken sie auf jeden Pfad, den sie erreichen.</p>
+
+<h3 id="tools-cutting">Radieren und Schneiden</h3>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Kürzel</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td>Radierer-Werkzeug</td><td><kbd>&#8679;E</kbd></td><td>Ziehen Sie einen runden Pinsel, um von Objekten abzuziehen. Mit einer Auswahl werden nur die ausgewählten Objekte radiert; andernfalls jeder nicht gesperrte Pfad, und <kbd>[</kbd> und <kbd>]</kbd> skalieren den Pinsel.</td></tr>
+    <tr><td>Pixel-Radierer-Werkzeug</td><td>&ndash;</td><td>Reibt Farbe von einer Pixel-Ebene weg und löscht sie auf transparent, sodass das darunter Sitzt hindurchscheint. Er funktioniert auf Pixel-Ebenen, wo der Radierer auf Vektorpfaden wirkt; <kbd>[</kbd> und <kbd>]</kbd> skalieren den Pinsel.</td></tr>
+    <tr><td>Scheren-Werkzeug</td><td><kbd>C</kbd></td><td>Klicken Sie auf ein Segment oder einen Anker, um den Pfad dort zu schneiden. Ein geschlossener Pfad öffnet am Schnitt; ein offener Pfad zerbricht in zwei Objekte.</td></tr>
+    <tr><td>Messer</td><td>&ndash;</td><td>Ziehen Sie über Objekte, um sie in separate Stücke zu schneiden. <kbd>&#8997;</kbd> schneidet in einer geraden Linie, und <kbd>&#8679;</kbd> hält diese Linie auf 45&deg;-Schritte.</td></tr>
+  </tbody>
+</table>
+<p>Der Radierer schnitzt Formen aus gefüllter Grafik wie Bleistift weg; die Schere macht einen einzelnen sauberen Schnitt an einem Punkt; das Messer schneidet ganze Objekte in Stücke entlang der Linie, die Sie ziehen. Der Pixel-Radierer teilt den Slot des Radierers, gehört aber zur Rasterseite, auf der <a href="/manual/de/pixels/">Pixel-Ebenen</a>-Seite.</p>
+<p>Ein weiterer Werkzeugleisten-Slot ist vollständig Raster: Die <strong>Abwedeln</strong>, <strong>Nachbelichten</strong> und <strong>Schwamm</strong> Retuschen-Pinsel hellen auf, dunkeln ein und sättigen die Pixel bereits auf einer Ebene. Sie malen wie der Pinsel und werden zusammen mit dem Rest der Pixelbearbeitung auf der <a href="/manual/de/pixels/">Pixel-Ebenen</a>-Seite behandelt.</p>
+
+<h2 id="tools-transform">Transformieren</h2>
+<p>Die Werkzeuge, die bewegen, drehen, spiegeln, skalieren, verzerren und umformen, was bereits gezeichnet ist. Jedes Transformations-Werkzeug arbeitet um einen Referenzpunkt, der in der Mitte der Auswahl beginnt; <kbd>&#8997;</kbd>-Klick setzt diesen Punkt dorthin, wo Sie klicken, und öffnet den Dialog des Werkzeugs für genaue Werte. Mit einzelnen Ankern ausgewählt transformieren diese Werkzeuge diese Anker statt ganzer Objekte.</p>
+
+<h3 id="tools-rotate-reflect">Drehen und Spiegeln</h3>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Kürzel</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td>Dreh-Werkzeug</td><td><kbd>R</kbd></td><td>Ziehen Sie um den Referenzpunkt, um die Auswahl zu drehen, wobei <kbd>&#8679;</kbd> auf 45&deg; einrastet und <kbd>&#8997;</kbd> eine Kopie dreht und das Original lässt. <kbd>&#8997;</kbd>-Klick setzt den Referenzpunkt dorthin, wo Sie geklickt haben, und öffnet den Dreh-Dialog.</td></tr>
+    <tr><td>Spiegel-Werkzeug</td><td><kbd>O</kbd></td><td>Ziehen, um die Spiegelachse durch den Referenzpunkt zu schwingen, wobei <kbd>&#8679;</kbd> sie auf 45&deg; einrastet. <kbd>&#8997;</kbd>-Klick setzt den Referenzpunkt und öffnet den Spiegel-Dialog, und <kbd>&#8997;</kbd> beim Ziehen spiegelt eine Kopie.</td></tr>
+  </tbody>
+</table>
+<p>Greifen Sie zum Dreh-Werkzeug, um Grafik um einen gewählten Drehpunkt statt um ihre eigene Mitte zu drehen, und zum Spiegel-Werkzeug, um eine symmetrische Zeichnung zu bauen: Spiegeln Sie eine Kopie über eine gewählte Achse, und die zwei Hälften bleiben übereinstimmend. Beide Werkzeuge beginnen in der Mitte der Auswahl, und das Wählen von etwas anderem setzt den Referenzpunkt dorthin zurück.</p>
+
+<h3 id="tools-scale-shear">Skalieren, Verzerren und Umformen</h3>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Kürzel</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td>Skalier-Werkzeug</td><td><kbd>S</kbd></td><td>Ziehen Sie vom Referenzpunkt weg, um die Auswahl wachsen zu lassen, und auf ihn zu, um sie zu schrumpfen; <kbd>&#8679;</kbd> hält die Proportionen, und <kbd>&#8997;</kbd> skaliert eine Kopie. <kbd>&#8997;</kbd>-Klick setzt den Referenzpunkt und öffnet den Skalier-Dialog.</td></tr>
+    <tr><td>Verzerren-Werkzeug</td><td>&ndash;</td><td>Ziehen, um die Auswahl um den Referenzpunkt zu verzerren; <kbd>&#8679;</kbd> lässt die Verzerrung auf die Achse fallen, auf die Ihr Ziehen sich neigt. <kbd>&#8997;</kbd>-Klick setzt den Referenzpunkt und öffnet den Verzerrungs-Dialog.</td></tr>
+    <tr><td>Umformen-Werkzeug</td><td>&ndash;</td><td>In der Werkzeugleiste aufgelistet, aber noch nicht implementiert; die Palette markiert es als „Demnächst".</td></tr>
+  </tbody>
+</table>
+<p>Verwenden Sie das Skalier-Werkzeug, wenn Sie Grafik um einen festen Punkt statt um einen Begrenzungsrahmen-Griff skalieren möchten, und das Verzerren-Werkzeug, um eine Form für einen Schlagschatten oder einen Kursiv-Look zu verzerren.</p>
+
+<h3 id="tools-width-liquify">Breite und die Verflüssigungs-Pinsel</h3>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Kürzel</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td>Konturprofil-Werkzeug</td><td><kbd>&#8679;W</kbd></td><td>Ziehen Sie von einem konturierten Pfad weg, um ihn an dieser Stelle zu breiten, und auf ihn zu, um ihn zu verengen, wobei ein Breitenpunkt zurückbleibt. Ohne Auswahl funktioniert es auf jedem bearbeitbaren Pfad.</td></tr>
+    <tr><td>Verformungs-Werkzeug</td><td><kbd>&#8679;R</kbd></td><td>Halten Sie und ziehen Sie einen runden Pinsel, um die Pfade darunter zusammen mit dem Zeiger zu drücken.</td></tr>
+    <tr><td>Wirbel-Werkzeug</td><td>&ndash;</td><td>Halten Sie den Pinsel über der Grafik, und er windet sich so lange, wie Sie ihn halten.</td></tr>
+    <tr><td>Zusammendrücken-Werkzeug</td><td>&ndash;</td><td>Zieht die Pfade unter dem Pinsel zu seiner Mitte hinein.</td></tr>
+    <tr><td>Aufblasen-Werkzeug</td><td>&ndash;</td><td>Drückt die Pfade unter dem Pinsel von seiner Mitte weg.</td></tr>
+    <tr><td>Wellen-Werkzeug</td><td>&ndash;</td><td>Fügt gebogene Muscheln zu den Pfaden unter dem Pinsel hinzu.</td></tr>
+    <tr><td>Spitzen-Werkzeug</td><td>&ndash;</td><td>Fügt gespitzte Punkte zu den Pfaden unter dem Pinsel hinzu.</td></tr>
+    <tr><td>Knitter-Werkzeug</td><td>&ndash;</td><td>Wellt die Pfade unter dem Pinsel.</td></tr>
+  </tbody>
+</table>
+<p>Das Breiten-Werkzeug verjüngt und wölbt eine Kontur von Hand, für eine feder- oder pinselartige Linie ohne Pinselwechsel. Die sieben Verflüssigungs-Pinsel drücken, drehen und rauen Pfade auf, während Sie darüber malen, für organische Verzerrung, die langsam wäre, Anker für Anker zu machen. Alle sieben nehmen <kbd>[</kbd> und <kbd>]</kbd> für die Größe und <kbd>&#8679;</kbd> mit denselben Tasten, <kbd>{</kbd> und <kbd>}</kbd>, für wie hart sie drücken.</p>
+
+<h3 id="tools-free-transform">Freies Transformieren und Pin-Verformung</h3>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Kürzel</th><th>What it does</th></tr></thead>
+  <tbody>
+    <tr><td>Freies Transformieren-Werkzeug</td><td><kbd>E</kbd></td><td>Ein Rahmen, der die Auswahl skaliert, dreht, verzieht und verzerrt. Ziehen Sie einen Rand- oder Eckgriff, um zu skalieren, halten Sie <kbd>&#8984;</kbd> an einem Randgriff, um zu verzerren, ziehen Sie innerhalb des Rahmens, um ihn zu bewegen, und ziehen Sie knapp außerhalb einer Ecke, um zu drehen.</td></tr>
+    <tr><td>Pin-Verformung-Werkzeug</td><td>&ndash;</td><td>Klicken Sie auf die ausgewählte Grafik, um einen Pin zu setzen, dann ziehen Sie die Pins, um sie zu biegen; die Grafik behält ihre Form um die Pins, die still bleiben. <kbd>&#8997;</kbd>-Klick auf einen Pin entfernt ihn, <kbd>&#8679;</kbd>-Klick nimmt mehrere auf, und <kbd>&#8997;</kbd>-Ziehen knapp außerhalb eines Pins dreht die Grafik darum.</td></tr>
+  </tbody>
+</table>
+<p>Freies Transformieren ist der All-in-One-Rahmen, wenn Sie skalieren, drehen und verzerren wollen, ohne zwischen jedem das Werkzeug zu wechseln. Es arbeitet um seinen Referenzpunkt, den Sie überall hin ziehen können, sogar außerhalb des Rahmens; legen Sie ihn nahe einem der neun üblichen Orte des Rahmens ab, und er setzt sich dort ein. Während des Skalierens hält <kbd>&#8679;</kbd> die Proportionen, und <kbd>&#8997;</kbd> skaliert um die Mitte statt um den Referenzpunkt; während des Drehens rastet <kbd>&#8679;</kbd> auf 45&deg; ein. An einem Eckgriff verzerrt <kbd>&#8984;</kbd> diese Ecke für sich, und <kbd>&#8984;&#8997;&#8679;</kbd> verzerrt in Perspektive, wobei die benachbarte Ecke das Ziehen spiegelt; das Widget neben dem Rahmen setzt dieselben zwei Modi und den Beschränkungsschalter. Das Ändern eines Modifikators mitten im Ziehen schaltet sofort um, ohne loszulassen.</p>
+<p>Pin-Verformung ist dafür da, ein einzelnes Stück Grafik zu posen und zu biegen, wie einen gezeichneten Arm zu beugen, indem man die Teile pinnt, die stillhalten sollen, und den Rest ziehen. Es liest <kbd>Entf</kbd> als das Entfernen der ausgewählten Pins statt der Grafik, und <kbd>&#8984;A</kbd> als das Auswählen jedes Pins. Jeder Ziehen ist ein Schritt zum Rückgängigmachen, und Rückgängigmachen bringt die Pins mit der Grafik zurück, mit der sie gingen. Text, Bilder und Symbolinstanzen können nicht verzerrt werden und bleiben, wie sie sind.</p>
+
+<h2 id="tools-build-perspective">Verbinden &amp; Teilen, Region-Füllung und Perspektive</h2>
+<p>Werkzeuge, die überlappende Formen als Regionen behandeln, die kombiniert und gefärbt werden, und das Raster, das Ihnen ermöglicht, Grafik in Perspektive zu zu zeichnen und zu platzieren.</p>
+
+<h3 id="tools-builder-paint">Verbinden &amp; Teilen und Region-Füllung</h3>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Kürzel</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td>Verbinden &amp; Teilen-Werkzeug</td><td><kbd>&#8679;M</kbd></td><td>Mit überlappenden Formen ausgewählt, ziehen Sie über die Regionen, die Sie verbunden haben wollen, und sie werden zu einem Objekt. <kbd>&#8997;</kbd>-Ziehen löscht die Regionen, die Sie kreuzen.</td></tr>
+    <tr><td>Region-Füll-Eimer</td><td><kbd>K</kbd></td><td>Klicken Sie auf eine Fläche einer Region-Füllungsgruppe, um sie mit der aktuellen Farbe zu füllen; <kbd>&#8997;</kbd>-Klick nimmt die bereits vorhandene Farbe auf, statt eine zu legen. Die Fläche unter dem Zeiger wird umrissen, bevor Sie klicken.</td></tr>
+    <tr><td>Region-Auswahl-Werkzeug</td><td><kbd>&#8679;L</kbd></td><td>Klicken Sie auf eine Fläche einer Region-Füllungsgruppe, um sie auszuwählen, ohne sie zu malen.</td></tr>
+  </tbody>
+</table>
+<p>Verwenden Sie das Verbinden &amp; Teilen, um ein paar überlappende Formen zu zeichnen und sie dann in den Umriss zu mergen und zu trimmen, den Sie wollen, indem Sie über die Stücke ziehen. Region-Füllung behandelt einen Satz überlappender Pfade wie ein Malbuch: Der Eimer überflutet jede eingeschlossene Fläche mit einer Farbe, und das Auswahl-Werkzeug wählt Flächen und Kanten, sodass Sie sie umgestalten können, ohne zuerst die Formen auseinanderzuschneiden.</p>
+
+<h3 id="tools-perspective">Perspektive</h3>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Kürzel</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td>Perspektiv-Raster-Werkzeug</td><td><kbd>&#8679;P</kbd></td><td>Zeigt das raster und formt es: Ziehen Sie die Fluchtpunkte, ziehen Sie einen nach oben oder unten, um den Horizont zu bewegen, und ziehen Sie die nahe Ecke des Gitters. <kbd>1</kbd> bis <kbd>4</kbd> oder das Widget auf dem Bildschirm wählen die Fläche, auf der Sie zeichnen.</td></tr>
+    <tr><td>Perspektiv-Auswahl-Werkzeug</td><td><kbd>&#8679;V</kbd></td><td>Grafik auswählen und entlang ihrer Fläche ziehen. Grafik, die noch nicht auf dem Raster ist, wird auf der aktiven Fläche abgelegt, wohin Sie sie ziehen.</td></tr>
+  </tbody>
+</table>
+<p>Greifen Sie zu diesen, um Szenen und Beschriftung zu zeichnen, die zu Fluchtpunkten zurückweichen, wie eine Straße oder ein verpacktes Produkt. Während das Raster angezeigt wird, zeichnen das Rechteck, das abgerundete Rechteck, die Ellipse und das Rechteckgitter-Werkzeug auf der aktiven Fläche statt flach, und <kbd>1</kbd> bis <kbd>4</kbd> wählen die Fläche auch von diesen Werkzeugen.</p>
+
+<h2 id="tools-mesh-gradient">Netz und Verlauf</h2>
+<p>Die zwei Werkzeuge, um gestufte Farbe in eine Form zu malen: ein Netz aus Farbpunkten über das Objekt oder eine glatte Mischung entlang einer Achse.</p>
+
+<h3 id="tools-mesh">Netz</h3>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Kürzel</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td>Netz-Werkzeug</td><td><kbd>U</kbd></td><td>Klicken Sie innerhalb eines Objekts, um eine Netzlinie in jede Richtung durch diesen Ort zu legen, wodurch ein gewöhnlicher Pfad zu einem Netz wird. Klicken Sie auf einen Netzpunkt, um ihn auszuwählen und ihm eine Farbe vom Farb-Panel zu geben, ziehen Sie einen Punkt, um ihn zu bewegen, und <kbd>&#8997;</kbd>-Klick auf einen, um die Linien durch ihn wegzunehmen.</td></tr>
+  </tbody>
+</table>
+<p>Verwend Sie ein Netz für weiche, freiform Schattierungen, die ein gerader Verlauf nicht geben kann, wie der abgerundete Glanz auf einem Obststück oder einem Gesicht.</p>
+
+<h3 id="tools-gradient">Verlauf</h3>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Kürzel</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td>Verlaufs-Werkzeug</td><td><kbd>G</kbd></td><td>Ziehen Sie über die Auswahl, um die Achse ihrer aktiven Farbe festzulegen, wobei <kbd>&#8679;</kbd> die Achse auf 45&deg;-Schritte hält. Über Grafik, die bereits einen Verlauf haben, bearbeiten Sie stattdessen den Annotator.</td></tr>
+  </tbody>
+</table>
+<p>Ziehen Sie das Verlaufs-Werkzeug, um eine lineare oder radiale Mischung in die gewünschte Richtung zu zeigen und einzustellen, wie weit sie läuft. Auf dem Annotator ziehen Sie einen Stopp entlang der Achse, um ihn zu bewegen, ziehen Sie eine Raute, um die Mischung zwischen zwei Stopps zu verschieben, klicken Sie auf die Achse, um einen Stopp in der Farbe hinzuzufügen, die dort bereits ist, und ziehen Sie einen Stopp weit von der Achse, um ihn wegzuwerfen, solange zwei übrig sind. <kbd>Entf</kbd> entfernt den Stopp, den Sie zuletzt berührt haben. Auf einem freiform Verlauf arbeitet das Werkzeug stattdessen in Farbpunkten: Klicken Sie auf die Grafik, um einen in der Füllfarbe hinzuzufügen, und ziehen Sie einen Punkt, um ihn zu bewegen. Verläufe werden auf der <a href="/manual/de/appearance/">Farbe &amp; Erscheinung</a>-Seite weiter behandelt.</p>
+
+<h2 id="tools-sample-morph">Abtasten, Messen und Morphen</h2>
+<p>Kopieren Sie ein Erscheinungsbild von einem Objekt zum anderen, lesen Sie Distanzen und Winkel von der Zeichenfläche ab, und mischen Sie sich zwischen Formen in einer Reihe von Schritten.</p>
+
+<h3 id="tools-eyedropper">Pipette und Messen</h3>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Kürzel</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td>Pipette-Werkzeug</td><td><kbd>I</kbd></td><td>Klicken Sie auf ein Objekt, um sein ganzes Erscheinungsbild auf die Auswahl zu übernehmen oder auf den Standardstil, wenn nichts ausgewählt ist. <kbd>&#8679;</kbd> tastet nur seine Füll- oder Konturfarbe auf die aktive Seite ab, und <kbd>&#8997;</kbd> funktioniert umgekehrt, wobei es das Erscheinungsbild der Auswahl auf das Objekt anwendet, das Sie klicken.</td></tr>
+    <tr><td>Mess-Werkzeug</td><td>&ndash;</td><td>Ziehen Sie zwischen zwei Punkten, um den Distanz, die Versätze und den Winkel abzulesen; <kbd>&#8679;</kbd> hält die Linie auf 45&deg;-Schritte. Die letzte Messung bleibt auf dem Bildschirm, bis Sie das nächste Mal ziehen.</td></tr>
+  </tbody>
+</table>
+<p>Die Pipette ist der schnelle Weg, um ein Objekt mit einem anderen übereinstimmen zu lassen: Wählen Sie den Look, den Sie mögen, und er landet auf der Auswahl. Verwenden Sie das Mess-Werkzeug, um eine Lücke oder einen Winkel zu prüfen, ohne einen Strich auf der Grafik zu hinterlassen.</p>
+
+<h3 id="tools-blend">Morph</h3>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Kürzel</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td>Morph-Werkzeug</td><td><kbd>W</kbd></td><td>Klicken Sie auf ein Objekt und dann ein anderes, um sich zwischen ihnen durch eine Reihe von Zwischenformen zu morphen. Um ein weiteres Objekt in einen Morph aufzunehmen, klicken Sie in den Morph und dann auf das Objekt, das Sie hinzufügen möchten.</td></tr>
+  </tbody>
+</table>
+<p>Greifen Sie zum Morph-Werkzeug, um eine Form oder Farbe in eine andere über gleichmäßige Schritte zu mischen, ob für eine sanfte Schattierung oder gleichmäßig verteilte, sich ändernde Kopien entlang eines Pfads.</p>
+
+<h2 id="tools-symbols">Symbole</h2>
+<p>Ein Symbol ist ein Stück Grafik, das Sie oft platzieren können, wobei jede Kopie an einen Meister gebunden ist. Die Symbol-Pinsel legen und arbeiten dann ganze Menschenmengen dieser Instanzen auf einmal.</p>
+
+<h3 id="tools-symbolism">Die Symbol-Pinsel</h3>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Kürzel</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td>Symbol-Streu-Werkzeug</td><td><kbd>&#8679;S</kbd></td><td>Ziehen, um Instanzen des im Symbole-Panel gewählten Symbols als Symbolset zu legen. <kbd>&#8997;</kbd> nimmt Instanzen wieder heraus.</td></tr>
+    <tr><td>Symbol-Schieben-Werkzeug</td><td>&ndash;</td><td>Zieht die Instanzen unter dem Pinsel zusammen mit dem Zeiger.</td></tr>
+    <tr><td>Symbol-Pack-Werkzeug</td><td>&ndash;</td><td>Zieht die Instanzen unter dem Pinsel zusammen; <kbd>&#8997;</kbd> breitet sie aus.</td></tr>
+    <tr><td>Symbol-Skalieren-Werkzeug</td><td>&ndash;</td><td>Lässt die Instanzen unter dem Pinsel wachsen; <kbd>&#8997;</kbd> schrumpft sie.</td></tr>
+    <tr><td>Symbol-Drehen-Werkzeug</td><td>&ndash;</td><td>Dreht die Instanzen unter dem Pinsel, um dem Ziehen zu folgen.</td></tr>
+    <tr><td>Symbol-Tönen-Werkzeug</td><td>&ndash;</td><td>Tönt die Instanzen unter dem Pinsel Richtung der Füllfarbe; <kbd>&#8997;</kbd> nimmt die Tönung heraus.</td></tr>
+    <tr><td>Symbol-Verblassen-Werkzeug</td><td>&ndash;</td><td>Lässt die Instanzen unter dem Pinsel verblassen; <kbd>&#8997;</kbd> bringt sie zurück auf volle Stärke.</td></tr>
+    <tr><td>Symbol-Umgestalten-Werkzeug</td><td>&ndash;</td><td>Wendet den im Grafikstile-Panel gewählten Grafikstil auf die Instanzen unter dem Pinsel an; <kbd>&#8997;</kbd> entfernt ihn.</td></tr>
+  </tbody>
+</table>
+<p>Verwenden Sie diese, um ein Feld wiederholter Grafik zu streuen und dann zu variieren, wie Bäume über einen Hügel oder Sterne am Himmel: Sprühen Sie ein Set, dann dünnen Sie es aus, skalieren Sie es, drehen Sie es und tönen Sie es, sodass die Kopien nicht wie gestempelt aussehen. Alle acht nehmen <kbd>[</kbd> und <kbd>]</kbd> für die Pinselgröße und <kbd>{</kbd> und <kbd>}</kbd> für wie hart der Pinsel arbeitet. Sie wirken auf die Instanzen in der Auswahl oder auf jede editierbare Instanz, wenn nichts ausgewählt ist.</p>
+
+<h2 id="tools-boards-slices">Boards und Slices</h2>
+<p>Die Werkzeuge, die die Zeichenfläche für die Ausgabe vorbereiten: Artboards, die die Seiten sind, auf denen Ihre Grafik sitzt, und Slices, die Rechtecke markieren, die eigenständig exportiert werden.</p>
+
+<h3 id="tools-boards">Boards</h3>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Kürzel</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td>Board-Werkzeug</td><td><kbd>&#8679;O</kbd></td><td>Zeichnen, bewegen und skalieren Artboards direkt auf der Zeichenfläche. Ziehen Sie die leere Zeichenfläche für ein neues Board, wobei <kbd>&#8997;</kbd> von der Mitte zeichnet und <kbd>&#8679;</kbd> es quadratisch hält; ziehen Sie innerhalb eines Boards, um es zu bewegen, wobei <kbd>&#8679;</kbd> die Bewegung auf eine Achse hält; ziehen Sie einen Eckgriff mit <kbd>&#8679;</kbd>, um die Proportionen des Boards zu behalten.</td></tr>
+  </tbody>
+</table>
+<p>Greifen Sie zum Board-Werkzeug, um Seiten für verschiedene Größen oder Versionen eines Designs in einem Dokument hinzuzufügen und um eine Seite um das, was Sie gezeichnet haben, zu skalieren. <kbd>Entf</kbd> entfernt das aktive Board, solange eins übrig ist.</p>
+
+<h3 id="tools-slices">Slices</h3>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Kürzel</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td>Slice-Werkzeug</td><td><kbd>&#8679;K</kbd></td><td>Ziehen Sie ein Rechteck, das eigenständig exportiert wird; <kbd>&#8997;</kbd> zeichnet von der Mitte, und <kbd>&#8679;</kbd> hält es quadratisch. Slice-Kanten setzen sich auf ganzen Pixeln ab, sodas das, was herauskommt, nicht verschwommen ist.</td></tr>
+    <tr><td>Slice-Auswahl-Werkzeug</td><td>&ndash;</td><td>Slices auswählen, bewegen und skalieren. <kbd>Entf</kbd> entfernt das ausgewählte, und ein Doppelklick öffnet seine Optionen.</td></tr>
+  </tbody>
+</table>
+<p>Verwenden Sie Slices, um ein Artboard in Stücke zu schneiden, die separat exportiert werden, wie die Buttons und Banner eines Web-Layouts, jede als eigene Datei. Exportieren wird auf der <a href="/manual/de/files/">Öffnen &amp; Exportieren</a>-Seite behandelt.</p>
+
+<h2 id="tools-navigate">Navigieren</h2>
+<p>Die Werkzeuge, die schwenken, drehen und zoomen. Keines davon ändert das Dokument: Sie ändern nur, wie Sie es betrachten.</p>
+
+<h3 id="tools-view">Ansicht bewegen</h3>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Kürzel</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td>Hand-Werkzeug</td><td><kbd>H</kbd></td><td>Ziehen, um die Ansicht zu schwenken. Halten Sie die Leertaste, um es von jedem anderen Werkzeug zu leihen, solange Sie es halten.</td></tr>
+    <tr><td>Ansicht-Drehen-Werkzeug</td><td><kbd>&#8679;H</kbd></td><td>Ziehen, um die Ansicht um die Mitte des Fensters zu drehen, wobei <kbd>&#8679;</kbd> auf 15&deg; einrastet; doppelklicken, um sie wieder aufrecht zu stellen. Nur die Ansicht dreht sich, niemals das Dokument.</td></tr>
+    <tr><td>Druckkachel-Werkzeug</td><td>&ndash;</td><td>In der Werkzeugleiste aufgelistet, aber noch nicht implementiert; die Palette markiert es als „Demnächst".</td></tr>
+  </tbody>
+</table>
+<p>Das Hand-Werkzeug scrollt eine vergrößerte Zeichnung, ohne die Scrollleisten zu berühren, und das Ansicht-Drehen-Werkzeug neigt die ganze Ansicht, sodass Sie eine schräge Linie in einem bequemen Winkel zeichnen können, dann wieder gerade.</p>
+
+<h3 id="tools-zoom">Zoomen</h3>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Kürzel</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td>Zoom-Werkzeug</td><td><kbd>Z</kbd></td><td>Klicken zum Vergrößern, <kbd>&#8997;</kbd>-Klick zum Verkleinern. Ziehen Sie ein Rechteck über einen Teil der Grafik, um das Fenster damit zu füllen.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="tools-fill-stroke">Füll- und Kontur-Steuerung</h2>
+<p>Am Fuß der Werkzeugleiste sitzen die Füll- und Kontur-Muster, eines vor dem anderen. Das vordere Muster ist die aktive Seite, die, auf die Ihre nächste Farbwahl landet. Eine Handvoll einzelner Tasten bedienen sie, ohne nach den Panels zu greifen:</p>
+<table>
+  <thead><tr><th>Kürzel</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td><kbd>D</kbd></td><td>Setzt Füllung und Kontur auf ihre Standardwerte zurück.</td></tr>
+    <tr><td><kbd>X</kbd></td><td>Wechselt, welche der Füllung oder der Kontur die aktive Seite ist.</td></tr>
+    <tr><td><kbd>&#8679;X</kbd></td><td>Vertauscht die Füll- und Konturfarben.</td></tr>
+    <tr><td><kbd>/</kbd></td><td>Setzt die aktive Seite auf keine Farbe.</td></tr>
+  </tbody>
+</table>
+<p>Diese machen die gemeinsamen Bewegungen schnell: <kbd>X</kbd>, um zwischen dem Malen der Füllung und der Kontur zu springen, <kbd>/</kbd>, um die Füllung oder die Kontur auf keine zu setzen, und <kbd>D</kbd>, um zu einem schwarz-weißen Ausgangspunkt zurückzukehren. Füllungen, Konturen und wie sie eingestellt werden, werden auf der <a href="/manual/de/appearance/">Farbe &amp; Erscheinung</a>-Seite behandelt.</p>

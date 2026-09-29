@@ -1,0 +1,134 @@
+<p class="lede">Cómo se ve una forma es su <em>apariencia</em>: el relleno dentro de su contorno, el contorno dibujado a lo largo de él, y la opacidad y fusión que deciden cómo se sitúa sobre lo que hay detrás. Cada uno de esos puede ser un color plano, un degradado o un patrón, y un objeto puede llevar más de uno de cada a la vez. Esta página cubre los controles de pintura, los modelos de color, muestras, degradados, contornos, transparencia, el panel Pila de pintura y los estilos gráficos.</p>
+
+<p>Los atajos a continuación están escritos en formato macOS. En Windows, lee <kbd>&#8984;</kbd> como Ctrl, <kbd>&#8997;</kbd> como Alt y <kbd>&#8679;</kbd> como Shift.</p>
+
+<figure class="shot">
+  <img src="img/artwork-landscape.png" width="1700" height="967" loading="lazy"
+       alt="Un paisaje vectorial de montañas, cielo y un lago, construido a partir de formas con relleno plano en Scissor." />
+  <figcaption>Una escena completa construida a partir de formas rellenas. Cada banda de color es un trazado con su propio relleno.</figcaption>
+</figure>
+
+<h2 id="appearance-fill-and-stroke">Rellenos y contornos</h2>
+<p>Un trazado, forma o pieza de texto puede contener un <strong>relleno</strong>, la pintura dentro de su contorno, y un <strong>contorno</strong>, la línea dibujada a lo largo de ese contorno. Un relleno puede ser un color sólido, un degradado o un patrón; un contorno puede ser un color sólido o un degradado, con su propio grosor y discontinuo. Cualquiera de los dos lados también se puede establecer en ninguno, de modo que puedes dibujar una forma con solo contorno, o solo relleno.</p>
+
+<h3 id="appearance-the-paint-chips">Las fichas de relleno y contorno</h3>
+<p>Dos fichas superpuestas al pie de la barra de herramientas contienen el relleno y el contorno. Haz clic en cualquiera para abrir un selector de color; la que está delante es el lado sobre el que actúan las teclas y los paneles Color, Degradado y Muestras. Pulsa <kbd>X</kbd> para traer el otro lado al frente, <kbd>&#8679;X</kbd> para intercambiar las dos pinturas, <kbd>/</kbd> para establecer el lado frontal en ninguno, y <kbd>D</kbd> para volver a los valores por defecto: un relleno blanco, un contorno negro y un grosor de 1 pt. El mismo relleno, contorno, grosor, opacidad y modo de fusión también se sitúan juntos en el panel Propiedades, lo cual es útil cuando los quieres todos en un solo lugar.</p>
+<p>Con nada seleccionado, estos controles establecen el estilo que tomará el siguiente objeto que dibujes, de modo que puedes elegir un color antes de dibujar en lugar de después.</p>
+
+<h3 id="appearance-eyedropper">Copiar pintura con el Cuentagotas</h3>
+<p>El Cuentagotas (<kbd>I</kbd>) copia una apariencia completa del objeto en el que haces clic sobre la selección. Mantén <kbd>&#8679;</kbd> para tomar solo su color de relleno o contorno en el lado activo, o <kbd>&#8997;</kbd> para empujar la apariencia de la selección sobre el objeto bajo el puntero en su lugar. Hacer clic en una imagen colocada o una capa de píxeles muestrea el color bajo el puntero en el lado activo, de modo que puedes sacar un color directamente de una foto. Recurre al Cuentagotas cuando dos objetos deben coincidir: muestrea uno, y el otro toma la misma pintura de un solo clic.</p>
+
+<h2 id="appearance-colour">Color</h2>
+<p>El color se elige en el pequeño selector emergente en cada ficha, o, con más control, en el panel Color.</p>
+
+<h3 id="appearance-color-panel">El panel Color</h3>
+<p>El panel <strong>Color</strong> (<kbd>F6</kbd>) muestra la pintura del lado activo como un conjunto de deslizadores, un campo hexadecimal y un espectro. Las fichas de relleno y contorno en la parte superior eligen qué lado estás editando. El espectro extiende los tonos a lo ancho, blanco en la parte superior y negro en la parte inferior; haz clic o arrastra en él para elegir. Tres muestras rápidas al lado establecen Ninguno, Blanco y Negro de un solo clic, y los botones <em>Invertir</em> y <em>Complementario</em> reelaboran el color actual (Complementario gira su tono media vuelta manteniendo su saturación y brillo).</p>
+<p>El menú de modelo de color establece qué deslizadores muestra el panel. La elección se mantiene para la sesión, y las nuevas muestras se crean en él.</p>
+<dl>
+  <dt>Escala de grises</dt><dd>Un único deslizador K, de blanco al 0% a negro al 100%.</dd>
+  <dt>RGB</dt><dd>Rojo, verde y azul de 0 a 255, el modelo para trabajo en pantalla.</dd>
+  <dt>HSB</dt><dd>Tono en grados, luego saturación y brillo como porcentajes: a menudo la manera más rápida de ajustar un color sin perder su carácter.</dd>
+  <dt>CMYK</dt><dd>Cian, magenta, amarillo y negro como porcentajes, para impresión.</dd>
+  <dt>RGB seguro para web</dt><dd>RGB ajustado a los 216 colores seguros para web. Cuando el color actual no es uno de ellos aparece un triángulo de advertencia; haz clic en él para ajustar al color seguro para web más cercano.</dd>
+</dl>
+<p>Cuando el lado activo está pintado con una muestra global, aparece una fila de tinte sobre los deslizadores: nombra la muestra y te permite establecer un tinte del 0% al 100% en lugar de editar el color directamente, de modo que la obra permanece vinculada a la muestra.</p>
+
+<h2 id="appearance-swatches">Muestras y grupos de color</h2>
+<p>Una muestra es un color con nombre guardado con el documento. Pintar a partir de muestras en lugar de escribir valores mantiene una paleta consistente y, para las muestras globales, te permite restilar un documento completo editando un solo color.</p>
+
+<h3 id="appearance-swatches-panel">El panel Muestras</h3>
+<p>El panel <strong>Muestras</strong> (ábrelo desde <strong>Ventana &rsaquo; Muestras</strong>) lista las muestras del documento como una cuadrícula o como una lista; la vista de lista también muestra el modelo de color de cada muestra. Un clic simple pinta el lado activo. <kbd>&#8679;</kbd>-clic selecciona un rango de muestras y <kbd>&#8984;</kbd>-clic añade o quita una de la selección, de modo que puedes actuar sobre varias a la vez. El pie contiene botones para cambiar de vista, abrir el menú del panel, mostrar opciones de muestra, crear un grupo de color, crear una nueva muestra y eliminar lo seleccionado.</p>
+<p>El menú del panel añade más: <em>Añadir colores usados</em> y <em>Añadir colores seleccionados</em> convierten los colores ya presentes en el documento, o solo en la selección, en muestras; <em>Seleccionar todos los no usados</em> selecciona cada muestra con la que nada está pintado, listas para eliminar; y <em>Remapear colores…</em> abre el diálogo de recoloreado descrito a continuación.</p>
+
+<h3 id="appearance-process-spot-global">Muestras de proceso, especiales y globales</h3>
+<p>Haz doble clic en una muestra para Opciones de muestra, donde estableces qué tipo de color es.</p>
+<dl>
+  <dt>Proceso</dt><dd>Un color ordinario, mezclado para el trabajo. Una muestra de proceso simple es solo un color almacenado: editarlo no toca la obra ya pintada con él.</dd>
+  <dt>Global</dt><dd>Una muestra de proceso marcada como Global mantiene la obra vinculada a ella, de modo que recolorear la muestra repinta todo lo pintado con ella de inmediato. Las muestras globales se pueden aplicar como un tinte.</dd>
+  <dt>Especial</dt><dd>Una tinta con nombre, destinada a imprimirse en su propia plancha. Los colores especiales son siempre globales.</dd>
+</dl>
+<p>Cada documento también empieza con una muesta fija <strong>[Registro]</strong>, que no tiene tipo de color propio y no se puede eliminar ni arrastrar. Usa una muestra global o especial cuando un color aparece muchas veces y podría cambiar: una edición actualiza cada objeto, en lugar de buscarlos a mano.</p>
+
+<h3 id="appearance-colour-groups">Grupos de color</h3>
+<p>Los grupos de color archivan muestras relacionadas, como una familia de tonos o la paleta de un proyecto. Arrastra muestras a un grupo para archivarlas, o selecciona algunas y crea un grupo con el botón Nuevo grupo de color del panel. Haz doble clic en la cabecera de un grupo para sus opciones. En el selector de color de cada ficha, cada grupo se muestra como una fila, de modo que una familia se lee como una rampa de tonos en lugar de una pared de fichas.</p>
+
+<h2 id="appearance-gradients">Degradados</h2>
+<p>Un degradado mezcla entre dos o más colores. Scissor crea degradados lineales, radiales y de forma libre, y tanto el panel como la herramienta en lienzo pueden construirlos y darles forma. Recurre a un degradado para dar profundidad a una forma plana, un lavado suave a un fondo, o un brillo a un botón.</p>
+
+<h3 id="appearance-gradient-panel">El panel Degradado</h3>
+<p>El panel <strong>Degradado</strong> (<kbd>&#8984;F9</kbd>) controla todo el degradado. Haz clic en la miniatura para rellenar el lado activo, elige Lineal, Radial o Forma libre del menú de tipo, y usa el botón de invertir para dar la vuelta a la rampa de extremo a extremo. La rampa misma lleva las paradas: haz clic en ella para añadir una parada en el color que ya tiene ahí, arrastra una parada para moverla, y arrastra un diamante entre dos paradas para desplazar dónde se encuentran los dos colores. La parada seleccionada tiene su propia muestra de color, un campo <em>Opacidad</em> y un campo <em>Ubicación</em>, y <em>Eliminar parada</em> la quita. <em>Ángulo</em> gira un degradado lineal o radial, y <em>Aspecto</em> (solo radial) aplasta un degradado radial en una elipse.</p>
+<figure class="shot">
+  <img src="img/gradient.gif" width="340" height="340" loading="lazy"
+       alt="Un cuadrado redondeado relleno con un degradado lineal de azul a ámbar cuya dirección barre alrededor." />
+  <figcaption>Un degradado lineal de azul a ámbar. Arrastrar el eje del degradado, o cambiar su ángulo, hace girar la mezcla alrededor de la forma.</figcaption>
+</figure>
+
+<h3 id="appearance-gradient-tool">La herramienta Degradado</h3>
+<p>Con la herramienta Degradado (<kbd>G</kbd>) los mismos controles se sitúan sobre la obra. Arrastra a través de un objeto para establecer el eje, manteniendo <kbd>&#8679;</kbd> para limitarlo a pasos de 45&deg;. El eje muestra una perilla redonda al inicio y una perilla cuadrada al final; arrastra cualquiera para mover ese extremo. Haz clic en el eje para añadir una parada en el color que ya tiene ahí, arrastra una parada a lo largo de él, y saca una parada bien lejos del eje para tirarla. Arrastra un diamante para mover el punto medio. <kbd>Supr</kbd> elimina la parada que tocaste por último.</p>
+
+<h3 id="appearance-freeform">Degradados de forma libre</h3>
+<p>Un degradado de forma libre coloca puntos de color en cualquier lugar de la forma en lugar de a lo largo de un eje, de modo que la mezcla puede seguir la forma de la obra. Con la herramienta Degradado, haz clic en la obra para colocar un punto de color, arrastra uno para moverlo, y pulsa <kbd>Supr</kbd> para quitarlo. Marca <em>Unir los puntos en líneas</em> en el panel para unir los puntos en líneas, lo que extiende un color a lo largo de una serie en lugar de desde un solo punto. Usa un degradado de forma libre para sombreado suave y orgánico que una rampa recta no puede dar.</p>
+
+<h2 id="appearance-patterns">Patrones</h2>
+<p>Un patrón es obra repetida como un mosaico y usada como relleno. Convierte una selección en un mosaico con <strong>Objeto &rsaquo; Patrón &rsaquo; Crear</strong>, luego rellena cualquier forma con él desde el panel <strong>Patrones</strong>: haz clic en un mosaico para rellenar, doble clic para editarlo, y <kbd>&#8997;</kbd>-clic para eliminarlo. <em>Opciones de mosaico</em> establece el tipo de mosaico, el desplazamiento de ladrillo, el tamaño y el espaciado, y si el mosaico se dimensiona y mueve con la obra. <strong>Editar patrón</strong> abre el mosaico en su lugar con sus copias repitiéndose a su alrededor mientras trabajas; haz clic en <em>Terminar edición</em> en el panel Patrones cuando el mosaico esté bien. Los patrones se adaptan a texturas repetidas, como rayas, puntos, tramas y fondos, que serían tediosas de dibujar a mano.</p>
+
+<h2 id="appearance-strokes">Contornos</h2>
+<p>El panel <strong>Contorno</strong> (<kbd>&#8984;F10</kbd>) da forma a la línea dibujada a lo largo de un trazado.</p>
+
+<h3 id="appearance-stroke-options">Grosor, terminales, uniones y alineación</h3>
+<p><em>Grosor</em> establece el grosor del contorno en puntos. Los botones de <em>Terminal</em> deciden cómo termina un trazado abierto: tope (corte cuadrado en el anclaje), redondo, o saliente (cuadrado, pero extendiéndose más allá del anclaje la mitad del grosor). Los botones de <em>Esquina</em> deciden cómo un contorno gira una esquina: inglete (un punto afilado), redondo, o bisel (un corte plano), con un <em>Límite</em> de inglete que bisela los puntos más afilados para que no se disparen. <em>Alinear</em> coloca el contorno en el centro del trazado, o completamente dentro o fuera de él, lo cual importa cuando una forma debe ajustarse exactamente a sus vecinas.</p>
+
+<h3 id="appearance-dashes">Líneas discontinuas</h3>
+<p>Marca <em>Línea discontinua</em> para romper el contorno en guiones. Los tres pares de guión y espacio de abajo establecen el patrón: el primer campo es una longitud de guión, el siguiente un espacio, y así sucesivamente, repitiéndose a lo largo del trazado. Deja los pares posteriores vacíos para un guión uniforme sencillo.</p>
+
+<h3 id="appearance-width-profiles">Perfiles de ancho y la herramienta Ancho</h3>
+<p>Un perfil de ancho afila el contorno a lo largo de su longitud en lugar de mantenerlo en un solo grosor. Elige un perfil del menú del panel y una pequeña vista previa muestra la forma que hace; los botones al lado invierten el perfil, guardan el contorno actual como un nuevo perfil, o eliminan un perfil que creaste. Un contorno que has dado forma a mano se muestra como <em>Personalizado</em> en el menú.</p>
+<p>La herramienta Ancho (<kbd>&#8679;W</kbd>) da forma a un contorno directamente en el lienzo: arrastra lejos del trazado para ensancharlo en ese punto, o hacia él para estrecharlo, dejando un punto de ancho atrás que puedes arrastrar de nuevo después. Úsala para dar a una línea dibujada el ensanchamiento y afilado de un pincel o una pluma.</p>
+
+<h3 id="appearance-brushes">Pinceles</h3>
+<p>El panel <strong>Pinceles</strong> (<kbd>F5</kbd>) pinta trazos con una forma en lugar de una línea simple. Contiene pinceles caligráficos, de dispersión, de arte, de cerda y de patrón. Haz clic en un pincel para aplicarlo a los trazados seleccionados; el Pincel usa el pincel que esté activo. Haz doble clic en un pincel para sus opciones, usa <em>Nuevo pincel…</em> para crear uno (los pinceles de dispersión, arte y patrón se construyen a partir de obra seleccionada), y <em>Eliminar pincel</em> para devolver un trazo a una línea simple.</p>
+
+<h2 id="appearance-opacity-blending">Opacidad y fusión</h2>
+<p>La opacidad y el modo de fusión deciden cómo un objeto se combina con lo que hay debajo. Se sitúan en el panel <strong>Transparencia</strong> (<kbd>&#8679;&#8984;F10</kbd>), y también en el panel Propiedades.</p>
+
+<h3 id="appearance-blend-modes">Los modos de fusión</h3>
+<p>La opacidad va del 0% (invisible) al 100% (sólido). El menú de modos ofrece dieciséis modos de fusión, que se dividen en grupos: modos que oscurecen, modos que aclaran, modos de contraste, modos de comparación, y los cuatro que toman una parte de un color.</p>
+<table>
+  <thead><tr><th>Modo</th><th>Qué hace</th></tr></thead>
+  <tbody>
+    <tr><td>Normal</td><td>Pinta sobre lo que hay debajo, sin fusión.</td></tr>
+    <tr><td>Oscurecer</td><td>Conserva el color más oscuro, canal por canal.</td></tr>
+    <tr><td>Multiplicar</td><td>Multiplica los dos colores, siempre oscureciendo; el blanco deja la base sin cambios.</td></tr>
+    <tr><td>Subexponer color</td><td>Oscurece la base para adoptar el color de fusión.</td></tr>
+    <tr><td>Aclarar</td><td>Conserva el color más claro.</td></tr>
+    <tr><td>Pantalla</td><td>La inversa de Multiplicar, siempre aclarando; el negro deja la base sin cambios.</td></tr>
+    <tr><td>Sobreexponer color</td><td>Aclara la base para adoptar el color de fusión.</td></tr>
+    <tr><td>Superponer</td><td>Multiplica o filtra según la base, aumentando el contraste.</td></tr>
+    <tr><td>Luz suave</td><td>Un aclarado u oscurecimiento suave, como si se proyectara una luz suave sobre la obra.</td></tr>
+    <tr><td>Luz fuerte</td><td>Multiplica o filtra según el color de fusión, como un foco duro.</td></tr>
+    <tr><td>Diferencia</td><td>Resta el color más oscuro del más claro; el blanco invierte la base, el negro no tiene efecto.</td></tr>
+    <tr><td>Exclusión</td><td>Como Diferencia, pero más suave y con menos contraste.</td></tr>
+    <tr><td>Tono</td><td>El tono de la fusión con la saturación y el brillo de la base.</td></tr>
+    <tr><td>Saturación</td><td>La saturación de la fusión con el tono y el brillo de la base.</td></tr>
+    <tr><td>Color</td><td>El tono y la saturación de la fusión con el brillo de la base: bueno para teñir obra en escala de grises.</td></tr>
+    <tr><td>Luminosidad</td><td>El brillo de la fusión con el tono y la saturación de la base.</td></tr>
+  </tbody>
+</table>
+<p>Para un grupo, dos interruptores cambian cómo se fusiona. <em>Contener fusión al grupo</em> mantiene los modos del grupo dentro de sí mismo, de modo que sus miembros se fusionan entre sí pero no con la obra detrás del grupo. <em>Grupo de eliminación</em> hace que cada miembro oculte los que están debajo de él dentro del grupo en lugar de fusionarse a través de ellos.</p>
+
+<h3 id="appearance-opacity-masks">Máscaras de opacidad</h3>
+<p>Una máscara de opacidad funde la obra por tono. Selecciona la obra y, encima de ella, la forma con la que enmascarar, luego haz clic en <em>Crear máscara</em> (también <strong>Objeto &rsaquo; Máscara de recorte &rsaquo; Crear máscara de opacidad</strong>). El objeto superior se convierte en la máscara: donde es clara la obra se muestra, y donde es oscura la obra se funde, de modo que un degradado de blanco a negro hace un fundido suave. <em>Liberar</em> devuelve los dos objetos. Usa una máscara para un borde suave o un viñeteado que un recorte duro no puede hacer.</p>
+
+<h2 id="appearance-appearance-panel">El panel Pila de pintura</h2>
+<p>El panel <strong>Pila de pintura</strong> (<kbd>&#8679;F6</kbd>) lista todo lo pintado en un objeto: sus rellenos y sus contornos, con cualquier efecto en vivo encima de ellos. Porque un objeto puede contener varios rellenos y contornos, aquí es donde los apilas, por ejemplo un contorno oscuro ancho debajo de uno claro fino para hacer un contorno, o dos rellenos con opacidades diferentes.</p>
+<p>La pila se dibuja de arriba hacia abajo, coincidiendo con el orden en que pinta. Cada fila de relleno o contorno tiene un ojo para ocultarlo, una ficha de pintura que abre el selector de color, un campo de opacidad, un campo de grosor para contornos, y flechas para moverlo arriba o abajo en la pila, más un botón para eliminarlo. <em>Añadir relleno</em> y <em>Añadir contorno</em> ponen otro encima. Los efectos se muestran sobre los rellenos y contornos con una insignia <em>fx</em>; haz clic en un efecto para editar sus opciones, o eliminarlo de su fila. Cuando el aspecto en capas está terminado, <strong>Objeto &rsaquo; Expandir apariencia</strong> hornea toda la pila en obra ordinaria.</p>
+
+<h2 id="appearance-graphic-styles">Estilos gráficos</h2>
+<p>Un estilo gráfico es una apariencia guardada que puedes aplicar a otros objetos. El panel <strong>Estilos gráficos</strong> (<kbd>&#8679;F5</kbd>) los guarda como fichas, cada una mostrando su relleno con su contorno como el borde de la ficha. Selecciona un objeto y haz clic en <em>Nuevo estilo</em> para guardar sus rellenos y contornos; haz clic en una ficha para aplicar ese estilo a la selección, y <kbd>&#8997;</kbd>-clic en una ficha para eliminarla. Los estilos merece la pena crearlos cuando el mismo aspecto, como un tratamiento de botón de casa o un estilo de etiqueta, tiene que ir en muchos objetos y permanecer consistente.</p>
+
+<h2 id="appearance-overprint">Sobreimpresión</h2>
+<p>El panel <strong>Atributos</strong> (<kbd>&#8984;F11</kbd>) establece la sobreimpresión para trabajo de impresión. <em>Sobreimprimir relleno</em> y <em>Sobreimprimir contorno</em> hacen que esa tinta se imprima encima de los colores debajo de ella en lugar de eliminarlos, lo cual se usa para el atrapado y para efectos como un negro que se imprime encima en lugar de reemplazar lo que hay debajo. Activa <strong>Ver &rsaquo; Vista previa de sobreimpresión</strong> para verlo en pantalla; la exportación PDF mantiene la configuración.</p>
+
+<h2 id="appearance-recolour">Recolorear obra</h2>
+<p><strong>Edición &rsaquo; Editar colores &rsaquo; Remapear colores…</strong> lista cada color en la selección con cuántas veces se usa. Haz clic en la ficha a la derecha de una fila para elegir en qué se convierte ese color, o en la flecha entre las dos fichas para dejar ese color como está. Los deslizadores de Tono, Saturación y Brillo desplazan todo el conjunto junto, y dos botones reordenan aleatoriamente los nuevos colores o aleatorizan su saturación y brillo, lo cual es una manera rápida de probar variaciones. La obra se actualiza mientras avanzas, y <em>Restablecer</em> vuelve a los colores con los que empezó.</p>
+<p>El mismo submenú también ofrece cambios de un solo paso: <em>Mezclar de delante a atrás</em> extiende una serie de colores entre los objetos delantero y trasero, <em>Convertir a escala de grises</em> elimina todo el color, <em>Invertir colores</em> invierte cada uno, y <em>Saturar…</em> sube o baja la saturación en toda la selección.</p>

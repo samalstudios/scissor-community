@@ -1,0 +1,91 @@
+<p class="lede">Los símbolos, pinceles y patrones son tres maneras de dibujar una pieza de obra una vez y reutilizarla. Cambia el original y cada uso de él cambia con él, de modo que un elemento repetido permanece consistente y rápido de actualizar.</p>
+
+<p>Los atajos a continuación están escritos en formato macOS. En Windows, lee <kbd>&#8984;</kbd> como <kbd>Ctrl</kbd>, <kbd>&#8997;</kbd> como <kbd>Alt</kbd> y <kbd>&#8679;</kbd> como <kbd>Shift</kbd>.</p>
+
+<h2 id="symbols-panel">El panel Símbolos</h2>
+<p>Un símbolo es una pieza de obra guardada que puedes colocar en el documento cualquier número de veces. Cada copia es una <em>instancia</em>: apunta de vuelta a la única definición en lugar de contener su propia obra, de modo que el documento permanece pequeño por muchas instancias que coloques, y un cambio en la definición llega a todas ellas a la vez. Recurre a los símbolos cuando el mismo elemento se repite, como un árbol en un paisaje, un pin en un mapa, un tornillo en un plano de conjunto, o un logotipo que aparece en varias mesas.</p>
+<p>Abre el panel con <strong>Ventana &gt; Símbolos</strong> (<kbd>&#8679;&#8984;F11</kbd>), o desde su pestaña en el panel de acoplamiento. Lista los símbolos del documento por nombre. Hacer clic en un nombre lo selecciona como el símbolo activo, que es el que la Dispersión de símbolos coloca; el símbolo activo está resaltado.</p>
+
+<h3 id="symbols-make">Crear un símbolo</h3>
+<p>Selecciona la obra que quieres reutilizar y haz clic en <strong>Nuevo símbolo</strong>. La selección se almacena como la definición del símbolo y, en su lugar en el lienzo, se reemplaza por una sola instancia situándose exactamente donde estaba la obra. La definición se mantiene apartada, de modo que no ensucia el lienzo ni las capas ordinarias. Si no nombras nada, el símbolo se llama <code>Símbolo 1</code>, <code>Símbolo 2</code> y así sucesivamente, en el orden en que los creas.</p>
+
+<h3 id="symbols-place">Colocar instancias</h3>
+<p>Haz doble clic en un símbolo en el panel para colocar una instancia nueva en el centro de la vista actual. Coloca tantas como necesites. Una instancia se comporta como cualquier otro objeto una vez que está en el lienzo: selecciónala y puedes moverla, escalarla, rotarla o reflejarla, y establecer su opacidad y fusión, todo sin tocar la definición, porque esos cambios van sobre la propia instancia. Usa esto para variar el tamaño y ángulo de piezas repetidas manteniéndolas vinculadas al mismo maestro.</p>
+
+<h3 id="symbols-edit">Editar un símbolo</h3>
+<p>Haz doble clic en una instancia en el lienzo con la herramienta Selección (<kbd>V</kbd>) para entrar en la definición. Todo lo demás de la página se atenúa, y editas la obra por su cuenta. Haz doble clic en una parte vacía del lienzo para salir de nuevo. Porque cada instancia dibuja la misma definición, la edición que haces aparece en todas ellas juntas. Este es el punto de un símbolo: corrige la obra una vez y todo el documento se actualiza, en lugar de buscar cada copia.</p>
+
+<h3 id="symbols-break">Romper el vínculo</h3>
+<p>Cuando una instancia necesita diferenciarse del resto de una manera que va más allá de la posición, el tamaño o la opacidad, selecciónala y haz clic en <strong>Romper vínculo</strong>. La instancia se reemplaza por una copia ordinaria y editable de la definición, del mismo tamaño y ángulo, ya no vinculada al símbolo. Los cambios en el símbolo ya no llegarán a ella. El botón está disponible solo mientras una instancia de símbolo está seleccionada.</p>
+<p>Para eliminar un símbolo por completo, mantén <kbd>&#8997;</kbd> y haz clic en su nombre en el panel. Su definición y cada instancia de él se eliminan, ya que una instancia sin definición no dibujaría nada.</p>
+
+<h2 id="symbols-symbolism">Las herramientas de simbolismo</h2>
+<p>Las herramientas de simbolismo dispersan y ajustan instancias de símbolos por puñados, bajo un pincel redondo, en lugar de una a una. Comparten una ranura en la barra de herramientas; mantén pulsada la ranura para elegir entre ellas. Actúan sobre las instancias dentro de la selección, o sobre cada instancia editable del documento cuando no hay nada seleccionado, de modo que puedes dirigir un campo completo de símbolos a la vez. Mantén <kbd>&#8997;</kbd> para invertir el efecto de cualquiera de ellas.</p>
+<p>Mientras una herramienta de simbolismo está activa, <kbd>[</kbd> y <kbd>]</kbd> hacen el pincel más pequeño y más grande, y <kbd>{</kbd> y <kbd>}</kbd> bajan y suben su intensidad (qué tan duro trabaja cada pasada).</p>
+<table>
+<thead><tr><th>Herramienta</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+<tbody>
+<tr><td>Dispersión de símbolos</td><td><kbd>&#8679;S</kbd></td><td>Arrastra para colocar instancias del símbolo activo, espaciadas a medida que te mueves; las instancias se recogen en un solo grupo <em>Conjunto de símbolos</em>. Mantén <kbd>&#8997;</kbd> para volver a quitar instancias bajo el pincel</td></tr>
+<tr><td>Empujar símbolo</td><td></td><td>Empuja las instancias en la dirección que arrastras, de modo que puedes ordenar una dispersión sin mover cada pieza</td></tr>
+<tr><td>Agrupar símbolo</td><td></td><td>Atrae las instancias hacia el pincel; <kbd>&#8997;</kbd> las separa</td></tr>
+<tr><td>Redimensionar símbolo</td><td></td><td>Agranda las instancias bajo el pincel; <kbd>&#8997;</kbd> las encoge</td></tr>
+<tr><td>Girar símbolo</td><td></td><td>Gira las instancias para seguir la dirección de tu arrastre</td></tr>
+<tr><td>Teñir símbolo</td><td></td><td>Tiñe las instancias hacia el color de relleno actual, para variación a través de un grupo; <kbd>&#8997;</kbd> elimina el tinte</td></tr>
+<tr><td>Fundir símbolo</td><td></td><td>Funde las instancias bajando su opacidad; <kbd>&#8997;</kbd> las devuelve</td></tr>
+<tr><td>Restilar símbolo</td><td></td><td>Aplica el estilo gráfico elegido en el panel Estilos gráficos a las instancias; <kbd>&#8997;</kbd> lo borra</td></tr>
+</tbody>
+</table>
+<p>Tres herramientas necesitan algo configurado primero. Dispersión de símbolos necesita un símbolo que rociar, así que crea uno en el panel Símbolos antes de empezar. Restilar símbolo aplica el estilo gráfico que esté elegido en el panel Estilos gráficos, así que elige un estilo ahí primero; Teñir símbolo usa el color de relleno actual, así que establece el relleno antes de teñir.</p>
+
+<h2 id="symbols-brushes">El panel Pinceles</h2>
+<p>Un pincel decide cómo se dibuja un trazo a lo largo de un trazado. En lugar de una línea simple de ancho uniforme, el trazado puede llevar un trazo de punta de pluma, un rastro de obra dispersada, una forma estirada de extremo a extremo, o una banda en mosaico. El trazado permanece completamente editable debajo: remodela y el trazo con pincel sigue. Abre el panel con <strong>Ventana &gt; Pinceles</strong> (<kbd>F5</kbd>), o desde su pestaña en el panel de acoplamiento. Cada pincel muestra una pequeña vista previa junto a su nombre.</p>
+
+<h3 id="symbols-brush-kinds">Tipos de pincel</h3>
+<p>Scissor tiene cinco tipos de pincel. Dos se dibujan a partir de unos pocos números, y tres se construyen a partir de obra que seleccionas.</p>
+<dl>
+  <dt>Caligráfico</dt>
+  <dd>Una punta oval inclinada que se engorda y adelgaza a medida que el trazado gira, como una pluma ancha. Establece su Ángulo, su Redondez y su Tamaño en puntos. Úsalo para trazos de lettering, firmas y cualquier línea destinada a parecer dibujada a mano.</dd>
+  <dt>Cerdas</dt>
+  <dd>Un grupo de trazos finos que se lee como un pincel cargado. Establece el Tamaño en puntos, el número de Cerdas y la Opacidad de pintura para que las pasadas superpuestas se acumulen. Recurre a ella cuando quieres un borde suave y pictórico en lugar de uno limpio.</dd>
+  <dt>Dispersión</dt>
+  <dd>Esparce copias de obra seleccionada a lo largo del trazado. Establece el Tamaño de las copias, el Espaciado entre ellas, qué tan lejos se Dispersan de la línea, y su Rotación, con opciones para rotar cada copia en relación al trazado y para recolorearla con el color de contorno. Úsalo para confeti, hojas, estrellas o burbujas siguiendo una curva.</dd>
+  <dt>Arte</dt>
+  <dd>Estira una pieza de obra seleccionada a lo largo de toda la longitud del trazado. Establece su Ancho, con una opción para recolorearlo con el color de contorno. Úsalo para un trazo de tinta afilado, una cinta, una flecha o una marca de carboncillo tosca que se dobla con la línea.</dd>
+  <dt>Patrón</dt>
+  <dd>Mosaica obra seleccionada de extremo a extremo a lo largo del trazado, como un borde decorativo. Establece la Escala y el Espaciado, con una opción para recolorearlo con el color de contorno. Úsalo para cadena, cuerda, costura o un marco repetido.</dd>
+</dl>
+
+<h3 id="symbols-brush-apply">Aplicar y eliminar un pincel</h3>
+<p>Selecciona uno o más trazados y haz clic en un pincel para dibujar sus contornos con él. Un trazado sin contorno visible recibe uno para que el pincel tenga una línea a lo largo de la que correr. La herramienta Pincel (<kbd>B</kbd>) dibuja nuevos trazos con el pincel que esté elegido actualmente, así que elige un pincel y pinta directamente en el lienzo. Para quitar un pincel de los contornos seleccionados y devolverlos a líneas simples, haz clic en <strong>Eliminar pincel</strong>.</p>
+
+<h3 id="symbols-brush-manage">Crear, editar y eliminar pinceles</h3>
+<p>Haz clic en <strong>Nuevo pincel…</strong>, elige uno de los cinco tipos, y establece sus opciones. Para un pincel de dispersión, arte o patrón, selecciona la obra que debe usar antes de abrir el diálogo, ya que esa obra se convierte en el pincel. Para cambiar un pincel después, selecciónalo y haz clic en <strong>Opciones…</strong> (o doble clic en él en la lista); cualquier trazo que lo use se redibuja con los nuevos ajustes. <strong>Eliminar</strong> quita el pincel seleccionado, después de preguntar; los trazos que lo usaban vuelven a líneas simples.</p>
+
+<h2 id="symbols-patterns">El panel Patrones</h2>
+<p>Un patrón es un mosaico de obra que se repite para rellenar una forma. Define el mosaico una vez y puedes verterlo en cualquier objeto como relleno, de modo que una textura o motivo permanece uniforme a través de la obra y se actualiza en todas partes cuando editas el mosaico. El panel se sitúa en el panel de acoplamiento, y los mismos comandos viven bajo <strong>Objeto &gt; Patrón</strong>.</p>
+
+<h3 id="symbols-pattern-make">Crear un patrón</h3>
+<p>Selecciona la obra para un mosaico y haz clic en <strong>Crear patrón</strong> (o <strong>Objeto &gt; Patrón &gt; Crear</strong>). Una copia de la obra se almacena como un mosaico repetido y se añade al panel; la obra que dibujaste permanece donde está. Los patrones se llaman <code>Patrón 1</code>, <code>Patrón 2</code> y así sucesivamente a medida que los creas.</p>
+
+<h3 id="symbols-pattern-fill">Rellenar con un patrón</h3>
+<p>Selecciona una forma y haz clic en un patrón en el panel para establecerlo como el relleno de la forma. Con nada seleccionado, hacer clic en un patrón lo convierte en el color de relleno para la próxima forma que dibujes. Porque es un relleno, el patrón se repite para cubrir la forma y se recorta a su contorno. Usa esto para fondos, telas, follaje, o cualquier superficie que debe leerse como una repetición en lugar de un color plano. Para eliminar un patrón del documento, mantén <kbd>&#8997;</kbd> y haz clic en él en el panel; las formas que estaban rellenas con él vuelven a sin relleno.</p>
+
+<h3 id="symbols-pattern-edit">Editar el mosaico</h3>
+<p>Haz doble clic en un patrón en el panel para editar su mosaico. El resto de la obra se atenúa y trabajas en el mosaico por su cuenta, con un botón <strong>Terminar edición</strong> en el panel; haz clic en él (o usa <strong>Objeto &gt; Patrón &gt; Editar patrón</strong> de nuevo) cuando hayas terminado. Cada forma rellena con el patrón se actualiza para coincidir. También puedes empezar a editar seleccionando una forma que está rellena con un patrón y eligiendo <strong>Editar patrón</strong>.</p>
+
+<h3 id="symbols-pattern-options">Opciones de mosaico</h3>
+<p>Haz clic en el botón de opciones de mosaico junto a un patrón (o <strong>Objeto &gt; Patrón &gt; Opciones de mosaico…</strong>) para controlar cómo se repite el mosaico. Estos ajustes cambian la disposición de la repetición sin cambiar la obra en el mosaico.</p>
+<dl>
+  <dt>Tipo de mosaico</dt>
+  <dd>Cómo se alinean filas y columnas: Cuadrícula, Ladrillo por fila, Ladrillo por columna, Hex por columna o Hex por fila. Ladrillo desplaza filas o columnas alternas como la albañilería; hex empaca los mosaicos en un panal.</dd>
+  <dt>Desplazamiento de ladrillo</dt>
+  <dd>Para los tipos de ladrillo, qué tan lejos se desplaza cada fila o columna alterna, como porcentaje del mosaico.</dd>
+  <dt>Dimensionar mosaico a la obra</dt>
+  <dd>Ajusta el mosaico a los límites de la obra. Desactívalo para establecer el Ancho y el Alto del mosaico tú mismo.</dd>
+  <dt>Ancho y alto</dt>
+  <dd>El tamaño del mosaico en píxeles, usado cuando el mosaico no se dimensiona a la obra.</dd>
+  <dt>Espaciado horizontal y vertical</dt>
+  <dd>Huecos dejados entre mosaicos, en píxeles. Los valores positivos espacian el motivo; los negativos superponen los mosaicos.</dd>
+  <dt>Mover mosaico con la obra</dt>
+  <dd>Mantiene el mosaico alineado a la obra cuando se mueve, de modo que la repetición viaja con el objeto.</dd>
+</dl>
