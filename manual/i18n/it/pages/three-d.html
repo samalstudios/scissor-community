@@ -1,0 +1,65 @@
+<p class="lede">3D e Materiali trasforma una forma piatta in un solido che puoi ruotare, illuminare e dare una superficie, senza mai lasciare indietro il tuo lavoro vettoriale. È un effetto live: il solido è disegnato dal tracciato sotto, e quel tracciato resta completamente modificabile, così puoi cambiare il contorno, il colore o il testo in qualsiasi momento e il 3D si ricostruisce attorno.</p>
+
+<h2 id="three-d-opening">Aprire l'effetto</h2>
+<p>Seleziona prima un oggetto, poi scegli un tipo di oggetto da <strong>Effetto &rsaquo; 3D e Materiali</strong>: <em>Piano</em>, <em>Estrudi e smussa</em>, <em>Rivolvi</em> oppure <em>Gonfia</em>. Ciascuno aggiunge l'effetto e apre il pannello <strong>3D e Materiali</strong>, dove vivono il resto dei controlli. Lo stesso pannello si apre da solo da <strong>Finestra &rsaquo; 3D e Materiali</strong> oppure da <strong>Effetto &rsaquo; 3D e Materiali &rsaquo; Pannello 3D e Materiali</strong>.</p>
+<p>Il pannello ha bisogno di qualcosa di selezionato prima di poter fare nulla; senza selezione lo dice e disattiva i suoi controlli. Una volta che un oggetto ha l'effetto, i quattro pulsanti del tipo di oggetto corrono lungo la parte superiore del pannello, così puoi passare da un'estrusione a una rivoluzione in un clic e mantenere rotazione e illuminazione che hai già impostato.</p>
+<p>Poiché è un effetto e non una conversione, puoi applicarlo a quasi tutto ciò che un tracciato può contenere: una forma, un gruppo, un contorni o testo live. Modificare la sorgente, ad esempio ridigitare una parola o spostare un'ancora, riesegue l'effetto sul nuovo lavoro.</p>
+
+<h2 id="three-d-types">I quattro tipi di oggetto</h2>
+<p>Il tipo di oggetto decide come la forma piatta viene letta come solido. Scegli quella che corrisponde alla forma che vuoi ottenere.</p>
+
+<h3 id="three-d-plane">Piano</h3>
+<p>Piano lascia il lavoro piatto e lo posiziona come una scheda nello spazio 3D, quindi tutto ciò che fa è permetterti di ruotarlo e inclinarlo. Non c'è profondità da impostare. Usalo quando vuoi un pezzo di lavoro piatto che si trova a un angolo, come un'etichella appoggiata su una superficie o un badge inclinato per catturare la luce, senza dargli spessore.</p>
+
+<h3 id="three-d-extrude">Estrudi e smussa</h3>
+<p>Estrudi spinge la forma dritta indietro per darle spessore, trasformando un contorno in un blocco solido. Una smussatura arrotonda o taglia i bordi davanti e dietro perché non restino netti. I fori vengono mantenuti: un tracciato composto come un anello o una lettera con il contro resta cavo per tutto il percorso. È il tipo da usare per lettering, loghi, icone e badge che devono leggersi come rilievi o scolpiti.</p>
+<figure class="shot">
+  <img src="img/3d-extrude.gif" width="620" height="620" loading="lazy" alt="Una stella vettoriale piatta che viene estrusa in una stella tridimensionale e ruotata per mostrare la sua profondità." />
+  <figcaption>Estrudi e smussa costruisce profondità da una forma piatta, live. La stella resta un tracciato modificabile sotto.</figcaption>
+</figure>
+
+<h3 id="three-d-revolve">Rivolvi</h3>
+<p>Rivolvi spazza la forma attorno al suo bordo sinistro, nel modo in cui un profilo girato su un tornio traccia un solido. Disegna metà di un oggetto simmetrico, un bicchiere, una bottiglia, una ciotola, un pezzo degli scacchi, e rivolvilo nel tondo. L'angolo di scansione può essere inferiore a un giro completo per lasciare una sezione che mostra l'interno.</p>
+
+<h3 id="three-d-inflate">Gonfia</h3>
+<p>Gonfia spinge la forma verso l'esterno, come se fuscino riempito d'aria, dandole una faccia morbida e arrotondata invece che piatta. Usalo per pulsanti morbidi, badge gonfi, dolciumi e adesivi arrotondati dove vuoi un rigonfiamento piuttosto che un bordo estruso duro.</p>
+
+<h2 id="three-d-shape">Profondità, smussatura e passi</h2>
+<p>La sezione <em>Oggetto</em> contiene i campi che modellano il solido. Quali appaiono dipende dal tipo di oggetto, così il pannello mostra solo i campi che fanno qualcosa per il tipo in questione.</p>
+<table>
+  <thead><tr><th>Campo</th><th>Mostrato per</th><th>Cosa imposta</th></tr></thead>
+  <tbody>
+    <tr><td>Profondità</td><td>Estrudi e smussa, Gonfia</td><td>Quanto la forma viene spinta indietro, oppure quanto si gonfia, in pixel.</td></tr>
+    <tr><td>Smussatura</td><td>Estrudi e smussa</td><td>La dimensione del bordo arrotondato o tagliato sui lati davanti e dietro, in pixel; lascialo a zero per un bordo quadrato semplice.</td></tr>
+    <tr><td>Angolo</td><td>Rivolvi</td><td>Quanto lontano il profilo viene spazzato, fino a un giro completo di 360&deg;. Un angolo inferiore lascia l'oggetto aperto, mostrando il suo interno.</td></tr>
+    <tr><td>Passi</td><td>Estrudi e smussa, Rivolvi, Gonfia</td><td>Quanti segmenti costruiscono le parti curve. Più passi danno una superficie più liscia; meno lo lasciano sfaccettato.</td></tr>
+  </tbody>
+</table>
+<p>Piano non ha nessuno di questi: non ha spessore da descrivere. Se una rivoluzione curva o una smussatura arrotondata sembra troppo angolare, aumenta i passi; se vuoi volutamente un aspetto low-poly e sfaccettato, riducili.</p>
+
+<h2 id="three-d-rotation">Ruotare l'oggetto</h2>
+<p>La sezione <em>Rotazione</em> imposta come l'oggetto ti guarda in faccia. Il modo più veloce è il pad di anteprima: trascina attraverso di esso per far girare l'oggetto a sinistra e a destra, e trascina su e giù per inclinarlo in avanti e indietro. Per angoli esatti, i campi <em>X</em>, <em>Y</em> e <em>Z</em> ruotano l'oggetto attorno a ciascun asse, ciascuno da -180&deg; a 180&deg;.</p>
+<p>Il menu di rotazione contiene punti di vista pronti, così puoi far atterrare l'oggetto direttamente in una vista standard invece che regolarla:</p>
+<dl>
+  <dt>Fuori asse Davanti, Dietro, Sinistra, Destra, Sopra, Sotto</dt><dd>Viste a tre quarti che mostrano una faccia principale insieme a un po' del lato superiore o laterale. Un buon predefinito per un solido che deve sembrare un solido.</dd>
+  <dt>Isometrica Sinistra, Destra, Sopra, Sotto</dt><dd>Viste isometriche vere, dove i tre assi sono accorciati ugualmente e le linee restano parallele. Si adatta a lavori tecnici e in stile gioco che devono allinearsi.</dd>
+  <dt>Davanti, Dietro, Sinistra, Destra, Sopra, Sotto</dt><dd>Le sei viste frontali, che guardano quadrati a una faccia. Comode per controllare la forma o per una presentazione piatta e frontale.</dd>
+</dl>
+<p>Scegliere un preset compila i campi X, Y e Z; modificarne uno a mano mostra il menu come <em>Rotazione personalizzata</em>. Il campo <em>Prospettiva</em>, da 0&deg; a 160&deg;, controlla quanto fortemente l'oggetto retrocede: a zero i lati restano paralleli, e man mano che lo alzi i bordi lontani si verso un punto di fuga, nel modo in cui un oggetto reale visto da vicino sembra sottilizzarsi. Aggiungi un po' di prospettica per una vista a tre quarti realistica, oppure lasciala a zero per mantenere esatta una configurazione isometrica o frontale.</p>
+
+<h2 id="three-d-lighting">Illuminazione</h2>
+<p>La sezione <em>Illuminazione</em> decide da dove viene la luce e quanto è forte, ed è ciò che fa leggere la superficie come rilievo, scolpita o arrotondata. Un menu di illuminazione offre quattro punti di partenza, <em>Standard</em>, <em>Diffusa</em>, <em>In alto a sinistra</em> e <em>Destra</em>, e qualsiasi modifica ai campi sotto lo mostra come <em>Illuminazione personalizzata</em>.</p>
+<dl>
+  <dt>Intensità</dt><dd>La forza della luce principale, come percentuale. Più alta rende le facce illuminate più chiare e i riflessi più forti.</dd>
+  <dt>Ambientale</dt><dd>Una luce di riempimento che solleva l'intero oggetto, come percentuale, così le facce in ombra non cadono nel nero. Aumentala per un aspetto più morbido e uniforme; riducila per un contrasto più profondo.</dd>
+  <dt>Rotazione</dt><dd>Dove la luce si trova attorno all'oggetto, da -180&deg; a 180&deg;, che sposta il riflesso e l'ombra dall'altro lato.</dd>
+  <dt>Altezza</dt><dd>Quanto in alto la luce è sopra l'oggetto, da 0&deg; (ad altezza dell'oggetto, per ombre lunghe e raschianti) a 90&deg; (direttamente sopra, per luce uniforme).</dd>
+</dl>
+<p><em>Diffusa</em> dà una finitura morbida e a basso contrasto; <em>In alto a sinistra</em> e <em>Destra</em> lanciano la luce da un lato per un aspetto più drammatico e scolpito. Parti dal preset più vicino, poi regola i quattro campi a piacimento.</p>
+
+<h2 id="three-d-materials">Materiali</h2>
+<p>Tre pulsanti materiale impostano come la superficie cattura la luce: <em>Plastica</em>, <em>Opaco</em> e <em>Metallo</em>. Plastica dà una lucentezza morbida con un riflesso chiaro, la scelta abituale per un aspetto amichevole e stampato. Opaco rimuove la lucentezza per una finitura piatta e uniforme, che si legge come carta, argilla o superficie stampata. Metallo dà una lucentezza più dura e a contrasto più alto, per cromo, oro e altri metalli lucidi. Il materiale lavora insieme all'illuminazione, quindi una modifica all'uno vale la pena di essere controllata rispetto all'altro.</p>
+
+<h2 id="three-d-expand">Mantenerlo live ed espandere</h2>
+<p>Tutto quanto sopra è memorizzato come un unico effetto live sull'oggetto, elencato nel pannello <strong>Aspetto</strong> (<kbd>&#8679;F6</kbd>) con un badge <em>fx</em> sopra i riempimenti e i contorni dell'oggetto. Fai clic su quella voce per riaprire il pannello 3D e Materiali, oppure rimuoverlo lì per riportare l'oggetto a piatto. Dentro il pannello, <em>Rimuovi 3D</em> toglie l'effetto dalla selezione.</p>
+<p>Mentre l'effetto è live il lavoro sotto resta un tracciato semplice e modificabile, ed è questo che ti permette di continuare a regolare la forma, il colore e il testo. Quando l'aspetto è sistemato e vuoi il risultato come lavoro vettoriale ordinario, ad esempio per modificare le singole facce o per passare il file, usa <em>Espandi come vettore</em> nel pannello (lo stesso di <strong>Oggetto &rsaquo; Espandi aspetto</strong>). Questo incorpora il solido in tracciati e fine della sua vita come effetto, quindi espandi una copia se potresti ancora voler cambiare la profondità o l'angolo in seguito.</p>

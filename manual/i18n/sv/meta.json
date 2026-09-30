@@ -1,0 +1,31 @@
+{
+  "chrome": {
+    "Manual": "Manual",
+    "Shortcuts": "Genvägar",
+    "Open the editor": "Öppna redigeraren",
+    "Skip to the content": "Hoppa till innehållet",
+    "Search the manual": "Sök i manualen",
+    "Search the manual…": "Sök i manualen…",
+    "Breadcrumb": "Brödsmulor",
+    "More pages": "Fler sidor",
+    "Previous": "Föregående",
+    "Next": "Nästa",
+    "Language": "Språk",
+    "Scissor by Samal Studios.": "Scissor av Samal Studios.",
+    "Third-party licences": "Tredjepartslicenser",
+    "| Scissor manual": "| Scissor-manual",
+    "Scissor user manual: every tool, menu and shortcut": "Scissor-användarmanual: varje verktyg, meny och genväg",
+    "Scissor user manual": "Scissor-användarmanual"
+  },
+  "groups": {
+    "Get started": "Kom igång",
+    "Draw": "Rita",
+    "Arrange & build": "Ordna och bygg",
+    "Layout & pixels": "Layout och pixlar",
+    "Panels": "Paneler",
+    "Files & reference": "Filer och referens"
+  },
+  "nav": {},
+  "meta": {},
+  "keywords": {}
+}

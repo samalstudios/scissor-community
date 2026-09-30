@@ -1,0 +1,85 @@
+<p class="lede">El panel Capas es el mapa de un documento: cada capa, grupo y objeto en una sola lista, apilados en el orden en que se sitúan en la página. Úsalo para mostrar y ocultar, bloquear, renombrar, reordenar y seleccionar, y para ver de un vistazo en qué capa vive cualquier objeto.</p>
+
+<p>Los atajos a continuación están escritos en formato macOS. En Windows y Linux, lee <kbd>&#8984;</kbd> como Ctrl, <kbd>&#8997;</kbd> como Alt y <kbd>&#8679;</kbd> como Shift.</p>
+
+<h2 id="layers-panel">El panel Capas</h2>
+<p>Ábrelo desde <strong>Ventana &rsaquo; Capas</strong> (<kbd>F7</kbd>). La lista contiene tus capas en el nivel superior, con el contenido de cada capa anidado debajo: grupos, trazados, texto, imágenes y capas de píxeles, dibujados como un árbol que puedes abrir y cerrar. Un contenedor (una capa o un grupo) lleva un pequeño triángulo a la izquierda de su fila; haz clic en él para plegar el contenedor o abrirlo. Los documentos profundos permanecen legibles porque puedes colapsar las partes en las que no estás trabajando.</p>
+<p>Dos botones se sitúan al pie del panel. <strong>Crear nueva capa</strong> añade una capa vacía justo encima de la que está activa actualmente y hace activa la nueva. <strong>Eliminar selección</strong> elimina lo que sea que esté seleccionado; un documento siempre conserva al menos una capa, de modo que la última capa restante no se puede eliminar de esta manera. Para renombrar cualquier capa, grupo o objeto, haz doble clic en su nombre en la lista, escribe y pulsa <kbd>Enter</kbd>. Nombrar las partes de un documento concurrido es la manera más rápida de mantenerlo navegable.</p>
+
+<h3 id="layers-row">Qué muestra cada fila</h3>
+<p>Leyendo una fila de izquierda a derecha:</p>
+<table>
+  <thead><tr><th>Parte</th><th>Qué hace</th></tr></thead>
+  <tbody>
+    <tr><td>Ojo</td><td>Muestra u oculta esa capa, grupo o objeto. Una fila con el ojo desactivado no se dibuja ni se imprime ni se exporta.</td></tr>
+    <tr><td>Bloqueo</td><td>Bloquea o desbloquea la fila. Un objeto bloqueado no se puede seleccionar ni editar en el lienzo.</td></tr>
+    <tr><td>Ficha de color</td><td>Solo en filas de capa: la etiqueta de color de la capa, utilizada para teñir las marcas de selección y resaltados de esa capa.</td></tr>
+    <tr><td>Triángulo</td><td>Solo en contenedores: abre o cierra la capa o grupo para revelar lo que hay dentro.</td></tr>
+    <tr><td>Icono de tipo</td><td>Marca grupos y grupos de recorte (un grupo de recorte se dibuja con un contorno discontinuo).</td></tr>
+    <tr><td>Nombre</td><td>El nombre, o un marcador de posición entre paréntesis angulares como <code>&lt;Trazado&gt;</code> o <code>&lt;Grupo&gt;</code> cuando algo no tiene nombre. Doble clic para renombrar.</td></tr>
+    <tr><td>Cuadrado de selección</td><td>En el borde derecho: un pequeño cuadrado en el color de la capa que aparece en cualquier fila que contenga parte de la selección actual.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="layers-groups">Capas y grupos</h2>
+<p>Las capas son los contenedores de nivel superior de un documento. Existen para mantener separadas partes no relacionadas de la obra: un fondo en una capa, el dibujo principal en otra, etiquetas en una tercera. Porque una capa se sitúa en la raíz del árbol, ocultar, bloquear o reordenar una mueve todo lo que contiene en un solo paso.</p>
+<p>Un grupo es un contenedor más pequeño que vive dentro de una capa (o dentro de otro grupo) y viaja con la obra. Agrupar es cómo unes las partes de una sola cosa, las piezas de un logotipo o un icono, de modo que se mueven, escalan y apilan como una unidad. Los grupos se abren y cierran en el panel con su propio triángulo, exactamente como las capas.</p>
+<p>Las capas y los grupos se comportan de manera parecida en un aspecto importante: cada uno se puede mostrar u ocultar, bloquear o desbloquear, y cada uno puede llevar su propia opacidad y modo de fusión que se aplican a todo lo que contiene. La diferencia es de función. Las capas organizan el documento completo; los grupos vinculan objetos individuales.</p>
+
+<h3 id="layers-grouping">Agrupar y desagrupar</h3>
+<p>Selecciona dos o más objetos y elige <strong>Objeto &rsaquo; Agrupar</strong> (<kbd>&#8984;G</kbd>) para reunirlos en un grupo. <strong>Objeto &rsaquo; Desagrupar</strong> (<kbd>&#8679;&#8984;G</kbd>) vuelve a sacar los objetos de un grupo seleccionado. Los grupos se pueden anidar, de modo que un grupo de grupos está bien; cada <kbd>&#8679;&#8984;G</kbd> pelda un nivel. Recurre a un grupo siempre que te encuentres seleccionando el mismo puñado de objetos una y otra vez.</p>
+
+<h2 id="layers-stacking">Orden de apilamiento: delante y detrás</h2>
+<p>Los objetos se dibujan de atrás hacia adelante, de modo que un objeto más cerca del frente cubre los que están detrás de él donde se superponen. El panel muestra este orden directamente: la fila más alta es el objeto más al frente, y la fila inferior es el más atrás. Reordenar un objeto cambia qué cubre qué.</p>
+<p>La manera más rápida de reordenar es arrastrar: coge una fila y suétala más arriba o más abajo en la lista para moverla a través de la pila, o suéltala sobre una capa o grupo para mover el objeto <em>a</em> su interior. Arrastrar también es cómo mueves un objeto seleccionado a una capa diferente — sin cortar y pegar.</p>
+<p>Mueve una selección a través de la pila con <strong>Objeto &rsaquo; Organizar</strong>:</p>
+<table>
+  <thead><tr><th>Comando</th><th>Atajo</th><th>Efecto</th></tr></thead>
+  <tbody>
+    <tr><td>Traer al frente</td><td><kbd>&#8679;&#8984;]</kbd></td><td>Hasta el frente de su capa.</td></tr>
+    <tr><td>Traer hacia adelante</td><td><kbd>&#8984;]</kbd></td><td>Un paso hacia el frente.</td></tr>
+    <tr><td>Enviar hacia atrás</td><td><kbd>&#8984;[</kbd></td><td>Un paso hacia atrás.</td></tr>
+    <tr><td>Enviar al fondo</td><td><kbd>&#8679;&#8984;[</kbd></td><td>Hasta el fondo de su capa.</td></tr>
+  </tbody>
+</table>
+<p>Usa estos cuando una forma que necesitas está oculta detrás de otra, o cuando un fondo ha terminado encima del dibujo. Para trabajar a través de objetos que se sitúan uno encima de otro, <strong>Seleccionar &rsaquo; Siguiente objeto por encima</strong> (<kbd>&#8997;&#8984;]</kbd>) y <strong>Siguiente objeto por debajo</strong> (<kbd>&#8997;&#8984;[</kbd>) avanzan la selección hacia arriba y abajo por la pila, lo cual es útil para llegar a algo enterrado bajo otra obra.</p>
+
+<h2 id="layers-visibility">Mostrar y ocultar</h2>
+<p>Haz clic en el ojo de cualquier fila para ocultar esa capa, grupo o objeto; haz clic de nuevo para recuperarlo. Una fila oculta no participa en el dibujo, la impresión ni la exportación, de modo que ocultar es la manera segura de sacar algo de en medio sin eliminarlo. Úsalo para comparar dos versiones de un detalle, o para despejar un lienzo concurrido hasta la parte en la que estás trabajando.</p>
+<p>El menú ofrece lo mismo para la selección actual: <strong>Objeto &rsaquo; Ocultar &rsaquo; Selección</strong> (<kbd>&#8984;3</kbd>) oculta lo seleccionado, y <strong>Objeto &rsaquo; Mostrar todo</strong> (<kbd>&#8997;&#8984;3</kbd>) revela todo lo que estaba oculto.</p>
+
+<h2 id="layers-locking">Bloquear</h2>
+<p>Haz clic en el bloqueo de una fila para bloquearla. Un objeto bloqueado permanece visible pero no se puede seleccionar ni cambiar en el lienzo, de modo que está a salvo mientras trabajas a su alrededor. Bloquear una capa protege todo lo que contiene de una vez. Bloquea el fondo mientras dibujas sobre él, o bloquea un elemento terminado para que un arrastre accidental no lo mueva.</p>
+<p>Desde el menú, <strong>Objeto &rsaquo; Bloquear &rsaquo; Selección</strong> (<kbd>&#8984;2</kbd>) bloquea lo seleccionado, y <strong>Objeto &rsaquo; Desbloquear todo</strong> (<kbd>&#8997;&#8984;2</kbd>) libera todo de nuevo. Bloquear un objeto seleccionado también lo quita de la selección, ya que algo bloqueado ya no es algo sobre lo que puedas actuar.</p>
+
+<h2 id="layers-selecting">Seleccionar y la capa activa</h2>
+<p>Haz clic en la fila de un objeto en el panel para seleccionar ese objeto en el lienzo. Mantén <kbd>&#8679;</kbd>, <kbd>&#8984;</kbd> o <kbd>Ctrl</kbd> mientras haces clic para añadir otro objeto a la selección, de modo que puedes construir una selección desde la lista sin buscar formas pequeñas en la página.</p>
+<p>Hacer clic en una fila de <em>capa</em> hace algo diferente: convierte esa capa en la capa activa, marcada con una barra de color a lo largo de su borde izquierdo. La obra nueva que dibujas, colocas o pegas se añade a la capa activa, de modo que hacer clic en una capa antes de empezar decide dónde cae ese trabajo. Crear una nueva capa la hace activa de inmediato.</p>
+<p>El cuadrado de selección a la derecha de cada fila vincula el panel al lienzo. Aparece, en el color de la capa, en cada fila que contiene parte de la selección actual, y está relleno en los objetos exactos que están seleccionados. Porque la marca sube por el árbol, un vistazo por la lista muestra tanto qué está seleccionado como en qué capas y grupos se sitúan esos objetos.</p>
+
+<h2 id="layers-colours">Etiquetas de color</h2>
+<p>Cada capa recibe un color de una secuencia fija (azul claro, rojo, verde, azul, amarillo y así sucesivamente, doce en total, cíclicas a medida que añades más capas). Ese color es la etiqueta de la capa. Se muestra como la ficha junto al nombre de la capa, y tiñe las marcas de selección en el panel junto con los resaltados de selección y el cuadro delimitador dibujados en el lienzo para objetos en esa capa. El punto es la identificación rápida: cuando seleccionas algo y su cuadro sale verde, sabes de inmediato que pertenece a la capa verde. Distribuir un documento entre unas pocas capas bien nombradas y de diferentes colores hace mucho más fácil seguir la pista de dónde está todo.</p>
+
+<h2 id="layers-masks">Máscaras de recorte y de opacidad</h2>
+<p>Una capa o un grupo puede llevar su propia opacidad y modo de fusión, ambos establecidos en el panel <strong>Transparencia</strong> (<strong>Ventana &rsaquo; Transparencia</strong>, <kbd>&#8679;&#8984;F10</kbd>). El mismo panel contiene <strong>Contener fusión al grupo</strong>, que mantiene los modos de fusión de un grupo mezclándose solo entre sí en lugar de con lo que hay debajo, y <strong>Grupo de eliminación</strong>, donde cada objeto del grupo oculta los que están detrás de él en lugar de dejarlos ver a través. Las máscaras van un paso más allá y permiten que un objeto controle dónde, o con qué intensidad, se muestra otra obra.</p>
+
+<h3 id="layers-clip">Máscaras de recorte</h3>
+<p>Una máscara de recorta recorta la obra a una forma. Selecciona dos o más objetos y elige <strong>Objeto &rsaquo; Máscara de recorte &rsaquo; Crear</strong> (<kbd>&#8984;7</kbd>). El objeto seleccionado más alto se convierte en el trazado de recorte, y todo lo que está debajo se muestra solo dentro de esa forma; el resto se recorta. El resultado es un grupo de recorte, dibujado en el panel con un icono discontinuo. <strong>Liberar</strong> (<kbd>&#8997;&#8984;7</kbd>) lo deshace y devuelve los objetos. Recurre a esto para recortar una fotografía o un patrón concurrido a un círculo, una letra, o cualquier contorno que dibujes encima.</p>
+
+<h3 id="layers-opacity-mask">Máscaras de opacidad</h3>
+<p>Una máscara de opacidad funde la obra según la luminosidad de otro objeto. Selecciona dos o más objetos y elige <strong>Objeto &rsaquo; Máscara de recorte &rsaquo; Crear máscara de opacidad</strong>, o usa <strong>Crear máscara</strong> en el panel Transparencia. El objeto más alto se convierte en la máscara: donde es clara la obra de debajo se muestra completa, donde es oscura la obra se funde a nada, con los grises intermedios dando transparencia parcial. <strong>Liberar máscara de opacidad</strong> la desmonta de nuevo. Usa un degradado de blanco a negro como máscara para fundir una imagen hacia un borde, o para construir los suaves viñeteados y mezclas que un único valor de opacidad plana no puede dar.</p>
+
+<h2 id="layers-organising">Organizar un documento</h2>
+<p>Un poco de estructura al principio ahorra mucho búsqueda después. Unos cuantos hábitos que dan resultado:</p>
+<dl>
+  <dt>Una capa por función</dt>
+  <dd>Mantén el fondo, la obra principal y el texto en capas separadas y nombradas. Puedes entonces ocultar, bloquear o reordenar una parte completa del dibujo de un solo clic.</dd>
+  <dt>Bloquear lo que no estás tocando</dt>
+  <dd>Bloquea las capas alrededor de la que estás trabajando para que un clic o arrastre accidental no las altere, y desbloquéalas de nuevo con <kbd>&#8997;&#8984;2</kbd> cuando las necesites.</dd>
+  <dt>Agrupar lo que se mueve junto</dt>
+  <dd>Vincula las partes de un solo elemento en un grupo para que se comporte como un objeto, y reserva las capas para las divisiones más grandes del documento.</dd>
+  <dt>Establecer la capa activa antes de dibujar</dt>
+  <dd>Haz clic primero en la capa a la que quieres añadir, de modo que la obra nueva caiga en el lugar correcto en lugar de encima de lo que ya estaba ahí.</dd>
+  <dt>Dejar que los colores te guíen</dt>
+  <dd>Apóyate en los colores de las capas: cuando el resaltado de una selección coincide con la ficha de una capa, sabes exactamente dónde vive ese objeto sin abrir nada.</dd>
+</dl>

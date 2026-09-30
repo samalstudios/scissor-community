@@ -1,0 +1,357 @@
+<p class="lede">La barre d'outils longe la gauche de la fenêtre et contient tous les outils de dessin, d'édition et d'affichage. Chaque emplacement est un outil unique ou un groupe d'outils apparentés ; cette page les liste tous, dans l'ordre où ils se trouvent dans la barre d'outils, avec la touche qui choisit chacun et à quoi il sert.</p>
+
+<p>Appuyez et maintenez un emplacement, ou cliquez avec le bouton droit dessus, pour ouvrir son menu déroulant et choisir un autre outil du groupe. Le raccourci d'un outil est une seule touche, et il fonctionne chaque fois que vous ne tapez pas dans du texte ou un champ.</p>
+
+<p>Les raccourcis ci-dessous sont écrits sous la forme macOS. Sur Windows, lisez <kbd>&#8997;</kbd> comme Alt, <kbd>&#8984;</kbd> comme Ctrl et <kbd>&#8679;</kbd> comme Maj.</p>
+
+<p>Trois habitudes s'appliquent à presque tous les outils :</p>
+<ul>
+<li>Maintenez la barre d'espace pour emprunter l'outil Main, et relâchez pour revenir à ce que vous utilisiez.</li>
+<li>Maintenez <kbd>&#8984;</kbd> pour emprunter l'outil Sélection de la même manière. L'outil Transformation libre est l'exception : il lit <kbd>&#8984;</kbd> lui-même.</li>
+<li><kbd>Échap</kbd> abandonne un glisser ou un tracé que vous êtes en train de dessiner, laissant l'illustration telle qu'elle était.</li>
+</ul>
+
+<p>Deux emplacements (les outils Remodelage et Mosaïque d'impression) sont listés pour complétude mais n'ont encore aucun comportement derrière eux. La barre d'outils les marque comme « à venir » et le moteur les refuse.</p>
+
+<h2 id="tools-selecting">Outils de sélection</h2>
+<p>Ces quatre choisissent ce sur quoi vous voulez travailler ensuite. Utilisez l'outil Sélection pour les objets entiers, l'outil Sélection directe pour les points d'ancrage et segments à l'intérieur d'un tracé, la Sélection automatique pour rassembler tout ce qui est peint de la même manière, et le Lasso pour balayer un groupe de points d'ancrage à la main.</p>
+
+<h3 id="tools-selection">Sélection</h3>
+<table>
+<thead><tr><th>Outil</th><th>Raccourci</th><th>Ce qu'il fait</th></tr></thead>
+<tbody>
+<tr><td>Outil Sélection</td><td><kbd>V</kbd></td><td>Cliquez sur un objet pour le sélectionner entier, <kbd>&#8679;</kbd>-cliquez pour en ajouter ou en retirer un, et glissez sur le canevas vide pour un cadre de sélection. Glissez à l'intérieur de la sélection pour la déplacer, avec <kbd>&#8679;</kbd> limitant le déplacement à des pas de 45&deg; et <kbd>&#8997;</kbd> laissant une copie derrière.</td></tr>
+</tbody>
+</table>
+<p>Avec un objet sélectionné, la boîte englobante porte huit poignées. Glissez une poignée pour mettre à l'échelle, en maintenant <kbd>&#8679;</kbd> pour conserver les proportions et <kbd>&#8997;</kbd> pour mettre à l'échelle autour du centre ; glissez juste à l'extérieur d'un coin pour faire pivoter, avec <kbd>&#8679;</kbd> s'alignant sur 45&deg;. Double-cliquez pour entrer dans un groupe et travailler à l'intérieur, double-cliquez sur du texte pour le modifier, double-cliquez sur une instance de symbole pour modifier le symbole que chaque instance dessine, et double-cliquez loin de l'illustration pour ressortir.</p>
+<p>Les formes modifiables portent leurs propres widgets : glissez un widget de coin pour arrondir tous les coins de la forme à la fois, ou <kbd>&#8997;</kbd>-cliquez dessus pour passer le coin au type suivant. C'est l'outil dans lequel vous passerez le plus de temps, alors cela vaut la peine d'apprendre ses poignées.</p>
+
+<h3 id="tools-direct-selection">Sélection directe et Sélection de groupe</h3>
+<table>
+<thead><tr><th>Outil</th><th>Raccourci</th><th>Ce qu'il fait</th></tr></thead>
+<tbody>
+<tr><td>Outil Sélection directe</td><td><kbd>A</kbd></td><td>Cliquez sur un point d'ancrage, une poignée ou un segment, et glissez-le pour remodeler le tracé ; un cadre de sélection sur le canevas vide saisit les points d'ancrage à l'intérieur. <kbd>&#8679;</kbd> ajoute à ce qui est sélectionné et limite un glisser à 45&deg;, et <kbd>&#8997;</kbd> en glissant une poignée sépare la paire pour que le point d'ancrage devienne un coin.</td></tr>
+<tr><td>Outil Sélection de groupe</td><td>&ndash;</td><td>Cliquez sur un objet pour le sélectionner ; cliquez à nouveau pour englober le groupe auquel il appartient, et encore pour le groupe au-dessus.</td></tr>
+</tbody>
+</table>
+<p>Utilisez l'outil Sélection directe pour peaufiner une forme après l'avoir dessinée : déplacez légèrement un point d'ancrage, tirez une seule poignée, ou remodelez une courbe. Il fait également gliser les croisements d'un maillage d'enveloppe, courbant ce que l'enveloppe contient, et il arrondit un coin d'une forme dynamique à la fois plutôt que tous. L'outil Sélection de groupe est le moyen rapide d'atteindre un objet enfoui dans des groupes imbriqués sans entrer et sortir de ceux-ci.</p>
+
+<h3 id="tools-magic-wand">Sélection automatique</h3>
+<table>
+<thead><tr><th>Outil</th><th>Raccourci</th><th>Ce qu'il fait</th></tr></thead>
+<tbody>
+<tr><td>Outil Sélection automatique</td><td><kbd>Y</kbd></td><td>Cliquez sur un objet pour sélectionner chaque objet peint de la même manière. Ce qui compte comme identique (fond, contour, épaisseur du contour, opacité, mode de fusion) est défini dans le panneau Sélection automatique, et <kbd>&#8679;</kbd> ajoute les nouvelles correspondances à la sélection.</td></tr>
+</tbody>
+</table>
+<p>Utilisez-le lorsque vous voulez changer chaque forme d'une couleur à la fois : cliquez sur une rouge, puis recoloriez toute la sélection en une seule étape.</p>
+
+<h3 id="tools-lasso">Lasso</h3>
+<table>
+<thead><tr><th>Outil</th><th>Raccourci</th><th>Ce qu'il fait</th></tr></thead>
+<tbody>
+<tr><td>Outil Lasso</td><td><kbd>Q</kbd></td><td>Glissez une boucle libre pour sélectionner les points d'ancrage à l'intérieur. <kbd>&#8679;</kbd> les ajoute aux points d'ancrage déjà sélectionnés.</td></tr>
+</tbody>
+</table>
+<p>Utilisez-le lorsque les points d'ancrage que vous voulez ne se trouvent pas dans un rectangle ordonné, de sorte qu'un cadre de sélection attraperait trop ou trop peu.</p>
+<p>Cet emplacement contient également les outils de sélection pixel — le <strong>Cadre rectangulaire</strong>, le <strong>Cadre elliptique</strong> et le <strong>Cadre lasso</strong> — qui dessinent une sélection de fourmis en marche sur un calque pixel plutôt que de choisir des points d'ancrage vectoriels. Ils sont couverts sur la page <a href="/manual/pixels/">Calques pixel</a>.</p>
+
+<h2 id="tools-pen-type">Plume, courbure et texte</h2>
+<p>Les outils qui créent de nouveaux tracés et textes. La famille des plumes vous donne un contrôle exact sur chaque point d'ancrage et poignée, l'outil Courbure ajuste une courbe lisse à travers les points que vous déposez, et les outils Texte définissent du texte ponctuel, en zone, sur tracé et vertical.</p>
+
+<h3 id="tools-pen">La famille des plumes</h3>
+<table>
+<thead><tr><th>Outil</th><th>Raccourci</th><th>Ce qu'il fait</th></tr></thead>
+<tbody>
+<tr><td>Outil Plume</td><td><kbd>P</kbd></td><td>Cliquez pour déposer un point de coin, ou appuyez et glissez pour en tirer des poignées lisses ; cliquez sur le premier point d'ancrage pour fermer le tracé. <kbd>&#8679;</kbd> limite le nouveau point ou la poignée à 45&deg;, et <kbd>&#8997;</kbd> en glissant sépare les poignées pour que le tracé quitte le point d'ancrage à son propre angle.</td></tr>
+<tr><td>Outil Ajout de point d'ancrage</td><td><kbd>+</kbd></td><td>Cliquez sur un segment pour y ajouter un point d'ancrage, sans changer la forme du tracé.</td></tr>
+<tr><td>Outil Suppression de point d'ancrage</td><td><kbd>&#8722;</kbd></td><td>Cliquez sur un point d'ancrage pour le retirer, joignant les segments de chaque côté.</td></tr>
+<tr><td>Outil Point d'ancrage</td><td><kbd>&#8679;C</kbd></td><td>Glissez un point d'ancrage pour en tirer une paire de poignées assorties, ou cliquez dessus pour rentrer les poignées et laisser un coin. Glissez une poignée seule pour déplacer ce côté seul ; <kbd>&#8679;</kbd> la limite à 45&deg;.</td></tr>
+</tbody>
+</table>
+<p>L'outil Plume est le cheval de bataille pour le dessin précis, d'un contour de logo à un tracé de lettrage. Pendant qu'il a un tracé en cours, <kbd>Entrée</kbd> ou <kbd>Échap</kbd> le termine et <kbd>Retour arrière</kbd> supprime le dernier point d'ancrage. Les trois assistants ajoutent, suppriment et convertissent des points d'ancrage sur un tracé terminé ; la plume et le crayon sont couverts plus en détail sur la page <a href="/manual/paths/">Tracés</a>.</p>
+
+<h3 id="tools-curvature">Courbure</h3>
+<table>
+<thead><tr><th>Outil</th><th>Raccourci</th><th>Ce qu'il fait</th></tr></thead>
+<tbody>
+<tr><td>Outil Courbure</td><td><kbd>&#8679;~</kbd></td><td>Cliquez pour déposer des points et une courbe lisse est ajustée à travers eux ; <kbd>&#8997;</kbd>-cliquez pour déposer un point de coin à la place. Glissez un point pour le déplacer, double-cliquez sur un point pour le faire passer de lisse à coin, cliquez sur le premier point pour fermer le tracé, et double-cliquez loin de celui-ci pour terminer.</td></tr>
+</tbody>
+</table>
+<p>Utilisez l'outil Courbure lorsque vous voulez une ligne fluide et préférez placer des points et laisser Scissor calculer les poignées plutôt que de les tirer chacune vous-même.</p>
+
+<h3 id="tools-type">Texte</h3>
+<table>
+<thead><tr><th>Outil</th><th>Raccourci</th><th>Ce qu'il fait</th></tr></thead>
+<tbody>
+<tr><td>Outil Texte</td><td><kbd>T</kbd></td><td>Cliquez pour du texte ponctuel, glissez un cadre pour du texte en zone, et cliquez sur du texte existant pour le modifier. Cliquer sur un tracé ouvert fait courir le texte le long de ce tracé.</td></tr>
+<tr><td>Outil Texte en zone</td><td>&ndash;</td><td>Glissez le cadre dans lequel le texte s'écoule.</td></tr>
+<tr><td>Outil Texte sur tracé</td><td>&ndash;</td><td>Cliquez sur un tracé et le texte court le long de celui-ci. Le tracé devient la ligne de base, de sorte qu'il cesse d'être une illustration à part entière.</td></tr>
+<tr><td>Outil Texte vertical</td><td>&ndash;</td><td>Identique à l'outil Texte, sauf que la ligne de texte descend dans la page plutôt que de la traverser.</td></tr>
+<tr><td>Outil Édition de glyphe</td><td><kbd>&#8679;T</kbd></td><td>Cliquez sur un caractère pour le sortir de sa ligne, puis glissez-le pour le déplacer, glissez un coin pour le redimensionner ou la poignée au-dessus pour le faire pivoter. <kbd>&#8679;</kbd> conserve les proportions d'un coin et aligne la rotation sur des pas de 11,25&deg;, et <kbd>Suppr</kbd> remet le caractère là où le texte l'avait placé.</td></tr>
+</tbody>
+</table>
+<p>L'outil Texte seul couvre la plupart du travail : cliquez pour un titre, glissez un cadre pour un paragraphe. Les poignées latérales du cadre d'édition de glyphe étirent le caractère dans un sens seulement, horizontalement pour la largeur et verticalement pour la hauteur, de sorte que vous pouvez déplacer des lettres individuelles pour un titre sans les extraire du texte. Le texte est couvert en détail sur la page <a href="/manual/type/">Texte</a>.</p>
+
+<h2 id="tools-lines-shapes">Lignes et formes</h2>
+<p>Tout ce qui dessine une forme prête à l'emploi : lignes droites, arcs et spirales, grilles de lignes, et les rectangles, ellipses, polygones et étoiles avec lesquels vous construisez un dessin.</p>
+
+<h3 id="tools-lines">Lignes, arcs, spirales et grilles</h3>
+<table>
+<thead><tr><th>Outil</th><th>Raccourci</th><th>Ce qu'il fait</th></tr></thead>
+<tbody>
+<tr><td>Outil Segment de ligne</td><td><kbd>\</kbd></td><td>Glissez pour dessiner une ligne droite. <kbd>&#8679;</kbd> la limite à des pas de 45&deg; et <kbd>&#8997;</kbd> la dessine depuis son milieu plutôt que son extrémité.</td></tr>
+<tr><td>Outil Arc</td><td>&ndash;</td><td>Glissez le cadre que l'arc remplit ; <kbd>&#8679;</kbd> rend ce cadre carré. Les flèches courbent l'arc plus plat ou plus plein, <kbd>C</kbd> le ferme et l'ouvre, et <kbd>F</kbd> ou <kbd>X</kbd> inversent son sens de courbure.</td></tr>
+<tr><td>Outil Spirale</td><td>&ndash;</td><td>Glissez depuis le centre : la distance définit le rayon et la direction définit où la spirale commence. <kbd>&#8997;</kbd> inverse le sens d'enroulement, <kbd>R</kbd> l'inverse définitivement, et les flèches ajoutent et retirent des segments.</td></tr>
+<tr><td>Outil Grille rectangulaire</td><td>&ndash;</td><td>Glissez la grille, avec <kbd>&#8997;</kbd> dessinant depuis le centre et <kbd>&#8679;</kbd> la gardant carrée. Les flèches haut et bas modifient le nombre de rangées, gauche et droite les colonnes.</td></tr>
+<tr><td>Outil Grille polaire</td><td>&ndash;</td><td>Glissez la grille, avec <kbd>&#8997;</kbd> dessinant depuis le centre et <kbd>&#8679;</kbd> la gardant ronde. Les flèches haut et bas modifient les anneaux concentriques, gauche et droite les rayons.</td></tr>
+</tbody>
+</table>
+<p>Les deux outils de grille créent un tracé par ligne, de sorte que chaque ligne reste sélectionnable individuellement : utilisez la Grille rectangulaire pour les tableaux, calendriers et échafaudages de mise en page, et la Grille polaire pour les cibles de fléchettes, les graphiques radar et les cadrans d'horloge. Ils dessinent des illustrations de grille que vous conservez. C'est une chose différente de la grille d'arrière-plan du plan, l'aide au dessin à l'écran que vous activez avec <strong>Affichage &rsaquo; Grille &rsaquo; Afficher la grille</strong>, qui ne s'imprime jamais et existe en sept types (carrée, isométrique, hexagonale, oblique, nombre d'or, motif et perspective). Les grilles d'arrière-plan sont couvertes sur la page <a href="/manual/grids/">Grilles</a>. Un <strong>Outil Forme de grille</strong> séparé (<kbd>&#8679;G</kbd>) construit un tracé rempli en cliquant ou en glissant sur les cellules de cette grille d'arrière-plan — un moyen rapide de poser des blocs pleins sur une grille isométrique ou hexagonale.</p>
+
+<h3 id="tools-shapes">Rectangles, ellipses et autres formes</h3>
+<table>
+<thead><tr><th>Outil</th><th>Raccourci</th><th>Ce qu'il fait</th></tr></thead>
+<tbody>
+<tr><td>Outil Rectangle</td><td><kbd>M</kbd></td><td>Glissez pour dessiner un rectangle. <kbd>&#8679;</kbd> le garde carré et <kbd>&#8997;</kbd> le dessine depuis son centre.</td></tr>
+<tr><td>Outil Rectangle arrondi</td><td>&ndash;</td><td>Le même glisser, avec des coins arrondis ; les flèches haut et bas augmentent et diminuent le rayon des coins pendant le dessin.</td></tr>
+<tr><td>Outil Ellipse</td><td><kbd>L</kbd></td><td>Glissez pour dessiner une ellipse, avec <kbd>&#8679;</kbd> pour un cercle et <kbd>&#8997;</kbd> pour dessiner depuis le centre.</td></tr>
+<tr><td>Outil Polygone</td><td>&ndash;</td><td>Glissez depuis le centre ; la direction du glisser fait pivoter le polygone, et <kbd>&#8679;</kbd> le garde droit. Les flèches ajoutent et retirent des côtés.</td></tr>
+<tr><td>Outil Étoile</td><td>&ndash;</td><td>Glissez depuis le centre, en faisant pivoter l'étoile au fur et à mesure, avec <kbd>&#8679;</kbd> la maintenant droite. Les flèches ajoutent et retirent des pointes.</td></tr>
+<tr><td>Outil Halo</td><td>&ndash;</td><td>Glissez une fois pour définir le centre et la taille du halo, puis glissez une seconde fois pour étirer ses anneaux sur l'illustration. Pendant le glisser, les flèches gauche et droite modifient le nombre d'anneaux et les flèches haut et bas le nombre de rayons.</td></tr>
+</tbody>
+</table>
+<p>Ceux-ci créent des formes dynamiques : elles conservent leurs paramètres, de sorte que vous pouvez changer la taille d'un rectangle ou le nombre de pointes d'une étoile longtemps après l'avoir dessiné. Un clic plutôt qu'un glisser avec l'un d'eux ouvre une boîte de dialogue, de sorte que vous pouvez donner à la forme des mesures exactes à la place. L'outil Halo répond à un clic par un halo de la taille que ses options demandent.</p>
+
+<h2 id="tools-brush-erase">Pinceaux, crayon et gommes</h2>
+<p>Les outils à main levée. Peignez un trait qui suit le pointeur, esquissez un tracé approximatif et laissez Scissor le nettoyer, entretenez et réparez des tracés existants, ou effacez des illustrations. Deux emplacements ici atteignent également le côté raster d'un document : le Pinceau peint des pixels et la Gomme pixel les efface.</p>
+
+<h3 id="tools-brushes">Pinceaux</h3>
+<table>
+<thead><tr><th>Outil</th><th>Raccourci</th><th>Ce qu'il fait</th></tr></thead>
+<tbody>
+<tr><td>Outil Pinceau</td><td><kbd>B</kbd></td><td>Glissez pour dessiner à main levée ; le trait est lissé lors de son ajustement aux courbes, et il conserve le pinceau et le contour actuels.</td></tr>
+<tr><td>Outil Pinceau de remplissage</td><td><kbd>&#8679;B</kbd></td><td>Dessine le même trait, mais le contour en forme remplie et le fusionne avec toute illustration qu'il touche partageant son fond.</td></tr>
+<tr><td>Outil Pinceau pixel</td><td>&ndash;</td><td>Peint directement des couleurs raster sur un calque pixel dans la couleur de fond actuelle, créant d'abord un calque pixel s'il n'y en a pas. Contrairement au Pinceau, la marque n'est pas un tracé que vous pouvez remodeler plus tard : elle devient partie de l'image.</td></tr>
+</tbody>
+</table>
+<p>Utilisez le Pinceau pour des traits expressifs et calligraphiques qui restent modifiables, et le Pinceau de remplissage lorsque vous préférez construire une forme pleine plutôt qu'une ligne contourée. <kbd>[</kbd> et <kbd>]</kbd> rendent le pinceau plus petit et plus grand. L'outil Pinceau pixel partage cet emplacement mais peint des pixels plutôt qu'un tracé, pour l'ombrage et la texture, et le <strong>Pot de peinture</strong> le partage également, inondant une zone connectée d'un calque pixel avec la couleur de fond. La peinture sur calques pixel est couverte sur la page <a href="/manual/pixels/">Calques pixel</a>.</p>
+
+<h3 id="tools-pencil">Crayon et outils de réparation de tracé</h3>
+<table>
+<thead><tr><th>Outil</th><th>Raccourci</th><th>Ce qu'il fait</th></tr></thead>
+<tbody>
+<tr><td>Outil Esquisse</td><td><kbd>&#8679;N</kbd></td><td>Dessinez grossièrement et le trait devient la forme nette que vous vouliez. Gribouiller sur une illustration poinçonne ce que le gribouillage couvre à la place.</td></tr>
+<tr><td>Outil Crayon</td><td><kbd>N</kbd></td><td>Dessinez à main levée et le trait est ajusté à des courbes lisses. Maintenez <kbd>&#8997;</kbd> en relâchant pour fermer le tracé, ce qui arrive aussi de lui-même si vous finissez près de l'endroit où vous avez commencé.</td></tr>
+<tr><td>Outil Lissage</td><td>&ndash;</td><td>Brossez le long d'un tracé pour égaliser ses poignées et supprimer les points d'ancrage qui le courbent à peine ; une brosse plus grande lisse plus fort.</td></tr>
+<tr><td>Outil Gomme de tracé</td><td>&ndash;</td><td>Brossez le long d'un tracé pour effacer la partie que vous couvrez.</td></tr>
+<tr><td>Outil Jonction</td><td>&ndash;</td><td>Brossez sur deux extrémités libres pour les joindre en un seul tracé.</td></tr>
+</tbody>
+</table>
+<p>Le Crayon est le moyen rapide d'esquisser une forme à la main ; l'outil Esquisse est fait pour lorsque vous voulez qu'un geste approximatif soit lu comme un rectangle, une ellipse ou une ligne propre. Les trois derniers entretiennent des tracés existants : <kbd>[</kbd> et <kbd>]</kbd> redimensionnent les brosses Lissage, Gomme de tracé et Jonction. Avec une illustration sélectionnée, ces trois-là travaillent sur la sélection seule ; sans rien de sélectionné, ils travaillent sur n'importe quel tracé qu'ils atteignent.</p>
+
+<h3 id="tools-cutting">Effacer et couper</h3>
+<table>
+<thead><tr><th>Outil</th><th>Raccourci</th><th>Ce qu'il fait</th></tr></thead>
+<tbody>
+<tr><td>Outil Gomme</td><td><kbd>&#8679;E</kbd></td><td>Glissez une brosse ronde pour soustraire des objets. Avec une sélection, seuls les objets sélectionnés sont effacés ; sinon chaque tracé non verrouillé l'est, et <kbd>[</kbd> et <kbd>]</kbd> redimensionnent la brosse.</td></tr>
+<tr><td>Outil Gomme pixel</td><td>&ndash;</td><td>Efface la peinture d'un calque pixel, la rendant transparente pour que ce qui se trouve en dessous apparaisse. Il fonctionne sur les calques pixel là où la Gomme fonctionne sur les tracés vectoriels ; <kbd>[</kbd> et <kbd>]</kbd> redimensionnent la brosse.</td></tr>
+<tr><td>Outil Ciseaux</td><td><kbd>C</kbd></td><td>Cliquez sur un segment ou un point d'ancrage pour couper le tracé à cet endroit. Un tracé fermé s'ouvre à la coupe ; un tracé ouvert se divise en deux objets.</td></tr>
+<tr><td>Couteau</td><td>&ndash;</td><td>Glissez sur des objets pour les trancher en pièces séparées. <kbd>&#8997;</kbd> coupe en ligne droite et <kbd>&#8679;</kbd> limite cette ligne à des pas de 45&deg;.</td></tr>
+</tbody>
+</table>
+<p>La Gomme sculpte des formes dans une illustration pleine comme effacer au crayon ; les Ciseaux font une seule coupe nette à un point ; le Couteau tranche des objets entiers en pièces le long de la ligne que vous glissez. La Gomme pixel partage l'emplacement de la Gomme mais appartient au côté raster, sur la page <a href="/manual/pixels/">Calques pixel</a>.</p>
+<p>Un autre emplacement de barre d'outils est entièrement raster : les brosses de retouche <strong>Densité</strong> (Dodge), <strong>Brûlure</strong> (Burn) et <strong>Éponge</strong> (Sponge) éclaircissent, assombrissent et saturent les pixels déjà présents sur un calque. Ils peignent comme le Pinceau et sont couverts, avec le reste de l'édition pixel, sur la page <a href="/manual/pixels/">Calques pixel</a>.</p>
+
+<h2 id="tools-transform">Transformation</h2>
+<p>Les outils qui déplacent, tournent, reflètent, mettent à l'échelle, inclinent, déforment et remodelent ce qui est déjà dessiné. Chaque outil de transformation travaille autour d'un point de référence, qui commence au milieu de la sélection ; <kbd>&#8997;</kbd>-cliquer définit ce point là où vous cliquez et ouvre la boîte de dialogue de l'outil pour des valeurs exactes. Avec des points d'ancrage individuels sélectionnés, ces outils transforment ces points d'ancrage plutôt que des objets entiers.</p>
+
+<h3 id="tools-rotate-reflect">Rotation et miroir</h3>
+<table>
+<thead><tr><th>Outil</th><th>Raccourci</th><th>Ce qu'il fait</th></tr></thead>
+<tbody>
+<tr><td>Outil Rotation</td><td><kbd>R</kbd></td><td>Glissez autour du point de référence pour faire pivoter la sélection, avec <kbd>&#8679;</kbd> s'alignant sur 45&deg; et <kbd>&#8997;</kbd> pivotant une copie et laissant l'original. <kbd>&#8997;</kbd>-cliquer place le point de référence là où vous avez cliqué et ouvre la boîte de dialogue Rotation.</td></tr>
+<tr><td>Outil Miroir</td><td><kbd>O</kbd></td><td>Glissez pour faire pivoter l'axe de miroir autour du point de référence, avec <kbd>&#8679;</kbd> l'alignant sur 45&deg;. <kbd>&#8997;</kbd>-cliquer définit le point de référence et ouvre la boîte de dialogue Miroir, et <kbd>&#8997;</kbd> en glissant reflète une copie.</td></tr>
+</tbody>
+</table>
+<p>Utilisez l'outil Rotation pour faire pivoter une illustration autour d'un pivot choisi plutôt que son propre centre, et l'outil Miroir pour construire un dessin symétrique : reflétez une copie à travers un axe choisi et les deux moitiés restent assorties. Les deux outils commencent au milieu de la sélection, et choisir autre chose remet le point de référence là.</p>
+
+<h3 id="tools-scale-shear">Mise à l'échelle, cisaillement et remodelage</h3>
+<table>
+<thead><tr><th>Outil</th><th>Raccourci</th><th>Ce qu'il fait</th></tr></thead>
+<tbody>
+<tr><td>Outil Mise à l'échelle</td><td><kbd>S</kbd></td><td>Glissez loin du point de référence pour agrandir la sélection et vers celui-ci pour la rétrécir ; <kbd>&#8679;</kbd> conserve les proportions et <kbd>&#8997;</kbd> met à l'échelle une copie. <kbd>&#8997;</kbd>-cliquer définit le point de référence et ouvre la boîte de dialogue Mise à l'échelle.</td></tr>
+<tr><td>Outil Cisaillement</td><td>&ndash;</td><td>Glissez pour incliner la sélection autour du point de référence ; <kbd>&#8679;</kbd; fixe l'inclinaison sur l'axe vers lequel votre glisser penche. <kbd>&#8997;</kbd>-cliquer définit le point de référence et ouvre la boîte de dialogue Cisaillement.</td></tr>
+<tr><td>Outil Remodelage</td><td>&ndash;</td><td>Listé dans la barre d'outils mais pas encore implémenté ; la palette le marque comme « à venir ».</td></tr>
+</tbody>
+</table>
+<p>Utilisez l'outil Mise à l'échelle lorsque vous voulez dimensionner une illustration autour d'un point fixe plutôt qu'une poignée de boîte englobante, et l'outil Cisaillement pour incliner une forme pour une ombre portée ou une sensation d'italique.</p>
+
+<h3 id="tools-width-liquify">Largeur et brosses de liquéfaction</h3>
+<table>
+<thead><tr><th>Outil</th><th>Raccourci</th><th>Ce qu'il fait</th></tr></thead>
+<tbody>
+<tr><td>Outil Profil de contour</td><td><kbd>&#8679;W</kbd></td><td>Glissez loin d'un tracé contouré pour l'élargir à cet endroit et vers le tracé pour le rétrécir, laissant un point de largeur derrière. Sans rien de sélectionné, il fonctionne sur n'importe quel tracé modifiable.</td></tr>
+<tr><td>Outil Déformation</td><td><kbd>&#8679;R</kbd></td><td>Maintenez et glissez une brosse ronde pour pousser les tracés en dessous avec le pointeur.</td></tr>
+<tr><td>Outil Tourbillon</td><td>&ndash;</td><td>Maintenez la brosse sur une illustration et elle continue de tourner aussi longtemps que vous la tenez.</td></tr>
+<tr><td>Outil Pincement</td><td>&ndash;</td><td>Attire les tracés sous la brosse vers son centre.</td></tr>
+<tr><td>Outil Gonflage</td><td>&ndash;</td><td>Pousse les tracés sous la brosse depuis son centre.</td></tr>
+<tr><td>Outil Ondulation</td><td>&ndash;</td><td>Ajoute des festons courbes aux tracés sous la brosse.</td></tr>
+<tr><td>Outil Pointe</td><td>&ndash;</td><td>Ajoute des pointes aux tracés sous la brosse.</td></tr>
+<tr><td>Outil Froissage</td><td>&ndash;</td><td>Ondule les tracés sous la brosse.</td></tr>
+</tbody>
+</table>
+<p>L'outil Largeur effile et gonfle un contour à la main, pour une ligne de plume ou de pinceau sans changer de pinceau. Les sept brosses de liquéfaction poussent, tordent et rugissent les tracés pendant que vous peignez dessus, pour une déformation organique qui serait lente à faire point d'ancrage par point d'ancrage. Les sept acceptent <kbd>[</kbd> et <kbd>]</kbd> pour la taille, et <kbd>&#8679;</kbd> avec ces mêmes touches, <kbd>{</kbd> et <kbd>}</kbd>, pour la force avec laquelle elles poussent.</p>
+
+<h3 id="tools-free-transform">Transformation libre et déformation par épingles</h3>
+<table>
+<thead><tr><th>Outil</th><th>Raccourci</th><th>Ce qu'il fait</th></tr></thead>
+<tbody>
+<tr><td>Outil Transformation libre</td><td><kbd>E</kbd></td><td>Une seule boîte qui met à l'échelle, tourne, cisaille et déforme la sélection. Glissez une poignée de bord ou de coin pour mettre à l'échelle, maintenez <kbd>&#8984;</kbd> sur une poignée de bord pour cisailler, glissez à l'intérieur de la boîte pour la déplacer, et glissez juste à l'extérieur d'un coin pour la faire pivoter.</td></tr>
+<tr><td>Outil Déformation par épingles</td><td>&ndash;</td><td>Cliquez sur l'illustration sélectionnée pour déposer une épingle, puis glissez les épingles pour la courber ; l'illustration conserve sa forme autour des épingles qui restent en place. <kbd>&#8997;</kbd>-cliquer sur une épingle la retire, <kbd>&#8679;</kbd>-cliquer en saisit plusieurs, et <kbd>&#8997;</kbd>-glisser juste à l'extérieur d'une épingle fait pivoter l'illustration autour de celle-ci.</td></tr>
+</tbody>
+</table>
+<p>La Transformation libre est la boîte tout-en-un lorsque vous voulez mettre à l'échelle, tourner et cisailler en un seul geste plutôt que de changer d'outil. Elle travaille autour de son point de référence, que vous pouvez glisser n'importe où, même en dehors de la boîte ; déposez-le près de l'un des neuf points habituels de la boîte et il s'y fixe. Pendant la mise à l'échelle, <kbd>&#8679;</kbd> conserve les proportions et <kbd>&#8997;</kbd> met à l'échelle autour du centre plutôt que du point de référence ; pendant la rotation, <kbd>&#8679;</kbd> s'aligne sur 45&deg;. Sur une poignée de coin, <kbd>&#8984;</kbd> déforme ce coin seul et <kbd>&#8984;&#8997;&#8679;</kbd> déforme en perspective, le coin voisin reflétant le glisser ; le widget à côté de la boîte définit les mêmes deux modes et la contrainte de proportion. Changer un modificateur en cours de glisser change d'action immédiatement, sans relâcher.</p>
+<p>La Déformation par épingles sert à poser et courber une seule pièce d'illustration, comme fléchir un bras dessiné, en épinglant les parties qui doivent rester immobiles et en glissant le reste. Elle lit <kbd>Suppr</kbd> comme retirant les épingles sélectionnées plutôt que l'illustration, et <kbd>&#8984;A</kbd> comme sélectionnant chaque épingle. Chaque glisser est une étape à annuler, et l'annulation ramène les épingles avec l'illustration qui leur était associée. Le texte, les images et les instances de symboles ne peuvent pas être déformés et sont laissés tels quels.</p>
+
+<h2 id="tools-build-perspective">Fusion et séparation, remplissage de région et perspective</h2>
+<p>Des outils qui traitent les formes qui se chevauchent comme des régions à combiner et à colorer, et la grille qui vous permet de dessiner et de placer des illustrations en perspective.</p>
+
+<h3 id="tools-builder-paint">Fusion et séparation et remplissage de région</h3>
+<table>
+<thead><tr><th>Outil</th><th>Raccourci</th><th>Ce qu'il fait</th></tr></thead>
+<tbody>
+<tr><td>Outil Fusion et séparation</td><td><kbd>&#8679;M</kbd></td><td>Avec des formes qui se chevauchent sélectionnées, glissez sur les régions que vous voulez joindre et elles deviennent un seul objet. <kbd>&#8997;</kbd>-glisser supprime les régions que vous traversez à la place.</td></tr>
+<tr><td>Pot de peinture de région</td><td><kbd>K</kbd></td><td>Cliquez sur une face d'un groupe de remplissage de région pour la remplir avec la peinture actuelle ; <kbd>&#8997;</kbd>-cliquer prend la peinture déjà présente plutôt que d'en déposer. La face sous le pointeur est entourée avant que vous cliquiez.</td></tr>
+<tr><td>Outil Sélection de région</td><td><kbd>&#8679;L</kbd></td><td>Cliquez sur une face d'un groupe de remplissage de région pour la sélectionner, sans la peindre.</td></tr>
+</tbody>
+</table>
+<p>Utilisez la Fusion et séparation pour dessiner quelques formes qui se chevauchent puis les fusionner et les rogner en le contour que vous voulez, en glissant sur les morceaux. Le remplissage de région traite un ensemble de tracés qui se chevauchent comme un livre à colorier : le Pot inonde chaque face fermée d'une couleur, et l'outil Sélection choisit des faces et des bords pour que vous puissiez les restyliser, sans d'abord couper les formes.</p>
+
+<h3 id="tools-perspective">Perspective</h3>
+<table>
+<thead><tr><th>Outil</th><th>Raccourci</th><th>Ce qu'il fait</th></tr></thead>
+<tbody>
+<tr><td>Outil Grille de perspective</td><td><kbd>&#8679;P</kbd></td><td>Affiche la grille et la façonne : glissez les points de fuite, glissez l'un d'eux vers le haut ou le bas pour déplacer l'horizon, et glissez le coin proche de la grille. <kbd>1</kbd> à <kbd>4</kbd>, ou le widget à l'écran, choisissent le plan sur lequel vous dessinez.</td></tr>
+<tr><td>Outil Sélection de perspective</td><td><kbd>&#8679;V</kbd></td><td>Sélectionne une illustration et la glisse le long de son plan. Une illustration qui n'est pas encore sur la grille est posée sur le plan actif là où vous la glissez.</td></tr>
+</tbody>
+</table>
+<p>Utilisez ceux-ci pour dessiner des scènes et du lettrage qui s'éloignent vers des points de fuite, comme une rue ou un produit en boîte. Pendant que la grille est affichée, les outils Rectangle, Rectangle arrondi, Ellipse et Grille rectangulaire dessinent sur le plan actif plutôt qu'à plat, et <kbd>1</kbd> à <kbd>4</kbd> choisissent le plan depuis ces outils aussi.</p>
+
+<h2 id="tools-mesh-gradient">Maillage et dégradé</h2>
+<p>Les deux outils pour peindre une couleur dégradée dans une forme : un maillage de points de couleur à travers l'objet, ou un mélange lisse le long d'un axe.</p>
+
+<h3 id="tools-mesh">Maillage</h3>
+<table>
+<thead><tr><th>Outil</th><th>Raccourci</th><th>Ce qu'il fait</th></tr></thead>
+<tbody>
+<tr><td>Outil Maillage</td><td><kbd>U</kbd></td><td>Cliquez à l'intérieur d'un objet pour y faire passer une ligne de maillage dans chaque sens, transformant un tracé simple en maillage. Cliquez sur un point de maillage pour le sélectionner et lui donner une couleur depuis le panneau Couleur, glissez un point pour le déplacer, et <kbd>&#8997;</kbd>-cliquez dessus pour en retirer les lignes qui le traversent.</td></tr>
+</tbody>
+</table>
+<p>Utilisez un maillage pour un ombrage doux et libre qu'un dégradé rectiligne ne peut pas donner, comme la lumière arrondie sur un fruit ou un visage.</p>
+
+<h3 id="tools-gradient">Dégradé</h3>
+<table>
+<thead><tr><th>Outil</th><th>Raccourci</th><th>Ce qu'il fait</th></tr></thead>
+<tbody>
+<tr><td>Outil Dégradé</td><td><kbd>G</kbd></td><td>Glissez sur la sélection pour définir l'axe de sa peinture active, avec <kbd>&#8679;</kbd> limitant l'axe à des pas de 45&deg;. Sur une illustration qui a déjà un dégradé, travaillez l'annotateur à la place.</td></tr>
+</tbody>
+</table>
+<p>Glissez l'outil Dégradé pour orienter un mélange linéaire ou radial comme vous voulez et définir sa portée. Sur l'annotateur, glissez un arrêt le long de l'axe pour le déplacer, glissez un losange pour décaler le mélange entre deux arrêts, cliquez sur l'axe pour ajouter un arrêt dans la couleur qu'il y a déjà, et tirez un arrêt bien loin de l'axe pour le jeter, tant qu'il en reste deux. <kbd>Suppr</kbd> retire le dernier arrêt touché. Sur un dégradé libre, l'outil fonctionne sur des points de couleur à la place : cliquez sur l'illustration pour en ajouter un dans la couleur de fond, et glissez un point pour le déplacer. Les dégradés sont couverts plus avant sur la page <a href="/manual/appearance/">Couleur et apparence</a>.</p>
+
+<h2 id="tools-sample-morph">Échantillonnage, mesure et interpolation</h2>
+<p>Copiez une apparence d'un objet à un autre, lisez des distances et des angles sur le canevas, et mélangez des formes dans une série d'étapes.</p>
+
+<h3 id="tools-eyedropper">Pipette et mesure</h3>
+<table>
+<thead><tr><th>Outil</th><th>Raccourci</th><th>Ce qu'il fait</th></tr></thead>
+<tbody>
+<tr><td>Outil Pipette</td><td><kbd>I</kbd></td><td>Cliquez sur un objet pour échantillonner son apparence entière sur la sélection, ou sur le style par défaut lorsque rien n'est sélectionné. <kbd>&#8679;</kbd> n'échantillonne que sa couleur de fond ou de contour dans le côté actif, et <kbd>&#8997;</kbd> fait l'inverse, appliquant l'apparence de la sélection à l'objet sur lequel vous cliquez.</td></tr>
+<tr><td>Outil Mesure</td><td>&ndash;</td><td>Glissez entre deux points pour lire la distance, les décalages et l'angle ; <kbd>&#8679;</kbd> limite la ligne à des pas de 45&deg;. La dernière mesure reste à l'écran jusqu'au prochain glisser.</td></tr>
+</tbody>
+</table>
+<p>La Pipette est le moyen rapide de faire correspondre un objet à un autre : choisissez l'aspect que vous aimez et il atterrit sur la sélection. Utilisez l'outil Mesure pour vérifier un écart ou un angle sans laisser de marque sur l'illustration.</p>
+
+<h3 id="tools-blend">Interpolation</h3>
+<table>
+<thead><tr><th>Outil</th><th>Raccourci</th><th>Ce qu'il fait</th></tr></thead>
+<tbody>
+<tr><td>Outil Interpolation</td><td><kbd>W</kbd></td><td>Cliquez sur un objet puis sur un autre pour interpoler entre eux à travers une série d'étapes intermédiaires. Pour ajouter un objet supplémentaire à une interpolation, cliquez à l'intérieur de l'interpolation puis cliquez sur l'objet que vous voulez y ajouter.</td></tr>
+</tbody>
+</table>
+<p>Utilisez l'outil Interpolation pour mélanger une forme ou une couleur en une autre par étapes régulières, que ce soit pour une bande ombrée lisse ou des copies régulièrement espacées et changeantes le long d'un tracé.</p>
+
+<h2 id="tools-symbols">Symboles</h2>
+<p>Un symbole est une illustration que vous pouvez placer plusieurs fois, chaque copie étant liée à un maître. Les brosses de symbolisme créent puis travaillent des foules entières de ces instances à la fois.</p>
+
+<h3 id="tools-symbolism">Les brosses de symbolisme</h3>
+<table>
+<thead><tr><th>Outil</th><th>Raccourci</th><th>Ce qu'il fait</th></tr></thead>
+<tbody>
+<tr><td>Outil Scatter de symboles</td><td><kbd>&#8679;S</kbd></td><td>Glissez pour déposer des instances du symbole choisi dans le panneau Symboles, en tant qu'ensemble de symboles. <kbd>&#8997;</kbd> retire des instances à nouveau.</td></tr>
+<tr><td>Outil Poussée de symboles</td><td>&ndash;</td><td>Glisse les instances sous la brosse avec le pointeur.</td></tr>
+<tr><td>Outil Regroupement de symboles</td><td>&ndash;</td><td>Rassemble les instances sous la brosse ; <kbd>&#8997;</kbd> les écarte.</td></tr>
+<tr><td>Outil Redimensionnement de symboles</td><td>&ndash;</td><td>Agrandit les instances sous la brosse ; <kbd>&#8997;</kbd> les rétrécit.</td></tr>
+<tr><td>Outil Rotation de symboles</td><td>&ndash;</td><td>Fait pivoter les instances sous la brosse pour suivre le glisser.</td></tr>
+<tr><td>Outil Teinte de symboles</td><td>&ndash;</td><td>Teint les instances sous la brosse vers la couleur de fond ; <kbd>&#8997;</kbd> retire la teinte.</td></tr>
+<tr><td>Outil Fondu de symboles</td><td>&ndash;</td><td>Estompe les instances sous la brosse ; <kbd>&#8997;</kbd> les ramène à pleine intensité.</td></tr>
+<tr><td>Outil Restylage de symboles</td><td>&ndash;</td><td>Applique le style graphique choisi dans le panneau Styles graphiques aux instances sous la brosse ; <kbd>&#8997;</kbd> le retire.</td></tr>
+</tbody>
+</table>
+<p>Utilisez ceux-ci pour disperser puis varier un champ d'illustrations répétées, comme des arbres sur une colline ou des étoiles dans un ciel : vaporisez un ensemble, puis éclaircissez-le, redimensionnez-le, faites-le pivoter et teintez-le pour que les copies ne semblent pas estampillées. Les huit acceptent <kbd>[</kbd> et <kbd>]</kbd> pour la taille de brosse et <kbd>{</kbd> et <kbd>}</kbd> pour la force de travail de la brosse. Ils agissent sur les instances dans la sélection, ou sur chaque instance modifiable lorsque rien n'est sélectionné.</p>
+
+<h2 id="tools-boards-slices">Plans et tranches</h2>
+<p>Les outils qui préparent le canevas pour la sortie : les plans de travail, qui sont les pages sur lesquelles votre illustration se trouve, et les tranches, qui marquent des rectangles à exporter séparément.</p>
+
+<h3 id="tools-boards">Plans</h3>
+<table>
+<thead><tr><th>Outil</th><th>Raccourci</th><th>Ce qu'il fait</th></tr></thead>
+<tbody>
+<tr><td>Outil Plan</td><td><kbd>&#8679;O</kbd></td><td>Dessine, déplace et redimensionne des plans de travail directement sur le canevas. Glissez sur le canevas vide pour un nouveau plan, avec <kbd>&#8997;</kbd> dessinant depuis le centre et <kbd>&#8679;</kbd> le gardant carré ; glissez à l'intérieur d'un plan pour le déplacer, avec <kbd>&#8679;</kbd> limitant le déplacement à un axe ; glissez une poignée de coin avec <kbd>&#8679;</kbd> pour conserver les proportions du plan.</td></tr>
+</tbody>
+</table>
+<p>Utilisez l'outil Plan pour ajouter des pages de tailles ou versions différentes d'un design dans un document, et pour redimensionner une page autour de ce que vous avez dessiné. <kbd>Suppr</kbd> retire le plan actif, tant qu'il en reste un.</p>
+
+<h3 id="tools-slices">Tranches</h3>
+<table>
+<thead><tr><th>Outil</th><th>Raccourci</th><th>Ce qu'il fait</th></tr></thead>
+<tbody>
+<tr><td>Outil Tranche</td><td><kbd>&#8679;K</kbd></td><td>Glissez un rectangle qui s'exporte seul ; <kbd>&#8997;</kbd> dessine depuis le centre et <kbd>&#8679;</kbd> le garde carré. Les bords de tranche se fixent sur des pixels entiers, de sorte que ce qui en sort n'est pas flou.</td></tr>
+<tr><td>Outil Sélection de tranche</td><td>&ndash;</td><td>Choisit, déplace et redimensionne des tranches. <kbd>Suppr</kbd> retire celle sélectionnée et un double-clic ouvre ses options.</td></tr>
+</tbody>
+</table>
+<p>Utilisez les tranches pour découper un plan de travail en pièces qui s'exportent séparément, comme les boutons et bannières d'une mise en page web, chacune dans son propre fichier. L'export est couvert sur la page <a href="/manual/files/">Ouvrir et exporter</a>.</p>
+
+<h2 id="tools-navigate">Navigation</h2>
+<p>Les outils qui naviguent, tournent et zooment la vue. Aucun d'eux ne modifie le document : ils ne changent que la façon dont vous le regardez.</p>
+
+<h3 id="tools-view">Déplacer la vue</h3>
+<table>
+<thead><tr><th>Outil</th><th>Raccourci</th><th>Ce qu'il fait</th></tr></thead>
+<tbody>
+<tr><td>Outil Main</td><td><kbd>H</kbd></td><td>Glissez pour naviguer dans la vue. Maintenir la barre d'espace l'emprunte depuis n'importe quel autre outil aussi longtemps que vous la tenez.</td></tr>
+<tr><td>Outil Rotation de la vue</td><td><kbd>&#8679;H</kbd></td><td>Glissez pour faire pivoter la vue autour du milieu de la fenêtre, avec <kbd>&#8679;</kbd> s'alignant sur 15&deg; ; double-cliquez pour la remettre droite. Seule la vue tourne, jamais le document.</td></tr>
+<tr><td>Outil Mosaïque d'impression</td><td>&ndash;</td><td>Listé dans la barre d'outils mais pas encore implémenté ; la palette le marque comme « à venir ».</td></tr>
+</tbody>
+</table>
+<p>L'outil Main fait défiler un dessin zoomé sans toucher les barres de défilement, et l'outil Rotation de la vue incline toute la vue pour que vous puissiez dessiner une ligne inclinée à un angle confortable, puis la remettre droite.</p>
+
+<h3 id="tools-zoom">Zoom</h3>
+<table>
+<thead><tr><th>Outil</th><th>Raccourci</th><th>Ce qu'il fait</th></tr></thead>
+<tbody>
+<tr><td>Outil Zoom</td><td><kbd>Z</kbd></td><td>Cliquez pour zoomer et <kbd>&#8997;</kbd>-cliquez pour dézoomer. Glissez un rectangle sur une partie de l'illustration pour remplir la fenêtre avec celle-ci.</td></tr>
+</tbody>
+</table>
+
+<h2 id="tools-fill-stroke">Contrôles de fond et de contour</h2>
+<p>En bas de la barre d'outils se trouvent les nuanciers de fond et de contour, l'un devant l'autre. Le nuancier avant est le côté actif, celui sur lequel votre prochain choix de couleur atterrit. Une poignée de touches uniques les actionnent sans avoir à atteindre les panneaux :</p>
+<table>
+<thead><tr><th>Raccourci</th><th>Ce qu'il fait</th></tr></thead>
+<tbody>
+<tr><td><kbd>D</kbd></td><td>Réinitialise le fond et le contour à leurs valeurs par défaut.</td></tr>
+<tr><td><kbd>X</kbd></td><td>Bascule entre le fond et le contour comme côté actif.</td></tr>
+<tr><td><kbd>&#8679;X</kbd></td><td>Échange les couleurs de fond et de contour.</td></tr>
+<tr><td><kbd>/</kbd></td><td>Définit le côté actif sur aucune peinture.</td></tr>
+</tbody>
+</table>
+<p>Ceux-ci rendent les mouvements courants rapides : <kbd>X</kbd> pour passer entre peindre le fond et le contour, <kbd>/</kbd> pour passer le fond ou le contour à aucun, et <kbd>D</kbd> pour revenir à un départ noir et blanc simple. Les fonds, les contours et la façon dont ils sont définis sont couverts sur la page <a href="/manual/appearance/">Couleur et apparence</a>.</p>

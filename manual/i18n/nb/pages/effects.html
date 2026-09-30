@@ -1,0 +1,95 @@
+<p class="lede">En effekt endrer hvordan et objekt ser ut uten å endre objektet selv. Stien, gruppen eller teksten forblir nøyaktig slik du tegnet den, og effekten regnes på nytt på toppen hver gang du flytter et punkt eller redigerer en verdi. Effekter stables i Malestabel-panelet, slik at du kan stable flere på ett objekt, omordne dem og ta hvilken som helst av dem av igjen.</p>
+
+<figure class="shot">
+  <img src="img/effects-demo.png" width="1400" height="560" loading="lazy"
+       alt="Tre identiske blå fliser som viser tre effekter: en skygge, en amber utvendig glød, og grovrekkede kanter." />
+  <figcaption>Samme flise med tre effekter: en skygge, en utvendig glød og Gjør grov. Hver er live, slik at flisen under fremdeles er et vanlig avrundet rektangel.</figcaption>
+</figure>
+
+<h2 id="effects-live-and-stacked">Live-effekter og utseendestabelen</h2>
+<p>Hver effekt i Scissor er <strong>live</strong> og <strong>ikke-destruktiv</strong>. Den sitter over objektets fyll og linjer i <strong>Utseende</strong>-panelet (<kbd>&#8679;F6</kbd>) og kjører over hele objektet hver gang kunstverket eller effekten endres. Fordi originalstien er urørt under, kan du fortsette å redigere ankerpunkter, bytte fyllfarge eller skrive ordene på nytt, og effekten følger med. Grip etter en effekt når du vil ha et utseende, en skygge, en bue, et avrundet hjørne, som du kan ombestemme deg om senere, i stedet for å forplikte deg til det for hånd.</p>
+
+<h3 id="effects-order">Rekkefølge betyr noe</h3>
+<p>Effekter kjører fra bunnen av stabelen og oppover, og panelet lister dem øverst først, over fyll og linjene. Rekkefølgen endrer resultatet: en sløring under en skygge myker formen opp før skyggen kastes, mens de samme to den andre veien kaster en skarp skygge og deretter slører hele. Hvis en effekt ikke gjør hva du forventer, er dens plass i stabelen det første å sjekke.</p>
+
+<h2 id="effects-using">Legge til, redigere og fjerne effekter</h2>
+<h3 id="effects-add">Fra Effekt-menyen</h3>
+<p>Velg et objekt, og velg deretter en effekt fra <strong>Effekt</strong>-menyen. Elementer som åpner en dialogboks viser en <strong>Forhåndsvisning</strong> mens du endrer verdiene sine, slik at du kan bedømme resultatet på lerretet før du forplikter deg; hele redigeringen lander som ett trinn i historien i stedet for ett trinn per tastetrykk. En kort versjon av menyen (Skygge, Utvendig glød og Gaussisk sløring, pluss Tøm effekter) sitter også i høyreklikkmenyen på lerretet under <strong>Effekt</strong>.</p>
+
+<h3 id="effects-appearance">I Malestabel-panelet</h3>
+<p>Hver effekt på det valgte objektet får sin egen rad i Malestabel-panelet, merket med et <em>fx</em>-merke. Klikk på effektens navn for å gjenåpne alternativene og endre dem. Klikk på krysset i slutten av raden for å fjerne den ene effekten. For å fjerne hver effekt fra utvalget på én gang, bruker du <strong>Effekt &rsaquo; Tøm effekter</strong>.</p>
+
+<h3 id="effects-panels">I Effektene-panelene</h3>
+<p><strong>Vindu &rsaquo; Effekter</strong>-gruppen samler effektene i ett panel per del av Effekt-menyen: Stiliser, Slør, Forvreng &amp; Transformer, Sti, Kombiner former og Forvreng, med 3D-panelet ved siden av. Hvert panel lister den gruppens effekter med en bryter for å slå én av eller på og innstillingene sine rett under, alle redigert live på utvalget. Det er en raskere måte å prøve en effekt og justere verdiene sine på enn å åpne en dialog hver gang. Å slå en bryter av tar den effekten av objektet. Når et objekt bærer mer enn én effekt av samme type, redigerer panelet den første av dem og Malestabel-panelet viser fremdeles hele stabelen.</p>
+
+<h2 id="effects-stylize">Stiliser: skygger, glød og kanter</h2>
+<p><strong>Effekt &rsaquo; Stiliser</strong>-undermenyen inneholder de hverdagslige ferdigstilleffektene.</p>
+<table>
+  <thead><tr><th>Effekt</th><th>Hva den gjør, og når du bruker den</th><th>Hovedalternativer</th></tr></thead>
+  <tbody>
+    <tr><td>Skygge</td><td>Kaster en forskjøvet, sløret kopi av objektet bak det. Bruk den til å løfte en form, et kort eller en bit tekst av bakgrunnen.</td><td>X- og Y-forskyvning, Sløring, Farge, Opasitet.</td></tr>
+    <tr><td>Utvendig glød</td><td>Spreder en myk halo av farge utover fra objektets kant. Grip etter den for et neonskilt, en fremheving, eller en glød rundt en lyskilde.</td><td>Sløring, Farge, Opasitet.</td></tr>
+    <tr><td>Indvendig glød</td><td>Toner en farge innover fra kanten i stedet for utover, slik at lyset sitter inni formen. Bruk den å tømme en form eller antyde en innfelt, opplyst kant.</td><td>Sløring, Farge, Opasitet.</td></tr>
+    <tr><td>Fjær</td><td>Toner objektets egen kant til gjennomsiktig over en radius. Bruk den for en myk-kantet form eller en enkel vignett.</td><td>Fjærradius.</td></tr>
+    <tr><td>Rund hjørner</td><td>Runder hvert hjørne av stien til én radius. Bruk den til å myke ut punktene på en stjerne, et polygon eller en håndtegnet sti uten å tegne den på nytt.</td><td>Radius.</td></tr>
+    <tr><td>Skissefyll</td><td>Fyller formen med en frem-og-tilbake rekke med linjer, som om den ble skissert for hånd. Bra for et løse, inn-tegnet fyll eller en markeringspenn-look.</td><td>Vinkel, Avstand, Linjetykkelse, Variasjon (hvor mye linjene vandrer, 0 til 100%).</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-blur">Sløring</h2>
+<p><strong>Effekt &rsaquo; Sløring &rsaquo; Gaussisk sløring</strong> myker hele objektet med en <em>Radius</em> du angir i piksler. Fordi den forblir live, kan du heve eller senke radiusen når som helst. Bruk den for en myk, uskarp bakgrunn, eller som en rask myk skyggform for seg selv.</p>
+
+<h2 id="effects-distort">Forvreng og transformer</h2>
+<p><strong>Effekt &rsaquo; Forvreng &amp; Transformer</strong>-undremenyen former omtrekken om mens den underliggende stien forblir redigerbar.</p>
+<table>
+  <thead><tr><th>Effekt</th><th>Hva den gjør, og når du bruker den</th><th>Hovedalternativer</th></tr></thead>
+  <tbody>
+    <tr><td>Fri forvrenging</td><td>Dra de fire hjørnene av objektets ramme i en liten forhåndsvisning, og kunstverket følger i perspektiv. Bruk den for å late som om det er perspektiv, som en etikett som sitter på en skjev flate. En Forhåndsvisning-bryter viser resultatet på lerretet mens du drar, og Tilbakestill får hjørnene tilbake til firkant.</td><td>De fire hjørnehåndtakene, Forhåndsvisning, Tilbakestill.</td></tr>
+    <tr><td>Klem &amp; Svulm</td><td>Bøyer segmentene mellom ankerpunkter enten innover, klemme omtrekken til spissere, eller utover, få den til å svulme ut i buker. Bruk den for stjerneutbrudd, klumper og myke bladformer.</td><td>Mengde, fra klemt til svullet.</td></tr>    <tr><td>Gjør grov</td><td>Bryter omtrekken opp i små tilfeldige bevegelser, enten skarpe eller jevnede. Bruk den for en revet-papirkant eller en grovere, håndtegnet linje.</td><td>Størrelse (hvor langt punktene beveger seg), Detalj (hvor tett), Punkter: Jevn eller Hjørne.</td></tr>
+    <tr><td>Transformer</td><td>Skalerer, flytter og roterer objektet som en effekt, og kan etterlate et sett med kopier. Bruk den for en redigerbar rad eller ring av gjentagelser, eller for å dytt og endre størrelse på en form uten å røre dens egentlige geometri.</td><td>Skalér horisontal og vertikal, Flytt horisontal og vertikal, Roter, Kopier (0 til 200).</td></tr>
+    <tr><td>Drett</td><td>Forskyver ankerpunkter og kontrollhåndtakene sine med en tilfeldig mengde. Bruk den for å drette en for perfekt form litt ut av retning.</td><td>Horisontal og vertikal mengde, og om Ankerpunkter, Kontrollpunkter, eller begge skal flyttes.</td></tr>
+    <tr><td>Snurr</td><td>Drer innersiden av formen mer enn kantene, sno den inn i en virvel. Bruk den for en spiral eller en hvirvel.</td><td>Vinkel.</td></tr>
+    <tr><td>Sikk-sakk</td><td>Gjør rette segmenter til regelmessige sikk-sakk (Hjørne) eller bølger (Jevn). Bruk den for en bølget understrekning, en rickrack-kant eller en taggete kant.</td><td>Størrelse, Åser per segment, Punkter: Hjørne eller Jevn.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-path">Sti</h2>
+<p><strong>Effekt &rsaquo; Sti</strong>-undremenyen bearbeider objektets omtrek mens den lar kilden være redigerbar.</p>
+<table>
+  <thead><tr><th>Effekt</th><th>Hva den gjør, og når du bruker den</th><th>Hovedalternativer</th></tr></thead>
+  <tbody>
+    <tr><td>Forskyv sti</td><td>Vokser eller krymper omtrekken med en angitt avstand. En positiv forskyvning sprer den utover, en negativ trekker den inn. Bruk den for en live omtrek rundt tekst eller en form som holder tritt mens du redigerer.</td><td>Forskyvning, Sammenføy: Mitre, Rund eller Bevel.</td></tr>
+    <tr><td>Omtrekk objekt</td><td>Legger til en Forskyv sti-effekt satt til null, og gjør objektet (live-tekst inkludert) til en omtrekket sti slik at senere effekter har en ekte sti å virke på.</td><td>Ingen.</td></tr>
+    <tr><td>Linje til form</td><td>Gjør linjen til en fylt form som en effekt. Bruk den når du vil fylle en linje med en gradient, eller fjerne eller forvreng en linje som ellers er en vanlig linje.</td><td>Ingen.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-pathfinder">Kombiner former</h2>
+<p><strong>Effekt &rsaquo; Kombiner former</strong>-undremenyen kombinerne formene inni en gruppe med en formmodus, men holder dem som separate, redigerbare stier under. Bruk den på en gruppe og det kombinerte resultatet er hva du ser, mens hvert medlem fortsatt kan flyttes eller omfarges. Bruk den for å prøve en kombinasjon uten å forplikte deg på den måten Kombiner former-panelet ville gjort.</p>
+<table>
+  <thead><tr><th>Modus</th><th>Resultat</th></tr></thead>
+  <tbody>
+    <tr><td>Legg til</td><td>Slår gruppens former sammen til ett område.</td></tr>
+    <tr><td>Snitt</td><td>Beholder bare hvor formene overlapper.</td></tr>
+    <tr><td>Ekskluder</td><td>Beholder alt unntatt hvor de overlapper.</td></tr>
+    <tr><td>Trekk fra</td><td>Fjerner de fremste formene fra den bakerste.</td></tr>
+    <tr><td>Minus Bak</td><td>Fjerner de bakerste formene fra den fremste.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-warp">Forvreng</h2>
+<p><strong>Effekt &rsaquo; Forvreng</strong> bøyer objektet langs én av et sett med forhåndsdefinerte former, og forblir live slik at du kan fortsette å redigere kunstverket under. Bruk den for å bue en overskrift til en bue, bølge et banner, eller presse en flat blokk inn i en bule, uten å gi opp muligheten til å endre ordene eller fargene.</p>
+<p>Menyen tilbyr ti stiler direkte (Bue, Bueform, Buil, Flagge, Bølge, Fiske, Stige, Fisheye, Puste og Klemme). <strong>Forvrengingsalternativer&#8230;</strong> åpner hele settet, som legger til Bue nederst, Bue øverst, Skall nederst og Skall øverst, og lar deg stille inn mengden:</p>
+<dl>
+  <dt>Bue</dt><dd>Hvor sterkt formen bøyer, fra -100% til 100%.</dd>
+  <dt>Horisontal</dt><dd>Heler bøyingen til én side, fra -100% til 100%.</dd>
+  <dt>Vertikal</dt><dd>Tipper bøyingen opp eller ned, fra -100% til 100%.</dd>
+</dl>
+<p>De samme forvrengingsstilene kan brukes som en omformende konvolutt i stedet, som endrer stien selv i stedet for å forbli live: se <a href="#transform-envelope">Formforvrenging</a>. Forvreng-verktøyet og de andre utflytelsesverktøyene omformer ved å dra på lerretet og dekkes under <a href="#tools-width-liquify">verktøyreferansen</a>.</p>
+
+<h2 id="effects-3d">3D og Materialer</h2>
+<p><strong>Effekt &rsaquo; 3D og Materialer</strong> gjør en flat form til et fast legeme: et plan, en ekstrudering og fasett, en rotasjon eller en oppblåsning. Som de andre er det en live-effekt, slik at den flate stien forblir der å redigere og det faste legemet bygges på nytt når du endrer det. Dybden, fasett, rotasjon, belysning og overflate angis i 3D og Materialer-panelet. Fordi det har flere kontroller enn én dialog, har 3D sin egen side: se <a href="/manual/three-d/">3D</a>.</p>
+
+<h2 id="effects-expand">Gjøre effekter om til kunstverk</h2>
+<p>En effekt forblir live så lenge du vil ha den. Når utseendet er fastlagt og du trenger resultatet som vanlige, redigerbare stier, for eksempel for å levere filen videre eller omforme effektens utdata for hånd, velger du <strong>Objekt &rsaquo; Utvid utseende</strong>. Det baker hele utseendestabelen, effekter inkludert, ned til vanlig kunstverk. Dette kan ikke redigeres som en effekt etterpå, så utvid bare når du er sikker. For å ta effekter av uten å bake noen, fjern dem én om én i Malestabel-panelet eller tøm dem alle med <strong>Effekt &rsaquo; Tøm effekter</strong>.</p>
+<p>Effekt-menyen lister også <strong>Rasteriser</strong>, som ikke er en live-effekt: den konverterer utvalget til piksler der og da. Maling og piksellag dekkes på <a href="/manual/pixels/">Piksellag</a>-siden.</p>

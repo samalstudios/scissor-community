@@ -1,0 +1,85 @@
+<p class="lede">El panell Capes és el mapa d'un document: cada capa, grup i objecte en una sola llista, apilats en l'ordre en què es troben a la pàgina. Useu-lo per mostrar i amagar, blocar, canviar el nom, reordenar i seleccionar, i per veure d'un cop d'ull en quina capa es troba qualsevol objecte.</p>
+
+<p>Les dreceres a continuació estan escrites en format macOS. A Windows i Linux, llegiu <kbd>&#8984;</kbd> com a Ctrl, <kbd>&#8997;</kbd> com a Alt i <kbd>&#8679;</kbd> com a Majúscules.</p>
+
+<h2 id="layers-panel">El panell Capes</h2>
+<p>Obriu-lo des de <strong>Finestra &rsaquo; Capes</strong> (<kbd>F7</kbd>). La llista conté les vostres capes al primer nivell, amb els continguts de cada capa niuats sota d'ella: grups, camins, text, imatges i capes de píxels, dibuixats com un arbre que podeu obrir i tancar. Un contenidor (una capa o un grup) porta un petit triangle a l'esquerra de la seva fila; feu clic a ell per plegar el contenidor o obrir-lo. Els documents profunds romanen llegibles perquè podeu col·lapsar les parts sobre les quals no esteu treballant.</p>
+<p>Dos botons es troben al peu del panell. <strong>Crea una capa nova</strong> afegeix una capa buida just sobre la que està activa actualment i activa la nova. <strong>Elimina selecció</strong> elimina allò que està seleccionat; un document sempre conserva almenys una capa, de manera que l'última capa romanent no es pot eliminar d'aquesta manera. Per canviar el nom de qualsevol capa, grup o objecte, feu doble clic al seu nom a la llista, escriviu i premeu <kbd>Retorn</kbd>. Donar noms a les parts d'un document ocupat és la manera més ràpida de mantenir-lo navegable.</p>
+
+<h3 id="layers-row">Què mostra cada fila</h3>
+<p>Llegint una fila d'esquerra a dreta:</p>
+<table>
+  <thead><tr><th>Part</th><th>Què fa</th></tr></thead>
+  <tbody>
+    <tr><td>Ull</td><td>Mostra o amaga aquesta capa, grup o objecte. Una fila amb l'ull apagat no es dibuixa ni s'imprimeix ni s'exporta.</td></tr>
+    <tr><td>Bloc</td><td>Bloca o desbloca la fila. Un objecte blocat no es pot seleccionar ni editar al llenç.</td></tr>
+    <tr><td>Targeta de color</td><td>Només a les files de capa: l'etiqueta de color de la capa, utilitzada per tenyir les marques de selecció i els ressaltats d'aquesta capa.</td></tr>
+    <tr><td>Triangle</td><td>Només als contenidors: obre o tanca la capa o el grup per revelar què hi ha dins.</td></tr>
+    <tr><td>Icona de tipus</td><td>Marca grups i grups de retall (un grup de retall es dibuixa amb un contorn discontínu).</td></tr>
+    <tr><td>Nom</td><td>El nom, o un marcador de posició entre claudators com <code>&lt;Camí&gt;</code> o bé <code>&lt;Grup&gt;</code> quan una cosa no té nom. Doble clic per canviar el nom.</td></tr>
+    <tr><td>Quadrat de selecció</td><td>A la vora dreta: un petit quadrat al color de la capa que apareix a qualsevol fila que conté part de la selecció actual.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="layers-groups">Capes i grups</h2>
+<p>Les capes són els contenidors de primer nivell d'un document. Existeixen per mantenir separades parts no relacionades de la feina: un fons a una capa, el dibuix principal a un altre, etiquetes a un tercer. Com que una capa es troba a l'arrel de l'arbre, amagar-la, blocar-la o reordenar-la mou tot allò que conté d'un sol pas.</p>
+<p>Un grup és un contenidor més petit que viu dins d'una capa (o dins d'un altre grup) i viatja amb la feina. L'agrupament és com les parts d'una cosa es lliguen entre elles, les peces d'un logotip o una icona, de manera que es mouen, es redimensionen i s'apilen com una unitat. Els grups s'obren i es tanquen al panell amb el seu propi triangle, exactament com les capes.</p>
+<p>Capes i grups es comporten de la mateixa manera en un aspecte important: cadascun es pot mostrar o amagar, blocar o desblocar, i cadascun pot portar la seva pròpia opacitat i mode de fusió que s'apliquen a tot allò que conté. La diferència és de rol. Les capes organitzen tot el document; els grups lliguen objectes individuals.</p>
+
+<h3 id="layers-grouping">Agrupar i desagrupar</h3>
+<p>Seleccioneu dos o més objectes i trieu <strong>Objecte &rsaquo; Agrupa</strong> (<kbd>&#8984;G</kbd>) per recollir-los en un grup. <strong>Objecte &rsaquo; Desagrupa</strong> (<kbd>&#8679;&#8984;G</kbd>) torna a treure els objectes d'un grup seleccionat. Els grups poden estar niuats, de manera que un grup de grups va bé; cada <kbd>&#8679;&#8984;G</kbd> treu un nivell. Useu un grup cada vegada que us trobeu seleccionant els mateixos objectes una i altra vegada.</p>
+
+<h2 id="layers-stacking">Ordre de superposició: davant i darrere</h2>
+<p>Els objectes es dibuixen de darrere a davant, de manera que un objecte més proper a la part de davant cobreix els que hi ha darrere on es superposen. El panell mostra aquest ordre directament: la fila de dalt és l'objecte més endavant, i la de baix és el més enrere. Reordenar un objecte canvia què cobreix què.</p>
+<p>La manera més ràpida de reordenar és arrossegar: agafeu una fila i deixeu-la anar més amunt o més avall a la llista per moure-la a través de la pila, o bé deixeu-la anar sobre una capa o grup per moure l'objecte <em>a dins</em> d'aquest. Arrossegar també és com moveu un objecte seleccionat a una capa diferent: sense tallar i enganxar.</p>
+<p>Mou una selecció a través de la pila amb <strong>Objecte &rsaquo; Organitza</strong>:</p>
+<table>
+  <thead><tr><th>Comandament</th><th>Drecera</th><th>Efecte</th></tr></thead>
+  <tbody>
+    <tr><td>Porta al davant</td><td><kbd>&#8679;&#8984;]</kbd></td><td>Tot al davant a la seva capa.</td></tr>
+    <tr><td>Porta endavant</td><td><kbd>&#8984;]</kbd></td><td>Un pas cap endavant.</td></tr>
+    <tr><td>Envia enrere</td><td><kbd>&#8984;[</kbd></td><td>Un pas cap enrere.</td></tr>
+    <tr><td>Envia al darrere</td><td><kbd>&#8679;&#8984;[</kbd></td><td>Tot al darrere a la seva capa.</td></tr>
+  </tbody>
+</table>
+<p>Useu-los quan una forma que necessiteu està amagada darrere una altra, o quan un fons ha acabat sobre el dibuix. Per treballar sobre objectes que es troben un sobre l'altre, <strong>Selecciona &rsaquo; Objecte següent de sobre</strong> (<kbd>&#8997;&#8984;]</kbd>) i <strong>Objecte següent de sota</strong> (<kbd>&#8997;&#8984;[</kbd>) mouen la selecció amunt i avall a la pila, cosa pràctica per arribar a alguna cosa enterrada sota altra feina.</p>
+
+<h2 id="layers-visibility">Mostrar i amagar</h2>
+<p>Feu clic a l'ull de qualsevol fila per amagar aquesta capa, grup o objecte; feu clic de nou per tornar-lo a mostrar. Una fila amagada no pren part en el dibuix, la impressió ni l'exportació, de manera que amagar és la manera segura de treure alguna cosa de sense eliminar-la. Useu-la per comparar dues versions d'un detall, o per desocupar un llenç abarrotat fins a la part sobre la qual esteu treballant.</p>
+<p>El menú ofereix el mateix per a la selecció actual: <strong>Objecte &rsaquo; Amaga &rsaquo; Selecció</strong> (<kbd>&#8984;3</kbd>) amaga allò que està seleccionat, i <strong>Objecte &rsaquo; Mostra-ho tot</strong> (<kbd>&#8997;&#8984;3</kbd>) revela tot allò que estava amagat.</p>
+
+<h2 id="layers-locking">Blocatge</h2>
+<p>Feu clic al bloc d'una fila per blocar-la. Un objecte blocat roman visible però no es pot seleccionar ni modificar al llenç, de manera que està fora de perill mentre treballeu al seu voltant. Blocar una capa protegeix tot allò que conté d'un sol cop. Bloqueu el fons mentre dibuixeu sobre d'ell, o bloqueu un element acabat perquè un arrossegament accidental no el mogui.</p>
+<p>Des del menú, <strong>Objecte &rsaquo; Bloca &rsaquo; Selecció</strong> (<kbd>&#8984;2</kbd>) bloc allò que està seleccionat, i <strong>Objecte &rsaquo; Desbloca-ho tot</strong> (<kbd>&#8997;&#8984;2</kbd>) allibera de nou tot. Blocar un objecte seleccionat també el treu de la selecció, atès que una cosa blocada ja no és alguna cosa sobre la qual pugueu actuar.</p>
+
+<h2 id="layers-selecting">Selecció i capa activa</h2>
+<p>Feu clic a la fila d'un objecte al panell per seleccionar aquest objecte al llenç. Mantingueu premut <kbd>&#8679;</kbd>, <kbd>&#8984;</kbd> o <kbd>Ctrl</kbd> mentre feu clic per afegir un altre objecte a la selecció, de manera que podeu construir una selecció des de la llista sense buscar petites formes a la pàgina.</p>
+<p>Fer clic a una fila de <em>capa</em> fa una cosa diferent: converteix aquesta capa en la capa activa, marcada amb una barra colorada al llarg de la seva vora esquerra. La feina nova que dibuixeu, inseriu o enganxeu s'afegeix a la capa activa, de manera que fer clic a una capa abans de començar decideix on caurà aquella feina. Crear una nova capa la fa activa immediatament.</p>
+<p>El quadrat de selecció a la dreta de cada fila lliga el panell al llenç. Apareix, al color de la capa, a cada fila que conté part de la selecció actual, i està omplert als objectes exactes que estan seleccionats. Com que el senyal puja per l'arbre, una ullada avall de la llista mostra tant què està seleccionat com en quines capes i grups es troben aquells objectes.</p>
+
+<h2 id="layers-colours">Etiquetes de color</h2>
+<p>Cada capa rep un color d'una seqüència fixa (blau clar, vermell, verd, blau, groc i així successivament, dotze en total, que es repeteixen a mesura que afegiu més capes). Aquest color és l'etiqueta de la capa. Apareix com la targeta al costat del nom de la capa, i teny les marques de selecció al panell juntament amb els ressaltats de selecció i el quadre delimitador dibuixats al llenç per als objectes d'aquesta capa. El propòsit és la identificació ràpida: quan seleccioneu alguna cosa i el seu quadrat es torna verd, sabeu immediatament que pertany a la capa verda. Repartir un document en unes capes ben nominades i de colors diferents fa que sigui molt més fàcil fer un seguiment de on és tot.</p>
+
+<h2 id="layers-masks">Màscares de retall i d'opacitat</h2>
+<p>Una capa o un grup pot portar la seva pròpia opacitat i mode de fusió, totes dues establertes al panell <strong>Transparència</strong> (<strong>Finestra &rsaquo; Transparència</strong>, <kbd>&#8679;&#8984;F10</kbd>). El mateix panell conté <strong>Contingut de fusió al grup</strong>, que manté els modes de fusió d'un grup barrejant-se només entre ells en comptes de fer-ho amb allò que hi ha sota, i <strong>Grup knockout</strong>, on cada objecte del grup amaga els que hi ha sota d'ell en comptes de mostrar-se a través d'ells. Les màscares van un pas més enllà i permeten que un objecte controli on, o amb quina força, es mostra altra feina.</p>
+
+<h3 id="layers-clip">Màscares de retall</h3>
+<p>Una màscara de retall retalla la feina a una forma. Seleccioneu dos o més objectes i trieu <strong>Objecte &rsaquo; Màscara de retall &rsaquo; Crea</strong> (<kbd>&#8984;7</kbd>). L'objecte seleccionat més alt es converteix en el camí de retall, i tot allò que hi ha sota d'ell es mostra només dins aquella forma; la resta es talla. El resultat és un grup de retall, dibuixat al panell amb una icona discontínua. <strong>Allibera</strong> (<kbd>&#8997;&#8984;7</kbd>) desfà l'operació i retorna els objectes. Useu-la per retallar una fotografia o un patró feixuc a un cercle, una lletra o qualsevol contorn que dibuixeu a sobre.</p>
+
+<h3 id="layers-opacity-mask">Màscares d'opacitat</h3>
+<p>Una màscara d'opacitat esvaeix la feina segons la lluminositat d'un altre objecte. Seleccioneu dos o més objectes i trieu <strong>Objecte &rsaquo; Màscara de retall &rsaquo; Crea màscara d'opacitat</strong>, o bé useu <strong>Crea màscara</strong> al panell Transparència. L'objecte més alt es converteix en la màscara: on és clara la feina de sota es mostra completament, on és fosca la feina s'esvaeix fins a desaparèixer, amb els grisos al donant transparència parcial. <strong>Allibera màscara d'opacitat</strong> la desmunta de nou. Useu un degradat de blanc a negre com a màscara per esvair una imatge cap a una vora, o per construir les suaus vinetes i transicions que un únic valor d'opacitat pla no pot donar.</p>
+
+<h2 id="layers-organising">Organitzar un document</h2>
+<p>Una mica d'estructura al principi estalvia molta cerca més endavant. Alguns costums que valen la pena:</p>
+<dl>
+  <dt>Una capa per assumpte</dt>
+  <dd>Manteniu el fons, la feina principal i el text en capes separades i nominades. Podeu llavors amagar-les, blocar-les o reordenar-les d'un sol clic.</dd>
+  <dt>Bloqueu allò que no toqueu</dt>
+  <dd>Bloqueu les capes al voltant de la qual esteu treballant perquè un clic o un arrossegament accidental no les pertorbi, i desbloqueu-les de nou amb <kbd>&#8997;&#8984;2</kbd> quan les necessiteu.</dd>
+  <dt>Agrupeu allò que es mou junts</dt>
+  <dd>Ligueu les parts d'un sol element en un grup perquè es comporti com un objecte únic, i reserveu les capes per a les divisions més grans del document.</dd>
+  <dt>Establiu la capa activa abans de dibuixar</dt>
+  <dd>Feu clic a la capa a la qual voleu afegir primer, de manera que la feina nova cau al lloc correcte en comptes de sobre el que hi havia.</dd>
+  <dd>Deixeu que els colors us guiïn</dd>
+  <dd>Confieu en els colors de les capes: quan el ressaltat d'una selecció coincideix amb la targeta d'una capa, sabeu exactament on viu aquell objecte sense obrir res.</dd>
+</dl>

@@ -1,0 +1,34 @@
+<p class="lede">Før du kan ændre noget, skal du sige, hvad der skal ændres. Denne side handler om at vælge grafik: de hurtige klik med markeringsværktøjerne og hele <strong>Vælg</strong>-menuen, der vælger objekter efter, hvad de er lavet af, gennemgår stakken og gemmer en markering til at bringe tilbage senere. I genvejene nedenfor er <kbd>&#8984;</kbd> <kbd>Ctrl</kbd> på Windows og Linux, <kbd>&#8997;</kbd> er <kbd>Alt</kbd> og <kbd>&#8679;</kbd> er Shift.</p>
+
+<h2 id="selecting-basics">Klik og marquee</h2>
+<p><strong>Markeringsværktøjet</strong> (<kbd>V</kbd>) er, hvor det meste markering begynder. Klik på et objekt for at vælge det; hold <kbd>&#8679;</kbd> og klik på et andet for at tilføje det, eller klik på et valgt for at slippe det. Træk på tomt lærred for at trække en <em>marquee</em> ud, og alt, den rører ved, vælges. <strong>Det direkte markeringsværktøj</strong> (<kbd>A</kbd>) når inde i stedet for: det vælger individuelle ankerpunkter og stisegmenter i stedet for hele objekter, og <strong>Gruppemarkeringværktøjet</strong> træder ind i en gruppe ad gangen. Disse værktøjer dækkes på siderne <a href="/manual/tools/">Værktøjer</a> og <a href="/manual/paths/">Stier</a>; resten af denne side er Vælg-menuen, som foretager det valg, som klik ikke kan.</p>
+
+<h2 id="selecting-whole-document">Alt, intet og invers</h2>
+<table>
+  <thead><tr><th>Kommando</th><th>Genvej</th><th>Hvad den vælger</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Vælg &rsaquo; Alt</strong></td><td><kbd>&#8984;A</kbd></td><td>Hvert ulåst objekt i dokumentet.</td></tr>
+    <tr><td><strong>Alt på aktiv tavle</strong></td><td><kbd>&#8997;&#8984;A</kbd></td><td>Kun grafikken på den tavle, du arbejder på - den hurtige måde at samle én side af en flertavlet fil op.</td></tr>
+    <tr><td><strong>Fravælg</strong></td><td><kbd>&#8679;&#8984;A</kbd></td><td>Intet; rydder den aktuelle markering.</td></tr>
+    <tr><td><strong>Invers</strong></td><td></td><td>Bytter markeringen med alt, der <em>ikke</em> var valgt.</td></tr>
+    <tr><td><strong>Vælg igen</strong></td><td><kbd>&#8984;6</kbd></td><td>Bringer den markering tilbage, du havde lige før du ryddede den.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="selecting-stack">Gennemgang af stakken</h2>
+<p>Når objekter overlapper, flytter <strong>Vælg &rsaquo; Næste objekt over</strong> (<kbd>&#8997;&#8984;]</kbd>) og <strong>Næste objekt under</strong> (<kbd>&#8997;&#8984;[</kbd>) markeringen op eller ned gennem bunken på samme sted, ét objekt ad gangen. Det er den pålidelige måde at nå en form, der er begravet under andre, uden at trække dem øverste ud af vejen.</p>
+
+<h2 id="selecting-same">Vælg samme: valg efter, hvad ting har til fælles</h2>
+<p>Vælg ét objekt, og derefter samler <strong>Vælg &rsaquo; Samme</strong> hvert andet objekt i dokumentet, der matcher det på én egenskab. Brug det til at omfarve hver form af én udfyldning i ét trin eller til at samle alle de tynde stregoverflader på én gang.</p>
+<dl>
+  <dt>Udseende</dt><dd>Det hele udseende - samme stak af udfyldninger, stregoverflader og effekter.</dd>
+  <dt>Udfyldning &amp; streg</dt><dd>Samme udfyldning og samme stregoverflade sammen.</dd>
+  <dt>Udfyldningsfarve / Stregfarve</dt><dd>Samme udfyldningsfarve eller samme stregfarve.</dd>
+  <dt>Stregtykkelse</dt><dd>Samme stregbredde.</dd>
+  <dt>Opacitet</dt><dd>Samme opacitet.</dd>
+  <dt>Blandingstilstand</dt><dd>Samme blandingstilstand.</dd>
+  <dt>Form</dt><dd>Samme type objekt - alle ellipser, lad os sige, eller al tekst.</dd>
+</dl>
+
+<h2 id="selecting-saved">Gemme en markering</h2>
+<p>En finmarkering er værd at beholde. <strong>Vælg &rsaquo; Gem markering&hellip;</strong> gemmer det aktuelle sæt under et navn; det vises derefter under <strong>Vælg &rsaquo; Gemte markeringer</strong>, og valg af det der vælger præcis disse objekter igen, uanset hvordan du har klikket rundt siden. <strong>Rediger markering&hellip;</strong> omdøber eller fjerner dem, du har gemt. Gemte markeringer rejser inde i <code>.cut</code>-dokumentet, så de stadig er der næste gang du åbner filen.</p>

@@ -1,0 +1,31 @@
+{
+  "chrome": {
+    "Manual": "Manual",
+    "Shortcuts": "Dreceres",
+    "Open the editor": "Obre l'editor",
+    "Skip to the content": "Salta al contingut",
+    "Search the manual": "Cerca al manual",
+    "Search the manual…": "Cerca al manual…",
+    "Breadcrumb": "Ruta de navegació",
+    "More pages": "Més pàgines",
+    "Previous": "Anterior",
+    "Next": "Següent",
+    "Language": "Idioma",
+    "Scissor by Samal Studios.": "Scissor per Samal Studios.",
+    "Third-party licences": "Llicències de tercers",
+    "| Scissor manual": "| Manual de Scissor",
+    "Scissor user manual: every tool, menu and shortcut": "Manual d'usuari de Scissor: cada eina, menú i drecera",
+    "Scissor user manual": "Manual d'usuari de Scissor"
+  },
+  "groups": {
+    "Get started": "Primers passos",
+    "Draw": "Dibuixar",
+    "Arrange & build": "Organitza i construeix",
+    "Layout & pixels": "Disseny i píxels",
+    "Panels": "Panells",
+    "Files & reference": "Fitxers i referència"
+  },
+  "nav": {},
+  "meta": {},
+  "keywords": {}
+}

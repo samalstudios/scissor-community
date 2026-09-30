@@ -1,0 +1,165 @@
+<p class="lede">Alt, der ændrer, hvor et objekt sidder, hvor stort det er, eller hvilken retning det vender, bor her: flytning og skalering i hånden, nøjagtige numeriske transformeringer, justering og stakning, levende gentagelser, morfer, konvolutter og at vende en flad form til en fast genstand.</p>
+
+<p>Genvejene nedenfor er skrevet i deres macOS-format. På Windows og Linux skal du læse <kbd>⌘</kbd> som Ctrl, <kbd>⌥</kbd> som Alt og <kbd>⇧</kbd> som Shift.</p>
+
+<h2 id="transform-select-move">Valg og flytning</h2>
+<p>Før du kan transformere noget, skal du sige hvad. Gå efter disse først: markeringsværktøjerne beslutter, hvad et træk, en numerisk kommando eller et panelfelt vil virke på.</p>
+
+<h3 id="transform-selection-tools">Markeringsværktøjerne</h3>
+<table>
+  <thead><tr><th>Værktøj</th><th>Genvej</th><th>Hvad den vælger</th></tr></thead>
+  <tbody>
+    <tr><td>Markeringsværktøj</td><td><kbd>V</kbd></td><td>Hele objekter og grupper.</td></tr>
+    <tr><td>Det direkte markeringsværktøj</td><td><kbd>A</kbd></td><td>Individuelle ankerpunkter og stisegmenter.</td></tr>
+    <tr><td>Gruppemarkeringværktøj</td><td></td><td>Ét objekt inde i en gruppe; hvert yderligere klik udvider til gruppen omkring det.</td></tr>
+  </tbody>
+</table>
+<p>Shift-klik tilføjer et objekt til markeringen eller slipper det igen. Træk på tomt lærred for en marquee, og hold <kbd>⇧</kbd> for at tilføje det, marqueeen fanger, til det, der allerede er valgt. Dobbeltklik på en gruppe med Markeringsværktøjet træder ind i den, så du kan arbejde på ét medlem uden at opdele gruppen.</p>
+
+<h3 id="transform-moving">Flytning af en markering</h3>
+<p>Træk et valgt objekt for at flytte det. At holde <kbd>⌥</kbd> efterlader en kopi og trækker den i stedet, hvilket er den hurtige måde at duplikere på plads og flytte i én bevægelse. At holde <kbd>⇧</kbd> begrænser flytningen til 45&deg;-trin målt fra begrænsningsvinklen indstillet i Indstillinger og slår fastgøring fra; uden <kbd>⇧;</kbd> fastgøres markeringen til nærliggende kanter, centra og vinkler. Piltasterne skubber med tastaturforøgelsen, <kbd>⇧</kbd> med en pil skubber med ti gange det, og <kbd>⌥</kbd> med en pil skubber en kopi.</p>
+
+<h3 id="transform-bounding-box">Afgrænsningsrammen: skalering og rotation i hånden</h3>
+<p>Markeringens afgrænsningsramme bærer otte håndtag. Træk ét for at skalere: <kbd>⇧</kbd> bevarer proportionerne, og <kbd>⌥</kbd> skalerer om centret i stedet for det modsatte håndtag. Lige uden for et hjørne kommer markøren ind i rotationszonen; træk der for at dreje markeringen om boksens centrum, med <kbd>⇧</kbd> der fastgør til 45&deg;. Efter en rotation efterlades rammen skrå med grafikken. <strong>Objekt &rsaquo; Transformering &rsaquo; Nulstil afgrænsningsramme</strong> retter den op igen, så senere bredde- og højde-redigeringer læses langs sidens akser.</p>
+
+<h2 id="transform-numeric">Numeriske transformeringer</h2>
+<p>Trækning er hurtig, men tilnærmelsesvist. Når en værdi skal være nøjagtig, eller den samme på mange objekter, skal du skrive den. Transformering-panelet holder de levende tal for markeringen, og undermenuen <strong>Objekt &rsaquo; Transformering</strong> holder engangskommandoer med en Kopi-indstilling.</p>
+
+<h3 id="transform-panel">Transformering-panelet</h3>
+<p>Transformering-panelet (<kbd>⇧F8</kbd>) viser X, Y, B og H i pixels for markeringen; skriv en værdi og tryk på Return for at indstille dem. Under dem roterer ⟳-feltet markeringen med en vinkel, og ⧄-feltet skærer den med én, hver der vender tilbage til nul efter anvendelse. Panelet har brug for noget valgt; uden valgt nedtoner det og siger det.</p>
+<p>Egenskaber-panelet gentager X, Y, B og H med et rotationsfelt og to knapper, der vender markeringen vandret eller lodret om sit eget centrum, så de mest almindelige bevægelser er for hånden uden at åbne et andet panel.</p>
+
+<h3 id="transform-commands">Flyt, Rotér, Spejl, Skalér og Skær</h3>
+<p><strong>Objekt &rsaquo; Transformering</strong> holder de numeriske kommandoer. Hver åbner en lille dialog, og hver (undtagen Flyt, som er en direkte forskydning) transformerer omkring referencepunktet. Feltet Kopi i hver dialog anvender ændringen på en duplikat og efterlader originalen urørt, hvilket er måden at bygge et spejlet par eller en skaleret ekkó på ét trin.</p>
+<table>
+  <thead><tr><th>Kommando</th><th>Genvej</th><th>Felter</th></tr></thead>
+  <tbody>
+    <tr><td>Flyt&hellip;</td><td><kbd>⇧⌘M</kbd></td><td>Vandret, Lodret, Kopi.</td></tr>
+    <tr><td>Rotér&hellip;</td><td></td><td>Vinkel, Kopi.</td></tr>
+    <tr><td>Spejl&hellip;</td><td></td><td>Akse (Vandret eller Lodret), Vinkel, Kopi.</td></tr>
+    <tr><td>Skalér&hellip;</td><td></td><td>Vandret %, Lodret %, Kopi.</td></tr>
+    <tr><td>Skær&hellip;</td><td></td><td>Skærvinkel, Aksevinkel, Kopi.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="transform-each-again">Transformér hver og Transformér igen</h3>
+<p><strong>Transformér hver&hellip;</strong> (<kbd>⌥⇧⌘D</kbd>) skalerer, flytter, drejer og spejler hvert valgte objekt omkring <em>dets eget</em> centrum i stedet for markeringens delte centrum. Dens dialog tager Skalering H og V, Flyt H og V, en Rotér-vinkel, Spejl X og Spejl Y afkrydsningsfelter og Kopi. Gå efter den for at gøre en række objekter ujævn eller sprede dem ud, så hvert enkelt drejer og vokser på plads i stedet for at bane rundt gruppen.</p>
+<p><strong>Transformér igen</strong> (<kbd>⌘D</kbd>) gentager den sidste transformering på den aktuelle markering. Flyt et objekt og tryk derefter på <kbd>⌘D</kbd> et par gange, og du får en jævnt forskudt række; kombiner det med <kbd>⌥</kbd>-trækning af en kopi for at bygge gentagelsesmønstre i hånden.</p>
+
+<h2 id="transform-tools">Transformationsværktøjerne og referencepunktet</h2>
+<p>Rotér (<kbd>R</kbd>), Spejl (<kbd>O</kbd>), Skalér (<kbd>S</kbd>) og Skær-værktøjerne arbejder hver omkring et referencepunkt, tegnet som et lille kors. Det starter i midten af markeringen; klik helst på lærredet for at flytte det derhen, og valg af noget andet sætter det tilbage til det nye centrum. Træk derefter på lærredet for at dreje, spejle, skalere eller skære omkring dette punkt.</p>
+<p><kbd>⇧</kbd> begrænser hvert værktøj: 45&deg;-trin for Rotér og Spejl, lige vandret og lodret for Skalér, én akse for Skær. At holde <kbd>⌥</kbd> under træk transformerer en kopi og efterlader originalen. <kbd>⌥</kbd>-klik placerer referencepunktet og åbner det pågældende værktøjs numeriske dialog med punktet allerede indstillet, så du kan dreje en form omkring et hjørne med en nøjagtig vinkel.</p>
+
+<h2 id="transform-free">Det frie transformværktøj</h2>
+<p>Det frie transformværktøj (<kbd>E</kbd>) sætter flytning, skalering, rotation, skæring og to typer forvrængning på én afgrænsningsramme. Træk inde i rammen for at flytte den, træk et håndtag for at skalere, og træk lige uden for et hjørne for at dreje, med <kbd>⇧</kbd> der fastgør til 45&deg;. Brug den, når du vil prøve flere typer af ændringer i én gestus uden at skifte værktøjer mellem hver.</p>
+<p>Markeringsværktøjets boks kan også forvrænges: hold <kbd>Ctrl</kbd> (eller <kbd>&#8984;</kbd>) nede, mens du trækker et af dens hjørnehåndtag, for at flytte det hjørne for sig selv i stedet for at skalere. Det fungerer på former og fotos ligeledes; på pixels følger en hurtig forhåndsvisning trækket, og resultatet regnes ud, når du trykker på <kbd>Enter</kbd>.</p>
+
+<h3 id="transform-free-widget">Widgeten</h3>
+<p>En lille widget flyder ved siden af rammen med fire knapper, hver der navngiver sig selv, når du holder musen over den: <strong>Begræns</strong>, <strong>Fri transformering</strong>, <strong>Perspektivforvrængning</strong> og <strong>Fri forvrængning</strong>. Begræns gør skalering proportional uden at holde <kbd>⇧</kbd>; med den tændt frigør <kbd>⇧</kbd> proportionerne i stedet. De to forvrængningstilstande efterlader kun de fire hjørnehåndtag at trække i.</p>
+
+<h3 id="transform-free-keys">Forvrængning fra tastaturet</h3>
+<p>De samme forvrængninger kan nås uden at forlade standardtilstanden. Hold <kbd>⌘</kbd> på et kanthåndtag for at skære langs den kant. Hold <kbd>⌘</kbd> på et hjørne for at forvrængne det frit for sig selv; tilføj <kbd>⇧</kbd> for at begrænse hjørnets rejse til 45&deg;. Hold <kbd>⌘⌥⇧</kbd> på et hjørne for perspektiv, hvor nabohjørnet spejler trækket. At trykke eller slippe en modifier halvvejs gennem et træk skifter handlingen med det samme, og det navn, det ender på, Skalering, Skæring, Perspektivforvrængning eller Fri forvrængning, er det, hvad trinet kaldes i Historik-panelet bagefter. Tekst, placerede billeder og symbolinstanser kan ikke forvrænges; de efterlades, som de er, og Scissor fortæller dig det, når et træk springer dem over.</p>
+
+<h3 id="transform-free-reference">Referencepunktet</h3>
+<p>Referencepunktet sidder i midten af rammen som et kors, og du kan trække det helst hen; i sig selv flytter det ikke noget. Rammen drejer og skalerer derefter omkring det, og det rejser med grafikken, når du flytter markeringen. Slip det nær et af boksens ni punkter (de fire hjørner, de fire kanters midterpunkter eller centrum), og det slår sig ned på dette punkt. At holde <kbd>⌥</kbd> under skalering ignorerer et placeret referencepunkt og skalerer om centrum. Skæring af en side med <kbd>⌘</kbd> holder også et placeret referencepunkt stille.</p>
+
+<h3 id="transform-free-pins">Flytning af håndtagene</h3>
+<p>Slå <strong>Flyt håndtag</strong> til i hurtiglinjen (eller indstillingslinjen), mens Fri transformering er aktiv, og trækning af et hjørne af rammen flytter det hjørne for sig selv uden at røre grafikken. Nær et ankerpunkt slår det sig ned på det. Slå Flyt håndtag fra igen og træk et flyttet hjørne: formen skalerer, så det hjørne følger markøren, og hvert andet punkt bevarer samme proportional afstand fra det, der holder stille, hvilket er det modsatte hjørne, det placerede referencepunkt eller centrum, mens <kbd>⌥</kbd> holdes. <kbd>⇧</kbd> bevarer proportionerne. Flyttede hjørner rejser med grafikken, og dobbeltklik på ét sætter alle fire tilbage på rammen.</p>
+
+<h2 id="transform-align-arrange">Justering, arrangement og gruppering</h2>
+<p>Disse kommandoer indstiller, hvordan objekter linjer op med hinanden, hvilket sidder foran hvilket, og hvilke der samles, låses væk eller skjules, mens du arbejder på resten.</p>
+
+<h3 id="transform-align">Justering og fordeling</h3>
+<p>Justering-panelet (<kbd>⇧F7</kbd>) har tre rækker. <strong>Justér objekter</strong> ligner markeringen op til venstre, centrum eller højre og øverst, midten eller nederst. <strong>Fordel objekter</strong> spreder tre eller flere objekter, så deres toppe, centra, bundner, venstre kanter, centra eller højre kanter falder på jævne intervaller. <strong>Fordel afstand</strong> indstiller en lige afstand mellem dem lodret eller vandret. Menuen på panelet vælger, hvad der skal justeres til - hele markeringen, tavlen eller et nøgleobjekt, du indstiller - så de samme knapper gør relativ eller absolut justering.</p>
+
+<h3 id="transform-arrange">Arranger: stakrækkefølge</h3>
+<p>Hvert objekt sidder på et niveau i stakken, og <strong>Objekt &rsaquo; Arranger</strong> flytter markeringen gennem det.</p>
+<table>
+  <thead><tr><th>Kommando</th><th>Genvej</th></tr></thead>
+  <tbody>
+    <tr><td>Bring til forside</td><td><kbd>⇧⌘]</kbd></td></tr>
+    <tr><td>Bring fremad</td><td><kbd>⌘]</kbd></td></tr>
+    <tr><td>Send bagud</td><td><kbd>⌘[</kbd></td></tr>
+    <tr><td>Send til bagside</td><td><kbd>⇧⌘[</kbd></td></tr>
+  </tbody>
+</table>
+
+<h3 id="transform-grouping">Gruppering, låsning og skjul</h3>
+<dl>
+  <dt><strong>Gruppér</strong> (<kbd>⌘G</kbd>) og <strong>Opdel gruppe</strong> (<kbd>⇧⌘G</kbd>)</dt>
+  <dd>Samler objekter, så de bevæger og transformeres som én, eller frigiver dem igen. En gruppe kan ved at dobbeltklikke på den med Markeringsværktøjet.</dd>
+  <dt><strong>Lås &rsaquo; Markering</strong> (<kbd>⌘2</kbd>) og <strong>Lås op alt</strong> (<kbd>⌥⌘2</kbd>)</dt>
+  <dd>Låsning gør objekter uplukkelige, så de forbliver på plads, mens du arbejder over dem; Lås op alt frigiver alt, der blev låst.</dd>
+  <dt><strong>Skjul &rsaquo; Markering</strong> (<kbd>⌘3</kbd>) og <strong>Vis alt</strong> (<kbd>⌥⌘3</kbd>)</dt>
+  <dd>Skjulning tager objekter af lærredet uden at slette dem, hvilket rydder en travl scene ned til den del, du redigerer; Vis alt bringer dem tilbage.</dd>
+</dl>
+
+<h2 id="transform-repeat">Levende gentagelser</h2>
+<p><strong>Objekt &rsaquo; Gentag</strong> bygger mange kopier fra ét objekt og holder dem levende: rediger originalen, og hver kopi følger. Gå efter en gentagelse, når grafikken er regelmæssig, en blomster med identiske kronblade eller et flisegitter af ikoner, så du kan forme ét element og lade resten følge det.</p>
+<dl>
+  <dt><strong>Radial&hellip;</strong></dt>
+  <dd>Ring kopierne omkring et centrum. Dialogen indstiller Eksemplarer og Radius.</dd>
+  <dt><strong>Gitter&hellip;</strong></dt>
+  <dd>Lægger kopierne i rækker og kolonner. Dialogen indstiller Kolonner, Rækker, Vandret afstand og Lodret afstand.</dd>
+  <dt><strong>Spejl&hellip;</strong></dt>
+  <dd>Spejler kopierne på tværs af en akse. Dialogen indstiller aksen (lodret eller vandret) og en Forskydning.</dd>
+</dl>
+<p>Med en gentagelse valgt udsætter Egenskaber-panelet de samme kontroller til senere justering: eksemplarer og radius for en radial gentagelse; kolonner, rækker og vandret og lodret afstand for et gitter; og forskydningen og spejleaksen for et spejl. <strong>Frigiv</strong> vender kopierne til almindelig, separat redigerbar grafik, når du er færdig.</p>
+<figure class="shot">
+  <img src="img/repeat.gif" width="640" height="640" loading="lazy"
+       alt="Et enkelt blåt kronblad gentaget omkring et centrum af en radial gentagelse, der udfylder sig til en tolv-blads blomster, mens antallet stiger." />
+  <figcaption>Ét kronblad og en radial gentagelse. Efterhånden som antallet kravler fra én til tolv, fylder blomsten ud; omform det enkelte kronblad, og hele tinget ændrer sig med det.</figcaption>
+</figure>
+
+<h2 id="transform-morph">Morfer</h2>
+<p>En morf fylder hullet mellem to objekter med en række af mellemliggende former, hver et trin tættere på den næste. Det er værktøjet til skyggegivende overgange mellem farver og til jævnt forskudte gentagelser langs en sti.</p>
+<p>Morfværktøjet (<kbd>W</kbd>) morfer ét objekt til et andet: klik på det første, derefter på det andet. Klik på et tredje bærer kæden videre, og klik i en eksisterende morf tilføjer det objekt til den. <strong>Objekt &rsaquo; Morf</strong> holder resten:</p>
+<table>
+  <thead><tr><th>Kommando</th><th>Genvej</th><th>Hvad det gør</th></tr></thead>
+  <tbody>
+    <tr><td>Opret</td><td><kbd>⌥⌘B</kbd></td><td>Morfer de valgte objekter sammen.</td></tr>
+    <tr><td>Frigiv</td><td><kbd>⌥⇧⌘B</kbd></td><td>Giver nøgleobjekterne tilbage og slipper trinnene.</td></tr>
+    <tr><td>Morfindstillinger&hellip;</td><td></td><td>Indstiller afstand og orientering (se nedenfor).</td></tr>
+    <tr><td>Udvid</td><td></td><td>Vender mellemliggende trin til rigtige, redigerbare objekter.</td></tr>
+    <tr><td>Erstat ryg</td><td></td><td>Bøjer trinrækken langs en valgt sti.</td></tr>
+    <tr><td>Vend ryg</td><td></td><td>Bytter, hvilken ende af rygen hvert nøgleobjekt sidder på.</td></tr>
+    <tr><td>Vend forrest til bagest</td><td></td><td>Vender stakrækkefølgen af trinnene.</td></tr>
+  </tbody>
+</table>
+<p><strong>Morfindstillinger&hellip;</strong> indstiller Afstand til Angivne trin (et fast antal mellemliggende), Angivet afstand (et fast mellemrum i pixels, der fylder så mange, som passer) eller Glat farve (så mange trin, det tager for en glat farveblanding), og indstiller Orientering til Juster til side eller Juster til sti. En morf forbliver levende og følger sine nøgleobjekter, så redigering af begge ender reflow hele løbet.</p>
+<figure class="shot">
+  <img src="img/morph.gif" width="760" height="316" loading="lazy"
+       alt="En blå stjerne morfer til en rågul cirkel gennem en voksende række af mellemliggende former." />
+  <figcaption>En morf fra en stjerne til en cirkel. Efterhånden som trinantallet stiger, fylder flere mellemliggende former hullet, hver en smule tættere på den næste.</figcaption>
+</figure>
+
+<h2 id="transform-envelope">Formbøjning</h2>
+<p><strong>Objekt &rsaquo; Formbøjning</strong> bøjer grafik for at passe en form, mens den forbliver redigerbar under den. Brug den til at passe et logo til et banner, bøje en linje af tekst eller skubbe et fladt mønster ud i en bule. Der er tre måder at lave én på.</p>
+<dl>
+  <dt><strong>Lav med bøjning&hellip;</strong> (<kbd>⌥⇧⌘W</kbd>)</dt>
+  <dd>Bøjer markeringen med en af de indbyggede bøjningstyper (Bue, Bue, Bulge, Flag, Bølge, Fisk, Stigning, Fiskeøje, Opblæs og Squeeze), styret af Bøjning, Vandret og Lodret mængder.</dd>
+  <dt><strong>Lav med øverste objekt</strong> (<kbd>⌥⌘C</kbd>)</dt>
+  <br>Bruger den forreste valgte form som konvolut og hælder alt under den ind i den kontur. Kræver to eller flere objekter: beholderen oven på, grafikken under.</dd>
+  <dt><strong>Lav med maske&hellip;</strong> (<kbd>⌥⌘M</kbd>)</dt>
+  <dd>Lægger et gitter af de rækker og kolonner, du beder om, over markeringen. Det forbliver levende: skift til Det direkte markeringsværktøj (<kbd>A</kbd>) og træk enhver krydsning af masken for at bøje det, den holder, så ofte du vil.</dd>
+</dl>
+<p><strong>Frigiv</strong> giver grafikken tilbage, som den var, sammen med konvolutformen; <strong>Udvid</strong> bevarer bøjningen og slipper konvolutten og efterlader forvrængede stier.</p>
+
+<h2 id="transform-3d">3D fra en vektorform</h2>
+<p><strong>Effekt &rsaquo; 3D og materialer</strong> vender en flad form til en fast genstand. Det forbliver en levende effekt, så den originale sti stadig er der at redigere, og kopien på skærmen genbygges, når du ændrer den.</p>
+<dl>
+  <dt><strong>Ekstrudér &amp; bevel</strong></dt>
+  <dd>Giver formen dybde med en kant, hvis du vil have én.</dd>
+  <dt><strong>Drej</strong></dt>
+  <dd>Spinder en profil omkring en akse til en drejet form.</dd>
+  <dt><strong>Opblæs</strong></dt>
+  <dd>Puster formen op, som om den var fyldt.</dd>
+  <dt><strong>Plan</strong></dt>
+  <dd>Vipper den flade form i rummet uden at tilføje dybde.</dd>
+</dl>
+<p>3D- og materiale-panelet drejer objektet på X-, Y- og Z-akserne, indstiller lysets rotation og højde og vælger en plast-, mat- eller metaloverflade, med Dybde- og Bevel-felter til ekstruderingen.</p>
+<figure class="shot">
+  <img src="img/3d-extrude.gif" width="620" height="620" loading="lazy"
+       alt="En flad vektorstjerne, der ekstruderes til en tredimensionel stjerne og drejes for at vise sin dybde." />
+  <figcaption>Ekstrudér &amp; bevel bygger dybde fra en flad form, levende. Stjernen forbliver en redigerbar sti under den.</figcaption>
+</figure>

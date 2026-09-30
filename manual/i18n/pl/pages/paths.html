@@ -1,0 +1,153 @@
+<p class="lede">Każdy obiekt wektorowy w Scissor jest zbudowany z ścieżek: łańcucha punktów kotwicznych połączonych prostymi lub krzywymi segmentami. Ta strona obejmuje sposób ich rysowania, przekształcania punkt po punkcie oraz polecenia, które je łączą, przesuwają, konturują i łączą.</p>
+
+<p>Skróty zapisane są w formacie macOS. W systemach Windows odczytuj <kbd>&#8984;</kbd> jako Ctrl, <kbd>&#8997;</kbd> jako Alt i <kbd>&#8679;</kbd> jako Shift.</p>
+
+<h2 id="paths-anchors-and-handles">Punkty kotwiczne, uchwyty i kształt ścieżki</h2>
+<p>Ścieżka to bieg punktów kotwicznych. Między dwoma sąsiednimi kotwicami leży segment, który jest prosty, gdy żadna kotwica się do niego nie ciągnie, i krzywy, gdy jedna lub obie ciągną. Zasięg kotwicy ustalają jej dwa uchwyty kierunkowe: uchwyt wejściowy kształtuje segment przychodzący do kotwicy, a uchwyt wyjściowy kształtuje segment odchodzący od niej. Przeciągnij uchwyt dalej, a krzywa bardziej wypukuje w jego stronę. Ścieżka może być otwarta, z dwoma luźnymi końcami, lub zamknięta, gdzie ostatnia kotwica łącza się z pierwszą.</p>
+
+<h3 id="paths-corner-and-smooth">Punkty narożne i gładkie</h3>
+<p>Kotwica jest albo narożna, albo gładka. W punkcie gładkim dwa uchwyty są zablokowane w linii prostej przez kotwicę, więc krzywa przechodzi bez zakrzywienia i pozostaje ciągła. W punkcie narożnym dwie strony są niezależne: ścieżka może ostro zmienić kierunek, a jedna strona może być prosta, podczas gdy druga jest krzywa. Większość kształtów miesza oba, punkty gładkie wzdłuż płynnych części i punkty narożne tam, gdzie krawędź się skręca.</p>
+<dl>
+  <dt>Punkt gładki</dt>
+  <dd>Uchwyty związane w linii. Używaj ich wzdłuż krzywej, która powinna odczytywać się jako jeden ciągły zamach, takiej jak bok liściwa lub miskiej litery.</dd>
+  <dt>Punkt narożny</dt>
+  <dd>Uchwyty, które poruszają się niezależnie, lub punkt bez uchwytów. Używaj ich na czubku gwiazdy, rogu pudełka lub wszędzie tam, gdzie krzywa powinna spotkać prostą krawędź.</dd>
+</dl>
+
+<h3 id="paths-direct-selection">Punkty kotwiczne, uchwyty i narzędzie Zaznacz bezpośrednio</h3>
+<p>Narzędzie Zaznacz bezpośrednio (<kbd>A</kbd>) działa na częściach ścieżki. Kliknij kotwicę, aby ją zaznaczyć, <kbd>&#8679;</kbd>-kliknij, aby dodać lub usunąć jedną, lub przeciągnij zaznaczenie po pustym miejscu, aby złapać każdą kotwicę w środku. Przeciąganie zaznaczonych kotwic przesuwa je; <kbd>&#8679;</kbd> ogranicza przesunięcie do kroków co 45&deg;. Sięgaj po nim, gdy kształt jest prawie dobry i tylko punkt lub dwa wymagają poprawki.</p>
+<p>Przeciągnij uchwyt, aby zmienić krzywę po jego stronie. Uchwyty należące do gładkiej kotwicy poruszają się razem, więc krzywa pozostaje ciągła; przytrzymaj <kbd>&#8997;</kbd> podczas przeciągania, aby przerwać to łączenie i prowadzić jedną stronę osobno, i <kbd>&#8679;</kbd>, aby przytrzymać uchwyt pod kątem. Możesz również przeciągnąć sam segment: krzywy segment podąża za wskaźnikiem, a prosty niesie obie swoje kotwice.</p>
+<p>Narzędzie Zaznacz grupę dzieli ten slot i wybiera całe obiekty z grupy, a nie kotwice. Kliknij raz dla najbardziej wewnętrznego obiektu, kliknij ponownie, aby wyjść do grupy wokół niego.</p>
+
+<h2 id="paths-drawing">Narzędzia rysujące</h2>
+<p>Scissor ma trzy narzędzia do układania ścieżki od zera. Pióro daje dokładną kontrolę punkt po punkcie, narzędzie Krzywa dopasowuje gładką krzywą przez punkty, które stawiasz, a Ołówek swobodnie podąża za Twoją ręką.</p>
+<table>
+  <thead><tr><th>Narzędzie</th><th>Skrót</th><th>Najlepsze do</th></tr></thead>
+  <tbody>
+    <tr><td>Pióro</td><td><kbd>P</kbd></td><td>Dokładnych konturów, gdzie każda kotwica i uchwyt są celowo umieszczone.</td></tr>
+    <tr><td>Krzywa</td><td><kbd>&#8679;~</kbd></td><td>Płynnych krzywych zdefiniowanych przez kilka punktów przejściowych, bez zarządzania uchwytami.</td></tr>
+    <tr><td>Ołówek</td><td><kbd>N</kbd></td><td>Luźnych, ręcznie rysowanych kształtów i szybkich szkiców.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="paths-pen">Narzędzie Pióro</h3>
+<p>Narzędzie Pióro (<kbd>P</kbd>) buduje ścieżkę punkt po punkcie. Kliknij, aby upuścić kotwicę narożną; naciśnij i przeciągnij, a kotwica zachowa uchwyty, więc ścieżka odchodzi od niej jako krzywa. Przytrzymaj <kbd>&#8679;</kbd> podczas przeciągania, aby przytrzymać uchwyt w krokach co 45&deg;, i przytrzymaj <kbd>&#8997;</kbd>, aby poruszać tylko uchwyt wyjściowy, co zamienia kotwicę w narożną i uwalnia następny segment od ostatniego.</p>
+<p>Gdy ścieżka jest otwarta, narzędzie zmienia się podczas poruszania się nad nią. Nad pierwszą kotwicą zamyka ścieżkę, nad segmentem dodaje kotwicę, a nad istniejącą kotwicą usuwa ją. Gdy nie ma ścieżki w trakcie, poruszanie się nad luźnym końcem otwartej ścieżki podnosi tę ścieżkę, abyś mógł kontynuować rysowanie od niej. <kbd>Enter</kbd> lub <kbd>Esc</kbd> kończy ścieżkę i zostawia ją otwartą; <kbd>Delete</kbd> usuwa ostatnią kotwicę.</p>
+
+<h3 id="paths-curvature">Narzędzie Krzywa</h3>
+<p>Narzędzie Krzywa (<kbd>&#8679;~</kbd>) dopasowuje gładką krzywę przez punkty, które klikasz, z podglądem biegnącym do wskaźnika w miarę postępu. <kbd>&#8997;</kbd>-klik upuszcza punkt narożny zamiast gładkiego, a dwuklik dowolnego punktu przełącza między nimi. Przeciągnij punkt, aby go przesunąć, a krzywa się dopasowuje. Kliknij pierwszy punkt, aby zamknąć kształt, lub naciśnij <kbd>Enter</kbd>, aby zakończyć. <kbd>Delete</kbd> usuwa ostatni punkt, a <kbd>Esc</kbd> porzuca ścieżkę. Użyj go, gdy bardziej zależy Ci na kształcie krzywej niż na dokładnych kotwicach, ponieważ samo wylicza uchwyty.</p>
+
+<h3 id="paths-pencil">Narzędzie Ołówek</h3>
+<p>Narzędzie Ołówek (<kbd>N</kbd>) rysuje swobodnie: naciśnij, rysuj i puść, a Scissor dopasowuje gładką ścieżkę do śladu. Puść blisko miejsca, w którym zacząłeś, lub przytrzymaj <kbd>&#8997;</kbd> podczas kończenia, a ścieżka zamyka się w kształt. Wynikiem jest obrysowana otwarta ścieżka w bieżącym kolorze obrysu, gotowa do zachowania jako linia lub wypełnienia. Jak ściśle dopasowana ścieżka przylega do Twojego ruchu, ustala to preferencja Wierność ołówka, od dokładnej, która zachowuje więcej kotwic i każde zakłócenie, do gładkiej, która używa mniej kotwic i wygładza linię. Sięgaj po niego do szkicowania, podpisów i dowolnego kształtu, który powinien wyglądać ręcznie rysowany, a nie skonstruowany.</p>
+
+<h2 id="paths-editing-points">Edycja punktów na ścieżce</h2>
+
+<h3 id="paths-add-remove-convert">Dodawanie, usuwanie i konwertowanie punktów</h3>
+<p>Pióro dzieli swój slot paska narzędzi z Dodaj punkt kotwiczny (<kbd>+</kbd>), Usuń punkt kotwiczny (<kbd>&#8722;</kbd>) i narzędziem Punkt kotwiczny (<kbd>&#8679;C</kbd>). Dodaj punkt kotwiczny upuszcza nowy punkt na segmencie bez zmiany krzywej; Usuń punkt kotwiczny usuwa kliknięty punkt i pozwala ścieżce zamknąć lukę. Z narzędziem Punkt kotwiczny przeciągnij od kotwicy narożnej, aby wyciągnąć dopasowaną parę uchwytów, czyniąc ją gładką; przeciągnij pojedynczy uchwyt, aby rozbić parę, tak że dwie strony poruszają się niezależnie, zamieniając ją z powrotem w narożną; i kliknij gładką kotwicę, aby pozbawić jej uchwytów na ostry róg.</p>
+<p>Obiekt &rsaquo; Ścieżka ma te same edycje jako polecenia działające na całym zaznaczeniu naraz. Dodaj punkty kotwiczne umieszcza nową kotwicę na środku każdego segmentu, podwajając liczbę punktów bez zmiany kształtu, co jest przydatne przed zniekształceniem lub deformacją, która potrzebuje więcej punktów do czystego zgięcia. Usuń punkty kotwiczne usuwa zaznaczone kotwice narzędziem Zaznacz bezpośrednio i dopasowuje ścieżkę przez to, co zostało.</p>
+
+<h3 id="paths-reshape-tools">Przekształcanie ręcznie: narzędzia Wygładź, Wymaż ścieżkę i Połącz</h3>
+<p>Trzy narzędzia w stylu pędzla przekształcają ścieżkę tam, gdzie przeciągasz, a nie w pojedynczej kotwicy. Działają na zaznaczonych ścieżkach lub na dowolnej ścieżce pod pędzlem, gdy nic nie jest zaznaczone, a <kbd>[</kbd> i <kbd>]</kbd> zmniejszają i zwiększają pędzel.</p>
+<dl>
+  <dt>Narzędzie Wygładź</dt>
+  <dd>Przeciągnij wzdłuż ścieżki, aby ją rozluźnić, rozrzedzając kotwice i zmiękczając wypustki. Użyj go, aby uspokoić drżącą linię ołówka lub śledzony obrys.</dd>
+  <dt>Narzędzie Wymaż ścieżkę</dt>
+  <dd>Przeciągnij wzdłuż ścieżki, aby wymazać część, którą przecinasz, rozdzielając lub skracając ją. Użyj go, przyciąć wychodzący ogon linii.</dd>
+  <dt>Narzędzie Połącz</dt>
+  <dd>Przetrzyj przez dwa otwarte końce i zostaną połączone, wydłużając lub przycinając ścieżki, aby spotkały się czysto w rogu. Użyj go, aby zamknąć lukę, w której dwa obrysy powinny się spotkać.</dd>
+</dl>
+
+<h3 id="paths-cutting">Cięcie ścieżki: Nożyce i Nóż</h3>
+<p>Narzędzie Nożyce (<kbd>C</kbd>) tnie w jednym miejscu. Kliknij segment lub kotwicę, a ścieżka zostanie rozdzielona w tym miejscu: zamknięta ścieżka otwiera się w cięciu, a otwarta ścieżka rozpadaje się na dwa osobne obiekty. Użyj go, aby wyciąć otwór w kole lub rozdzielić kształt, aby połówki mogły być stylizowane inaczej.</p>
+<p>Nóż tnie prosto przez grafikę. Przeciągnij ostrze przez obiekt, aby rozciąć go na osobne kawałki wzdłuż narysowanej linii; przytrzymaj <kbd>&#8997;</kbd>, aby ciąć prosto, i dodaj <kbd>&#8679;</kbd>, aby przytrzymać tę linię w krokach co 45&deg;. Z czymś zaznaczonym tylko zaznaczone obiekty są cięte; w przeciwnym razie wszystko, czego ostrze przetnie. Użyj go, aby wydrążyć wypełniony kształt w kilka zamkniętych kawałków jednym pociągnięciem.</p>
+
+<h2 id="paths-commands">Polecenia ścieżki</h2>
+<p>Obiekt &rsaquo; Ścieżka gromadzi operacje działające na całych ścieżkach naraz.</p>
+<table>
+  <thead><tr><th>Polecenie</th><th>Skrót</th><th>Co robi</th></tr></thead>
+  <tbody>
+    <tr><td>Połącz</td><td><kbd>&#8984;J</kbd></td><td>Łączy otwarte końce w jedną ścieżkę lub zamyka pojedynczą otwartą ścieżkę.</td></tr>
+    <tr><td>Średnia&hellip;</td><td><kbd>&#8997;&#8984;J</kbd></td><td>Przesuwa zaznaczone kotwice do ich wspólnej pozycji.</td></tr>
+    <tr><td>Kontur obrysu</td><td></td><td>Zamienia obrys w wypełniony kształt o tym samym konturze.</td></tr>
+    <tr><td>Ścieżka przesunięcia&hellip;</td><td></td><td>Tworzy kopię powiększoną lub zmniejszoną o ustaloną odległość.</td></tr>
+    <tr><td>Odwróć kierunek ścieżki</td><td></td><td>Odwraca kierunek biegu ścieżki.</td></tr>
+    <tr><td>Uprość&hellip;</td><td></td><td>Zmniejsza liczbę punktów kotwicznych.</td></tr>
+    <tr><td>Dodaj punkty kotwiczne</td><td></td><td>Dodaje punkt na środku każdego segmentu.</td></tr>
+    <tr><td>Usuń punkty kotwiczne</td><td></td><td>Usuwa zaznaczone kotwice.</td></tr>
+    <tr><td>Podziel na siatkę&hellip;</td><td></td><td>Tnie zaznaczenie w siatkę rzędów i kolumn.</td></tr>
+    <tr><td>Wyczyść&hellip;</td><td></td><td>Usuwa błędne punkty, nieobrysowane obiekty i pusty tekst.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="paths-join-average">Połącz i średnia</h3>
+<p>Połącz (<kbd>&#8984;J</kbd>) działa na otwartych ścieżkach. Z dwiema osobnymi otwartymi ścieżkami zaznaczonymi łączy ich najbliższe końce w jedną ścieżkę; z pojedynczą otwartą ścieżką łączy dwa luźne końce, aby ją zamknąć. Końce, które już na siebie nachodzą, są scalane w jedną kotwicę. Użyj go, aby zamknąć kształt narysowany jako otwarty kontur lub zszyć dwa pół-narysowane obrysy.</p>
+<p>Średnia (<kbd>&#8997;&#8984;J</kbd>) przesuwa zaznaczone kotwice do ich wspólnej średniej pozycji. Okno dialogowe oferuje oś poziomą, która wyrównuje punkty do wspólnej wysokości; oś pionową, która wyrównuje je w kolumnie; lub obie, które składa je wszystkie w jednym miejscu. Sięgaj po nią, aby wyrównać rząd punktów lub zbliżyć dwa końce przed ich połączeniem.</p>
+
+<h3 id="paths-simplify">Uprość</h3>
+<p>Uprość rysuje ponownie zaznaczone ścieżki z mniejszą liczbą punktów kotwicznych, pozostając w ustalonej dokładności: cieśniejsza dokładność zachowuje blisko oryginału kosztem większej liczby punktów, luźniejsza wygładza kształt do garstki. Użyj go, aby wyczyścić śledzoną lub ręcznie rysowaną ścieżkę, która niesie znacznie więcej punktów, niż kształt potrzebuje, co czyni ją lżejszą do edycji i renderowania.</p>
+
+<h3 id="paths-offset">Ścieżka przesunięcia</h3>
+<p>Ścieżka przesunięcia buduje świeżą ścieżkę o ustalonej odległości od oryginału: dodatnie przesunięcie powiększa kontur na zewnątrz i siedzi za oryginałem, ujemne pomniejsza do środka i siedzi z przodu. Ustawienie Połączenia decyduje, jak traktowane są narożne zewnętrzne, jako ostre Szczyte, zaokrąglone Okrągłe lub płaskie Ścięte, z limitem szczytu ograniczającym, jak długi może biec ostry róg przed przycięciem. Użyj go, aby narysować równy obwód wokół kształtu, wciąć kształt dla linii klucza lub pogrubić cienką formę. Ścieżka przesunięcia jest również dostępna pod Efekt &rsaquo; Ścieżka jako efekt na żywo, który przelicza się przy zmianie kształtu.</p>
+
+<h3 id="paths-outline-stroke">Kontur obrysu</h3>
+<p>Kontur obrysu zastępuje obrysowaną ścieżkę wypełnionym kształtem, który ma dokładnie kontur obrysu. Po skonturowaniu grubość nie skaluje się już z obiektem i nie może być edytowana jako obrys, ale kontur może być przekształcany punkt po punkcie, wypełniony gradientem lub połączony z innymi kształtami. Sięgaj po nim, gdy potrzebujesz, aby obrys zachowywał się jak grafika: nadać linii zwężający się lub zróżnicowany brzeg, który następnie dostosujesz ręcznie, lub zachować stałe grubości linii projektu, gdy jest skalowany. Jest dostępny również jako efekt na żywo, pod Efekt &rsaquo; Ścieżka.</p>
+
+<h3 id="paths-reverse">Odwróć kierunek ścieżki</h3>
+<p>Odwróć kierunek ścieżki odwraca kolejność, w jakiej biegną kotwice, więc ścieżka porusza się w przeciwną stronę. Kierunek rzadko pokazuje się sam w sobie, ale decyduje, który kontur jest dziurą w ścieżce złożonej i gdzie pędzle lub groty strzałek zaczynają i kończą. Użyj go, gdy dziura w ścieżce złożonej wypełnia się na pełno lub gdy tekst na ścieżce lub początek i koniec obrysu siedzą po złej stronie.</p>
+
+<h2 id="paths-live-shapes">Kształty edytowalne i ich widżety</h2>
+<p>Prostokąty, zaokrąglone prostokąty, elipsy i wielokąty pozostają na żywo: zachowują swoje parametry i przebudowują swoją ścieżkę za każdym razem, gdy któryś zmienisz. Podczas przeciągania kształtu <kbd>&#8679;</kbd> czyni go regularnym, a <kbd>&#8997;</kbd> rysuje go od środka. Klawisze strzałek działają również podczas przeciągania, w górę i w prawo dodają, w dół i w lewo odejmując, zmieniając boki wielokąta, punkty gwiazdy lub promień narożnika zaokrąglonego prostokąta.</p>
+<p>Zaznacz pojedynczy kształt na żywo i małe okrągłe uchwyty pojawiają się tuż wewnątrz jego rogów; są ukrywane, gdy kształt jest zbyt mały na ekranie, aby je wyraźnie pokazać. Przeciągnij jeden z nimi narzędziem Zaznacz (<kbd>V</kbd>), aby zaokrąglić wszystkie narożniki naraz, lub Zaznacz bezpośrednio, aby zaokrąglić tylko narożnik, który trzymasz. <kbd>&#8997;</kbd>-kliknij uchwyt narożnika, aby przejść przez zaokrąglony, odwrócony i sfazowany, znowu wszystkie cztery narożniki narzędziem Zaznacz, jeden narożnik Zaznacz bezpośrednio.</p>
+<p>Elipsa pokazuje zamiast tego kwadratowy uchwyt: jeden na całej elipsie i po jednym na każdym końcu odcinka, gdy już jeden otworzysz. Przeciągnij jeden, aby otworzyć klina z kształtu, z <kbd>&#8679;</kbd> przytrzymującym kąt w krokach co 15&deg;; sprowadzenie końca z powrotem do początku przywraca całą elipsę. Panel Właściwości zawiera te same wartości jako liczby: promień i typ narożnika, promienie na narożnik, liczba boków wielokąta oraz początek i koniec odcinka w stopniach. Kształt na żywo zachowuje te kontrolki, dopóki nie edytujesz jego ścieżki bezpośrednio, co zamienia go w zwykłą ścieżkę.</p>
+
+<h2 id="paths-combining">Łączenie kształtów: Połącz i Podziel oraz Łącz kształty</h2>
+<p>Gdy dwa lub więcej kształtów się nakłada, często chcesz jedyny nowy kształt z nich: sumę, dziurę lub fragment, w którym się przecinają. Scissor oferuje dwa sposoby osiągnięcia tego. Połącz i Podziel jest bezpośredni i wizualny; panel Łącz kształty stosuje te same operacje jako przyciski. Oba zachowują krzywe zamiast spłaszczania ich do segmentów.</p>
+
+<h3 id="paths-shape-builder">Narzędzie Połącz i Podziel</h3>
+<p>Narzędzie Połącz i Podziel (<kbd>&#8679;M</kbd>) działa na dwóch lub więcej zaznaczonych ścieżkach. Dzieli ich nakładki na regiony i podświetla ten, nad którym jest wskaźnik; przeciągnij linię przez kilka regionów, aby scalić je w jeden obiekt, który przejmuje wygląd kształtu, z którego pochodzi, lub <kbd>&#8997;</kbd>-przeciągnij przez nie, aby je usunąć. Użyj go, aby budować kształt na oko, dodając części, które chcesz, i wymazując te, których nie chcesz, bez zatrzymywania się, aby wybrać polecenie dla każdego kroku.</p>
+
+<h3 id="paths-pathfinder-shape-modes">Tryby kształtów Łącz kształty</h3>
+<p>Panel Łącz kształty (<kbd>&#8679;&#8984;F9</kbd>) otwiera się z czterema trybami kształtów, z których każdy zastępuje zaznaczone ścieżki jedną połączoną ścieżką. Wynik przejmuje wygląd górnego obiektu, z wyjątkiem Od przodu, który zachowuje wygląd dolnego.</p>
+<dl>
+  <dt>Połącz</dt>
+  <dd>Scala każdy zaznaczony kształt w jeden kontur. Użyj go, aby zespalić nakładające się elementy w jedną sylwetkę, taką jak chmura z rzędu kół.</dd>
+  <dt>Od przodu</dt>
+  <dd>Zachowuje najdalszy kształt i wycina wszystko, co jest na nim ułożone. Użyj go, aby wyrąbać kawałek z kształtu, tak jak wykuwanie księżyca z dwóch kół.</dd>
+  <dt>Przecięcie</dt>
+  <dd>Zachowuje tylko obszar, który dzielą wszystkie zaznaczone kształty. Użyj go, przyciąć grafikę do wspólnego regionu, takiego jak soczewka, w której przecinają się dwa koła.</dd>
+  <dt>Wyklucz</dt>
+  <dd>Zachowuje wszystko poza nakładkami, które stają się dziurami. Użyj go, aby stworzyć pierścień lub ogniwo łańcucha, w którym przecinające się części odpadają.</dd>
+</dl>
+
+<figure class="shot">
+  <img src="img/combine.gif" width="760" height="441" loading="lazy"
+       alt="Trzy nakładające się kształty, koło, zaokrąglony kwadrat i koło, scalające się w jedną połączoną sylwetkę." />
+  <figcaption>Połącz (lub przeciągnięcie Połącz i Podziel) scala nakładające się kształty w jeden kontur, który zachowuje swoje krzywe.</figcaption>
+</figure>
+
+<h3 id="paths-pathfinders">Pozostałe operacje Łącz kształty</h3>
+<p>Poniżej trybów kształtów znajduje się sześć narzędzi Pathfinder. Zostawiają Ci one kilka kawałków, zebranych w grupę, zamiast jednej połączonej ścieżki. Od tyłu pasuje do swojego odpowiednika trybu kształtu, ale zachowuje górny kształt.</p>
+<dl>
+  <dt>Podziel</dt>
+  <dd>Tnie kształty w osobne ściany wzdłuż każdej linii, którą przecinają, każda ściana przejmując kolor górnego kształtu, który ją pokrywa. Użyj go, aby rozbić projekt na malowalne kawałki, jak komórki witrażu.</dd>
+  <dt>Przytnij</dt>
+  <dd>Usuwa ukrytą część każdego kształtu, gdy kształt powyżej go pokrywa. Każdy kawałek zachowuje własne wypełnienie i nic nie jest scalane; obrysy są odrzucane. Użyj go, aby spłaszczyć ułożoną grafikę płaskich kolorów, żaden kolor drukuje się na drugim.</dd>
+  <dt>Połącz</dt>
+  <dd>Przytnij ukryte części, a następnie połączy sąsiednie kawałki, które dzielą kolor wypełnienia. Użyj go, aby uporządkować ilustrację płaskich kolorów, łącząc jednolite regiony w pojedyncze kształty.</dd>
+  <dt>Przytnij do</dt>
+  <dd>Zachowuje tylko części niższych kształtów, które wpadają w najwyższy kształt, który jest następnie odrzucany. Użyj go, aby przyciąć grafikę do ramki i wpiąć przycięcie w ścieżki, zamiast trzymać maskę przycinającą na żywo.</dd>
+  <dt>Od tyłu</dt>
+  <dd>Zachowuje najbliższy kształt i wycina wszystko za nim. Użyj go, gdy górny kształt jest tym, który zostaje, a kształty pod nim powinny wyrąbać w niego.</dd>
+  <dt>Kontur</dt>
+  <dd>Zamienia każdą granicę regionu w otwartą linię, obrysowaną kolorem wypełnienia, z którego pochodzi. Użyj go, aby wyciągnąć szkielet krawędzi z zestawu nakładających się kształtów.</dd>
+</dl>
+<p>Efekt &rsaquo; Łącz kształty stosuje Dodaj, Przecięcie, Wyklucz, Odejmij i Od tyłu jako efekty na żywo na grupie, zostawiając oryginalne obiekty nienaruszone i edytowalne pod spodem. Sięgaj po wersjach efektowych, gdy możesz chcieć jeszcze poruszać częściami; sięgaj po panelu, gdy połączony kształt jest ostateczny.</p>
+
+<h2 id="paths-compound-and-masks">Ścieżki złożone i maski przycinające</h2>
+<p>Obiekt &rsaquo; Ścieżka złożona &rsaquo; Utwórz (<kbd>&#8984;8</kbd>) składa zaznaczone ścieżki w jeden obiekt wypełniany regułą parzysto-nieparzystą, dzięki czemu wewnętrzny kontur wycina dziurę w tym wokół. Wynik przejmuje wygląd najniższego obiektu w zaznaczeniu. Zwolnij (<kbd>&#8997;&#8679;&#8984;8</kbd>) oddaje każdy kontur jako własną ścieżkę. Użyj ścieżki złożonej dla dowolnego kształtu z dziurą, takiej jak wnętrze litery O lub podkładka.</p>
+<p>Obiekt &rsaquo; Maska przycinająca &rsaquo; Utwórz (<kbd>&#8984;7</kbd>) używa najwyższego zaznaczonego obiektu, który musi być ścieżką, do przycięcia wszystkiego pod nim. Scissor wkłada je wszystkie do grupy przycinającej i czyści własne wypełnienie i obrys ścieżki maski. Zwolnij (<kbd>&#8997;&#8984;7</kbd>) zamienia grupę przycinającą z powrotem w zwykłą grupę, więc nic nie jest przycinane i każdy obiekt, w tym ścieżka maski, zostaje tam, gdzie był. Utwórz maskę krycia w tym samym podmenu maskuje według tonu, a nie według konturu, dzięki czemu jaśniejsze części maski prześwietlają, a ciemniejsze ukrywają.</p>
+
+<h2 id="paths-smart-guides">Inteligentne prowadnice i przyciąganie</h2>
+<p>Inteligentne prowadnice (Widok &rsaquo; Inteligentne prowadnice, <kbd>&#8984;U</kbd>) obserwują widoczną grafikę i plansze podczas rysowania lub przeciągania. To, co poruszasz, przyciąga się do krawędzi, środków i kotwic sąsiadów, a linia pojawia się z powrotem do tego, z czym się wyrównało, z etykietą rodzaju dopasowania: kotwica, środek, róg lub wyrównanie.</p>
+<p>Dwie kolejne prowadnice pojawiają się same. Gdy obiekt, który poruszasz, zasiądzie w tej samej odległości od sąsiadów, oni od siebie, przyciąga się tam, a dwie równe przerwy są rysowane z pomiarem; działa to zarówno do kontynuowania równo rozłożonego rzędu, jak i wyśrodkowania jednego w przerwie między dwoma. A gdy przeciągasz z punktu początkowego, kierunek przyciąga się do linii konstrukcyjnej co 45&deg; od kąta ograniczenia, rysowanej jako długa linia z kątem obok.</p>
+<p>Przyciąganie do punktu (<kbd>&#8997;&#8984;'</kbd>) i Przyciąganie do siatki (<kbd>&#8679;&#8984;'</kbd>) to osobne przełączniki w menu Widok. Z włączonym Przyciąganiem do siatki wszystko ląduje na podziale siatki, a inteligentne prowadnice ustępują miejsca.</p>

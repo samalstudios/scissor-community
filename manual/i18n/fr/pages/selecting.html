@@ -1,0 +1,34 @@
+<p class="lede">Avant de pouvoir modifier quoi que ce soit, vous devez dire quoi modifier. Cette page concerne la sélection d'illustrations : les clics rapides avec les outils de sélection, et tout le menu <strong>Sélection</strong> qui choisit des objets par ce dont ils sont faits, parcourt la pile et conserve une sélection pour la ramener plus tard. Dans les raccourcis ci-dessous, <kbd>&#8984;</kbd> est <kbd>Ctrl</kbd> sur Windows et Linux, <kbd>&#8997;</kbd> est <kbd>Alt</kbd> et <kbd>&#8679;</kbd> est Maj.</p>
+
+<h2 id="selecting-basics">Clic et sélection rectangulaire</h2>
+<p>L'<strong>outil Sélection</strong> (<kbd>V</kbd>) est là où commence la plupart des sélections. Cliquez sur un objet pour le sélectionner ; maintenez <kbd>&#8679;</kbd> et cliquez sur un autre pour l'ajouter, ou cliquez sur un objet sélectionné pour le retirer. Glissez sur le canevas vide pour créer un <em>cadre de sélection</em>, et tout ce qu'il touche est sélectionné. L'<strong>outil Sélection directe</strong> (<kbd>A</kbd> atteint l'intérieur à la place : il choisit des points d'ancrage individuels et des segments de tracé plutôt que des objets entiers, et l'<strong>outil Sélection de groupe</strong> entre dans un groupe un niveau à la fois. Ces outils sont couverts sur les pages <a href="/manual/tools/">Outils</a> et <a href="/manual/paths/">Tracés</a> ; le reste de cette page est le menu Sélection, qui fait la sélection que le clic ne peut pas faire.</p>
+
+<h2 id="selecting-whole-document">Tout, aucun et inverser</h2>
+<table>
+  <thead><tr><th>Commande</th><th>Raccourci</th><th>Ce qu'elle sélectionne</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Sélection &rsaquo; Tout</strong></td><td><kbd>&#8984;A</kbd></td><td>Chaque objet non verrouillé du document.</td></tr>
+    <tr><td><strong>Tout sur le plan actif</strong></td><td><kbd>&#8997;&#8984;A</kbd></td><td>Uniquement l'illustration sur le plan sur lequel vous travaillez — le moyen rapide de saisir une page d'un fichier multi-plans.</td></tr>
+    <tr><td><strong>Désélectionner</strong></td><td><kbd>&#8679;&#8984;A</kbd></td><td>Rien ; efface la sélection actuelle.</td></tr>
+    <tr><td><strong>Inverser</strong></td><td></td><td>Échange la sélection avec tout ce qui n'était <em>pas</em> sélectionné.</td></tr>
+    <tr><td><strong>Resélectionner</strong></td><td><kbd>&#8984;6</kbd></td><td>Ramène la sélection que vous aviez juste avant de l'effacer.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="selecting-stack">Parcourir la pile</h2>
+<p>Lorsque des objets se chevauchent, <strong>Sélection &rsaquo; Objet suivant au-dessus</strong> (<kbd>&#8997;&#8984;]</kbd>) et <strong>Objet suivant en dessous</strong> (<kbd>&#8997;&#8984;[</kbd>) déplacent la sélection vers le haut ou le bas dans la pile au même endroit, un objet à la fois. C'est le moyen fiable d'atteindre une forme enfouie sous d'autres sans déplacer celles du dessus.</p>
+
+<h2 id="selecting-same">Sélectionner identique : choisir par ce que les choses partagent</h2>
+<p>Sélectionnez un objet, puis <strong>Sélection &rsaquo; Identique</strong> rassemble chaque autre objet du document qui lui correspond sur un trait. Utilisez-le pour recolorer chaque forme d'un fond en un seul balayage, ou pour saisir tous les contours fins d'un coup.</p>
+<dl>
+  <dt>Apparence</dt><dd>L'aspect entier — la même pile de fonds, de contours et d'effets.</dd>
+  <dt>Fond et contour</dt><dd>Le même fond et le même contour ensemble.</dd>
+  <dt>Couleur de fond / Couleur de contour</dt><dd>La même couleur de fond, ou la même couleur de contour.</dd>
+  <dt>Épaisseur du contour</dt><dd>La même largeur de contour.</dd>
+  <dt>Opacité</dt><dd>La même opacité.</dd>
+  <dt>Mode de fusion</dt><dd>Le même mode de fusion.</dd>
+  <dt>Forme</dt><dd>Le même type d'objet — toutes les ellipses, par exemple, ou tout le texte.</dd>
+</dl>
+
+<h2 id="selecting-saved">Enregistrer une sélection</h2>
+<p>Une sélection délicate vaut la peine d'être conservée. <strong>Sélection &rsaquo; Enregistrer la sélection…</strong> stocke l'ensemble actuel sous un nom ; elle apparaît ensuite sous <strong>Sélection &rsaquo; Sélections enregistrées</strong>, et la choisir y sélectionne exactement ces objets à nouveau, quelle que soit votre navigation depuis. <strong>Modifier la sélection…</strong> renomme ou supprime celles que vous avez enregistrées. Les sélections enregistrées voyagent à l'intérieur du document <code>.cut</code>, de sorte qu'elles sont toujours là la prochaine fois que vous ouvrez le fichier.</p>

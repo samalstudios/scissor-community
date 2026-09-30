@@ -1,0 +1,166 @@
+<p class="lede">Scissor täyttää selainikkunan yhdellä muokkausalueella: valikkorivi ylhäällä, komentorivi ja asiakirjavälilehdet sen alla, työkalupalkki vasemmalla, piirtoalue keskellä ja paneelialue oikealla. Kaikki toimii omalla koneellanne, joten asiakirja pysyy siinä, minne sen laitit, eikä mitään lähetetä avattavaksi.</p>
+
+  <p>Tämän sivun pikanäppäimet on kirjoitettu macOS-muodossa. Windowsilla ja Linuxilla lue <kbd>⌘</kbd> <kbd>Ctrl</kbd>:ksi ja <kbd>⌥</kbd> <kbd>Alt</kbd>:ksi; <kbd>⇧</kbd> on Shift ja <kbd>⌃</kbd> on Control.</p>
+
+  <h2 id="interface-at-a-glance">Työtila yhdellä silmäyksellä</h2>
+  <p>Ikkuna koostuu muutamasta alueesta, jotka kaikki vastaavat eri kysymykseen. Opi missä ne ovat kerran ja loput käsikirjasta lukeutuvat helpommin.</p>
+  <dl>
+    <dt>Valikkorivi</dt>
+    <dd>Valikkorivi ylhäällä, peruutus- ja uudelleen-toiminnot ja komentohaku sen oikeassa päässä. Tämä on täysi luettelo kaikesta, mitä editori osaa.</dd>
+    <dt>Komentorivi</dt>
+    <dd>Valikkojen alapuolella oleva palkki. Se näyttää käytössä olevan työkalun ja muutaman säätimen, jotka ovat tärkeitä juuri nyt valitsemallesi kohteelle.</dd>
+    <dt>Asiakirjavälilehdet</dt>
+    <dt>Vasemmalla komentoriviltä, yksi välilehti jokaiselle avoimelle asiakirjalle. Paneelipainike on saman rivin kaukaisimmassa oikeassa laidassa.</dd>
+    <dt>Työkalupalkki</dt>
+    <dd>Kapea työkalusarake vasemmassa reunassa, täyte- ja reunaviivaohjaimen kanssa sen alaosassa.</dd>
+    <dt>Piirtoalue ja alusta</dt>
+    <dd>Suuri alue keskellä, jossa piirrät. Valkeat suorakulmiot ovat alustoja; harmaa ympäristö on alusta.</dd>
+    <dt>Paneelialue</dt>
+    <dd>Paneelisarake oikealla. Se liukuu piirtoalueen päälle, kun tarvitset sitä, ja palauttaa tilan, kun suljet sen.</dd>
+    <dt>Tilarivi</dt>
+    <dd>Ohut rivi ikkunan alareunassa, joka raportoi käytössä olevan työkalun, valinnan ja viimeisen peruutettavan toiminnon.</dd>
+  </dl>
+  <figure class="shot">
+    <img src="img/app-light.png" width="1900" height="1082" loading="lazy"
+         alt="Koko Scissor-ikkuna: valikkorivi, komentorivi, työkalupalkki, piirtoalue ja paneelialue." />
+    <figcaption>Koko ikkuna. Scissor seuraa järjestelmän vaaleaa tai tummaa asetusta ja tämä kuvakaappaus seuraa sitä myös.</figcaption>
+  </figure>
+
+  <h2 id="interface-menu-bar">Valikkorivi</h2>
+  <p>Kymmenen valikkoa kulkee ylhäällä. Ne keräävät kaikki ohjelman komennot ryhmiteltyinä työn tyypin mukaan eikä sen mukaan, missä ominaisuus sattuu olemaan moottorin sisällä.</p>
+  <table>
+    <thead><tr><th>Valikko</th><th>Mitä se sisältää</th></tr></thead>
+    <tbody>
+      <tr><td>Tiedosto</td><td>Uusi, avaa, sulje, tallenna, sijoita, vie, skriptit, asiakirjan asetukset ja tulosta.</td></tr>
+      <tr><td>Muokkaa</td><td>Peruutus ja uudelleen, leikepöytäkomennot, koko <strong>Valitse</strong>-valikko alavalikkona, värien muokkaus ja Asetukset.</td></tr>
+      <tr><td>Järjestä</td><td>Muunnos, pinojärjestys, tasaus, ryhmitys ja lukitseminen ja piilottaminen.</td></tr>
+      <tr><td>Polku</td><td>Polku- ja yhdistetty polku -komennot, muovaus, Shape Warp ja perspektiivi, leikkausmaskit, tekstin ympäröinti ja laajennus.</td></tr>
+      <tr><td>Luo</td><td>Kuviot, toistot, Region Fill, vektööri, liukuväriverkko, alustat, viipaleet ja pikselitasot-komennot.</td></tr>
+      <tr><td>Tehosteet</td><td>Live-tehosteet: vektorisarja (3D, väännös ja muunnos, muotojen yhdistäminen, tyylittely, väännös ja paljon muuta) ja Rasteri-alavalikko niiden alla.</td></tr>
+      <tr><td>Teksti</td><td>Kirjasin, koko ja glyfit, luo ääriviivat, vaihda kirjainkoko, tekstin kulku ja merkkien lisääminen.</td></tr>
+      <tr><td>Näytä</td><td>Ulkoasu (vaalea ja tumma), ääriviiva- ja pikselinäkymä, zoomaa, kierrä näkymää, viivottimet, apuviivat, ruudukko ja kohdistus.</td></tr>
+      <tr><td>Työtila</td><td>Paneelit: kuusi, joita käytät useimmin, Teksti-alavalikko, Lisää paneelit -alavalikko lopuille ja Palaa paneelit.</td></tr>
+      <tr><td>Ohje</td><td>Mitä uutta, käyttöopas, asenna, Käyttöehdot ja Tietoja, hakukentällä ylhäällä.</td></tr>
+    </tbody>
+  </table>
+  <p>Valintamerkki kohdan vieressä tarkoittaa, että asetus on päällä. Harmaaksi piirretty kohda ei voi käyttää tällä hetkellä, yleensä koska mitään ei ole valittu tai asiakirjaa ei ole auki. Jos komennolla on pikanäppäin, se näytetään valikon oikeassa reunassa.</p>
+
+  <h3 id="interface-command-search">Komennon löytäminen</h3>
+  <tt>Sinun ei tarvitse muistaa, mikä valikko pitää mitään sisällään. Hakupainike valikkorivin oikealla puolella, merkitty <em>Hae tai kirjoita komento</em>, avaa komentopaletin; <kbd>⌘K</kbd> avaa sen näppäimistöltä. Kirjoita muutama kirjain ja se listaa kaikki vastaavat komennot valikkopolulla ja pikanäppäimellä, ja kaikki vastaavat työkalut. Käytä <kbd>↑</kbd> ja <kbd>↓</kbd> liikkuaksesi tulosten läpi, <kbd>Enter</kbd> suorittaaksesi korostetun ja <kbd>Esc</kbd> sulkeaksesi. Käytä tätä, kun tiedät mitä haluat muttet missä se on, tai kun pikanäppäin on nopeampi kirjoittaa kuin etsiä. Ohje-valikko sisältää oman hakukenttänsä, joka tekee saman kaikkien valikkojen läpi.</tt>
+
+  <h3 id="interface-undo-redo">Peruutus ja uudelleen</h3>
+  <p>Kaarevat nuolit valikkorivin oikealla puolella peruuttavat ja tekevät uudelleen, kuten <kbd>⌘Z</kbd> ja <kbd>⇧⌘Z</kbd>. Kumpikin painike nimeää vaiheen, jonka se kumoaisi, kun viet hiiren sen päälle, ja tilarivi näyttää saman ikkunan alareunassa, joten näet aina, mikä yksi painaisi lisää peruisi.</p>
+
+  <h2 id="interface-tool-palette">Työkalupalkki</h2>
+  <p>Työkalut ovat yhdessä sarakkeessa vasemmassa reunassa. Ne on järjestetty perheisiin: Valitse, Piirrä, Teksti, Viiva, Muoto, Maalaa, Muunna, Rakenna, Ota näyte, Symbolit, Alustat ja Näytä. Sarake näyttää yhden työkalun kustakin perheestä kerrallaan; leikuta osoitin paikan päälle ja loput perheestä avautuvat oikealle, jotta voit valita sisaruksen ilman että sarake liikkuu käden alla. Paikka jatkaa näyttämistä kumpaa tahansa perheen jäsentä käytit viimeksi.</p>
+  <p>Napsauta paikkaa valitaksesi sen näyttämän työkalun. Sen työkaluvihje antaa työkalun nimen ja sen yksittäisen näppäimen pikanäppäimen, esimerkiksi <kbd>V</kbd> valintatyökalulle, <kbd>P</kbd> kynälle tai <kbd>T</kbd> tekstille. Kun vaihdat työkaluja näppäimistöllä, vastaava paikka syttyy hetkeksi, jotta näet, mikä on nyt aktiivinen. Jos haluat nähdä kaikki kerralla, painike komentohaun vieressä, piirrettynä kolmeen pisteeseen, avaa selaimen jokaiselle työkalulle, ryhmiteltyinä perheittäin ja suodatettuna kirjoittaessasi.</p>
+
+  <h3 id="interface-fill-stroke">Täyte ja reunaviiva</h3>
+  <p>Työkalujen alla on täyte- ja reunaviivaohjain: täytetty neliö täytteelle, sijoitettu kaistaleeseen, joka edustaa reunaviivaa, pienellä nuolilla vaihtaa ne. Koska se on täällä eikä vain komentorivillä, voit valita värin ennen kuin valitset työkalun, ja siitä tulee se, mihin seuraava kohde piirretään. Napsauta täytettä tai kaistaletta avataksesi värin, näytteiden ja liukuvärien.</p>
+  <table>
+    <thead><tr><th>Näppäin</th><th>Toiminto</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>X</kbd></td><td>Siirrä tarkennus täytteen ja reunaviivan välillä</td></tr>
+      <tr><td><kbd>⇧X</kbd></td><td>Vaihda täyte ja reunaviiva</td></tr>
+      <tr><td><kbd>D</kbd></td><td>Palaa oletuksiin: valkoinen täyte, musta reunaviiva</td></tr>
+      <tr><td><kbd>/</kbd></td><td>Aseta aktiivinen puoli tyhjäksi</td></tr>
+    </tbody>
+  </table>
+
+  <h3 id="interface-rail-panels">Paneelit raidan vieressä</h3>
+  <p>Täyte- ja reunaviivaohjaimen ja työkalujen välissä palkki tarjoaa lyhyen rivin paneelipainikkeita, jotka on valittu työkalulle, jota pidät kädessäsi: piirtotyökalut tuovat näytteet ja reunaviivapaneelit käden ulottuviin, tekstityökalut tuovat teksti- ja kappalepaneelit ja niin edelleen. Nämä avaavat yhden paneelin juuri siellä, missä kätesi on jo. Lisäpainike avaa koko alueen. Matalassa ikkunassa rivi lasketaan yhdeksi Paneelit-painikkeeksi, joka listaa samat valinnat, jotta palkki ei koskaan juos alareunan yli.</p>
+
+  <h2 id="interface-control-bar">Komentorivi</h2>
+  <p>Valikkojen alapuolella oleva palkki muuttuu sen mukaan, mitä teet. Se nimeää käytössä olevan työkalun vasemmalla ja oikealla se näyttää vain säätimet, jotka voivat vaikuttaa nykyiseen valintaan: täytteen, reunaviivan ja reunaviivan paksuuden; valinnan X, Y, W ja H; ja toiminnot, jotka ovat järkeviä, kuten tasaus, boolean-muodot, pinojärjestys, ryhmitys, hajotus ja monistus. Kun mahtuu enemmän kuin mahtuu, viimeinen painike kerää loput valikkoon, jotta palkki ei koskaan muotoile uudelleen käytön aikana.</p>
+  <p>Kirjoita mihin tahansa numerokenttään ja paina <kbd>Enter</kbd> tai jätä kenttä käyttääksesi arvoa; <kbd>↑</kbd> ja <kbd>↓</kbd> askuttavat sitä, <kbd>⇧</kbd> kymmenkertaisella askeleella ja <kbd>⌥</kbd> kymmenennesosalla. Pieni kentän vieressä oleva selite on scrubber: vedä sitä vasemmalle tai oikealle muuttaaksesi arvoa tunteella. Vie hiiri työkalun nimen päälle paljastaaksesi sen muutaman ensimmäisen vaihtoehdon; napsauta nimeä avataksesi sen täydet vaihtoehdot palkin alla, kaikkiin kytkimiinsa ja numeroihinsa.</p>
+  <p>Komentorivi on oletuksena kiinnitetty välilehtiriviin, mutta voit vetää sitä kahvalla kellumaan piirtoalueen päälle ja kaksoisnapsauttamalla kahvalla (tai sen kiinnityspainikkeella) laittaa sen takaisin. Sen viereen voi ilmestyä kompakti palkki valitun kohteen vieressä, joka sisältää vain sen täytteen, reunaviivan ja paksuuden, jotta väri on juuri teoksen vieressä eikä ikkunan yli.</p>
+
+  <h2 id="interface-quick-bar">Pikapalkki</h2>
+  <p>Kun valitset jotain, pieni palkki kelloo sen vieressä säätimillä, joita käytät useimmin, joten sinun ei tarvitse matkata ikkunan reunaan. Muodoille ja poluille se sisältää täytteen ja reunaviivan; tekstille se sisältää täytteen, koon, lihavoidun, kursivoinnin ja tasauksen. Se pysyy poissa tieltä vedon aikana ja palaa, kun pustat. Kaikki siellä on myös komentorivillä ja paneeleissa.</p>
+
+  <h2 id="interface-canvas">Piirtoalue ja alusta</h2>
+  <p>Ikkunan keskellä on piirtoalue. Alustat ovat valkeita suorakulmioita, jotka pitävät teoksen, jonka haluat säilyttää; harmaa ympäristö on alusta. Alusta on osa asiakirjaa, joten luonnos, leikekale tai väritesti pysyy siinä tallennetaan tiedoston mukana, mutta kun viet alustaan, vain se, mikä osuu kyseisen alustan suorakulmioon, kirjoitetaan ulos.</p>
+
+  <h3 id="interface-pan-zoom">Siirtäminen ja zoomaus</h3>
+  <p>Pidä <kbd>Space</kbd> käytössä siirtyäksesi käsityökaluun niin kauan kuin pidät sitä, vedä sitten siirtyäksesi; pustu ja työkalusi palaa. Vedä hiiren keskipainikkeella siirtyäksesi myös. Rullaa rullaa ja rulla <kbd>⌘</kbd> tai <kbd>⌥</kbd> pidettäessä zoomaa osoittimen ympärille.</p>
+  <table>
+    <thead><tr><th>Pikanäppäin</th><th>Zoomaus</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>⌘=</kbd> / <kbd>⌘-</kbd></td><td>Lähemmäs ja kauemmas</td></tr>
+      <tr><td><kbd>⌘0</kbd></td><td>Sovita aktiivinen alusta ikkunaan</td></tr>
+      <tr><td><kbd>⌥⌘0</kbd></td><td>Sovita kaikki alustat ikkunaan</td></tr>
+      <tr><td><kbd>⌘1</kbd></td><td>Todellinen koko</td></tr>
+    </tbody>
+  </table>
+  <p>Zoomausohjain on piirtoalueen päälle miinus-, plus- ja sovita-painikkeilla ja nykyisellä prosentilla; napsauta prosenttia samoja sovita ja todellinen koko -komentoja valikkona.</p>
+
+  <h3 id="interface-rulers-guides">Viivottimet ja apuviivat</h3>
+  <p><kbd>⌘R</kbd> näyttää ja piilottaa viivottimet, jotka mittaa asiakirjan yksiköissä aktiivisen alustan ylävasemmasta kulmasta ja kantaa merkintää, joka seuraa osoitinta. Vedä viivottimelta vetääksesi apuviivan piirtoalueelle ja pudota apuviiva takaisin viivottimelle päästäksesi siitä eroon. Voit myös muuntaa valitun polun apuviivaksi Luo apuviivat (<kbd>⌘5</kbd>) -komennolla ja palauttaa sen Vapauta apuviivat (<kbd>⌥⌘5</kbd>) -komennolla. Näytä tai piilota kaikki apuviivat <kbd>⌘;</kbd>:llä. Älykkäät apuviivat (<kbd>⌘U</kbd>) näyttävät tasaus- ja mittausvihjeitä piirrettäessä ja vedettäessä.</p>
+
+  <h3 id="interface-grid">Ruudukko</h3>
+  <p>Ruudukko piirretään jokaiselle alustalle ja asetetaan Näytä › Ruudukko tai Ruudukko-paneelista. Näytä tai piilota se <kbd>⌘'</kbd>:llä ja kytke kohdistus siihen <kbd>⇧⌘'</kbd>:llä. Jokainen alusta voi käyttää yhtä kuudesta ruudukon tyypistä: Ortooninen, Isoometrinen, Kuusikulmio, Vinokulma, Kultainen leikkaus ja Perspektiivi. Tyypin valitseminen kytkee ruudukon päälle, jotta näet sen heti. Ruudukko kuvataan kokonaan omalla sivullaan.</p>
+
+  <h3 id="interface-history-strip">Historiavyöhyke</h3>
+  <p>Pieni merkkisarake ilmestyy piirtoalueen kulmaan, kun viet hiiren sen lähelle: tämä on asiakirjan historia. Vie hiiri merkin päälle nimetäksesi kyseisen vaiheen, napsauta sitä siirtyäksesi suoraan sinne tai paina ja liikuta alas merkkiä pitkin ajaaksesi asiakirjan taakse ja eteenpäin, jotta voit nähdä muutoksen tulevan ja menevän. Historia-paneeli alueella listaa samat vaiheet tekstinä.</p>
+
+  <h2 id="interface-boards">Alustat ja alustarivi</h2>
+  <p>Alustat ovat sitä, mitä Scissor kutsuu artboardeiksi. Jokainen kantaa nimensä ylävasemmassa kulmassaan ja aktiivinen alusta piirretään vahvemalla kehyksellä kuin muut. Napsauta alustan nimeä ottaaksesi Alusta-työkalun käyttöön kyseisen alustan aktiivisena, valmiina siirtämään, muuttamaan kokoa tai nimeämään. Jos alustalla on leikkaus, se näytetään sen ympärillä punaisena viivattuna suorakulmiona. Lisää yksi kohtaa Luo › Alustat › Uusi alusta, piirrä ja muunna alustoja Alusta-työkalulla (<kbd>⇧O</kbd>) ja aseta alustan koko ja nimi Alustan asetuksissa. Järjestä kaikki alustat järjestää ne riviin.</p>
+  <p>Alustan pienoiskuvien rivi on piirtoalueen päällä, yksi pieni esikatselu jokaiselle alustalle plus lisäuspainike lopussa. Napsauta pienoiskuvaa tehdäksesi kyseisen alustan aktiiviseksi ja sovittaaksesi sen ikkunaan; napsauta sen alla olevaa nimeä siirtyäksesi kyseiseen alustaan ja ottaaksesi Alusta-työkalun käyttöön valmiina muokkaamaan. Alustat-paneeli alueella listaa ne myös.</p>
+
+  <h2 id="interface-tabs">Asiakirjavälilehdet</h2>
+  <p>Avoinna olevat asiakirjat näkyvät välilehtinä komentorivin vasemmalla puolella. Välilehti näyttää asiakirjan nimen, pisteen edessä niin kauan kuin sillä on tallentamattomia muutoksia. Napsauta välilehteä vaihtaaksesi kyseiseen asiakirjaan tai × sulkeaksesi sen; asiakirjan sulkeminen tallentamattomine töineen kysyy ensin. Napsauta välilehteä hiiren keskipainikkeella sulkeaksesi sen heti ja vedä välilehti toiseen järjestääksesi avoinna olevat asiakirjat. Uusi (<kbd>⌥⌘N</kbd>), Avaa (<kbd>⌘O</kbd>) ja Tallenna (<kbd>⌘S</kbd>) ovat Tiedosto-valikossa ja Sulje on <kbd>⌥⌘W</kbd>.</p>
+  <p>Välilehdet ovat oletuksena ylhäällä. Jos haluat kiinnittää ne sivulle, kytke <strong>Näytä &rsaquo; Asiakirjavälilehdet sivulla</strong> (myös Asetuksissa); sivupalkin voi vetää leveämmäksi tai kapeammaksi sen oikeasta reunasta ja valinta muistetaan.</p>
+
+  <h2 id="interface-status-bar">Tilarivi</h2>
+  <p>Ikkunan alareunassa oleva rivi raportoi vasemmalta oikealle: valmiuden, käytössä olevan työkalun, valinnan koon (mitään ei valittu, yksi kohde tai lukumäärä) ja toiminnon, jonka <kbd>⌘Z</kbd> peruisi. Se on hiljainen paikka varmistaa, mitä olet ottanut ja mitä seuraava peruutus kumoaisi.</p>
+
+  <h2 id="interface-dock">Paneelialue</h2>
+  <p>Paneelit asuvat oikealla olevassa sarakkeessa. Levossa piirtoalue on koko ikkunan; paneelin pyytäminen liuttaa alueen piirtoalueen päälle ja sulkeminen palauttaa tilan suoraan takaisin. Paneelipainike välilehtirivin oikealla puolella ja Escape-näppäin avaavat ja sulkevat alueen; Ikkuna- ja Työtila-valikot ja komentopaletti avaavat tietyn paneelin.</p>
+  <figure class="shot">
+    <img src="img/editing.png" width="1900" height="1176" loading="lazy"
+         alt="Asiakirja avoinna Scissorissa teoksen kanssa alustalla ja Tasot ja Näytteet paneelit avoinna alueella." />
+    <figcaption>Asiakirja muokattavana, Tasot ja Näytteet paneelit avoinna alueella.</figcaption>
+  </figure>
+
+  <h3 id="interface-dock-groups">Kiinnitetyt paneeliryhmät</h3>
+  <p>Paneelit on pinottu ryhmiin, jokainen ryhmä on pieni kuvakevälilehtisarake omalla reunallaan. Vie hiiri välilehden päälle nähdäksesi paneelin nimen ja avoin paneeli nimeää itsensä sisällön yläpuolella. Oletuksena ryhmät keräävät paneelit, joita on taipumus käyttää yhdessä:</p>
+  <ul>
+    <li><strong>Ominaisuudet, Tasot, Alustat, Ruudukko</strong>: asiakirjan rakenne.</li>
+    <li><strong>Väri, Näytteet, Liukuväri, Reunaviiva</strong>: miten asiat maalataan.</li>
+    <li><strong>Teksti, Kappale, Glyfit</strong>: teksti.</li>
+    <li><strong>Tasaa, Yhdistä muotoja, Muunnos, Maalapino, Läpinäkyvyys, 3D</strong>: muotoilu ja järjestely.</li>
+    <li><strong>Tyylit, Sivellint, Symbolit, Kuviot</strong>: uudelleenkäytettävät ulkoasut ja kohteet.</li>
+    <li><strong>Navigaattori, Tiedot, Asiakirjan tiedot, Historia, Toiminnot</strong>: liikkuminen ja mittaus.</li>
+    <li><strong>Varat, Muuttujat, Automaattinen valinta, Vektööri, Määritteet</strong>: loput.</li>
+  </ul>
+
+  <h3 id="interface-rearranging">Paneelien järjestäminen</h3>
+  <p>Asettelu on sinun muutettavaksi. Vedä välilehteä oman rivinsä pitkin järjestääksesi sen, vedä se toisen ryhmän riville siirtääksesi sen sinne tai vedä se pois alueelta jättääksesi sen kellumaan piirtoalueen päälle. Vedä rivin tyhjä osa nostaaksesi koko ryhmän pois ja pudota se takaisin alueen päälle laittaaksesi sen kotiin; väli ryhmien välillä hyväksyy pudotetun välilehden uutena ryhmänään. Napsauta välilehteä hiiren oikealla painikkeella samoja liikkeitä valikossa, mukaan lukien Sulje paneeli. × rivin yläosassa sulkee kyseisen ryhmän ja kahden ryhmän välisen jakajan vetäminen antaa korkeutta yhdelle ja ottaa sen toiselta. Kelluva ryhmä voidaan muuttaa kokoa sen kulmasta.</p>
+
+  <h3 id="interface-gating">Paneelit, jotka odottavat jotain</h3>
+  <p>Paneeli, jolla ei ole mitään tehtävää juuri nyt, ei katoa: sen välilehti pysyy, vain himmeänä, ja sen runko näyttää rivin, joka kertoo, mitä se odottaa, kuten kohteen valitsemista tai Teksti-työkalun valitsemista. Jotta alue ei muotoile uudelleen käden alla, tämä odotetaan niin kauan kuin osoitin on alueen sisällä ja saavutetaan, kun osoitin lähtee.</p>
+
+  <h3 id="interface-workspace">Paneelien avaaminen, piilottaminen ja palautus</h3>
+  <p>Avaa paneeli Työtila-valikossa, jossa kuusi käytetyintä ovat ylhäällä ja loput Lisää paneelit -kohdassa, tai Ikkuna-valikossa klassisessa kromissa. Monilla paneeleilla on pikanäppäin:</p>
+  <table>
+    <thead><tr><th>Paneeli</th><th>Pikanäppäin</th><th>Paneeli</th><th>Pikanäppäin</th></tr></thead>
+    <tbody>
+      <tr><td>Tasot</td><td><kbd>F7</kbd></td><td>Väri</td><td><kbd>F6</kbd></td></tr>
+      <tr><td>Maalapino</td><td><kbd>⇧F6</kbd></td><td>Tiedot</td><td><kbd>F8</kbd></td></tr>
+      <tr><td>Tasaa</td><td><kbd>⇧F7</kbd></td><td>Muunnos</td><td><kbd>⇧F8</kbd></td></tr>
+      <tr><td>Reunaviiva</td><td><kbd>⌘F10</kbd></td><td>Liukuväri</td><td><kbd>⌘F9</kbd></td></tr>
+      <tr><td>Yhdistä muotoja</td><td><kbd>⇧⌘F9</kbd></td><td>Läpinäkyvyys</td><td><kbd>⇧⌘F10</kbd></td></tr>
+      <tr><td>Graafiset tyylit</td><td><kbd>⇧F5</kbd></td><td>Sivellint</td><td><kbd>F5</kbd></td></tr>
+      <tr><td>Määritteet</td><td><kbd>⌘F11</kbd></td><td>Symbolit</td><td><kbd>⇧⌘F11</kbd></td></tr>
+      <tr><td>Merkki</td><td><kbd>⌘T</kbd></td><td>Kappale</td><td><kbd>⌥⌘T</kbd></td></tr>
+      <tr><td>Glyfit</td><td><kbd>⌥⇧F11</kbd></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+  <p>Alueen voi leveventää vetämällä sen vasenta reunaa, mukavasta kahden kentän leveydestä paljon leveämmäksi. Asettelusi ja kuinka leveäksi jätit alueen, muistetaan istuntojen välillä. Kun alue on suljettu, osoittimen pyyhkäiseminen ikkunan oiseen reunaan tuo sen esiin, kunhan osoittimen alla ei ole teosta. Palauttaaksesi kaikki muutoksesi asetteluun, valitse Palaä paneelit, joka palauttaa jokaisen ryhmän alkuperäiseen paikkaansa.</p>
+  <p><kbd>Tab</kbd> piilottaa työkalupalkin, komentorivin, asiakirjavälilehdet, tilarivin, paneelit ja muun kromin piirtoalueelta, jätäen vain teoksen ja valikkorivin; paina se uudelleen palauttaaksesi kaikki takaisin.</p>
+
+  <h2 id="interface-language">Kieli</h2>
+  <p>Scissor puhuu englantia, saksaa (Deutsch), espanjaa (Español), ranskaa (Français), italiaa (Italiano), katalaania (Català), tšekkiä (Čeština), tanskaa (Dansk), norjaa (Norsk), puolaa (Polski), slovakkia (Slovenčina), suomea (Suomi) ja ruotsia (Svenska). Ensimmäisellä kerralla se käyttää selaimesi kieltä, jos se on yksi näistä, ja muuten englantia. Valitse toinen napsauttamalla maapallopainiketta valikkorivillä tai tervetulonäytöllä tai avaa <strong>Muokkaa › Asetukset</strong> (<kbd>&#8984;K</kbd>), mene <strong>Käyttöliittymä</strong> ja valitse yksi <strong>Kieli</strong> alla. Scissor vaihtuu, kun se lataa uudelleen, ja muistaa valinnan. Valikot, paneelit, valintaikkunat, työkaluvihjeet, viestit ja Mitä uutta seuraavat sitä ja luvut näytetään paikallisella tavalla, kuten 12,5 saksassa, vaikka voit kirjoittaa pilkun tai pisteen. Asiakirjasi eivät ole vaikutuksen alaisia: tasojen nimet ja teksti teoksesi pysyvät sellaisina kuin kirjoitit ne. Kun käyttöliittymä ei ole englanniksi, Käyttöehdot näytetään käytännöllisyyden vuoksi käännettäin ja englannin versio on se, joka pätee.</p>
+
+  <h2 id="interface-appearance">Vaalea ja tumma</h2>
+  <p>Scissor seuraa järjestelmän vaalean ja tumman asetusta. Jos haluat asettaa sen tavalla, valitse Näytä › Ulkoasu ja valitse Järjestelmä, Vaalea tai Tumma. Valinta muistetaan ja se kulkee myös piirtoalueelle: alusta, viivottimet ja alustan nimet piirretään kaikki sopimaan teemaan, jossa olet.</p>

@@ -1,0 +1,110 @@
+<p class="lede">El texto en Scissor permanece en vivo. Puedes reeditar las palabras, la fuente y el espaciado en cualquier momento, y el texto se dibuja directamente en el lienzo mientras escribes, de modo que lo que editas es lo que se imprime y exporta.</p>
+
+<p>Los atajos a continuación están escritos en formato macOS. En Windows, lee <kbd>&#8984;</kbd> como <kbd>Ctrl</kbd>, <kbd>&#8997;</kbd> como <kbd>Alt</kbd> y <kbd>&#8679;</kbd> como <kbd>Shift</kbd>.</p>
+
+<h2 id="type-tools">Las herramientas de texto</h2>
+<p>Las herramientas de texto comparten una ranura en la barra de herramientas. Elige la ranura y mantén pulsada para elegir entre ellas, luego trabaja en el lienzo.</p>
+<table>
+<thead><tr><th>Herramienta</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+<tbody>
+<tr><td>Herramienta Texto</td><td><kbd>T</kbd></td><td>Haz clic para texto de punto, arrastra para un marco rectangular de texto de área</td></tr>
+<tr><td>Herramienta Texto de área</td><td></td><td>Arrastra un marco y escribe dentro de él</td></tr>
+<tr><td>Herramienta Texto en trazado</td><td></td><td>Haz clic en un trazado para que el texto discurra a lo largo de él</td></tr>
+<tr><td>Herramienta Texto vertical</td><td></td><td>Coloca caracteres verticales en columnas</td></tr>
+<tr><td>Herramienta Edición de glifos</td><td><kbd>&#8679;T</kbd></td><td>Mueve, redimensiona y rota un caracter a la vez</td></tr>
+</tbody>
+</table>
+<p>Para editar texto que ya está en la página, haz clic en él con cualquiera de las herramientas de texto excepto Edición de glifos para poner el cursor en él, o doble clic con la herramienta Selección (<kbd>V</kbd>). Pulsa <kbd>Escape</kbd>, o haz clic fuera, para dejar de editar. Con la herramienta Texto simple, hacer clic en un trazado abierto adjunta texto a ese trazado en lugar de empezar un bloque nuevo, de modo que no siempre necesitas recurrir a la herramienta Texto en trazado dedicada.</p>
+
+<h2 id="type-kinds">Texto de punto, de área y en trazado</h2>
+<p>El texto puede situarse en el documento de tres maneras, y la diferencia está en cómo se miden las líneas y dónde se rompen. Los tres permanecen editables, toman los mismos ajustes de Carácter y Párrafo, y se pueden convertir en contornos después.</p>
+
+<h3 id="type-point">Texto de punto</h3>
+<p>Haz clic una vez con la herramienta Texto y escribe. El texto crece desde ese único punto y solo se rompe donde pulsas <kbd>Return</kbd>: no un marco contra el que ajustarse. Recurre al texto de punto para titulares, etiquetas, unas cuantas palabras de texto de presentación, o cualquier cosa que posicionarás a ojo en lugar de verter en una columna. Sus sangrías y espaciado de párrafo no tienen nada contra lo que medirse, de modo que esos controles no tienen efecto en el texto de punto; la alineación se toma del anclaje en el que hiciste clic.</p>
+
+<h3 id="type-area">Texto de área</h3>
+<p>Arrastra un rectángulo con la herramienta Texto o la herramienta Texto de área y el texto se ajusta al marco, rompiendo líneas automáticamente en el borde derecho. Usa texto de área para texto de cuerpo, leyendas, o cualquier serie de texto que debe permanecer dentro de un ancho establecido. Cuando hay más texto del que el marco puede contener, el excedente se oculta y el marco se marca como desbordado; haz el marco más grande, reduce el texto, o encadena el desbordamiento a otro marco (ver más abajo). Las sangrías, la sangría de primera línea, el espacio antes y después, y la silabación se aplican todas al texto de área.</p>
+
+<h3 id="type-on-a-path">Texto en trazado</h3>
+<p>Haz clic en un trazado con la herramienta Texto en trazado. El trazado se convierte en la línea de base y deja de ser obra por derecho propio, de modo que ya no se rellena ni se contornea. Recurre a esto para hacer discurrir una etiqueta alrededor de una insignia, a lo largo de una curva, o sobre la parte superior de una forma. Selecciona el resultado y aparecen tres soportes: uno al inicio, uno al final y uno en el medio. Arrastra el soporte de inicio o fin para mover dónde empieza y termina el texto a lo largo del trazado, arrastra el soporte del medio para deslizar toda la serie a lo largo, y arrastra el soporte del medio al otro lado del trazado para voltear el texto. El texto en trazado no acepta saltos de línea, de modo que <kbd>Return</kbd> no hace nada mientras lo editas. Remodela el trazado subyacente y el texto sigue sus nuevos dobleces.</p>
+<figure class="shot">
+  <img src="img/type-on-path.png" width="1700" height="798" loading="lazy"
+       alt="Las palabras 'El texto fluye a lo largo de cualquier trazado que dibujes' siguiendo los dobleces de un trazado ondulado en Scissor." />
+  <figcaption>Texto compuesto en un trazado ondulado. Remodela el trazado y el texto sigue sus dobleces; la línea de base aquí se muestra discontinua.</figcaption>
+</figure>
+
+<h2 id="type-character">El panel Carácter</h2>
+<p>El panel Carácter (<kbd>&#8984;T</kbd>, o <strong>Ventana &gt; Texto &gt; Carácter</strong>) contiene todo lo que se aplica a las letras mismas. Con un objeto de texto seleccionado, sus ajustes cubren todo el objeto: cambia la fuente o el tracking y cada caracter sigue. Mientras escribes, la fuente, el peso, la cursiva y el tamaño se aplican solo a los caracteres seleccionados (ver <a href="#type-mixed">Estilos mixtos en un texto</a>). El panel se atenúa hasta que estás editando texto o tienes un objeto de texto seleccionado.</p>
+
+<h3 id="type-font">Fuente, peso, estilo y tamaño</h3>
+<p>El menú de fuente es searchable y mantiene las familias que has usado recientemente en la parte superior. Lista las fuentes que tu navegador puede dibujar realmente, leídas del sistema donde las reportará y sondeadas de otro modo a partir de un conjunto de familias comunes, de modo que la lista coincide con lo que se renderizará en lugar de un catálogo fijo.</p>
+<p>El menuto de peso ofrece Light, Regular, Medium, Semibold, Bold y Heavy, pero solo los pesos que la familia elegida realmente tiene son seleccionables: los demás están atenuados. El botón de cursiva al lado activa y desactiva el estilo inclinado. El tamaño se establece en píxeles, desde el campo Tamaño.</p>
+
+<h3 id="type-mixed">Estilos mixtos en un texto</h3>
+<p>Un texto puede mezclar tamaños, colores, pesos y cursivas. Mientras escribes, selecciona algunos caracteres y cámbialos desde la barra rápida junto al texto, la barra de opciones o el panel Color. Solo los caracteres seleccionados cambian, y el resto del texto mantiene su propio estilo. Con nada seleccionado, el cambio se aplica a todo el texto como de costumbre. Los estilos viajan con sus caracteres mientras sigues escribiendo, y se conservan en las exportaciones SVG y PDF.</p>
+
+<h3 id="type-metrics">Interlineado, tracking y kerning</h3>
+<dl>
+  <dt>Interlineado</dt>
+  <dd>La distancia de una línea de base a la siguiente, en píxeles. Déjalo en 0 para interlineado automático, que es el 120% del tamaño. Establécelo más grande para abrir las líneas, o más pequeño para compactar un titular.</dd>
+  <dt>Tracking</dt>
+  <dd>Espaciado uniforme añadido o quitado a cada caracter, medido en milésimas de em (de modo que escala con el tamaño). Los valores positivos aflojan el texto, los negativos lo compactan. Recurre al tracking para ajustar una línea a un ancho o para espaciar versalitas.</dd>
+  <dt>Kerning</dt>
+  <dd>El espaciado propio de la fuente entre pares de letras particulares, como el hueco bajo una T mayúscula. Está activado por defecto, en el botón Kerning de la fila OpenType (marcado AV). Desactívalo para ver las métricas en bruto de la fuente.</dd>
+</dl>
+
+<h3 id="type-align">Alineación</h3>
+<p>El panel Carácter tiene cuatro botones de alineación: izquierda, centro, derecha y justificar. Izquierda y derecha son relativas a la dirección de lectura, de modo que significan inicio y fin: el texto de derecha a izquierda alineado a la izquierda se alinea a la derecha visual. La justificación extiende cada línea para llenar la medida, de modo que solo cambia algo donde las líneas se ajustan, lo cual significa texto de área y texto en trazado en lugar de texto de punto de una sola línea. Para los controles de justificación más finos (cómo se compone la última línea) usa el panel Párrafo.</p>
+
+<h3 id="type-opentype">Características OpenType y versalitas</h3>
+<p>Bajo el encabezado <strong>OpenType</strong> hay una fila de botones, cada uno de los cuales activa o desactiva una característica del texto seleccionado:</p>
+<table>
+<thead><tr><th>Botón</th><th>Característica</th></tr></thead>
+<tbody>
+<tr><td>fi</td><td>Ligaduras estándar (activadas por defecto)</td></tr>
+<tr><td>st</td><td>Ligaduras discrecionales</td></tr>
+<tr><td>TT</td><td>Versalitas</td></tr>
+<tr><td>T&#7472;</td><td>Versalitas pequeñas</td></tr>
+<tr><td>T&sup1;</td><td>Superíndice</td></tr>
+<tr><td>T&#8321;</td><td>Subíndice</td></tr>
+<tr><td>&frac12;</td><td>Fracciones</td></tr>
+<tr><td>1&#738;&#7511;</td><td>Ordinales</td></tr>
+<tr><td>&#119964;</td><td>Swash</td></tr>
+<tr><td>AV</td><td>Kerning (activado por defecto)</td></tr>
+</tbody>
+</table>
+<p>Versalitas dibuja cada letra como una mayúscula sin cambiar el texto subyacente, de modo que sigue en minúsculas cuando lo editas. Versalitas pequeñas pide a la fuente sus formas de versalita pequeña. Superíndice y subíndice dibujan los caracteres afectados más pequeños y los desplazan de la línea de base, para marcadores de pie de página, terminaciones ordinales o fórmulas químicas.</p>
+<p>Debajo de los botones, el menú de estilo de cifra elige cómo se componen los números: Default, Tabular Lining, Proportional Oldstyle, Proportional Lining o Tabular Oldstyle. Las cifras tabulares todas ocupan el mismo ancho, de modo que las columnas de números se alinean; las cifras oldstyle tienen ascensores y descensos que se sitúan mejor en texto corrido.</p>
+<p>No todas las características se pueden previsualizar en el lienzo. Las ligaduras activadas o desactivadas, el kerning, las mayúsculas, las versalitas pequeñas y los super- y subíndices se dibujan mientras editas. Las ligaduras discrecionales, los estilos de cifra, las fracciones, los ordinales y el swash se registran en el texto y se escriben en el <code>.svg</code> exportado como ajustes de características de fuente, pero el lienzo no los muestra, así que trátalos como ajustes de momento de exportación.</p>
+
+<h2 id="type-paragraph">El panel Párrafo</h2>
+<p>El panel Párrafo (<kbd>&#8997;&#8984;T</kbd>, o <strong>Ventana &gt; Texto &gt; Párrafo</strong>) controla cómo se componen párrafos completos. Igual que con los ajustes de carácter, estos se aplican a cada párrafo del objeto de texto.</p>
+<p>Siete botones de alineación se extienden por la parte superior. Los tres primeros son izquierda, centro y derecha simples. Los tres siguientes justifican el cuerpo del párrafo y establecen solo la última línea, alineada a la izquierda, centrada o a la derecha. El último justifica cada línea incluida la última, estirándola hasta la medida completa. La justificación necesita un lugar donde ajustarse, de modo que tiene efecto en texto de área, no en texto de punto.</p>
+<p>Debajo de los botones de alineación están las sangrías: <strong>Izquierda</strong> y <strong>Derecha</strong> meten todo el párrafo desde los lados del marco, y <strong>Primera</strong> sangra solo la primera línea. Una sangría de primera línea negativa hace sobresalir la primera línea más allá de las demás, que es cómo se crea una sangría francesa. Los campos <strong>Antes</strong> y <strong>Después</strong> añaden espacio encima y debajo de cada párrafo, una manera más limpia de separar párrafos que una línea vacía. El interruptor <strong>Silabación</strong> permite que las palabras largas se rompan entre líneas para uniformar el borde derecho. Las sangrías y el espaciado se aplican al texto de área; el texto de punto se compone desde su propio anclaje.</p>
+
+<h2 id="type-glyphs">El panel Glifos</h2>
+<p>El panel Glifos (<strong>Texto &gt; Glifos</strong>, <kbd>&#8997;&#8679;F11</kbd>) lista los caracteres de la fuente actual por conjunto, desde Latin básico pasando por Griego, Cirílico, Hebreo, Árabe, puntuación, moneda, flechas y más, y mantiene los que has usado recientemente en la parte superior. Recurre a él para insertar un caracter que tu teclado no escribirá, como una flecha, un símbolo de moneda o una letra acentuada. Haz doble clic en un glifo para escribirlo en el cursor de texto. Sin cursor en ningún texto, el glifo se copia al portapapeles en su lugar, de modo que puedes pegarlo en otro sitio.</p>
+
+<h2 id="type-orientation">Texto vertical y de derecha a izquierda</h2>
+<p>Scissor puede componer texto hacia abajo por la página así como a lo ancho, y puede distribuir escrituras que se leen de derecha a izquierda. Ambos funcionan en texto de punto, de área y en trazado, y el editor en lienzo sigue la misma dirección que la obra terminada.</p>
+
+<h3 id="type-vertical">Texto vertical</h3>
+<p>La herramienta Texto vertical coloca caracteres verticales que se apilan hacia abajo, con cada nueva línea formando una columna a la izquierda de la última. En un marco de área vertical, una columna se ajusta a una nueva cuando llega al fondo. Para cambiar texto que ya has compuesto entre horizontal y vertical, elige <strong>Texto &gt; Orientación de texto &gt; Horizontal</strong> o <strong>Vertical</strong>.</p>
+
+<h3 id="type-rtl">De derecha a izquierda y árabe</h3>
+<p>El menú de dirección del panel Carácter ofrece Auto, Izquierda a derecha y Derecha a izquierda. En Auto la dirección se lee del texto mismo, de su primer carácter fuerte, de modo que el árabe o el hebreo fluyen de derecha a izquierda sin que tú establezcas nada. Las letras árabes toman sus formas unidas, y una serie de palabras latinas dentro de una línea de derecha a izquierda mantiene su propio orden de izquierda a derecha. Establece el menú en Izquierda a derecha o Derecha a izquierda cuando quieras forzar la dirección en lugar de dejar que se detecte, por ejemplo para una línea que empieza con un número o puntuación.</p>
+
+<h2 id="type-touch">Edición de glifos</h2>
+<p>La herramienta Edición de glifos (<kbd>&#8679;T</kbd>) mueve, escala y rota un caracter a la vez dejando el texto completamente editable. Recurre a ella para empujar una sola letra para efecto sin romper la palabra en contornos. Elige la herramienta y haz clic en un caracter: aparece una caja alrededor de ese caracter con una perilla en cada esquina, una en el lado derecho, una en la parte inferior y una flotando encima. Arrastra una esquina para escalar en ambas direcciones, la perilla lateral para el ancho solo, la perilla inferior para el alto solo, y la perilla superior para rotar el caracter. Mantén <kbd>&#8679;</kbd> mientras arrastras una esquina para mantener las proporciones, o mientras giras para ajustar el ángulo. <kbd>Retroceso</kbd> o <kbd>Supr</kbd> devuelve el caracter a donde lo colocó el texto, y <kbd>Escape</kbd> suelta la selección. Porque el texto sigue siendo texto en todo momento, puedes seguir editando las palabras alrededor del caracter que moviste.</p>
+
+<h2 id="type-flow">Encadenado y ajuste de texto</h2>
+<p>Dos características permiten que el texto comparta espacio con el resto de un diseño: el encadenado hace discurrir una historia a través de varios marcos, y el ajuste de texto empuja el texto lejos de un objeto que se superpone.</p>
+
+<h3 id="type-threading">Texto encadenado</h3>
+<p>Selecciona dos o más objetos de texto de área y elige <strong>Texto &gt; Texto encadenado &gt; Crear</strong>. Su texto se une en una historia que fluye de marco a marco en orden de apilamiento, de atrás hacia adelante, y siempre se edita desde el primer marco. Usa el encadenado para hacer discurrir un artículo a través de columnas o páginas: mientras añades o eliminas texto, se redistribuye a través de la cadena. Cada marco muerto un puerto en su parte superior izquierda e inferior derecha, con una línea dibujada al marco en el que continúa el texto. Un más rojo en lugar del puerto de salida significa que hay más texto del que el marco puede contener. <strong>Liberar selección</strong> saca los marcos seleccionados de su hilo, y <strong>Eliminar encadenado</strong> rompe todo el hilo con cada marco conservando el texto que estaba mostrando.</p>
+
+<h3 id="type-wrap">Ajuste de texto</h3>
+<p>Para empujar el texto lejos de una forma, selecciona la forma y elige <strong>Objeto &gt; Ajuste de texto &gt; Crear</strong>. El texto de área que se sitúa debajo del objeto entonces fluye a su alrededor. El ajuste sigue el contorno del objeto, no su cuadro delimitador, de modo que el texto puede abrazar un círculo o una silueta irregular. <strong>Opciones de ajuste de texto…</strong> establece el espacio mantenido entre el objeto y el texto, en píxeles, y puede invertir el ajuste para que el texto discurra dentro de la forma en lugar de alrededor de ella. <strong>Liberar</strong> elimina el ajuste.</p>
+
+<h2 id="type-outlines">Convertir texto en contornos</h2>
+<p>Selecciona texto y elige <strong>Texto &gt; Crear contornos</strong> (<kbd>&#8679;&#8984;O</kbd>) para convertirlo en trazados. Recurre a esto cuando necesitas remodelar las letras a mano, garantizar que el texto se vea idéntico en una máquina que no tiene la fuente, o usar las letras como una forma para combinar con otra obra. Las letras se trazan a partir de los propios glifos de la fuente en alta resolución, con el ajustador dejando las esquinas verdaderas afiladas mientras suaviza las curvas, y el resultado conserva el relleno, contorno, nombre, opacidad y modo de fusión del texto. Las palabras dejan de ser editables como texto después, así que guarda una copia si puede que necesites cambiarlas, o deshaz con <kbd>&#8984;Z</kbd>.</p>

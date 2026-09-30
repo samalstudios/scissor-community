@@ -1,0 +1,134 @@
+<p class="lede">Hoe een vorm eruitziet is zijn <em>uiterlijk</em>: de vulling binnen zijn omtrek, de lijn die erlangs wordt getekend, en de dekking en overvloeiming die bepalen hoe het over wat erachter ligt heen zit. Elk daarvan kan een effen kleur, een verloop of een patroon zijn, en een object kan meer dan één van elk tegelijk dragen. Deze pagina behandelt de verfbesturing, de kleurmodellen, stalen, verlopen, lijnen, transparantie, het Verfstapel-paneel en grafische stijlen.</p>
+
+<p>Sneltoetsen hieronder zijn geschreven in hun macOS-vorm. Op Windows leest u <kbd>&#8984;</kbd> als Ctrl, <kbd>&#8997;</kbd> als Alt en <kbd>&#8679;</kbd> als Shift.</p>
+
+<figure class="shot">
+  <img src="img/artwork-landscape.png" width="1700" height="967" loading="lazy"
+       alt="Een vectorlandschap van bergen, hemel en een meer, opgebouwd uit effen gevulde vormen in Scissor." />
+  <figcaption>Een hele scène opgebouwd uit gevulde vormen. Elke kleureenband is een pad met zijn eigen vulling.</figcaption>
+</figure>
+
+<h2 id="appearance-fill-and-stroke">Vullingen en lijnen</h2>
+<p>Een pad, vorm of stuk tekst kan een <strong>vulling</strong> bevatten, de verf binnen zijn omtrek, en een <strong>lijn</strong>, de lijn die langs die omtrek wordt getekend. Een vulling kan een effen kleur, een verloop of een patroon zijn; een lijn kan een effen kleur of een verloop zijn, met zijn eigen dikte en streep. Beide kanten kunnen ook op niets worden ingesteld, zodat u een vorm met alleen een lijn, of alleen een vulling kunt tekenen.</p>
+
+<h3 id="appearance-the-paint-chips">De vulling- en lijnchips</h3>
+<p>Twee overlappende chips onderaan de werkbalk bevatten de vulling en de lijn. Klik op een ervan om een kleurkiezer te openen; de voorkant is de kant waarop de toetsen en de Kleur-, Verloop- en Stalen-panelen werken. Druk op <kbd>X</kbd> om de andere kant naar voren te brengen, <kbd>&#8679;X</kbd> om de twee verven om te wisselen, <kbd>/</kbd> om de voorkant op niets in te stellen, en <kbd>D</kbd> om terug te keren naar de standaardwaarden: een witte vulling, een zwarte lijn en een 1 pt dikte. Dezelfde vulling, lijn, dikte, dekking en overvloeimodus zitten ook samen in het Eigenschappen-paneel, wat handig is wanneer u ze allemaal op één plek wilt.</p>
+<p>Met niets geselecteerd stellen deze besturingselementen de stijl in die het volgende object dat u tekent zal aannemen, zodat u een kleur kunt kiezen voordat u tekent in plaats daarna.</p>
+
+<h3 id="appearance-eyedropper">Verf kopiëren met de Pipet</h3>
+<p>De Pipet (<kbd>I</kbd>) kopieert een heel uiterlijk van het object dat u klikt naar de selectie. Houd <kbd>&#8679;</kbd> ingedrukt om alleen zijn vulkleur of lijnkleur naar de actieve kant te nemen, of <kbd>&#8997;</kbd> om het uiterlijk van de selectie naar het object onder de pointer te duwen in plaats daarvan. Klikken op een geplaatste afbeelding of een pixel-laag bemonstert de kleur onder de pointer naar de actieve kant, zodat u een kleur direct uit een foto kunt tillen. Greep naar de Pipet wanneer twee objecten moeten overeenkomen: bemonster het ene, en het andere neemt dezelfde verf in één klik over.</p>
+
+<h2 id="appearance-colour">Kleur</h2>
+<p>Kleur wordt gekozen in de kleine pop-upkiezer op elke chip, of, met meer controle, in het Kleur-paneel.</p>
+
+<h3 id="appearance-color-panel">Het Kleur-paneel</h3>
+<p>Het <strong>Kleur</strong>-paneel (<kbd>F6</kbd>) toont de verf van de actieve kant als een set schuifregelaars, een hexadecimaal veld en een spectrum. Vulling- en lijnchips bovenaan kiezen welke kant u bewerkt. Het spectrum loopt tinten over, wit bovenaan en zwart onderaan; klik of sleep erin om te kiezen. Drie snelle stalen ernaast stellen Niets, Wit en Zwart in één klik in, en de <em>Inverteer</em>- en <em>Complement</em>-knoppen verwerken de huidige kleur opnieuw (Complement draait zijn tint half rond terwijl hij zijn verzadiging en helderheid behoudt).</p>
+<p>Het kleurmodel-menu stelt in welke schuifregelaars het paneel toont. De keuze wordt voor de sessie bewaard, en nieuwe stalen worden erin gemaakt.</p>
+<dl>
+  <dt>Grijswaarden</dt><dd>Eén K-schuifregelaar, van wit op 0% tot zwart op 100%.</dd>
+  <dt>RGB</dt><dd>Rood, groen en blauw van 0 tot 255, het model voor schermwerk.</dd>
+  <dt>HSB</dt><dd>Tint in graden, dan verzadiging en helderheid als percentages: vaak de snelste manier om een kleur aan te passen zonder zijn karakter te verliezen.</dd>
+  <dt>CMYK</dt><dd>Cyaan, magenta, geel en zwart als percentages, voor drukwerk.</dd>
+  <dt>Web Safe RGB</dt><dd>RGB vastgezet op de 216 webveilige kleuren. Wanneer de huidige kleur geen ervan is, verschijnt een waarschuwingsdriehoek; klik erop om naar de dichtstbijzijnde webveilige kleur vast te zetten.</dd>
+</dl>
+<p>Wanneer de actieve kant is beschilderd met een globaal staal, verschijnt een tintrij boven de schuifregelaars: het noemt het staal en laat u een tint van 0% tot 100% instellen in plaats van de kleur onmiddellijk te bewerken, zodat het werk aan het staal verbonden blijft.</p>
+
+<h2 id="appearance-swatches">Stalen en kleurgroepen</h2>
+<p>Een staal is een benoemde kleur die met het document wordt opgeslaan. Verven vanuit stalen in plaats van waarden typen houdt een palet consistent en, voor globale stalen, laat u een heel document herkleuren door één kleur te bewerken.</p>
+
+<h3 id="appearance-swatches-panel">Het Stalen-paneel</h3>
+<p>Het <strong>Stalen</strong>-paneel (open het via <strong>Venster &rsaquo; Stalen</strong>) somt de stalen van het document op als een raster of als een lijst; de lijstweergave toont ook het kleurmodel van elk staal. Een gewone klik beschildert de actieve kant. <kbd>&#8679;</kbd>-klik kiest een reeks stalen en <kbd>&#8984;</kbd>-klik voegt eréén toe of verwijderd eréén uit de selectie, zodat u op verscheidene tegelijk kunt werken. De voettekst bevat knoppen om van weergave te wisselen, het paneelmenu te openen, staalopties te tonen, een kleurgroep te maken, een nieuw staal te maken en wat is gekozen te verwijderen.</p>
+<p>Het paneelmenu voegt meer toe: <em>Gebruikte kleuren toevoegen</em> en <em>Geselecteerde kleuren toevoegen</em> veranderen de kleuren die al in het document staan, of alleen in de selectie, in stalen; <em>Alle ongebruikte selecteren</em> kiest elk staal dat niets mee beschildert, klaar om te verwijderen; en <em>Kleuren toewijzen&#8230;</em> opent het herkleuringsdialoogvenster hieronder beschreven.</p>
+
+<h3 id="appearance-process-spot-global">Proces-, spot- en globale stalen</h3>
+<p>Dubbelklik op een staal voor Staalopties, waar u instelt wat voor kleur het is.</p>
+<dl>
+  <dt>Proces</dt><dd>Een gewone kleur, gemengd voor de klus. Een gewoon processtaal is slechts een opgeslagen kleur: het bewerken ervan raakt het werk dat ermee is beschilderd niet.</dd>
+  <dt>Globaal</dt><dd>Een processtaal gemarkeerd als Globaal houdt het werk eraan verbonden, zodat het herkleuren van het staal alles wat ermee is beschilderd in één keer opnieuw beschildert. Globale stalen kunnen als tint worden toegepast.</dd>
+  <dt>Spot</dt><dd>Een benoemde inkt, bedoeld om op een eigen plaat af te drukken. Spotkleuren zijn altijd globaal.</dd>
+</dl>
+<p>Elk document begint ook met een vast <strong>[Registratie]</strong>-staal, dat geen eigen kleurtype heeft en niet kan worden verwijderd of gesleept. Gebruik een globaal of spotstaal wanneer een kleur vaak voorkomt en zou kunnen veranderen: één bewerking werkt elk object bij, in plaats van ze met de hand te jagen.</p>
+
+<h3 id="appearance-colour-groups">Kleurgroepen</h3>
+<p>Kleurgroepen maken samenhangende stalen samen, zoals één tintenfamilie of het palet van één project. Sleep stalen naar een groep om ze erin te archiveren, of selecteer eréén en maak er een groep van met de Nieuwe kleurgroep-knop van het paneel. Dubbelklik op de kop van een groep voor zijn opties. In de kleurkiezer op elke chip, toont elke groep als één rij, zodat een familie als een ramp van tinten leest in plaats van een muur van chips.</p>
+
+<h2 id="appearance-gradients">Verlopen</h2>
+<p>Een verloop mengt tussen twee of meer kleuren. Scissor maakt lineaire, radiale en vrije verlopen, en zowel het paneel als het canvasgereedschap kunnen ze bouwen en vormgeven. Greep naar een verloop om een vlakke vorm diepte te geven, een achtergrond een zachte was, of een knop een glans.</p>
+
+<h3 id="appearance-gradient-panel">Het Verloop-paneel</h3>
+<p>Het <strong>Verloop</strong>-paneel (<kbd>&#8984;F9</kbd>) stuurt het hele verloop. Klik op de miniature om de actieve kant te vullen, kies Lineair, Radiaal of Vrij uit het typemenu, en gebruik de omkeerknop om de ramp van punt te punt te keren. De ramp zelf draagt de stoppen: klik erop om een stop toe te voegen in de kleur die het al daar heeft, sleep een stop om hem te verplaatsen, en sleep een ruit tussen twee stoppen om te verschuiven waar de twee kleuren elkaar ontmoeten. De geselecteerde stop heeft zijn eigen kleurstaal, een <em>Dekking</em>-veld en een <em>Locatie</em>-veld, en <em>Stop verwijderen</em> verwijdert hem. <em>Hoek</em> draait een lineair of radiaal verloop, en <em>Aspect</em> (alleen radiaal) drukt een radiaal verloop tot een ellips samen.</p>
+<figure class="shot">
+  <img src="img/gradient.gif" width="340" height="340" loading="lazy"
+       alt="Een afgerond vierkant gevuld met een blauw-tot-amber lineair verloop waarvan de richting heen en weer gaat." />
+  <figcaption>Een lineair verloop van blauw tot amber. Het slepen van de verloopas, of het veranderen van de hoek, jaagt de mengeling rond de vorm.</figcaption>
+</figure>
+
+<h3 id="appearance-gradient-tool">Het Verloop-gereedschap</h3>
+<p>Met het Verloop-gereedschap (<kbd>G</kbd>) zitten dezelfde besturingselementen op het werk. Sleep over een object om de as neer te leggen, <kbd>&#8679;</kbd> ingedrukt houdend om hem op 45&deg; stappen vast te houden. De as toont een ronde knop aan het begin en een vierkant knop aan het einde; sleep eréén om dat uiteinde te verplaatsen. Klik op de as om een stop toe te voegen in de kleur die het al daar heeft, sleep een stop erlangs, en sleep een stop ver weg van de as om hem weg te gooien. Sleep een ruit om het middelpunt te verplaatsen. <kbd>Delete</kbd> verwijdert de stop die u het laatst heeft aangeraakt.</p>
+
+<h3 id="appearance-freeform">Vrije verlopen</h3>
+<p>Een vrij verloop plaatst kleurpunten overal op de vorm in plaats van langs één as, zodat de mengeling de vorm van het werk kan volgen. Met het Verloop-gereedschap, klik op het werk om een kleurpunt neer te zetten, sleep eréén om het te verplaatsen, en druk op <kbd>Delete</kbd> om het weg te nemen. Vink <em>Punten tot lijnen verbinden</em> in het paneel aan om de punten tot lijnen te verbinden, wat een kleur langs een reeks verspreidt in plaats van uit één enkele stip. Gebruik een vrij verloop voor zachte, organische schaduw die een rechte ramp niet kan geven.</p>
+
+<h2 id="appearance-patterns">Patronen</h2>
+<p>Een patroon is werk dat als een tegel wordt herhaald en als vulling wordt gebruikt. Verander een selectie in een tegel met <strong>Object &rsaquo; Patroon &rsaquo; Maken</strong>, en vul elke vorm ermee vanuit het <strong>Patronen</strong>-paneel: klik op een tegel om te vullen, dubbelklik om het te bewerken, en <kbd>&#8997;</kbd>-klik om het te verwijderen. <em>Tegelopties</em> stelt het tegeltype, de bakstenenverschuiving, de grootte en de tussenruimte in, en of de tegel mee schaalt en beweegt met het werk. <strong>Patroon bewerken</strong> opent de tegel op zijn plaats met zijn kopieën die eromheen herhalen terwijl u werkt; klik op <em>Bewerking voltooien</em> in het Patronen-paneel wanneer de tegel goed is. Patronen geschikt voor herhalende texturen, zoals strepen, stippen, weefsels en achtergronden, die vervelend zijn om met de hand te tekenen.</p>
+
+<h2 id="appearance-strokes">Lijnen</h2>
+<p>Het <strong>Lijn</strong>-paneel (<kbd>&#8984;F10</kbd>) geeft vorm aan de lijn die langs een pad wordt getekend.</p>
+
+<h3 id="appearance-stroke-options">Dikte, uiteinden, verbindingen en uitlijning</h3>
+<p><em>Dikte</em> stelt de dikte van de lijn in punten in. De <em>Uiteinde</em>-knoppen bepalen hoe een open pad eindigt: plat (vierkant afgekapt op het anker), rond, of uitsteeksel (vierkant, maar een halve dikte voorbij het anker reikend). De <em>Hoek</em>-knoppen bepalen hoe een lijn een hoek maakt: mitre (een scherpe punt), rond, of bevel ( een platte snede), met een mitre <em>Limiet</em> die de scherpste punten bevelt zodat ze niet uitsteken. <em>Uitlijnen</em> plaatst de lijn op het midden van het pad, of volledig binnen of buiten het, wat ertoe doet wanneer een vorm precies tegen zijn buren aan moet sluiten.</p>
+
+<h3 id="appearance-dashes">Gestreepte lijnen</h3>
+<p>Vink <em>Gestreepte lijn</em> aan om de lijn in strepen te breken. De drie streep-en-kans-paren eronder stellen het patroon in: het eerste veld is een steeklengte, de volgende een kans, en zo verder, rond het pad herhalend. Latere paren leeg laten voor een eenvoudige gelijkmatige streep.</p>
+
+<h3 id="appearance-width-profiles">Breedteprofielen en het Breedte-gereedschap</h3>
+<p>Een breedteprofiel loopt de lijn over zijn lengte toe in plaats van hem op één dikte vast te houden. Kies een profiel uit het menu van het paneel en een klein voorbeeld toont de vorm die het maakt; de knoppen ernaast draaien het profiel de andere kant op, slaan de huidige lijn op als een nieuw profiel, of verwijderen een profiel dat u heeft gemaakt. Een lijn die u met de hand heeft gevormd toont als <em>Aangepast</em> in het menu.</p>
+<p>Het Breedte-gereedschap (<kbd>&#8679;W</kbd>) geeft vorm aan een lijn direct op het canvas: sleep vanuit het pad weg om het op die plek te verbreden, of ernaartoe om het te versmallen, en laat een breedter punt achter dat u later opnieuw kunt slepen. Gebruik het om een getekende lijn de zwelling en taps van een penseel of pen te geven.</p>
+
+<h3 id="appearance-brushes">Penselen</h3>
+<p>Het <strong>Penselen</strong>-paneel (<kbd>F5</kbd>) schildert lijnen met een vorm in plaats van een gewone lijn. Het bevat kalligrafische, verspreide, kunst-, borstel- en patroonpenselen. Klik op een penseel om het toe te passen op de geselecteerde paden; het Verfpenseel gebruikt welke penseel actief is. Dubbelklik op een penseel voor zijn opties, gebruik <em>Nieuw penseel&#8230;</em> om eréén te maken (verspreide, kunst- en patroonpenselen worden opgebouwd uit geselecteerd werk), en <em>Penseel verwijderen</em> om een lijn terug te keren naar een gewone lijn.</p>
+
+<h2 id="appearance-opacity-blending">Dekking en overvloeiming</h2>
+<p>Dekking en de overvloeimodus bepalen hoe een object zich met alles eronder vermengt. Ze zitten in het <strong>Transparantie</strong>-paneel (<kbd>&#8679;&#8984;F10</kbd>), en ook in het Eigenschappen-paneel.</p>
+
+<h3 id="appearance-blend-modi">De overvloeimodi</h3>
+<p>Dekking loopt van 0% (onzichtbaar) tot 100% (ondoorzichtig). Het modusbodemenu biedt zestien overvloeimodi, die in groepen vallen: modi die donkerder maken, modi die lichter maken, contrastmodi, vergelijkingsmodi, en de vier die één deel van een kleur lenen.</p>
+<table>
+  <thead><tr><th>Modus</th><th>Wat het doet</th></tr></thead>
+  <tbody>
+    <tr><td>Normaal</td><td>Schildert over wat eronder zit, zonder overvloeiming.</td></tr>
+    <tr><td>Donkerder</td><td>Behoudt welke kleur donkerder is, kanaal voor kanaal.</td></tr>
+    <tr><td>Vermenigvuldigen</td><td>Vermenigvuldigt de twee kleuren, altijd donkerder; wit laat de basis ongewijzigd.</td></tr>
+    <tr><td>Kleur donkerder</td><td>Maakt de basis donkerder om de overvloei-kleur over te nemen.</td></tr>
+    <tr><td>Lichter</td><td>Behoudt welke kleur lichter is.</td></tr>
+    <tr><td>Scherm</td><td>De omgekeerde van Vermenigvuldigen, altijd lichter; zwart laat de basis ongewijzigd.</td></tr>
+    <tr><td>Kleur lichter</td><td>Maakt de basis lichter om de overvloei-kleur over te nemen.</td></tr>
+    <tr><td>Overvloeien</td><td>Vermenigvuldigt of schermt afhankelijk van de basis, contrast verhogend.</td></tr>
+    <tr><td>Zacht licht</td><td>Een zachte lichtering of donkerder, alsof een zacht licht op het werk werd geschoten.</td></tr>
+    <tr><td>Hard licht</td><td>Vermenigvuldigt of schermt afhankelijk van de overvloei-kleur, zoals een harde spot.</td></tr>
+    <tr><td>Verschil</td><td>Trekt de donkerste kleur af van de lichtere; wit keert de basis om, zwart heeft geen effect.</td></tr>
+    <tr><td>Uitsluiting</td><td>Zoals Verschil, maar zachter en met minder contrast.</td></tr>
+    <tr><td>Tint</td><td>De tint van de overvloei met de verzadiging en helderheid van de basis.</td></tr>
+    <tr><td>Verzadiging</td><td>De verzadiging van de overvloei met de tint en helderheid van de basis.</td></tr>
+    <tr><td>Kleur</td><td>De tint en verzadiging van de overvloei met de helderheid van de basis: goed voor het kleuren van grijswaardenwerk.</td></tr>
+    <tr><td>Helderheid</td><td>De helderheid van de overvloei met de tint en verzadiging van de basis.</td></tr>
+  </tbody>
+</table>
+<p>Voor een groep, veranderen twee schakelaars hoe ze overvloeien. <em>Overvloeiming tot groep beperken</em> houdt de modi van de groep binnen zichzelf, zodat haar leden met elkaar overvloeien maar niet met het werk achter de groep. <em>Knockout-groep</em> maakt dat elk lid de onder hem verbergt in plaats van door hen heen over te vloeien.</p>
+
+<h3 id="appearance-opacity-masks">Dekkingmaskers</h3>
+<p>Een dekkingmasker vervaagt werk op toon. Selecteer het werk en, erboven, de vorm om mee te maskeren, en klik dan op <em>Masker maken</em> (ook <strong>Object &rsaquo; Afsnijdenmasker &rsaquo; Dekkingmasker maken</strong>). Het bovenste object wordt het masker: waar het licht is, toont het werk, en waar het donker is, vervaagt het werk uit, zodat een wit-tot-zwart verloop een zachte overgang maakt. <em>Vrijgeven</em> geeft de twee objecten terug. Gebruik een masker voor een zachte rand of een vignet dat een harde afsnijding niet kan maken.</p>
+
+<h2 id="appearance-appearance-panel">Het Verfstapel-paneel</h2>
+<p>Het <strong>Verfstapel</strong>-paneel (<kbd>&#8679;F6</kbd>) somt alles op dat op één object is beschilderd: zijn vullingen en zijn lijnen, met eventuele live effecten erboven. Omdat een object meerdere vullingen en lijnen kan bevatten, is dit waar u ze stapelt, bijvoorbeeld een brede donkere lijn onder een dunne lichte om een omtrek te maken, of twee vullingen met verschillende dekkingen.</p>
+<p>De stapel wordt van bovenaf getekend, overeenkomstig de volgorde waarin ze schildert. Elke vulling- of lijnrij heeft een oog om het te verbergen, een verfchip die de kleurkiezer opent, een dekkingsveld, een dikteveld voor lijnen, en pijlen om het omhoog of omlaag de stapel te verplaatsen, plus een knop om het te verwijderen. <em>Vulling toevoegen</em> en <em>Lijn toevoegen</em> zet er nog één bovenop. Effecten tonen boven de vullingen en lijnen met een <em>fx</em>-badge; klik op een effect om zijn opties te bewerken, of verwijder het van zijn rij. Wanneer de gelaagde look klaar is, <strong>Object &rsaquo; Uiterlijk uitbreiden</strong> bakt de hele stapel tot gewoon werk.</p>
+
+<h2 id="appearance-graphic-styles">Grafische stijlen</h2>
+<p>Een grafische stijl is een opgeslagen uiterlijk dat u op andere objecten kunt toepassen. Het <strong>Grafische stijlen</strong>-paneel (<kbd>&#8679;F5</kbd>) bewaart ze als chips, elk zijn vulling met zijn lijn als de rand van de chip tonend. Selecteer een object en klik op <em>Nieuwe stijl</em> om zijn vullingen en lijnen op te slaan; klik op een chip om die stijl op de selectie toe te passen, en <kbd>&#8997;</kbd>-klik op een chip om het te verwijderen. Stijlen zijn de moeite waard om te maken wanneer dezelfde look, zoals een huisbehandeling van een knop of een labelstijl, op veel objecten moet komen en consistent moet blijven.</p>
+
+<h2 id="appearance-overprint">Overdrukken</h2>
+<p>Het <strong>Attributen</strong>-paneel (<kbd>&#8984;F11</kbd>) stelt overdrukken in voor drukwerk. <em>Vulling overdrukken</em> en <em>Lijn overdrukken</em> maken dat die inkt boven de kleuren eronder afdrukt in plaats van hen uit te snijden, wat wordt gebruikt voor afvangen en voor effecten zoals een zwart dat over afdrukt in plaats van te vervangen wat eronder zit. Schakel <strong>Beeld &rsaquo; Overdrukvoorbeeld</strong> in om het op het scherm te zien; PDF-export behoudt de instelling.</p>
+
+<h2 id="appearance-recolour">Werk herkleuren</h2>
+<p><strong>Bewerken &rsaquo; Kleuren bewerken &rsaquo; Kleuren toewijzen&#8230;</strong> somt elke kleur in de selectie op met hoe vaak het wordt gebruikt. Klik op de chip rechts van een rij om te kiezen wat die kleur wordt, of op de pijl tussen de twee chips om die kleur met rust te laten. Tint-, Verzadiging- en Helderheid-schuifregelaars verschuiven de hele set samen, en twee knoppen schikken de nieuwe kleuren willekeurig opnieuw of maken hun verzadiging en helderheid willekeurig, wat een snelle manier is om variaties te proberen. Het werk werkt bij terwijl u doorgaat, en <em>Reset</em> keert terug naar de kleuren waarmee het begon.</p>
+<p>Hetzelfde submenu biedt ook stapsgewijze veranderingen: <em>Voor naar achter mengen</em> verspreidt een reeks kleuren tussen de voor- en achterobjecten, <em>Omzetten naar grijswaarden</em> laat alle kleur vallen, <em>Kleuren omkeren</em> keert elke om, en <em>Verzadigen&#8230;</em> verhoogt of verlaagt de verzadiging in de selectie.</p>

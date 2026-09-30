@@ -1,0 +1,26 @@
+<p>Scissor öppnas i en webbläsarflik. Det finns inget konto att skapa och inget att installera innan du börjar: ritmotorn är kompilerad till WebAssembly och körs på din egen maskin, så ditt aldrig laddas upp någonstans. Vid ditt första besök hälsas du av en välkomstskärm – Scissor-räven, en kort genomgång av vad programmet gör, och Användarvillkoren. Kryssa i <strong>Jag har läst och godkänner Användarvillkoren</strong> och tryck på <strong>Kom igång</strong> för att gå in i redigeraren. En andra, valfri kryssruta frågar om Scissor får räkna besök med anonym analys; lämnar du den avstängd laddas ingen analys alls. Du kan ändra det valet senare under <strong>Inställningar &gt; Integritet</strong>, och läsa villkoren igen när som helst från <strong>Hjälp &gt; Användarvillkor&hellip;</strong>.</p>
+
+<p>Genvägarna nedan är skrivna i macOS-form. På Windows och Linux, läs <kbd>⌘</kbd> som Ctrl och <kbd>⌥</kbd> som Alt; <kbd>⇧</kbd> är Shift.</p>
+
+<h3 id="what-you-see">Vad du ser</h3>
+<p>Längst upp sitter menyraden och, under den, kontrollraden, som ändras med vad du har valt och innehåller fyllning, kontur, tjocklek, opacitet samt X, Y, W och H för markeringen. Verktygen löper ned längs vänsterkanten; paneldockan finns till höger. Däremellan finns duken, med en flik för varje öppet dokument ovanför och en statusrad nedanför som visar zoomnivån, den aktiva artboarden, det aktuella verktyget och namnet på det senaste ångringsbara steget.</p>
+<p>Utan något öppet dokument visar duken en startskärm med <strong>Nytt dokument…</strong> och <strong>Öppna…</strong>; dubbelklicka var som helst på den för att öppna en fil. Tryck <kbd>Tab</kbd> för att dölja panelerna och ge konstverket hela fönstret, och igen för att få tillbaka dem. Håll ned mellanslagstangenten när som helst för att panorera.</p>
+
+<h3 id="first-document">Skapa ditt första dokument</h3>
+<p>Välj <strong>Arkiv &gt; Nytt…</strong> (<kbd>⌥⌘N</kbd>). Dialogrutan grupperar tomma förinställningar under Utskrift, Webb, Mobil, Film &amp; Video och Konst &amp; Illustration; klicka på ett kort för att ladda dess storlek, eller dubbelklicka på det för att skapa dokumentet direkt. Till höger kan du ange dokumentets namn, bredd och höjden, enheterna, samt porträtt- eller liggande orientering. <strong>Artboards</strong>, <strong>Kolumner</strong> och <strong>Mellanrum</strong> ordnar fler än en artboard i ett rutnät. Under <strong>Bledd</strong> håller länkknappen alla fyra sidor lika; stäng av den för att ställa in dem separat. <strong>Avancerat</strong> innehåller färgläget (RGB eller CMYK) och upplösningen som används av rastereffekter. <kbd>Enter</kbd> skapar dokumentet, <kbd>Esc</kbd> stänger dialogrutan.</p>
+<figure class="shot">
+  <img src="img/new-document.png" width="1500" height="928" loading="lazy"
+       alt="Dialogrutan Nytt dokument i Scissor, med storleksförinställningar grupperade efter användning till vänster och dokumentinställningar till höger." />
+  <figcaption>Dialogrutan Nytt dokument. Välj en förinställning till vänster, eller ställ in storlek, artboards och bledd till höger.</figcaption>
+</figure>
+
+<h3 id="first-shape">Rita en första form</h3>
+<p>Tryck <kbd>M</kbd> för rektangelverktyget eller <kbd>L</kbd> för ellipsverktyget och dra på duken. Håll ned <kbd>⇧</kbd> medan du drar för att hålla formen kvadratisk eller cirkelformad, och <kbd>⌥</kbd> för att rita ut från centrum istället för från hörnet. Enkelklick istället för en dragning öppnar en liten dialogruta, så att du kan ange en exakt bredd och höjd. Med polygon- eller stjärnverktyget ändrar pil upp- och ner-tangenterna antalet sidor eller spetsar medan du drar.</p>
+<p>Fyllnings- och konturprovet sitter längst ner i verktygsraden. <kbd>X</kbd> flyttar fokus mellan dem, <kbd>⇧X</kbd> byter de två färgerna, <kbd>D</kbd> återgår till standard vit fyllning och svart kontur, och <kbd>/</kbd> ställer in den aktiva sidan till ingen. Tryck <kbd>V</kbd> för markeringsverktyget för att flytta och ändra storlek på det du har ritat.</p>
+
+<h3 id="saving">Spara</h3>
+<p>Scissor-dokument är <code>.cut</code>-filer. <strong>Arkiv &gt; Spara</strong> (<kbd>⌘S</kbd>) frågar en gång var filen ska ligga och, i webbläsare som stödjer direkt filåtkomst, skriver tillbaka till samma fil varje gång därefter. Webbläsare utan det sparar dokumentet till din nedladdningsmapp istället. <strong>Spara som…</strong> är <kbd>⇧⌘S</kbd> och <strong>Spara en kopia…</strong> är <kbd>⌥⌘S</kbd>. För att överlämna arbetet till ett annat program, använd <strong>Arkiv &gt; Exportera</strong>.</p>
+<p>Medan ett dokument har osparade ändringar sparar Scissor en kopia i webbläsarens egen lagring varannan sekund, och igen varje gång fliken döljs eller stängs. Om fliken försvinner innan du sparar, erbjuds arbetet tillbaka vid ditt nästa besök med en <strong>Återställ</strong>-notis.</p>
+
+<h3 id="installing">Installera Scissor</h3>
+<p>Välj <strong>Hjälp &gt; Installera Scissor…</strong> för att installera det som ett program. Det öppnas då i eget fönster utan webbläsargränssnitt, fungerar offline, och kan ställas in som program som öppnar <code>.cut</code>-filer. Om din webbläsare inte erbjuder frågan, använd dess eget installeralternativ i adressfältet eller menyn.</p>

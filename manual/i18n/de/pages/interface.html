@@ -1,0 +1,166 @@
+<p class="lede">Scissor füllt das Browserfenster mit einer einzigen Bearbeitungsfläche: eine Menüleiste oben, eine Kontrollleiste und Dokument-Tabs darunter, die Werkzeugpalette links, die Zeichenfläche in der Mitte und der Panel-Dock rechts. Alles läuft auf Ihrem eigenen Gerät, sodass ein Dokument dort bleibt, wo Sie es abgelegt haben, und nichts zur Öffnung verschickt wird.</p>
+
+<p>Die Kürzel auf dieser Seite sind in macOS-Form geschrieben. Unter Windows und Linux lesen Sie <kbd>⌘</kbd> als <kbd>Strg</kbd> und <kbd>⌥</kbd> als <kbd>Alt</kbd>; <kbd>⇧</kbd> ist Umschalt und <kbd>⌃</kbd> ist Steuerung.</p>
+
+<h2 id="interface-at-a-glance">Der Arbeitsbereich auf einen Blick</h2>
+<p>Das Fenster besteht aus einigen Bereichen, die jeweils eine andere Frage beantworten. Lernen Sie einmal, wo sie sind, und das restliche Handbuch leichter zu lesen.</p>
+<dl>
+  <dt>Menüleiste</dt>
+  <dd>Die Menüreihe ganz oben, mit Rückgängig und Wiederholen und einer Befehlssuche am rechten Ende. Dies ist die vollständige Liste alles, was der Editor kann.</dd>
+  <dt>Kontrollleiste</dt>
+  <dd>Der Streifen direkt unter den Menüs. Er zeigt das aktuelle Werkzeug und die Handvoll Steuerelemente, die für das gerade Ausgewählte relevant sind.</dd>
+  <dt>Dokument-Tabs</dt>
+  <dd>Links von der Kontrollleiste, ein Tab pro geöffnetem Dokument. Die Panels-Schaltfläche befindet sich am rechten Ende derselben Reihe.</dd>
+  <dt>Werkzeugpalette</dt>
+  <dd>Die schmale Spalte der Werkzeuge am linken Rand, mit der Füll- und Kontur-Steuerung am Fuß.</dd>
+  <dt>Zeichenfläche und Zwischenablage</dt>
+  <dd>Der große Bereich in der Mitte, auf dem Sie zeichnen. Die weißen Rechtecke sind Boards; der graue Rand ist die Zwischenablage.</dd>
+  <dt>Panel-Dock</dt>
+  <dd>Die Spalte der Panels rechts. Er schiebt sich bei Bedarf über die Zeichenfläche und gibt den Raum zurück, wenn Sie ihn schließen.</dd>
+  <dt>Statusleiste</dt>
+  <dd>Die dünne Leiste am Fuß des Fensters, die das aktuelle Werkzeug, die Auswahl und die letzte rückgängig machbare Aktion anzeigt.</dd>
+</dl>
+<figure class="shot">
+  <img src="img/app-light.png" width="1900" height="1082" loading="lazy"
+       alt="Das gesamte Scissor-Fenster: Menüleiste, Kontrollleiste, Werkzeugpalette, Zeichenfläche und Panel-Dock." />
+  <figcaption>Das gesamte Fenster. Scissor folgt Ihrer Systemeinstellung für Hell oder Dunkel, und dieser Screenshot folgt ebenfalls.</figcaption>
+</figure>
+
+<h2 id="interface-menu-bar">Die Menüleiste</h2>
+<p>Zehn Menüs verlaufen oben. Sie sammeln jeden Befehl im Programm, gruppiert nach der Art der Arbeit, die Sie machen, und nicht danach, wo eine Funktion zufällig in der Engine liegt.</p>
+<table>
+  <thead><tr><th>Menü</th><th>Was es enthält</th></tr></thead>
+  <tbody>
+    <tr><td>Datei</td><td>Neu, Öffnen, Schließen, Speichern, Platzieren, Exportieren, Skripte, Dokumenteinrichtung und Drucken.</td></tr>
+    <tr><td>Bearbeiten</td><td>Rückgängig und Wiederholen, die Zwischenablage-Befehle, das gesamte <strong>Auswahl</strong>-Menü als Untermenü, Farbbearbeitung und Einstellungen.</td></tr>
+    <tr><td>Anordnen</td><td>Transformieren, Stapelreihenfolge, Ausrichtung, Gruppierung sowie Sperren und Ausblenden.</td></tr>
+    <tr><td>Pfad</td><td>Pfad- und Verbundpfad-Befehle, Morphen, Formverzerrung und Perspektive, Clipping-Masken, Textumfluss und Erweitern.</td></tr>
+    <tr><td>Erstellen</td><td>Muster, Wiederholungen, Region-Füllung, Vektorisieren, Verlaufsnetz, Boards, Slices und die Pixel-Ebenen-Befehle.</td></tr>
+    <tr><td>Effekte</td><td>Live-Effekte: der Vektorsatz (3D, Verzeren und Transformieren, Formen kombinieren, Stilisieren, Verzeren und mehr) und ein Raster-Untermenü darunter.</td></tr>
+    <tr><td>Text</td><td>Schrift, Größe und Glyphen, Konturen erstellen, Groß-/Kleinschreibung, Textfluss und Zeichen einfügen.</td></tr>
+    <tr><td>Ansicht</td><td>Erscheinungsbild (Hell und Dunkel), Kontur- und Pixelvorschau, Zoom, Ansicht drehen, Lineale, Hilfslinien, Raster und Einrasten.</td></tr>
+    <tr><td>Arbeitsbereich</td><td>Die Panels: die sechs meistgenutzten, ein Text-Untermenü, ein Weitere Panels-Untermenü für den Rest und Panels zurücksetzen.</td></tr>
+    <tr><td>Hilfe</td><td>Was ist neu, das Benutzerhandbuch, Installieren, Nutzungsbedingungen und Über, mit einem Suchfeld oben.</td></tr>
+  </tbody>
+</table>
+<p>Ein Häkchen neben einem Eintrag bedeutet, dass diese Einstellung aktiviert ist. Ein ausgegrauter Eintrag kann im Moment nicht verwendet werden, meist weil nichts ausgewählt ist oder kein Dokument geöffnet ist. Wo ein Befehl ein Kürzel hat, wird es auf der rechten Seite des Menüs angezeigt.</p>
+
+<h3 id="interface-command-search">Einen Befehl finden</h3>
+<p>Sie müssen sich nicht merken, welches Menü was enthält. Die Suchschaltfläche rechts in der Menüleiste, beschriftet <em>Suchen oder Befehl eingeben</em>, öffnet die Befehlspalette; <kbd>⌘K</kbd> öffnet sie von der Tastatur aus. Tippen Sie ein paar Buchstaben und sie listet jeden passenden Befehl mit seinem Menüpfad und Kürzel auf sowie jedes passende Werkzeug. Verwenden Sie <kbd>↑</kbd> und <kbd>↓</kbd>, um durch die Ergebnisse zu navigieren, <kbd>Enter</kbd>, um das hervorgehobene auszuführen, und <kbd>Esc</kbd>, um zu schließen. Greifen Sie hierher, wenn Sie wissen, was Sie wollen, aber nicht wo es ist, oder wenn ein Kürzel schneller zu tippen ist als zu suchen. Das Hilfe-Menü hat ein eigenes Suchfeld, das dasselbe über die Menüs macht.</p>
+
+<h3 id="interface-undo-redo">Rückgängig und Wiederholen</h3>
+<p>Die gebogenen Pfeile rechts in der Menüleiste machen rückgängig und wiederholen, genauso wie <kbd>⌘Z</kbd> und <kbd>⇧⌘Z</kbd>. Jede Schaltfläche nennt den Schritt, den sie umkehren würde, wenn Sie mit dem Mauszeiger darüberfahren, und die Statusleiste zeigt dasselbe am Fuß des Fensters, sodass Sie immer sehen können, was ein weiterer Druck rückgängig machen würde.</p>
+
+<h2 id="interface-tool-palette">Die Werkzeugpalette</h2>
+<p>Die Werkzeuge sitzen in einer einzigen Spalte am linken Rand. Sie sind in Familien angeordnet: Auswahl, Zeichnen, Text, Linie, Form, Malen, Umformen, Erstellen, Abtasten, Symbole, Boards und Ansicht. Die Spalte zeigt jeweils ein Werkzeug jeder Familie; ruhen Sie den Zeiger auf einem Slot, und der Rest dieser Familie fächert nach rechts auf, sodass Sie ein Geschwister wählen können, ohne dass sich die Spalte unter Ihrer Hand verschiebt. Ein Slot zeigt weiterhin das Mitglied seiner Familie, das Sie zuletzt verwendet haben.</p>
+<p>Klicken Sie auf einen Slot, um das darin gezeigte Werkzeug zu wählen. Sein Tooltip gibt den Namen des Werkzeugs und sein Einzelbuchstaben-Kürzel an, zum Beispiel <kbd>V</kbd> für das Auswahl-Werkzeug, <kbd>P</kbd> für das Stift oder <kbd>T</kbd> für Text. Wenn Sie Werkzeuge mit der Tastatur wechseln, leuchtet der passende Slot einen Moment auf, sodass Sie sehen können, welches jetzt aktiv ist. Um alle auf einmal zu sehen, öffnet eine Schaltfläche nahe der Befehlssuche, gezeichnet als drei Punkte, einen Browser jedes Werkzeugs, gruppiert nach Familie und gefiltert während Sie tippen.</p>
+
+<h3 id="interface-fill-stroke">Füllung und Kontur</h3>
+<p>Unter den Werkzeugen befindet sich die Füll- und Kontur-Steuerung: ein gefülltes Quadrat für die Füllung, eingebettet in einen Band, der für die Kontur steht, mit einem kleinen Pfeilpaar zum Vertauschen. Weil sie hier sitzt und nicht nur in der Kontrollleiste, können Sie eine Farbe wählen, bevor Sie ein Werkzeug wählen, und sie wird zur Füllung des nächsten Objekts. Klicken Sie auf die Füllung oder das Band, um die Farben, Muster und Verlaufs-Tabs zu öffnen.</p>
+<table>
+  <thead><tr><th>Taste</th><th>Aktion</th></tr></thead>
+  <tbody>
+    <tr><td><kbd>X</kbd></td><td>Fokus zwischen Füllung und Kontur wechseln</td></tr>
+    <tr><td><kbd>⇧X</kbd></td><td>Füllung und Kontur vertauschen</td></tr>
+    <tr><td><kbd>D</kbd></td><td>Zurück zum Standard: weiße Füllung, schwarze Kontur</td></tr>
+    <tr><td><kbd>/</kbd></td><td>Aktive Seite auf keine setzen</td></tr>
+  </tbody>
+</table>
+
+<h3 id="interface-rail-panels">Panels neben der Leiste</h3>
+<p>Zwischen der Füll- und Kontur-Steuerung und den Werkzeugen bietet die Palette eine kurze Reihe von Panel-Schaltflächen, passend zum Werkzeug, das Sie halten: die Zeichenwerkzeuge bringen die Muster- und Kontur-Panels in Reichweite, die Textwerkzeuge bringen die Text- und Absatz-Panels und so weiter. Diese öffnen ein einzelnes Panel genau dort, wo Ihre Hand bereits ist. Eine weitere Schaltfläche öffnet den vollständigen Dock. Auf einem kurzen Fenster faltet sich die Reihe zu einer Panels-Schaltfläche, die dieselben Auswählmöglichkeiten auflistet, sodass die Palette nie über den unteren Rand hinausläuft.</p>
+
+<h2 id="interface-control-bar">Die Kontrollleiste</h2>
+<p>Der Streifen unter den Menüs ändert sich mit dem, was Sie tun. Er nennt das aktuelle Werkzeug links und rechts zeigt er nur die Steuerelemente, die auf die aktuelle Auswahl wirken können: Füllung, Kontur und Konturstärke; X, Y, B und H der Auswahl; und die Aktionen, die sinnvoll sind, wie Ausrichten, die booleschen Formmodi, Stapelreihenfolge, Gruppieren, Gruppierung aufheben und Duplizieren. Wenn mehr hineinpasst als Platz ist, sammelt eine letzte Schaltfläche den Rest in einem Menü, sodass sich die Leiste nie während der Verwendung neu umbricht.</p>
+<p>Tippen Sie in ein Zahlenfeld und drücken Sie <kbd>Enter</kbd> oder verlassen Sie das Feld, um den Wert zu übernehmen; <kbd>↑</kbd> und <kbd>↓</kbd> schalten ihn weiter, mit <kbd>⇧</kbd> für zehnmal den Schritt und <kbd>⌥</kbd> für ein Zehntel. Das kleine Label neben einem Field ist ein Scrubber: Ziehen Sie es nach links oder rechts, um den Wert nach Gefühl zu ändern. Fahren Sie mit dem Zeiger über den Werkzeugnamen, um die ersten Optionen dieses Werkzeugs anzuzeigen; klicken Sie auf den Namen, um seine vollen Optionen unter der Leiste zu öffnen, mit allen Schaltern und Zahlen.</p>
+<p>Die Kontrollleiste ist standardmäßig in der Tab-Reihe angedockt, aber Sie können ihen Griff ziehen, um sie über der Zeichenfläche schweben zu lassen, und doppelklicken auf den Griff (oder seine Andock-Schaltfläche), um sie zurückzusetzen. Daneben kann eine kompakte Leiste neben einem ausgewählten Objekt erscheinen, die nur dessen Füllung, Kontur und Stärke trägt, sodare Farbe direkt neben der Grafik liegt und nicht am anderen Ende des Fensters.</p>
+
+<h2 id="interface-quick-bar">Die Schnellleiste</h2>
+<p>Wenn Sie etwas auswählen, schwebt eine kleine Leiste daneben mit den Steuerelementen, die Sie am häufigsten brauchen, sodass Sie nicht zum Rand des Fensters reisen müssen. Für Formen und Pfade enthält sie Füllung und Kontur; für Text enthält sie Füllung, Größe, Fett, Kursiv und Ausrichtung. Sie bleibt während des Ziehens aus dem Weg und kommt zurück, wenn Sie loslassen. Alles darauf ist auch in der Kontrollleiste und den Panels.</p>
+
+<h2 id="interface-canvas">Die Zeichenfläche und Zwischenablage</h2>
+<p>Die Mitte des Fensters ist die Zeichenfläche. Boards sind die weißen Rechtecke, die die Grafik enthalten, die Sie behalten möchten; der graue Rand ist die Zwischenablage. Die Zwischenablage ist Teil des Dokuments, sodass eine Skizze, ein Rest oder ein Farbtest, der dort geparkt ist, mit der Datei gespeichert wird, aber beim Export eines Boards nur das geschrieben wird, was innerhalb dieses Board-Rechtecks liegt.</p>
+
+<h3 id="interface-pan-zoom">Schwenken und Zoomen</h3>
+<p>Halten Sie <kbd>Leertaste</kbd>, um für die Dauer des Hand-Werkzeugs zu wechseln, dann ziehen Sie zum Schwenken; lassen Sie los und Ihr Werkzeug kommt zurück. Ziehen Sie mit der mittleren Maustaste schwenkt ebenfalls. Das Mausrad scrollt, und das Rad mit gedrückter <kbd>⌘</kbd> oder <kbd>⌥</kbd> zoomt um den Zeiger.</p>
+<table>
+  <thead><tr><th>Kürzel</th><th>Zoom</th></tr></thead>
+  <tbody>
+    <tr><td><kbd>⌘=</kbd> / <kbd>⌘-</kbd></td><td>Rein und raus</td></tr>
+    <tr><td><kbd>⌘0</kbd></td><td>Aktives Board in das Fenster einpassen</td></tr>
+    <tr><td><kbd>⌥⌘0</kbd></td><td>Alle Boards in das Fenster einpassen</td></tr>
+    <tr><td><kbd>⌘1</kbd></td><td>Tatsächliche Größe</td></tr>
+  </tbody>
+</table>
+<p>Ein Zoom-Steuerelement sitzt über der Zeichenfläche mit Minus, Plus und Einpass-Schaltflächen und dem aktuellen Prozentsatz; klicken Sie auf den Prozentsatz für dieselben Einpass- und Tatsächliche-Größe-Befehle als Menü.</p>
+
+<h3 id="interface-rulers-guides">Lineale und Hilfslinien</h3>
+<p><kbd>⌘R</kbd> zeigt und verbirgt die Lineale, die in den Einheiten des Dokuments von der oberen linken Ecke des aktiven Boards aus messen und einen Marker trägen, der dem Zeiger folgt. Ziehen Sie aus einem Lineal, um eine Hilfslinie auf die Grafik zu ziehen, und legen Sie eine Hilfslinie zurück auf ein Lineal, um sie loszuwerden. Sie können auch einen ausgewählten Pfad mit Hilfslinien erstellen (<kbd>⌘5</kbd>) und ihn zurückwandeln (<kbd>⌥⌘5</kbd>). Zeigen oder verbergen Sie alle Hilfslinien mit <kbd>⌘;</kbd>. Smart Guides (<kbd>⌘U</kbd>) zeigen Ausrichtungs- und Messhinweise während des Zeichnens und Ziehens.</p>
+
+<h3 id="interface-grid">Das Raster</h3>
+<p>Das Raster wird pro Board gezeichnet und über Ansicht › Raster oder das Raster-Panel eingestellt. Zeigen oder verbergen Sie es mit <kbd>⌘'</kbd> und schalten Sie das Einrasten darauf mit <kbd>⇧⌘'</kbd>. Jedes Board kann eines von sechs Rastertypen verwenden: Orthogonal, Isometrisch, Hexagonal, Schief, Goldener Schnitt und Perspektive. Die Auswahl eines Typs schaltet das Raster ein, sofort zu sehen. Das Raster wird auf einer eigenen Seite ausführlich beschrieben.</p>
+
+<h3 id="interface-history-strip">Der Verlaufsstreifen</h3>
+<p>Eine Spalte kleiner Striche erscheint in einer Ecke der Zeichenfläche, wenn Sie den Zeiger in ihre Nähe bewegen: dies ist der Verlaufs des Dokuments. Fahren Sie mit dem Zeiger über einen Strich, um diesen Schritt zu benennen, klicken Sie auf einen, um direkt dorthin zu springen, oder drücken und schieben Sie die Striche hinunter, um das Dokument vorwärts und rückwärts zu durchlaufen, sodass Sie eine Änderung kommen und gehen sehen können. Das Verlaufs-Panel im Dock listet dieselben Schritte als Text auf.</p>
+
+<h2 id="interface-boards">Boards und der Board-Streifen</h2>
+<p>Boards sind, was Scissor Artboards nennt. Jedes trägt seinen Namen über seiner oberen linken Ecke, und das aktive Board wird mit einem stärkeren Rahmen als die restlichen gezeichnet. Klicken Sie auf den Namen eines Boards, um das Board-Werkzeug mit diesem Board aktiv aufzunehen, bereit, es zu bewegen, zu skalieren oder umzubenennen. Wenn ein Board eine Schnittzugabe hat, wird es als rotes gestricheltes Rechteck darum herum angezeigt. Fügen Sie eines über Erstellen › Boards › Neues Board hinzu, zeichnen und formen Sie Boards mit dem Board-Werkzeug (<kbd>⇧O</kbd>) und legen Sie Größe und Namen eines Boards in den Board-Optionen fest. „Alle Boards anordnen" richtet sie in einer Reihe an.</p>
+<p>Ein Streifen von Board-Vorschaubildern sitzt über der Zeichenfläche, eine kleine Vorschau pro Board plus eine Hinzufügen-Schaltfläche am Ende. Klicken Sie auf ein Vorschaubild, um dieses Board aktiv zu machen und es in das Fenster einzupassen; klicken Sie auf den Namen darunter, um zu diesem Board zu springen und das Board-Werkzeug aufzunehen, bereit, es zu bearbeiten. Das Boards-Panel im Dock listet sie ebenfalls auf.</p>
+
+<h2 id="interface-tabs">Dokument-Tabs</h2>
+<p>Geöffnete Dokumente erscheinen als Tabs links von der Kontrollleiste. Ein Tab zeigt den Namen des Dokuments, mit einem Punkt davor, während es ungespeicherte Änderungen hat. Klicken Sie auf ein Tab, um zu diesem Dokument zu wechseln, oder auf das ×, um es zu schließen; das Schließen eines Dokuments mit ungespeicherter Arbeit fragt zuerst. Klicken Sie mit der mittleren Maustaste auf ein Tab, um es sofort zu schließen, und ziehen Sie ein Tab auf ein anderes, um die geöffneten Dokumente neu anzuordnen. Neu (<kbd>⌥⌘N</kbd>), Öffnen (<kbd>⌘O</kbd>) und Speichern (<kbd>⌘S</kbd>) befinden sich im Datei-Menü, und Schließen ist <kbd>⌥⌘W</kbd>.</p>
+<p>Die Tabs sitzen standardmäßig oben. Um sie stattdessen an der Seite zu andocken, aktivieren Sie <strong>Ansicht &rsaquo; Dokument-Tabs an der Seite</strong> (auch in den Einstellungen); der Seitenstreifen kann an seinem rechten Rand breiter oder schmaler gezogen werden, und die Wahl wird gemerkt.</p>
+
+<h2 id="interface-status-bar">Die Statusleiste</h2>
+<p>Die Leiste am Fuß des Fensters meldet von links nach rechts: einen Bereitschaftsindikator, den Namen des aktuellen Werkzeugs, die Größe der Auswahl (nichts ausgewählt, ein Objekt oder eine Anzahl) und die Aktion, die <kbd>⌘Z</kbd> rückgängig machen würde. Sie ist ein stiller Ort, um zu bestätigen, was Sie aufgehoben haben und was die nächste Rückgängig-Aktion umkehren wird.</p>
+
+<h2 id="interface-dock">Der Panel-Dock</h2>
+<p>Panels leben in der Spalte rechts. Im Ruhezustand hat die Zeichenfläche das gesamte Fenster; das Anfordern eines Panels schiebt den Dock über die Zeichenfläche, und das Schließen gibt den Raum direkt zurück. Die Panels-Schaltfläche rechts in der Tab-Reihe und die Escape-Taste öffnen und schließen den Dock; das Fenster- und Arbeitsbereich-Menü und die Befehlspalette öffnen ein bestimmtes Panel.</p>
+<figure class="shot">
+  <img src="img/editing.png" width="1900" height="1176" loading="lazy"
+       alt="Ein Dokument in Scissor geöffnet mit Grafik auf dem Board und den Ebenen- und Mustern-Panels im Dock." />
+  <figcaption>Ein Dokument in Bearbeitung, mit den Ebenen- und Mustern-Panels im Dock geöffnet.</figcaption>
+</figure>
+
+<h3 id="interface-dock-groups">Die angedockten Panel-Gruppen</h3>
+<p>Panels sind in Gruppen gestapelt, jede Gruppe eine Spalte kleiner Icon-Tabs an ihrer eigenen Kante. Fahren Sie mit dem Zeiger über ein Tab, um den Namen des Panels zu sehen, und das geöffnete Panel nennt sich selbst über seinem Inhalt. Standardmäßig sammeln die Gruppen Panels, die gemeinsam verwendet werden:</p>
+<ul>
+  <li><strong>Eigenschaften, Ebenen, Boards, Raster</strong>: die Struktur des Dokuments.</li>
+  <li><strong>Farbe, Muster, Verlauf, Kontur</strong>: wie Dinge bemalt werden.</li>
+  <li><strong>Text, Absatz, Glyphen</strong>: Text.</li>
+  <li><strong>Ausrichten, Formen kombinieren, Transformieren, Farbstapel, Transparenz, 3D</strong>: Formen und Anordnen.</li>
+  <li><strong>Stile, Pinsel, Symbole, Muster</strong>: wiederverwendbare Looks und Objekte.</li>
+  <li><strong>Navigator, Info, Dokumentinfo, Verlauf, Aktionen</strong>: Bewegen und Messen.</li>
+  <li><strong>Assets, Variablen, Auto-Auswahl, Vektorisieren, Attribute</strong>: der Rest.</li>
+</ul>
+
+<h3 id="interface-rearranging">Panels neu anordnen</h3>
+<p>Das Layout gehört Ihnen. Ziehen Sie ein Tab entlang seines Streifens, um es neu zu ordnen, ziehen Sie es auf den Streifen einer anderen Gruppe, um es dorthin zu verschieben, oder ziehen Sie es klar vom Dock, um es über der Zeichenfläche schweben zu lassen. Ziehen Sie den leeren Teil eines Streifens, um eine ganze Gruppe herauszuheben, und legen Sie sie zurück über dem Dock ab, um sie nach Hause zu bringen; eine Lücke zwischen Gruppen nimmt ein abgelegtes Tab als neue eigene Gruppe auf. Klicken Sie mit der rechten Maustaste auf ein Tab für dieselben Bewegungen per Menü, einschließen Panel schließen. Das × oben auf einem Streifen schließt diese Gruppe, und das Ziehen der Trennlinie zwischen zwei Gruppen gibt der einen Höhe und nimmt sie der anderen. Eine schwebende Gruppe kann von ihrer Ecke aus skaliert werden.</p>
+
+<h3 id="interface-gating">Panels, die auf etwas warten</h3>
+<p>Ein Panel, das im Moment nichts zu tun hat, verschwindet nicht: sein Tab bleibt, nur gedimmt, und sein Körper zeigt eine Zeile, die sagt, worauf es wartet, wie das Auswählen eines Objekts oder das Wählen des Text-Werkzeugs. Damit sich der Dock nicht unter Ihrer Hand neu ordnet, wird dieses Warten zurückgehalten, solange der Zeiger innerhalb des Dock ist, und holt sich auf, sobald der Zeiger ihn verlässt.</p>
+
+<h3 id="interface-workspace">Panels öffnen, ausblenden und zurücksetzen</h3>
+<p>Öffnen Sie ein Panel aus dem Arbeitsbereich-Menü, wo die sechs meistgenutzten oben sind und der Rest unter Weitere Panels, oder aus dem Fenster-Menü im klassischen Chrome. Viele Panels haben ein Kürzel:</p>
+<table>
+  <thead><tr><th>Panel</th><th>Kürzel</th><th>Panel</th><th>Kürzel</th></tr></thead>
+  <tbody>
+    <tr><td>Ebenen</td><td><kbd>F7</kbd></td><td>Farbe</td><td><kbd>F6</kbd></td></tr>
+    <tr><td>Farbstapel</td><td><kbd>⇧F6</kbd></td><td>Info</td><td><kbd>F8</kbd></td></tr>
+    <tr><td>Ausrichten</td><td><kbd>⇧F7</kbd></td><td>Transformieren</td><td><kbd>⇧F8</kbd></td></tr>
+    <tr><td>Kontur</td><td><kbd>⌘F10</kbd></td><td>Verlauf</td><td><kbd>⌘F9</kbd></td></tr>
+    <tr><td>Formen kombinieren</td><td><kbd>⇧⌘F9</kbd></td><td>Transparenz</td><td><kbd>⇧⌘F10</kbd></td></tr>
+    <tr><td>Grafikstile</td><td><kbd>⇧F5</kbd></td><td>Pinsel</td><td><kbd>F5</kbd></td></tr>
+    <tr><td>Attribute</td><td><kbd>⌘F11</kbd></td><td>Symbole</td><td><kbd>⇧⌘F11</kbd></td></tr>
+    <tr><td>Zeichen</td><td><kbd>⌘T</kbd></td><td>Absatz</td><td><kbd>⌥⌘T</kbd></td></tr>
+    <tr><td>Glyphen</td><td><kbd>⌥⇧F11</kbd></td><td></td><td></td></tr>
+  </tbody>
+</table>
+<p>Der Dock kann durch Ziehen seiner linken Kante verbreitert werden, von einer bequemen zwei-Feld-breiten Breite bis zu einer guten Breite weiter. Ihre Anordnung und wie breit Sie den Dock gelassen haben, werden zwischen Sitzungen gemerkt. Wenn der Dock geschlossen ist, streicht der Zeiger an den rechten Rand des Fensters, um ihn hervorzuziehen, solange keine Grafik unter dem Zeiger ist. Um alle Ihre Änderungen am Layout rückgängig zu machen, wählen Sie Panels zurücksetzen, was jede Gruppe an ihren Ausgangsort zurückbringt.</p>
+<p><kbd>Tab</kbd> verbirgt die Werkzeugpalette, die Kontrollleiste, die Dokument-Tabs, die Statusleiste, die Panels und die anderen Chrome-Elemente auf der Zeichenfläche, sodass nur noch die Grafik und die Menüleiste übrig bleiben; drücken Sie es erneut, um sie alle zurückzubringen.</p>
+
+<h2 id="interface-language">Sprache</h2>
+<p>Scissor spricht Englisch, Deutsch (Deutsch), Spanisch (Español), Französisch (Français), Italienisch (Italiano), Katalanisch (Català), Tschechisch (Čeština), Dänisch (Dansk), Norwegisch (Norsk), Polnisch (Polski), Slowakisch (Slovenčina), Finnisch (Suomi) und Schwedisch (Svenska). Beim ersten Öffnen verwendet es die Sprache Ihres Browsers, wenn es eine davon ist, und sonst Englisch. Um eine andere zu wählen, klicken Sie auf die Globus-Schaltfläche in der Menüleiste oder auf dem Willkommensbildschirm, oder öffnen Sie <strong>Bearbeiten &rsaquo; Einstellungen</strong> (<kbd>⌘K</kbd>), gehen Sie zu <strong>Oberfläche</strong> und wählen Sie eine unter <strong>Sprache</strong>. Scissor wechselt beim Neuladen und merkt sich die Wahl. Menüs, Panels, Dialoge, Tooltips, Nachrichten und Was ist neu folgen ihr, und Zahlen werden lokal angezeigt, wie 12,5 im Deutschen, obwohl Sie entweder ein Komma oder einen Punkt eingeben können. Ihre Dokumente sind nicht betroffen: Ebenennamen und der Text in Ihren Grafiken bleiben, wie Sie sie geschrieben haben. Wenn die Oberfläche nicht auf Englisch ist, werden die Nutzungsbedingungen der Übersetzung wegen gezeigt, und die englische Version ist die maßgebliche.</p>
+
+<h2 id="interface-appearance">Hell und Dunkel</h2>
+<p>Scissor folgt Ihrer Systemeinstellung für Hell und Dunkel. Um es festzulegen, wählen Sie Ansicht › Erscheinungsbild und wählen Sie System, Hell oder Dunkel. Die Wahl wird gemerkt und trägt bis zur Zeichenfläche: Die Zwischenablage, die Lineale und die Board-Labels werden alle passend zum Thema gezeichnet, in dem Sie sich befinden.</p>

@@ -1,0 +1,357 @@
+<p class="lede">Panel nástrojov beží vľavo od okna a drží všetky kresliace, editačné a zobrazovacie nástroje. Každý slot je jeden nástroj alebo skupina súvisiacich; táto stránka ich vypisuje všetkých, v poradí, v ktorom sú v paneli nástrojov, s klávesom, ktorý vyberie každý, a tým, čo je pre.</p>
+
+<p>Stlačte a podržte slot alebo kliknite naň pravým tlačidlom myši pre otvorenie jeho rozbaľovacieho menu a výber iného nástroja zo skupiny. Skratka nástroja je jedno stlačenie klávesu a funguje vždy, keď nepíšete do textu alebo poľa.</p>
+
+<p>Skratky nižšie sú zapísané v macOS forme. V systéme Windows čítajte <kbd>&#8997;</kbd> ako Alt, <kbd>&#8984;</kbd> ako Ctrl a <kbd>&#8679;</kbd> ako Shift.</p>
+
+<p>Tri zvyčajnosti sa použijú na takmer každý nástroj:</p>
+<ul>
+<li>Podržte medzerník pre požičanie nástroja Ruka a pustite pre návrat k tomu, čo ste používali.</li>
+<li>Podržte <kbd>&#8984;</kbd> pre požičanie nástroja Výber rovnakým spôsobom. Nástroj Free Transform je výnimka: číta <kbd>&#8984;</kbd> sám.</li>
+<li><kbd>Esc</kbd> opustí ťahanie alebo cestu, ktorú ste sťahovali v polovici, zanechávajúc grafiku tak, ako bola.</li>
+</ul>
+
+<p>Dva sloty (nástroje Prevarovanie a Tlač dlaždíc) sú vypísané pre úplnosť, ale zatiaľ nemajú za sebou žiadne správanie. Panel nástrojov označuje tieto ako už čoskoro a engine ich odmietne.</p>
+
+<h2 id="tools-selecting">Nástroje výberu</h2>
+<p>Tieto štyri vyberajú to, s čím chcete pracovať ďalej. Siahnite po nástroji Výber pre celé objekty, nástroj Priamy výber pre ukotvenia a segmenty vnútri cesty, Auto-Select pre zdvihnutie všetkého namaľovaného rovnako a Lasso pre zametanie klastra ukotvení ručne.</p>
+
+<h3 id="tools-selection">Výber</h3>
+<table>
+<thead><tr><th>Nástroj</th><th>Skratka</th><th>Čo robí</th></tr></thead>
+<tbody>
+<tr><td>Nástroj Výber</td><td><kbd>V</kbd></td><td>Kliknite na objekt pre jeho výber, <kbd>&#8679;</kbd>-klik pre pridanie alebo odstránenie jedného a ťahajte naprieč prázdnym plátnom pre obdĺžnikový výber. Ťahajte vnútra výberu pre jeho presunutie, s <kbd>&#8679;</kbd> držiacim presun na 45&deg; krokov a <kbd>&#8997;</kbd> zanechávajúc kópiu pozadu.</td></tr>
+</tbody>
+</table>
+<p>S vybraným objektom nesie obdĺžnik výberu osem rukoväti. Ťahajte rukoväť pre zmenu veľkosti, podržaním <kbd>&#8679;</kbd> pre zachovanie proporcií a <kbd>&#8997;</kbd> pre zmenu veľkosti od stredu; ťahajte tesne za rohom pre rotáciu, s <kbd>&#8679;</kbd> prichytávajúc na 45&deg;. Dvojklik vstúpi do skupiny a pracuje vo vnútri nej, dvojklik na text ho upraví, dvojklik na inštanciu symbolu upraví symbol, ktorý kreslí každá inštancia, a dvojklik mimo grafiky vystúpi späť von.</p>
+<p>Editovateľné tvary nesú svoje vlastné widgety: ťahajte rohový widget pre zaoblenie všetkých rohov tvaru naraz alebo <kbd>&#8997;</kbd>-kliknite naň pre prechod rohu na ďalší druh. Toto je nástroj, v ktorom strávite najviac času, takže stojí za to dobre sa naučiť jeho rukoväte.</p>
+
+<h3 id="tools-direct-selection">Priamy výber a výber skupiny</h3>
+<table>
+<thead><tr><th>Nástroj</th><th>Skratka</th><th>Čo robí</th></tr></thead>
+<tbody>
+<tr><td>Nástroj Priamy výber</td><td><kbd>A</kbd></td><td>Kliknite na ukotvenie, rukoväť alebo segment a ťahajte ho pre prevarovanie cesty; obdĺžnikový výber naprieč prázdnym plátnom zdvihne ukotvenia vo vnútri. <kbd>&#8679;</kbd> pridáva k tomu, čo je vybrané a drží ťah na 45&deg; a <kbd>&#8997;</kbd> počas ťahania rukovätí rozbije pár, takže ukotvenie sa stane rohom.</td></tr>
+<tr><td>Nástroj Výber skupiny</td><td>&ndash;</td><td>Kliknite na objekt pre jeho výber; kliknite znova pre zachytenie skupiny, do ktorej patrí, a znova pre skupinu nad ňou.</td></tr>
+</tbody>
+</table>
+<p>Použite nástroj Priamy výber pre doladenie tvaru po jeho nakreslení: posuňte jedno ukotvenie, potiahnite jednu rukoväť alebo prevarujte krivku. Tiež ťahá prieniky obálky mriežky, ohýbajúc to, čo obálka drží, a zaobluje jeden roh živého tvaru po jednom namiesto všetkých. Nástroj Výber skupiny je rýchly spôsob, ako dosiahnuť objekt skrytý vnútri vnorených skupín bez vstupovania a vystupovania z nich.</p>
+
+<h3 id="tools-magic-wand">Auto-Select</h3>
+<table>
+<thead><tr><th>Nástroj</th><th>Skratka</th><th>Čo robí</th></tr></thead>
+<tbody>
+<tr><td>Nástroj Auto-Select</td><td><kbd>Y</kbd></td><td>Kliknite na objekt pre výber všetkých objektov namaľovaných rovnako. To, čo sa počíta ako rovnaké (výplň, obrys, hrúbka obrysu, krytie, režim miešania) sa nastaví v paneli Auto-Select a <kbd>&#8679;</kbd> pridáva nové zhody do výberu.</td></tr>
+</tbody>
+</table>
+<p>Siahnite po tomto, keď chcete zmeniť každý tvar jednej farby naraz: kliknite na červený, potom premaľte celý výber v jednom kroku.</p>
+
+<h3 id="tools-lasso">Lasso</h3>
+<table>
+<thead><tr><th>Nástroj</th><th>Skratka</th><th>Čo robí</th></tr></thead>
+<tbody>
+<tr><td>Nástroj Lasso</td><td><kbd>Q</kbd></td><td>Ťahajte voľnú slučku pre výber ukotvení vo vnútri. <kbd>&#8679;</kbd> pridáva ich k už vybraným ukotveniam.</td></tr>
+</tbody>
+</table>
+<p>Použite to, keď ukotvenia, ktoré chcete, nesedia v čistom obdĺžniku, takže obdĺžnikový výber by zachytil príliš veľa alebo príliš málo.</p>
+<p>Tento slot drží tiež nástroje výberu pixelov — <strong>Obdĺžnikový výber</strong>, <strong>Elipsový výber</strong> a <strong>Lasso výber</strong> — ktoré kreslia výber po piškotách na pixelovej vrstve namiesto vyberania vektorových ukotvení. Sú pokryté na stránke <a href="/manual/sk/pixels/">Pixelové vrstvy</a>.</p>
+
+<h2 id="tools-pen-type">Pero, krivka a text</h2>
+<p>Nástroje, ktoré pokladajú nové cesty a text. Rodina pera vám dáva presnú kontrolu nad každým ukotvením a rukovätou, nástroj Krivka prispôsobí hladkú čiaru bodom, ktoré vložíte, a nástroje Text nastavujú bodový, plošný, cestový a vertikálny text.</p>
+
+<h3 id="tools-pen">Rodina pera</h3>
+<table>
+<thead><tr><th>Nástroj</th><th>Skratka</th><th>Čo robí</th></tr></thead>
+<tbody>
+<tr><td>Nástroj Pero</td><td><kbd>P</kbd></td><td>Kliknite pre vloženie rohového bodu alebo stlačte a ťahajte pre vytiahnutie hladkých rukovätí z neho; kliknite na prvé ukotvenie pre zavretie cesty. <kbd>&#8679;</kbd> drží nový bod alebo rukoväť na 45&deg; a <kbd>&#8997;</kbd> počas ťahania rozbíja rukoväte, takže cesta opúšťa ukotvenie pod vlastným uhlom.</td></tr>
+<tr><td>Nástroj Pridať ukotvenie</td><td><kbd>+</kbd></td><td>Kliknite na segment pre pridanie ukotvenia tam, bez zmeny tvaru cesty.</td></tr>
+<tr><td>Nástroj Odstrániť ukotvenie</td><td><kbd>&#8722;</kbd></td><td>Kliknite na ukotvenie pre jeho odstránenie, spájajúc segmenty po oboch stranách.</td></tr>
+<tr><td>Nástroj Ukotvenie</td><td><kbd>&#8679;C</kbd></td><td>Ťahajte ukotvenie pre vytiahnutie zodpovedajúceho páru rukovätí z neho alebo kliknite na ňo pre vytiahnutie rukovätí späť a zanechanie rohu. Ťahajte jednu rukoväť samostatne pre pohyb tej strany sama; <kbd>&#8679;</kbd> ju drží na 45&deg;.</td></tr>
+</tbody>
+</table>
+<p>Nástroj Pero je pracovný kôň pre presné kreslenie, od obrysu loga po cestu písma. Kým má cestu na ceste, <kbd>Enter</kbd> alebo <kbd>Esc</kbd> ju dokončí a <kbd>Backspace</kbd> vezme späť posledné ukotvenie. Traja pomocníci pridávajú, odstraňujú a konvertujú ukotvenia na dokončenej ceste; pero a ceruzka sú pokryté hlbšie na stránke <a href="/manual/sk/paths/">Cesty</a>.</p>
+
+<h3 id="tools-curvature">Krivka</h3>
+<table>
+<thead><tr><th>Nástroj</th><th>Skratka</th><th>Čo robí</th></tr></thead>
+<tbody>
+<tr><td>Nástroj Krivka</td><td><kbd>&#8679;~</kbd></td><td>Kliknite pre vloženie bodov a hladká krivka sa prispôsobí cez ne; <kbd>&#8997;</kbd>-klik vloží rohový bod namiesto. Ťahajte bod pre jeho presunutie, dvojklikom na bod prepnete medzi hladkým a rohovým, kliknite na prvý bod pre zavretie tvaru a dvojklikom mimo neho pre dokončenie.</td></tr>
+</tbody>
+</table>
+<p>Siahnite po nástroji Krivka, keď chcete prúdiacu čiaru a radšej vložíte body a necháte Scissor pracovať s rukovätami, než ste sťahovali každý sám.</p>
+
+<h3 id="tools-type">Text</h3>
+<table>
+<thead><tr><th>Nástroj</th><th>Skratka</th><th>Čo robí</th></tr></thead>
+<tbody>
+<tr><td>Nástroj Text</td><td><kbd>T</kbd></td><td>Kliknite pre bodový text, ťahajte obdĺžnik pre plošný text a kliknite na existujúci text pre jeho úpravu. Kliknutie na otvorenú cestu nastaví text bežiaci po tejto ceste.</td></tr>
+<tr><td>Nástroj Plošný text</td><td>&ndash;</td><td>Ťahajte obdĺžnik, do ktorého text tečie.</td></tr>
+<tr><td>Nástroj Text na ceste</td><td>&ndash;</td><td>Kliknite na cestu a text beží po nej. Cesta sa stane základnou čiarou, takže prestane byť grafikou samo o sebe.</td></tr>
+<tr><td>Nástroj Vertikálny text</td><td>&ndash;</td><td>Rovnaké ako nástroj Text, okrem toho, že riadok textu beží dolu po strane namiesto naprieč.</td></tr>
+<tr><td>Nástroj Úprava znaku</td><td><kbd>&#8679;T</kbd></td><td>Kliknite na znak pre jeho vybratie z riadku, potom ťahajte ho pre presunutie, ťahajte rohovú rukoväť pre zmenu veľkosti alebo rukoväť nad ňou pre jej otočenie. <kbd>&#8679;</kbd> udrí rohovú zmenu veľkosti proporcionálnu a prichytí otočenie na 11.25&deg; krokov a <kbd>Delete</kbd> vráti znak tam, kam ho text umiestnil.</td></tr>
+</tbody>
+</table>
+<p>Nástroj Text sám pokrýva väčšinu práce: kliknite pre nadpis, ťahajte obdĺžnik pre odstavec. Bočné rukoväte rámca Úpravy znaku rozťahujú znak len jedným smerom, naprieč pre šírku a po dĺžke pre výšku, takže môžete ťahať jednotlivé písmena okolo titulku bez rozbichnutia ich z textu. Text je pokrytý plne na stránke <a href="/manual/sk/type/">Text</a>.</p>
+
+<h2 id="tools-lines-shapes">Čiary a tvary</h2>
+<p>Všetko, čo kreslí hotový tvar: rovné čiary, oblúky a špirály, mriežky čiar a obdĺžniky, elipsy, mnohouholníky a hviezdy, z ktorých staviate kresbu.</p>
+
+<h3 id="tools-lines">Čiary, oblúky, špirály a mriežky</h3>
+<table>
+<thead><tr><th>Nástroj</th><th>Skratka</th><th>Čo robí</th></tr></thead>
+<tbody>
+<tr><td>Nástroj Čiara</td><td><kbd>\</kbd></td><td>Ťahajte pre nakreslenie rovnej čiary. <kbd>&#8679;</kbd> ju drží na 45&deg; krokov a <kbd>&#8997;</kbd> ju kreslí od stredu namiesto od konca.</td></tr>
+<tr><td>Nástroj Oblúk</td><td>&ndash;</td><td>Ťahajte obdĺžnik, ktorý vyplňuje oblúk; <kbd>&#8679;</kbd> zaobdĺžnikuje tento obdĺžnik. Klávesy so šípkami ohýbajú oblúk plochším alebo plnejším, <kbd>C</kbd> ho zatvára a otvára a <kbd>F</kbd> alebo <kbd>X</kbd> prevracia, ktorým smerom sa ohýba.</td></tr>
+<tr><td>Nástroj Špirála</td><td>&ndash;</td><td>Ťahajte od stredu: vzdialenosť nastavuje polomer a smer nastavuje, kde špirála začína. <kbd>&#8997;</kbd> obracia vinutie, <kbd>R</kbd> ho obrátí dobre a klávesy so šípkami pridávajú a odstraňujú segmenty.</td></tr>
+<tr><td>Nástroj Obdĺžniková mriežka</td><td>&ndash;</td><td>Ťahajte mriežku, s <kbd>&#8997;</kbd> kresliac od stredu a <kbd>&#8679;</kbd> udržiavajúc ju štvorcovou. Šípky hore a dole menia počet riadkov, vľavo a vpravo stĺpce.</td></tr>
+<tr><td>Nástroj Polárna mriežka</td><td>&ndash;</td><td>Ťahajte mriežku, s <kbd>&#8997;</kbd> kresliac od stredu a <kbd>&#8679;</kbd> udržiavajúc ju okrúhlu. Šípky hore a dole menia počet sústredných kružníc, vľavo a vpravo polárne lúče.</td></tr>
+</tbody>
+</table>
+<p>Dva nástroje mriežky robia jednu cestu na čiaru, takže každá čiara zostáva vybrateľná sama o sebe: použite Obdĺžnikovú mriežku pre tabuľky, kalendáre a rozloženie konštrukcií a Polárnu mriežku pre terče, radarové grafy a ciferníky. Kreslia mriežkovú grafiku, ktorú zachovávate. To je iná vec ako pozadie plochy, kresliace pomôcky na obrazovke, ktoré zapínate pomocou <strong>Zobraziť &rsaquo; Mriežka &rsaquo; Zobraziť mriežku</strong>, ktorá sa nikdy netlačí a prichádza v siedmich druhoch (štvorcová, izometrická, šesťuholníková, šikmá, zlatý rez, vzor a perspektívna). Pozadie mriežok je pokryté na stránke <a href="/manual/sk/grids/">Mriežky</a>. Samostatný <strong>Nástroj Tvar mriežky</strong> (<kbd>&#8679;G</kbd>) stavia vyplnenú cestu kliknutím alebo ťahaním cez bunky tejto pozadí mriežky — rýchly spôsob, ako pokladať pevné bloky na izometrickú alebo šesťuholníkovú mriežku.</p>
+
+<h3 id="tools-shapes">Obdĺžniky, elipsy a ostatné tvary</h3>
+<table>
+<thead><tr><th>Nástroj</th><th>Skratka</th><th>Čo robí</th></tr></thead>
+<tbody>
+<tr><td>Nástroj Obdĺžnik</td><td><kbd>M</kbd></td><td>Ťahajte pre nakreslenie obdĺžnika. <kbd>&#8679;</kbd> ho udrží štvorcovým a <kbd>&#8997;</kbd> ho kreslí od stredu.</td></tr>
+<tr><td>Nástroj Zaoblený obdĺžnik</td><td>&ndash;</td><td>Rovnaké ťahanie, s zaoblenými rohmi; šípky hore a dole zväčšujú a zmenšujú polomer rohu počas kreslenia.</td></tr>
+<tr><td>Nástroj Elipsa</td><td><kbd>L</kbd></td><td>Ťahajte pre nakreslenie elipsy, s <kbd>&#8679;</kbd> pre kruh a <kbd>&#8997;</kbd> pre kreslenie od stredu.</td></tr>
+<tr><td>Nástroj Mnohouholník</td><td>&ndash;</td><td>Ťahajte od stredu; smer ťahania otáča mnohouholník a <kbd>&#8679;</kbd> ho udrží vzporeným. Klávesy so šípkami pridávajú a odstraňujú strany.</td></tr>
+<tr><td>Nástroj Hviezda</td><td>&ndash;</td><td>Ťahajte od stredu, otáčajúc hviezdu počas ťahania, s <kbd>&#8679;</kbd> držiac ju vzporenou. Klávesy so šípkami pridávajú a odstraňujú hroty.</td></tr>
+<tr><td>Nástroj Skvorna</td><td>&ndash;</td><td>Ťahajte raz pre nastavenie stredu a veľkosti skvornej aureoly, potom ťahajte druhý raz pre natiahnutie jej krúžkov naprieč grafikou. Počas ťahania vľavo a vpravo menia počet krúžkov a hore a dole počet lúčov.</td></tr>
+</tbody>
+</table>
+<p>Tieto robia živé tvary: zachovávajú svoje parametre, takže môžete zmeniť veľkosť obdĺžnika alebo počet hrotov hviezdy dlho po jeho nakreslení. Kliknutie namiesto ťahania s ktorýmkoľvek z nich otvorí dialógové okno, takže môžete dať tvaru presné merania namiesto. Nástroj Skvorna odpovedá na kliknutie skvornou veľkosti, ktorú žiadajú jeho možnosti.</p>
+
+<h2 id="tools-brush-erase">Štetce, ceruzka a gumy</h2>
+<p>Nástroje voľnej ruky. Nakreslite ťah, ktorý nasleduje ukazovateľ, nakreslite hrubú cestu a nechajte Scissor ju upratať, starajte sa a opravujte existujúce cesty alebo grafiku gumou. Dva sloty tu tiež dosiahnuť rastrovú stranu dokumentu: Štetec maľuje pixely a Pixelová guma ich čistí.</p>
+
+<h3 id="tools-brushes">Štetce</h3>
+<table>
+<thead><tr><th>Nástroj</th><th>Skratka</th><th>Čo robí</th></tr></thead>
+<tbody>
+<tr><td>Nástroj Štetec</td><td><kbd>B</kbd></td><td>Ťahajte pre kreslenie voľnou rukou; ťah je vyhladený, keď sa prispôsobí krivkám a zachová aktuálny štetec a ťah.</td></tr>
+<tr><td>Nástroj Výplňový štetec</td><td><kbd>&#8679;B</kbd></td><td>Kreslí rovnaký ťah, ale obrysuje ho do vyplneného tvaru a zlúči ho s akoukoľvek grafikou, ktorej sa dotýka, ktorá zdieľa jeho výplň.</td></tr>
+<tr><td>Nástroj Štetec (pixelový)</td><td>&ndash;</td><td>Maľuje rastrovú farbu priamo na pixelovú vrstvu v aktuálnej farbe výplne, vytvárajúc pixelovú vrstvu najprv, ak žiadna nie je. Na rozdiel od Štetca nie je značka cestou, ktorú môžete prevarovať neskôr: stane sa súčasťou obrázka.</td></tr>
+</tbody>
+</table>
+<p>Použite Štetec pre výrazné, kaligrafické ťahy, ktoré zostávajú editovateľné a Výplňový štetec, keď by ste radšej stavali pevný vyplnený tvar ako ťah čiary. <kbd>[</kbd> a <kbd>]</kbd> robia štetec menším a väčším. Nástroj Štetec zdieľa tento slot, ale maľuje pixely namiesto cesty, pre tieň a texturu a <strong>Výplňový vedierko</strong> tiež zdieľa, zaplavujúc súvislú oblasť pixelovej vrstvy farbou výplne. Maľovanie na pixelových vrstvách je pokryté na stránke <a href="/manual/sk/pixels/">Pixelové vrstvy</a>.</p>
+
+<h3 id="tools-pencil">Ceruzka a opravy ciest</h3>
+<table>
+<thead><tr><th>Nástroj</th><th>Skratka</th><th>Čo robí</th></tr></thead>
+<tbody>
+<tr><td>Nástroj Skica</td><td><kbd>&#8679;N</kbd></td><td>Kreslite hrubo a ťah sa stane ostrým tvarom, ktorý ste mali na mysli. Škrabanie naprieč grafikou vyreže to, čo škrabanie pokrýva.</td></tr>
+<tr><td>Nástroj Ceruzka</td><td><kbd>N</kbd></td><td>Kreslite voľnou rukou a ťah sa prispôsobí hladkým krivkám. Podržte <kbd>&#8997;</kbd> pri pustení pre zavretie cesty, čo sa tiež stane samo, ak dokončíte bližšie k tomu, kde ste začali.</td></tr>
+<tr><td>Nástroj Vyhladiť</td><td>&ndash;</td><td>Maľujte po ceste pre vyrovnanie jej rukovätí a zahodenie ukotvení, ktoré ju len mierne ohýbajú; väčší štetec vyhladí tvrdšie.</td></tr>
+<tr><td>Nástroj Guma na cesty</td><td>&ndash;</td><td>Maľujte po ceste pre vymazanie časti, ktorú pokrývate.</td></tr>
+<tr><td>Nástroj Spojiť</td><td>&ndash;</td><td>Maľujte naprieč dvoma voľnými koncami pre ich spojenie do jednej cesty.</td></tr>
+</tbody>
+</table>
+<p>Ceruzka je rýchly spôsob, ako skicovať tvar od ruky; Shaper je pre keď chcete, aby hrubé gesto bolo čítané ako čistý obdĺžnik, elipsa alebo čiara. Posledné tri starajú sa o existujúce cesty: <kbd>[</kbd> a <kbd>]</kbd> menia veľkosť štetcov Vyhladiť, Guma na cesty a Spojiť. S vybranou grafikou tieto tri pracujú len na výberu; bez vybraného pracujú na akejkoľvek ceste, ktorú dosiahnu.</p>
+
+<h3 id="tools-cutting">Mazanie a strihanie</h3>
+<table>
+<thead><tr><th>Nástroj</th><th>Skratka</th><th>Čo robí</th></tr></thead>
+<tbody>
+<tr><td>Nástroj Guma</td><td><kbd>&#8679;E</kbd></td><td>Ťahajte okrúhly štetec pre odčítanie od objektov. S výberom sa odstránia len vybrané objekty; inak sa odstránia všetky nezamknuté cesty a <kbd>[</kbd> a <kbd>]</kbd> menia veľkosť štetcu.</td></tr>
+<tr><td>Nástroj Pixelová gum</td><td>&ndash;</td><td>Gumuje maľovnú farbu z pixelovej vrstvy, čistiac ju do priesvitnosti, takže to, čo sedí pod nou, prejde cez. Funguje na pixelových vrstvách, kde Guma funguje na vektorových cestách; <kbd>[</kbd> a <kbd>]</kbd> menia veľkosť štetcu.</td></tr>
+<tr><td>Nástroj Nožnice</td><td><kbd>C</kbd></td><td>Kliknite na segment alebo ukotvenie pre strihnutie cesty tam. Zatvorená cesta sa otvore na reze; otvorená cesta sa rozdelí na dva objekty.</td></tr>
+<tr><td>Nástroj Nôž</td><td>&ndash;</td><td>Ťahajte naprieč objektmi pre ich rozdelenie na samostatné kusy. <kbd>&#8997;</kbd> strihne rovnou čiarou a <kbd>&#8679;</kbd> drží túto čiaru na 45&deg; krokov.</td></tr>
+</tbody>
+</table>
+<p>Guma vyrezuje tvary z vyplnenej grafiky ako gumovanie ceruzky; Nožnice robia jeden čistý rez v bode; Nôž rozdelí celé objekty na kusy pozdĺž čiary, ktorú ťaháte. Pixelová gum zdieľa slot Gumy, ale patrí na rastrovú stranu, na stránke <a href="/manual/sk/pixels/">Pixelové vrstvy</a>.</p>
+<p>Ešte jeden slot panela nástrojov je úplne rastrový: <strong>Dodge</strong>, <strong>Burn</strong> a <strong>Sponge</strong> retušovacie štetce zosvetľujú, stmavňujú a sýtia pixely už na vrstve. Maľujú ako Štetec a sú pokryté, so zvyškom pixelovej úpravy, na stránke <a href="/manual/sk/pixels/">Pixelové vrstvy</a>.</p>
+
+<h2 id="tools-transform">Transformácia</h2>
+<p>Nástroje, ktoré presúvajú, otáčajú, zrkadlia, škálujú, šikujú, skresľujú a prevarúvajú to, čo je už nakreslené. Každý transformačný nástroj pracuje okolo referenčného bodu, ktorý začína v strede výberu; <kbd>&#8997;</kbd>-kliknutie nastaví tento bod tam, kde kliknete a otvorí dialógové okno nástroja pre presné hodnoty. S vybranými jednotlivými ukotveniami tieto nástroje transformujú tieto ukotvenia namiesto celých objektov.</p>
+
+<h3 id="tools-rotate-reflect">Rotácia a zrkadlenie</h3>
+<table>
+<thead><tr><th>Nástroj</th><th>Skratka</th><th>Čo robí</th></tr></thead>
+<tbody>
+<tr><td>Nástroj Rotácia</td><td><kbd>R</kbd></td><td>Ťahajte okolo referenčného bodu pre otočenie výberu, s <kbd>&#8679;</kbd> prichytávajúc na 45&deg; a <kbd>&#8997;</kbd> otáčajúc kópiu a zanechávajúc originál. <kbd>&#8997;</kbd>-klik umiestni referenčný bod tam, kde ste klikli a otvorí dialógové okno Rotácia.</td></tr>
+<tr><td>Nástroj Zrkadlenie</td><td><kbd>O</kbd></td><td>Ťahajte pre prehodenie zrkadlovej osi cez referenčný bod, s <kbd>&#8679;</kbd> prichytávajúc ju na 45&deg;. <kbd>&#8997;</kbd>-klik nastaví referenčný bod a otvorí dialógové okno Zrkadlenie a <kbd>&#8997;</kbd> počas ťahania zrkadlí kópiu.</td></tr>
+</tbody>
+</table>
+<p>Siahnite po nástroji Rotácia pre otočenie grafiky okolo zvoleneho pivota namiesto jeho vlastného stredu a nástroj Zrkadlenie pre stavbu symetrickej kresby: zrkadlite kópiu naprieč zvolenou osou a dve polovice zostanú zladené. Oba nástroje začínajú od stredu výberu a výber niečoho iného vráti referenčný bod späť tam.</p>
+
+<h3 id="tools-scale-shear">Mierka, šikmo a prevarovanie</h3>
+<table>
+<thead><tr><th>Nástroj</th><th>Skratka</th><th>Čo robí</th></tr></thead>
+<tbody>
+<tr><td>Nástroj Mierka</td><td><kbd>S</kbd></td><td>Ťahajte od referenčného bodu pre zväčšenie výberu a k nemu pre zmenšenie; <kbd>&#8679;</kbd> udrží proporcie a <kbd>&#8997;</kbd> škáluje kópiu. <kbd>&#8997;</kbd>-klik nastaví referenčný bod a otvorí dialógové okno Mierka.</td></tr>
+<tr><td>Nástroj Šikmo</td><td>&ndash;</td><td>Ťahajte pre naklonenie výberu okolo referenčného bodu; <kbd>&#8679;</kbd> usadí šikmosť na ktorejkoľvek osi, ku ktorej sa vaše ťahanie nakláňa. <kbd>&#8997;</kbd>-klik nastaví referenčný bod a otvorí dialógové okno Šikmo.</td></tr>
+<tr><td>Nástroj Prevarovanie</td><td>&ndash;</td><td>Vypísaný v paneli nástrojov, ale zatiaľ neimplementovaný; paleta ho označuje ako už čoskoro.</td></tr>
+</tbody>
+</table>
+<p>Použite nástroj Mierka, keď chcete zmeniť veľkosť grafiky okolo pevného bodu namiesto rukoväte obdĺžnika výberu a nástroj Šikmo pre naklonenie tvaru pre tieň alebo kurzívu.</p>
+
+<h3 id="tools-width-liquify">Šírka a štetce na skreslenie</h3>
+<table>
+<thead><tr><th>Nástroj</th><th>Skratka</th><th>Čo robí</th></tr></thead>
+<tbody>
+<tr><td>Nástroj Profil obrysu</td><td><kbd>&#8679;W</kbd></td><td>Ťahajte od obrysu cesty pre jej rozšírenie tam a k ceste pre jej zúženie, zanechávajúc bod šírky. Bez vybraného pracuje na akejkoľvek editovateľnej ceste.</td></tr>
+<tr><td>Nástroj Deformácia</td><td><kbd>&#8679;R</kbd></td><td>Podržte a ťahajte okrúhly štetec pre potláčanie ciest pod ním spolu s ukazovateľom.</td></tr>
+<tr><td>Nástroj Vír</td><td>&ndash;</td><td>Podržte štetec nad grafikou a stále vinie, kým ho držíte.</td></tr>
+<tr><td>Nástroj Roztiahnuť</td><td>&ndash;</td><td>Ťahá cesty pod štetcom do stredu.</td></tr>
+<tr><td>Nástroj Nafúknuť</td><td>&ndash;</td><td>Tlačí cesty pod štetcom od stredu von.</td></tr>
+<tr><td>Nástroj Vlnka</td><td>&ndash;</td><td>Pridáva zakrivené škvrny na cesty pod štetcom.</td></tr>
+<tr><td>Nástroj Hrot</td><td>&ndash;</td><td>Pridáva hrotité body na cesty pod štetcom.</td></tr>
+<tr><td>Nástroj Múčka</td><td>&ndash;</td><td>Vlní cesty pod štetcom.</td></tr>
+</tbody>
+</table>
+<p>Nástroj Šírka zužuje a nafuká obrys od ruky, pre čiaru perovú alebo štetcovú bez prepínania štetcov. Sedem štetcov na skreslenie tlačí, otáča a robí cesty hrubými počas maľovania nad nimi, pre organické skreslenie, ktoré by bolo pomalé robiť ukotvenie po ukotvení. Všetky sedem berú <kbd>[</kbd> a <kbd>]</kbd> pre veľkosť a <kbd>&#8679;</kbd> s tými istými klávesmi, <kbd>{</kbd> a <kbd>}</kbd> pre to, ako tvrdo tlačia.</p>
+
+<h3 id="tools-free-transform">Free Transform a Pin Warp</h3>
+<table>
+<thead><tr><th>Nástroj</th><th>Skratka</th><th>Čo robí</th></tr></thead>
+<tbody>
+<tr><td>Nástroj Free Transform</td><td><kbd>E</kbd></td><td>Jeden rámec, ktorý škáluje, otáča, šikmo a skresľuje výber. Ťahajte okraj alebo rohovú rukoväť pre zmenu veľkosti, podržte <kbd>&#8984;</kbd> na okrajovej rukoväti pre šikmo, ťahajte vnútra rámca pre jeho presunutie a ťahajte tesne za rohom pre otočenie.</td></tr>
+<tr><td>Nástroj Pin Warp</td><td>&ndash;</td><td>Kliknite na vybranú grafiku pre vloženie piny, potom ťahajte piny pre jej ohnutie; grafika zachová svoj tvar okolo pín, ktoré zostanú na mieste. <kbd>&#8997;</kbd>-klik na pin ho odstráni, <kbd>&#8679;</kbd>-klik zdvihne niekoľko a <kbd>&#8997;</kbd>-ťah tesne za pinom otáča grafiku okolo neho.</td></tr>
+</tbody>
+</table>
+<p>Free Transform je všetko-v-jednom rámec, keď chcete škálovať, otáčať a šikmo v jednom geste namiesto prepínania nástrojov. Pracuje okolo svojho referenčného bodu, ktorý môžete ťahať kdekoľvek, dokonca aj mimo rámca; spustite ho bližšie k jednému z deviatich obvyklých miest rámca a usadí sa tam. Počas škálovania <kbd>&#8679;</kbd> udrží proporcie a <kbd>&#8997;</kbd> škáluje od stredu namiesto referenčného bodu; počas otáčania <kbd>&#8679;</kbd> prichytí na 45&deg;. Na rohovej rukoväti <kbd>&#8984;</kbd> skreslí tento roh sám o sebe a <kbd>&#8984;&#8997;&#8679;</kbd> skreslí v perspektíve, so susedným rohom zrkadliacim ťah; widget vedľa rámca nastaví rovnaké dva režimy a prepínač obmedzenia. Zmena modifikátora v polovici ťahania prepne okamžite, bez pustenia.</p>
+<p>Pin Warp je pre pózovanie a ohíbanie jedného kusu grafiky, ako je ohnutie nakreslenej ruky, pnutím častí, ktoré by mali zostať na mieste a ťahaním zvyšku. Číta <kbd>Delete</kbd> ako odstránenie vybraných pín namiesto grafiky a <kbd>&#8984;A</kbd> ako výber všetkých pín. Každé ťahanie je jeden krok späť a vrátenie späť prináša piny späť s grafikou, s ktorou šli. Text, obrázky a inštancie symbolov sa nedajú skresliť a zostanú tak, ako sú.</p>
+
+<h2 id="tools-build-perspective">Zlúčenie a rozdelenie, Region Fill a perspektíva</h2>
+<p>Nástroje, ktoré sa zaobchádzajú s prekrývajúcimi sa tvarmi ako s oblasťami na spojenie a maľovanie a mriežka, ktorá vám umožňuje kresliť a umiestňovať grafiku v perspektíve.</p>
+
+<h3 id="tools-builder-paint">Zlúčenie a rozdelenie a Region Fill</h3>
+<table>
+<thead><tr><th>Nástroj</th><th>Skratka</th><th>Čo robí</th></tr></thead>
+<tbody>
+<tr><td>Nástroj Zlúčenie a rozdelenie</td><td><kbd>&#8679;M</kbd></td><td>S vybranými prekrývajúcimi sa tvarmi ťahajte naprieč oblasťami, ktoré chcete spojiť a stanú sa jedným objektom. <kbd>&#8997;</kbd>-ťah odstráni oblasti, ktoré prejdete.</td></tr>
+<tr><td>Vedierko Region Fill</td><td><kbd>K</kbd></td><td>Klikníte na plochu skupiny Region Fill pre jej vyplnenie aktuálnym maľovaním; <kbd>&#8997;</kbd>-klik zdvihne maľovanie už tam namiesto pokladania. Plocha pod ukazovateľom je obrysovaná pred kliknutím.</td></tr>
+<tr><td>Nástroj Výber oblasti</td><td><kbd>&#8679;L</kbd></td><td>Kliknite na plochu skupiny Region Fill pre jej výber, bez maľovania.</td></tr>
+</tbody>
+</table>
+<p>Použite Zlúčenie a rozdelenie pre nakreslenie niekoľkých prekrývajúcich sa tvarov a potom ich zlúčenie a orezanie do obrysu, ktorý chcete, ťahaním naprieč kusmi. Region Fill sa zaobchádza so sadou prekrývajúcich sa ciest ako s oľubovnicou: vedierko zaplaví každú uzavretú plochu farbou a nástroj Výber vyberá plochy a okraje, aby ste mohli premaľovať, bez predbežného strihania tvarov.</p>
+
+<h3 id="tools-perspective">Perspektíva</h3>
+<table>
+<thead><tr><th>Nástroj</th><th>Skratka</th><th>Čo robí</th></tr></thead>
+<tbody>
+<tr><td>Nástroj Perspektívna mriežka</td><td><kbd>&#8679;P</kbd></td><td>Zobrazuje mriežku a tvaruje ju: ťahajte úbodžné body, ťahajte jeden z nich hore alebo dole pre presunutie horizontu a ťahajte blízky roh mriežky. <kbd>1</kbd> do <kbd>4</kbd>, alebo widget na obrazovke, vyberú rovinu, na ktorej kreslíte.</td></tr>
+<tr><td>Nástroj Výber v perspektíve</td><td><kbd>&#8679;V</kbd></td><td>Vyberte grafiku a ťahajte ju po jej rovine. Grafika, ktorá zatiaľ nie je na mriežke, sa položí na aktívnu rovinu tam, kde ju ťaháte.</td></tr>
+</tbody>
+</table>
+<p>Siahnite po týchto pre kreslenie scén a písma, ktoré ustupujú k úbodžným bodom, ako je ulica alebo produkt v krabici. Kým mriežka zobrazuje, nástroje Obdĺžnik, Zaoblený obdĺžnik, Elipsa a Obdĺžniková mriežka kreslia na aktívnu rovinu namiesto ploché a <kbd>1</kbd> do <kbd>4</kbd> vyberajú rovinu z týchto nástrojov tiež.</p>
+
+<h2 id="tools-mesh-gradient">Mriežka a gradient</h2>
+<p>Dva nástroje pre maľovanie prechodnej farby do tvaru: mriežka farebných bodov naprieč objektom alebo hladká zmes po osi.</p>
+
+<h3 id="tools-mesh">Mriežka</h3>
+<table>
+<thead><tr><th>Nástroj</th><th>Skratka</th><th>Čo robí</th></tr></thead>
+<tbody>
+<tr><td>Nástroj Mriežka</td><td><kbd>U</kbd></td><td>Kliknite vnútra objektu pre spustenie mriežkovej čiary každým smerom cez toto miesto, premenujúc obyčajnú cestu na mriežku. Kliknite na bod mriežky pre jeho výber a farbu z panela Farba, ťahajte bod pre jeho presunutie a <kbd>&#8997;</kbd>-kliknite naň pre odobratie čiar cez neho.</td></tr>
+</tbody>
+</table>
+<p>Použite mriežku pre jemné, voľné tieňovanie, ktoré rovný gradient nemôže dať, ako je zaoblený odlesk na kuse ovocia alebo tváre.</p>
+
+<h3 id="tools-gradient">Gradient</h3>
+<table>
+<thead><tr><th>Nástroj</th><th>Skratka</th><th>Čo robí</th></tr></thead>
+<tbody>
+<tr><td>Nástroj Gradient</td><td><kbd>G</kbd></td><td>Ťahajte naprieč výberom pre nastavenie osi jeho aktívneho maľovania, s <kbd>&#8679;</kbd> držiac os na 45&deg; krokov. Na grafike, ktorá už má gradient, pracujte namiesto s anotátorom.</td></tr>
+</tbody>
+</table>
+<p>Ťahajte nástroj Gradient pre nasmerovanie lineárneho alebo radiálneho prechodu tam, kam chcete a pre nastavenie toho, ako ďaleko beží. Na anotátore ťahajte zastávku po osi pre jej presunutie, ťahajte diamant pre posunutie zmesi medzi dvoma zastávkami, kliknite na os pre pridanie zastávky v farbe, ktorá už tam je a potiahnite zastávku ďaleko od osi pre jej zahodenie, pokiaľ zostanú dve. <kbd>Delete</kbd> odstráni zastávku, ktorej ste sa naposledy dotkli. Na voľnom prechode nástroj pracuje namiesto vo farebných bodoch: kliknite na grafiku pre pridanie jedného vo farbe výplne a ťahajte bod pre jeho presunutie. Gradienty sú ďalej pokryté na stránke <a href="/manual/sk/appearance/">Farba a vzhľad</a>.</p>
+
+<h2 id="tools-sample-morph">Vzorkovanie, meranie a morfovanie</h2>
+<p>Skopírujte vzhľad z jedného objektu do druhého, čítajte vzdialenosti a uhly z plátna a zmiešajte medzi tvarmi v sérii krokov.</p>
+
+<h3 id="tools-eyedropper">Kvapkadlo a Merač</h3>
+<table>
+<thead><tr><th>Nástroj</th><th>Skratka</th><th>Čo robí</th></tr></thead>
+<tbody>
+<tr><td>Nástroj Kvapkadlo</td><td><kbd>I</kbd></td><td>Kliknite na objekt pre vzorkovanie jeho celého vzhľadu na výber, alebo na predvolený štýl, keď nie je vybrané nič. <kbd>&#8679;</kbd> vzorkuje len jeho výplň alebo farbu obrysu do aktívnej strany a <kbd>&#8997;</kbd> robí to opačne, používajúc vzhľad výberu na objekt, na ktorý kliknete.</td></tr>
+<tr><td>Nástroj Merač</td><td>&ndash;</td><td>Ťahajte medzi dvoma bodmi pre prečítanie vzdialenosti, posunutí a uhlu; <kbd>&#8679;</kbd> drží čiaru na 45&deg; krokov. Posledné meranie zostáva na obrazovce do ďalšieho ťahania.</td></tr>
+</tbody>
+</table>
+<p>Kvapkadlo je rýchly spôsob, ako dosiahnuť, aby sa objekt zhodoval s iným: vyberte vzhľad, ktorý sa vám páči a pristane na výbere. Použite nástroj Merač pre kontrolu medzery alebo uhlu bez zanechania stopy na grafike.</p>
+
+<h3 id="tools-blend">Morf</h3>
+<table>
+<thead><tr><th>Nástroj</th><th>Skratka</th><th>Čo robí</th></tr></thead>
+<tbody>
+<tr><td>Nástroj Morf</td><td><kbd>W</kbd></td><td>Kliknite na jeden objekt a potom na druhý pre morfovanie medzi nimi cez sériu krokov medzilčí. Ak chcete zobrať ďalší objekt do morfu, kliknite do morfu a potom kliknite na objekt, ktorý chcete pridať.</td></tr>
+</tbody>
+</table>
+<p>Siahnite po nástroji Morf pre zmiešanie jedného tvaru aleby farby do druhého cez rovnaké kroky, či už pre hladký tieňovaný pás alebo rovnomerne rozložené, meniace sa kópie pozdĺž cesty.</p>
+
+<h2 id="tools-symbols">Symboly</h2>
+<p>Symbol je kus grafiky, ktorý môžete umiestniť mnohokrát, s každou kópiou spätou k jednej definícii. Štetce symboliky pokladajú a potom pracujú s celými davmi týchto inštancií naraz.</p>
+
+<h3 id="tools-symbolism">Štetce symboliky</h3>
+<table>
+<thead><tr><th>Nástroj</th><th>Skratka</th><th>Čo robí</th></tr></thead>
+<tbody>
+<tr><td>Nástroj Rozptýlenie symbolov</td><td><kbd>&#8679;S</kbd></td><td>Ťahajte pre pokladanie inštancií symbolu vybraného v paneli Symboly, ako súbor symbolov. <kbd>&#8997;</kbd> berie inštancie späť von.</td></tr>
+<tr><td>Nástroj Posunutie symbolov</td><td>&ndash;</td><td>Ťahá inštancie pod štetcom spolu s ukazovateľom.</td></tr>
+<tr><td>Nástroj Zoskupenie symbolov</td><td>&ndash;</td><td>Ťahá inštancie pod štetcom do stredu; <kbd>&#8997;</kbd> ich rozsypáva.</td></tr>
+<tr><td>Nástroj Zmena veľkosti symbolov</td><td>&ndash;</td><td>Zväčšuje inštancie pod štetcom; <kbd>&#8997;</kbd> ich zmenšuje.</td></tr>
+<tr><td>Nástroj Otáčanie symbolov</td><td>&ndash;</td><td>Otáča inštancie pod štetcom, aby nasledovali ťah.</td></tr>
+<tr><td>Nástroj Tónovanie symbolov</td><td>&ndash;</td><td>Tónuje inštancie pod štetcom smerom k farbe výplne; <kbd>&#8997;</kbd> berie tónovanie späť von.</td></tr>
+<tr><td>Nástroj Zoslabenie symbolov</td><td>&ndash;</td><td>Zoslabuje inštancie pod štetcom; <kbd>&#8997;</kbd> ich prináša späť v plnej sile.</td></tr>
+<tr><td>Nástroj Zmena štýlu symbolov</td><td>&ndash;</td><td>Používa grafický štýl vybraný v paneli Grafické štýly na inštancie pod štetcom; <kbd>&#8997;</kbd> ho odstraňuje.</td></tr>
+</tbody>
+</table>
+<p>Použite tieto na rozptýlenie a potom zmenu pole opakovane použiteľnej grafiky, ako sú stromy na svahu alebo hviezdy na oblohe: sprejte sadu, potom ju zredšite, zmeňte veľkosť, otočte a tónujte, aby kópie nevyzerali štampované. Všetky osem berú <kbd>[</kbd> a <kbd>]</kbd> pre veľkosť štetcu a <kbd>{</kbd> a <kbd>}</kbd> pre to, ako tvrdý štetec pracuje. Pôsobia na inštancie vo výberu alebo na každú editovateľnú inštanciu, keď nie je vybrané nič.</p>
+
+<h2 id="tools-boards-slices">Plochy a rezy</h2>
+<p>Nástroje, ktoré rozložia plátno pre výstup: artboardy, ktoré sú strany, na ktorých sedí vaša grafika, a rezy, ktoré označujú obdĺžniky na export samostatne.</p>
+
+<h3 id="tools-boards">Plochy</h3>
+<table>
+<thead><tr><th>Nástroj</th><th>Skratka</th><th>Čo robí</th></tr></thead>
+<tbody>
+<tr><td>Nástroj Plocha</td><td><kbd>&#8679;O</kbd></td><td>Kreslite, presúvajte a menite veľkosť artboardov priamo na plátne. Ťahajte prázdné plátno pre novú plochu, s <kbd>&#8997;</kbd> kresliac od stredu a <kbd>&#8679;</kbd> udržiavajúc ju štvorcovou; ťahajte vnútra plochy pre jej presunutie, s <kbd>&#8679;</kbd> držiac presun na jednu os; ťahajte rohovú rukoväť s <kbd>&#8679;</kbd> pre zachovanie proporcií plochy.</td></tr>
+</tbody>
+</table>
+<p>Siahnite po nástroji Plocha pre pridanie strán pre rôzne veľkosti alebo verzie dizajnu v jednom dokumente a pre zmenu veľkosti strany okolo toho, čo ste nakreslili. <kbd>Delete</kbd> odstráni aktívnu plochu, pokiaľ zostane jedna.</p>
+
+<h3 id="tools-slices">Rezy</h3>
+<table>
+<thead><tr><th>Nástroj</th><th>Skratka</th><th>Čo robí</th></tr></thead>
+<tbody>
+<tr><td>Nástroj Rez</td><td><kbd>&#8679;K</kbd></td><td>Ťahajte obdĺžnik, ktorý sa exportuje samostatne; <kbd>&#8997;</kbd> kreslí od stredu a <kbd>&#8679;</kbd> udrží štvorcový. Okraje rezov sa usadia na celé pixely, takže to, čo vyjde, nie je rozmazané.</td></tr>
+<tr><td>Nástroj Výber rezu</td><td>&ndash;</td><td>Vyberte, presuňte a menite veľkosť rezov. <kbd>Delete</kbd> odstráni vybraný a dvojklik otvorí jeho možnosti.</td></tr>
+</tbody>
+</table>
+<p>Použite rezy pre rozrezanie jedného artboardu na kusy, ktoré sa exportujú samostatne, ako sú tlačidlá a banéry webového rozloženia, každý ako svoj vlastný súbor. Export je pokrytý na stránke <a href="/manual/sk/files/">Otvorenie a export</a>.</p>
+
+<h2 id="tools-navigate">Pohyb</h2>
+<p>Nástroje, ktoré posúvajú, otáčajú a približujú zobrazenie. Žiadny z nich nemení dokument: menia len to, ako sa naň pozeráte.</p>
+
+<h3 id="tools-view">Pohyb zobrazenia</h3>
+<table>
+<thead><tr><th>Nástroj</th><th>Skratka</th><th>Čo robí</th></tr></thead>
+<tbody>
+<tr><td>Nástroj Ruka</td><td><kbd>H</kbd></td><td>Ťahajte pre posunutie zobrazenia. Podržanie medzerníka požičuje ho z akéhokoľvek iného nástroja na dobu, ktorú ho držíte.</td></tr>
+<tr><td>Nástroj Otáčanie zobrazenia</td><td><kbd>&#8679;H</kbd></td><td>Ťahajte pre otočenie zobrazenia okolo stredu okna, s <kbd>&#8679;</kbd> prichytávajúc na 15&deg;; dvojklik ju vráti vzpätky. Otáča sa len zobrazenie, nikdy dokument.</td></tr>
+<tr><td>Nástroj Tlač dlaždíc</td><td>&ndash;</td><td>Vypísaný v paneli nástrojov, ale zatiaľ neimplementovaný; paleta ho označuje ako už čoskoro.</td></tr>
+</tbody>
+</table>
+<p>Nástroj Ruka posúva priblíženú kresbu bez dotýkania sa posuvníkov a nástroj Otáčanie zobrazenia nakláňa celé zobrazenie, aby ste mohli nakresliť šikmú čiaru v pohodlne uhle a potom ju nastaviť rovno späť.</p>
+
+<h3 id="tools-zoom">Priblíženie</h3>
+<table>
+<thead><tr><th>Nástroj</th><th>Skratka</th><th>Čo robí</th></tr></thead>
+<tbody>
+<tr><td>Nástroj Priblíženie</td><td><kbd>Z</kbd></td><td>Kliknite pre priblíženie a <kbd>&#8997;</kbd>-klik pre oddialenie. Ťahajte obdĺžnik nad časťou grafiky pre vyplnenie okna ňou.</td></tr>
+</tbody>
+</table>
+
+<h2 id="tools-fill-stroke">Ovládanie výplne a obrysu</h2>
+<p>V spodnej časti panela nástrojov sú výplň a obrys, jeden pred druhým. Predný je aktívna strana, tá, na ktorú pristane vaša ďalšia voľba farby. Niekoľko jedných klávesov ich ovláda bez siahania po paneloch:</p>
+<table>
+<thead><tr><th>Skratka</th><th>Čo robí</th></tr></thead>
+<tbody>
+<tr><td><kbd>D</kbd></td><td>Obnoví výplň a obrys na ich predvolené hodnoty.</td></tr>
+<tr><td><kbd>X</kbd></td><td>Prepína, ktorá z výplne alebo obrysu je aktívna strana.</td></tr>
+<tr><td><kbd>&#8679;X</kbd></td><td>Vymení farby výplne a obrysu.</td></tr>
+<tr><td><kbd>/</kbd></td><td>Nastaví aktívnu stranu na žiadnu.</td></tr>
+</tbody>
+</table>
+<p>Tieto robia bežné pohyby rýchlymi: <kbd>X</kbd> pre skákanie medzi maľovaním výplne a obrysu, <kbd>/</kbd> pre zahodenie výplne alebo obrysu na žiadnu a <kbd>D</kbd> pre návrat k čiernobielym začiatkom. Výplne, obrysy a ako sa nastavujú sú pokryté na stránke <a href="/manual/sk/appearance/">Farba a vzhľad</a>.</p>

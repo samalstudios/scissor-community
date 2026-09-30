@@ -1,0 +1,91 @@
+<p class="lede">Símbolos, pincéis e padrões são três maneiras de desenhar uma peça de arte uma vez e a reutilizar. Mude o original e cada uso muda com ele, pelo que um elemento repetido permanece consistente e rápido de atualizar.</p>
+
+<p>Os atalhos abaixo estão escritos no formato macOS. No Windows, leia <kbd>&#8984;</kbd> como <kbd>Ctrl</kbd>, <kbd>&#8997;</kbd> como <kbd>Alt</kbd> e <kbd>&#8679;</kbd> como <kbd>Shift</kbd>.</p>
+
+<h2 id="symbols-panel">O painel Símbolos</h2>
+<p>Um símbolo é uma peça de arte guardada que pode largar no documento qualquer número de vezes. Cada cópia é uma <em>instância</em>: aponta de volta para a única definição em vez de guardar a sua própria arte, pelo que o documento permanece pequeno por muitas instâncias que coloque, e uma alteração na definição chega a todas de uma vez. Use símbolos quando o mesmo elemento se repete, como uma árvore numa paisagem, um alfinete num mapa, um parafuso num desenho de montagem, ou um logótipo que aparece em várias pranchas.</p>
+<p>Abra o painel com <strong>Janela &gt; Símbolos</strong> (<kbd>&#8679;&#8984;F11</kbd>), ou do seu separador no dock de painéis. Lista os símbolos no documento por nome. Clicar num nome seleciona-o como o símbolo ativo, que é aquele que o Symbol Scatter coloca; o símbolo ativo é destacado.</p>
+
+<h3 id="symbols-make">Criando um símbolo</h3>
+<p>Selecione a arte que quer reutilizar e clique <strong>Novo Símbolo</strong>. A seleção é guardada como a definição do símbolo e, no seu lugar na tela, é substituída por uma única instância ficando exatamente onde a arte estava. A definição é guardada de parte, para que não desnem a tela nem as camadas comuns. Se não nomear nada, o símbolo chama-se <code>Símbolo 1</code>, <code>Símbolo 2</code> e assim por diante, na ordem em que os faz.</p>
+
+<h3 id="symbols-place">Colocando instâncias</h3>
+<p>Clique duas vezes num símbolo no painel para largar uma instância nova no centro da visualização atual. Coloque tantas quantas precisar. Uma instância comporta-se como qualquer outro objeto quando está na tela: selecione-a e pode movê-la, dimensioná-la, rodá-la ou refleti-la, e definir a sua opacidade e mistura, tudo sem tocar na definição, porque essas alterações vão na própria instância. Use isto para variar o tamanho e ângulo de peças repetidas mantendo-as ligadas ao mesmo modelo.</p>
+
+<h3 id="symbols-edit">Editando um símbolo</h3>
+<p>Clique duas vezes numa instância na tela com a ferramenta Seleção (<kbd>V</kbd>) para entrar na definição. Tudo o resto na página esmaece-se e edita a arte por conta própria. Clique duas vezes numa parte vazia da tela para sair de volta. Como cada instância desenha a mesma definição, a edição que faz aparece em todas juntas. É esse o ponto de um símbolo: corrija a arte uma vez e o documento inteiro acompanha, em vez de caçar cada cópia.</p>
+
+<h3 id="symbols-break">Quebrando a ligação</h3>
+<p>Quando uma instância precisa de diferir do resto de uma forma que vai além da posição, tamanho ou opacidade, selecione-a e clique <strong>Quebrar Ligação</strong>. A instância é substituída por uma cópia comum e editável da definição, no mesmo tamanho e ângulo, não mais ligada ao símbolo. Alterações ao símbolo não a alcançarão mais. O botão está disponível apenas enquanto uma instância de símbolo está selecionada.</p>
+<p>Para remover um símbolo inteiramente, segure <kbd>&#8997;</kbd> e clique no seu nome no painel. A sua definição e cada instância dele são eliminadas, pois uma instância sem definição não desenharia nada.</p>
+
+<h2 id="symbols-symbolism">As ferramentas de simbolismo</h2>
+<p>As ferramentas de simbolismo espalham e ajustam instâncias de símbolos aos punhados, sob um pincel redondo, em vez de uma de cada vez. Partilham um slot na barra de ferramentas; segure o slot para escolher entre elas. Atuam nas instâncias dentro da seleção, ou em cada instância editável no documento quando nada está selecionado, pelo que pode guiar um campo inteiro de símbolos de uma vez. Segure <kbd>&#8997;</kbd> para inverter o efeito de qualquer uma delas.</p>
+<p>Enquanto uma ferramenta de simbolismo está ativa, <kbd>[</kbd> e <kbd>]</kbd> tornam o pincel menor e maior, e <kbd>{</kbd> e <kbd>}</kbd> diminuem e aumentam a sua intensidade (quão forte cada passagem trabalha).</p>
+<table>
+  <thead><tr><th>Ferramenta</th><th>Atalho</th><th>O que faz</th></tr></thead>
+  <tbody>
+    <tr><td>Symbol Scatter</td><td><kbd>&#8679;S</kbd></td><td>Arraste para colocar instâncias do símbolo ativo, espaçadas à medida que se move; as instâncias recolhem-se num único grupo <em>Conjunto de Símbolos</em>. Segure <kbd>&#8997;</kbd> para levantar instâncias de volta debaixo do pincel</td></tr>
+    <tr><td>Symbol Nudge</td><td></td><td>Empurra as instâncias na direção em que arrasta, para que possa arrumar uma dispersão sem mover cada peça</td></tr>
+    <tr><td>Symbol Pack</td><td></td><td>Puxa as instâncias para junto do pincel; <kbd>&#8997;</kbd> espalha-as</td></tr>
+    <tr><td>Symbol Resize</td><td></td><td>Aumentas as instâncias debaixo do pincel; <kbd>&#8997;</kbd> diminui-as</td></tr>
+    <tr><td>Symbol Spin</td><td></td><td>Roda as instâncias debaixo do pincel para seguir a direção do seu arrasto</td></tr>
+    <tr><td>Symbol Tint</td><td></td><td>Tinge as instâncias debaixo do pincel na direção da cor de preenchimento atual, para variação num grupo; <kbd>&#8997;</kbd> remove a tingidela</td></tr>
+    <tr><td>Symbol Fade</td><td></td><td>Desvanece as instâncias debaixo do pincel; <kbd>&#8997;</kbd> traz-nas de volta</td></tr>
+    <tr><td>Symbol Restyle</td><td></td><td>Aplica o estilo gráfico escolhido no painel Estilos Gráficos às instâncias; <kbd>&#8997;</kbd> limpa-o</td></tr>
+  </tbody>
+</table>
+<p>Três ferramentas precisam de algo configurado primeiro. Symbol Scatter precisa de um símbolo para pulverizar, por isso faça um no painel Símbolos antes de começar. Symbol Restyle aplica o estilo gráfico escolhido no painel Estilos Gráficos, por isso escolha um estilo lá primeiro; Symbol Tint também usa a cor de preenchimento atual, por isso defina o preenchimento antes de tingir.</p>
+
+<h2 id="symbols-brushes">O painel Pincéis</h2>
+<p>Um pincel decide como um contorno é desenhado ao longo de um caminho. Em vez de uma linha simples de largura uniforme, o caminho pode transportar um contorno de pena, um rasto de arte dispersa, uma forma esticada de ponta a ponta, ou uma faixa em mosaico. O caminho permanece totalmente editável por baixo: remodelhe-o e o contorno do pincel segue. Abra o painel com <strong>Janela &gt; Pincéis</strong> (<kbd>F5</kbd>), ou do seu separador no dock de painéis. Cada pincel mostra uma pequena pré-visualização ao lado do seu nome.</p>
+
+<h3 id="symbols-brush-kinds">Tipos de pincel</h3>
+<p>O Scissor tem cinco tipos de pincel. Dois são desenhados a partir de alguns números, e três são construídos a partir de arte que seleciona.</p>
+<dl>
+  <dt>Caligráfico</dt>
+  <dd>Uma pena oval inclinada que engrossa e afina à medida que o caminho vira, como uma pena larga. Defina o seu Ângulo, a sua Redondeza e o seu Tamanho em pontos. Use-o para traços caligráficos, assinaturas e qualquer linha destinada a parecer desenhada à mão.</dd>
+  <dt>Cerdas</dt>
+  <dd>Um aglomerado de traços finos que se lê como um pincel carregado. Defina o Tamanho em pontos, o número de Cerdas e a Opacidade da Tinta para que passagens sobrepostas se construam. Use-o quando quer uma borda suave e pictórica em vez de limpa.</dd>
+  <dt>Dispersão</dt>
+  <dd>Espalha cópias da arte selecionada ao longo do caminho. Defina o Tamanho das cópias, o Espaçamento entre elas, até onde se Dispersam da linha e a sua Rotação, com opções para rodar cada cópia relativa ao caminho e para a recolorir com a cor de contorno. Use-o para confetes, folhas, estrelas ou bolhas a seguir uma curva.</dd>
+  <dt>Arte</dt>
+  <dd>Estica uma peça da arte selecionada ao longo de todo o comprimento do caminho. Defina a sua Largura, com uma opção para a recolorir com a cor de contorno. Use-o para um traço de tinta afunilado, uma fita, uma seta ou uma marca de carvão rugosa que dobra com a linha.</dd>
+  <dt>Padrão</dt>
+  <dd>Ladrilha a arte selecionada de ponta a ponta ao longo do caminho, como uma borda decorativa. Defina a Escala e o Espaçamento, com uma opção para a recolorir com a cor de contorno. Use-o para corrente, corda, costura ou uma moldura repetida.</dd>
+</dl>
+
+<h3 id="symbols-brush-apply">Aplicar e remover um pincel</h3>
+<p>Selecione um ou mais caminhos e clique num pincel para desenhar os seus contornos com ele. Um caminho sem contorno visível recebe um para que o pincel tenha uma linha para correr. A ferramenta Pincel de Pintura (<kbd>B</kbd>) desenha novos contornos com o pincel atualmente escolhido, por isso escolha um pincel e pinte diretamente na tela. Para tirar um pincel dos contornos selecionados e devolvê-los a linhas simples, clique <strong>Remover Pincel</strong>.</p>
+
+<h3 id="symbols-brush-manage">Criar, editar e eliminar pincéis</h3>
+<p>Clique <strong>Novo Pincel&hellip;</strong>, escolha um dos cinco tipos e defina as suas opções. Para um pincel de dispersão, arte ou padrão, selecione a arte que deve usar antes de abrir a caixa de diálogo, pois essa arte torn-se o pincel. Para alterar um pincel mais tarde, selecione-o e clique <strong>Opções&hellip;</strong> (ou clique duas vezes nele na lista); qualquer contorno que o use redesenha-se com as novas configurações. <strong>Eliminar</strong> remove o pincel selecionado, depois de perguntar; contornos que o usavam voltam a linhas simples.</p>
+
+<h2 id="symbols-patterns">O painel Padrões</h2>
+<p>Um padrão é um ladrilho de arte que se repete para preencher uma forma. Defina o ladrilho uma vez e pode despejá-lo em qualquer objeto como preenchimento, para que uma textura ou motivo permaneça uniforme em toda a arte e atualize em todo o lado quando edita o ladrilho. O painel fica no dock de painéis, e os mesmos comandos vivem sob <strong>Objeto &rsaquo; Padrão</strong>.</p>
+
+<h3 id="symbols-pattern-make">Criando um padrão</h3>
+<p>Selecione a arte para um ladrilho e clique <strong>Criar Padrão</strong> (ou <strong>Objeto &rsaquo; Padrão &rsaquo; Criar</strong>). Uma cópia da arte é guardada como um ladrilho repetido e adicionada ao painel; a arte que desenhou fica onde está. Padrões chamam-se <code>Padrão 1</code>, <code>Padrão 2</code> e assim por diante à medida que os faz.</p>
+
+<h3 id="symbols-pattern-fill">Preenchendo com um padrão</h3>
+<p>Selecione uma forma e clique num padrão no painel para o definir como o preenchimento da forma. Com nada selecionado, clicar num padrão torna-o a cor de preenchimento para a próxima forma que desenhar. Como é um preenchimento, o padrão repete-se para cobrir a forma e é cortado ao seu contorno. Use isto para fundos, tecidos, folhagem, ou qualquer superfície que deva ler-se como uma repetição em vez de uma cor plana. Para remover um padrão do documento, segure <kbd>&#8997;</kbd> e clique nele no painel; formas que foram preenchidas com ele caem de volta para nenhum preenchimento.</p>
+
+<h3 id="symbols-pattern-edit">Editando o ladrilho</h3>
+<p>Clique duas vezes num padrão no painel para editar o seu ladrilho. O resto da arte esmaece-se e trabalha no ladrilho por conta própria, com um botão <strong>Concluir Edição</strong> no painel; clique nele (ou use <strong>Objeto &rsaquo; Padrão &rsaquo; Editar Padrão</strong> novamente) quando terminar. Cada forma preenchida com o padrão atualiza-se para corresponder. Também pode começar a editar selecionando uma forma preenchida com um padrão e escolhendo <strong>Editar Padrão</strong>.</p>
+
+<h3 id="symbols-pattern-options">Opções de ladrilho</h3>
+<p>Clique no botão de opções de ladrilho ao lado de um padrão (ou <strong>Objeto &rsaquo; Padrão &rsaquo; Opções de Ladrilho&hellip;</strong>) para controlar como o ladrilho se repete. Essas configurações alteram a disposição da repetição sem alterar a arte no ladrilho.</p>
+<dl>
+  <dt>Tipo de Ladrilho</dt>
+  <dd>Como fileiras e colunas se alinham: Grelha, Tijolo por Fileira, Tijolo por Coluna, Hex por Coluna ou Hex por Fileira. Tijolo desloca fileiras ou colunas alternadas como alvenaria; hex empacota os ladrilhos num favo de mel.</dd>
+  <dt>Deslocamento de Tijolo</dt>
+  <dd>Para os tipos de tijolo, até onde cada fileira ou coluna alternada é deslocada, como percentagem do ladrilho.</dd>
+  <dt>Dimensionar Ladrilho à Arte</dt>
+  <dd>Ajusta o ladrilho aos limites da arte. Desligue-o para definir a Largura e Altura do ladrilho você mesmo.</dd>
+  <dt>Largura e Altura</dt>
+  <dd>O tamanho do ladrilho em pixels, usado quando o ladrilho não é dimensionado à arte.</dd>
+  <dt>Espaçamento Horizontal e Vertical</dt>
+  <dd>Espaços deixados entre ladrilhos, em pixels. Valores positivos espaçam o motivo; negativos sobrepõem os ladrilhos.</dd>
+  <dt>Mover Ladrilho com a Arte</dt>
+  <dd>Mantém o ladrilho alinhado com a arte quando ela se move, para que a repetição viaje com o objeto.</dd>
+</dl>

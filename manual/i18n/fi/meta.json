@@ -1,0 +1,31 @@
+{
+  "chrome": {
+    "Manual": "Käsikirja",
+    "Shortcuts": "Pikanäppäimet",
+    "Open the editor": "Avaa editori",
+    "Skip to the content": "Siirry sisältöön",
+    "Search the manual": "Hae käsikirjasta",
+    "Search the manual…": "Hae käsikirjasta…",
+    "Breadcrumb": "Murupolku",
+    "More pages": "Lisää sivuja",
+    "Previous": "Edellinen",
+    "Next": "Seuraava",
+    "Language": "Kieli",
+    "Scissor by Samal Studios.": "Scissorin tekijä Samal Studios.",
+    "Third-party licences": "Kolmannen osapuolen lisenssit",
+    "| Scissor manual": "| Scissor-käsikirja",
+    "Scissor user manual: every tool, menu and shortcut": "Scissorin käyttäjäopas: jokainen työkalu, valikko ja pikanäppäin",
+    "Scissor user manual": "Scissorin käyttäjäopas"
+  },
+  "groups": {
+    "Get started": "Aloittaminen",
+    "Draw": "Piirtäminen",
+    "Arrange & build": "Järjestä ja rakenna",
+    "Layout & pixels": "Asettelu ja pikselit",
+    "Panels": "Paneelit",
+    "Files & reference": "Tiedostot ja viitteet"
+  },
+  "nav": {},
+  "meta": {},
+  "keywords": {}
+}

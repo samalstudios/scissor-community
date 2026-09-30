@@ -1,0 +1,85 @@
+<p class="lede">Het Lagen-paneel is de kaart van een document: elke laag, groep en object in één lijst, gestapeld in de volgorde waarin ze op de pagina zitten. Gebruik het om te tonen en te verbergen, te vergrendelen, te hernoemen, te herordenen en te selecteren, en om in één oogopslag te zien op welke laag elk object leeft.</p>
+
+<p>Sneltoetsen hieronder zijn geschreven in hun macOS-vorm. Op Windows en Linux leest u <kbd>&#8984;</kbd> als Ctrl, <kbd>&#8997;</kbd> als Alt en <kbd>&#8679;</kbd> als Shift.</p>
+
+<h2 id="layers-panel">Het Lagen-paneel</h2>
+<p>Open het via <strong>Venster &rsaquo; Lagen</strong> (<kbd>F7</kbd>). De lijst bevat uw laag op het hoogste niveau, met de inhoud van elke laag eronder genest: groepen, paden, tekst, afbeeldingen en pixel-lagen, getekend als een boom die u open en dicht kunt vouwen. Een container (een laag of een groep) draagt een kleine driehoek links van zijn rij; klik erop om de container op te vouwen of te openen. Diepe documenten blijven leesbaar omdat u de delen die u niet aan het bewerken bent kunt samenvouwen.</p>
+<p>Twee knoppen zitten onderaan het paneel. <strong>Nieuwe laag maken</strong> voegt een lege laag toe net boven de huidige actieve en maakt de nieuwe actief. <strong>Selectie verwijderen</strong> verwijdert wat is geselecteerd; een document behoudt altijd minstens één laag, dus de laatst overgebleven laag kan niet op deze manier worden verwijderd. Om elke laag, groep of object te hernoemen, dubbelklik op zijn naam in de lijst, typ, en druk op <kbd>Enter</kbd>. De delen van een druk document noemen is de snelste manier om het navigeerbaar te houden.</p>
+
+<h3 id="layers-row">Wat elke rij toont</h3>
+<p>Een rij van links naar rechts lezen:</p>
+<table>
+  <thead><tr><th>Deel</th><th>Wat het doet</th></tr></thead>
+  <tbody>
+    <tr><td>Oog</td><td>Toont of verbergt die laag, groep of object. Een rij met het oog uit wordt niet getekend en niet afgedrukt of geëxporteerd.</td></tr>
+    <tr><td>Vergrendelen</td><td>Vergrendelt of ontgrendelt de rij. Een vergrendeld object kan niet op het canvas worden geselecteerd of bewerkt.</td></tr>
+    <tr><td>Kleurstaal</td><td>Alleen op laagrijen: het kleurlabel van de laag, gebruikt om de selectiemarkeringen en accentueringen van die laag te kleuren.</td></tr>
+    <tr><td>Driehoek</td><td>Alleen op containers: opent of sluit de laag of groep om erin te zitten te onthullen.</td></tr>
+    <tr><td>Soortpictogram</td><td>Markeert groepen en afsnijdgroepen (een afsnijdgroep wordt met een gestippelde omtrek getekend).</td></tr>
+    <tr><td>Naam</td><td>De naam, of een plaatshouder in haakjes zoals <code>&lt;Pad&gt;</code> of <code>&lt;Groep&gt;</code> wanneer een ding onbenoemd is. Dubbelklik om te hernoemen.</td></tr>
+    <tr><td>Selectievierkant</td><td>Aan de rechterrand: een klein vierkant in de kleur van de dat op elke rij verschijnt die een deel van de huidige selectie bevat.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="layers-groups">Lagen en groepen</h2>
+<p>Lagen zijn de hoogste schillen van een document. Ze bestaan om ongerelateerde delen van het werk uit elkaar te houden: een achtergrond op één laag, de hoofdtekening op een andere, labels op een derde. Omdat een laag aan de wortel van de boom zit, verplaatst het verbergen, vergrendelen of herordenen ervan alles wat het bevat in één stap.</p>
+<p>Een groep is een kleinere container die binnen een laag (of binnen een groep) leeft en met het werk meereist. Groeperen is hoe u de delen van één ding aan elkaar bindt, de stukken van een logo of een pictogram, zodat ze als een eenheid bewegen, schalen en stapelen. Groepen openen en sluiten in het paneel met hun eigen driehoek, precies zoals laag doen.</p>
+<p>Lagen en groepen gedragen zich op één belangrijke manier hetzelfde: elke kan worden getoond of verborgen, vergrendeld of ontgrendeld, en elke kan zijn eigen dekking en overvloeimodus dragen die van toepassing zijn op alles erin. Het verschil is een van rol. Lagen organiseren het hele document; groepen binden individuele objecten.</p>
+
+<h3 id="layers-grouping">Groeperen en degroeperen</h3>
+<p>Selecteer twee of meer objecten en kies <strong>Object &rsaquo; Groeperen</strong> (<kbd>&#8984;G</kbd>) om ze in een groep te verzamelen. <strong>Object &rsaquo; Degroeperen</strong> (<kbd>&#8679;&#8984;G</kbd>) haalt de objecten van een geselecteerde groep eruit. Groepen kunnen genest zijn, dus een groep van groepen is prima; elke <kbd>&#8679;&#8984;G</kbd> pelt één niveau af. Greep naar een groep wanneer u steeds dezelfde handjevol objecten selecteert.</p>
+
+<h2 id="layers-stacking">Stapelvolgorde: voor en achter</h2>
+<p>Objecten worden van achter naar voren getekend, dus een object dichter bij de voorkant bedekt de erachter waar ze elkaar overlappen. Het paneel toont deze volgorde direct: de bovenste rij is het voorste object, en de onderste rij is het verst achter. Een object herordenen verandert wat wat bedekt.</p>
+<p>De snelste manier om te herordenen is slepen: grijp een rij en zet het hoger of lager in de lijst om het door de stapel te verplaatsen, of zet het op een laag of groep om het object <em>erin</em> te verplaatsen. Slepen is ook hoe u een geselecteerd object naar een andere laag verplaatst — zonder knippen en plakken.</p>
+<p>Verplaats een selectie door de stapel met <strong>Object &rsaquo; Rangschikken</strong>:</p>
+<table>
+  <thead><tr><th>Commando</th><th>Sneltoets</th><th>Effect</th></tr></thead>
+  <tbody>
+    <tr><td>Breng naar voren</td><td><kbd>&#8679;&#8984;]</kbd></td><td>Helemaal naar de voorkant van zijn laag.</td></tr>
+    <tr><td>Breng vooruit</td><td><kbd>&#8984;]</kbd></td><td>Eén stap richting de voorkant.</td></tr>
+    <tr><td>Breng achteruit</td><td><kbd>&#8984;[</kbd></td><td>Eén stap richting de achterkant.</td></tr>
+    <tr><td>Breng naar achteren</td><td><kbd>&#8679;&#8984;[</kbd></td><td>Helemaal naar de achterkant van zijn laag.</td></tr>
+  </tbody>
+</table>
+<p>Gebruik deze wanneer een vorm die u nodig heeft achter een andere zit, of wanneer een achtergrond boven de tekening is beland. Om door objecten te werken die één op één liggen, treden <strong>Selecteren &rsaquo; Volgend object boven</strong> (<kbd>&#8997;&#8984;]</kbd>) en <strong>Volgend object onder</strong> (<kbd>&#8997;&#8984;[</kbd>) de selectie omhoog en omlaag de stapel, wat handig is om iets te bereiken dat onder ander werk begraven ligt.</p>
+
+<h2 id="layers-visibility">Tonen en verbergen</h2>
+<p>Klik op het oog op elke rij om die laag, groep of object te verbergen; klik opnieuw om het terug te brengen. Een verborgen rij neemt geen deel aan tekenen, afdrukken of exporteren, dus verbergen is de veilige manier om iets uit de weg te krijgen zonder het te verwijderen. Gebruik het om twee versies van een detail te vergelijken, of om een druk canvas tot het deel dat u aan het bewerken bent terug te brengen.</p>
+<p>Het menu biedt hetzelfde voor de huidige selectie: <strong>Object &rsaquo; Verbergen &rsaquo; Selectie</strong> (<kbd>&#8984;3</kbd>) verbergt wat is geselecteerd, en <strong>Object &rsaquo; Alles tonen</strong> (<kbd>&#8997;&#8984;3</kbd>) onthult alles dat was verborgen.</p>
+
+<h2 id="layers-locking">Vergrendelen</h2>
+<p>Klik op het slot op een rij om het te vergrendelen. Een vergrendeld object blijft zichtbaar maar kan niet op het canvas worden geselecteerd of veranderd, dus het is uit de weg terwijl u eromheen werkt. Een laag vergrendelen beschermt alles erop tegelijk. Vergrendel de achtergrond terwijl u eroverheen tekent, of vergrendel een afgewerkt element zodat een verdwaalde sleep het niet kan verplaatsen.</p>
+<p>Vanuit het menu, <strong>Object &rsaquo; Vergrendelen &rsaquo; Selectie</strong> (<kbd>&#8984;2</kbd>) vergrendelt wat is geselecteerd, en <strong>Object &rsaquo; Alles ontgrendelen</strong> (<kbd>&#8997;&#8984;2</kbd>) bevrijdt alles opnieuw. Een geselecteerd object vergrendelen laat het ook uit de selectie vallen, omdat een vergrendeld ding niet langer iets is waar u op kunt werken.</p>
+
+<h2 id="layers-selecting">Selecteren en de actieve laag</h2>
+<p>Klik op de rij van een object in het paneel om dat object op het canvas te selecteren. Houd <kbd>&#8679;</kbd>, <kbd>&#8984;</kbd> of <kbd>Ctrl</kbd> ingedrukt terwijl u klikt om een ander object aan de selectie toe te voegen, zodat u een selectie vanuit de lijst kunt opbouwen zonder kleine vormen op de pagina te jagen.</p>
+<p>Klikken op een <em>laag</em>rij doet iets anders: het maakt die laag de actieve laag, gemarkeerd met een gekleurde balk langs de linkerrand. Nieuw werk dat u tekent, plaatst of plakt wordt toegevoegd aan de actieve laag, dus klikken op een laag voordat u begint bepaalt waar dat werk terechtkomt. Een nieuwe laag maken maakt hem direct actief.</p>
+<p>Het selectievierkantje rechts van elke rij verbindt het paneel met het canvas. Het verschijnt, in de kleur van de laag, op elke rij die een deel van de huidige selectie bevat, en het is gevuld op de exacte objecten die zijn geselecteerd. Omdat het merk de boom op reist, toont een blik naar beneden de lijst zowel wat is geselecteerd als op welke laag en groepen die objecten zitten.</p>
+
+<h2 id="layers-colours">Kleurlabels</h2>
+<p>Elke laag krijgt een kleur uit een vaste reeks (lichtblauw, rood, groen, blauw, geel en zo verder, twaalven in totaal, die zich herhaalt naarmate u meer laag toevoegt). Die kleur is het label van de laag. Het toont als de chip naast de naam van de laag, en het kleurt de selectiemarkeringen in het paneel samen met de selectie-accentueringen en begrenzingskader die op het canvas voor objecten op die laag worden getekend. Het punt is snelle identificatie: wanneer u iets selecteert en zijn kader groen komt, weet u meteen dat het bij de groene laag hoort. Een document verspreiden over een paar goed benoemd, anders gekleurde laag maakt het veel gemakkelijker om bij te houden waar alles is.</p>
+
+<h2 id="layers-masks">Afsnijden- en dekkingmaskers</h2>
+<p>Een laag of een groep kan zijn eigen dekking en overvloeimodus dragen, beide ingesteld in het <strong>Transparantie</strong>-paneel (<strong>Venster &rsaquo; Transparantie</strong>, <kbd>&#8679;&#8984;F10</kbd>). Hetzelfde paneel bevat <strong>Overvloeiming tot groep beperken</strong>, dat de overvloeimodi van een groep alleen met elkaar laten overvloeien in plaats van met wat eronder zit, en <strong>Knockout-groep</strong>, waar elk object in de groep de erachter verbergt in plaats van door hen heen te tonen. Maskers gaan een stap verder en laten één object bepalen waar, of hoe sterk, ander werk toont.</p>
+
+<h3 id="layers-clip">Afsnijdenmaskers</h3>
+<p>Een afsnijdenmasker snijdt werk tot een vorm bij. Selecteer twee of meer objecten en kies <strong>Object &rsaquo; Afsnijdenmasker &rsaquo; Maken</strong> (<kbd>&#8984;7</kbd>). Het bovenste geselecteerde object wordt het afsnijdend pad, en alles eronder wordt alleen binnen die vorm getoond; de rest wordt afgesneden. Het resultaat is een afsnijdgroep, in het paneel met een gestippeld pictogram getekend. <strong>Vrijgeven</strong> (<kbd>&#8997;&#8984;7</kbd>) maakt het ongedaan en geeft de objecten terug. Greep hiervoor om een foto of een druk patroon tot een cirkel, een letter, of elke omtrek die u erboven tekent bij te snijden.</p>
+
+<h3 id="layers-opacity-mask">Dekkingmaskers</h3>
+<p>Een dekkingmasker vervaagt werk volgens de lichtheid van een ander object. Selecteer twee of meer objecten en kies <strong>Object &rsaquo; Afsnijdenmasker &rsaquo; Dekkingmasker maken</strong>, of gebruik <strong>Masker maken</strong> in het Transparantie-paneel. Het bovenste object wordt het masker: waar het licht is, toont het werk eronder volledig, waar het donker is, vervaagt het werk tot niets, met de grijzen daartussen voor gedeeltelijke transparantie. <strong>Dekkingmasker vrijgeven</strong> haalt het weer uit elkaar. Gebruik een wit-tot-zwart verloop als het masker om een afbeelding naar één rand uit te vervagen, om de zachte vignetten en overgangen te bouwen die één enkele vlakke dekkingwaarde niet kan geven.</p>
+
+<h2 id="layers-organising">Een document organiseren</h2>
+<p>Een beetje structuur vroegtijdig bespaart veel jagen later. Een paar gewoonten die zich uitbetalen:</p>
+<dl>
+  <dt>Eén laag per zorg</dt>
+  <dd>Houd de achtergrond, het hoofdwerk en de tekst op afzonderlijke, benoemde laag. U kunt dan een heel deel van de tekening in één klik verbergen, vergrendelen of herordenen.</dd>
+  <dt>Vergrendel wat u niet aanraakt</dt>
+  <dd>Vergrendel de laag rond de laag waar u aan werkt zodat een verdwaalde klik of sleep ze niet kan verstoren, en ontgrendel ze opnieuw met <kbd>&#8997;&#8984;2</kbd> wanneer u ze nodig heeft.</dd>
+  <dt>Groepeer de dingen die samen bewegen</dt>
+  <dd>Bind de delen van één element in een groep zodat het zich als één object gedraagt, en houd laag voor de grotere verdelingen van het document.</dd>
+  <dt>Stel de actieve laag in voordat u tekent</dt>
+  <dd>Klik eerst op de laag die u wilt toevoegen, zodat nieuw werk op de juiste plek terechtkomt in plaats van bovenop wat er was.</dd>
+  <dt>Laat de kleuren u leiden</dt>
+  <dd>Leun op de laagkleuren: wanneer de accentuering van een selectie overeenkomt met de chip van een laag, weet u precies waar dat object leeft zonder iets te openen.</dd>
+</dl>

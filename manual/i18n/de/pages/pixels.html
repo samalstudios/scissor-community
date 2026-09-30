@@ -1,0 +1,120 @@
+<p class="lede">Ein Scissor-Dokument kann gemalte Pixel neben seinen gezeichneten Pfaden und Text enthalten, sodass eine einzige Datei eine weiche Pinseltextur, ein Foto und ein scharfes Logo zusammen tragen kann. Diese Seite behandelt, was eine Pixel-Ebene ist, wie man auf einer malt, und wie sie sich als Objekt im Dokument verhält.</p>
+
+<h2 id="pixels-vector-vs-raster">Pixel versus Vektorgrafik</h2>
+<p>Ein Scissor-Dokument hält zwei Arten von Grafik nebeneinander. Pfade und Text werden <em>gezeichnet</em>: Sie bleiben bei jeder Größe scharf, weil sie durch ihre Form beschrieben werden, und Scissor zeichnet sie neu, wann immer Sie zoomen oder skalieren. Eine <strong>Pixel-Ebene</strong> wird <em>gemalt</em>: Es ist ein Gitter aus farbigen Punkten, wie ein Foto oder eine Pinselmalerei, und das Vergrößern macht diese Punkte statt Details größer. Ein Dokument kann so viele von jeder Art enthalten, in beliebiger Reihenfolge, und sie stapeln sich im Ebenen-Panel zusammen.</p>
+<p>Greifen Sie zu einer Pixel-Ebene, wenn eine Form allein nicht ausreicht: ein handgemalter Schatten, eine raue Textur hinter sauberem Text, ein Farbaufprall, der kein editierbarer Pfad sein muss, oder Retusche über einem platzierten Foto. Halten Sie Logos, Diagramme und alles, was Sie später skalieren werden, als Vektoren, und verwenden Sie Pixel für die Teile, die das Gefühl von Farbe wollen.</p>
+<p>Ein platziertes Foto ist eine verwandte, aber separate Sache. <strong>Datei &gt; Platzieren…</strong> (<kbd>&#8679;&#8984;P</kbd>) bringt ein bestehendes Bild als eingebettetes Bild in das Dokument; eine Pixel-Ebene ist eine Fläche, auf der Sie in Scissor von Grund auf malen. Beide bestehen aus Pixeln, und beide können mit der Pipette getastet werden, aber nur eine Pixel-Ebene nimmt Pinselstriche an.</p>
+
+<h2 id="pixels-new">Eine Pixel-Ebene erstellen</h2>
+<p><strong>Objekt &gt; Pixel-Ebene &gt; Neue Pixel-Ebene</strong> fügt eine leere Fläche hinzu, die das aktive Board bedeckt. Sie müssen keine zuerst erstellen: Wählen Sie den Pinsel und malen Sie, und Scissor erstellt die Ebene in dem Moment, in dem der erste Strich landt. Auf jeden Fall wird die Ebene auf das Board abgebildet, sodass die Pixel mit dem Artboard übereinstimmen, egal in welcher Auflösung sie erstellt wurden.</p>
+<p>Diese Auflösung kommt von der Einstellung <strong>Rastereffekte</strong> in <strong>Datei &gt; Dokumenteinrichtung…</strong> (<kbd>&#8997;&#8984;P</kbd>): Bildschirm (72&nbsp;ppi), Mittel (150&nbsp;ppi) oder Hoch (300&nbsp;ppi). Eine höhere Einstellung gibt einer neuen Pixel-Ebene mehr Punkte pro Punkt, sodass die Pinselarbeit glatt bleibt, wenn das Stück gedruckt oder groß betrachtet wird. Stellen Sie es ein, bevor Sie die Ebene erstellen, da die Pixelzahl fest ist, wenn die Fläche erstellt wird.</p>
+<p>In der modernen Hülle können Sie auch eine Ebene von der Werkzeugoptionsleiste aus hinzufügen: Mit dem Pinsel oder Pixel-Radierer aktiv, sitzt eine Schaltfläche <strong>Neue Pixel-Ebene</strong> am Ende der Leiste.</p>
+<p><strong>Ein Bild platzieren erstellt auch eine Pixel-Ebene.</strong> Legen Sie ein Bild auf die Zeichenfläche, verwenden Sie <strong>Datei &gt; Platzieren…</strong> oder fügen Sie eines aus der Zwischenablage ein, und es kommt als editierbare Pixel-Ebene in seiner eigenen Größe statt als gesperrtes Bild herein – also können Sie direkt darauf malen, maskieren, anpassen und filtern. Die Pixel werden innerhalb des Dokuments gehalten, also sucht es nie nach einer verknüpften Datei, die sich bewegen oder verschwinden könnte; ein sehr großes Foto wird herunterskaliert, um auf eine einzige Fläche zu passen.</p>
+<p>Eine geschichtete <strong><code>.psd</code></strong> Datei kommt reicher herein: Das Öffnen einer baut ihren Stapel als separate Pixel-Ebenen wieder auf, behält die <strong>Maske</strong> jeder Ebene und bringt Text, Formen und Ebeneneffekte mit, sodass der Datei nah an dem landet, wo sie aussah, wo sie gemacht wurde, statt als ein flaches Bild. Es ist der vollste Weg in die Pixelarbeit, und alles auf dieser Seite gilt dann für die Ebenen, die ankommen.</p>
+
+<h2 id="pixels-painting">Malen</h2>
+
+<h3 id="pixels-brush">Der Pinsel und der Pixel-Radierer</h3>
+<p>Zwei Werkzeuge arbeiten auf Pixel-Ebenen.</p>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Wo es lebt</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Pinsel-Werkzeug</strong></td><td>Teilt einen Slot mit dem Malpinsel (<kbd>B</kbd>) und dem Füllpinsel (<kbd>&#8679;B</kbd>)</td><td>Legt Farbe, die Teil des Bildes wird</td></tr>
+    <tr><td><strong>Pixel-Radierer-Werkzeug</strong></td><td>Teilt einen Slot mit dem Radierer (<kbd>&#8679;E</kbd>), der Schere und dem Messer</td><td>Reibt Farbe weg, sodass das darunter Sitzt hindurchscheint</td></tr>
+  </tbody>
+</table>
+<p>Um einen zu erreichen, drücken und halten Sie das sichtbare Werkzeug in der Werkzeugleiste oder klicken Sie mit der rechten Maustaste darauf und wählen Sie das Pixel-Werkzeug aus der Liste. Verwechseln Sie sie nicht mit ihren Vektor-Nachbarn: Der Malpinsel zeichnet einen Pfad, den Sie später umformen können, während der Pinsel Pixel malt, die nicht neu gepunktet werden können. Beide Pixel-Werkzeuge zeigen einen Ring auf der Zeichenfläche in der Größe, in der sie malen werden, und beide verwenden einen Fadenkreuz-Zeiger.</p>
+<p>Ziehen Sie zum Malen oder Radieren. Die Markierung folgt dem Zeiger ohne Lücken, egal wie schnell Sie sich bewegen, weil Scissor eine Reihe runder Punkte entlang des Strichs legt und sie gleichmäßig beabstandet hält, selbst wenn der Zeiger springt. Der Pixel-Radierer nimmt Alpha weg statt darüber zu malen, also wird, was er löscht, vollständig transparent; eine Kachel, die zurück auf nichts radiert wird, wird gelöscht, also hinterlässt Radieren kein Gewicht.</p>
+
+<h3 id="pixels-colour">In der Füllfarbe malen</h3>
+<p>Der Pinsel malt in der aktuellen <strong>Füll</strong>farbe. Stellen Sie sie so ein, wie Sie jede Füllung einstellen: Das Farb-Panel, ein Muster oder, wenn der Pinsel in der modernen Hülle aktiv ist, der <strong>Farbe</strong>-Chip in der Werkzeugoptionsleiste. Wenn die Füllung leer ist, fällt der Pinsel auf die Konturfarbe zurück, und auf Schwarz, wenn es überhaupt keine Farbe gibt. Wählen Sie eine Farbe direkt von einer Pixel-Ebene mit der Pipette, wenn Sie bereits vorhandene Farbe anpassen möchten.</p>
+
+<h3 id="pixels-controls">Größe, Härte und Fluss</h3>
+<p>Wenn der Pinsel oder Pixel-Radierer aktiv ist, trägt die Werkzeugoptionsleiste die Einstellungen, die die Markierung formen. Sie leben auch in Ihren Einstellungen, also tragen sie von einer Sitzung zur nächsten.</p>
+<dl>
+  <dt>Größe</dt><dd>Der Pinseldurchmesser, von 1 bis 2500 Pixel. Drücken Sie <kbd>[</kbd>, um den Pinsel kleiner zu machen, und <kbd>]</kbd>, um ihn größer zu machen; jeder Druck ändert die Größe um ein Fünftel, sodass der Schritt mit dem Pinsel wächst. Der Ring auf der Zeichenfläche zeigt die aktuelle Größe.</dd>
+  <dt>Härte</dt><dd>Wo die Kante anfängt zu verblassen, als Prozent. Bei 100% ist die Kante scharf; verringern Sie sie, und der Punkt weicht zu seinem Rand mit einem sanften Abfall und ohne sichtbaren Ring ab. Verwenden Sie einen weichen Pinsel für Schatten und Glühen, einen harten für solide Formen.</dd>
+  <dt>Fluss</dt><dd>Wie viel Farbe jeder Punkt ablegt, nur für den Pinsel. Unter 100% baut sich die Farbe allmählich auf, während Sie erneut über einen Bereich gehen, was für Schattierungen und langsame Mischungen geeignet ist. Der Pixel-Radierer hat keine Fluss-Steuerung.</dd>
+</dl>
+
+<h2 id="pixels-retouch">Abwedeln, nachbelichten und schwämmen</h2>
+<p>Drei Retuschen-Pinsel arbeiten in die Pixel, die bereits sind, statt eine Farbe zu legen, und teilen einen Slot in der Werkzeugleiste. Sie malen wie der Pinsel – dieselbe Größe, Härte und Zeichenfläche-Ring – und bauen sich auf, während Sie erneut über einen Bereich gehen, also ist eine leichte Berührung allmählich und eine feste schnell.</p>
+<dl>
+  <dt>Abwedeln</dt><dd>Hellt auf, wo Sie malt, hebt Schatten an und fügt Glanzlichter hinzu.</dd>
+  <dt>Nachbelichten</dt><dd>Dunkelt auf, wo Sie malt, vertieft Schatten und Kanten.</dd>
+  <dt>Schwamm</dt><dd>Hebt Sättigung an, macht Farben reicher, je mehr Sie darüber gehen.</dd>
+</dl>
+<p>Jeder lässt transparente Pixel unberührt, bleibt innerhalb einer Auswahl, wenn eine gesetzt ist, und der ganze Strich geht in einem Schritt rückgängig.</p>
+
+<h2 id="pixels-more-tools">Eimer, Formen und Verläufe</h2>
+<p>Malen ist nicht nur der Pinsel. Auf einer Pixel-Ebene legen drei weitere Werkzeuge Farbe ab: Der <strong>Farbeimer</strong> überflutet einen zusammenhängenden Bereich ähnlicher Farbe von dem Ort, an dem Sie klicken; die <strong>Formwerkzeuge</strong> stempeln ein Rechteck, eine Ellipse, einen Stern oder ein Polygon direkt in die Pixel statt einen Pfad zu zeichnen; und das <strong>Verlaufs-Werkzeug</strong> malt einen linearen oder radialen Verlauf über die Fläche. Jeder respektiert die aktuelle Auswahl, sodass Sie eine Füllung oder einen Verlauf auf eine gewählte Region beschränken können.</p>
+
+<h2 id="pixels-selecting">Pixel auswählen</h2>
+<p>Eine <strong>Pixel-Auswahl</strong> – eine Marquee – beschränkt jede Farbe und Bearbeitung auf die Region innerhalb, wie eine Schablone. Drei Werkzeuge erstellen eine, und teilen den Pixel-Auswahl-Slot: Die <strong>Rechteckige</strong> und <strong>Elliptische Marquee</strong> und eine freihandige <strong>Lasso-Marquee</strong>, die Sie von Hand nachzeichnen. Ziehen Sie, um eine Auswahl zu zeichnen; ein einfaches Ziehen ersetzt die aktuelle.</p>
+<p>Die <strong>Auto-Auswahl</strong> wählt nach Farbe statt nach Form: Klicken Sie auf eine Pixel-Ebene, und sie nimmt den zusammenhängenden Farbfleck um den Ort, an dem Sie geklickt haben, auf und zeichnet eine marching-ants-Linie darum herum – praktisch, um einen flachen Hintergrund oder einen farbigen Bereich zu heben. Wie nah eine Farbe sein muss, um aufgenommen zu werden, ist die <strong>Toleranz</strong> in den Auto-Auswahl-Optionen, dieselbe Einstellung, die sie auf Vektorobjekten verwendet; erhöhen Sie sie, um mehr zu sammeln, verringern Sie sie, um sich an eine enge Übereinstimmung zu halten. Löcher im Fleck bleiben von der Auswahl ausgeschlossen.</p>
+<p>Auswahlen kombinieren sich, sodass eine Form aus mehreren Strichen oder Klicks gebaut werden kann: Halten Sie <kbd>&#8679;</kbd>, um zur Auswahl <strong>hinzuzufügen</strong>, <kbd>&#8997;</kbd>, um <strong>abzuziehen</strong>, und beide zusammen, um nur die <strong>Überlappung</strong> zu behalten – die Marquees und die Auto-Auswahl kombinieren sich alle auf dieselbe Weise. <strong>Auswahl &gt; Alle</strong> (<kbd>&#8984;A</kbd>) wählt jedes Pixel, <strong>Auswahl &gt; Umkehren</strong> kehrt die Marquee um, und <strong>Auswahl aufheben</strong> – <kbd>&#8984;D</kbd> auf einer Pixel-Ebene – lässt sie fallen. Eine marching-ants-Linie zeigt die Auswahl auf der Zeichenfläche.</p>
+
+<h2 id="pixels-editing-selection">Pixel bewegen, ausschneiden und kopieren</h2>
+<p>Mit einer Auswahl gesetzt, bewegt das Auswahl-Werkzeug die Pixel innerhalb: Ziehen Sie von innerhalb der Marquee, und die ausgewählte Farbe hebt sich und reist, wohin sie war, und trägt die Marquee mit. Halten Sie <kbd>&#8997;</kbd> während des Ziehens, um das Original an Ort und Stelle zu lassen und eine <strong>Kopie</strong> zu bewegen.</p>
+<p>Die Transformationswerkzeuge funktionieren auch auf der Auswahl. Mit einer Marquee gesetzt, wickelt der Begrenzungsrahmen des Auswahl-Werkzeugs und das <strong>Freie Transformieren-Werkzeug</strong> (<kbd>E</kbd>) die Marquee, nicht die ganze Ebene, sodass Sie nur diesen Teil des Bildes skalieren, drehen oder bewegen können; <strong>Objekt &gt; Transformieren</strong> und die Pfeiltasten wirken auf dieselbe Weise. Die gehobenen Pixel schweben über der Ebene, während Sie arbeiten, also können Sie sie immer wieder ziehen, ohne Details zu verlieren. Drücken Sie <kbd>Enter</kbd>, wählen Sie ein anderes Werkzeug oder erstellen Sie eine neue Auswahl, um sie abzulegen, was ein einziger Schritt zum Rückgängigmachen ist, oder drücken Sie <kbd>Esc</kbd>, um alles dorthin zurückzulegen, wo es war. Eine Bewegung um ganze Pixel hält sie genau, wie sie waren; Skalieren oder Drehen tastet sie einmal ab, wenn sie abgelegt werden.</p>
+<p>Das Freie Transformieren-Werkzeug <strong>Freie Verzerrung</strong> und <strong>Perspektivische Verzerrung</strong> funktionieren auch auf Pixel, auf einer Marquee oder auf einer ganzen Ebene: Ziehen Sie eine Ecke des Rahmens (oder halten Sie <kbd>&#8984;</kbd>, während Sie eine im Freien Transformieren-Modus ziehen), um das Bild aus dem Lot zu ziehen, zum Beispiel um ein Foto auf einen Bildschirm oder ein Schild in einem Winkel anzupassen. Während Sie ziehen, zeigt Scissor eine schnelle Vorschau, die an den Bildschirm angepasst ist, sodass sie auch auf einem großen Foto glatt bleibt; die Pixel selbst werden einmal, in voller Auflösung, angefasst, wenn Sie <kbd>Enter</kbd> drücken oder weitermachen, und die Marquee folgt der neuen Form.</p>
+<p>Kopieren (<kbd>&#8984;C</kbd>) und Ausschneiden (<kbd>&#8984;X</kbd>) funktionieren auf den Pixeln innerhalb einer Marquee: Kopieren lässt die Ebene, wie sie ist, Ausschneiden nimmt die Pixel heraus. Einfügen (<kbd>&#8984;V</kbd>) legt sie auf einer <strong>neuen Pixel-Ebene</strong> direkt über der, von der sie kamen, an genau derselben Stelle, bereit, eigenständig bewegt oder transformiert zu werden. Dieselben Befehle befinden sich in <strong>Erstellen &gt; Pixel-Ebene</strong>, und die Auswahl steuert auch die Flächenbefehle: <strong>Mit Füllfarbe füllen</strong> füllt nur die ausgewählte Region, <strong>Löschen</strong> und <strong>Entfernen</strong> löschen sie, und ohne Auswahl wirkt jeder auf die ganze Ebene.</p>
+
+<h2 id="pixels-adjustments">Anpassungen</h2>
+<p>Das Untermenü <strong>Objekt &gt; Pixel-Ebene &gt; Anpassungen</strong> retuschiert die Farbe einer Pixel-Ebene, auf die Auswahl beschränkt, wenn eine gesetzt ist. Jeder öffnet einen Dialog, der auf der Zeichenfläche vorschaut, während Sie ziehen.</p>
+<dl>
+  <dt>Helligkeit / Kontrast, Werte</dt><dd>Legt die Gesamthelligkeit und den Kontrast fest oder bildet den Schwarzpunkt, den Weißpunkt und die Gamma für feinere Tonsteuerung neu ab.</dd>
+  <dt>Farbton / Sättigung, Lebendigkeit</dt><dd>Verschiebt den Farbton und hebt oder senkt die Sättigung über das ganze Brett oder verwendet Lebendigkeit, um die gedämpften Farben zu stärken, während die bereits lebendigen in Ruhe gelassen werden.</dd>
+  <dt>Farbbalance</dt><dd>Drückt die Mitteltöne in Richtung Cyan oder Rot, Magenta oder Grün, Gelb oder Blau.</dd>
+  <dt>Verlaufsabbildung</dt><dd>Färbt die Ebene nach ihrer Helligkeit neu, wobei die Schatten eine Farbe und die Glanzlichter eine andere zugeordnet werden.</dd>
+  <dt>Entsättigen, Invertieren</dt><dd>Lässt alle Farben auf Grau fallen oder jede Farbe auf ihr Gegenteil umdrehen.</dd>
+  <dt>Schwelle, Posterisieren</dt><dd>Reduziert das Bild auf reines Schwarz und Weiß bei einem gewählten Niveau oder auf eine kleine Anzahl von Tönen pro Kanal.</dd>
+</dl>
+
+<h2 id="pixels-filters">Filter</h2>
+<p>Das Untermenü <strong>Filter</strong> formt die Pixel selbst um, wiederum innerhalb der Auswahl.</p>
+<dl>
+  <dt>Gaußscher Weichzeichner</dt><dd>Weicht die Ebene um einen gleichmäßigen, einstellbaren Betrag aus.</dd>
+  <dt>Schärfen, Unscharf maskieren</dt><dd>Schärft das Detail – Unscharf maskieren gibt Kontrolle über Radius, Betrag und eine Schwelle, die flache Bereiche und feines Rauschen schont.</dd>
+  <dt>Verpixeln</dt><dd>Blockiert das Bild in quadratische Kacheln für ein Mosaik.</dd>
+  <dt>Rauschen hinzufügen</dt><dd>Streut Korn über die Farbe.</dd>
+  <dt>Kanten finden, Prägen</dt><dd>Zeichnet nach, wo sich die Farbe als helle Linien auf Dunklem ändert oder als graue Relief.</dd>
+</dl>
+<p><strong>Filter &gt; Effektvorschauen</strong> zeigt Ihre Ebene als Gitter aus Live-Miniaturen, jede mit einer Anpassung oder einem Filter angewendet, sodass Sie nach Augenmaß statt nach Namen wählen können. Das Wählen einer Miniatur hält das Fenster geöffnet. Die Einstellungen des Effekts erscheinen neben dem Gitter, und die Zeichenfläche zeigt das Ergebnis, während Sie sie ändern. Nichts wird angewendet, bis Sie auf <strong>Anwenden</strong> klicken (oder <kbd>Enter</kbd> drücken). <strong>Abbrechen</strong> oder <kbd>Esc</kbd> bringt das Bild zurück, und ein Rückgängigmachen nimmt einen angewendeten Effekt weg. Sie können das Fenster an seinem Titel ziehen, um die Zeichenfläche dahinter zu sehen.</p>
+
+<h2 id="pixels-undo">Schnelles, kachelbasiertes Rückgängigmachen</h2>
+<p>Ein ganzer Strich geht in einem Schritt rückgängig, egal wie lang er war: Drücken Sie einmal <kbd>&#8984;Z</kbd>, und die letzte Markierung ist weg, und <kbd>&#8679;&#8984;Z</kbd> bringt sie zurück. Wenn der erste Strich seine Ebene erstellen musste, geht diese Ebene mit dem Strich zurück, statt leer zurückgelassen zu werden.</p>
+<p>Hinter den Kulissen wird eine Pixel-Ebene als Gitter aus kleinen Kacheln gehalten, und ein Strich kopiert nur die Kacheln, die er tatsächlich berührt hat. Rückgängigmachen behält ganze Dokument-Snapshots, aber ein Strich kostet nur seine eigenen Kacheln statt der ganzen Fläche, sodass das Malen auf einer großen Ebene schnell bleibt und eine lange Sitzung von Pinselarbeit nicht den Speicher füllt. Flächenbereiche einer Farbe werden kompakt gespeichert, sodass eine Ebene, die meist eine einzige Farbe ist, fast keinen Raum einnimmt.</p>
+
+<h2 id="pixels-treating">Eine Pixel-Ebene wie jedes Objekt behandeln</h2>
+<p>Eine Pixel-Ebene ist ein Objekt im Dokument, also gilt alles, was Sie bereits wissen. Wählen Sie sie aus, bewegen Sie sie, und skalieren, drehen, spiegeln oder verzerren Sie sie von <strong>Objekt &gt; Transformieren</strong>, dem Begrenzungsrahmen oder dem Freien Transformieren-Werkzeug. Ohne Marquee wickelt der Rahmen die bemalten Pixel der Ebene statt seiner ganzen Fläche, und eine Transformation wirkt auf diese Pixel: Bewegen lässt sie unberührt, während Skalieren oder Drehen in die Pixel gebackt wird, wenn Sie <kbd>Enter</kbd> drücken, ein anderes Werkzeug wählen oder etwas anderes auswählen, sodass die Ebene aufrecht bleibt und der nächste Pinselstrich richtig oben landet. Stellen Sie ihre Deckkraft ein und geben Sie ihr einen der sechzehn Füllmodi aus dem Transparenz-Panel, um gemalte Farbe über der gezeichneten Grafik darunter sitzen zu lassen. Das Klicken wählt die Ebene nur dort, wo sie Farbe hat, sodass eine transparente Ecke Sie direkt durchklicken lässt, was darunter liegt. <strong>Duplizieren</strong> kopiert eine Pixel-Ebene wie jedes Objekt – günstig, da die Kopie ihre Kacheln teilt, bis einer von ihnen gemalt wird.</p>
+<p><strong>Objekt &gt; Pixel-Ebene &gt; Nach unten vereinen</strong> vereinfacht eine Pixel-Ebene auf die Pixel-Ebene direkt darunter und entfernt die obere, sodass eine einzige Ebene mit den beiden zusammengesetzt bleibt. Wenn die Ebenen unter verschiedenen Transformationen sitzen – sagen wir, eine wurde gedreht – wird die obere in das Gitter der unteren neu abgetastet, während sie verschmilzt.</p>
+<p>Zwei Befehle wirken auf die ganze Fläche auf einmal:</p>
+<dl>
+  <dt>Objekt &gt; Pixel-Ebene &gt; Mit Füllfarbe füllen</dt><dd>Überflutet die ganze Fläche mit der aktuellen Füllfarbe. Greifen Sie hierher, um eine Grundierung zu legen, bevor Sie darüber malen, oder um eine Ebene zu überfluten, die hinter anderer Grafik liegt.</dd>
+  <dt>Objekt &gt; Pixel-Ebene &gt; Löschen</dt><dd>Leert die Fläche, ohne die Ebene zu entfernen, sodass Sie das Malen neu beginnen können, während die Ebene ihren Ort, ihre Transformation, Deckkraft und Füllmodus behält.</dd>
+</dl>
+<p>Beide Befehle erscheinen auch unter <strong>Effekt &gt; Pixel-Ebene</strong>.</p>
+
+<h2 id="pixels-masks">Ebenenmasken</h2>
+<p>Eine <strong>Ebenenmaske</strong> verbirgt Teile einer Pixel-Ebene, ohne sie zu löschen: Die Ebene scheint durch, wo die Maske weiß ist, und ist verborgen, wo sie schwarz ist, mit den Grautönen dazwischen für teilweise Transparenz. Weil nichts gelöscht wird, können Sie die Maske so oft hin- und hermalen, wie Sie möchten. Die Befehle befinden sich unter <strong>Objekt &gt; Pixel-Ebene</strong>.</p>
+<dl>
+  <dt>Ebenenmaske hinzufügen</dt><dd>Hängt eine Maske an, die zunächst alles zeigt, bereit, darauf zu malen.</dd>
+  <dt>Ebenenmaske aus Auswahl hinzufügen</dt><dd>Baut die Maske aus der aktuellen Pixel-Auswahl: Was innerhalb bleibt, was außerhalb ist verbunden. Ein schneller Weg, um eine Form aus einem Foto nicht-destruktiv herauszuschneiden.</dd>
+  <dt>Maske bearbeiten</dt><dd>Schaltet das Malen der Maske ein und aus. Während es an ist, malen der Pinsel, Radierer und Farbeimer die Maske statt der Ebene: Malen Sie mit Schwarz (oder einer dunklen Farbe), um zu verbergen, Weiß zum Zeigen, Grau zum Verblassen. Der Pinsel verwendet die Helligkeit der aktuellen Füllfarbe, also verbirgt Schwarz und zeigt Weiß.</dd>
+  <dt>Ebenenmaske anwenden</dt><dd>Backt die Maske in die Ebene für immer – die verborgenen Pixel werden transparent – und entfernt die Maske.</dd>
+  <dt>Ebenenmaske löschen</dt><dd>Wirft die Maske weg und zeigt die ganze Ebene wieder, unberührt.</dd>
+</dl>
+<p>Eine maskierte Ebene exportiert und speichert mit der Maske bereits angewendet und verbindet und transformiert sich wie jede andere Ebene.</p>
+
+<h2 id="pixels-rasterize">Vektorgrafik in Pixel verwandeln: Rastern</h2>
+<p><strong>Objekt &gt; Rastern</strong> ersetzt die aktuelle Auswahl durch ein eingebettetes Bild ihrer selbst, wobei die Pfade, der Text und alle Effekte in feste Pixel gebacken werden. Verwenden Sie dies, wenn Sie ein Vektorergebnis nicht mehr bearbeitbar haben möchten, wenn ein Effekt eher als flaches Bild behandelt werden kann oder um ein Stück weiterzugeben, das überall gleich aussehen soll, ohne seine live Konstruktion mitzuführen. Das Ergebnis ist ein eingebettetes Bild statt einer malbaren Pixel-Ebene, also behalten Sie eine Kopie der Originalgrafik, wenn Sie sie vielleicht wieder bearbeiten müssen. <strong>Ansicht &gt; Pixelvorschau</strong> (<kbd>&#8997;&#8984;Y</kbd>) lässt Sie prüfen, wie Vektorgrafik auf das Pixelgitter landen wird, bevor Sie sich festlegen.</p>
+
+<h2 id="pixels-saving">Speichern und Exportieren</h2>
+<p><code>.cut</code>-Dokumente halten Pixel-Ebenen mit dem Rest der Grafik, gepackt, sodass Fläbereiche fast keinen Raum einnehmen und genau so wiedergeöffnet werden, wie gemalt.</p>
+<p>Wie Pixel-Ebenen das Dokument verlassen, hängt vom Format ab:</p>
+<dl>
+  <dt>PNG, JPEG und WebP</dt><dd>Vereinfachen das ganze Dokument auf Pixel, sodass gemalte und gezeichnete Arbeit in eine Bitmap verschmelzen. PNG kann Transparenz behalten; exportieren Sie bei @2x für ein schärferes Ergebnis.</dd>
+  <dt>SVG und PDF</dt><dd>Schreiben die gemalte Fläche als eingebettetes Bild, das sich unter der Vektorgrafik befindet, sodass ein Dokument, das Gezeichnetes und Gemaltes mischt, als eine Datei mit ihren Formen noch scharf reist.</dd>
+</dl>
+<p>Weil Raster und Vektor im selben Dokument leben und zusammen exportieren, können Sie ein Stück auf die natürliche Weise bauen: saubere Formen und Text als Vektoren und die Teile, die das Gefühl von Farbe wollen, einen weichen Glanz, eine texturierte Wäsche, ein retuschiertes Foto, als Pixel-Ebenen, die darunter gestapelt sind.</p>

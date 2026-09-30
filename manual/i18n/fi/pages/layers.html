@@ -1,0 +1,85 @@
+<p class="lede">Tasot-paneeli on asiakirjan kartta: jokainen taso, ryhmä ja kohde yhdessä listassa, pinottuna järjestyksessä, jolla ne ovat sivulla. Käytä sitä näyttämiseen ja piilottamiseen, lukitsemiseen, nimeämiseen, järjestämiseen ja valitsemiseen ja nähdäksesi silmäyksellä, millä tasolla mikä tahansa kohde elää.</p>
+
+<p>Alla olevat pikanäppäimet on kirjoitettu macOS-muodossa. Windowsilla ja Linuxilla lue <kbd>&#8984;</kbd> Ctrl:ksi, <kbd>&#8997;</kbd> Alt:ksi ja <kbd>&#8679;</kbd> Shift:ksi.</p>
+
+<h2 id="layers-panel">Tasot-paneeli</h2>
+<p>Avaa se kohteesta <strong>Ikkuna &rsaquo; Tasot</strong> (<kbd>F7</kbd>). Lista pitää tasot ylimmällä tasolla, kunkin tasön sisällön versiona sen alla: ryhmät, polut, teksti, kuvat ja pikselitasot, piirrettynä puuksi, jonka voit avata ja sulkea. Säilö (taso tai ryhmä) kantaa pientä kolmiota rivinsä vasemmassa laidassa; napsauta sitä laskettaaksesi säilön tai avataksesi sen. Syvät asiakirjat pysyvät luettavina, koska voit kutistaa osia, joilla et työskentele.</p>
+<p>Kaksi painiketta on paneelin alaosassa. <strong>Luo uusi taso</strong> lisää tyhjän tasoon juuri sen yläpuolelle, joka on tällä hetkellä aktiivinen ja tekee uudesta aktiivisen. <strong>Poista valinta</strong> poistaa mitä tahansa, mikä on valittu; asiakirja säilyttää aina vähintään yhden tasoen, joten viimeistä jäävää tasoa ei voi poistaa tällä tavalla. Jos haluat nimetä uudelleen minkä tahansa tasoa, ryhmää tai kohdetta, kaksoisnapsauta sen nimeä listassa, kirjoita ja paina <kbd>Enter</kbd>. Osien nimeäminen kiireisessä asiakirjassa on nopein tapa pitää siitä hallussa.</p>
+
+<h3 id="layers-row">Mitä jokainen rivi näyttää</h3>
+<p>Rivin lukeminen vasemmalta oikealle:</p>
+<table>
+  <thead><tr><th>Osa</th><th>Mitä se tekee</th></tr></thead>
+  <tbody>
+    <tr><td>Silmä</td><td>Näyttää tai piilottaa tämän tasoa, ryhmää tai kohdetta. Rivi, jolla silmä on pois, ei piirretty eikä tulosteta eikä vietä.</td></tr>
+    <tr><td>Lukko</td><td>Lukitsee tai avaa rivin. Lukittua kohdetta ei voi valita tai muokata piirtoalueella.</td></tr>
+    <tr><td>Värikuvake</td><td>Vain tasoriveillä: tasoon värimerkintä, jota käytetään värjäämään kyseisen tasoon valinnan merkinnät ja korostukset.</td></tr>
+    <tr><td>Kolmio</td><td>Vain säilöissä: avaa tai sulkee tasoa tai ryhmää paljastaaksesi sen sisällön.</td></tr>
+    <tr><td>Tyyppikuvake</td><td>Merkitsee ryhmät ja leikkausryhmät (leikkausryhmä piirretään viivattuna ääriviivana).</td></tr>
+    <tr><td>Nimi</td><td>Nimi tai paikkamerkki kulmasulkeissa, kuten <code>&lt;Polku&gt;</code> tai <code>&lt;Ryhmä&gt;</code>, kun asia on nimeämätön. Kaksoisnapsauta nimetäksesi uudelleen.</td></tr>
+    <tr><td>Valintaneliö</td><td>Oikeassa reunassa: pieni neliö tasoon värissä, joka ilmestyy mihin tahansa riviin, joka kantaa osaa nykyisestä valinnasta.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="layers-groups">Tasot ja ryhmät</h2>
+<p>Tasot ovat asiakirjan ylimmän tason säiliöitä. Ne ovat olemassa pitämään toisiinsa liittymättömiä osia erillään: tausta yhdellä tasolla, pääpiirros toisella, kolmannella kolmannella. Koska taso on juurihakemistossa, sen piilottaminen, lukitseminen tai järjestäminen siirtää kaiken, mitä se kantaa, yhdellä vedolla.</p>
+<p>Ryhmä on pienempi säiliö, joka elää tasossa (tai toisen ryhmän sisällä) ja matkustaa teoksen mukana. Ryhmitys on tapa sitoa yhden asian osat yhteen, logon tai kuvakkeen palat, jotta ne liikkuvat, skaalaavat ja pinoutuvat yksikkönä. Ryhmät avautuvat ja sulkeutuvat paneelissa omalla kolmiollaan, aivan kuten tasot.</p>
+<p>Tasot ja ryhmät käyttäytyvät samalla tavalla yhdessä tärkeässä asiassa: kumpikaan voi olla näkyvissä tai piilossa, lukittu tai avoinna ja kumpikaan voi kantaa omaa peittävyyttään ja sekoitustilaansa, jotka vaikuttavat kaikkeen sen sisällä. Ero on roolissa. Tasot järjestävät koko asiakirjan; ryhmät sitovat yksittäisiä kohteita.</p>
+
+<h3 id="layers-grouping">Ryhmitys ja hajotus</h3>
+<p>Valitse kaksi tai useampi kohde ja valitse <strong>Objekti &rsaquo; Ryhmitä</strong> (<kbd>&#8984;G</kbd>) kerätäksesi ne ryhmäksi. <strong>Objekti &rsaquo; Hajota</strong> (<kbd>&#8679;&#8984;G</kbd>) ottaa kohteet valitusta ryhmästä takaisin ulos. Ryhmät voivat olla sisäkkäisiä, joten ryhmien ryhmä on ok; jokainen <kbd>&#8679;&#8984;G</kbd> kuorii yhden tason. Käytä ryhmää aina, kun huomaat valitsevasi saman kouran kohteita uudelleen ja uudelleen.</p>
+
+<h2 id="layers-stacking">Pinojärjestys: edestä ja takaa</h2>
+<p>Kohteet piirretään takaisin eteenpäin, joten lähempänä etua oleva kohde peittää ne takana, missä ne ovat päällekkäin. Paneeli näyttää tämän järjestyksen suoraan: ylin rivi on etummaisin kohde ja alin rivi on se, mikä on kauimpana takana. Kohteen järjestäminen muuttaa sitä, mikä peittää mitä.</p>
+<p>Nopein tapa järjestää on vetää: ota rivi ja pudota se ylemmäksi tai alemmaksi listassa siirtääksesi sitä pinon läpi tai pudota se tasoon tai ryhmään siirtääksesi kohteen <em>sen</em> sisään. Vetäminen on myös tapa siirtää valittu kohde toiselle tasolle — ilman leikkausta ja liittämistä.</p>
+<p>Siirrä valintaa pinon läpi <strong>Objekti &rsaquo; Järjestä</strong> -komennolla:</p>
+<table>
+  <thead><tr><th>Komento</th><th>Pikanäppäin</th><th>Vaikutus</th></tr></thead>
+  <tbody>
+    <tr><td>Tuo eteen</td><td><kbd>&#8679;&#8984;]</kbd></td><td>Aivan eteen tasollaan.</td></tr>
+    <tr><td>Tuo eteenpäin</td><td><kbd>&#8984;]</kbd></td><td>Yksi askel eteenpäin.</td></tr>
+    <tr><td>Vie taakse</td><td><kbd>&#8984;[</kbd></td><td>Yksi askel taakse.</td></tr>
+    <tr><td>Vie taakse</td><td><kbd>&#8679;&#8984;[</kbd></td><td>Aivan taakse tasollaan.</td></tr>
+  </tbody>
+</table>
+<p>Käytä näitä, kun tarvitsemasi muoto on piilossa toisen alla tai kun tausta on päätynyt piirroksen päälle. Jos haluat työskennellä kohteiden kanssa, jotka ovat toinen toisensa päällä, <strong>Valitse &rsaquo; Seuraava kohde ylhäällä</strong> (<kbd>&#8997;&#8984;]</kbd>) ja <strong>Seuraava kohde alhaalla</strong> (<kbd>&#8997;&#8984;[</kbd>) siirtävät valintaa ylös ja alas pinossa, mikä on kätevää jotain muun teoksen alle uppoavan saamiseksi.</p>
+
+<h2 id="layers-visibility">Näyttäminen ja piilottaminen</h2>
+<p>Napsauta silmää mihin tahansa riviin piilottaaksesi tämän tasoa, ryhmää tai kohdetta; napsauta uudelleen tuodaksesi sen takaisin. Piilotettu rivi ei osallistu piirtämiseen, tulostamiseen tai vientiin, joten piilottaminen on turvallinen tapa saada jotain pois tieltä poistamatta sitä. Käytä tätä vertaillaksesi kahden version yksityiskohtaa tai puhdistaaksesi kiireisen piirtoalueen osaan, jolla työskentelet.</p>
+<p>Valikko tarjoaa saman nykyiselle valinnalle: <strong>Objekti &rsaquo; Piilota &rsaquo; Valinta</strong> (<kbd>&#8984;3</kbd>) piilottaa sen, mikä on valittu ja <strong>Objekti &rsaquo; Näytä kaikki</strong> (<kbd>&#8997;&#8984;3</kbd>) paljastaa kaiken, mikä oli piilossa.</p>
+
+<h2 id="layers-locking">Lukitseminen</h2>
+<p>Napsauta lukkoa riviin lukitaksesi sen. Lukittu kohde pysyy näkyvissä, mutta sitä ei voi valita tai muuttaa piirtoalueella, joten se on vahingon ulottumattomissa, kun työskentelet sen ympärillä. Tasoon lukitseminen suojaa kaiken siitä kerralla. Lukitse tausta, kun piirrät sen päälle tai lukitse valmis elementti, jotta satunnainen veto ei voisi siirtää sitä.</p>
+<p>Valikosta <strong>Objekti &rsaquo; Lukitse &rsaquo; Valinta</strong> (<kbd>&#8984;2</kbd>) lukitsee sen, mikä on valittu ja <strong>Objekti &rsaquo; Avaa kaikki</strong> (<kbd>&#8997;&#8984;2</kbd>) vapauttaa kaiken takaisin. Valitun kohteen lukitseminen myös pudottaa sen valinnasta, koska lukittu asia ei ole enää johonkin, mihin voit vaikuttaa.</p>
+
+<h2 id="layers-selecting">Valitseminen ja aktiivinen taso</h2>
+<p>Napsauta kohteen riviä paneelissa valitaksesi kyseisen kohteen piirtoalueella. Pidä <kbd>&#8679;</kbd>, <kbd>&#8984;</kbd> tai <kbd>Ctrl</kbd> napsauttamalla lisätäksesi toisen kohteen valintaan, jotta voit rakentaa valinnan listasta etsimällä pieniä muotoja sivulta.</p>
+<p><em>Tason</em> rivin napsauttaminen tekee jotain muuta: se tekee tämän tasosta aktiivisen, merkittynä värillä palkilla sen vasemmassa reunassa. Uusi teos, jonka piirrät, sijoittaa tai liität, lisätään aktiiviseen tasoon, joten tason napsauttaminen ennen alkua päättää, minne työ laskeutuu. Uuden tasoon luominen tekee siitä aktiivisen suoraan.</p>
+<p>Jokaisen rivin oikealla puolella oleva valintaneliö sitoo paneelin piirtoalueeseen. Se ilmestyy, tasoon värissä, joka kantaa osaa nykyisestä valinnasta ja se on täytetty täsmälleen kohteissa, jotka ovat valittuja. Koska merkki matkustaa puun ylös, katsominen listaan alas näyttää molemmat: mitä on valittu ja millä tasoilla ja ryhmissä nämä kohteet ovat.</p>
+
+<h2 id="layers-colours">Värimerkit</h2>
+<p>Jokainen taso saa värin kiinteästä sarjasta (vaaleanpunainen, punainen, vihreä, sininen, keltainen ja niin edelleen, yhteensä kaksitoista, kiertäen, kun lisätään enemmän tasoja). Tämä väri on tasoon merkki. Se näkyy kuvakkeena tasoon nimen vieressä ja värjää valinnan merkinnät paneelissa yhdessä valinnan korostusten ja piirtoalueelle piirretyn valintakaaren kanssa kohteille tällä tasolla. Tavoitteena on nopea tunnistaminen: kun valitset jotain ja sen kehys tulee vihreäksi, tiedät heti, että se kuuluu vihreään tasoon. Asiakirjan levittäminen muutamalle hyvin nimetylle, eriväriselle tasolle tekee paljon helpomaksi seurata, missä kaikki on.</p>
+
+<h2 id="layers-masks">Leikkaus- ja peittävyysmaskit</h2>
+<p>Taso tai ryhmä voi kantaa omaa peittävyyttään ja sekoitustilaan, molemmat asetettu <strong>Läpinäkyvyys</strong>-paneelissa (<strong>Ikkuna &rsaquo; Läpinäkyvyys</strong>, <kbd>&#8679;&#8984;F10</kbd>). Sama paneeli pitää <strong>Rajoita sekoitus ryhmään</strong>, joka pitää ryhmän sekoitustilat sekoittamassa vain toisiinsa sen sijaan, että sekoittaisi sen alla olevan kanssa, ja <strong>Knockout Group</strong>, jossa jokainen ryhmän jäsen piilottaa sen alla olevat ryhmän sisällä sen sijaan, että sekoittaisi niiden läpi. Maskit menevät askeleen pidemmälle ja antavat yhden kohteen hallita, missä tai kuinka voimakkaasti muu teos näkyy.</p>
+
+<h3 id="layers-clip">Leikkausmaskit</h3>
+<p>Leikkausmaski rajaa teoksen muotoon. Valitse kaksi tai useampi kohde ja valitse <strong>Objekti &rsaquo; Leikkausmaski &rsaquo; Luo</strong> (<kbd>&#8984;7</kbd>). Ylin valittu kohda tulee leikkauspoluksi ja kaikki sen alla näkyy vain tämän muodon sisällä; loppu leikataan. Tuloksena on leikkausryhmä, piirretty paneelissa viivattuna kuvakkeena. <strong>Vapauta</strong> (<kbd>&#8997;&#8984;7</kbd>) kumoaa sen ja palauttaa kohteet. Käytä tätä rajaamaan valokuva tai kiireinen kuvio ympyrään, kirjaimeen tai mihin tahansa ääriviivaan, jonka piirrät yläpuolelle.</p>
+
+<h3 id="layers-opacity-mask">Peittävyysmaskit</h3>
+<p>Peittävyysmaski himmeää teosta toisen kohteen valon mukaan. Valitse kaksi tai useampi kohde ja valitse <strong>Objekti &rsaquo; Leikkausmaski &rsaquo; Luo peittävyysmaski</strong> tai käytä <strong>Luo maski</strong> Läpinäkyvyys-paneelista. Ylin kohda tulee maskiksi: missä se on vaalea, teos alla näkyy täysin, missä se on tumma, teos himmeää pois, harmaiden ollessa osittaisen läpinäkyvyyden. <strong>Vapauta peittävyysmaski</strong> purkaa sen takaisin. Käytä valkoisesta mustaan liukuväriä maskina himmeääksesi kuvan yhteen reunaan tai rakentaaksesi pehmeitä vinettejä ja sekoituksia, joita yksi tasainen peittävyysarvo ei voi antaa.</p>
+
+<h2 id="layers-organising">Asiakirjan järjestäminen</h2>
+<p>Vähän rakennetta varhaisessa vaiheessa säästää paljon etsintää myöhemmin. Muutamia tapoja, jotka kannattavat:</p>
+<dl>
+  <dt>Yksi tasi per huoli</dt>
+  <dd>Pidä tausta, pääteos ja teksti erillisillä, nimetyillä tasoilla. Voit sitten piilottaa, lukita tai järjestää koko osan piirroksesta yhdellä napsautuksella.</dd>
+  <dt>Lukitse se, mitä et koske</dt>
+  <dd>Lukitse tasot sen ympärillä, jolla työskentelet, jotta satunnainen napsautus tai veto ei voi häiritä niitä ja avaa ne uudelleen <kbd>&#8997;&#8984;2</kbd>:llä, kun tarvitset niitä.</dd>
+  <dt>Ryhmitä asiat, jotka liikkuvat yhdessä</dt>
+  <dd>Sitoo yhden elementin osat ryhmäksi, jotta se käyttäytyy yhtenä kohteena ja varaa tasot asiakirjan suuremmille jaotteluille.</dd>
+  <dt>Aseta aktiivinen tasi ennen piirtämistä</dt>
+  <dd>Napsauta tasoa, johon haluat lisätä ensin, jotta uusi teos laskeutuu oikeaan paikkaan sen sijaan, että se kaatuisi sen päälle, mikä siellä oli.</dd>
+  <dt>Anna värien opastaa sinua</dt>
+  <dd>Nojaa tasoon väreihin: kun valinnan korostus vastaa tasoon kuvakkeetta, tiedät täsmälleen, missä kyseinen kohde elää avaamatta mitään.</dd>
+</dl>

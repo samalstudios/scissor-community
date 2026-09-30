@@ -1,0 +1,91 @@
+<p class="lede">Simboli, pennelli e motivi sono tre modi per disegnare un pezzo di lavoro una volta e riutilizzarlo. Cambia l'originale e ogni uso di esso cambia con esso, così un elemento ripetuto resta coerente e resta veloce da aggiornare.</p>
+
+<p>Le scorciatoie sotto sono scritte nel formato macOS. Su Windows, leggi <kbd>&#8984;</kbd> come <kbd>Ctrl</kbd>, <kbd>&#8997;</kbd> come <kbd>Alt</kbd> e <kbd>&#8679;</kbd> come <kbd>Shift</kbd>.</p>
+
+<h2 id="symbols-panel">Il pannello Simboli</h2>
+<p>Un simbolo è un pezzo di lavoro salvato che puoi far atterrare nel documento un numero qualsiasi di volte. Ogni copia è un'<em>istanza</em>: punta alla definizione unica piuttosto che contenere lavoro proprio, così il documento resta piccolo per quante istanze tu posi, e una modifica alla definizione li raggiunge tutti in una volta. Usa i simboli quando lo stesso elemento ricorre, come un albero in un paesaggio, un puntino su una mappa, un bullone in un disegno di assemblaggio, oppure un logo che appare su diverse tavole.</p>
+<p>Apri il pannello con <strong>Finestra &gt; Simboli</strong> (<kbd>&#8679;&#8984;F11</kbd>), oppure dalla sua scheda nel dock dei pannelli. Elenca i simboli del documento per nome. Facendo clic su un nome lo selezioni come simbolo attivo, che è quello che Simbolo Sparso posa; il simbolo attivo è evidenziato.</p>
+
+<h3 id="symbols-make">Creare un simbolo</h3>
+<p>Seleziona il lavoro che vuoi riutilizzare e fai clic su <strong>Nuovo simbolo</strong>. La selezione viene memorizzata come definizione del simbolo e, al suo posto sulla tela, viene sostituita da una singola istanza posata esattamente dove si trovava il lavoro. La definizione viene tenuta in disparte, così non ingombra la tela né i livelli ordinari. Se non gli dai un nome, il simbolo si chiama <code>Simbolo 1</code>, <code>Simbolo 2</code> e così via, nell'ordine in cui li crei.</p>
+
+<h3 id="symbols-place">Posare istanze</h3>
+<p>Fai doppio clic su un simbolo nel pannello per far atterrare una nuova istanza al centro della vista corrente. Posane quante ne servono. Un'istanza si comporta come qualsiasi altro oggetto una volta che è sulla tela: selezionala e puoi spostarla, ridimensionarla, ruotarla o riflettere, e impostarne opacità e fusione, tutto senza toccare la definizione, perché quelle modifiche viaggiano sull'istanza stessa. Usa questo per variare dimensione e angolo di pezzi ripetuti mantenendoli legati allo stesso master.</p>
+
+<h3 id="symbols-edit">Modificare un simbolo</h3>
+<p>Fai doppio clic su un'istanza sulla tela con lo Strumento Selezione (<kbd>V</kbd>) per entrare nella definizione. Tutto il resto nella pagina si attenua, e modifichi il lavoro per conto suo. Fai doppio clic su una parte vuota della tela per uscire. Poiché ogni istanza disegna la stessa definizione, la modifica che fai appare in tutte insieme. Questo è il punto di un simbolo: correggi il lavoro una volta e l'intero documento si aggiorna, piuttosto che cercare ogni copia.</p>
+
+<h3 id="symbols-break">Spezzare il collegamento</h3>
+<p>Quando un'istanza deve differire dalle altre in un modo che va oltre posizione, dimensione o opacità, selezionala e fai clic su <strong>Spezza collegamento</strong>. L'istanza viene sostituita da una copia ordinaria e modificabile della definizione, alla stessa dimensione e angolo, non più legata al simbolo. Le modifiche al simbolo non la raggiungeranno più. Il pulsante è disponibile solo mentre è selezionata un'istanza di simbolo.</p>
+<p>Per rimuovere completamente un simbolo, tieni premuto <kbd>&#8997;</kbd> e fai clic sul suo nome nel pannello. La sua definizione e ogni istanza di esso vengono eliminate, poiché un'istanza senza definizione non disegnerebbe nulla.</p>
+
+<h2 id="symbols-symbolism">Gli strumenti simbolici</h2>
+<p>Gli strumenti simbolici spargono e regolano istanze di simbolo a manciate, sotto un pennello rotondo, piuttosto che una alla volta. Condividono un unico slot nella barra degli strumenti; tieni premuto lo slot per scegliere tra di essi. Agiscono sulle istanze dentro la selezione, oppure su ogni istanza modificabile del documento quando non è selezionato nulla, così puoi guidare un intero campo di simboli in una volta. Tieni premuto <kbd>&#8997;</kbd> per invertire l'effetto di ciascuno.</p>
+<p>Mentre uno strumento simbolico è attivo, <kbd>[</kbd> e <kbd>]</kbd> rendono il pennello più piccolo e più grande, e <kbd>{</kbd> e <kbd>}</kbd> abbassano e alzano la sua intensità (quanto forte lavora ogni passaggio).</p>
+<table>
+<thead><tr><th>Strumento</th><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+<tbody>
+<tr><td>Simbolo Sparso</td><td><kbd>&#8679;S</kbd></td><td>Trascina per posare istanze del simbolo attivo, spaziate man mano che ti muovi; le istanze si raccolgono in un unico gruppo <em>Set di simboli</em>. Tieni premuto <kbd>&#8997;</kbd> per sollevare le istanze di nuovo sotto il pennello</td></tr>
+<tr><td>Simbolo Sposta</td><td></td><td>Sposta le istanze nella direzione in cui trascini, così puoi ordinare uno spargimento senza spostare ogni pezzo</td></tr>
+<tr><td>Simbolo Raggruppa</td><td></td><td>Ravvicina le istanze verso il pennello; <kbd>&#8997;</kbd> le allontana</td></tr>
+<tr><td>Simbolo Ridimensiona</td><td></td><td>Ingrandisce le istanze sotto il pennello; <kbd>&#8997;</kbd> le rimpicciolisce</td></tr>
+<tr><td>Simbolo Ruota</td><td></td><td>Ruota le istanze per seguire la direzione del tuo trascinamento</td></tr>
+<tr><td>Simbolo Tinta</td><td></td><td>Tinge le istanze verso il colore di riempimento corrente, per variazione in un gruppo; <kbd>&#8997;</kbd> rimuove la tinta</td></tr>
+<tr><td>Simbolo Sfuma</td><td></td><td>Sfuma le istanze abbassando la loro opacità; <kbd>&#8997;</kbd> le riporta</td></tr>
+<tr><td>Simbolo Restile</td><td></td><td>Applica lo stile grafico scelto nel pannello Stili grafici alle istanze; <kbd>&#8997;</kbd> lo cancella</td></tr>
+</tbody>
+</table>
+<p>Tre strumenti hanno bisogno di qualcosa impostato prima. Simbolo Sparso ha bisogno di un simbolo da spruzzare, quindi creane uno nel pannello Simboli prima di iniziare. Simbolo Restile applica lo stile grafico scelto nel pannello Stili grafici, quindi scegli uno stile lì prima; Simbolo Tinta usa il colore di riempimento corrente, quindi imposta il riempimento prima di tingere.</p>
+
+<h2 id="symbols-brushes">Il pannello Pennelli</h2>
+<p>Un pennello decide come un tratto viene disegnato lungo un tracciato. Invece di una linea semplice di larghezza uniforme, il tracciato può portare un tratto tipo stilo, una scia di lavoro sparso, una forma estesa da un capo all'altro, oppure una banda piastrellata. Il tracciato resta completamente modificabile sotto: rimodellalo e il tratto a pennello segue. Apri il pannello con <strong>Finestra &gt; Pennelli</strong> (<kbd>F5</kbd>), oppure dalla sua scheda nel dock dei pannelli. Ogni pennello mostra una piccola anteprima accanto al suo nome.</p>
+
+<h3 id="symbols-brush-kinds">Tipi di pennello</h3>
+<p>Scissor ha cinque tipi di pennello. Due sono disegnati da pochi numeri, e tre sono costruiti da lavoro che selezioni.</p>
+<dl>
+  <dt>Calligrafico</dt>
+  <dd>Una punta ovale inclinata che si ispessisce e si assottiglia man mano che il tracciato gira, come un pennello ampio. Impostane l'Angolo, la Rotondità e la Dimensione in punti. Usalo per tratti di lettering, firme e qualsiasi linea destinata a sembrare disegnata a mano.</dd>
+  <dt>Seta</dt>
+  <dd>Un gruppo di tratti fini che si legge come un pennello carico. Impostane la Dimensione in punti, il numero di Sete e l'Opacità vernice così passaggi sovrapposti si accumulano. Usalo quando vuoi un bordo morbido e pittorico piuttosto che pulito.</dd>
+  <dt>Sparso</dt>
+  <dd>Sparge copie di lavoro selezionato lungo il tracciato. Impostane la Dimensione delle copie, la Spaziatura tra di esse, quanto si Dispersione dalla linea e la loro Rotazione, con opzioni per ruotare ogni copia rispetto al tracciato e ricolorarla con il colore di contorno. Usalo per coriandoli, foglie, stelle o bolle che seguono una curva.</dd>
+  <dt>Artistico</dt>
+  <dd>Estende un pezzo di lavoro selezionato lungo tutta la lunghezza del tracciato. Impostane la Larghezza, con un'opzione per ricolorarlo con il colore di contorno. Usalo per un tratto d'inchiostro conico, un nastro, una freccia o un segno a carboncino ruvido che si piega con la linea.</dd>
+  <dt>Motivo</dt>
+  <dd>Piastrella lavoro selezionato di seguito in seguito lungo il tracciato, come un bordo decorativo. Impostane la Scala e la Spaziatura, con un'opzione per ricolorarlo con il colore di contorno. Usalo per catene, corde, cuciture o un frame ripetuto.</dd>
+</dl>
+
+<h3 id="symbols-brush-apply">Applicare e rimuovere un pennello</h3>
+<p>Seleziona uno o più tracciati e fai clic su un pennello per disegnarne i tratti con esso. Un tracciato senza contorno visibile ne riceve uno così il pennello ha una linea su cui correre. Lo Strumento Pennello (<kbd>B</kbd>) disegna nuovi tratti con il pennello attualmente scelto, quindi scegli un pennello e dipingi direttamente sulla tela. Per togliere un pennello dai tratti selezionati e riportarli a linee semplici, fai clic su <strong>Rimuovi pennello</strong>.</p>
+
+<h3 id="symbols-brush-manage">Creare, modificare ed eliminare pennelli</h3>
+<p>Fai clic su <strong>Nuovo pennello&hellip;</strong>, scegli uno dei cinque tipi e impostane le sue opzioni. Per un pennello sparso, artistico o motivo, seleziona il lavoro che deve usare prima di aprire la finestra di dialogo, poiché quel lavoro diventa il pennello. Per cambiare un pennello in seguito, selezionalo e fai clic su <strong>Opzioni&hellip;</strong> (oppure fai doppio clic su di esso nell'elenco); qualsiasi tratto che lo usa viene ridisegnato con le nuove impostazioni. <strong>Elimina</strong> rimuove il pennello selezionato, dopo aver chiesto conferma; i tratti che lo usavano tornano a linee semplici.</p>
+
+<h2 id="symbols-patterns">Il pannello Motivi</h2>
+<p>Un motivo è una piastrella di lavoro che si ripete per riempire una forma. Definisci la piastrella una volta e puoi versarla in qualsiasi oggetto come riempimento, così una texture o un motivo resta uniforme in tutto il lavoro e si aggiorna ovunque quando modifichi la piastrella. Il pannello si trova nel dock dei pannelli, e gli stessi comandi vivono sotto <strong>Oggetto &gt; Motivo</strong>.</p>
+
+<h3 id="symbols-pattern-make">Creare un motivo</h3>
+<p>Seleziona il lavoro per una piastrella e fai clic su <strong>Crea motivo</strong> (oppure <strong>Oggetto &gt; Motivo &gt; Crea</strong>). Una copia del lavoro viene memorizzata come piastrella ripetuta e aggiunta al pannello; il lavoro che hai disegnato resta dove è. I motivi si chiaman <code>Motivo 1</code>, <code>Motivo 2</code> e così via man mano che li crei.</p>
+
+<h3 id="symbols-pattern-fill">Riempire con un motivo</h3>
+<p>Seleziona una forma e fai clic su un motivo nel pannello per impostarlo come riempimento della forma. Senza selezione, fare clic su un motivo lo rende il colore di riempimento per la prossima forma che disegni. Poiché è un riempimento, il motivo si ripete per coprire la forma e viene ritagliata al suo contorno. Usalo per sfondi, tessuti, fogliame o qualsiasi superficie che dovrebbe leggersi come una ripetizione piuttosto che un colore piatto. Per rimuovere un motivo dal documento, tieni premuto <kbd>&#8997;</kbd> e fai clic su di esso nel pannello; le forme che lo avevano come riempimento tornano a nessun riempimento.</p>
+
+<h3 id="symbols-pattern-edit">Modificare la piastrella</h3>
+<p>Fai doppio clic su un motivo nel pannello per modificarne la piastrella. Il resto del lavoro si attenua e lavori sulla piastrella per conto suo, con un pulsante <strong>Finito</strong> nel pannello; fai clic su di esso (oppure usa di nuovo <strong>Oggetto &gt; Motivo &gt; Modifica motivo</strong>) quando hai finito. Ogni forma riempita con il motivo si aggiorna per corrispondere. Puoi anche iniziare a modificare selezionando una forma riempita con un motivo e scegliendo <strong>Modifica motivo</strong>.</p>
+
+<h3 id="symbols-pattern-options">Opzioni piastrella</h3>
+<p>Fai clic sul pulsante opzioni piastrella accanto a un motivo (oppure <strong>Oggetto &gt; Motivo &gt; Opzioni piastrella&hellip;</strong>) per controllare come la piastrella si ripete. Queste impostazioni cambiano il layout della ripetizione senza cambiare il lavoro nella piastrella.</p>
+<dl>
+  <dt>Tipo piastrella</dt>
+  <dd>Come righe e colonne si allineano: Griglia, Mattonella per riga, Mattonella per colonna, Esagonale per colonna o Esagonale per riga. Mattonella alterna righe o colonne come in una parete di mattoni; esagonale impacchetta le piastrelle in un favo.</dd>
+  <dt>Offset mattonella</dt>
+  <dd>Per i tipi mattonella, quanto ogni riga o colonna alterna viene spostata, come percentuale della piastrella.</dd>
+  <dt>Adatta piastrella al lavoro</dt>
+  <dd>Adatta la piastrella ai confini del lavoro. Disattivala per impostare tu la Larghezza e Altezza della piastrella.</dd>
+  <dt>Larghezza e Altezza</dt>
+  <dd>La dimensione della piastrella in pixel, usata quando la piastrella non è dimensionata sul lavoro.</dd>
+  <dt>Spaziatura orizzontale e verticale</dt>
+  <dd>Spazi lasciati tra le piastrelle, in pixel. Valori positivi spargono il motivo; valori negativi sovrappongono le piastrelle.</dd>
+  <dt>Sposta piastrella con il lavoro</dt>
+  <dd>Mantiene la piastrella allineata al lavoro quando si muove, così la ripetizione viaggia con l'oggetto.</dd>
+</dl>

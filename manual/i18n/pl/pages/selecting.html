@@ -1,0 +1,34 @@
+<p class="lede">Zanim cokolwiek zmienisz, musisz powiedzieć, co zmienić. Ta strona dotyczy wybierania grafiki: szybkich kliknięć za pomocą narzędzi zaznaczania oraz całego menu <strong>Zaznacz</strong>, które wybiera obiekty według tego, z czego są zbudowane, przechodzi przez stos i zapisuje zaznaczenie do późniejszego przywrócenia. W skrótach poniżej <kbd>&#8984;</kbd> to <kbd>Ctrl</kbd> w systemach Windows i Linux, <kbd>&#8997;</kbd> to <kbd>Alt</kbd>, a <kbd>&#8679;</kbd> to Shift.</p>
+
+<h2 id="selecting-basics">Klikanie i zaznaczanie prostokątne</h2>
+<p><strong>Narzędzie Zaznacz</strong> (<kbd>V</kbd>) to miejsce, w którym zaczyna się większość zaznaczania. Kliknij obiekt, aby go zaznaczyć; przytrzymaj <kbd>&#8679;</kbd> i kliknij inny, aby go dodać, lub kliknij zaznaczony, aby go upuścić. Przeciągnij po pustym płótnie, aby wyciągnąć <em>zaznaczenie prostokątne</em>, i wszystko, czego dotyka, jest zaznaczane. <strong>Narzędzie Zaznacz bezpośrednio</strong> (<kbd>A</kbd>) sięga do środka: wybiera pojedyncze punkty kotwiczne i segmenty ścieżki, a nie całe obiekty, a <strong>Narzędzie Zaznacz grupę</strong> wchodzi do grupy o poziom naraz. Te narzędzia są opisane na stronach <a href="/manual/tools/">Narzędzia</a> i <a href="/manual/paths/">Ścieżki</a>; reszta tej strony to menu Zaznacz, które wykonuje wybieranie, którego klikanie nie może.</p>
+
+<h2 id="selecting-whole-document">Wszystko, nic i odwrócenie</h2>
+<table>
+  <thead><tr><th>Polecenie</th><th>Skrót</th><th>Co zaznacza</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Zaznacz &rsaquo; Wszystko</strong></td><td><kbd>&#8984;A</kbd></td><td>Każdy niezablokowany obiekt w dokumencie.</td></tr>
+    <tr><td><strong>Wszystko na aktywnej planszy</strong></td><td><kbd>&#8997;&#8984;A</kbd></td><td>Tylko grafika na planszy, na której pracujesz — szybki sposób na złapanie jednej strony dokumentu wieloplanszowego.</td></tr>
+    <tr><td><strong>Odznacz</strong></td><td><kbd>&#8679;&#8984;A</kbd></td><td>Nic; czyści bieżące zaznaczenie.</td></tr>
+    <tr><td><strong>Odwróć</strong></td><td></td><td>Zamienia zaznaczenie na wszystko, co <em>nie</em> było zaznaczone.</td></tr>
+    <tr><td><strong>Ponownie zaznacz</strong></td><td><kbd>&#8984;6</kbd></td><td>Przywraca zaznaczenie, które miałeś tu przed wyczyszczeniem.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="selecting-stack">Przechodzenie przez stos</h2>
+<p>Gdy obiekty się nakładają, <strong>Zaznacz &rsaquo; Następny obiekt powyżej</strong> (<kbd>&#8997;&#8984;]</kbd>) i <strong>Następny obiekt poniżej</strong> (<kbd>&#8997;&#8984;[</kbd>) przesuwają zaznaczenie w górę lub w dół przez stos w tym samym miejscu, po jednym obiekcie na raz. To niezawodny sposób na dotarcie do kształtu poniżej innych bez przestawiania tych na górze.</p>
+
+<h2 id="selecting-same">Zaznacz podobne: wybieranie według wspólnych cech</h2>
+<p>Zaznacz jeden obiekt, a następnie <strong>Zaznacz &rsaquo; Podobne</strong> zbiera każdy inny obiekt w dokumencie, który pasuje do niego pod względem jednej cechy. Użyj tego, aby przemalować każdy kształt jednego wypełnienia w jednym przebiegu lub złapać wszystkie cienkie obrysy naraz.</p>
+<dl>
+  <dt>Wygląd</dt><dd>Cały wygląd — ten sam stos wypełnień, obrysów i efektów.</dd>
+  <dt>Wypełnienie i obrys</dt><dd>To samo wypełnienie i ten sam obrys razem.</dd>
+  <dt>Kolor wypełnienia / Kolor obrysu</dt><dd>Ten sam kolor wypełnienia lub ten sam kolor obrysu.</dd>
+  <dt>Grubość obrysu</dt><dd>Ta sama grubość obrysu.</dd>
+  <dt>Krycie</dt><dd>Ta sama krycie.</dd>
+  <dt>Tryb mieszania</dt><dd>Ten sam tryb mieszania.</dd>
+  <dt>Kształt</dt><dd>Ten sam rodzaj obiektu — wszystkie elipsy, powiedzmy, lub cały tekst.</dd>
+</dl>
+
+<h2 id="selecting-saved">Zapisywanie zaznaczenia</h2>
+<p>Skomplikowane zaznaczenie jest warte zachowania. <strong>Zaznacz &rsaquo; Zapisz zaznaczenie&hellip;</strong> przechowuje bieżący zestaw pod nazwą; następnie pojawia się pod <strong>Zaznacz &rsaquo; Zapisane zaznaczenia</strong>, a wybranie go tam zaznacza dokładnie te obiekty ponownie, niezależnie od tego, jak klikałeś od tamtej pory. <strong>Edytuj zaznaczenie&hellip;</strong> zmienia nazwy lub usuwa zapisane. Zapisane zaznaczenia podróżują wewnątrz dokumentu <code>.cut</code>, więc nadal są tam przy następnym otwarciu pliku.</p>

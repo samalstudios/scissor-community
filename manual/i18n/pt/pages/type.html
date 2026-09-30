@@ -1,0 +1,110 @@
+<p class="lede">O texto no Scissor permanece ao vivo. Pode reeditar as palavras, a fonte e o espaçamento a qualquer momento, e o texto é desenhado diretamente na tela à medida que digita, pelo que o que edita é o que imprime e exporta.</p>
+
+<p>Os atalhos abaixo estão escritos no formato macOS. No Windows, leia <kbd>&#8984;</kbd> como <kbd>Ctrl</kbd>, <kbd>&#8997;</kbd> como <kbd>Alt</kbd> e <kbd>&#8679;</kbd> como <kbd>Shift</kbd>.</p>
+
+<h2 id="type-tools">As ferramentas de texto</h2>
+<p>As ferramentas de texto partilham um slot na barra de ferramentas. Escolha o slot e segure para escolher entre elas, depois trabalhe na tela.</p>
+<table>
+  <thead><tr><th>Ferramenta</th><th>Atalho</th><th>O que faz</th></tr></thead>
+  <tbody>
+    <tr><td>Ferramenta Texto</td><td><kbd>T</kbd></td><td>Clique para texto pontual, arraste para uma moldura retangular de texto de área</td></tr>
+    <tr><td>Ferramenta Texto de Área</td><td></td><td>Arraste uma moldura e digite nela</td></tr>
+    <tr><td>Ferramenta Texto em Caminho</td><td></td><td>Clique num caminho para correr texto ao longo dele</td></tr>
+    <tr><td>Ferramenta Texto Vertical</td><td></td><td>Define caracteres direitos em colunas</td></tr>
+    <tr><td>Ferramenta Edição de Glifo</td><td><kbd>&#8679;T</kbd></td><td>Move, redimensiona e roda um carácter de cada vez</td></tr>
+  </tbody>
+</table>
+<p>Para editar texto já na página, clique nele com qualquer uma das ferramentas de texto exceto Edição de Glifo para colocar o cursor nele, ou clique duas vezes nele com a ferramenta Seleção (<kbd>V</kbd>). Pressione <kbd>Escape</kbd>, ou clique fora, para parar de editar. Com a ferramenta Texto simples, clicar num caminho aberto liga texto a esse caminho em vez de iniciar um novo bloco, pelo que nem sempre precisa de usar a ferramenta Texto em Caminho dedicada.</p>
+
+<h2 id="type-kinds">Texto pontual, de área e em caminho</h2>
+<p>O texto pode ficar no documento de três maneiras, e a diferença está em como as linhas são medidas e onde quebram. As três permanecem editáveis, assumem as mesmas configurações de Carácter e Parágrafo e podem ser transformadas em contornos mais tarde.</p>
+
+<h3 id="type-point">Texto pontual</h3>
+<p>Clique uma vez com a ferramenta Texto e digita. O texto cresce a partir desse único ponto e só quebra onde pressiona <kbd>Return</kbd>: não há moldura para envolver. Use texto pontual para títulos, etiquetas, algumas palavras de texto de exibição, ou qualquer coisa que posicione a olho em vez de despejar numa coluna. Os seus recuos e espaçamento de parágrafo não têm nada contra o que medir, pelo que esses controlos não têm efeito no texto pontual; o alinhamento é tirado da âncora em que clicou.</p>
+
+<h3 id="type-area">Texto de área</h3>
+<p>Arraste um retângulo com a ferramenta Texto ou a ferramenta Texto de Área e o texto envolve-se para caber na moldura, quebrando linhas automaticamente na borda direita. Use texto de área para texto de corpo, legendas, ou qualquer sequência de texto que tenha de permanecer dentro de uma largura definida. Quando há mais texto do que a moldura pode conter, o excesso é oculto e a moldura é marcada como transbordante; aumente a moldura, diminua o texto, ou ligue o excesso a outra moldura (veja abaixo). Recuos, recuo de primeira linha, espaço antes e depois e hifenização aplicam-se todos ao texto de área.</p>
+
+<h3 id="type-on-a-path">Texto em caminho</h3>
+<p>Clique num caminho com a ferramenta Texto em Caminho. O caminho torna-se a linha de base e deixa de ser arte por si só, pelo que deixa de ser preenchido ou contornado. Use isto para correr uma etiqueta à volta de um emblema, ao longo de uma curva, ou por cima de uma forma. Selecione o resultado e três parênteses aparecem: um no início, um no fim e um no meio. Arraste o parêntese de início ou fim para mover onde o texto começa e termina ao longo do caminho, arraste o parêntese do meio para deslizar a sequência inteira ao longo, e arraste o parêntese do meio para o outro lado do caminho para virar o texto. Texto em caminho não aceita quebras de linha, pelo que <kbd>Return</kbd> não faz nada enquanto o edita. Remodele o caminho subjacente e o texto segue as suas novas curvas.</p>
+<figure class="shot">
+  <img src="img/type-on-path.png" width="1700" height="798" loading="lazy"
+       alt="As palavras 'O texto flui ao longo de qualquer caminho que desenhar' seguindo as curvas de um caminho ondulado no Scissor." />
+  <figcaption>Texto definido num caminho ondulado. Remodele o caminho e o texto segue as suas curvas; a linha de base aqui é mostrada a tracejado.</figcaption>
+</figure>
+
+<h2 id="type-character">O painel Carácter</h2>
+<p>O painel Carácter (<kbd>&#8984;T</kbd>, ou <strong>Janela &gt; Texto &gt; Carácter</strong>) contém tudo o que se aplica às próprias letras. Com um objeto de texto selecionado, as suas configurações cobrem o objeto inteiro: mude a fonte ou o tracking e cada carácter segue. Enquanto digita, fonte, peso, itálico e tamanho aplicam-se apenas aos carateres selecionados (veja <a href="#type-mixed">Estilos mistos num texto</a>). O painel esmaece-se até estar a editar texto ou ter um objeto de texto selecionado.</p>
+
+<h3 id="type-font">Fonte, peso, estilo e tamanho</h3>
+<p>O menu de fonte é pesquisável e mantém as famílias que usou recentemente no topo. Lista as fontes que o seu navegador consegue realmente desenhar, lidas do sistema onde as reportará e caso contrário sondadas a partir de um conjunto de famílias comuns, para que a lista corresponda ao que renderizará em vez de um catálogo fixo.</p>
+<p>O menu de peso oferece Light, Regular, Medium, Semibold, Bold e Heavy, mas apenas os pesos que a família escolhida realmente tem são selecionáveis: os outros ficam esmaecidos. O botão de itálico ao lado liga e desliga o estilo inclinado. O tamanho é definido em pixels, a partir do campo Tamanho.</p>
+
+<h3 id="type-mixed">Estilos mistos num texto</h3>
+<p>Um texto pode misturar tamanhos, cores, pesos e itálicos. Enquanto digita, selecione alguns carateres e altere-os da barra rápida ao lado do texto, da barra de opções ou do painel Cor. Apenas os carateres selecionados mudam, e o resto do texto mantém o seu próprio estilo. Com nada selecionado, a alteração aplica-se a todo o texto como habitualmente. Os estilos movem-se com os seus carateres à medida que continua a digitar, e são mantidos nas exportações SVG e PDF.</p>
+
+<h3 id="type-metrics">Entrelinha, tracking e kerning</h3>
+<dl>
+  <dt>Entrelinha</dt>
+  <dd>A distância de uma linha de base à seguinte, em pixels. Deixe-a em 0 para entrelinha automática, que é 120% do tamanho. Defina-a maior para abrir as linhas, ou menor para apertar um título.</dd>
+  <dt>Tracking</dt>
+  <dd>Espaçamento uniforme adicionado ou retirado de cada carácter, medido em milésimos de em (pelo que escala com o tamanho). Valores positivos afrouxam o texto, negativos apertam-no. Use tracking para ajustar uma linha a uma largura ou para espaçar versais.</dd>
+  <dt>Kerning</dt>
+  <dd>O espaçamento par a par da própria fonte entre letras específicas, como o espaço sob um T maiúsculo. Está ligado por padrão, no botão Kerning na fileira OpenType (marcado AV). Desligue-o para ver as métricas brutas da fonte.</dd>
+</dl>
+
+<h3 id="type-align">Alinhamento</h3>
+<p>O painel Carácter tem quatro botões de alinhamento: esquerda, centro, direita e justificar. Esquerda e direita são relativos à direção de leitura, pelo que significam início e fim: texto da direita para a esquerda definido à esquerda alinha-se à direita visual. Justificação estica cada linha para preencher a medida, pelo que só altera algo onde as linhas quebram, o que significa texto de área e texto em caminho em vez de texto pontual de linha única. Para os controlos de justificação mais finos (como a última linha é definida) use o painel Parágrafo.</p>
+
+<h3 id="type-opentype">Funcionalidades OpenType e versais</h3>
+<p>Sob o cabeçalho <strong>OpenType</strong> está uma fileira de botões, cada um dos quais liga ou desliga uma funcionalidade do texto selecionado:</p>
+<table>
+  <thead><tr><th>Botão</th><th>Funcionalidade</th></tr></thead>
+  <tbody>
+    <tr><td>fi</td><td>Ligações padrão (ligadas por padrão)</td></tr>
+    <tr><td>st</td><td>Ligações discricionárias</td></tr>
+    <tr><td>TT</td><td>Tudo maiúsculas</td></tr>
+    <tr><td>T&#7472;</td><td>Versais</td></tr>
+    <tr><td>T&sup1;</td><td>Superior à linha</td></tr>
+    <tr><td>T&#8321;</td><td>Inferior à linha</td></tr>
+    <tr><td>&frac12;</td><td>Frações</td></tr>
+    <tr><td>1&#738;&#7511;</td><td>Ordinais</td></tr>
+    <tr><td>&#119964;</td><td>Swash</td></tr>
+    <tr><td>AV</td><td>Kerning (ligado por padrão)</td></tr>
+  </tbody>
+</table>
+<p>Tudo maiúsculas desenha cada letra como maiúscula sem alterar o texto subjacente, pelo que ainda é minúsculo quando o edita. Versais pede à fonte as suas formas de versal. Superior à linha e inferior à linha desenham os carateres afetados mais pequenos e deslocam-nos da linha de base, para marcadores de nota de rodapé, terminações ordinais ou fórmulas químicas.</p>
+<p>Abaixo dos botões, o menu de estilo de algarismo escolhe como os números são definidos: Padrão, Tabular Lining, Proporcional Oldstyle, Proporcional Lining ou Tabular Oldstyle. Algarismos tabulares ocupam todos a mesma largura, pelo que colunas de números se alinham; algarismos oldstyle têm ascensores e descensores que se assentam melhor em texto corrido.</p>
+<p>Nem todas as funcionalidades podem ser pré-visualizadas na tela. Ligações ligadas ou desligadas, kerning, maiúsculas, versais e superior e inferior à linha são desenhados enquanto edita. Ligações discricionárias, estilos de algarismo, frações, ordinais e swash são registrados no texto e escritos no <code>.svg</code> exportado como configurações de funcionalidade de fonte, mas a tela não os mostra, por isso trate esses como configurações de tempo de exportação.</p>
+
+<h2 id="type-paragraph">O painel Parágrafo</h2>
+<p>O painel Parágrafo (<kbd>&#8997;&#8984;T</kbd>, ou <strong>Janela &gt; Texto &gt; Parágrafo</strong>) controla como parágrafos inteiros são definidos. Tal como as configurações de carácter, estas aplicam-se a cada parágrafo do objeto de texto.</p>
+<p>Sete botões de alinhamento correm ao longo do topo. Os três primeiros são simples esquerda, centro e direita. Os próximos três justificam o corpo do parágrafo e definem apenas a última linha, alinhada à esquerda, centrada ou à direita. O último justifica todas as linhas incluindo a última, esticando-a até à medida completa. Justificação precisa de algum lugar para quebrar, pelo que faz efeito em texto de área, não em texto pontual.</p>
+<p>Abaixo dos botões de alinhamento estão os recuos: <strong>Esquerda</strong> e <strong>Direita</strong> puxam o parágrafo inteiro para dentro das laterais da moldura, e <strong>Primeira</strong> recua apenas a primeira linha. Um recuo de primeira linha negativo pendura a primeira linha para além das outras, o que é como faz um recuo pendente. Os campos <strong>Antes</strong> e <strong>Depois</strong> adicionam espaço acima e abaixo de cada parágrafo, uma maneira mais limpa de separar parágrafos do que uma linha vazia. O interruptor <strong>Hifenizar</strong> permite que palavras longas quebrem entre linhas para uniformizar a borda direita. Recuos e espaçamento aplicam-se ao texto de área; texto pontual é definido a partir da sua própria âncora.</p>
+
+<h2 id="type-glyphs">O painel Glifos</h2>
+<p>O painel Glifos (<strong>Texto &gt; Glifos</strong>, <kbd>&#8997;&#8679;F11</kbd>) lista os carateres da fonte atual por conjunto, do Latim Básico através de Grego, Cirílico, Hebraico, Árabe, pontuação, moeda, setas e mais, e mantém os que usou recentemente no topo. Use-o para inserir um carácter que o seu teclado não digita, como uma seta, um símbolo de moeda ou uma letra acentuada. Clique duas vezes num glifo para o digitar no cursor do texto. Sem cursor em nenhum texto, o glifo é copiado para a área de transferência em vez disso, para que possa colá-lo noutro lugar.</p>
+
+<h2 id="type-orientation">Texto vertical e da direita para a esquerda</h2>
+<p>O Scissor pode definir texto na página bem como ao longo dela, e pode dispor escritas que se leem da direita para a esquerda. Ambos funcionam em texto pontual, de área e em caminho, e o editor na tela segue a mesma direção que a arte acabada.</p>
+
+<h3 id="type-vertical">Texto vertical</h3>
+<p>A ferramenta Texto Vertical define caracteres direitos que se empilham para baixo, com cada nova linha formando uma coluna à esquerda da última. Numa moldura de área vertical, uma coluna quebra para uma nova quando chega à base. Para alternar texto já definido entre horizontal e vertical, escolha <strong>Texto &gt; Orientação do Texto &gt; Horizontal</strong> ou <strong>Vertical</strong>.</p>
+
+<h3 id="type-rtl">Da direita para a esquerda e Árabe</h3>
+<p>O menu de direção do painel Carácter oferece Automático, da Esquerda para a Direita e da Direita para a Esquerda. Em Automático, a direção é lida do próprio texto, do seu primeiro carácter forte, pelo que Árabe ou Hebraico flui da direita para a esquerda sem definir nada. Letras árabes assumem as suas formas ligadas, e uma sequência de palavras latinas dentro de uma linha da direita para a esquerda mantém a sua própria ordem da esquerda para a direita. Defina o menu para da Esquerda para a Direita ou da Direita para a Esquerda quando quiser forçar a direção em vez de a deixar ser detetada, por exemplo para uma linha que começa com um número ou pontuação.</p>
+
+<h2 id="type-touch">Edição de Glifo</h2>
+<p>A ferramenta Edição de Glifo (<kbd>&#8679;T</kbd>) move, dimensiona e roda um carácter de cada vez enquanto deixa o texto totalmente editável. Use-o para ajustar uma única letra para efeito sem partir a palavra em contornos. Escolha a ferramenta e clique num carácter: aparece uma moldura à volta desse único carácter com uma pega em cada canto, uma no lado direito, uma na base e uma a flutuar acima. Arraste um canto para dimensionar em ambas as direções, a pega lateral apenas para largura, a pega inferior apenas para altura, e a pega superior para rodar o carácter. Segure <kbd>&#8679;</kbd> enquanto arrasta um canto para manter as proporções, ou enquanto roda para ajustar o ângulo. <kbd>Backspace</kbd> ou <kbd>Delete</kbd> repõe o carácter onde o texto o definiu, e <kbd>Escape</kbd> larga a escolha. Como o texto continua a ser texto durante todo o processo, pode continuar a editar as palavras à volta do carácter que moveu.</p>
+
+<h2 id="type-flow">Ligação e contorno de texto</h2>
+<p>Duas funcionalidades permitem ao texto partilhar espaço com o resto de uma disposição: a ligação corre uma história através de várias molduras, e o contorno de texto empurra o texto para longe de um objeto com que se sobrepõe.</p>
+
+<h3 id="type-threading">Texto ligado</h3>
+<p>Selecione dois ou mais objetos de texto de área e escolha <strong>Texto &gt; Texto Ligado &gt; Criar</strong>. O seu texto é unido numa história que flui de moldura em moldura na ordem de empilhamento, de trás para frente, e é sempre editado a partir da primeira moldura. Use a ligação para correr um artigo através de colunas ou páginas: à medida que adiciona ou remove texto, ele reflui através da cadeia. Cada moldura mostra uma porta no seu canto superior esquerdo e inferior direito, com uma linha desenhada para a moldura em que o texto continua. Um mais vermelho no lugar da porta de saída significa que há mais texto do que a moldura pode conter. <strong>Libertar Seleção</strong> remove as molduras selecionadas da sua ligação, e <strong>Remover Ligação</strong> quebra a ligação inteira com cada moldura a manter o texto que estava a mostrar.</p>
+
+<h3 id="type-wrap">Contorno de texto</h3>
+<p>Para empurrar o texto para longe de uma forma, selecione a forma e escolha <strong>Objeto &gt; Contorno de Texto &gt; Criar</strong>. Texto de área que está por baixo do objeto flui então à volta dele. O contorno segue o contorno do objeto, não a sua caixa delimitadora, pelo que o texto pode abraçar um círculo ou uma silhueta irregular. <strong>Opções de Contorno de Texto&#8230;</strong> define a margem mantida entre o objeto e o texto, em pixels, e pode inverter o contorno para que o texto corra dentro da forma em vez de à volta dela. <strong>Libertar</strong> remove o contorno.</p>
+
+<h2 id="type-outlines">Convertendo texto em contornos</h2>
+<p>Selecione algum texto e escolha <strong>Texto &gt; Criar Contornos</strong> (<kbd>&#8679;&#8984;O</kbd>) para o transformar em caminhos. Use isto quando precisa de remodelar as letras à mão, garantir que o texto tem aspeto idêntico numa máquina sem a fonte, ou usar as letras como uma forma para combinar com outra arte. As letras são traçadas a partir dos próprios glifos da fonte em alta resolução, com o ajustador a deixar os cantos verdadeiros afiados enquanto suaviza as curvas, e o resultado mantém o preenchimento, contorno, nome, opacidade e modo de mistura do texto. As palavras deixam de ser editáveis como texto depois, por isso guarde uma cópia se precisar de as alterar, ou desfaça com <kbd>&#8984;Z</kbd>.</p>

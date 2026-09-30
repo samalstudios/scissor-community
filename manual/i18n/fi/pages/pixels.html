@@ -1,0 +1,120 @@
+<p class="lede">Scissor-asiakirja voi kantaa maalattuja pikseleitä piirrettyjen polkujen ja tekstin rinnalla, joten yksi tiedosto voi kantaa pehmeän sivellintekstuurin, valokuvan ja terävän logon yhdessä. Tämä sivu kattaa, mikä pikselitaso on, miten siihen maalataan ja miten se käyttäytyy kohteena asiakirjassa.</p>
+
+<h2 id="pixels-vector-vs-raster">Pikselit versus vektori</h2>
+<p>Scissor-asiakirja kantaa kahta teoksen tyyppiä vierekkäin. Polut ja teksti ovat <em>piirrettyjä</em>: ne pysyvät terävinä tahansa koon, koska ne on kuvattu muodollaan ja Scissor piirtää ne uudelleen aina, kun zoomaat tai skaalaat. <strong>Pikselitaso</strong> on <em>maalattu</strong>: se on värillisten pisteiden ruudukko, kuten valokuva tai sivellinmaalaus ja sen suurentaminen tekee näistä pisteistä suurempia yksityiskohtien lisäämisen sijaan. Yksi asiakirja voi kantaa niin monta kumpaakin kuin haluat, missä tahansa järjestyksessä ja ne pinoutuvat Tasot-paneeliin yhdessä.</p>
+<p>Käytä pikselitasoa, kun muoto ei yksinään riitä: käsin maalattu varjo, karkea tekstuuri puhtaan tekstin alla, värläys, joka ei tarvitse olla muokattava polku, tai retusointi sijoitetun valokuvan päälle. Pidä logot, kaaviot ja kaikki, mitä aiot muuttaa kokoa myöhemmin, vektoreina ja käytä pikseleitä osille, jotka haluavat maalauksen tunnetta.</p>
+<p>Sijoitettu valokuva on liittyvä, mutta erillinen asia. <strong>Tiedosto &gt; Sijoita&hellip;</strong> (<kbd>&#8679;&#8984;P</kbd>) tuo olemassa olevan kuvan asiakirjaan upotettuna kuvana; pikselitaso on pinta, jolle maalaat alusta Scissorissa. Molemmat ovat pikseleistä ja molempia voi ottaa näytteeksi pipetillä, mutta vain pikselitaso ottaa sivellinten vedot.</p>
+
+<h2 id="pixels-new">Pikselitason luominen</h2>
+<p><strong>Objekti &gt; Pikselitaso &gt; Uusi pikselitaso</strong> lisää tyhjän pinnan peittäen aktiivisen alustan. Sinun ei tarvitse tehdä sitä ensin: valitse Sivellint ja maalaa ja Scissor luo tason sinulle heti, kun ensimmäinen veto laskeutuu. Kummallakin tavalla taso kartoittaa alustan, joten pikselit tasautuvat artboardiin riippumatta siitä, millä resoluutiolla ne on tehty.</p>
+<p>Tämä resoluutio tulee <strong>Rasteritehosteet</strong>-asetuksesta <strong>Tiedosto &gt; Asiakirjan asetukset&hellip;</strong> (<kbd>&#8997;&#8984;P</kbd>) -kohdassa: Näyttö (72&nbsp;ppi), Keskikokoinen (150&nbsp;ppi) tai Korkea (300&nbsp;ppi). Korkeampi asetus antaa uudelle pikselitasolle enemmän pisteitä pistettä kohden, joten sivellintyö pysyy sujuvana, kun kappale tulostetaan tai näytetään suurena. Aseta se ennen tason luomista, koska pikselimäärä on kiinteä, kun pinta on luotu.</p>
+<p>Modernissa kuoressa voit lisätä tason myös työkalun asetuspalkista: Sivellint- tai Pikselipyyhkijä-työkalun ollessa aktiivinen <strong>Uusi pikselitaso</strong>-painike on palkin lopussa.</p>
+<p><strong>Kuvan sijoittaminen tekee pikselitason myös.</strong> Pudota kuva piirtoalueelle, käytä <strong>Tiedosto &gt; Sijoita&hellip;</strong> tai liitä se leikepöydältä ja se tulee muokattavana pikselitasolla omalla koolaan lukitun kuvan sijaan — jotta voit maalaata siihen, peittää sitä, muokata ja suodattaa sitä heti. Kuvan avaaminen <strong>Tiedosto &gt; Avaa</strong> -komennolla tekee uuden asiakirjan yhdellä alustalla kuvan kokoisena, täytettynä pikselitasolla. Hyvin suuret valokuvat pienennetään pikselibudjettiin mahtuakseen. <strong>SVG</strong> pysyy vektorina — sen polut pysyvät muokattavina — joten vain rasterikuvat (PNG, JPEG, GIF, WebP ja vastaavat) tulevat pikselitasoiksi.</p>
+<p>Kerroksinen <strong><code>.psd</code></strong> tiedosto tulee rikkaampana: yksi avaa sen pinon erillisinä pikselitasoina, säilyttäen jokaisen tasoon <strong>maskin</strong> ja tuomalla tekstin, muodot ja tason tehosteet, jotta tiedosto laskeutuu lähemmäs siihen, miltä se näytti siellä, missä se tehtiin, yhden tason kuvan sijaan. Se on täysin tapa pikselityöhön ja kaikki tällä sivulla pätee sitten saapuviin tasoihin.</p>
+
+<h2 id="pixels-painting">Maalaaminen</h2>
+
+<h3 id="pixels-brush">Sivellint ja Pikselipyyhkijä</h3>
+<p>Kaksi työkalua toimivat pikselitasoilla.</p>
+<table>
+  <thead><tr><th>Työkalu</th><th>Missä se asuu</th><th>Mitä se tekee</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Sivellintyökalu</strong></td><td>Jakaa paikan Sivellint (<kbd>B</kbd>) ja Täytesivellint (<kbd>&#8679;B</kbd>) kanssa</td><td>Asettaa värin, josta tulee osa kuvaa</td></tr>
+    <tr><td><strong>Pikselipyyhkijä-työkalu</strong></td><td>Jakaa paikan Pyyhkijä (<kbd>&#8679;E</kbd>), Sakset ja Veitsi kanssa</td><td>Pyyhkii maalauksen, jotta sen alla oleva tulee näkyviin</td></tr>
+  </tbody>
+</table>
+<p>Jommankumman saamiseksi paina ja pidä näkyvissä olevaa työkalua työkalupalkissa tai napsauta sitä hiiren oikealla painikkeella ja valitse pikselityökalu listasta. Älä sekoita niitä vektorinaapureihinsa: Sivellint piirtää polun, jota voit muuntaa myöhemmin, kun taas Sivellint maalaa pikseleitä, joita ei voi uudelleenpisteitä. Molemmat pikselityökalut näyttävät renkaan piirtoalueella koollaan, jolla ne maalaavat ja molemmat käyttävät risti-osoitinta.</p>
+<p>Vedä maalataksesi tai pyyhkätäksesi. Merkki seuraa osoitinta ilman aukoista riippumatta siitä, kuinka nopeasti liikut, koska Scissor asettaa pyöreitä tahmeita vedon pitkin ja pitää ne tasaisesti välitettyinä, vaikka osoitin hyppää. Pikselipyyhkijä ottaa alfan yli maalaamisen sijaan, joten se, mitä se puhdistaa, menee täysin läpinäkyväksi; tiili, joka pyyhkistään tyhjäksi, heitetään, jotta pyyhkiminen ei jätä painoa taakse.</p>
+
+<h3 id="pixels-colour">Maalaaminen täytteen värissä</h3>
+<p>Sivellint maalaa nykyisessä <strong>täytteen värissä</strong>. Aseta se kuten tahansa täytteen: Väri-paneelilla, näytteellä tai, kun Sivellint on aktiivinen modernissa kuoressa, <strong>Väri</strong>-kuvakkeella työkalun asetuspalkissa. Jos täyte on tyhjä, Sivellint kääntyy reunaviivan väriin ja mustaan, jos väriä ei ole lainkaan. Valitse väri suoraan pikselitasosta Pipetillä, kun haluat vastata jo olemassa olevaa maalausta.</p>
+
+<h3 id="pixels-controls">Koko, kovuus ja virtaus</h3>
+<p>Kun Sivellint tai Pikselipyyhkijä on aktiivinen, työkalun asetuspalkki kantaa asetuksia, jotka muotoilevat merkkiä. Ne ovat myös asetuksissasi, joten ne kulkevat istunnosta toiseen.</p>
+<dl>
+  <dt>Koko</dt><dd>Sivellimen halkaisija, 1:stä 2500 pikseliin. Paina <kbd>[</kbd> pienentääksesi sivellintä ja <kbd>]</kbd> suurentaaksesi sitä; jokainen painallus muuttaa koon viidenneksellä, joten askel kasvaa sivellimen mukana. Rengas piirtoalueella näyttää nykyisen koon.</dd>
+  <dt>Kovuus</dt><dd>Missä reuna alkaa himmetä, prosenttina. 100%:lla reuna on terävä; laske sitä ja tahme pehmenee kohti reunaa pehmeällä laskulla ja näkymättömällä renkaalla. Käytä pehmeää sivellintä varjoihin ja hehkuihin, kovaa kiinteisiin muotoihin.</dd>
+  <dt>Virtaus</dt><dd>Kuinka paljon maalausta jokainen tahma asettaa, vain Sivellintä varten. Alle 100%:lla väri rakentuu asteittain, kun menet alueen uudelleen läpi, mikä sopii varjotukseen ja hitaisiin sekoituksiin. Pikselipyyhkijällä ei ole virtausohjainta.</dd>
+</dl>
+
+<h2 id="pixels-retouch">Dodge, Burn ja Sponge</h2>
+<p>Kolme retusointisivellintä toimivat jo olemassa oleviin pikseleihin värin asettamisen sijaan, jakamalla yhden työkalupaikan. Ne maalaavat kuin Sivellint — sama koko, kovuus ja renkas piirtoalueella — ja rakentuvat, kun menet alueen uudelleen läpi, joten kevyt kosketus on asteittainen ja luja nopea.</p>
+<dl>
+  <dt>Dodge</dt><dd>Valottaa missä maalaat, nostaa varjot ja lisää korostuksia.</dd>
+  <dt>Burn</dt><dd>Tummentaa missä maalaat, syventää varjoja ja reunoja.</dd>
+  <dt>Sponge</dt><dd>Nostaa kylläisyyttä, tekee väreistä rikkaimpia, mitä enemmän menet niiden läpi.</dd>
+</dl>
+<p>Jokainen jättää läpinäkyvät pikselet koskemattomaksi, pysyy valinnassa, kun sellainen on asetettu ja koko veto peruu yhdellä vedolla.</p>
+
+<h2 id="pixels-more-tools">Astia, muodot ja liukuväri</h2>
+<p>Maalaaminen ei ole vain Sivellint. Pikselitasolla asettaa väriä kolme muuta työkalua: <strong>Maala-astia</strong> tulvaa yhtenäisen samankaltaisen värin alueen mistä napsautat; <strong>muototyökalut</strong> leimaavat suorakulmion, ellipsin, tähden tai monikulmion suoraan pikseleihin polun piirtämisen sijaan ja <strong>Liukuväri-työkalu</strong> maalaa lineaarisen tai radiaalisen sekoituksen pinnan yli. Jokainen kunnioittaa nykyistä valintaa, jotta voit rajoittaa täytteen tai liukuvärin valittuun alueeseen.</p>
+
+<h2 id="pixels-selecting">Pikselien valitseminen</h2>
+<p><strong>Pikselivalinta</strong> — valintakaari — rajoittaa jokaisen maalauksen ja muokkaukseen alueeseen sen sisällä, kuten malline. Kolme työkalua tekee yhden, jakamalla pikselivalintapaikan: <strong>Suorakulmainen</strong> ja <strong>Elliptinen valintakaari</strong> ja vapaamuotoinen <strong>Lassovalintakaari</strong>, jonka jäljität käsin. Vedä piirtääksesi valinnan; tavallinen veto korvaa nykyisen.</p>
+<p><strong>Automaattinen valinta</strong> valitsee värin mukaan muodon sijaan: napsauta pikselitasoa ja se ottaa yhtenäisen väripalan ympäriltä, missä napsautit, jäljittäen marssivat muurit ääriviivan ympärille — kätevää tasaisen taustan tai yhden värin alueen nostamiseen. Kuinka lähellä värin täytyy olla, jotta se otetaan, on <strong>Toleranssi</strong> Automaattinen valinta -asetuksissa, sama asetus, jota se käyttää vektorikohteilla; nosta sitä kerätäksesi enemmän, laske sitä pysyäksesi lähinnä vastaavuudessa. Aukot palassa jätetään valinnasta pois.</p>
+<p>Valinnat yhdistyvät, joten muoto voidaan rakentaa useammasta vedosta tai napsautuksesta: pidä <kbd>&#8679;</kbd> <strong>lisätäksesi</strong> valintaan, <kbd>&#8997;</kbd> <strong>vähentääksesi</strong> ja molemmat yhdessä säilyttääksesi vain <strong>päällekkäisyyden</strong> — valintakaaret ja Automaattinen valinta yhdistyvät samalla tavalla. <strong>Valitse &gt; Kaikki</strong> (<kbd>&#8984;A</kbd>) valitsee jokaisen pikselin, <strong>Valitse &gt; Käänteinen</strong> kääntää valintakaaren ja <strong>Poista valinta</strong> — <kbd>&#8984;D</kbd> pikselitasolla — pudottaa sen. Marssivat muurit näyttävät valinnan piirtoalueella.</p>
+
+<h2 id="pixels-editing-selection">Pikselien siirtäminen, leikkaaminen ja kopioiminen</h2>
+<p>Valinnan ollessa asetettu Valintatyökalu siirtää pikseleitä sen sisällä: vedä valintakaaren sisältä ja valittu maalaus nousee ja matkustaa, puhdistaen sen, missä se oli ja kantaen valintakaaren mukana. Pidä <kbd>&#8997;</kbd> vedon aikana jättääksesi alkuperäisen paikoilleen ja siirtääksesi <strong>kopion</strong>.</p>
+<p>Muunnostyökalut toimivat valinnassa myös. Valintakaaren ollessa asetettu Valintatyökalun ja <strong>Vapaa muunnos -työkalun</strong> (<kbd>E</kbd>) valintakaari kietoo valintakaaren, ei koko tasoa, jotta voit skaalata, kääntää tai siirtää vain osan kuvasta; <strong>Objekti &gt; Muunnos</strong> ja nuolinuolet vaikuttavat siihen samalla tavalla. Nostetut pikselit kellovat tasolla työn aikana, jotta voit vetää niitä uudelleen ja uudelleen menettämättä yksityiskohtia. Paina <kbd>Enter</kbd>, valitse toinen työkalu tai tee uusi valinta asettaaksesi ne, mikä on yksi peruutusvaihe, tai paina <kbd>Esc</kbd> palauttaaksesi kaiken takaisin, missä se oli. Kokonaisten pikselien siirtäminen pitää ne täsmälleen sellaisina kuin ne olivat; skaalaus tai kääntäminen resampleeraa ne kerran, kun ne asetetaan.</p>
+<p>Vapaa muunnos -työkalun <strong>Vapaamuotoinen väännös</strong> ja <strong>Perspektiiviväännös</strong> toimivat pikseleillä myös, valintakaarella tai koko tasolla: vedä laatikon kulmaa (tai pidä <kbd>&#8984;</kbd> vedon aikana yhdestä Vapaa muunnos -tilassa) vetääksesi kuvan oikeasta, esimerkiksi sovittaaksesi valokuvan näytölle tai kyltseen, joka näkyy kulmassa. Vedon aikana Scissor näyttää nopean esikatselun näytön kokoisena, jotta se pysyy sujuvana suurellakin valokuvalla; itse pikselet vedetään kerran, täysellä resoluutiolla, kun painat <kbd>Enter</kbd> tai siirryt eteenpäin ja valintakaari seuraa uutta muotoa.</p>
+<p>Kopiointi (<kbd>&#8984;C</kbd>) ja leikkaus (<kbd>&#8984;X</kbd>) toimivat pikseleillä valintakaaren sisällä: kopiointi jättää tason sellaiseksi kuin se on, leikkaus ottaa pikselet pois. Liittäminen (<kbd>&#8984;V</kbd>) laittaa ne <strong>uudelle pikselitasolle</strong> juuri sen yläpuolelle, mistä ne tulivat, täsmälleen samassa paikassa, valmiina siirrettäväksi tai muunnettavaksi itsenäisesti. Samat komennot ovat <strong>Luo &gt; Pikselitaso</strong> -kohdassa ja valinta ohjaa myös pintakomentoja: <strong>Täytä täytteen värillä</strong> täyttää vain valitun alueen, <strong>Tyhjennä</strong> ja <strong>Poista</strong> pyyhkivät sen ja ilman valintaa kumpikin toimii koko tasoon.</p>
+
+<h2 id="pixels-adjustments">Säädöt</h2>
+<p><strong>Objekti &gt; Pikselitaso &gt; Säädöt</strong> -alavalikko retusoi pikselitason väriä, rajoittuen valintaan, kun sellainen on asetettu. Jokainen avaa valintaikkunan, joka esikatselussa piirtoalueella vedon aikana.</p>
+<dl>
+  <dt>Kirkkaus / Kontrasti, Tasot</dt><dd>Asettaa yleisen valon ja kontrastin tai kartoittaa mustan pisteen, valkoisen pisteen ja gamman tarkemman sävynhallinnan.</dd>
+  <dt>Sävy / Kylläisyys, Vibranssi</dt><dd>Siirtää sävyn ja nostaa tai laskee kylläisyyttä alustan yli tai käyttää Vibranssia vaimennettujen värien vahvistamiseen jättäen jo elävät rauhaan.</dd>
+  <dt>Väritasapaino</dt><dd>Työntää keskisävyjä kohti syaania tai punaista, magenta tai vihreää, keltaista tai sinistä.</dd>
+  <dt>Liukuvärikartta</dt><dd>Värittää tasoon sen kirkkauden mukaan, kartoittaen varjot yhteen väriin ja korostukset toiseen.</dd>
+  <dt>Kylläisyys pois, Käännä</dt><dd>Kaataa kaiken värin harmaaksi tai kääntää jokaisen värin vastakseen.</dd>
+  <dt>Kynnys, Posterize</dt><dd>Vähentää kuvan puhtaaksi mustaksi ja valkoiseksi valitulla tasolla tai pieneksi määräksi sävyjä kanavaa kohden.</dd>
+</dl>
+
+<h2 id="pixels-filters">Suodattimet</h2>
+<p><strong>Suodattimet</strong> -alavalikko muotoilee itse pikseleitä, jälleen valinnan sisällä.</p>
+<dl>
+  <td>Gaussian Blur</dt><dd>Pehmentää tasoa tasaisella, säädettävällä määrällä.</dd>
+  <td>Terävöitä, Unsharp Mask</dt><dd>Terävöittää yksityiskohdat — Unsharp Mask antaa hallinnan säteellä, määrällä ja kynnyksellä, joka säästää tasaiset alueet ja melun.</dd>
+  <td>Pixelate</dt><dd>Kuormittaa kuvan neliötiiliksi mosaiikiksi.</dd>
+  <td>Lisää kohinaa</dt><dd>Hajottaa jauhoa maalauksen yli.</dd>
+  <td>Etsi reunat, Relief</dt><dd>Jäljittää, missä väri muuttuu, kirkkaina viivoina tummalla tai harmaana reliefinä.</dd>
+</dl>
+<p><strong>Suodattimet &gt; Tehosteiden esikatselut</strong> näyttää tason ruudukkona live-pienoiskuvia, kukin yhdellä säädöllä tai suodattimella sovellettuna, jotta voit valita silmällä nimen sijaan. Pienoiskuvan valitseminen pitää ikkunan auki. Tehosteen asetukset ilmestyvät ruudukon vieressä ja piirtoalue esikatselun tulosta, kun muutat niitä. Mitään ei sovelleta, ennen kuin napsautat <strong>Käytä</strong> (tai painat <kbd>Enter</kbd>). <strong>Peruuta</kbd> tai <kbd>Esc</kbd> palauttaa kuvan takaisin ja yksi peruutus poistaa sovelletun tehosteen. Voit vetää ikkunan otsikollaan nähdäksesi piirtoalueen sen takana.</p>
+
+<h2 id="pixels-undo">Nopea, tiiliperustainen peruutus</h2>
+<p>Koko veto peruu yhdellä vedolla, riippumatta siitä, kuinka pitkä se oli: paina <kbd>&#8984;Z</kbd> kerran ja viimeinen merkki on pois ja <kbd>&#8679;&#8984;Z</kbd> tuo sen takaisin. Jos ensimmäisen vedon täytyi luoda tason, taso menee taakse vedon kanssa sen sijaan, että se jätettäisiin tyhjäksi jälkeen.</p>
+<p> kulississa pikselitaso pidetään pienten tiilien ruudukossa ja veto kopioi vain tiilit, jotka se todella koski. Peruutus pitää koko asiakirjan kuvakaappauksia, mutta veto maksaa vain omat tiilensä koko pinnan sijaan, joten maalaaminen suurella tasolla pysyy nopeana ja pitkä sivellintyöistunto ei täytä muistia. Tasaiset yhden värin alueet tallennetaan tiiviisti, joten taso, joka on lähinnä yhtä väriä, vie tuskin tilaa.</p>
+
+<h2 id="pixels-treating">Pikselitason käsitteleminen kuin kohdetta</h2>
+<p>Pikselitaso on kohde asiakirjassa, joten kaikki, mitä jo tiedät, pätee. Valitse se, siirrä sitä ja skaalaa, kääntää, peilaa tai viistää <strong>Objekti &gt; Muunnos</strong> -komennolla, valintakaarella tai Vapaa muunnos -työkalulla. Ilman valintakaarta kehys kietoo tason maalatut pikselet koko pinnan sijaan ja muunnos toimii näille pikseleille: siirtäminen pitää ne koskemattomina, kun taas skaalaus tai kääntäminen paistetaan pikseleihin, kun painat <kbd>Enter</kbd>, valitset toisen työkalun tai valitset jotain muuta, jotta taso pysyy pystyssä ja seuraava sivellinveto laskeutuu oikein. Aseta sen peittävyys ja anna sille kuudestatoista sekoitustilaa Läpinäkyvyys-paneelista asettaaksesi maalatun värin piirrettyjen teosten päälle. Napsauttaminen valitsee tason vain siellä, missä sillä on maalausta, joten läpinäkyvä kulma antaa sinun napsauttaa suoraan läpi sen alle olevalle. <strong>Monista</strong> kopioi pikselitason kuten minkä tahansa kohteen — edullisesti, koska kopio jakaa tiilensä, kunnes niistä toista maalataan.</p>
+<p><strong>Objekti &gt; Pikselitaso &gt; Yhdistä alas</strong> tasottaa pikselitason suoraan sen alla olevaan pikselitasoon ja poistaa ylemmän, jättäen yhden tason, jossa molemmat on yhdistetty. Jos tasot ovat eri muunnosten alla — sanotaan, että yksi on kääntynyt — ylemmän resamplataan aleman ruudukkoon se yhdistettäessä.</p>
+<p>Kaksi komentoa toimivat koko pintaan kerralla:</p>
+<dl>
+  <dt>Objekti &gt; Pikselitaso &gt; Täytä täytteen värillä</dt><dd>Tulvaa koko pinnan nykyisellä täytteen värillä. Käytä tätä asettaaksesi pohjamaaliksi ennen maalaamista sen päälle tai tulvataaksesi tason, joka on muiden teosten takana.</dd>
+  <dt>Objekti &gt; Pikselitaso &gt; Tyhjennä</dt><dd>Tyhjentää pinnan poistamatta tasoa, jotta voit aloittaa maalaamisen uudelleen säilyttäen tason paikan, muunnoksen, peittävyyden ja sekoitustilan.</dd>
+</dl>
+<p>Molemmat komennot ovat myös <strong>Tehoste &gt; Pikselitaso</strong> -kohdassa.</p>
+
+<h2 id="pixels-masks">Tasomaskit</h2>
+<p><strong>Tasomaski</strong> piilottaa osia pikselitasosta poistamatta niitä: taso näkyy siellä, missä maski on valkoinen ja piilossa siellä, missä se on musta, harmaiden ollessa osittaisen läpinäkyvyyden. Koska mitään ei pyyhkistä, voit maalia maskia edestakaisin niin useasti kuin haluat. Komennot ovat <strong>Objekti &gt; Pikselitaso</strong> -kohdassa.</p>
+<dl>
+  <dt>Lisää tasomaski</dt><dd>Liittää maskin, joka paljastaa kaiken aluksi, valmiina maalattavaksi.</dd>
+  <dt>Lisää tasomaski valinnasta</dt><dd>Rakentaa maskin nykyisestä pikselivalinnasta: mitä sisällä on, pysyy, mitä ulkona on, piilotetaan. Nopea tapa leikata muoto valokuvasta tuhoamatta.</dd>
+  <dt>Muokkaa maskia</dt><dd>Kytke maskin maalaus päälle ja pois. Kun se on päällä, Sivellint, Pyyhkijä ja Maala-astia maalaavat maskia tason sijaan: maalaa mustalla (tai tumman värillä) piilottaaksesi, valkoisella paljastaaksesi, harmaalla himmeääksesi. Sivellin käyttää nykyisen täytteen värin valon, joten musta piilottaa ja valkoinen näyttää.</dd>
+  <dt>Käytä tasomaskia</dt><dd>Paistaa maskin tasoon lopullisesti — piilotetut pikselet tulevat läpinäkyviksi — ja poistaa maskin.</dd>
+  <dt>Poista tasomaski</dt><dd>Heittää maskin pois ja näyttää koko tason uudelleen, koskemattomana.</dd>
+</dl>
+<p>Maskitettu taso vie ja tallentaa maskin jo sovellettuna ja sekoittuu ja muuntuu kuten mikä tahansa muu taso.</p>
+
+<h2 id="pixels-rasterize">Vektoriteoksen muuntaminen pikseleiksi: Rasteroi</h2>
+<p><strong>Objekti &gt; Rasteroi</strong> korvaa nykyisen valinnan upotetulla kuvalla itsestään, paistaen polut, tekstin ja kaikki tehosteet kiinteiksi pikseleiksi. Käytä tätä, kun haluat vektorilopetuksen lakata olemasta muokattava, kun tehoste on helpompi käsitellä tasona tai viedäksesi kappaleen, joka pitäisi näyttää samalta kaikkialla kantamatta live-rakennettaan. Tulos on upotettu kuva eikä maalattava pikselitaso, joten pidä kopio alkuperäisestä teoksesta, jos saatat tarvita sitä muokata uudelleen. <strong>Näytä &gt; Pikseliesikatselu</strong> (<kbd>&#8997;&#8984;Y</kbd>) antaa sinun tarkistaa, miten vektori laskeutuu pikseliruudulle ennen kuin sitoudut.</p>
+
+<h2 id="pixels-saving">Tallentaminen ja vienti</h2>
+<p><code>.cut</code>-asiakirjat pitävät pikselitasot muiden teosten mukana, pakattuna niin, että tasaiset alueet vievät tuskin tilaa ja avautuvat täsmälleen sellaisina kuin ne maalattiin.</p>
+<p>Miten pikselitasot poistuvat asiakirjasta, riippuu muodosta:</p>
+<dl>
+  <dt>PNG, JPEG ja WebP</dt><dd>Tasoa koko asiakirjan pikseleiksi, joten maalatut ja piirretty yhdistyvät yhdeksi bitmapiksi. PNG voi säilyttää läpinäkyvyyden; vie @2x:llä terävämpi tulos.</dd>
+  <dt>SVG ja PDF</dt><dd>Kirjoittaa maalatun pinnan upotettuna kuvana vektorin keskelle, joten asiakirja, joka sekoittaa piirrettyä ja maalattua, matkustaa yhtenä tiedostona muotonsa edelleen terävinä.</dd>
+</dl>
+<p>Koska rasteri ja vektori asuvat samassa asiakirjassa ja vievät yhdessä, voit rakentaa kappaleen luonnollisella tavalla: puhtaat muodot ja teksti vektoreina ja osat, jotka haluavat maalauksen tunnetta, pehmeän hehkun, tekstuurisen värjauksen, retusoidun valokuvan, pikselitasoina pinottuna niiden välille.</p>

@@ -1,0 +1,165 @@
+<p class="lede">Kaikki, mikä muuttaa, missä kohde on, kuinka se on iso tai mihin suuntaan se on kääntynyt, elää täällä: siirtäminen ja skaalaaminen käsin, tarkat numeeriset muunnokset, tasaus ja pinoaminen, live-toistot, muovakkeet, kääreet ja tason muuntaminen kiinteäksi.</p>
+
+<p>Alla olevat pikanäppäimet on kirjoitettu macOS-muodossa. Windowsilla ja Linuxilla lue <kbd>⌘</kbd> Ctrl:ksi, <kbd>⌥</kbd> Alt:ksi ja <kbd>⇧</kbd> Shift:ksi.</p>
+
+<h2 id="transform-select-move">Valitseminen ja siirtäminen</h2>
+<p>Ennen kuin voit muuntaa mitään, sinun on sanottava mitä. Käytä näitä ensin: valintatyökalut päättävät, mihin veto, numeerinen komento tai paneelin kenttä vaikuttaa.</p>
+
+<h3 id="transform-selection-tools">Valintatyökalut</h3>
+<table>
+  <thead><tr><th>Työkalu</th><th>Pikanäppäin</th><th>Mitä se valitsee</th></tr></thead>
+  <tbody>
+    <tr><td>Valintatyökalu</td><td><kbd>V</kbd></td><td>Kokonaiset kohteet ja ryhmät.</td></tr>
+    <tr><td>Suora valintatyökalu</td><td><kbd>A</kbd></td><td>Yksittäiset ankkurit ja polun segmentit.</td></tr>
+    <tr><td>Ryhmän valintatyökalu</td><td></td><td>Yksi kohde ryhmän sisällä; jokainen lisä napsautus laajentaa ryhmään ympärille.</td></tr>
+  </tbody>
+</table>
+<p>Shift-napsautus lisää kohteen valintaan tai pudottaa sen takaisin. Vedä tyhjän piirtoalueen yli valintakaaren saadaksesi ja pidä <kbd>⇧</kbd> lisätäksesi sen, mitä valintakaari sai, siihen, mikä on jo valittu. Ryhmän kaksoisnapsautus Valintatyökalulla astuu sen sisään, jotta voit työskennellä yhden jäsenen kanssa hajottamatta.</p>
+
+<h3 id="transform-moving">Valinnan siirtäminen</h3>
+<p>Vedä valittua kohdetta siirtääksesi sitä. <kbd>⌥</kbd> pidettäessä jättää kopion taakse ja vetää sitä sijaan, mikä on nopea tapa kopioida paikalleen ja siirtää yhdellä liikkeellä. <kbd>⇧</kbd> pidettäessä rajoittaa siirron 45° askeluihin mitattuna Asetuksissa asetetusta rajoituskulmasta ja kytkee kohdistuksen pois; ilman <kbd>⇧</kbd> valinta kohdistuu lähellä oleviin reunoihin, keskuksiin ja kulmiin. Nuolinuolet nyökätävät näppäimistön askeleella, <kbd>⇧</kbd> nuolella nyökätävät kymmenkertaisella askeleella ja <kbd>⌥</kbd> nuolella nyökätävät kopion.</p>
+
+<h3 id="transform-bounding-box">Valintakaari: skaalaus ja kierto käsin</h3>
+<p>Valintakaari kantaa kahdeksan kahvaa. Vedä yhtä muuttaaksesi kokoa: <kbd>⇧</kbd> pitää mittasuhteet ja <kbd>⌥</kbd> skaalaa keskeltä vastakkaisen kahvan sijaan. Juuri kulman ulkopuolella osoitin astuu kiertovyöhykkeeseen; vedä siinä kääntääksesi valintaa laatikon keskeltä, <kbd>⇧</kbd> kohdistaen 45&deg;. Kierron jälkeen laatikko jää vinossa teoksen kanssa. <strong>Objekti &rsaquo; Muunnos &rsaquo; Palauta valintakaari</strong> suoristaa sen takaisin, jotta myöhempien leveyden ja korkeuden muokkaukset lukeutuvat sivun akselien mukaan.</p>
+
+<h2 id="transform-numeric">Numeeriset muunnokset</h2>
+<p>Vetäminen on nopeaa, mutta likimääräistä. Kun arvon on oltava tarkka tai sama monilla kohteilla, kirjoita se. Muunnos-paneeli pitää live-luvut valinnalle ja <strong>Objekti &rsaquo; Muunnos</strong> -alavalikko sisältää kertakäyttöiset komennot Kopio-vaihtoehdon kanssa.</p>
+
+<h3 id="transform-panel">Muunnos-paneeli</h3>
+<p>Muunnos-paneeli (<kbd>⇧F8</kbd>) näyttää X, Y, W ja H pikseleinä valinnalle; kirjoita arvo ja paina Return asettaaksesi sen. Niiden alla ⟳-kenttä kääntää valintaa kulman ja ⧄-kenttä viistää sitä yhden, kumpikin palautuu nollaan sovellettaessaan. Paneeli tarvitsee jotain valittua; ilman valintaa se himmeää ja sanoo niin.</p>
+<p>Ominaisuudet-paneeli toistaa X, Y, W ja H käännöksellä ja kahdella painikkeella, jotka kääntävät valinnan vaakasuoraan tai pystysuoraan sen oman keskeltä, joten yleisimmät liikkeet ovat käden ulottuvuudessa ilman toisen paneelin avaamista.</p>
+
+<h3 id="transform-commands">Siirrä, Kierrä, Peilaa, Skaalaa ja Viistä</h3>
+<p><strong>Objekti &rsaquo; Muunnos</strong> pitää numeeriset komennot. Jokainen avaa pienen valintaikkunan ja jokainen (paitsi Siirrä, joka on suora siirto) muuntaa viitepisteen ympäriltä. Kopio-ruutu jokaisessa valintaikkunassa soveltaa muutokseen kopioon ja jättää alkuperäisen koskemattomaksi, mikä on tapa rakentaa peilattu pari tai skaalattu kaiku yhdellä vedolla.</p>
+<table>
+  <thead><tr><th>Komento</th><th>Pikanäppäin</th><th>Kentät</th></tr></thead>
+  <tbody>
+    <tr><td>Siirrä&hellip;</td><td><kbd>⇧⌘M</kbd></td><td>Vaakasuora, Pystysuora, Kopio.</td></tr>
+    <tr><td>Kierrä&hellip;</td><td></td><td>Kulma, Kopio.</td></tr>
+    <tr><td>Peilaa&hellip;</td><td></td><td>Akseli (Vaakasuora tai Pystysuora), Kulma, Kopio.</td></tr>
+    <tr><td>Skaalaa&hellip;</td><td></td><td>Vaakasuora %, Pystysuora %, Kopio.</td></tr>
+    <tr><td>Viistä&hellip;</td><td></td><td>Viistokulma, Akselin kulma, Kopio.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="transform-each-again">Muunna jokainen ja Muunna uudelleen</h3>
+<p><strong>Muunna jokainen&hellip;</strong> (<kbd>⌥⇧⌘D</kbd>) skaalaa, siirtää, kääntää ja peilaa jokaisen valitun kohteen <em>sen oman</em> keskeltä valinnan jaetun keskeltä sijaan. Sen valintaikkuna ottaa Skaalaus H ja V, Siirrä H ja V, Kierrä kulman, Peilaa X ja Peilaa Y -valintaruudut ja Kopio. Käytä tätä sekoittaaksesi tai levittääksesi joukon kohteita, jotta kumpikaan kääntyy ja kasvaa paikallaan kiertämällä ryhmää sijaan.</p>
+<p><strong>Muunna uudelleen</strong> (<kbd>⌘D</kbd>) toistaa viimeisen muunnoksen nykyiselle valinnalle. Siirrä kohde, paina sitten <kbd>⌘D</kbd> muutaman kerran ja saat tasaisesti askeleitetun rivin; yhdistä se <kbd>⌥</kbd>-vetämällä kopiota rakentaaksesi toistavia kuvioita käsin.</p>
+
+<h2 id="transform-tools">Muunnostyökalut ja viitepiste</h2>
+<p>Kierto (<kbd>R</kbd>), Peilaus (<kbd>O</kbd>), Skaalaus (<kbd>S</kbd>) ja Viistä-työkalut toimivat kukin viitepisteen ympäriltä, piirrettynä pieneksi ristikkäiseksi. Se alkaa valinnan keskeltä; napsauta minne tahansa piirtoalueelle siirtääksesi sen sinne ja jotain muun valitseminen palauttaa sen takaisin uuteen keskustaan. Vedä sitten piirtoalueella kääntääksesi, peilataksesi, skaalaataksesi tai viistääksesi tämän pisteen ympäriltä.</p>
+<p><kbd>⇧</kbd> rajoittaa jokaista työkalua: 45&deg; askeleet Kierrölle ja Peilaukselle, yhtäläiset vaakasuora ja pystysuora Skaalaukselle, yksi akseli Viistämiselle. <kbd>⌥</kbd> vedon aikana muuntaa kopion ja jättää alkuperäisen. <kbd>⌥</kbd>-napsautus asettaa viitepisteen ja avaa kyseisen työkalun numeerisen valintaikkunan pisteen jo asetettuna, jotta voit kääntää muodon kulman tarkalla kulmalla.</p>
+
+<h2 id="transform-free">Vapaa muunnos -työkalu</h2>
+<p>Vapaa muunnos -työkalu (<kbd>E</kbd>) laittaa siirtämisen, skaalauksen, kääntämisen, viistämisen ja kaksi väännön tyyppiä yhteen valintakaareen. Vedä laatikon sisältä siirtääksesi sitä, vedä kahvaa muuttaaksesi kokoa ja vedä juuri kulman ulkopuolella kiertääksesi, <kbd>⇧</kbd> kohdistaen 45&deg;. Käytä tätä, kun haluat kokeilla useita muutoksen tyyppejä yhdellä elellä työkalujen vaihtamisen sijaan.</p>
+<p>Valintatyökalun laatikko voi vääntyä myös: pidä <kbd>Ctrl</kbd> (tai <kbd>&#8984;</kbd>) vedon aikana yhdestä sen kulmakahvasta siirtääksesi kyseisen kulman itsenäisesti skaalaamisen sijaan. Se toimii muotoihin ja valokuviin samalla tavalla; pikseleillä nopea esikatselu seuraa vedoa ja tulos lasketaan, kun painat <kbd>Enter</kbd>.</p>
+
+<h3 id="transform-free-widget">Widget</h3>
+<p>Pieni widget kelloo laatikon vieressä neljällä painikkeella, kukin nimeää itsensä, kun viet hiiren sen päälle: <strong>Rajoita</strong>, <strong>Vapaa muunnos</strong>, <strong>Perspektiiviväännös</strong> ja <strong>Vapaamuotoinen väännös</strong>. Rajoita tekee skaalauksen suhteelliseksi <kbd>⇧</kbd> pitämättä; sen ollessa päällä <kbd>⇧</kbd> vapauttaa mittasuhteet sijaan. Kaksi väännön tilaa jättää vain neljä kulmaa vedettäväksi.</p>
+
+<h3 id="transform-free-keys">Väännös näppäimistöltä</h3>
+<p>Samat väännökset voi saavuttaa poistumatta oletustilasta. Pidä <kbd>⌘</kbd> reunakahvassa viistääksesi tämän reunan pitkin. Pidä <kbd>⌘</kbd> kulmassa vääntääksesi sen vapaasti itsenäisesti; lisää <kbd>⇧</kbd> rajoittaaksesi kulman matkan 45&deg;:n. Pidä <kbd>⌘⌥⇧;</kbd> kulmassa perspektiivissä, naapuri kulma peiltäen vedon. Muokkaajan painaminen tai vapauttaminen vedon puolessa vaihtaa toiminnon heti ja nimi, jolla se päättyy, Skaalaus, Viistäminen, Perspektiiviväännös tai Vapaamuotoinen väännös, on se, mitä vaihe kutsutaan Historia-paneelissa myöhemmin. Teksti, sijoitetut kuvat ja symbolin esiintymät eivät voi vääntyä; ne jätetään sellaisina kuin ne ovat ja Scissor kertoo sinulle, kun veto ohittaa ne.</p>
+
+<h3 id="transform-free-reference">Viitepiste</h3>
+<p>Viitepiste on laatikon keskellä ristikkäisenä ja voit vetää sitä minne tahansa; yksinään se ei liikuta mitään. Laatikko kääntyy ja skaalaa sen ympäriltä ja se matkustaa teoksen mukana, kun siirrät valintaa. Pudota se lähellä yhtä laatikon yhdeksästä pisteestä (neljä kulmaa, neljä keskikohtaa tai keskus) ja se asettuu kyseiseen pisteeseen. <kbd>⌥</kbd> skaalatessa ohittaa asetetun viitepisteen ja skaalaa keskeltä. Sivun viistäminen <kbd>⌘</kbd>:llä myös pitää asetetun viitepisteen paikoillaan.</p>
+
+<h3 id="transform-free-pins">Kahvojen siirtäminen</h3>
+<p>Kytke <strong>Siirrä kahvoja</strong> pikapalkissa (tai asetuspalkilla) Vapaa muunnos ollessa aktiivinen ja kulman vetäminen siirtää kyseisen kulman itsenäisesti koskematta teokseen. Lähellä ankkuria se asettuu siihen. Kytke Siirrä kahvoja pois ja vedä siirrettyä kulmaa: muoto skaalaa, jotta kulma seuraa osoitinta ja jokainen muu piste säilyttää saman suhteellisen etäisyyden siitä, mikä pitää paikoillaan, mikä on vastakkainen kulma, asetettu viitepiste tai keskus, kun <kbd>⌥</kbd> on pidetty. <kbd>⇧</kbd> pitää mittasuhteet. Siirretyt kulmat matkustavat teoksen mukana ja kaksoisnapsautus yhteen laittaa kaikki neljä takaisin laatikkoon.</p>
+
+<h2 id="transform-align-arrange">Tasaus, järjestely ja ryhmitys</h2>
+<p>Nämä komennot asettavat, miten kohteet tasautuvat toisiinsa, kuka on kenenkään edessä ja kerätäänkö, lukitaanko tai piilotetaanko, kun työskentelet lopun parissa.</p>
+
+<h3 id="transform-align">Tasaus ja jakelu</h3>
+<p>Tasaa-paneeli (<kbd>⇧F7</kbd>) on kolm riviä. <strong>Tasaa kohteet</strong> tasaa valinnan vasemmalle, keskelle tai oikealle ja ylös, keskelle tai alas. <strong>Jaa kohteet</strong> levittää kolme tai useampi kohde niin, että niiden yläosat, keskukset, alareunat, vasemmat reunat, keskukset tai oikeat reunat putoavat tasaisiin väleihin. <strong>Jaa välit</strong> asettaa yhtäläisen välin niiden välillä pystysuoraan tai vaakasuoraan. Valikko paneelissa valitsee, tasautuuko kaikki valintaan vai alustaan. Tasaus tarvitsee vähintään yhden kohteen (yksi kohde tasautuu alustaan); jakelu tarvitsee kolme ja paneeli himmeää näitä painikkeita, kunnes niitä on. Kuusi tasautusta ilmestyy myös <strong>Objekti &rsaquo; Tasaa</strong> -kohdan alle.</p>
+
+<h3 id="transform-arrange">Järjestä: pinojärjestys</h3>
+<p>Jokainen kohde on tasolla pinossa ja <strong>Objekti &rsaquo; Järjestä</strong> siirtää valintaa sen läpi.</p>
+<table>
+  <thead><tr><th>Komento</th><th>Pikanäppäin</th></tr></thead>
+  <tbody>
+    <tr><td>Tuo eteen</td><td><kbd>⇧⌘]</kbd></td></tr>
+    <tr><td>Tuo eteenpäin</td><td><kbd>⌘]</kbd></td></tr>
+    <tr><td>Vie taakse</td><td><kbd>⌘[</kbd></td></tr>
+    <tr><td>Vie taakse</td><td><kbd>⇧⌘[</kbd></td></tr>
+  </tbody>
+</table>
+
+<h3 id="transform-grouping">Ryhmitys, lukitseminen ja piilottaminen</h3>
+<dl>
+  <dt><strong>Ryhmitä</strong> (<kbd>⌘G</kbd>) ja <strong>Hajota</strong> (<kbd>⇧⌘G</kbd>)</dt>
+  <dd>Kerää kohteet, jotta ne liikkuvat ja muuntuvat yhtenä tai vapauta ne takaisin. Ryhmään voi astua kaksoisnapsauttamalla sitä Valintatyökalulla.</dd>
+  <dt><strong>Lukitse &rsaquo; Valinta</strong> (<kbd>⌘2</kbd>) ja <strong>Avaa kaikki</strong> (<kbd>⌥⌘2</kbd>)</dt>
+  <dd>Lukitseminen tekee kohteista valitsemattomia, jotta ne pysyvät paikoillaan, kun työskentelet niiden yllä; Avaa kaikki vapauttaa kaiken, mikä oli lukittu.</dd>
+  <dt><strong>Piilota &rsaquo; Valinta</strong> (<kbd>⌘3</kbd>) ja <strong>Näytä kaikki</strong> (<kbd>⌥⌘3</kbd>)</dt>
+  <dd>Piilottaminen ottaa kohteet piirtoalueelta poistamatta niitä, mikä puhdistaa kiireisen kohtaan osaan, jota muokkaat; Näytä kaikki tuo ne takaisin.</dd>
+</dl>
+
+<h2 id="transform-repeat">Live-toistot</h2>
+<p><strong>Objekti &rsaquo; Toista</strong> rakentaa monta kopiota yhdestä kohteesta ja pitää ne liveinä: muokkaa alkuperäistä ja jokainen kopio seuraa. Käytä toistoa, kun teos on säännöllinen, kukka samoista terälehdistä tai laatoitettu ruudukko kuvakkeista, jotta voit muotoilla yhden elementin ja antaa lopun seurata sitä.</p>
+<dl>
+  <dt><strong>Radiaalinen&hellip;</strong></dt>
+  <dd>Kiertää kopioita keskeltä. Valintaikkuna asettaa Esiintymät ja Säde.</dd>
+  <dt><strong>Ruudukko&hellip;</strong></dt>
+  <dd>Laittaa kopiot riveihin ja sarakkeisiin. Valintaikkuna asettaa Sarakkeet, Rivit, Vaakasuora väli ja Pystysuora väli.</dd>
+  <dt><strong>Peilaa&hellip;</strong></dt>
+  <dd>Peilaa kopiot akselin yli. Valintaikkuna asettaa akselin (pystysuora tai vaakasuora) ja Siirron.</dd>
+</dl>
+<p>Valitun toiston kanssa Ominaisuudet-paneeli paljastaa samat ohjaimet myöhempää virittämistä varten: esiintymät ja säde radiaaliselle toistolle; sarakkeet, rivit ja vaakasuora ja pystysuora väli ruudukolle ja siirto ja peilausakseli peilaukseen. <strong>Vapauta</strong> muuttaa kopiot tavalliseksi, itsenäisesti muokattavaksi teokseksi, kun olet valmis.</p>
+<figure class="shot">
+  <img src="img/repeat.gif" width="640" height="640" loading="lazy"
+       alt="Yksi sininen terälehti toistettuna keskeltä radiaalisella toistolla, täyttyen kahdentoista terälehdeksi kukaksi, kun määrä kasvaa." />
+  <figcaption>Yksi terälehti ja radiaalinen toisto. Kun määrä nousee yhdestä kahteentoistatoista kukka täyttyy; muunna yksittäinen terälehti ja koko asia muuttuu sen mukana.</figcaption>
+</figure>
+
+<h2 id="transform-morph">Muovakkeet</h2>
+<p>Muovake täyttää kahden kohteen välisen aukon välissä olevien muotojen sarjalla, kumpikin askeleen lähempänä seuraavaa. Se on työkalu varjostetuille siirtymille värien välillä ja tasaisesti välitettyjen toistojen polun varrella.</p>
+<p>Muovaustyökalu (<kbd>W</kbd>) muovaa yhden kohteen toiseksi: napsauta ensimmäistä, sitten toista. Kolmannen napsauttaminen jatkaa ketjua ja olemassa olevaan muovakkeeseen napsauttaminen lisää kyseisen kohteen siihen. <strong>Objekti &rsaquo; Muovaus</strong> pitää loput:</p>
+<table>
+  <thead><tr><th>Komento</th><th>Pikanäppäin</th><th>Mitä se tekee</th></tr></thead>
+  <tbody>
+    <tr><td>Luo</td><td><kbd>⌥⌘B</kbd></td><td>Muovaa valitut kohteet yhteen.</td></tr>
+    <tr><td>Vapauta</td><td><kbd>⌥⇧⌘B</kbd></td><td>Palauttaa avainkohteet ja heittää askel pois.</td></tr>
+    <tr><td>Muovausasetukset&hellip;</td><td></td><td>Asettaa välin ja suunnan (katso alla).</td></tr>
+    <tr><td>Laajenna</td><td></td><td>Muuttaa välissä olevat askel todellisiksi, muokattaviksi kohteiksi.</td></tr>
+    <tr><td>Korvaa selkäranka</td><td></td><td>Taivuttaa askelien sarjan valitun polun pitkin.</td></tr>
+    <tr><td>Käännä selkäranka</td><td></td><td>Vaihtaa, kumpi selkärannan pää jokainen avainkohde on.</td></tr>
+    <tr><td>Käännä etualalta taakse</td><td></td><td>Kääntää askelien pinojärjestyksen.</td></tr>
+  </tbody>
+</table>
+<p><strong>Muovausasetukset&hellip;</strong> asettaa Välin Määritellyt askelut (kiinteä määrä välissä olevia), Määritelty etäisyys (kiinteä väli pikseleinä, täyttäen niin monta kuin mahtuu) tai Tasainen väri (niin monta askelta kuin tarvitaan tasaisen värisekoitukseen) ja asettaa Suunnan Tasaa sivulle tai Tasaa polkuun. Muovake pysyy live ja seuraa avainkohteitaan, joten kummankaan pään muokkaus virtaa koko sarjan.</p>
+<figure class="shot">
+  <img src="img/morph.gif" width="760" height="316" loading="lazy"
+       alt="Sininen tähti muovautumassa keltaiseksi ympyräksi kasvavan välissä olevien muotojen rivin kautta." />
+  <figcaption>Muovake tähdestä ympyrään. Kun askelien määrä kasvaa, enemmän välissä olevia muotoja täyttää aukon, kumpikin vähän lähempänä seuraavaa.</figcaption>
+</figure>
+
+<h2 id="transform-envelope">Shape Warp</h2>
+<p><strong>Objekti &rsaquo; Shape Warp</strong> taivuttaa teosta vastaamaan muotoa, pitäen sen muokattavana sen alla. Käytä tätä sovittamaan logo banneriin, taivuttaa tekstiriviä tai työntää tasaista kuviota pullistumaan. On kolme tapaa tehdä se.</p>
+<dl>
+  <dt><strong>Luo väännöllä&hellip;</strong> (<kbd>⌥⇧⌘W</kbd>)</dt>
+  <dd>Taivuttaa valinnan yhdellä sisäänrakennetuista väännön tyyleistä (Arc, Arch, Bulge, Flag, Wave, Fish, Rise, Fisheye, Inflate, Squeeze ja shell- ja arc-variaatiot), hallittuna Taivutuksen, Vaakasuoran ja Pystysuoran määrällä.</dd>
+  <dt><strong>Luo ylimmällä kohteella</strong> (<kbd>⌥⌘C</kbd>)</dt>
+  <dd>Käyttää ylintä valittua muotoa kääreenä ja kaataa kaiken sen alla olevan tämän ääriviivan sisään. Tarvitsee kaksi tai useampaa kohdetta: säilö ylhäällä, teos sen alla.</dd>
+  <dt><strong>Luo verkolla&hellip;</strong> (<kbd>⌥⌘M</kbd>)</dt>
+  <dd>Laittaa rivien ja sarakkeiden verkon pyytämäsi valinnan päälle. Se pysyy live: vaihda Suora valintatyökaluun (<kbd>A</kbd>) ja vedä minkä tahansa verkon risteyksen taivuttaaksesi sitä, mitä se pitää, niin useasti kuin haluat.</dd>
+</dl>
+<p><strong>Vapauta</strong> palauttaa teoksen sellaisena kuin se oli, kääreen muodon kanssa; <strong>Laajenna</strong> säilyttää taivutuksen ja heittää kääreen, jättäen väännetyt polut.</p>
+
+<h2 id="transform-3d">3D vektorimuodosta</h2>
+<p><strong>Tehoste &rsaquo; 3D ja Materiaalit</strong> muuttaa tason muodon kiinteäksi. Se pysyy live-tehosteena, joten alkuperäinen polku on siellä edelleen muokattavaksi ja näytöllä oleva kopio rakentuu uudelleen aina, kun muutat sitä.</p>
+<dl>
+  <dt><strong>Pursotus &amp; viisto</strong></dt>
+  <dd>Antaa muodolle syvyyttä, viistetty reunalla, jos haluat.</dd>
+  <dt><strong>Kierto</strong></dt>
+  <dd>Pyörittää profiilia akselin ympäri muotojen muotoon.</dd>
+  <dt><strong>Pullotus</strong></dt>
+  <dd>Pullottaa muotoa, kuin se olisi täytetty.</dd>
+  <dt><strong>Taso</strong></dt>
+  <dd>Kiertää tason muodon avaruudessa lisäämättä syvyyttä.</dd>
+</dl>
+<p>3D ja Materiaalit-paneeli kääntää kohteen X-, Y- ja Z-akseleilla, asettaa valon käännöksen ja korkeuden ja valitsee muovin, mattan tai metallin pinnan, Syvyys- ja Viisto-kentillä pursotusta varten.</p>
+<figure class="shot">
+  <img src="img/3d-extrude.gif" width="620" height="620" loading="lazy"
+       alt="Tasainen vektoritähti pursotettuna kolmiulotteiseksi tähdeksi ja kääntynyt näyttämään syvyyttään." />
+  <figcaption>Pursotus ja viisto rakentaa syvyyttä tasaisesta muodosta, live. Tähti pysyy muokattavana polkuna sen alla.</figcaption>
+</figure>

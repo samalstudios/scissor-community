@@ -1,0 +1,39 @@
+<p class="lede">Três ferramentas no Scissor fazem o trabalho repetitivo por si: <strong>Ações</strong> gravam uma sequência de comandos e reproduzem-na, <strong>Variáveis</strong> trocam texto e visibilidade a partir de uma tabela de dados para que um design se torne muitos, e <strong>Scripts</strong> conduzem o editor inteiro a partir de JavaScript. Nenhuma delas precisa de conta ou servidor - tal como o resto do Scissor, rodam na sua própria máquina.</p>
+
+<h2 id="automation-actions">Ações: grave uma vez, reproduza em qualquer lugar</h2>
+<p>O painel <strong>Ações</strong> (Janela &rsaquo; Ações) grava o que faz e reproduz-o numa nova seleção. Pressione <strong>Gravar</strong>, corra os comandos que quer capturar - alinhar, deslocar, adicionar uma sombra, o que quer que a sequência seja - depois pressione <strong>Parar</strong> e dê um nome à ação. Ela junta-se à lista, mostrando quantos passos contém.</p>
+<p>Clique numa ação para a <strong>reproduzir</strong> no que quer que esteja selecionado agora; <kbd>&#8997;</kbd>-clique numa para a eliminar. Como uma ação é apenas uma lista de comandos, repete uma rotina exata em muitos objetos sem passar por ela de cada vez.</p>
+
+<h2 id="automation-variables">Variáveis: um design, muitas versões</h2>
+<p>O painel <strong>Variáveis</strong> (Janela &rsaquo; Variáveis) transforma um design fixo num modelo conduzido por dados. Duas coisas num objeto podem ser tornadas dinâmicas:</p>
+<dl>
+  <dt>Tornar Texto Dinâmico</dt><dd>Liga as palavras de um objeto de texto a uma variável, para que diferentes conjuntos de dados possam colocar texto diferente no mesmo lugar.</dd>
+  <dt>Tornar Visibilidade Dinâmica</dt><dd>Liga se um objeto se mostra, para que um conjunto possa ligar ou desligar partes do design.</dd>
+</dl>
+<p><strong>Desligar</strong> torna um objeto ligado fixo de volta.</p>
+
+<h3 id="automation-datasets">Conjuntos de dados</h3>
+<p>Um <strong>conjunto de dados</strong> é uma fileira de valores para essas variáveis - um crachá, um cartão, uma moldura. <strong>Capturar</strong> guarda os valores atuais como um novo conjunto; as setas passam de um conjunto para o próximo e o design atualiza-se para corresponder. <strong>Importar CSV&hellip;</strong> lê um lote inteiro de uma vez - uma coluna por variável, uma fileira por conjunto - e <strong>Exportar CSV</strong> grava os conjuntos de volta para editar numa folha de cálculo.</p>
+
+<h3 id="automation-batch">Exportando cada conjunto de uma vez</h3>
+<p><strong>Exportar Conjuntos de Dados&hellip;</strong> renderiza a prancha ativa uma vez para cada conjunto de dados e grava-os todos numa só passagem, como PNG, JPEG, WebP ou SVG. Uma folha de crachás, um conjunto de banners localizados ou uma série de cartões de redes sociais saem como um lote arrumado de arquivos, cada um com os seus próprios dados preenchidos.</p>
+
+<h2 id="automation-scripts">Scripts: conduzir o Scissor a partir de JavaScript</h2>
+<p>Para qualquer coisa que um menu não consiga expressar, um script consegue. <strong>Ficheiro &rsaquo; Scripts &rsaquo; Consola de Scripts&hellip;</strong> abre um editor onde escreve JavaScript e o corre contra o documento aberto; <strong>Outro Script&hellip;</strong> (<kbd>&#8984;F12</kbd>) corre um arquivo <code>.js</code> do disco. Um script corre num Web Worker, afastado da página, pelo que não pode tocar na interface nem nos seus arquivos exceto através do objeto <code>scissor</code> que lhe é dado - cada chamada é realizada no motor e respondida de volta.</p>
+<p>O objeto <code>scissor</code> cobre o terreno comum:</p>
+<dl>
+  <dt>Fazer formas e texto</dt><dd><code>scissor.rect</code>, <code>roundedRect</code>, <code>ellipse</code>, <code>polygon</code>, <code>star</code>, <code>path</code> e <code>text</code> desenham arte; cada um recebe uma posição e tamanho e um objeto de opções para <code>fill</code>, <code>stroke</code> e <code>strokeWidth</code> (cores são quaisquer cores CSS).</dd>
+  <dt>Ler o documento</dt><dd><code>await scissor.document()</code> retorna a aplicação, seleção, camadas e pranchas como os painéis as veem; <code>scissor.selection()</code> retorna apenas o que está selecionado.</dd>
+  <dt>Atuar sobre ele</dt><dd><code>scissor.select</code>, <code>group</code> e <code>undo</code>, e <code>scissor.run(command)</code> para qualquer comando do motor - os mesmos comandos que os menus enviam.</dd>
+  <dt>Falar de volta</dt><dd><code>scissor.log</code> imprime na consola; <code>scissor.alert</code> mostra uma mensagem.</dd>
+</dl>
+<p>Um pequeno exemplo - um anel de pontos coloridos e uma legenda:</p>
+<pre><code>const doc = await scissor.document();
+scissor.log('Pranchas:', doc.artboards.length);
+for (let i = 0; i &lt; 12; i++) {
+  const a = (i / 12) * Math.PI * 2;
+  await scissor.ellipse(300 + Math.cos(a) * 120, 260 + Math.sin(a) * 120, 36, 36,
+    { fill: `hsl(${i * 30} 80% 60%)` });
+}
+await scissor.text(230, 270, 'Olá, Scissor', { size: 24 });</code></pre>
+<p>A Consola de Scripts mantém o último código que correu, para que um script de trabalho esteja lá quando voltar a ele.</p>

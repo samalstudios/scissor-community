@@ -1,0 +1,134 @@
+<p class="lede">Hur en form ser ut är dess <em>utseende</em>: fyllningen inne i dess kontur, konturen ritad längs den, och opaciteten och blandningen som bestämmer hur den sitter över vad som ligger bakom. Var och en av dessa kan vara en fast färg, en gradient eller ett mönster, och ett objekt kan bära fler än en av var och en på en gång. Denna sida täcker färgkontrollerna, färgmodellerna, färgprover, gradienter, konturer, transparens, Målstack-panelen och grafiska stilar.</p>
+
+<p>Genvägarna nedan är skrivna i deras macOS-form. På Windows, läs <kbd>&#8984;</kbd> som Ctrl, <kbd>&#8997;</kbd> som Alt och <kbd>&#8679;</kbd> som Shift.</p>
+
+<figure class="shot">
+  <img src="img/artwork-landscape.png" width="1700" height="967" loading="lazy"
+       alt="En vektorlandskap av berg, himmel och en sjö, byggt av plattfyllda former i Scissor." />
+  <figcaption>En hel scen byggd av fyllda former. Varje färgband är en bana med sin egen fyllning.</figcaption>
+</figure>
+
+<h2 id="appearance-fill-and-stroke">Fyllningar och konturer</h2>
+<p>En bana, form eller textbit kan hålla en <strong>fyllning</strong>, färgen inne i dess kontur, och en <strong>kontur</strong>, linjen ritad längs den konturen. En fyllning kan vara en fast färg, en gradient eller ett mönster; en kontur kan vara en fast färg eller en gradient, med sin egen vikter och streckning. Vardera sida kan också ställas in till ingen, så att du kan rita en form med bara en kontur, eller bara en fyllning.</p>
+
+<h3 id="appearance-the-paint-chips">Fyllnings- och konturplattorna</h3>
+<p>Två överlappande plattor längst ner i verktygsraden håller fyllningen och konturen. Klicka på valfri för att öppna en färgväljare; den i fram är sidan som tangenterna och Färg-, Gradient- och Färgprovs-panelerna verkar på. Tryck <kbd>X</kbd> för att få fram den andra sidan, <kbd>&#8679;X</kbd> för att byta de två färgerna, <kbd>/</kbd> för att ställa in den främra sidan till ingen, och <kbd>D</kbd> för att återgå till standardvärdena: en vit fyllning, en svart kontur och en 1 pt vikt. Samma fyllning, kontur, vikt, opacitet och blandningsläge sitter också tillsammans i Egenskapspanelen, vilket är praktiskt när du vill ha dem alla på ett ställe.</p>
+<p>Utan något markerat ställer dessa kontroller in stilen som nästa objekt du ritar kommer att ta, så att du kan välja en färg innan du ritar snarare än efter.</p>
+
+<h3 id="appearance-eyedropper">Kopiera färg med pipetten</h3>
+<p>Pipetten (<kbd>I</kbd>) kopierar ett helt utseende från objektet du klickar på till markeringen. Håll ned <kbd>&#8679;</kbd> för att bara ta dess fyllnings- eller konturfärg till den aktiva sidan, eller <kbd>&#8997;</kbd> för att trycka markeringens utseende på objektet under pekaren istället. Att klicka på en placerad bild eller ett pixellager provar färgen under pekaren till den aktiva sidan, så att du kan lyfta en färg rakt ur ett foto. Nå efter pipetten när två objekt ska matcha: prova det ena, och det andra tar samma färg på ett enda klick.</p>
+
+<h2 id="appearance-colour">Färg</h2>
+<p>Färgen väljs i den lilla popup-väljaren på varje platta, eller, med mer kontroll, i Färgpanelen.</p>
+
+<h3 id="appearance-color-panel">Färgpanelen</h3>
+<p><strong>Färg</strong>-panelen (<kbd>F6</kbd>) visar den aktiva sidans färg som en uppsättning reglage, ett hexadecimalfält och ett spektrum. Fyllnings- och konturplattor högst upp väljer vilken sida du redigerar. Spektrumet löper nyanser över, vitt högst upp och svart längst ner; klicka eller dra i det för att välja. Tre snabbfärgprover bredvid ställer in Ingen, Vitt och Svart på ett klick, och <em>Invertera</em>- och <em>Komplement</em>-knapparna omformar den aktuella färgen (Komplement vänder dess nyans halvvägs runt medan den behåller sin mättnad och ljusstyrka).</p>
+<p>Färgmodellmenyn ställer in vilka reglage panelen visar. Valet behålls för sessionen, och nya färgprover görs i det.</p>
+<dl>
+  <dt>Gråskala</dt><dd>En enda K-reglage, från vitt vid 0% till svart vid 100%.</dd>
+  <dt>RGB</dt><dd>Rött, grönt och blått från 0 till 255, modellen för skärmarbete.</dd>
+  <dt>HSB</dt><dd>Nyans i grader, sedan mättnad och ljusstyrka i procent: oftast det snabbaste sättet att skjuta en färg utan att förlora dess karaktär.</dd>
+  <dt>CMYK</dt><dd>Cyan, magenta, gult och svart i procent, för utskrift.</dd>
+  <dt>Webb-säkert RGB</dt><dd>RGB fäst till de 216 webb-säkra färgerna. När den aktuella färgen inte är en av dem visas en varningstriangel; klicka på den för att fästa till närmaste webb-säkra färg.</dd>
+</dl>
+<p>När den aktiva sidan är målad med en global färgprov visas en nyansrad ovanför reglagen: den namnger färgprovet och låter dig ställa in en nyans från 0% till 100% snarare än att redigera färgen rakt av, så att konstverket förblir länkat till färgprovet.</p>
+
+<h2 id="appearance-swatches">Färgprover och färggrupper</h2>
+<p>En färgprov är en namngiven färg som sparas med dokumentet. Att måla från färgprover snarre än att skriva värden håller en palett konsekvent, och för globala färgprover låter det dig omforma hela ett dokument genom att redigera en färg.</p>
+
+<h3 id="appearance-swatches-panel">Färgprovspanelen</h3>
+<p><strong>Färgprover</strong>-panelen (öppna den från <strong>Fönster &rsaquo; Färgprover</strong>) listar dokumentets färgprover som ett rutnät eller som en lista; listvyn visar också varje färgprovs färgmodell. Ett enkelt klick målar den aktiva sidan. <kbd>&#8679;</kbd>-klicka väljer en rad färgprover och <kbd>&#8984;</kbd>-klicka lägger till eller tar bort ett från markeringen, så att du kan verka på flera på en gång. Sidfoten innehåller knappar för att växla vy, öppna panelmenyn, visa färgprovsalternativ, göra en färggrupp, göra en ny färgprov och ta bort det som plockas upp.</p>
+<p>Panelmenyn lägger till mer: <em>Lägg till använda färger</em> och <em>Lägg till markerade färger</em> förvandlar färgerna redan i dokumentet, eller bara i markeringen, till färgprover; <em>Markera alla oanvända</em> plockar ut varje färgprov som inget är målat med, redo att tas bort; och <em>Omfärglägg färger&#8230;</em> öppnar färgläggningsdialogen som beskrivs nedan.</p>
+
+<h3 id="appearance-process-spot-global">Process-, spot- och globala färgprover</h3>
+<p>Dubbelklicka på en färgprov för Färgprovsalternativ, där du ställer in vilken typ av färg det är.</p>
+<dl>
+  <dt>Process</dt><dd>En vanlig färg, blandad för jobbet. En vanlig processfärgprov är bara en lagrad färg: att redigera den rör inte konstverk redan målat med den.</dd>
+  <dt>Global</dt><dd>En processfärgprov märkt Global håller konstverket länkat till den, så att omfärgläggning av färgprovet omålar allt som målat med den på en gång. Globala färgprover kan tillämpas som en nyans.</dd>
+  <dt>Spot</dt><dd>En namngiven bläck, avsedd att skrivas ut på egen plåt. Spotfärger är alltid globala.</dd>
+</dl>
+<p>Varje dokument börjar också med en fast <strong>[Registrering]</strong>-färgprov, som ingen egen färgtyp och inte kan tas bort eller dras. Använd en global eller spotfärgprov när en färg förekommer många gånger och kan komma att ändras: en uppdatering uppdaterar varje objekt, snarre än att jaga dem för hand.</p>
+
+<h3 id="appearance-colour-groups">Färggrupper</h3>
+<p>Färggrupper arkiverar relaterade färgprover tillsammans, såsom en nyansfamilj eller ett projekts palett. Dra färgprover på en grupp för att arkivera dem, eller markera några och gör en grupp ur dem med panelens Ny färggrupp-knapp. Dubbelklicka på en grupps rubrik för dess alternativ. I färgväljaren på varje platta visas varje grupp som en rad, så att en familj lässe som en ramp av nyanser snarre än en vägg av plattor.</p>
+
+<h2 id="appearance-gradients">Gradienter</h2>
+<p>En gradient blandar mellan två eller fler färger. Scissor gör linjära, radiella och fria gradienter, och antingen panelen eller verktyget på duken kan bygga och forma dem. Nå efter en gradient för att ge en platt form djup, en bakgrund en mjuk tvätt, eller en knapp en glans.</p>
+
+<h3 id="appearance-gradient-panel">Gradientpanelen</h3>
+<p><strong>Gradient</strong>-panelen (<kbd>&#8984;F9</kbd>) driver hela gradienten. Klicka på miniatyren för att fylla den aktiva sidan, välj Linjär, Radiell eller Fri från typmenyn, och använd vändknappen för att vända rampen ände mot ände. Rampen själv bär stoppen: klicka på den för att lägga till ett stopp i den färg den redan har där, dra ett stopp för att flytta det, och dra en diamant mellan två stopp för att skifta var de två färgerna möts. Det markerade stoppet har sin egen färgprov, ett <em>Opacitet</em>-fält och ett <em>Plats</em>-fält, och <em>Ta bort stopp</em> tar bort det. <em>Vinkel</em> vider en linjär eller radiell gradient, och <em>Aspekt</em> (bara radiell) krymper en radiell gradient till en ellips.</p>
+<figure class="shot">
+  <img src="img/gradient.gif" width="340" height="340" loading="lazy"
+       alt="En avrundad kvadrat fylld med en blå-till-amber linjär gradient vars riktning sveper runt." />
+  <figcaption>En linjär gradient från blått till amber. Att dra gradientaxeln, eller ändra dess vinkel, sveper övergraderingen runt formen.</figcaption>
+</figure>
+
+<h3 id="appearance-gradient-tool">Gradientverktyget</h3>
+<p>Med gradientverktyget (<kbd>G</kbd>) sitter samma kontroller på konstverket. Dra över ett objekt för att lägga ner axeln, håll ned <kbd>&#8679;</kbd> för att hålla den till 45&deg;-steg. Axeln visar en rund knapp i början och en kvadratisk knapp i änden; dra valfri för att flytta den änden. Klicka på axeln för att lägga till ett stopp i den färg den redan har där, dra ett stopp längs den, och dra ett stopp långt bort från axeln för att kasta det. Dra en diamant för flytta mittpunkten. <kbd>Delete</kbd> tar bort det stopp du sist rörde.</p>
+
+<h3 id="appearance-freeform">Fri gradienter</h3>
+<p>En fri gradient placerar färgpunkter var som helst på formen snarare än längs en axel, så att övergraderingen kan följa konstverkets form. Med gradientverktyget, klicka på konstverket för att släppa en färgpunkt, dra en för att flytta den, och tryck <kbd>Delete</kbd> för att ta bort den. Kryssa i <em>Tråda ihop punkterna till linjer</em> i panelen för att förena punkterna till linjer, vilket sprider en färg längs en rad snarre än ut från en enda prick. Använd en fri gradient för mjuk, organisk skuggning som en rak ramp inte kan ge.</p>
+
+<h2 id="appearance-patterns">Mönster</h2>
+<p>Ett mönster är konstverk som upprepas som en platta och används som en fyllning. Förvandla en markering till en platta med <strong>Objekt &rsaquo; Mönster &rsaquo; Skapa</strong>, och fyll sedan valfri form med det från <strong>Mönster</strong>-panelen: klicka på en platta för att fylla, dubbelklicka för att redigera den, och <kbd>&#8997;</kbd>-klicka för att ta bort den. <em>Plattalternativ</em> ställer in plattatypen, tegel förskjutningen, storleken och avståndet, och om plattan ändrar storlek och rör sig med konstverket. <strong>Redigera mönster</strong> öppnar plattan på plats med dess kopior som upprepas runt omkring den som du arbetar; klicka på <em>Slutför redigering</em> i Mönster-panelen när plattan är rätt. Mönster passar för upprepande texturer, såsom ränder, prickar, vävningar och bakgrunder, som skulle vara tråkiga att rita för hand.</p>
+
+<h2 id="appearance-strokes">Konturer</h2>
+<p><strong>Kontur</strong>-panelen (<kbd>&#8984;F10</kbd>) formar linjen som ritas längs en bana.</p>
+
+<h3 id="appearance-stroke-options">Vikt, ändar, föreningar och justering</h3>
+<p><em>Vikt</em> ställer in konturens tjocklek i punkter. <em>Ände</em>-knapparna bestämmer hur en öppen bana slutar: butt (avkvadrerat i ankaret), round, eller projecting (kvadratiskt, men når förbi ankaret med halva vikten). <em>Hörn</em>-knapparna bestämmer hur en kontur vänder ett hörn: mitre (en skarp spets), round, eller bevel (ett flat snitt), med en mitre<em>gräns</em> som avfasar de skarpaste spetsarna så att de inte sticker ut. <em>Justera</em> placerar konturen på banans centrum, eller helt inne i eller utanför den, vilket spelar roll när en form måste stå exakt intill sina grannar.</p>
+
+<h3 id="appearance-dashes">Streckade linjer</h3>
+<p>Kryssa i <em>Streckad linje</em> för att bryta konturen till streck. De tre streck-och-mellanrum-paren nedan ställer in mönstret: det första fältet är en strecklängd, nästa ett mellanrum, och så vidare, och upprepas runt banan. Lämna senare par tomma för en enkel jämn streckning.</p>
+
+<h3 id="appearance-width-profiles">Breddprofiler och breddverktyget</h3>
+<p>En breddprofil avsmalnar konturen längs dess längd snarre än att hålla den till en vikt. Välj en profil från panelens meny och en liten förhandsvisning visar formen den gör; knapparna bredvid kör profilen åt andra hålet, sparar den aktuella konturen som en ny profil, eller tar bort en profil du gjort. En kontur du har format för hand visas som <em>Anpassad</em> i menyn.</p>
+<p>Breddverktyget (<kbd>&#8679;W</kbd>) formar en kontur direkt på duken: dra bort från banan för att bredda den på den punkten, eller mot den för att göra den smalare, och lämnar en breddpunkt kvar som du kan dra igen senare. Använd det för att ge en ritad linje en svällning och avsmalnande som en penna eller stift.</p>
+
+<h3 id="appearance-brushes">Penslar</h3>
+<p><strong>Penslar</strong>-panelen (<kbd>F5</kbd>) målar strökar med en form snarre än en vanlig linje. Den innehåller kalligrafiska, spridnings-, konst-, borst- och mönsterpenslar. Klicka på en pensel för att tillämpa den på de markerade banorna; målpenseln använder vilken pensel som är aktuell. Dubbelklicka på en pensel för dess alternativ, använd <em>Ny pensel&#8230;</em> för att göra en (spridnings-, konst- och mönsterpenslar byggs från markerat konstverk), och <em>Ta bort pensel</em> för att återföra en strök till en vanlig linje.</p>
+
+<h2 id="appearance-opacity-blending">Opacitet och blandning</h2>
+<p>Opaciteten och blandningsläget bestämmer hur ett objekt kombineras med vad som ligger under det. De sitter i <strong>Transparens</strong>-panelen (<kbd>&#8679;&#8984;F10</kbd>), och också i Egenskapspanelen.</p>
+
+<h3 id="appearance-blend-modes">Blandningslägena</h3>
+<p>Opaciteten löper från 0% (osynlig) till 100% (fast). Menyn med lägen erbjuder sexton blandningslägen, som faller i grupper: lägen som mörkar, lägen som ljusnar, kontrastlägen, jämförelselägen, och de fyra som lånar en del av en färg.</p>
+<table>
+  <thead><tr><th>Läge</th><th>Vad det gör</th></tr></thead>
+  <tbody>
+    <tr><td>Normal</td><td>Målar över vad som ligger under, utan blandning.</td></tr>
+    <tr><td>Mörkna</td><td>Behåller vilken färg som är mörkare, kanal för kanal.</td></tr>
+    <tr><td>Multiplicera</td><td>Multiplicerar de två färgerna, alltid mörkare; vitt lämnar basen oförändrad.</td></tr>
+    <tr><td>Färgbränna</td><td>Mörkar basen för att ta på sig blandningsfärgen.</td></tr>
+    <tr><td>Ljusna</td><td>Behåller vilken färg som är ljusare.</td></tr>
+    <tr><td>Skärm</td><td>Inversen av Multiplicera, alltid ljusare; svart lämnar basen oförändrad.</td></tr>
+    <tr><td>Färgblekning</td><td>Ljusnar basen för att ta på sig blandningsfärgen.</td></tr>
+    <tr><td>Överlagra</td><td>Multiplicerar eller skärmar beroende på basen, och ökar kontrasten.</td></tr>
+    <tr><td>Mjukt ljus</td><td>En mjuk blekning eller bränning, som om ett mjukt ljus skinnede på konstverket.</td></tr>
+    <tr><td>Hårt ljus</td><td>Multiplicerar eller skärmar beroende på blandningsfärgen, som en hård strålkastare.</td></tr>
+    <tr><td>Differens</td><td>Subtraherar den mörkare färgen från den ljusare; vitt inverterar basen, svart har ingen effekt.</td></tr>
+    <tr><td>Exkludera</td><td>Som Differens, men mjukare och lägre i kontrast.</td></tr>
+    <tr><td>Nyans</td><td>Blandningens nyans med basens mättnad och ljusstyrka.</td></tr>
+    <tr><td>Mättnad</td><td>Blandningens mättnad med basens nyans och ljusstyrka.</td></tr>
+    <tr><td>Färg</td><td>Blandningens nyans och mättnad med basens ljusstyrka: bra för att tonera gråskaleverk.</td></tr>
+    <tr><td>Luminans</td><td>Blandnings ljusstyrka med basens nyans och mättnad.</td></tr>
+  </tbody>
+</table>
+<p>För en grupp ändrar två växlar hur den blandar. <em>Begränsa blandning till grupp</em> håller gruppens lägen inne i sig själv, så att dess medlemmar blandar med varandra men inte med konstverket bakom gruppen. <em>Knockout-grupp</em> får varje medlem att dölja de under den inne i gruppen snarre än att blanda ner genom dem.</p>
+
+<h3 id="appearance-opacity-masks">Opacitetsmasker</h3>
+<p>En opacitetsmask tonar ut konstverk efter ton. Markera konstverket och, ovanpå det, formen att maskera med, och klicka sedan på <em>Gör mask</em> (också <strong>Objekt &rsaquo; Beskärningsmask &rsaquo; Gör opacitetsmask</strong>). Det översta objektet blir masken: där det är ljus syns konstverket, och där det är mörkt tonar konstverket ut, så att en vit-till-svart gradient gör en mjuk övergång. <em>Frigör</em> ger de två objekten tillbaka. Använd en mask för en mjuk kant eller en vignett som en hård beskärning inte kan göra.</p>
+
+<h2 id="appearance-appearance-panel">Målstack-panelen</h2>
+<p><strong>Målstack</strong>-panelen (<kbd>&#8679;F6</kbd>) listar allt som målats på ett objekt: dess fyllningar och dess konturer, med alla live-effekter ovanför dem. Eftersom ett objekt kan hålla flera fyllningar och konturer är det här du staplar dem, till exempel en bred mörk kontur under en tunn ljus för att göra en kontur, eller två fyllningar vid olika opaciteter.</p>
+<p>Stapeln ritas överst först, i samma ordning som den målar. Varje fyllnings- eller konturrad har ett öga för att dölja det, en färgplatta som öppnar färgväljaren, ett opacitetsfält, ett viktfält för konturer, och pilar för att flytta det upp eller ner i stapeln, plus en knapp för att ta bort det. <em>Lägg till fyllning</em> och <em>Lägg till kontur</em> sätter ytterligare en överst. Effekter visas ovanför fyllningarna och konturerna med en <em>fx</em>-bricka; klicka på en effekt för att redigera dess alternativ, eller ta bort den från dess rad. När det utseende som byggts i lager är färdigt bakar <strong>Objekt &rsaquo; Expandera utseende</em> hela stapeln ner till vanligt konstverk.</p>
+
+<h2 id="appearance-graphic-styles">Grafiska stilar</h2>
+<p>En grafisk stil är ett sparat utseende som du kan tillämpa på andra objekt. <strong>Grafikstilar</strong>-panelen (<kbd>&#8679;F5</kbd>) håller dem som plattor, var och en visar sin fyllning med sin kontur som plattans kant. Markera ett objekt och klicka på <em>Ny stil</em> för att spara dess fyllningar och konturer; klicka på en platta för att tillämpa den stilen på markeringen, och <kbd>&#8997;</kbd>-klicka på en platta för att ta bort den. Stilar är värda att göra när samma utseende, såsom en husknappbehandling eller en etikettstil, måste gå på många objekt och förbli konsekvent.</p>
+
+<h2 id="appearance-overprint">Övertryck</h2>
+<p><strong>Attribut</strong>-panelen (<kbd>&#8984;F11</kbd>) ställer in övertryck för utskriftsarbete. <em>Övertryck fyllning</em> och <em>Övertryck kontur</em> får det bläcket att skrivas ut ovanpå färgerna under det istället för att knocka ut dem, vilket används för trapping och för effekter som ett svart som skrivs ut över istället för att ersätta vad som ligger under det. Slå på <strong>Visa &rsaquo; Övertrycksförhandsvisning</strong> för att se det på skärmen; PDF-export behåller inställningen.</p>
+
+<h2 id="appearance-recolour">Omfärglägg konstverk</h2>
+<p><strong>Redigera &rsaquo; Redigera färger &rsaquo; Omfärglägg färger&#8230;</strong> listar varje färg i markeringen med hur ofta den används. Klicka på plattan till höger om en rad för att välja vad den färgen blir, eller pilen mellan de två plattorna för att lämna den färgen ifred. Nyans-, mättnad- och ljusstyrkereglagen skiftar hela uppsättningen tillsammans, och två knappar slumpar om de nya färgerna eller slumpar deras mättnad och ljusstyrka, vilket är ett snabbt sätt att prova variationer. Konstverket uppdateras som du går, och <em>Återställ</em> återgår till färgerna det började med.</p>
+<p>Samma undermeny erbjuder också steg-för-steg-ändringar: <em>Blanda fram till bak</em> sprider en rad färger mellan fram- och bakobjekten, <em>Konvertera till gråskala</em> släpper all färg, <em>Invertera färger</em> vänder varje, och <em>Mätta&#8230;</em> höjer eller sänker mättnaden över markeringen.</p>

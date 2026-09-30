@@ -1,0 +1,85 @@
+<p class="lede">Panel Warstwy to mapa dokumentu: każda warstwa, grupa i obiekt na jednej liście, ułożone w kolejności, w jakiej siedzą na stronie. Użyj go do pokazywania i ukrywania, blokowania, zmiany nazwy, zmiany kolejności i wybierania, oraz do sprawdzenia na pierwszy rzut oka, na której warstwie znajduje się dowolny obiekt.</p>
+
+<p>Skróty poniżej zapisane są w formacie macOS. W systemach Windows i Linux odczytuj <kbd>&#8984;</kbd> jako Ctrl, <kbd>&#8997;</kbd> jako Alt i <kbd>&#8679;</kbd> jako Shift.</p>
+
+<h2 id="layers-panel">Panel Warstwy</h2>
+<p>Otwórz go z <strong>Okno &rsaquo; Warstwy</strong> (<kbd>F7</kbd>). Lista trzyma Twoje warstwy na najwyższym poziomie, z zawartością każdej warstwy zagnieżdżoną pod nią: grupami, ścieżkami, tekstem, obrazami i warstwami pikselowymi, rysowanymi jako drzewo, które możesz otwierać i zamykać. Kontener (warstwa lub grupa) niesie mały trójkąt po lewej stronie swojego rzędu; kliknij go, aby złożyć kontener lub go otworzyć. Głębokie dokumenty pozostają czytelne, ponieważ możesz zwijać części, przy których nie pracujesz.</p>
+<p>Dwa przyciski siedzą u dołu panelu. <strong>Utwórz nową warstwę</strong> dodaje pustą warstwę tuż nad tą, która jest obecnie aktywna, i czyni nową aktywną. <strong>Usuń zaznaczenie</strong> usuwa wszystko, co jest zaznaczone; dokument zawsze zachowuje co najmniej jedną warstwę, więc ostatnia pozostała warstwa nie może być usunięta w ten sposób. Aby zmienić nazwę dowolnej warstwy, grupy lub obiektu, kliknij dwukrotnie jego nazwę na liście, wpisz i naciśnij <kbd>Enter</kbd>. Nazewnictwo części zatłoczonego dokumentu to najszybszy sposób na utrzymanie go nadającym się do nawigacji.</p>
+
+<h3 id="layers-row">Co pokazuje każdy rząd</h3>
+<p>Odczyt rzędu od lewej do prawej:</p>
+<table>
+  <thead><tr><th>Część</th><th>Co robi</th></tr></thead>
+  <tbody>
+    <tr><td>Oko</td><td>Pokazuje lub ukrywa tę warstwę, grupę lub obiekt. Rząd z wyłączonym okiem nie jest rysowany ani drukowany ani eksportowany.</td></tr>
+    <tr><td>Kłódka</td><td>Blokuje lub odblokowuje rząd. Zablokowany obiekt nie może być zaznaczony ani edytowany na płótnie.</td></tr>
+    <tr><td>Próbka koloru</td><td>Tylko w rzędach warstw: kolorowa etykieta warstwy, używana do barwienia zaznaczeń i podświetleń tej warstwy.</td></tr>
+    <tr><td>Trójkąt</td><td>Tylko w kontenerach: otwiera lub zamyka warstwę lub grupę, aby odkryć to, co w środku.</td></tr>
+    <tr><td>Ikona rodzaju</td><td>Oznacza grupy i grupy przycinające (grupa przycinająca jest rysowana przerywanym konturem).</td></tr>
+    <tr><td>Nazwa</td><td>Nazwa lub zastępcza w nawiasach kątowych, takich jak <code>&lt;Ścieżka&gt;</code> lub <code>&lt;Grupa&gt;</code>, gdy coś jest nienazwane. Kliknij dwukrotnie, aby zmienić nazwę.</td></tr>
+    <tr><td>Kwadrat zaznaczenia</td><td>Na prawej krawędzi: mały kwadrat w kolorze warstwy, który pojawia się na każdym rzędzie zawierającym część bieżącego zaznaczenia.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="layers-groups">Warstwy i grupy</h2>
+<p>Warstwy to pojemniki najwyższego poziomu dokumentu. Istnieją, aby trzymać niepowiązane części grafiki oddzielnie: tło na jednej warstwie, główny rysunek na drugiej, etykiety na trzeciej. Ponieważ warstwa siedzi w korzeniu drzewa, ukrywanie, blokowanie lub zmiana kolejności przenosi wszystko, co zawiera, jednym krokiem.</p>
+<p>Grupa to mniejszy kontener mieszkający wewnątrz warstwy (lub wewnątrz innej grupy) i podróżujący z grafiką. Grupowanie to sposób na związanie części jednej rzeczy, elementów logo lub ikony, aby poruszały się, skalowały się i układały jako jednostka. Grupy otwierają się i zamykają w panelu z własnym trójkątem, dokładnie tak jak warstwy.</p>
+<p>Warstwy i grupy zachowują się podobnie w jednym ważnym aspekcie: każda może być pokazywana lub ukrywana, blokowana lub odblokowywana, a każda może nosić własne krycie i tryb mieszania stosowane do wszystkiego w jej wnętrzu. Różnica to rola. Warstwy organizują cały dokument; grupy wiążą pojedyncze obiekty.</p>
+
+<h3 id="layers-grouping">Grupowanie i rozgrupowywanie</h3>
+<p>Zaznacz dwa lub więcej obiektów i wybierz <strong>Obiekt &rsaquo; Grupuj</strong> (<kbd>&#8984;G</kbd>), aby zebrać je w grupę. <strong>Obiekt &rsaquo; Rozgrupuj</strong> (<kbd>&#8679;&#8984;G</kbd>) wyciąga obiekty z zaznaczonej grupy z powrotem. Grupy mogą być zagnieżdżone, więc grupą grup jest w porządku; każde <kbd>&#8679;&#8984;G</kbd; zdejmuje jeden poziom. Sięgaj po grupę, gdy znajdujesz się wybierając tę samą garstkę obiektów w kółko.</p>
+
+<h2 id="layers-stacking">Kolejność na stosie: przód i tył</h2>
+<p>Obiekty są rysowane od tyłu do przodu, więc obiekt bliżej przodu pokrywa te za nim, gdy się nakładają. Panel pokazuje tę kolejność bezpośrednio: najwyższy rząd to najdalszy obiekt, a dolny rząd to ten najdalej w tył. Zmiana kolejności obiektu zmienia to, co co pokrywa.</p>
+<p>Najszybszy sposób na zmianę kolejności to przeciąganie: chwyć rząd i upuść go wyżej lub niżej na liście, aby przesunąć go przez stos, lub upuść go na warstwę lub grupę, aby przenieść obiekt <em>do</em> niej. Przeciąganie jest również sposobem na przeniesienie zaznaczonego obiektu na inną warstwę — bez wycinania i wklejania.</p>
+<p>Przesuń zaznaczenie przez stos za pomocą <strong>Obiekt & Rozmieść</strong>:</p>
+<table>
+  <thead><tr><th>Polecenie</th><th>Skrót</th><th>Efekt</th></tr></thead>
+  <tbody>
+    <tr><td>Przenieś na przód</td><td><kbd>&#8679;&#8984;]</kbd></td><td>Całkowicie na przód swojej warstwy.</td></tr>
+    <tr><td>Przenieś do przodu</td><td><kbd>&#8984;]</kbd></td><td>O jeden krok w stronę przodu.</td></tr>
+    <tr><td>Przenieś do tyłu</td><td><kbd>&#8984;[</kbd></td><td>O jeden krok w stronę tyłu.</td></tr>
+    <tr><td>Przenieś na tył</td><td><kbd>&#8679;&#8984;[</kbd></td><td>Całkowicie na tył swojej warstwy.</td></tr>
+  </tbody>
+</table>
+<p>Użyj tych, gdy potrzebny kształt jest ukryty za innym lub gdy tło znalazło się na górze rysunku. Aby pracować przez obiekty leżące jeden na drugim, <strong>Zaznacz &rsaquo; Następny obiekt powyżej</strong> (<kbd>&#8997;&#8984;]</kbd>) i <strong>Następny obiekt poniżej</strong> (<kbd>&#8997;&#8984;[</kbd>) przesuwają zaznaczenie w górę i w dół stosu, co jest przydatne do sięgnięcia czegoś poniżej innej grafiki.</p>
+
+<h2 id="layers-visibility">Pokazywanie i ukrywanie</h2>
+<p>Kliknij oko na dowolnym rzędzie, aby ukryć tę warstwę, grupę lub obiekt; kliknij ponownie, aby go przywrócić. Ukryty rząd nie bierze udziału w rysowaniu, drukowaniu lub eksporcie, więc ukrywanie to bezpieczny sposób na usunięcie czegoś z drogi bez usuwania. Użyj go, aby porównać dwie wersje detalu lub oczyścić zatłoczone płótno do części, przy której pracujesz.</p>
+<p>Menu oferuje to samo dla bieżącego zaznaczenia: <strong>Obiekt &rsaquo; Ukryj &rsaquo; Zaznaczenie</strong> (<kbd>&#8984;3</kbd>) ukrywa to, co jest zaznaczone, a <strong>Obiekt & Pokaż wszystko</strong> (<kbd>&#8997;&#8984;3</kbd>) odkrywa wszystko, co było ukryte.</p>
+
+<h2 id="layers-locking">Blokowanie</h2>
+<p>Kliknij kłódkę na rzędzie, aby ją zablokować. Zablokowany obiekt pozostaje widoczny, ale nie może być zaznaczony ani zmieniony na płótnie, więc jest poza zasięgiem, podczas gdy pracujesz wokół niego. Zablokowanie warstwy chroni wszystko na niej naraz. Zablokuj tło, gdy rysujesz nad nim, lub zablokuj gotowy element, aby przypadkowe przeciągnięcie nie mogło go przesunąć.</p>
+<p>Z menu, <strong>Obiekt &rsaquo; Zablokuj &rsaquo; Zaznaczenie</strong> (<kbd>&#8984;2</kbd>) blokuje to, co jest zaznaczone, a <strong>Obiekt & Odblokuj wszystko</strong> (<kbd>&#8997;&#8984;2</kbd>) uwalnia wszystko z powrotem. Zablokowanie zaznaczonego obiektu również wyklucza go z zaznaczenia, ponieważ zablokowana rzecz nie jest już czymś, na czym możesz działać.</p>
+
+<h2 id="layers-selecting">Wybieranie i aktywna warstwa</h2>
+<p>Kliknij rząd obiektu w panelu, aby zaznaczyć ten obiekt na płótnie. Przytrzymaj <kbd>&#8679;</kbd>, <kbd>&#8984;</kbd> lub <kbd>Ctrl</kbd> podczas kliknięcia, aby dodać kolejny obiekt do zaznaczenia, dzięki czemu możesz budować zaznaczenie z listy bez polowania na małe kształty na stronie.</p>
+<p>Kliknięcie rzędu <em>warstwy</em> robi coś innego: czyni tę warstwę aktywną, oznaczoną kolorowym paskiem wzdłuż jej lewej krawędzi. Nowa grafika, którą rysujesz, umieszczasz lub wklejasz, jest dodawana do aktywnej warstwy, więc kliknięcie warstwy przed rozpoczęciem decyduje, gdzie ta praca wyląduje. Utworzenie nowej warstwy czyni ją aktywną od razu.</p>
+<p>Kwadrat zaznaczenia po prawej stronie każdego rzędu wiąże panel z płótnem. Pojawia się, w kolorze warstwy, na każdym rzędzie zawierającym część bieżącego zaznaczenia, i jest wypełniony na dokładnych obiektach, które są zaznaczone. Ponieważ znacznik podróżuje w górę drzewa, spojrzenie w dół listy pokazuje zarówno to, co jest zaznaczone, jak i w których warstwach i grupach siedzą te obiekty.</p>
+
+<h2 id="layers-colours">Etykiety kolorów</h2>
+<p>Każda warstwa otrzymuje kolor z stałej sekwencji (jasnoniebieski, czerwony, zielony, niebieski, żółty i tak dalej, dwanaście w cyklu, gdy dodajesz więcej warstw). Ten kolor to etykieta warstwy. Pokazuje się jako chips obok nazwy warstwy i barwi znaki zaznaczenia w panelu wraz z podświetleniami zaznaczenia i ramką ograniczającą rysowaną na płótnie dla obiektów na tej warstwie. Chodzi o szybką identyfikację: gdy zaznaczysz coś, a jego ramka wyjdzie zielona, od razu wiesz, że należy do zielonej warsty. Rozłożenie dokumentu na kilka dobrze nazwanych, różnie kolorowych warstw znacznie ułatwia śledzenie, gdzie wszystko jest.</p>
+
+<h2 id="layers-masks">Maski przycinające i krycia</h2>
+<p>Warstwa lub grupa może nosić własne krycie i tryb mieszania, oba ustawiane w panelu <strong>Przezroczystość</strong> (<strong>Okno &rsaquo; Przezroczystość</strong>, <kbd>&#8679;&#8984;F10</kbd>). Ten sam panel zawiera <strong>Ogranicz mieszanie do grupy</strong>, które utrzymuje tryby mieszania grupy mieszające się tylko ze sobą, a nie z tym, co leży pod spodem, i <strong>Przebijająca grupa</strong>, gdzie każdy obiekt w grupie ukrywa te za nim zamiast pokazywać się przez nie. Maski idą o krok dalej i pozwalają jednemu obiektowi kontrolować, gdzie lub jak silnie pokazuje się inna grafika.</p>
+
+<h3 id="layers-clip">Maski przycinające</h3>
+<p>Maska przycinająca przycina grafikę do kształtu. Zaznacz dwa lub więcej obiektów i wybierz <strong>Obiekt &rsaquo; Maska przycinająca &rsaquo; Utwórz</strong> (<kbd>&#8984;7</kbd>). Najwyższy zaznaczony obiekt staje się ścieżką przycinającą, a wszystko pod nim jest pokazywane tylko wewnątrz tego kształtu; reszta jest przycinana. Wynikiem jest grupa przycinająca, rysowana w panelu przerywaną ikoną. <strong>Zwolnij</strong> (<kbd>&#8997;&#8984;7</kbd>) cofa to i oddaje obiekty. Sięgaj po to, aby przyciąć fotografię lub wzorzysty wzór do koła, litery lub dowolnego konturu, który rysujesz na górze.</p>
+
+<h3 id="layers-opacity-mask">Maski krycia</h3>
+<p>Maska krycia wygładza grafikę według jasności innego obiektu. Zaznacz dwa lub więcej obiektów i wybierz <strong>Obiekt &rsaquo; Maska przycinająca &rsaquo; Utwórz maskę krycia</strong> lub użyj <strong>Utwórz maskę</strong> w panelu Przezroczystość. Najwyższy obiekt staje się maską: tam, gdzie jest jasny, grafika pod spodem pokazuje się w pełni, tam, gdzie ciemny, zanika, a szarości pośrednie dają częściową przezroczystość. <strong>Zwolnij maskę krycia</strong> rozbija to z powrotem. Użyj gradientu od białego do czarnego jako maski, aby wygładzić obraz do jednej krawędzi lub stworzyć miękkie winiety i przejścia, które pojedyncza płaska wartość krycia nie może dać.</p>
+
+<h2 id="layers-organising">Organizowanie dokumentu</h2>
+<p>Trochę struktury na początku oszczędza dużo polowania później. Kilka nawyków, które się opłacają:</p>
+<dl>
+  <dt>Jedna warstwa na zagadnienie</dt>
+  <dd>Trzymaj tło, główną grafikę i tekst na osobnych, nazwanych warstwach. Możesz wtedy ukryć, zablokować lub zmienić kolejność całej części rysunku jednym kliknięciem.</dd>
+  <dt>Blokuj tego, czego nie dotykasz</dt>
+  <dd>Zablokuj warstwy wokół tej, przy której pracujesz, aby przypadkowe kliknięcie lub przeciągnięcie nie mogło ich zakłócić, i odblokuj je ponownie za pomocą <kbd>&#8997;&#8984;2</kbd>, gdy będziesz potrzebować.</dd>
+  <dt>Grupuj rzeczy, które poruszają się razem</dt>
+  <dd>Zwiąż części pojedynczego elementu w grupę, aby zachowywała się jak jeden obiekt, i zarezerwuj warstwy dla większych podziałów dokumentu.</dd>
+  <dt>Ustaw aktywną warstwę przed rysowaniem</dt>
+  <dd>Kliknij warstwę, do której chcesz dodać, najpierw, aby nowa grafika wylądowała we właściwym miejscu, a nie na tym, co było tam wcześniej.</dd>
+  <dt>Pozwól kolorom Cię prowadzić</dt>
+  <dd>Opieraj się na kolorach warstw: gdy podświetlenie zaznaczenia pasuje do chipsu warstwy, wiesz dokładnie, gdzie mieszka ten obiekt, bez otwierania czegokolwiek.</dd>
+</dl>

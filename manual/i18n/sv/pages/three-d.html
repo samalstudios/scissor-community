@@ -1,0 +1,65 @@
+<p class="lede">3D och material förvandlar en platt form till en fast som du kan vrida, belysa och ge en yta, utan att någonsin lämna ditt vektorkonstverk bakom dig. Det är en live-effekt: den fasta ritas från banan under, och den banan förblir fullt redigerbar, så att du kan ändra konturen, färgen eller texten när som helst och 3D byggs om runt det.</p>
+
+<h2 id="three-d-opening">Öppna effekten</h2>
+<p>Markera ett objekt först, och välj sedan en objekttyp från <strong>Effekt &rsaquo; 3D och material</strong>: <em>Plan</em>, <em>Extrudera &amp; avfasning</em>, <em>Rotera upp</em> eller <em>Blås upp</em>. Var och en lägger till effekten och öppnar <strong>3D och material</strong>-panelen, där resten av kontrollerna bor. Samma panel öppnas på egen hand från <strong>Fönster &rsaquo; 3D och material</strong> eller från <strong>Effekt &rsaquo; 3D och material &rsaquo; 3D och material-panel</strong>.</p>
+<p>Panelen behöver något markerat innan den kan göra något; utan något valt säger den det och gråar sina kontroller. När ett objekt har effekten löper de fyra objekttypsknapparna överst i panelen, så att du kan växla en form från en extrudering till en rotation upp på ett klick och behålla rotationen och belysningen du redan ställt in.</p>
+<p>Eftersom det är en effekt och inte en konvertering kan du släppa den på nästan vad som helst en bana kan hålla: en form, en grupp, en kontur eller live-text. Att redigera källan, till exempel skriva om ett ord eller skjuta ett ankare, kör effekten på det nya konstverket igen.</p>
+
+<h2 id="three-d-types">De fyra objekttyperna</h2>
+<p>Objekttypen bestämmer hur den platta formen läses som en fast. Välj den som matchar den form du är ute efter.</p>
+
+<h3 id="three-d-plane">Plan</h3>
+<p>Plan lämnar konstverket platt och placerar det som ett kort i 3D-rymden, så att allt det gör är att låta dig vrida och tippa det. Det finns inget djup att ställa in. Nå efter det när du vill ha ett platt konstverk att sitta i en vinkel, såsom en etikett som ligger tillbaka på en yta eller en sköld lutad för att fånga ljuset, utan att ge det någon tjocklek.</p>
+
+<h3 id="three-d-extrude">Extrudera och avfasning</h3>
+<p>Extrudering trycker formen rakt bakåt för att ge den tjocklek, och förvandlar en kontur till ett fast block. En avfasning rundar eller klipper de främre och bakre kanterna så att de inte lämnas skarpa. Hål behålls: en sammansatt bana såsom en ring eller en bokstav med innersta förblir ihålig hela vägen igenom. Det är typen att använda för bokstäver, logotyper, ikoner och skölder som ska läsas som upphöjda eller skurna.</p>
+<figure class="shot">
+  <img src="img/3d-extrude.gif" width="620" height="620" loading="lazy" alt="En platt vektorstjärna extruderas till en tredimensionell stjärna och vriden för att visa sitt djup." />
+  <figcaption>Extrudera och avfasning bygger djup från en platt form, live. Stjärnan förblir en redigerbar bana under.</figcaption>
+</figure>
+
+<h3 id="three-d-revolve">Rotera upp</h3>
+<p>Rotera upp sveper formen runt dess vänstra kant, på samma sätt som en profil snurrade på en svarv spårar ut en fast. Rita hälften av ett symmetriskt objekt, ett glas, en flaska, en skål, en schackpjäs, och rotera upp den till det runda. Svepvinkeln kan vara mindre än en hel vändning för att lämna ett utsnitt som visar insidan.</p>
+
+<h3 id="three-d-inflate">Blås upp</h3>
+<p>Blås upp puffar formen utåt, som om den var en kudde fylld med luft, och ger den en mjuk avrundad yta istället för en platt. Använd det för mjuka knappar, kuddade skölder, godis och avrundade klistermärken där du vill ha sväll snarre än en hård extruderad kant.</p>
+
+<h2 id="three-d-shape">Djup, avfasning och steg</h2>
+<p><em>Objekt</em>-sektionen innehåller fälten som formar den fasta. Vilka som visas beror på objekttypen, så att panelen bara visar de fält som gör något för den typ du har i handen.</p>
+<table>
+  <thead><tr><th>Fält</th><th>Visas för</th><th>Vad det ställer in</th></tr></thead>
+  <tbody>
+    <tr><td>Djup</td><td>Extrudera och avfasning, Blås upp</td><td>Hur långt formen trycks bakåt, eller hur mycket den sveller, i pixlar.</td></tr>
+    <tr><td>Avfasning</td><td>Extrudera och avfasning</td><td>Storleken på den avrundade eller klippade kanten på fram- och baksidan, i pixlar; lämna den på noll för en vanlig fyrkantig kant.</td></tr>
+    <tr><td>Vinkel</td><td>Rotera upp</td><td>Hur långt profilen svepes, upp till en hel 360&deg;-vändning. En mindre vinkel lämnar objektet öppet, och visar dess insida.</td></tr>
+    <tr><td>Steg</td><td>Extrudera och avfasning, Rotera upp, Blås upp</td><td>Hur många segment som bygger de kurviga delarna. Fler steg ger en jämnare yta; färre lämnar den facetterad.</td></tr>
+  </tbody>
+</table>
+<p>Plan har inget av dessa: det har ingen tjocklek att beskriva. Om en kurvig rotation upp eller en avrundad avfasning ser för kantig ut, höj stegen; om du vill ha en lågpolygonerad, facetterad look medvetet, sänk dem.</p>
+
+<h2 id="three-d-rotation">Vrida objektet</h2>
+<p><em>Rotation</em>-sektionen ställer in hur objektet vänder mot dig. Det snabbaste sättet är förhandsvisningsplattan: dra över den för att snurra objektet vänster och höger, och dra upp och ner för att tippa det framåt och bakåt. För exakta vinklar, vrider <em>X</em>, <em>Y</em> och <em>Z</em>-fälten objektet runt varje axel, var och en från -180&deg; till 180&deg;.</p>
+<p>Rotationsmenyn håller färdiga synvinklar, så att du kan släppa objektet rakt in i en standardvy snarre än att ställa in en:</p>
+<dl>
+  <dt>Från sidan Fram, Bak, Vänster, Höger, Överst, Nederst</dt><dd>Tredjevisvyn som visar en huvudsida lite av toppen eller sidan. Bra standard för en fast som ska se ut som en fast.</dd>
+  <dt>Isometrisk Vänster, Höger, Överst, Nederst</dt><dd>Verktiga isometriska vyer, där de tre axlarna förkortas lika och linjer förblir parallella. Passar tekniskt och spelstilkonstverk som måste linjera upp.</dd>
+  <dt>Fram, Bak, Vänster, Höger, Överst, Nederst</dt><dd>De sex rakt på vyerna, och tittar rakt på en sida. Praktiskt för att kontrollera formen eller för en platt, rakt framåt presentation.</dd>
+</dl>
+<p>Att välja en förinställning fyller i X-, Y- och Z-fälten; att ändra någon av dem för hand visar menyn som <em>Anpassad rotation</em>. <em>Perspektiv</em>-fältet, från 0&deg; till 160&deg;, styr hur starkt objektet försvinner: vid noll förblir sidorna parallella, och när du höjer det drar de avlägsna kanterna in mot en försvinningspunkt, på samma sätt som ett verkligt objekt som ses nära verkar avsmalna. Lägg till lite perspektiv för en livlik tredjedelsvy, eller lämna det på noll för att hålla en isometrisk eller rakt på inställning exakt.</p>
+
+<h2 id="three-d-lighting">Belysning</h2>
+<p><em>Belysning</em>-sektionen bestämmer var ljuset kommer ifrån och hur hårt det är, vilket är det som får ytan att läsas som upphöjd, skuren eller avrundad. En belysningsmeny erbjuder fyra utgångspunkter, <em>Standard</em>, <em>Diffus</em>, <em>Övre vänster</em> och <em>Höger</em>, och alla ändringar av fälten nedan visar den som <em>Anpassad belysning</em>.</p>
+<dl>
+  <dt>Intensitet</dt><dd>Styrkan på huvudljuset, som en procent. Högre gör de upplysta sidorna ljusare och höjdpunkterna starkare.</dd>
+  <dt>Omgivande</dt><dd>Ett fyllningsljus som lyfter hela objektet, som en procent, så att de skuggade sidorna inte faller till svart. Höj det för en mjukare, jämnare look; sänk det för djupare kontrast.</dd>
+  <dt>Rotation</dt><dd>Var ljuset sitter runt objektet, från -180&deg; till 180&deg;, vilket flyttar höjdpunkten och skuggan till andra sidan.</dd>
+  <dt>Höjd</dt><dd>Hur högt ljuset är ovanför objektet, från 0&deg; (i nivå med det, för långa skuggor) till 90&deg; (rakt ovanför, för jämnt ljus).</dd>
+</dl>
+<p><em>Diffus</em> ger en mjuk, lågkontrast finish; <em>Övre vänster</em> och <em>Höger</em> kastar ljuset från ett håll för en mer dramatisk, skulpterad look. Börja från den förinställning som är närmast, och justera sedan de fyra fälten efter smak.</p>
+
+<h2 id="three-d-materials">Material</h2>
+<p>Tre materialknappar ställer in hur ytan fångar ljuset: <em>Plast</em>, <em>Matte</em> och <em>Metall</em>. Plast ger en mjuk glans med en tydlig höjdpunkt, det vanliga valet för en vänligt, formad look. Matte tar bort glansen för en platt, jämn finish, som läses som papper, lera eller en tryckt yta. Metall ger en hårdare, högre kontrast skänk, för krom, guld och andra polerade metaller. Materialet fungerar tillsammans med belysningen, så att en ändring av det ena är värd att kontrollera mot det andra.</p>
+
+<h2 id="three-d-expand">Håll det live, och expandera</h2>
+<p>Allt ovan sparas som en enda live-effekt på objektet, listad i <strong>Utseende</strong>-panelen (<kbd>&#8679;F6</kbd>) med en <em>fx</em>-bricka ovanpå objektets fyllningar och konturer. Klicka på den posten för att öppna 3D och material-panelen igen, eller ta bort den där för att få tillbaka objektet till platt. Inne i panelen, släpper <em>Ta bort 3D</em> effekten av markeringen.</p>
+<p>Medan effekten är live förblir konstverket under en vanlig, redigerbar bana, vilket är det som låter dig fortsätta justera formen, färgen och texten. När utseendet är bestämt och du vill ha resultatet som vanligt vektorkonstverk, till exempel för att redigera de enskilda sidorna eller överlämna filen, använd <em>Expandera som vektor</em> i panelen (samma som <strong>Objekt &rsaquo; Expandera utseende</strong>). Det bakar den fasta ner till banor och avslutar dess liv som en effekt, så expandera en kopia om du kanske fortfarande vill ändra djupet eller vinkeln senare.</p>

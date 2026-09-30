@@ -1,0 +1,165 @@
+<p class="lede">Wszystko, co zmienia pozycję obiektu, jego rozmiar lub kierunek, znajduje się tutaj: przesuwanie i skalowanie ręczne, dokładne przekształcenia liczbowe, wyrównywanie i układanie, powtórzenia na żywo, morfowanie, koperty i zamiana płaskiego kształtu w bryłę.</p>
+
+<p>Skróty poniżej zapisane są w formacie macOS. W systemach Windows i Linux odczytuj <kbd>⌘</kbd> jako Ctrl, <kbd>⌥</kbd> jako Alt i <kbd>⇧</kbd> jako Shift.</p>
+
+<h2 id="transform-select-move">Wybieranie i przesuwanie</h2>
+<p>Zanim cokolwiek przekształcisz, musisz powiedzieć co. Sięgaj po to najpierw: narzędzia zaznaczania decydują, na czym będzie działać przeciągnięcie, polecenie liczbowe lub pole panelu.</p>
+
+<h3 id="transform-selection-tools">Narzędzia zaznaczania</h3>
+<table>
+  <thead><tr><th>Narzędzie</th><th>Skrót</th><th>Co wybiera</th></tr></thead>
+  <tbody>
+    <tr><td>Narzędzie Zaznacz</td><td><kbd>V</kbd></td><td>Całe obiekty i grupy.</td></tr>
+    <tr><td>Narzędzie Zaznacz bezpośrednio</td><td><kbd>A</kbd></td><td>Pojedyncze punkty kotwiczne i segmenty ścieżek.</td></tr>
+    <tr><td>Narzędzie Zaznacz grupę</td><td></td><td>Jeden obiekt wewnątrz grupy; każde kolejne kliknięcie rozszerza do grupy wokół niego.</td></tr>
+  </tbody>
+</table>
+<p>Shift-klik dodaje obiekt do zaznaczenia lub wyklucza go z powrotem. Przeciągnij po pustym płótnie, aby zaznaczyć prostokąt, i przytrzymaj <kbd>⇧</kbd>, aby dodać wszystko, co złapie zaznaczenie, do tego, co już jest zaznaczone. Dwuklik grupy narzędziem Zaznacz wchodzi do jej wnętrza, abyś mógł pracować na jednym członku bez rozgrupowywania.</p>
+
+<h3 id="transform-moving">Przesuwanie zaznaczenia</h3>
+<p>Przeciągnij zaznaczony obiekt, aby go przesunąć. Przytrzymanie <kbd>⌥</kbd> zostawia kopię i przeciąga ją, co jest szybkim sposobem na duplikowanie w miejscu i przestawienie w jednym ruchu. Przytrzymanie <kbd>⇧</kbd> ogranicza przesunięcie do kroków co 45° mierzonych od kąta ograniczonego ustawionego w Preferencjach i wyłącza przyciąganie; bez <kbd>⇧</kbd> zaznaczenie przyciąga się do pobliskich krawędzi, środków i kątów. Klawisze strzałek przesuwają o przyrost klawiaturowy, <kbd>⇧</kbd> ze strzałką przesuwa o dziesięć razy tyle, a <kbd>⌥</kbd> ze strzałką przesuwa kopię.</p>
+
+<h3 id="transform-bounding-box">Ramka ograniczająca: skalowanie i obracanie ręcznie</h3>
+<p>Ramka ograniczająca zaznaczenia niesie osiem uchwytów. Przeciągnij jeden, aby skalować: <kbd>⇧</kbd> zachowuje proporcje, a <kbd>⌥</kbd> skaluje wokół środka, a nie wokół przeciwnego uchwytu. Tuż za rogiem wskaźnik wchodzi w strefę obrotu; przeciągnij tam, aby obrócić zaznaczenie wokół środka ramki, z <kbd>⇧</kbd> przyciągającym do 45°. Po obrocie ramka pozostaje przekrzywiona z grafiką. <strong>Obiekt &rsaquo; Przekształć &rsaquo; Zresetuj ramkę ograniczającą</strong> prostuje ją z powrotem, aby późniejsze edycje szerokości i wysokości odczytywały się wzdłuż osi strony.</p>
+
+<h2 id="transform-numeric">Przekształcenia liczbowe</h2>
+<p>Przeciąganie jest szybkie, ale przybliżone. Gdy wartość musi być dokładna lub taka sama na wielu obiektach, wpisz ją. Panel Przekształć trzyma bieżące liczby dla zaznaczenia, a podmenu <strong>Obiekt &rsaquo; Przekształć</strong> trzyma polecenia jednorazowe z opcją Kopiuj.</p>
+
+<h3 id="transform-panel">Panel Przekształć</h3>
+<p>Panel Przekształć (<kbd>⇧F8</kbd>) pokazuje X, Y, W i H w pikselach dla zaznaczenia; wpisz wartość i naciśnij Return, aby ją ustawić. Pod nimi pole ⟳ obraca zaznaczenie o kąt, a pole ⧄ przechyla je o jeden, każde wracając do zera po zastosowaniu. Panel potrzebuje czegoś zaznaczonego; gdy nic nie wybrano, wyszarza się i mówi o tym.</p>
+<p>Panel Właściwości powtarza X, Y, W i H z polem obrotu i dwoma przyciskami odwracającymi zaznaczenie poziomo lub pionowo wokół własnego środka, więc najczęstsze ruchy są pod ręką bez otwierania drugiego panelu.</p>
+
+<h3 id="transform-commands">Przesuń, Obróć, Odbij, Skaluj i Przechyl</h3>
+<p><strong>Obiekt &rsaquo; Przekształć</strong> zawiera polecenia liczbowe. Każde otwiera małe okno dialogowe, a każde (poza Przesuń, które jest bezpośrednim przesunięciem) przekształca wokół punktu odniesienia. Pole Kopiuj w każdym oknie dialogowym stosuje zmianę do duplikatu i zostawia oryginał nietknięty, co jest sposobem na zbudowanie lustrzanej pary lub skalowanego echa w jednym kroku.</p>
+<table>
+  <thead><tr><th>Polecenie</th><th>Skrót</th><th>Pola</th></tr></thead>
+  <tbody>
+    <tr><td>Przesuń&hellip;</td><td><kbd>⇧⌘M</kbd></td><td>Poziome, Pionowe, Kopiuj.</td></tr>
+    <tr><td>Obróć&hellip;</td><td></td><td>Kąt, Kopiuj.</td></tr>
+    <tr><td>Odbij&hellip;</td><td></td><td>Oś (Pozioma lub Pionowa), Kąt, Kopiuj.</td></tr>
+    <tr><td>Skaluj&hellip;</td><td></td><td>Poziomy %, Pionowy %, Kopiuj.</td></tr>
+    <tr><td>Przechyl&hellip;</td><td></td><td>Kąt przechylenia, Kąt osi, Kopiuj.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="transform-each-again">Przekształć każdy i Przekształć ponownie</h3>
+<p><strong>Przekształć każdy&hellip;</strong> (<kbd>⌥⇧⌘D</kbd>) skaluje, przesuwa, obraca i odbija każdy zaznaczony obiekt wokół <em>jego własnego</em> środka, a nie wspólnego środka zaznaczenia. Jego okno dialogowe przyjmuje Skaluj H i V, Przesuń H i V, kąt Obróć, pola Odbij X i Odbij Y oraz Kopiuj. Sięgaj po to, aby zakłócić lub rozłożyć zestaw obiektów, aby każdy obracał się i rósł w miejscu, zamiast orbitować grupę.</p>
+<p><strong>Przekształć ponownie</strong> (<kbd>⌘D</kbd>) powtarza ostatnie przekształcenie na bieżącym zaznaczeniu. Przesuń obiekt, a następnie naciśnij <kbd>⌘D</kbd> kilka razy, a otrzymasz równo rozłożony rząd; połącz to z <kbd>⌥</kbd>-przeciąganiem kopii, aby budować powtarzające się wzorce ręcznie.</p>
+
+<h2 id="transform-tools">Narzędzia przekształcania i punkt odniesienia</h2>
+<p>Narzędzia Obróć (<kbd>R</kbd>), Odbij (<kbd>O</kbd>), Skaluj (<kbd>S</kbd>) i Przechyl działają każde wokół punktu odniesienia, rysowanego jako małe krzyżyk. Zaczyna się on od środka zaznaczenia; kliknij dowolne miejsce na płótnie, aby go tam przenieść, a zaznaczenie czegoś innego przywraca go do nowego środka. Następnie przeciągnij na płótnie, aby obracać, odbijać, skalować lub przechylać wokół tego punktu.</p>
+<p><kbd>⇧</kbd> ogranicza każde narzędzie: kroki co 45° dla Obróć i Odbij, równe poziome i pionowe dla Skaluj, jedną oś dla Przechyl. Przytrzymanie <kbd>⌥</kbd> podczas przeciągania przekształca kopię i zostawia oryginał. <kbd>⌥</kbd>-kliknięcie umieszcza punkt odniesienia i otwiera okno dialogowe liczbowe tego narzędzia z punktem już ustawionym, dzięki czemu możesz obrócić kształt wokół rogu o dokładny kąt.</p>
+
+<h2 id="transform-free">Narzędzie Dowolne przekształcanie</h2>
+<p>Narzędzie Dowolne przekształcanie (<kbd>E</kbd>) kładzie przesuwanie, skalowanie, obracanie, przechylanie i dwa rodzaje zniekształcania na jednej ramce ograniczającej. Przeciągnij wewnątrz ramki, aby ją przesunąć, przeciągnij uchwyt, aby skalować, i przeciągnij tuż za rogiem, aby obrócić, z <kbd>⇧</kbd> przyciągającym do 45°. Użyj go, gdy chcesz wypróbować kilka rodzajów zmian w jednym geście bez przełączania narzędzi między nimi.</p>
+<p>Ramka narzędzia Zaznacz może również zniekształcać: przytrzymaj <kbd>Ctrl</kbd> (lub <kbd>&#8984;</kbd>) podczas przeciągania jednego z jej rogów, aby przesunąć ten róg samodzielnie, zamiast skalować. Działa to na kształtach i zdjęciach jednakowo; na pikselach szybki podgląd podąża za przeciąganiem, a wynik jest wyliczany po naciśnięciu <kbd>Enter</kbd>.</p>
+
+<h3 id="transform-free-widget">Widżet</h3>
+<p>Mały widżet unosi się obok ramki z czterema przyciskami, z których każdy nazywa się przy najechaniu: <strong>Ogranicz</strong>, <strong>Dowolne przekształcanie</strong>, <strong>Zniekształcenie perspektywiczne</strong> i <strong>Zniekształcenie swobodne</strong>. Ogranicz czyni skalowanie proporcjonalnym bez przytrzymywania <kbd>⇧</kbd>; z nim włączonym <kbd>⇧</kbd> uwalnia proporcje zamiast tego. Dwa tryby zniekształcania zostawiają tylko cztery rogi do ciągnięcia.</p>
+
+<h3 id="transform-free-keys">Zniekształcanie z klawiatury</h3>
+<p>Możesz osiągnąć te same zniekształcenia bez opuszczania trybu domyślnego. Przytrzymaj <kbd>⌘</kbd> na uchwycie krawędzi, aby przechylać wzdłuż tej krawędzi. Przytrzymaj <kbd>⌘</kbd> na rogu, aby zniekształcić go swobodnie na własną rękę; dodaj <kbd>⇧</kbd>, aby ograniczyć drogę rogu do 45°. Przytrzymaj <kbd>⌘⌥⇧</kbd> na rogu dla perspektywy, gdzie sąsiedni róg odbija przeciąganie. Naciśnięcie lub puszczenie modyfikatora w połowie przeciągania przełącza działanie natychmiast, a nazwa, na której kończy, Skaluj, Przechyl, Zniekształcenie perspektywiczne lub Zniekształcenie swobodne, to jak nazywa się krok w panelu Historia później. Tekst, umieszczone obrazy i instancje symboli nie mogą być zniekształcane; są zostawiane tak, jak są, i Scissor mówi Ci o tym, gdy przeciąganie je pomija.</p>
+
+<h3 id="transform-free-reference">Punkt odniesienia</h3>
+<p>Punkt odniesienia siedzi w środku ramki jako krzyżyk i możesz go przeciągnąć gdziekolwiek; sam w sobie nic nie przesuwa. Ramka następnie obraca się i skaluje wokół niego i podróżuje z grafiką, gdy przesuwasz zaznaczenie. Upuść go blisko jednego z dziewięciu punktów ramki (cztery rogi, cztery środki krawędzi lub środek) i osiądzie na tym punkcie. Przytrzymanie <kbd>⌥</kbd> podczas skalowania ignoruje umieszczony punkt odniesienia i skaluje wokół środka. Przechylanie boku za pomocą <kbd>⌘</kbd> również utrzymuje umieszczony punkt odniesienia w miejscu.</p>
+
+<h3 id="transform-free-pins">Przesuwanie uchwytów</h3>
+<p>Włącz <strong>Przesuń uchwyty</strong> na szybkim pasku (lub pasku opcji), gdy Dowolne przekształcanie jest aktywne, i przeciągnij róg ramki, aby przesunąć ten róg samodzielnie, bez dotykania grafiki. Blisko punktu kotwicznego osiądzie na nim. Wyłącz Przesuń uchwyty z powrotem i przeciągnięty róg: kształt skaluje się tak, że róg podąża za wskaźnikiem, a każdy inny punkt zachowuje tę samą proporcjonalną odległość od tego, co trzyma się nieruchomo, co jest przeciwległym rogiem, umieszczonym punktem odniesienia lub środkiem, gdy trzymany jest <kbd>⌥</kbd>. <kbd>⇧</kbd> zachowuje proporcje. Przesunięte rogi podróżują z grafiką, a dwuklik jednego z nich odkłada wszystkie cztery z powrotem na ramkę.</p>
+
+<h2 id="transform-align-arrange">Wyrównywanie, porządkowanie i grupowanie</h2>
+<p>Te polecenia ustalają, jak obiekty wyrównują się do siebie, który siedzi przed którym i które są zebrane, schowane lub ukryte, podczas gdy pracujesz nad resztą.</p>
+
+<h3 id="transform-align">Wyrównywanie i rozdzielanie</h3>
+<p>Panel Wyrównaj (<kbd>⇧F7</kbd>) ma trzy rzędy. <strong>Wyrównaj obiekty</strong> wyrównuje zaznaczenie na lewo, środek lub prawo oraz na górę, środek lub dół. <strong>Rozłóż obiekty</strong> rozprowadza trzy lub więcej obiektów tak, aby ich góry, środki, doły, lewe krawędzie, środki lub prawe krawędzie spadały w równych odstępach. <strong>Rozłóż odstępy</strong> ustawia równą przerwę między nimi pionowo lub poziomo. Menu na panelu wybiera, czy wszystko wyrównuje się do zaznaczenia, czy do planszy. Wyrównywanie wymaga co najmniej jednego obiektu (pojedynczy obiekt wyrównuje się do planszy); rozdzielanie wymaga trzech, a panel wyszarza te przyciski, dopóki ich nie masz. Sześć wyrównań pojawia się również pod <strong>Obiekt &rsaquo; Wyrównaj</strong>.</p>
+
+<h3 id="transform-arrange">Rozmieść: kolejność na stosie</h3>
+<p>Każdy obiekt siedzi na poziomie stosu, a <strong>Obiekt &rsaquo; Rozmieść</strong> przesuwa zaznaczenie przez niego.</p>
+<table>
+  <thead><tr><th>Polecenie</th><th>Skrót</th></tr></thead>
+  <tbody>
+    <tr><td>Przenieś na przód</td><td><kbd>⇧⌘]</kbd></td></tr>
+    <tr><td>Przenieś do przodu</td><td><kbd>⌘]</kbd></td></tr>
+    <tr><td>Przenieś do tyłu</td><td><kbd>⌘[</kbd></td></tr>
+    <tr><td>Przenieś na tył</td><td><kbd>⇧⌘[</kbd></td></tr>
+  </tbody>
+</table>
+
+<h3 id="transform-grouping">Grupowanie, blokowanie i ukrywanie</h3>
+<dl>
+  <dt><strong>Grupuj</strong> (<kbd>⌘G</kbd>) i <strong>Rozgrupuj</strong> (<kbd>⇧⌘G</kbd>)</dt>
+  <dd>Zbieraj obiekty, aby poruszały się i przekształcały się jako jedno, lub uwalniaj je z powrotem. Grupę można wejść przez dwuklik narzędziem Zaznacz.</dd>
+  <dt><strong>Zablokuj &rsaquo; Zaznaczenie</strong> (<kbd>⌘2</kbd>) i <strong>Odblokuj wszystko</strong> (<kbd>⌥⌘2</kbd>)</dt>
+  <dd>Blokowanie czyni obiekty niewybieralnymi, aby pozostały w miejscu, podczas gdy pracujesz nad nimi; Odblokuj wszystko uwalnia wszystko, co było zablokowane.</dd>
+  <dt><strong>Ukryj &rsaquo; Zaznaczenie</strong> (<kbd>⌘3</kbd>) i <strong>Pokaż wszystko</strong> (<kbd>⌥⌘3</kbd>)</dt>
+  <dd>Ukrywanie zdejmuje obiekty z płótna bez usuwania ich, co oczyszcza zatłoczoną scenę do części, którą edytujesz; Pokaż wszystko przywraca je.</dd>
+</dl>
+
+<h2 id="transform-repeat">Powtórzenia na żywo</h2>
+<p><strong>Obiekt &rsaquo; Powtórz</strong> buduje wiele kopii z jednego obiektu i utrzymuje je na żywo: edytuj oryginał, a każda kopia podąża. Sięgaj po powtórzenie, gdy grafika jest regularna, kwiat o identycznych płatkach lub kafelkowa siatka ikon, abyś mógł ukształtować jeden element, a reszta podążała za nim.</p>
+<dl>
+  <dt><strong>Radialnie&hellip;</strong></dt>
+  <dd>Pierścieniuje kopie wokół środka. Okno dialogowe ustawia Liczbę instancji i Promień.</dd>
+  <dt><strong>Siatka&hellip;</strong></dt>
+  <dd>Układaje kopie w rzędach i kolumnach. Okno dialogowe ustawia Kolumny, Wiersze, Odstęp poziomy i Odstęp pionowy.</dd>
+  <dt><strong>Lustro&hellip;</strong></dt>
+  <dd>Odbija kopie przez oś. Okno dialogowe ustawia oś (pionową lub poziomą) i Przesunięcie.</dd>
+</dl>
+<p>Z zaznaczonym powtórzeniem panel Właściwości udostępnia te same kontrolki do późniejszego dostrajania: liczbę instancji i promień dla powtórzenia radialnego; kolumny, wiersze i odstępy poziome i pionowe dla siatki; oraz przesunięcie i oś lustra dla lustra. <strong>Zwolnij</strong> zamienia kopie w zwykłe, osobno edytowalne grafiki, gdy skończysz.</p>
+<figure class="shot">
+  <img src="img/repeat.gif" width="640" height="640" loading="lazy"
+       alt="Pojedynczy niebieski płatek powtarzany wokół środka przez powtórzenie radialne, wypełniający się w dwunastopłatkowy kwiat wraz ze wzrostem liczby." />
+  <figcaption>Jeden płatek i powtórzenie radialne. Wraz ze wzrostem liczby od jednego do dwunastu kwiat wypełnia się; przekształć pojedynczy płatek, a cała rzecz zmienia się z nim.</figcaption>
+</figure>
+
+<h2 id="transform-morph">Morfy</h2>
+<p>Morf wypełnia lukę między dwoma obiektami serią kształtów pośrednich, z których każdy jest bliższy następnemu. To narzędzie do cieniowanych przejść między kolorami i równo rozłożonych powtórzeń wzdłuż ścieżki.</p>
+<p>Narzędzie Morf (<kbd>W</kbd>) morfuje jeden obiekt w drugi: kliknij pierwszy, a następnie drugi. Kliknięcie trzeciego kontynuuje łańcuch, a kliknięcie do istniejącego morfu dodaje do niego ten obiekt. <strong>Obiekt &rsaquo; Morf</strong> zawiera resztę:</p>
+<table>
+  <thead><tr><th>Polecenie</th><th>Skrót</th><th>Co robi</th></tr></thead>
+  <tbody>
+    <tr><td>Utwórz</td><td><kbd>⌥⌘B</kbd></td><td>Morfuje zaznaczone obiekty razem.</td></tr>
+    <tr><td>Zwolnij</td><td><kbd>⌥⇧⌘B</kbd></td><td>Oddaje obiekty kluczowe i odrzuca kroki.</td></tr>
+    <tr><td>Opcje morfu&hellip;</td><td></td><td>Ustawia odstępy i orientację (patrz poniżej).</td></tr>
+    <tr><td>Rozwiń</td><td></td><td>Zamienia kroki pośrednie w prawdziwe, edytowalne obiekty.</td></tr>
+    <tr><td>Zastąp kręgosłup</td><td></td><td>Zgina bieg kroków wzdłuż zaznaczonej ścieżki.</td></tr>
+    <tr><td>Odwróć kręgosłup</td><td></td><td>Zamienia, który koniec kręgosłupa siedzi na którym końcu każdego obiektu kluczowego.</td></tr>
+    <tr><td>Odwróć przód do tyłu</td><td></td><td>Odwraca kolejność na stosie kroków.</td></tr>
+  </tbody>
+</table>
+<p><strong>Opcje morfu&hellip;</strong> ustawia Odstępy na Określone kroki (stała liczba pośredników), Określona odległość (stała przerwa w pikselach, wypełniająca tyle, ile się mieści) lub Płynny kolor (tyle kroków, ile potrzeba do płynnego mieszania koloru) i ustawia Orientację na Wyrównaj do strony lub Wyrównaj do ścieżki. Morf pozostaje na żywo i podąża za swoimi obiektami kluczowymi, więc edycja któregokolwiek końca przepływa przez cały bieg.</p>
+<figure class="shot">
+  <img src="img/morph.gif" width="760" height="316" loading="lazy"
+       alt="Niebieska gwiazda morfująca w bursztynowe koło przez rosnący rząd kształtów pośrednich." />
+  <figcaption>Morf od gwiazdy do koła. Wraz ze wzrostem liczby kroków więcej kształtów pośrednich wypełnia lukę, każdy trochę bliższy następnemu.</figcaption>
+</figure>
+
+<h2 id="transform-envelope">Deformacja kształtu</h2>
+<p><strong>Obiekt &rsaquo; Deformacja kształtu</strong> zgina grafikę, aby dopasowała się do kształtu, pozostawiając ją edytowalną pod spodem. Użyj go, aby dopasować logo do baneru, zakrzywić linię tekstu lub wypchnąć płaski wzór w wypukłość. Istnieją trzy sposoby stworzenia jednego.</p>
+<dl>
+  <dt><strong>Utwórz z deformacją&hellip;</strong> (<kbd>⌥⇧⌘W</kbd>)</dt>
+  <dd>Zgina zaznaczenie jednym z wbudowanych stylów deformacji (Łuk, Ark, Wypukłość, Flaga, Fala, Ryba, Wzrost, Rybie oko, Nadmuch, Ściskanie i warianty muszli i łuku), sterowanymi przez Wygięcie, Poziome i Pionowe wartości.</dd>
+  <dt><strong>Utwórz z górnym obiektem</strong> (<kbd>⌥⌘C</kbd>)</dt>
+  <dd>Używa najwyższego zaznaczonego kształtu jako koperty i wlewa wszystko pod nim w ten kontur. Wymaga dwóch lub więcej obiektów: kontener na górze, grafika pod spodem.</dd>
+  <dt><strong>Utwórz z siatką&hellip;</strong> (<kbd>⌥⌘M</kbd>)</dt>
+  <dd>Kładzie siatkę żądanych rzędów i kolumn nad zaznaczeniem. Pozostaje na żywo: przełącz na narzędzie Zaznacz bezpośrednio (<kbd>A</kbd>) i przeciągnij dowolne skrzyżowanie siatki, aby zginać to, co trzyma, tak często, jak chcesz.</dd>
+</dl>
+<p><strong>Zwolnij</strong> oddaje grafikę tak, jak była, wraz z kształtem koperty; <strong>Rozwiń</strong> zachowuje zgięcie i odrzuca kopertę, zostawiając zniekształcone ścieżki.</p>
+
+<h2 id="transform-3d">3D z kształtu wektorowego</h2>
+<p><strong>Efekt &rsaquo; 3D i Materiały</strong> zamienia płaski kształt w bryłę. Pozostaje efektem na żywo, więc oryginalna ścieżka nadal jest tam do edycji, a kopia na ekranie przebudowuje się za każdym razem, gdy ją zmienisz.</p>
+<dl>
+  <dt><strong>Wyciągnij i sfazuj</strong></dt>
+  <dd>Daje kształtowi głębię, z sfazowaną krawędzią, jeśli chcesz.</dd>
+  <dt><strong>Obróć</strong></dt>
+  <dd>Obraca profil wokół osi w obróconą formę.</dd>
+  <dt><strong>Nadmuchaj</strong></dt>
+  <dd>Pompie kształt tak, jakby był wypełniony.</dd>
+  <dt><strong>Płaszczyzna</strong></dt>
+  <dd>Chyli płaski kształt w przestrzeni bez dodawania głębi.</dd>
+</dl>
+<p>Panel 3D i Materiały obraca obiekt na osiach X, Y i Z, ustawia obrót i wysokość światła i wybiera powierzchnię plastikową, matową lub metalową, z polami Głębokość i Faza dla wyciągania.</p>
+<figure class="shot">
+  <img src="img/3d-extrude.gif" width="620" height="620" loading="lazy"
+       alt="Płaski wektorowy gwiazda wyciągana w trójwymiarową gwiazdę i obracana, aby pokazać swoją głębię." />
+  <figcaption>Wyciągnij i sfazuj buduje głębię z płaskiego kształtu, na żywo. Gwiazda pozostaje edytowalną ścieżką pod spodem.</figcaption>
+</figure>

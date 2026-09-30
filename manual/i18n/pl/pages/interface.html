@@ -1,0 +1,166 @@
+<p class="lede">Scissor wypełnia okno przeglądarki pojedynczą powierzchnią edycji: pasek menu u góry, pasek sterowania i karty dokumentów pod nim, paleta narzędzi po lewej, płótno rysunkowe w środku i dok paneli po prawej. Wszystko działa na Twoim własnym komputerze, więc dokument pozostaje tam, gdzie go umieściłeś, i nic nie jest wysyłane do otwarcia.</p>
+
+  <p>Skróty na tej stronie zapisane są w formacie macOS. W systemach Windows i Linux odczytuj <kbd>⌘</kbd> jako <kbd>Ctrl</kbd> i <kbd>⌥</kbd> jako <kbd>Alt</kbd>; <kbd>⇧</kbd> to Shift, a <kbd>⌃</kbd> to Control.</p>
+
+  <h2 id="interface-at-a-glance">Przestrzeń robocza w skrócie</h2>
+  <p>Okno zbudowane jest z kilku regionów, z których każdy odpowiada na inne pytanie. Poznaj ich lokalizację raz, a reszta przewodnika będzie łatwiejsza do czytania.</p>
+  <dl>
+    <dt>Pasek menu</dt>
+    <dd>Rzędów menu wzdłuż samej góry, z cofnięciem i ponowieniem oraz wyszukiwaniem poleceń na jego prawym końcu. To pełna lista wszystkiego, co edytor potrafi zrobić.</dd>
+    <dt>Pasek sterowania</dt>
+    <dd>Pasek tuż pod menu. Pokazuje bieżące narzędzie i garść kontrolek, które mają znaczenie dla tego, co masz zaznaczone w tej chwili.</dd>
+    <dt>Karty dokumentów</dt>
+    <dd>Po lewej stronie paska sterowania, jedna karta na każdy otwarty dokument. Przycisk paneli znajduje się na samym końcu tego samego rzędu.</dd>
+    <dt>Paleta narzędzi</dt>
+    <dd>Wąska kolumna narzędzi wzdłuż lewej krawędzi, z kontrolką wypełnienia i obrysu u jej podstawy.</dd>
+    <dt>Płótno i stół montażowy</dt>
+    <dd>Duży obszar w środku, w którym rysujesz. Białe prostokąty to plansze; szare otoczenie to stół montażowy.</dd>
+    <dt>Dok paneli</dt>
+    <dd>Kolumna paneli po prawej. Wsuwa się nad płótno, gdy go potrzebujesz, i oddaje miejsce z powrotem, gdy go zamykasz.</dd>
+    <dt>Pasek stanu</dt>
+    <dd>Cienka linia wzdłuż podstawy okna, raportująca bieżące narzędzie, zaznaczenie i ostatnią akcję cofnięcia.</dd>
+  </dl>
+  <figure class="shot">
+    <img src="img/app-light.png" width="1900" height="1082" loading="lazy"
+         alt="Całe okno Scissor: pasek menu, pasek sterowania, paleta narzędzi, płótno i dok paneli." />
+    <figcaption>Całe okno. Scissor podąża za ustawieniem jasnym lub ciemnym systemu, a to również.</figcaption>
+  </figure>
+
+  <h2 id="interface-menu-bar">Pasek menu</h2>
+  <p>Dziesięć menu biegnie wzdłuż góry. Gromadzą one wszystkie polecenia programu, pogrupowane według rodzaju wykonywanej pracy, a nie według tego, gdzie dana funkcja znajduje się w silniku.</p>
+  <table>
+    <thead><tr><th>Menu</th><th>Co zawiera</th></tr></thead>
+    <tbody>
+      <tr><td>Plik</td><td>Nowy, otwórz, zamknij, zapisz, umieść, eksportuj, skrypty, ustawienia dokumentu i drukuj.</td></tr>
+      <tr><td>Edycja</td><td>Cofnij i ponów, polecenia schowka, całe menu <strong>Zaznacz</strong> jako podmenu, edycja kolorów i Preferencje.</td></tr>
+      <tr><td>Rozmieść</td><td>Przekształć, kolejność na stosie, wyrównanie, grupowanie oraz blokowanie i ukrywanie.</td></tr>
+      <tr><td>Ścieżka</td><td>Polecenia ścieżek i ścieżek złożonych, morfowanie, Deformacja kształtu i perspektywa, maski przycinające, opływanie tekstem i rozwijanie.</td></tr>
+      <tr><td>Utwórz</td><td>Wzorce, powtórzenia, Wypełnienie obszaru, Wektoryzacja, siatka gradientu, plansze, wycinki i polecenia warstw pikselowych.</td></tr>
+      <tr><td>Efekty</td><td>Efekty na żywo: zestaw wektorowy (3D, zniekształcenia i przekształcenia, Łącz kształty, stylizacja, deformacje i inne) oraz podmenu Rastrowe pod nimi.</td></tr>
+      <tr><td>Tekst</td><td>Kroj pisma, rozmiar i glify, tworzenie konturów, zmiana wielkości liter, przepływ tekstu i wstawianie znaków.</td></tr>
+      <tr><td>Widok</td><td>Wygląd (jasny i ciemny), podgląd konturów i pikseli, powiększenie, obracanie widoku, linijki, prowadnice, siatka i przyciąganie.</td></tr>
+      <tr><td>Przestrzeń robocza</td><td>Panele: sześć najczęściej używanych, podmenu Tekst, podmenu Więcej paneli dla reszty i Resetuj panele.</td></tr>
+      <tr><td>Pomoc</td><td>Co nowego, przewodnik użytkownika, instalacja, Warunki Użytkowania i O programu, z polem wyszukiwania u góry.</td></tr>
+    </tbody>
+  </table>
+  <p>Znacznik obok pozycji oznacza, że dane ustawienie jest włączone. Pozycja wyszarzona nie może być użyta w tej chwili, zazwyczaj dlatego, że nic nie jest zaznaczone lub żaden dokument nie jest otwarty. Gdy polecenie ma skrót, jest on pokazany po prawej stronie menu.</p>
+
+  <h3 id="interface-command-search">Wyszukiwanie poleceń</h3>
+  <p>Nie musisz pamiętać, które menu co zawiera. Przycisk wyszukiwania po prawej stronie paska menu, oznaczony <em>Wyszukaj lub wpisz polecenie</em>, otwiera paletę poleceń; <kbd>⌘K</kbd> otwiera ją z klawiatury. Wpisz kilka liter, a ona wymieni wszystkie pasujące polecenia z ich ścieżką menu i skrótem oraz wszystkie pasujące narzędzia. Użyj <kbd>↑</kbd> i <kbd>↓</kbd>, aby poruszać się po wynikach, <kbd>Enter</kbd>, aby wykonać wyróżnione, i <kbd>Esc</kbd>, aby zamknąć. Sięgaj po nią, gdy wiesz, co chcesz, ale nie wiesz, gdzie to jest, lub gdy skrót jest szybszy do wpisania niż szukanie. Menu Pomoc ma własne pole wyszukiwania, które robi to samo we wszystkich menu.</p>
+
+  <h3 id="interface-undo-redo">Cofanie i ponawianie</h3>
+  <p>Zakrzywione strzałki blisko prawej strony paska menu cofają i ponawiają, tak samo jak <kbd>⌘Z</kbd> i <kbd>⇧⌘Z</kbd>. Każdy przycisk nazywa krok, który odwróciłby po najechaniu, a pasek stanu pokazuje to samo u dołu okna, więc zawsze wiesz, co jeszcze jedno naciśnięcie cofnęłoby.</p>
+
+  <h2 id="interface-tool-palette">Paleta narzędzi</h2>
+  <p>Narzędzia znajdują się w jednej kolumnie wzdłuż lewej krawędzi. Są ułożone w rodziny: Zaznacz, Rysuj, Tekst, Linia, Kształt, Maluj, Przekształć, Buduj, Pobierz próbkę, Symbole, Plansze i Widok. Kolumna pokazuje po jednym narzędziu z każdej rodziny na raz; zatrzymaj wskaźnik na slocie, a reszta tej rodziny rozłoży się po prawej, dzięki czemu możesz wybrać rodzeństwo bez przesuwania kolumny spod ręki. Slot nadal pokazuje tego członka rodziny, którego ostatnio użyłeś.</p>
+  <p>Kliknij slot, aby wybrać pokazane narzędzie. Jego podpowiedź podaje nazwę narzędzia i jego jednoklawiszowy skrót, na przykład <kbd>V</kbd> dla narzędzia Zaznacz, <kbd>P</kbd> dla Pióra lub <kbd>T</kbd> dla Tekstu. Gdy przełączasz narzędzia klawiaturą, pasujący slot na chwilę się podświetla, abyś mógł zobaczyć, które jest teraz aktywne. Aby zobaczyć wszystko naraz, przycisk blisko wyszukiwania poleceń, narysowany jako trzy kropki, otwiera przeglądarkę wszystkich narzędzi, pogrupowanych według rodziny i filtrowanych podczas pisania.</p>
+
+  <h3 id="interface-fill-stroke">Wypełnienie i obrys</h3>
+  <p>Poniżej narzędzi znajduje się kontrolka wypełnienia i obrysu: wypełniony kwadrat dla wypełnienia, umieszczony w pasku symbolizującym obrys, z małą parą strzałek do ich zamiany. Ponieważ znajduje się ona tutaj, a nie tylko w pasku sterowania, możesz wybrać kolor przed wybraniem narzędzia, a on stanie się tym, czym narysujesz następny obiekt. Kliknij wypełnienie lub pasek, aby otworzyć kolor, próbki i karty gradientu.</p>
+  <table>
+    <thead><tr><th>Klawisz</th><th>Działanie</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>X</kbd></td><td>Przenosi fokus między wypełnieniem a obrysem</td></tr>
+      <tr><td><kbd>⇧X</kbd></td><td>Zamienia wypełnienie i obrys</td></tr>
+      <tr><td><kbd>D</kbd></td><td>Przywraca domyślne: białe wypełnienie, czarny obrys</td></tr>
+      <tr><td><kbd>/</kbd></td><td>Ustawia aktywną stronę na brak</td></tr>
+    </tbody>
+  </table>
+
+  <h3 id="interface-rail-panels">Panele obok paska</h3>
+  <p>Między kontrolką wypełnienia i obrysu a narzędziami paleta oferuje krótki rząd przycisków paneli wybranych dla narzędzia, który trzymasz: narzędzia rysujące wybierają próbki i panele obrysu, narzędzia tekstu wybierają panele tekstu i akapitu i tak dalej. Otwierają one pojedynczy panel dokładnie tam, gdzie już jest Twoja ręka. Kolejny przycisk otwiera pełny dok. W niskim oknie rząd zwija się w jeden przycisk Panele, który wymienia te same opcje, dzięki czemu paleta nigdy nie wybiega poza dolną krawędź.</p>
+
+  <h2 id="interface-control-bar">Pasek sterowania</h2>
+  <p>Pasek pod menu zmienia się wraz z tym, co robisz. Po lewej stronie nazywa bieżące narzędzie, a po prawej pokazuje tylko kontrolki, które mogą działać na bieżącym zaznaczeniu: wypełnienie, obrys i grubość obrysu; X, Y, W i H zaznaczenia; oraz działania, które mają sens, takie jak wyrównanie, tryby logiczne kształtów, kolejność na stosie, grupa, rozgrupuj i duplikuj. Gdy jest więcej, niż się mieści, ostatni przycisk zbiera resztę w menu, więc pasek nigdy nie zmienia układu podczas użytkowania.</p>
+  <p>Wpisz wartość w dowolne pole liczbowe i naciśnij <kbd>Enter</kbd> lub opuść pole, aby zastosować wartość; <kbd>↑</kbd> i <kbd>↓</kbd> zmieniają ją o krok, z <kbd>⇧</kbd> dziesięć razy większym krokiem, a z <kbd>⌥</kbd> o dziesiątą część. Mała etykieta obok pola to suwak: przeciągnij ją w lewo lub w prawo, aby zmienić wartość na około. Najedź na nazwę narzędzia, aby odkryć pierwsze opcje tego narzędzia; kliknij nazwę, aby otworzyć jego pełne opcje pod paskiem, ze wszystkimi przełącznikami i liczbami.</p>
+  <p>Pasek sterowania jest domyślnie zadokowany w rzędzie kart, ale możesz przeciągnąć jego uchwyt, aby unieść go nad płótno, i kliknąć dwukrotnie uchwyt (lub użyć jego przycisku dokowania), aby go odłożyć z powrotem. Obok niego kompaktowy pasek może pojawić się obok zaznaczonego obiektu, niosąc tylko jego wypełnienie, obrys i grubość, dzięki czemu kolor jest tuż obok grafiki, a nie po drugiej stronie okna.</p>
+
+  <h2 id="interface-quick-bar">Szybki pasek</h2>
+  <p>Gdy coś zaznaczysz, mały pasek unosi się obok z najczęściej używanymi kontrolkami, dzięki czemu nie musisz przenosić się na krawędź okna. Dla kształtów i ścieżek zawiera wypełnienie i obrys; dla tekstu zawiera wypełnienie, rozmiar, pogrubienie, kursywę i wyrównanie. Trzyma się z dala od drogi podczas przeciągania i wraca, gdy puścisz. Wszystko na nim jest również w pasku sterowania i panelach.</p>
+
+  <h2 id="interface-canvas">Płótno i stół montażowy</h2>
+  <p>Środek okna to płótno. Plansze to białe prostokąty, które zawierają grafikę, którą chcesz zachować; szare otoczenie to stół montażowy. Stół montażowy jest częścią dokumentu, więc szkic, obróbka lub test koloru zaparkowany tam jest zapisywany z plikiem, ale podczas eksportu planszy zapisywane jest tylko to, co mieści się w prostokącie tej planszy.</p>
+
+  <h3 id="interface-pan-zoom">Przesuwanie i powiększanie</h3>
+  <p>Przytrzymaj <kbd>Spację</kbd>, aby przełączyć na narzędzie Ręka tak długo, jak je trzymasz, a następnie przeciągnij, aby przesunąć widok; puść, a Twoje narzędzie wraca. Przeciąganie środkowym przyciskiem myszy również przesuwa. Kółko przewija, a kółko z przytrzymanym <kbd>⌘</kbd> lub <kbd>⌥</kbd> powiększa wokół wskaźnika.</p>
+  <table>
+    <thead><tr><th>Skrót</th><th>Powiększenie</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>⌘=</kbd> / <kbd>⌘-</kbd></td><td>W górę i w dół</td></tr>
+      <tr><td><kbd>⌘0</kbd></td><td>Dopasuj aktywną planszę do okna</td></tr>
+      <tr><td><kbd>⌥⌘0</kbd></td><td>Dopasuj wszystkie plansze do okna</td></tr>
+      <tr><td><kbd>⌘1</kbd></td><td>Rzeczywisty rozmiar</td></tr>
+    </tbody>
+  </table>
+  <p>Kontrolka powiększenia znajduje się nad płótnem z przyciskami minus, plus i dopasuj oraz bieżącym procentem; kliknij procent, aby otworzyć te same polecenia dopasowania i rzeczywistego rozmiaru jako menu.</p>
+
+  <h3 id="interface-rulers-guides">Linijki i prowadnice</h3>
+  <p><kbd>⌘R</kbd> pokazuje i ukrywa linijki, które mierzą w jednostkach dokumentu od lewego górnego rogu aktywnej planszy i niosą znacznik podążający za wskaźnikiem. Przeciągnij z linijki, aby wyciągnąć prowadnicę na grafikę, i upuść prowadnicę z powrotem na linijkę, aby się jej pozbyć. Możesz również zamienić zaznaczoną ścieżkę w prowadnicę za pomocą Utwórz prowadnice (<kbd>⌘5</kbd>) i zamienić ją z powrotem za pomocą Zwolnij prowadnice (<kbd>⌥⌘5</kbd>). Pokaż lub ukryj wszystkie prowadnice za pomocą <kbd>⌘;</kbd>. Inteligentne prowadnice (<kbd>⌘U</kbd>) pokazują podpowiedzi wyrównania i pomiaru podczas rysowania i przeciągania.</p>
+
+  <h3 id="interface-grid">Siatka</h3>
+  <p>Siatka jest rysowana dla każdej planszy i ustawiana z Widok › Siatka lub z panelu Siatka. Pokaż lub ukryj ją za pomocą <kbd>⌘'</kbd> i przełącz przyciąganie do niej za pomocą <kbd>⇧⌘'</kbd>. Każda plansza może używać jednego z sześciu rodzajów siatki: Ortogonalna, Izometryczna, Sześciokątna, Ukośna, Złoty Proporcji i Perspektywiczna. Wybór rodzaju włącza siatkę, abyś mógł ją od razu zobaczyć. Siatka jest opisana w pełni na swojej własnej stronie.</p>
+
+  <h3 id="interface-history-strip">Pasek historii</h3>
+  <p>Kolumna małych kresek pojawia się w rogu płótna, gdy zbliżasz do niego wskaźnik: to historia dokumentu. Najedź na kreskę, aby nazwać ten krok, kliknij jedną, aby przejść prosto do niej, lub naciśnij i przesuń w dół kreski, aby przewijać dokument w przód i w tył, dzięki czemu możesz obserwować, jak zmiana przychodzi i odchodzi. Panel Historia w doku wymienia te same kroki jako tekst.</p>
+
+  <h2 id="interface-boards">Plansze i pasek plansz</h2>
+  <p>Plansze to to, co Scissor nazywa artbledami. Każda niesie swoją nazwę nad swoim lewym górnym rogiem, a aktywna plansza jest rysowana z mocniejszą ramką niż reszta. Kliknij nazwę planszy, aby pobrać narzędzie Plansza z tą planszą aktywną, gotową do przesunięcia, zmiany rozmiaru lub zmiany nazwy. Jeśli plansza ma spad, jest on pokazany wokół niej jako czerwona przerywana ramka. Dodaj jedną z Utwórz › Plansze › Nowa plansza, rysuj i przekształcaj plansze za pomocą narzędzia Plansza (<kbd>⇧O</kbd>) i ustaw rozmiar i nazwę planszy w Opcjach planszy. Rozmieść wszystkie plansze porządkuje je w rząd.</p>
+  <p>Pasek miniatur plansz znajduje się nad płótnem, jedna mała podgląd na planszę plus przycisk dodawania na końcu. Kliknij miniaturę, aby ustawić tę planszę jako aktywną i dopasować ją do okna; kliknij nazwę pod nią, aby przejść do tej planszy i pobrać narzędzie Plansza gotowe do edycji. Panel Plansze w doku również je wymienia.</p>
+
+  <h2 id="interface-tabs">Karty dokumentów</h2>
+  <p>Otwarte dokumenty pojawiają się jako karty po lewej stronie paska sterowania. Karta pokazuje nazwę dokumentu, z kropką przed nią, gdy ma niezapisane zmiany. Kliknij kartę, aby przełączyć się do tego dokumentu, lub ×, aby go zamknąć; zamykanie dokumentu z niezapisaną pracą najpierw pyta. Kliknij środkowym przyciskiem myszy kartę, aby zamknąć ją od razu, i przeciągnij kartę na inną, aby zmienić kolejność otwartych dokumentów. Nowy (<kbd>⌥⌘N</kbd>), Otwórz (<kbd>⌘O</kbd>) i Zapisz (<kbd>⌘S</kbd>) znajdują się w menu Plik, a Zamknij to <kbd>⌥⌘W</kbd>.</p>
+  <p>Karty domyślnie znajdują się u góry. Aby zadokować je z boku, włącz <strong>Widok &rsaquo; Karty dokumentów z boku</strong> (również w Preferencjach); pasek boczny można przeciągać szerszy lub węższy za jego prawą krawędź, a wybór jest zapamiętywany.</p>
+
+  <h2 id="interface-status-bar">Pasek stanu</h2>
+  <p>Linia wzdłuż podstawy okna raportuje, od lewej do prawej: wskaźnik gotowości, nazwę bieżącego narzędzia, rozmiar zaznaczenia (nic nie zaznaczone, jeden obiekt lub liczbę) oraz działanie, które <kbd>⌘Z</kbd> cofnęłoby. To ciche miejsce, aby potwierdzić, co podniosłeś i co następne cofnięcie odwróci.</p>
+
+  <h2 id="interface-dock">Dok paneli</h2>
+  <p>Panele mieszkają w kolumnie po prawej. W spoczynku płótno ma całe okno; zażądanie panelu wsuwa dok nad płótno, a zamknięcie go oddaje miejsce z powrotem. Przycisk paneli po prawej stronie rzędu kart i klawisz Escape otwierają i zamykają dok; menu Okno i Przestrzeń robocza oraz paleta poleceń otwierają konkretny panel.</p>
+  <figure class="shot">
+    <img src="img/editing.png" width="1900" height="1176" loading="lazy"
+         alt="Dokument otwarty w Scissor z grafiką na planszy i otwartymi panelami Warstwy i Próbki w doku." />
+    <figcaption>Dokument w trakcie edycji, z otwartymi panelami Warstwy i Próbki w doku.</figcaption>
+  </figure>
+
+  <h3 id="interface-dock-groups">Zadokowane grupy paneli</h3>
+  <p>Panele są ułożone w grupy, każda grupa to kolumna małych kart ikon wzdłuż własnej krawędzi. Zatrzymaj wskaźnik na karcie, aby zobaczyć nazwę panelu, a otwarty panel nazywa się nad swoją zawartością. Domyślnie grupy gromadzą panele, które zwykle są używane razem:</p>
+  <ul>
+    <li><strong>Właściwości, Warstwy, Plansze, Siatka</strong>: struktura dokumentu.</li>
+    <li><strong>Kolor, Próbki, Gradient, Obrys</strong>: sposób malowania.</li>
+    <li><strong>Tekst, Akapit, Glify</strong>: tekst.</li>
+    <li><strong>Wyrównaj, Łącz kształty, Przekształć, Stos malowania, Przezroczystość, 3D</strong>: kształtowanie i porządkowanie.</li>
+    <li><strong>Style, Pędzle, Symbole, Wzorce</strong>: wielokrotnie używalne wyglądy i obiekty.</li>
+    <li><strong>Nawigator, Informacje, Informacje o dokumencie, Historia, Akcje</strong>: poruszanie się i mierzenie.</li>
+    <li><strong>Zasoby, Zmienne, Automatyczne zaznaczanie, Wektoryzacja, Atrybuty</strong>: reszta.</li>
+  </ul>
+
+  <h3 id="interface-rearranging">Przebudowanie paneli</h3>
+  <p>Układ jest do zmiany. Przeciągnij kartę wzdłuż własnego paska, aby zmienić jej kolejność, przeciągnij ją na pasek innej grupy, aby ją tam przenieść, lub przeciągnij ją poza dok, aby zostawić ją pływającą nad płótnem. Przeciągnij pustą część paska, aby unieść całą grupę, i upuść ją z powrotem nad dok, aby ją umieścić w domu; przerwa między grupami przyjmuje upuszczoną kartę jako nową własną grupę. Kliknij prawym przyciskiem myszy kartę, aby wykonać te same ruchy z menu, w tym Zamknij panel. × na górze paska zamyka tę grupę, a przeciąganie podziału między dwiema grupami daje wysokość jednej i zabiera ją drugiej. Pływającą grupę można zmienić rozmiar z rogu.</p>
+
+  <h3 id="interface-gating">Panele, które czekają na zadanie</h3>
+  <p>Panel, który nie ma nic do zrobienia w tej chwili, nie znika: jego karta pozostaje, tylko wyszarzona, a jego treść pokazuje linię mówiącą, na co czeka, na przykład na zaznaczenie obiektu lub wybranie narzędzia Tekst. Aby dok nie przestawiał się spod ręki, to czekanie jest wstrzymywane, gdy wskaźnik znajduje się w doku, i nadrabia, gdy wskaźnik go opuszcza.</p>
+
+  <h3 id="interface-workspace">Otwieranie, ukrywanie i resetowanie paneli</h3>
+  <p>Otwórz panel z menu Przestrzeń robocza, gdzie sześć najczęściej używanych znajduje się u góry, a reszta pod Więcej paneli, lub z menu Okno w klasycznym interfejsie. Wiele paneli ma skrót:</p>
+  <table>
+    <thead><tr><th>Panel</th><th>Skrót</th><th>Panel</th><th>Skrót</th></tr></thead>
+    <tbody>
+      <tr><td>Warstwy</td><td><kbd>F7</kbd></td><td>Kolor</td><td><kbd>F6</kbd></td></tr>
+      <tr><td>Stos malowania</td><td><kbd>⇧F6</kbd></td><td>Informacje</td><td><kbd>F8</kbd></td></tr>
+      <tr><td>Wyrównaj</td><td><kbd>⇧F7</kbd></td><td>Przekształć</td><td><kbd>⇧F8</kbd></td></tr>
+      <tr><td>Obrys</td><td><kbd>⌘F10</kbd></td><td>Gradient</td><td><kbd>⌘F9</kbd></td></tr>
+      <tr><td>Łącz kształty</td><td><kbd>⇧⌘F9</kbd></td><td>Przezroczystość</td><td><kbd>⇧⌘F10</kbd></td></tr>
+      <tr><td>Style graficzne</td><td><kbd>⇧F5</kbd></td><td>Pędzle</td><td><kbd>F5</kbd></td></tr>
+      <tr><td>Atrybuty</td><td><kbd>⌘F11</kbd></td><td>Symbole</td><td><kbd>⇧⌘F11</kbd></td></tr>
+      <tr><td>Znak</td><td><kbd>⌘T</kbd></td><td>Akapit</td><td><kbd>⌥⌘T</kbd></td></tr>
+      <tr><td>Glify</td><td><kbd>⌥⇧F11</kbd></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+  <p>Dok można poszerzyć, przeciągając jego lewą krawędź, od wygodnej szerokości dwóch pól w rzędzie do znacznie szerszej. Twój układ i to, jak szeroko zostawiłeś dok, są zapamiętywane między sesjami. Gdy dok jest zamknięty, zahaczanie wskaźnika o prawą krawędź okna wysuwa go, o ile nie ma grafiki pod wskaźnikiem. Aby cofnąć wszystkie zmiany układu, wybierz Resetuj panele, co przywraca każdę grupę do jej początkowego miejsca.</p>
+  <p><kbd>Tab</kbd> ukrywa paletę narzędzi, pasek sterowania, karty dokumentów, pasek stanu, panele i pozostałe elementy na płótnie, zostawiając tylko grafikę i pasek menu; naciśnij go ponownie, aby przywrócić je wszystkie.</p>
+
+  <h2 id="interface-language">Język</h2>
+  <p>Scissor mówi po angielsku, niemiecki (Deutsch), hiszpański (Español), francuski (Français), włoski (Italiano), kataloński (Català), czeski (Čeština), duński (Dansk), norweski (Norsk), polski (Polski), słowacki (Slovenčina), fiński (Suomi) i szwedzki (Svenska). Przy pierwszym otwarciu używa języka Twojej przeglądarki, gdy jest jednym z nich, a w przeciwnym razie angielskiego. Aby wybrać inny, kliknij przycisk globusa w pasku menu lub na ekranie powitalnym, lub otwórz <strong>Edycja › Preferencje</strong> (<kbd>&#8984;K</kbd>), przejdź do <strong>Interfejs</strong> i wybierz jeden pod <strong>Język</strong>. Scissor przeładowuje się i zapamiętuje wybór. Menu, panele, okna dialogowe, podpowiedzi, komunikaty i Co nowego podążają za nim, a liczby są pokazywane lokalnie, na przykład 12,5 po niemiecku, choć możesz wpisać przecinek lub kropkę. Twoje dokumenty nie są dotknięte: nazwy warstw i tekst w Twojej grafice pozostają tak, jak je napisałeś. Gdy interfejs nie jest po angielsku, Warunki Użytkowania są pokazywane przetłumaczone dla wygody, a wersja angielska jest tą, która obowiązuje.</p>
+
+  <h2 id="interface-appearance">Jasny i ciemny</h2>
+  <p>Scissor podąża za ustawieniem systemu dla trybu jasnego i ciemnego. Aby ustawić go na jeden sposób, wybierz Widok › Wygląd i wybierz Systemowy, Jasny lub Ciemny. Wybór jest zapamiętywany i przenosi się również na płótno: stół montażowy, linijki i etykiety plansz są rysowane tak, aby pasowały do motywu, w którym jesteś.</p>

@@ -1,0 +1,153 @@
+<p class="lede">Ogni oggetto vettoriale in Scissor è costruito da tracciati: una catena di punti di ancoraggio uniti da segmenti retti o curvi. Questa pagina copre come disegnarli, come rimodellarli punto per punto e i comandi che li uniscono, li scompongono, li contornano e li combinano.</p>
+
+<p>Le scorciatoie sono scritte nel formato macOS. Su Windows, leggi <kbd>&#8984;</kbd> come Ctrl, <kbd>&#8997;</kbd> come Alt e <kbd>&#8679;</kbd> come Shift.</p>
+
+<h2 id="paths-anchors-and-handles">Ancore, maniglie e la forma di un tracciato</h2>
+<p>Un tracciato è una serie di punti di ancoraggio. Tra due ancore vicine si trova un segmento, che è retta quando nessuna delle due ancore si protende verso di esso e curva quando una o lo fanno. La portata di un'ancora è impostata dalle sue due maniglie direzionali: la maniglie in ingresso modella il segmento che arriva all'ancora, e quella in uscita modella il segmento che la lascia. Trascinando una maniglia più lontano la curva sporge più fortemente verso di essa. Un tracciato può essere aperto, con due estremità libere, o chiuso, dove l'ultima ancora si unisce di nuovo alla prima.</p>
+
+<h3 id="paths-corner-and-smooth">Punti d'angolo e punti morbidi</h3>
+<p>Un'ancora è o un angolo o un punto morbido. In un punto morbido le due maniglie sono bloccate in una linea retta attraverso l'ancora, così la curva passa attraverso di essa senza scatti e resta continua. In un punto d'angolo i due lati sono indipendenti: il tracciato può cambiare direzione bruscamente, e un lato può essere rettilineo mentre l'altro è curvo. La maggior parte delle forme mescola i due, punti morbidi lungo le parti fluenti e punti d'angolo dove un bordo gira.</p>
+<dl>
+  <dt>Punto morbido</dt>
+  <dd>Maniglie legate insieme in una linea. Usale lungo una curva che dovrebbe leggersi come un unico gesto continuo, come il lato di una foglia o la cava di una lettera.</dd>
+  <dt>Punto d'angolo</dt>
+  <dd>Maniglie che si muovono separatamente, oppure un punto senza maniglie. Usale alla punta di una stella, all'angolo di una scatola, ovunque una curva debba incontrare un bordo retto.</dd>
+</dl>
+
+<h3 id="paths-direct-selection">Ancore, maniglie e Strumento Selezione diretta</h3>
+<p>Lo Strumento Selezione diretta (<kbd>A</kbd>) lavora sulle parti di un tracciato. Fai clic su un'ancora per selezionarla, <kbd>&#8679;</kbd>-clic per aggiungerla o rimuoverla, oppure trascina un rettangolo di selezione sul vuoto per catturare ogni ancora al suo interno. Trascinando le ancore selezionate le sposti; <kbd>&#8679;</kbd> limita lo spostamento a passi di 45&deg;. Usalo ogni volta che una forma è quasi giusta e solo uno o due punti hanno bisogno di essere spostati.</p>
+<p>Trascina una maniglia per cambiare la curva sul suo lato. Le maniglie che appartengono a un'ancora morbida si muovono insieme, così la curva resta continua; tieni premuto <kbd>&#8997;</kbd> mentre trascini per spezzare quel collegamento e guidare un lato da solo, e <kbd>&#8679;</kbd> per limitare la maniglia a un angolo. Puoi anche trascinare un segmento stesso: un segmento curvo si piega sotto il puntatore, e uno retto porta con sé entrambe le sue ancore.</p>
+<p>Lo Strumento Selezione gruppo condivide questo slot e raccoglie interi oggetti da un gruppo invece che ancore. Fai clic una volta per l'oggetto più interno, fai clic di nuovo per uscire al gruppo che lo circonda.</p>
+
+<h2 id="paths-drawing">Strumenti di disegno</h2>
+<p>Scissor ha tre strumenti per creare un tracciato da zero. La Penna dà il controllo esatto punto per punto, lo Strumento Curvatura adatta una curva morbida attraverso i punti che piazzi, e la Matita segue liberamente la tua mano.</p>
+<table>
+  <thead><tr><th>Strumento</th><th>Scorciatoia</th><th>Ideale per</th></tr></thead>
+  <tbody>
+    <tr><td>Penna</td><td><kbd>P</kbd></td><td>Contorni precisi dove ogni ancora e maniglia è posizionata di proposito.</td></tr>
+    <tr><td>Curvatura</td><td><kbd>&#8679;~</kbd></td><td>Curve fluide definite da pochi punti passanti, senza gestire le maniglie.</td></tr>
+    <tr><td>Matita</td><td><kbd>N</kbd></td><td>Forme libere, disegnate a mano e abbozzi rapidi.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="paths-pen">Lo Strumento Penna</h3>
+<p>Lo Strumento Penna (<kbd>P</kbd>) costruisce un tracciato punto per punto. Fai clic per piazzare un'ancora d'angolo; premi e trascina invece e l'ancora mantiene le maniglie, così il tracciato esce da essa come una curva. Tieni premuto <kbd>&#8679;</kbd> mentre trascini per limitare la maniglia a passi di 45&deg;, e tieni premuto <kbd>&#8997;</kbd> per spostare solo la maniglia in uscita, che trasforma l'ancora in un angolo e libera il segmento successivo da quello precedente.</p>
+<p>Mentre un tracciato è aperto lo strumento cambia man mano che ti muovi sopra di esso. Sopra la prima ancora chiude il tracciato, sopra un segmento aggiunge un'ancora e sopra un'ancora esistente ne rimuove una. Senza un tracciato in corso, muovendoti sopra l'estremità libera di un tracciato aperto riprende quel tracciato così continui a disegnare da esso. <kbd>Invio</kbd> o <kbd>Esc</kbd> termina il tracciato e lo lascia aperto; <kbd>Canc</kbd> rimuove l'ancora che hai posizionato per ultima.</p>
+
+<h3 id="paths-curvature">Lo Strumento Curvatura</h3>
+<p>Lo Strumento Curvatura (<kbd>&#8679;~</kbd>) adatta una curva morbida attraverso i punti su cui fai clic, con un'anteprima che arriva al puntatore man mano che procedi. <kbd>&#8997;</kbd>-clic per piazzare un punto d'angolo invece di uno morbido, e doppio clic su qualsiasi punto per alternarlo tra i due. Trascina un punto per spostarlo e la curva si riadatta. Fai clic sul primo punto per chiudere la forma, oppure premi <kbd>Invio</kbd> per finire. <kbd>Canc</kbd> rimuove l'ultimo punto e <kbd>Esc</kbd> abbandona il tracciato. Usalo quando tieni più alla forma della curva che alle ancore esatte, dato che calcola le maniglie per te.</p>
+
+<h3 id="paths-pencil">Lo Strumento Matita</h3>
+<p>Lo Strumento Matita (<kbd>N</kbd>) disegna a mano libera: premi, disegna e rilasci, e Scissor adatta un tracciato morbido attraverso la scia. Rilascia vicino a dove hai iniziato, oppure tieni premuto <kbd>&#8997;</kbd> mentre finisci, e il tracciato si chiude in una forma. Il risultato è un tracciato aperto con contorno nel colore di contorno corrente, quindi è pronto a essere conservato come linea o riempito. Quanto da vicino il tracciato adattato segue il tuo movimento è impostato dalla preferenza Fedeltà matita, da accurata, che mantiene più ancore e ogni oscillazione, a morbida, che usa meno ancore e stira la linea. Usala per abbozzare, firme e qualsiasi forma che dovrebbe sembrare disegnata a mano piuttosto che costruita.</p>
+
+<h2 id="paths-editing-points">Modificare i punti su un tracciato</h2>
+
+<h3 id="paths-add-remove-convert">Aggiungere, rimuovere e convertire punti</h3>
+<p>La Penna condivide il suo slot nella barra degli strumenti con Aggiungi punto di ancoraggio (<kbd>+</kbd>), Elimina punto di ancoraggio (<kbd>&#8722;</kbd>) e lo Strumento Punto di ancoraggio (<kbd>&#8679;C</kbd>). Aggiungi punto di ancoraggio piazza un nuovo punto su un segmento senza cambiare la curva; Elimina punto di ancoraggio rimuove il punto su cui fai clic e lascia che il tracciato chiuda il vuoto. Con lo Strumento Punto di ancoraggio, trascina da un'ancora d'angolo per estrarre una coppia di maniglie corrispondendenti, trasformandola in morbida; trascina una singola maniglia per spezzare la coppia così i due lati si muovono separatamente, trasformandola di nuovo in un angolo; e fai clic su un'ancora morbida per eliminarne le maniglie in un angolo netto.</p>
+<p>Oggetto &rsaquo; Tracciato ha le stesse modifiche come comandi che agiscono sull'intera selezione in una volta. Aggiungi punti di ancoraggio piazza una nuova ancora al centro di ogni segmento, raddoppiando il numero di punti senza cambiare la forma, cosa utile prima di una distorsione o deformazione che ha bisogno di più punti per piegarsi pulitamente. Rimuovi punti di ancoraggio elimina le ancore che hai selezionato con lo Strumento Selezione diretta e riadatta il tracciato attraverso ciò che resta.</p>
+
+<h3 id="paths-reshape-tools">Rimodellare a mano: Smussa, Gomma tracciato e Unisci</h3>
+<p>Tre strumenti tipo pennello rimodellano un tracciato dove trascini piuttosto che in una singola ancora. Agiscono sui tracciati selezionati, oppure su qualsiasi tracciato sotto il pennello quando non è selezionato nulla, e <kbd>[</kbd> e <kbd>]</kbd> rimpiccioliscono e ingrandiscono il pennello.</p>
+<dl>
+  <dt>Strumento Smussa</dt>
+  <dd>Trascina lungo un tracciato per rilassarlo, assottigliando le ancore e ammorbidendo le irregolarità. Usalo per calmare una linea di matita tremolante o un bordo tracciato.</dd>
+  <dt>Strumento Gomma tracciato</dt>
+  <dd>Trascina lungo un tracciato per cancellare la parte che attraversi, spezzandolo o accorciandolo. Usalo per tagliare una coda estranea da una linea.</dd>
+  <dt>Strumento Unisci</dt>
+  <dd>Passa su due estremità aperte e vengono unite, estendendo o accorciando i tracciati per incontrarsi pulitamente in un angolo. Usalo per chiudere uno spazio dove due tratti avrebbero dovuto incontrarsi.</dd>
+</dl>
+
+<h3 id="paths-cutting">Tagliare un tracciato: Forbici e Coltello</h3>
+<p>Lo Strumento Forbici (<kbd>C</kbd>) taglia in un singolo punto. Fai clic su un segmento o un'ancora e il tracciato viene diviso lì: un tracciato chiuso si apre al taglio, e un tracciato aperto si spezza in due oggetti separati. Usalo per tagliare un'apertura in un cerchio, oppere per spezzare una forma così che le metà possano essere stylate diversamente.</p>
+<p>Lo Strumento Coltello affetta direttamente attraverso il lavoro. Trascina la lama sopra un oggetto per tagliarlo in pezzi separati lungo la linea disegnata; tieni premuto <kbd>&#8997;</kbd> per tagliare in linea retta e aggiungi <kbd>&#8679;</kbd> per limitare quella linea a passi di 45&deg;. Con qualcosa selezionato, vengono tagliati solo gli oggetti selezionati; altrimenti tutto ciò che la lama attraversa. Usalo per affettare una forma riempita in diversi pezzi chiusi in un sol colpo.</p>
+
+<h2 id="paths-commands">Comandi di tracciato</h2>
+<p>Oggetto &rsaquo; Tracciato raccoglie le operazioni che agiscono su interi tracciati in una volta.</p>
+<table>
+  <thead><tr><th>Comando</th><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+  <tbody>
+    <tr><td>Unisci</td><td><kbd>&#8984;J</kbd></td><td>Collega estremità aperte in un unico tracciato, oppure chiude un singolo tracciato aperto.</td></tr>
+    <tr><td>Media&hellip;</td><td><kbd>&#8997;&#8984;J</kbd></td><td>Sposta le ancore selezionate nella loro posizione comune.</td></tr>
+    <tr><td>Contorna tratto</td><td></td><td>Trasforma un contorno in una forma riempita dello stesso profilo.</td></tr>
+    <tr><td>Tracciato offset&hellip;</td><td></td><td>Crea una copia ingrandita o rimpicciolita di una distanza impostata.</td></tr>
+    <tr><td>Inverti direzione tracciato</td><td></td><td>Inverte la direzione in cui scorre il tracciato.</td></tr>
+    <tr><td>Semplifica&hellip;</td><td></td><td>Riduce il numero di punti di ancoraggio.</td></tr>
+    <tr><td>Aggiungi punti di ancoraggio</td><td></td><td>Aggiunge un punto al centro di ogni segmento.</td></tr>
+    <tr><td>Rimuovi punti di ancoraggio</td><td></td><td>Rimuove le ancore selezionate.</td></tr>
+    <tr><td>Dividi in griglia&hellip;</td><td></td><td>Taglia la selezione in una griglia di righe e colonne.</td></tr>
+    <tr><td>Pulisci&hellip;</td><td></td><td>Elimina punti sparsi, oggetti senza vernice e testo vuoto.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="paths-join-average">Unisci e media</h3>
+<p>Unisci (<kbd>&#8984;J</kbd>) lavora su tracciati aperti. Con due tracciati aperti separati selezionati, collega le loro estremità più vicine in un unico tracciato; con un singolo tracciato aperto, unisce le due estremità libere per chiuderlo. Estremità che già si trovano una sopra l'altra vengono fuse in un'unica ancora. Usalo per chiudere una forma che hai disegnato come contorno aperto, oppure per cucire insieme due tratti disegnati a metà.</p>
+<p>Media (<kbd>&#8997;&#8984;J</kbd>) sposta le ancore selezionate nella loro posizione media condivisa. La finestra offre l'asse orizzontale, che allinea i punti a un'altezza comune; l'asse verticale, che li allinea in una colonna; oppure entrambi, che li impilano tutti in un punto. Usalo per livellare una fila di punti o per avvicinare due estremità prima di unirle.</p>
+
+<h3 id="paths-simplify">Semplifica</h3>
+<p>Semplifica ridisegna i tracciati selezionati con meno punti di ancoraggio, restando entro un'accuratezza che imposti: un'accuracy più stretta resta vicina all'originale a costo di più punti, una più larga smussa la forma fino a una manciata. Usalo per pulire un tracciato tracciato o disegnato a mano che porta molti più punti di quanti la forma ne necessiti, cosa che lo rende più leggero da modificare e da rendere.</p>
+
+<h3 id="paths-offset">Tracciato offset</h3>
+<p>Tracciato offset costruisce un nuovo tracciato a una distanza impostata dall'originale: un offset positivo ingrandisce il contorno verso l'externo e si posiziona dietro l'originale, un offset negativo lo rimpicciolisce verso l'interno e si posiziona davanti. L'impostazione Giunzioni decide come sono trattati gli angoli esterni, come un Miter netto, un Round arrotondato o un Bevel piatto, con un limite miter che limita la lunghezza di un angolo netto prima di essere tagliato. Usalo per disegnare un bordo uniforme attorno a una forma, per inserire una forma per una chiave, oppure per ingrassare una forma sottile. Tracciato offset è disponibile anche sotto Effetto &rsaquo; Tracciato come effetto live che ricalcola quando la forma cambia.</p>
+
+<h3 id="paths-outline-stroke">Contorna tratto</h3>
+<p>Contorna tratto sostituisce un tracciato con contorno con una forma riempita che ha esattamente il profilo del contorno. Una volta contornato, lo spessore non si più ridimensionare con l'oggetto e non può essere modificato come contorno, ma il contorno può essere rimodellato punto per punto, riempito con una sfumatura o combinato con altre forme. Usalo quando hai bisogno che il contorno si comporti come lavoro: per dare a una linea un bordo conico o variato che poi regoli a mano, oppure per mantenere gli spessori di linea di un design fissi quando viene ridimensionato. È disponibile anche come effetto live, sotto Effetto &rsaquo; Tracciato.</p>
+
+<h3 id="paths-reverse">Inverti direzione tracciato</h3>
+<p>Inverti direzione trattiato inverte l'ordine in cui le ancore si susseguono, così il tracciato percorre il percorso nel verso opposto. La direzione raramente si mostra da sola, ma decide quale contorno è il foro in un tracciato composto e dove una punta di pennello o freccia inizia e finisce. Usalo quando un foro in un tracciato composto si riempie di colore, oppure quando il testo su un tracciato o l'inizio e la fine di un contorno si trovano dal lato sbagliato.</p>
+
+<h2 id="paths-live-shapes">Forme modificabili e i loro widget</h2>
+<p>Rettangoli, rettangoli arrotondati, ellissi e poligoni restano live: mantengono i loro parametri e ricostruiscono il loro tracciato ogni volta che ne cambi uno. Mentre trascini una forma, <kbd>&#8679;</kbd> la rende regolare e <kbd>&#8997;</kbd> la disegna dal centro. Anche i tasti freccia funzionano durante il trascinamento, su e destra aggiungono, giù e sinistra sottraggono, cambiando i lati di un poligono, le punte di una stella o il raggio d'angolo di un rettangolo arrotondato.</p>
+<p>Seleziona una singola forma live e piccole maniglie rotonde appaiono appena dentro i suoi angoli; vengono nascoste quando la forma è troppo piccola su schermo per mostrarle chiaramente. Trascinala con lo Strumento Selezione (<kbd>V</kbd>) per arrotondare tutti gli angoli in una volta, oppure con Selezione diretta per arrotondare solo l'angolo che stai tenendo. <kbd>&#8997;</kbd>-clic su una maniglia d'angolo per farla passare tra rotondo, invertito e smussato, di nuovo tutti e quattro gli angoli con lo Strumento Selezione, un angolo con Selezione diretta.</p>
+<p>Un'ellisse mostra invece una maniglia quadrata: una su un'ellisse intera, e una a estrema della torta una volta che ne hai aperta una. Trascinala per aprire un spicchio fuori dalla forma, con <kbd>&#8679;</kbd> che fa scattare l'angolo a passi di 15&deg;; riportando l'estremità di nuovo al punto di partenza si ripristina l'ellisse intera. Il pannello Proprietà contiene gli stessi valori come numeri: raggio e tipo d'angolo, raggi per angolo, lati del poligono e inizio e fine della torta in gradi. Una forma live mantiene questi controlli finché non modifichi direttamente il suo tracciato, cosa che la trasforma in un tracciato ordinario.</p>
+
+<h2 id="paths-combining">Combinare forme: Unisci e dividi e Forme combinate</h2>
+<p>Quando due o più forme si sovrappongono, spesso vuoi una singola forma nuova da esse: un'unione, un foro, o il pezzo dove si incrociano. Scissor offre due modi per arrivarci. Unisci e dividi è diretto e visivo; il pannello Forme combinate applica le stesse operazioni come pulsanti. Entrambi mantengono le curve invece di appiattirle in segmenti di linea.</p>
+
+<h3 id="paths-shape-builder">Lo Strumento Unisci e dividi</h3>
+<p>Lo Strumento Unisci e dividi (<kbd>&#8679;M</kbd>) lavora su due o più tracciati selezionati. Divide le loro sovrapposizioni in regioni e evidenzia quella sopra cui si trova il puntatore; trascina una linea attraverso diverse regioni per unirle in un unico oggetto, che assume l'aspetto della forma da cui proviene, oppure <kbd>&#8997;</kbd>-trascina attraverso di esse per eliminarle. Usalo per costruire una forma a occhio, aggiungendo le parti che vuoi e cancellando quelle che no, senza fermarti a scegliere un comando per ogni passaggio.</p>
+
+<h3 id="paths-pathfinder-shape-modes">Modalità forma di Forme combinate</h3>
+<p>Il pannello Forme combinate (<kbd>&#8679;&#8984;F9</kbd>) si apre con quattro modalità forma, ciascuna delle quali sostituisce i tracciati selezionati con un unico tracciato combinato. Il risultato assume l'aspetto dell'oggetto in cima, tranne Meno davanti, che mantiene l'aspetto di quello in basso.</p>
+<dl>
+  <dt>Unisci</dt>
+  <dd>Unisce ogni forma selezionata in un unico contorno. Usala per saldare pezzi sovrapposti in un'unica sagoma, come una nuvola da una fila di cerchi.</dd>
+  <dt>Meno davanti</dt>
+  <dd>Mantiene la forma più in basso e elimina tutto ciò che è impilato davanti. Usala per mordere un pezzo da una forma, come scolpire una luna crescente da due cerchi.</dd>
+  <dt>Interseca</dt>
+  <dd>Mantiene solo l'area che ogni forma selezionata condivide. Usala per ritagliare il lavoro a una regione comune, come la lente dove due cerchi si incrociano.</dd>
+  <dt>Escludi</dt>
+  <dd>Mantiene tutto tranne le sovrapposizioni, che diventano fori. Usala per creare un anello, oppure un maglio, dove le parti che si incrociano spariscono.</dd>
+</dl>
+
+<figure class="shot">
+  <img src="img/combine.gif" width="760" height="441" loading="lazy"
+       alt="Tre forme sovrapposte, un cerchio, un quadrato arrotondato e un cerchio, che si uniscono in un'unica sagoma combinata." />
+  <figcaption>Unisci (oppure un trascinamento con Unisci e dividi) unisce forme sovrapposte in un unico contorno che mantiene le sue curve.</figcaption>
+</figure>
+
+<h3 id="paths-pathfinders">Le altre operazioni di Forme combinate</h3>
+<p>Sotto le modalità forma si trovano sei pathfinder. Questi ti lasciano con diversi pezzi, raccolti in un gruppo, piuttosto che un unico tracciato combinato. Meno dietro corrisponde alla sua omonima modalità forma ma mantiene la forma in cima.</p>
+<dl>
+  <dt>Dividi</dt>
+  <dd>Taglia le forme in facce separate lungo ogni linea che si incrociano, ogni faccia assumendo il colore della forma in cima che la copre. Usalo per spezzare un design in pezzi dipingibili, come le celle di un pannello in vetro colorato.</dd>
+  <dt>Ritaglia</dt>
+  <dd>Rimuove la parte nascosta di ogni forma dove una forma sopra la copre. Ogni pezzo mantiene il proprio riempimento e nulla viene unito; i contorni vengono eliminati. Usalo per appiattire lavoro piatto a colori sovrapposti così nessun colore stampa sopra un altro.</dd>
+  <dt>Unisci</dt>
+  <dd>Ritaglia le parti nascoste, poi unisce i pezzi vicini che condividono un colore di riempimento. Usalo per ordinare un'illustrazione a colori piatti, unendo regioni dello stesso colore in forme singole.</dd>
+  <dt>Ritaglia</dt>
+  <dd>Mantiene solo le parti delle formhe inferiori che rientrano nella forma più in cima, che viene poi scartata. Usalo per ritagliare il lavoro a un frame e incorporare il ritaglio nei tracciati, piuttosto che mantenere una maschera di ritaglio live.</dd>
+  <dt>Meno dietro</dt>
+  <dd>Mantiene la forma più in cima e elimina tutto ciò che è dietro di essa. Usalo quando la forma in cima è quella da conservare e quelle sotto dovrebbero scolpirsi in essa.</dd>
+  <dt>Contorno</dt>
+  <dd>Trasforma ogni confine di regione in una linea aperta, con il colore di riempimento da cui proviene. Usalo per estrarre lo scheletro di bordi da un insieme di forme sovrapposte.</dd>
+</dl>
+<p>Effetto &rsaquo; Forme combinate applica Aggiungi, Interseca, Escludi, Sottrai e Meno dietro come effetti live su un gruppo invece, lasciando gli oggetti originali intatti e modificabili sotto. Usa le versioni effetto quando potresti ancora voler spostare le parti in seguito; usa il pannello quando la forma combinata è definitiva.</p>
+
+<h2 id="paths-compound-and-masks">Tracciati composti e maschere di ritaglio</h2>
+<p>Oggetto &rsaquo; Tracciato composto &rsaquo; Crea (<kbd>&#8984;8</kbd>) piega i tracciati selezionati in un unico oggetto riempito dalla regola pari-dispari, così un contorno interno taglia un foro attorno a quello esterno. Il risultato assume l'aspetto dell'oggetto più in basso nella selezione. Rilascia (<kbd>&#8997;&#8679;&#8984;8</kbd>) restituisce ogni contorno come un tracciato proprio. Usa un tracciato composto per qualsiasi forma con un foro, come il contro della lettera O o una rondella.</p>
+<p>Oggetto &rsaquo; Maschera di ritaglio &rsaquo; Crea (<kbd>&#8984;7</kbd>) usa l'oggetto selezionato più in cima, che deve essere un tracciato, per ritagliare tutto ciò che è sotto di esso. Scissor li mette tutti in un gruppo di ritaglio e cancella il riempimento e il contorno del tracciato maschera. Rilascia (<kbd>&#8997;&#8984;7</kbd>) trasforma il gruppo di ritaglio di nuovo in un gruppo ordinario, così nulla viene più ritagliato e ogni oggetto, tracciato maschera incluso, resta dove era. Crea maschera di opacità nello stesso sottomenu maschera per tono piuttosto che per contorno, così le parti più chiare della maschera si vedono attraverso e le più scure nascondono.</p>
+
+<h2 id="paths-smart-guides">Guide intelligenti e aggancio</h2>
+<p>Le guide intelligenti (Visualizza &rsaquo; Guide intelligenti, <kbd>&#8984;U</kbd>) osservano il lavoro visibile e le tavole mentre disegni o trascini. Ciò che stai muovendo si aggancia ai bordi, centri e ancore dei suoi vicini, e appare una linea che torna a ciò con cui si è allineata, etichettata con il tipo di corrispondenza: ancora, centro, angolo o allineamento.</p>
+<p>Altre due guide appaiono da sole. Quando l'oggetto che stai muovendo si troverebbe alla stessa distanza dai suoi vicini quanto lo sono loro tra loro, si aggancia lì e i due spazi uguali vengono disegnati con la misura indicata; funziona sia per continuare una serie di oggetti uniformemente spaziati sia per centrarne uno nello spazio tra due. E quando trascini lontano da un punto di partenza, la direzione si aggancia su una linea di costruzione ogni 45&deg; dall'angolo di vincolo, disegnata come una linea lunga con l'angolo accanto.</p>
+<p>Aggancio a punto (<kbd>&#8997;&#8984;'</kbd>) e Aggancio a griglia (<kbd>&#8679;&#8984;'</kbd>) sono interruttori separati nel menu Visualizza. Con Aggancio a griglia attivo, tutto atterra sulla suddivisione della griglia e le guide intelligenti si fiancheggiano.</p>

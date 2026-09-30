@@ -1,0 +1,120 @@
+<p class="lede">Een Scissor-document kan beschilderde pixels naast zijn getekende paden en tekst bevatten, zodat één bestand een zachte penseeltextuur, een foto en een scherp logo samen kan dragen. Deze pagina behandelt wat een pixel-laag is, hoe u erop tekent, en hoe het zich als een object in het document gedraagt.</p>
+
+<h2 id="pixels-vector-vs-raster">Pixels versus vectorwerk</h2>
+<p>Een Scissor-document bevat twee soorten werk naast elkaar. Paden en tekst zijn <em>getekend</em>: ze blijven scherp in elke grootte omdat ze door hun vorm worden beschreven, en Scissor tekent ze opnieuw elke keer dat u zoomt of schaalt. Een <strong>pixel-laag</strong> is <em>beschilderd</em>: het is een raster van gekleurde stippen, zoals een foto of een penseelschilderij, en het vergroten ervan maakt die stippen groter in plaats van detail toe te voegen. Één document kan er zoveel van elk bevatten als u wilt, in elke volgorde, en ze stapelen samen in het Lagen-paneel.</p>
+<p>Greep naar een pixel-laag wanneer een vorm alleen niet voldoet: een handbeschilderde schaduw, een ruwe textuur achter schone tekst, een kleurvlek die geen bewerkbaar pad nodig heeft, of retouche over een geplaatste foto. Houd logo's, diagrammen en alles dat u later zult vergroten of verkleinen als vectors, en gebruik pixels voor de delen die het gevoel van verf willen hebben.</p>
+<p>Een geplaatste foto is een maar afzonderlijk ding. <strong>Bestand &gt; Plaatsen…</strong> (<kbd>&#8679;&#8984;P</kbd>) brengt een bestaande afbeelding als een ingebedde afbeelding in het document; een pixel-laag is een oppervlak dat u vanaf nul in Scissor beschildert. Beide zijn gemaakt van pixels en beide kunnen met de pipet worden bemonsterd, maar alleen een pixel-laag neemt penseelstreken aan.</p>
+
+<h2 id="pixels-new">Een pixel-laag maken</h2>
+<p><strong>Object &gt; Pixel-laag &gt; Nieuwe pixel-laag</strong> voegt een leeg oppervlak toe dat het actieve bord bedekt. U hoeft er echter niet eerst één te maken: kies het Penseel en teken, en Scissor maakt de laag voor u op het moment dat de eerste streken landt. In beide gevallen wordt de laag op het bord gemapped, zodat de pixels met het artboard op een lijn liggen, ongeacht met welke resolutie ze zijn gemaakt.</p>
+<p>Die resolutie komt van de <strong>Rastereffecten</strong>-instelling in <strong>Bestand &gt; Documentinstellingen…</strong> (<kbd>&#8997;&#8984;P</kbd>): Scherm (72&nbsp;ppi), Medium (150&nbsp;ppi) of Hoog (300&nbsp;ppi). Een hogere instelling geeft een nieuwe pixel-laag meer stippen per punt, zodat penseelwerk zacht blijft wanneer het stuk wordt afgedrukt of groot wordt bekeken. Stel het in voordat u de laag maakt, omdat het aantal pixels wordt vastgelegd wanneer het oppervlak wordt gemaakt.</p>
+<p>In de moderne schil kunt u ook een laag toevoegen vanuit de gereedschapsoptiebalk: met het Penseel of Pixelwisser actief, zit een <strong>Nieuwe pixel-laag</strong>-knop aan het einde van de balk.</p>
+<p><strong>Een afbeelding plaatsen maakt ook een pixel-laag.</strong> Zet een afbeelding neer op het canvas, gebruik <strong>Bestand &gt; Plaatsen…</strong>, of plak eréén vanuit het klembord, en het komt erin als een bewerkbare pixel-laag op zijn eigen grootte in plaats van een vergrendelde afbeelding — dus u kunt erop beschilderen, het maskeren, aanpassen en filteren direct. Een afbeelding openen met <strong>Bestand &gt; Openen</strong> maakt een nieuw document met één bord ter grootte van de afbeelding, gevuld door de pixel-laag. Heel grote foto's worden verkleind om in het pixelbudget te passen. Een <strong>SVG</strong> blijft vector — zijn paden blijven bewerkbaar — dus alleen bitmapafbeeldingen (PNG, JPEG, GIF, WebP, en dergelijke) worden pixel-lagen.</p>
+<p>Een gelaagd <strong><code>.psd</code></strong>-bestand komt rijker binnen: het openen ervan bouwt zijn stapel opnieuw op als afzonderlijke pixel-lagen, het masker van elke laag behoudend, en het brengt tekst, vormen en laageffecten over zodat het bestand dicht bij hoe het eruitzag waar het werd gemaakt landt in plaats van als één vlakke afbeelding. Het is de volledigste manier naar pixelwerk, en alles op deze pagina is dan van toepassing op de laag die aankomen.</p>
+
+<h2 id="pixels-painting">Beschilderen</h2>
+
+<h3 id="pixels-brush">Het Penseel en de Pixelwisser</h3>
+<p>Twee gereedschappen werken op pixel-lagen.</p>
+<table>
+  <thead><tr><th>Gereedschap</th><th>Waar het leeft</th><th>Wat het doet</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Penseel-gereedschap</strong></td><td>Deelt een vak met het Verfpenseel (<kbd>B</kbd>) en Vul-penseel (<kbd>&#8679;B</kbd>)</td><td>Legt kleur die deel van de afbeelding wordt</td></tr>
+    <tr><td><strong>Pixelwisser-gereedschap</strong></td><td>Deelt een vak met de Wisser (<kbd>&#8679;E</kbd>), Schaar en Mes</td><td>Wist verf weg zodat wat eronder zit doorlaat</td></tr>
+  </tbody>
+</table>
+<p>Om eréén te bereiken, druk en houd het zichtbare gereedschap in de werkbalk ingedrukte, of klik erop met de rechtermuisknop, en kies het pixelgereedschap uit de lijst. Verwar ze niet met hun vectorburen: het Verfpenseel tekent een pad dat u later kunt vervormen, terwijl het Penseel pixels beschildert die niet opnieuw gepunt kunnen worden. Beide pixelgereedschappen tonen een ring op het canvas op de grootte waarmee ze zullen beschilderen, en beide gebruiken een kruisvisierpointer.</p>
+<p>Sleep om te beschilderen of te wissen. Het teken volgt de pointer zonder kansen hoe snel u ook beweegt, omdat Scissor een reeks ronde deponeringen langs de streken legt en ze gelijkmatig verdeeld houdt zelfs wanneer de pointer springt. De Pixelwisser neemt alfa weg in plaats van over te schilderen, dus wat het wist gaat volledig transparant; een tegel die niets meer is wordt weggegooid, dus wissen laat geen gewicht achter.</p>
+
+<h3 id="pixels-colour">In de vulkleur beschilderen</h3>
+<p>Het Penseel beschildert in de huidige <strong>vul</strong>kleur. Stel het in zoals u elke vulling instelt: het Kleurpaneel, een staal, of, wanneer het Penseel in de moderne schil actief is, de <strong>Kleur</strong>-chip in de gereedschapsoptiebalk. Als de vulling leeg is, valt het Penseel terug op de lijnkleur, en op zwart als er helemaal geen kleur is. Kies een kleur direct van een pixel-laag met de Pipet wanneer u verf die al neerligt wilt evenen.</p>
+
+<h3 id="pixels-controls">Grootte, hardheid en doorstroming</h3>
+<p>Wanneer het Penseel of Pixelwisser actief is, draagt de gereedschapsoptiebalk de instellingen die het teken vormgeven. Ze leven ook in uw voorkeuren, dus ze dragen van de ene sessie naar de volgende over.</p>
+<dl>
+  <dt>Grootte</dt><dd>De penseeldiameter, van 1 tot 2500 pixels. Druk op <kbd>[</kbd> om het penseel kleiner te maken en <kbd>]</kbd> om het groter te maken; elke druk verandert de grootte met een vijfde, dus de stap groeit met het penseel. De ring op het canvas toont de huidige grootte.</dd>
+  <dt>Hardheid</dt><dd>Waar de rand begint te vervagen, als percentage. Op 100% is de rand scherp; verlaag het en de deponering verzacht naar zijn rand met een zachte afval en geen zichtbare ring. Gebruik een zachte penseel voor schaduwen en gloed, een harde voor vaste vormen.</dd>
+  <dt>Doorstroming</dt><dd>Hoeveel verf elke deponering neerlegt, alleen voor het Penseel. Onder 100% bouwt de kleur zich geleidelijk op naarmate u over een gebied heen gaat, wat geschikt is voor schaduw en langzame overgangen. De Pixelwisser heeft geen doorstromingsbesturing.</dd>
+</dl>
+
+<h2 id="pixels-retouch">Doden, branden en sponsen</h2>
+<p>Drie retouchepenselen werken in de pixels die er al zijn in plaats van een kleur neer te leggen, één vak in de werkbalk delend. Ze schilderen zoals het Penseel — dezelfde grootte, hardheid en canvasring — en bouwen op naarmate u over een gebied heen gaat, dus een lichte aanraking is geleidelijk en een ferme is snel.</p>
+<dl>
+  <dt>Doden</dt><dd>Verlicht waar u beschildert, schaduwen optillend en accentueringen toevoegend.</dd>
+  <dt>Branden</dt><dd>Donkert waar u beschildert, schaduwen en randen diepend.</dd>
+  <dt>Spons</dt><dd>Verhoogt verzadiging, kleuren rijker makend naarmate u eroverheen gaat.</dd>
+</dl>
+<p>Elk laat transparante pixels onaangeroerd, blijft binnen een selectie wanneer eréén is ingesteld, en de hele streken maakt in één stap ongedaan.</p>
+
+<h2 id="pixels-more-tools">Emmer, vormen en verlopen</h2>
+<p>Beschilderen is niet alleen het Penseel. Op een pixel-laag leggen drie meer gereedschappen kleur neer: de <strong>Vulemer</strong> overstroomt een aaneengesloten gebied van gelijkaardige kleur vanaf waar u klikt; de <strong>vormgereedschappen</strong> stempelen een rechthoek, ellips, ster of veelhoek direct in de pixels in plaats van een pad te tekenen; en het <strong>Verloop-gereedschap</strong> beschildert een lineaire of radiale mengeling over het oppervlak. Elk respecteert de huidige selectie, zodat u een vulling of een verloop tot een gekozen gebied kunt beperken.</p>
+
+<h2 id="pixels-selecting">Pixels selecteren</h2>
+<p>Een <strong>pixelselectie</strong> — een marquee — beperkt elke verf en bewerking tot het gebied erin, zoals een sjabloon. Drie gereedschappen maken eréén, het selectie-vak voor pixels delend: de <strong>Rechthoekige</strong> en <strong>Elliptische Marquee</strong>, en een vrije <strong>Lasso Marquee</strong> die u met de hand traceert. Sleep om een selectie te tekenen; een gewone sleep vervangt de huidige.</p>
+<p>De <strong>Auto-Selecteren</strong> selecteert op kleur in plaats van op vorm: klik op een pixel-laag en het neemt het aaneengesloten kleurenbakje rond waar u klikte, een marcherende-eranten-omtrek eromheen traceerend — handig om een vlakke achtergrond of één gekleurd gebied op te tillen. Hoe dicht een kleur moet zijn om te nemen is de <strong>Tolerantie</strong> op de Auto-Selecteren-opties, dezelfde instelling die het op vectorobjecten gebruikt; verhoog het om meer te verzamelen, verlaag het om bij een nauwkeurige overeenkomst te blijven. Gaten in het bakje blijven uit de selectie.</p>
+<p>Selecties combineren, zodat een vorm uit verscheidene streken of klikken kan worden opgebouwd: houd <kbd>&#8679;</kbd> ingedrukt om toe te <strong>voegen</strong> aan de selectie, <kbd>&#8997;</kbd> om af te <strong>trekken</strong>, en beide samen om alleen de <strong>overlapping</strong> te behouden — de marquees en de Auto-Selecteren combineren allemaal op dezelfde manier. <strong>Selecteren &gt; Alles</strong> (<kbd>&#8984;A</kbd>) selecteert elke pixel, <strong>Selecteren &gt; Omkeren</strong> keert de marquee om, en <strong>Deselecteren</strong> — <kbd>&#8984;D</kbd> op een pixel-laag — laat het vallen. Een marcherende-eranten-omtrek toont de selectie op het canvas.</p>
+
+<h2 id="pixels-editing-selection">Pixels verplaatsen, knippen en kopiëren</h2>
+<p>Met een selectie ingesteld, verplaatst het Selectie-gereedschap de pixels erin: sleep vanuit binnen de marquee en de geselecteerde verf tilt en reist, het waar het was leegmakend en de marquee meenemend. Houd <kbd>&#8997;</kbd> ingedrukte terwijl u sleept om het origineel op zijn plaats te laten en een <strong>kopie</strong> te verplaatsen.</p>
+<p>De transformatie-gereedschappen werken ook op de selectie. Met een marquee ingesteld, wikkelen het begrenzingskader van het Selectie-gereedschap en het <strong>Vrije transformatie-gereedschap</strong> (<kbd>E</kbd>) de marquee, niet de hele laag, zodat u alleen dat deel van de afbeelding kunt schalen, draaien of verplaatsen; <strong>Object &gt; Transformeren</strong> en de pijltoetsen werken erop dezelfde manier. De opgetilde pixels zweven boven de laag terwijl u werkt, zodat u ze steeds opnieuw kunt slepen zonder detail te verliezen. Druk op <kbd>Enter</kbd>, kies een ander gereedschap, of maak een nieuwe selectie om ze neer te zetten, wat één stap is om ongedaan te maken, of druk op <kbd>Escape</kbd> om alles terug te zetten waar het was. Een verplaatsing door hele pixels houdt ze exact zoals ze waren; schalen of draaien bemonstert ze één keer, wanneer ze worden neergezet.</p>
+<p>Het Vrije transformatie-gereedschap's <strong>Vrije vervorming</strong> en <strong>Perspectiefvervorming</strong> werken ook op pixels, op een marquee of op een hele laag: sleep een hoek van het kader (of houd <kbd>&#8984;</kbd> ingedrukte terwijl u eréén in Vrije transformatie-modus sleept) om de afbeelding uit het rechte te trekken, bijvoorbeeld om een foto op een scherm of een bord dat schuin wordt gezien te passen. Terwijl u sleept, toont Scissor een snel voorbeeld op schermgrootte, zodat het zacht blijft zelfs op een grote foto; de pixels zelf worden één keer, in volledige resolutie, getrokken wanneer u op <kbd>Enter</kbd> drukt of verdergaat, en de marquee volgt de nieuwe vorm.</p>
+<p>Kopiëren (<kbd>&#8984;C</kbd>) en Knippen (<kbd>&#8984;X</kbd>) werken op de pixels binnen een marquee: kopiëren laat de laag zoals het is, knippen neemt de pixels eruit. Plakken (<kbd>&#8984;V</kbd>) zet ze op een <strong>nieuwe pixel-laag</strong> net boven de laag waar ze vandaan kwamen, op exact dezelfde plek, klaar om op zichzelf te verplaatsen of te transformeren. Dezelfde commando's staan in <strong>Maken &gt; Pixel-laag</strong>, en de selectie drijft ook de oppervlaktecommando's: <strong>Vullen met vulkleur</strong> vult alleen het geselecteerde gebied, <strong>Wissen</strong> en <strong>Verwijderen</strong> wissen het, en zonder selectie werkt elk op de hele laag.</p>
+
+<h2 id="pixels-adjustments">Aanpassingen</h2>
+<p>Het <strong>Object &gt; Pixel-laag &gt; Aanpassingen</strong>-submenu retoucheert de kleur van een pixel-laag, tot de selectie beperkt wanneer eréén is ingesteld. Elk opent een dialoogvenster dat op het canvas voorbeeldt terwijl u sleept.</p>
+<dl>
+  <dt>Helderheid / Contrast, Niveaus</dt><dd>Stelt de algehele lichtheid en contrast in, of beeldt het zwartpunt, witpunt en gamma opnieuw in voor fijnere toonbesturing.</dd>
+  <dt>Tint / Verzadiging, Levendigheid</dt><dd>Verschuift de tint en verhoogt of verlaagt de verzadiging in het hele, of gebruikt Levendigheid om de gedempte kleuren te versterken terwijl de al levendige alleen laat.</dd>
+  <dt>Kleurbalans</dt><dd>Duwt de middentoonen naar cyaan of rood, magenta of groen, geel of blauw.</dd>
+  <dt>Verloopkaart</dt><dd>Herkleurt de laag op zijn helderheid, de schaduwen naar één kleur en de accentueringen naar een andere beeldend.</dd>
+  <dt>Verzadiging opheffen, Omkeren</dt><dd>Laat alle kleur naar grijs vallen, of keert elke kleur naar zijn tegenpool.</dd>
+  <dt>Drempel, Posteriseren</dt><dd>Reduceert de afbeelding tot puur zwart en wit op een gekozen niveau, tot een klein aantal tonen per kanaal.</dd>
+</dl>
+
+<h2 id="pixels-filters">Filters</h2>
+<p>Het <strong>Filters</strong>-submenu vervormt de pixels zelf, opnieuw binnen de selectie.</p>
+<dl>
+  <dt>Gaussische vervaging</dt><dd>Verzacht de laag met een gelijkmatige, aanpasbare hoeveelheid.</dd>
+  <dt>Scherpen, Onscherpe masker</dt><dd>Maakt het detail scherp — Onscherpe masker geeft controle over de straal, hoeveelheid en een drempel die vlakke gebieden en fijn ruis spaart.</dd>
+  <dt>Pixeleren</dt><dd>Blokkeert de afbeelding in vierkante tegels voor een mozaïek.</dd>
+  <dt>Ruis toevoegen</dt><dd>Verspreidt korrels over de verf.</dd>
+  <dt>Randen vinden, Reliëf</dt><dd>Traceert waar de kleur verandert als heldere lijnen op donker, of als een grijs reliëf.</dd>
+</dl>
+<p><strong>Filters &gt; Effectvoorbeelden</strong> toont uw laag als een raster van live miniaturen, elk met één aanpassing of filter toegepast, zodat u met het oog kunt kiezen in plaats van op naam. Een miniature kiezen houdt het venster open. De instellingen van het effect verschijnen naast het raster, en het canvas voorbeeldt het resultaat terwijl u ze verandert. Niets wordt toegepast totdat u op <strong>Toepassen</strong> klikt (of op <kbd>Enter</kbd> drukt). <strong>Annuleren</strong> of <kbd>Esc</kbd> zet de afbeelding terug, en één ongedaan maken neemt een toegepast effect weg. U kunt het venster door zijn titel slepen om het canvas erachter te zien.</p>
+
+<h2 id="pixels-undo">Snelle, tegel-gebaseerde ongedaan maken</h2>
+<p>Een hele streken maakt in één stap ongedaan, hoe lang het ook was: druk één keer op <kbd>&#8984;Z</kbd> en de laatste teken is weg, en <kbd>&#8679;&#8984;Z</kbd> brengt het terug. Als de eerste streken zijn laag moest maken, gaat die laag met de streken terug in plaats van leeg achter te blijven.</p>
+<p>Achter de schermen wordt een pixel-laag bewaard als een raster van kleine tegels, en een streken kopieert alleen de tegels die het daadwerkelijk heeft aangeraakt. Ongedaan maken houdt volledige documentmomentopnames, maar een streken kost alleen zijn eigen tegels in plaats van het hele oppervlak, dus beschilderen op een grote laag blijft snel en een lange sessie van penseelwerk vult het geheugen niet. Vlakke gebieden van één kleur worden compact opgeslagen, dus een die grotendeels één kleur is neemt bijna geen ruimte in.</p>
+
+<h2 id="pixels-treating">Een pixel-laag als elk object behandelen</h2>
+<p>Een pixel-laag is een object in het document, dus alles wat u al weet is van toepassing. Selecteer het, verplaats het, en schaal, draat, spiegel of scheer het vanuit <strong>Object &gt; Transformeren</strong>, het begrenzingskader of het Vrije transformatie-gereedschap. Zonder marquee, wikkelt het kader de beschilderde pixels van de laag in plaats van zijn hele oppervlak, en een transformatie werkt op die pixels: verplaatsen laat ze onaangeroerd, terwijl schalen of draaien in de pixels wordt gebakken wanneer u op <kbd>Enter</kbd> drukt, een ander gereedschap kiest of iets anders selecteert, zodat de laag rechtop blijft en de volgende penseelstreken de goede kant op landen. Stel zijn dekking in en geef hem elk van de zestien overvloeimodi van het Transparantie-paneel om beschilderde kleur over het getekende werk eronder te laten zitten. Kiezen pikt de laag alleen waar hij verf heeft, zodat een transparante hoek u direct door laat klikken naar wat eronder zit. <strong>Dupliceren</strong> kopieert een pixel-laag zoals elk object — goedkoop, omdat de kopie zijn tegels deelt totdat één ervan wordt beschilderd.</p>
+<p><strong>Object &gt; Pixel-laag &gt; Naar beneden samenvoegen</strong> vlakt een pixel-laag op de pixel-laag eronder samen en verwijdert de bovenste, één laag achterlatend met de twee samengesteld. Als de laag onder verschillende transformaties zitten — zeg één is gedraaid — wordt de bovenste in het raster van de onderste bemonsterd terwijl het samenvoegt.</p>
+<p>Twee commando's werken op het hele oppervlak tegelijk:</p>
+<dl>
+  <dt>Object &gt; Pixel-laag &gt; Vullen met vulkleur</dt><dd>Overstroomt het hele oppervlak met de huidige vulkleur. Greep hiervoor om een grondverf te leggen voordat u eroverheen tekent, of om een laag die achter ander werk ligt te vullen.</dd>
+  <dt>Object &gt; Pixel-laag &gt; Wissen</dt><dd>Leegt het oppervlak zonder de laag te verwijderen, zodat u het beschilderen opnieuw kunt beginnen terwijl u de plaats, transformatie, dekking en overvloeimodus van de laag behoudt.</dd>
+</dl>
+<p>Beide commando's verschijnen ook onder <strong>Effect &gt; Pixel-laag</strong>.</p>
+
+<h2 id="pixels-masks">Laagmaskers</h2>
+<p>Een <strong>laagmasker</strong> verbergt delen van een pixel-laag zonder ze te verwijderen: de laag toont door waar het masker wit is en is verborgen waar het zwart is, met de grijzen daartussen voor gedeeltelijke transparantie. Omdat niets wordt gewist, kunt u het masker zo vaak als u wilt heen en weer beschilderen. De commando's staan onder <strong>Object &gt; Pixel-laag</strong>.</p>
+<dl>
+  <dt>Laagmasker toevoegen</dt><dd>Voegt een masker toe dat alles onthult om mee te beginnen, klaar om op te beschilderen.</dd>
+  <dt>Laagmasker van selectie toevoegen</dt><dd>Bouwt het masker van de huidige pixelselectie: wat erin blijft, wat erbuiten is verborgen. Een snelle manier om een vorm uit een foto niet-destructief bij te snijden.</dd>
+  <dt>Masker bewerken</dt><dd>Schakelt maskerbeschilderen aan en uit. Terwijl het aan is, schilderen het Penseel, de Wisser en de Vulemer het masker in plaats van de laag: beschilderen met zwart (of een donkere kleur) om te verbergen, wit om te onthullen, grijs om te vervagen. Het penseel gebruikt de lichtheid van de huidige vulkleur, dus zwart verbergt en wit toont.</dd>
+  <dt>Laagmasker toepassen</dt><dd>Bakt het masker voor goed in de laag — de verborgen pixels worden transparant — en verwijdert het masker.</dd>
+  <dt>Laagmasker verwijderen</dt><dd>Gooit het masker weg en toont de hele laag opnieuw, onaangeroerd.</dd>
+</dl>
+<p>Een gemaskeerde laag exporteert en slaat op met het masker al toegepast, en overvloeit en transformeert zoals elke andere laag.</p>
+
+<h2 id="pixels-rasterize">Vectorwerk omzetten in pixels: Rasteriseren</h2>
+<p><strong>Object &gt; Rasteriseren</strong> vervangt de huidige selectie door een ingebedde afbeelding van zichzelf, de paden, tekst en eventuele effecten tot vaste pixels bakkend. Gebruik dit wanneer u een vectorresultaat wilt laten stoppen met bewerkbaar zijn, wanneer een effect gemakkelijker als een vlakke afbeelding te behandelen is, of om een stuk door te geven dat overal hetzelfde moet uitzien zonder zijn live constructie mee te dragen. Het resultaat is een ingebedde afbeelding in plaats van een beschilderbare pixel-laag, dus bewaar een kopie van het originele werk als u het opnieuw zou kunnen moeten bewerken. <strong>Beeld &gt; Pixelvoorbeeld</strong> (<kbd>&#8997;&#8984;Y</kbd>) laat u controleren hoe vectorwerk op het pixelraster zal landen voordat u zich inlaat.</p>
+
+<h2 id="pixels-saving">Opslaan en exporteren</h2>
+<p><code>.cut</code>-documenten bewaren pixel-lagen met de rest van het werk, zodat vlakke gebieden bijna geen ruimte innemen en exact zoals beschilderd heropenen.</p>
+<p>Hoe pixel-lagen het document verlaten hangt af van het formaat:</p>
+<dl>
+  <dt>PNG, JPEG en WebP</dt><dd>Vlakt het hele document tot pixels, zodat beschilderd en getekend werk samensmelt tot één bitmap. PNG kan transparantie behouden; exporteer op @2x voor een scherper resultaat.</dd>
+  <dt>SVG en PDF</dt><dd>Schrijft het beschilderde oppervlak uit als een ingebedde afbeelding tussen het vectorwerk, zodat een document dat getekend en beschilderd werk mengt als één bestand reist met zijn vormen nog steeds scherp.</dd>
+</dl>
+<p>Omdat raster en vector in hetzelfde document leven en samen exporteren, kunt u een stuk op de natuurlijke manier opbouwen: schone vormen en tekst als vectors, en de delen die het gevoel van verf willen hebben, een zachte gloed, een getextureerde was, een geretoucheerde foto, als pixel-lagen eronder gestapeld.</p>

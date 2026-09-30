@@ -1,0 +1,166 @@
+<p class="lede">Scissor riempie la finestra del browser con una singola superficie di modifica: una barra dei menu in alto, una barra di controllo e le schede dei documenti sotto di essa, la palette degli strumenti a sinistra, la tela di disegno al centro e il dock dei pannelli a destra. Tutto funziona sulla propria macchina, quindi un documento resta dove lo metti e nulla viene inviato altrove per essere aperto.</p>
+
+  <p>Le scorciatoie in questa pagina sono scritte nel formato macOS. Su Windows e Linux, leggi <kbd>⌘</kbd> come <kbd>Ctrl</kbd> e <kbd>⌥</kbd> come <kbd>Alt</kbd>; <kbd>⇧</kbd> è Shift e <kbd>⌃</kbd> è Control.</p>
+
+  <h2 id="interface-at-a-glance">L'area di lavoro a colpo d'occhio</h2>
+  <p>La finestra è costituita da alcune regioni che rispondono ciascuna a una domanda diversa. Impara dove si trovano una volta e il resto del manuale si legge più facilmente.</p>
+  <dl>
+    <dt>Barra dei menu</dt>
+    <dd>La fila di menu lungo la parte superiore, con annulla e ripeti e una ricerca comandi all'estremità destra. Questo è l'elenco completo di tutto ciò che l'editor può fare.</dd>
+    <dt>Barra di controllo</dt>
+    <dd>La striscia subito sotto i menu. Mostra lo strumento corrente e la manciata di controlli che contano per ciò che hai selezionato in questo momento.</dd>
+    <dt>Schede dei documenti</dt>
+    <dd>A sinistra della barra di controllo, una scheda per ogni documento aperto. Il pulsante dei pannelli si trova all'estrema destra della stessa riga.</dd>
+    <dt>Palette degli strumenti</dt>
+    <dd>La stretta colonna di strumenti lungo il bordo sinistro, con il controllo di riempimento e contorno in fondo.</dd>
+    <dt>Tela e piano di lavoro</dt>
+    <dd>L'ampia area al centro dove disegni. I rettangoli bianchi sono le tavole; il contorno grigio è il piano di lavoro.</dd>
+    <dt>Dock dei pannelli</dt>
+    <dd>La colonna di pannelli a destra. Scorre sopra la tela quando ne hai bisogno e restituisce lo spazio quando la chiudi.</dd>
+    <dt>Barra di stato</dt>
+    <dd>La sottile linea lungo il fondo della finestra, che riporta lo strumento corrente, la selezione e l'ultima azione annullabile.</dd>
+  </dl>
+  <figure class="shot">
+    <img src="img/app-light.png" width="1900" height="1082" loading="lazy"
+         alt="L'intera finestra di Scissor: barra dei menu, barra di controllo, palette degli strumenti, tela e dock dei pannelli." />
+    <figcaption>L'intera finestra. Scissor segue l'impostazione chiara o scura del sistema, e anche questa schermata la segue.</figcaption>
+  </figure>
+
+  <h2 id="interface-menu-bar">La barra dei menu</h2>
+  <p>Dieci menu si dispongono lungo la parte superiore. Raccolgono ogni comando del programma, raggruppati per tipo di lavoro che stai facendo anziché per dove una funzionalità si trova all'interno del motore.</p>
+  <table>
+    <thead><tr><th>Menu</th><th>Cosa contiene</th></tr></thead>
+    <tbody>
+      <tr><td>File</td><td>Nuovo, apri, chiudi, salva, inserisci, esporta, script, impostazioni documento e stampa.</td></tr>
+      <tr><td>Modifica</td><td>Annulla e ripeti, comandi degli appunti, l'intero menu <strong>Seleziona</strong> come sottomenu, modifica colore e Preferenze.</td></tr>
+      <tr><td>Disponi</td><td>Trasforma, ordine di sovrapposizione, allineamento, raggruppamento e blocca e nascondi.</td></tr>
+      <tr><td>Tracciato</td><td>Comandi di tracciato e tracciato composto, morfologia, Deformazione forma e prospettiva, maschere di ritaglio, testo attorno e espansione.</td></tr>
+      <tr><td>Crea</td><td>Motivi, ripetizioni, Riempimento area, Vettorizza, mesh sfumata, tavole, sezioni e i comandi dei livelli pixel.</td></tr>
+      <tr><td>Effetti</td><td>Effetti live: il set vettoriale (3D, distorci e trasforma, Forme combinate, stilizza, deforma e altro) e un sottomenu Raster sotto di essi.</td></tr>
+      <tr><td>Testo</td><td>Carattere, dimensione e glifi, crea contorni, cambia maiuscolo/minuscolo, flusso del testo e inserimento caratteri.</td></tr>
+      <tr><td>Visualizza</td><td>Aspetto (chiaro e scuro), anteprima contorni e pixel, zoom, ruota vista, righelli, guide, griglia e aggancio.</td></tr>
+      <tr><td>Area di lavoro</td><td>I pannelli: i sei che apri più spesso, un sottomenu Testo, un sottomenu Altri pannelli per il resto e Ripristina pannelli.</td></tr>
+      <tr><td>Aiuto</td><td>Novità, manuale utente, installa, Termini di utilizzo e Informazioni, con un campo di ricerca in alto.</td></tr>
+    </tbody>
+  </table>
+  <p>Un segno di spunta accanto a una voce significa che quell'impostazione è attiva. Una voce disegnata in grigio non può essere usata al momento, di solito perché non è selezionato nulla o non è aperto alcun documento. Dove un comando ha una scorciatoia, è mostrata lungo il lato destro del menu.</p>
+
+  <h3 id="interface-command-search">Trovare un comando</h3>
+  <p>Non devi ricordare quale menu contiene cosa. Il pulsante di ricerca alla destra della barra dei menu, etichettato <em>Cerca o digita un comando</em>, apre la palette dei comandi; <kbd>⌘K</kbd> la apre da tastiera. Digita alcune lettere ed elenca ogni comando corrispondente con il suo percorso nel menu e la scorciatoia, e ogni strumento corrispondente. Usa <kbd>↑</kbd> e <kbd>↓</kbd> per spostarti tra i risultati, <kbd>Invio</kbd> per eseguire quello evidenziato ed <kbd>Esc</kbd> per chiudere. Usa questa funzione quando sai cosa vuoi ma non dove si trova, o quando una scorciatoia è più veloce da digitare che da cercare. Il menu Aiuto ha il suo campo di ricerca che fa lo stesso attraverso i menu.</p>
+
+  <h3 id="interface-undo-redo">Annulla e ripeti</h3>
+  <p>Le frecce curve vicino alla destra della barra dei menu annullano e ripetono, come <kbd>⌘Z</kbd> e <kbd>⇧⌘Z</kbd>. Ogni pulsante nomina il passaggio che annullerà quando passi sopra con il puntatore, e la barra di stato mostra la stessa cosa in fondo alla finestra, così puoi sempre vedere cosa annullerebbe un'ulteriore pressione.</p>
+
+  <h2 id="interface-tool-palette">La palette degli strumenti</h2>
+  <p>Gli strumenti si trovano in una singola colonna lungo il bordo sinistro. Sono organizzati in famiglie: Seleziona, Disegna, Testo, Linea, Forma, Dipingi, Rimodella, Costruisci, Campiona, Simboli, Tavole e Visualizza. La colonna mostra uno strumento per famiglia alla volta; posiziona il puntatore su uno slot e il resto di quella famiglia si dispiega a destra, così puoi scegliere uno strumento correlato senza che la colonna si sposti sotto la tua mano. Uno slot continua a mostrare quale membro della sua famiglia hai usato per ultimo.</p>
+  <p>Fai clic su uno slot per scegliere lo strumento che mostra. Il suo tooltip fornisce il nome dello strumento e la sua scorciatoia a tasto singolo, ad esempio <kbd>V</kbd> per lo Strumento Selezione, <kbd>P</kbd> per la Penna o <kbd>T</kbd> per Testo. Quando cambi strumento con la tastiera, lo slot corrispondente si illumina per un momento così puoi vedere quale è ora attivo. Per vedere tutto insieme, un pulsante vicino alla ricerca comandi, disegnato come tre punti, apre un browser di ogni strumento, raggruppato per famiglia e filtrato mentre digiti.</p>
+
+  <h3 id="interface-fill-stroke">Riempimento e contorno</h3>
+  <p>Sotto gli strumenti si trova il controllo di riempimento e contorno: un quadrato pieno per il riempimento, inserito in una banda che rappresenta il contorno, con una piccola coppia di frecce per scambiarli. Poiché si trova qui e non solo nella barra di controllo, puoi scegliere un colore prima di scegliere uno strumento, e diventerà quello con cui viene disegnato l'oggetto successivo. Fai clic sul riempimento o sulla banda per aprire le schede colore, campioni e sfumature.</p>
+  <table>
+    <thead><tr><th>Tasto</th><th>Azione</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>X</kbd></td><td>Sposta il focus tra riempimento e contorno</td></tr>
+      <tr><td><kbd>⇧X</kbd></td><td>Scambia il riempimento e il contorno</td></tr>
+      <tr><td><kbd>D</kbd></td><td>Torna al predefinito: riempimento bianco, contorno nero</td></tr>
+      <tr><td><kbd>/</kbd></td><td>Imposta il lato attivo su nessuno</td></tr>
+    </tbody>
+  </table>
+
+  <h3 id="interface-rail-panels">Pannelli accanto alla barra</h3>
+  <p>Tra il controllo di riempimento e contorno e gli strumenti, la palette offre una breve riga di pulsanti dei pannelli scelti per lo strumento che stai usando: gli strumenti di disegno portano i campioni e i pannelli di contorno a portata di mano, gli strumento di testo portano i pannelli di carattere e paragrafo, e così via. Questi aprono un singolo pannello proprio dove si trova già la tua mano. Un ulteriore pulsante apre il dock completo. Su una finestra bassa la riga si ripiega in un unico pulsante Pannelli che elenca le stesse scelte, così la palette non supera mai il bordo inferiore.</p>
+
+  <h2 id="interface-control-bar">La barra di controllo</h2>
+  <p>La striscia sotto i menu cambia con ciò che stai facendo. Nomina lo strumento corrente alla sua sinistra, e a destra mostra solo i controlli che possono agire sulla selezione corrente: il riempimento, il contorno e lo spessore del contorno; le coordinate X, Y, L e H della selezione; e le azioni che hanno senso, come allineamento, le modalità booleane, ordine di sovrapposizione, raggruppa, separa e duplica. Quando ce n'è più di quanto ne sta, un ultimo pulsante raccoglie il resto in un menu, così la barra non si riorganizza mai mentre la usi.</p>
+  <p>Digita in qualsiasi campo numerico e premi <kbd>Invio</kbd>, o lascia il campo, per applicare il valore; <kbd>↑</kbd> e <kbd>↓</kbd> lo modificano, con <kbd>⇧</kbd> per dieci volte il passo e <kbd>⌥</kbd> per un decimo. La piccola etichetta accanto a un campo è un regolatore: trascinala a sinistra o a destra per modificare il valore a tatto. Passa il puntatore sul nome dello strumento per rivelare le prime opzioni di quello strumento; fai clic sul nome per aprirne le opzioni complete sotto la barra, con tutti i suoi interruttori e numeri.</p>
+  <p>La barra di controllo è ancorata nella riga delle schede per impostazione predefinita, ma puoi trascinare la sua maniglia per farla fluttuare sopra la tela, e fare doppio clic sulla maniglia (o usare il suo pulsante di ancoraggio) per riportarla indietro. Accanto ad essa, una barra compatta può apparire accanto a un oggetto selezionato contenente solo il suo riempimento, contorno e spessore, così il colore è proprio accanto al lavoro invece che dall'altra parte della finestra.</p>
+
+  <h2 id="interface-quick-bar">La barra rapida</h2>
+  <p>Quando selezioni qualcosa, una piccola barra fluttua accanto ad essa con i controlli che usi più spesso, così non devi andare fino al bordo della finestra. Per forme e tracciati contiene riempimento e contorno; per il testo contiene riempimento, dimensione, grassetto, corsivo e allineamento. Rimane in disparte mentre trascini e torna quando rilasci. Tutto ciò che contiene si trova anche nella barra di controllo e nei pannelli.</p>
+
+  <h2 id="interface-canvas">La tela e il piano di lavoro</h2>
+  <p>Il centro della finestra è la tela. Le tavole sono i rettangoli bianchi che contengono il lavoro che intendi conservare; il contorno grigio è il piano di lavoro. Il piano di lavoro fa parte del documento, quindi un abbozzo, un ritaglio o un test di colore lasciato lì viene salvato con il file, ma quando esporti una tavola solo ciò che rientra nel rettangolo di quella tavola viene scritto.</p>
+
+  <h3 id="interface-pan-zoom">Spostamento e zoom</h3>
+  <p>Tieni premuto <kbd>Spazio</kbd> per passare allo Strumento Mano per tutto il tempo che lo tieni premuto, poi trascina per spostarti; rilascia e il tuo strumento torna. Trascinare con il pulsante centrale del mouse si sposta anch'esso. La rotellina scorre, e la rotellina con <kbd>⌘</kbd> o <kbd>⌥</kbd> premuti fa lo zoom attorno al puntatore.</p>
+  <table>
+    <thead><tr><th>Scorciatoia</th><th>Zoom</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>⌘=</kbd> / <kbd>⌘-</kbd></td><td>Aumenta e riduci</td></tr>
+      <tr><td><kbd>⌘0</kbd></td><td>Adatta la tavola attiva nella finestra</td></tr>
+      <tr><td><kbd>⌥⌘0</kbd></td><td>Adatta tutte le tavole nella finestra</td></tr>
+      <tr><td><kbd>⌘1</kbd></td><td>Dimensione effettiva</td></tr>
+    </tbody>
+  </table>
+  <p>Un controllo zoom si trova sopra la tela con pulsanti meno, più e adatta e la percentuale corrente; fai clic sulla percentuale per le stesse comandi di adattamento e dimensione effettiva come menu.</p>
+
+  <h3 id="interface-rulers-guides">Righelli e guide</h3>
+  <p><kbd>⌘R</kbd> mostra e nasconde i righelli, che misurano nelle unità del documento dall'angolo in alto a sinistra della tavola attiva e portano un marcatore che segue il puntatore. Trascina fuori da un righello per tirare una guida sul lavoro, e rilascia una guida su un righello per liberartene. Puoi anche trasformare un tracciato selezionato in una guida con Crea guide (<kbd>⌘5</kbd>) e trasformarla di nuovo con Rilascia guide (<kbd>⌥⌘5</kbd>). Mostra o nascondi tutte le guide con <kbd>⌘;</kbd>. Le Guide intelligenti (<kbd>⌘U</kbd>） mostrano suggerimenti di allineamento e misura mentre disegni e trascini.</p>
+
+  <h3 id="interface-grid">La griglia</h3>
+  <p>La griglia è disegnata per tavola e impostata da Visualizza › Griglia o dal pannello Griglia. Mostra o nascondila con <kbd>⌘'</kbd> e attiva o disattiva l'aggancio con <kbd>⇧⌘'</kbd>. Ogni tavola può usare uno dei sei tipi di griglia: Ortogonale, Isometrica, Esagonale, Obliqua, Rapporto aureo e Prospettica. Sceglierne un tipo attiva la griglia così puoi vederla subito. La griglia è descritta nella sua pagina dedicata.</p>
+
+  <h3 id="interface-history-strip">La striscia della cronologia</h3>
+  <p>Una colonna di piccoli segni appare in un angolo della tela quando sposti il puntatore vicino ad essa: questa è la cronologia del documento. Passa il puntatore su un segno per nominare quel passaggio, fai clic su uno per andare direttamente lì, oppure premi e scorri lungo i segni per far avanzare e retrocedere il documento così puoi guardare un cambiamento andare e venire. Il pannello Cronologia nel dock elenca gli stessi passaggi come testo.</p>
+
+  <h2 id="interface-boards">Tavole e striscia delle tavole</h2>
+  <p>Le tavole sono ciò che Scissor chiama tavole da stampa. Ogni una porta il suo nome sopra il suo angolo in alto a sinistra, e la tavola attiva è disegnata con un bordo più marcato rispetto alle altre. Fai clic sul nome di una tavola per prendere lo Strumento Tavola con quella tavola attiva, pronta a spostarla, ridimensionarla o rinominarla. Se una tavola ha un margine di stampa, questo viene mostrato attorno ad essa come un rettangolo tratteggiato rosso. Aggiungine una da Crea › Tavole › Nuova tavola, disegna e rimodella le tavole con lo Strumento Tavola (<kbd>⇧O</kbd>) e imposta dimensione e nome di una tavola in Opzioni tavola. Ridisponi tutte le tavole le ordina in una fila.</p>
+  <p>Una striscia di miniature delle tavole si trova sopra la tela, una piccola anteprima per tavola più un pulsante aggiungi alla fine. Fai clic su una miniatura per rendere attiva quella tavola e adattarla nella finestra; fai clic sul nome sotto per saltare a quella tavola e prendere lo Strumento Tavola pronto a modificarla. Il pannello Tavole nel dock le elenca anch'esso.</p>
+
+  <h2 id="interface-tabs">Schede dei documenti</h2>
+  <p>I documenti aperti appaiono come schede a sinistra della barra di controllo. Una scheda mostra il nome del documento, con un punto davanti mentre ha modifiche non salvate. Fai clic su una scheda per passare a quel documento, o sulla × per chiuderla; chiudere un documento con lavoro non salvato chiede prima conferma. Fai clic con il pulsante centrale su una scheda per chiuderla subito, e trascina una scheda su un'altra per riordinare i documenti aperti. Nuovo (<kbd>⌥⌘N</kbd>), Apri (<kbd>⌘O</kbd>) e Salva (<kbd>⌘S</kbd>) si trovano nel menu File, e Chiudi è <kbd>⌥⌘W</kbd>.</p>
+  <p>Le schede si trovano in alto per impostazione predefinita. Per ancorarle lungo il lato invece, attiva <strong>Visualizza &rsaquo; Schede documento laterali</strong> (anche nelle Preferenze); la striscia laterale può essere trascinata più larga o più stretta dal suo bordo destro, e la scelta viene ricordata.</p>
+
+  <h2 id="interface-status-bar">La barra di stato</h2>
+  <p>La linea lungo il fondo della finestra riporta, da sinistra a destra: un indicatore di prontezza, il nome dello strumento corrente, la dimensione della selezione (nessuna selezione, un oggetto o un conteggio) e l'azione che <kbd>⌘Z</kbd> annullerebbe. È un luogo tranquillo per confermare cosa hai preso e cosa il prossimo annullamento annullerà.</p>
+
+  <h2 id="interface-dock">Il dock dei pannelli</h2>
+  <p>I pannelli vivono nella colonna a destra. A riposo la tela ha l'intera finestra; chiedendo un pannello il dock scorre sopra la tela, e chiudendolo restituisce lo spazio subito. Il pulsante dei pannelli alla destra della riga delle schede e il tasto Esc aprono e chiudono il dock; i menu Finestra e Area di lavoro e la palette dei comandi aprono un pannello specifico.</p>
+  <figure class="shot">
+    <img src="img/editing.png" width="1900" height="1176" loading="lazy"
+         alt="Un documento aperto in Scissor con lavoro sulla tavola e i pannelli Livelli e Campioni aperti nel dock." />
+    <figcaption>Un documento in modifica, con i pannelli Livelli e Campioni aperti nel dock.</figcaption>
+  </figure>
+
+  <h3 id="interface-dock-groups">I gruppi di pannelli ancorati</h3>
+  <p>I pannelli sono impilati in gruppi, ogni gruppo una colonna di piccole icone scheda lungo il proprio bordo. Posiziona il puntatore su una scheda per vedere il nome del pannello, e il pannello aperto si nomina sopra i suoi contenuti. Per impostazione predefinita i gruppi raccolgono pannelli che tendono ad essere usati insieme:</p>
+  <ul>
+    <li><strong>Proprietà, Livelli, Tavole, Griglia</strong>: la struttura del documento.</li>
+    <li><strong>Colore, Campioni, Sfumatura, Contorno</strong>: come vengono dipinte le cose.</li>
+    <li><strong>Carattere, Paragrafo, Glifi</strong>: testo.</li>
+    <li><strong>Allinea, Forme combinate, Trasforma, Stack pittura, Trasparenza, 3D</strong>: modellazione e disposizione.</li>
+    <li><strong>Stili, Pennelli, Simboli, Motivi</strong>: aspetti e oggetti riutilizzabili.</li>
+    <li><strong>Navigatore, Info, Info documento, Cronologia, Azioni</strong>: spostamento e misurazione.</li>
+    <li><strong>Asset, Variabili, Selezione automatica, Vettorizza, Attributi</strong>: il resto.</li>
+  </ul>
+
+  <h3 id="interface-rearranging">Riorganizzare i pannelli</h3>
+  <p>Il layout è tuo da cambiare. Trascina una scheda lungo la sua striscia per riordinarla, trascinala sulla striscia di un altro gruppo per spostarla lì, oppure trascinala fuori dal dock per lasciarla fluttuare sopra la tela. Trascina la parte vuota di una striscia per sollevare un intero gruppo, e rilasciala sopra il dock per rimetterlo a posto; uno spazio tra i gruppi accetta una scheda rilasciata come nuovo gruppo proprio. Fai clic con il pulsante destro su una scheda per le stesse operazioni da menu, inclusi Chiudi pannello. La × in cima a una striscia chiude quel gruppo, e trascina il divisore tra due gruppi dà altezza a uno e la toglie all'altro. Un gruppo fluttuante può essere ridimensionato dal suo angolo.</p>
+
+  <h3 id="interface-gating">Pannelli che aspettano qualcosa da fare</h3>
+  <p>Un pannello che non ha nulla su cui agire al momento non sparisce: la sua scheda resta, solo attenuata, e il suo corpo mostra una riga che dice cosa sta aspettando, come selezionare un oggetto o scegliere lo Strumento Testo. Affinché il dock non si riorganizzi sotto la tua mano, questa attesa viene trattenuta mentre il puntatore è dentro il dock e si aggiorna una volta che il puntatore esce.</p>
+
+  <h3 id="interface-workspace">Aprire, nascondere e ripristinare i pannelli</h3>
+  <p>Apri un pannello dal menu Area di lavoro, dove i sei più usati si trovano in alto e il resto è sotto Altri pannelli, oppure dal menu Finestra nella cornice classica. Molti pannelli hanno una scorciatoia:</p>
+  <table>
+    <thead><tr><th>Pannello</th><th>Scorciatoia</th><th>Pannello</th><th>Scorciatoia</th></tr></thead>
+    <tbody>
+      <tr><td>Livelli</td><td><kbd>F7</kbd></td><td>Colore</td><td><kbd>F6</kbd></td></tr>
+      <tr><td>Stack pittura</td><td><kbd>⇧F6</kbd></td><td>Info</td><td><kbd>F8</kbd></td></tr>
+      <tr><td>Allinea</td><td><kbd>⇧F7</kbd></td><td>Trasforma</td><td><kbd>⇧F8</kbd></td></tr>
+      <tr><td>Contorno</td><td><kbd>⌘F10</kbd></td><td>Sfumatura</td><td><kbd>⌘F9</kbd></td></tr>
+      <tr><td>Forme combinate</td><td><kbd>⇧⌘F9</kbd></td><td>Trasparenza</td><td><kbd>⇧⌘F10</kbd></td></tr>
+      <tr><td>Stili grafici</td><td><kbd>⇧F5</kbd></td><td>Pennelli</td><td><kbd>F5</kbd></td></tr>
+      <tr><td>Attributi</td><td><kbd>⌘F11</kbd></td><td>Simboli</td><td><kbd>⇧⌘F11</kbd></td></tr>
+      <tr><td>Carattere</td><td><kbd>⌘T</kbd></td><td>Paragrafo</td><td><kbd>⌥⌘T</kbd></td></tr>
+      <tr><td>Glifi</td><td><kbd>⌥⇧F11</kbd></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+  <p>Il dock può essere allargato trascinando il suo bordo sinistro, da una comoda larghezza di due campi per riga fino a molto più largo. La tua disposizione e la larghezza che hai lasciato al dock vengono ricordate tra le sessioni. Quando il dock è chiuso, passare il puntatore al bordo destro della finestra lo fuoriesce, purché non ci sia lavoro sotto il puntatore. Per annullare tutte le tue modifiche al layout, scegli Ripristina pannelli, che rimette ogni gruppo al suo punto di partenza.</p>
+  <p><kbd>Tab</kbd> nasconde la palette degli strumenti, la barra di controllo, le schede dei documenti, la barra di stato, i pannelli e le altre interfacce sulla tela così che restano solo il lavoro e la barra dei menu; premilo di nuovo per riportarli tutti indietro.</p>
+
+  <h2 id="interface-language">Lingua</h2>
+  <p>Scissor parla inglese, tedesco (Deutsch), spagnolo (Español), francese (Français), italiano (Italiano), catalano (Català), ceco (Čeština), danese (Dansk), norvegese (Norsk), polacco (Polski), slovacco (Slovenčina), finlandese (Suomi) e svedese (Svenska). Alla prima apertura, usa la lingua del browser se è una di queste, e l'inglese altrimenti. Per sceglierne un'altra, fai clic sul pulsante globo nella barra dei menu o nella schermata di benvenuto, oppure apri <strong>Modifica › Preferenze</strong> (<kbd>&#8984;K</kbd>), vai su <strong>Interfaccia</strong> e scegline una sotto <strong>Lingua</strong>. Scissor cambia al ricaricamento e ricorda la scelta. Menu, pannelli, finestre di dialogo, tooltip, messaggi e Novità la seguono tutti, e i numeri vengono mostrati nel formato locale, come 12,5 in tedesco, anche se puoi digitare sia la virgola che il punto. I tuoi documenti non ne sono influenzati: i nomi dei livelli e il testo nel tuo lavoro restano come li hai scritti. Quando l'interfaccia non è in inglese, i Termini di utilizzo vengono mostrati tradotti per comodità, e la versione inglese è quella che vale.</p>
+
+  <h2 id="interface-appearance">Chiaro e scuro</h2>
+  <p>Scissor segue l'impostazione del sistema per chiaro e scuro. Per fissarla in un modo, scegli Visualizza › Aspetto e scegli Sistema, Chiaro o Scuro. La scelta viene ricordata e si estende alla tela oltre che all'interfaccia: il piano di lavoro, i righelli e le etichette delle tavole vengono disegnati in base al tema in cui ti trovi.</p>

@@ -1,0 +1,85 @@
+<p class="lede">Panel Vrstvy je mapa dokumentu: každá vrstva, skupina a objekt v jednom seznamu, vrstvené v pořadí, v jakém sedí na stránce. Použijte jej pro zobrazení a skrytí, zamknutí, přejmenování, přeuspořádání a výběr a pro okamžité zobrazení, na které vrstvě se který objekt nachází.</p>
+
+<p>Zkratky níže jsou napsány ve svém formátu macOS. Na Windows a Linuxe čtěte <kbd>&#8984;</kbd> jako Ctrl, <kbd>&#8997;</kbd> jako Alt a <kbd>&#8679;</kbd> jako Shift.</p>
+
+<h2 id="layers-panel">Panel Vrstvy</h2>
+<p>Otevřete jej z <strong>Okno &rsaquo; Vrstvy</strong> (<kbd>F7</kbd>). Seznam drží vaše vrstvy na nejvyšší úrovni, s obsahem každé vrstvy vnořeným pod ní: skupiny, cesty, texty, obrázky a pixelové vrstvy, kreslené jako strom, který můžete otevírat a zavírat. Kontejner (vrstva nebo skupina) nese malý trojúhelník vlevo od svého řádku; klikněte na něj pro složení kontejneru nebo jeho otevření. Hluboké dokumenty zůstávají čitelné, protože můžete složit části, na kterých nepracujete.</p>
+<p>Dvě tlačítka sedí v patě panelu. <strong>Vytvořit novou vrstvu</strong> přidá prázdnou vrstvu přímo nad tu, která je aktuálně aktivní, a udělá novou aktivní. <strong>Smazat výběr</strong> odstraní cokoli, co je vybráno; dokument vždy zachová alespoň jednu vrstvu, takže poslední zbývající vrstva nemůže být smazána tímto způsobem. Pro přejmenování jakékoli vrstvy, skupiny nebo objektu dvojklikněte na jeho název v seznamu, pište a stiskněte <kbd>Enter</kbd>. Pojmenování částí rušného dokumentu je nejrychlejším způsobem, jak udržet jej procházitelný.</p>
+
+<h3 id="layers-row">Co každý řádek zobrazuje</h3>
+<p>Čtení řádku zleva doprava:</p>
+<table>
+  <thead><tr><th>Část</th><th>Co dělá</th></tr></thead>
+  <tbody>
+    <tr><td>Oko</td><td>Zobrazí nebo skryje tuto vrstvu, skupinu nebo objekt. Řádek s vypnutým okem se nekreslí a netiskne ani se neexportuje.</td></tr>
+    <tr><td>Zámek</td><td>Zamkne nebo odemkne řádek. Zamčený objekt nemůže být vybrán nebo upravován na plátně.</td></tr>
+    <tr><td>Barevný čip</td><td>Pouze na řádcích vrstev: barevný štítek vrstvy, používaný pro zbarvení značek výběru a zvýraznění této vrstvy.</td></tr>
+    <tr><td>Trojúhelník</td><td>Pouze na kontejnerech: otevírá nebo zavírá vrstvu nebo skupinu pro odhalení toho, co je uvnitř.</td></tr>
+    <tr><td>Ikona druhu</td><td>Označuje skupiny a ořezové skupiny (ořezová skupina se kreslí přerušovaným obrysem).</td></tr>
+    <tr><td>Název</td><td>Název, nebo zástupný text v lomených závorkách jako <code>&lt;Cesta&gt;</code> nebo <code>&lt;Skupina&gt;</code>, když je věc nepojmenovaná. Dvojklik pro přejmenování.</td></tr>
+    <tr><td>Čtverec výběru</td><td>Na pravém okraji: malý čtverec barvou vrstvy, který se objeví na jakémkoli řádku držícím část aktuálního výběru.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="layers-groups">Vrstvy a skupiny</h2>
+<p>Vrstvy jsou kontejnery nejvyšší úrovně dokumentu. Existují pro udržení nesouvisejících částí grafiky odděleně: pozadí na jedné vrstvě, hlavní kresba na druhé, štítky na třetí. Protože vrstva sedí v kořeni stromu, skrytí, zamknutí nebo přeuspořádání ji přesune vše, co drží, jedním krokem.</p>
+<p>Skupina je menší kontejner, který žije uvnitř vrstvy (nebo uvnitř jiné skupiny) a cestuje s grafikou. Seskupení je způsob, jak svázat části jedné věci dohromady, kusy loga nebo ikony, takže se pohybují, mění velikost a vrstvení jako celek. Skupiny se otevírají a zavírají v panelu se svým vlastním trojúhelníkem, přesně jako vrstvy.</p>
+<p>Vrstvy a skupiny se chovají stejně v jedné důležité věci: každá může být zobrazena nebo skryta, zamčena nebo odemčena a každá může nést své vlastní krytí a režim prolnutí, které se použijí na vše uvnitř ní. Rozdíl je v roli. Vrstvy organizují celý dokument; skupiny svazují jednotlivé objekty.</p>
+
+<h3 id="layers-grouping">Seskupení a rozskupení</h3>
+<p>Vyberte dva nebo více objektů a zvolte <strong>Objekt &rsaquo; Seskupit</strong> (<kbd>&#8984;G</kbd>) pro jejich seskupení. <strong>Objekt &rsaquo; Rozskupit</strong> (<kbd>&#8679;&#8984;G</kbd>) vezme objekty vybrané skupiny zpět ven. Skupiny mohou být vnořené, takže skupina skupin je v pořádku; každé <kbd>&#8679;&#8984;G</kbd> oloupé jednu úroveň. Sáhněte po skupině vždycky, když sami vybíráte stejnou hrstku objektů znovu a znovu.</p>
+
+<h2 id="layers-stacking">Pořadí vrstvení: přední a zadní</h2>
+<p>Objekty se kreslí odzadu dopředu, takže objekt blíže přednímu kryje ty za nimi, kde se překrývají. Panel zobrazuje toto pořadí přímo: nejvrchnější řádek je nejpřednější objekt a spodní řádek je ten nejzadnější. Přeuspořádání objektu mění to, co kryje co.</p>
+<p>Nejrychlejší způsob, jak přeuspořádat, je tažení: uchopte řádek a pusťte jej výše nebo níže v seznamu pro jeho přesun skrz zásobník, nebo pusťte jej na vrstvu nebo skupinu pro přesun objektu <em>do</em> ní. Tažení je také způsob, jak přesunout vybraný objekt na jinou vrstvu – bez vyjmutí a vložení.</p>
+<p>Přesuňte výběr skrz zásobník pomocí <strong>Objekt &rsaquo; Uspořádat</strong>:</p>
+<table>
+  <thead><tr><th>Příkaz</th><th>Zkratka</th><th>Účinek</th></tr></thead>
+  <tbody>
+    <tr><td>Přenést do předu</td><td><kbd>&#8679;&#8984;]</kbd></td><td>Až na přední stranu jeho vrstvy.</td></tr>
+    <tr><td>Přenést blíže</td><td><kbd>&#8984;]</kbd></td><td>Jeden krok směrem k předu.</td></tr>
+    <tr><td>Odeslat zpět</td><td><kbd>&#8984;[</kbd></td><td>Jeden krok směrem k zadu.</td></tr>
+    <tr><td>Odeslat dozadu</td><td><kbd>&#8679;&#8984;[</kbd></td><td>Až na zadní stranu jeho vrstvy.</td></tr>
+  </tbody>
+</table>
+<p>Použijte tyto, když je tvar, který potřebujete, skrytý za jiným, nebo když se pozadí ocitlo nad kresbou. Pro práci s objekty, které se jedna na druhou, <strong>Výběr &rsaquo; Další objekt výše</strong> (<kbd>&#8997;&#8984;]</kbd>) a <strong>Další objekt níže</strong> (<kbd>&#8997;&#8984;[</kbd>) přesouvají výběr nahoru a dolů po zásobníku, což je užitečné pro dosáhnutí něčeho pohřbeného pod ostatní grafikou.</p>
+
+<h2 id="layers-visibility">Zobrazení a skrývání</h2>
+<p>Klikněte na oko na jakémkoli řádku pro skrytí této vrstvy, skupiny nebo objektu; klikněte znovu pro jeho vrácení. Skrytý řádek se neúčastní kreslení, tisku nebo exportu, takže skrytí je bezpečný způsob, jak dostat něco z cesty, aniž byste to smazali. Použijte to pro porovnání dvou verze detailu, nebo pro vyčištění přeplněného plátna na část, na které pracujete.</p>
+<p>Nabídka nabízí totéž pro aktuální výběr: <strong>Objekt &rsaquo; Skrýt &rsaquo; Výběr</strong> (<kbd>&#8984;3</kbd>) skrývá to, co je vybráno a <strong>Objekt &rsaquo; Zobrazit vše</strong> (<kbd>&#8997;&#8984;3</kbd>) odhaluje vše, co bylo skryto.</p>
+
+<h2 id="layers-locking">Zamykání</h2>
+<p>Klikněte na zámek na řádku pro jeho zamknutí. Zamčený objekt zůstává viditelný, ale nemůže být vybrán nebo změněn na plátně, takže je mimo dosah zla, zatímco kolem něj pracujete. Zamknutí vrstvy chrání vše na ní najednou. Zamkněte pozadí, zatímco přes něj kreslíte, nebo zamkněte hotový prvek, aby jej nemohl náhodný pohyb přesunout.</p>
+<p>Z nabídky <strong>Objekt &rsaquo; Zamknout &rsaquo; Výběr</strong> (<kbd>&#8984;2</kbd>) zamyká to, co je vybráno a <strong>Objekt &rsaquo; Odemknout vše</strong> (<kbd>&#8997;&#8984;2</kbd>) uvolňuje vše zpět. Zamknutí vybraného objektu jej také shodí z výběru, protože zamčená věc již není něčím, s čím můžete působit.</p>
+
+<h2 id="layers-selecting">Výběr a aktivní vrstva</h2>
+<p>Klikněte na řádek objektu v panelu pro výběr tohoto objektu na plátně. Podržte <kbd>&#8679;</kbd>, <kbd>&#8984;</kbd> nebo <kbd>Ctrl</kbd> při kliknutí pro přidání dalšího objektu do výběru, takže můžete stavět výběr ze seznamu, aniž byste hledali malé tvary na stránce.</p>
+<p>Kliknutí na řádek <em>vrstvy</em> dělá něco jiného: udělá tuto vrstvu aktivní vrstvou, označenou barevným pruhem po jejím levém okraji. Nová grafika, kterou kreslíte, umístíte nebo vložíte, se přidá do aktivní vrstvy, takže kliknutí na vrstvu před začátkem rozhodne, kde tato práce přistane. Vytvoření nové vrstvy ji hned udělá aktivní.</p>
+<p>Čtverec výběru vpravo od každého řádku svazuje panel s plátnem. Objeví se, ve barvě vrstvy, na každém řádku, který drží část aktuálního výběru, a je vyplněn na přesných objektech, které jsou vybrány. Protože značka cestuje nahoru stromem, pohled dolů seznamem zobrazuje jak to, co je vybráno, tak na kterých vrstvách a skupinách ty objekty sedí.</p>
+
+<h2 id="layers-colours">Barevné štítky</h2>
+<p>Každé vrstvě je přidělena barva z fixní posloupnosti (světle modrá, červená, zelená, modrá, žlutá a tak dále, celkem dvanáct, cyklicky, jak přidáváte víc vrstev). Tato barva je štítek vrstvy. Zobrazuje se jako čip vedle názvu vrstvy a zbarvuje značky výběru v panelu spolu se zvýrazněním výběru a ohraničujícím rámečkem kresleným na plátně pro objekty na této vrstvě. Pointa je rychlá identifikace: když něco vyberete a jeho rámeček přijde zelený, hned víte, že patří do zelené vrstvy. Rozložení dokumentu po několika dobře pojmenovaných, odlišně barevných vrstvách dělá mnohem snazší udržet přehled o tom, kde je všechno.</p>
+
+<h2 id="layers-masks">Ořezové a masky krytí</h2>
+<p>Vrstva nebo skupina může nést své vlastní krytí a režim prolnutí, oba nastavené v panelu <strong>Průhlednost</strong> (<strong>Okno &rsaquo; Průhlednost</strong>, <kbd>&#8679;&#8984;F10</kbd>). Stejný panel drží <strong>Obsahovat prolnutí ve skupině</strong>, které udržuje režimy prolnutí skupiny prolínající se pouze s sebou namísto toho, co leží pod ní a <strong>Vyrazit skupinu</strong>, kde každý objekt ve skupině skryje ty za ním namísto zobrazení skrz ně. Masky jdou o krok dále a jeden objekt řídí, kde, nebo jak silně, se zobrazí jiná grafika.</p>
+
+<h3 id="layers-clip">Ořezové masky</h3>
+<p>Ořezová maska ořezává grafiku na tvar. Vyberte dva nebo více objektů a zvolte <strong>Objekt &rsaquo; Ořezová maska &rsaquo; Vytvořit</strong> (<kbd>&#8984;7</kbd>). Nejvrchnější vybraný objekt se stává ořezovou cestou a vše pod ním se zobrazí pouze uvnitř tohoto tvaru; zbytek je oříznut. Výsledkem je ořezová skupina, kreslená v panelu přerušovanou ikonou. <strong>Uvolnit</strong> (<kbd>&#8997;&#8984;7</kbd>) to vrátí zpět a vrací objekty. Sáhněte po tom pro oříznutí fotografie nebo vzoru na kruh, písmeno nebo jakýkoli obrys, který nakreslíte přes vrchol.</p>
+
+<h3 id="layers-opacity-mask">Masky krytí</h3>
+<p>Maska krytí zeslabuje grafiku podle světlosti jiného objektu. Vyberte dva nebo více objektů a zvolte <strong>Objekt &rsaquo; Ořezová maska &rsaquo; Vytvořit masku krytí</strong>, nebo použijte <strong>Vytvořit masku</strong> v panelu Průhlednost. Nejvrchnější objekt se stává maskou: kde je světlá, grafika pod ní se zobrazí v plné, kde je tmavá, grafika vymizí, se šedemi mezi nimi dávajícími částečné průhlednost. <strong>Uvolnit masku krytí</strong> to zase rozebere. Použijte přechod od bílé k černé jako masku pro vyblednutí obrázku na jeden okraj, nebo pro stavbu jemných vinžet a přechodů, které jedna plochá hodnota krytí nemůže dát.</p>
+
+<h2 id="layers-organising">Organizace dokumentu</h2>
+<p>Trocha struktury brzy ušetří mnoho hledání později. Několik zvyků, které se vyplatí:</p>
+<dl>
+  <dt>Jedna vrstva na jednu starost</dt>
+  <dd>Udržujte pozadí, hlavní grafiku a text na samostatných, pojmenovaných vrstvách. Poté můžete skrýt, zamknout nebo přeuspořádat celou část kresby jedním kliknutím.</dd>
+  <dt>Zamkněte to, čeho se nedotýkáte</dt>
+  <dd>Zamkněte vrstvy kolem té, na které pracujete, takže náhodné kliknutí nebo tažení jejich nenaruší, a odemkněte je znovu pomocí <kbd>&#8997;&#8984;2</kbd>, když je potřebujete.</dd>
+  <dt>Seskupte věci, které se pohybují dohromady</dt>
+  <dd>Svažte části jednoho prvku do skupiny, aby se chovala jako jeden objekt, a vyhradte vrstvy pro větší dělení dokumentu.</dd>
+  <dt>Nastavte aktivní vrstvu před kreslením</dt>
+  <dd>Klikněte na vrstvu, do které chcete přidat, nejprve, takže nová grafika přistane na správném místě namísto na vrchu toho, co tam bylo.</dd>
+  <dt>Nechte vás barvy vést</dt>
+  <dd>Spoléhajte na barvy vrstev: když zvýraznění výběru odpovídá čipu vrstey, přesně víte, kde tento objekt žije, bez otevření čehokoli.</dd>
+</dl>

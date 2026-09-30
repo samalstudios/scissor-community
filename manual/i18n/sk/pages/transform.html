@@ -1,0 +1,165 @@
+<p class="lede">Všetko, čo mení, kde objekt sedí, aký je veľký alebo ktorým smerom sa otočil, žije tu: presúvanie a škálovanie od ruky, presné číselné transformácie, zarovnávanie a naskladanie, živé opakovania, morfy, obálky a premena plochého tvaru na pevný.</p>
+
+<p>Skratky nižšie sú zapísané v ich macOS forme. V systémoch Windows a Linux čítajte <kbd>⌘</kbd> ako Ctrl, <kbd>⌥</kbd> ako Alt a <kbd>⇧</kbd> ako Shift.</p>
+
+<h2 id="transform-select-move">Výber a presúvanie</h2>
+<p>Predtým, ako môžete transformovať čokoľvek, musíte povedať čo. Siahnite po týchto najprv: nástroje výberu rozhodnú, na čo bude ťahanie, číselný príkaz alebo pole panelu pôsobiť.</p>
+
+<h3 id="transform-selection-tools">Nástroje výberu</h3>
+<table>
+  <thead><tr><th>Nástroj</th><th>Skratka</th><th>Čo vyberie</th></tr></thead>
+  <tbody>
+    <tr><td>Nástroj Výber</td><td><kbd>V</kbd></td><td>Celé objekty a skupiny.</td></tr>
+    <tr><td>Nástroj Priamy výber</td><td><kbd>A</kbd></td><td>Jednotlivé body ukotvenia a segmenty cesty.</td></tr>
+    <tr><td>Nástroj Výber skupiny</td><td></td><td>Jeden objekt vo vnútri skupiny; každé ďalšie kliknutie rozšíri na skupinu okolo neho.</td></tr>
+  </tbody>
+</table>
+<p>Shift-klik pridáva objekt do výberu alebo ho vypúšťa späť. Ťahajte na prázdnom plátne pre obdĺžnikový výber a podržte <kbd>⇧</kbd> pre pridanie toho, čo obdĺžnik zachytil, k tomu, čo je už vybrané. Dvojklik na skupinu nástrojom Výber vstúpi do vnútra, aby ste mohli pracovať na jednom členovi bez rozskupovania.</p>
+
+<h3 id="transform-moving">Presúvanie výberu</h3>
+<p>Ťahajte vybraný objekt pre jeho presunutie. Podržanie <kbd>⌥</kbd> zanechá kópiu pozadu a ťahá tou namiesto, čo je rýchly spôsob duplikovania na mieste a presunutia v jednom pohybe. Podržanie <kbd>⇧</kbd> obmedzuje presun na 45° krokov meraných od obmedzovacieho uhla nastaveného v Nastaveniach a vypína prichytávanie; bez <kbd>⇧</kbd> sa výber prichytáva k blízkym okrajom, stredom a uhlom. Šipy posúvaju o prírastok klávesnice, <kbd>⇧</kbd> so šípkou posúva o desaťkrát toľko a <kbd>⌥</kbd> so šípkou posúva kópiu.</p>
+
+<h3 id="transform-bounding-box">Obdĺžnik výberu: škálovanie a rotácia od ruky</h3>
+<p>Obdĺžnik výberu nesie osem rukoväti. Ťahajte jednu pre zmenu veľkosti: <kbd>⇧</kbd> udrží proporcie a <kbd>⌥</kbd> škáluje od stredu namiesto od protiľahlej rukoväte. Tesne za rohom ukazovateľ vstúpi do zóny rotácie; ťahajte tam pre otočenie výberu okola stredu obdĺžnika, s <kbd>⇧</kbd> prichytávajúc na 45&deg;. Po rotácii zostane obdĺžnik naklonený s grafikou. <strong>Objekt &rsaquo; Transformácia &rsaquo; Resetovať obdĺžnik výberu</strong> ho zarovná späť, aby neskoršie úpravy šírky a výšky čítali po osiach strany.</p>
+
+<h2 id="transform-numeric">Číselné transformácie</h2>
+<p>Ťahanie je rýchle, ale približné. Keď musí byť hodnota presná, alebo rovnaká na mnohých objektoch, zadajte ju. Panel Transformácia drží živé údaje pre výber a podponuka <strong>Objekt &rsaquo; Transformácia</strong> drží jednorazové príkazy s možnosťou Kópia.</p>
+
+<h3 id="transform-panel">Panel Transformácia</h3>
+<p>Panel Transformácia (<kbd>⇧F8</kbd>) zobrazuje X, Y, W a H v pixeloch pre výber; zadajte hodnota a stlačte Return pre jeho nastavenie. Pod nimi pole ⟳ otáča výber o uhol a pole ⧄ ho šikmo, každé sa vracia na nulu po použití. Panel potrebuje niečo vybrané; bez vybraného sa stlmi a povie to.</p>
+<p>Panel Vlastnosti opakuje X, Y, W a H s rotáciou a dvoma tlačidlami, ktoré prevracia výber horizontálne alebo vertikálne okolo svojho vlastného streda, takže najčastejšie pohyby sú na dosah ruky bez otvárania druhého panelu.</p>
+
+<h3 id="transform-commands">Presun, Rotácia, Zrkadlenie, Mierka a Šikmo</h3>
+<p><strong>Objekt &rsaquo; Transformácia</strong> drží číselné príkazy. Každé otvorí malé dialógové okno a každé (okrem Presun, ktorý je priamym posunutím) transformuje okolo referenčného bodu. políčko Kópia v každom dialógovom okne použije zmenu na duplikát a zanechá originál nedotknutý, čo je spôsob, ako postavíte zrkadlený pár alebo škálovaný odkaz v jednom kroku.</p>
+<table>
+  <thead><tr><th>Príkaz</th><th>Skratka</th><th>Polia</th></tr></thead>
+  <tbody>
+    <tr><td>Presun&hellip;</td><td><kbd>⇧⌘M</kbd></td><td>Horizontálne, Vertikálne, Kópia.</td></tr>
+    <tr><td>Rotácia&hellip;</td><td></td><td>Uhol, Kópia.</td></tr>
+    <tr><td>Zrkadlenie&hellip;</td><td></td><td>Os (Horizontálna alebo Vertikálna), Uhol, Kópia.</td></tr>
+    <tr><td>Mierka&hellip;</td><td></td><td>Horizontálne %, Vertikálne %, Kópia.</td></tr>
+    <tr><td>Šikmo&hellip;</td><td></td><td>Uhol šikmo, Uhol osi, Kópia.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="transform-each-again">Transformácia každého a Transformácia znova</h3>
+<p><strong>Transformácia každého&hellip;</strong> (<kbd>⌥⇧⌘D</kbd>) škáluje, presúva, otáča a zrkadlí každý vybraný objekt okolo <em>jeho vlastného</em> streda namiesto zdieľaného streda výberu. Jeho dialógové okno berie Škálovanie H a V, Presun H a V, uhol Rotácie, zaškrtávacie polia Zrkadlenie X a Zrkadlenie Y a Kópia. Siahnite po ňom pre rozhádzanie alebo rozvíjanie sady objektov, takže každý sa otáča a rastie na mieste namiesto obehovania skupiny.</p>
+<p><strong>Transformácia znova</strong> (<kbd>⌘D</kbd>) opakuje poslednú transformáciu na aktuálnom výbere. Presuňte objekt, potom stlačte <kbd>⌘D</kbd> niekoľko krát a dostanete rovnomerne rozložený riadok; kombinujte to s <kbd>⌥</kbd>-ťahaním kópie pre stavbu opakujúcich sa vzorov ručne.</p>
+
+<h2 id="transform-tools">Transformačné nástroje a referenčný bod</h2>
+<p>Nástroje Rotácia (<kbd>R</kbd>), Zrkadlenie (<kbd>O</kbd>), Mierka (<kbd>S</kbd>) a Šikmo pracujú každý okolo referenčného bodu, kresleného ako malé krížik. Začína v strede výberu; kliknite kdekoľvek na plátno pre jeho presunutie tam a výber niečoho iného ho vráti späť do nového streda. Potom ťahajte na plátne pre otočenie, zrkadlenie, škálovanie alebo skreslenie okolo tohto bodu.</p>
+<p><kbd>⇧</kbd> obmedzuje každý nástroj: 45&deg; kroky pre Rotáciou a Zrkadlením, rovnaké horizontálne a vertikálne pre Mierkou, jednu os pre Šikmo. Podržanie <kbd>⌥</kbd> počas ťahania transformuje kópiu a zanechá originál. <kbd>⌥</kbd>-kliknutie umiestni referenčný bod a otvorí číselné dialógové okno tohto nástroja s bodom už nastaveným, takže môžete otočiť tvar okola rohu presným uhlom.</p>
+
+<h2 id="transform-free">Nástroj Free Transform</h2>
+<p>Nástroj Free Transform (<kbd>E</kbd>) pokladá presúvanie, škálovanie, rotáciu, šikmo a dva druhy skreslenia na jeden obdĺžnik výberu. Ťahajte vnútra obdĺžnika pre jeho presunutie, ťahajte rukoväť pre zmenu veľkosti a ťahajte tesne za rohom pre rotáciu, s <kbd>⇧</kbd> prichytávajúc na 45&deg;. Použite to, keď chcete skúsiť niekoľko druhov zmien v jednom geste bez prepínania nástrojov medzi každým.</p>
+<p>Obdĺžnik nástroja Výberu sa dá skresliť tiež: podržte <kbd>Ctrl</kbd> (alebo <kbd>&#8984;</kbd>) počas ťahania jednej z jeho rohových rukoväti pre presunutie tohto rohu samostatne, namiesto škálovania. Funguje na tvary a na fotografie rovnako; na pixeloch nasleduje rýchly náhľad ťahanie a výsledok sa vypočíta, keď stlačíte <kbd>Enter</kbd>.</p>
+
+<h3 id="transform-free-widget">Widget</h3>
+<p>Malý widget pláva vedľa obdĺžnika so štyrmi tlačidlami, z ktorých každé sa pomenúva, keď naň prejdete: <strong>Obmedziť</strong>, <strong>Free Transform</strong>, <strong>Skreslenie v perspektíve</strong> a <strong>Voľné skreslenie</strong>. Obmedziť robí škálovanie proporcionálnym bez držania <kbd>⇧;</kbd>; s ním zapnutým <kbd>⇧;</kbd> uvoľňuje proporcie namiesto. Dva režimy skreslenie zanechajú len štyri rohové rukoväte na ťahanie.</p>
+
+<h3 id="transform-free-keys">Skreslenie z klávesnice</h3>
+<p>Rovnaké skreslenia môžete dosiahnuť bez opustenia predvoleného režimu. Podržte <kbd>⌘</kbd> na okrajovej rukoväti pre šikmo pozdĺž tohto okraja. Podržte <kbd>⌘</kbd> na rohu pre jeho voľné skreslenie samostatne; pridajte <kbd>⇧;</kbd> pre obmedzenie cesty rohu na 45&deg;. Podržte <kbd>⌘⌥⇧;</kbd> na rohu pre perspektívu, kde susedný roh zrkadlí ťah. Stlačenie alebo uvoľnenie modifikátora v polovici ťahania prepne akciu okamžite a názov, na ktorom skončí, Škálovanie, Šikmo, Skreslenie v perspektíve alebo Voľné skreslenie, je to, čo sa krok volá v paneli Histórii neskôr. Text, umiestnené obrázky a inštancie symbolov sa nedajú skresliť; zostanú tak, ako sú a Scissor vámovie, keď ťahanie ich preskočí.</p>
+
+<h3 id="transform-free-reference">Referenčný bod</h3>
+<p>Referenčný bod sedí v strede obdĺžnika ako krížik a môžete ho ťahať kdekoľvek; sám o sebe nič nepohybuje. Obdĺžnik sa potom otáča a škáluje okolo neho a cestuje s grafikou, keď presúvate výber. Spustite ho bližšie k jednému z deviatich bodov obdĺžnika (štyri rohy, štyri stredy okrajov alebo stred) a usadí sa na tom bode. Podržanie <kbd>⌥;</kbd> počas škálovania ignoruje umiestnený referenčný bod a škáluje od stredu. Šikanie strany s <kbd>⌘;</kbd> tiež drží umiestnený referenčný bod na mieste.</p>
+
+<h3 id="transform-free-pins">Presúvanie rukoväti</h3>
+<p>Zapnite <strong>Presunúť rukoväte</strong> v rýchlo paneli (alebo v paneli možností), kým je Free Transform aktívny a ťahanie rohom obdĺžnika presunie tento roh samostatne, bez dotýkania sa grafiky. Blízko bodu ukotvenia se naň usadí. Vypnite Presunutie rukoväti späť a ťahajte presunutým rohom: tvar sa škáluje, takže tento roh nasleduje ukazovateľ a každý iný bod zachová rovnakú proporcionálnu vzdialenosť od toho, čo drží na mieste, čo je protiľahlý roh, umiestnený referenčný bod alebo stred, kým je podržaný <kbd>⌥;</kbd>. <kbd>⇧;</kbd> udrží proporcie. Presunuté rohy cestujú s grafiky a dvojklik na jeden ich všetkých štyri vráti späť na obdĺžnik.</p>
+
+<h2 id="transform-align-arrange">Zarovnávanie, usporiadanie a zoskupovanie</h2>
+<p>Tieto príkazy nastavujú, ako sa objekty zarovnávajú medzi sebou, ktorý sedí pred ktorým a ktoré sú zozbierené, zamknuté alebo skryté, kým pracujete na zvyšku.</p>
+
+<h3 id="transform-align">Zarovnanie a rozloženie</h3>
+<p>Panel Zarovnanie (<kbd>⇧F7</kbd>) má tri riadky. <strong>Zarovnať objekty</strong> zarovná výber vľavo, stred alebo vpravo a hore, stred alebo dole. <strong>Rozložiť objekty</strong> rozloží tri alebo viac objektov, takže ich vrcholy, stredy, spodky, ľavé okraje, stredy alebo pravé okraje padnú na rovnaké intervaly. <strong>Rozložiť rozstup</strong> nastaví rovnakú medzeru medzi nimi vertikálne alebo horizontálne. Ponuka na paneli vyberá, či sa všetko zarovnává k výberu alebo k ploche. Zarovnávanie potrebuje aspoň jeden objekt (jeden objekt sa zarovnáva k ploche); rozloženie potrebuje tri a panel stlmi tieto tlačidlá, kým ich nemáte. Šesť zarovnaní sa tiež objaví pod <strong>Objekt &rsaquo; Zarovnanie</strong>.</p>
+
+<h3 id="transform-arrange">Usporiadať: poradie vrstvenia</h3>
+<p>Každý objekt sedí na úrovni v stohu a <strong>Objekt &rsaquo; Usporiadať</strong> presúva výber cez neho.</p>
+<table>
+  <thead><tr><th>Príkaz</th><th>Skratka</th></tr></thead>
+  <tbody>
+    <tr><td>Presunúť dopredu</td><td><kbd>⇧⌘]</kbd></td></tr>
+    <tr><td>Presunúť vpred</td><td><kbd>⌘]</kbd></td></tr>
+    <tr><td>Presunúť vzad</td><td><kbd>⌘[</kbd></td></tr>
+    <tr><td>Presunúť dozadu</td><td><kbd>⇧⌘[</kbd></td></tr>
+  </tbody>
+</table>
+
+<h3 id="transform-grouping">Zoskupovanie, zamykanie a skrývanie</h3>
+<dl>
+  <dt><strong>Zoskupiť</strong> (<kbd>⌘G</kbd>) a <strong>Rozskupiť</strong> (<kbd>⇧⌘G</kbd>)</dt>
+  <dd>Zozbieračte objekty, aby sa pohybovali a transformovali ako jeden alebo ich uvoľnite späť. Skupina sa dá vstúpiť dvojklikom na ňu nástrojom Výber.</dd>
+  <dt><strong>Zamknúť &rsaquo; Výber</strong> (<kbd>⌘2</kbd>) a <strong>Odomknúť všetko</strong> (<kbd>⌥⌘2</kbd>)</dt>
+  <dd>Zamykanie robí objekty nevybrateľnými, takže zostanú na mieste, kým nad nimi pracujete; Odomknúť všetko uvoľňuje všetko, čo bolo zamknuté.</dd>
+  <dt><strong>Skryť &rsaquo; Výber</strong> (<kbd>⌘3</kbd>) a <strong>Zobraziť všetko</strong> (<kbd>⌥⌘3</kbd>)</dt>
+  <dd>Skrývanie berie objekty z plátna bez ich odstránenia, čo vyčistí preplnenú scénu na časť, ktorú upravujete; Zobraziť všetko ich prináša späť.</dd>
+</dl>
+
+<h2 id="transform-repeat">Živé opakovania</h2>
+<p><strong>Objekt &rsaquo; Opakovať</strong> stavia mnoho kópií z jedného objektu a udržiava ich živými: upravte originál a každá kópia nasleduje. Siahnite po opakovaní, keď je grafika pravidelná, kvetina s rovnakými alebo dlaždicová mriežka ikon, takže môžete tvarovať jeden prvok a nechať zvyšok sledovať ho.</p>
+<dl>
+  <dt><strong>Radiálne&hellip;</strong></dt>
+  <dd>Krúži kópie okola streda. Dialógové okno nastavuje Počet inštancií a Polomer.</dd>
+  <dt><strong>Mriežka&hellip;</strong></dt>
+  <dd>Kladie kópie do riadkov a stĺpcov. Dialógové okno nastavuje Stĺpce, Riadky, Horizontálny rozstup a Vertikálny rozstup.</dd>
+  <dt><strong>Zrkadlo&hellip;</strong></dt>
+  <dd>Zrkadlí kópie naprieč osou. Dialógové okno nastavuje os (vertikálnu alebo horizontálnu) a Offset.</dd>
+</dl>
+<p>S vybraným opakovaním panel Vlastnosti odhalí rovnaké ovládacie prvky pre neskoršie ladenie: počet inštancií a polomer pre radiálne opakovanie; stĺpce, riadky a horizontálny a vertikálny rozstup pre mriežku a offset a zrkadlovú os pre zrkadlo. <strong>Uvoľniť</strong> premení kópie na obyčajnú, samostatne editovateľnú grafiku, keď ste hotoví.</p>
+<figure class="shot">
+  <img src="img/repeat.gif" width="640" height="640" loading="lazy"
+       alt="Jeden modrý okvetný lístok opakovaný okola streda radiálnym opakovaním, zapĺňajúci sa do kvetiny s dvanástimi lístkami, keď počet rastie." />
+  <figcaption>Jeden lístok a radiálne opakovanie. Keď počet stúpa od jedného po dvanásť sa kvetina zapĺňa; prevarujte jediný lístok a celá vec sa s ním mení.</figcaption>
+</figure>
+
+<h2 id="transform-morph">Morfy</h2>
+<p>Morf zapĺňa medzeru medzi dvoma objektami sériou tvarov medzi, každý o krok bližšie k ďalšiemu. Je to nástroj pre tieňové prechody medzi farbami a pre rovnomerne rozložené opakovania pozdĺž cesty.</p>
+<p>Nástroj Morf (<kbd>W</kbd>) morfuje jeden objekt do druhého: kliknite na prvý, potom na druhý. Kliknutie na tretí pokračuje reťaz a kliknutie do existujúceho morfu pridá tento objekt do neho. <strong>Objekt &rsaquo; Morf</strong> drží zvyšok:</p>
+<table>
+  <thead><tr><th>Príkaz</th><th>Skratka</th><th>Čo robí</th></tr></thead>
+  <tbody>
+    <tr><td>Vytvoriť</td><td><kbd>⌥⌘B</kbd></td><td>Morfuje vybrané objekty dohromady.</td></tr>
+    <tr><td>Uvoľniť</td><td><kbd>⌥⇧⌘B</kbd></td><td>Vráti kľúčové objekty a zahodí kroky.</td></tr>
+    <tr><td>Možnosti morfu&hellip;</td><td></td><td>Nastavuje rozstup a orientáciu (pozrite nižšie).</td></tr>
+    <tr><td>Rozbaliť</td><td></td><td>Premení kroky medzi na skutočné, editovateľné objekty.</td></tr>
+    <tr><td>Nahradiť chrbticu</td><td></td><td>Ohýba rad krokov pozdĺž vybranej cesty.</td></tr>
+    <tr><td>Otočiť chrbticu</td><td></td><td>Vymení, ktorý konca chrbtice sedí každý kľúčový objekt.</td></tr>
+    <tr><td>Otočiť odpredu dozadu</td><td></td><td>Prepína poradie vrstvenia krokov.</td></tr>
+  </tbody>
+</table>
+<p><strong>Možnosti morfu&hellip;</strong> nastavuje Rozstup na Zadané kroky (pevný počet medzilčí), Zadanú vzdialenosť (pevná medzera v pixeloch, zapĺňajúca toľko, koľko sa zmestí) alebo Hladkú farbu (toľko krokov, koľko treba pre hladkú zmiešanie farieb) a nastavuje Orientáciou na Zarovnať k strane alebo Zarovnať k ceste. Morf zostáva živý a nasleduje svoje kľúčové objekty, takže úprava oboch koncov preteká celý rad.</p>
+<figure class="shot">
+  <img src="img/morph.gif" width="760" height="316" loading="lazy"
+       alt="Modrá hviezda morfujúca do jantárového kruhu cez rastúci rad tvarov medzi." />
+  <figcaption>Morf z hviezdy do kruhu. Keď počet krokov rastie, viac tvarov medzi zapĺňa medzeru, každý trochu bližšie k ďalšiemu.</figcaption>
+</figure>
+
+<h2 id="transform-envelope">Shape Warp</h2>
+<p><strong>Objekt &rsaquo; Shape Warp</strong> ohýba grafiku, aby zodpovedala tvaru, zanechávajúc ju editovateľnou pod ním. Použite to na prilobenie loga na baner, zakrivenie riadku textu alebo vytlačenie plochého vzoru do vydutia. Sú tri spôsoby, ako ju vytvoriť.</p>
+<dl>
+  <dt><strong>Vytvoriť s deformáciou&hellip;</strong> (<kbd>⌥⇧⌘W</kbd>)</dt>
+  <dd>Ohýba výber jednou z vstavaných štýlov deformácie (Arc, Arch, Bulge, Flag, Wave, Fish, Rise, Fisheye, Inflate, Squeeze a varianty shell a arc), ovládaných množstvom Ohnutia, Horizontálneho a Vertikálneho.</dd>
+  <dt><strong>Vytvoriť s vrchným objektom</strong> (<kbd>⌥⌘C</kbd>)</dt>
+  <dd>Používa najvrchnejší vybraný tvar ako obálku a nalieva všetko pod ním do tohto obrysu. Potrebuje dva alebo viac objektov: kontajner na vrchu, grafika pod ním.</dd>
+  <dt><strong>Vytvoriť s mriežkou&hellip;</strong> (<kbd>⌥⌘M</kbd>)</dt>
+  <dd>Kladie mriežku riadkov a stĺpcov, ktoré požadujete, nad výber. Zostáva živá: prepnite na nástroj Priamy výber (<kbd>A</kbd>) a ťahajte akýkoľvek prienik mriežky pre ohnutie toho, čo drží, koľkokrát chcete.</dd>
+</dl>
+<p><strong>Uvoľniť</strong> vracia grafiku späť, ako bola, spolu s tvarom obálky; <strong>Rozbaliť</strong> zachová ohnutie a zahodí obálku, zanechávajúc skreslené cesty.</p>
+
+<h2 id="transform-3d">3D z vektorového tvaru</h2>
+<p><strong>Efekt &rsaquo; 3D a Materiály</strong> premení plochý tvar na pevný. Zostáva živým efektom, takže pôvodná cesta je stále tam na úpravu a kópia na obrazovke sa staví znova vždy, keď ju zmeníte.</p>
+<dl>
+  <dt><strong>Vytlačenie &amp; zkosenie</strong></dt>
+  <dd>Dáva tvaru hĺbku, so zkoseným okrajom, ak chcete.</dd>
+  <dt><strong>Rotácia</strong></dt>
+  <dd>Otáča profil okola osi do točeného tvaru.</dd>
+  <dt><strong>Nafúknutie</strong></dt>
+  <dd>Nafuká tvar, ako keby bol naplnený.</dd>
+  <dt><strong>Plocha</strong></dt>
+  <dd>Nakláňa plochý tvar v priestore bez pridania hĺbky.</dd>
+</dl>
+<p>Panel 3D a Materiály otáča objekt na osách X, Y a Z, nastavuje rotáciu a výšku svetla a vyberá plastový, matový alebo kovový povrch, s poliami Hĺbka a Zkosenie pre vytlačenie.</p>
+<figure class="shot">
+  <img src="img/3d-extrude.gif" width="620" height="620" loading="lazy"
+       alt="Plochá vektorová hviezda vytlačená do trojrozmernej hviezdy a otočená pre zobrazenie jej hĺbky." />
+  <figcaption>Vytlačenie a zkosenie stavia hĺbku z plochého tvaru, živo. Hviezda zostáva editovateľnou cestou pod ním.</figcaption>
+</figure>

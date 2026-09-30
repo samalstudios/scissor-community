@@ -1,0 +1,96 @@
+<p class="lede">En effekt ändrar hur ett objekt ser ut utan att ändra objektet självt. Banan, gruppen eller textbiten förblir precis som du ritade den, och effekten räknas om ovanpå varje gång du flyttar en punkt eller redigerar ett värde. Effekter staplar i Målstack-panelen, så att du kan stapla flera på ett objekt, ändra ordning på dem och ta bort valfri av dem igen.</p>
+
+<figure class="shot">
+  <img src="img/effects-demo.png" width="1400" height="560" loading="lazy"
+       alt="Tre identiska blå plattor som visar tre effekter: en skugga, en amber yttre glöd, och grovkantade kanter." />
+  <figcaption>Samma platta med tre effekter: en skugga, en yttre glöd och Grovna. Var och en är live, så att plattan under fortfarande är en vanlig avrundad rektangel.</figcaption>
+</figure>
+
+<h2 id="effects-live-and-stacked">Live-effekter och utseendestacken</h2>
+<p>Varje effekt i Scissor är <strong>live</strong> och <strong>icke-förstörande</strong>. Den sitter ovanpå objektets fyllningar och konturer i <strong>Utseende</strong>-panelen (<kbd>&#8679;F6</kbd>) och körs över hela objektet varje gång konstverket eller effekten ändras. Eftersom den ursprungliga banan är orörd under, kan du fortsätta redigera ankarpunkter, byta fyllningsfärg eller skriva om orden, och effekten följer med. Nå efter en effekt när du vill ha ett utseende, en skugga, en böjning, ett avrundat hörn, som du kan komma att ångra dig över senare, snarre än att förplikta dig till det för hand.</p>
+
+<h3 id="effects-order">Ordning spelar roll</h3>
+<p>Effekter körs från botten av stapeln och uppåt, och panelen listar dem överst först, ovanpå fyllningarna och konturerna. Ordningen ändrar resultatet: en suddighet under en skugga mjukar upp formen innan skuggan kastas, medan samma två åt andra hållet kaster en skarp skugga och sedan suddar ut hela röran. Om en effekt inte gör vad du förväntar dig, är dess position i stapeln det första att kolla.</p>
+
+<h2 id="effects-using">Lägg till, redigera och ta bort effekter</h2>
+<h3 id="effects-add">Från effektmenyn</h3>
+<p>Markera ett objekt, och välj sedan en effekt från <strong>Effekt</strong>-menyn. Objekt som öppnar en dialog visar en <strong>Förhandsvisning</strong> medan du ändrar deras värden, så att du kan bedöma resultatet på duken innan du förpliktar dig; hela redigeringen landar som ett enda steg i historiken snarre än ett steg per tangenttryck. En kort version av menyn (Skugga, Yttre glöd och Gaussisk suddighet, plus Rensa effekter) finns också i dukens högerklick-meny under <strong>Effekt</strong>.</p>
+
+<h3 id="effects-appearance">I Målstack-panelen</h3>
+<p>Varje effekt på det markerade objektet får sin egen rad i Målstack-panelen, märkt med en <em>fx</em>-bricka. Klicka på effektens namn för att öppna dess alternativ igen och ändra dem. Klicka på krysset i slutet av raden för att ta bort den enda effekten. För att ta bort varje effekt från markeringen på en gång, använd <strong>Effekt &rsaquo; Rensa effekter</strong>.</p>
+
+<h3 id="effects-panels">I effektpanelerna</h3>
+<p><strong>Fönster &rsaquo; Effekter</strong>-gruppen samlar effekterna till en panel för varje del av effektmenyn: Stilisera, Suddighet, Förvräng &amp; transformera, Bana, Kombinera former och Förvräng, med 3D-panelen bredvid. Varje panel listar gruppens effekter med en växel för att slå en på eller av och dess inställningar precis nedan, alla redigerade live på markeringen. Det är ett snabbare sätt att prova en effekt och justera dess värden än att öppna en dialog varje gång. Att stänga av en växel tar den effekten tillbaka bort från objektet. När ett objekt bär fler än en effekt av samma slag, redigerar panelen den första av dem och Målstack-panelen visar fortfarande hela stapeln.</p>
+
+<h2 id="effects-stylize">Stilisera: skuggor, glödar och kanter</h2>
+<p><strong>Effekt &rsaquo; Stilisera</strong>-undermenyn innehåller de vardagliga avslutande effekterna.</p>
+<table>
+  <thead><tr><th>Effekt</th><th>Vad det gör, och när det ska användas</th><th>Huvudalternativ</th></tr></thead>
+  <tbody>
+    <tr><td>Skugga</td><td>Kastar en förskjuten, suddig kopia av objektet bakom det. Använd det för att lyfta en form, ett kort eller en textbit från bakgrunden.</td><td>X- och Y-förskjutning, Suddighet, Färg, Opacitet.</td></tr>
+    <tr><td>Yttre glöd</td><td>Sprider en mjuk halon av färg utåt från objektets kant. Nå efter det för en neonskylt, en höjdpunkt, eller en glöd runt en ljuskälla.</td><td>Suddighet, Färg, Opacitet.</td></tr>
+    <tr><td>Inre glöd</td><td>Tonar en färg inåt från kanten istället för utåt, så att ljuset sitter inne i formen. Använd det för att tömma en form eller antyda en infälld, upplyst kant.</td><td>Suddighet, Färg, Opacitet.</td></tr>
+    <tr><td>Fjäder</td><td>Tonar objektets egen kant till transparent över en radie. Använd det för en mjukantad form eller en enkel vignett.</td><td>Fjäderradie.</td></tr>
+    <tr><td>Avrunda hörn</td><td>Rundar varje hörn i banan till en radie. Använd det för att mjuka ut spetsarna på en stjärna, en polygon eller en handritad bana utan att rita om den.</td><td>Radie.</td></tr>
+    <tr><td>Skissfyllning</td><td>Fyller formen med en fram-och-tillbaka-rad av strökar, som om den skissrades för hand. Bra för en lös, infylld fyllning eller en överstrykningspennlook.</td><td>Vinkel, Avstånd, Konturbredd, Variation (hur mycket strökarna vandrar, 0 till 100%).</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-blur">Suddighet</h2>
+<p><strong>Effekt &rsaquo; Suddighet &rsaquo; Gaussisk suddighet</strong> mjukar upp hela objektet med en <em>radie</em> du ställer in i pixlar. Eftersom det förblir live kan du höja eller sänka radien när som helst. Använd det för en mjuk, oskarp bakgrund, eller som en snabb mjuk skuggform på egen hand.</p>
+
+<h2 id="effects-distort">Förvräng och transformera</h2>
+<p><strong>Effekt &rsaquo; Förvräng &amp; transformera</strong>-undermenyn omformar konturen medan den underliggande banan förblir redigerbar.</p>
+<table>
+  <thead><tr><th>Effekt</th><th>Vad det gör, och när det ska användas</th><th>Huvudalternativ</th></tr></thead>
+  <tbody>
+    <tr><td>Fri förvrängning</td><td>Drar de fyra hörnen av objektets ruta i en liten förhandsvisning, och konstverket följer i perspektiv. Använd det för att falska ett perspektiv, såsom en etikett som sitter på en vinklad yta. En förhandsvisningsväxel visar resultatet på duken medan du drar, och Återställ hörnen till kvadrat.</td><td>De fyra hörnmattarna, Förhandsvisning, Återställ.</td></tr>
+    <tr><td>Knycka &amp; sväll</td><td>Böjer segmenten mellan ankarpunkter antingen inåt, och knycker konturen till spetsar, eller utåt, och sväller den till bukar. Använd det för stjärnskott, klumpar och mjuka kronbladsformer.</td><td>Belopp, från knyckt till svällt.</td></tr>
+    <tr><td>Grovna</td><td>Bryter konturen till små slumpmässiga rörelser, antingen skarpa eller slätade. Använd det för en papperskant eller en grovare, handritad linje.</td><td>Storlek (hur långt punkterna flyttas), Detalj (hur tätt), Punkter: Slät eller Hörn.</td></tr>
+    <tr><td>Transformera</td><td>Skalar, flyttar och roterar objektet som en effekt, och kan lämna en uppsättning kopior kvar. Använd det för en redigerbar rad eller ring av upprepningar, eller för att skjuta och ändra storlek på en form utan att röra dess verkliga geometri.</td><td>Skala horisontell och vertikal, Flytta horisontell och vertikal, Rotera, Kopior (0 till 200).</td></tr>
+    <tr><td>Justera</td><td>Skiftar ankarpunkter och deras kontrollhandtag med ett slumpmässigt belopp. Använd det för att knacka en allt för perfekt form lite ur vinkel.</td><td>Horisontellt och vertikalt belopp, och om du ska flytta ankarpunkter, kontrollpunkter, eller båda.</td></tr>
+    <tr><td>Vrid</td><td>Vrider formens insida mer än dess kanter, och lindar den till en virvel. Använd det för en spiral eller en strömvirvel.</td><td>Vinkel.</td></tr>
+    <tr><td>Sicksack</td><td>Vänder raka segment till regelbundna sicksackar (Hörn) eller vågor (Slät). Använd det för en vågig understrykning, en ric-rac-kant eller en taggig kant.</td><td>Storlek, Räfflor per segment, Punkter: Hörn eller Slät.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-path">Bana</h2>
+<p><strong>Effekt &rsaquo; Bana</strong>-undermenyn omformar objektets kontur medan den lämnar källan redigerbar.</p>
+<table>
+  <thead><tr><th>Effekt</th><th>Vad det gör, och när det ska användas</th><th>Huvudalternativ</th></tr></thead>
+  <tbody>
+    <tr><td>Förskjut bana</td><td>Ökar eller minskar konturen med ett visst avstånd. En positiv förskjutning sprider den utåt, en negativ drar in den. Använd det för en live kontur runt text eller en form som håller takt medan du redigerar.</td><td>Förskjutning, Föreningar: Mitre, Round eller Bevel.</td></tr>
+    <tr><td>Konturera objekt</td><td>Lägg till en Förskjut bana-effekt inställd på noll, och förvandla objektet (live text inkluderad) till en konturerad bana så att senare effekter har en verklig bana att verka på.</td><td>Inga.</td></tr>
+    <tr><td>Konturera kontur</td><td>Förvandlar konturen till en fylld form som en effekt. Använd det när du vill fylla en kontur med en gradient, eller fjädera eller förvränga en kontur som annars är en vanlig linje.</td><td>Inga.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-pathfinder">Kombinera former</h2>
+<p><strong>Effekt &rsaquo; Kombinera former</strong>-undermenyn kombinerar formerna inne i en grupp med ett formläge, men håller dem som separata, redigerbara banor under. Tillämpa det på en grupp och det kombinerade resultatet är vad du ser, medan varje medlem fortfarande kan flyttas eller omfärgläggas. Använd det för att prova en kombination utan att förplikta dig till det som Kombinera former-panelen skulle göra.</p>
+<table>
+  <thead><tr><th>Läge</th><th>Resultat</th></tr></thead>
+  <tbody>
+    <tr><td>Lägg till</td><td>Förenar gruppens former till en region.</td></tr>
+    <tr><td>Skär</td><td>Behåller bara där formerna överlappar.</td></tr>
+    <tr><td>Uteslut</td><td>Behåller allt utom där de överlappar.</td></tr>
+    <tr><td>Subtrahera</td><td>Tar bort de främsta formerna från den bakre.</td></tr>
+    <tr><td>Minus bak</td><td>Tar bort de bakre från den främsta.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-warp">Förvräng</h2>
+<p><strong>Effekt &rsaquo; Förvräng</strong> böjer objektet längs en av en uppsättning förinställda former, och förblir live så att du kan fortsätta redigera konstverket under. Använd det för att böja en rubrik till en båge, våga en banderoll, eller trycka ett platt block till en bukt, utan att ge upp förmågan att ändra orden eller färgerna.</p>
+<p>Menyn erbjuder tio stilar direkt (Arc, Arch, Bulge, Flag, Wave, Fish, Rise, Fisheye, Inflate och Squeeze). <strong>Förvrängningsalternativ&#8230;</strong> öppnar hela uppsättningen, som lägger till Arc Lower, Arc Upper, Shell Lower och Shell Upper, och låter dig ställa in beloppet:</p>
+<dl>
+  <dt>Böj</dt><dd>Hur starkt formen böjer, från -100% till 100%.</dd>
+  <dt>Horisontell</dt><dd>Lutar böjningen åt ett håll, från -100% till 100%.</dd>
+  <dt>Vertikal</dt><dd>Tippar böjningen upp eller ner, från -100% till 100%.</dd>
+</dl>
+<p>Samma förvrängningsstilar kan tillämpas som en omformningskuvert istället, vilket ändrar banan själv snarre än att förbli live: se <a href="#transform-envelope">Shape Warp</a>. Förvrängningsverktyget och de andra flytverktygen omformar genom att dra på duken och täcks under <a href="#tools-width-liquify">verktygsreferensen</a>.</p>
+
+<h2 id="effects-3d">3D och material</h2>
+<p><strong>Effekt &rsaquo; 3D och material</strong> förvandlar en platt form till en fast: ett plan, en extrudering och avfasning, en rotation upp eller en uppblåsning. Som de andra är det en live-effekt, så att den platta banan finns kvar att redigera och den fasta byggs om när du ändrar den. Djupet, avfasningen, rotationen, belysningen och ytan ställs in i 3D och material-panelen. Eftersom det har fler kontroller än en enda dialog har 3D en egen sida: se <a href="/manual/three-d/">3D</a>.</p>
+
+<h2 id="effects-expand">Förvandla effekter till konstverk</h2>
+<p>En effekt förblir live så länge du vill ha den. När utseendet är bestämt och du behöver resultatet som vanliga, redigerbara banor, till exempel för att överlämna filen eller omforma effektens utdata för hand, välj <strong>Objekt &rsaquo; Expandera utseende</strong>. Det bakar hela utseendestapeln, effekter inkluderade, ner till vanligt konstverk. Detta kan inte redigeras som en effekt efteråt, så expandera bara när du är säker. För att ta bort effekter utan att baka något, ta bort dem ett i taget i Målstack-panelen eller rensa dem alla med <strong>Effekt &rsaquo; Rensa effekter</strong>.</p>
+<p>Effektmenyn listar också <strong>Rasterisera</strong>, som inte är en live-effekt: det konverterar markeringen till pixlar där och då. Målning och pixellager täcks på <a href="/manual/pixels/">Pixellager</a>-sidan.</p>

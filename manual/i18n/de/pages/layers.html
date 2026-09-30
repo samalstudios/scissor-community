@@ -1,0 +1,85 @@
+<p class="lede">Das Ebenen-Panel ist die Karte eines Dokuments: jede Ebene, Gruppe und Objekt in einer Liste, gestapelt in der Reihenfolge, in der sie auf der Seite sitzen. Verwenden Sie es zum Anzeigen und Verbergen, Sperren, Umbenennen, Neuordnen und Auswählen, und um auf einen Blick zu sehen, auf welcher Ebene ein beliebiges Objekt lebt.</p>
+
+<p>Die untenstehenden Kürzel sind in ihrer macOS-Form geschrieben. Unter Windows und Linux lesen Sie <kbd>&#8984;</kbd> als Strg, <kbd>&#8997;</kbd> als Alt und <kbd>&#8679;</kbd> als Umschalt.</p>
+
+<h2 id="layers-panel">Das Ebenen-Panel</h2>
+<p>Öffnen Sie es über <strong>Fenster &rsaquo; Ebenen</strong> (<kbd>F7</kbd>). Die Liste hält Ihre Ebenen auf der obersten Ebene, mit dem Inhalt jeder Ebene darunter verschachtelt: Gruppen, Pfade, Text, Bilder und Pixel-Ebenen, gezeichnet als ein Baum, den Sie öffnen und schließen können. Ein Container (eine Ebene oder eine Gruppe) trägt ein kleines Dreieck am linken Rand seiner Zeile; klicken Sie darauf, um den Container wegzufalten oder zu öffnen. Tiefe Dokumente bleiben lesbar, weil Sie die Teile zusammenklappen können, an denen Sie nicht arbeiten.</p>
+<p>Zwei Schaltflächen sitzen am Fuß des Panels. <strong>Neue Ebene erstellen</strong> fügt eine leere Ebene direkt über der aktuell aktiven hinzu und macht die neue aktiv. <strong>Auswahl löschen</strong> entfernt, was ausgewählt ist; ein Dokument behält immer mindestens eine Ebene, also kann die letzte verbleibende Ebene nicht so gelöscht werden. Um eine Ebene, Gruppe oder Objekt umzubenennen, doppelklicken Sie auf seinen Namen in der Liste, tippen Sie und drücken Sie <kbd>Enter</kbd>. Die Teile eines belebten Dokuments zu benennen ist der schnellste Weg, es navigierbar zu halten.</p>
+
+<h3 id="layers-row">Was jede Zeile zeigt</h3>
+<p>Eine Zeile von links nach rechts lesen:</p>
+<table>
+  <thead><tr><th>Teil</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td>Auge</td><td>Zeigt oder verbirgt diese Ebene, Gruppe oder Objekt. Eine Zeile mit ausgeschaltetem Auge wird nicht gezeichnet und nicht gedruckt oder exportiert.</td></tr>
+    <tr><td>Sperre</td><td>Sperrt oder entsperrt die Zeile. Ein gesperrtes Objekt kann auf der Zeichenfläche nicht ausgewählt oder bearbeitet werden.</td></tr>
+    <tr><td>Farbchip</td><td>Nur auf Ebenenzeilen: Die Farbebezeichnung der Ebene, verwendet, um die Auswahlmarkierungen und Hervorhebungen dieser Ebene zu tönen.</td></tr>
+    <tr><td>Dreieck</td><td>Nur auf Containern: Öffnet oder schließt die Ebene oder Gruppe, um das Innere zu zeigen.</td></tr>
+    <tr><td>Art-Icon</td><td>Markiert Gruppen und Clippgruppen (eine Clippgruppe wird mit gestricheltem Umriss gezeichnet).</td></tr>
+    <tr><td>Name</td><td>Der Name, oder ein Platzhalter in spitzen Klammern wie <code>&lt;Pfad&gt;</code> oder <code>&lt;Gruppe&gt;</code>, wenn eine Sache unbenannt ist. Doppelklicken zum Umbenennen.</td></tr>
+    <tr><td>Auswahlquadrat</td><td>Am rechten Rand: Ein kleines Quadrat in der Farbe der Ebene, das auf jeder Zeile erscheint, die einen Teil der aktuellen Auswahl enthält.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="layers-groups">Ebenen und Gruppen</h2>
+<p>Ebenen sind die Behälter auf oberster Ebene eines Dokuments. Sie existieren, um unabhängige Teile der Grafik auseinanderzuhalten: ein Hintergrund auf einer Ebene, die Hauptszene auf einer anderen, Beschriftungen auf einer dritten. Weil eine Ebene an der Wurzel des Baums sitzt, bewegt das Verbergen, Sperren oder Neuordnen sie alles, was sie enthält, in einem Schritt.</p>
+<p>Eine Gruppe ist ein kleinerer Container, der innerhalb einer Ebene (oder innerhalb einer anderen Gruppe) lebt und mit der Grafik reist. Gruppieren ist, wie Sie die Teile einer Sache zusammenbinden, die Teile eines Logos oder eines Icons, sodass sie sich als Einheit bewegen, skalieren und stapeln. Gruppen öffnen und schließen im Panel mit ihrem eigenen Dreieck, genau wie Ebenen.</p>
+<p>Ebenen und Gruppen verhalten sich in einer wichtigen Hinsicht gleich: Jede kann angezeigt oder verborgen, gesperrt oder entsperrt werden, und jede kann ihre eigene Deckkraft und ihren eigenen Füllmodus tragen, die auf alles innerhalb ihr wirken. Der Unterschied ist einer der Rolle. Ebenen organisieren das ganze Dokument; Gruppen binden einzelne Objekte.</p>
+
+<h3 id="layers-grouping">Gruppieren und Gruppierung aufheben</h3>
+<p>Wählen Sie zwei oder mehr Objekte und wählen Sie <strong>Objekt &rsaquo; Gruppieren</strong> (<kbd>&#8984;G</kbd>), um sie zu einer Gruppe zu sammeln. <strong>Objekt &rsaquo; Gruppierung aufheben</strong> (<kbd>&#8679;&#8984;G</kbd>) nimmt die Objekte einer ausgewählten Gruppe wieder heraus. Gruppen können verschachtelt sein, also ist eine Gruppe von Gruppen in Ordnung; jedes <kbd>&#8679;&#8984;G</kbd> schält eine Ebene ab. Greifen Sie zu einer Gruppe, wenn Sie immer wieder dieselbe Handvoll Objekte auswählen.</p>
+
+<h2 id="layers-stacking">Stapelreihenfolge: Vorne und hinten</h2>
+<p>Objekte werden von hinten nach vorne gezeichnet, sodass ein Objekt, das näher vorn ist, die dahinter bedeckt, wo sie sich überlappen. Das Panel zeigt diese Reihenfolge direkt: Die oberste Zeile ist das vorderste Objekt, und die unterste Zeile ist das am weitesten hinten. Das Neuordnen eines Objekts ändert, was was bedeckt.</p>
+<p>Der schnellste Weg zum Neuordnen ist Ziehen: Erfassen Sie eine Zeile und legen Sie sie höher oder tiefer in der Liste ab, um sie durch den Stapel zu bewegen, oder legen Sie sie auf eine Ebene oder Gruppe, um das Objekt <em>hinein</em> zu bewegen. Ziehen ist auch, wie Sie ein ausgewähltes Objekt auf eine andere Ebene bewegen – ohne Ausschneiden und Einfügen.</p>
+<p>Bewegen Sie eine Auswahl durch den Stapel mit <strong>Objekt &rsaquo; Anordnen</strong>:</p>
+<table>
+  <thead><tr><th>Befehl</th><th>Kürzel</th><th>Wirkung</th></tr></thead>
+  <tbody>
+    <tr><td>Nach vorne bringen</td><td><kbd>&#8679;&#8984;]</kbd></td><td>Ganz nach vorne seiner Ebene.</td></tr>
+    <tr><td>Nach vorne</td><td><kbd>&#8984;]</kbd></td><td>Einen Schritt nach vorne.</td></tr>
+    <tr><td>Nach hinten</td><td><kbd>&#8984;[</kbd></td><td>Einen Schritt nach hinten.</td></tr>
+    <tr><td>Nach hinten bringen</td><td><kbd>&#8679;&#8984;[</kbd></td><td>Ganz nach hinten seiner Ebene.</td></tr>
+  </tbody>
+</table>
+<p>Verwenden Sie diese, wenn eine Form, die Sie brauchen, hinter einer anderen verborgen ist oder wenn ein Hintergrund über der Szene gelandet ist. Um durch Objekte zu arbeiten, die aufeinander sitzen, schritt <strong>Auswahl &rsaquo; Nächstes Objekt darüber</strong> (<kbd>&#8997;&#8984;]</kbd>) und <strong>Nächstes Objekt darunter</strong> (<kbd>&#8997;&#8984;[</kbd>) die Auswahl auf und ab im Stapel, was praktisch ist, um etwas zu erreichen, das unter anderer Grafik begraben ist.</p>
+
+<h2 id="layers-visibility">Anzeigen und Verbergen</h2>
+<p>Klicken Sie auf das Auge einer Zeile, um diese Ebene, Gruppe oder Objekt zu verbergen; klicken Sie erneut, um es zurückzubringen. Eine verborgene Zeile nimmt nicht am Zeichnen, Drucken oder Export teil, also ist Verbergen der sichere Weg, um etwas aus dem Weg zu bekommen, ohne es zu löschen. Verwenden Sie es, um zwei Versionen eines Details zu vergleichen oder eine überfüllte Zeichenfläche auf den Teil zu reduzieren, an dem Sie arbeiten.</p>
+<p>Das Menü bietel dasselbe für die aktuelle Auswahl: <strong>Objekt &rsaquo; Verbergen &rsaquo; Auswahl</strong> (<kbd>&#8984;3</kbd>) verbirgt, was ausgewählt ist, und <strong>Objekt &rsaquo; Alle anzeigen</strong> (<kbd>&#8997;&#8984;3</kbd>) enthüllt alles, was verborgen war.</p>
+
+<h2 id="layers-locking">Sperren</h2>
+<p>Klicken Sie auf das Schloss einer Zeile, um sie zu sperren. Ein gesperrtes Objekt bleibt sichtbar, kann aber auf der Zeichenfläche nicht ausgewählt oder geändert werden, also ist es außer Reichweite, während Sie darum herum arbeiten. Das Sperren einer Ebene schützt alles darauf auf einmal. Sperren Sie den Hintergrund, während Sie darüber zeichnen, oder sperren Sie ein fertiges Element, damit ein versehentlicher Ziehen es nicht bewegt.</p>
+<p>Aus dem Menü sperrt <strong>Objekt &rsaquo; Sperren &rsaquo; Auswahl</strong> (<kbd>&#8984;2</kbd>) das, was ausgewählt ist, und <strong>Objekt &rsaquo; Alle entsperren</strong> (<kbd>&#8997;&#8984;2</kbd>) befreit alles wieder. Das Sperren eines ausgewählten Objekts entfernt es auch aus der Auswahl, da ein gesperrtes Ding nicht mehr etwas ist, auf das Sie wirken können.</p>
+
+<h2 id="layers-selecting">Auswählen und die aktive Ebene</h2>
+<p>Klicken Sie auf die Zeile eines Objekts im Panel, um dieses Objekt auf der Zeichenfläche auszuwählen. Halten Sie <kbd>&#8679;</kbd>, <kbd>&#8984;</kbd> oder <kbd>Strg</kbd> während Sie klicken, um ein weiteres Objekt zur Auswahl hinzuzufügen, sodass Sie eine Auswahl aus der Liste aufbauen können, ohne nach kleinen Formen auf der Seite zu jagen.</p>
+<p>Das Klicken auf eine <em>Ebenen</em>-Zeile macht etwas anderes: Es macht diese Ebene zur aktiven Ebene, markiert mit einem farbigen Balken an ihrer linken Kante. Neue Grafik, die Sie zeichnen, platzieren oder einfügen, wird zur aktiven Ebene hinzugefügt, also entscheidet das Klicken auf eine Ebene, bevor Sie beginnen, wo diese Arbeit landet. Das Erstellen einer neuen Ebene macht sie sofort aktiv.</p>
+<p>Das Auswahlquadrat rechts jeder Zeile verknüpft das Panel mit der Zeichenfläche. Es erscheint, in der Farbe der Ebene, auf jeder Zeile, die einen Teil der aktuellen Auswahl enthält, und es ist gefüllt auf den genauen Objekten, die ausgewählt sind. Weil die Markierung den Baum hinaufwandert, zeigt ein Blick nach unten in die Liste sowohl, was ausgewählt ist, als auch, auf welchen Ebenen und in welchen Gruppen diese Objekte sitzen.</p>
+
+<h2 id="layers-colours">Farbbezeichnungen</h2>
+<p>Jede Ebene erhält eine Farbe aus einer festen Reihenfolge (hellblau, rot, grün, blau, gelb und so weiter, insgesamt zwölf, die sich zyklisch wiederholen, wenn Sie mehr Ebenen hinzufügen). Diese Farbe ist die Bezeichnung der Ebene. Sie zeigt sich als Chip neben dem Namen der Ebene, und sie tönt die Auswahlmarkierungen im Panel zusammen mit den Auswahlhervorhebungen und dem Begrenzungsrahmen, der auf der Zeichenfläche für Objekte auf dieser Ebene gezeichnet wird. Der Zweck ist die schnelle Identifikation: Wenn Sie etwas auswählen und sein Rahmen grün erscheint, wissen Sie sofort, dass es zur grünen Ebene gehört. Ein Dokument über einige gut benannte, unterschiedlich gefärbte Ebenen zu verteilen, macht es viel leichter, den Überblick zu behalten, wo alles ist.</p>
+
+<h2 id="layers-masks">Clipping- und Deckkraftmasken</h2>
+<p>Eine Ebene oder eine Gruppe kann ihre eigene Deckkraft und ihren eigenen Füllmodus tragen, beide im <strong>Transparenz</strong>-Panel eingestellt (<strong>Fenster &rsaquo; Transparenz</strong>, <kbd>&#8679;&#8984;F10</kbd>). Dasselbe Panel hält <strong>Füllung auf Gruppe beschränken</strong>, das die Füllmodi einer Gruppe nur miteinander mischen lässt statt mit dem, was darunter liegt, und <strong>Durchschlaggruppe</strong>, wo jedes Objekt in der Gruppe die dahinter verbergen statt durch sie hindurchzuscheinen. Masken gehen einen Schritt weiter und lassen ein Objekt steuern, wo oder wie stark andere Grafik zeigt.</p>
+
+<h3 id="layers-clip">Clipping-Masken</h3>
+<p>Eine Clipping-Maske schneidet Grafik auf eine Form zu. Wählen Sie zwei oder mehr Objekte und wählen Sie <strong>Objekt &rsaquo; Clipping-Maske &rsaquo; Erstellen</strong> (<kbd>&#8984;7</kbd>). Das oberste ausgewählte Objekt wird zum Clipping-Pfad, und alles darunter wird nur innerhalb dieser Form gezeigt; der Rest wird abgeschnitten. Das Ergebnis ist eine Clippgruppe, die im Panel mit einem gestrichelten Icon gezeichnet wird. <strong>Freigeben</strong> (<kbd>&#8997;&#8984;7</kbd>) macht es rückgängig und gibt die Objekte zurück. Greifen Sie hierher, um ein Foto oder ein beschäftigtes Muster auf einen Kreis, einen Buchstaben oder einen beliebigen Umriss zuzuschneiden, den Sie darüber zeichnen.</p>
+
+<h3 id="layers-opacity-mask">Deckkraftmasken</h3>
+<p>Eine Deckkraftmaske lässt Grafik nach der Helligkeit eines anderen Objekts verblassen. Wählen Sie zwei oder mehr Objekte und wählen Sie <strong>Objekt &rsaquo; Clipping-Maske &rsaquo; Deckkraftmaske erstellen</strong>, oder verwenden Sie <strong>Maske erstellen</strong> im Transparenz-Panel. Das oberste Objekt wird zur Maske: Wo es hell ist, zeigt die Grafik darunter voll, wo es dunkel ist, verblasst die Grafik zu nichts, mit den Grautönen dazwischen für teilweise Transparenz. <strong>Deckkraftmaske freigeben</strong> nimmt sie wieder auseinander. Verwenden Sie einen Weiß-zu-Schwarz-Verlauf als Maske, um ein Foto an einer Kante auszulaufen oder die weichen Vignettierungen und Mischungen zu bauen, die ein einzelner flacher Deckkraftwert nicht geben kann.</p>
+
+<h2 id="layers-organising">Ein Dokument organisieren</h2>
+<p>Ein wenig Struktur früh spät viel Suche später. Einige Gewohnheiten, die sich auszahlen:</p>
+<dl>
+  <dt>Eine Ebene pro Anliegen</dt>
+  <dd>Halten Sie den Hintergrund, die Hauptgrafik und den Text auf separaten, benannten Ebenen. Sie können dann einen ganzen Teil des Zeichnens mit einem Klick verbergen, sperren oder neuordnen.</dd>
+  <dt>Sperren Sie, was Sie nicht anfassen</dt>
+  <dd>Sperren Sie die Ebenen um die herum, an der Sie arbeiten, sodass ein versehentlicher Klick oder Ziehen sie nicht stört, und entsperren Sie sie mit <kbd>&#8997;&#8984;2</kbd> wieder, wenn Sie sie brauchen.</dd>
+  <dt>Gruppieren Sie die Dinge, die sich zusammen bewegen</dt>
+  <dd>Binden Sie die Teile eines einzelnen Elements zu einer Gruppe, sodass es sich wie ein Objekt verhält, und behalten Sie Ebenen für die größeren Abteilungen des Dokuments.</dd>
+  <dt>Stellen Sie die aktive Ebene vor dem Zeichnen ein</dt>
+  <dd>Klicken Sie zuerst auf die Ebene, der Sie hinzufügen möchten, sodass neue Grafik am richtigen Ort landet statt auf dem, was dort war.</dd>
+  <dt>Lassen Sie sich von den Farben leiten</dt>
+  <dd>Verlassen Sie sich auf die Ebenenfarben: Wenn die Auswahlhervorhebung einer Ebene dem Chip einer Ebene entspricht, wissen Sie genau, wo dieses Objekt lebt, ohne etwas zu öffnen.</dd>
+</dl>

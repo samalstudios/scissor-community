@@ -1,0 +1,46 @@
+<p class="lede">Réguas, guias e ajuste são como alinha o trabalho com precisão. Réguas colocam uma escala medida ao longo das bordas superior e esquerda da tela, guias dão-lhe linhas para construir contra, guias inteligentes mostram alinhamento e espaçamento à medida que arrasta, e a ferramenta Medir lê a distância e o ângulo entre dois pontos. Nenhum deles marca a arte em si: guias nunca imprimem nem exportam, e desligar qualquer um deles altera apenas o que vê.</p>
+
+<h2 id="guides-rulers">Réguas</h2>
+<p>Ligue as réguas com <strong>Ver &rsaquo; Réguas &rsaquo; Mostrar Réguas</strong> (<kbd>&#8984;R</kbd>). Uma régua horizontal corre ao longo do topo da tela e uma vertical desce pelo lado esquerdo. Ambas são marcadas com traços principais em intervalos rotulados e traços menores mais curtos entre eles; à medida que amplia e reduz o espaçamento dos traços rotulados ajusta-se para permanecerem legíveis.</p>
+<p>As posições são medidas a partir do canto superior esquerdo da prancha ativa, e os números crescem para a direita e para baixo. Como o ponto zero fica na prancha ativa, mudar para uma prancha diferente move-o: selecione outra prancha e as réguas voltam a ler a partir do canto dessa prancha. À medida que move o cursor sobre a tela, uma linha indicadora fina acompanha a sua posição em cada régua, pelo que pode ler a coordenada atual de relance sem um painel.</p>
+<p>Quando a visualização está rodada (com a ferramenta Rodar Visualização) não resta nenhum eixo horizontal ou vertical reto do documento para medir, pelo que as réguas ficam no lugar mas não mostram traços até repor a rotação.</p>
+
+<h3 id="guides-units">Unidades</h3>
+<p>As réguas leem na unidade do documento. Defina-a em <strong>Ficheiro &rsaquo; Configuração do Documento</strong> (<kbd>&#8997;&#8984;P</kbd>), que oferece pixels, pontos, milímetros, centímetros, polegadas e paicas. Escolha a unidade que corresponde à sua saída: pixels ou pontos para trabalho de ecrã, milímetros ou polegadas para impressão. Alterar a unidade reetiqueta as réguas imediatamente; não redimensiona nada.</p>
+
+<h2 id="guides-ruler-guides">Guias de régua</h2>
+<p>Com as réguas visíveis, arraste de uma régua para puxar uma guia para a tela. Arraste para baixo da régua superior para uma guia horizontal, ou através da régua esquerda para uma vertical. A guia segue o cursor enquanto segura o botão, e cai onde solta. Puxar uma guia liga <strong>Mostrar Guias</strong> se estava desligada, para que a nova guia fique visível imediatamente. Se desistir, largue-a de volta na régua e é abandonada.</p>
+<p>Uma guia é uma linha reta longa que se estende bem para além da arte, pelo que se lê como se corresse a largura ou altura do documento. Cada uma aparece no painel Camadas como um objeto <em>Guia Horizontal</em> ou <em>Guia Vertical</em>.</p>
+<p>Para mover uma guia mais tarde, clique ao longo da sua linha com a ferramenta Seleção e arraste, ou ajuste-a com as teclas de seta. Uma guia move-se como qualquer outro objeto, pelo que o ajuste se aplica enquanto a arrasta: isto torna direto largar uma guia exatamente na borda de um objeto ou numa âncora. Um caso de uso: puxe uma guia vertical para a borda esquerda de um título, depois alinhe uma coluna de botões a ela para que os seus lados esquerdos todos se encontrem na mesma linha.</p>
+
+<h2 id="guides-managing">Ocultar, bloquear e limpar guias</h2>
+<p><strong>Ver &rsaquo; Guias &rsaquo; Mostrar Guias</strong> (<kbd>&#8984;;</kbd>) oculta e mostra todas as guias de uma vez. Oculte-as enquanto verifica como um design se lê sem o andaime, depois traga-as de volta para continuar a trabalhar.</p>
+<p>Para impedir que uma guia seja movida por acidente, trate-a como o objeto que é: selecione-a e bloqueie-a com <strong>Objeto &rsaquo; Bloquear &rsaquo; Seleção</strong> (<kbd>&#8984;2</kbd>), ou bloqueie-a ou oculte-a a partir do painel Camadas. <strong>Objeto & Desbloquear Tudo</strong> (<kbd>&#8997;&#8984;2</kbd>) liberta-a de volta, e <strong>Objeto &rsaquo; Ocultar &rsaquo; Seleção</strong> (<kbd>&#8984;3</kbd>) oculta uma única guia sem tocar nas outras.</p>
+<p>Quando tiver acabado com elas, <strong>Ver &rsaquo; Guias &rsaquo; Limpar Guias</strong> remove todas as guias no documento de uma só vez.</p>
+
+<h2 id="guides-make">Criar guias a partir de objetos</h2>
+<p>Uma guia não tem de ser uma linha horizontal ou vertical simples. Desenhe qualquer caminho ou forma, selecione-a e escolha <strong>Ver &rsaquo; Guias &rsaquo; Criar Guias</strong> (<kbd>&#8984;5</kbd>) para a transformar numa guia. Um círculo torna-se uma guia circular, uma linha diagonal uma inclinada, pelo que pode construir contra curvas e ângulos que as guias de régua retas não conseguem dar. Use-a para configurar uma guia circular para dispor elementos à volta de um mostrador, ou uma diagonal para manter uma sequência de formas numa inclinação consistente.</p>
+<p><strong>Ver &rsaquo; Guias &rsaquo; Libertar Guias</strong> (<kbd>&#8997;&#8984;5</kbd>) transforma uma guia selecionada de volta num caminho comum editável, para que possa recuperar uma forma que converteu, ou reutilizar a geometria como arte.</p>
+
+<h2 id="guides-smart">Guias inteligentes</h2>
+<p><strong>Ver &rsaquo; Guias Inteligentes</strong> (<kbd>&#8984;U</kbd>) mostra feedback de alinhamento enquanto desenha, move ou redimensiona. À medida que o cursor se aproxima de algo valioso para alinhar, uma linha magenta e um pequeno rótulo aparecem e o ponto é puxado para ela. As guias inteligentes leem das bordas, centros e cantos de outros objetos, dos seus pontos de âncora e das bordas da prancha, pelo que uma forma que está a colocar pode ser feita para se alinhar com o que já está lá sem qualquer medição manual.</p>
+<p>As guias inteligentes também ajudam enquanto desenha um arrasto reto: quando a direção em que está a arrastar se aproxima de um ângulo de construção (a cada 45&deg; do ângulo de restrição definido nas preferências), o arrasto ajusta-se a esse ângulo e uma linha com o rótulo do ângulo é desenhada ao longo dele. Isto mantém linhas e movimentos verdadeiramente horizontais, verticais ou diagonais.</p>
+
+<h3 id="guides-spacing">Espaçar objetos uniformemente</h3>
+<p>Quando arrasta um objeto para além de dois ou mais outros que ficam numa fileira ou coluna, as guias inteligentes procuram a posição onde os espaços ficam iguais: ou continuando uma sequência uniformemente espaçada, ou centrando o objeto no espaço entre dois vizinhos. Quando a encontra, ajusta o objeto aí e desenha os dois espaços correspondentes com tampas e uma medição, pelo que pode espaçar uma fileira de itens a olho e deixar a guia confirmar o ajuste, em vez de alinhar e distribuir depois.</p>
+
+<h2 id="guides-snapping">Ajustar ao Ponto e Ajustar à Grade</h2>
+<p>Dois interruptores de ajuste ficam no menu <strong>Ver</strong> e funcionam independentemente uns dos outros e das guias inteligentes.</p>
+<dl>
+  <dt>Ajustar ao Ponto (<kbd>&#8997;&#8984;'</kbd>)</dt>
+  <dd>Puxa o ponto que está a colocar para os pontos de outros objetos: as suas âncoras, cantos e centros, e as bordas da prancha. Use-o quando uma nova forma tem de se encontrar exatamente com uma existente, como iniciar um caminho no canto de uma caixa.</dd>
+  <dt>Ajustar à Grade (<kbd>&#8679;&#8984;'</kbd>)</dt>
+  <dd>Arredonda pontos e objetos arrastados para a grade da prancha ativa. Cada prancha transporta a sua própria grade, pelo que onde um ponto cai depende de em que prancha está a trabalhar; as próprias grades são cobertas em Grades. Enquanto Ajustar à Grade está ligado assume o controlo, pelo que pontos caem nas linhas da grade em vez dos pontos de outros objetos.</dd>
+</dl>
+
+<h3 id="guides-ignore">Ignorar o ajuste por um arrasto</h3>
+<p>Segure <kbd>&#8997;</kbd> (Alt) enquanto arrasta e o ajuste é suspenso apenas para esse gesto. Solte e retoma. Isto funciona enquanto desenha formas, arrasta objetos e move pontos de âncora, e deixa os seus interruptores de ajuste inalterados, pelo que pode ajustar um ponto livre da grade ou de uma guia sem ligar e desligar nada.</p>
+
+<h2 id="guides-measure">A ferramenta Medir</h2>
+<p>A ferramenta Medir lê a distância e o ângulo entre dois pontos. Partilha um slot na barra de ferramentas com o Conta-gotas, por isso segure o Conta-gotas para a revelar. Arraste de um ponto para outro e um rótulo mostra a distância (<code>D</code>), o ângulo e os deslocamentos horizontal (<code>X</code>) e vertical (<code>Y</code>) entre as duas extremidades. A linha e a sua leitura permanecem no ecrã até ao seu próximo arrasto, pelo que pode anotar uma medição e continuar.</p>
+<p>As extremidades ajustam-se aos mesmos pontos que as guias inteligentes e o Ajustar ao Ponto usam, pelo que pode medir de um canto de um objeto ao outro exatamente. Segure <kbd>&#8679;</kbd> enquanto arrasta para restringir a linha de medição a passos de 45&deg;. Use-a para verificar o espaço entre duas colunas antes de se comprometer com o espaçamento, ou para ler o comprimento e a inclinação de uma borda que está prestes a corresponder.</p>

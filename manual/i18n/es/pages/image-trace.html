@@ -1,0 +1,100 @@
+<p class="lede">Vectorizar convierte una imagen en trazados vectoriales: un logotipo escaneado de papel, un boceto a lápiz o una fotografía se convierte en un conjunto de formas rellenas que puedes escalar, recolorear y editar como cualquier otra cosa que dibujes. Esta página cubre qué puedes vectorizar, el panel que lo ejecuta, los tres modos y sus ajustes preestablecidos, cada opción, y cómo conservar o descartar el resultado.</p>
+
+<h2 id="image-trace-what">Qué hace la vectorización, y qué puedes vectorizar</h2>
+<p>Una imagen está hecha de píxeles: se difumina cuando la agrandas y no se puede remodelar punto por punto. La vectorización lee esos píxeles y dibuja trazados vectoriales que siguen las formas que encuentra, de modo que el resultado permanece nítido a cualquier tamaño y se puede editar, recolorear y combinar con el resto de tu obra.</p>
+<p>Vectorizas una <strong>capa de píxeles</strong>: una imagen que colocaste o pegaste, una imagen abierta como su propia mesa, o una capa que pintaste tú mismo. Trae una imagen con <strong>Archivo &gt; Colocar…</strong> (<kbd>&#8679;&#8984;P</kbd>) — llega como una capa de píxeles — selecciónala, luego ejecuta la vectorización. (La obra vectorial ya está hecha de trazados, así que no hay nada que vectorizar; la vectorización lee píxeles.)</p>
+<p>La vectorización no tira la imagen. Construye un grupo llamado <strong>Vectorizar</strong> que contiene la imagen original (ahora oculta) junto con los nuevos trazados, situándose exactamente sobre ella. Porque el grupo recuerda los ajustes con los que se creó, el resultado permanece en vivo: selecciónalo de nuevo, cambia un ajuste y se vectoriza de nuevo. Cuando estás contento lo <strong>Expande</strong> para conservar solo los trazados, o lo <strong>Libera</strong> para volver a la imagen simple.</p>
+
+<h2 id="image-trace-panel">El panel Vectorizar</h2>
+<p>Cada ajuste vive en el panel Vectorizar. Ábrelo desde <strong>Objeto &gt; Vectorizar &gt; Panel Vectorizar</strong>, o desde su pestaña en el panel de acoplamiento. El panel necesita una imagen seleccionada antes de poder hacer nada: sin nada adecuado seleccionado, el botón Vectorizar está desactivado y el panel te pide que selecciones una imagen colocada.</p>
+
+<h3 id="image-trace-run">Ejecutar una vectorización</h3>
+<p>Selecciona una imagen, elige un ajuste preestablecido o configura el modo y las opciones a mano, y pulsa <strong>Vectorizar</strong>. Una línea al pie del panel informa del progreso, leyendo <em>Vectorizando…</em> mientras trabaja y <em>Vectorizado. Expande para conservar solo los trazados.</em> cuando termina. Si la imagen no contiene nada de lo que se pueda hacer una forma, o no se puede leer, el panel te lo dice y deja la imagen intacta.</p>
+
+<h3 id="image-trace-preview">Previsualizar mientras avanzas</h3>
+<p>La casilla <strong>Vectorizar al cambiar los ajustes</strong>, activada por defecto, vectoriza de nuevo en el momento en que cambias el modo, un ajuste preestablecido, un número o una casilla, de modo que puedes juzgar cada ajuste contra la imagen de inmediato. En una imagen grande o concurrida el redibujo tarda un momento, así que desactívala si prefieres establecer varias opciones primero y pulsar <strong>Vectorizar</strong> una vez. Cuando vuelves a seleccionar una vectorización existente, el panel carga los ajustes exactos con los que se creó, listos para ser ajustados y vectorizados de nuevo.</p>
+
+<h3 id="image-trace-menu">Los comandos del menú Objeto</h3>
+<p>Las mismas acciones se sitúan bajo <strong>Objeto &gt; Vectorizar</strong>, lo cual es útil cuando el panel está cerrado.</p>
+<table>
+  <thead><tr><th>Comando</th><th>Qué hace</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Crear</strong></td><td>Vectoriza la imagen seleccionada con los ajustes actuales, dejando el resultado en vivo.</td></tr>
+    <tr><td><strong>Crear y expandir</strong></td><td>Vectoriza y expande de un solo paso, de modo que vas directamente a trazados editables.</td></tr>
+    <tr><td><strong>Expandir</strong></td><td>Conserva los trazados y elimina la imagen (ver más abajo).</td></tr>
+    <tr><td><strong>Liberar</strong></td><td>Descarta los trazados y vuelve a la imagen (ver más abajo).</td></tr>
+    <tr><td><strong>Panel Vectorizar</strong></td><td>Trae el panel al frente.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="image-trace-modes">Los tres modos</h2>
+<p>El modo decide cómo se reduce la imagen antes de dibujarla. Es la primera elección a hacer, porque gobierna cuáles de las opciones de abajo se aplican.</p>
+<table>
+  <thead><tr><th>Modo</th><th>Cómo reduce la imagen</th><th>La opción que usa</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Blanco y negro</strong></td><td>Divide todo en dos tonos, tinta y papel, en un brillo que estableces.</td><td>Umbral</td></tr>
+    <tr><td><strong>Escala de grises</strong></td><td>Reduce la imagen a un número establecido de niveles de gris uniformes de negro a blanco.</td><td>Número de colores (como niveles de gris)</td></tr>
+    <tr><td><strong>Color</strong></td><td>Elige una paleta de los colores más significativos de la imagen y mapea cada píxel al más cercano.</td><td>Número de colores</td></tr>
+  </tbody>
+</table>
+<p>Sea cual sea el modo que elijas, se hace una forma rellena por tono o color, y las formas se apilan de mayor a primero para que el detalle más pequeño se sitúe encima. Las partes completamente transparentes de la imagen se dejan fuera, de modo que un recorte sobre un fondo transparente se vectoriza solo a su sujeto.</p>
+
+<h2 id="image-trace-presets">Ajustes preestablecidos</h2>
+<p>Un ajuste preestablecido es un punto de partida con nombre que establece el modo y cada opción a la vez. Elige uno del menú en la parte superior del panel y, con la vista previa activada, la imagen se vectoriza inmediatamente; trata el resultado como una base y ajusta desde ahí. En el momento en que cambias cualquier opción individual el menú de ajustes preestablecidos cambia a <strong>Personalizado</strong>, ya que los ajustes ya no coinciden con el ajuste preestablecido.</p>
+<table>
+  <thead><tr><th>Ajuste preestablecido</th><th>Modo</th><th>Recurre a él cuando</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Foto de alta fidelidad</strong></td><td>Color</td><td>Quieres una fotografía mantenida cerca del original, con muchos colores.</td></tr>
+    <tr><td><strong>Foto de baja fidelidad</strong></td><td>Color</td><td>Una fotografía debe leerse como unas pocas áreas amplias y planas de color.</td></tr>
+    <tr><td><strong>3 colores</strong></td><td>Color</td><td>Quieres un resultado audaz, tipo póster, a partir de tres colores planos.</td></tr>
+    <tr><td><strong>6 colores</strong></td><td>Color</td><td>Un aspecto plano e ilustrado con una paleta pequeña y ordenada.</td></tr>
+    <tr><td><strong>16 colores</strong></td><td>Color</td><td>Más rango de color que los ajustes preestablecidos planos, sin llegar a una foto completa.</td></tr>
+    <tr><td><strong>Tonalidades de gris</strong></td><td>Escala de grises</td><td>Una imagen tonal debe mantener su sombreado pero perder su color.</td></tr>
+    <tr><td><strong>Logotipo blanco y negro</strong></td><td>Blanco y negro</td><td>Convertir una marca o logotipo limpio de dos tonos en formas nítidas.</td></tr>
+    <tr><td><strong>Arte bosquejado</strong></td><td>Blanco y negro</td><td>Capturar un boceto a lápiz o tinta con sus líneas más sueltas.</td></tr>
+    <tr><td><strong>Siluetas</strong></td><td>Blanco y negro</td><td>Quieres siluetas sólidas y rellenas en lugar de líneas finas.</td></tr>
+    <tr><td><strong>Arte lineal</strong></td><td>Blanco y negro</td><td>Un dibujo de línea fina donde los trazos finos deben sobrevivir.</td></tr>
+    <tr><td><strong>Dibujo técnico</strong></td><td>Blanco y negro</td><td>Trabajo de línea nítido y fiel con el mayor detalle posible conservado.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="image-trace-options">Las opciones</h2>
+<p>Debajo del modo se sitúan los controles que dan forma al resultado. Cuáles se muestran depende del modo: Umbral aparece solo para Blanco y negro, mientras que el número de colores aparece para Escala de grises y Color.</p>
+<dl>
+  <dt>Número de colores</dt>
+  <dd>Cuántos colores (en modo Color) o niveles de gris (en Escala de grises) se reduce la imagen, de 2 a 64. Menos da un resultado más plano y gráfico con menos formas; más mantiene la imagen más cerca del original a costa de más trazados. El modo Blanco y negro ignora esto, ya que siempre tiene dos tonos.</dd>
+  <dt>Umbral</dt>
+  <dd>Solo para Blanco y negro: el brillo, de 0 a 255, donde la imagen se divide en tinta y papel. Cualquier cosa más oscura que el umbral se convierte en la forma dibujada; cualquier cosa más clara se trata como fondo. Súbelo para atraer más de los tonos medios a la forma para un resultado más pesado, bájalo para mantener solo las marcas más oscuras. Úsalo para ajustar cuánto de un boceto tenue se recoge.</dd>
+  <dt>Trazados</dt>
+  <dd>Qué tan estrechamente los trazados siguen los píxeles, en una escala de 0 a 100. Los valores altos abrazan los bordes estrechamente y mantienen el temblor fino, con más puntos de anclaje; los valores bajos relajan el ajuste para trazados más suaves y simples que son más ligeros de editar. Recurre a un valor alto cuando la precisión importa y a uno bajo cuando quieres un contorno limpio y ordenado.</dd>
+  <dt>Esquinas</dt>
+  <dd>Qué tan fácilmente un giro en el contorno se convierte en una esquina afilada en lugar de una curva suave, de 0 a 100. Súbela para obra con ángulos nítidos, como un logotipo o lettering; bájala para formas orgánicas que deben permanecer redondeadas.</dd>
+  <dt>Ruido</dt>
+  <dd>El parche más pequeño, en píxeles, que se permite que se convierta en su propia forma. Cualquier cosa más pequeña se absorbe en lo que la rodea. Súbela para eliminar motas y grano de un escaneo o fotografía de modo que los puntos sueltos no se conviertan cada uno en un trazado; bájala para mantener el detalle fino genuino.</dd>
+  <dt>Ignorar blanco</dt>
+  <dd>Deja fuera cualquier forma que salga casi blanca, de modo que el papel o fondo no se dibuja y permanece transparente detrás de las marcas vectorizadas. Activado por defecto, y mostrado para el modo Blanco y negro. Desactívalo cuando un área blanca es parte de la obra y necesita ser una forma rellena real.</dd>
+  <dt>Rellenos</dt>
+  <dd>Da a cada forma vectorizada un relleno sólido en el color en que se vectorizó. Es la elección habitual y está activada por defecto.</dd>
+  <dt>Contornos</dt>
+  <dd>Contornea cada forma vectorizada con un contorno en su propio color en lugar de, o además de, un relleno. Desactivado por defecto. Si desactivas Rellenos y Contornos los trazados se crean igualmente pero no tienen nada pintándolos, así que deja al menos uno activado.</dd>
+</dl>
+
+<h2 id="image-trace-finish">Conservar o revertir el resultado</h2>
+<p>Una vectorización reciente está en vivo: los trazados se sitúan sobre el original oculto dentro del grupo Vectorizar, y puedes seguir ajustando los valores. Dos comandos terminan ese estado, ambos en el panel como botones y bajo <strong>Objeto &gt; Vectorizar</strong>. Se vuelven disponibles una vez que una vectorización está seleccionada.</p>
+<dl>
+  <dt>Expandir</dt>
+  <dd>Conserva los trazados y elimina la imagen, de modo que el grupo se convierte en obra vectorial ordinaria. Los ajustes ya no se aplican y no se pueden cambiar, pero cada trazado es ahora una forma normal que puedes remodelar, recolorear, combinar y organizar. Recurre a esto una vez que la vectorización se ve bien y quieres trabajar en los vectores. <strong>Crear y expandir</strong> hace la vectorización y este paso juntos.</dd>
+  <dt>Liberar</dt>
+  <dd>Descarta los trazados vectorizados y restaura la imagen original, visible de nuevo en su antiguo lugar. Úsala para abandonar una vectorización y empezar de nuevo, o cuando solo necesitabas la imagen después de todo.</dd>
+</dl>
+
+<h2 id="image-trace-uses">Logotipos, bocetos y fotografías</h2>
+<p>Los tres puntos de partida comunes piden ajustes diferentes.</p>
+<dl>
+  <dt>Un logotipo o marca limpia</dt>
+  <dd>Empieza desde <strong>Logotipo blanco y negro</strong>. Mantén <strong>Ignorar blanco</strong> activado para que el papel desaparezca, sube <strong>Esquinas</strong> para ángulos nítidos y <strong>Trazados</strong> para bordes fieles, y ajusta <strong>Umbral</strong> hasta que la marca sea sólida sin rellenarse. Expande, luego establece tu propio color de relleno.</dd>
+  <dt>Un boceto a lápiz o tinta</dt>
+  <dd>Prueba <strong>Arte bosquejado</strong> o <strong>Arte lineal</strong>. Baja el <strong>Umbral</strong> para mantener solo las líneas dibujadas y dejar que el papel desaparezca, y sube <strong>Ruido</strong> un poco para eliminar el grano del papel. Arte lineal mantiene trazos más finos; Arte bosquejado se adapta a una mano más suelta.</dd>
+  <dt>Una fotografía</dt>
+  <dd>Usa el modo Color con <strong>Foto de alta fidelidad</strong> para un parecido cercano o <strong>Foto de baja fidelidad</strong> para un aspecto más plano e ilustrado, y establece el <strong>número de colores</strong> a tu gusto. Deja <strong>Ignorar blanco</strong> desactivado para que las áreas pálidas permanezcan. Más colores significan más formas, de modo que una vectorización de foto pesada puede ser grande: reduce los colores si el resultado se vuelve inmanejable.</dd>
+</dl>

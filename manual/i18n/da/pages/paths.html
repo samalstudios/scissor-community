@@ -1,0 +1,153 @@
+<p class="lede">Hvert vektorobjekt i Scissor er bygget af stier: en kæde af ankerpunkter forbundet af lige eller buede segmenter. Denne side dækker, hvordan man tegner dem, hvordan man omformer dem punkt for punkt og kommandoerne, der samler, forskyder, konturerer og kombinerer dem.</p>
+
+<p>Genveje er skrevet i deres macOS-format. På Windows skal du læse <kbd>&#8984;</kbd> som Ctrl, <kbd>&#8997;</kbd> som Alt og <kbd>&#8679;</kbd> som Shift.</p>
+
+<h2 id="paths-anchors-and-handles">Ankre, håndtag og en stis form</h2>
+<p>En sti er en række af ankerpunkter. Mellem to naboliggende ankre ligger et segment, som er lige, når ingen af ankrene når ud mod det, og buet, når én eller begge gør. Et ankers rækkevidde indstilles af dets to retningshåndtag: det indgående håndtag former det segment, der ankommer til ankeret, og det udgående håndtag former det segment, der forlader det. Træk et håndtag længere ud, og krumningen buler stærkere mod det. En sti kan være åben med to løse ender eller lukket, hvor det sidste anker samles tilbage til det første.</p>
+
+<h3 id="paths-corner-and-smooth">Hjørne- og glatte punkter</h3>
+<p>Et anker er enten et hjørne eller et gladt punkt. På et gladt punkt er de to håndtag låst sammen i en lige linje gennem ankeret, så krumningen passerer gennem uden et knæ og forbliver kontinuerligt. På et hjørnepunkt er de to sider uafhængige: stien kan skifte retning skarpt, og én side kan være lige, mens den anden er buet. De fleste former blander de to, glatte punkter langs de flydende dele og hjørnepunkter, hvor en kant drejer.</p>
+<dl>
+  <dt>Gladt punkt</dt>
+  <dd>Håndtag bundet sammen i en linje. Brug disse langs en kurve, der skal læses som én sammenhængende strøg, som siden af et blad eller skålen af et bogstav.</dd>
+  <dt>Hjørnepunkt</dt>
+  <dd>Håndtag, der bevæger sig fra hinanden, eller et punkt uden håndtag overhovedet. Brug disse på spidsen af en stjerne, hjørnet af en boks eller hvor som helst, hvor en kurve mødes med en lige kant.</dd>
+</dl>
+
+<h3 id="paths-direct-selection">Ankre, håndtag og Det direkte markeringsværktøj</h3>
+<p>Det direkte markeringsværktøj (<kbd>A</kbd>) arbejder på delene af en sti. Klik på et anker for at vælge det, <kbd>&#8679;</kbd>-klik for at tilføje eller fjerne ét, eller træk en marquee på tomt rum for at fange hvert anker inde i den op. Træk af valgte ankre flytter dem; <kbd>&#8679;</kbd> begrænser flytningen til 45&deg;-trin. Gå efter den, når en form er næsten rigtig, og kun ét eller to punkter skal skubbes.</p>
+<p>Træk et håndtag for at ændre krumningen på dets side. Håndtag, der tilhører et gladt anker, bevæger sig sammen, så krumningen forbliver kontinuerlig; hold <kbd>&#8997;</kbd> under træk for at bryde dette link og styre én side alene, og <kbd>&#8679;</kbd> for at holde håndtaget i en vinkel. Du kan også trække selve segmentet: et buet segment bøjer sig under markøren, og et lige fører begge sine ankre med sig.</p>
+<p>Gruppemarkeringværktøjet deler denne plads og vælger hele objekter ud af en gruppe i stedet for ankre. Klik én gang for det inderste objekt, klik igen for at træde ud til gruppen omkring det.</p>
+
+<h2 id="paths-drawing">Tegneværktøjer</h2>
+<p>Scissor har tre værktøjer til at lægge en sti fra bunden. Pen giver præcis kontrol punkt for punkt, Kurveværktøjet tilpasser en glat kurve gennem punkter, du placerer, og Blyanten følger din hånd frit.</p>
+<table>
+  <thead><tr><th>Værktøj</th><th>Genvej</th><th>Bedst til</th></tr></thead>
+  <tbody>
+    <tr><td>Pen</td><td><kbd>P</kbd></td><td>Præcise konturer, hvor hvert anker og håndtag er placeret med vilje.</td></tr>
+    <tr><td>Kurve</td><td><kbd>&#8679;~</kbd></td><td>Flydende kurver defineret af et par gennemgående punkter uden håndtagskæl.</td></tr>
+    <tr><td>Blyant</td><td><kbd>N</kbd></td><td>Løse, håndtegnede former og hurtige skitser.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="paths-pen">Penneværktøjet</h3>
+<p>Penneværktøjet (<kbd>P</kbd>) bygger en sti punkt for punkt. Klik for at placere et hjørneanker; tryk og træk i stedet for, og ankeret beholder håndtag, så stien forlader det som en kurve. Hold <kbd>&#8679;</kbd> under træk for at holde håndtaget til 45&deg;-trin, og hold <kbd>&#8997;</kbd> for kun at flytte det udgående håndtag, hvilket gør ankeret til et hjørne og frigør næste segment fra det sidste.</p>
+<p>Mens en sti er åben, ændrer værktøjet sig, når du bevæger dig over den. Over det første anker lukker det stien, over et segment tilføjer det et anker, og over et eksisterende anker fjerner det ét. Uden en sti i gang, bevægelse over den løse ende af en åben sti samler den sti op, så du kan fortsætte med at tegne fra den. <kbd>Enter</kbd> eller <kbd>Esc</kbd> afslutter stien og efterlader den åben; <kbd>Delete</kbd> fjerner det anker, du sidst placerede.</p>
+
+<h3 id="paths-curvature">Kurveværktøjet</h3>
+<p>Kurveværktøjet (<kbd>&#8679;~</kbd>) tilpasser en glat kurve gennem de punkter, du klikker på, med en forhåndsvisning, der løber til markøren, mens du går. <kbd>&#8997;</kbd>-klik for at placere et hjørnepunkt i stedet for et gladt, og dobbeltklik på et hvilket som helst punkt for at skifte mellem de to. Træk et punkt for at flytte det, og krumningen tilpasses igen. Klik på det første punkt for at lukke formen, eller tryk på <kbd>Enter</kbd> for at afslutte. <kbd>Delete</kbd> fjerner det sidste punkt, og <kbd>Esc</kbd> opgiver stien. Brug den, når du mere end de præcise ankre interesserer dig for krumningens form, da den regner håndtagene ud for dig.</p>
+
+<h3 id="paths-pencil">Blyantværktøjet</h3>
+<p>Blyantværktøjet (<kbd>N</kbd>) tegner frihånd: tryk, tegn og slip, og Scissor tilpasser en glat sti til sporet. Slip tæt på, hvor du startede, eller hold <kbd>&#8997;</kbd>, mens du afslutter, og stien lukkes til en form. Resultatet er en åben strukket sti i den aktuelle stregfarve, så den er klar til at beholdes som en linje eller udfyldes. Hvor tæt den tilpassede sti følger dine bevægelser, indstilles af blyantens trofasthedspræference, fra nøjagtig, som bevarer flere ankre og hver eneste rysten, til glat, som bruger færre ankre og strør linjen ud. Gå efter den til skitsering, underskrifter og enhver form, der skal se håndtegnet ud i stedet for konstrueret.</p>
+
+<h2 id="paths-editing-points">Redigering af punkter på en sti</h2>
+
+<h3 id="paths-add-remove-convert">Tilføjelse, fjernelse og konvertering af punkter</h3>
+<p>Pen deler sin værktøjslinjeplads med Tilføj anker (<kbd>+</kbd>), Slet anker (<kbd>&#8722;</kbd>) og Ankerpunktværktøjet (<kbd>&#8679;C</kbd>). Tilføj anker placerer et nyt punkt på et segment uden at ændre krumningen; Slet anker fjerner det punkt, du klikker på, og lader stien lukke hullet. Med Ankerpunktværktøjet trækker du fra et hjørneanker for at trække et matchet par af håndtag ud af det og gøre det glat; trækker du ét håndtag, deler du parret, så de to sider bevæger sig fra hinanden og gør det til et hjørne igen; og klikker du på et gladt anker, fjerner du dets håndtag og efterlacer et skarpt hjørne.</p>
+<p>Objekt &rsaquo; Sti har de samme redigeringer som kommandoer, der arbejder på hele markeringen på én gang. Tilføj ankerpunkter placerer et nyt anker i midten af hvert segment, hvilket fordobler punktetallet uden at ændre formen, hvilket er praktisk før en forvrængning eller bøjning, der har brug for flere punkter til at bøje rent. Fjern ankerpunkter fjerner de ankre, du har valgt med Det direkte markeringsværktøj, og tilpasser stien gennem det, der er tilbage.</p>
+
+<h3 id="paths-reshape-tools">Omformning i hånden: Udglatnings-, Stivisker- og Sammenføjningsværktøjer</h3>
+<p>Tre penselværktøjer omformer en sti, hvor du trækker, i stedet for på et enkelt anker. De virker på de valgte stier eller på enhver sti under penslen, når intet er valgt, og <kbd>[</kbd> og <kbd>]</kbd> formindsker og forstørrer penslen.</p>
+<dl>
+  <dt>Udglatningsværktøj</dt>
+  <dd>Pensl langs en sti for at slappe af den, fortynde ankre og blødgøre ujævnheder. Brug den til at berolige en rystet blyantlinje eller en sporadisk kant.</dd>
+  <dt>Stiviskerværktøj</dt>
+  <dd>Pensl langs en sti for at viske den del, du krydser, ud, og dele eller forkorte den. Brug den til at beskære en uønsket hale af en linje.</dd>
+  <dt>Sammenføjningsværktøj</dt>
+  <dd>Gnid på tværs af to åbne ender for at samle dem, forlængende eller beskærende stierne til at mødes rent i et hjørne. Brug den til at lukke et hul, hvor to strøg skulle have mødt hinanden.</dd>
+</dl>
+
+<h3 id="paths-cutting">Skæring af en sti: Sakse og kniv</h3>
+<p>Sakseværktøjet (<kbd>C</kbd>) skærer på ét sted. Klik på et segment eller et anker, og stien deles der: en lukket sti åbnes ved snittet, og en åben sti deles i to separate objekter. Brug den til at klippe en åbning ud i en cirkel eller til at dele en form, så halvdelne kan styles forskelligt.</p>
+<p>Kniven skærer lige på tværs af grafik. Træk klingen over et objekt for at skære det i separate stykker langs den tegnede linje; hold <kbd>&#8997;</kbd> for at skære i en lige linje, og tilføj <kbd>&#8679;</kbd> for at holde den linje til 45&deg;-trin. Med noget valgt skal kun de valgte objekter skæres; ellers alt, klingen krydser. Brug den til at skære en udfyldt form i flere lukkede stykker med ét strøg.</p>
+
+<h2 id="paths-commands">Stikommandoer</h2>
+<p>Objekt &rsaquo; Sti samler operationer, der virker på hele stier på én gang.</p>
+<table>
+  <thead><tr><th>Kommando</th><th>Genvej</th><th>Hvad det gør</th></tr></thead>
+  <tbody>
+    <tr><td>Sammenføj</td><td><kbd>&#8984;J</kbd></td><td>Forbinder løse ender til én sti eller lukker én åben sti.</td></tr>
+    <tr><td>Gennemsnit&hellip;</td><td><kbd>&#8997;&#8984;J</kbd></td><td>Flytter valgte ankre til deres fælles placering.</td></tr>
+    <tr><td>Konturér streg</td><td></td><td>Vender en stregoverflade til en udfyldt form med samme kontur.</td></tr>
+    <tr><td>Forskyd sti&hellip;</td><td></td><td>Laver en kopi, der er vokset eller skrumpet med en fast afstand.</td></tr>
+    <tr><td>Vend stiretning</td><td></td><td>Vender, hvilken retning stien løber.</td></tr>
+    <tr><td>Forenkl&hellip;</td><td></td><td>Reducerer antallet af ankerpunkter.</td></tr>
+    <tr><td>Tilføj ankerpunkter</td><td></td><td>Tilføjer et punkt i midten af hvert segment.</td></tr>
+    <tr><td>Fjern ankerpunkter</td><td></td><td>Fjerner de valgte ankre.</td></tr>
+    <tr><td>Del i gitter&hellip;</td><td></td><td>Skærer markeringen i et gitter af rækker og kolonner.</td></tr>
+    <tr><td>Ryd op&hellip;</td><td></td><td>Sletter spredte punkter, umalede objekter og tom tekst.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="paths-join-average">Sammenføjning og gennemsnit</h3>
+<p>Sammenføj (<kbd>&#8984;J</kbd>) fungerer på åbne stier. Med to separate åbne stier valgt forbinder de deres nærmeste ender til én sti; med én åben sti samler de to løse ender for at lukke den. Endere, der allerede sidder på hinanden, flettes til ét anker. Brug den til at lukke en form, du tegnede som en åben kontur, eller til at sy to halvtegnede strøg sammen.</p>
+<p>Gennemsnit (<kbd>&#8997;&#8984;J</kbd>) flytter de valgte ankre til deres delte gennemsnitsplacering. Dialogen tilbyder den vandrette akse, som ligner punkterne op i en fælles højde; den lodrette akse, som ligner dem op i en kolonne; eller begge, som stabler dem alle på ét sted. Gå efter den til at udjævne en række punkter eller til at bringe to ender sammen, før du samler dem.</p>
+
+<h3 id="paths-simplify">Forenkling</h3>
+<p>Forenkling tegner de valgte stier igen med færre ankerpunkter og forbliver inden for en nøjagtighed, du indstiller: en strammere nøjagtighed holder sig tæt på originalen på bekostning af flere punkter, en løsere glatter formen ned til en håndfuld. Brug den til at rydde op i en sporadisk eller håndtegnet sti, der bærer langt flere punkter, end formen har brug for, hvilket gør den lettere at redigere og gengive.</p>
+
+<h3 id="paths-offset">Forskyd sti</h3>
+<p>Forskyd sti bygger en ny sti i en fast afstand fra originalen: en positiv forskyder vokser konturen ud og sidder bag originalen, en negativ formindsker den ind og sidder foran. Sammenføjningsindstillingen beslutter, hvordan udvendige hjørne behandles, som en skarp Mitre, en afrundet Round eller en flad Bevel, med en mitregrænse, der afkapper, hvor langt et skarpt hjørne må løbe, før det beskæres. Brug den til at tegne en jævn kant omkring en form, til at indsætte en form til en nøglekant eller til at gøre en tynd form fed. Forskyd sti er også tilgængelig under Effekt &rsaquo; Sti som en levende effekt, der genberegnes, når formen ændres.</p>
+
+<h3 id="paths-outline-stroke">Konturér streg</h3>
+<p>Konturér streg erstatter en strukket sti med en udfyldt form, der har præcis stregoverfladens kontur. Efter konturering skalerer bredden ikke længere med objektet og kan ikke redigeres som en streg, men konturen kan omformes punkt for punkt, udfyldes med en gradient eller kombineres med andre former. Gå efter den, når du har brug for, at stregen opfører sig som grafik: til at give en linje en indsnævrende eller varieret kant, du derefter justerer i hånden, eller til at holde et designs stregbredder faste, når det skaleres. Den er også tilgængelig som en levende effekt under Effekt &rsaquo; Sti.</p>
+
+<h3 id="paths-reverse">Vend stiretning</h3>
+<p>Vend stiretning vender den rækkefølge, ankrene løber i, så stien rejser den anden vej rundt. Retningen viser sig sjældent af sig selv, men den beslutter, hvilken kontur der er hullet i en sammensat sti, og hvor en pil eller en pilhoved starter og slutter. Brug den, når et hul i en sammensat sti udfyldes solidt, eller når tekst på en sti eller en stregs start og slut sidder på den forkerte side.</p>
+
+<h2 id="paths-live-shapes">Redigerelige former og deres widgets</h2>
+<p>Rektangler, afrundede rektangler, ellipser og polygoner forbliver live: de bevarer deres parametre og genbygger deres sti, hver gang du ændrer én. Mens du trækker en form ud, gør <kbd>&#8679;</kbd> den regelmæssig, og <kbd>&#8997;</kbd> tegner den fra centret. Piltasterne fungerer også under træk, op og højre tilføjer, ned og venstre trækker fra, hvilket ændrer siderne af en polygon, spidserne af en stjerne eller hjørneradius af en afrundet rektangel.</p>
+<p>Vælg én live form, og små runde håndtag vises lige inden for dens hjørner; de skjules, når formen er for lille på skærmen til at vise dem tydeligt. Træk ét med Markeringsværktøjet (<kbd>V</kbd>) for at afrunde alle hjørner på én gang, eller med Det direkte markering for kun at afrunde det hjørne, du holder. <kbd>&#8997;</kbd>-klik på et hjørnehåndtag for at skifte det gennem afrundet, inverteret og affaset, alle fire hjørner med Markeringsværktøjet, ét hjørne med Det direkte markering.</p>
+<p>En ellipse viser i stedet et firkantet håndtag: én på hele ellipsen og én i hver ende af kagen, når du har åbnet én. Træk ét for at åbne en kile ud af formen, med <kbd>&#8679;</kbd> der fastgør vinklen til 15&deg;-trin; at bringe enden tilbage til starten genskaber hele ellipsen. Egenskaber-panelet indeholder de samme værdier som tal: radius og hjørnetype, radius pr. hjørne, polygonsider og kagestart og -slut i grader. En live form beholder disse kontroller, indtil du redigerer dens sti direkte, hvilket gør den til en almindelig sti.</p>
+
+<h2 id="paths-combining">Kombinering af former: Sammenføj &amp; del og Kombinerede former</h2>
+<p>Når to eller flere former overlapper, ønsker du ofte én ny form ud af dem: en union, et hul eller det styk, hvor de krydser. Scissor tilbyder to måder at komme derhen. Sammenføj &amp; del er direkte og visuelt; Kombinerede former-panelet anvender de samme operationer som knapper. Begge bevarer kurver i stedet for at flade dem ud til linjestykker.</p>
+
+<h3 id="paths-shape-builder">Sammenføj &amp; delværktøjet</h3>
+<p>Sammenføj &amp; delværktøjet (<kbd>&#8679;M</kbd>) fungerer på to eller flere valgte stier. Det deler deres overlapninger i områder og fremhæver det, markøren er over; træk en linje på tværs af flere områder for at samle dem til ét objekt, som overtager udseendet af den form, det kom fra, eller <kbd>&#8997;</kbd>-træk på tværs af dem for at slette dem. Brug det til at bygge en form efter øje, tilføje de dele, du vil have, og viske de dele, du ikke vil have, uden at stoppe for at vælge en kommando for hvert trin.</p>
+
+<h3 id="paths-pathfinder-shape-modes">Kombinerede former-formtilstande</h3>
+<p>Kombinerede former-panelet (<kbd>&#8679;&#8984;F9</kbd>) åbnes med fire formtilstande, hvor hver erstatter de valgte stier med én kombineret sti. Resultatet overtager det øverste objekts udseende, bortset fra Minus forfra, som bevarer det nederstes.</p>
+<dl>
+  <dt>Foren</dt>
+  <dd>Samler hver valgt form til én kontur. Brug den til at svejse overlappende stykker til én silhuet, som en sky af en række cirkler.</dd>
+  <dt>Minus forfra</dt>
+  <dd>Bevarer den bagerste form og skærer alt, der er stablet foran den, væk. Brug den til at bide et stykke ud af en form, som at skære en halvmåne ud af to cirkler.</dd>
+  <dt>Skær</dt>
+  <dd>Bevarer kun det område, hver valgt form deler. Brug den til at beskære grafik ned til et fælles område, som linsen, hvor to cirkler krydser.</dd>
+  <dt>Udeluk</dt>
+  <dd>Bevarer alt bortset fra overlapningerne, som bliver til huller. Brug den til at lave en ring eller et kædeled, hvor de krydsende dele falder ud.</dd>
+</dl>
+
+<figure class="shot">
+  <img src="img/combine.gif" width="760" height="441" loading="lazy"
+       alt="Tre overlappende former, en cirkel, et afrundet kvadrat og en cirkel, der smelter sammen til én kombineret silhuet." />
+  <figcaption>Foren (eller et træk med Sammenføj &amp; del) fletter overlappende former til én kontur, som bevarer sine kurver.</figcaption>
+</figure>
+
+<h3 id="paths-pathfinders">De andre Kombinerede former-operationer</h3>
+<p>Under formtilstandene sidder seks pathfindere. Disse efterlader dig med flere stykker, samlet i en gruppe, i stedet for én kombineret sti. Minus bagud matcher sin formtilstandsnavngivelse, men bevarer den øverste form.</p>
+<dl>
+  <dt>Del</dt>
+  <dd>Skærer formerne i separate flader langs hver linje, de krydser, hver flade overtager farven af den øverste form, der dækker den. Brug den til at dele et design i malebare stykker, som cellerne i et stained-glass-panel.</dd>
+  <dt>Beskær</dt>
+  <dd>Fjerner den skjulte del af hver form, hvor en form over den dækker den. Hvert stykke bevarer sin egen udfyldning, og intet flettes; stregoverfladerne slippes. Brug den til at flade stakket fladfarvet grafik ud, så ingen farve udskrives på tværs af en anden.</dd>
+  <dt>Flet</dt>
+  <dd>Beskærer de skjulte dele og forener derefter nabostykker, der deler en udfyldningsfarve. Brug den til at rydde op i en fladfarvet illustration ved at samle ensfarvede områder til enkle former.</dd>
+  <dt>Beskær</dt>
+  <dd>Bevarer kun de dele af de lavere former, der falder inden for den øverste form, som derefter kasseres. Brug den til at beskære grafik til en ramme og bage beskæringen ind i stierne i stedet for at beholde en levende beskæringsmaske.</dd>
+  <dt>Minus bagud</dt>
+  <dd>Bevarer den forreste form og skærer alt bag den væk. Brug den, når den øverste form er den, der beholdes, og formerne under den skal skære ind i den.</dd>
+  <dt>Kontur</dt>
+  <dd>Vender hver områdegrænse til en åben linje, strukket i den udfyldningsfarve, den kom fra. Brug den til at trække skelettet af kanter ud af et sæt overlappende former.</dd>
+</dl>
+<p>Effekt &rsaquo; Kombinerede former anvender Tilføj, Skær, Udeluk, Træk fra og Minus bagud som levende effekter på en gruppe i stedet for, hvorved de originale objekter forbliver intakte og redigerelige under dem. Gå efter effektversionerne, når du måske stadig vil flytte delene rundt; gå efter panelet, når den kombinerede form er endelig.</p>
+
+<h2 id="paths-compound-and-masks">Sammensatte stier og beskæringsmasker</h2>
+<p>Objekt &rsaquo; Sammensat sti &rsaquo; Opret (<kbd>&#8984;8</kbd>) folder de valgte stier til ét objekt udfyldt efter lige-ulige-reglen, så en indre kontur skærer et hul gennem den omkring den. Resultatet overtager udseendet af det laveste objekt i markeringen. Frigiv (<kbd>&#8997;&#8679;&#8984;8</kbd>) giver hver kontur tilbage som en sti for sig selv. Brug en sammensat sti til enhver form med et hul, som modstykket af bogstavet O eller en skive.</p>
+<p>Objekt &rsaquo; Beskæringsmaske &rsaquo; Opret (<kbd>&#8984;7</kbd>) bruger det øverste valgte objekt, som skal være en sti, til at beskære alt under det. Scissor putter dem alle i en beskæringsgruppe og rydder maskestiens egen udfyldning og stregoverflade. Frigiv (<kbd>&#8997;&#8984;7</kbd>) vender beskæringsgruppen tilbage til en almindelig gruppe, så intet beskæres mere, og hvert objekt, maskestien inklusive, forbliver, hvor det var. Opret opacitetsmaske i samme undermenu maskerer efter tone i stedet for efter kontur, så lysere dele af masken skinner igennem, og mørkere dele skjuler.</p>
+
+<h2 id="paths-smart-guides">Smarte hjælpelinjer og fastgøring</h2>
+<p>Smarte hjælpelinjer (Vis &rsaquo; Smarte hjælpelinjer, <kbd>&#8984;U</kbd>) overvåger den synlige grafik og tavlerne, mens du tegner eller trækker. Det, du flytter, fastgøres til kanterne, centra og ankre af dets naboer, og en linje vises tilbage til det, det blev justeret med, mærket med matchens type: anker, centrum, hjørne eller justering.</p>
+<p>To yderligere hjælpelinjer vises af sig selv. Når det objekt, du flytter, ville sidde i samme afstand fra dets naboer, som de sidder fra hinanden, fastgøres det der, og de to ens afstande tegnes med måling; dette fungerer både til at fortsætte en række jævnt forskudte objekter og til at centrere ét i mellemrummet mellem to. Og når du trækker væk fra et startpunkt, fastgøres retningen til en konstruktionslinje hver 45&deg; fra begrænsningsvinklen, tegnet som en lang linje med vinklen ved siden af.</p>
+<p>Fastgør til punkt (<kbd>&#8997;&#8984;'</kbd>) og Fastgør til gitter (<kbd>&#8679;&#8984;'</kbd>) er separate kontakter i Vis-menuen. Med Fastgør til gifter tændt lander alt på gitterets underinddeling, og de smarte hjælpelinjer træder til side.</p>

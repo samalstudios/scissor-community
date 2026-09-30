@@ -1,0 +1,153 @@
+<p class="lede">Elk vectorobject in Scissor is opgebouwd uit paden: een keten ankerpunten verbonden door rechte of gebogen segmenten. Deze pagina behandelt hoe u ze tekent, hoe u ze punt voor punt vervormt, en de commando's die ze verbinden, compenseren, omtrekken en combineren.</p>
+
+<p>Sneltoetsen zijn geschreven in hun macOS-vorm. Op Windows leest u <kbd>&#8984;</kbd> als Ctrl, <kbd>&#8997;</kbd> als Alt en <kbd>&#8679;</kbd> als Shift.</p>
+
+<h2 id="paths-anchors-and-handles">Ankers, handvatten en de vorm van een pad</h2>
+<p>Een pad is een reeks ankerpunten. Tussen twee naburige ankers ligt een segment, dat recht is wanneer geen van beide ankers ernaartoe reikt en gebogen wanneer één of beide dat doen. Het bereik van een anker wordt bepaald door zijn twee richtingshandvatten: het inkomende handvat geeft vorm aan het segment dat bij het anker aankomt, en het uitgaande handvat geeft vorm aan het segment dat het verlaat. Sleep een handvat verder naar buiten en de boog buigt sterker ernaartoe. Een pad kan open zijn, met twee losse uiteinden, of gesloten, waar het laatste anker terug naar het eerste verbindt.</p>
+
+<h3 id="paths-corner-and-smooth">Hoek- en gladde punten</h3>
+<p>Een anker is ofwel een hoekpunt ofwel een glad punt. Op een glad punt zijn de twee handvatten vergrendeld in een recht lijn door het anker, zodat de boog erdoorheen gaat zonder een knik en continu blijft. Op een hoekpunt zijn de twee zijden onafhankelijk: het pad kan scherp van richting veranderen, en de ene zijde kan recht zijn terwijl de andere buigt. De meeste vormen mengen de twee, gladde punten langs de vloeiende delen en hoekpunten waar een rand afbuigt.</p>
+<dl>
+  <dt>Glad punt</dt>
+  <dd>Handvatten samengebonden in een lijn. Gebruik deze langs een boog die als één doorlopende zwaai moet lezen, zoals de zijde van een blad of de kom van een letter.</dd>
+  <dt>Hoekpunt</dt>
+  <dd>Handvatten die uit elkaar bewegen, of een punt zonder handvatten. Gebruik deze op de punt van een ster, de hoek van een doos, of waar een boog een rechte rand moet ontmoeten.</dd>
+</dl>
+
+<h3 id="paths-direct-selection">Ankers, handvatten en het Directe selectie-gereedschap</h3>
+<p>Het Directe selectie-gereedschap (<kbd>A</kbd>) werkt op de delen van een pad. Klik op een anker om het te selecteren, <kbd>&#8679;</kbd>-klik om eréén toe te voegen of te verwijderen, of sleep een marquee over leeg gebied om elk anker erin te vangen. Geselecteerde ankers slepen verplaatst ze; <kbd>&#8679;</kbd> beperkt de verplaatsing tot 45&deg; stappen. Greep hiervoor wanneer een vorm bijna goed is en slechts een punt of twee een duwtje nodig heeft.</p>
+<p>Sleep een handvat om de boog aan zijn kant te veranderen. Handvatten die bij een glad anker horen bewegen samen, zodat de boog continu blijft; houd <kbd>&#8997;</kbd> ingedrukt terwijl u sleept om die verbinding te verbreken en één kant alleen te sturen, en <kbd>&#8679;</kbd> om het handvat op een hoek vast te houden. U kunt ook een segment zelf slepen: een gebogen segment buigt onder de pointer, en een recht bevat beide ankers mee.</p>
+<p>Het Groepselectie-gereedschap deelt dit vak en kiest hele objecten uit een groep in plaats van ankers. Klik één keer voor het binnenste object, klik opnieuw om naar de groep eromheen te stappen.</p>
+
+<h2 id="paths-drawing">Tekengereedschappen</h2>
+<p>Scissor heeft drie gereedschappen om een pad vanaf de grond leggen. De Pen geeft exacte controle punt voor punt, het Kromming-gereedschap past een gladde boog door punten die u plaatst, en het Potlood volgt uw vrij hand.</p>
+<table>
+  <thead><tr><th>Gereedschap</th><th>Sneltoets</th><th>Beste voor</th></tr></thead>
+  <tbody>
+    <tr><td>Pen</td><td><kbd>P</kbd></td><td>Precieze omtrekken waar elk anker en handvat met opzet is geplaatst.</td></tr>
+    <tr><td>Kromming</td><td><kbd>&#8679;~</kbd></td><td>Vloeiende bogen gedefinieerd door een paar doorlopingspunten, zonder handvatmanipulatie.</td></tr>
+    <tr><td>Potlood</td><td><kbd>N</kbd></td><td>Losse, handgetekende vormen en snelle schetsen.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="paths-pen">Het Pen-gereedschap</h3>
+<p>Het Pen-gereedschap (<kbd>P</kbd>) bouwt een pad punt voor punt. Klik om een hoekanker neer te zetten; druk en sleep in plaats daarvan en het anker behoudt handvatten, zodat het pad er als een boog vanaf komt. Houd <kbd>&#8679;</kbd> ingedrukt terwijl u sleept om het handvat op 45&deg; stappen vast te houden, en houd <kbd>&#8997;</kbd> ingedrukt om alleen het uitgaande handvat te bewegen, wat het anker een hoek maakt en het volgende segment van het laatste bevrijd.</p>
+<p>Terwijl een pad open is, verandert het gereedschap naarmate u erover beweegt. Over het eerste anker sluit het het pad, over een segment voegt het een anker toe, en over een bestaand anker verwijdert het eréén. Met geen pad in uitvoering, bewegen over het losse uiteinde van een open pad pakt dat pad op zodat u er mee verder tekent. <kbd>Enter</kbd> of <kbd>Esc</kbd> beëindigt het pad en laat het open; <kbd>Delete</kbd> verwijdert het anker dat u het laatst heeft geplaatst.</p>
+
+<h3 id="paths-curvature">Het Kromming-gereedschap</h3>
+<p>Het Kromming-gereedschap (<kbd>&#8679;~</kbd>) past een gladde boog door de punten die u klikt, met een voorbeeld dat naar de pointer loopt terwijl u doorgaat. <kbd>&#8997;</kbd>-klik om een hoekpunt in plaats van een glad neer te zetten, en dubbelklik op een punt om het tussen de twee te schakelen. Sleep een punt om het te verplaatsen en de boog past zich opnieuw. Klik op het eerste punt om de vorm te sluiten, of druk op <kbd>Enter</kbd> om te voltooien. <kbd>Delete</kbd> verwijdert het laatste punt en <kbd>Esc</kbd> laat het pad varen. Gebruik het wanneer u meer om de vorm van de boog geeft dan de exacte ankers, omdat het de handvatten voor u uitrekent.</p>
+
+<h3 id="paths-pencil">Het Potlood-gereedschap</h3>
+<p>Het Potlood-gereedschap (<kbd>N</kbd>) tekent vrijhand: druk, teken, en laat los, en Scissor past een glad pad door het spoor. Laat los dicht bij waar u begon, of houd <kbd>&#8997;</kbd> ingedrukte terwijl u voltooit, en het pad sluit tot een vorm. Het resultaat is een gestreept open pad in de huidige lijnkleur, zodat het klaar is om als lijn te behouden of te vullen. Hoe nauwkeurig het ingepaste pad uw volgt wordt bepaald door de Potlood-nauwkeurigheid-voorkeur, van nauwkeurig, dat meer ankers en elke hobbel behoudt, tot glad, dat minder ankers gebruikt en de lijn uitstrijkt. Greep hiervoor voor schetsen, handtekeningen, en elke vorm die er handgetekend moet uitzien in plaats van geconstrueerd.</p>
+
+<h2 id="paths-editing-points">Punten op een pad bewerken</h2>
+
+<h3 id="paths-add-remove-convert">Punten toevoegen, verwijderen en omzetten</h3>
+<p>De Pen deelt zijn werkbalkvak met Ankerpunt toevoegen (<kbd>+</kbd>), Ankerpunt verwijderen (<kbd>&#8722;</kbd>) en het Ankerpunt-gereedschap (<kbd>&#8679;C</kbd>). Ankerpunt toevoegen zet een nieuw punt op een segment zonder de boog te veranderen; Ankerpunt verwijderen verwijdert het punt dat u klikt en laat het pad de kans dichten. Met het Ankerpunt-gereedschap, sleep vanuit een hoekanker om een overeenkomstig paar handvatten eruit te trekken, wat het glad maakt; sleep één handvat om het paar te verbreken zodat de twee zijden uit elkaar bewegen, wat het terug een hoek maakt; en klik op een glad anker om zijn handvatten te strippen tot een scherpe hoek.</p>
+<p>Object &rsaquo; Pad heeft dezelfde bewerkingen als commando's die op de hele selectie tegelijk werken. Ankerpunten toevoegen zet een nieuw anker in het midden van elk segment, het verdubbelt het aantal punten zonder de vorm te veranderen, wat handig is voorafgaand aan een vervorming of vervorming die meer punten nodig heeft om schoon te buigen. Ankerpunten verwijderen verwijdert de ankers die u heeft geselecteerd met het Directe selectie-gereedschap en past het pad opnieuw door wat erover blijft.</p>
+
+<h3 id="paths-reshape-tools">Handmatig vervormen: Glad, Padwisser en Verbinden</h3>
+<p>Drie penseelachtige gereedschappen vervormen een pad waar u sleept in plaats van op één anker. Ze werken op de geselecteerde paden, of op elk pad onder de penseel wanneer er niets is geselecteerd, en <kbd>[</kbd> en <kbd>]</kbd> krimpen en groeien de penseel.</p>
+<dl>
+  <dt>Glad-gereedschap</dt>
+  <dd>Sleep langs een pad om het te ontspannen, ankers uit te dunneren en oneffenheden te verzachten. Gebruik het om een zitterende potloodlijn of een getraceerde rand te kalmeren.</dd>
+  <dt>Padwisser-gereedschap</dt>
+  <dd>Sleep langs een pad om het deel dat u kruist uit te wisselen, het splitsen of verkorten. Gebruik het om een verdwaalde staart van een lijn af te trimmen.</dd>
+  <dt>Verbinden-gereedschap</dt>
+  <dd>Schrob over twee open uiteinden en ze worden verbonden, de paden verlengend of trimmend om netjes op een hoek te ontmoeten. Gebruik het om een kans te dichten waar twee lijnen elkaar hadden moeten ontmoeten.</dd>
+</dl>
+
+<h3 id="paths-cutting">Een pad snijden: Schaar en Mes</h3>
+<p>Het Schaar-gereedschap (<kbd>C</kbd>) snijdt op één plek. Klik op een segment of een anker en het pad wordt daar gesplitst: een gesloten pad opent op de snede, en een open pad breekt in twee afzonderlijke objecten. Gebruik het om een opening in een cirkel te knippen, of om een vorm uit elkaar te breken zodat de helften anders kunnen worden vormgegeven.</p>
+<p>Het Mes snijdt dwars door werk. Sleep het lemmet over een object om het in afzonderlijke stukken langs de getekende lijn te snijden; houd <kbd>&#8997;</kbd> ingedrukt om in een rechte lijn te snijden, en voeg <kbd>&#8679;</kbd> toe om die lijn op 45&deg; stappen vast te houden. Met iets geselecteerd worden alleen de geselecteerde objecten gesneden; anders alles wat het lemmet kruist. Gebruik het om een gevulde vorm in één kliek in verscheidene gesloten stukken te snijden.</p>
+
+<h2 id="paths-commands">Padcommando's</h2>
+<p>Object &rsaquo; Pad verzamelt de bewerkingen die op hele paden tegelijk werken.</p>
+<table>
+  <thead><tr><th>Commando</th><th>Sneltoets</th><th>Wat het doet</th></tr></thead>
+  <tbody>
+    <tr><td>Verbinden</td><td><kbd>&#8984;J</kbd></td><td>Verbindt open uiteinden tot één pad, of sluit één open pad.</td></tr>
+    <tr><td>Middelpunt&hellip;</td><td><kbd>&#8997;&#8984;J</kbd></td><td>Verplaatst geselecteerde ankers naar hun gemeenschappelijke positie.</td></tr>
+    <tr><td>Lijn omtrekken</td><td></td><td>Verandert een lijn in een gevulde vorm met dezelfde omtrek.</td></tr>
+    <tr><td>Pad compenseren&hellip;</td><td></td><td>Maakt een kopie gegroeid of gekrompen met een bepaalde afstand.</td></tr>
+    <tr><td>Padrichting omkeren</td><td></td><td>Draait om welke kant het pad loopt.</td></tr>
+    <tr><td>Vereenvoudigen&hellip;</td><td></td><td>Vermindert het aantal ankerpunten.</td></tr>
+    <tr><td>Ankerpunten toevoegen</td><td></td><td>Voegt een punt toe in het midden van elk segment.</td></tr>
+    <tr><td>Ankerpunten verwijderen</td><td></td><td>Verwijdert de geselecteerde ankers.</td></tr>
+    <tr><td>In raster splitsen&hellip;</td><td></td><td>Snijdt de selectie in een raster van rijen en kolommen.</td></tr>
+    <tr><td>Opruimen&hellip;</td><td></td><td>Verwijdert verdwaalde punten, onbeschilderde objecten en lege tekst.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="paths-join-average">Verbinden en middelpunt</h3>
+<p>Verbinden (<kbd>&#8984;J</kbd>) werkt op open paden. Met twee afzonderlijke open paden geselecteerd, verbindt het hun dichtstbijzijnde uiteinden tot één pad; met één open pad, verbindt het de twee losse uiteinden om het te sluiten. Uiteinden die al op elkaar liggen worden samengevoegd tot één anker. Gebruik het om een vorm te sluiten die u als een open omtrek heeft getekend, om twee halfgetekende lijnen aan elkaar te naaien.</p>
+<p>Middelpunt (<kbd>&#8997;&#8984;J</kbd>) verplaatst de geselecteerde ankers naar hun gedeelde gemiddelde positie. Het dialoogvenster biedt de horizontale as, die de punten op een gemeenschappelijke hoogte uitlijnt; de verticale as, die ze in een kolom uitlijnt; of beide, die ze allemaal op één plek stapelt. Greep hiervoor om een rij punten te effenen of om twee uiteinden bij elkaar te brengen voordat u ze verbindt.</p>
+
+<h3 id="paths-simplify">Vereenvoudigen</h3>
+<p>Vereenvoudigen tekent de geselecteerde paden opnieuw met minder ankerpunten, binnen een nauwkeurigheid die u instelt: een striktere nauwkeurigheid blijft dicht bij het origineel ten koste van meer punten, een losse strijkt de vorm tot een handjevol glad. Gebruik het om een getraceerd of handgetekend pad op te ruimen dat veel meer punten meedraagt dan de vorm nodig heeft, wat het lichter maakt om te bewerken en te renderen.</p>
+
+<h3 id="paths-offset">Pad compenseren</h3>
+<p>Pad compenseren bouwt een nieuw pad op een bepaalde afstand van het origineel: een positieve compensatie laat de omtrek naar buiten groeien en gaat achter het origineel zitten, een negatieve compensatie krimpt hem naar binnen en gaat ervoor zitten. De Verbindingen-instelling bepaalt hoe uitstekende hoeken worden behandeld, als een scherpe Mitre, een ronde Afgeronde of een platte Bevel, met een beperking die hoe lang een scherpe hoek mag lopen voordat hij wordt afgekapt. Gebruik het om een gelijkmatige rand rond een vorm te tekenen, om een vorm in te zetten voor een keyline, of om een dunne vorm te vervetten. Pad compenseren is ook beschikbaar onder Effect &rsaquo; Pad als een live effect dat opnieuw berekent wanneer de vorm verandert.</p>
+
+<h3 id="paths-outline-stroke">Lijn omtrekken</h3>
+<p>Lijn omtrekken vervangt een gestreept pad door een gevulde vorm die exact de omtrek van de lijn heeft. Eenmaal omtrokken, schaalt de breedte niet meer met het object en kan niet meer als lijn worden bewerkt, maar de omtrek kan punt voor punt worden vervormd, gevuld met een verloop, of gecombineerd met andere vormen. Greep hiervoor wanneer u de lijn als werk nodig heeft: om een lijn een taps toelopende of gevarieerde rand te geven die u dan handmatig aanpast, of om de lijndiktes van een ontwerp vast te houden wanneer het wordt geschaald. Het is ook beschikbaar als een live effect, onder Effect &rsaquo; Pad.</p>
+
+<h3 id="paths-reverse">Padrichting omkeren</h3>
+<p>Padrichting omkeren draait de volgorde om waarin de ankers lopen, zodat het pad de andere kant op loopt. Richting toont zichzelf zelden, maar het bepaalt welk omtrek het gat in een samengesteld pad is en waar een penseel of pijlpunt begint en eindigt. Gebruik het wanneer een gat in een samengesteld pad opvult, of wanneer tekst op een pad of het begin en einde van een lijn aan de verkeerde kant zitten.</p>
+
+<h2 id="paths-live-shapes">Bewerkbare vormen en hun widgets</h2>
+<p>Rechthoeken, afgeronde rechthoeken, ellipsen en veelhoeken blijven live: ze behouden hun parameters en bouwen hun pad opnieuw wanneer u eréén verandert. Terwijl u een vorm uitsleept, maakt <kbd>&#8679;</kbd> hem regelmatig en tekent <kbd>&#8997;</kbd> hem vanuit het midden. De pijltoetsen werken ook tijdens de sleep, omhoog en rechts voegen toe, omlaag en links trekken af, het aantal zijden van een veelhoek, de punten van een ster, of de hoekstraal van een afgeronde rechthoek veranderend.</p>
+<p>Selecteer één live vorm en kleine ronde handvatten verschijnen net binnen de hoeken; ze zijn verborgen wanneer de vorm op het scherm te klein is om ze duidelijk te tonen. Sleep eréén met het Selectie-gereedschap (<kbd>V</kbd>) om alle hoeken tegelijk af te ronden, of met Directe selectie om alleen de hoek die u vasthoudt af te ronden. <kbd>&#8997;</kbd>-klik op een hoekhandvat om het door rond, omgekeerd en afgewerkt te stappen, opnieuw alle vier de hoeken met het Selectie-gereedschap, één hoek met Directe selectie.</p>
+<p>Een ellips toont een vierkant handvat in plaats daarvan: eréén op een hele ellips, en eréén op elk uiteinde van de taart zodra u eréén heeft geopend. Sleep eréén om een wig uit de vorm te openen, met <kbd>&#8679;</kbd> die de hoek op 15&deg; stappen vastzet; het uiteinde terugbrengen rond naar het begin herstelt de hele ellips. Het Eigenschappen-paneel bevat dezelfde waarden als getallen: straal en hoektype, per-hoek stralen, veelhoekszijden, en taartbegin en -eind in graden. Een live vorm behoudt deze besturingselementen totdat u zijn pad direct bewerkt, wat het in een gewoon pad verandert.</p>
+
+<h2 id="paths-combining">Vormen combineren: Samenvoegen &amp; Splitsen en Vormen combineren</h2>
+<p>Wanneer twee of meer vormen elkaar overlappen, wilt u vaak één nieuwe vorm eruit: een unie, een gat, of het stuk waar ze elkaar kruisen. Scissor biedt twee manieren om daar te komen. De Samenvoegen &amp; Splitsen is direct en visueel; het Vormen combineren-paneel past dezelfde bewerkingen toe als knoppen. Beide behouden bogen in plaats van ze tot lijnsegmenten te vlakken.</p>
+
+<h3 id="paths-shape-builder">Het Samenvoegen &amp; Splitsen-gereedschap</h3>
+<p>Het Samenvoegen &amp; Splitsen-gereedschap (<kbd>&#8679;M</kbd>) werkt op twee of meer geselecteerde paden. Het verdeelt hun overlappingen in gebieden en markeert welke de pointer boven is; sleep een lijn door verscheidene gebieden om ze samen te voegen tot één object, dat het uiterlijk van de vorm aanneemt waar het van kwam, of <kbd>&#8997;</kbd>-sleep door hen om ze te verwijderen. Gebruik het om een vorm met het oog te bouwen, de delen die u wilt toevoegen en de delen die u niet wilt uit te wisselen, zonder te stoppen om een commando voor elke stap te kiezen.</p>
+
+<h3 id="paths-pathfinder-shape-modi">Vormen combineren vormmodi</h3>
+<p>Het Vormen combineren-paneel (<kbd>&#8679;&#8984;F9</kbd>) opent met vier vormmodi, die elk de geselecteerde paden vervangen door één gecombineerd pad. Het resultaat neemt het uiterlijk van het bovenste object over, behalve Minus voorgrond, dat het uiterlijk van de onderste behoudt.</p>
+<dl>
+  <dt>Samenvoegen</dt>
+  <dd>Voegt elke geselecteerde vorm samen tot één omtrek. Gebruik het om overlappende stukken tot één silhouet te lassen, zoals een wolk uit een rij cirkels.</dd>
+  <dt>Minus voorgrond</dt>
+  <dd>Behoudt de achterste vorm en snijdt alles weg dat ervoor is gestapeld. Gebruik het om een hap uit een vorm te bijten, zoals een halve maan uit twee cirkels snijden.</dd>
+  <dt>Doorsnede</dt>
+  <dd>Behoudt alleen het gebied dat elke geselecteerde vorm deelt. Gebruik het om werk tot een gemeenschappelijk gebied te trimmen, zoals de lens waar twee cirkels elkaar kruisen.</dd>
+  <dt>Uitsluiten</dt>
+  <dd>Behoudt alles behalve de overlappingen, die gaten worden. Gebruik het om een ring te maken, of een schakel, waar de kruisende delen uitvallen.</dd>
+</dl>
+
+<figure class="shot">
+  <img src="img/combine.gif" width="760" height="441" loading="lazy"
+       alt="Drie overlappende vormen, een cirkel, een afgerond vierkant en een cirkel, die samensmelten tot één gecombineerd silhouet." />
+  <figcaption>Samenvoegen (of een sleep met de Samenvoegen &amp; Splitsen) voegt overlappende vormen samen tot één omtrek die zijn bogen behoudt.</figcaption>
+</figure>
+
+<h3 id="paths-pathfinders">De andere Vormen combineren-bewerkingen</h3>
+<p>Onder de vormmodi zitten zes pathfinders. Deze laten u met verscheidene stukken, verzameld in een groep, in plaats van één gecombineerd pad. Minus achtergrond komt overeen met zijn vormmodus-tweeling maar behoudt de bovenste vorm.</p>
+<dl>
+  <dt>Verdelen</dt>
+  <dd>Snijdt de vormen in afzonderlijke vlakken langs elke lijn die ze kruisen, elk vlak de kleur van de bovenste vorm die het bedekt nemend. Gebruik het om een ontwerp in beschilderbare stukken te breken, zoals de cellen van een glas-in-loodpaneel.</dd>
+  <dt>Trimmen</dt>
+  <dd>Verwijdert het verborgen deel van elke vorm waar een vorm boven het bedekt. Elk stuk behoudt zijn eigen vulling en niets wordt samengevoegd; lijnen worden weggegooid. Gebruik het tot gestapelde vlakke kleurwerk vlak te maken zodat geen kleur boven een andere afdrukt.</dd>
+  <dt>Samenvoegen</dt>
+  <dd>Trimt de verborgen delen weg, en voegt naburige stukken die een vulkleur delen samen. Gebruik het om een vlakke kleurillustratie op te ruimen, door gelijk gekleurde gebieden tot enkele vormen samen te voegen.</dd>
+  <dt>Bijsnijden</dt>
+  <dd>Behoudt alleen de delen van de lagere vormen die binnen de bovenste vorm vallen, die dan wordt weggegooid. Gebruik het om werk tot een kader bij te snijden en de bijsnijding in de paden te bakken, in plaats van een live afsnijdenmasker te behouden.</dd>
+  <dt>Minus achtergrond</dt>
+  <dd>Behoudt de voorste vorm en snijdt alles erachter weg. Gebruik het wanneer de bovenste vorm de bewaarder is en de vormen eronder erin moeten snijden.</dd>
+  <dt>Omtrek</dt>
+  <dd>Verandert elke gebiedsgrens in een open lijn, gestreept in de vulkleur waar het van kwam. Gebruik het om het skelet van randen uit een set overlappende vormen te trekken.</dd>
+</dl>
+<p>Effect &rsaquo; Vormen combineren past Toevoegen, Doorsnede, Uitsluiten, Aftrekken en Minus achtergrond toe als live effecten op een groep in plaats daarvan, waarbij de originele objecten eronder intact en bewerkbaren blijven. Greep voor de effectversies wanneer u de delen later nog wilt verplaatsen; greep voor het paneel wanneer de gecombineerde vorm definitief is.</p>
+
+<h2 id="paths-compound-and-masks">Samengestelde paden en afsnijdenmaskers</h2>
+<p>Object &rsaquo; Samengesteld pad &rsaquo; Maken (<kbd>&#8984;8</kbd>) vouwt de geselecteerde paden tot één object gevuld door de even-oneven regel, zodat een binnenste omtrek een gat door het omtrek eromheen snijdt. Het resultaat neemt het uiterlijk van het laagste object in de selectie over. Vrijgeven (<kbd>&#8997;&#8679;&#8984;8</kbd>) geeft elk omtrek terug als een pad op zich. Gebruik een samengesteld pad voor elke vorm met een gat, zoals de teller van de letter O of een ring.</p>
+<p>Object &rsaquo; Afsnijdenmasker &rsaquo; Maken (<kbd>&#8984;7</kbd>) gebruikt het bovenste geselecteerde object, dat een pad moet zijn, om alles eronder af te snijden. Scissor zet ze allemaal in een afsnijdgroep en wist de eigen vulling en lijn van het maskerpad. Vrijgeven (<kbd>&#8997;&#8984;7</kbd>) verandert de afsnijdgroep terug in een gewone groep, zodat niets meer wordt afgesneden en elk object, het maskerpad inbegrepen, blijft waar het was. Dekkingmasker maken in hetzelfde submenu maskeert op toon in plaats van op omtrek, zodat lichtere delen van het masker doorlaat en donkerere verbergen.</p>
+
+<h2 id="paths-smart-guides">Slimme hulplijnen en uitlijning</h2>
+<p>Slimme hulplijnen (Beeld &rsaquo; Slimme hulplijnen, <kbd>&#8984;U</kbd>) kijken naar het zichtbare werk en de borden terwijl u tekent of sleept. Wat u verplaatst uitlijnt op de randen, midden en hoeken van zijn buren, en een lijn verschijnt terug naar wat het mee uitlijnde, gelabeld met het soort overeenkomst: anker, midden, hoek of uitlijnen.</p>
+<p>Twee verdere hulplijnen verschijnen op zichzelf. Wanneer het object dat u verplaatst op dezelfde afstand van zijn buren zou komen als zij van elkaar, uitlijnt het daar en worden de twee gelijke tussenruimten getekonden met de meting getoond; dit werkt zowel voor het voortzetten van een reeks gelijkmatig verdeelde objecten als voor het centreren van één in de kans tussen twee. En wanneer u weg van een startpunt sleept, uitlijnt de richting op een constructielijn elke 45&deg; van de beperkingshoek, getekend als een lange lijn met de hoek ernaast.</p>
+<p>Uitlijnen op punt (<kbd>&#8997;&#8984;'</kbd>) en Uitlijnen op raster (<kbd>&#8679;&#8984;'</kbd>) zijn afzonderlijke schakelaars in het Beeld-menu. Met Uitlijnen op raster aan, landt alles op de rasterverdeling en treden de slimme hulplijnen opzij.</p>

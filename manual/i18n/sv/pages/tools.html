@@ -1,0 +1,357 @@
+<p class="lede">Verktygsraden löper nedtill vänster i fönstret och innehåller alla rit-, redigerings- och visningsverktyg. Varje plats är ett enskilt verktyg eller en grupp av relaterade; denna sida listar dem alla, i den ordning de sitter i verktygsraden, med tangenten som väljer varje och vad den är till för.</p>
+
+<p>Tryck och håll en plats, eller högerklicka på den, för att öppna dess utflytt och välja ett annat verktyg från gruppen. Ett verktygs genväg är ett enda tangenttryck, och den fungerar närhelst du inte skriver i text eller ett fält.</p>
+
+<p>Genvägarna nedan är skrivna i macOS-form. På Windows, läs <kbd>&#8997;</kbd> som Alt, <kbd>&#8984;</kbd> som Ctrl och <kbd>&#8679;</kbd> som Shift.</p>
+
+<p>Tre vanor gäller nästan alla verktyg:</p>
+<ul>
+<li>Håll ned mellanslagstangenten för att låna handverktyget, och släpp för att återvända till det du använde.</li>
+<li>Håll ned <kbd>&#8984;</kbd> för att låna markeringsverktyget på samma sätt. Fritt transformverktyg är undantaget: det läser <kbd>&#8984;</kbd> självt.</li>
+<li><kbd>Esc</kbd> överger en dragning eller en bana du är halvvägs genom att rita, och lämnar konstverket som det var.</li>
+</ul>
+
+<p>Två platser (omformnings- och utskriftsplattverktygen) listas för fullständighetens skull men har inget beteende bakom sig ännu. Verktygsraden markerar dem som kommer snart och motorn avvisar dem.</p>
+
+<h2 id="tools-selecting">Markeringsverktyg</h2>
+<p>Dessa fyra plockar ut vad du vill arbeta med nåsta. Nå efter markeringsverktyget för hela objekt, direktmarkeringsverktyget för ankare och segment inuti en bana, auto-markera för att samla allt som målats likadant, och lassot för att svepa upp en kluster av ankare för hand.</p>
+
+<h3 id="tools-selection">Markering</h3>
+<table>
+<thead><tr><th>Verktyg</th><th>Genväg</th><th>Vad det gör</th></tr></thead>
+<tbody>
+<tr><td>Markeringsverktyg</td><td><kbd>V</kbd></td><td>Klicka på ett objekt för att markera det helt, <kbd>&#8679;</kbd>-klicka för att lägga till eller ta bort ett, och dra över tom duk för en rammarkering. Dra inne i markeringen för att flytta den, med <kbd>&#8679;</kbd> som håller flytten till 45&deg;-steg och <kbd>&#8997;</kbd> som lämnar en kopia kvar.</td></tr>
+</tbody>
+</table>
+<p>Med ett objekt markerat bär avgränsningsramen åtta handtag. Dra ett handtag för att skala, håll ned <kbd>&#8679;</kbd> för att behålla proportionerna och <kbd>&#8997;</kbd> för att skala kring centrum; dra precis utanför ett hörn för att rotera, med <kbd>&#8679;</kbd> som fäster till 45&deg;. Dubbelklicka stegar in i en grupp och arbetar inne i den, dubbelklicka på text för att redigera den, dubbelklicka på en symbolinstans för att redigera symbolen som varje instans ritar, och dubbelklicka bort från konstverket för att stega tillbaka ut.</p>
+<p>Redigerbara former bär sina egna widgets: dra ett hörnwidget för att runda alla hörnen på formen på en gång, eller <kbd>&#8997;</kbd>-klicka på det för att stega hörnet till nästa typ. Detta är verktyget du kommer att tillbringa mest tid i, så det är värt att lära sig dess handtag väl.</p>
+
+<h3 id="tools-direct-selection">Direktmarkering och gruppmarkering</h3>
+<table>
+<thead><tr><th>Verktyg</th><th>Genväg</th><th>Vad det gör</th></tr></thead>
+<tbody>
+<tr><td>Direktmarkeringsverktyg</td><td><kbd>A</kbd></td><td>Klicka på ett ankare, ett handtag eller ett segment, och dra det för att omforma banan; en rammarkering över tom duk plockar upp ankarna inne i den. <kbd>&#8679;</kbd> lägger till i det som plockas upp och håller en dragning till 45&deg;, och <kbd>&#8997;</kbd> medan du drar ett handtag bryter paret så att ankaret blir ett hörn.</td></tr>
+<tr><td>Gruppmarkeringsverktyg</td><td>&ndash;</td><td>Klicka på ett objekt för att markera det; klicka igen för att ta in den grupp det tillhör, och igen för gruppen ovanför den.</td></tr>
+</tbody>
+</table>
+<p>Använd direktmarkeringsverktyget för att finjustera en form efter att den är ritad: skjut ett ankare, dra ett enskilt handtag, eller omforma en kurva. Det drar också överläggningarna i ett kuverts nät, vilket böjer vad kuvertet håller, och det runder ett hörn av en live-form i taget snarare än alla. Gruppmarkeringsverktyget är det snabba sättet att nå ett objekt begravt inuti kapslade grupper utan att stega in och ut ur dem.</p>
+
+<h3 id="tools-magic-wand">Auto-markera</h3>
+<table>
+<thead><tr><th>Verktyg</th><th>Genväg</th><th>Vad det gör</th></tr></thead>
+<tbody>
+<tr><td>Auto-markera-verktyg</td><td><kbd>Y</kbd></td><td>Klicka på ett objekt för att markera varje objekt som målats som det. Vad som räknas som likadant (fyllning, kontur, konturtjocklek, opacitet, blandningsläge) ställs in i Auto-markera-panelen, och <kbd>&#8679;</kbd> lägger till de nya träffarna i markeringen.</td></tr>
+</tbody>
+</table>
+<p>Nå efter detta när du vill ändra varje form av en färg på en gång: klicka på en röd, och färglägg sedan hela markeringen i ett enda steg.</p>
+
+<h3 id="tools-lasso">Lasso</h3>
+<table>
+<thead><tr><th>Verktyg</th><th>Genväg</th><th>Vad det gör</th></tr></thead>
+<tbody>
+<tr><td>Lassoverktyg</td><td><kbd>Q</kbd></td><td>Dra en frihandslinga för att markera ankarna inne i den. <kbd>&#8679;</kbd> lägger till dem till de ankare som redan plockats upp.</td></tr>
+</tbody>
+</table>
+<p>Använd det när du vill ankare inte sitter i en styrd rektangel, så att en rammarkering skulle fånga för mycket eller för lite.</p>
+<p>Denna plats innehåller också pixelmarkeringsverktygen – <strong>Rektangulär ram</strong>, <strong>Elliptisk ram</strong> och <strong>Lassoram</strong> – som ritar en markeringsmyror på ett pixellager istället för att plocka upp vektorankare. De täcks på <a href="/manual/pixels/">Pixellager</a>-sidan.</p>
+
+<h2 id="tools-pen-type">Penna, kurvatur och text</h2>
+<p>Verktygen som lägger nya banor och text. Pennfamiljen ger dig exakt kontroll över varje ankare och handtag, kurvaturverktyget passar en slät kurva genom punkter du släpper, och textverktygen ställer in punkt-, yta-, ban- och vertikaltext.</p>
+
+<h3 id="tools-pen">Pennfamiljen</h3>
+<table>
+<thead><tr><th>Verktyg</th><th>Genväg</th><th>Vad det gör</th></tr></thead>
+<tbody>
+<tr><td>Pennverktyg</td><td><kbd>P</kbd></td><td>Klicka för att släppa ett hörnpunkt, eller tryck och dra för att dra ut små handtag ur den; klicka på det första ankaret för att stänga banan. <kbd>&#8679;</kbd> håller den nya punkten eller handtaget till 45&deg;, och <kbd>&#8997;</kbd> medan du drar bryter handtagen så att banan lämnar ankaret i sin egen vinkel.</td></tr>
+<tr><td>Lägg till ankarpunkt-verktyg</td><td><kbd>+</kbd></td><td>Klicka på ett segment för att lägga till ett ankare där, utan att ändra banans form.</td></tr>
+<tr><td>Ta bort ankarpunkt-verktyg</td><td><kbd>&#8722;</kbd></td><td>Klicka på ett ankare för att ta ut det, och förena segmenten på båda sidor om det.</td></tr>
+<tr><td>Ankarpunktverktyg</td><td><kbd>&#8679;C</kbd></td><td>Dra ett ankare för att dra ut ett matchat par handtag ur det, eller klicka på det för att dra tillbaka handtagen och lämna ett hörn. Dra ett handtag ensamt för att flytta den sidan ensam; <kbd>&#8679;</kbd> håller det till 45&deg;.</td></tr>
+</tbody>
+</table>
+<p>Pennverktyget är arbetshästen för exakt ritning, från en logotypkontur till en bokstavsbana. Medan det har en bana på gång, avslutar <kbd>Enter</kbd> eller <kbd>Esc</kbd> den och tar <kbd>Backspace</kbd> tillbaka det senaste ankaret. De tre hjälparna lägger till, tar bort och konverterar ankare på en färdig bana; penna och blyert beskrivs mer i detalj på <a href="/manual/paths/">Banor</a>-sidan.</p>
+
+<h3 id="tools-curvature">Kurvatur</h3>
+<table>
+<thead><tr><th>Verktyg</th><th>Genväg</th><th>Vad det gör</th></tr></thead>
+<tbody>
+<tr><td>Kurvaturverktyg</td><td><kbd>&#8679;~</kbd></td><td>Klicka för att släppa punkter och en slät kurva passas genom dem; <kbd>&#8997;</kbd>-klicka släpper en hörnpunkt istället. Dra en punkt för att flytta den, dubbelklicka på en punkt för att växla den mellan slät och hörn, klicka på den första punkten för att stänga banan, och dubbelklicka bort från den för att avsluta.</td></tr>
+</tbody>
+</table>
+<p>Nå efter kurvaturverktyget när du vill ha en flytande linje och hellre vill placera punkter och låta Scissor räkna ut handtagen än att dra varje enskild själv.</p>
+
+<h3 id="tools-type">Text</h3>
+<table>
+<thead><tr><th>Verktyg</th><th>Genväg</th><th>Vad det gör</th></tr></thead>
+<tbody>
+<tr><td>Textverktyg</td><td><kbd>T</kbd></td><td>Klicka för punkttext, dra ut en ruta för ytatext, och klicka på befintlig text för att redigera den. Klicka på en öppen bana ställer in texten att löpa längs den banan.</td></tr>
+<tr><td>Ytatextverktyg</td><td>&ndash;</td><td>Dra ut rutan texten flödar inne i.</td></tr>
+<tr><td>Text på bana-verktyg</td><td>&ndash;</td><td>Klicka på en bana och texten löper längs den. Banan blir baslinjen, så den slutar vara konstverk i egen rätt.</td></tr>
+<tr><td>Vertikaltextverktyg</td><td>&ndash;</td><td>Samma som textverktyget, förutom att textraden löper ned över sidan snarare än över den.</td></tr>
+<tr><td>Glyfredigeringsverktyg</td><td><kbd>&#8679;T</kbd></td><td>Klicka på ett tecken för att plocka ut det från dess rad, dra sedan det för att flytta det, dra ett hörnmatt för att ändra storlek eller mattet ovanför det för att vrida det. <kbd>&#8679;</kbd> håller en hörnskalning proportionell och fäster vridningen till 11.25&deg;-steg, och <kbd>Delete</kbd> sätter tillbaka tecknet där texten satte det.</td></tr>
+</tbody>
+</table>
+<p>Textverktyget ensam täcker det mesta arbetet: klicka för en rubrik, dra en ruta för ett stycke. Sidomattarna i glyfredigeringsrutan sträcker tecknet enbart ett sätt, över för bredd och längs för höjd, så att du kan dra enskilda bokstäver runt för en rubrik utan att bryta ut dem ur texten. Text täcks i detalj på <a href="/manual/type/">Text</a>-sidan.</p>
+
+<h2 id="tools-lines-shapes">Linjer och former</h2>
+<p>Allt som ritar en färdigform: raka linjer, bågar och spiraler, rutnät av linjer, och rektanglar, ellipser, polygoner och stjärnor som du bygger en ritning av.</p>
+
+<h3 id="tools-lines">Linjer, bågar, spiraler och rutnät</h3>
+<table>
+<thead><tr><th>Verktyg</th><th>Genväg</th><th>Vad det gör</th></tr></thead>
+<tbody>
+<tr><td>Linjesegmentverktyg</td><td><kbd>\</kbd></td><td>Dra för att rita en rak linje. <kbd>&#8679;</kbd> håller den till 45&deg;-steg och <kbd>&#8997;</kbd> ritar den ut från sin mitt istället för sin ände.</td></tr>
+<tr><td>Bågeverktyg</td><td>&ndash;</td><td>Dra ut rutan bågen fyller; <kbd>&#8679;</kbd> kvadrerar den rutan. Piltangenterna böjer bågen flatare eller fylligare, <kbd>C</kbd> stänger och öppnar den, och <kbd>F</kbd> eller <kbd>X</kbd> vänder vilken vikt den buktar.</td></tr>
+<tr><td>Spiralverktyg</td><td>&ndash;</td><td>Dra ut från centrum: avståndet ställer in radien och riktningen ställer in var spiralen börjar. <kbd>&#8997;</kbd> vänder lindningen, <kbd>R</kbd> vänder den för gott, och piltangenterna lägger till och tar bort segment.</td></tr>
+<tr><td>Rektangulärt rutnätverktyg</td><td>&ndash;</td><td>Dra ut rutnätet, med <kbd>&#8997;</kbd> som ritar från centrum och <kbd>&#8679;</kbd> som håller det kvadratiskt. Pil upp och ner ändrar antalet rader, vänster och höger kolumner.</td></tr>
+<tr><td>Polärt rutnätverktyg</td><td>&ndash;</td><td>Dra ut rutnätet, med <kbd>&#8997;</kbd> som ritar från centrum och <kbd>&#8679;</kbd> som håller det runt. Pil upp och ner ändrar de koncentriska ringarna, vänster och höger de radiäla eken.</td></tr>
+</tbody>
+</table>
+<p>De två rutnätsverktygen gör en bana per linje, så att varje linje förblir markerbar för sig: använd det rektangulära rutnätet för tabeller, kalendrar och layoutstomter, och det polära rutnätet för dartavlådor, radardiagram och klockskivor. De ritar rutnätskonstverk som du behåller. Det är en annan sak än artboardens bakgrundsrutnät, ritstöd du slår på med <strong>Visa &rsaquo; Rutnät &rsaquo; Visa rutnät</strong>, som aldrig skrivs ut och kommer i sju slag (kvadratiskt, isometriskt, hexagonalt, oblikt, guldsektion, mönster och perspektiv). Bakgrundsrutnäten täcks på <a href="/manual/grids/">Rutnät</a>-sidan. Ett separat <strong>Rutnätsformverktyg</strong> (<kbd>&#8679;G</kbd>) bygger en fylld bana genom att klicka eller dra över cellerna i det bakgrundsrutnätet – ett snabbt sätt att lägga fasta block på ett isometriskt eller hexagonalt rutnät.</p>
+
+<h3 id="tools-shapes">Rektanglar, ellipser och andra former</h3>
+<table>
+<thead><tr><th>Verktyg</th><th>Genväg</th><th>Vad det gör</th></tr></thead>
+<tbody>
+<tr><td>Rektangelverktyg</td><td><kbd>M</kbd></td><td>Dra för att rita en rektangel. <kbd>&#8679;</kbd> håller den kvadratisk och <kbd>&#8997;</kbd> ritar den ut från sitt centrum.</td></tr>
+<tr><td>Avrundad rektangelverktyg</td><td>&ndash;</td><td>Samma dragning, med avrundade hörn; pil upp och ner ökar och minskar hörnas radie medan du ritar.</td></tr>
+<tr><td>Ellipsverktyg</td><td><kbd>L</kbd></td><td>Dra för att rita en ellips, med <kbd>&#8679;</kbd> för en cirkel och <kbd>&#8997;</kbd> för att rita från centrum.</td></tr>
+<tr><td>Polygonverktyg</td><td>&ndash;</td><td>Dra ut från centrum; dragningens riktning vänder polygonen, och <kbd>&#8679;</kbd> håller den upprätt. Piltangenterna lägger till och tar bort sidor.</td></tr>
+<tr><td>Stjärnverktyg</td><td>&ndash;</td><td>Dra ut från centrum, vrid stjärnan som du går, med <kbd>&#8679;</kbd> som håller den upprätt. Piltangenterna lägger till och tar bort spetsar.</td></tr>
+<tr><td>Flare-verktyg</td><td>&ndash;</td><td>Dra en gång för att ställa in centrum och storlek för flarens halon, dra sedan en andra gång för att spänna dess ringar över konstverket. Medan du drar ändrar vänster och höger piltangent antalet ringar och upp och ner antalet strålar.</td></tr>
+</tbody>
+</table>
+<p>Dessa gör live-former: de behåller sina parametrar, så att du kan ändra en rektangels storlek eller en stjärnas spetsantal långt efter att ha ritat den. Ett klick istället för en dragning med någon av dem öppnar en dialogruta, så att du kan ge formen exakta mått istället. Flare-verktyget svarar på ett klick med en flare i den storlek dess alternativ ber om.</p>
+
+<h2 id="tools-brush-erase">Penslar, blyertspenna och radergummi</h2>
+<p>Frihandsverktygen. Måla en strök som följer pekaren, skissra en grov bana och låt Scissor städa upp den, sköta och reparera befintliga banor, eller gnugga bort konstverk. Två platser här når också raster sidan av ett dokument: penseln målar pixlar och pixelraderaren rensar dem.</p>
+
+<h3 id="tools-brushes">Penslar</h3>
+<table>
+<thead><tr><th>Verktyg</th><th>Genväg</th><th>Vad det gör</th></tr></thead>
+<tbody>
+<tr><td>Målpenselverktyg</td><td><kbd>B</kbd></td><td>Dra för att rita för hand; ströken jämnas ut medan den passas till kurvor, och den behåller den aktuella penseln och ströken.</td></tr>
+<tr><td>Fyllpenselverktyg</td><td><kbd>&#8679;B</kbd></td><td>Ritar samma strök, men konturerar den till en fylld form och förenar den med allt konstverk den rör vid som delar dess fyllning.</td></tr>
+<tr><td>Penselverktyg</td><td>&ndash;</td><td>Målar rasterfärg direkt på ett pixellager i den aktuella fyllningsfärgen, och gör först ett pixellager om det inte finns något. Till skillnad från målpenseln är märket inte en bana du kan omforma senare: det blir en del av bilden.</td></tr>
+</tbody>
+</table>
+<p>Använd målpenseln för uttrycksfulla, kalligrafiska strökar som förblir redigerbara, och fyllpenseln när du hellre vill bygga upp en fast fylld form än en konturerad linje. <kbd>[</kbd> och <kbd>]</kbd> gör penseln mindre och större. Penselverktyget delar denna plats men målar pixlar istället för en bana, för skuggning och textur, och <strong>Burkverktyget</strong> delar den också, och överflöder en sammankopplad yta av ett pixellager med fyllningsfärgen. Målning på pixellager täcks på <a href="/manual/pixels/">Pixellager</a>-sidan.</p>
+
+<h3 id="tools-pencil">Blyertspenna och banreparatörer</h3>
+<table>
+<thead><tr><th>Verktyg</th><th>Genväg</th><th>Vad det gör</th></tr></thead>
+<tbody>
+<tr><td>Skissverktyg</td><td><kbd>&#8679;N</kbd></td><td>Rita grovt och ströken blir den krispiga form du menade. Kluddra över konstverk pajar ut vad kluddret täcker istället.</td></tr>
+<tr><td>Blyertspennverktyg</td><td><kbd>N</kbd></td><td>Dra för hand och ströken passas till släta kurvor. Håll ned <kbd>&#8997;</kbd> medan du släpper för att stänga banan, vilket också händer av sig självt om du avslutar nära där du började.</td></tr>
+<tr><td>Slätthållningsverktyg</td><td>&ndash;</td><td>Pensla längs en bana för att jämna ut dess handtag och släppa de knappar som knappt böjer den; en större pensel slätar hårtare.</td></tr>
+<tr><td>Baneraderingsverktyg</td><td>&ndash;</td><td>Pensla längs en bana för att gnugga bort den del du täcker.</td></tr>
+<tr><td>Föreningsverktyg</td><td>&ndash;</td><td>Pensla över två lösa ändar för att förena dem till en bana.</td></tr>
+</tbody>
+</table>
+<p>Blyertspennan är det snabba sättet att skissera en form för hand; Shaper är för när du vill att en grov gest ska läsas som en styrd rektangel, ellips eller linje. De sista tre sköter befintliga banor: <kbd>[</kbd> och <kbd>]</kbd> ändrar storlek på slätthållnings-, baneraderings- och föreningspenslarna. Med konstverk markerat fungerar dessa tre bara på markeringen; utan något markerat fungerar de på valfri bana de når.</p>
+
+<h3 id="tools-cutting">Radera och klippa</h3>
+<table>
+<thead><tr><th>Verktyg</th><th>Genväg</th><th>Vad det gör</th></tr></thead>
+<tbody>
+<tr><td>Radergummiverktyg</td><td><kbd>&#8679;E</kbd></td><td>Dra en rund pensel för att subtrahera från objekt. Med en markering raderas bara de markerade objekten; annars varje olåst bana, och <kbd>[</kbd> och <kbd>]</kbd> ändrar storlek på penseln.</td></tr>
+<tr><td>Pixelraderingsverktyg</td><td>&ndash;</td><td>Gnuggar bort färg från ett pixellager, och rensar det till transparent så att det som sitter under syns igenom. Det fungerar på pixellager där radergummit fungerar på vektorbanor; <kbd>[</kbd> och <kbd>]</kbd> ändrar storlek på penseln.</td></tr>
+<tr><td>Saxverktyg</td><td><kbd>C</kbd></td><td>Klicka på ett segment eller ett ankare för att klippa banan där. En stängd bana öppnas vid snittet; en öppen bana delas i två objekt.</td></tr>
+<tr><td>Kniv</td><td>&ndash;</td><td>Dra över objekt för att skära isär dem i separata bitar. <kbd>&#8997;</kbd> klipper i en rak linje och <kbd>&#8679;</kbd> håller den linjen till 45&deg;-steg.</td></tr>
+</tbody>
+</table>
+<p>Radergummit skär ut former ur fyllt konstverk som att gnugga bort blyert; saxen gör ett enda rent snitt på en punkt; kniven skär hela objekt i bitar längs den linje du drar. Pixelraderaren delar radergummits plats men tillhör raster sidan, på <a href="/manual/pixels/">Pixellager</a>-sidan.</p>
+<p>Ytterligare en verktygsradsplats är helt raster: <strong>Dodge</strong>, <strong>Burn</strong> och <strong>Sponge</strong> retuscheringspenslarna ljusnar, mörkar och mättar pixlarna redan på ett lager. De målar som penseln och täcks, med resten av pixelredigering, på <a href="/manual/pixels/">Pixellager</a>-sidan.</p>
+
+<h2 id="tools-transform">Transformera</h2>
+<p>Verktygen som flyter, vider, speglar, skalar, lutar, förvränger och omformar det som redan är ritat. Varje transformverktyg fungerar kring en referenspunkt, som börjar i mitten av markeringen; <kbd>&#8997;</kbd>-klicka ställer in den punkten där du klickar och öppnar verktygets dialog för exakta värden. Med enskilda ankare markerade transformerar dessa verktyg de ankarna snarare än hela objekt.</p>
+
+<h3 id="tools-rotate-reflect">Rotera och spegla</h3>
+<table>
+<thead><tr><th>Verktyg</th><th>Genväg</th><th>Vad det gör</th></tr></thead>
+<tbody>
+<tr><td>Roteringsverktyg</td><td><kbd>R</kbd></td><td>Dra runt referenspunkten för att vrida markeringen, med <kbd>&#8679;</kbd> som fäster till 45&deg; och <kbd>&#8997;</kbd> som vider en kopia och lämnar originalet. <kbd>&#8997;</kbd>-klicka sätter referenspunkten där du klickade och öppnar roteringsdialogen.</td></tr>
+<tr><td>Spegelsverktyg</td><td><kbd>O</kbd></td><td>Dra för att svinga spegelaxeln genom referenspunkten, med <kbd>&#8679;</kbd> som fäster den till 45&deg;. <kbd>&#8997;</kbd>-klicka ställer in referenspunkten och öppnar spegeldialogen, och <kbd>&#8997;</kbd> medan du drar speglar en kopia.</td></tr>
+</tbody>
+</table>
+<p>Nå efter roteringsverktyget för att vrida konstverk kring en vald pivot snarare än dess eget centrum, och spegelverktyget för att bygga en symmetrisk ritning: spegla en kopia över en vald axel och de två halvorna förblir matchade. Båda verktygen börjar från mitten av markeringen, och att välja något annat sätter tillbaka referenspunkten dit.</p>
+
+<h3 id="tools-scale-shear">Skala, luta och omforma</h3>
+<table>
+<thead><tr><th>Verktyg</th><th>Genväg</th><th>Vad det gör</th></tr></thead>
+<tbody>
+<tr><td>Skalningsverktyg</td><td><kbd>S</kbd></td><td>Dra bort från referenspunkten för att öka markeringen och mot den för att minska den; <kbd>&#8679;</kbd> behåller proportionerna och <kbd>&#8997;</kbd> skalar en kopia. <kbd>&#8997;</kbd>-klicka ställer in referenspunkten och öppnar skalningsdialogen.</td></tr>
+<tr><td>Lutningsverktyg</td><td>&ndash;</td><td>Dra för att luta markeringen kring referenspunkten; <kbd>&#8679;</kbd> lutar den lutningen på vilken axel din dragning lutar mot. <kbd>&#8997;</kbd>-klicka ställer in referenspunkten och öppnar lutningsdialogen.</td></tr>
+<tr><td>Omformningsverktyg</td><td>&ndash;</td><td>Listat i verktygsraden men inte implementerat ännu; paletten markerar det som kommer snart.</td></tr>
+</tbody>
+</table>
+<p>Använd skalningsverktyget när du vill ändra storlek på konstverk kring en fast punkt snarare än ett avgränsningshandtag, och lutningsverktyget för att luta en form för en kastskugga eller en känsla av kursiv.</p>
+
+<h3 id="tools-width-liquify">Bredd och flytverktygen</h3>
+<table>
+<thead><tr><th>Verktyg</th><th>Genväg</th><th>Vad det gör</th></tr></thead>
+<tbody>
+<tr><td>Konturprofilverktyg</td><td><kbd>&#8679;W</kbd></td><td>Dra bort från en konturerad bana för att bredda den där och mot banan för att göra den smalare, och lämnar en breddpunkt kvar. Utan något markerat fungerar det på valfri redigerbar bana.</td></tr>
+<tr><td>Förvrängningsverktyg</td><td><kbd>&#8679;R</kbd></td><td>Håll och dra en rund pensel för att trycka banorna under den längs med pekaren.</td></tr>
+<tr><td>Virvla-verktyg</td><td>&ndash;</td><td>Håll penseln över konstverk och det fortsätter virvla så länge du håller det.</td></tr>
+<tr><td>Knycka-verktyg</td><td>&ndash;</td><td>Drar banorna under penseln in mot dess centrum.</td></tr>
+<tr><td>Svällverktyg</td><td>&ndash;</td><td>Trycker banorna under penseln ut från dess centrum.</td></tr>
+<tr><td>Krusverktyg</td><td>&ndash;</td><td>Lägger till krökta skallor på banorna under penseln.</td></tr>
+<tr><td>Spetsverktyg</td><td>&ndash;</td><td>Lägger till spetsiga punkter på banorna under penseln.</td></tr>
+<tr><td>Krumelverktyg</td><td>&ndash;</td><td>Krusar banorna under penseln.</td></tr>
+</tbody>
+</table>
+<p>Breddverktyget avsmalnar och sväller en kontur för hand, för en penna- eller penselliknande linje utan att byta pensel. De sju flytverktygen trycker, vider och grovgör banor medan du målar över dem, för organisk förvrängning som skulle vara långsam att göra ankare för ankare. Alla sju tar <kbd>[</kbd> och <kbd>]</kbd> för storlek, och <kbd>&#8679;</kbd> med samma tangenter, <kbd>{</kbd> och <kbd>}</kbd>, för hur hårt de trycker.</p>
+
+<h3 id="tools-free-transform">Fritt transform och pinnförvrängning</h3>
+<table>
+<thead><tr><th>Verktyg</th><th>Genväg</th><th>Vad det gör</th></tr></thead>
+<tbody>
+<tr><td>Fritt transformverktyg</td><td><kbd>E</kbd></td><td>En enda ruta som skalar, vider, lutar och förvränger markeringen. Dra en kant eller ett hörnmatt för att skala, håll ned <kbd>&#8984;</kbd> på ett kanthandtag för att luta, dra inne i rutan för att flytta den, och dra precis utanför ett hörn för att vrida den.</td></tr>
+<tr><td>Pinnförvrängningsverktyg</td><td>&ndash;</td><td>Klicka på det markerade konstverket för att släppa en pin, och dra sedan pinnarna för att böja det; konstverket behåller sin form runt de pinnar som står still. <kbd>&#8997;</kbd>-klicka på en pin tar bort den, <kbd>&#8679;</kbd>-klicka plockar upp flera, och <kbd>&#8997;</kbd>-dra precis utanför en pin vider konstverket kring den.</td></tr>
+</tbody>
+</table>
+<p>Fritt transform är allt-i-ett-rutan när du vill skala, vrida och luta i en gest istället för att byta verktyg. Det fungerar kring sin referenspunkt, som du kan dra vart som helst, även utanför rutan; släpp den nära en av ruts nio vanliga platser och den stannar där. Medan du skalar, behåller <kbd>&#8679;</kbd> proportionerna och <kbd>&#8997;</kbd> skalar kring centrum snarare än referenspunkten; medan du vider, fäster <kbd>&#8679;</kbd> till 45&deg;. På ett hörnmatt förvränger <kbd>&#8984;</kbd> det hörnet för sig självt och <kbd>&#8984;&#8997;&#8679;</kbd> förvränger i perspektiv, med det intilliggande hörnet som speglar dragningen; widgeten bredvid rutan ställer in samma två lägen och begränsningsväxeln. Att ändra en modifierare halvvägs genom en dragning växlar direkt, utan att släppa.</p>
+<p>Pinnförvrängning är för att posera och böja ett enda konstverk, som att böja en ritad arm, genom att fästa de delar som ska hålla stilla och dra resten. Det läser <kbd>Delete</kbd> som att ta bort de markerade pinnarna snarare än konstverket, och <kbd>&#8984;A</kbd> som att markera varje pin. Varje dragning är ett steg att ångra, och ångeråtgärden tar tillbaka pinnarna med det konstverk de följde med. Text, bilder och symbolinstanser kan inte förvrängas, och lämnas som de är.</p>
+
+<h2 id="tools-build-perspective">Förena &amp; dela, Regionfyllning och perspektiv</h2>
+<p>Verktyg som behandlar överlappande former som regioner att förena och färglägga, och rutnätet som låter dig rita och placera konstverk i perspektiv.</p>
+
+<h3 id="tools-builder-paint">Förena &amp; dela och Regionfyllning</h3>
+<table>
+<thead><tr><th>Verktyg</th><th>Genväg</th><th>Vad det gör</th></tr></thead>
+<tbody>
+<tr><td>Förena &amp; dela-verktyg</td><td><kbd>&#8679;M</kbd></td><td>Med överlappande former markerade, dra över de regioner du vill förena och de blir ett objekt. <kbd>&#8997;</kbd>-dra tar bort de regioner du korsar istället.</td></tr>
+<tr><td>Regionfyllningsburk</td><td><kbd>K</kbd></td><td>Klicka på en sida i en Regionfyllningsgrupp för att fylla den med den aktuella färgen; <kbd>&#8997;</kbd>-klicka plockar upp färgen som redan finns där istället för att lägga någon. Sidan under pekaren kontureras innan du klickar.</td></tr>
+<tr><td>Regionmarkeringsverktyg</td><td><kbd>&#8679;L</kbd></td><td>Klicka på en sida i en Regionfyllningsgrupp för att markera den, utan att måla den.</td></tr>
+</tbody>
+</table>
+<p>Använd Förena &amp; dela för att rita några överlappande former och sedan förena och beskära dem till den kontur du vill ha, genom att dra över bitarna. Regionfyllning behandlar en uppsättning överlappande banor som en färgbok: burken överflöder varje omsluten sida med en färg, och markeringsverktyget plockar ut sidor och kanter så att du kan omforma dem, utan att först klippa isär formerna.</p>
+
+<h3 id="tools-perspective">Perspektiv</h3>
+<table>
+<thead><tr><th>Verktyg</th><th>Genväg</th><th>Vad det gör</th></tr></thead>
+<tbody>
+<tr><td>Perspektivrutnätsverktyg</td><td><kbd>&#8679;P</kbd></td><td>Visar rutnätet och formar det: dra i försvinningspunkterna, dra en av dem upp eller ner för att flytta horisonten, och dra rutnätets nära hörn. <kbd>1</kbd> till <kbd>4</kbd>, eller widgeten på skärmen, väljer det plan du ritar på.</td></tr>
+<tr><td>Perspektivmarkeringsverktyg</td><td><kbd>&#8679;V</kbd></td><td>Markera konstverk och dra det längs dess plan. Konstverk som inte är på rutnätet ännu sätts ner på det aktiva plan där du drar det.</td></tr>
+</tbody>
+</table>
+<p>Nå efter dessa för att rita scener och bokstäver som försvinner mot försvinningspunkter, såsom en gågata eller en förpackad produkt. Medan rutnätet visas, ritar rektangel-, avrundad rektangel-, ellips- och rektangulärt rutnätverktygen på det aktiva planet snarare än platt, och <kbd>1</kbd> till <kbd>4</kbd> väljer plan från dessa verktyg också.</p>
+
+<h2 id="tools-mesh-gradient">Nät och gradient</h2>
+<p>De två verktygen för att måla övergående färg in i en form: ett nät av färgpunkter över objektet, eller en slät övergradering längs en axel.</p>
+
+<h3 id="tools-mesh">Nät</h3>
+<table>
+<thead><tr><th>Verktyg</th><th>Genväg</th><th>Vad det gör</th></tr></thead>
+<tbody>
+<tr><td>Nätverktyg</td><td><kbd>U</kbd></td><td>Klicka inne i ett objekt för att dra en nätlinje varje väg genom den punkten, och förvandla en vanlig bana till ett nät. Klicka på en nätplocka för att plocka upp den och ge den en färg från Färgpanelen, dra en punkt för att flytta den, och <kbd>&#8997;</kbd>-klicka på en för att ta bort linjerna genom den.</td></tr>
+</tbody>
+</table>
+<p>Använd ett nät för mjuk, frihandskuggning som en rak gradient inte kan ge, såsom den avrundade höjdpunkten på en frukt eller ett ansikte.</p>
+
+<h3 id="tools-gradient">Gradient</h3>
+<table>
+<thead><tr><th>Verktyg</th><th>Genväg</th><th>Vad det gör</th></tr></thead>
+<tbody>
+<tr><td>Gradientverktyg</td><td><kbd>G</kbd></td><td>Dra över markeringen för ställa in axeln för dess aktiva färg, med <kbd>&#8679;</kbd> som håller axeln till 45&deg;-steg. Över konstverk som redan har en gradient, arbeta med annoteraren istället.</td></tr>
+</tbody>
+</table>
+<p>Dra gradientverktyget för att peka en linjär eller radiell övergradering som du vill och för att ställa in hur långt den löper. På annoteraren, dra en stopp längs axeln för att flytta den, dra en diamant för att skifta övergraderingen mellan två stopp, klicka på axeln för att lägga till ett stopp i den färg den redan har där, och dra ett stopp långt bort från axeln för att kasta det, så länge två finns kvar. <kbd>Delete</kbd> tar bort det stopp du sist rörde. På en frihandsgradient fungerar verktyget i färgpunkter istället: klicka på konstverket för att lägga till en i fyllningsfärgen, och dra en punkt för att flytta den. Gradienter täcks vidare på <a href="/manual/appearance/">Färg &amp; utseende</a>-sidan.</p>
+
+<h2 id="tools-sample-morph">Provtaga, mäta och morfera</h2>
+<p>Kopiera ett utseende från ett objekt till ett annat, läs avstånd och vinklar från duken, och blanda mellan former i en serie steg.</p>
+
+<h3 id="tools-eyedropper">Pipett och mätverktyg</h3>
+<table>
+<thead><tr><th>Verktyg</th><th>Genväg</th><th>Vad det gör</th></tr></thead>
+<tbody>
+<tr><td>Pipettverktyg</td><td><kbd>I</kbd></td><td>Klicka på ett objekt för att prova hela dess utseende på markeringen, eller på standardstilen när inget är markerat. <kbd>&#8679;</kbd> provar bara dess fyllnings- eller konturfärg till den aktiva sidan, och <kbd>&#8997;</kbd> fungerar tvärtom, och tillämpar markeringens utseende på objektet du klickar på.</td></tr>
+<tr><td>Mätverktyg</td><td>&ndash;</td><td>Dra mellan två punkter för att läsa avståndet, förskjutningarna och vinkeln; <kbd>&#8679;</kbd> håller linjen till 45&deg;-steg. Den sista mätningen stannar på skärmen tills nästa dragning.</td></tr>
+</tbody>
+</table>
+<p>Pipetten är det snabba sättet att få ett objekt att matcha ett annat: plocka utseendet du gillar och det lander på markeringen. Använd mätverktyget för att kontrollera ett gap eller en vinkel utan att lämna ett märke på konstverket.</p>
+
+<h3 id="tools-blend">Morfera</h3>
+<table>
+<thead><tr><th>Verktyg</th><th>Genväg</th><th>Vad det gör</th></tr></thead>
+<tbody>
+<tr><td>Morfverktyg</td><td><kbd>W</kbd></td><td>Klicka på ett objekt och sedan ett annat för att morfera mellan dem genom en serie mellanliggande steg. För att ta ett ytterligare objekt in i en morf, klicka inne i morfen och klicka sedan på objektet du vill lägga till i den.</td></tr>
+</tbody>
+</table>
+<p>Nå efter morfverktyget för att blanda en form eller färg in i en annan över jämna steg, vare sig för ett mjuk skuggband eller jämnt fördelade, förändrade kopior längs en bana.</p>
+
+<h2 id="tools-symbols">Symboler</h2>
+<p>En symbol är ett konstverk som du kan placera många gånger, med varje kopio bunden till en original. Symbolpenslarna lägger ner och sedan arbetar hela folksamlingar av dessa instanser på en gång.</p>
+
+<h3 id="tools-symbolism">Symbolpenslarna</h3>
+<table>
+<thead><tr><th>Verktyg</th><th>Genväg</th><th>Vad det gör</th></tr></thead>
+<tbody>
+<tr><td>Symbolspridningsverktyg</td><td><kbd>&#8679;S</kbd></td><td>Dra för att lägga ner instanser av den symbol som valts i Symbolpanelen, som en symboluppsättning. <kbd>&#8997;</kbd> tar bort instanser igen.</td></tr>
+<tr><td>Symbolskjutningsverktyg</td><td>&ndash;</td><td>Drar instanserna under penseln längs med pekaren.</td></tr>
+<tr><td>Symbolpackningsverktyg</td><td>&ndash;</td><td>Drar ihop instanserna under penseln; <kbd>&#8997;</kbd> sprider isär dem.</td></tr>
+<tr><td>Symbolskalningsverktyg</td><td>&ndash;</td><td>Ökar instanserna under penseln; <kbd>&#8997;</kbd> minskar dem.</td></tr>
+<tr><td>Symbolvridningsverktyg</td><td>&ndash;</td><td>Vrider instanserna under penseln för att följa dragningen.</td></tr>
+<tr><td>Symboltoningsverktyg</td><td>&ndash;</td><td>Tonerar instanserna under penseln mot fyllningsfärgen; <kbd>&#8997;</kbd> tar toningen tillbaka ut.</td></tr>
+<tr><td>Symboltoningsborttagningverktyg</td><td>&ndash;</td><td>Tonerar bort instanserna under penseln; <kbd>&#8997;</kbd> får dem tillbaka till full styrka.</td></tr>
+<tr><td>Symbolomformningsverktyg</td><td>&ndash;</td><td>Tillämpar den grafiska stil som valts i Grafikstilspanelen på instanserna under penseln; <kbd>&#8997;</kbd> tar bort den.</td></tr>
+</tbody>
+</table>
+<p>Använd dessa för att sprida och sedan variera ett fält av upprepat konstverk, såsom träd över en sluttning eller stjärnor på en himmel: sprej en uppsättning, och sedan tunna ut den, ändra storlek, vrid och tonera den så att kopiorna inte ser stämplade ut. Alla åtta tar <kbd>[</kbd> och <kbd>]</kbd> för penselstorlek och <kbd>{</kbd> och <kbd>}</kbd> för hur hårt penseln arbetar. De verkar på instanserna i markeringen, eller på varje redigerbar instans när inget är markerat.</p>
+
+<h2 id="tools-boards-slices">Artboards och snitt</h2>
+<p>Verktygen som ordnar duken för utdata: artboards, som är sidorna ditt konstverk sitter på, och snitt, som markerar rektanglar att exportera för sig.</p>
+
+<h3 id="tools-boards">Artboards</h3>
+<table>
+<thead><tr><th>Verktyg</th><th>Genväg</th><th>Vad det gör</th></tr></thead>
+<tbody>
+<tr><td>Artboardverktyg</td><td><kbd>&#8679;O</kbd></td><td>Rita, flytta och ändra storlek på artboards direkt på duken. Dra tom duk för en ny artboard, med <kbd>&#8997;</kbd> som ritar från centrum och <kbd>&#8679;</kbd> som håller den kvadratisk; dra inne i en artboard för att flytta den, med <kbd>&#8679;</kbd> som håller flytten till en axel; dra ett hörnmatt med <kbd>&#8679;</kbd> för att behålla artboards proportioner.</td></tr>
+</tbody>
+</table>
+<p>Nå efter artboardverktyget för att lägga till sidor för olika storlekar eller versioner av en design i ett dokument, och för att ändra storlek på en sida runt det du har ritat. <kbd>Delete</kbd> tar bort den aktiva artboarden, så länge en finns kvar.</p>
+
+<h3 id="tools-slices">Snitt</h3>
+<table>
+<thead><tr><th>Verktyg</th><th>Genväg</th><th>Vad det gör</th></tr></thead>
+<tbody>
+<tr><td>Snittverktyg</td><td><kbd>&#8679;K</kbd></td><td>Dra ut en rektangel som exporterar för sig; <kbd>&#8997;</kbd> ritar från centrum och <kbd>&#8679;</kbd> håller den kvadratisk. Snittkanter stannar på hela pixlar, så att det som kommer ut inte blir suddigt.</td></tr>
+<tr><td>Snittmarkeringsverktyg</td><td>&ndash;</td><td>Plocka, flytta och ändra storlek på snitt. <kbd>Delete</kbd> tar bort det markerade och en dubbelklick öppnar dess alternativ.</td></tr>
+</tbody>
+</table>
+<p>Använd snitt för att skära en artboard i bitar som exporterar separat, såsom knappar och banderoller för en webblayout, var och en som egen fil. Exportering täcks på <a href="/manual/files/">Öppna &amp; exportera</a>-sidan.</p>
+
+<h2 id="tools-navigate">Navigera</h2>
+<p>Verktygen som panorerar, vider och zoomar vyn. Ingen av dem ändrar dokumentet: de ändrar bara hur du tittar på det.</p>
+
+<h3 id="tools-view">Flytta vyn</h3>
+<table>
+<thead><tr><th>Verktyg</th><th>Genväg</th><th>Vad det gör</th></tr></thead>
+<tbody>
+<tr><td>Handverktyg</td><td><kbd>H</kbd></td><td>Dra för att panorera vyn. Håll ned mellanslagstangenten lånar det från valfritt annat verktyg så länge du håller det.</td></tr>
+<tr><td>Rotera vy-verktyg</td><td><kbd>&#8679;H</kbd></td><td>Dra för att vrida vyn kring mitten av fönstret, med <kbd>&#8679;</kbd> som fäster till 15&deg;; dubbelklicka för att sätta den upprätt igen. Bara vyn vrid, aldrig dokumentet.</td></tr>
+<tr><td>Utskriftsplattverktyg</td><td>&ndash;</td><td>Listat i verktygsraden men inte implementerat ännu; paletten markerar det som kommer snart.</td></tr>
+</tbody>
+</table>
+<p>Handverktyget rullar en zooman ritning utan att rulla i rullningslistarna, och rotera-vy-verktyget lutar hela vyn så att du kan rita en sned linje i en bekväm vinkel, och sedan sätta den rak igen.</p>
+
+<h3 id="tools-zoom">Zooma</h3>
+<table>
+<thead><tr><th>Verktyg</th><th>Genväg</th><th>Vad det gör</th></tr></thead>
+<tbody>
+<tr><td>Zoomverktyg</td><td><kbd>Z</kbd></td><td>Klicka för att zooma in och <kbd>&#8997;</kbd>-klicka för att zooma ut. Dra en rektangel över en del av konstverket för att fylla fönstret med den.</td></tr>
+</tbody>
+</table>
+
+<h2 id="tools-fill-stroke">Fyllnings- och kontroller</h2>
+<p>Längst ner i verktygsraden sitter fyllnings- och konturprovet, det ena framför det andra. Det främre provet är den aktiva sidan, den som ditt nästa färgval landar på. En handfull enstaka tangenter fungerar dem utan att nå efter panelerna:</p>
+<table>
+<thead><tr><th>Genväg</th><th>Vad det gör</th></tr></thead>
+<tbody>
+<tr><td><kbd>D</kbd></td><td>Återställer fyllning och kontur till deras standardvärden.</td></tr>
+<tr><td><kbd>X</kbd></td><td>Växlar vilken av fyllningen eller konturen som är den aktiva sidan.</td></tr>
+<tr><td><kbd>&#8679;X</kbd></td><td>Byter fyllnings- och konturfärgerna.</td></tr>
+<tr><td><kbd>/</kbd></td><td>Ställer in den aktiva sidan till ingen färg.</td></tr>
+</tbody>
+</table>
+<p>Dessa gör de vanliga rörelserna snabba: <kbd>X</kbd> för att hoppa mellan att måla fyllningen och konturen, <kbd>/</kbd> för att släppa fyllningen eller konturen till ingen, och <kbd>D</kbd> för att komma tillbaka till en enkel svart-och-vit start. Fyllningar, konturer och hur de ställs in täcks på <a href="/manual/appearance/">Färg &amp; utseende</a>-sidan.</p>

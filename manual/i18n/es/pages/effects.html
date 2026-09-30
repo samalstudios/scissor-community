@@ -1,0 +1,94 @@
+<p class="lede">Un efecto cambia cómo se ve un objeto sin cambiar el objeto mismo. El trazado, el grupo o la pieza de texto permanece exactamente como lo dibujaste, y el efecto se recalcula encima cada vez que mueves un punto o editas un valor. Los efectos se apilan en el panel Pila de pintura, de modo que puedes apilar varios en un objeto, reordenarlos y quitar cualquiera de ellos de nuevo.</p>
+
+<figure class="shot">
+  <img src="img/effects-demo.png" width="1400" height="560" loading="lazy"
+       alt="Tres fichas azules idénticas mostrando tres efectos: una sombra paralela, un brillo exterior ámbar y bordes rugosos." />
+  <figcaption>La misma ficha con tres efectos: una sombra paralela, un brillo exterior y Rugoso. Cada uno es en vivo, de modo que la ficha de debajo sigue siendo un rectángulo redondeado simple.</figcaption>
+</figure>
+
+<h2 id="effects-live-and-stacked">Efectos en vivo y la pila de apariencia</h2>
+<p>Cada efecto en Scissor es <strong>en vivo</strong> y <strong>no destructivo</strong>. Se sitúa encima de los rellenos y contornos del objeto en el panel <strong>Apariencia</strong> (<kbd>&#8679;F6</kbd>) y se ejecuta sobre todo el objeto cada vez que la obra o el efecto cambian. Porque el trazado original permanece intacto debajo, puedes seguir editando puntos de anclaje, cambiar el color de relleno o reescribir las palabras, y el efecto lo sigue. Recurre a un efecto siempre que quieras un aspecto, una sombra, un doblado, una esquina redondeada, de la que podrías cambiar de opinión después, en lugar de comprometerte a ella a mano.</p>
+
+<h3 id="effects-order">El orden importa</h3>
+<p>Los efectos se ejecutan de abajo hacia arriba en la pila, y el panel los lista de arriba hacia abajo, sobre los rellenos y contornos. El orden cambia el resultado: un desenfoque debajo de una sombra paralela suaviza la forma antes de que se proyecte la sombra, mientras que los dos mismos en orden inverso proyectan una sombra nítida y luego difuminan todo. Si un efecto no hace lo que esperas, su posición en la pila es lo primero que hay que comprobar.</p>
+
+<h2 id="effects-using">Añadir, editar y eliminar efectos</h2>
+<h3 id="effects-add">Desde el menú Efecto</h3>
+<p>Selecciona un objeto, luego elige un efecto del menú <strong>Efecto</strong>. Los elementos que abren un diálogo muestran una <strong>Vista previa</strong> mientras cambias sus valores, de modo que puedes juzgar el resultado en el lienzo antes de comprometerte; toda la edición aterriza como un solo paso en el historial en lugar de un paso por pulsación. Una versión corta del menú (Sombra paralela, Brillo exterior y Desenfoque gaussiano, más Limpiar efectos) también se sitúa en el menú contextual del lienzo bajo <strong>Efecto</strong>.</p>
+<h3 id="effects-appearance">En el panel Pila de pintura</h3>
+<p>Cada efecto en el objeto seleccionado tiene su propia fila en el panel Pila de pintura, marcado con una insignia <em>fx</em>. Haz clic en el nombre del efecto para reabrir sus opciones y cambiarlas. Haz clic en la cruz al final de la fila para eliminar ese efecto. Para quitar cada efecto de la selección de una vez, usa <strong>Efecto &rsaquo; Limpiar efectos</strong>.</p>
+<h3 id="effects-panels">En los paneles de efectos</h3>
+<p>El grupo <strong>Ventana &rsaquo; Efectos</strong> reúne los efectos en un panel por cada parte del menú Efecto: Estilizar, Desenfoque, Distorsionar y transformar, Trazado, Combinar formas y Deformar, con el panel 3D al lado. Cada panel lista los efectos de ese grupo con un interruptor para activar o desactivar uno y sus ajustes justo debajo, todos editados en vivo sobre la selección. Es una manera más rápida de probar un efecto y ajustar sus valores que abrir un diálogo cada vez. Apagar un interruptor quita ese efecto del objeto. Cuando un objeto lleva más de un efecto del mismo tipo, el panel edita el primero de ellos y el panel Pila de pintura sigue mostrando toda la pila.</p>
+
+<h2 id="effects-stylize">Estilizar: sombras, brillos y bordes</h2>
+<p>El submenú <strong>Efecto &rsaquo; Estilizar</strong> contiene los efectos de acabado cotidianos.</p>
+<table>
+  <thead><tr><th>Efecto</th><th>Qué hace, y cuándo usarlo</th><th>Opciones principales</th></tr></thead>
+  <tbody>
+    <tr><td>Sombra paralela</td><td>Proyecta una copia desplazada y difuminada del objeto detrás de él. Úsala para levantar una forma, una tarjeta o una pieza de texto del fondo.</td><td>Desplazamiento X e Y, Desenfoque, Color, Opacidad.</td></tr>
+    <tr><td>Brillo exterior</td><td>Extiende un halo suave de color hacia afuera desde el borde del objeto. Recurre a ella para un letrero de neón, un resaltado, o un brillo alrededor de una fuente de luz.</td><td>Desenfoque, Color, Opacidad.</td></tr>
+    <tr><td>Brillo interior</td><td>Funde un color hacia adentro desde el borde en lugar de hacia afuera, de modo que la luz se sitúa dentro de la forma. Úsala para ahuecar una forma o sugerir un borde interior iluminado.</td><td>Desenfoque, Color, Opacidad.</td></tr>
+    <tr><td>Pluma</td><td>Funde el propio borde del objeto a transparente en un radio. Úsala para una forma de borde suave o un viñeteado simple.</td><td>Radio de pluma.</td></tr>
+    <tr><td>Redondear esquinas</td><td>Redondea cada esquina del trazado a un radio. Úsala para suavizar las puntas de una estrella, un polígono o un trazado dibujado a mano sin redibujarlo.</td><td>Radio.</td></tr>
+    <tr><td>Relleno de bosquejo</td><td>Rellena la forma con una serie de trazos de ida y vuelta, como si estuviera bosquejado a mano. Bueno para un relleno suelto y dibujado o un aspecto de rotulador.</td><td>Ángulo, Espaciado, Grosor de trazo, Variación (cuánto se desvían los trazos, de 0 a 100%).</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-blur">Desenfoque</h2>
+<p><strong>Efecto &rsaquo; Desenfoque &rsaquo; Desenfoque gaussiano</strong> suaviza todo el objeto por un <em>Radio</em> que estableces en píxeles. Porque permanece en vivo, puedes subir o bajar el radio en cualquier momento. Úsala para un fondo suave y desenfocado, o como una forma de sombra suave rápida por sí misma.</p>
+
+<h2 id="effects-distort">Distorsionar y transformar</h2>
+<p>El submenú <strong>Efecto &rsaquo; Distorsionar y transformar</strong> remodela el contorno manteniendo el trazado subyacente editable.</p>
+<table>
+  <thead><tr><th>Efecto</th><th>Qué hace, y cuándo usarlo</th><th>Opciones principales</th></tr></thead>
+  <tbody>
+    <tr><td>Distorsión libre</td><td>Arrastra las cuatro esquinas del cuadro del objeto en una pequeña vista previa, y la obra sigue en perspectiva. Úsala para simular una perspectiva, como una etiqueta apoyada en una superficie inclinada. Un interruptor Vista previa muestra el resultado en el lienzo mientras arrastras, y Restablecer devuelve las esquinas a escuadra.</td><td>Los cuatro tiradores de esquina, Vista previa, Restablecer.</td></tr>
+    <tr><td>Pellizcar e hinchar</td><td>Dobla los segmentos entre puntos de anclaje hacia adentro, pellizcando el contorno en picos, o hacia afuera, hinchándolo en abombamientos. Úsala para explosiones estelares, manchas y formas de pétalo suaves.</td><td>Cantidad, desde pellizcado hasta hinchado.</td></tr>
+    <tr><td>Rugoso</td><td>Rompe el contorno en pequeños movimientos aleatorios, afilados o suavizados. Úsala para un borde de papel rasgado o una línea más tosca y dibujada a mano.</td><td>Tamaño (cuánto se mueven los puntos), Detalle (qué tan densamente), Puntos: Suave o Esquina.</td></tr>
+    <tr><td>Transformar</td><td>Escala, mueve y rota el objeto como un efecto, y puede dejar un conjunto de copias atrás. Úsala para una fila o anillo de repeticiones editables, o para empujar y redimensionar una forma sin tocar su geometría real.</td><td>Escalar horizontal y vertical, Mover horizontal y vertical, Rotar, Copias (0 a 200).</td></tr>
+    <tr><td>Ajustar</td><td>Desplaza los puntos de anclaje y sus tiradores de control por una cantidad aleatoria. Úsala para sacar una forma demasiado perfecta de su escuadra.</td><td>Cantidad horizontal y vertical, y si mover Puntos de anclaje, Puntos de control, o ambos.</td></tr>
+    <tr><td>Girar</td><td>Gira el interior de la forma más que sus bordes, enrollándolo en un remolino. Úsala para una espiral o un remolino.</td><td>Ángulo.</td></tr>
+    <tr><td>Zigzag</td><td>Convierte segmentos rectos en zigzags regulares (Esquina) u ondas (Suave). Úsala para un subrayado ondulado, un borde de festón o un borde dentado.</td><td>Tamaño, Crestas por segmento, Puntos: Esquina o Suave.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-path">Trazado</h2>
+<p>El submenú <strong>Efecto &rsaquo; Trazado</strong> reelabora el contorno del objeto dejando la fuente editable.</p>
+<table>
+  <thead><tr><th>Efecto</th><th>Qué hace, y cuándo usarlo</th><th>Opciones principales</th></tr></thead>
+  <tbody>
+    <tr><td>Desplazar trazado</td><td>Agranda o encoge el contorno por una distancia establecida. Un desplazamiento positivo lo extiende hacia afuera, uno negativo lo atrae hacia adentro. Úsala para un contorno en vivo alrededor de texto o una forma que sigue el ritmo mientras editas.</td><td>Desplazamiento, Uniones: Inglete, Redondo o Bisel.</td></tr>
+    <tr><td>Contornear objeto</td><td>Añade un efecto Desplazar trazado establecido en cero, convirtiendo el objeto (texto en vivo incluido) en un trazado contorneado para que los efectos posteriores tengan un trazado real sobre el que actuar.</td><td>Ninguna.</td></tr>
+    <tr><td>Contornear contorno</td><td>Convierte el contorno en una forma rellena como un efecto. Úsala cuando quieras rellenar un contorno con un degradado, o difuminar o distorsionar un contorno que de otro modo es una línea simple.</td><td>Ninguna.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-pathfinder">Combinar formas</h2>
+<p>El submenú <strong>Efecto &rsaquo; Combinar formas</strong> combina las formas dentro de un grupo con un modo de forma, pero las mantiene como trazados separados y editables debajo. Aplícalo a un grupo y el resultado combinado es lo que ves, mientras cada miembro aún se puede mover o recolorear. Úsala para probar una combinación sin comprometerte a ella como lo haría el panel Combinar formas.</p>
+<table>
+  <thead><tr><th>Modo</th><th>Resultado</th></tr></thead>
+  <tbody>
+    <tr><td>Añadir</td><td>Fusiona las formas del grupo en una región.</td></tr>
+    <tr><td>Intersecar</td><td>Conserva solo donde se superponen las formas.</td></tr>
+    <tr><td>Excluir</td><td>Conserva todo excepto donde se superponen.</td></tr>
+    <tr><td>Restar</td><td>Elimina las formas delanteras de la trasera.</td></tr>
+    <tr><td>Menos trasero</td><td>Elimina las formas traseras de la delantera.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-warp">Deformar</h2>
+<p><strong>Efecto &rsaquo; Deformar</strong> dobla el objeto a lo largo de una de un conjunto de formas preestablecidas, y permanece en vivo para que puedas seguir editando la obra debajo. Úsala para curvar un titular en un arco, ondear un banner, o empujar un bloque plano en un abombamiento, sin renunciar a la capacidad de cambiar las palabras o los colores.</p>
+<p>El menú ofrece diez estilos directamente (Arco, Arqueta, Abombamiento, Bandera, Onda, Pez, Elevación, Ojo de pez, Inflar y Exprimir). <strong>Opciones de deformación…</strong> abre el conjunto completo, que añade Arco inferior, Arco superior, Concha inferior y Concha superior, y te permite marcar la cantidad:</p>
+<dl>
+  <dt>Curvatura</dt><dd>Qué tan fuertemente se dobla la forma, de -100% a 100%.</dd>
+  <dt>Horizontal</dt><dd>Inclina la curvatura hacia un lado, de -100% a 100%.</dd>
+  <dt>Vertical</dt><dd>La curvatura hacia arriba o hacia abajo, de -100% a 100%.</dd>
+</dl>
+<p>Los mismos estilos de deformación se pueden aplicar como un deformador de remodelación en su lugar, que cambia el trazado mismo en lugar de permanecer en vivo: ver <a href="#transform-envelope">Deformar forma</a>. La herramienta Deformar y las otras herramientas de licuar remodelan arrastrando en el lienzo y se cubren en <a href="#tools-width-liquify">la referencia de herramientas</a>.</p>
+
+<h2 id="effects-3d">3D y Materiales</h2>
+<p><strong>Efecto &rsaquo; 3D y Materiales</strong> convierte una forma plana en un sólido: un plano, una extrusión y bisel, una revolución o un inflado. Como los demás es un efecto en vivo, de modo que el trazado plano sigue ahí para editar y el sólido se reconstruye cuando lo cambias. La profundidad, el bisel, la rotación, la iluminación y la superficie se establecen en el panel 3D y Materiales. Porque tiene más controles que un solo diálogo, 3D tiene su propia página: ver <a href="/manual/three-d/">3D</a>.</p>
+
+<h2 id="effects-expand">Convertir efectos en obra</h2>
+<p>Un efecto permanece en vivo todo el tiempo que quieras. Cuando el aspecto está asentado y necesitas el resultado como trazados simples y editables, por ejemplo para entregar el archivo o para remodelar la salida del efecto a mano, elige <strong>Objeto &rsaquo; Expandir apariencia</strong>. Hornea toda la pila de apariencia, efectos incluidos, en obra ordinaria. Esto no se puede editar como un efecto después, así que expande solo cuando estés seguro. Para quemar efectos sin hornear nada, elimínalos de uno en uno en el panel Pila de pintura o límpialos todos con <strong>Efecto &rsaquo; Limpiar efectos</strong>.</p>
+<p>El menú Efecto también lista <strong>Convertir en píxeles</strong>, que no es un efecto en vivo: convierte la selección en píxeles en ese momento. La pintura y las capas de píxeles se cubren en la página <a href="/manual/pixels/">Capas de píxeles</a>.</p>

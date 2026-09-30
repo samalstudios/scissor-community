@@ -1,0 +1,65 @@
+<p class="lede">3D og materialer vender en flad form til en fast genstand, du kan dreje, belyse og give en overflade, uden at du nogensine forlader din vektorgrafik. Det er en levende effekt: genstanden tegnes fra stien under den, og denne sti forbliver fuldt redigerbar, så du kan ændre konturen, farven eller teksten når som helst, og 3D genbygger omkring den.</p>
+
+<h2 id="three-d-opening">Åbning af effekten</h2>
+<p>Vælg først et objekt og vælg derefter en objekttype fra <strong>Effekt &rsaquo; 3D og materialer</strong>: <em>Plan</em>, <em>Ekstrudér &amp; bevel</em>, <em>Drej</em> eller <em>Opblæs</em>. Hver tilføjer effekten og åbner <strong>3D og materialer</strong>-panelet, hvor resten af kontrollerne bor. Samme panel åbner for sig selv fra <strong>Vindue &rsaquo; 3D og materialer</strong> eller fra <strong>Effekt &rsaquo; 3D og materialer &rsaquo; 3D og materialer-panel</strong>.</p>
+<p>Panelet har brug for noget valgt, før det kan gøre noget; uden valgt siger det det og grå sine kontroller. Når et objekt har effekten, løber de fire objekttypeknapper på tværs af panelets top, så du kan skifte en form fra en ekstrudering til en drejning med ét klik og bevare rotationen og belysningen, du allerede har indstillet.</p>
+<p>Fordi det er en effekt og ikke en konvertering, kan du slippe den på næsten alt, hvad en sti kan holde: en form, en gruppe, en kontur eller levende tekst. Redigering af kilden, for eksempel omskrivning af et ord eller skub af et anker, kører effekten igen på den nye grafik.</p>
+
+<h2 id="three-d-types">De fire objekttyper</h2>
+<p>Objekttypen beslutter, hvordan den flade form læses som en fast genstand. Vælg den, der matcher den form, du er ude efter.</p>
+
+<h3 id="three-d-plane">Plan</h3>
+<p>Plan efterlader grafikken flad og placerer den som et kort i 3D-rummet, så det eneste den gør, er at lade dig dreje og vippe den. Der er ingen dybde at indstille. Gå efter den, når du vil have et stykke flad grafik til at sidde i en vinkel, som en etiket, der læner sig tilbage på en overflade, eller en badge, der vipper for at fange lyset, uden at give den nogen tykkelse.</p>
+
+<h3 id="three-d-extrude">Ekstrudering og bevel</h3>
+<p>Ekstrudering skubber formen ligeud for at give den tykkelse og gør en kontur til en fast blok. En bevel afrunder eller skærer de forreste og bageste kanter, så de ikke efterlades skarpe. Huller bevares: en sammensat sti som en ring eller et bogstav med modstykket forbliver hul hele vejen igennem. Dette er typen til bogstaver, logoer, ikoner og badges, der skal læses som ophøjede eller udskårne.</p>
+<figure class="shot">
+  <img src="img/3d-extrude.gif" width="620" height="620" loading="lazy" alt="En flad vektorstjerne, der ekstruderes til en tredimensionel stjerne og drejes for at vise sin dybde." />
+  <figcaption>Ekstrudering og bevel bygger dybde fra en flad form, levende. Stjernen forbliver en redigerbar sti under den.</figcaption>
+</figure>
+
+<h3 id="three-d-revolve">Drej</h3>
+<p>Drej svejper formen omkring dens venstre kant, ligesom en profil spundet på en drejebænke sporer en fast genstand ud. Tegn halvdelen af et symmetrisk objekt, et glas, en flaske, en skål, en skakbrik, og drej den rundt. Svejpevinklen kan være mindre end en hel omgang for at efterlade et udsnit, der viser indersiden.</p>
+
+<h3 id="three-d-inflate">Opblæs</h3>
+<p>Opblæs puster formen udad, som om den var en pude fyldt med luft og giver den en blød afrundet overflade i stedet for en flad. Brug den til bløde knapper, opblæste badges, slik og afrundede klistermærker, hvor du vil have svulning i stedet for en hård ekstruderet kant.</p>
+
+<h2 id="three-d-shape">Dybde, bevel og trin</h2>
+<p>Sektionen <em>Objekt</em> holder de felter, der former genstanden. Hvilke der vises, afhænger af objekttypen, så panelet viser kun de felter, der gør noget for den type i hånden.</p>
+<table>
+  <thead><tr><th>Felt</th><th>Vist for</th><th>Hvad det indstiller</th></tr></thead>
+  <tbody>
+    <tr><td>Dybde</td><td>Ekstrudering og bevel, Opblæs</td><td>Hvor langt formen skubbes tilbage, eller hvor meget den svulmer, i pixels.</td></tr>
+    <tr><td>Bevel</td><td>Ekstrudering og bevel</td><td>Størrelsen af den afrundede eller skårne kant på for- og bagside, i pixels; lad den være på nul for en almindelig firkantet kant.</td></tr>
+    <tr><td>Vinkel</td><td>Drej</td><td>Hvor langt profilen svejpes, op til en hel 360&deg;-vending. En mindre vinkel efterlader objektet åbent og viser dets inderside.</td></tr>
+    <tr><td>Trin</td><td>Ekstrudering og bevel, Drej, Opblæs</td><td>Hvor mange segmenter der bygger de buede dele. Flere trin giver en glattere overflade; færre efterlader den facetteret.</td></tr>
+  </tbody>
+</table>
+<p>Plan har ingen af disse: den har ingen tykkelse at beskrive. Hvis en buet drejning eller en afrundet bevel ser for kantet ud, skal du hæve trinnene; hvis du vil have en lav-polygon, facetteret look med vilje, skal du sænke dem.</p>
+
+<h2 id="three-d-rotation">Drejning af objektet</h2>
+<p>Sektionen <em>Rotation</em> indstiller, hvordan objektet vender dig. Den hurtigste måde er forhåndsvisningspladen: træk på tværs af den for at dreje objektet til venstre og højre, og træk op og ned for at vippe det fremad og tilbage. For nøjagtige vinkler drejer <em>X</em>-, <em>Y</em>- og <em>Z</em>-felterne objektet omkring hver akse, hver fra -180&deg; til 180&deg;.</p>
+<p>Rotationsmenuen holder færdige synsvinkler, så du kan sætte objektet direkte i en standardvisning i stedet for at indstille én:</p>
+<dl>
+  <dt>Akseforskudt forside, bagside, venstre, højre, top, bund</dt><dd>Tredjedels visninger, der viser én hovedflade sammen med lidt af top eller side. En god standard for en genstand, der skal se ud som en genstand.</dd>
+  <dt>Isometrisk venstre, højre, top, bund</dt><dd>Ægte isometriske visninger, hvor de tre akser forkortes ligeligt, og linjer forbliver parallelle. Passer til teknisk og spil-agtig grafik, der skal linje op.</dd>
+  <dt>Forside, bagside, venstre, højre, top, bund</dt><dd>De seks lige-visninger, der kigger firkantet på én flade. Praktisk til at tjekke formen eller til en flad, frontpræsentation.</dd>
+</dl>
+<p>Valg af en forudindstilling udfylder X-, Y- og Z-felterne; ændring af enhver af dem manuelt viser menuen som <em>Tilpasset rotation</em>. Feltet <em>Perspektiv</em>, fra 0&deg; til 160&deg;, styrer, hvor stærkt objektet skrumper: på nul forbliver siderne parallelle, og efterhånden som du hæver den, trækkes de fjerne kanter ind mod et forsvindingspunkt, ligesom et rigtigt objekt set tæt på ser ud til at indsnævre. Tilføj lidt perspektiv for en livagtig tredjedels visning, eller lad det være på nul for at holde en isometrisk eller flad-op opsætning nøjagtig.</p>
+
+<h2 id="three-d-lighting">Belysning</h2>
+<p>Sektionen <em>Belysning</em> beslutter, hvor lyset kommer fra, og hvor hårdt det er, hvilket er det, der får overfladen til at læses som ophøjet, udskåret eller afrundet. Belysningsmenuen tilbyder fire udgangspunkter, <em>Standard</em>, <em>Diffus</em>, <em>Øverst til venstre</em> og <em>Højre</em>, og enhver ændring af felterne nedenfor viser den som <em>Tilpasset belysning</em>.</p>
+<dl>
+  <dt>Intensitet</dt><dd>Styrken af hovedlyset, som en procent. Højere gør de belyste flader lysere og højlysene stærkere.</dd>
+  <dt>Omgivende</dt><dd>Et fyldlys, der løfter hele objektet, som en procent, så de skyggefulde flader ikke falder til sort. Hæv den for en blødere, jævnere look; sænk den for dybere kontrast.</dd>
+  <dt>Rotation</dt><dd>Hvor lyset sidder omkring objektet, fra -180&deg; til 180&deg;, hvilket flytter højlyset og skyggen til den anden side.</dd>
+  <dt>Højde</dt><dd>Hvor højt lyset er over objektet, fra 0&deg; (i niveau med det, til lange skrå skygger) til 90&deg; (lige over hovedet, til jævnt lys).</dd>
+</dl>
+<p><em>Diffus</em> giver en blød, lav-kontrast overflade; <em>Øverst til venstre</em> og <em>Højre</em> kaster lyset fra én side for en mere dramatisk, skulptureret look. Start fra den forudindstilling, der er tættest, og juster derefter de fire felter efter smag.</p>
+
+<h2 id="three-d-materials">Materialer</h2>
+Tre materialeknapper indstiller, hvordan overfladen fanger lyset: <em>Plast</em>, <em>Mat</em> og <em>Metal</em>. Plast giver en blød glans med et klart højlys, det sædvanlige valg for en venlig, støbt look. Mat fjerner glansen for en flad, jævn overflade, der læses som papir, ler eller en trykt overflade. Metal giver en hårdere, højere kontrast skinn, til krom, guld og andre polerede metaller. Materialet fungerer sammen med belysningen, så en ændring af den ene er værd at tjekke mod den anden.</p>
+
+<h2 id="three-d-expand">At holde det levende og udvide</h2>
+<p>Alt ovenfor gemmes som én levende effekt på objektet, opført i <strong>Udseende</strong>-panelet (<kbd>&#8679;F6</kbd>) med et <em>fx</em>-mærke over objektets udfyldninger og stregoverflader. Klik på dette element for at genåbne 3D- og materiale-panelet eller fjerne det der for at tage objektet tilbage til fladt. Inden i panelet fjerner <em>Fjern 3D</em> effekten fra markeringen.</p>
+<p>Mens effekten er levende, forbliver grafikken under den en almindelig, redigerbar sti, hvilket er det, der lader dig fortsætte med at finjustere formen, farven og teksten. Når udseendet er fastlagt, og du vil have resultatet som almindelig vektorgrafik, for eksempel for at redigere de enkelte flader eller overdrage filen, skal du bruge <em>Udvid som vektor</em> i panelet (det samme som <strong>Objekt &rsaquo; Udvid udseende</strong>). Det bager genstanden ned i stier og afslutter dens liv som en effekt, så udvid en kopi, hvis du måske stadig vil ændre dybden eller vinklen senere.</p>

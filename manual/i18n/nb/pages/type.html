@@ -1,0 +1,110 @@
+<p class="lede">Tekst i Scissor forblir live. Du kan redigere ordene, skrifttypen og mellomrommet når som helst, og teksten tegnes rett på lerretet mens du skriver, slik at det du redigerer er det som skrives ut og eksporteres.</p>
+
+<p>Snarveiene nedenfor er skrevet i macOS-form. På Windows leser du <kbd>&#8984;</kbd> som <kbd>Ctrl</kbd>, <kbd>&#8997;</kbd> som <kbd>Alt</kbd> og <kbd>&#8679;</kbd> som <kbd>Shift</kbd>.</p>
+
+<h2 id="type-tools">Tekstverktøyene</h2>
+<p>Tekstverktøyene deler én plass i verktøylinjen. Velg plassen og hold for å velge blant dem, og jobb deretter på lerretet.</p>
+<table>
+  <thead><tr><th>Verktøy</th><th>Snarvei</th><th>Hva det gjør</th></tr></thead>
+  <tbody>
+    <tr><td>Tekstverktøy</td><td><kbd>T</kbd></td><td>Klikk for punkttekst, dra for et rektangulært ramme av områdetekst</td></tr>
+    <tr><td>Områdetekstverktøy</td><td></td><td>Dra ut en ramme og skriv i den</td></tr>
+    <tr><td>Tekst på sti-verktøy</td><td></td><td>Klikk en sti for å kjøre tekst langs den</td></tr>
+    <tr><td>Vertikal tekstverktøy</td><td></td><td>Setter oppreiste tegn i kolonner</td></tr>
+    <tr><td>Tegnredigeringsverktøy</td><td><kbd>&#8679;T</kbd></td><td>Flytter, endrer størrelse og roterer ett tegn om gangen</td></tr>
+  </tbody>
+</table>
+<p>For å redigere tekst som allerede er på siden, klikk på den med hvilket som helst av tekstverktøyene unntatt Tegnredigering for å sette markøren i den, eller dobbeltklikk på den med Utvalgsverktøyet (<kbd>V</kbd>). Trykk <kbd>Escape</kbd>, eller klikk bort, for å slutte å redigere. Med det vanlige Tekstverktøyet klikker du på en åpen sti kobler tekst til den stien i stedet for å starte en ny blokk, slik at du ikke alltid trenger å gripe etter det dedikerte Tekst på sti-verktøyet.</p>
+
+<h2 id="type-kinds">Punkt-, område- og sti-tekst</h2>
+<p>Tekst kan sitte i dokumentet på tre måter, og forskjellen er hvordan linjene måles og hvor de brytes. Alle tre forblir redigerbare, tar de samme Tegn- og Avsnittsinnstillingene, og kan gjøres til former senere.</p>
+
+<h3 id="type-point">Punkttekst</h3>
+<p>Klikk én gang med Tekstverktøyet og skriv. Teksten vokser fra det enkle punktet og brytes bare der du trykker <kbd>Return</kbd>: det er ingen ramme å bryte mot. Grip etter punkttekst for overskrifter, etiketter, noen få ord display-tekst, eller noe du vil plassere med øyet i stedet for å helle i en kolonne. Dens innrykk og avsnittsmellomrom har ingenting å måle mot, slik at disse kontrollene har ingen effekt på punkttekst; justeringen tas fra ankeret du klikket på.</p>
+
+<h3 id="type-area">Områdetekst</h3>
+<p>Dra ut et rektangel med Tekstverktøyet eller Områdetekstverktøyet og teksten brytes for å passe i rammen, linjene brytes automatisk på høyre kant. Bruk områdetekst for brødtekst, bildetekster, eller enhver tekst som må holde seg innenfor en angitt bredde. Når det er mer tekst enn rammen kan holde, er overfloden skjult og rammen merkes som overløpende; gjør rammen større, krymp teksten, eller koble overfloden til en annen ramme (se nedenfor). Innrykk, første linje-innrykk, mellomrom før og etter, og orddeling gjelder alle for områdetekst.</p>
+
+<h3 id="type-on-a-path">Tekst på en sti</h3>
+<p>Klikk en sti med Tekst på sti-verktøyet. Stien blir grunnlinjen og slutter å være kunstverk i seg selv, slik at den ikke lenger fylles eller strekes. Grip etter dette for å kjøre en etikett rundt en badge, langs en bue, eller over toppen av en form. Velg resultatet og tre klamre vises: én på starten, én på slutten og én i midten. Dra start- eller sluttklamren for å flytte hvor teksten begynner og slutter langs stien, dra midtklamren for å skyve hele rekken langs, og dra midtklamren over til den andre siden av stien for å snu teksten. Tekst på en sti tar ingen linjeskift, slik at <kbd>Return</kbd> gjør ingenting mens du redigerer den. Omform den underliggende stien og teksten følger nye buer.</p>
+<figure class="shot">
+  <img src="img/type-on-path.png" width="1700" height="798" loading="lazy"
+       alt="Ordene 'Tekst flyter langs enhver sti du tegner' følger buene til en bølget sti i Scissor." />
+  <figcaption>Tekst satt på en bølget sti. Omform stien og teksten følger buene; grunnlinjen her vises stiplet.</figcaption>
+</figure>
+
+<h2 id="type-character">Tegn-panelet</h2>
+<p>Tegn-panelet (<kbd>&#8984;T</kbd>, eller <strong>Vindu &gt; Tekst &gt; Tegn</strong>) inneholder alt som gjelder for bokstavene i seg selv. Med et tekstobjekt valgt, dekker innstillingene det hele objektet: endre skrifttypen eller sporingen og hver bokstav følger. Mens du skriver, gjelder skrift, vekt, kursiv og størrelse bare for de valgte tegnene (se <a href="#type-mixed">Blandede stiler i én tekst</a>). Panelet gråtes ut til du redigerer tekst eller har et tekstobjekt valgt.</p>
+
+<h3 id="type-font">Skrift, vekt, stil og størrelse</h3>
+<p>Skriftmenyen er søkbar og holder familiene du har brukt nylig øverst. Den lister skrifttypene nettleseren din faktisk kan tegne med, lest fra systemet der den vil rapportere dem og ellers spurt fra et sett med vanlige familier, slik at listen matcher hva som vil rendres i stedet for en fast katalog.</p>
+<p>Vektmenyen tilbyr Light, Regular, Medium, Semibold, Bold og Heavy, men bare vektene den valgte familien faktisk har er valgbare: de andre er demmet. Kursivknappen ved siden av slår den skrå stilen av og på. Størrelse settes i piksler, fra Størrelse-feltet.</p>
+
+<h3 id="type-mixed">Blandede stiler i én tekst</h3>
+<p>Én tekst kan blande størrelser, farger, vekter og kursiver. Mens du skriver, velg noen tegn og endre dem fra hurtiglinjen ved siden av teksten, alternativlinjen eller Farge-panelet. Bare de valgte tegnene endres, og resten av teksten beholder sin egen stil. Uten noe valgt gjelder endringen for hele teksten som vanlig. Stilene reiser med tegnene sine mens du fortsetter å skrive, og de beholdes i SVG- og PDF-eksporter.</p>
+
+<h3 id="type-metrics">Linjeavstand, sporing og kerning</h3>
+<dl>
+  <dt>Linjeavstand</dt>
+  <dd>Avstanden fra én grunnlinje til neste, i piksler. La den stå på 0 for automatisk linjeavstand, som er 120% av størrelsen. Sett den større for å åpne linjene opp, eller mindre for å stramme en overskrift.</dd>
+  <dt>Sporing</dt>
+  <dd>Jevn avstand lagt til eller trukket fra hvert tegn, målt i tusendeler av en em (slik at den skalerer med størrelsen). Positive verdier løsner teksten opp, negative strammer den. Grip etter sporing for å passe en linje til en bredde eller å spre ut små kapiteler.</dd>
+  <dt>Kerning</dt>
+  <dd>Skriftens egen par-for-par avstand mellom bestemte bokstaver, som gapet under en stor T. Den er på som standard, på Kerning-knappen i OpenType-raden (merket AV). Slå den av for å se skriftens rå mål.</dd>
+</dl>
+
+<h3 id="type-align">Justering</h3>
+<p>Tegn-panelet har fire justeringsknapper: venstre, midt, høyre og bli en. Venstre og høyre er relative til leseretningen, slik at de betyr start og slutt: høyre-til-venstre tekst satt til venstre justeres til visuelle høyre. Bli en sprer hver linje for å fylle målet, slik at den bare endrer noe der linjene brytes, noe som betyr områdetekst og tekst på en sti i stedet for enkeltlinje punkttekst. For de finere bli en-kontrollene (hvordan siste linje settes) bruker du Avsnitt-panelet.</p>
+
+<h3 id="type-opentype">OpenType-funksjoner og små kapiteler</h3>
+<p>Under <strong>OpenType</strong>-overskriften er en rad med knapper, hvorav hver slår én funksjon av den valgte teksten av eller på:</p>
+<table>
+  <thead><tr><th>Knapp</th><th>Funksjon</th></tr></thead>
+  <tbody>
+    <tr><td>fi</td><td>Standard ligaturer (på som standard)</td></tr>
+    <tr><td>st</td><td>Frivillige ligaturer</td></tr>
+    <tr><td>TT</td><td>Store bokstaver</td></tr>
+    <tr><td>T&#7472;</td><td>Små kapiteler</td></tr>
+    <tr><td>T&sup1;</td><td>Hevet skrift</td></tr>
+    <tr><td>T&#8321;</td><td>Senket skrift</td></tr>
+    <tr><td>&frac12;</td><td>Brøker</td></tr>
+    <tr><td>1&#738;&#7511;</td><td>Ordinaler</td></tr>
+    <tr><td>&#119964;</td><td>Skrå</td></tr>
+    <tr><td>AV</td><td>Kerning (på som standard)</td></tr>
+  </tbody>
+</table>
+<p>Store bokstaver tegner hver bokstav som en stor bokstav uten å endre den underliggende teksten, slik at den fremdeles er små bokstaver når du redigerer den. Små kapiteler ber skrifttypen om sine små-kapiteler-former. Hevet og senket skrift tegner de berørte tegnene mindre og skyver dem fra grunnlinjen, for fotnoter, ordinal-endelser eller kjemiske formler.</p>
+<p>Under knappene velger sifferstilmenyen hvordan sifrene settes: Standard, Tabulær Lining, Proporsjonell Gammel Stil, Proporsjonell Lining eller Tabulær Gammel Stil. Tabulære siffer tar alle samme bredde, slik at kolonner med tall stilles opp; gammel-stil-siffer har oppgangere og nedgangere som sitter bedre i løpende tekst.</p>
+<p>Ikke hver funksjon kan forhåndsvises på lerretet. Ligaturer på eller av, kerning, store bokstaver, små kapiteler og hevet/senket skrift tegnes mens du redigerer. Frivillige ligaturer, sifferstilene, brøker, ordinaler og skrå registreres på teksten og skrives inn i den eksporterte <code>.svg</code> som skriftfunksjonsinnstillinger, men lerretet viser dem ikke, så behandles disse som eksporttidsinnstillinger.</p>
+
+<h2 id="type-paragraph">Avsnitt-panelet</h2>
+<p>Avsnitt-panelet (<kbd>&#8997;&#8984;T</kbd>, eller <strong>Vindu &gt; Tekst &gt; Avsnitt</strong>) kontrollerer hvordan hele avsnitt settes. Som med tegninnstillingene gjelder disse for hvert avsnitt i tekstobjektet.</p>
+<p>Sju justeringsknapper løper øverst. De første tre er vanlig venstre, midt og høyre. De neste tre bli en brødteksten i avsnittet og setter bare siste linje, justert venstre, midt eller høyre. Den siste bli en hver linje inkludert siste, og strekker den til hele målet. Bli en trenger et sted å bryte, slik at det trer i kraft i områdetekst, ikke i punkttekst.</p>
+<p>Under justeringsknappene står innrykkene: <strong>Venstre</strong> og <strong>Høyre</strong> trekker hele avsnittet inn fra sidene av rammen, og <strong>Første</strong> rykker bare første linje inn. Et negativt første-linje-innrykk henger første linje ut forbi de andre, noe som er hvordan du lager et hengende innrykk. <strong>Før</strong> og <strong>Etter</strong>-feltene legger til mellomrom over og under hvert avsnitt, en renere måte å skille avsnitt på enn en tom linje. <strong>Orddeling</strong>-bryteren lar lange ord brytes over linjer for å jevne ut høyre kant. Innrykk og mellomrom gjelder for områdetekst; punkttekset settes fra sitt eget anker.</p>
+
+<h2 id="type-glyphs">Tegn-panelet</h2>
+<p>Tegn-panelet (<strong>Tekst &gt; Tegn</strong>, <kbd>&#8997;&#8679;F11</kbd>) lister tegnene i gjeldende skrift etter sett, fra Basisk Latin gjennom gresk, kyrillisk, hebraisk, arabisk, tegnsetting, valuta, piler og mer, og holder tegnene du har brukt nylig øverst. Grip etter det for å sette inn et tegn tastaturet ikke skriver, som en pil, et valutategn eller en bokstav med aksent. Dobbeltklikk på et tegn for å skrive det ved tekstmarkøren. Uten markør i noen tekst kopires tegnet til utklippstavlen i stedet, slik at du kan lime det inn andre steder.</p>
+
+<h2 id="type-orientation">Vertikal og høyre-til-venstre tekst</h2>
+<p>Scissor kan sette tekst nedover siden så vel som på tvers av den, og kan legge ut skrifter som leses høyre til venstre. Begge fungerer i punkt-, område- og sti-tekst, og lerret-redigeringsprogrammet følger samme retning som det ferdige kunstverket.</p>
+
+<h3 id="type-vertical">Vertikal tekst</h3>
+<p>Vertikal tekstverktøyet setter oppreiste tegn som stabler nedover, hver ny linje danner en kolonne til venstre for den siste. I et vertikalt områderamme brytes en kolonne til en ny når den når bunnen. For å bytte tekst du allerede har satt mellom horisontal og vertikal, velger du <strong>Tekst &gt; Tekstretning &gt; Horisontal</strong> eller <strong>Vertikal</strong>.</p>
+
+<h3 id="type-rtl">Høyre-til-venstre og arabisk</h3>
+<p>Retningsmenyen i Tegn-panelet tilbyr Auto, Venstre til Høyre og Høyre til Venstre. På Auto leses retningen fra teksten selv, fra dens første sterke tegn, slik at arabisk eller hebraisk flyter høyre til venstre uten at du setter noe. Arabiske bokstaver tar sammenføyede former, og en rekke latinske ord inni en høyre-til-venstre linje beholder sin egen venstre-til-høyre rekkefølge. Sett menyen til Venstre til Høyre eller Høyre til Venstre når du vil tvinge retningen i stedet for å la den oppdages, for eksempel for en linje som begynner med et tall eller tegnsetting.</p>
+
+<h2 id="type-touch">Tegnredigering</h2>
+<p>Tegnredigeringsverktøyet (<kbd>&#8679;T</kbd>) flytter, skalerer og roterer ett tegn om gangen mens det lar teksten være fullt redigerbar. Grip etter det for å dytt én bokstav for effekt uten å dele ordet opp i former. Velg verktøyet og klikk på et tegn: en ramme vises rundt det ene tegnet med en knop på hvert hjørne, én på høyre side, én på bunnen og én som flyter over. Dra et hjørne for å skale i begge retninger, siden alene for bredde, bunnen alene for høyde, og toppen for å rotere tegnet. Hold <kbd>&#8679;</kbd> mens du drar et hjørne for å beholde proporsjonene, eller mens du roterer for å feste vinkelen. <kbd>Backspace</kbd> eller <kbd>Delete</kbd> setter tegnet tilbake der teksten satte det, og <kbd>Escape</kbd> slipper valget. Fordi teksten fortsatt er tekst gjennomgående, du fortsette å redigere ordene rundt tegnet du flyttet.</p>
+
+<h2 id="type-flow">Kobling og tekstomforming</h2>
+<p>To funksjoner lar tekst dele rom med resten av en oppsett: kobling kjører én historie gjennom flere rammer, og tekstomforming skyver tekst bort fra et objekt det overlapper.</p>
+
+<h3 id="type-threading">Koblet tekst</h3>
+<p>Velg to eller flere områdetekstobjekter og velg <strong>Tekst &gt; Koblet tekst &gt; Lag</strong>. Deres tekst slås sammen til én historie som flyter fra ramme til ramme i stabelrekkefølge, bak til front, og redigeres alltid fra første ramme. Bruk kobling til å kjøre en artikkel over kolonner eller sider: mens du legger til eller fjerner tekst, renner den gjennen kjeden. Hver ramme viser en port i øvre venstre og nedre høyre hjørne, med en linje tegnet til rammen teksten fortsetter i. Et rødt plus i stedet for den utgående porten betyr at det er mer tekst enn rammen kan holde. <strong>Frigi utvalg</strong> tar de valgte ramene ut av koblingen, og <strong>Fjern kobling</strong> bryter hele koblingen med hver ramme beholder teksten den viste.</p>
+
+<h3 id="type-wrap">Tekstomforming</h3>
+<p>For å skyve tekst bort fra en form, velg formen og velg <strong>Objekt &gt; Tekstomforming &gt; Lag</strong>. Områdetekst som ligger under objektet flyter deretter rundt det. Omformingen følger objektets omtrek, ikke dets avgrensningsramme, slik at tekst kan klemme seg opp mot en sirkel eller en uregelmessig silhuett. <strong>Tekstomformingalternativer&#8230;</strong> angir avstanden som holdes mellom objektet og teksten, i piksler, og kan invertere omformingen slik at teksten løper inni formen i stedet for rundt den. <strong>Frigi</strong> fjerner omformingen.</p>
+
+<h2 id="type-outlines">Konvertere tekst til former</h2>
+<p>Velg litt tekst og velg <strong>Tekst &gt; Lag former</strong> (<kbd>&#8679;&#8984;O</kbd>) for å gjøre den om til stier. Grip etter dette når du trenger å omforme bokstavformene for hånd, garantere at teksten ser identisk ut på en maskin som mangler skriften, eller bruke bokstavene som en form å kombinere med annet kunstverk. Bokstavformene spores fra skriftens egne tegn i høy oppløsning, med fitteren som lar ekte hjørner være skarpe mens den glater buene, og resultatet beholder tekstens fyll, linje, navn, opasitet og blandingsmodus. Ordene er ikke lenger redigerbare som tekst etterpå, så behold en kopi hvis du kan trenge å endre dem, eller angre med <kbd>&#8984;Z</kbd>.</p>

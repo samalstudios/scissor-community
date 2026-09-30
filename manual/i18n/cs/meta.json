@@ -1,0 +1,31 @@
+{
+  "chrome": {
+    "Manual": "Příručka",
+    "Shortcuts": "Zkratky",
+    "Open the editor": "Otevřít editor",
+    "Skip to the content": "Přeskočit na obsah",
+    "Search the manual": "Hledat v příručce",
+    "Search the manual…": "Hledat v příručce…",
+    "Breadcrumb": "Drobečková navigace",
+    "More pages": "Další stránky",
+    "Previous": "Předchozí",
+    "Next": "Další",
+    "Language": "Jazyk",
+    "Scissor by Samal Studios.": "Scissor od Samal Studios.",
+    "Third-party licences": "Licence třetích stran",
+    "| Scissor manual": "| Příručka Scissor",
+    "Scissor user manual: every tool, menu and shortcut": "Uživatelská příručka Scissor: každý nástroj, menu a zkratka",
+    "Scissor user manual": "Uživatelská příručka Scissor"
+  },
+  "groups": {
+    "Get started": "Začínáme",
+    "Draw": "Kreslit",
+    "Arrange & build": "Uspořádat a sestavit",
+    "Layout & pixels": "Rozvržení a pixely",
+    "Panels": "Panely",
+    "Files & reference": "Soubory a reference"
+  },
+  "nav": {},
+  "meta": {},
+  "keywords": {}
+}

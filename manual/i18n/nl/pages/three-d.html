@@ -1,0 +1,65 @@
+<p class="lede">3D en Materialen verandert een vlakke vorm in een vast lichaam dat u kunt draaien, belichten en een oppervlak kunt geven, zonder ooit uw vectorwerk achter te laten. Het is een live effect: het vast lichaam wordt getekend vanuit het pad eronder, en dat pad blijft volledig bewerkbaar, zodat u de omtrek, de kleur of de tekst op elk gewenst moment kunt veranderen en de 3D eromheen opnieuw wordt gebouwd.</p>
+
+<h2 id="three-d-opening">Het effect openen</h2>
+<p>Selecteer eerst een object, en kies dan een objecttype uit <strong>Effect &rsaquo; 3D en Materialen</strong>: <em>Vlak</em>, <em>Uitdraaien &amp; Afschuinen</em>, <em>Roteren</em> of <em>Opblazen</em>. Elk voegt het effect toe en opent het <strong>3D en Materialen</strong>-paneel, waar de rest van de besturingselementen leven. Hetzelfde paneel opent op zichzelf vanuit <strong>Venster &rsaquo; 3D en Materialen</strong> of vanuit <strong>Effect &rsaquo; 3D en Materialen &rsaquo; 3D en Materialen-paneel</strong>.</p>
+<p>Het paneel heeft iets geselecteerd nodig voordat het iets kan doen; met niets geselecteerd zegt het dat en grijst het zijn besturingselementen uit. Zodra een object het effect heeft, lopen de vier objecttypeknoppen bovenaan het paneel, zodat u in één klik een vorm van een uitdraaiing naar een rotatie kunt schakelen en de draaiing en belichting behoudt die u al heeft ingesteld.</p>
+<p>Omdat het een effect is en geen conversie, kunt u het op bijna alles waar een pad het kan dragen zetten: een vorm, een groep, een omtrek of live tekst. Het bewerken van de bron, bijvoorbeeld een woord opnieuw typen of een anker een duwtje geven, voert het effect opnieuw uit op het nieuwe werk.</p>
+
+<h2 id="three-d-types">De vier objecttypen</h2>
+<p>Het objecttype bepaalt hoe de vlakke vorm als een vast lichaam wordt gelezen. Kies het dat past bij de vorm die u nastreeft.</p>
+
+<h3 id="three-d-plane">Vlak</h3>
+<p>Vlak laat het werk vlak en plaatst het als een kaart in de 3D-ruimte, zodat het alleen maar u laat draaien en kantelen. Er is geen diepte in te stellen. Greep hiervoor wanneer u een stuk vlak werk onder een hoek wilt laten zitten, zoals een label dat op een oppervlak achterover ligt of een badge die schuin staat om het licht te vangen, zonder het enige dikte te geven.</p>
+
+<h3 id="three-d-extrude">Uitdraaien en Afschuinen</h3>
+<p>Uitdraaien duwt de vorm recht naar achteren om hem dikte te geven, waardoor een omtrek een vast blok wordt. Een afschuining rondt of snijdt de voor- en achterranden af zodat ze niet scherp blijven. Gaten worden bewaard: een samengesteld pad zoals een ring of een letter met een teller blijft hol door en door. Dit is het type om te gebruiken voor lettering, logo's, pictogrammen en badges die als verhoogd of uitgesneden moeten lezen.</p>
+<figure class="shot">
+  <img src="img/3d-extrude.gif" width="620" height="620" loading="lazy" alt="Een vlakke vectorster die wordt uitgedraaid tot een driedimensionale ster en wordt gedraaid om zijn diepte te tonen." />
+  <figcaption>Uitdraaien en Afschuinen bouwt diepte uit een vlakke vorm, live. De ster blijft eronder een bewerkbaar pad.</figcaption>
+</figure>
+
+<h3 id="three-d-revolve">Roteren</h3>
+<parameter name="newString"><p>Roteren veegt de vorm rond zijn linkerrand, zoals een profiel dat op een draaibank wordt rondgedraaid een vast lichaam uitstrekt. Teken de helft van een symmetrisch object, een glas, een fles, een kom, een schaakstuk, en roteer het tot het ronde. De veeghoek kan minder zijn dan een volledige draaiing om een doorsnede achter te laten die het inwendige toont.</p>
+
+<h3 id="three-d-inflate">Opblazen</h3>
+<p>Opblazen blaast de vorm naar buiten op, alsof het een kussen gevuld met lucht was, hem een zacht rond oppervlak in plaats van een vlakke gevend. Gebruik het voor zachte knoppen, geborduurde badges, snoepjes en ronde stickers waar u zwelling wilt in plaats van een harde uitgedraaide rand.</p>
+
+<h2 id="three-d-shape">Diepte, afschuining en stappen</h2>
+<p>De <em>Object</em>-sectie bevat de velden die het vast lichaam vormgeven. Welke verschijnen hangt af van het objecttype, dus het paneel toont alleen de velden die iets doen voor het type in hand.</p>
+<table>
+  <thead><tr><th>Veld</th><th>Getoond voor</th><th>Wat het instelt</th></tr></thead>
+  <tbody>
+    <tr><td>Diepte</td><td>Uitdraaien en Afschuinen, Opblazen</td><td>Hoe ver de vorm naar achteren wordt geduwd, of hoeveel ze zwellt, in pixels.</td></tr>
+    <tr><td>Afschuining</td><td>Uitdraaien en Afschuinen</td><td>De grootte van de afgeronde of afgesneden rand op de voor- en achterkant, in pixels; laat het op nul voor een gewone vierkante rand.</td></tr>
+    <tr><td>Hoek</td><td>Roteren</td><td>Hoe ver het profiel wordt veegd, tot een volledige 360&deg; draaiing. Een kleinere hoek laat het object open, zijn inwendige tonend.</td></tr>
+    <tr><td>Stappen</td><td>Uitdraaien en Afschuinen, Roteren, Opblazen</td><td>Hoeveel segmenten de gebouwde delen bouwen. Meer stappen geven een gladder oppervlak; minder laten het facetvormig.</td></tr>
+  </tbody>
+</table>
+<p>Vlak heeft geen van deze: het heeft geen dikte om te beschrijven. Als een gebogen rotatie of een afgeronde afschuining te hoekig uitziet, verhoogt u de stappen; als u bewust een laag-polygonale, facetvormige look wilt, verlaagt u ze.</p>
+
+<h2 id="three-d-rotation">Het object draaien</h2>
+<p>De <em>Draaiing</em>-sectie stelt in hoe het object naar u kijkt. De snelste manier is het voorbeeldvlak: sleep eroverheen om het object links en rechts te draaien, en sleep omhoog en omlaag om het voor en achterover te kantelen. Voor exacte hoeken, draaien de <em>X</em>, <em>Y</em> en <em>Z</em>-velden het object om elke as, elk van -180&deg; tot 180&deg;.</p>
+<p>Het draaiingsmenu bevat kant-en-klaar gezichtspunten, zodat u het object direct in een standaardbeeld kunt zetten in plaats van eréén in te draaien:</p>
+<dl>
+  <dt>Off-Axis Voor, Achter, Links, Rechts, Boven, Onder</dt><dd>Drie-kwart-beelden die één hoofdvlak tonen met een beetje van de boven- of zijkant. Een goed standaard voor een vast lichaam dat als een vast lichaam moet lijken.</dd>
+  <dt>Isometrisch Links, Rechts, Boven, Onder</dt><dd>Echte isometrische beelden, waar de drie assen even kortgetrokken zijn en lijnen parallel blijven. Geschikt voor technische en game-achtige werk dat moet uitlijnen.</dd>
+  <dt>Voor, Achter, Links, Rechts, Boven, Onder</dt><dd>De zes rechte beelden, rechtop naar één vlak kijkend. Handig om de vorm te controleren of voor een vlakke, frontale presentatie.</dd>
+</dl>
+<p>Een vooraf ingestelde waarde kiezen vult de X-, Y- en Z-velden in; ze met de hand veranderen toont het menu als <em>Aangepaste draaiing</em>. Het <em>Perspectief</em>-veld, van 0&deg; tot 160&deg;, bestuurt hoe sterk het object achteruitduwt: op nul blijven de zijden parallel, en naarmate u het verhoogt trekken de verre randen naar een verdwijnpunt in, zoals een echt object dat van dichtbij wordt gezien taps toeloopt. Voeg een beetje perspectief toe voor een levendig driekwart-beeld, of laat het op nul om een isometrische of vlakke opstelling exact te houden.</p>
+
+<h2 id="three-d-lighting">Belichting</h2>
+<p>De <em>Belichting</em>-sectie bepaalt waar het licht vandaan komt en hoe hard het is, wat is wat het oppervlak als verhoogd, uitgesneden of afgerond doet lezen. Een belichtingsmenu biedt vier startpunten, <em>Standaard</em>, <em>Diffuus</em>, <em>Boven links</em> en <em>Rechts</em>, en elke verandering van de velden eronder toont het als <em>Aangepaste belichting</em>.</p>
+<dl>
+  <dt>Intensiteit</dt><dd>De sterkte van het hoofdlicht, als percentage. Hoger maakt de verlichte vlakker helderder en de accentueringen sterker.</dd>
+  <dt>Omgeving</dt><dd>Een invullicht dat het hele object optilt, als percentage, zodat de schaduwrijke vlakker niet naar zwart vallen. Verhoog het voor een zachtere, gelijkmatigere look; verlaag het voor dieper contrast.</dd>
+  <dt>Rotatie</dt><dd>Waar het licht rond het object zit, van -180&deg; tot 180&deg;, wat de accentuering en de schaduw naar de andere kant verplaatst.</dd>
+  <dt>Hoogte</dt><dd>Hoe hoog het licht boven het object is, van 0&deg; (op het niveau ervan, voor lange schuine schaduwen) tot 90&deg; (recht boven, voor gelijkmatig licht).</dd>
+</dl>
+<p><em>Diffuus</em> geeft een zacht, laag-contrast afgewerkte; <em>Boven links</em> en <em>Rechts</em> werpen het licht van één kant voor een meer dramatische, gebeeldhouwde look. Begin met de vooraf ingestelde waarde die het dichtstbijzijnd is, en pas de vier velden dan naar smaak aan.</p>
+
+<h2 id="three-d-materials">Materialen</h2>
+<p>Drie materiaknoppen stellen in hoe het oppervlak het licht vangt: <em>Plastic</em>, <em>Mat</em> en <em>Metaal</em>. Plastic geeft een zachte glans met een duidelijke accentuering, de gebruikelijke keuze voor een vriendelijke, gegoten look. Mat verwijdert de glans voor een vlak, gelijkmatig afgewerkte, dat als papier, klei of een afgedrukt oppervlak leest. Metaal geeft een hardere, hoger-contrast glans, voor chroom, goud en andere gepolijste metalen. Het materiaal werkt samen met de belichting, dus een verandering van de ene is de moeite waard om tegen de andere te controleren.</p>
+
+<h2 id="three-d-expand">Live houden, en uitbreiden</h2>
+<p>Alles hierboven wordt opgeslagen als één live effect op het object, opgesomd in het <strong>Uiterlijk</strong>-paneel (<kbd>&#8679;F6</kbd>) met een <em>fx</em>-badge boven de vullingen en lijnen van het object. Klik op dat item om het 3D en Materialen-paneel te heropenen, of verwijder het er om het object terug naar vlak te brengen. Binnen het paneel, strijkt <em>3D verwijderen</em> het effect van de selectie af.</p>
+<p>Terwijj het effect live is, blijft het werk eronder een gewoon, bewerkbaar pad, wat is wat u in staat stelt de vorm, de kleur en de tekst te blijven afstellen. Wanneer de look is vastgelegd en u het resultaat als gewoon vectorwerk wilt, bijvoorbeeld om de individuele vlakken te bewerken of het bestand door te geven, gebruikt u <em>Uitbreiden als vector</em> in het paneel (hetzelfde als <strong>Object &rsaquo; Uiterlijk uitbreiden</strong>). Dat bakt het vast lichaam tot paden en beëindigt zijn leven als effect, dus breidt een kopie uit als u de diepte of de hoek later nog zou kunnen willen veranderen.</p>

@@ -1,0 +1,100 @@
+<p class="lede">Vektorisér vender et billede til vektorstier: et logo scannet fra papir, en blyantskitse eller et foto bliver til et sæt af udfyldte former, du kan skalere, omfarve og redigere som alt andet, du tegner. Denne side dækker, hvad du kan vektorisere, panelet, der kører det, de tre tilstande og deres forudindstillinger, enhver mulighed og hvordan du beholder eller kasserer resultatet.</p>
+
+<h2 id="image-trace-what">Hvad vektorisering gør, og hvad du kan vektorisere</h2>
+<p>Et billede er lavet af pixels: det sløres, når du forstørrer det, og det kan ikke omformes punkt for punkt. Vektorisering læser disse pixels og tegner vektorstier, der følger de former, den finder, så resultatet forbliver skarpt i enhver størrelse og kan redigeres, omfarves og kombineres med resten af din grafik.</p>
+<p>Du vektoriserer et <strong>pixellag</strong>: et billede, du har placeret eller indsat, et billede åbnet som sin egen tavle eller et lag, du har malet selv. Bring et billede ind med <strong>Filer &gt; Placér&hellip;</strong> (<kbd>&#8679;&#8984;P</kbd>) - det ankommer som et pixellag - vælg det, og kør derefter vektoriseringen. (Vektorgrafik er allerede lavet af stier, så der er intet at vektorise; vektorisering læser pixels.)</p>
+<p>Vektoriseringen kasserer ikke billedet. Den bygger en gruppe med navnet <strong>Vektorisér</strong>, der holder det originale billede (nu skjult) sammen med de nye stier og sidder præcis over det. Fordi gruppen husker de indstillinger, den blev lavet med, forbliver resultatet levende: vælg det igen, ændre en indstilling, og det vektoriseres igen. Når du er tilfreds, <strong>Udvid</strong> det for kun at beholde stierne, eller <strong>Frigiv</strong> det for at gå tilbage til det almindelige billede.</p>
+
+<h2 id="image-trace-panel">Vektorisér-panelet</h2>
+<p>Hver indstilling bor i Vektorisér-panelet. Åbn det fra <strong>Objekt &gt; Vektorisér &gt; Vektorisér-panel</strong> eller fra dets fane i paneldokken. Panelet har brug for et billede valgt, før det kan gøre noget: uden noget passende valgt er Vektorisér-knappen deaktiveret, og panelet beder dig om at vælge et placeret billede.</p>
+
+<h3 id="image-trace-run">Kørsel af en vektorisering</h3>
+<p>Vælg et billede, vælg en forudindstilling eller indstil tilstanden og mulighederne i hånden, og tryk på <strong>Vektorisér</strong>. En linje i bunden af panelet rapporterer fremskridt og læser <em>Vektoriserer&hellip;</em>, mens det arbejder, og <em>Vektoriseret. Udvid for kun at beholde stierne.</em>, når det er færdigt. Hvis billedet ikke indeholder noget, en form kan laves af, eller ikke kan læses, fortæller panelet dig det og efterlader billedet urørt.</p>
+
+<h3 id="image-trace-preview">Forhåndsvisning undervejs</h3>
+<p>Afkrydsningsfeltet <strong>Vektorisér ved indstillingændringer</strong>, som standard tændt, vektoriserer igen i det øjeblik, du ændrer tilstanden, en forudindstilling, et tal eller et afkrydsningsfelt, så du kan dømme hver justering mod billedet med det samme. På et stort eller travelt billede tager gen tegningen et øjeblik, så slå den fra, hvis du hellere vil indstille flere muligheder først og trykke på <strong>Vektorisér</strong> én gang. Når du vælger en eksisterende vektorisering igen, indlæser panelet de nøjagtige indstillinger, den blev lavet med, klar til at blive justeret og vektoriseret igen.</p>
+
+<h3 id="image-trace-menu">Objekt-menuens kommandoer</h3>
+<p>De samme handlinger sidder under <strong>Objekt &gt; Vektorisér</strong>, hvilket er praktisk, når panelet er lukket.</p>
+<table>
+  <thead><tr><th>Kommando</th><th>Hvad det gør</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Opret</strong></td><td>Vektoriserer det valgte billede med de aktuelle indstillinger og efterlader resultatet levende.</td></tr>
+    <tr><td><strong>Opret og udvid</strong></td><td>Vektoriserer og udvider på ét trin, så du går direkte til redigerbare stier.</td></tr>
+    <tr><td><strong>Udvid</strong></td><td>Bevarer stierne og kasserer billedet (se nedenfor).</td></tr>
+    <tr><td><strong>Frigiv</strong></td><td>Kasserer stierne og vender tilbage til billedet (se nedenfor).</td></tr>
+    <tr><td><strong>Vektorisér-panel</strong></td><td>Bringer panelet forrest.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="image-trace-modes">De tre tilstande</h2>
+<p>Tilstanden beslutter, hvordan billedet reduceres, før det tegnes. Det er det første valg, du laver, fordi den styrer, hvilke af mulighederne nedenfor der gælder.</p>
+<table>
+  <thead><tr><th>Tilstand</th><th>Hvordan den reducerer billedet</th><th>Den mulighed, den bruger</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Sort og hvid</strong></td><td>Deler alt i to toner, blæk og papir, ved en lysstyrke, du indstiller.</td><td>Tærskel</td></tr>
+    <tr><td><strong>Gråtoner</strong></td><td>Reducerer billedet til et indstillet antal jævne gråtoner fra sort til hvid.</td><td>Antal farver (som gråtoner)</td></tr>
+    <tr><td><strong>Farve</strong></td><td>Vælger en palet af de mest sigende farver i billedet og mapper hver pixel til den nærmeste.</td><td>Antal farver</td></tr>
+  </tbody>
+</table>
+<p>Uanset hvilken tilstand du vælger, laves én udfyldt form pr. tone eller farver, og formerne stables størst først, så mindre detaljer sidder oven på. Fuldt gennemsigtige dele af billedet udelades, så et udsnit på en gennemsigtig baggrund vektoriserer til kun sit motiv.</p>
+
+<h2 id="image-trace-presets">Forudindstillinger</h2>
+<p>En forudindstilling er et navngivet udgangspunkt, der indstiller tilstanden og enhver mulighed på én gang. Vælge én fra menuen øverst i panelet og, med forhåndsvisning tændt, vektoriseres billedet med det samme; behandl resultatet som et grundlag og juster derfra. I det øjeblik du ændrer enhver enkelt mulighed, skifter forudindstillingmenuen til <strong>Tilpasset</strong>, da indstillingerne ikke længere matcher forudindstillingen.</p>
+<table>
+  <thead><tr><th>Forudindstilling</th><th>Tilstand</th><th>Gå efter den, når</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Høj trofasthed foto</strong></td><td>Farve</td><td>Du vil have et foto holdt tæt på originalen med mange farver.</td></tr>
+    <tr><td><strong>Lav trofasthed foto</strong></td><td>Farve</td><td>Et foto skal læses som nogle få brede, flade farveområder.</td></tr>
+    <tr><td><strong>3 farver</strong></td><td>Farve</td><td>Du vil have et dristigt, plakat-agtigt resultat fra tre flade farver.</td></tr>
+    <tr><td><strong>6 farver</strong></td><td>Farve</td><td>Et fladt, illustreret look med en lille, pæn palet.</td></tr>
+    <tr><td><strong>16 farver</strong></td><td>Farve</td><td>Mere farveskala end de flade forudindstillinger, men ikke et helt foto.</td></tr>
+    <tr><td><strong>Gråtoner</strong></td><td>Gråtoner</td><td>Et tonalt billede skal bevare sin skyggegivning, men miste sin farve.</td></tr>
+    <tr><td><strong>Sort-hvidt logo</strong></td><td>Sort og hvid</td><td>Vending af et rent to-tone mærke eller logo til skarpe former.</td></tr>
+    <tr><td><strong>Skitseret kunst</strong></td><td>Sort og hvid</td><td>Indfangning af en blæk- eller blyantskitse med dens løsere linjer.</td></tr>
+    <tr><td><strong>Silhuetter</strong></td><td>Sort og hvid</td><td>Du vil have solide, udfyldte silhuetter i stedet for fine linjer.</td></tr>
+    <tr><td><strong>Linjekunst</strong></td><td>Sort og hvid</td><td>En fin linjetegning, hvor tynde strøg skal overleve.</td></tr>
+    <tr><td><strong>Teknisk tegning</strong></td><td>Sort og hvid</td><td>Skarpe, trofaste linjearbejde med så meget detalje bevaret som muligt.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="image-trace-options">Mulighederne</h2>
+<p>Under tilstanden sidder de kontroller, der former resultatet. Hvilke der vises, afhænger af tilstanden: Tærskel vises kun for Sort og hvid, mens antallet af farver vises for Gråtoner og Farve.</p>
+<dl>
+  <dt>Antal farver</dt>
+  <dd>Hvor mange farver (i Farvetilstand) eller gråtoner (i Gråtoner) billedet reduceres til, fra 2 til 64. Færre giver et flattere, mere grafisk resultat med færre former; flere holder billedet tættere på originalen på bekostning af flere stier. Sort og hvid-tilstand ignorerer dette, da den altid har to toner.</dd>
+  <dt>Tærskel</dt>
+  <dd>Kun for Sort og hvid: lysstyrken, fra 0 til 255, hvor billedet deles i blæk og papir. Alt, der er mørkere end tærskelen, bliver til den tegnede form; alt, der er lysere, behandles som baggrund. Hæv den for at trække flere af midttonerne ind i formen for et tungere resultat, sænk den for kun at beholde de mærkeste mærker. Brug den til at tune, hvor meget af en bleg skitse der fanges op.</dd>
+  <dt>Stier</dt>
+  <dd>Hvor tæt stierne følger pixelsne, på en skala fra 0 til 100. Høje værdier krammer kanterne tæt og bevarer fine rystelser med flere ankerpunkter; lave værdier afslapper tilpasningen til glattere, enklere stier, der er lettere at redigere. Gå efter en høj værdi, når nøjagtighed betyder noget, og en lav, når du vil have en ren, pæn kontur.</dd>
+  <dt>Hjørner</dt>
+  <dd>Hvor villigt et sving i konturen bliver til et skarpt hjørne i stedet for en glat kurve, fra 0 til 100. Hæv den for grafik med skarpe vinkler, som et logo eller bogstaver; sænk den for organiske former, der skal forblive afrundede.</dd>
+  <dt>Støj</dt>
+  <dd>Den mindste plet, i pixels, der må være sin egen form. Alt, der er mindre, absorberes i det, der omgiver den. Hæv den for at rydde pletter og korn fra en scan eller et foto, så tilfældige prikker ikke hver især bliver til en sti; sænk den for at bevare ægte fine detaljer.</dd>
+  <dt>Ignorer hvid</dt>
+  <dd>Udelader enhver form, der kommer næsten hvid, så papiret eller baggrunden ikke tegnes og forbliver gennemsigtig bag de vektoriserede mærker. Som standard tændt og vist for Sort og hvid-tilstand. Slå den fra, når et hvidt område er en del af grafikken og skal være en rigtig udfyldt form.</dd>
+  <dt>Udfyldninger</dt>
+  <dd>Giver hver vektoriseret form en solid udfyldning i den farve, den blev vektoriseret som. Dette er det sædvanlige valg og er som standard tændt.</dd>
+  <dt>Stregoverflader</dt>
+  <dd>Konturerer hver vektoriseret form med en stregoverflade i sin egen farve i stedet for, eller så vel som, en udfyldning. Som standard slukket. Hvis du slår både Udfyldninger og Stregoverflader fra, oprettes stierne stadig, men de har intet, der maler dem, så lad mindst én være tændt.</dd>
+</dl>
+
+<h2 id="image-trace-finish">Beholdelse eller tilbagevending af resultatet</h2>
+<p>En frisk vektorisering er levende: stierne sidder over den skjulte original inde i Vektorisér-gruppen, og du kan fortsætte med at justere indstillingerne. To kommandoer afslutter denne tilstand, begge på panelet som knapper og under <strong>Objekt &gt; Vektorisér</strong>. De bliver tilgængelige, når en vektorisering er valgt.</p>
+<dl>
+  <dt>Udvid</dt>
+  <dd>Bevarer stierne og fjerner billedet, så gruppen bliver til almindelig vektorgrafik. Indstillingerne gælder ikke længere og kan ikke ændres, men hver sti er nu en normal form, du kan omforme, omfarve, kombinere og arrangere. Gå efter denne, når vektoriseringen ser rigtig ud, og du vil arbejde på vektorerne. <strong>Opret og udvid</strong> gør vektoriseringen og dette trin sammen.</dd>
+  <dt>Frigiv</dt>
+  <dd>Kasserer de vektoriserede stier og genskaber det originale billede, synligt igen på sin gamle placering. Brug den til at opgive en vektorisering og starte forfra, eller når du kun havde brug for billedet alligevel.</dd>
+</dl>
+
+<h2 id="image-trace-uses">Logoer, skitser og fotos</h2>
+<p>De tre almindelige udgangspunkter kalder på forskellige indstillinger.</p>
+<dl>
+  <dt>Et logo eller rent mærke</dt>
+  <dd>Start fra <strong>Sort-hvidt logo</strong>. Hold <strong>Ignorer hvid</strong> tændt, så papiret falder ud, hæv <strong>Hjørner</strong> for skarpe vinkler og <strong>Stier</strong> for trofaste kanter, og indstil <strong>Tærskel</strong>, indtil mærket er solidt uden at blive fyldt. Udvid, og indstil derefter din egen udfyldningsfarve.</dd>
+  <dt>En blæk- eller blyantskitse</dt>
+  <dd>Prøv <strong>Skitseret kunst</strong> eller <strong>Linjekunst</strong>. Sænk <strong>Tærskel</strong> for kun at beholde de tegnede linjer og lad papiret falde væk, og hæv <strong>Støj</strong> en smule for at rydde kornet af papiret. Linjekunst bevarer tyndere strøg; Skitseret kunst passer til en løsere hånd.</dd>
+  <dt>Et foto</dt>
+  <dd>Brug Farvetilstand med <strong>Høj trofasthed foto</strong> for en tæt lighed eller <strong>Lav trofasthed foto</strong> for et flattere, illustreret look, og indstil <strong>antallet af farver</strong> efter smag. Lad <strong>Ignorer hvid</strong> være slukket, så blege områder forbliver. Flere farver betyder flere former, så en tung fotovektorisering kan være stor: reducer farverne, hvis resultatet føles uhåndterligt.</dd>
+</dl>

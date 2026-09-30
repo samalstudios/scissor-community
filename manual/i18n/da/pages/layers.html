@@ -1,0 +1,85 @@
+<p class="lede">Lag-panelet er kortet over et dokument: hvert lag, gruppe og objekt i én liste, stablet i den rækkefølge, de sidder på siden. Brug det til at vise og skjule, låse, omdøbe, omarrangere og vælge, og til at se på et øjekast, hvilket lag ethvert objekt bor på.</p>
+
+<p>Genvejene nedenfor er skrevet i deres macOS-format. På Windows og Linux skal du læse <kbd>&#8984;</kbd> som Ctrl, <kbd>&#8997;</kbd> som Alt og <kbd>&#8679;</kbd> som Shift.</p>
+
+<h2 id="layers-panel">Lag-panelet</h2>
+<p>Åbn det fra <strong>Vindue &rsaquo; Lag</strong> (<kbd>F7</kbd>). Listen holder dine lag på øverste niveau, med indholdet af hvert lag indlejret under det: grupper, stier, tekst, billeder og pixellag, tegnet som et træ, du kan åbne og lukke. En beholder (et lag eller en gruppe) bærer en lille trekant til venstre for sin række; klik på den for at folde beholderen sammen eller åbne den op. Dybe dokumenter forbliver læselige, fordi du kan folde de dele sammen, du ikke arbejder på.</p>
+<p>To knapper sidder i bunden af panelet. <strong>Opret nyt lag</strong> tilføjer et tomt lag lige over det, der er aktivt i øjeblikket, og gør det nye aktivt. <strong>Slet markering</strong> fjerner alt, hvad der er valgt; et dokument bevarer altid mindst ét lag, så det sidst resterende lag kan ikke slettes på denne måde. For at omdøbe hvilket som helst lag, gruppe eller objekt skal du dobbeltklikke på dets navn i listen, skrive og trykke på <kbd>Enter</kbd>. At navngive dele af et travlt dokument er den hurtigste måde at holde det gennemskueligt.</p>
+
+<h3 id="layers-row">Hvad hver række viser</h3>
+<p>Læsning af en række fra venstre mod højre:</p>
+<table>
+  <thead><tr><th>Del</th><th>Hvad den gør</th></tr></thead>
+  <tbody>
+    <tr><td>Øje</td><td>Viser eller skjuler dette lag, gruppe eller objekt. En række med øjet slukket tegnes ikke og udskrives eller eksporteres ikke.</td></tr>
+    <tr><td>Lås</td><td>Låser eller op låser rækken. Et låst objekt kan ikke vælges eller redigeres på lærredet.</td></tr>
+    <tr><td>Farvechip</td><td>Kun på lagrækker: lagets farveetiket, bruges til at tone dette lagss markeringer og fremhævninger.</td></tr>
+    <tr><td>Trekant</td><td>Kun på beholdere: åbner eller lukker laget eller gruppen for at afsløre det, der er inde i.</td></tr>
+    <tr><td>Typeikon</td><td>Markerer grupper og beskæringsgrupper (en beskæringsgruppe tegnes med en stiplet kontur).</td></tr>
+    <tr><td>Navn</td><td>Navnet, eller en pladsholder i vinkelparenteser som <code>&lt;Sti&gt;</code> eller <code>&lt;Gruppe&gt;</code>, når en ting er unavngivet. Dobbeltklik for at omdøbe.</td></tr>
+    <tr><td>Markeringkvadrat</td><td>På højre kant: en lille kvadrat i lagets farve, der vises på enhver række, der holder en del af den aktuelle markering.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="layers-groups">Lag og grupper</h2>
+<p>Lag er beholdere på øverste niveau i dokumentet. De eksisterer for at holde urelaterede dele af grafikken adskilt: en baggrund på ét lag, hovedtegningen på et andet, etiketter på et tredje. Fordi et lag sidder i roden af træet, flytter skjul, lås eller omarrangering af det alt, det holder, på én gang.</p>
+<p>En gruppe er en mindre beholder, der bor inde i et lag (eller inde i en anden gruppe) og rejser med grafikken. Gruppering er måden at binde dele af én ting sammen, stykkerne af et logo eller et ikon, så de bevæger sig, skalerer og stables som en enhed. Grupper åbner og lukker i panelet med deres egen trekant, præcis som lag.</p>
+<p>Lag og grupper opfører sig ens på én vigtig måde: hver kan vises eller skjules, låses eller op låses, og hver kan bære sin egen opacitet og blandingstilstand, der gælder for alt inde i den. Forskellen er en rolle. Lag organiserer hele dokumentet; grupper binder individuelle objekter.</p>
+
+<h3 id="layers-grouping">Gruppering og opdeling af grupper</h3>
+<p>Vælg to eller flere objekter og vælge <strong>Objekt &rsaquo; Gruppér</strong> (<kbd>&#8984;G</kbd>) for at samle dem i en gruppe. <strong>Objekt &rsaquo; Opdel gruppe</strong> (<kbd>&#8679;&#8984;G</kbd>) tager objekterne af en valgt gruppe ud igen. Grupper kan være indlejret, så en gruppe af grupper er i orden; hver <kbd>&#8679;&#8984;G</kbd> skræller ét niveau af. Gå efter en gruppe, når du selv vælger den samme håndfuld objekter igen og igen.</p>
+
+<h2 id="layers-stacking">Stakrækkefølge: forrest og bagest</h2>
+<p>Objekter tegnes bagst til forrest, så et objekt tættere på forresten dækker dem bag det, hvor de overlapper. Panelet viser denne rækkefølge direkte: den øverste række er det forreste objekt, og den nederste række er det, der ligger længst tilbage. Omarrangering af et objekt ændrer, hvad der dækker hvad.</p>
+<p>Den hurtigste måde at omarrangere på er at trække: grib en række og slip den højere eller lavere i listen for at flytte den gennem stakken, eller slip den på et lag eller en gruppe for at flytte objektet <em>ind i</em> den. Trækning er også måden at flytte et valgt objekt til et andet lag på - uden at klippe og indsætte.</p>
+<p>Flyt en markering gennem stakken med <strong>Objekt &rsaquo; Arranger</strong>:</p>
+<table>
+  <thead><tr><th>Kommando</th><th>Genvej</th><th>Effekt</th></tr></thead>
+  <tbody>
+    <tr><td>Bring til forside</td><td><kbd>&#8679;&#8984;]</kbd></td><td>Hele vejen til forsiden af sit lag.</td></tr>
+    <tr><td>Bring fremad</td><td><kbd>&#8984;]</kbd></td><td>Ét trin mod forsiden.</td></tr>
+    <tr><td>Send bagud</td><td><kbd>&#8984;[</kbd></td><td>Ét trin mod bagenden.</td></tr>
+    <tr><td>Send til bagside</td><td><kbd>&#8679;&#8984;[</kbd></td><td>Hele vejen til bagenden af sit lag.</td></tr>
+  </tbody>
+</table>
+<p>Brug disse, når en form, du har brug for, er skjult bag en anden, eller når en baggrund er endt op oven på tegningen. For at arbejde gennem objekter, der ligger oven på hinanden, <strong>Vælg &rsaquo; Næste objekt over</strong> (<kbd>&#8997;&#8984;]</kbd>) og <strong>Næste objekt under</strong> (<kbd>&#8997;&#8984;[</kbd>) flytter markeringen op og ned ad stakken, hvilket er praktisk til at nå noget begravet under anden grafik.</p>
+
+<h2 id="layers-visibility">Visning og skjul</h2>
+<p>Klik på øjet på enhver række for at skjule dette lag, gruppe eller objekt; klik igen for at bringe det tilbage. En skjult række deltager ikke i tegning, udskrift eller eksport, så skjul er den sikre måde at få noget ud af vejen på uden at slette det. Brug det til at sammenligne to versioner af en detalje eller til at rydde et overfyldt lærred ned til den del, du arbejder på.</p>
+<p>Menuen tilbyder det samme for den aktuelle markering: <strong>Objekt &rsaquo; Skjul &rsaquo; Markering</strong> (<kbd>&#8984;3</kbd>) skjuler det, der er valgt, og <strong>Objekt &rsaquo; Vis alt</strong> (<kbd>&#8997;&#8984;3</kbd>) afslører alt, der blev skjult.</p>
+
+<h2 id="layers-locking">Låsning</h2>
+<p>Klik på låsen på en række for at låse den. Et låst objekt forbliver synligt, men kan ikke vælges eller ændres på lærredet, så det er uden for skades rækkevidde, mens du arbejder omkring det. Låsning af et lag beskytter alt på det på én gang. Lås baggrunden, mens du tegner over den, eller lås et færdigt element, så et tilfældigt træk ikke kan flytte det.</p>
+<p>Fra menuen låser <strong>Objekt &rsaquo; Lås &rsaquo; Markering</strong> (<kbd>&#8984;2</kbd>) det, der er valgt, og <strong>Objekt &rsaquo; Lås op alt</strong> (<kbd>&#8997;&#8984;2</kbd>) frigiver alt igen. Låsning af et valgt objekt slipper det også fra markeringen, da en låst ting ikke længere er noget, du kan virke på.</p>
+
+<h2 id="layers-selecting">Valg og det aktive lag</h2>
+<p>Klik på en objekts række i panelet for at vælge det objekt på lærredet. Hold <kbd>&#8679;</kbd>, <kbd>&#8984;</kbd> eller <kbd>Ctrl</kbd> nede, mens du klikker, for at tilføje et andet objekt til markeringen, så du kan opbygge en markering fra listen uden at lede efter små former på siden.</p>
+<p>Klik på en <em>lags</em> række gør noget andet: det gør dette lag til det aktive lag, markeret med en farvet streg ned ad dens venstre kant. Ny grafik, du tegner, placerer eller indsætter, føjes til det aktive lag, så klik på et lag før du begynder beslutter, hvor dette arbejde lander. Oprettelse af et nyt lag gør det aktivt med det samme.</p>
+<p>Markeringkvadratet til højre for hver række binder panelet til lærredet. Det vises i lagets farve på hver række, der holder en del af den aktuelle markeringen, og er udfyldt på de præcise objekter, der er valgt. Fordi mærket rejser op ad træet, viser et nedad bladret både, hvad der er valgt, og hvilke lag og grupper disse objekter sidder i.</p>
+
+<h2 id="layers-colours">Farveetiketter</h2>
+<p>Hvert lag får en farve fra en fast sekvens (lyseblå, rød, grøn, blå, gul og så videre, tolv i alt, cyklisk, mens du tilføjer flere lag). Denne farve er lagets etiket. Den vises som chipet ved siden af lagets navn og toner markeringerne i panelet sammen med markeringsfremhævelserne og afgrænsningsrammen tegnet på lærredet for objekter på dette lag. Pointen er hurtig identifikation: når du vælger noget, og dets ramme kommer grøn, ved du med det samme, at det tilhører det grønne lag. At sprede et dokument på tværs af nogle få velnavngivne, forskelligt farvede lag gør det meget nemmere at holde styr på, hvor alt er.</p>
+
+<h2 id="layers-masks">Beskærings- og opacitetsmasker</h2>
+<p>Et lag eller en gruppe kan bære sin egen opacitet og blandingstilstand, begge indstillet i <strong>Gennemsigtighed</strong>-panelet (<strong>Vindue &rsaquo; Gennemsigtighed</strong>, <kbd>&#8679;&#8984;F10</kbd>). Samme panel indeholder <strong>Begræns blanding til gruppe</strong>, som holder en gruppes blandingstilstande til at blande kun med hinanden i stedet for det, der ligger under dem, og <strong>Knockout-gruppe</strong>, hvor hvert objekt i gruppen skjuler dem under det i stedet for at skine igennem dem. Masker går et skridt videre og lader ét objekt styre, hvor, eller hvor stærkt, anden grafik vises.</p>
+
+<h3 id="layers-clip">Beskæringsmasker</h3>
+<p>En beskæringsmaske beskærer grafik til en form. Vælg to eller flere objekter og vælge <strong>Objekt &rsaquo; Beskæringsmaske &rsaquo; Opret</strong> (<kbd>&#8984;7</kbd>). Det øverste valgte objekt bliver til beskæringsstien, og alt under det vises kun inde i den form; resten beskæres væk. Resultatet er en beskæringsgruppe, tegnet i panelet med et stiplet ikon. <strong>Frigiv</strong> (<kbd>&#8997;&#8984;7</kbd>) vender det om og giver objekterne tilbage. Gå efter denne for at beskære et foto eller et mønster til en cirkel, et bogstav eller enhver kontur, du tegner over toppen.</p>
+
+<h3 id="layers-opacity-mask">Opacitetsmasker</h3>
+<p>En opacitetsmaske falmer grafik efter et andet objekts lysstyrke. Vælg to eller flere objekter og vælge <strong>Objekt &rsaquo; Beskæringsmaske &rsaquo; Opret opacitetsmaske</strong>, eller brug <strong>Lav maske</strong> i Gennemsigtighed-panelet. Det øverste objekt bliver til masken: hvor den er lys, vises grafikken under den fuldt ud, hvor den er mørk, falmer grafikken ud, med gråtonerne imellem, der giver delvis gennemsigtighed. <strong>Frigiv opacitetsmaske</strong> tager den fra hinanden igen. Brug en hvid-til-sort gradient som maske for at falme et billede ud til én kant, eller til at bygge bløde vigneringer og blandinger, som én flad opacitetsværdi ikke kan give.</p>
+
+<h2 id="layers-organising">Organisering af et dokument</h2>
+<p>Lidt struktur tidligt sparer meget søgning senere. Et par vaner, der giver sig udbytte:</p>
+<dl>
+  <dt>Ét lag pr. bekymring</dt>
+  <dd>Hold baggrunden, hovedgrafikken og teksten på separate, navngivne lag. Du kan derefter skjule, låse eller omarrangere en hel del af tegningen med ét klik.</dd>
+  <dt>Lås det, du ikke rører</dt>
+  <dd>Lås lagene omkring det, du arbejder på, så et tilfældigt klik eller træk ikke forstyrrer dem, og lås dem op igen med <kbd>&#8997;&#8984;2</kbd>, når du har brug for dem.</dd>
+  <dt>Gruppér de ting, der bevæger sig sammen</dt>
+  <dd>Bind dele af ét element i en gruppe, så det opfører sig som ét objekt, og reserver lagene til større opdelinger af dokumentet.</dd>
+  <dt>Indstil det aktive lag før du tegner</dt>
+  <dd>Klik på det lag, du vil tilføje til, først, så ny grafik lande det rigtige sted i stedet for oven på det, der var der.</dd>
+  <dt>Lad farverne guide dig</dt>
+  <dd>Stol på lagfarverne: når en markeringens fremhævning matcher en lags chip, ved du præcis, hvor det objekt bor, uden at åbne noget.</dd>
+</dl>

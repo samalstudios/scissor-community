@@ -1,0 +1,39 @@
+<p class="lede">Trois outils dans Scissor font le travail répétitif pour vous : <strong>Actions</strong> enregistre une série de commandes et la rejoue, <strong>Variables</strong> échange du texte et de la visibilité depuis une table de données pour qu'un design devienne plusieurs, et <strong>Scripts</strong> pilote l'éditeur entier depuis JavaScript. Aucun d'eux n'a besoin d'un compte ou d'un serveur — comme le reste de Scissor, ils s'exécutent sur votre propre machine.</p>
+
+<h2 id="automation-actions">Actions : enregistrez une fois, rejouez partout</h2>
+<p>Le panneau <strong>Actions</strong> (Fenêtre &rsaquo; Actions) enregistre ce que vous faites et le rejoue sur une nouvelle sélection. Appuyez sur <strong>Enregistrer</strong>, exécutez les commandes que vous voulez capturer — aligner, décaler, ajouter une ombre, quelle que soit la série — puis appuyez sur <strong>Arrêter</strong> et donnez un nom à l'action. Elle rejoint la liste, montrant combien d'étapes elle contient.</p>
+<p>Cliquez sur une action pour la <strong>jouer</strong> sur ce qui est sélectionné maintenant ; <kbd>&#8997;</kbd>-cliquez sur une pour la supprimer. Parce qu'une action n'est qu'une liste de commandes, elle répète une routine exacte à travers de nombreux objets sans que vous ayez à cliquer à travers elle à chaque fois.</p>
+
+<h2 id="automation-variables">Variables : un design, plusieurs versions</h2>
+<p>Le panneau <strong>Variables</strong> (Fenêtre &rsaquo; Variables) transforme un design fixe en modèle piloté par des données. Deux choses sur un objet peuvent être rendues dynamiques :</p>
+<dl>
+  <dt>Rendre le texte dynamique</dt><dd>Lie les mots d'un objet texte à une variable, donc différents jeux de données peuvent mettre du texte différent au même endroit.</dd>
+  <dt>Rendre la visibilité dynamique</dt><dd>Lie si un objet s'affiche, donc un jeu peut activer ou désactiver des parties du design.</dd>
+</dl>
+<p><strong>Délier</strong> rend un objet lié à nouveau fixe.</p>
+
+<h3 id="automation-datasets">Jeux de données</h3>
+<p>Un <strong>jeu de données</strong> est une ligne de valeurs pour ces variables — un badge, une carte, un cadre. <strong>Capturer</strong> enregistre les valeurs actuelles comme nouveau jeu ; les flèches passent d'un jeu au suivant et le design se met à jour pour correspondre. <strong>Importer CSV…</strong> lit un lot entier à la fois — une colonne par variable, une rangée par jeu — et <strong>Exporter CSV</strong> écrit les jeux en retour pour les modifier dans un tableur.</p>
+
+<h3 id="automation-batch">Exporter chaque jeu à la fois</h3>
+<p><strong>Exporter les jeux de données…</strong> rend le plan actif une fois pour chaque jeu de données et les écrit tous en une seule passe, en PNG, JPEG, WebP ou SVG. Une feuille de badges de nom, un ensemble de bannières localisées ou une série de cartes sociales sortent comme un lot ordonné de fichiers, chacun avec ses propres données renseignées.</p>
+
+<h2 id="automation-scripts">Scripts : piloter Scissor depuis JavaScript</h2>
+<p>Pour tout ce qu'un menu ne peut pas exprimer, un script le peut. <strong>Fichier &rsaquo; Scripts &rsaquo; Console de script…</strong> ouvre un éditeur où vous écrivez du JavaScript et l'exécutez contre le document ouvert ; <strong>Autre script…</strong> (<kbd>&#8984;F12</kbd>) exécute un fichier <code>.js</code> depuis le disque. Un script s'exécute dans un Web Worker, loin de la page, donc il ne peut ni toucher l'interface ni vos fichiers sauf à travers l'objet <code>scissor</code> qui lui est donné — chaque appel est exécuté sur le moteur et renvoyé.</p>
+<p>L'objet <code>scissor</code> couvre le terrain commun :</p>
+<dl>
+  <dt>Créer des formes et du texte</dt><dd><code>scissor.rect</code>, <code>roundedRect</code>, <code>ellipse</code>, <code>polygon</code>, <code>star</code>, <code>path</code> et <code>text</code> dessinent des illustrations ; chacun prend une position et une taille et un objet d'options pour <code>fill</code>, <code>stroke</code> et <code>strokeWidth</code> (les couleurs sont n'importe quelle couleur CSS).</dd>
+  <dt>Lire le document</dt><dd><code>await scissor.document()</code> renvoie l'application, la sélection, les calques et les plans de travail tels que les panneaux les voient ; <code>scissor.selection()</code> renvoie juste ce qui est sélectionné.</dd>
+  <dt>Agir dessus</dt><dd><code>scissor.select</code>, <code>group</code> et <code>undo</code>, et <code>scissor.run(command)</code> pour n'importe quelle commande du moteur — les mêmes commandes que les menus envoient.</dd>
+  <dt>Parler en retour</dt><dd><code>scissor.log</code> imprime dans la console ; <code>scissor.alert</code> affiche un message.</dd>
+</dl>
+<p>Un court exemple — un anneau de points colorés et une légende :</p>
+<pre><code>const doc = await scissor.document();
+scissor.log('Boards:', doc.artboards.length);
+for (let i = 0; i &lt; 12; i++) {
+  const a = (i / 12) * Math.PI * 2;
+  await scissor.ellipse(300 + Math.cos(a) * 120, 260 + Math.sin(a) * 120, 36, 36,
+    { fill: `hsl(${i * 30} 80% 60%)` });
+}
+await scissor.text(230, 270, 'Hello, Scissor', { size: 24 });</code></pre>
+<p>La Console de script conserve le dernier code que vous avez exécuté, donc un script fonctionnel est là quand vous y revenez.</p>

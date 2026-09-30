@@ -1,0 +1,91 @@
+<p class="lede">Símbols, pinzells i motius són tres maneres de dibuixar una peça de feina una vegada i reutilitzar-la. Canvieu l'original i cada ús d'aquest canvia amb ell, de manera que un element repetit roman coherent i roman ràpid d'actualitzar.</p>
+
+<p>Les dreceres a continuació estan escrites en format macOS. A Windows, llegiu <kbd>&#8984;</kbd> com a <kbd>Ctrl</kbd>, <kbd>&#8997;</kbd> com a <kbd>Alt</kbd> i <kbd>&#8679;</kbd> com a <kbd>Majúscules</kbd>.</p>
+
+<h2 id="symbols-panel">El panell Símbols</h2>
+<p>Un símbol és una peça de feina desada que podeu fer caure al document un nombre qualsevol de vegades. Cada còpia és una <em>instància</em>: apunta a la definició única en comptes de contenir feina pròpia, de manera que el document roman petit per quantes instàncies col·loqueu, i un canvi a la definició els arriba a tots d'un cop. Useu símbols quan el mateix element es repeteix, com un arbre en un paisatge, un punts en un mapa, un cargol en un dibuix de muntatge, o un logotip que apareix a diverses taules.</p>
+<p>Obriu el panell amb <strong>Finestra &gt; Símbols</strong> (<kbd>&#8679;&#8984;F11</kbd>), o bé des de la seva pestanya a l'acoblador de panells. Llista els símbols del document per nom. Fent clic a un nom el seleccioneu com a símbol actiu, que és el que Símbol Escampadora col·loca; el símbol actiu està destacat.</p>
+
+<h3 id="symbols-make">Crear un símbol</h3>
+<p>Seleccioneu la feina que voleu reutilitzar i feu clic a <strong>Nou símbol</strong>. La selecció s'emmagatzema com a definició del símbol i, al seu lloc al llenç, es substitueix per una sola instància col·locada exactament on es trobava la feina. La definició es mantén a part, de manera que no omple el llenç ni les capes ordinàries. Si no li doneu un nom, el símbol es diu <code>Símbol 1</code>, <code>Símbol 2</code> i així successivament, en l'ordre en què els creeu.</p>
+
+<h3 id="symbols-place">Col·locar instàncies</h3>
+<p>Feu doble clic a un símbol al panell per fer caure una nova instància al centre de la vista actual. Col·loqueu tantes com necessiteu. Una instància es comporta com qualsevol altre objecte un cop és al llenç: seleccioneu-la i podeu moure-la, redimensionar-la, girar-la o reflectir-la, i establir-ne l'opacitat i la fusió, tot sense tocar la definició, perquè aquells canvis viatgen sobre la instància mateixa. Useu això per variar la mida i l'angle de peces repetides mantenint-les lligades al mateix mestre.</p>
+
+<h3 id="symbols-edit">Editar un símbol</h3>
+<p>Feu doble clic a una instància al llenç amb l'eina Selecció (<kbd>V</kbd>) per entrar a la definició. Tot el resta a la pàgina s'atenua, i editeu la feina per compte seu. Feu doble clic a una part buida del llenç per sortir. Com que cada instància dibuixa la mateixa definició, l'edició que feu apareix a totes juntes. Aquest és el punt d'un símbol: corregiu la feina una vegada i tot el document s'actualitza, en comptes de buscar cada còpia.</p>
+
+<h3 id="symbols-break">Trencar l'enllaç</h3>
+<p>Quan una instància ha de diferir de la resta d'una manera que va més enllà de la posició, la mida o l'opacitat, seleccioneu-la i feu clic a <strong>Trenca l'enllaç</strong>. La instància es substitueix per una còpia ordinària i editable de la definició, a la mateixa mida i angle, ja no lligada al símbol. Els canvis al símbol ja no la arribaran. El botó està disponible només mentre està seleccionada una instància de símbol.</p>
+<p>Per eliminar completament un símbol, manteniu premut <kbd>&#8997;</kbd> i feu clic al seu nom al panell. La seva definició i cada instància d'aquest s'eliminen, atès que una instància sense definició no dibuixaria res.</p>
+
+<h2 id="symbols-symbolism">Les eines simbòliques</h2>
+<p>Les eines simbòliques escampen i ajusten instàncies de símbol a grapats, sota un pinzell rodó, en comptes d'una a la vegada. Comparteixen una sola ranura a la barra d'eines; manteniu premuda la ranura per triar entre elles. Actuen sobre les instàncies dins de la selecció, o bé sobre cada instància editable del document quan no hi ha res seleccionat, de manera que podeu guiar un camp sencer de símbols d'un cop. Mantingueu premut <kbd>&#8997;</kbd> per invertir l'efecte de cadascuna.</p>
+<p>Mentre una eina simbòlica està activa, <kbd>[</kbd> i <kbd>]</kbd> fan el pinzell més petit i més gran, i <kbd>{</kbd> i <kbd>}</kbd> baixen i pugen la seva intensitat (com de fort treballa cada pas).</p>
+<table>
+<thead><tr><th>Eina</th><th>Drecera</th><th>Què fa</th></tr></thead>
+<tbody>
+<tr><td>Símbol Escampadora</td><td><kbd>&#8679;S</kbd></td><td>Arrossegueu per col·locar instàncies del símbol actiu, espaiades a mesura que us moveu; les instàncies es recullen en un únic grup <em>Conjunt de símbols</em>. Mantingueu premut <kbd>&#8997;</kbd> per aixecar les instàncies de nou sota el pinzell</td></tr>
+<tr><td>Símbol Empenta</td><td></td><td>Mou les instàncies en la direcció en què arrossegueu, de manera que podeu ordenar un escampat sense moure cada peça</td></tr>
+<tr><td>Símbol Agrupa</td><td></td><td>Apropa les instàncies cap al pinzell; <kbd>&#8997;</kbd> les separa</td></tr>
+<tr><td>Símbol Redimensiona</td><td></td><td>Engrandeix les instàncies sota el pinzell; <kbd>&#8997;</kbd> les empetiteix</td></tr>
+<tr><td>Símbol Gira</td><td></td><td>Gira les instàncies per seguir la direcció del vostre arrossegament</td></tr>
+<tr><td>Símbol Tinta</td><td></td><td>Tinta les instàncies cap al color d'emplenament actual, per a variació en un grup; <kbd>&#8997;</kbd> elimina la tinta</td></tr>
+<tr><td>Símbol Esvaeix</td><td></td><td>Esvaeix les instàncies baixant la seva opacitat; <kbd>&#8997;</kbd> les retorna</td></tr>
+<tr><td>Símbol Restil</td><td></td><td>Aplica l'estil gràfic triat al panell Estils gràfics a les instàncies; <kbd>&#8997;</kbd> l'esborra</td></tr>
+</tbody>
+</table>
+<p>Tres eines necessiten alguna cosa establerta primer. Símbol Escampadora necessita un símbol per ruixar, de manera que creeu-ne un al panell Símbols abans de començar. Símbol Restil aplica l'estil gràfic triat al panell Estils gràfics, de manera que trieu un estil allà primer; Símbol Tinta utilitza el color d'emplenament actual, de manera que establiu l'emplenament abans d'acolorir.</p>
+
+<h2 id="symbols-brushes">El panell Pinzells</h2>
+<p>Un pinzell decideix com un traç es dibuixa al llarg d'un camí. En comptes d'una línia simple d'amplada uniforme, el camí pot portar un traç tipus ploma, un rastre de feina escampada, una forma estesa d'un cap a l'altre, o bé una banda de mosaic. El camí roman completament editable sota: remodelleu-lo i el traç amb pinzell el segueix. Obriu el panell amb <strong>Finestra &gt; Pinzells</strong> (<kbd>F5</kbd>), o bé des de la seva pestanya a l'acoblador de panells. Cada pinzell mostra una petita vista prèvia al costat del seu nom.</p>
+
+<h3 id="symbols-brush-kinds">Tipus de pinzell</h3>
+<p>Scissor té cinc tipus de pinzell. Dos es dibuixen a partir de pocs números, i tres es construeixen a partir de feina que seleccioneu.</p>
+<dl>
+  <dt>Cal·ligràfic</dt>
+  <dd>Una punta oval inclinada que s'engreixa i s'aprima a mesura que el camí gira, com una ploma ampla. Establiu-ne l'Angle, la Rodonesa i la Mida en punts. Useu-lo per a traços de lettering, signatures i qualsevol línia destinada a semblar dibuixada a mà.</dd>
+  <dt>Cerd</dt>
+  <dd>Un conjunt de traços prims que es llegeix com un pinzell carregat. Establiu la Mida en punts, el nombre de Cerds i l'Opacitat de pintura de manera que passos superposats s'acumulin. Useu-lo quan voleu una vora suau i pictòrica en comptes de neta.</dd>
+  <dt>Escampat</dt>
+  <dd>Escampa còpies de feina seleccionada al llarg del camí. Establiu la Mida de les còpies, l'Espaiat entre elles, com de lluny es Disperseixen de la línia i la seva Rotació, amb opcions per girar cada còpia respecte al camí i acolorir-la amb el color de contorn. Useu-lo per a confeti, fulles, estrelles o bombolles que segueixen una corba.</dd>
+  <dt>Artístic</dt>
+  <dd>Estén una peça de feina seleccionada al llarg de tota la llargada del camí. Establiu-ne l'Amplada, amb una opció per acolorir-la amb el color de contorn. Useu-lo per a un traç de tinta cònic, una cinta, una fletxa o un marca de carboncí aspra que es doblega amb la línia.</dd>
+  <dt>Motiu</dt>
+  <dd>Repeteix feina seleccionada d'un cap a l'altre al llarg del camí, com una vora decorativa. Establiu l'Escala i l'Espaiat, amb una opció per acolorir-la amb el color de contorn. Useu-lo per a cadenes, cordes, costures o un marc repetit.</dd>
+</dl>
+
+<h3 id="symbols-brush-apply">Aplicar i eliminar un pinzell</h3>
+<p>Seleccioneu un o més camins i feu clic a un pinzell per dibuixar-ne els traços amb ell. Un camí sense contorn visible en rep un perquè el pinzell tingui una línia on córrer. L'eina Pinzell (<kbd>B</kbd>) dibuixa nous traços amb el pinzell actualment triat, de manera que trieu un pinzell i pinteu directament al llenç. Per treure un pinzell dels traços seleccionats i tornar-los a línies simples, feu clic a <strong>Elimina pinzell</strong>.</p>
+
+<h3 id="symbols-brush-manage">Crear, editar i eliminar pinzells</h3>
+<p>Feu clic a <strong>Nou pinzell&hellip;</strong>, trieu un dels cinc tipus i establiu-ne les opcions. Per a un pinzell escampat, artístic o motiu, seleccioneu la feina que ha d'utilitzar abans d'obrir el diàleg, atès que aquesta feina es converteix en el pinzell. Per canviar un pinzell més endavant, seleccioneu-lo i feu clic a <strong>Opcions&hellip;</strong> (o bé feu doble clic a ell a la llista); qualsevol traç que l'utilitzi es torna a dibuixar amb les noves configuracions. <strong>Elimina</strong> elimina el pinzell seleccionat, després de demanar confirmació; els traços que l'utilitzaven tornen a línies simples.</p>
+
+<h2 id="symbols-patterns">El panell Motius</h2>
+<p>Un motiu és una mosaic de feina que es repeteix per omplir una forma. Definiu la mosaic una vegada i podeu omplir qualsevol objecte amb ella, de manera que una textura o un motiu roman uniforme a tota la feina i s'actualitza arreu quan editeu la mosaic. El panell es troba a l'acoblador de panells, i els mateixos comandaments viuen sota <strong>Objecte &gt; Motiu</strong>.</p>
+
+<h3 id="symbols-pattern-make">Crear un motiu</h3>
+<p>Seleccioneu la feina per una mosaic i feu clic a <strong>Crea motiu</strong> (o bé <strong>Objecte &gt; Motiu &gt; Crea</strong>). Una còpia de la feina s'emmagatzema com a mosaic repetida i s'afegeix al panell; la feina que heu dibuixat roman on és. Els motius es diuen <code>Motiu 1</code>, <code>Motiu 2</code> i així successivament a mesura que els creeu.</p>
+
+<h3 id="symbols-pattern-fill">Omplir amb un motiu</h3>
+<p>Seleccioneu una forma i feu clic a un motiu al panell per establir-la com a emplenament de la forma. Sense selecció, fer clic a un motiu el converteix en el color d'emplenament per a la propera forma que dibuixeu. Com que és un emplenament, el motiu es repeteix per cobrir la forma i es retalla al seu contorn. Useu-lo per a fons, teixits, fullatge o qualsevol superfície que hauria de llegir-se com una repetició en comptes d'un color pla. Per eliminar un motiu del document, manteniu premut <kbd>&#8997;</kbd> i feu clic a ell al panell; les formes que el tenien com a emplenament tornen a cap emplenament.</p>
+
+<h3 id="symbols-pattern-edit">Editar la mosaic</h3>
+<p>Feu doble clic a un motiu al panell per editar-ne la mosaic. La resta de la feina s'atenua i treballeu sobre la mosaic per compte seu, amb un botó <strong>Fet</strong> al panell; feu clic a ell (o bé torneu a utilitzar <strong>Objecte &gt; Motiu &gt; Edita motiu</strong>) quan hagi acabat. Cada forma emplenada amb el motiu s'actualitza per coincidir. També podeu començar a editar seleccionant una forma emplenada amb un motiu i triant <strong>Edita motiu</strong>.</p>
+
+<h3 id="symbols-pattern-options">Opcions de mosaic</h3>
+<p>Feu clic al botó d'opcions de mosaic al costat d'un motiu (o bé <strong>Objecte &gt; Motiu &gt; Opcions de mosaic&hellip;</strong>) per controlar com la mosaic es repeteix. Aquestes configuracions canvien la disposició de la repetició sense canviar la feina a la mosaic.</p>
+<dl>
+  <dt>Tipus de mosaic</dt>
+  <dd>Com s'alineen files i columnes: Graella, Maó per fila, Maó per columna, Hexagonal per columna o Hexagonal per fila. Maó alterna files o columnes com una paret de maons; hexagonal empaqueta les mosaics en un rusc.</dd>
+  <dt>Desplaçament de maó</dt>
+  <dd>Per als tipus de maó, com cada fila o columna alterna es desplaça, com a percentatge de la mosaic.</dd>
+  <dt>Adapta la mosaic a la feina</dt>
+  <dd>Adapta la mosaic als límits de la feina. Desactiveu-la per establir vostè l'Amplada i l'Alçada de la mosaic.</dd>
+  <dt>Amplada i Alçada</dt>
+  <dd>La mida de la mosaic en píxels, utilitzada quan la mosaic no està dimensionada sobre la feina.</dd>
+  <dt>Espaiat horitzontal i vertical</dt>
+  <dd>Espais deixats entre mosaics, en píxels. Els valors positius separen el motiu; els negatius superposen les mosaics.</dd>
+  <dt>Mou la mosaic amb la feina</dt>
+  <dd>Manté la mosaic alineada amb la feina quan es mou, de manera que la repetició viatja amb l'objecte.</dd>
+</dl>
