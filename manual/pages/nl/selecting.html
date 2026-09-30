@@ -1,0 +1,34 @@
+<p class="lede">Voordat u iets kunt veranderen, moet u zeggen wat u wilt veranderen. Deze pagina gaat over het kiezen van werk: de snelle klikken met de selectiegereedschappen, en het hele <strong>Selecteren</strong>-menu dat objecten kiekt op basis van waar ze van zijn gemaakt, door de stapel stapt, en een selectie op slaat om later terug te halen. In de sneltoetsen hieronder is <kbd>&#8984;</kbd> <kbd>Ctrl</kbd> op Windows en Linux, <kbd>&#8997;</kbd> is <kbd>Alt</kbd> en <kbd>&#8679;</kbd> is Shift.</p>
+
+<h2 id="selecting-basics">Klikken en markeren</h2>
+<p>Het <strong>Selectie-gereedschap</strong> (<kbd>V</kbd>) is waar het meeste selecteren begint. Klik op een object om het te selecteren; houd <kbd>&#8679;</kbd> ingedrukt en klik op een andere om het toe te voegen, of klik op een geselecteerde om het te verwijderen. Sleep over leeg canvas om een <em>marquee</em> te trekken, en alles wat het raakt wordt geselecteerd. Het <strong>Directe selectie-gereedschap</strong> (<kbd>A</kbd>) reikt naar binnen in plaats daarvan: het kiest individuele ankerpunten en padsegmenten in plaats van hele objecten, en het <strong>Groepselectie-gereedschap</strong> stapt één niveau per keer een groep in. Deze gereedschappen worden behandeld op de <a href="/manual/tools/">Gereedschappen</a>- en <a href="/manual/paths/">Paden</a>-pagina's; de rest van deze pagina is het Selecteren-menu, dat het kiezen doet dat klikken niet kan.</p>
+
+<h2 id="selecting-whole-document">Alles, niets en omgekeerd</h2>
+<table>
+  <thead><tr><th>Commando</th><th>Sneltoets</th><th>Wat het selecteert</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Selecteren &rsaquo; Alles</strong></td><td><kbd>&#8984;A</kbd></td><td>Elk ontgrendeld object in het document.</td></tr>
+    <tr><td><strong>Alles op actief bord</strong></td><td><kbd>&#8997;&#8984;A</kbd></td><td>Alleen het werk op het bord waar u aan werkt — de snelste manier om één pagina van een bestand met meerdere borden te grijpen.</td></tr>
+    <tr><td><strong>Deselecteren</strong></td><td><kbd>&#8679;&#8984;A</kbd></td><td>Niets; wist de huidige selectie.</td></tr>
+    <tr><td><strong>Omkeren</strong></td><td></td><td>Wisselt de selectie om voor alles wat <em>niet</em> was geselecteerd.</td></tr>
+    <tr><td><strong>Opnieuw selecteren</strong></td><td><kbd>&#8984;6</kbd></td><td>Brengt de selectie terug die u had voordat u die wist.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="selecting-stack">Door de stapel stappen</h2>
+<p>Wanneer objecten elkaar overlappen, verplaatsen <strong>Selecteren &rsaquo; Volgend object boven</strong> (<kbd>&#8997;&#8984;]</kbd>) en <strong>Volgend object onder</strong> (<kbd>&#8997;&#8984;[</kbd>) de selectie omhoog of omlaag door de stapel op dezelfde plek, één object per keer. Het is de betrouwbare manier om een vorm te bereiken die onder anderen zit zonder de bovenste uit de weg te schuiven.</p>
+
+<h2 id="selecting-same">Selecteren op basis van: kiezen op wat dingen delen</h2>
+<p>Selecteer één object, dan verzamelt <strong>Selecteren &rsaquo; Op basis van</strong> elk ander object in het document dat ermee overeenkomt op één eigenschap. Gebruik het om elke vorm van één vulling in één kleur in één kleur te herkleuren, of om alle dunne lijnen tegelijk te grijpen.</p>
+<dl>
+  <dt>Uiterlijk</dt><dd>Het hele uiterlijk — dezelfde stapel vullingen, lijnen en effecten.</dd>
+  <dt>Vulling &amp; lijn</dt><dd>Dezelfde vulling en dezelfde lijn samen.</dd>
+  <dt>Vulkleur / Lijnkleur</dt><dd>Dezelfde vulkleur, of dezelfde lijnkleur.</dd>
+  <dt>Lijndikte</dt><dd>Dezelfde lijnbreedte.</dd>
+  <dt>Dekking</dt><dd>Dezelfde dekking.</dd>
+  <dt>Overvloeimodus</dt><dd>Dezelfde overvloeimodus.</dd>
+  <dt>Vorm</dt><dd>Hetzelfde soort object — alle ellipsen, zeg, of alle tekst.</dd>
+</dl>
+
+<h2 id="selecting-saved">Een selectie opslaan</h2>
+<p>Een lastige selectie is de moeite waard om te bewaren. <strong>Selecteren &rsaquo; Selectie opslaan…</strong> slaat de huidige set op onder een naam; het verschijnt dan onder <strong>Selecteren &rsaquo; Opgeslagen selecties</strong>, en het kiezen ervan selecteert exact die objecten opnieuw, hoe u sindsdien ook rond heeft geklikt. <strong>Selectie bewerken…</strong> hernoemt of verwijdert de u heeft opgeslagen. Opgeslagen selecties reizen binnen het <code>.cut</code>-document, dus ze zijn er nog de volgende keer dat u het bestand opent.</p>
