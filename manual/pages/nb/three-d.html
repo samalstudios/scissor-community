@@ -1,0 +1,65 @@
+<p class="lede">3D og Materialer gjør en flat form til et fast legeme du kan rotere, belyse og gi en overflate, uten å forlate vektorverket ditt bak deg. Det er en live-effekt: det faste legemet tegnes fra stien under, og den stien forblir fullt redigerbar, slik at du kan endre omtrekken, fargen eller teksten når som helst og 3D bygges rundt det på nytt.</p>
+
+<h2 id="three-d-opening">Åpne effekten</h2>
+<p>Velg et objekt først, og velg deretter en objekttype fra <strong>Effekt &rsaquo; 3D og Materialer</strong>: <em>Plan</em>, <em>Ekstruder &amp; Fasett</em>, <em>Roter</em> eller <em>Pust</em>. Hver legger til effekten og åpner <strong>3D og Materialer</strong>-panelet, hvor resten av kontrollene bor. Samme panel åpnes på egen hånd fra <strong>Vindu &rsaquo; 3D og Materialer</strong> eller fra <strong>Effekt &rsaquo; 3D og Materialer &rsaquo; 3D og Materialer-panel</strong>.</p>
+<p>Panelet trenger noe valgt før det kan gjøre noe; uten noe valgt sier det det og gråter kontrollene sine ut. Når et objekt har effekten, løper de fire objekttypeknappene øverst i panelet, slik at du kan bytte en form fra en ekstrudering til en rotasjon på én klikk og beholde rotasjonen og belysningen du allerede har satt.</p>
+<p>Fordi det er en effekt og ikke en konvertering, kan du legge den på nesten alt en sti kan bære: en form, en gruppe, en omtrek eller live-tekst. Å redigere kilden, for eksempel skrive om et ord eller dytt et anker, kjører effekten på nytt på det nye kunstverket.</p>
+
+<h2 id="three-d-types">De fire objekttypene</h2>
+<p>Objekttypen bestemmer hvordan den flate formen leses som et fast legeme. Velg den som passer til formen du er ute etter.</p>
+
+<h3 id="three-d-plane">Plan</h3>
+<p>Plan lar kunstverket være flatt og plasserer det som et kort i 3D-rommet, slik at det eneste det gjør er å la deg rotere og tippe det. Det er ingen dybde å angi. Grip etter det når du vil ha et stykke flatt kunstverk til å ligge på en vinkel, som en etikett som ligger bakover på en flate eller en badge som er hellet for å fange lyset, uten å gi det noen tykkelse.</p>
+
+<h3 id="three-d-extrude">Ekstrudering og Fasett</h3>
+<p>Ekstrudering skyver formen rett bakover for å gi den tykkelse, og gjør en omtrek til en fast blokk. En fasett runder eller kutter for- og bakkanter slik at de ikke blir skarpe. Hull beholdes: en sammensatt sti som en ring eller en bokstav med en teller forblir hull gjennomgående. Dette er typen å bruke for skrifter, logoer, ikoner og badges som skal lese som hevet eller utskåret.</p>
+<figure class="shot">
+  <img src="img/3d-extrude.gif" width="620" height="620" loading="lazy" alt="En flat vektorstjerne som ekstruderes til en tredimensjonal stjerne og roteres for å vise dybden sin." />
+  <figcaption>Ekstrudering og Fasett bygger dybde fra en flat form, live. Stjernen forblir en redigerbar sti under.</figcaption>
+</figure>
+
+<h3 id="three-d-revolve">Roter</h3>
+<p>Roter sveiper formen rundt venstre kant, på samme måte som en profil snudre på en dreiebenk tegner et fast legeme. Tegn halvparten av et symmetrisk objekt, et glass, en flaske, en skål, et sjakkbrikke, og roter det til det runde. Sveivinkelen kan være mindre enn en hel omgang for å etterlate et tverrsnitt som viser innersiden.</p>
+
+<h3 id="three-d-inflate">Pust</h3>
+<p>Pust blåser formen utover, som om den var enpute fylt med luft, og gir den en myk, rundet overflate i stedet for en flat. Bruk den for myke knapper, putete badges, godter og runde klistremerker hvor du vil ha svulming i stedet for en hard ekstrudert kant.</p>
+
+<h2 id="three-d-shape">Dybde, fasett og trinn</h2>
+<p><em>Objekt</em>-seksjonen inneholder feltene som former det faste legemet. Hvilke som vises avhenger av objekttypen, slik at panelet bare viser de feltene som gjør noe for typen i hånden.</p>
+<table>
+  <thead><tr><th>Felt</th><th>Vises for</th><th>Hva det angir</th></tr></thead>
+  <tbody>
+    <tr><td>Dybde</td><td>Ekstrudering og Fasett, Pust</td><td>Hvor langt formen skyves bakover, eller hvor mye den svulmer, i piksler.</td></tr>
+    <tr><td>Fasett</td><td>Ekstrudering og Fasett</td><td>Størrelsen på den avrundede eller kuttede kanten foran og bak, i piksler; la den stå på null for en vanlig firkantet kant.</td></tr>
+    <tr><td>Vinkel</td><td>Roter</td><td>Hvor langt profilen sveipes, opp til en hel 360&deg; omgang. En mindre vinkel etterlater objektet åpent, og viser dets innside.</td></tr>
+    <tr><td>Trinn</td><td>Ekstrudering og Fasett, Roter, Pust</td><td>Hvor mange segmenter de buede delene bygges av. Flere trinn gir en jevnere overflate; færre later den facettert.</td></tr>
+  </tbody>
+</table>
+<p>Plan har ingen av disse: den har ingen dybde å beskrive. Hvis en buet rotasjon eller en avrundet fasett ser for kantet ut, øker du trinnene; hvis du vil ha en lav-polygonalt, facettert look med vilje, senker du dem.</p>
+
+<h2 id="three-d-rotation">Rotere objektet</h2>
+<p><em>Rotasjon</em>-seksjonen angir hvordan objektet vender mot deg. Den raskeste måten er forhåndsvisningsflaten: dra over den for å snu objektet til venstre og høyre, og dra opp og ned for å tippe det fremover og bakover. For nøyaktige vinkler roterer <em>X</em>, <em>Y</em> og <em>Z</em>-feltene objektet rundt hver akse, hver fra -180&deg; til 180&deg;.</p>
+<p>Rotasjonsmenyen inneholder ferdigdefinerte synsvinkler, slik at du kan slippe objektet rett inn i en standardvisning i stedet for å stille inn én:</p>
+<dl>
+  <dt>Akse-av Forside, Bakside, Venstre, Høyre, Topp, Bunn</dt><dd>Tredjekvartvisninger som viser én hovedflate sammen med litt av toppen eller siden. En god standard for et fast legeme som skal se ut som et fast legeme.</dd>
+  <dt>Isometrisk Venstre, Høyre, Topp, Bunn</dt><dd>Ekte isometriske visninger, hvor de tre aksene er forkortet likt og linjene forblir parallelle. Passer til teknisk og spillaktig kunstverk som må stilles opp.</dd>
+  <dt>Forside, Bakside, Venstre, Høyre, Topp, Bunn</dt><dd>De seks rett-visningene, som ser rett på én flate. Nyttig for å sjekke formen eller for en flate, frontpresentasjon.</dd>
+</dl>
+<p>Å velge en forhåndsinnstilling fyller ut X-, Y- og Z-feltene; å endre dem med hånden viser menyen som <em>Tilpasset rotasjon</em>. <em>Perspektiv</em>-feltet, fra 0&deg; til 160&deg;, kontrollerer hvor sterkt objektet trekker seg tilbake: på null forblir sidene parallelle, og etter hvert som du hever det trekkes de fjerne kantene mot et forsvinningspunkt, på samme måte som et ekte objekt som sett fra nær ser ut til å tapers. Legg til litt perspektiv for en levende tredjekvartvisning, eller la det stå på null for å holde en isometrisk eller flate oppsett nøyaktig.</p>
+
+<h2 id="three-d-lighting">Belysning</h2>
+<p><em>Belysning</em>-seksjonen bestemmer hvor lyset kommer fra og hvor hardt det er, noe som er det som får overflaten til å lese som hevet, utskåret eller avrundet. En belysningsmeny tilbyr fire utgangspunkter, <em>Standard</em>, <em>Diffus</em>, <em>Øverst til venstre</em> og <em>Høyre</em>, og enhver endring av feltene under viser den som <em>Tilpasset belysning</em>.</p>
+<dl>
+  <dt>Intensitet</dt><dd>Styrken til hovedlyset, som prosent. Høyere gjør de opplyste flatene lysere og fremhevingene sterkere.</dd>
+  <dt>Omgivelse</dt><dd>Et fylllys som løfter hele objektet, som prosent, slik at de skyggeflatene ikke faller til svart. Øk det for en mykere, jevnere look; senk det for dypere kontrast.</dd>
+  <dt>Rotasjon</dt><dd>Hvor lyset sitter rundt objektet, fra -180&deg; til 180&deg;, noe som flytter fremhevingen og skyggen til den andre siden.</dd>
+  <dt>Høyde</dt><dd>Hvor høyt lyset er over objektet, fra 0&deg; (i nivå med det, for lange skrå skygger) til 90&deg; (rett overfor, for jevnt lys).</dd>
+</dl>
+<p><em>Diffus</em> gir en myk, lav-kontrast finish; <em>Øverst til venstre</em> og <em>Høyre</em> kaster lyset fra én side for en mer dramatisk, skulptert look. Start fra den forhåndsinnstillingen som er nærmest, og juster deretter de fire feltene etter smak.</p>
+
+<h2 id="three-d-materials">Materialer</h2>
+<p>Tre materiaknapper angir hvordan overflaten fanger lyset: <em>Plast</em>, <em>Matte</em> og <em>Metall</em>. Plast gir en myk glans med en klar fremheving, det vanlige valget for en vennlig, støpt look. Matte fjerner glansen for en flat, jevn finish, som leser som papir, leire eller en trykt overflate. Metall gir en hardere, høyere-kontrast glans, for krom, gull og andre polerte metaller. Materialet fungerer sammen med belysningen, slik at en endring av den ene er verdt å sjekke mot den andre.</p>
+
+<h2 id="three-d-expand">Holde det live, og utvide</h2>
+<p>Alt ovenfor lagres som én live-effekt på objektet, oppført i <strong>Utseende</strong>-panelet (<kbd>&#8679;F6</kbd>) med et <em>fx</em>-merke over objektets fyll og linjer. Klikk på det oppføringen for å gjenåpne 3D og Materialer-panelet, eller fjern den der for å ta objektet tilbake til flat. Inne i panelet, <em>Fjern 3D</em> stryker effekten av utvalget.</p>
+<p>Mens effekten er live forblir kunstverket under en vanlig, redigerbar sti, noe som er det som lar deg fortsette å justere formen, fargen og teksten. Når utseendet er fastlagt og du vil ha resultatet som vanlig vektorkunstverk, for eksempel for å redigere de individuelle flatene eller levere filen videre, bruker du <em>Utvid som vektor</em> i panelet (det samme som <strong>Objekt &rsaquo; Utvid utseende</strong>). Det baker det faste legemet ned til stier og avslutter livet som en effekt, så utvid en kopi hvis du kanskje vil endre dybden eller vinkelen senere.</p>

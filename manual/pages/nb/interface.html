@@ -1,0 +1,166 @@
+<p class="lede">Scissor fyller nettleservinduet med ett enkelt redigeringsflate: en menybjelke øverst, en kontrollbjelke og dokumentfaner under den, verktøypaletten nedover til venstre, tegnebrettet i midten, og paneldokken til høyre. Alt kjører på din egen maskin, slik at et dokument forblir der du la det og ingenting sendes bort for å bli åpnet.</p>
+
+  <p>Snarveier på denne siden er skrevet i macOS-form. På Windows og Linux leser du <kbd>⌘</kbd> som <kbd>Ctrl</kbd> og <kbd>⌥</kbd> som <kbd>Alt</kbd>; <kbd>⇧</kbd> er Shift og <kbd>⌃</kbd> er Control.</p>
+
+  <h2 id="interface-at-a-glance">Arbeidsområdet i ett øyekast</h2>
+  <p>Vinduet er bygget av noen få områder som hver svarer på et annet spørsmål. Lær hvor de er én gang og resten av manualen lettere å lese.</p>
+  <dl>
+    <dt>Menybjelke</dt>
+    <dd>Raden med menyer langs toppen, med angre og gjør om og en kommandosøk i høyre ende. Dette er den komplette listen over alt redigeringsprogrammet kan gjøre.</dd>
+    <dt>Kontrollbjelke</dt>
+    <dd>Stripen rett under menyene. Den viser det gjeldende verktøyet og de få kontrollene som betyr noe for akkurat det du har valgt akkurat nå.</dd>
+    <dt>Dokumentfaner</dt>
+    <dt>Til venstre for kontrollinjen, én fane per åpent dokument. Panelknappen sitter helt til høyre på samme rad.</dt>
+    <dt>Verktøypalett</dt>
+    <dd>Den smale kolonnen med verktøy nedover langs venstre kant, med fyll- og linjekontrollen nederst.</dd>
+    <dt>Lerret og klistrebrett</dt>
+    <dd>Det store området i midten hvor du tegner. De hvite rektanglene er tavler; det grå området er klistrebrettet.</dd>
+    <dt>Paneldokk</dt>
+    <dd>Kolonnen med paneler til høyre. Den glider inn over lerretet når du trenger den og gir rommet tilbake når du lukker den.</dd>
+    <dt>Statuslinje</dt>
+    <dd>Den tynne linjen langs bunnen av vinduet, som rapporterer det gjeldende verktøyet, utvalget og siste angrebbare handlingen.</dd>
+  </dl>
+  <figure class="shot">
+    <img src="img/app-light.png" width="1900" height="1082" loading="lazy"
+         alt="Hele Scissor-vinduet: menybjelke, kontrollbjelke, verktøypalett, lerret og paneldokk." />
+    <figcaption>Hele vinduet. Scissor følger systemets lyst eller mørke innstilling, og dette skjermbildet følger det også.</figcaption>
+  </figure>
+
+  <h2 id="interface-menu-bar">Menybjelken</h2>
+  <p>Ti menyer løper langs toppen. De samler hver kommando i programmet, gruppert etter hva slags arbeid du driver med i stedet for hvor en funksjon tilfeldigvis bor inne i motoren.</p>
+  <table>
+    <thead><tr><th>Meny</th><th>Hva den inneholder</th></tr></thead>
+    <tbody>
+      <tr><td>Fil</td><td>Nytt, åpne, lukk, lagre, plasser, eksporter, skript, dokumentoppsett og skriv ut.</td></tr>
+      <tr><td>Rediger</td><td>Angre og gjør om, utklippstavlekommandoene, hele <strong>Velg</strong>-menyen som en undermeny, fargeredigering, og Innstillinger.</td></tr>
+      <tr><td>Arranger</td><td>Transformer, stabelrekkefølge, justering, gruppering, og låsing og skjuling.</td></tr>
+      <tr><td>Sti</td><td>Sti- og sammensatte sti-kommandoer, morfe, Formforvrenging og perspektiv, klippemasker, tekstomforming og utvide.</td></tr>
+      <tr><td>Opprett</td><td>Mønstre, gjentagelser, Områdefyll, Vektoriser, gradientmesher, tavler, skiver og piksellag-kommandoene.</td></tr>
+      <tr><td>Effekt</td><td>Live-effekter: vektorsettet (3D, forvreng og transformer, Kombiner former, stiliser, forvreng og mer) og en Raster-undermeny under dem.</td></tr>
+      <tr><td>Tekst</td><td>Skrift, størrelse og tegn, lag former, endre store/små bokstaver, tekstflyt og tegninnsetting.</td></tr>
+      <tr><td>Vis</td><td>Utseende (lyst og mørke), kontur- og pikselforhåndsvisning, zoom, roter visning, linjaler, hjelpelinjer, rutenett og festing.</td></tr>
+      <tr><td>Arbeidsområde</td><td>Panelene: de seks du åpner oftest, en Tekst-undermeny, en Flere paneler-undermeny for resten, og Tilbakestill paneler.</td></tr>
+      <tr><td>Hjelp</td><td>Hva er nytt, brukermanualen, installer, Brukervilkårer og Om, med et søkefelt øverst.</td></tr>
+    </tbody>
+  </table>
+  <p>En hake ved et element betyr at den innstillingen er på. Et element tegnet i grått kan ikke brukes for tiden, vanligvis fordi ingenting er valgt eller ingen dokument er åpent. Der en kommando har en snarvei, vises den nedover på høyre side av menyen.</p>
+
+  <h3 id="interface-command-search">Finne en kommando</h3>
+  <p>Du trenger ikke å huske hvilken meny som har hva. Søkeknappen til høyre på menybjelken, merket <em>Søk eller skriv en kommando</em>, åpner kommandopaletten; <kbd>⌘K</kbd> åpner den fra tastaturet. Skriv noen bokstaver og den lister hver matchende kommando med menybanen og snarveien, og hvert matchende verktøy. Bruk <kbd>↑</kbd> og <kbd>↓</kbd> for å bevege deg gjennom resultatene, <kbd>Enter</kbd> for å kjøre den markerte, og <kbd>Esc</kbd> for å lukke. Grip etter dette når du vet hva du vil, men ikke hvor det er, eller når en snarvei er raskere å skrive enn å lete etter. Hjelp-menyen har sitt eget søkefelt som gjør det samme på tvers av alle menyer.</p>
+
+  <h3 id="interface-undo-redo">Angre og gjør om</h3>
+  <p>De buede pilene nær høyre på menybjelken angre og gjør om, det samme som <kbd>⌘Z</kbd> og <kbd>⇧⌘Z</kbd>. Hvis knappen navngir trinnet den ville reversere når du holder pekeren over den, og statuslinjen viser det samme nederst i vinduet, slik at du alltid kan se hva ett trykk til ville angre.</p>
+
+  <h2 id="interface-tool-palette">Verktøypaletten</h2>
+  <p>Verktøyene sitter i én kolonne nedover langs venstre kant. De er arrangert i familier: Velg, Tegn, Tekst, Linje, Form, Mal, Omform, Bygg, Prøve, Symboler, Tavler og Vis. Kolonnen viser ett verktøy fra hver familie om gangen; hvile pekeren på en plass og resten av den familien breder seg ut til høyre, slik at du kan velge et søsken uten at kolonnen skifter under hånden din. En plass fortsetter å vise hvert medlem av familien du sist brukte.</p>
+  <p>Klikk på en plass for å velge verktøyet den viser. Verktøytipsen gir verktøyets navn og dets snarvei, for eksempel <kbd>V</kbd> for utvalgsverktøyet, <kbd>P</kbd> for pennen eller <kbd>T</kbd> for Tekst. Når du bytter verktøy med tastaturet, lyser den tilsvarende plassen opp et øyeblikk slik at du kan se hvilken som nå er aktiv. For å se alt på én gang åpner en knap nær kommandosøket, tegnet som tre prikker, en nettleser av hvert verktøy, gruppert etter familie og filtrert mens du skriver.</p>
+
+  <h3 id="interface-fill-stroke">Fyll og linje</h3>
+  <p>Under verktøyene sitter fyll- og linjekontrollen: et fylt firkant for fyll, satt inni en bånd som står for linjen, med et lite par piler for å bytte dem. Fordi den sitter her i stedet for bare i kontrollinjen, kan du velge en farge før du velger et verktøy, og det blir det neste objektet tegnes med. Klikk på fyll eller båndet for å åpne farge-, prøve- og gradientfanene.</p>
+  <table>
+    <thead><tr><th>Tast</th><th>Handling</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>X</kbd></td><td>Flytt fokus mellom fyll og linje</td></tr>
+      <tr><td><kbd>⇧X</kbd></td><td>Bytt fyll og linje</td></tr>
+      <tr><td><kbd>D</kbd></td><td>Gå tilbake til standard: hvitt fyll, svart linje</td></tr>
+      <tr><td><kbd>/</kbd></td><td>Sett den aktive siden til ingen</td></tr>
+    </tbody>
+  </table>
+
+  <h3 id="interface-rail-panels">Paneler ved siden av skinnen</h3>
+  <p>Mellom fyll- og linjekontrollen og verktøyene tilbyr paletten en kort rad med panelknapper valgt for verktøyet du holder: tegneverktøyene tar fargeprøver og linjepaneler innen rekkevidde, tekstverktøyene tar tekst- og avsnittspaneler, og så videre. Disse åpner ett panel rett der hånden din allerede er. En ytterligere knap åpner hele dokken. På et kort vindu brettes raden sammen til én Paneler-knop som lister de samme valgene, slik at paletten aldri løper av bunnkanten.</p>
+
+  <h2 id="interface-control-bar">Kontrollinjen</h2>
+  <p>Stripen under menyene endrer seg med hva du gjør. Den navngir det gjeldende verktøyet til venstre, og til høyre viser den bare kontrollene som kan virke på det gjeldende utvalget: fyll, linje og linjetykkelse; X, Y, B og H for utvalget; og handlingene som gir mening, som justering, de boolske formmodiene, stabelrekkefølge, grupper, avgrupper og dupliser. Når det er mer enn plass til, samler en siste knap resten i en meny, slik at linjen aldri flyter om mens du bruker den.</p>
+  <p>Skriv i et tallfelt og trykk <kbd>Enter</kbd>, eller forlat feltet, for å bruke verdien; <kbd>↑</kbd> og <kbd>↓</kbd> trinnden, med <kbd>⇧</kbd> for ti ganger trinnet og <kbd>⌥</kbd> for en tiendedel. Den lille etiketten ved siden av feltet er en skrubber: dra den til venstre eller høyre for å endre verdien etter følelse. Hold pekeren over verktøyets navn for å vise det første par alternativene for det verktøyet; klikk på navnet for å åpne dets fulle alternativer under linjen, med alle bryterne og tallene.</p>
+  <p>Kontrollinjen er dokket i faneraden som standard, men du kan dra i håndtaket for å la den flyte over lerretet, og dobbeltklikk på håndtaket (eller bruk dokkeknappen) for å sette den tilbake. Sammen med den kan en kompakt linje vises ved siden av et valgt objekt med bare fyll, linje og tykkelse, slik at farge er rett ved kunstverket i stedet for på den andre siden av vinduet.</p>
+
+  <h2 id="interface-quick-bar">Hurtiglinjen</h2>
+  <p>Når du velger noe, flyter en liten linje ved siden av det med kontrollene du griper etter oftest, slik at du ikke trenger å reise til kanten av vinduet. For former og stier inneholder den fyll og linje; for tekst inneholder den fyll, størrelse, fet, kursiv og justeringen. Den holder seg ute av veien mens du drar og kommer tilbake når du slipper. Alt på den finnes også i kontrollinjen og panelene.</p>
+
+  <h2 id="interface-canvas">Lerret og klistrebrett</h2>
+  <p>Midten av vinduet er lerretet. Tavler er de hvite rektanglene som inneholder kunstverket du vil beholde; det grå området er klistrebrettet. Klistrebrettet er en del av dokumentet, slik at en skisse, et reste eller en fargetest parkert der lagres med filen, men når du eksporterer en tavle skrives bare det som faller innenfor den tavlens rektangel ut.</p>
+
+  <h3 id="interface-pan-zoom">Panorering og zooming</h3>
+  <p>Hold <kbd>Mellomrom</kbd> for å bytte til håndverktøyet så lenge du holder det, og dra for å panorere; slipp og verktøyet ditt kommer tilbake. Dra med museknapp midt panserer også. Hjulet ruller, og hjulet med <kbd>⌘</kbd> eller <kbd>⌥</kbd> holdt zoomer om pekeren.</p>
+  <table>
+    <thead><tr><th>Snarvei</th><th>Zoom</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>⌘=</kbd> / <kbd>⌘-</kbd></td><td>Inn og ut</td></tr>
+      <tr><td><kbd>⌘0</kbd></td><td>Tilpass aktive tavlen i vinduet</td></tr>
+      <tr><td><kbd>⌥⌘0</kbd></td><td>Tilpass alle tavler i vinduet</td></tr>
+      <tr><td><kbd>⌘1</kbd></td><td>Faktisk størrelse</td></tr>
+    </tbody>
+  </table>
+  <p>En zoomkontroll sitter over lerretet med minus-, pluss- og tilpass-knapper og gjeldende prosent; klikk på prosenten for de samme tilpass- og faktiske størrelse-kommandoene som en meny.</p>
+
+  <h3 id="interface-rulers-guides">Linjaler og hjelpelinjer</h3>
+  <p><kbd>⌘R</kbd> viser og skjuler linjalene, som måler i dokumentets enheter fra øvre venstre hjørne av den aktive tavlen og bærer en markør som følger pekeren. Dra ut av en linjal for å trekke en hjelpelinjen ut på kunstverket, og slipp en hjelpelinje tilbake på en linjal for å bli kvitt den. Du kan også gjøre en valgt sti til en hjelpelinje med Lag hjelpelinjer (<kbd>⌘5</kbd>) og gjøre den tilbake med Frigi hjelpelinjer (<kbd>⌥⌘5</kbd>). Vis eller skjul alle hjelpelinjer med <kbd>⌘;</kbd>. Smarte hjelpelinjer (<kbd>⌘U</kbd>) viser justerings- og målhints mens du tegner og drar.</p>
+
+  <h3 id="interface-grid">Rutenettet</h3>
+  <p>Rutenettet tegnes per tavle og settes fra Vis › Ruter eller fra Ruter-panelet. Vis eller skjul det med <kbd>⌘'</kbd> og slå festing til det med <kbd>⇧⌘'</kbd>. Hver tavle kan bruke en av seks typer ruter: Ortogonal, Isometrisk, Heksagonal, Skjev, Gylden Snitt og Perspektiv. Å velge en type slår rutenettet på slik at du kan se det med en gang. Rutenettet er fullstendig beskrevet på sin egen side.</p>
+
+  <h3 id="interface-history-strip">Historie-stripa</h3>
+  <p>En kolonne med små streker vises i et hjørne av lerretet når du beveger pekeren nær det: dette er dokumentets historie. Hold pekeren over en streke for å navngi det trinnet, klikk på en for å gå rett dit, eller trykk og dra nedover strekene for å kjøre dokumentet bakover og fremover slik at du kan se en endring komme og gå. Historie-panelet i dokken lister de samme trinnene som tekst.</p>
+
+  <h2 id="interface-boards">Tavler og tavlestripa</h2>
+  <p>Tavler er hva Scissor kaller artboards. Hver bærer navnet sitt over øvre venstre hjørne, og den aktive tavlen tegnes med en sterkere ramme enn resten. Klikk på en tavles navn for å plukke opp tavleverktøyet med den tavlen aktiv, klar til å flytte, endre størrelse eller gi nytt navn. Hvis en tavle har bled, vises den rundt den som en rød stiplet rektangel. Legg til en fra Opprett › Tavler › Ny tavle, tegn og omform tavler med tavleverktøyet (<kbd>⇧O</kbd>), og angi en tavles størrelse og navn i Tavlealternativer. Omarranger alle tavler rydder dem opp til en rad.</p>
+  <p>En stripe med tavleminiatyrer sitter over lerretet, én liten forhåndsvisning per tavle pluss en legg-til-knapp i slutten. Klikk på en miniatyr for å gjøre den tavlen aktiv og tilpasse den i vinduet; klikk på navnet under for å hoppe til den tavlen og plukke opp tavleverktøyet klart til å redigere den. Tavler-panelet i dokken lister dem også.</p>
+
+  <h2 id="interface-tabs">Dokumentfaner</h2>
+  <p>Åpne dokumenter vises som faner til venstre for kontrollinjen. En fane viser dokumentets navn, med en prikken foran det mens det har ulagrede endringer. Klikk på en fane for å bytte til det dokumentet, eller på × for å lukke det; å lukke et dokument med ulagret arbeid spør først. Midtklikk på en fane for å lukke det med en gang, og dra en fane på en annen for å omordne de åpne dokumentene. Nytt (<kbd>⌥⌘N</kbd>), Åpne (<kbd>⌘O</kbd>) og Lagre (<kbd>⌘S</kbd>) finnes i Fil-menyen, og Lukk er <kbd>⌥⌘W</kbd>.</p>
+  <p>Fanene sitter på toppen som standard. For å dokke dem nedover langs siden i stedet, slår du på <strong>Vis &rsaquo; Dokumentfaner på siden</strong> (også i Innstillinger); sidestripa kan draes bredere eller smalere ved høyre kant, og valget huskes.</p>
+
+  <h2 id="interface-status-bar">Statuslinjen</h2>
+  <p>Linjen langs bunnen av vinduet rapporterer, fra venstre til høyre: en klar-indikator, navnet på det gjeldende verktøyet, størrelsen på utvalget (ingenting valgt, ett objekt, eller et antall), og handlingen <kbd>⌘Z</kbd> ville angre. Det er et sted til å bekrefte hva du har plukket opp og hva neste angre vil reversere.</p>
+
+  <h2 id="interface-dock">Paneldokken</h2>
+  <p>Panelene bor i kolonnen til høyre. I hvile har lerretet hele vinduet; å be om et panel glider dokken inn over lerretet, og å lukke den gir rommet rett tilbake. Panelknappen til høyre på faneraden, og Escape-tasten, åpner og lukker dokken; Vindu- og Arbeidsområde-menyene og kommandopaletten åpner et bestemt panel.</p>
+  <figure class="shot">
+    <img src="img/editing.png" width="1900" height="1176" loading="lazy"
+         alt="Et dokument åpent i Scissor med kunstverk på tavlen og Lag- og Fargeprøver-panelene åpne i dokken." />
+    <figcaption>Et dokument under redigering, med Lag- og Fargeprøver-panelene åpne i dokken.</figcaption>
+  </figure>
+
+  <h3 id="interface-dock-groups">De dokkede panelgruppene</h3>
+  <p>Panelene er stablet i grupper, hver gruppe en kolonne med små ikonerfaner nedover sin egen kant. Hvile pekeren på en fane for å se panelnavnet, og det åpne panel navngir seg selv over innholdet. Som standard samler gruppene paneler som pleier å brukes sammen:</p>
+  <ul>
+    <li><strong>Egenskaper, Lag, Tavler, Ruter</strong>: dokumentets struktur.</li>
+    <li><strong>Farge, Fargeprøver, Gradient, Linje</strong>: hvordan ting males.</li>
+    <li><strong>Tekst, Avsnitt, Tegn</strong>: tekst.</li>
+    <li><strong>Juster, Kombiner former, Transformer, Malestabel, Gjennomsiktighet, 3D</strong>: formgivning og arrangering.</li>
+    <li><strong>Stiler, Pensler, Symboler, Mønstre</strong>: gjenbrukbare utseender og objekter.</li>
+    <li><strong>Navigator, Info, Dokumentinfo, Historie, Handlinger</strong>: bevege seg rundt og måle.</li>
+    <li><strong>Ressurser, Variabler, Auto-Velg, Vektoriser, Attributter</strong>: resten.</li>
+  </ul>
+
+  <h3 id="interface-rearranging">Omarrangere paneler</h3>
+  <p>Oppsettet er ditt å endre. Dra en fane langs sin egen stripe for å omordne den, dra den på en annen gruppes stripe for å flytte den dit, eller dra den ut av dokken for å la den flyte over lerretet. Dra den delen av en stripe for å løfte en hel gruppe ut, og slipp den tilbake over dokken for å sette den hjem; et mellomrom mellom grupper aksepterer en sluppet fane som en ny gruppe for seg. Høyreklikk på en fane for de samme flyttene via menyen, inkluder Lukk panel. × øverst på en stripe lukker den gruppen, og å dra skillelinjen mellom to grupper gir høyde til den ene og tar den fra den andre. En flytende gruppe kan endres størrelse fra hjørnet.</p>
+
+  <h3 id="interface-gating">Paneler som venter på noe å gjøre</h3>
+  <p>Et panel som ikke har noe å virke på akkurat nå forsvinner ikke: fanen forblir, bare demmet, og kroppen viser en linje som sier hva den venter på, for eksempel å velge et objekt eller velge Tekst-verktøyet. Slik at dokken ikke omarrangerer seg under hånden din, holdes dette venten mens pekeren er inne i dokken og henter opp når pekeren forlater.</p>
+
+  <h3 id="interface-workspace">Åpne, skjule og tilbakestille paneler</h3>
+  <p>Åpne et panel fra Arbeidsområde-menyen, hvor de seks mest brukte sitter øverst og resten er under Flere paneler, eller fra Vindu-menyen i den klassiske chrome. Mange paneler har en snarvei:</p>
+  <table>
+    <thead><tr><th>Panel</th><th>Snarvei</th><th>Panel</th><th>Snarvei</th></tr></thead>
+    <tbody>
+      <tr><td>Lag</td><td><kbd>F7</kbd></td><td>Farge</td><td><kbd>F6</kbd></td></tr>
+      <tr><td>Malestabel</td><td><kbd>⇧F6</kbd></td><td>Info</td><td><kbd>F8</kbd></td></tr>
+      <tr><td>Juster</td><td><kbd>⇧F7</kbd></td><td>Transformer</td><td><kbd>⇧F8</kbd></td></tr>
+      <tr><td>Linje</td><td><kbd>⌘F10</kbd></td><td>Gradient</td><td><kbd>⌘F9</kbd></td></tr>
+      <tr><td>Kombiner former</td><td><kbd>⇧⌘F9</kbd></td><td>Gjennomsiktighet</td><td><kbd>⇧⌘F10</kbd></td></tr>
+      <tr><td>Grafiske stiler</td><td><kbd>⇧F5</kbd></td><td>Pensler</td><td><kbd>F5</kbd></td></tr>
+      <tr><td>Attributter</td><td><kbd>⌘F11</kbd></td><td>Symboler</td><td><kbd>⇧⌘F11</kbd></td></tr>
+      <tr><td>Tegn</td><td><kbd>⌘T</kbd></td><td>Avsnitt</td><td><kbd>⌥⌘T</kbd></td></tr>
+      <tr><td>Tegn</td><td><kbd>⌥⇧F11</kbd></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+  <p>Dokken kan utvides ved å dra venstre kant, fra en komfortabel to-felt-per-rad bredde opp til mye bredere. Oppsettet ditt, og hvor bred du la dokken, huskes mellom økter. Når dokken er lukket, fører du pekeren til høyre kant av vinduet den ut, så lenge det ikke er kunstverk under pekeren. For å angre alle endringene dine i oppsettet, velg Tilbakestill paneler, som setter hver gruppe tilbake til sin startplass.</p>
+  <p><kbd>Tab</kbd> skjuler verktøypaletten, kontrollinjen, dokumentfanene, statuslinjen, panelene og den andre lerret-chromen slik at bare kunstverket og menybjelken står igjen; trykk den igjen for å få dem alle tilbake.</p>
+
+  <h2 id="interface-language">Språk</h2>
+  <p>Scissor snakker engelsk, tysk (Deutsch), spansk (Español), fransk (Français), italiensk (Italiano), katalansk (Català), tsjekkisk (Čeština), dansk (Dansk), norsk (Norsk), polsk (Polski), slovakisk (Slovenčina), finsk (Suomi) og svensk (Svenska). Første gangen du åpner det, bruker det nettleserens språk når det er en av disse, og engelsk ellers. For å velge et annet, klikk på globusknappen i menybjelken eller på velkomstskjermen, eller åpne <strong>Rediger › Innstillinger</strong> (<kbd>&#8984;K</kbd>), gå til <strong>Grensesnitt</strong> og velg en under <strong>Språk</strong>. Scissor bytter når det lastes på nytt, og husker valget. Menyer, paneler, dialogbokser, verktøytips, meldinger og Hva er nytt følger det alle, og tall vises på den lokale måten, for eksempel 12,5 på tysk, selv om du kan skrive enten komma eller punktum. Dokumentene dine påvirkes ikke: lagnavn og teksten i kunstverket ditt forblir som du skrev dem. Når grensesnittet ikke er på engelsk, vises Brukervilkårene oversatt for bekvemmelighet, og den engelske versjonen er den som gjelder.</p>
+
+  <h2 id="interface-appearance">Lyst og mørkt</h2>
+  <p>Scissor følger systeminnstillingen for lyst og mørkt. For å sette det på én måte, velg Vis › Utseende og velg System, Lyst eller Mørkt. Valget huskes, og det bærer gjennom til lerretet så vel som chromen: klistrebrettet, linjalene og tavleneikettene tegnes alle for å passe til temaet du er i.</p>

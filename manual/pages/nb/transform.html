@@ -1,0 +1,165 @@
+<p class="lede">Alt som endrer hvor et objekt sitter, hvor stort det er eller hvilken vei det vender, lever her: flytte og skalere for hånd, eksakte numeriske transformasjoner, justering og stabling, live-gjentagelser, morfer, konvolutter og å gjøre en flat form til et fast legeme.</p>
+
+<p>Snarveier nedenfor er skrevet i macOS-form. På Windows og Linux leser du <kbd>⌘</kbd> som Ctrl, <kbd>⌥</kbd> som Alt og <kbd>⇧</kbd> som Shift.</p>
+
+<h2 id="transform-select-move">Velge og flytte</h2>
+<p>Før du kan transformere noe må du si hva. Grip etter disse først: utvalgsverktøyene bestemmer hva en dra, en numerisk kommando eller et panelfelt skal virke på.</p>
+
+<h3 id="transform-selection-tools">Utvalgsverktøyene</h3>
+<table>
+  <thead><tr><th>Verktøy</th><th>Snarvei</th><th>Hva det velger</th></tr></thead>
+  <tbody>
+    <tr><td>Utvalgsverktøy</td><td><kbd>V</kbd></td><td>Hele objekter og grupper.</td></tr>
+    <tr><td>Direkte utvalgsverktøy</td><td><kbd>A</kbd></td><td>Individuelle ankerpunkter og stisegmenter.</td></tr>
+    <tr><td>Gruppeutvalgsverktøy</td><td></td><td>Étt objekt inni en gruppe; hvert ytterligere klikk utvides til gruppen rundt.</td></tr>
+  </tbody>
+</table>
+<p>Shift-klikk legger til et objekt i utvalget eller fjerner det igjen. Dra på tomt lerret for å markere et rektangel, og hold <kbd>⇧;</kbd> for å legge til hva markeringsrektangelet fanger til det som allerede er valgt. Dobbeltklikk på en gruppe med Utvalgsverktøyet trer inni den slik at du kan jobbe på ett medlem uten å avgruppere.</p>
+
+<h3 id="transform-moving">Flytte et utvalg</h3>
+<p>Dra et valgt objekt for å flytte det. Å holde <kbd>⌥;</kbd> etterlater en kopi og drar den i stedet, noe som er den raskeste måten å duplisere på plass og flytte i én bevegelse. Å holde <kbd>⇧;</kbd> begrenser flyttingen til 45° trinn målt fra begrensningsvinkelen som er satt i Innstillinger, og slår festing av; uten <kbd>⇧;</kbd> festes utvalget til nærliggende kanter, midter og vinkler. Piltastene dytter med tastaturbegrensningen, <kbd>⇧;</kbd> med en pil dytter ti ganger så mye, og <kbd>⌥;</kbd> med en pil dytter en kopi.</p>
+
+<h3 id="transform-bounding-box">Avgrensningsrammen: skalere og rotere for hånd</h3>
+<p>Utvalgets avgrensningsramme bærer åtte håndtak. Dra ett for å skalere: <kbd>⇧;</kbd> beholder proporsjonene og <kbd>⌥;</kbd> skalerer om midten i stedet for om motstående håndtak. Rett utenfor et hjørne kommer pekeren inn i rotasjonssonen; dra der for å rotere utvalget om rammen sin midte, med <kbd>⇧;</kbd> som fester til 45°. Etter en rotasjon står rammen skjev med kunstverket. <strong>Objekt &rsaquo; Transformer &rsaquo; Tilbakestill avgrensningsramme</strong> retter den opp igjen slik at senere bredde- og høyde-redigeringer leses langs sideaksen.</p>
+
+<h2 id="transform-numeric">Numeriske transformasjoner</h2>
+<p>Å dra er raskt, men omtrentlig. Når en verdi må være eksakt, eller den samme på mange objekter, skriver du. Transformer-panelet inneholder de levende tallene for utvalget, og <strong>Objekt &rsaquo; Transformer</strong>-undermenyen inneholder engangskommandoer med et Kopier-alternativ.</p>
+
+<h3 id="transform-panel">Transformer-panelet</h3>
+<p>Transformer-panelet (<kbd>⇧F8</kbd>) viser X, Y, B og H i piksler for utvalget; skriv en verdi og trykk Return for å sette den. Under dem roterer <em>⟳</em>-feltet utvalget over en vinkel og <em>⧄</em>-feltet krenger det over én, hver som går tilbake til null når den er brukt. Panelet trenger noe valgt; uten noe valgt demmer det og sier det.</p>
+<p>Egenskaper-panelet gjentar X, Y, B og H med et roteringsfelt og to knapper som speiler utvalget horisontalt eller vertikalt om sin egen midte, slik at de vanligste flyttingene er tilgjengelige uten å åpne et andre panel.</p>
+
+<h3 id="transform-commands">Flytt, Roter, Speil, Skalér og Krenge</h3>
+<p><strong>Objekt &rsaquo; Transformer</strong> inneholder de numeriske kommandoene. Hver åpner en liten dialogboks, og hver (unntatt Flytt, som er en direkte forskyvning) transformerer om referansepunktet. Kopier-boksen i hver dialog bruker endringen på et duplikat og lar originalen urørt, noe som er hvordan du bygger et speilet par eller en skalert ekko på én gang.</p>
+<table>
+  <thead><tr><th>Kommando</th><th>Snarvei</th><th>Felter</th></tr></thead>
+  <tbody>
+    <tr><td>Flytt…</td><td><kbd>⇧⌘M</kbd></td><td>Horisontal, Vertikal, Kopier.</td></tr>
+    <tr><td>Roter…</td><td></td><td>Vinkel, Kopier.</td></tr>
+    <tr><td>Speil…</td><td></td><td>Akse (Horisontal eller Vertikal), Vinkel, Kopier.</td></tr>
+    <tr><td>Skalér…</td><td></td><td>Horisontal %, Vertikal %, Kopier.</td></tr>
+    <tr><td>Krenge…</td><td></td><td>Krengevinkel, Aksevinkel, Kopier.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="transform-each-again">Transformer hver og Transformer igjen</h3>
+<p><strong>Transformer hver…</strong> (<kbd>⌥⇧⌘D</kbd>) skalerer, flytter, roterer og speiler hvert valgt objekt om <em>sine egne</em> midter i stedet for utvalgets delte midte. Dens dialog tar Skalér H og V, Flytt H og V, en Roter-vinkel, Speil X og Speil Y-avhør, og Kopier. Grip etter det for å forvreng eller fane ut et sett med objekter slik at hvert snur og vokser på plass i stedet for å krets rundt gruppen.</p>
+<p><strong>Transformer igjen</strong> (<kbd>⌘D</kbd>) gjentar siste transformasjon på gjeldende utvalg. Flytt et objekt, trykk deretter <kbd>⌘D</kbd> noen ganger, og du får en jevnt trinnvis rad; kombiner det med <kbd>⌥;</kbd>-dra av en kopi for å bygge gjentakende mønstre for hånd.</p>
+
+<h2 id="transform-tools">Transformasjonsverktøyene og referansepunktet</h2>
+<p>Roter (<kbd>R</kbd>), Speil (<kbd>O</kbd>), Skalér (<kbd>S</kbd>) og Krenge-verktøyet virker hvert om et referansepunkt, tegnet som et lite trådkors. Det starter på midten av utvalget; klikk hvor som helst på lerretet for å flytte det dit, og velge noe annet setter det tilbake til den nye midten. Deretter drar du på lerretet for å rotere, speile, skalere eller krenge om det punktet.</p>
+<p><kbd>⇧;</kbd> begrenser hvert verktøy: 45° trinn for Roter og Speil, like horisontal og vertikal for Skalér, én akse for Krenge. Å holde <kbd>⌥;</kbd> under draet transformerer en kopi og lar originalen. <kbd>⌥;</kbd>-klikk plasserer referansepunktet og åpner det verktøyets numeriske dialog med punktet allerede satt, slik at du kan snu en form om et hjørne med en eksakt vinkel.</p>
+
+<h2 id="transform-free">Fri transformasjonsverktøy</h2>
+<p>Fri transformasjonsverktøyet (<kbd>E</kbd>) setter flytting, skalering, rotasjon, krenging og to typer forvrengning på én avgrensningsramme. Dra inni rammen for å flytte den, dra et håndtak for å skalere, og dra rett utenfor et hjørne for å rotere, med <kbd>⇧;</kbd> som fester til 45°. Bruk det når du vil prøve flere typer endring på én bevegelse uten å bytte verktøy mellom hver.</p>
+<p>Utvalgsverktøyets ramme kan også forvrenges: hold <kbd>Ctrl</kbd> (eller <kbd>&#8984;</kbd>) mens du drar ett av hjørnehåndtakene for å flytte det hjørnet alene, i stedet for å skalere. Det fungerer på former og på bilder likt; på piksler følger en rask forhåndsvisning draet og resultatet regnes ut når du trykker <kbd>Enter</kbd>.</p>
+
+<h3 id="transform-free-widget">Skjermelementet</h3>
+<p>Et lite skjermelement flyter ved siden av rammen med fire knapper, hver navngir seg selv når du holder pekeren over: <strong>Begrens</strong>, <strong>Fri transformasjon</strong>, <strong>Perspektivforvrenging</strong> og <strong>Fri forvrenging</strong>. Begrens gjør skalering proporsjonelt uten å holde <kbd>⇧;</kbd>; med det på frigjør <kbd>⇧;</kbd> proporsjonene i stedet. De to forvrengningsmodiene lar bare de fire hjørnehåndtakene være igjen å dra på.</p>
+
+<h3 id="transform-free-keys">Forvreng fra tastaturet</h3>
+<p>Du kan nå de samme forvrengningene uten å forlate standardmodus. Hold <kbd>⌘;</kbd> på et kanthåndtak for å krenge langs den kanten. Hold <kbd>⌘;</kbd> på et hjørne for å forvrengne det fritt på egen hånd; legg til <kbd>⇧;</kbd> for å begrense hjørnets reise til 45°. Hold <kbd>⌘⌥⇧;</kbd> på et hjørne for perspektiv, der nabohjørnet speiler draet. Å trykke eller slippe en modifierer halvveis gjennom en dra bytter handlingen med en gang, og navnet den ender på, Skalér, Krenge, Perspektivforvrenging eller Fri forvrenging, er hva trinnet kalles i Historie-panelet etterpå. Tekst, plasserte bilder og symbolinstanser kan ikke forvrenges; de forblir som de er, og Scissor forteller deg det når en dra hopper over dem.</p>
+
+<h3 id="transform-free-reference">Referansepunktet</h3>
+<p>Referansepunktet sitter i midten av rammen som et trådkors, og du kan dra det hvor som helst; på egen hånd flytter det ingenting. Rammen roterer og skalerer deretter om det, og det reiser med kunstverket når du flytter utvalget. Slipp det nær ett av rammen ni punkter (de fire hjørnene, de fire kantmidtene eller midten) og det slår seg fast på det punktet. Å holde <kbd>⌥;</kbd> mens du skalerer ignorerer et plassert referansepunkt og skalerer om midten. Å krenge en side med <kbd>⌘;</kbd> holder også et plassert referansepunkt i ro.</p>
+
+<h3 id="transform-free-pins">Flytte håndtakene</h3>
+<p>Slå på <strong>Flytt håndtak</strong> i hurtiglinjen (eller alternativlinjen) mens Fri transformasjon er aktiv, og å dra et hjørne av rammen flytter det hjørnet på egen hånd, uten å røre kunstverket. Nær et ankerpunkt slår det seg fast på det. Slå Flytt håndtak av igjen og dra et flyttet hjørne: formen skaleres slik at hjørnet følger pekeren, og hvert andre punkt beholder samme proporsjonelle avstand fra det som holder i ro, som er motstående hjørnet, det plasserte referansepunktet, eller midten mens <kbd>⌥;</kbd> holdes. <kbd>⇧;</kbd> beholder proporsjonene. Flyttede hjørnereiser med kunstverket, og dobbeltklikk på ett setter alle fire tilbake på rammen.</p>
+
+<h2 id="transform-align-arrange">Justere, arrangere og gruppere</h2>
+<p>Disse kommandoene angir hvordan objekter stilles opp mot hverandre, hvilket som sitter foran hvilket, og hvilke samles, låses bort eller skjules mens du jobber på resten.</p>
+
+<h3 id="transform-align">Juster og fordel</h3>
+<p>Juster-panelet (<kbd>⇧F7</kbd>) har tre rader. <strong>Juster objekter</strong> stiller utvalget opp til venstre, midten eller høyre, og toppen, midten eller bunnen. <strong>Fordel objekter</strong> sprer tre eller flere objekter slik at deres topper, midter, bunn, venstre kanter, midter eller høyre kanter faller på jevne intervaller. <strong>Fordel avstand</strong> angir et likt mellomrom mellom dem vertikalt eller horisontalt. Menyen på panelet velger om alt justeres til utvalget eller til tavlen. Justering trenger minst ett objekt (ett enkelt objekt justeres til tavlen); fordeling trenger tre, og panelet gråter disse knappene ut til du har dem. De seks justeringene vises også under <strong>Objekt &rsaquo; Juster</strong>.</p>
+
+<h3 id="transform-arrange">Arranger: stabelrekkefølge</h3>
+<p>Hvert objekt sitter på et nivå i stabelen, og <strong>Objekt &rsaquo; Arranger</strong> flytter utvalget gjennom den.</p>
+<table>
+  <thead><tr><th>Kommando</th><th>Snarvei</th></tr></thead>
+  <tbody>
+    <tr><td>Helt til front</td><td><kbd>⇧⌘]</kbd></td></tr>
+    <tr><td>Flytt fremover</td><td><kbd>⌘]</kbd></td></tr>
+    <tr><td>Flytt bakover</td><td><kbd>⌘[</kbd></td></tr>
+    <tr><td>Helt til bak</td><td><kbd>⇧⌘[</kbd></td></tr>
+  </tbody>
+</table>
+
+<h3 id="transform-grouping">Gruppere, låse og skjule</h3>
+<dl>
+  <dt><strong>Grupper</strong> (<kbd>⌘G</kbd>) og <strong>Avgrupper</strong> (<kbd>⇧⌘G</kbd>)</dt>
+  <dd>Samle objekter slik at de beveger seg og transformeres som én, eller frigi dem igjen. En gruppe kan ved å dobbeltklikke på den med Utvalgsverktøyet.</dd>
+  <dt><strong>Lås &rsaquo; Utvalg</strong> (<kbd>⌘2</kbd>) og <strong>Lås opp alt</strong> (<kbd>⌥⌘2</kbd>)</dt>
+  <dd>Låsing gjør objekter uplikelige slik at de holder seg på plass mens du jobber over dem; Lås opp alt frigjør alt som var låst.</dd>
+  <dt><strong>Skjul &rsaquo; Utvalg</strong> (<kbd>⌘3</kbd>) og <strong>Vis alt</strong> (<kbd>⌥⌘3</kbd>)</dt>
+  <dd>Skjuling tar objekter av lerretet uten å slette dem, noe som rydder en travel scene ned til delen du redigerer; Vis alt får dem tilbake.</dd>
+</dl>
+
+<h2 id="transform-repeat">Live-gjentagelser</h2>
+<p><strong>Objekt &rsaquo; Gjenta</strong> bygger mange kopier fra ett objekt og holder dem live: rediger originalen og hver kopi følger. Grip etter en gjentagelse når kunstverket er regelmessig, en blomster med identiske blader eller et flislagt rutenett av ikoner, slik at du kan forme ett element og la resten følge det.</p>
+<dl>
+  <dt><strong>Radial…</strong></dt>
+  <dd>Ring kopierne rundt en midte. Dialogboksen angir Eksempler og Radius.</dd>
+  <dt><strong>Rutenett…</strong></dt>
+  <dd>Legger kopierne i rader og kolonner. Dialogboksen angir Kolonner, Rader, Horisontal avstand og Vertikal avstand.</dd>
+  <dt><strong>Speil…</strong></dt>
+  <dd>Speiler kopierne over en akse. Dialogboksen angir aksen (vertikal eller horisontal) og en Forskyvning.</dd>
+</dl>
+<p>Med en gjentagelse valgt, avslører Egenskaper-panelet de samme kontrollene for senere justering: eksempler og radius for en radial gjentagelse; kolonner, rader og horisontal og vertikal avstand for et rutenett; og forskyvningen og speilaksen for et speil. <strong>Frigi</strong> gjør kopierne til vanlige, separat redigerbare kunstverk når du er ferdig.</p>
+<figure class="shot">
+  <img src="img/repeat.gif" width="640" height="640" loading="lazy"
+       alt="Ett enkelt blått blad gjentatt rundt en midte av en radial gjentagelse, som fyller seg inn til en tolv-bladers blomster etter hvert som tallet stiger." />
+  <figcaption>Ett blad og en radial gjentagelse. Etter hvert som tallet klatrer fra én til tolv fylles blomsten inn; omform det ene bladet og hele endres med det.</figcaption>
+</figure>
+
+<h2 id="transform-morph">Morfer</h2>
+<p>En morfe fyller gapet mellom to objekter med en rekke mellomformer, hvert et trinn nærmere neste. Det er verktøyet for skyggoverganger mellom farger og for jevnt fordelte gjentagelser langs en sti.</p>
+<p>Morfe-verktøyet (<kbd>W</kbd>) morfer ett objekt til et annet: klikk det første, deretter det andre. Å klikke en tredje bærer kjeden videre, og å klikke inni en eksisterende morfe legger det objektet til den. <strong>Objekt &rsaquo; Morfe</strong> inneholder resten:</p>
+<table>
+  <thead><tr><th>Kommando</th><th>Snarvei</th><th>Hva den gjør</th></tr></thead>
+  <tbody>
+    <tr><td>Lag</td><td><kbd>⌥⌘B</kbd></td><td>Morfer de valgte objektene sammen.</td></tr>
+    <tr><td>Frigi</td><td><kbd>⌥⇧⌘B</kbd></td><td>Gir nøkkelobjektene tilbake og slipper trinnene.</td></tr>
+    <tr><td>Morfealternativer…</td><td></td><td>Angir avstand og retning (se nedenfor).</td></tr>
+    <tr><td>Utvid</td><td></td><td>Gjør mellomtrinnene til ekte, redigerbare objekter.</td></tr>
+    <tr><td>Erstatt ryggrad</td><td></td><td>Bøyer rekken av trinn langs en valgt sti.</td></tr>
+    <tr><td>Reverser ryggrad</td><td></td><td>Bytter hvilken ende av ryggraden hvert nøkkelobjekt sitter på.</td></tr>
+    <tr><td>Reverser front til bak</td><td></td><td>Vender stabelrekkefølgen til trinnene.</td></tr>
+  </tbody>
+</table>
+<p><strong>Morfealternativer…</strong> angir Avstand til Angitte trinn (et fast antall mellomliggende), Angitt avstand (et fast gap i piksler, fylle så mange som passer) eller Jevn farge (så mange trinn som det tar for en jevn fargeblanding), og angir Retning til Juster til side eller Juster til sti. En morfe forblir live og følger nøkkelobjektene sine, slik at redigering av begge ender får hele rekken til å flyte på nytt.</p>
+<figure class="shot">
+  <img src="img/morph.gif" width="760" height="316" loading="lazy"
+       alt="En blå stjerne som morfer til en amber sirkel gjennok en voksende rad med mellomformer." />
+  <figcaption>En morfe fra en stjerne til en sirkel. Etter hvert som trinnantallet stiger, fyller flere mellomformer gapet, hvert litt nærmere neste.</figcaption>
+</figure>
+
+<h2 id="transform-envelope">Formforvrenging</h2>
+<p><strong>Objekt &rsaquo; Formforvrenging</strong> bøyer kunstverk for å passe en form mens det forblir redigerbart under. Bruk det til å passe et logo på et banner, bue en linje med tekst, eller presse et flatt mønster inn i en bule. Det er tre måter å lage en.</p>
+<dl>
+  <dt><strong>Lag med forvrenging…</strong> (<kbd>⌥⇧⌘W</kbd>)</dt>
+  <dd>Bøyer utvalget med en av de innebygde forvrengingsstilene (Bue, Bueform, Buil, Flagge, Bølge, Fiske, Stige, Fisheye, Puste, Klemme og skall- og buevariantene), kontrollert av Bue-, Horisontal- og Vertikal-mengder.</dd>
+  <dt><strong>Lag med øverste objekt</strong> (<kbd>⌥⌘C</kbd>)</dt>
+  <br>Bruker den fremste valgte formen som konvolutt og helter alt under den inn i den omtrekken. Trenger to eller flere objekter: beholderen på toppen, kunstverket under.</dd>
+  <dt><strong>Lag med mesh…</strong> (<kbd>⌥⌘M</kbd>)</dt>
+  <dd>Legger et rutenett med radene og kolonnene du ber om over utvalget. Det forblir live: bytt til Direkte utvalgsverktøyet (<kbd>A</kbd>) og dra hvilken som helst kryssing av meshen for å bøye det den holder, så mange ganger du vil.</dd>
+</dl>
+<p><strong>Frigi</strong> gir kunstverket tilbake som det var, sammen med konvoluttformen; <strong>Utvid</strong> beholder bøyingen og slipper konvolutten, og etterlater forvrengte stier.</p>
+
+<h2 id="transform-3d">3D fra en vektorform</h2>
+<p><strong>Effekt &rsaquo; 3D og Materialer</strong> gjør en flat form til et fast legeme. Det forblir en live-effekt, slik at originalstien fortsatt er der å redigere, og kopien på skjermen bygges på nytt når du endrer den.</p>
+<dl>
+  <dt><strong>Ekstruder &amp; Fasett</strong></dt>
+  <dd>Gir formen dybde, med en fasettert kant hvis du vil ha det.</dd>
+  <dt><strong>Roter</strong></dt>
+  <dd>Snurrer en profil rundt en akse til en dreid form.</dd>
+  <dt><strong>Pust</strong></dt>
+  <dd>Puster formen opp som om den var fylt.</dd>
+  <dt><strong>Plan</strong></dt>
+  <dd>Hell den flate formen i rommet uten å legge til dybde.</dd>
+</dl>
+<p>3D og Materialer-panelet roterer objektet på X-, Y- og Z-aksene, angir lysets rotasjon og høyde, og velger en plast-, matte- eller metall-overflate, med Dybde- og Fasett-felter for ekstruderingen.</p>
+<figure class="shot">
+  <img src="img/3d-extrude.gif" width="620" height="620" loading="lazy"
+       alt="En flat vektorstjerne som ekstruderes til en tredimensjonal stjerne og roteres for å vise dybden sin." />
+  <figcaption>Ekstruder &amp; Fasett bygger dybde fra en flat form, live. Stjernen forblir en redigerbar sti under.</figcaption>
+</figure>

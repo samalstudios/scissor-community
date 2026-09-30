@@ -1,0 +1,100 @@
+<p class="lede">Vektoriser gjør et bilde om til vektorstier: et logo skannet fra papir, en blyantskisse eller et foto blir et sett med fylte former du kan skalere, omfarge og redigere som alt annet du tegner. Denne siden dekker hva du kan spore, panelet som kjører det, de tre modiene og malene sine, hvert alternativ, og hvordan du beholder eller forkaster resultatet.</p>
+
+<h2 id="image-trace-what">Hva sporing gjør, og hva du kan spore</h2>
+<p>Et bilde er laget av piksler: det blir når du forstørrer det og kan ikke omformes punkt for punkt. Sporing leser de pikslene og tegner vektorstier som følger formene den finner, slik at resultatet forblir skarpt i enhver størrelse og kan redigeres, omfarges og kombineres med resten av kunstverket ditt.</p>
+<p>Du sporer et <strong>piksellag</strong>: et bilde du har plassert eller limt inn, et bilde åpnet som sin egen tavle, eller et lag du har malt selv. Ta inn et bilde med <strong>Fil &gt; Plasser…</strong> (<kbd>&#8679;&#8984;P</kbd>) - det ankommer som et piksellag - velg det, og kjør deretter sporingen. (Vektorkunstverk er allerede laget av stier, slik at det er ingenting å spore; sporing leser piksler.)</p>
+<p>Sporingen kaster ikke bildet bort. Den bygger en gruppe ved navn <strong>Vektoriser</strong> som inneholder det originale bildet (nå skjult) sammen med de nye stiene, og sitter nøyaktig over det. Fordi gruppen husker innstillingene den ble laget med, forblir resultatet live: velg det på nytt, endre en innstilling, og det sporer på nytt. Når du er fornøyd <strong>Utvider</strong> du det for å beholde bare stiene, eller <strong>Frigir</strong> du det for å gå tilbake til det vanlige bildet.</p>
+
+<h2 id="image-trace-panel">Vektoriser-panelet</h2>
+<p>Hver innstilling bor i Vektoriser-panelet. Åpne det fra <strong>Objekt &gt; Vektoriser &gt; Vektoriser-panel</strong>, eller fra fanen sin i paneldokken. Panelet trenger et bilde valgt før det kan gjøre noe: uten noe passent valgt, er Spor-knappen deaktivert og panelet ber deg velge et plassert bilde.</p>
+
+<h3 id="image-trace-run">Kjøre en sporing</h3>
+<p>Velg et bilde, velg en mal eller angi modiene og alternativene for hånd, og trykk <strong>Spor</strong>. En linje nederst i panelet rapporterer fremgang, og leser <em>Sporer…</em> mens det jobber og <em>Sporet. Utvid for å beholde bare stiene.</em> når det er ferdig. Hvis bildet ikke inneholder noe en form kan lages av, eller ikke kan leses, sier panelet det og lar bildet være urørt.</p>
+
+<h3 id="image-trace-preview">Forhåndsvis mens du går</h3>
+<p>Avhør for <strong>Spor ved innstillinger endres</strong>, på som standard, sporer på nytt i det øyeblikket du endrer modien, en mal, et tall eller et avhør, slik at du kan bedømme hver justering mot bildet med en gang. På et stort eller travelt bilde tar tegningen et øyeblikk, så slå det av hvis du heller vil angi flere alternativer først og trykke <strong>Spor</strong> én gang. Når du velger en eksisterende sporing på nytt, laster panelet de nøyaktige innstillingene den ble laget med, klare til å justeres og spore på nytt.</p>
+
+<h3 id="image-trace-menu">Objekt-menyen kommandoer</h3>
+<p>De samme handlingene finnes under <strong>Objekt &gt; Vektoriser</strong>, noe som er praktisk når panelet er lukket.</p>
+<table>
+  <thead><tr><th>Kommando</th><th>Hva den gjør</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Lag</strong></td><td>Sporer det valgte bildet med gjeldende innstillinger, og etterlater resultatet live.</td></tr>
+    <tr><td><strong>Lag og utvid</strong></td><td>Sporer og utvider på én trinn, slik at du går rett til redigerbare stier.</td></tr>
+    <tr><td><strong>Utvid</strong></td><td>Beholder stiene og slipper bildet (se nedenfor).</td></tr>
+    <tr><td><strong>Frigi</strong></td><td>Forkaster stiene og går tilbake til bildet (se nedenfor).</td></tr>
+    <tr><td><strong>Vektoriser-panel</strong></td><td>Bringer panelet frem.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="image-trace-modes">De tre modiene</h2>
+<p>Modien bestemmer hvordan bildet reduseres før det tegnes. Det er det første valget å gjøre, fordi det styrer hvilke av alternativene nedenfor som gjelder.</p>
+<table>
+  <thead><tr><th>Modus</th><th>Hva den reduserer bildet til</th><th>Alternativet den bruker</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Svart og hvitt</strong></td><td>Deler alt inn i to toner, blekk og papir, på en lyshet du angir.</td><td>Terskel</td></tr>
+    <tr><td><strong>Gråtoner</strong></td><td>Reduserer bildet til et angitt antall jevne gråtoner fra svart til hvitt.</td><td>Antall farger (som gråtoner)</td></tr>
+    <tr><td><strong>Farge</strong></td><td>Velger et palet av de mest betydelsesfulle fargene i bildet og kartlegger hver piksel til nærmeste.</td><td>Antall farger</td></tr>
+  </tbody>
+</table>
+<p>Uansett hvilken modus du velger, lages én fylt form per tone eller farge, og formene stables størst først slik at mindre detaljer sitter på toppen. Helt gjennomsiktige deler av bildet utelates, slik at en utklipp på en gjennomsiktig bakgrund sporer til bare motivet.</p>
+
+<h2 id="image-trace-presets">Maler</h2>
+<p>En mal er et navngitt utgangspunkt som angir modien og hvert alternativ på én gang. Velg en fra menyen øverst i panelet og, med forhåndsvisning på, sporer bildet med en gang; behandle resultatet som en grunnlinje og juster derfra. I det øyeblikket du endrer et enkelt alternativ, bytter malmenyen til <strong>Tilpasset</strong>, siden innstillingene ikke lenger matcher malen.</p>
+<table>
+  <thead><tr><th>Mal</th><th>Modus</th><th>Grip etter den når</th></tr></thead>
+  <tbody>
+    <tr><td><høy-trofasthet foto</strong></td><td>Farge</td><td>Du vil ha et foto holdt nær originalen, med mange farger.</td></tr>
+    <tr><td><Lav-trofasthet foto</strong></td><td>Farge</td><td>Et foto skal lese som noen få brede, flate fargeområder.</td></tr>
+    <tr><td><3 farger</strong></td><td>Farge</td><td>Du vil ha et dristig, plakataktig resultat fra tre flate farger.</td></tr>
+    <tr><td><6 farger</strong></td><td>Farge</td><td>Et flatt, illustrert utseende med et lite, ryddig palett.</td></tr>
+    <tr><td><16 farger</strong></td><td>Farge</td><td>Mer fargeomfang enn de flatte malene, kort av et fullt foto.</td></tr>
+    <tr><td><Gråtoner</strong></td><td>Gråtoner</td><td>Et tonalt bilde skal beholde skyggen sin, men miste fargen sin.</td></tr>
+    <tr><td><Svart-hvitt logo</strong></td><td>Svart og hvitt</td><td>Gjøre et rent to-tone merke eller logo om til skarpe former.</td></tr>
+    <tr><td><Skissert kunst</strong></td><td>Svart og hvitt</td><td>Fange en blyant- eller blekkskisse med sine løsere linjer.</td></tr>
+    <tr><td><Silhuetter</strong></td><td>Svart og hvitt</td><td>Du vil ha solide, fylte silhuetter i stedet for fine linjer.</td></tr>
+    <tr><td><Linjekunst</strong></td><td>Svart og hvitt</td><td>En fin linjetegning der tynne strøk må overleve.</td></tr>
+    <tr><td><Tegning</strong></td><td>Svart og hvitt</td><td>Skarpe, trofaste linjeverk med så mye detalj som mulig beholdes.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="image-trace-options">Alternativene</h2>
+<p>Under modien sitter kontrollene som former resultatet. Hvilke som vises avhenger av modien: Terskel vises bare for Svart og hvitt, mens antall farger vises for Gråtoner og Farge.</p>
+<dl>
+  <dt>Antall farger</dt>
+  <dd>Hvor mange farger (i Farge-modus) eller gråtoner (i Gråtoner) bildet reduseres til, fra 2 opp til 64. Færre gir et flatere, mer grafisk resultat med færre former; flere holder bildet nær originalen på bekostning av flere stier. Svart og hvitt-modus ignorerer dette, siden den alltid har to toner.</dd>
+  <dt>Terskel</dt>
+  <dd>Bare for Svart og hvitt: lysheten, fra 0 til 255, der bildet deles i blekk og papir. Alt mørkere enn terskelen blir den tegnede formen; alt lysere behandles som bakgrunn. Øk det for å trekke mer av midttonene inn i formen for et tyngre resultat, senk det for å beholde bare de mørkeste merkene. Bruk det til å justere hvor mye av en svak skisse som plukkes opp.</dd>
+  <dt>Stier</dt>
+  <dd>Hvor nøye stiene følger pikslerne, på en skala fra 0 til 100. Høye verdiene klemmer kantene tett og beholder fin risting, med flere ankerpunkter; lave verdiene slapper av passformen for jevnere, enklere stier som er lettere å redigere. Grip etter en høy verdi når nøyaktighet betyr noe, og en lav når du vil ha en ren, ryddig omtrek.</dd>
+  <dt>Hjørner</dt>
+  <dd>Hvor gjerne en sving i omtrekken blir et skarpt hjørne i stedet for en myk bue, fra 0 til 100. Øk det for kunstverk med skarpe vinkler, som en logo eller skrift; senk det for organiske former som skal forbli runde.</dd>
+  <dt>Støy</dt>
+  <dd>Det minste stykket, i piksler, som får lov til å bli sin egen form. Alt mindre absorberes inn i det som omgir det. Øk det for å fjerne flekker og korn fra en scan eller et foto slik at ikke hver enkelt prikk blir en sti; senk det for å beholde ekte fine detaljer.</dd>
+  <dt>Ignorer hvitt</dt>
+  <dd>Utelater enhver form som blir nesten hvit, slik at papiret eller bakgrunnen ikke tegnes og forblir gjennomsiktig bak de sporede merkene. På som standard, og vist for Svart og hvitt-modus. Slå det av når et hvitt område er en del av kunstverket og må være en ekte fylt form.</dd>
+  <dt>Fyll</dt>
+  <dd>Gir hver sporet form et fast fyll i fargen den ble sporet som. Dette er det vanlige valget og er på som standard.</dd>
+  <dt>Linjer</dt>
+  <dd>Omtrekker hver sporet form med en linje i sin egen farge i stedet for, eller i tillegg til, et fyll. Av som standard. Hvis du slår både Fyll og Linjer av, opprettes stiene fremdeles, men har ingenting som maler dem, så la minst én være på.</dd>
+</dl>
+
+<h2 id="image-trace-finish">Beholde eller tilbakeføre resultatet</h2>
+<p>En fersk sporing er live: stiene sitter over det skjulte originale inni Vektoriser-gruppen, og du kan fortsette å justere innstillingene. To kommandoer avslutter den tilstanden, begge på panelet som knapper og under <strong>Objekt &gt; Vektoriser</strong>. De blir tilgjengelige når en sporing er valgt.</p>
+<dl>
+  <dt>Utvid</dt>
+  <dd>Beholder stiene og fjerner bildet, slik at gruppen blir vanlig vektorkunstverk. Innstillingene gjelder ikke lenger og kan ikke endres, men hvert sti er nå en normal form du kan omforme, omfarge, kombinere og arrangere. Grip etter dette når sporingen ser riktig ut og du vil jobbe på vektorene. <strong>Lag og utvid</strong> gjør sporingen og dette trinnet sammen.</dd>
+  <dt>Frigi</dt>
+  <dd>Forkaster de sporete stiene og gjenoppretter det originale bildet, synlig igjen på sin gamle plass. Bruk det for å forlate en sporing og begynne på nytt, eller når du bare trengte bildet likevel.</dd>
+</dl>
+
+<h2 id="image-trace-uses">Logoer, skisser og fotoer</h2>
+<p>De tre vanlige utgangspunktene krever forskjellige innstillinger.</p>
+<dl>
+  <dt>En logo eller et rent merke</dt>
+  <dd>Start fra <strong>Svart-hvitt logo</strong>. Hold <strong>Ignorer hvitt</strong> på slik at papiret faller ut, øk <strong>Hjørner</strong> for skarpe vinkler og <strong>Stier</strong> for trofaste kanter, og juster <strong>Terskel</strong> til merket er solidt uten å fylle seg inn. Utvid, og angi deretter din egen fyllfarge.</dd>
+  <dt>En blyant- eller blekkskisse</dt>
+  <dd>Prøv <strong>Skissert kunst</strong> eller <strong>Linjekunst</strong>. Senk <strong>Terskel</strong> for å beholde bare de tegnede linjene og la papiret forsvinne, og øk <strong>Støy</strong> litt for å fjerne kornet i papiret. Linjekunst beholder tynnere strøk; Skissert kunst passer til en løsere hånd.</dd>
+  <dt>Et foto</dt>
+  <dd>Bruk Farge-modus med <strong>Høy-trofasthet foto</strong> for en nær lignelse eller <strong>Lav-trofasthet foto</strong> for et flatere, illustrert utseende, og angi <strong>antall farger</strong> etter smak. La <strong>Ignorer hvitt</strong> være av slik at bleke områder forblir. Flere farger betyr flere former, slik at en tung fotosporing kan være stor: reduser fargene hvis resultatet føles uhåndterlig.</dd>
+</dl>
