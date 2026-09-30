@@ -1,0 +1,85 @@
+<p class="lede">Il pannello Livelli è la mappa di un documento: ogni livello, gruppo e oggetto in un unico elenco, impilati nell'ordine in cui si trovano sulla pagina. Usalo per mostrare e nascondere, bloccare, rinominare, riordinare e selezionare, e per vedere a colpo d'occhio su quale livello si trova qualsiasi oggetto.</p>
+
+<p>Le scorciatoie sotto sono scritte nel formato macOS. Su Windows e Linux, leggi <kbd>&#8984;</kbd> come Ctrl, <kbd>&#8997;</kbd> come Alt e <kbd>&#8679;</kbd> come Shift.</p>
+
+<h2 id="layers-panel">Il pannello Livelli</h2>
+<p>Aprilo da <strong>Finestra &rsaquo; Livelli</strong> (<kbd>F7</kbd>). L'elenco contiene i tuoi livelli al primo livello, con i contenuti di ogni livello annidati sotto di esso: gruppi, tracciati, testo, immagini e livelli pixel, disegnati come un albero che puoi aprire e chiudere. Un contenitore (un livello o un gruppo) porta un piccolo triangolo a sinistra della sua riga; fai clic su di esso per ripiegare il contenitore o aprirlo. I documenti profondi restano leggibili perché puoi collassare le parti su cui non stai lavorando.</p>
+<p>Due pulsanti si trovano in fondo al pannello. <strong>Crea nuovo livello</strong> aggiunge un livello vuoto appena sopra quello attualmente attivo e rende attivo il nuovo. <strong>Elimina selezione</strong> rimuove ciò che è selezionato; un documento conserva sempre almeno un livello, quindi l'ultimo livello rimanente non può essere eliminato in questo modo. Per rinominare qualsiasi livello, gruppo o oggetto, fai doppio clic sul suo nome nell'elenco, digita e premi <kbd>Invio</kbd>. Dare nomi alle parti di un documento affollato è il modo più veloce per mantenerlo navigabile.</p>
+
+<h3 id="layers-row">Cosa mostra ogni riga</h3>
+<p>Leggendo una riga da sinistra a destra:</p>
+<table>
+  <thead><tr><th>Parte</th><th>Cosa fa</th></tr></thead>
+  <tbody>
+    <tr><td>Occhio</td><td>Mostra o nasconde quel livello, gruppo o oggetto. Una riga con l'occhio spento non viene disegnata né stampata o esportata.</td></tr>
+    <tr><td>Blocco</td><td>Blocca o sblocca la riga. Un oggetto bloccato non può essere selezionato o modificato sulla tela.</td></tr>
+    <tr><td>Chip colore</td><td>Solo sulle righe dei livelli: l'etichetta colore del livello, usata per tingere i marcatori di selezione e le evidenziazioni di quel livello.</td></tr>
+    <tr><td>Triangolo</td><td>Solo sui contenitori: apre o chiude il livello o il gruppo per rivelare cosa c'è dentro.</td></tr>
+    <tr><td>Icona tipo</td><td>Contrassegna gruppi e gruppi di ritaglio (un gruppo di ritaglio è disegnato con un contorno tratteggiato).</td></tr>
+    <tr><td>Nome</td><td>Il nome, o un segnaposto tra parentesi angolari come <code>&lt;Tracciato&gt;</code> oppure <code>&lt;Gruppo&gt;</code> quando una cosa non ha nome. Doppio clic per rinominare.</td></tr>
+    <tr><td>Quadrato selezione</td><td>Al bordo destro: un piccolo quadrato nel colore del livello che appare su qualsiasi riga che contiene parte della selezione corrente.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="layers-groups">Livelli e gruppi</h2>
+<p>I livelli sono i contenitori di primo livello di un documento. Esistono per mantenere separate parti non correlate del lavoro: uno sfondo su un livello, il disegno principale su un altro, etichette su un terzo. Poiché un livello si trova alla radice dell'albero, nasconderlo, bloccarlo o riordinarlo sposta tutto ciò contiene in un unico passaggio.</p>
+<p>Un gruppo è un contenitore più piccolo che vive dentro un livello (o dentro un altro gruppo) e viaggia con il lavoro. Il raggruppamento è come le parti di una cosa si legano insieme, i pezzi di un logo o un'icona, così si muovono, si ridimensionano e si impilano come un'unità. I gruppi si aprono e chiudono nel pannello con il proprio triangolo, esattamente come i livelli.</p>
+<p>Livelli e gruppi si comportano allo stesso modo in un aspetto importante: ciascuno può essere mostrato o nascosto, bloccato o sbloccato, e ciascuno può portare la propria opacità e modalità di fusione che si applicano a tutto ciò che contiene. La differenza è di ruolo. I livelli organizzano l'intero documento; i gruppi legano oggetti individuali.</p>
+
+<h3 id="layers-grouping">Raggruppare e separare</h3>
+<p>Seleziona due o più oggetti e scegli <strong>Oggetto &rsaquo; Raggruppa</strong> (<kbd>&#8984;G</kbd>) per raccoglierli in un gruppo. <strong>Oggetto &rsaquo; Separa</strong> (<kbd>&#8679;&#8984;G</kbd>) rimette fuori gli oggetti di un gruppo selezionato. I gruppi possono essere annidati, quindi un gruppo di gruppi va bene; ogni <kbd>&#8679;&#8984;G</kbd> rimuove un livello. Usa un gruppo ogni volta che ti trovi a selezionare gli stessi oggetti una e ancora.</p>
+
+<h2 id="layers-stacking">Ordine di sovrapposizione: davanti e dietro</h2>
+<p>Gli oggetti vengono disegnati da dietro a davanti, quindi un oggetto più vicino alla parte davanti copre quelli dietro di esso dove si sovrappongono. Il pannello mostra questo ordine direttamente: la riga in cima è l'oggetto più in alto, e quella in fondo è quello più indietro. Riordinare un oggetto cambia cosa copre cosa.</p>
+<p>Il modo più veloce di riordinare è trascinare: afferra una riga e rilasciala più in alto o più in basso nell'elenco per spostarla attraverso la pila, oppure rilasciala su un livello o gruppo per spostare l'oggetto <em>dentro</em> di esso. Trascinare è anche come sposti un oggetto selezionato su un livello diverso: senza tagliare e incollare.</p>
+<p>Sposta una selezione attraverso la pila con <strong>Oggetto &rsaquo; Disponi</strong>:</p>
+<table>
+  <thead><tr><th>Comando</th><th>Scorciatoia</th><th>Effetto</th></tr></thead>
+  <tbody>
+    <tr><td>Porta in cima</td><td><kbd>&#8679;&#8984;]</kbd></td><td>Tutto davanti nel suo livello.</td></tr>
+    <tr><td>Porta avanti</td><td><kbd>&#8984;]</kbd></td><td>Un passo verso l'alto.</td></tr>
+    <tr><td>Manda indietro</td><td><kbd>&#8984;[</kbd></td><td>Un passo verso il basso.</td></tr>
+    <tr><td>Manda in fondo</td><td><kbd>&#8679;&#8984;[</kbd></td><td>Tutto dietro nel suo livello.</td></tr>
+  </tbody>
+</table>
+<p>Usali quando una forma che ti serve è nascosta dietro un'altra, oppure quando uno sfondo è finito sopra il disegno. Per lavorare su oggetti che si trovano uno sopra l'altro, <strong>Seleziona &rsaquo; Oggetto successivo sopra</strong> (<kbd>&#8997;&#8984;]</kbd>) e <strong>Oggetto successivo sotto</strong> (<kbd>&#8997;&#8984;[</kbd>) spostano la su e giù nella pila, cosa comoda per raggiungere qualcosa sepolto sotto altro lavoro.</p>
+
+<h2 id="layers-visibility">Mostrare e nascondere</h2>
+<p>Fai clic sull'occhio di qualsiasi riga per nascondere quel livello, gruppo o oggetto; fai clic di nuovo per riportarlo. Una riga nascosta non prende parte alla disegnazione, alla stampa o all'esportazione, quindi nascondere è il modo sicuro per togliere qualcosa di mezzo senza eliminarlo. Usalo per confrontare due versioni di un dettaglio, oppure per sgomberare una tela affollata fino alla parte su cui stai lavorando.</p>
+<p>Il menu offre lo stesso per la selezione corrente: <strong>Oggetto &rsaquo; Nascondi &rsaquo; Selezione</strong> (<kbd>&#8984;3</kbd>) nasconde ciò che è selezionato, e <strong>Oggetto &rsaquo; Mostra tutto</strong> (<kbd>&#8997;&#8984;3</kbd>) rivela tutto ciò che era nascosto.</p>
+
+<h2 id="layers-locking">Blocco</h2>
+<p>Fai clic sul blocco di una riga per bloccarla. Un oggetto bloccato resta visibile ma non può essere selezionato o modificato sulla tela, quindi è al sicuro mentre lavori intorno. Bloccare un livello protegge tutto ciò che contiene in una volta. Blocca lo sfondo mentre disegni sopra di esso, oppure blocca un elemento finito perché un trascinamento accidentale non lo sposti.</p>
+<p>Dal menu, <strong>Oggetto &rsaquo; Blocca &rsaquo; Selezione</strong> (<kbd>&#8984;2</kbd>) blocca ciò che è selezionato, e <strong>Oggetto &rsaquo; Sblocca tutto</strong> (<kbd>&#8997;&#8984;2</kbd>) libera di nuovo tutto. Bloccare un oggetto selezionato lo rimuove anche dalla selezione, poiché una cosa bloccata non è più qualcosa su cui puoi agire.</p>
+
+<h2 id="layers-selecting">Selezione e livello attivo</h2>
+<p>Fai clic sulla riga di un oggetto nel pannello per selezionare quell'oggetto sulla tela. Tieni premuto <kbd>&#8679;</kbd>, <kbd>&#8984;</kbd> o <kbd>Ctrl</kbd> mentre fai clic per aggiungere un altro oggetto alla selezione, così puoi costruire una selezione dall'elenco senza cercare piccole forme sulla pagina.</p>
+<p>Fare clic su una riga di <em>livello</em> fa qualcosa di diverso: rende quel livello il livello attivo, contrassegnato con una barra colorata lungo il suo bordo sinistro. Il nuovo lavoro che disegni, inserisci o incoll viene aggiunto al livello attivo, quindi fare clic su un livello prima di iniziare decide dove quel lavoro atterrà. Creare un nuovo livello lo rende attivo immediatamente.</p>
+<p>Il quadrato di selezione a destra di ogni riga collega il pannello alla tela. Appare, nel colore del livello, su ogni riga che contiene parte della selezione corrente, e è riempito sugli oggetti esatti che sono selezionati. Poiché il segno risale lungo l'albero, un'occhiata lungo l'elenco mostra sia cosa è selezionato sia in quali livelli e gruppi quegli oggetti si trovano.</p>
+
+<h2 id="layers-colours">Etichette colore</h2>
+<p>Ogni livello riceve un colore da una sequenza fissa (blu chiaro, rosso, verde, blu, giallo e così via, dodici in totale, che si ripetono man mano che aggiungi altri livelli). Quel colore è l'etichetta del livello. Appare come il chip accanto al nome del livello, e tinge i marcatori di selezione nel pannello insieme alle evidenziazioni di selezione e al riquadro di selezione disegnati sulla tela per gli oggetti su quel livello. Lo scopo è l'identificazione veloce: quando selezioni qualcosa e il suo riquadro divene verde, sai subito che appartiene al livello verde. Distribuire un documento su alcuni livelli ben nominati e colorati diversamente rende molto più facile tenere traccia di dove si trova ogni cosa.</p>
+
+<h2 id="layers-masks">Maschere di ritaglio e di opacità</h2>
+<p>Un livello o un gruppo può portare la propria opacità e modalità di fusione, entrambe impostate nel pannello <strong>Trasparenza</strong> (<strong>Finestra &rsaquo; Trasparenza</strong>, <kbd>&#8679;&#8984;F10</kbd>). Lo stesso pannello contiene <strong>Contieni fusione nel gruppo</strong>, che mantiene le modalità di fusione di un gruppo a mescolarsi solo tra loro invece che con ciò che è sotto, e <strong>Gruppo knockout</strong>, dove ogni oggetto nel gruppo nasconde quelli dietro di esso invece di mostrarsi attraverso di essi. Le maschere vanno oltre e permettono a un oggetto di controllare dove, o quanto fortemente, altro lavoro si mostra.</p>
+
+<h3 id="layers-clip">Maschere di ritaglio</h3>
+<p>Una maschera di ritaglio ritaglia il lavoro a una forma. Seleziona due o più oggetti e scegli <strong>Oggetto &rsaquo; Maschera di ritaglio &rsaquo; Crea</strong> (<kbd>&#8984;7</kbd>). L'oggetto selezionato più in cima diventa il tracciato di ritaglio, e tutto ciò che è sotto di esso viene mostrato solo dentro quella forma; il resto viene tagliato via. Il risultato è un gruppo di ritaglio, disegnato nel pannello con un'icona tratteggiata. <strong>Rilascia</strong> (<kbd>&#8997;&#8984;7</kbd>) annulla l'operazione e restituisce gli oggetti. Usala per ritagliare una fotografia o un motivo affollato a un cerchio, una lettera o qualsiasi contorno che disegni sopra.</p>
+
+<h3 id="layers-opacity-mask">Maschere di opacità</h3>
+<p>Una maschera di opacità sfuma il lavoro secondo la luminosità di un altro oggetto. Seleziona due o più oggetti e scegli <strong>Oggetto &rsaquo; Maschera di ritaglio &rsaquo; Crea maschera di opacità</strong>, oppure usa <strong>Crea maschera</strong> nel pannello Trasparenza. L'oggetto più in cima diventa la maschera: dove è chiaro il lavoro sotto si mostra per intero, dove è scuro il lavoro sfuma fino a scomparire, con i grigi nel mezzo che danno trasparenza parziale. <strong>Rilascia maschera di opacità</strong> la smonta di nuovo. Usa una sfumatura da bianco a nero come maschera per sfumare un'immagine verso un bordo, oppure per costruire le morbide vignettature e dissolvenze che un singolo valore di opacità piatto non può dare.</p>
+
+<h2 id="layers-organising">Organizzare un documento</h2>
+<p>Un po' di struttura all'inizio risparmia molto cercare in seguito. Alcune abitudini che valgono la pena:</p>
+<dl>
+  <dt>Un livello per argomento</dt>
+  <dd>Mantieni lo sfondo, il lavoro principale e il testo su livelli separati e nominati. Puoi poi nasconderlo, bloccarlo o riordinare un'intera parte del disegno in un singolo clic.</dd>
+  <dt>Blocca ciò che non tocchi</dt>
+  <dd>Blocca i livelli intorno a quello su cui stai lavorando perché un clic o un trascinamento accidentale non li disturbi, e sbloccali di nuovo con <kbd>&#8997;&#8984;2</kbd> quando ne hai bisogno.</dd>
+  <dt>Raggruppa ciò che si muove insieme</dt>
+  <dd>Lega le parti di un singolo elemento in un gruppo così si comporta come un unico oggetto, e riserva i livelli per le divisioni più grandi del documento.</dd>
+  <dt>Imposta il livello attivo prima di disegnare</dt>
+  <dd>Fai clic sul livello a cui vuoi aggiungere prima, così il nuovo lavoro atterra nel posto giusto piuttosto che sopra qualsiasi cosa c'era.</dd>
+  <dt>Lascia che i colori ti guidino</dt>
+  <dd>Affidati ai colori dei livelli: quando l'evidenziazione di una selezione corrisponde al chip di un livello, sai esattamente dove vive quell'oggetto senza aprire nulla.</dd>
+</dl>

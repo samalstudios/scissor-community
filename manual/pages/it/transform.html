@@ -1,0 +1,165 @@
+<p class="lede">Tutto ciò che cambia dove si trova un oggetto, quanto è grande o da che lato guarda si trova qui: spostamento e ridimensionamento a mano, trasformazioni numeriche esatte, allineamento e impilamento, ripetizioni live, morfologie, buste e la trasformazione di una forma piatta in un solido.</p>
+
+<p>Le scorciatoie sotto sono scritte nel formato macOS. Su Windows e Linux, leggi <kbd>⌘</kbd> come Ctrl, <kbd>⌥</kbd> come Alt e <kbd>⇧</kbd> come Shift.</p>
+
+<h2 id="transform-select-move">Selezionare e spostare</h2>
+<p>Prima di poter trasformare qualsiasi cosa devi dire cosa. Usa questi per primi: gli strumenti di selezione decidono su cosa agirà un trascinamento, un comando numerico o un campo di pannello.</p>
+
+<h3 id="transform-selection-tools">Gli strumenti di selezione</h3>
+<table>
+  <thead><tr><th>Strumento</th><th>Scorciatoia</th><th>Cosa seleziona</th></tr></thead>
+  <tbody>
+    <tr><td>Strumento Selezione</td><td><kbd>V</kbd></td><td>Interi oggetti e gruppi.</td></tr>
+    <tr><td>Strumento Selezione diretta</td><td><kbd>A</kbd></td><td>Singoli punti di ancoraggio e segmenti di tracciato.</td></tr>
+    <tr><td>Strumento Selezione gruppo</td><td></td><td>Un oggetto dentro un gruppo; ogni clic successivo si allarga al gruppo che lo circonda.</td></tr>
+  </tbody>
+</table>
+<p>Shift-clic aggiunge un oggetto alla selezione o lo rimuove di nuovo. Trascina sulla tela vuota per un rettangolo di selezione, e tieni premuto <kbd>⇧</kbd> per aggiungere ciò che il rettangolo cattura a ciò che è già selezionato. Facendo doppio clic su un gruppo con lo Strumento Selezione ci entri dentro così puoi lavorare su un membro senza separare.</p>
+
+<h3 id="transform-moving">Spostare una selezione</h3>
+<p>Trascina un oggetto selezionato per spostarlo. Tenendo premuto <kbd>⌥</kbd> lascia una copia dietro di sé e trascina quella invece, che è il modo veloce per duplicare sul posto e riposizionare in un unico movimento. Tenendo premuto <kbd>⇧</kbd> vincola lo spostamento a passi di 45&deg; misurati dall'angolo di vincolo impostato nelle Preferenze, e disattiva l'aggancio; senza <kbd>⇧</kbd> la selezione si aggancia a bordi, centri e angoli vicini. I tasti freccia spostano dell'incremento da tastiera, <kbd>⇧</kbd> con una freccia sposta di dieci volte quello, e <kbd>⌥</kbd> con una freccia sposta una copia.</p>
+
+<h3 id="transform-bounding-box">Il riquadro di selezione: ridimensionare e ruotare a mano</h3>
+<p>Il riquadro di selezione porta otto maniglie. Trascinala per ridimensionare: <kbd>⇧</kbd> mantiene le proporzioni e <kbd>⌥</kbd> ridimensiona attorno al centro piuttosto che alla maniglia opposta. Appena fuori da un angolo il puntatore entra nella zona di rotazione; trascina lì per ruotare la selezione attorno al centro del riquadro, con <kbd>⇧</kbd> che scatta a 45&deg;. Dopo una rotazione il riquadro resta inclinato con il lavoro. <strong>Oggetto &rsaquo; Trasforma &rsaquo; Ripristina riquadro di selezione</strong> lo rimette in squadra così le successive modifiche di larghezza e altezza si leggono lungo gli assi della pagina.</p>
+
+<h2 id="transform-numeric">Trasformazioni numeriche</h2>
+<p>Trascinare è veloce ma approssimativo. Quando un valore deve essere esatto, o lo stesso su molti oggetti, digitalo. Il pannello Trasforma contiene i valori live per la selezione, e il sottomenu <strong>Oggetto &rsaquo; Trasforma</strong> contiene comandi una tantum con un'opzione Copia.</p>
+
+<h3 id="transform-panel">Il pannello Trasforma</h3>
+<p>Il pannello Trasforma (<kbd>⇧F8</kbd>) mostra X, Y, L e A in pixel per la selezione; digita un valore e premi Invio per impostarlo. Sotto di essi, il campo ⟳ ruota la selezione di un angolo e il campo ⧄ la inclina di uno, ciascuno che torna a zero una volta applicato. Il pannello ha bisogno di qualcosa di selezionato; senza nulla si disattiva e lo dice.</p>
+<p>Il pannello Propetià ripete X, Y, L e A con un campo di rotazione e due pulsanti che capovolgono la selezione orizzontalmente o verticalmente attorno al suo proprio centro, così le mosse più comuni sono a portata di mano senza aprire un secondo pannello.</p>
+
+<h3 id="transform-commands">Sposta, Ruota, Rifletti, Ridimensiona e Inclina</h3>
+<p><strong>Oggetto &rsaquo; Trasforma</strong> contiene i comandi numerici. Ciascuno apre una piccola finestra di dialogo, e ciascuno (tranne Sposta, che è uno spostamento diretto) trasforma attorno al punto di riferimento. La casella Copia in ogni finestra applica la modifica a una copia e lascia l'originale intatto, che è come si costruisce una coppia specchiata o un'eco ridimensionata in un passo.</p>
+<table>
+  <thead><tr><th>Comando</th><th>Scorciatoia</th><th>Campi</th></tr></thead>
+  <tbody>
+    <tr><td>Sposta&hellip;</td><td><kbd>⇧⌘M</kbd></td><td>Orizzontale, Verticale, Copia.</td></tr>
+    <tr><td>Ruota&hellip;</td><td></td><td>Angolo, Copia.</td></tr>
+    <tr><td>Rifletti&hellip;</td><td></td><td>Asse (Orizzontale o Verticale), Angolo, Copia.</td></tr>
+    <tr><td>Ridimensiona&hellip;</td><td></td><td>% Orizzontale, % Verticale, Copia.</td></tr>
+    <tr><td>Inclina&hellip;</td><td></td><td>Angolo di inclinazione, Angolo dell'asse, Copia.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="transform-each-again">Trasforma singoli e Trasforma di nuovo</h3>
+<p><strong>Trasforma singoli&hellip;</strong> (<kbd>⌥⇧⌘D</kbd>) ridimensiona, sposta, ruota e riflette ogni oggetto selezionato attorno al <em>proprio</em> centro piuttosto che al centro condiviso della selezione. La sua finestra accetta Ridimensiona O e V, Sposta O e V, un angolo Ruota, caselle Rifletti X e Rifletti Y e Copia. Usalo per ombreggiare o ventagliare un insieme di oggetti così ciascuno si ruota e cresce sul posto invece che orbitare intorno al gruppo.</p>
+<p><strong>Trasforma di nuovo</strong> (<kbd>⌘D</kbd>) ripete l'ultima trasformazione sulla selezione corrente. Sposta un oggetto, poi premi <kbd>⌘D</kbd> alcune volte, e ottieni una fila uniformemente graduata; combinalo con <kbd>⌥</kbd>-trascinamento di una copia per costruire motivi ripetuti a mano.</p>
+
+<h2 id="transform-tools">Gli strumenti di trasformazione e il punto di riferimento</h2>
+<p>Gli strumenti Ruota (<kbd>R</kbd>), Rifletti (<kbd>O</kbd>), Ridimensiona (<kbd>S</kbd>) e Inclina ciascuno lavorano attorno a un punto di riferimento, disegnato come una piccola mirino. Inizia al centro della selezione; fai clic ovunque sulla tela per spostarlo lì, e selezionando qualcosa di altro lo riporta al nuovo centro. Poi trascina sulla tela per ruotare, riflettere, ridimensionare o inclinare attorno a quel punto.</p>
+<p><kbd>⇧</kbd> vincola ogni strumento: passi di 45&deg; per Ruota e Rifletti, orizzontale e verticale uguali per Ridimensiona, un asse per Inclina. Tenendo premuto <kbd>⌥</kbd> durante il trascinamento trasforma una copia e lascia l'originale. <kbd>⌥</kbd>-clic posiziona il punto di riferimento e apre la finestra numerica di quello strumento con il punto già impostato, così puoi far girare una forma attorno a un angolo di un angolo esatto.</p>
+
+<h2 id="transform-free">Lo Strumento Trasforma libera</h2>
+<p>Lo Strumento Trasforma libera (<kbd>E</kbd>) mette spostamento, ridimensionamento, rotazione, inclinazione e due tipi di distorsione su un unico riquadro di selezione. Trascina dentro il riquadro per spostarlo, trascina una maniglia per ridimensionare e trascina appena fuori da un angolo per ruotare, con <kbd>⇧</kbd> che scatta a 45&deg;. Usalo quando vuoi provare diversi tipi di modifica in un unico gesto senza cambiare strumento tra l'uno e l'altro.</p>
+<p>Il riquadro dello Strumento Selezione può distorcere anche: tieni premuto <kbd>Ctrl</kbd> (o <kbd>&#8984;</kbd>) mentre trascini una delle sue maniglie d'angolo per spostare quell'angolo da solo, invece di ridimensionare. Funziona su forme e foto allo stesso modo; sui pixel un'anteprima rapida segue il trascinamento e il risultato viene calcolato quando premi <kbd>Invio</kbd>.</p>
+
+<h3 id="transform-free-widget">Il widget</h3>
+<p>Un piccolo widget fluttua accanto al riquadro con quattro pulsanti, ciascuno che si nomina quando passi sopra: <strong>Vincola</strong>, <strong>Trasforma libera</strong>, <strong>Distorci prospettica</strong> e <strong>Distorci libera</strong>. Vincola rende il ridimensionamento proporzionale senza tenere premuto <kbd>⇧</kbd>; con esso attivo, <kbd>⇧</kbd> libera le proporzioni invece. Le due modalità di distorsione lasciano solo le quattro maniglie d'angolo da tirare.</p>
+
+<h3 id="transform-free-keys">Distorcere da tastiera</h3>
+<p>Puoi raggiungere le stesse distorsioni senza lasciare la modalità predefinita. Tieni premuto <kbd>⌘</kbd> su una maniglia di bordo per inclinare lungo quel bordo. Tieni premuto <kbd>⌘</kbd> su un angolo per distorcerlo liberamente da solo; aggiungi <kbd>⇧</kbd> per vincolare il percorso dell'angolo a 45&deg;. Tieni premuto <kbd>⌘⌥⇧</kbd> su un angolo per la prospettica, dove l'angolo vicino rispecchia il trascinamento. Premere o rilasciare un modificatore a metà di un trascinamento cambia azione immediatamente, e il nome su cui finisce, Ridimensiona, Inclina, Distorci prospettica o Distorci libera, è come il passaggio viene chiamato nel pannello Cronologia in seguito. Testo, immagini posate e istanze di simbolo non possono essere distorti; vengono lasciati come sono, e Scissor te lo dice quando un trascinamento li salta.</p>
+
+<h3 id="transform-free-reference">Il punto di riferimento</h3>
+<p>Il punto di riferimento si trova al centro del riquadro come una mirino, e puoi trascinarlo ovunque; da solo non sposta nulla. Il ruota e si ridimensiona poi attorno ad esso, e viaggia con il lavoro quando sposti la selezione. Rilascialo vicino a uno dei nove punti del riquadro (i quattro angoli, i quattro punti medi dei bordi o il centro) e si stabilisce su quel punto. Tenendo premuto <kbd>⌥</kbd> mentre ridimensioni ignora un punto di riferimento posato e ridimensiona attorno al centro. Inclinare un lato con <kbd>⌘</kbd> tiene fermo anche un punto di riferimento posato.</p>
+
+<h3 id="transform-free-pins">Spostare le maniglie</h3>
+<p>Attiva <strong>Sposta maniglie</strong> nella barra rapida (o nella barra delle opzioni) mentre Trasforma libera è attivo, e trascinare un angolo del riquadro sposta quell'angolo da solo, senza toccare il lavoro. Vicino a un punto di ancoraggio si stabilisce su di esso. Disattiva di nuovo Sposta maniglie e trascina un angolo spostato: la forma si ridimensiona così quell'angolo segue il puntatore, e ogni altro punto mantiene la stessa distanza proporzionale da ciò che resta fermo, che è l'angolo opposto, il punto di riferimento posato o il centro mentre <kbd>⌥</kbd> è premuto. <kbd>⇧</kbd> mantiene le proporzioni. Gli angoli spostati viaggiano con il lavoro, e facendo doppio clic su uno li rimette tutti e quattro sul riquadro.</p>
+
+<h2 id="transform-align-arrange">Allineare, disporre e raggruppare</h2>
+<p>Questi comandi impostano come gli oggetti si allineano tra loro, quale si trova davanti a quale, e quali vengono raccolti, bloccati o nascosti mentre lavori sul resto.</p>
+
+<h3 id="transform-align">Allinea e distribuisci</h3>
+<p>Il pannello Allinea (<kbd>⇧F7</kbd>) ha tre righe. <strong>Allinea oggetti</strong> allinea la selezione a sinistra, centro o destra, e in alto, in basso o al centro. <strong>Distribuisci oggetti</strong> distribuisce tre o più oggetti così che i loro bordi superiori, centrali, inferiori, bordi sinistri, centri o bordi destri cadano a intervalli uniformi. <strong>Distribuisci spaziatura</strong> imposta uno spazio uguale tra loro verticalmente o orizzontalmente. Il menu sul pannello sceglie se tutto si allinea alla selezione o alla tavola. L'allineamento richiede almeno un oggetto (un singolo oggetto si allinea alla tavola); la distribuzione ne richiede tre, e il pannello disattiva quei pulsanti finché non li hai. I sei allineamenti appaiono anche sotto <strong>Oggetto &rsaquo; Allinea</strong>.</p>
+
+<h3 id="transform-arrange">Disponi: ordine di sovrapposizione</h3>
+<p>Ogni oggetto si trova a un livello nella pila, e <strong>Oggetto &rsaquo; Disponi</strong> sposta la selezione attraverso di esso.</p>
+<table>
+  <thead><tr><th>Comando</th><th>Scorciatoia</th></tr></thead>
+  <tbody>
+    <tr><td>Porta in cima</td><td><kbd>⇧⌘]</kbd></td></tr>
+    <tr><td>Porta avanti</td><td><kbd>⌘]</kbd></td></tr>
+    <tr><td>Manda indietro</td><td><kbd>⌘[</kbd></td></tr>
+    <tr><td>Manda in fondo</td><td><kbd>⇧⌘[</kbd></td></tr>
+  </tbody>
+</table>
+
+<h3 id="transform-grouping">Raggruppare, bloccare e nascondere</h3>
+<dl>
+  <dt><strong>Raggruppa</strong> (<kbd>⌘G</kbd>) e <strong>Separa</strong> (<kbd>⇧⌘G</kbd>)</dt>
+  <dd>Raccogli gli oggetti così si muovono e si trasformano come uno, oppure rilasciali di nuovo. Un gruppo può essere entrato facendo doppio clic su di esso con lo Strumento Selezione.</dd>
+  <dt><strong>Blocca &rsaquo; Selezione</strong> (<kbd>⌘2</kbd>) e <strong>Sblocca tutto</strong> (<kbd>⌥⌘2</kbd>)</dt>
+  <dd>Il blocco rende gli oggetti non selezionabili così restano fermi mentre lavori sopra di essi; Sblocca tutto libera tutto ciò che era bloccato.</dd>
+  <dt><strong>Nascondi &rsaquo; Selezione</strong> (<kbd>⌘3</kbd>) e <strong>Mostra tutto</strong> (<kbd>⌥⌘3</kbd>)</dt>
+  <dd>Nascondere toglie gli oggetti dalla tela senza eliminarli, cosa che sgombera una scena affollata fino alla parte che stai modificando; Mostra tutto li riporta indietro.</dd>
+</dl>
+
+<h2 id="transform-repeat">Ripetizioni live</h2>
+<p><strong>Oggetto &rsaquo; Ripeti</strong> costruisce molte copie da un oggetto e le mantiene live: modifica l'originale e ogni copia segue. Usa una ripetizione quando il lavoro è regolare, un fiore di petali identici o una griglia piastrellata di icone, così puoi plasmare un elemento e lasciare che il resto lo segua.</p>
+<dl>
+  <dt><strong>Radiale&hellip;</strong></dt>
+  <dd>Dispone le copie in cerchio attorno a un centro. La finestra imposta Istanze e Raggio.</dd>
+  <dt><strong>Griglia&hellip;</strong></dt>
+  <dd>Dispone le copie in righe e colonne. La finestra imposta Colonne, Righe, Spaziatura orizzontale e Spaziatura verticale.</dd>
+  <dt><strong>Specchio&hellip;</strong></dt>
+  <dd>Riflette le copie attraverso un asse. La finestra imposta l'asse (verticale o orizzontale) e uno Scostamento.</dd>
+</dl>
+<p>Con una ripetizione selezionata, il pannello Proprietà espone gli stessi controlli per una regolazione successiva: istanze e raggio per una ripetizione radiale; colonne, righe e spaziatura orizzontale e verticale per una griglia; e l'offset e l'asse speculare per uno specchio. <strong>Rilascia</strong> trasforma le copie in lavoro ordinario e separatamente modificabile quando hai finito.</p>
+<figure class="shot">
+  <img src="img/repeat.gif" width="640" height="640" loading="lazy"
+       alt="Un singolo petalo blu ripetuto attorno a un centro da una ripetizione radiale, che si riempie in un fiore a dodici petali man mano che il conteggio aumenta." />
+  <figcaption>Un petalo e una ripetizione radiale. Man mano che il conteggio sale da uno a dodici il fiore si riempie; rimodella il singolo petalo e l'intera cosa cambia con esso.</figcaption>
+</figure>
+
+<h2 id="transform-morph">Morfologie</h2>
+<p>Una morfologia riempie lo spazio tra due oggetti con una serie di forme intermedie, ciascuna un passo più vicina alla successiva. È lo strumento per transizioni sfumate tra colori e per ripetizioni uniformemente spaziate lungo un tracciato.</p>
+<p>Lo Strumento Morfologia (<kbd>W</kbd>) trasforma un oggetto in un altro: fai clic sul primo, poi sul secondo. Facendo clic su un terzo la catena continua, e facendo clic dentro una morfologia esistente aggiunge quell'oggetto ad essa. <strong>Oggetto &rsaquo; Morfologia</strong> contiene il resto:</p>
+<table>
+  <thead><tr><th>Comando</th><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+  <tbody>
+    <tr><td>Crea</td><td><kbd>⌥⌘B</kbd></td><td>Trasforma gli oggetti selezionati insieme.</td></tr>
+    <tr><td>Rilascia</td><td><kbd>⌥⇧⌘B</kbd></td><td>Restituisce gli oggetti chiave e elimina i passi.</td></tr>
+    <tr><td>Opzioni morfologia&hellip;</td><td></td><td>Imposta spaziatura e orientamento (vedi sotto).</td></tr>
+    <tr><td>Espandi</td><td></td><td>Trasforma i passi intermedi in oggetti reali e modificabili.</td></tr>
+    <tr><td>Sostituisci spina</td><td><tr><td>Piega la serie di passi lungo un tracciato selezionato.</td></tr>
+    <tr><td>Inverti spina</td><td></td><td>Inverte a quale estremità della spina si trova ogni oggetto chiave.</td></tr>
+    <tr><td>Inverti davanti a dietro</td><td></td><td>Capovolge l'ordine di sovrapposizione dei passi.</td></tr>
+  </tbody>
+</table>
+<p><strong>Opzioni morfologia&hellip;</strong> imposta Spaziatura su Passi specificati (un numero fisso di intermedi), Distanza specificata (un intervallo fisso in pixel, riempiendo quanti ne stanno) o Colore morbido (tutti i passi che servono per una sfumatura colore uniforme), e imposta Orientamento su Allinea alla pagina o Allinea al tracciato. Una morfologia resta live e segue i suoi oggetti chiave, così modificare entrambe le estremità rifluisce in tutta la serie.</p>
+<figure class="shot">
+  <img src="img/morph.gif" width="760" height="316" loading="lazy"
+       alt="Una stella blu che si trasforma in un cerchio ambra attraverso una fila crescente di forme intermedie." />
+  <figcaption>Una morfologia da stella a cerchio. Man mano che il conteggio dei passi sale, più forme intermedie riempiono lo spazio, ciascuna un po' più vicina alla successiva.</figcaption>
+</figure>
+
+<h2 id="transform-envelope">Deformazione forma</h2>
+<p><strong>Oggetto &rsaquo; Deformazione forma</strong> piega il lavoro per adattarlo a una forma mantenendolo modificabile sotto. Usalo per adattare un logo a un banner, curvare una riga di testo o spingere un motivo piatto in un rigonfiamento. Ci sono tre modi di crearne una.</p>
+<dl>
+  <dt><strong>Crea con deformazione&hellip;</strong> (<kbd>⌥⇧⌘W</kbd>)</dt>
+  <dd>Piega la selezione con uno degli stili di deformazione integrati (Arco, Arco di cerchio, Rigonfiamento, Bandiera, Onda, Pesce, Salita, Occhio di pesce, Gonfia, Stringi e le varianti conchiglia e arco), controllate da quantità Piega, Orizzontale e Verticale.</dd>
+  <dt><strong>Crea con oggetto superiore</strong> (<kbd>⌥⌘C</kbd>)</dt>
+  <dd>Usa la forma selezionata più in cima come busta e versa tutto ciò che è sotto in quel contorno. Richiede due o più oggetti: il contenitore sopra, il lavoro sotto.</dd>
+  <dt><strong>Crea con mesh&hellip;</strong> (<kbd>⌥⌘M</kbd>)</dt>
+  <dd>Posa una griglia delle righe e colonne che richiedi sopra la selezione. Resta live: passa allo Strumento Selezione diretta (<kbd>A</kbd>) e trascina qualsiasi incrociazione della mesh per piegare ciò che contiene, tutte le volte che vuoi.</dd>
+</dl>
+<p><strong>Rilascia</strong> restituisce il lavoro com'era, insieme alla forma busta; <strong>Espandi</strong> mantiene la piega e lascia la busta, lasciando tracciati distorti.</p>
+
+<h2 id="transform-3d">3D da una forma vettoriale</h2>
+<p><strong>Effetto &rsaquo; 3D e Materiali</strong> trasforma una forma piatta in un solido. Resta un effetto live, così il tracciato originale è ancora lì da modificare e la copia su schermo si ricostruisce ogni volta che lo cambi.</p>
+<dl>
+  <dt><strong>Estrudi e smussa</strong></dt>
+  <dd>Dona profondità alla forma, con un bordo smussato se lo vuoi.</dd>
+  <dt><strong>Rivolvi</strong></dt>
+  <dd>Gira un profilo attorno a un asse in una forma tornita.</dd>
+  <dt><strong>Gonfia</strong></dt>
+  <dd>Gonfia la forma come se fosse riempita.</dd>
+  <dt><strong>Piano</strong></dt>
+  <dd>Inclina la forma piatta nello spazio senza aggiungere profondità.</dd>
+</dl>
+<p>Il pannello 3D e Materiali ruota l'oggetto sugli assi X, Y e Z, imposta rotazione e altezza della luce e sceglie una superficie plastica, opaca o metallica, con campi Profondità e Smussatura per l'estrusione.</p>
+<figure class="shot">
+  <img src="img/3d-extrude.gif" width="620" height="620" loading="lazy"
+       alt="Una stella vettoriale piatta che viene estrusa in una stella tridimensionale e ruotata per mostrare la sua profondità." />
+  <figcaption>Estrudi e smussa costruisce profondità da una forma piatta, live. La stella resta un tracciato modificabile sotto.</figcaption>
+</figure>

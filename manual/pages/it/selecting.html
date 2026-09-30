@@ -1,0 +1,34 @@
+<p class="lede">Prima di poter cambiare qualsiasi cosa devi dire cosa cambiare. Questa pagina riguarda la scelta del lavoro: i clic rapidi con gli strumenti di selezione e l'intero menu <strong>Seleziona</strong> che raccoglie oggetti per come sono fatti, scava nella pila e memorizza una selezione da riportare indietro in seguito. Nelle scorciatoie sotto, <kbd>&#8984;</kbd> è <kbd>Ctrl</kbd> su Windows e Linux, <kbd>&#8997;</kbd> è <kbd>Alt</kbd> e <kbd>&#8679;</kbd> è Shift.</p>
+
+<h2 id="selecting-basics">Clic e rettangolo di selezione</h2>
+<p>Lo <strong>Strumento Selezione</strong> (<kbd>V</kbd>) è dove inizia la maggior parte delle selezioni. Fai clic su un oggetto per selezionarlo; tieni premuto <kbd>&#8679;</kbd> e fai clic su un altro per aggiungerlo, oppure fai clic su uno selezionato per eliminarlo. Trascina sulla tela vuota per tirare un <em>rettangolo di selezione</em>, e tutto ciò che tocca viene selezionato. Lo <strong>Strumento Selezione diretta</strong> (<kbd>A</kbd>) raggiunge invece l'interno: seleziona singoli punti di ancoraggio e segmenti di tracciato piuttosto che interi oggetti, e lo <strong>Strumento Selezione gruppo</strong> entra in un gruppo un livello alla volta. Questi strumenti sono trattati nelle pagine <a href="/manual/tools/">Strumenti</a> e <a href="/manual/paths/">Tracciati</a>; il resto di questa pagina è il menu Seleziona, che fa la selezione che il clic non può fare.</p>
+
+<h2 id="selecting-whole-document">Tutto, niente e inverso</h2>
+<table>
+  <thead><tr><th>Comando</th><th>Scorciatoia</th><th>Cosa seleziona</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Seleziona &rsaquo; Tutto</strong></td><td><kbd>&#8984;A</kbd></td><td>Ogni oggetto non bloccato nel documento.</td></tr>
+    <tr><td><strong>Tutto sulla tavola attiva</strong></td><td><kbd>&#8997;&#8984;A</kbd></td><td>Solo il lavoro sulla tavola su cui stai lavorando: il modo veloce per prendere una pagina di un file multi-tavola.</td></tr>
+    <tr><td><strong>Deseleziona</strong></td><td><kbd>&#8679;&#8984;A</kbd></td><td>Nulla; cancella la selezione corrente.</td></tr>
+    <tr><td><strong>Inverso</strong></td><td></td><td>Scambia la selezione con tutto ciò che <em>non</em> era selezionato.</td></tr>
+    <tr><td><strong>Riseleziona</strong></td><td><kbd>&#8984;6</kbd></td><td>Riporta la selezione che avevi prima di cancellarla.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="selecting-stack">Scorrere nella pila</h2>
+<p>Quando gli oggetti si sovrappongono, <strong>Seleziona &rsaquo; Oggetto successivo sopra</strong> (<kbd>&#8997;&#8984;]</kbd>) e <strong>Oggetto successivo sotto</strong> (<kbd>&#8997;&#8984;[</kbd>) spostano la selezione su o giù nella pila nello stesso punto, un oggetto alla volta. È il modo affidabile per raggiungere una forma sepolta sotto altre senza spostare quelle in cima.</p>
+
+<h2 id="selecting-same">Seleziona stesso: scegliere per ciò che le cose condividono</h2>
+<p>Seleziona un oggetto, poi <strong>Seleziona &rsaquo; Stesso</strong> raccoglie ogni altro oggetto nel documento che gli corrisponde su un tratto. Usalo per ricolorare ogni forma di un riempimento in una sola passata, oppure per prendere tutti i contorni sottili in una volta.</p>
+<dl>
+  <dt>Aspetto</dt><dd>L'intero aspetto: la stessa pila di riempimenti, contorni ed effetti.</dd>
+  <dt>Riempimento e contorno</dt><dd>Lo stesso riempimento e lo stesso contorno insieme.</dd>
+  <dt>Colore riempimento / Colore contorno</dt><dd>Lo stesso colore di riempimento, oppure lo stesso colore di contorno.</dd>
+  <dt>Spessore contorno</dt><dd>La stessa larghezza di contorno.</dd>
+  <dt>Opacità</dt><dd>La stessa opacità.</dd>
+  <dt>Modalità di fusione</dt><dd>La stessa modalità di fusione.</dd>
+  <dt>Forma</dt><dd>Lo stesso tipo di oggetto: tutte le ellissi, ad esempio, o tutto il testo.</dd>
+</dl>
+
+<h2 id="selecting-saved">Salvare una selezione</h2>
+<p>Una selezione elaborata vale la pena di conservarla. <strong>Seleziona &rsaquo; Salva selezione&hellip;</strong> memorizza l'insieme corrente sotto un nome; appare poi sotto <strong>Seleziona &rsaquo; Selezioni salvate</strong>, e scegliendola lì seleziona esattamente quegli oggetti di nuovo, ovunque tu abbia fatto clic da allora. <strong>Modifica selezione&hellip;</strong> rinomina o rimuove quelle che hai salvato. Le selezioni salvate viaggiano dentro il documento <code>.cut</code>, quindi sono ancora lì la prossima volta che apri il file.</p>
