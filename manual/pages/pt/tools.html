@@ -1,0 +1,357 @@
+<p class="lede">A barra de ferramentas desce pela esquerda da janela e contém cada ferramenta de desenho, edição e visualização. Cada slot é uma ferramenta única ou um grupo de relacionadas; esta página lista-as todas, na ordem em que ficam na barra de ferramentas, com a tecla que escolhe cada uma e para que serve.</p>
+
+<p>Pressione e segure um slot, ou clique com o botão direito nele, para abrir o seu menu de sobrevoo e escolher outra ferramenta do grupo. O atalho de uma ferramenta é uma única tecla, e funciona sempre que não está a digitar num texto ou campo.</p>
+
+<p>Os atalhos abaixo estão escritos no formato macOS. No Windows, leia <kbd>&#8997;</kbd> como Alt, <kbd>&#8984;</kbd> como Ctrl e <kbd>&#8679;</kbd> como Shift.</p>
+
+<p>Três hábitos aplicam-se a quase todas as ferramentas:</p>
+<ul>
+<li>Segure a barra de espaço para pedir emprestado a ferramenta Mão, e solte para voltar ao que estava a usar.</li>
+<li>Segure <kbd>&#8984;</kbd> para pedir emprestado a ferramenta Seleção da mesma forma. A ferramenta Transformação Livre é a exceção: ela própria lê <kbd>&#8984;</kbd>.</li>
+<li><kbd>Esc</kbd> abandona um arrasto ou um caminho que está a meio de desenhar, deixando a arte como estava.</li>
+</ul>
+
+<p>Dois slots (as ferramentas Remodelar e Mosaica de Impressão) estão listados por completude mas ainda não têm comportamento por trás deles. A barra de ferramentas marca-os como chegando em breve e o motor recusa-os.</p>
+
+<h2 id="tools-selecting">Ferramentas de seleção</h2>
+<p>Estas quatro escolhem o que quer trabalhar a seguir. Use a ferramenta Seleção para objetos inteiros, a ferramenta Seleção Direta para âncoras e segmentos dentro de um caminho, a Seleção Automática para reunir tudo pintado de forma igual, e o Laço para varrer um aglomerado de âncoras à mão.</p>
+
+<h3 id="tools-selection">Seleção</h3>
+<table>
+<thead><tr><th>Ferramenta</th><th>Atalho</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td>Ferramenta Seleção</td><td><kbd>V</kbd></td><td>Clique num objeto para o selecionar inteiro, <kbd>&#8679;</kbd>-clique para adicionar ou remover um, e arraste através de tela vazia para uma seleção em área. Arraste dentro da seleção para a mover, com <kbd>&#8679;</kbd> segurando o movimento em passos de 45&deg; e <kbd>&#8997;</kbd> deixando uma cópia.</td></tr>
+</tbody>
+</table>
+<p>Com um objeto selecionado a caixa delimitadora transporta oito alças. Arraste uma alça para dimensionar, segurando <kbd>&#8679;</kbd> para manter as proporções e <kbd>&#8997;</kbd> para dimensionar em torno do centro; arraste mesmo fora de um canto para rodar, com <kbd>&#8679;</kbd> ajustando a 45&deg;. Clicar duas vezes entra num grupo e trabalha dentro dele, clicar duas vezes num texto edita-o, clicar duas vezes numa instância de símbolo edita o símbolo que cada instância desenha, e clicar duas vezes fora da arte sai de volta.</p>
+<p>Formas editáveis transportam os seus próprios widgets: arraste uma alça de canto para arredondar todos os cantos da forma de uma vez, ou <kbd>&#8997;</kbd>-clique nela para alternar o canto para o próximo tipo. É a ferramenta em que passará mais tempo, por isso vale a pena aprender bem as suas alças.</p>
+
+<h3 id="tools-direct-selection">Seleção Direta e Seleção de Grupo</h3>
+<table>
+<thead><tr><th>Ferramenta</th><th>Atalho</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td>Ferramenta Seleção Direta</td><td><kbd>A</kbd></td><td>Clique numa âncora, alça ou segmento e arraste para remodelar o caminho; uma seleção em área sobre tela vazia apanha as âncoras dentro dela. <kbd>&#8679;</kbd> adiciona ao que está escolhido e segura o arrasto em passos de 45&deg;, e <kbd>&#8997;</kbd> enquanto arrasta uma alça quebra o par, para que a âncora se torne um canto.</td></tr>
+<tr><td>Ferramenta Seleção de Grupo</td><td>&ndash;</td><td>Clique num objeto para o selecionar; clique novamente para incluir o grupo a que pertence, e novamente para o grupo acima.</td></tr>
+</tbody>
+</table>
+<p>Use a ferramenta Seleção Direta para afinar uma forma depois de desenhada: ajuste uma âncora, puxe uma alça única, ou remodelhe uma curva. Também arrasta os cruzamentos da malha de um envelope, dobrando o que o envelope segura, e arredonda um canto de uma forma ao vivo de cada vez em vez de todos. A ferramenta Seleção de Grupo é a maneira rápida de alcançar um objeto enterrado em grupos aninhados sem entrar e sair deles.</p>
+
+<h3 id="tools-magic-wand">Seleção Automática</h3>
+<table>
+<thead><tr><th>Ferramenta</th><th>Atalho</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td>Ferramenta Seleção Automática</td><td><kbd>Y</kbd></td><td>Clique num objeto para selecionar todos os objetos pintados de forma igual. O que conta como igual (preenchimento, contorno, espessura de contorno, opacidade, modo de mistura) é definido no painel Seleção Automática, e <kbd>&#8679;</kbd> adiciona as novas correspondências à seleção.</td></tr>
+</tbody>
+</table>
+<p>Use-a quando quiser alterar todas as formas de uma cor de uma vez: clique numa vermelha, depois recolora toda a seleção num único passo.</p>
+
+<h3 id="tools-lasso">Laço</h3>
+<table>
+<thead><tr><th>Ferramenta</th><th>Atalho</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td>Ferramenta Laço</td><td><kbd>Q</kbd></td><td>Arraste um laço de forma livre para selecionar as âncoras dentro dele. <kbd>&#8679;</kbd> adiciona-as às âncoras já escolhidas.</td></tr>
+</tbody>
+</table>
+<p>Use-o quando as âncoras que quer não ficam num retângulo arrumado, para que uma seleção em área apanhasse demasiado ou demasiado pouco.</p>
+<p>Este slot também contém as ferramentas de seleção de pixels - a <strong>Seleção Retangular</strong>, a <strong>Seleção Elíptica</strong> e a <strong>Seleção Laço</strong> - que desenham uma seleção de formigas marchantes numa camada de pixels em vez de escolher âncoras vetoriais. São cobertas na página <a href="/manual/pixels/">Camadas de Pixels</a>.</p>
+
+<h2 id="tools-pen-type">Caneta, curvatura e texto</h2>
+<p>As ferramentas que traçam novos caminhos e texto. A família da caneta dá controlo exato sobre cada âncora e alça, a ferramenta Curvatura ajusta uma curva suave através dos pontos que coloca, e as ferramentas Texto definem texto pontual, de área, em caminho e vertical.</p>
+
+<h3 id="tools-pen">A família da caneta</h3>
+<table>
+<thead><tr><th>Ferramenta</th><th>Atalho</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td>Ferramenta Caneta</td><td><kbd>P</kbd></td><td>Clique para colocar um ponto de canto, ou pressione e arraste para puxar alças suaves para fora dele; clique na primeira âncora para fechar o caminho. <kbd>&#8679;</kbd> segura o novo ponto ou a alça em passos de 45&deg;, e <kbd>&#8997;</kbd> enquanto arrasta quebra as alças para que o caminho saia da âncora no seu próprio ângulo.</td></tr>
+<tr><td>Ferramenta Adicionar Ponto de Âncora</td><td><kbd>+</kbd></td><td>Clique num segmento para adicionar uma âncora, sem alterar a forma do caminho.</td></tr>
+<tr><td>Ferramenta Eliminar Ponto de Âncora</td><td><kbd>&#8722;</kbd></td><td>Clique numa âncora para a remover, unindo os segmentos de cada lado.</td></tr>
+<tr><td>Ferramenta Ponto de Âncora</td><td><kbd>&#8679;C</kbd></td><td>Arraste uma âncora para puxar um par de alças correspondente para fora dela, ou clique nela para puxar as alças de volta e deixar um canto. Arraste uma alça sozinha para mover apenas esse lado; <kbd>&#8679;</kbd> segura-a em passos de 45&deg;.</td></tr>
+</tbody>
+</table>
+<p>A ferramenta Caneta é o cavalo de batalha para desenho preciso, de um contorno de logótipo a um caminho de texto. Enquanto tem um caminho em curso, <kbd>Enter</kbd> ou <kbd>Esc</kbd> termina-o e <kbd>Backspace</kbd> recua a última âncora. Os três ajudantes adicionam, removem e convertem âncoras num caminho acabado; a caneta e o lápis são cobertos em mais profundidade na página <a href="/manual/paths/">Caminhos</a>.</p>
+
+<h3 id="tools-curvature">Curvatura</h3>
+<table>
+<thead><tr><th>Ferramenta</th><th>Atalho</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td>Ferramenta Curvatura</td><td><kbd>&#8679;~</kbd></td><td>Clique para colocar pontos e uma curva suave é ajustada através deles; <kbd>&#8997;</kbd>-clique coloca um ponto de canto em vez disso. Arraste um ponto para o mover, clique duas vezes num ponto para alternar entre suave e canto, clique no primeiro ponto para fechar o caminho, e clique duas vezes fora dele para terminar.</td></tr>
+</tbody>
+</table>
+<p>Use a ferramenta Curvatura quando quer uma linha fluida e prefere colocar pontos e deixar o Scissor calcular as alças, em vez de puxar cada uma você mesmo.</p>
+
+<h3 id="tools-type">Texto</h3>
+<table>
+<thead><tr><th>Ferramenta</th><th>Atalho</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td>Ferramenta Texto</td><td><kbd>T</kbd></td><td>Clique para texto pontual, arraste uma moldura retangular para texto de área, e clique em texto existente para o editar. Clicar num caminho aberto define texto a correr ao longo desse caminho.</td></tr>
+<tr><td>Ferramenta Texto de Área</td><td>&ndash;</td><td>Arraste uma moldura e digite nela.</td></tr>
+<tr><td>Ferramenta Texto em Caminho</td><td>&ndash;</td><td>Clique num caminho e o texto corre ao longo dele. O caminho torn-se a linha de base, pelo que deixa de ser arte por si só.</td></tr>
+<tr><td>Ferramenta Texto Vertical</td><td>&ndash;</td><td>O mesmo que a ferramenta Texto, exceto que a linha de texto corre para baixo na página em vez de ao longo dela.</td></tr>
+<tr><td>Ferramenta Edição de Glifo</td><td><kbd>&#8679;T</kbd></td><td>Clique num carácter para o escolher da sua linha, depois arraste para o mover, arraste uma alça de canto para o redimensionar, ou a alça acima dele para o rodar. <kbd>&#8679;</kbd> mantém as proporções do redimensionamento de canto e ajusta a rotação a passos de 11.25&deg;, e <kbd>Delete</kbd> repõe o carácter onde o texto o definiu.</td></tr>
+</tbody>
+</table>
+<p>A ferramenta Texto por si só cobre a maioria do trabalho: clique para um título, arraste uma moldura para um parágrafo. As alças laterais da caixa de Edição de Glifo esticam o carácter apenas numa direção, ao longo para largura e ao longo para altura, pelo que pode puxar letras individuais num título sem as tirar do texto. O texto é coberto na íntegra na página <a href="/manual/type/">Texto</a>.</p>
+
+<h2 id="tools-lines-shapes">Linhas e formas</h2>
+<p>Tudo o que desenha uma forma pronta: linhas retas, arcos e espirais, grelhas de linhas, e os retângulos, elipses, polígonos e estrelas com que constrói um desenho.</p>
+
+<h3 id="tools-lines">Linhas, arcos, espirais e grelhas</h3>
+<table>
+<thead><tr><th>Ferramenta</th><th>Atalho</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td>Ferramenta Segmento de Linha</td><td><kbd>\</kbd></td><td>Arraste para desenhar uma linha reta. <kbd>&#8679;</kbd> segura-a em passos de 45&deg; e <kbd>&#8997;</kbd> desenha-a a partir do meio em vez da extremidade.</td></tr>
+<tr><td>Ferramenta Arco</td><td>&ndash;</td><td>Arraste o retângulo que o arco preenche; <kbd>&#8679;</kbd> faz esse retângulo quadrado. As teclas de seta dobram o arco mais plano ou mais cheio, <kbd>C</kbd> fecha e abre-o, e <kbd>F</kbd> ou <kbd>X</kbd> inverte para que lado se curva.</td></tr>
+<tr><td>Ferramenta Espiral</td><td>&ndash;</td><td>Arraste a partir do centro: a distância define o raio e a direção define onde a espiral começa. <kbd>&#8997;</kbd> inverte o enrolamento, <kbd>R</kbd> inverte-o de vez, e as teclas de seta adicionam e removem segmentos.</td></tr>
+<tr><td>Ferramenta Grelha Retangular</td><td>&ndash;</td><td>Arraste a grelha, com <kbd>&#8997;</kbd> desenhando a partir do centro e <kbd>&#8679;</kbd> mantendo-a quadrada. As setas para cima e para baixo alteram o número de fileiras, para esquerda e direita as colunas.</td></tr>
+<tr><td>Ferramenta Grelha Polar</td><td>&ndash;</td><td>Arraste a grelha, com <kbd>&#8997;</kbd> desenhando a partir do centro e <kbd>&#8679;</kbd> mantendo-a redonda. As setas para cima e para baixo alteram o número de anéis concêntricos, para esquerda e direita os raios radiais.</td></tr>
+</tbody>
+</table>
+<p>As duas ferramentas de grelha fazem um caminho por linha, para que cada linha permaneça selecionável por conta própria: use a Grelha Retangular para tabelas, calendários e andaimes de disposição, e a Grelha Polar para alvos de dardos, gráficos de radar e mostradores de relógio. Desenham arte de grelha que guarda. Isso é diferente da grade de fundo da prancha, a ajuda de desenho no ecrã que liga com <strong>Ver &rsaquo; Grade &rsaquo; Mostrar Grade</strong>, que nunca imprime e vem em sete tipos (quadrada, isométrica, hexagonal, oblíqua, proporção áurea, padrão e perspetiva). As grades de fundo são cobertas na página <a href="/manual/grids/">Grades</a>. Uma <strong>ferramenta Forma de Grade</strong> separada (<kbd>&#8679;G</kbd>) constrói um caminho preenchido clicando ou arrastando através das células dessa grade de fundo - uma maneira rápida de colocar blocos sólidos numa grade isométrica ou hexagonal.</p>
+
+<h3 id="tools-shapes">Retângulos, elipses e outras formas</h3>
+<table>
+<thead><tr><th>Ferramenta</th><th>Atalho</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td>Ferramenta Retângulo</td><td><kbd>M</kbd></td><td>Arraste para desenhar um retângulo. <kbd>&#8679;</kbd> mantém-o quadrado e <kbd>&#8997;</kbd> desenha-o a partir do centro.</td></tr>
+<tr><td>Ferramenta Retângulo Arredondado</td><td>&ndash;</td><td>O mesmo arrasto, com cantos arredondados; as setas para cima e para baixo aumentam e diminuem o raio do canto enquanto desenha.</td></tr>
+<tr><td>Ferramenta Elipse</td><td><kbd>L</kbd></td><td>Arraste para desenhar uma elipse, com <kbd>&#8679;</kbd> para um círculo e <kbd>&#8997;</kbd> para desenhar a partir do centro.</td></tr>
+<tr><td>Ferramenta Polígono</td><td>&ndash;</td><td>Arraste a partir do centro; a direção do arrasto roda o polígono, e <kbd>&#8679;</kbd> mantém-o direito. As teclas de seta adicionam e removem lados.</td></tr>
+<tr><td>Ferramenta Estrela</td><td>&ndash;</td><td>Arraste a partir do centro, rodando a estrela à medida que avança, com <kbd>&#8679;</kbd> segurando-a direita. As teclas de seta adicionam e removem pontas.</td></tr>
+<tr><td>Ferramenta Flare</td><td>&ndash;</td><td>Arraste uma vez para definir o centro e tamanho do halo do flare, depois arraste uma segunda vez para esticar os seus anéis através da arte. Enquanto arrasta as setas para esquerda e direita alteram o número de anéis e as setas para cima e para baixo o número de raios.</td></tr>
+</tbody>
+</table>
+<p>Estas fazem formas ao vivo: mantêm os seus parâmetros, pelo que pode alterar o tamanho de um retângulo ou a contagem de pontas de uma estrela muito depois de o desenhar. Um clique em vez de um arrasto com qualquer delas abre uma caixa de diálogo, para que possa dar à forma medidas exatas. A ferramenta Flare responde a um clique com um flare do tamanho que as suas opções pedem.</p>
+
+<h2 id="tools-brush-erase">Pincéis, lápis e borrachas</h2>
+<p>As ferramentas à mão livre. Pinte um traço que segue o cursor, esboce um caminho aproximado e deixe o Scissor arrumá-lo, trate e repare caminhos existentes, ou apague arte. Dois slots aqui também alcançam o lado raster de um documento: o Pincel pinta pixels e a Borracha de Pixels limpa-os.</p>
+
+<h3 id="tools-brushes">Pincéis</h3>
+<table>
+<thead><tr><th>Ferramenta</th><th>Atalho</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td>Ferramenta Pincel de Pintura</td><td><kbd>B</kbd></td><td>Arraste para desenhar à mão livre; o traço é suavizado à medida que é ajustado a curvas e mantém o pincel e contorno atuais.</td></tr>
+<tr><td>Ferramenta Pincel de Preenchimento</td><td><kbd>&#8679;B</kbd></td><td>Desenha o mesmo traço, mas contorna-o numa forma preenchida e funde-a com qualquer arte que toque e que partilhe o seu preenchimento.</td></tr>
+<tr><td>Ferramenta Pincel</td><td>&ndash;</td><td>Pinta cor raster diretamente numa camada de pixels na cor de preenchimento atual, fazendo primeiro uma camada de pixels se não houver nenhuma. Ao contrário do Pincel de Pintura, o rasto não é um caminho que possa remodelar depois: torna-se parte da imagem.</td></tr>
+</tbody>
+</table>
+<p>Use o Pincel de Pintura para traços expressivos e caligráficos que permanecem editáveis, e o Pincel de Preenchimento quando prefere construir uma forma sólida preenchida em vez de uma linha contornada. <kbd>[</kbd> e <kbd>]</kbd> tornam o pincel menor e maior. A ferramenta Pincel partilha este slot mas pinta pixels em vez de um caminho, para sombreamento e textura, e o <strong>Balde de Tinta</strong> também o partilha, inundando uma área contígua de uma camada de pixels com a cor de preenchimento. Pintura em camadas de pixels é coberta na página <a href="/manual/pixels/">Camadas de Pixels</a>.</p>
+
+<h3 id="tools-pencil">Lápis e as ferramentas de reparação de caminhos</h3>
+<table>
+<thead><tr><th>Ferramenta</th><th>Atalho</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td>Ferramenta Esboço</td><td><kbd>&#8679;N</kbd></td><td>Desenhe aproximadamente e o traço torna-se a forma nítida que quis dizer. Esfregar através de arte perfura o que o esfregaço cobre.</td></tr>
+<tr><td>Ferramenta Lápis</td><td><kbd>N</kbd></td><td>Desenhe à mão livre e o traço é ajustado a curvas suaves. Segure <kbd>&#8997;</kbd> enquanto solta para fechar o caminho, o que também acontece por si só se terminar perto de onde começou.</td></tr>
+<tr><td>Ferramenta Suavizar</td><td>&ndash;</td><td>Arraste ao longo de um caminho para uniformizar as suas alças e deitar fora as âncoras que pouco o dobram; um pincel maior suaviza mais forte.</td></tr>
+<tr><td>Ferramenta Apagar Caminho</td><td>&ndash;</td><td>Arraste ao longo de um caminho para apagar a parte que atravessa.</td></tr>
+<tr><td>Ferramenta Unir</td><td>&ndash;</td><td>Esfregue através de duas pontas abertas para as unir num único caminho.</td></tr>
+</tbody>
+</table>
+<p>O Lápis é a maneira rápida de esboçar uma forma à mão; o Shaper é para quando quer que um gesto aproximado seja lido como um retângulo, elipse ou linha limpa. Os últimos três tratam caminhos existentes: <kbd>[</kbd> e <kbd>]</kbd> redimensionam os pincéis Suavizar, Apagar Caminho e Unir. Com arte selecionada estes três trabalham apenas na seleção; sem seleção trabalham em qualquer caminho que alcancem.</p>
+
+<h3 id="tools-cutting">Apagar e cortar</h3>
+<table>
+<thead><tr><th>Ferramenta</th><th>Atalho</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td>Ferramenta Borracha</td><td><kbd>&#8679;E</kbd></td><td>Arraste um pincel redondo para subtrair de objetos. Com seleção apenas os objetos selecionados são apagados; caso contrário cada caminho desbloqueado é, e <kbd>[</kbd> e <kbd>]</kbd> redimensionam o pincel.</td></tr>
+<tr><td>Ferramenta Borracha de Pixels</td><td>&ndash;</td><td>Apaga tinta de uma camada de pixels, limpando-a para transparente para que o que está por baixo se mostre. Funciona em camadas de pixels onde a Borracha funciona em caminhos vetoriais; <kbd>[</kbd> e <kbd>]</kbd> redimensionam o pincel.</td></tr>
+<tr><td>Ferramenta Tesoura</td><td><kbd>C</kbd></td><td>Clique num segmento ou âncora para cortar o caminho aí. Um caminho fechado abre-se no corte; um caminho aberto parte-se em dois objetos.</td></tr>
+<tr><td>Faca</td><td>&ndash;</td><td>Arraste através de objetos para os cortar em pedaços separados. <kbd>&#8997;</kbd> corta em linha reta e <kbd>&#8679;</kbd> segura essa linha em passos de 45&deg;.</td></tr>
+</tbody>
+</table>
+<p>A Borracha esculpe formas de arte preenchida como apagar a lápis; a Tesoura faz um único corte limpo num ponto; a Faca corta objetos inteiros em pedaços ao longo da linha que arrasta. A Borracha de Pixels partilha o slot com a Borracha mas pertence ao lado raster, na página <a href="/manual/pixels/">Camadas de Pixels</a>.</p>
+<p>Mais um slot da barra de ferramentas é inteiramente raster: os pincéis de retoque <strong>Desclarear</strong>, <strong>Queimar</strong> e <strong>Esponja</strong> clareiam, escurecem e saturam os pixels já numa camada. Pintam como o Pincel e são cobertos, com o resto da edição de pixels, na página <a href="/manual/pixels/">Camadas de Pixels</a>.</p>
+
+<h2 id="tools-transform">Transformando</h2>
+<p>As ferramentas que movem, rodam, refletem, dimensionam, inclinam, distorcem e remodelam o que já está desenhado. Cada ferramenta de transformação funciona em torno de um ponto de referência, que começa no centro da seleção; <kbd>&#8997;</kbd>-clique define esse ponto onde clica e abre a caixa de diálogo da ferramenta para valores exatos. Com âncoras individuais selecionadas, estas ferramentas transformam essas âncoras em vez de objetos inteiros.</p>
+
+<h3 id="tools-rotate-reflect">Rodar e Refletir</h3>
+<table>
+<thead><tr><th>Ferramenta</th><th>Atalho</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td>Ferramenta Rodar</td><td><kbd>R</kbd></td><td>Arraste à volta do ponto de referência para rodar a seleção, com <kbd>&#8679;</kbd> ajustando a 45&deg; e <kbd>&#8997;</kbd> rodando uma cópia e deixando o original. <kbd>&#8997;</kbd>-clique coloca o ponto de referência onde clicou e abre a caixa de diálogo Rodar.</td></tr>
+<tr><td>Ferramenta Refletir</td><td><kbd>O</kbd></td><td>Arraste para balançar o eixo do espelho através do ponto de referência, com <kbd>&#8679;</kbd> ajustando-o a 45&deg;. <kbd>&#8997;</kbd>-clique define o ponto de referência e abre a caixa de diálogo Refletir, e <kbd>&#8997;</kbd> enquanto arrasta reflete uma cópia.</td></tr>
+</tbody>
+</table>
+<p>Use a ferramenta Rodar para rodar arte em torno de um pivô escolhido em vez do seu próprio centro, e a ferramenta Refletir para construir um desenho simétrico: reflita uma cópia através de um eixo escolhido e as duas metades permanecem correspondidas. Ambas as ferramentas começam do centro da seleção, e escolher outra coisa repõe o ponto de referência aí.</p>
+
+<h3 id="tools-scale-shear">Dimensionar, Inclinar e Remodelar</h3>
+<table>
+<thead><tr><th>Ferramenta</th><th>Atalho</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td>Ferramenta Dimensionar</td><td><kbd>S</kbd></td><td>Arraste para longe do ponto de referência para aumentar a seleção e para ele para a diminuir; <kbd>&#8679;</kbd> mantém as proporções e <kbd>&#8997;</kbd> dimensiona uma cópia. <kbd>&#8997;</kbd>-clique define o ponto de referência e abre a caixa de diálogo Dimensionar.</td></tr>
+<tr><td>Ferramenta Inclinar</td><td>&ndash;</td><td>Arraste para inclinar a seleção em torno do ponto de referência; <kbd>&#8679;</kbd> assenta a inclinação no eixo para o qual o seu arrasto se inclina. <kbd>&#8997;</kbd>-clique define o ponto de referência e abre a caixa de diálogo Inclinar.</td></tr>
+<tr><td>Ferramenta Remodelar</td><td>&ndash;</td><td>Listada na barra de ferramentas mas ainda não implementada; a paleta marca-a como chegando em breve.</td></tr>
+</tbody>
+</table>
+<p>Use a ferramenta Dimensionar quando quer dimensionar arte em torno de um ponto fixo em vez de uma alça da caixa delimitadora, e a ferramenta Inclinar para inclinar uma forma para uma sombra projetada ou uma sensação itálica.</p>
+
+<h3 id="tools-width-liquify">Largura e os pincéis líquidos</h3>
+<table>
+<thead><tr><th>Ferramenta</th><th>Atalho</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td>Ferramenta Perfil de Largura</td><td><kbd>&#8679;W</kbd></td><td>Arraste para longe de um caminho com contorno para o alargar aí e para o caminho para o estreitar, deixando um ponto de largura. Sem seleção funciona em qualquer caminho editável.</td></tr>
+<tr><td>Ferramenta Deformar</td><td><kbd>&#8679;R</kbd></td><td>Segure e arraste um pincel redondo para empurrar os caminhos debaixo dele junto com o cursor.</td></tr>
+<tr><td>Ferramenta Torcer</td><td>&ndash;</td><td>Segure o pincel sobre arte e continua a enrolar enquanto o segurar.</td></tr>
+<tr><td>Ferramenta Beliscar</td><td>&ndash;</td><td>Puxa os caminhos debaixo do pincel para o seu centro.</td></tr>
+<tr><td>Ferramenta Inchar</td><td>&ndash;</td><td>Empurra os caminhos debaixo do pincel para fora do seu centro.</td></tr>
+<tr><td>Ferramenta Ondular</td><td>&ndash;</td><td>Adiciona conchas curvas aos caminhos debaixo do pincel.</td></tr>
+<tr><td>Ferramenta Picar</td><td>&ndash;</td><td>Adiciona pontas aos caminhos debaixo do pincel.</td></tr>
+<tr><td>Ferramenta Amassar</td><td>&ndash;</td><td>Ondula os caminhos debaixo do pincel.</td></tr>
+</tbody>
+</table>
+<p>A ferramenta Largura afunila e incha um contorno à mão, para uma linha tipo pena ou pincel sem trocar de pincel. Os sete pincéis líquidos empurram, torcem e tornam rugosos caminhos à medida que pinta sobre eles, para distorção orgânica que seria lenta de fazer âncora a âncora. Todos os sete aceitam <kbd>[</kbd> e <kbd>]</kbd> para tamanho, e <kbd>&#8679;</kbd> com essas mesmas teclas, <kbd>{</kbd> e <kbd>}</kbd>, para quão forte empurram.</p>
+
+<h3 id="tools-free-transform">Transformação Livre e Pin Warp</h3>
+<table>
+<thead><tr><th>Ferramenta</th><th>Atalho</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td>Ferramenta Transformação Livre</td><td><kbd>E</kbd></td><td>Uma caixa que dimensiona, roda, inclina e distorce a seleção. Arraste uma alça de borda ou canto para dimensionar, segure <kbd>&#8984;</kbd> numa alça de borda para inclinar, arraste dentro da caixa para a mover, e arraste mesmo fora de um canto para rodar.</td></tr>
+<tr><td>Ferramenta Pin Warp</td><td>&ndash;</td><td>Clique na arte selecionada para colocar um pino, depois arraste os pinos para a dobrar; a arte mantém a sua forma à volta dos pinos que ficam parados. <kbd>&#8997;</kbd>-clique num pino remove-o, <kbd>&#8679;</kbd>-clique apanha vários, e <kbd>&#8997;</kbd>-arraste mesmo fora de um pino roda a arte à volta dele.</td></tr>
+</tbody>
+</table>
+<p>Transformação Livre é a caixa tudo-em-um quando quer dimensionar, rodar e inclinar num só gesto em vez de trocar de ferramentas. Funciona em torno do seu ponto de referência, que pode arrastar para qualquer lugar, mesmo fora da caixa; largue-o perto de um dos nove lugares habituais da caixa e assenta aí. Enquanto dimensiona <kbd>&#8679;</kbd> mantém as proporções e <kbd>&#8997;</kbd> dimensiona em torno do centro em vez do ponto de referência; enquanto roda <kbd>&#8679;</kbd> ajusta a 45&deg;. Numa alça de canto <kbd>&#8984;</kbd> distorce esse canto sozinho e <kbd>&#8984;&#8997;&#8679;</kbd> distorce em perspetiva, com o canto vizinho espelhando o arrasto; o widget ao lado da caixa define os mesmos dois modos e o interruptor de restrição. Alterar um modificador a meio do arrasto alterna imediatamente, sem soltar.</p>
+<p>Pin Warp é para dobrar e posar uma única peça de arte, como flexionar um braço desenhado, fixando as partes que devem ficar paradas e arrastando o resto. Lê <kbd>Delete</kbd> como remover os pinos selecionados em vez da arte, e <kbd>&#8984;A</kbd> como selecionar todos os pinos. Cada arrasto é um passo para desfazer, e desfazer traz os pinos de volta com a arte com que foram. Texto, imagens e instâncias de símbolos não podem ser distorcidos e ficam como estão.</p>
+
+<h2 id="tools-build-perspective">Unir e Dividir, Preenchimento de Região e perspetiva</h2>
+<p>Ferramentas que tratam formas sobrepostas como regiões para combinar e colorir, e a grade que permite desenhar e colocar arte em perspetiva.</p>
+
+<h3 id="tools-builder-paint">Unir e Dividir e Preenchimento de Região</h3>
+<table>
+<thead><tr><th>Ferramenta</th><th>Atalho</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td>Ferramenta Unir e Dividir</td><td><kbd>&#8679;M</kbd></td><td>Com formas sobrepostas selecionadas arraste através das regiões que quer unir e tornam-se um único objeto. <kbd>&#8997;</kbd>-arraste elimina as regiões que atravessa.</td></tr>
+<tr><td>Balde de Preenchimento de Região</td><td><kbd>K</kbd></td><td>Clique numa face de um grupo de Preenchimento de Região para a preencher com a pintura atual; <kbd>&#8997;</kbd>-clique apanha a pintura já aí em vez de colocar alguma. A face sob o cursor é contornada antes de clicar.</td></tr>
+<tr><td>Ferramenta Selecionar Região</td><td><kbd>&#8679;L</kbd></td><td>Clique numa face de um grupo de Preenchimento de Região para a selecionar, sem a pintar.</td></tr>
+</tbody>
+</table>
+<p>Use Unir e Dividir para desenhar algumas formas sobrepostas e depois fundi-las e apará-las no contorno que quer, arrastando através dos pedaços. Preenchimento de Região trata um conjunto de caminhos sobrepostos como um livro de colorir: o Balde inunda cada face fechada com uma cor, e a ferramenta Seleção escolhe faces e bordas para as possa reestilizar, sem primeiro cortar as formas.</p>
+
+<h3 id="tools-perspective">Perspetiva</h3>
+<table>
+<thead><tr><th>Ferramenta</th><th>Atalho</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td>Ferramenta Grade de Perspetiva</td><td><kbd>&#8679;P</kbd></td><td>Mostra a grade e molda-a: arraste os pontos de fuga, arraste um para cima ou para baixo para mover o horizonte, e arraste o canto próximo da grade. <kbd>1</kbd> a <kbd>4</kbd>, ou o widget no ecrã, escolhem o plano em que desenha.</td></tr>
+<tr><td>Ferramenta Seleção de Perspetiva</td><td><kbd>&#8679;V</kbd></td><td>Seleciona arte e arrasta-a ao longo do seu plano. Arte que ainda não está na grade é assentada no plano ativo onde a arrasta.</td></tr>
+</tbody>
+</table>
+<p>Use estas para desenhar cenas e texto que recuam para pontos de fuga, como uma rua ou um produto embalado. Quando a grade está visível, as ferramentas Retângulo, Retângulo Arredondado, Elipse e Grelha Retangular desenham no plano ativo em vez de plano, e <kbd>1</kbd> a <kbd>4</kbd> escolhem o plano dessas ferramentas também.</p>
+
+<h2 id="tools-mesh-gradient">Malha e gradiente</h2>
+<p>As duas ferramentas para pintar cor gradual numa forma: uma malha de pontos de cor através do objeto, ou uma mistura suave ao longo de um eixo.</p>
+
+<h3 id="tools-mesh">Malha</h3>
+<table>
+<thead><tr><th>Ferramenta</th><th>Atalho</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td>Ferramenta Malha</td><td><kbd>U</kbd></td><td>Clique dentro de um objeto para correr uma linha de malha em cada direção através desse ponto, transformando um caminho simples numa malha. Clique num ponto de malha para o escolher e dar-lhe uma cor do painel Cor, arraste um ponto para o mover, e <kbd>&#8997;</kbd>-clique num para remover as linhas através dele.</td></tr>
+</tbody>
+</table>
+<p>Use uma malha para sombreamento suave e livre que um gradiente reto não consegue dar, como o destaque arredondado numa fruta ou numa cara.</p>
+
+<h3 id="tools-gradient">Gradiente</h3>
+<table>
+<thead><tr><th>Ferramenta</th><th>Atalho</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td>Ferramenta Gradiente</td><td><kbd>G</kbd></td><td>Arraste através da seleção para definir o eixo da sua pintura ativa, com <kbd>&#8679;</kbd> segurando o eixo em passos de 45&deg;. Sobre arte que já tem um gradiente, trabalhe o anotador.</td></tr>
+</tbody>
+</table>
+<p>Arraste a ferramenta Gradiente para apontar uma mistura linear ou radial na direção que quer e definir até onde corre. No anotador, arraste uma parada ao longo do eixo para a mover, arraste um losango para deslocar a mistura entre duas paradas, clique no eixo para adicionar uma parada na cor que já tem aí, e puxe uma parada bem para longe do eixo para a deitar fora, desde que restem duas. <kbd>Delete</kbd> remove a última parada tocada. Num gradiente livre a ferramenta trabalha em pontos de cor em vez disso: clique na arte para adicionar um na cor de preenchimento, e arraste um ponto para o mover. Gradientes são cobertos mais na página <a href="/manual/appearance/">Cor e Aparência</a>.</p>
+
+<h2 id="tools-sample-morph">Amostragem, medição e morfagem</h2>
+<p>Copie uma aparência de um objeto para outro, leia distâncias e ângulos da tela, e misture entre formas numa sequência de passos.</p>
+
+<h3 id="tools-eyedropper">Conta-gotas e Medir</h3>
+<table>
+<thead><tr><th>Ferramenta</th><th>Atalho</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td>Ferramenta Conta-gotas</td><td><kbd>I</kbd></td><td>Clique num objeto para amostrar a sua aparência inteira na seleção, ou no estilo padrão quando nada está selecionado. <kbd>&#8679;</kbd> amostra apenas a sua cor de preenchimento ou contorno para o lado ativo, e <kbd>&#8997;</kbd> funciona ao contrário, aplicando a aparência da seleção ao objeto em que clica.</td></tr>
+<tr><td>Ferramenta Medir</td><td>&ndash;</td><td>Arraste entre dois pontos para ler a distância, os deslocamentos e o ângulo; <kbd>&#8679;</kbd> segura a linha em passos de 45&deg;. A última medição fica no ecrã até ao próximo arrasto.</td></tr>
+</tbody>
+</table>
+<p>O Conta-gotas é a maneira rápida de fazer um objeto corresponder a outro: escolha o aspeto de que gosta e ele cai na seleção. Use a ferramenta Medir para verificar um espaço ou ângulo sem deixar marca na arte.</p>
+
+<h3 id="tools-blend">Morfo</h3>
+<table>
+<thead><tr><th>Ferramenta</th><th>Atalho</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td>Ferramenta Morfo</td><td><kbd>W</kbd></td><td>Clique num objeto e depois noutro para morfar entre eles através de uma série de passos intermédios. Para levar um objeto adicional a um morfo, clique dentro do morfo e depois clique no objeto que quer adicionar a ele.</td></tr>
+</tbody>
+</table>
+<p>Use a ferramenta Morfo para misturar uma forma ou cor noutra em passos uniformes, seja para uma faixa sombreada suave ou cópias uniformemente espaçadas e variadas ao longo de um caminho.</p>
+
+<h2 id="tools-symbols">Símbolos</h2>
+<p>Um símbolo é uma peça de arte que pode colocar muitas vezes, com cada cópia ligada a um modelo. As ferramentas de simbolismo colocam e depois trabalham multidões inteiras destas instâncias de uma vez.</p>
+
+<h3 id="tools-symbolism">As ferramentas de simbolismo</h3>
+<table>
+<thead><tr><th>Ferramenta</th><th>Atalho</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td>Symbol Scatter</td><td><kbd>&#8679;S</kbd></td><td>Arraste para colocar instâncias do símbolo escolhido no painel Símbolos, como um conjunto de símbolos. <kbd>&#8997;</kbd> remove instâncias de volta.</td></tr>
+<tr><td>Symbol Nudge</td><td></td><td>Empurra as instâncias debaixo do pincel junto com o cursor.</td></tr>
+<tr><td>Symbol Pack</td><td></td><td>Puxa as instâncias debaixo do pincel juntas; <kbd>&#8997;</kbd> espalha-as.</td></tr>
+<tr><td>Symbol Resize</td><td></td><td>Aumenta as instâncias debaixo do pincel; <kbd>&#8997;</kbd> diminui-as.</td></tr>
+<tr><td>Symbol Spin</td><td></td><td>Roda as instâncias debaixo do pincel para seguir o arrasto.</td></tr>
+<tr><td>Symbol Tint</td><td></td><td>Tinge as instâncias debaixo do pincel na direção da cor de preenchimento; <kbd>&#8997;</kbd> remove a tingidela.</td></tr>
+<tr><td>Symbol Fade</td><td></td><td>Desvanece as instâncias debaixo do pincel; <kbd>&#8997;</kbd> traz-nas de volta à força total.</td></tr>
+<tr><td>Symbol Restyle</td><td></td><td>Aplica o estilo gráfico escolhido no painel Estilos Gráficos às instâncias; <kbd>&#8997;</kbd> limpa-o.</td></tr>
+</tbody>
+</table>
+<p>Use estas para espalhar e depois variar um campo de arte repetida, como árvores numa encosta ou estrelas num céu: pulverize um conjunto, depois rarefa-o, redimensione-o, rode-o e tinga-o para que as cópias não parecem carimbadas. Todas as oito aceitam <kbd>[</kbd> e <kbd>]</kbd> para tamanho de pincel e <kbd>{</kbd> e <kbd>}</kbd> para quão forte o pincel trabalha. Atuam nas instâncias na seleção, ou em cada instância editável quando nada está selecionado.</p>
+
+<h2 id="tools-boards-slices">Pranchas e fatias</h2>
+<p>As ferramentas que dispõem a tela para saída: pranchas de arte, que são as páginas em que a sua arte fica, e fatias, que delimitam retângulos para exportar por conta própria.</p>
+
+<h3 id="tools-boards">Pranchas</h3>
+<table>
+<thead><tr><th>Ferramenta</th><th>Atalho</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td>Ferramenta Prancha</td><td><kbd>&#8679;O</kbd></td><td>Desenha, move e redimensiona pranchas de arte diretamente na tela. Arraste tela vazia para uma nova prancha, com <kbd>&#8997;</kbd> desenhando a partir do centro e <kbd>&#8679;</kbd> mantendo-a quadrada; arraste dentro de uma prancha para a mover, com <kbd>&#8679;</kbd> segurando o movimento a um eixo; arraste uma alça de canto com <kbd>&#8679;</kbd> para manter as proporções da prancha.</td></tr>
+</tbody>
+</table>
+<p>Use a ferramenta Prancha para adicionar páginas para tamanhos ou versões diferentes de um design num documento, e para redimensionar uma página à volta do que desenhou. <kbd>Delete</kbd> remove a prancha ativa, desde que reste uma.</p>
+
+<h3 id="tools-slices">Fatias</h3>
+<table>
+<thead><tr><th>Ferramenta</th><th>Atalho</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td>Ferramenta Fatia</td><td><kbd>&#8679;K</kbd></td><td>Arraste um retângulo que exporta por conta própria; <kbd>&#8997;</kbd> desenha a partir do centro e <kbd>&#8679;</kbd> mantém-o quadrado. As bordas da fatia assentam em pixels inteiros, para que o que sai não fique desfocado.</td></tr>
+<tr><td>Ferramenta Selecionar Fatia</td><td></td><td>Escolhe, move e redimensiona fatias. <kbd>Delete</kbd> remove a selecionada e um duplo clique abre as suas opções.</td></tr>
+</tbody>
+</table>
+<p>Use fatias para cortar uma prancha de arte em pedaços que exportam separadamente, como os botões e banners de uma disposição web, cada um como seu próprio arquivo. Exportação é coberta na página <a href="/manual/files/">Abrir e Exportar</a>.</p>
+
+<h2 id="tools-navigate">Navegando</h2>
+<p>As ferramentas que deslocam, rodam e ampliam a visualização. Nenhuma delas altera o documento: alteram apenas a forma como está a olhar para ele.</p>
+
+<h3 id="tools-view">Movendo a visualização</h3>
+<table>
+<thead><tr><th>Ferramenta</th><th>Atalho</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td>Ferramenta Mão</td><td><kbd>H</kbd></td><td>Arraste para deslocar a visualização. Segurar a barra de espaço pede-a emprestada de qualquer outra ferramenta enquanto a segura.</td></tr>
+<tr><td>Ferramenta Rodar Visualização</td><td><kbd>&#8679;H</kbd></td><td>Arraste para rodar a visualização à volta do centro da janela, com <kbd>&#8679;</kbd> ajustando a 15&deg;; clique duas vezes para a repor direita. Apenas a visualização roda, nunca o documento.</td></tr>
+<tr><td>Ferramenta Mosaica de Impressão</td><td>&ndash;</td><td>Listada na barra de ferramentas mas ainda não implementada; a paleta marca-a como chegando em breve.</td></tr>
+</tbody>
+</table>
+<p>A ferramenta Mão percorre um desenho ampliado sem tocar nas barras de deslocamento, e a ferramenta Rodar Visualização inclina toda a visualização para que possa desenhar uma linha inclinada num ângulo confortável, depois endireitá-la de volta.</p>
+
+<h3 id="tools-zoom">Zoom</h3>
+<table>
+<thead><tr><th>Ferramenta</th><th>Atalho</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td>Ferramenta Zoom</td><td><kbd>Z</kbd></td><td>Clique para ampliar e <kbd>&#8997;</kbd>-clique para reduzir. Arraste um retângulo sobre parte da arte para a preencher a janela com ela.</td></tr>
+</tbody>
+</table>
+
+<h2 id="tools-fill-stroke">Controlos de preenchimento e contorno</h2>
+<p>Na base da barra de ferramentas ficam as amostras de preenchimento e contorno, uma à frente da outra. A amostra da frente é o lado ativo, aquele em que a sua próxima escolha de cor cai. Um punhado de teclas únicas trabalham-nas sem ir aos painéis:</p>
+<table>
+<thead><tr><th>Atalho</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td><kbd>D</kbd></td><td>Repõe o preenchimento e contorno nos seus padrões.</td></tr>
+<tr><td><kbd>X</kbd></td><td>Alterna qual do preenchimento ou contorno é o lado ativo.</td></tr>
+<tr><td><kbd>&#8679;X</kbd></td><td>Troca as cores de preenchimento e contorno.</td></tr>
+<tr><td><kbd>/</kbd></td><td>Define o lado ativo como sem pintura.</td></tr>
+</tbody>
+</table>
+<p>Estas tornam os movimentos comuns rápidos: <kbd>X</kbd> para saltar entre pintar o preenchimento e o contorno, <kbd>/</kbd> para largar o preenchimento ou contorno para nenhum, e <kbd>D</kbd> para voltar a um começo preto e branco simples. Preenchimentos, contornos e como são definidos são cobertos na página <a href="/manual/appearance/">Cor e Aparência</a>.</p>

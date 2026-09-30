@@ -1,0 +1,153 @@
+<p class="lede">Cada objeto vetorial no Scissor é construído a partir de caminhos: uma cadeia de pontos de âncora unidos por segmentos retos ou curvos. Esta página cobre como desenhá-los, como remodelá-los ponto a ponto e os comandos que os unem, deslocam, contornam e combinam.</p>
+
+<p>Os atalhos estão escritos no formato macOS. No Windows, leia <kbd>&#8984;</kbd> como Ctrl, <kbd>&#8997;</kbd> como Alt e <kbd>&#8679;</kbd> como Shift.</p>
+
+<h2 id="paths-anchors-and-handles">Âncoras, alças e a forma de um caminho</h2>
+<p>Um caminho é uma sequência de pontos de âncora. Entre duas âncoras vizinhas está um segmento, que é reto quando nenhuma âncora se estende para ele e curvo quando uma ou ambas o fazem. O alcance de uma âncora é definido pelas suas duas alças de direção: a alça de entrada molda o segmento que chega à âncora, e a alça de saída molda o segmento que sai dela. Arraste uma alça mais para longe e a curva sobressai mais fortemente na sua direção. Um caminho pode ser aberto, com duas pontas soltas, ou fechado, onde a última âncora se junta à primeira.</p>
+
+<h3 id="paths-corner-and-smooth">Pontos de canto e suaves</h3>
+<p>Uma âncora é ou um canto ou um ponto suave. Num ponto suave, as duas alças estão bloqueadas numa linha reta através da âncora, pelo que a curva passa sem dobras e permanece contínua. Num ponto de canto, os dois lados são independentes: o caminho pode mudar de direção bruscamente, e um lado pode ser reto enquanto o outro é curvo. A maioria das formas mistura os dois, pontos suaves ao longo das partes fluidas e pontos de canto onde uma borda vira.</p>
+<dl>
+  <dt>Ponto suave</dt>
+  <dd>Alças ligadas numa linha. Use-os ao longo de uma curva que deve ler-se como um movimento contínuo, como o lado de uma folha ou a tigela de uma letra.</dd>
+  <dt>Ponto de canto</dt>
+  <dd>Alças que se movem separadamente, ou um ponto sem alças. Use-os na ponta de uma estrela, no canto de uma caixa, ou onde quer que uma curva deva encontrar uma borda reta.</dd>
+</dl>
+
+<h3 id="paths-direct-selection">Âncoras, alças e a ferramenta Seleção Direta</h3>
+<p>A ferramenta Seleção Direta (<kbd>A</kbd>) trabalha nas partes de um caminho. Clique numa âncora para a selecionar, <kbd>&#8679;</kbd>-clique para adicionar ou remover uma, ou arraste uma seleção em área sobre espaço vazio para apanhar todas as âncoras dentro dela. Arrastar âncoras selecionadas move-as; <kbd>&#8679;</kbd> restringe o movimento a passos de 45&deg;. Use-o sempre que uma forma está quase certa e apenas um ou dois pontos precisam de ajuste.</p>
+<p>Arraste uma alça para alterar a curva do seu lado. Alças que pertencem a uma âncora suave movem-se juntas, pelo que a curva permanece contínua; segure <kbd>&#8997;</kbd> enquanto arrasta para quebrar essa ligação e guiar um lado sozinho, e <kbd>&#8679;</kbd> para segurar a alça num ângulo. Também pode arrastar o próprio segmento: um segmento curvo dobra-se sob o cursor, e um reto transporta ambas as suas âncoras.</p>
+<p>A ferramenta Seleção de Grupo partilha este slot e escolhe objetos inteiros de um grupo em vez de âncoras. Clique uma vez para o objeto mais interno, clique novamente para sair para o grupo à volta dele.</p>
+
+<h2 id="paths-drawing">Ferramentas de desenho</h2>
+<p>O Scissor tem três ferramentas para traçar um caminho do zero. A Caneta dá controlo exato ponto a ponto, a ferramenta Curvatura ajusta uma curva suave através dos pontos que coloca, e o Lápis segue a sua mão livremente.</p>
+<table>
+  <thead><tr><th>Ferramenta</th><th>Atalho</th><th>Melhor para</th></tr></thead>
+  <tbody>
+    <tr><td>Caneta</td><td><kbd>P</kbd></td><td>Contornos precisos onde cada âncora e alça é colocada propositadamente.</td></tr>
+    <tr><td>Curvatura</td><td><kbd>&#8679;~</kbd></td><td>Curvas fluidas definidas por alguns pontos de passagem, sem lutar com alças.</td></tr>
+    <tr><td>Lápis</td><td><kbd>N</kbd></td><td>Formas soltas, desenhadas à mão e esboços rápidos.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="paths-pen">A ferramenta Caneta</h3>
+<p>A ferramenta Caneta (<kbd>P</kbd>) constrói um caminho ponto a ponto. Clique para colocar uma âncora de canto; pressione e arraste em vez disso e a âncora mantém alças, pelo que o caminho sai dela como uma curva. Segure <kbd>&#8679;</kbd> enquanto arrasta para segurar a alça em passos de 45&deg;, e segure <kbd>&#8997;</kbd> para mover apenas a alça de saída, o que transforma a âncora num canto e liberta o próximo segmento do último.</p>
+<p>Enquanto um caminho está aberto, a ferramenta muda à medida que se move sobre ele. Sobre a primeira âncora fecha o caminho, sobre um segmento adiciona uma âncora, e sobre uma âncora existente remove-a. Sem um caminho em curso, mover sobre a ponta solta de um caminho aberto apanha esse caminho para continuar a desenhar a partir dele. <kbd>Enter</kbd> ou <kbd>Esc</kbd> termina o caminho e o deixa aberto; <kbd>Delete</kbd> remove a última âncora colocada.</p>
+
+<h3 id="paths-curvature">A ferramenta Curvatura</h3>
+<p>A ferramenta Curvatura (<kbd>&#8679;~</kbd>) ajusta uma curva suave através dos pontos que clica, com uma pré-visualização a correr para o cursor à medida que avança. <kbd>&#8997;</kbd>-clique para colocar um ponto de canto em vez de um suave, e clique duas vezes em qualquer ponto para alternar entre os dois. Arraste um ponto para o mover e a curva reajusta-se. Clique no primeiro ponto para fechar a forma, ou pressione <kbd>Enter</kbd> para terminar. <kbd>Delete</kbd> remove o último ponto e <kbd>Esc</kbd> abandona o caminho. Use-o quando se importa mais com a forma da curva do que com as âncoras exatas, pois calcula as alças por si.</p>
+
+<h3 id="paths-pencil">A ferramenta Lápis</h3>
+<p>A ferramenta Lápis (<kbd>N</kbd>) desenha à mão livre: pressione, desenhe e solte, e o Scissor ajusta um caminho suave através do rasto. Solte perto de onde começou, ou segure <kbd>&#8997;</kbd> enquanto termina, e o caminho fecha-se numa forma. O resultado é um caminho aberto com contorno na cor de contorno atual, pronto para manter como linha ou preencher. Quão perto o caminho ajustado segue o seu movimento é definido pela preferência de fidelidade do Lápis, de preciso, que mantém mais âncoras e cada tremor, a suave, que usa menos âncoras e alisa a linha. Use-o para esboçar, assinar e qualquer forma que deva parecer desenhada à mão em vez de construída.</p>
+
+<h2 id="paths-editing-points">Editando pontos num caminho</h2>
+
+<h3 id="paths-add-remove-convert">Adicionar, remover e converter pontos</h3>
+<p>A Canena partilha o seu slot na barra de ferramentas com Adicionar Ponto de Âncora (<kbd>+</kbd>), Eliminar Ponto de Âncora (<kbd>&#8722;</kbd>) e a ferramenta Ponto de Âncora (<kbd>&#8679;C</kbd>). Adicionar Ponto de Âncora coloca um novo ponto num segmento sem alterar a curva; Eliminar Ponto de Âncora remove o ponto em que clica e permite que o caminho feche a lacuna. Com a ferramenta Ponto de Âncora, arraste a partir de uma âncora de canto para puxar um par de alças correspondente, tornando-a suave; arraste uma alça única para quebrar o par para que os dois lados se movam separadamente, tornando-a de volta num canto; e clique numa âncora suave para despojar as suas alças num canto afiado.</p>
+<p>Objeto &rsaquo; Caminho tem as mesmas edições como comandos que funcionam em toda a seleção de uma vez. Adicionar Pontos de Âncora coloca uma nova âncora no meio de cada segmento, duplicando a contagem de pontos sem alterar a forma, o que é útil antes de uma distorção ou deformação que precisa de mais pontos para dobrar limpo. Remover Pontos de Âncora remove as âncoras que selecionou com a ferramenta Seleção Direta e reajusta o caminho através do que resta.</p>
+
+<h3 id="paths-reshape-tools">Remodelar à mão: ferramentas Suavizar, Apagar Caminho e Unir</h3>
+<p>Três ferramentas estilo pincel remodelam um caminho onde arrasta em vez de numa única âncora. Atuam nos caminhos selecionados, ou em qualquer caminho sob o pincel quando nada está selecionado, e <kbd>[</kbd> e <kbd>]</kbd> encolhem e aumentam o pincel.</p>
+<dl>
+  <dt>Ferramenta Suavizar</dt>
+  <dd>Arraste ao longo de um caminho para o relaxar, rareando âncoras e suavizando saliências. Use-o para acalmar uma linha trémula de lápis ou um contorno traçado.</dd>
+  <dt>Ferramenta Apagar Caminho</dt>
+  <dd>Arraste ao longo de um caminho para apagar a parte que atravessa, dividindo-o ou encurtando-o. Use-o para cortar uma cauda solta de uma linha.</dd>
+  <dt>Ferramenta Unir</dt>
+  <dd>Esfregue através de duas pontas abertas e elas são unidas, estendendo ou aparando os caminhos para se encontrarem limpo num canto. Use-o para fechar uma lacuna onde dois contornos deviam ter-se encontrado.</dd>
+</dl>
+
+<h3 id="paths-cutting">Cortar um caminho: Tesoura e Faca</h3>
+<p>A ferramenta Tesoura (<kbd>C</kbd>) corta num único local. Clique num segmento ou âncora e o caminho é dividido aí: um caminho fechado abre-se no corte, e um caminho aberto parte-se em dois objetos separados. Use-o para cortar uma abertura num círculo ou para partir uma forma para que as metades possam ser estilizadas de maneira diferente.</p>
+<p>A Faca corta através da arte. Arraste a lâmina sobre um objeto para o cortar em pedaços separados ao longo da linha desenhada; segure <kbd>&#8997;</kbd> para cortar em linha reta, e adicione <kbd>&#8679;</kbd> para segurar essa linha em passos de 45&deg;. Com algo selecionado, apenas os objetos selecionados são cortados; caso contrário, tudo o que a lâmina atravessa é. Use-o para esculpir uma forma preenchida em várias peças fechadas de um só traço.</p>
+
+<h2 id="paths-commands">Comandos de caminho</h2>
+<p>Objeto &rsaquo; Caminho reúne as operações que atuam em caminhos inteiros de uma vez.</p>
+<table>
+  <thead><tr><th>Comando</th><th>Atalho</th><th>O que faz</th></tr></thead>
+  <tbody>
+    <tr><td>Unir</td><td><kbd>&#8984;J</kbd></td><td>Liga pontas abertas num caminho, ou fecha um único caminho aberto.</td></tr>
+    <tr><td>Média&hellip;</td><td><kbd>&#8997;&#8984;J</kbd></td><td>Move as âncoras selecionadas para a sua posição comum.</td></tr>
+    <tr><td>Contorno do Contorno</td><td></td><td>Transforma um contorno numa forma preenchida com o mesmo contorno.</td></tr>
+    <tr><td>Caminho Deslocado&hellip;</td><td></td><td>Faz uma cópia aumentada ou diminuída por uma distância definida.</td></tr>
+    <tr><td>Inverter Direção do Caminho</td><td></td><td>Inverte a direção em que o caminho corre.</td></tr>
+    <tr><td>Simplificar&hellip;</td><td></td><td>Reduz o número de pontos de âncora.</td></tr>
+    <tr><td>Adicionar Pontos de Âncora</td><td></td><td>Adiciona um ponto no meio de cada segmento.</td></tr>
+    <tr><td>Remover Pontos de Âncora</td><td></td><td>Remove as âncoras selecionadas.</td></tr>
+    <tr><td>Dividir em Grade&hellip;</td><td></td><td>Corta a seleção numa grelha de fileiras e colunas.</td></tr>
+    <tr><td>Limpar&hellip;</td><td></td><td>Elimina pontos perdidos, objetos sem pintura e texto vazio.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="paths-join-average">Unir e média</h3>
+<p>Unir (<kbd>&#8984;J</kbd>) funciona em caminhos abertos. Com dois caminhos abertos separados selecionados, liga as suas pontas mais próximas num único caminho; com um único caminho aberto, une as duas pontas soltas para o fechar. Pontas que já estão uma sobre a outra são fundidas numa única âncora. Use-o para fechar uma forma que desenhou como contorno aberto ou para costurar dois contornos desenhados pela metade.</p>
+<p>Média (<kbd>&#8997;&#8984;J</kbd>) move as âncoras selecionadas para a sua posição média comum. A caixa de diálogo oferece o eixo horizontal, que alinha os pontos numa altura comum; o eixo vertical, que os alinha numa coluna; ou ambos, que os empilha todos num só local. Use-o para nivelar uma fileira de pontos ou para juntar duas pontas antes de as unir.</p>
+
+<h3 id="paths-simplify">Simplificar</h3>
+<p>Simplificar redesenha os caminhos selecionados com menos pontos de âncora, mantendo-se dentro de uma precisão que define: uma precisão mais apertada mantém-se perto do original à custa de mais pontos, uma mais solta suaviza a forma até um punhado. Use-o para limpar um caminho traçado ou desenhado à mão que transporta muitos mais pontos do que a forma precisa, o que o torna mais leve de editar e renderizar.</p>
+
+<h3 id="paths-offset">Caminho Deslocado</h3>
+<p>Caminho Deslocado constrói um caminho novo a uma distância definida do original: um deslocamento positivo aumenta o contorno para fora e fica atrás do original, um negativo encolhe-o para dentro e fica à frente. A configuração de Junções decide como os cantos externos são tratados, como Mitra afiado, Redondo ou Biselado, com um limite de mitra que limita o quanto um canto afiado pode correr antes de ser cortado. Use-o para desenhar uma borda uniforme à volta de uma forma, para inserir uma forma para uma linha-chave ou para engrossar uma forma fina. Caminho Deslocado também está disponível sob Efeito &rsaquo; Caminho como um efeito ao vivo que recalcula quando a forma muda.</p>
+
+<h3 id="paths-outline-stroke">Contorno do Contorno</h3>
+<p>Contorno do Contorno substitui um caminho com contorno por uma forma preenchida que tem exatamente o contorno do contorno. Depois de contornado, a largura deixa de escalar com o objeto e não pode ser editada como contorno, mas o contorno pode ser remodelado ponto a ponto, preenchido com um gradiente ou combinado com outras formas. Use-o quando precisa que o contorno se comporte como arte: para dar a uma linha uma borda afunilada ou variada que depois ajusta à mão, ou para manter as espessuras de linha de um design fixas quando ele é escalado. Também está disponível como efeito ao vivo, sob Efeito &rsaquo; Caminho.</p>
+
+<h3 id="paths-reverse">Inverter Direção do Caminho</h3>
+<p>Inverter Direção do Caminho inverte a ordem em que as âncoras correm, pelo que o caminho viaja na direção oposta. A direção raramente se mostra por si só, mas decide qual contorno é o buraco num caminho composto e onde um pincel ou ponta de seta começa e termina. Use-o quando um buraco num caminho composto se preenche sólido, ou quando texto num caminho ou o início e fim de um contorno estão do lado errado.</p>
+
+<h2 id="paths-live-shapes">Formas editáveis e os seus widgets</h2>
+<p>Retângulos, retângulos arredondados, elipses e polígonos permanecem ao vivo: mantêm os seus parâmetros e reconstróem o seu caminho sempre que altera um. Enquanto arrasta uma forma para fora, <kbd>&#8679;</kbd> torna-a regular e <kbd>&#8997;</kbd> desenha-a a partir do centro. As teclas de seta também funcionam durante o arrasto, para cima e para direita adicionam, para baixo e para esquerda subtraem, alterando os lados de um polígono, as pontas de uma estrela ou o raio do canto de um retângulo arredondado.</p>
+<p>Selecione uma única forma ao vivo e pequenas alças redondas aparecem mesmo dentro dos seus cantos; ficam ocultas quando a forma é demasiado pequena no ecrã para as mostrar claramente. Arraste uma com a ferramenta Seleção (<kbd>V</kbd>) para arredondar todos os cantos de uma vez, ou com Seleção Direta para arredondar apenas o canto que está a segurar. <kbd>&#8997;</kbd>-clique numa alça de canto para alternar entre redondo, invertido e chanfrado, novamente todos os quatro cantos com a ferramenta Seleção, um canto com Seleção Direta.</p>
+<p>Uma elipse mostra uma alça quadrada em vez disso: uma numa elipse inteira, e uma em cada ponta da fatia depois de abrir uma. Arraste uma para abrir uma cunha da forma, com <kbd>&#8679;</kbd> ajustando o ângulo em passos de 15&deg;; trazer a ponta de volta ao início restaura a elipse inteira. O painel Propriedades contém os mesmos valores como números: raio e tipo de canto, raios por canto, lados do polígono e início e fim da fatia em graus. Uma forma ao vivo mantém estes controlos até editar o seu caminho diretamente, o que a transforma num caminho comum.</p>
+
+<h2 id="paths-combining">Combinando formas: Unir e Dividir e Combinar Formas</h2>
+<p>Quando duas ou mais formas se sobrepõem, muitas vezes quer uma única forma nova a partir delas: uma união, um buraco, ou a parte onde se cruzam. O Scissor oferece duas maneiras de lá chegar. Unir e Dividir é direto e visual; o painel Combinar Formas aplica as mesmas operações como botões. Ambos mantêm curvas em vez de as achatarem em segmentos de linha.</p>
+
+<h3 id="paths-shape-builder">A ferramenta Unir e Dividir</h3>
+<p>A ferramenta Unir e Dividir (<kbd>&#8679;M</kbd>) funciona em dois ou mais caminhos selecionados. Divide as suas sobreposições em regiões e destaca aquela sobre a qual o cursor está; arraste uma linha através de várias regiões para as fundir num único objeto, que assume a aparência da forma de onde veio, ou <kbd>&#8997;</kbd>-arraste através delas para as eliminar. Use-o para construir uma forma a olho, adicionando as partes que quer e apagando as que não, sem parar para escolher um comando para cada etapa.</p>
+
+<h3 id="paths-pathfinder-shape-modes">Modos de forma Combinar Formas</h3>
+<p>O painel Combinar Formas (<kbd>&#8679;&#8984;F9</kbd>) abre com quatro modos de forma, cada um dos quais substitui os caminhos selecionados por um único caminho combinado. O resultado assume a aparência do objeto superior, exceto Menos Frente, que mantém a aparência do inferior.</p>
+<dl>
+  <dt>Unir</dt>
+  <dd>Funde todas as formas selecionadas num único contorno. Use-o para soldar peças sobrepostas numa única silhueta, como uma nuvem a partir de uma fileira de círculos.</dd>
+  <dt>Menos Frente</dt>
+  <dd>Mantém a forma mais atrás e corta tudo o que está empilhado à sua frente. Use-o para morder um pedaço de uma forma, como esculpir uma lua crescente a partir de dois círculos.</dd>
+  <dt>Interseção</dt>
+  <dd>Mantém apenas a área que todas as formas selecionadas partilham. Use-o para cortar arte até uma região comum, como a lente onde dois círculos se cruzam.</dd>
+  <dt>Excluir</dt>
+  <dd>Mantém tudo exceto as sobreposições, que se tornam buracos. Use-o para fazer um anel ou um elo de corrente, onde as partes que se cruzam desaparecem.</dd>
+</dl>
+
+<figure class="shot">
+  <img src="img/combine.gif" width="760" height="441" loading="lazy"
+       alt="Três formas sobrepostas, um círculo, um quadrado arredondado e um círculo, fundindo-se numa única silhueta combinada." />
+  <figcaption>Unir (ou um arrasto com Unir e Dividir) funde formas sobrepostas num único contorno que mantém as suas curvas.</figcaption>
+</figure>
+
+<h3 id="paths-pathfinders">As outras operações Combinar Formas</h3>
+<p>Abaixo dos modos de forma estão seis pathfinders. Estes deixam-no com vários pedaços, reunidos num grupo, em vez de um único caminho combinado. Menos Trás corresponde ao seu homólogo de modo de forma mas mantém a forma superior.</p>
+<dl>
+  <dt>Dividir</dt>
+  <dd>Corta as faces em faces separadas ao longo de cada linha que atravessam, cada face assumindo a cor da forma superior que a cobre. Use-o para partir um design em peças pintáveis, como as células de um vitral.</dd>
+  <dt>Aparar</dt>
+  <dd>Remove a parte oculta de cada forma onde uma forma acima a cobre. Cada pedaço mantém o seu próprio preenchimento e nada é fundido; contornos são descartados. Use-o para achatar arte de cor plana empilhada para que nenhuma cor imprima sobre outra.</dd>
+  <dt>Fundir</dt>
+  <dd>Apara as partes ocultas e depois une peças vizinhas que partilham uma cor de preenchimento. Use-o para arrumar uma ilustração de cor plana, juntando regiões da mesma cor em formas únicas.</dd>
+  <dt>Recortar</dt>
+  <dd>Mantém apenas as partes das formas inferiores que caem dentro da forma mais à frente, que é depois descartada. Use-o para cortar arte a uma moldura e incorporar o recorte nos caminhos, em vez de manter uma máscara de recorte ao vivo.</dd>
+  <dt>Menos Trás</dt>
+  <dd>Mantém a forma mais à frente e corta tudo o que está atrás dela. Use-o quando a forma superior é a que fica e as formas abaixo devem esculpir nela.</dd>
+  <dt>Contorno</dt>
+  <dd>Transforma cada limite de região numa linha aberta, contornada na cor de preenchimento de onde veio. Use-o para puxar o esqueleto de bordas de um conjunto de formas sobrepostas.</dd>
+</dl>
+<p>Efeito &rsaquo; Combinar Formas aplica Adicionar, Interseção, Excluir, Subtrair e Menos Trás como efeitos ao vivo num grupo, deixando os objetos originais intactos e editáveis por baixo. Use as versões de efeito quando ainda pode querer mover as peças mais tarde; use o painel quando a forma combinada for final.</p>
+
+<h2 id="paths-compound-and-masks">Caminhos compostos e máscaras de recorte</h2>
+<p>Objeto &rsaquo; Caminho Composto &rsaquo; Criar (<kbd>&#8984;8</kbd>) dobra os caminhos selecionados num único objeto preenchido pela regra par-ímpar, pelo que um contorno interno corta um buraco através do que está à volta. O resultado assume a aparência do objeto mais baixo na seleção. Libertar (<kbd>&#8997;&#8679;&#8984;8</kbd>) devolve cada contorno como o seu próprio caminho. Use um caminho composto para qualquer forma com um buraco, como o contra a letra O ou uma anilha.</p>
+<p>Objeto &rsaquo; Máscara de Recorte &rsaquo; Criar (<kbd>&#8984;7</kbd>) usa o objeto mais à frente selecionado, que deve ser um caminho, para cortar tudo o que está abaixo dele. O Scissor coloca-os todos num grupo de recorte e limpa o preenchimento e contorno do próprio caminho da máscara. Libertar (<kbd>&#8997;&#8984;7</kbd>) transforma o grupo de recorte de volta num grupo comum, pelo que nada é mais cortado e cada objeto, incluindo o caminho da máscara, fica onde estava. Criar Máscara de Opacidade no mesmo submenu mascara por tom em vez de contorno, pelo que as partes mais claras da máscara aparecem e as mais escuras ocultam.</p>
+
+<h2 id="paths-smart-guides">Guias inteligentes e ajuste</h2>
+<p>Guias inteligentes (Ver › Guias Inteligentes, <kbd>&#8984;U</kbd>) observam a arte visível e as pranchas enquanto desenha ou arrasta. O que está a mover ajusta-se às bordas, centros e âncoras dos seus vizinhos, e uma linha aparece de volta ao que alinhou, rotulada com o tipo de correspondência: âncora, centro, canto ou alinhamento.</p>
+<p>Duas guias adicionais aparecem por si só. Quando o objeto que está a mover ficaria à mesma distância dos seus vizinhos como eles estão uns dos outros, ajusta-se aí e os dois espaços iguais são desenhados com a medição; funciona tanto para continuar uma sequência de objetos uniformemente espaçados como para centrar um no espaço entre dois. E quando arrasta a partir de um ponto de partida, a direção ajusta-se a uma linha de construção a cada 45&deg; do ângulo de restrição, desenhada como uma linha longa com o ângulo ao lado.</p>
+<p>Ajustar ao Ponto (<kbd>&#8997;&#8984;'</kbd>) e Ajustar à Grade (<kbd>&#8679;&#8984;'</kbd>) são interruptores separados no menu Ver. Com Ajustar à Grade ligado, tudo cai na subdivisão da grade e as guias inteligentes afastam-se.</p>

@@ -1,0 +1,166 @@
+<p class="lede">O Scissor preenche a janela do navegador com uma única superfície de edição: uma barra de menu na parte superior, uma barra de controlo e separadores de documento abaixo dela, a paleta de ferramentas à esquerda, a tela de desenho no meio e o dock de painéis à direita. Tudo roda na sua própria máquina, pelo que um documento fica onde você o coloca e nada é enviado para ser aberto.</p>
+
+  <p>Os atalhos nesta página estão escritos no formato macOS. No Windows e Linux, leia <kbd>⌘</kbd> como <kbd>Ctrl</kbd> e <kbd>⌥</kbd> como <kbd>Alt</kbd>; <kbd>⇧</kbd> é Shift e <kbd>⌃</kbd> é Control.</p>
+
+  <h2 id="interface-at-a-glance">O espaço de trabalho num relance</h2>
+  <p>A janela é construída a partir de algumas regiões que respondem a perguntas diferentes. Aprenda onde estão uma vez e o resto do manual fica mais fácil de ler.</p>
+  <dl>
+    <dt>Barra de menu</dt>
+    <dd>A fileira de menus ao longo do topo, com desfazer e refazer e uma pesquisa de comandos na sua extremidade direita. Esta é a lista completa de tudo o que o editor pode fazer.</dd>
+    <dt>Barra de controlo</dt>
+    <dd>A faixa logo abaixo dos menus. Mostra a ferramenta atual e o punhado de controlos que importam para o que tem selecionado neste momento.</dd>
+    <dt>Separadores de documento</dt>
+    <dd>À esquerda da barra de controlo, um separador por documento aberto. O botão de painéis encontra-se na extremidade direita da mesma fileira.</dd>
+    <dt>Paleta de ferramentas</dt>
+    <dd>A coluna estreita de ferramentas ao longo da borda esquerda, com o controlo de preenchimento e contorno na sua base.</dd>
+    <dt>Tela e prancheta</dt>
+    <dd>A grande área no meio onde desenha. Os retângulos brancos são pranchas; o entorno cinzento é a prancheta.</dd>
+    <dt>Dock de painéis</dt>
+    <dd>A coluna de painéis à direita. Desliza sobre a tela quando precisa dela e devolve o espaço quando a fecha.</dd>
+    <dt>Barra de status</dt>
+    <dd>A linha fina ao longo da base da janela, reportando a ferramenta atual, a seleção e a última ação de desfazer.</dd>
+  </dl>
+  <figure class="shot">
+    <img src="img/app-light.png" width="1900" height="1082" loading="lazy"
+         alt="A janela inteira do Scissor: barra de menu, barra de controlo, paleta de ferramentas, tela e dock de painéis." />
+    <figcaption>A janela inteira. O Scissor segue a configuração clara ou escura do seu sistema, e esta captura de tela também.</figcaption>
+  </figure>
+
+  <h2 id="interface-menu-bar">A barra de menu</h2>
+  <p>Dez menus correm ao longo do topo. Reúnem todos os comandos do programa, agrupados pelo tipo de trabalho que está a fazer em vez de onde uma funcionalidade acontece de estar no motor.</p>
+  <table>
+    <thead><tr><th>Menu</th><th>O que contém</th></tr></thead>
+    <tbody>
+      <tr><td>Ficheiro</td><td>Novo, abrir, fechar, guardar, colocar, exportar, scripts, configuração de documento e imprimir.</td></tr>
+      <tr><td>Editar</td><td>Desfazer e refazer, comandos da área de transferência, todo o menu <strong>Selecionar</strong> como submenu, edição de cores e Preferências.</td></tr>
+      <tr><td>Organizar</td><td>Transformar, ordem de empilhamento, alinhamento, agrupamento e bloquear e ocultar.</td></tr>
+      <tr><td>Caminho</td><td>Comandos de caminho e caminho composto, morfar, Deformação de Forma e perspectiva, máscaras de recorte, contorno de texto e expansão.</td></tr>
+      <tr><td>Criar</td><td>Padrões, repetições, Preenchimento de Região, Vetorizar, malha de gradiente, pranchas, fatias e comandos de camada de pixels.</td></tr>
+      <tr><td>Efeitos</td><td>Efeitos ao vivo: o conjunto vetorial (3D, distorcer e transformar, Combinar Formas, estilizar, deformar e mais) e um submenu Raster abaixo deles.</td></tr>
+      <tr><td>Texto</td><td>Fonte, tamanho e glifos, criar contornos, alterar maiúsculas/minúsculas, fluxo de texto e inserção de caracteres.</td></tr>
+      <tr><td>Ver</td><td>Aparência (clara e escura), pré-visualização de contorno e pixels, zoom, rodar visualização, réguas, guias, grade e ajuste.</td></tr>>
+      <tr><td>Área de Trabalho</td><td>Os painéis: os seis que mais abre, um submenu Texto, um submenu Mais Painéis para o restante e Repor Painéis.</td></tr>
+      <tr><td>Ajuda</td><td>Novidades, o manual do utilizador, instalar, Termos de Uso e Sobre, com um campo de pesquisa no topo.</td></tr>
+    </tbody>
+  </table>
+  <p>Um sinal ao lado de um item significa que essa configuração está ligada. Um item a cinzento não pode ser usado no momento, geralmente porque nada está selecionado ou nenhum documento está aberto. Quando um comando tem um atalho, ele é mostrado no lado direito do menu.</p>
+
+  <h3 id="interface-command-search">Encontrando um comando</h3>
+  <p>Não precisa de lembrar qual menu contém o quê. O botão de pesquisa à direita da barra de menu, rotulado <em>Pesquisar ou digitar um comando</em>, abre a paleta de comandos; <kbd>⌘K</kbd> abre-a do teclado. Digite algumas letras e ela lista todos os comandos correspondentes com o seu caminho de menu e atalho, e todas as ferramentas correspondentes. Use <kbd>↑</kbd> e <kbd>↓</kbd> para navegar pelos resultados, <kbd>Enter</kbd> para executar o destacado e <kbd>Esc</kbd> para fechar. Use-o quando sabe o que quer mas não sabe onde está, ou quando um atalho é mais rápido de digitar do que procurar. O menu Ajuda tem o seu próprio campo de pesquisa que faz o mesmo em todos os menus.</p>
+
+  <h3 id="interface-undo-redo">Desfazer e refazer</h3>
+  <p>As setas curvas perto da direita da barra de menu desfazem e refazem, tal como <kbd>⌘Z</kbd> e <kbd>⇧⌘Z</kbd>. Cada botão nomeia a etapa que reverteria quando passa o cursor sobre ele, e a barra de status mostra o mesmo na base da janela, para que possa sempre ver o que mais uma pressão desfaria.</p>
+
+  <h2 id="interface-tool-palette">A paleta de ferramentas</h2>
+  <p>As ferramentas ficam numa única coluna ao longo da borda esquerda. Estão organizadas em famílias: Selecionar, Desenhar, Texto, Linha, Forma, Pintar, Remodelar, Construir, Amostrar, Símbolos, Pranchas e Ver. A coluna mostra uma ferramenta de cada família de cada vez; pouse o cursor sobre um slot e o resto dessa família abre-se à direita, para que possa escolher um irmão sem a coluna se mover debaixo da sua mão. Um slot continua a mostrar o membro da sua família que usou por último.</p>
+  <p>Clique num slot para escolher a ferramenta que mostra. A sua dica de ferramenta dá o nome da ferramenta e o seu atalho de tecla única, por exemplo <kbd>V</kbd> para a ferramenta Seleção, <kbd>P</kbd> para a Caneta ou <kbd>T</kbd> para Texto. Quando muda de ferramentas com o teclado, o slot correspondente acende-se por um momento para que possa ver qual está ativo. Para ver tudo de uma vez, um botão perto da pesquisa de comandos, desenhado como três pontos, abre um navegador de todas as ferramentas, agrupadas por família e filtradas à medida que digita.</p>
+
+  <h3 id="interface-fill-stroke">Preenchimento e contorno</h3>
+  <p>Abaixo das ferramentas está o controlo de preenchimento e contorno: um quadrado preenchido para o preenchimento, colocado dentro de uma faixa que representa o contorno, com um pequeno par de setas para trocar entre eles. Por estar aqui em vez de apenas na barra de controlo, pode escolher uma cor antes de escolher uma ferramenta, e ela torna-se aquilo com que o próximo objeto é desenhado. Clique no preenchimento ou na faixa para abrir o separador de cores, amostras e gradiente.</p>
+  <table>
+    <thead><tr><th>Tecla</th><th>Ação</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>X</kbd></td><td>Move o foco entre preenchimento e contorno</td></tr>
+      <tr><td><kbd>⇧X</kbd></td><td>Troca o preenchimento e o contorno</td></tr>
+      <tr><td><kbd>D</kbd></td><td>Retorna ao padrão: preenchimento branco, contorno preto</td></tr>
+      <tr><td><kbd>/</kbd></td><td>Define o lado ativo como nenhum</td></tr>
+    </tbody>
+  </table>
+
+  <h3 id="interface-rail-panels">Painéis ao lado da barra</h3>
+  <p>Entre o controlo de preenchimento e contorno e as ferramentas, a paleta oferece uma pequena fileira de botões de painel escolhidos para a ferramenta que está a segurar: as ferramentas de desenho trazem as amostras e painéis de contorno à mão, as ferramentas de texto trazem os painéis de texto e parágrafo, e assim por diante. Estes abrem um único painel exatamente onde a sua mão já está. Um botão adicional abre o dock completo. Numa janela baixa, a fileira dobra-se num único botão Painéis que lista as mesmas opções, para que a paleta nunca saia pela borda inferior.</p>
+
+  <h2 id="interface-control-bar">A barra de controlo</h2>
+  <p>A faixa abaixo dos menus muda conforme o que está a fazer. Nomeia a ferramenta atual à esquerda e, à direita, mostra apenas os controlos que podem atuar na seleção atual: preenchimento, contorno e espessura do contorno; X, Y, L e A da seleção; e as ações que fazem sentido, como alinhar, os modos de forma booleanos, ordem de empilhamento, grupo, desagrupar e duplicar. Quando há mais do que cabe, um botão final recolhe o resto num menu, para que a barra nunca se reorganize enquanto a usa.</p>
+  <p>Digite em qualquer campo numérico e pressione <kbd>Enter</kbd>, ou saia do campo, para aplicar o valor; <kbd>↑</kbd> e <kbd>↓</kbd> alteram-no em passos, com <kbd>⇧</kbd> para dez vezes o passo e <kbd>⌥</kbd> para um décimo. A pequena etiqueta ao lado de um campo é um scrubber: arraste-a para a esquerda ou direita para alterar o valor ao sabor. Passe o cursor sobre o nome da ferramenta para revelar as primeiras opções dessa ferramenta; clique no nome para abrir as suas opções completas abaixo da barra, com todos os seus interruptores e números.</p>
+  <p>A barra de controlo está ancorada na fileira de separadores por padrão, mas pode arrastar a sua alça para a flutuar sobre a tela, e clicar duas vezes na alça (ou usar o seu botão de ancoragem) para a repor. Ao lado dela, uma barra compacta pode aparecer ao lado de um objeto selecionado transportando apenas o seu preenchimento, contorno e espessura, para que a cor esteja mesmo ao lado da arte em vez do outro lado da janela.</p>
+
+  <h2 id="interface-quick-bar">A barra rápida</h2>
+  <p>Quando seleciona algo, uma pequena barra flutua ao lado dela com os controlos que mais usa, para que não tenha de viajar até à borda da janela. Para formas e caminhos contém o preenchimento e contorno; para texto contém o preenchimento, o tamanho, negrito, itálico e o alinhamento. Mantém-se fora do caminho enquanto arrasta e volta quando solta. Tudo o que está nela também está na barra de controlo e nos painéis.</p>
+
+  <h2 id="interface-canvas">A tela e a prancheta</h2>
+  <p>O meio da janela é a tela. As pranchas são os retângulos brancos que contêm a arte que pretende manter; o entorno cinzento é a prancheta. A prancheta faz parte do documento, pelo que um esboço, um recorte ou um teste de cor estacionado aí é salvo com o arquivo, mas ao exportar uma prancha apenas o que cai dentro do retângulo dessa prancha é escrito.</p>
+
+  <h3 id="interface-pan-zoom">Deslocar e ampliar</h3>
+  <p>Segure <kbd>Espaço</kbd> para mudar para a ferramenta Mão enquanto a segura, depois arraste para deslocar; solte e a sua ferramenta volta. Arrastar com o botão do meio do rato também desloca. A roda do rato desloca, e a roda com <kbd>⌘</kbd> ou <kbd>⌥</kbd> segurados amplia em torno do cursor.</p>
+  <table>
+    <thead><tr><th>Atalho</th><th>Zoom</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>⌘=</kbd> / <kbd>⌘-</kbd></td><td>Aumentar e diminuir</td></tr>
+      <tr><td><kbd>⌘0</kbd></td><td>Ajustar a prancha ativa na janela</td></tr>
+      <tr><td><kbd>⌥⌘0</kbd></td><td>Ajustar todas as pranchas na janela</td></tr>
+      <tr><td><kbd>⌘1</kbd></td><td>Tamanho real</td></tr>
+    </tbody>
+  </table>
+  <p>Um controlo de zoom fica sobre a tela com botões de menos, mais e ajustar e a percentagem atual; clique na percentagem para abrir os mesmos comandos de ajuste e tamanho real como um menu.</p>
+
+  <h3 id="interface-rulers-guides">Réguas e guias</h3>
+  <p><kbd>⌘R</kbd> mostra e oculta as réguas, que medem nas unidades do documento a partir do canto superior esquerdo da prancha ativa e transportam um marcador que segue o cursor. Arraste de uma régua para puxar uma guia para a arte, e largue uma guia de volta numa régua para se livrar dela. Também pode transformar um caminho selecionado numa guia com Criar Guias (<kbd>⌘5</kbd>) e transformá-lo de volta com Libertar Guias (<kbd>⌥⌘5</kbd>). Mostre ou oculte todas as guias com <kbd>⌘;</kbd>. As Guias Inteligentes (<kbd>⌘U</kbd>) mostram sugestões de alinhamento e medição enquanto desenha e arrasta.</p>
+
+  <h3 id="interface-grid">A grade</h3>
+  <p>A grade é desenhada por prancha e configurada em Ver › Grade ou no painel Grade. Mostre ou oculte-a com <kbd>⌘'</kbd> e ligue o ajuste a ela com <kbd>⇧⌘'</kbd>. Cada prancha pode usar um dos seis tipos de grade: Ortogonal, Isométrica, Hexagonal, Oblíqua, Proporção Áurea e Perspetiva. Escolher um tipo liga a grade para que a possa ver imediatamente. A grade é descrita na íntegra na sua própria página.</p>
+
+  <h3 id="interface-history-strip">A faixa de histórico</h3>
+  <p>Uma coluna de pequenos traços aparece num canto da tela quando aproxima o cursor dela: este é o histórico do documento. Passe o cursor sobre um traço para nomear essa etapa, clique num para saltar diretamente para ela, ou pressione e deslize pelos traços para correr o documento para trás e para a frente, para que possa ver uma mudança ir e vir. O painel Histórico no dock lista as mesmas etapas como texto.</p>
+
+  <h2 id="interface-boards">Pranchas e a faixa de pranchas</h2>
+  <p>As pranchas são o que o Scissor chama de pranchas de arte. Cada uma transporta o seu nome acima do seu canto superior esquerdo, e a prancha ativa é desenhada com uma moldura mais forte do que as restantes. Clique no nome de uma prancha para pegar na ferramenta Prancha com essa prancha ativa, pronta para mover, redimensionar ou renomear. Se uma prancha tem sangria, é mostrada à volta dela como um retângulo tracejado vermelho. Adicione uma em Criar › Pranchas › Nova Prancha, desenhe e remodelhe pranchas com a ferramenta Prancha (<kbd>⇧O</kbd>) e defina o tamanho e nome de uma prancha em Opções de Prancha. Organizar Todas as Pranchas arruma-as numa fileira.</p>
+  <p>Uma faixa de miniaturas de pranchas fica sobre a tela, uma pequena pré-visualização por prancha mais um botão de adicionar no final. Clique numa miniatura para tornar essa prancha ativa e ajustá-la na janela; clique no nome abaixo dela para saltar para essa prancha e pegar na ferramenta Prancha pronta para a editar. O painel Pranchas no dock também as lista.</p>
+
+  <h2 id="interface-tabs">Separadores de documento</h2>
+  <p>Os documentos abertos aparecem como separadores à esquerda da barra de controlo. Um separador mostra o nome do documento, com um ponto à frente enquanto tem alterações não salvas. Clique num separador para mudar para esse documento, ou no × para o fechar; fechar um documento com trabalho não salvo pergunta primeiro. Clique com o botão do meio num separador para o fechar imediatamente, e arraste um separador para outro para reordenar os documentos abertos. Novo (<kbd>⌥⌘N</kbd>), Abrir (<kbd>⌘O</kbd>) e Guardar (<kbd>⌘S</kbd>) estão no menu Ficheiro, e Fechar é <kbd>⌥⌘W</kbd>.</p>
+  <p>Os separadores ficam na parte superior por padrão. Para os ancorar na lateral, ligue <strong>Ver &rsaquo; Separadores de Documento na Lateral</strong> (também em Preferências); a faixa lateral pode ser arrastada mais larga ou mais estreita pela sua borda direita, e a escolha é lembrada.</p>
+
+  <h2 id="interface-status-bar">A barra de status</h2>
+  <p>A linha ao longo da base da janela reporta, da esquerda para a direita: um indicador de prontidão, o nome da ferramenta atual, o tamanho da seleção (nada selecionado, um objeto ou uma contagem) e a ação que <kbd>⌘Z</kbd> desfaria. É um local tranquilo para confirmar o que apanhou e o que o próximo desfazer reverterá.</p>
+
+  <h2 id="interface-dock">O dock de painéis</h2>
+  <p>Os painéis vivem na coluna à direita. Em repouso, a tela tem a janela inteira; pedir um painel desliza o dock sobre a tela, e fechá-lo devolve o espaço imediatamente. O botão de painéis à direita da fileira de separadores e a tecla Escape abrem e fecham o dock; os menus Janela e Área de Trabalho e a paleta de comandos abrem um painel específico.</p>
+  <figure class="shot">
+    <img src="img/editing.png" width="1900" height="1176" loading="lazy"
+         alt="Um documento aberto no Scissor com arte na prancha e os painéis Camadas e Amostras abertos no dock." />
+    <figcaption>Um documento em edição, com os painéis Camadas e Amostras abertos no dock.</figcaption>
+  </figure>
+
+  <h3 id="interface-dock-groups">Os grupos de painéis ancorados</h3>
+  <p>Os painéis estão empilhados em grupos, cada grupo uma coluna de pequenos separadores de ícone ao longo da sua própria borda. Passe o cursor sobre um separador para ver o nome do painel, e o painel aberto nomeia-se acima do seu conteúdo. Por padrão, os grupos reúnem painéis que tendem a ser usados juntos:</p>
+  <ul>
+    <li><strong>Propriedades, Camadas, Pranchas, Grade</strong>: a estrutura do documento.</li>
+    <li><strong>Cor, Amostras, Gradiente, Contorno</strong>: como as coisas são pintadas.</li>
+    <li><strong>Texto, Parágrafo, Glifos</strong>: texto.</li>
+    <li><strong>Alinhar, Combinar Formas, Transformar, Pilha de Pintura, Transparência, 3D</strong>: modelar e organizar.</li>
+    <li><strong>Estilos, Pincéis, Símbolos, Padrões</strong>: aspetos e objetos reutilizáveis.</li>
+    <li><strong>Navegador, Informações, Informações do Documento, Histórico, Ações</strong>: navegar e medir.</li>
+    <li><strong>Recursos, Variáveis, Seleção Automática, Vetorizar, Atributos</strong>: o resto.</li>
+  </ul>
+
+  <h3 id="interface-rearranging">Reorganizar painéis</h3>
+  <p>A disposição é sua para mudar. Arraste um separador ao longo da sua própria faixa para o reordenar, arraste-o para a faixa de outro grupo para o mover para lá, ou arraste-o para fora do dock para o deixar a flutuar sobre a tela. Arraste a parte vazia de uma faixa para levantar um grupo inteiro, e largue-o de volta sobre o dock para o repor; um espaço entre grupos aceita um separador largado como um novo grupo próprio. Clique com o botão direito num separador para os mesmos movimentos por menu, incluindo Fechar Painel. O × no topo de uma faixa fecha esse grupo, e arrastar o divisor entre dois grupos dá altura a um e tira-a ao outro. Um grupo flutuante pode ser redimensionado a partir do seu canto.</p>
+
+  <h3 id="interface-gating">Painéis que esperam por algo para fazer</h3>
+  <p>Um painel que não tem nada para fazer neste momento não desaparece: o seu separador permanece, apenas esmaecido, e o seu corpo mostra uma linha dizendo o que está à espera, como selecionar um objeto ou escolher a ferramenta Texto. Para que o dock não se reorganize debaixo da sua mão, esta espera é retida enquanto o cursor está dentro do dock e atualiza-se quando o cursor sai.</p>
+
+  <h3 id="interface-workspace">Abrir, ocultar e repor painéis</h3>
+  <p>Abra um painel do menu Área de Trabalho, onde os seis mais usados ficam no topo e o resto está em Mais Painéis, ou do menu Janela na interface clássica. Muitos painéis têm um atalho:</p>
+  <table>
+    <thead><tr><th>Painel</th><th>Atalho</th><th>Painel</th><th>Atalho</th></tr></thead>
+    <tbody>
+      <tr><td>Camadas</td><td><kbd>F7</kbd></td><td>Cor</td><td><kbd>F6</kbd></td></tr>
+      <tr><td>Pilha de Pintura</td><td><kbd>⇧F6</kbd></td><td>Informações</td><td><kbd>F8</kbd></td></tr>
+      <tr><td>Alinhar</td><td><kbd>⇧F7</kbd></td><td>Transformar</td><td><kbd>⇧F8</kbd></td></tr>
+      <tr><td>Contorno</td><td><kbd>⌘F10</kbd></td><td>Gradiente</td><td><kbd>⌘F9</kbd></td></tr>
+      <tr><td>Combinar Formas</td><td><kbd>⇧⌘F9</kbd></td><td>Transparência</td><td><kbd>⇧⌘F10</kbd></td></tr>
+      <tr><td>Estilos Gráficos</td><td><kbd>⇧F5</kbd></td><td>Pincéis</td><td><kbd>F5</kbd></td></tr>
+      <tr><td>Atributos</td><td><kbd>⌘F11</kbd></td><td>Símbolos</td><td><kbd>⇧⌘F11</kbd></td></tr>
+      <tr><td>Carácter</td><td><kbd>⌘T</kbd></td><td>Parágrafo</td><td><kbd>⌥⌘T</kbd></td></tr>
+      <tr><td>Glifos</td><td><kbd>⌥⇧F11</kbd></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+  <p>O dock pode ser alargado arrastando a sua borda esquerda, de uma largura confortável de dois campos por fileira até bastante mais larga. A sua disposição e a largura que deixou no dock são lembradas entre sessões. Quando o dock está fechado, passar o cursor até à borda direita da janela espreita-o, desde que não haja arte por baixo do cursor. Para desfazer todas as suas alterações à disposição, escolha Repor Painéis, que repõe cada grupo no seu lugar inicial.</p>
+  <p><kbd>Tab</kbd> oculta a paleta de ferramentas, a barra de controlo, os separadores de documento, a barra de status, os painéis e o resto da interface na tela, deixando apenas a arte e a barra de menu; pressione-o novamente para trazer todos de volta.</p>
+
+  <h2 id="interface-language">Idioma</h2>
+  <p>O Scissor fala inglês, alemão (Deutsch), espanhol (Español), francês (Français), italiano (Italiano), catalão (Català), checo (Čeština), dinamarquês (Dansk), norueguês (Norsk), polaco (Polski), eslovaco (Slovenčina), finlandês (Suomi) e sueco (Svenska). Na primeira vez que o abre, usa o idioma do seu navegador quando é um deles, e inglês caso contrário. Para escolher outro, clique no botão de globo na barra de menu ou no ecrã de boas-vindas, ou abra <strong>Editar › Preferências</strong> (<kbd>&#8984;K</kbd>), vá a <strong>Interface</strong> e escolha um em <strong>Idioma</strong>. O Scissor muda quando recarrega e lembra a escolha. Menus, painéis, caixas de diálogo, dicas de ferramentas, mensagens e Novidades todos o seguem, e os números são mostrados de forma local, como 12,5 em alemão, embora possa digitar vírgula ou ponto. Os seus documentos não são afetados: os nomes das camadas e o texto na sua arte permanecem como os escreveu. Quando a interface não está em inglês, os Termos de Uso são mostrados traduzidos por conveniência, e a versão em inglês é a que se aplica.</p>
+
+  <h2 id="interface-appearance">Claro e escuro</h2>
+  <p>O Scissor segue a configuração do seu sistema para claro e escuro. Para fixar de uma maneira, escolha Ver › Aparência e escolha Sistema, Claro ou Escuro. A escolha é lembrada e estende-se à tela bem como à interface: a prancheta, as réguas e os rótulos das pranchas são todos desenhados para se adequarem ao tema em que está.</p>

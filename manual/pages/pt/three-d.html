@@ -1,0 +1,65 @@
+<p class="lede">3D e Materiais transforma uma forma plana num sólido que pode rodar, iluminar e dar uma superfície, sem nunca deixar a sua arte vetorial para trás. É um efeito ao vivo: o sólido é desenhado a partir do caminho por baixo, e esse caminho permanece totalmente editável, pelo que pode alterar o contorno, a cor ou o texto a qualquer momento e o 3D reconstrói-se à volta dele.</p>
+
+<h2 id="three-d-opening">Abrindo o efeito</h2>
+<p>Selecione primeiro um objeto, depois escolha um tipo de objeto de <strong>Efeito &rsaquo; 3D e Materiais</strong>: <em>Plano</em>, <em>Extrudar e Biselar</em>, <em>Revolver</em> ou <em>Inflar</em>. Cada um adiciona o efeito e abre o painel <strong>3D e Materiais</strong>, onde vivem o resto dos controlos. O mesmo painel abre-se sozinho a partir de <strong>Janela &rsaquo; 3D e Materiais</strong> ou de <strong>Efeito &rsaquo; 3D e Materiais &rsaquo; Painel 3D e Materiais</strong>.</p>
+<p>O painel precisa de algo selecionado antes de poder fazer qualquer coisa; com nada selecionado diz-o e esmaece os seus controlos. Quando um objeto tem o efeito, os quatro botões de tipo de objeto correm ao longo do topo do painel, pelo que pode mudar uma forma de extrusão para revolução com um clique e manter a rotação e iluminação que já definiu.</p>
+<p>Como é um efeito e não uma conversão, pode largá-lo em quase qualquer coisa que um caminho possa conter: uma forma, um grupo, um contorno ou texto ao vivo. Editar a fonte, por exemplo redigitar uma palavra ou ajustar uma âncora, volta a correr o efeito na arte nova.</p>
+
+<h2 id="three-d-types">Os quatro tipos de objeto</h2>
+<p>O tipo de objeto decide como a forma plana é lida como um sólido. Escolha aquele que corresponde à forma que procura.</p>
+
+<h3 id="three-d-plane">Plano</h3>
+<p>Plano deixa a arte plana e coloca-a como um cartão no espaço 3D, pelo que tudo o que faz é permitir rodar e inclinar. Não há profundidade para definir. Use-o quando quer um pedaço de arte plana a ficar num ângulo, como uma etiqueta inclinada numa superfície ou um emblema inclinado para apanhar a luz, sem lhe dar espessura.</p>
+
+<h3 id="three-d-extrude">Extrudar e Biselar</h3>
+<p>Extrudar empurra a forma diretamente para trás para lhe dar espessura, transformando um contorno num bloco sólido. Um bisel arredonda ou corta as bordas dianteiras e traseiras para que não fiquem afiadas. Buracos são mantidos: um caminho composto como um anel ou uma letra com contra permanece oco até ao fim. É o tipo a usar para texto, logótipos, ícones e emblemas que devem ler-se como elevados ou esculpidos.</p>
+<figure class="shot">
+  <img src="img/3d-extrude.gif" width="620" height="620" loading="lazy" alt="Uma estrela vetorial plana a ser extrudada numa estrela tridimensional e rodada para mostrar a sua profundidade." />
+  <figcaption>Extrudar e Biselar constrói profundidade a partir de uma forma plana, ao vivo. A estrela permanece um caminho editável por baixo.</figcaption>
+</figure>
+
+<h3 id="three-d-revolve">Revolver</h3>
+<p>Revolver varre a forma à volta da sua borda esquerda, da mesma forma que um perfil girado num torno traça um sólido. Desenhe metade de um objeto simétrico, um copo, uma garrafa, uma tigela, uma peça de xadrez, e revolva-o até ao redondo. O ângulo de varrimento pode ser menos do que uma volta completa para deixar um corte que mostra o interior.</p>
+
+<h3 id="three-d-inflate">Inflar</h3>
+<p>Inflar enche a forma para fora, como se fosse uma almofada cheia de ar, dando-lhe uma face suave e arredondada em vez de plana. Use-o para botões suaves, emblemas acolchoados, doces e autocolantes arredondados onde quer inchaço em vez de uma borda extrudada dura.</p>
+
+<h2 id="three-d-shape">Profundidade, bisel e passos</h2>
+<p>A secção <em>Objeto</em> contém os campos que moldam o sólido. Quais aparecem depende do tipo de objeto, pelo que o painel apenas mostra os campos que fazem algo para o tipo em mãos.</p>
+<table>
+  <thead><tr><th>Campo</th><th>Mostrado para</th><th>O que define</th></tr></thead>
+  <tbody>
+    <tr><td>Profundidade</td><td>Extrudar e Biselar, Inflar</td><td>Até onde a forma é empurrada para trás, ou o quanto incha, em pixels.</td></tr>
+    <tr><td>Bisel</td><td>Extrudar e Biselar</td><td>O tamanho da borda arredondada ou cortada na frente e atrás, em pixels; deixe-o em zero para uma borda quadrada simples.</td></tr>
+    <tr><td>Ângulo</td><td>Revolver</td><td>Até onde o perfil é varrido, até uma volta completa de 360&deg;. Um ângulo menor deixa o objeto aberto, mostrando o seu interior.</td></tr>
+    <tr><td>Passos</td><td>Extrudar e Biselar, Revolver, Inflar</td><td>Quantos segmentos constroem as partes curvas. Mais passos dão uma superfície mais suave; menos deixam-na facetada.</td></tr>
+  </tbody>
+</table>
+<p>Plano não tem nenhum destes: não tem espessura para descrever. Se uma revolução curva ou um bisel arredondado parecer demasiado angular, aumente os passos; se quiser deliberadamente um aspeto de baixo polígono e facetado, diminua-os.</p>
+
+<h2 id="three-d-rotation">Rodando o objeto</h2>
+<p>A secção <em>Rotação</em> define como o objeto fica virado para si. A maneira mais rápida é a placa de pré-visualização: arraste através dela para rodar o objeto para a esquerda e direita, e arraste para cima e para baixo para o inclinar para frente e para trás. Para ângulos exatos, os campos <em>X</em>, <em>Y</em> e <em>Z</em> rodam o objeto à volta de cada eixo, cada um de -180&deg; a 180&deg;.</p>
+<p>O menu de rotação contém pontos de vista prontos, pelo que pode largar o objeto diretamente numa vista padrão em vez de a marcar:</p>
+<dl>
+  <dt>Fora do Eixo Frente, Trás, Esquerda, Direita, Topo, Base</dt><dd>Vistas de três quartos que mostram uma face principal junto com um pouco do topo ou lado. Uma boa predefinição para um sólido que deve parecer um sólido.</dd>
+  <dt>Isométrico Esquerda, Direita, Topo, Base</dt><dd>Vistas isométricas verdadeiras, onde os três eixos são encurtados igualmente e as linhas permanecem paralelas. Adequa-se a arte técnica e estilo jogo que tem de se alinhar.</dd>
+  <dt>Frente, Trás, Esquerda, Direita, Topo, Base</dt><dd>As seis vistas frontais, olhando diretamente para uma face. Útil para verificar a forma ou para uma apresentação plana e frontal.</dd>
+</dl>
+<p>Escolher uma predefinição preenche os campos X, Y e Z; alterar qualquer um deles manualmente mostra o menu como <em>Rotação Personalizada</em>. O campo <em>Perspetiva</em>, de 0&deg; a 160&deg;, controla quão fortemente o objeto se afasta: em zero os lados permanecem paralelos, e à medida que o aumenta as bordas distantes puxam para um ponto de fuga, da mesma forma que um objeto real visto de perto parece afunilar. Adicione um pouco de perspetiva para uma vista de três quartos realista, ou deixe-a em zero para manter uma configuração isométrica ou frontal exata.</p>
+
+<h2 id="three-d-lighting">Iluminação</h2>
+<p>A secção <em>Iluminação</em> decide de onde vem a luz e quão forte é, o que é o que faz a superfície ler-se como elevada, esculpida ou arredondada. Um menu de iluminação oferece quatro pontos de partida, <em>Padrão</em>, <em>Difuso</em>, <em>Topo Esquerdo</em> e <em>Direita</em>, e qualquer alteração aos campos abaixo mostra-o como <em>Iluminação Personalizada</em>.</p>
+<dl>
+  <dt>Intensidade</dt><dd>A força da luz principal, como percentagem. Maior torna as faces iluminadas mais brilhantes e os destaques mais fortes.</dd>
+  <dt>Ambiente</dt><dd>Uma luz de preenchimento que levanta o objeto inteiro, como percentagem, para que as faces sombreadas não caiam para preto. Aumente-a para um aspeto mais suave e uniforme; diminua-a para um contraste mais profundo.</dd>
+  <dt>Rotação</dt><dd>Onde a luz fica à volta do objeto, de -180&deg; a 180&deg;, o que move o destaque e a sombra para o outro lado.</dd>
+  <dt>Altura</dt><dd>Quão alta a luz está acima do objeto, de 0&deg; (ao nível dele, para sombras longas e rasantes) a 90&deg; (diretamente acima, para luz uniforme).</dd>
+</dl>
+<p><em>Difuso</em> dá um acabamento suave e de baixo contraste; <em>Topo Esquerdo</em> e <em>Direita</em> projetam a luz de um lado para um aspeto mais dramático e esculpido. Comece pela predefinição mais próxima, depois ajuste os quatro campos a gosto.</p>
+
+<h2 id="three-d-materials">Materiais</h2>
+<p>Três botões de material definem como a superfície capta a luz: <em>Plástico</em>, <em>Fosco</em> e <em>Metal</em>. Plástico dá um brilho suave com um destaque claro, a escolha habitual para um aspeto amigável e moldado. Fosco remove o brilho para um acabamento plano e uniforme, que se lê como papel, argila ou uma superfície impressa. Metal dá um brilho mais duro e de maior contraste, para cromo, ouro e outros metais polidos. O material funciona em conjunto com a iluminação, pelo que uma alteração a um vale a pena verificar contra o outro.</p>
+
+<h2 id="three-d-expand">Mantendo ao vivo e expandindo</h2>
+<p>Tudo acima é armazenado como um único efeito ao vivo no objeto, listado no painel <strong>Aparência</strong> (<kbd>&#8679;F6</kbd>) com um distintivo <em>fx</em> acima dos preenchimentos e contornos do objeto. Clique nessa entrada para reabrir o painel 3D e Materiais, ou removê-la aí para voltar o objeto a plano. Dentro do painel, <em>Remover 3D</em> tira o efeito da seleção.</p>
+<p>Enquanto o efeito está ao vivo a arte por baixo permanece um caminho comum e editável, o que lhe permite continuar a ajustar a forma, a cor e o texto. Quando o aspeto estiver decidido e quiser o resultado como arte vetorial comum, por exemplo para editar as faces individuais ou para entregar o arquivo, use <em>Expandir como Vetor</em> no painel (o mesmo que <strong>Objeto &rsaquo; Expandir Aparência</strong>). Isso coze o sólido em caminhos e termina a sua vida como efeito, por isso expanda uma cópia se ainda pode querer alterar a profundidade ou o ângulo mais tarde.</p>

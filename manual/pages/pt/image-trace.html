@@ -1,0 +1,100 @@
+<p class="lede">Vetorizar transforma uma imagem em caminhos vetoriais: um logótipo digitalizado de papel, um esboço a lápis ou uma fotografia torna-se um conjunto de formas preenchidas que pode dimensionar, recolorir e editar como qualquer outra coisa que desenhe. Esta página cobre o que pode traçar, o painel que o corre, os três modos e as suas predefinições, cada opção, e como manter ou descartar o resultado.</p>
+
+<h2 id="image-trace-what">O que a traçado faz e o que pode traçar</h2>
+<p>Uma imagem é feita de pixels: desfoca-se quando a amplia e não pode ser remodelada ponto a ponto. O traçado lê esses pixels e desenha caminhos vetoriais que seguem as formas que encontra, para que o resultado permaneça nítido em qualquer tamanho e possa ser editado, recolorido e combinado com o resto da sua arte.</p>
+<p>Traça uma <strong>camada de pixels</strong>: uma imagem que colou ou colou, uma imagem aberta como a sua própria prancha, ou uma camada que pintou você mesmo. Traga uma imagem com <strong>Ficheiro &gt; Colocar&hellip;</strong> (<kbd>&#8679;&#8984;P</kbd>) - chega como uma camada de pixels - selecione-a, depois corra o traçado. (Arte vetorial já é feita de caminhos, pelo que não há nada para traçar; o traçado lê pixels.)</p>
+<p>O traçado não deita a imagem fora. Constrói um grupo chamado <strong>Vetorizar</strong> que contém a imagem original (agora oculta) junto com os novos caminhos, ficando exatamente por cima dela. Como o grupo lembra as configurações com que foi feito, o resultado permanece ao vivo: selecione-o novamente, altere uma configuração e ele re-traça. Quando estiver satisfeito <strong>Expanda</strong>-o para manter apenas os caminhos, ou <strong>Liberte</strong>-o para voltar à imagem simples.</p>
+
+<h2 id="image-trace-panel">O painel Vetorizar</h2>
+<p>Cada configuração vive no painel Vetorizar. Abra-o a partir de <strong>Objeto &gt; Vetorizar &gt; Painel Vetorizar</strong>, ou do seu separador no dock de painéis. O painel precisa de uma imagem selecionada antes de poder fazer qualquer coisa: com nada adequado escolhido, o botão Traçar está desativado e o painel pede-lhe para selecionar uma imagem colocada.</p>
+
+<h3 id="image-trace-run">Correndo um traçado</h3>
+<p>Selecione uma imagem, escolha uma predefinição ou defina o modo e as opções à mão, e pressione <strong>Traçar</strong>. Uma linha na base do painel reporta o progresso, lendo <em>A traçar&hellip;</em> enquanto trabalha e <em>Traçado. Expanda para manter apenas os caminhos.</em> quando termina. Se a imagem não contém nada de que uma forma possa ser feita, ou não pode ser lida, o painel diz-lhe isso e deixa a imagem intacta.</p>
+
+<h3 id="image-trace-preview">Pré-visualizando à medida que avança</h3>
+<p>A caixa <strong>Traçar ao alterar configurações</strong>, ligada por padrão, re-traça no momento em que altera o modo, uma predefinição, um número ou uma caixa, para que possa julgar cada ajuste contra a imagem imediatamente. Numa imagem grande ou ocupada o redesenho leva um momento, por isso desligue-o se preferir definir várias opções primeiro e pressionar <strong>Traçar</strong> uma vez. Quando reseleciona um traçado existente, o painel carrega as configurações exatas com que foi feito, prontas para serem ajustadas e traçadas novamente.</p>
+
+<h3 id="image-trace-menu">Os comandos do menu Objeto</h3>
+<p>As mesmas ações ficam sob <strong>Objeto &gt; Vetorizar</strong>, o que é útil quando o painel está fechado.</p>
+<table>
+  <thead><tr><th>Comando</th><th>O que faz</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Criar</strong></td><td>Traça a imagem selecionada com as configurações atuais, deixando o resultado ao vivo.</td></tr>
+    <tr><td><strong>Criar e Expandir</strong></td><td>Traça e expande de uma só vez, para que vá direto aos caminhos editáveis.</td></tr>
+    <tr><td><strong>Expandir</strong></td><td>Mantém os caminhos e deita fora a imagem (veja abaixo).</td></tr>
+    <tr><td><strong>Libertar</strong></td><td>Descarta os caminhos e volta à imagem (veja abaixo).</td></tr>
+    <tr><td><strong>Painel Vetorizar</strong></td><td>Traz o painel para a frente.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="image-trace-modes">Os três modos</h2>
+<p>O modo decide como a imagem é reduzida antes de ser desenhada. É a primeira escolha a fazer, pois governa qual das opções abaixo se aplica.</p>
+<table>
+  <thead><tr><th>Modo</th><th>Como reduz a imagem</th><th>A opção que usa</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Preto e Branco</strong></td><td>Divide tudo em dois tons, tinta e papel, numa claridade que define.</td><td>Limiar</td></tr>
+    <tr><th>Escala de Cinzentos</th><td>Reduz a imagem a um número definido de níveis de cinzento uniformes de preto a branco.</td><td>Número de cores (como níveis de cinzento)</td></tr>
+    <tr><td><strong>Cor</strong></td><td>Escolhe uma paleta das cores mais expressivas na imagem e mapeia cada pixel para a mais próxima.</td><td>Número de cores</td></tr>
+  </tbody>
+</table>
+<p>Qualquer que seja o modo que escolha, uma forma preenchida é feita por tom ou cor, e as formas são empilhadas da maior primeiro para que detalhes menores fiquem por cima. Partes totalmente transparentes da imagem são deixadas de fora, pelo que um recorte num fundo transparente traça apenas o seu assunto.</p>
+
+<h2 id="image-trace-presets">Predefinições</h2>
+<p>Uma predefinição é um ponto de partida nomeado que define o modo e todas as opções de uma vez. Escolha uma do menu no topo do painel e, com a pré-visualização ligada, a imagem traça-se imediatamente; trate o resultado como uma base e ajuste a partir daí. No momento em que alterar qualquer opção individual o menu de predefinição muda para <strong>Personalizado</strong>, pois as configurações já não correspondem à predefinição.</p>
+<table>
+  <thead><tr><th>Predefinição</th><th>Modo</th><th>Use-a quando</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Alta Fidelidade de Foto</strong></td><td>Cor</td><td>Quer uma fotografia mantida perto do original, com muitas cores.</td></tr>
+    <tr><td><strong>Baixa Fidelidade de Foto</strong></td><td>Cor</td><td>Uma fotografia deve ler-se como algumas áreas amplas e planas de cor.</td></tr>
+    <tr><td><strong>3 Cores</strong></td><td>Cor</td><td>Quer um resultado arrojado, estilo póster, a partir de três cores planas.</td></tr>
+    <tr><td><strong>6 Cores</strong></td><td>Cor</td><td>Um aspeto plano e ilustrado com uma paleta pequena e arrumada.</td></tr>
+    <tr><td><strong>16 Cores</strong></td><td>Cor</td><td>Mais gama de cores do que as predefinições planas, sem chegar a uma foto completa.</td></tr>
+    <tr><td><strong>Tons de Cinzento</strong></td><td>Escala de Cinzentos</td><td>Uma imagem tonal deve manter o seu sombreamento mas perder a cor.</td></tr>
+    <tr><td><strong>Logótipo Preto e Branco</strong></td><td>Preto e Branco</td><td>Transformar uma marca ou logótipo de dois tons limpo em formas nítidas.</td></tr>
+    <tr><td><strong>Arte Esboçada</strong></td><td>Preto e Branco</td><td>Capturar um esboço a lápis ou tinta com as suas linhas mais soltas.</td></tr>
+    <tr><td><strong>Silhuetas</strong></td><td>Preto e Branco</td><td>Quer silhuetas sólidas e preenchidas em vez de linhas finas.</td></tr>
+    <tr><td><strong>Arte de Linha</strong></td><td>Preto e Branco</td><td>Um desenho de linha fina onde traços finos devem sobreviver.</td></tr>
+    <tr><td><strong>Desenho Técnico</strong></td><td>Preto e Branco</td><td>Trabalho de linha nítido e fiel com o máximo de detalhe possível mantido.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="image-trace-options">As opções</h2>
+<p>Abaixo do modo ficam os controlos que moldam o resultado. Quais são mostrados depende do modo: Limiar aparece apenas para Preto e Branco, enquanto o número de cores aparece para Escala de Cinzentos e Cor.</p>
+<dl>
+  <dt>Número de cores</dt>
+  <dd>Quantas cores (no modo Cor) ou níveis de cinzento (na Escala de Cinzentos) a imagem é reduzida, de 2 a 64. Menos dá um resultado mais plano e gráfico com menos formas; mais mantém a imagem mais perto do original à custa de mais caminhos. O modo Preto e Branco ignora isto, pois tem sempre dois tons.</dd>
+  <dt>Limiar</dt>
+  <dd>Apenas para Preto e Branco: a claridade, de 0 a 255, onde a imagem se divide em tinta e papel. Tudo mais escuro que o limiar torna-se a forma desenhada; tudo mais claro é tratado como fundo. Aumente-o para puxar mais dos meios tons para a forma para um resultado mais pesado, diminua-o para manter apenas as marcas mais escuras. Use-o para ajustar quanto de um esboço ténue é capturado.</dd>
+  <dt>Caminhos</dt>
+  <dd>Quão perto os caminhos seguem os pixels, numa escala de 0 a 100. Valores altos abraçam as bordas apertadamente e mantêm tremores finos, com mais pontos de âncora; valores baixos relaxam o ajuste para caminhos mais suaves e simples que são mais leves de editar. Use um valor alto quando a precisão importa e um baixo quando quer um contorno limpo e arrumado.</dd>
+  <dt>Cantos</dt>
+  <dd>Quão prontamente uma virada no contorno se torna um canto afiado em vez de uma curva suave, de 0 a 100. Aumente-o para arte com ângulos nítidos, como um logótipo ou texto; diminua-o para formas orgânicas que devem permanecer arredondadas.</dd>
+  <dt>Ruído</dt>
+  <dd>O menor pedaço, em pixels, que pode tornar-se a sua própria forma. Tudo mais pequeno é absorvido pelo que o rodeia. Aumente-o para limpar manchas e grão de uma digitalização ou fotografia para que pontos perdidos não se transformem cada um num caminho; diminua-o para manter detalhes finos genuínos.</dd>
+  <dt>Ignorar Branco</dt>
+  <dd>Deixa de fora qualquer forma que fique quase branca, para que o papel ou fundo não seja desenhado e permaneça transparente atrás dos traços. Ligado por padrão e mostrado para o modo Preto e Branco. Desligue-o quando uma área branca faz parte da arte e precisa de ser uma forma preenchida real.</dd>
+  <dt>Preenchimentos</dt>
+  <dd>Dá a cada forma traçada um preenchimento sólido na cor em que foi traçada. Esta é a escolha habitual e está ligada por padrão.</dd>
+  <dt>Contornos</dt>
+  <dd>Contorna cada forma traçada com um contorno na sua própria cor em vez de, ou bem como, um preenchimento. Desligado por padrão. Se desligar tanto Preenchimentos como Contornos os caminhos ainda são criados mas nada os pinta, por isso deixe pelo menos um ligado.</dd>
+</dl>
+
+<h2 id="image-trace-finish">Manter ou reverter o resultado</h2>
+<p>Um traçado fresco está ao vivo: os caminhos ficam por cima do original oculto dentro do grupo Vetorizar, e pode continuar a ajustar as configurações. Dois comandos terminam esse estado, ambos no painel como botões e sob <strong>Objeto &gt; Vetorizar</strong>. Tornam-se disponíveis assim que um traçado é selecionado.</p>
+<dl>
+  <dt>Expandir</dt>
+  <dd>Mantém os caminhos e remove a imagem, para que o grupo se torne arte vetorial comum. As configurações deixam de se aplicar e não podem ser alteradas, mas cada caminho é agora uma forma comum que pode remodelar, recolorir, combinar e organizar. Use-o quando o traçado parecer certo e quiser trabalhar nos vetores. <strong>Criar e Expandir</strong> faz o traçado e este passo juntos.</dd>
+  <dt>Libertar</dt>
+  <dd>Descarta os caminhos traçados e restaura a imagem original, visível de volta no seu lugar antigo. Use-o para abandonar um traçado e recomeçar, ou quando afinal só precisava da imagem.</dd>
+</dl>
+
+<h2 id="image-trace-uses">Logótipos, esboços e fotografias</h2>
+<p>Os três pontos de partida comuns pedem configurações diferentes.</p>
+<dl>
+  <dt>Um logótipo ou marca limpa</dt>
+  <dd>Comece de <strong>Logótipo Preto e Branco</strong>. Mantenha <strong>Ignorar Branco</strong> ligado para que o papel caia, aumente <strong>Cantos</strong> para ângulos nítidos e <strong>Caminhos</strong> para bordas fiéis, e ajuste <strong>Limiar</strong> até a marca ficar sólida sem preencher. Expanda, depois defina a sua própria cor de preenchimento.</dd>
+  <dt>Um esboço a lápis ou tinta</dt>
+  <dd>Experimente <strong>Arte Esboçada</strong> ou <strong>Arte de Linha</strong>. Diminua o <strong>Limiar</strong> para manter apenas as linhas desenhadas e deixar o papel cair, e aumente o <strong>Ruído</strong> um pouco para limpar o grão do papel. Arte de Linha mantém traços mais finos; Arte Esboçada adequa-se a uma mão mais solta.</dd>
+  <dt>Uma fotografia</dt>
+  <dd>Use o modo Cor com <strong>Alta Fidelidade de Foto</strong> para uma semelhança próxima ou <strong>Baixa Fidelidade de Foto</strong> para um aspeto mais plano e ilustrado, e defina o <strong>número de cores</strong> a gosto. Deixe <strong>Ignorar Branco</strong> desligado para que áreas claras permaneçam. Mais cores significam mais formas, pelo que um traçado pesado de fotografia pode ser grande: reduza as cores se o resultado parecer incontrolável.</dd>
+</dl>

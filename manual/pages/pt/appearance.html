@@ -1,0 +1,134 @@
+<p class="lede">A aparência de uma forma é a sua <em>aparência</em>: o preenchimento dentro do seu contorno, o contorno desenhado ao longo dele, e a opacidade e mistura que decidem como se coloca sobre o que está atrás. Cada um desses pode ser uma cor plana, um gradiente ou um padrão, e um objeto pode transportar mais de um de cada de uma vez. Esta página cobre os controlos de pintura, os modelos de cor, amostras, gradientes, contornos, transparência, o painel Pilha de Pintura e estilos gráficos.</p>
+
+<p>Os atalhos abaixo estão escritos no formato macOS. No Windows, leia <kbd>&#8984;</kbd> como Ctrl, <kbd>&#8997;</kbd> como Alt e <kbd>&#8679;</kbd> como Shift.</p>
+
+<figure class="shot">
+  <img src="img/artwork-landscape.png" width="1700" height="967" loading="lazy"
+       alt="Uma paisagem vetorial de montanhas, céu e um lago, construída a partir de formas com preenchimento plano no Scissor." />
+  <figcaption>Cena inteira construída a partir de formas preenchidas. Cada faixa de cor é um caminho com o seu próprio preenchimento.</figcaption>
+</figure>
+
+<h2 id="appearance-fill-and-stroke">Preenchimentos e contornos</h2>
+<p>Um caminho, forma ou pedaço de texto pode conter um <strong>preenchimento</strong>, a tinta dentro do seu contorno, e um <strong>contorno</strong>, a linha desenhada ao longo desse contorno. Um preenchimento pode ser uma cor sólida, um gradiente ou um padrão; um contorno pode ser uma cor sólida ou um gradiente, com a sua própria espessura e tracejado. Qualquer dos lados também pode ser definido como nenhum, pelo que pode desenhar uma forma apenas com contorno ou apenas com preenchimento.</p>
+
+<h3 id="appearance-the-paint-chips">Os chips de preenchimento e contorno</h3>
+<p>Dois chips sobrepostos na base da barra de ferramentas guardam o preenchimento e o contorno. Clique em qualquer um para abrir um seletor de cor; o que está à frente é o lado sobre o qual as teclas e os painéis Cor, Amostras e Gradiente atuam. Pressione <kbd>X</kbd> para trazer o outro lado para a frente, <kbd>&#8679;X</kbd> para trocar as duas cores, <kbd>/</kbd> para definir o lado da frente como nenhum, e <kbd>D</kbd> para voltar aos padrões: preenchimento branco, contorno preto e espessura de 1 pt. O mesmo preenchimento, contorno, espessura, opacidade e modo de mistura também estão juntos no painel Propriedades, o que é útil quando os quer todos num só lugar.</p>
+<p>Com nada selecionado, estes controlos definem o estilo que o próximo objeto que desenhar assumirá, pelo que pode escolher uma cor antes de desenhar em vez de depois.</p>
+
+<h3 id="appearance-eyedropper">Copiando pintura com o Conta-gotas</h3>
+<p>O Conta-gotas (<kbd>I</kbd>) copia uma aparência inteira do objeto em que clica para a seleção. Segure <kbd>&#8679;</kbd> para levar apenas a sua cor de preenchimento ou contorno para o lado ativo, ou <kbd>&#8997;</kbd> para empurrar a aparência da seleção para o objeto sob o cursor. Clicar numa imagem colocada ou camada de pixels amostra a cor sob o cursor para o lado ativo, pelo que pode levantar uma cor diretamente de uma foto. Use o Conta-gotas quando dois objetos devem corresponder: amostre um, e o outro assume a mesma pintura com um único clique.</p>
+
+<h2 id="appearance-colour">Cor</h2>
+<p>A cor é escolhida no pequeno seletor pop-up em cada chip, ou, com mais controlo, no painel Cor.</p>
+
+<h3 id="appearance-color-panel">O painel Cor</h3>
+<p>O painel <strong>Cor</strong> (<kbd>F6</kbd>) mostra a pintura do lado ativo como um conjunto de controlos deslizantes, um campo hexadecimal e um espectro. Chips de preenchimento e contorno no topo escolhem qual o lado que está a editar. O espectro corre os matizes ao longo, branco no topo e preto na base; clique ou arraste nele para escolher. Três amostras rápidas ao lado definem Nenhum, Branco e Preto com um clique, e os botões <em>Inverter</em> e <em>Complementar</em> refazem a cor atual (Complementar vira o seu matize a meio caminho mantendo a sua saturação e brilho).</p>
+<p>O menu de modelo de cor define quais os controlos deslizantes que o painel mostra. A escolha é mantida para a sessão, e novas amostras são feitas nela.</p>
+<dl>
+  <dt>Escala de Cinzentos</dt><dd>Um único controlo deslizante K, de branco a 0% a preto a 100%.</dd>
+  <dt>RGB</dt><dd>Vermelho, verde e azul de 0 a 255, o modelo para trabalho de ecrã.</dd>
+  <dt>HSB</dt><dd>Matiz em graus, depois saturação e brilho como percentagens: frequentemente a maneira mais rápida de ajustar uma cor sem perder o seu carácter.</dd>
+  <dt>CMYK</dt><dd>Ciano, magenta, amarelo e preto como percentagens, para impressão.</dd>
+  <dt>RGB Seguro para Web</dt><dd>RGB ajustado às 216 cores seguras para web. Quando a cor atual não é uma delas, aparece um triângulo de aviso; clique nele para ajustar à cor segura para web mais próxima.</dd>
+</dl>
+<p>Quando o lado ativo é pintado com uma amostra global, uma fileira de tonalidades aparece acima dos controlos deslizantes: nomeia a amostra e permite definir uma tonalidade de 0% a 100% em vez de editar a cor diretamente, para que a arte permaneça ligada à amostra.</p>
+
+<h2 id="appearance-swatches">Amostras e grupos de cor</h2>
+<p>Uma amostra é uma cor nomeada guardada com o documento. Pintar a partir de amostras em vez de digitar valores mantém uma paleta consistente e, para amostras globais, permite recolorir um documento inteiro editando uma cor.</p>
+
+<h3 id="appearance-swatches-panel">O painel Amostras</h3>
+<p>O painel <strong>Amostras</strong> (abra em <strong>Janela &rsaquo; Amostras</strong>) lista as amostras do documento como uma grelha ou como uma lista; a vista de lista também mostra o modelo de cor de cada amostra. Um clique simples pinta o lado ativo. <kbd>&#8679;</kbd>-clique escolhe uma série de amostras e <kbd>&#8984;</kbd>-clique adiciona ou remove uma da seleção, pelo que pode atuar em várias de uma vez. O rodapé contém botões para alternar a vista, abrir o menu do painel, mostrar opções de amostra, criar um grupo de cor, criar uma nova amostra e eliminar o que está escolhido.</p>
+<p>O menu do painel adiciona mais: <em>Adicionar Cores Usadas</em> e <em>Adicionar Cores Selecionadas</em> transformam as cores já no documento, ou apenas na seleção, em amostras; <em>Selecionar Todas as Não Usadas</em> escolhe todas as amostras com que nada está pintado, prontas para eliminar; e <em>Remapear Cores&#8230;</em> abre a caixa de diálogo de recoloração descrita abaixo.</p>
+
+<h3 id="appearance-process-spot-global">Amostras de processo, spot e globais</h3>
+<p>Clique duas vezes numa amostra para Opções de Amostra, onde define que tipo de cor é.</p>
+<dl>
+  <dt>Processo</dt><dd>Uma cor comum, misturada para o trabalho. Uma amostra de processo simples é apenas uma cor guardada: editá-la não toca arte já pintada com ela.</dd>
+  <dt>Global</dt><dd>Uma amostra de processo marcada como Global mantém a arte ligada a ela, pelo que recolorir a amostra repinta tudo o que está pintado com ela de uma vez. Amostras globais podem ser aplicadas como tonalidade.</dd>
+  <dt>Spot</dt><dd>Uma tinta nomeada, destinada a imprimir na sua própria chapa. Cores spot são sempre globais.</dd>
+</dl>
+<p>Cada documento também começa com uma amostra fixa <strong>[Registo]</strong>, que não tem tipo de cor próprio e não pode ser eliminada nem arrastada. Use uma amostra global ou spot quando uma cor aparece muitas vezes e pode mudar: uma edição atualiza todos os objetos, em vez de os caçar à mão.</p>
+
+<h3 id="appearance-colour-groups">Grupos de cor</h3>
+<p>Grupos de cor arquivam amostras relacionadas, como uma família de tonalidades ou a paleta de um projeto. Arraste amostras para um grupo para as arquivar, ou selecione algumas e faça um grupo a partir delas com o botão Novo Grupo de Cor do painel. Clique duas vezes no cabeçalho de um grupo para as suas opções. No seletor de cor em cada chip, cada grupo mostra-se como uma fileira, para que uma família se leia como uma rampa de tonalidades em vez de uma parede de chips.</p>
+
+<h2 id="appearance-gradients">Gradientes</h2>
+<p>Um gradiente mistura entre duas ou mais cores. O Scissor faz gradientes lineares, radiais e livres, e tanto o painel como a ferramenta na tela podem construí-los e moldá-los. Use um gradiente para dar profundidade a uma forma plana, um fundo uma lavagem suave, ou um botão um brilho.</p>
+
+<h3 id="appearance-gradient-panel">O painel Gradiente</h3>
+<p>O painel <strong>Gradiente</strong> (<kbd>&#8984;F9</kbd>) controla todo o gradiente. Clique na miniatura para preencher o lado ativo, escolha Linear, Radial ou Livre no menu de tipo e use o botão de inverter para virar a rampa de ponta a ponta. A própria rampa transporta as paradas: clique nela para adicionar uma parada na cor que já tem aí, arraste uma parada para a mover, e arraste um losango entre duas paradas para deslocar onde as duas cores se encontram. A parada selecionada tem a sua própria amostra de cor, um campo <em>Opacidade</em> e um campo <em>Localização</em>, e <em>Eliminar Parada</em> remove-a. <em>Ângulo</em> roda um gradiente linear ou radial, e <em>Proporção</em> (apenas radial) esmaga um gradiente radial numa elipse.</p>
+<figure class="shot">
+  <img src="img/gradient.gif" width="340" height="340" loading="lazy"
+       alt="Um quadrado arredondado preenchido com um gradiente linear de azul a âmbar cuja direção gira." />
+  <figcaption>Um gradiente linear de azul a âmbar. Arrastar o eixo do gradiente ou alterar o seu ângulo gira a mistura à volta da forma.</figcaption>
+</figure>
+
+<h3 id="appearance-gradient-tool">A ferramenta Gradiente</h3>
+<p>Com a ferramenta Gradiente (<kbd>G</kbd>) os mesmos controlos ficam na arte. Arraste através de um objeto para colocar o eixo, segurando <kbd>&#8679;</kbd> para o segurar em passos de 45&deg;. O eixo mostra uma pega redonda no início e uma pega quadrada no fim; arraste qualquer uma para mover essa ponta. Clique no eixo para adicionar uma parada na cor que já tem aí, arraste uma parada ao longo dele, e puxe uma parada bem para longe do eixo para a deitar fora. Arraste um losango para mover o ponto médio. <kbd>Delete</kbd> remove a última parada tocada.</p>
+
+<h3 id="appearance-freeform">Gradientes livres</h3>
+<p>Um gradiente livre coloca pontos de cor em qualquer lugar da forma em vez de ao longo de um eixo, pelo que a mistura pode seguir a forma da arte. Com a ferramenta Gradiente, clique na arte para colocar um ponto de cor, arraste um para o mover, e pressione <kbd>Delete</kbd> para o remover. Marque <em>Ligar os pontos em linhas</em> no painel para ligar os pontos em linhas, que espalham uma cor ao longo de uma sequência em vez de a partir de um único ponto. Use um gradiente livre para sombreamento suave e orgânico que uma rampa reta não consegue dar.</p>
+
+<h2 id="appearance-patterns">Padrões</h2>
+<p>Um padrão é arte repetida como um ladrilho e usada como preenchimento. Transforme seleção num ladrilho com <strong>Objeto &rsaquo; Padrão &rsaquo; Criar</strong>, depois preencha qualquer forma com ele a partir do painel <strong>Padrões</strong>: clique num ladrilho para preencher, clique duas vezes para editar, e <kbd>&#8997;</kbd>-clique para eliminar. <em>Opções de Ladrilho</em> define o tipo de ladrilho, o deslocamento de tijolo, o tamanho e o espaçamento, e se o ladrilho dimensiona e move-se com a arte. <strong>Editar Padrão</strong> abre o ladrilho no local com as suas repetições à volta enquanto trabalha; clique <em>Concluir Edição</em> no painel Padrões quando o ladrilho estiver certo. Padrões adequam-se a texturas repetidas, como riscas, pontos, tecidos e fundos, que seriam tediosos de desenhar à mão.</p>
+
+<h2 id="appearance-strokes">Contornos</h2>
+<p>O painel <strong>Contorno</strong> (<kbd>&#8984;F10</kbd>) molda a linha desenhada ao longo de um caminho.</p>
+
+<h3 id="appearance-stroke-options">Espessura, terminações, junções e alinhamento</h3>
+<p><em>Espessura</em> define a espessura do contorno em pontos. Os botões de <em>Terminação</em> decidem como um caminho aberto termina: chanfrado (cortado na âncora), redondo, ou projetante (quadrado, mas estendendo-se para além da âncora por metade da espessura). Os botões de <em>Canto</em> decidem como um contorno vira um canto: mitra (um ponto afiado), redondo, ou biselado (um corte plano), com um <em>Limite</em> de mitra que bisela os pontos mais afiados para que não saiam disparados. <em>Alinhamento</em> coloca o contorno no centro do caminho, ou inteiramente dentro ou fora dele, o que importa quando uma forma tem de encaixar exatamente com os seus vizinhos.</p>
+
+<h3 id="appearance-dashes">Linhas tracejadas</h3>
+<p>Marque <em>Linha Tracejada</em> para partir o contorno em traços. Os três pares de traço e intervalo abaixo definem o padrão: o primeiro campo é um comprimento de traço, o próximo um intervalo, e assim por diante, repetindo-se à volta do caminho. Deixe os pares posteriores vazios para um traço simples e uniforme.</p>
+
+<h3 id="appearance-width-profiles">Perfis de largura e a ferramenta Largura</h3>
+<p>Um perfil de largura afunila o contorno ao longo do seu comprimento em vez de o manter numa única espessura. Escolha um perfil do menu do painel e uma pequena pré-visualização mostra a forma que faz; os botões ao lado invertem o perfil na outra direção, guardam o contorno atual como um novo perfil, ou eliminam um perfil que criou. Um contorno que moldou à mão mostra-se no menu como <em>Personalizado</em>.</p>
+<p>A ferramenta Largura (<kbd>&#8679;W</kbd>) molda um contorno diretamente na tela: arraste para longe do caminho para o alargar nesse ponto, ou para ele para o estreitar, deixando um ponto de largura que pode arrastar novamente mais tarde. Use-o para dar a uma linha desenhada o inchaço e afunilamento de um pincel ou pena.</p>
+
+<h3 id="appearance-brushes">Pincéis</h3>
+<p>O painel <strong>Pincéis</strong> (<kbd>F5</kbd>) pinta contornos com uma forma em vez de uma linha simples. Contém pincéis caligráficos, de dispersão, de arte, de cerdas e de padrão. Clique num pincel para o aplicar aos caminhos selecionados; o Pincel de Pintura usa o pincel atual. Clique duas vezes num pincel para as suas opções, use <em>Novo Pincel&#8230;</em> para criar um (pincéis de dispersão, arte e padrão são construídos a partir de arte selecionada), e <em>Remover Pincel</em> para devolver um contorno a uma linha simples.</p>
+
+<h2 id="appearance-opacity-blending">Opacidade e mistura</h2>
+<p>A opacidade e o modo de mistura decidem como um objeto se combina com o que está por baixo. Ficam no painel <strong>Transparência</strong> (<kbd>&#8679;&#8984;F10</kbd>), e também no painel Propriedades.</p>
+
+<h3 id="appearance-blend-modes">Os modos de mistura</h3>
+<p>A opacidade vai de 0% (invisível) a 100% (sólido). O menu de modo oferece dezasseis modos de mistura, que se dividem em grupos: modos que escurecem, modos que clareiam, modos de contraste, modos de comparação, e os quatro que pedem emprestado uma parte de uma cor.</p>
+<table>
+  <thead><tr><th>Modo</th><th>O que faz</th></tr></thead>
+  <tbody>
+    <tr><td>Normal</td><td>Pinta sobre o que está abaixo, sem mistura.</td></tr>
+    <tr><td>Escurecer</td><td>Mantém a cor mais escura, canal a canal.</td></tr>
+    <tr><td>Multiplicar</td><td>Multiplica as duas cores, sempre escurecendo; branco deixa a base inalterada.</td></tr>
+    <tr><td>Queimar Cor</td><td>Escurece a base para assumir a cor de mistura.</td></tr>
+    <tr><td>Clarear</td><td>Mantém a cor mais clara.</td></tr>
+    <tr><td>Ecrã</td><td>O inverso de Multiplicar, sempre clareando; preto deixa a base inalterada.</td></tr>
+    <tr><td>Subtrair Cor</td><td>Clareia a base para assumir a cor de mistura.</td></tr>
+    <tr><td>Sobrepor</td><td>Multiplica ou ecrã dependendo da base, aumentando o contraste.</td></tr>
+    <tr><td>Luz Suave</td><td>Um subtrair ou queimar suave, como se uma luz suave fosse projetada sobre a arte.</td></tr>
+    <tr><td>Luz Dura</td><td>Multiplica ou ecrã dependendo da cor de mistura, como um foco de luz duro.</td></tr>
+    <tr><td>Diferença</td><td>Subtrai a cor mais escura da mais clara; branco inverte a base, preto não tem efeito.</td></tr>
+    <tr><td>Exclusão</td><td>Como Diferença, mas mais suave e com menos contraste.</td></tr>
+    <tr><td>Matiz</td><td>O matiz da mistura com a saturação e brilho da base.</td></tr>
+    <tr><td>Saturação</td><td>A saturação da mistura com o matiz e brilho da base.</td></tr>
+    <tr><td>Cor</td><td>O matiz e saturação da mistura com o brilho da base: bom para tingir arte em escala de cinzentos.</td></tr>
+    <tr><td>Luminosidade</td><td>O brilho da mistura com o matiz e saturação da base.</td></tr>
+  </tbody>
+</table>
+<p>Para um grupo, dois interruptores alteram a forma como se mistura. <em>Limitar mistura ao grupo</em> mantém os modos do grupo dentro dele próprio, pelo que os seus membros misturam entre si mas não com a arte atrás do grupo. <em>Grupo de Perfuração</em> faz com que cada membro oculte os que estão por baixo dentro do grupo em vez de se misturar através deles.</p>
+
+<h3 id="appearance-opacity-masks">Máscaras de opacidade</h3>
+<p>Uma máscara de opacidade desvanece a arte por tom. Selecione a arte e, por cima dela, a forma com que mascarar, depois clique <em>Criar Máscara</em> (também <strong>Objeto &rsaquo; Máscara de Recorte &rsaquo; Criar Máscara de Opacidade</strong>). O objeto superior torna-se a máscara: onde é claro a arte mostra-se, e onde é escuro a arte desvanece-se, pelo que um gradiente de branco a preto faz um desvanecimento suave. <em>Libertar</em> devolve os dois objetos. Use uma máscara para uma borda suave ou uma vinheta que um corte duro não consegue fazer.</p>
+
+<h2 id="appearance-appearance-panel">O painel Pilha de Pintura</h2>
+<p>O painel <strong>Pilha de Pintura</strong> (<kbd>&#8679;F6</kbd>) lista tudo o que está pintado num único objeto: os seus preenchimentos e contornos, com quaisquer efeitos ao vivo acima deles. Como um objeto pode conter vários preenchimentos e contornos, é aqui que os empilha, por exemplo um contorno escuro largo sob um claro fino para fazer um contorno, ou dois preenchimentos com opacidades diferentes.</p>
+<p>A pilha é desenhada de cima primeiro, correspondendo à ordem em que pinta. Cada fileira de preenchimento ou contorno tem um olho para a ocultar, um chip de cor que abre o seletor de cor, um campo de opacidade, um campo de espessura para contornos, e setas para a mover para cima ou para baixo na pilha, mais um botão para a remover. <em>Adicionar Preenchimento</em> e <em>Adicionar Contorno</em> colocam outro no topo. Efeitos mostram-se acima dos preenchimentos e contornos com um distintivo <em>fx</em>; clique num efeito para editar as suas opções, ou removê-lo da sua fileira. Quando o aspeto em camadas está terminado, <strong>Objeto &rsaquo; Expandir Aparência</strong> coze toda a pilha em arte comum.</p>
+
+<h2 id="appearance-graphic-styles">Estilos Gráficos</h2>
+<p>Um estilo gráfico é uma aparência guardada que pode aplicar a outros objetos. O painel <strong>Estilos Gráficos</strong> (<kbd>&#8679;F5</kbd>) guarda-os como chips, cada um mostrando o seu preenchimento com o seu contorno como a borda do chip. Selecione um objeto e clique <em>Novo Estilo</em> para guardar os seus preenchimentos e contornos; clique num chip para aplicar esse estilo à seleção, e <kbd>&#8997;</kbd>-clique num chip para o eliminar. Estilos valem a pena criar quando o mesmo aspeto, como um tratamento de botão ou um estilo de etiqueta, tem de ir para muitos objetos e permanecer consistente.</p>
+
+<h2 id="appearance-overpress">Sobreimpressão</h2>
+<p>O painel <strong>Atributos</strong> (<kbd>&#8984;F11</kbd>) define sobreimpressão para trabalho de impressão. <em>Sobreimprimir Preenchimento</em> e <em>Sobreimprimir Contorno</em> fazem com que essa tinta imprima por cima das cores por baixo em vez de as perfurar, o que é usado para aprisionamento e efeitos como um preto que imprime por cima em vez de substituir o que está por baixo. Ligue <strong>Ver &rsaquo; Pré-visualização de Sobreimpressão</strong> para a ver no ecrã; a exportação PDF mantém a configuração.</p>
+
+<h2 id="appearance-recolour">Recolorindo arte</h2>
+<p><strong>Editar &rsaquo; Editar Cores &rsaquo; Remapear Cores&hellip;</strong> lista cada cor na seleção com a frequência com que é usada. Clique no chip à direita de uma fileira para escolher o que essa cor se torna, ou na seta entre os dois chips para deixar essa cor em paz. Controlos deslizantes de Matiz, Saturação e Brilho deslocam todo o conjunto junto, e dois botões reordenam aleatoriamente as novas cores ou aleatorizam a sua saturação e brilho, o que é uma maneira rápida de experimentar variações. A arte atualiza-se à medida que avança, e <em>Repor</em> volta às cores com que começou.</p>
+<p>O mesmo submenu também oferece alterações de um passo: <em>Misturar Frente para Trás</em> espalha uma sequência de cores entre os objetos da frente e de trás, <em>Converter para Escala de Cinzentos</em> remove toda a cor, <em>Inverter Cores</em> inverte cada uma, e <em>Saturar&hellip;</em> aumenta ou diminui a saturação em toda a seleção.</p>
