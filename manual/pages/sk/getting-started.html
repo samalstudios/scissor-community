@@ -1,0 +1,26 @@
+<p>Scissor sa otvorí v karte prehliadača. Nie je potrebné vytvoriť účet ani nič inštalovať predtým, ako začnete: kresliací engine je skompilovaný do WebAssembly a beží na vašom vlastnom stroji, takže vaša grafika sa nikdy nikam nenahráva. Pri prvej návšteve vás privíta úvodná obrazovka — Scissor líštiak, krátka prehľad toho, čo aplikácia robí, a Podmienky používania. Zaškrtnite <strong>Prečítal som sa a súhlasím s Podmienkami používania</strong> a stlačte <strong>Začať</strong> pre vstup do editora. Druhé, voliteľné políčko sa pýta, či Scissor môže počítať návštevy pomocou anonymnej analytiky; ak ho necháte vypnuté, nenačíta sa žiadna analytika. Túto voľbu môžete neskôr zmeniť v časti <strong>Nastavenia &gt; Ochrana osobných údajov</strong> a podmienky môžete kedykoľvek znova prečítať v časti <strong>Pomocník &gt; Podmienky používania&hellip;</strong>.</p>
+
+<p>Nižšie uvedené skratky sú zapísané v macOS forme. V systémoch Windows a Linux čítajte <kbd>⌘</kbd> ako Ctrl a <kbd>⌥</kbd> ako Alt; <kbd>⇧</kbd> je Shift.</p>
+
+<h3 id="what-you-see">Čo vidíte</h3>
+<p>V hornej časti sa nachádza stavový riadok a pod ním ovládací panel, ktorý sa mení podľa toho, čo máte vybrané, a obsahuje výplň, obrys, hrúbku, krytie a súradnice X, Y, W a H výberu. Nástroje bežia po ľavom okraji; panelový dok je vpravo. Medzi nimi je plátno, s kartou pre každý otvorený dokument nad ním a stavovým riadkom pod ním, ktorý zobrazuje úroveň priblíženia, aktívnu plochu, aktuálny nástroj a názov posledného kroku, ktorý možno vrátiť späť.</p>
+<p>Ak nie je otvorený žiadny dokument, plátno zobrazuje úvodnú obrazovku s položkami <strong>Nový dokument&hellip;</strong> a <strong>Otvoriť&hellip;</strong>; dvojklik kdekoľvek na ňom otvorí súbor. Stlačte <kbd>Tab</kbd> pre skrytie panelov a poskytnutie grafike celého okna, a stlačte znova pre ich návrat. Podržte medzerník kedykoľvek pre posunutie.</p>
+
+<h3 id="first-document">Vytvorenie prvého dokumentu</h3>
+<p>Vyberte <strong>Súbor &gt; Nový&hellip;</strong> (<kbd>⌥⌘N</kbd>). Dialógové okno zoskupuje prázdne predvoľby podľa Tlač, Web, Mobil, Film &amp; Video a Umenie &amp; Ilustrácia; kliknite na kartu pre načítanie jeho veľkosti, alebo dvojklikom vytvorte dokument okamžite. Vpravo môžete nastaviť názov dokumentu, šírku a výšku, jednotky a orientáciu na výšku alebo šírku. <strong>Plochy</strong>, <strong>Stĺpce</strong> a <strong>Rozstup</strong> rozložia viac ako jednu plochu do mriežky. V časti <strong>Zárezy</strong> tlačidlo prepojenia udržiava všetky štyri strany rovnaké; vypnite ho pre nastavenie každej strany zvlášť. <strong>Rozšírené</strong> obsahuje farebný režim (RGB alebo CMYK) a rozlíšenie používané rastrovými efektmi. <kbd>Enter</kbd> vytvorí dokument, <kbd>Esc</kbd> zavrie dialógové okno.</p>
+<figure class="shot">
+  <img src="img/new-document.png" width="1500" height="928" loading="lazy"
+       alt="Dialógové okno Nový dokument v Scissor, s predvoľbami veľkostí zoskupenými podľa použitia vľavo a nastaveniami dokumentu vpravo." />
+  <figcaption>Dialógové okno Nový dokument. Vyberte predvoľbu vľavo alebo nastavte veľkosť, plochy a zárezy vpravo.</figcaption>
+</figure>
+
+<h3 id="first-shape">Kreslenie prvého tvaru</h3>
+<p>Stlačte <kbd>M</kbd> pre nástroj Obdĺžnik alebo <kbd>L</kbd> pre nástroj Elipsa a ťahajte na plátne. Podržte <kbd>⇧</kbd> počas ťahania pre zachovanie tvaru štvorca alebo kruhu a <kbd>⌥</kbd> pre kreslenie od stredu namiesto od rohu. Jedno kliknutie namiesto ťahania otvorí malé dialógové okno, kde môžete zadať presnú šírku a výšku. Pri nástrojoch Mnohouholník a Hviezda šípky hore a dole menia počet strán alebo hrotov počas ťahania.</p>
+<p>Výplň a obrys sa nachádzajú v spodnej časti panela nástrojov. <kbd>X</kbd> presunie zameranie medzi nimi, <kbd>⇧X</kbd> vymení dve farby, <kbd>D</kbd> sa vráti k predvolenej bielej výplni a čierneho obrysu a <kbd>/</kbd> nastaví zameranú stranu na žiadnu. Stlačte <kbd>V</kbd> pre nástroj Výber pre presunutie a zmenu veľkosti toho, čo ste nakreslili.</p>
+
+<h3 id="saving">Ukladanie</h3>
+<p>Dokumenty Scissor sú súbory <code>.cut</code>. <strong>Súbor &gt; Uložiť</strong> (<kbd>⌘S</kbd>) sa raz spýta, kam by mal súborísť, a v prehliadačoch, ktoré podporujú priamy prístup k súborom, zapisuje späť do toho istého súboru vždy potom. Prehliadače bez tejto podpory ukladajú dokument namiesto toho do priečinka stiahnutí. <strong>Uložiť ako&hellip;</strong> je <kbd>⇧⌘S</kbd> a <strong>Uložiť kópiu&hellip;</strong> je <kbd>⌥⌘S</kbd>. Ak chcete odovzdať prácu inému programu, použite <strong>Súbor &gt; Export</strong>.</p>
+<p>Kým má dokument neuložené zmeny, Scissor každých pár sekúnd uchováva kópiu v úložisku prehliadača, a znova vždy, keď je karta skrytá alebo zavretá. Ak karta zmizne predtým, ako uložíte, vaša ďalšia návšteva ponúkne prácu späť s oznámením <strong>Obnoviť</strong>.</p>
+
+<h3 id="installing">Inštalácia Scissor</h3>
+<p>Vyberte <strong>Pomocník &gt; Inštalovať Scissor&hellip;</strong> pre inštaláciu ako aplikácie. Potom sa otvorí vo vlastnom okne bez rozhrania prehliadača, funguje offline a môže byť nastavený ako program, ktorý otvára súbory <code>.cut</code>. Ak váš prehliadač neponúka výzvu na inštaláciu, použite jeho vlastnú možnosť inštalácie v adresnom riadku alebo ponuke.</p>

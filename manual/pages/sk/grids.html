@@ -1,0 +1,57 @@
+<p class="lede">Každá plocha v Scissor nesie svoju vlastnú mriežku, takže rôzne časti dokumentu sa dajú kresliť proti rôznym vodítkam. Mriežka je kresliacia pomôcka: zobrazuje sa na obrazovke, nikdy sa netlačí ani sa neexportuje a so zapnutým prichytávaním ťahá vaše body na jej čiary. Mriežku zapnite pomocou <strong>Zobraziť &rsaquo; Mriežka &rsaquo; Zobraziť mriežku</strong> (<kbd>&#8984;'</kbd>).</p>
+
+<h2 id="grids-choosing">Výber mriežky</h2>
+<p>Vyberte druh pod <strong>Zobraziť &rsaquo; Mriežka</strong>, potom otvorte <strong>Panel Mriežka</strong> pre nastavenie jej rozstupu, koľko podmnožín sedí medzi hlavnými čiarami, jeho uhla a kde jeho začiatok začína na ploche. Pretože mriežka patrí k ploche, dokument s viacerými plochami môže dať každej mriežku, ktorá vyhovuje práci na nej. <strong>Prichytiť k mriežke</strong> (<kbd>&#8679;&#8984;'</kbd>) robí, že nové body, rohy tvarov a ťahané objekty pristávajú na najbližšiu čiaru.</p>
+
+<h2 id="grids-square">Štvorcová (ortogonálna)</h2>
+<p>Obyčajná mriežka: rovnomerne rozložené horizontálne a vertikálne čiary. Použite ju pre rozloženia, UI mockupy, prácu v pixelovom štýle, ikony a čokoľvek, čo sa má zarovnať na pravidelné meradlo.</p>
+<figure class="shot">
+  <img src="img/grid-orthogonal.png" width="1300" height="934" loading="lazy" alt="Štvorcová mriežka rovnomerne rozložených horizontálnych a vertikálnych čiar na ploche v Scissor." />
+  <figcaption>Štvorcová mriežka. Rovné riadky a stĺpce pre rozloženie a meranú prácu.</figcaption>
+</figure>
+
+<h2 id="grids-isometric">Izometrická</h2>
+<p>Tri sady čiar na 30&deg; zastupujú tri osi kocky, takže môžete kresliť miestnosti, balenie, herné dlaždice a technické ilustrácie, ktoré sa čítajú ako pevné bez skutočného 3D. Každá stena nasleduje jednu z troch osí, takže krabice sa naskladávajú a stretávajú čisto. So zobrazenou mriežkou kreslia nástroje tvarov pozdĺž jej osí.</p>
+<figure class="shot">
+  <img src="img/isometric-example.png" width="1600" height="1149" loading="lazy" alt="Malé mesto farebných budov s oknami kreslených na izometrickej mriežke Scissor, každý okraj nasledujúci čiaru mriežky." />
+  <figcaption>Malé mesto na izometrickej mriežke. Každá stena a vertikálny okraj beží pozdĺž čiary mriežky, takže budovy sedia pravo.</figcaption>
+</figure>
+<figure class="shot">
+  <img src="img/iso-build.gif" width="820" height="589" loading="lazy" alt="Izometrické mesto stavané jedna budova po druhej na mriežke, každý blok nasledujúci čiary mriežky." />
+  <figcaption>Rovnaké mesto stavané blok po bloku. Každá budova sa prichytí k mriežke, keď pristane.</figcaption>
+</figure>
+
+<h2 id="grids-hexagonal">Šesťuholníková</h2>
+<p>Plodina šesťuholníkov. Hodí sa pre mapy stolných hier, vzorové dlaždice a akékoľvek rozloženie zložené zo šesťstranných buniek. Rozstup nastavuje šírku jedného šesťuholníka, plochá strana k plochej strane.</p>
+<figure class="shot">
+  <img src="img/grid-hexagonal.png" width="1300" height="934" loading="lazy" alt="Mriežka plodiny šesťuholníkov na ploche v Scissor." />
+  <figcaption>Šesťuholníková mriežka. Plodina pre mapy a prácu s dlaždicami.</figcaption>
+</figure>
+
+<h2 id="grids-oblique">Šikmá</h2>
+<p>Jedna rodina horizontálnych čiar a jedna šikmá rodina pod uhlom, ktorý vyberiete. Dáva jednoosové, bočné promítanie, užitočné pre diagramy v kavalierskom štýle a šikmé vodítka písma. Nastavte šikmosť v paneli Mriežka.</p>
+<figure class="shot">
+  <img src="img/grid-oblique.png" width="1300" height="934" loading="lazy" alt="Šikmá mriežka: horizontálne čiary prieniknuté šikmou rodinou čiar." />
+  <figcaption>Šikmá mriežka. Horizontálne čiary prieniknuté šikmom, ktorú nastavíte.</figcaption>
+</figure>
+
+<h2 id="grids-golden">Zlatý rez</h2>
+<p>Zlatý obdĺžnik prispôsobený ploche, rozdelený na jeho štvorec a menší obdĺžnik, s kvartálnymi oblúkmi, ktoré značia zlatú špirálu. Použite to na umiestnenie bodov pozornosti a na veľkosť prvkov v klasickej proporcii. Škáluje sa s plochou namiesto pevného rozstupu.</p>
+<figure class="shot">
+  <img src="img/grid-golden.png" width="1300" height="813" loading="lazy" alt="Mriežka zlatého rezu: plocha rozdelená v zlatom pomere s kvartálnymi oblúkmi, ktoré značia zlatú špirálu." />
+  <figcaption>Mriežka zlatého rezu. Proporčné čiary a špirála pre kompozíciu.</figcaption>
+</figure>
+
+<h2 id="grids-pattern">Vzor</h2>
+<p>Mriežka Vzor kryje vzorku vzoru naprieč plochou a kreslí ju pod grafikou, takže vzor slúži ako pozadie a zároveň zarovnávacie vodítko — užitočné pre pokladanie grafiky na opakovanie, kontrolu zarovnania dlaždice alebo prácu nad referenčnou textúrou. Vyberte ju pod <strong>Zobraziť &rsaquo; Mriežka &rsaquo; Vzor</strong>; dlaždica pochádza z aktuálnej vzorky vzoru, ktorú vytvárate a upravujete, ako je popísané na stránke <a href="/manual/sk/symbols/">Symboly a štetce</a>. Ako každá mriežka patrí k ploche, takže rôzne plochy môžu niesť rôzne vzorové pozadia.</p>
+
+<h2 id="grids-perspective">Perspektíva</h2>
+<p>Vodítka bežiaci do jedného, dvoch alebo troch úbodžných bodov na horizonte, takže môžete kresliť scény so skutočnou hĺbkou. Nastavte to pomocou <strong>Nástroja Perspektívna mriežka</strong> (<kbd>&#8679;P</kbd>): ťahajte úbodžné body, ťahajte jeden hore alebo dole pre presunutie horizontu a stlačte <kbd>1</kbd> do <kbd>4</kbd> pre výber roviny, na ktorej kreslíte. Tlačidlá <strong>1 bod</strong>, <strong>2 body</strong> a <strong>3 body</strong> v <strong>paneli Mriežka</strong> prepínajú medzi nastaveniami. TVary kreslené na mriežke zdieľajú jednu perspektívu.</p>
+<figure class="shot">
+  <img src="img/grid-perspective.png" width="1300" height="813" loading="lazy" alt="Dvojbodová perspektívna mriežka, jej vodítka konvergujúce k úbodžnému bodu na každej strane horizontu." />
+  <figcaption>Dvojbodová perspektívna mriežka. Vodítka konvergujú k úbodžnému bodu na každej strane.</figcaption>
+</figure>
+<figure class="shot">
+  <img src="img/perspective-grid.png" width="1700" height="969" loading="lazy" alt="Tri farebné krabice kreslené v dvojbodovej perspektíve na mriežke, ich okraje konvergujúce k úbodžným bodom." />
+  <figcaption>Krabice kreslené na dvojbodovej mriežke. Ich okraje bežia k úbodžným bodom, takže zdieľajú jednu perspektívu.</figcaption>
+</figure>

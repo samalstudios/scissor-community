@@ -1,0 +1,39 @@
+<p class="lede">Tri nástroje v Scissor robia opakovanú prácu za vás: <strong>Akcie</strong> zaznamenávajú rad príkazov a prehrávajú ho, <strong>Premenné</strong> vymieňajú text a viditeľnosť z tabuľky dát, takže jeden dizajn sa stane mnohými a <strong>Skripty</strong> riadia celý editor z JavaScriptu. Žiadny z nich nepotrebuje účet ani server — rovnako ako zvyšok Scissor bežia na vašom vlastnom stroji.</p>
+
+<h2 id="automation-actions">Akcie: zaznamenať raz, prehrať kdekoľvek</h2>
+<p><strong>Panel Akcie</strong> (Okno &rsaquo; Akcie) zaznamenáva, čo robíte a prehráva to na novom výbere. Stlačte <strong>Zaznamenať</strong>, spustite príkazy, ktoré chcete zachytiť — zarovnanie, posunutie, pridanie tieňa, čokoľvek je rad — potom stlačte <strong>Zastaviť</strong> a dajte akcii názov. Pridá sa do zoznamu, zobrazujúc, koľko krokov drží.</p>
+<p>Kliknite na akciu pre jeho <strong>prehratie</strong> na tom, čo je teraz vybrané; <kbd>&#8997;</kbd>-klik na ňu ju odstráni. Pretože akcia je len zoznamom príkazov, opakuje presnú rutinu naprieč mnohými objektami bez toho, aby ste na ňu klikali každý krát.</p>
+
+<h2 id="automation-variables">Premenné: jeden dizajn, mnoho verzií</h2>
+<p><strong>Panel Premenné</strong> (Okno &rsaquo; Premenné) premení fixný dizajn na šablónu riadenú dátami. Dve veci na objekte sa dajú spraviť dynamickými:</p>
+<dl>
+  <dt>Spraviť text dynamickým</dt><dd>Spája slová textového objektu s premennou, takže rôzne sady dát môžu dať rôzny text na rovnaké miesto.</dd>
+  <dt>Spraviť viditeľnosť dynamickou</dt><dd>Spája to, či sa objekt zobrazuje, takže sada môže zapínať a vypínať časti dizajnu.</dd>
+</dl>
+<p><strong>Odpojiť</strong> robí spojený objekt fixným späť.</p>
+
+<h3 id="automation-datasets">Sady dát</h3>
+<p><strong>Sada dát</strong> je jeden riadok hodnôt pre tieto premenné — jeden odznak, jedna karta, jeden rámec. <strong>Zachytiť</strong> uloží aktuálne hodnoty ako novú sadu; šípky prechádzajú z jednej sady do druhej a dizajn sa aktualizuje, aby zodpovedal. <strong>Importovať CSV&hellip;</strong> číta celú dávku naraz — jeden stĺpec na premennu, jeden riadok na sadu — a <strong>Exportovať CSV</strong> zapíše sady späť pre úpravu v tabuľkovom procesore.</p>
+
+<h3 id="automation-batch">Export každej sady naraz</h3>
+<p><strong>Exportovať sady dát&hellip;</strong> vykreslí aktívnu plochu raz pre každú sadu dát a zapíše ich všetky v jednom prechode, ako PNG, JPEG, WebP alebo SVG. Hárčok menových odznakov, sada lokalizovaných banerov alebo rad sociálnych kariet vyjde ako čistá dávka súborov, každá s vlastnými dátami vplnenými.</p>
+
+<h2 id="automation-scripts">Skripty: riadenie Scissor z JavaScriptu</h2>
+<p>Pre čokoľvek, čo ponuka nemôže vyjadriť, skript dokáže. <strong>Súbor &rsaquo; Skripty &rsaquo; Konzola skriptov&hellip;</strong> otvára editor, kde píšete JavaScript a spustíte ho proti otvorenému dokumentu; <strong>Iný skript&hellip;</strong> (<kbd>&#8984;F12</kbd>) spúšťa súbor <code>.js</code> z disku. Skript beží vo Web Workerovi, stránky, takže nemôže siahnuť na rozhranie ani vaše súbory okrem objektu <code>scissor</code>, ktorý mu je daný — každé volanie sa vykoná na engine a odpoveď sa vráti.</p>
+<p>Objekt <code>scissor</code> pokrýva spoločnú pôdu:</p>
+<dl>
+  <dt>Vytváranie tvarov a textu</dt><dd><code>scissor.rect</code>, <code>roundedRect</code>, <code>ellipse</code>, <code>polygon</code>, <code>star</code>, <code>path</code> a <code>text</code> kreslia grafiku; každý berie pozíciu a veľkosť a objekt možností pre <code>fill</code>, <code>stroke</code> a <code>strokeWidth</code> (farby sú akákoľvek CSS farba).</dd>
+  <dt>Čítanie dokumentu</dt><dd><code>await scissor.document()</code> vracia aplikáciu, výber, vrstvy a artboardy tak, ako ich vidia panely; <code>scissor.selection()</code> vracia len to, čo je vybrané.</dd>
+  <dt>Pôsobenie naň</dt><dd><code>scissor.select</code>, <code>group</code> a <code>undo</code> a <code>scissor.run(command)</code> pre akýkoľvek príkaz engine — rovnaké príkazy, ktoré posielajú ponuky.</dd>
+  <dt>Hovorenie späť</dt><dd><code>scissor.log</code> tlačí do konzoly; <code>scissor.alert</code> zobrazuje správu.</dd>
+</dl>
+<p>Krátky príklad — prstencové farebné bodky a titulok:</p>
+<pre><code>const doc = await scissor.document();
+scissor.log('Plochy:', doc.artboards.length);
+for (let i = 0; i &lt; 12; i++) {
+  const a = (i / 12) * Math.PI * 2;
+  await scissor.ellipse(300 + Math.cos(a) * 120, 260 + Math.sin(a) * 120, 36, 36,
+    { fill: `hsl(${i * 30} 80% 60%)` });
+}
+await scissor.text(230, 270, 'Ahoj, Scissor', { size: 24 });</code></pre>
+<p>Konzola skriptov udržiava posledný kód, ktorý ste spustili, takže funkčný skript je tam, keď sa k nemu vrátite.</p>

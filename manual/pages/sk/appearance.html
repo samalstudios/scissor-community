@@ -1,0 +1,134 @@
+<p class="lede">Ako tvar vyzerá, je jeho <em>vzhľad</em>: výplň vo vnútri jeho obrysu, obrys kreslený po ňom a krytie a miešanie, ktoré rozhodujú, ako sedí nad tým, čo je za ním. Každý z týchto môže byť plochá farba, gradient alebo vzor a objekt môže niesť viac ako jeden z každého naraz. Táto stránka pokrýva ovládanie maľovania, farebné modely, vzorky, gradienty, obrysy, priesvitnosť, panel Paint Stack a grafické štýly.</p>
+
+<p>Skratky nižšie sú zapísané v ich macOS forme. V systéme Windows čítajte <kbd>&#8984;</kbd> ako Ctrl, <kbd>&#8997;</kbd> ako Alt a <kbd>&#8679;</kbd> ako Shift.</p>
+
+<figure class="shot">
+  <img src="img/artwork-landscape.png" width="1700" height="967" loading="lazy"
+       alt="Vektorová krajina z hôr, oblohy a jazera, zložená z plochých vyplnených tvarov v Scissor." />
+  <figcaption>Celá scéna zložená z vyplnených tvarov. Každý pás farby je cesta s vlastnou výplňou.</figcaption>
+</figure>
+
+<h2 id="appearance-fill-and-stroke">Výplne a obrysy</h2>
+<p>Cesta, tvar alebo kus textu môže držať <strong>výplň</strong>, maľovanie vo vnútri jeho obrysu a <strong>obrys</strong>, čiaru kreslenú po tomto obryse. Výplň môže byť plochá farba, gradient alebo vzor; obrys môže byť plochá farba alebo gradient, s vlastnou hrúbkovou a čiarou. Ktorákoľvek strana sa tiež môže nastaviť na žiadnu, takže môžete nakresliť tvar s len obrysom alebo len výplňou.</p>
+
+<h3 id="appearance-the-paint-chips">Výplň a obrys</h3>
+<p>Dve prekrývajúce sa ikony v spodnej časti panela nástrojov držia výplň a obrys. Kliknite na ktorúkoľvek pre otvorenie výberu farby; tá vpredu je strana, na ktorú kľúče a panely Farba, Gradient a Vzorky pôsobia. Stlačte <kbd>X</kbd> pre privedenie druhej strany dopredu, <kbd>&#8679;X</kbd> pre vymenenie dvoch farieb, <kbd>/</kbd> pre nastavenie prednej strany na žiadnu a <kbd>D</kbd> pre návrat k predvoleným: biela výplň, čierny obrys a hrúbka 1 pt. Rovnaká výplň, obrys, hrúbka, krytie a režim miešania sú tiež spoločne v paneli Vlastnosti, čo je užitočné, keď chcete všetky na jednom mieste.</p>
+<p>Bez vybraného nastavujú tieto ovládacie prvky štýl, ktorý vezme ďalší objekt, ktorý nakreslíte, takže môžete vybrať farbu pred kreslením namiesto po ňom.</p>
+
+<h3 id="appearance-eyedropper">Kopírovanie maľovania kvapkadlom</h3>
+<p>Kvapkadlo (<kbd>I</kbd>) kopíruje celý vzhľad z objektu, na ktorý kliknete, na výber. Podržte <kbd>&#8679;</kbd> pre vzorkovanie len jeho farby výplne alebo obrysu do aktívnej strany alebo <kbd>&#8997;</kbd> pre potlačenie vzhľadu výberu na objekt pod ukazovateľom namiesto. Kliknutie na umiestnený obrázok alebo pixelovú vrstvu vzorkuje farbu pod ukazovateľom do aktívnej strany, takže môžete zdvihnúť farbu priamo z fotografie. Siahnite po kvapkadle, keď sa dva objekty majú zhodovať: vzorkujte jeden a druhý vezme rovnaké maľovanie v jednom kliknutí.</p>
+
+<h2 id="appearance-colour">Farba</h2>
+<p>Farba sa vyberá v malom vyskakovacom výbere na každej ikone alebo, s väčšou kontrolou, v paneli Farba.</p>
+
+<h3 id="appearance-color-panel">Panel Farba</h3>
+<p><strong>Panel Farba</strong> (<kbd>F6</kbd>) zobrazuje maľovanie aktívnej strany ako sadu posuvníkov, hexadecimálne pole a spektrum. Výplň a obrys v hornej časti vyberajú, ktorú stranu upravujete. Spektrum beží odtieňmi naprieč, biele v hornej časti a čierne v dolnej časti; kliknite alebo ťahajte v ňom pre výber. Tri rýchle vzorky vedľa nastavia Žiadnu, Bielu a Čiernu v jednom kliknutí a tlačidlá <em>Invertovať</em> a <em>Doplnok</em> prepracujú aktuálnu farbu (Doplnok otáča jej odtieň napola, zachovávajúc jej sýtosť a jas).</p>
+<p> ponuka farebného modelu nastavuje, ktoré posuvníky panel zobrazuje. Voľba je zachovaná pre reláciu a nové vzorky sa v nej vytvárajú.</p>
+<dl>
+  <dt>Šedá</dt><dd>Jeden posuvník K, od bielej pri 0% po čiernu pri 100%.</dd>
+  <dt>RGB</dt><dd>Červená, zelená a modrá od 0 do 255, model pre prácu na obrazovke.</dd>
+  <dt>HSB</dt><dd>Odtieň v stupňoch, potom sýtosť a jas ako percentá: často najrýchlejší spôsob, ako posunúť farbu bez straty jej charakteru.</dd>
+  <dt>CMYK</dt><dd>Azúrová, purpurová, žltá a čierna ako percentá, pre tlač.</dd>
+  <dt>Web Safe RGB</dt><dd>RGB prichyté na 216 webových farieb. Keď aktuálna farba nie je jednou z nich, objaví sa varovný trojuholník; kliknite naň pre prichytanie k najbližšej webovej farbe.</dd>
+</dl>
+<p>Keď je aktívna strana maľovaná globálnou vzorkou, nad posuvníkmi sa objaví rad tónu: pomenúva vzorku a umožňuje nastaviť tón od 0% do 100% namiesto úpravy farby priamo, takže grafika zostávia spojená so vzorkou.</p>
+
+<h2 id="appearance-swatches">Vzorky a farebné skupiny</h2>
+<p>Vzorka je pomenovaná farba uložená s dokumentom. Maľovanie z vzoriek namiesto zadávania hodnot udržiava paletu konzistentnú a, pre globálne vzorky, umožňuje premaľovať celý dokument úpravou jednej farby.</p>
+
+<h3 id="appearance-swatches-panel">Panel Vzorky</h3>
+<p><strong>Panel Vzorky</strong> (otvorte ho z <strong>Okno &rsaquo; Vzorky</strong>) vypisuje vzorky dokumentu ako mriežku alebo ako zoznam; zoznamové zobrazenie tiež zobrazuje farebný model každej vzorky. Obyčajné kliknutie maľuje aktívnu stranu. <kbd>&#8679;</kbd>-klik vyberie rad vzoriek a <kbd>&#8984;</kbd>-klik pridáva alebo odstraňuje jednu z výberu, takže môžete pôsobiť na niekoľko naraz. Päta drží tlačidlá na prepnutie zobrazenia, otvorenie ponuky panelu, zobrazenie možností vzorky, vytvorenie farebnej skupiny, vytvorenie novej vzorky a odstránenie vybraného.</p>
+<p>Ponuka panelu pridáva viac: <em>Pridať použité farby</em> a <em>Pridať vybrané farby</em> premenia farby už v dokumente, alebo len vo výbere, na vzorky; <em>Vybrať všetky nepoužité</em> vyberie každú vzorku, ktorou nič nie je maľované, pripravenú na odstránenie a <em>Premeniť farby&#8230;</em> otvorí dialógové okno premaľovania popísané nižšie.</p>
+
+<h3 id="appearance-process-spot-global">Procesné, potlačové a globálne vzorky</h3>
+<p>Dvojkliknite na vzorku pre Možnosti vzorky, kde nastavujete, aký druh farby je.</p>
+<dl>
+  <dt>Procesná</dt><dd>Obyčajná farba, zmiešaná pre úlohu. Obyčajná procesná vzorka je len uložená farba: jej úprava nesahá do grafiky už namaľovanej ňou.</dd>
+  <dt>Globálna</dt><dd>Procesná vzorka označená ako Globálna udržiava grafiku spojenú s ňou, takže premaľovanie vzorky premaľuje všetko namaľované ňou naraz. Globálne vzorky sa dajú použiť ako tón.</dd>
+  <dt>Potlačová</dt><dd>Pomenovaná farba, určená na tlač na vlastnej platni. Potlačové farby sú vždy globálne.</dd>
+</dl>
+<p>Každý dokument začína tiež pevnou vzorkou <strong>[Registrácia]</strong>, ktorá nemá vlastný typ farby a nedá sa odstrániť ani presunúť. Použite globálnu alebo potlačovú vzorku, keď sa farba objaví mnohokrát a sa môže zmeniť: jedna úprava aktualizuje každý objekt namiesto hľadania ich po jednom.</p>
+
+<h3 id="appearance-colour-groups">Farebné skupiny</h3>
+<p>Farebné skupiny zaraďujú súvisiace vzorky spolu, ako je jedna rodína odtieňov alebo paleta jedného projektu. Ťahajte vzorky do skupiny pre ich zaraľovanie alebo vyberte niekoľko a vytvorte z nich skupinu tlačidlom Nová farebná skupina v paneli. Dvojkliknite na hlavičku skupiny pre jej možnosti. Vo výbere farby na každej ikone sa každá skupina zobrazí ako jeden riadok, takže rodína sa číta ako rampa odtieňov namiesto steny ikon.</p>
+
+<h2 id="appearance-gradients">Gradienty</h2>
+<p>Gradient zmiešáva medzi dvoma alebo viacerými farbami. Scissor robí lineárne, radiálne a voľné gradienty a buď panel alebo nástroj na plátne ich môže stavať a tvarovať. Siahnite po gradiente pre dodanie plochému tvaru hĺbky, pozadiu jemného preboja alebo tlačidlu lesku.</p>
+
+<h3 id="appearance-gradient-panel">Panel Gradient</h3>
+<p><strong>Panel Gradient</strong> (<kbd>&#8984;F9</kbd>) riadi celý gradient. Kliknite na miniaturu pre vyplnenie aktívnej strany, vyberte Lineárny, Radiálny alebo Voľný z ponuky typu a použite tlačidlo obratenia pre prevrátenie rampy koniec za koniec. Samotná rampa nesie zastávky: kliknite na ňu pre pridanie zastávky v farbe, ktorá už tam je, ťahajte zastávku pre jej presunutie a ťahajte diamant medzi dvoma zastávkami pre posunutie, kde sa dve farby stretnú. Vybraná zastávka má svoju vlastnú vzorku farby, pole <em>Krytie</em> a pole <em>Umiestnenie</em> a <em>Odstrániť zastávku</em> ju odstraňuje. <em>Uhol</em> otáča lineárny alebo radiálny gradient a <em>Pomer strán</em> (len radiálny) splošťuje radiálny gradient do elipsy.</p>
+<figure class="shot">
+  <img src="img/gradient.gif" width="340" height="340" loading="lazy"
+       alt="Zaoblený štvorec vyplnený lineárnym gradientom od modrej po jantárový, ktorého smer sa otáča." />
+  <figcaption>Lineárny gradient od modrej po jantárovú. Ťahanie osi gradientu alebo zmena jeho uhla otáča zmes okolo tvaru.</figcaption>
+</figure>
+
+<h3 id="appearance-gradient-tool">Nástroj Gradient</h3>
+<p>S nástrojom Gradient (<kbd>G</kbd>) sú rovnaké ovládacie prvky na grafike. Ťahajte naprieč objektom pre položenie osi, podržaním <kbd>&#8679;</kbd> pre držanie na 45&deg; krokov. Os zobrazuje okrúhly kolík na začiatku a štvorcový kolík na konci; ťahajte ktorýkoľvek pre presunutie tohto konca. Kliknite na os pre pridanie zastávky v farbe, ktorá už tam je, ťahajte zastávku po nej a potiahnite zastávku ďaleko od osi pre jej zahodenie. Ťahajte diamant pre presunutie stredu. <kbd>Delete</kbd> odstráni zastávku, ktorej ste sa naposledy dotkli.</p>
+
+<h3 id="appearance-freeform">Voľné gradienty</h3>
+<p>Voľný gradient umiestňuje farebné body kdekoľvek na tvar namiesto po jednej osi, takže zmes môže nasledovať tvar grafiky. S nástrojom Gradient kliknite na grafiku pre vloženie farebného bodu, ťahajte ho pre presunutie a stlačte <kbd>Delete</kbd> pre jeho odobratie. Zaškrtnite <em>Spojiť body do čiar</em> v paneli pre spojenie bodov do čiar, čo rozširuje farbu po rieške namiesto z jednej bodky. Použite voľný gradient pre jemné, organické tieňovanie, ktoré rovná rampa nemôže dať.</p>
+
+<h2 id="appearance-patterns">Vzory</h2>
+<p>Vzor je grafika opakovaná ako dlaždica a použitá ako výplň. Zmeňte výber na dlaždicu pomocou <strong>Objekt &rsaquo; Vzor &rsaquo; Vytvoriť</strong>, potom vyplňte akýkoľvek tvar z nej z panelu <strong>Vzory</strong>: kliknite na dlaždicu pre vyplnenie, dvojklikom ju upravte a <kbd>&#8997;</kbd>-klikom ju odstráňte. <em>Možnosti dlaždice</em> nastavujú typ dlaždice, offset cihly, veľkosť a rozstup a či dlaždica mení veľkosť a pohybuje sa s grafikou. <strong>Upraviť vzor</strong> otvára dlaždicu na mieste s jej kópiami opakujúcimi sa okolo nej počas práce; kliknite na <em>Dokončiť úpravu</em> v paneli Vzory, keď je dlaždica správna. Vzory sa hodia pre opakujúce sa textúry, ako sú pruhy, bodky, tkaniny a pozadia, ktoré by bolé zdĺžne kresliť ručne.</p>
+
+<h2 id="appearance-strokes">Obrysy</h2>
+<p><strong>Panel Obrys</strong> (<kbd>&#8984;F10</kbd>) tvaruje čiaru kreslenú po ceste.</p>
+
+<h3 id="appearance-stroke-options">Hrúbka, zakončenia, spojenia a zarovnanie</h3>
+<p><em>Hrúbka</em> nastavuje hrúbku obrysu v bodoch. Tlačidlá <em>Zakončenie</em> rozhodujú, ako sa otvorená cesta končí: rovné (orezané štvorcové na ukotvení), okrúhle alebo premietajúce (štvorcové, ale siahajúce za ukotvenie o polovicu hrúbky). Tlačidlá <em>Spojenie</em> rozhodujú, ako obrys otáča roh: miter (ostrý hrot), okrúhle alebo skosené (plochý rez), s limitom miter, ktorý skosí najostrejšie hroty, aby nevyčnievali. <em>Zarovnanie</em> umiestňuje obrys na stred cesty alebo úplne vnútri alebo vonkajšie, čo záleží, keď sa tvar musí presne priložiť k susedom.</p>
+
+<h3 id="appearance-dashes">Prerušované čiary</h3>
+<p>Zaškrtnite <em>Prerušovaná čiara</em> pre rozdelenie obrysu na čiary. Trojice čiary a medzery nižšie nastavujú vzor: prvé pole je dĺžka čiary, ďalšie medzera a tak ďalej, opakujúce sa po ceste. Nechajte neskoršie prázdne pre jednoduchú rovnomernú čiaru.</p>
+
+<h3 id="appearance-width-profiles">Profily šírky a nástroj Šírka</h3>
+<p>Profil šírky zužuje obrys pozdĺž jeho dĺžky namiesto držania jednej hrúbky. Vyberte profil z ponuky panelu a malý náhľad zobrazí tvar, ktorý robí; tlačidlá vedľa spustia profil opačne, uložia aktuálny obrys ako nový profil alebo odstránia profil, ktorý ste vytvorili. Obrys, ktorý ste tvarovali ručne, sa v ponuke zobrazí ako <em>Vlastný</em>.</p>
+<p>Nástroj Šírka (<kbd>&#8679;W</kbd>) tvaruje obrys priamo na plátne: ťahajte od cesty pre jej rozšírenie v tomto bode alebo k ceste pre zúženie, zanechávajúc bod šírky, ktorý môžete neskôr znova ťahať. Použite to na dodanie nakreslenej čiare nafuknutia a zúženia štetca alebo pera.</p>
+
+<h3 id="appearance-brushes">Štetce</h3>
+<p><strong>Panel Štetce</strong> (<kbd>F5</kbd>) maľuje ťahy tvarom namiesto obyčajnej čiary. Drží kaligrafické, rozptýlené, umelecké, štetcinové a vzorové štetce. Kliknite na štetec pre jeho použitie na vybrané cesty; Štetec používa ktorýkoľvek štetec je aktuálny. Dvojkliknite na štetec pre jeho možnosti, použite <em>Nový štetec&#8230;</em> pre vytvorenie jedného (rozptýlené, umelecké a vzorové štetce sa stavajú z vybrané grafiky) a <em>Odstrániť štetec</em> pre vrátenie ťahu na obyčajnú čiaru.</p>
+
+<h2 id="appearance-opacity-blending">Krytie a miešanie</h2>
+<p>Krytie a režim miešania rozhodujú, ako sa objekt kombinuje s tým, čo leží pod ním. Sú v <strong>paneli Priesvitnosť</strong> (<kbd>&#8679;&#8984;F10</kbd>) a tiež v paneli Vlastnosti.</p>
+
+<h3 id="appearance-blend-modes">Režimy miešania</h3>
+<p>Krytie beží od 0% (neviditeľné) do 100% (pevné). Ponuka režimov ponúka šestnásť režimov miešania, ktoré sa delia do skupín: režimy, ktoré stmavňujú, režimy, ktoré zosvetľujú, kontrastné režimy, porovnávacie režimy a štyri, ktoré požičajú jednu časť farby.</p>
+<table>
+  <thead><tr><th>Režim</th><th>Čo robí</th></tr></thead>
+  <tbody>
+    <tr><td>Normálny</td><td>Maľuje nad tým, čo je pod, bez miešania.</td></tr>
+    <tr><td>Stmavňovanie</td><td>Zachová ktorúkoľvek farbu je tmavšiu, kanál po kanáli.</td></tr>
+    <tr><td>Násobenie</td><td>Násobí dve farby, vždy stmavňujúce; biela zachová základ nezmenený.</td></tr>
+    <tr><td>Color Burn</td><td>Stmavňuje základ, aby prevzal miešajúcu farbu.</td></tr>
+    <tr><td>Zosvetľovanie</td><td>Zachová ktorúkoľvek farbu je svetlejšiu.</td></tr>
+    <tr><td>Screen</td><td>Inverzia Násobenia, vždy zosvetľujúce; čierna zachová základ nezmenený.</td></tr>
+    <tr><td>Color Dodge</td><td>Zosvetľuje základ, aby prevzal miešajúcu farbu.</td></tr>
+    <tr><td>Overlay</td><td>Násobí alebo Screen v závislosti od základu, zvyšujúc kontrast.</td></tr>
+    <tr><td>Soft Light</td><td>Jemné zosvetlenie alebo spálenie, ako keby na grafiku svietilo svetlo.</td></tr>
+    <tr><td>Hard Light</td><td>Násobí alebo Screen v závislosti od miešajúcej farby, ako ostré reflektorové svetlo.</td></tr>
+    <tr><td>Rozdiel</td><td>Odčíta tmavšiu farbu zo svetlejšej; biela invertuje základ, čierna nemá účinok.</td></tr>
+    <tr><td>Vylúčenie</td><td>Ako Rozdiel, ale jemnejšie a s nižším kontrastom.</td></tr>
+    <tr><td>Odtieň</td><td>Odtieň miešania so sýtosťou a jasom základu.</td></tr>
+    <tr><td>Sýtosť</td><td>Sýtosť miešania s odtieňom a jasom základu.</td></tr>
+    <tr><td>Farba</td><td>Odtieň a sýtosť miešania so základom: vhodné pre tónovanie šedotónovej grafiky.</td></tr>
+    <tr><td>Jas</td><td>Jas miešania s odtieňom a sýtosťou základu.</td></tr>
+  </tbody>
+</table>
+<p>Pre skupinu dva prepínače menia, ako sa mieša. <em>Obmedziť miešanie na skupinu</em> udržiava režimy skupiny vo vnútri seba, takže jej členovia sa miešajú medzi sebou, ale nie s grafikou za skupinou. <em>Knockout Group</em> robí, že každý člen skryje tých pod ním v skupine namiesto miešania cez nich.</p>
+
+<h3 id="appearance-opacity-masks">Masky krytia</h3>
+<p>Maska krytia zoslabuje grafiku podľa tónu. Vyberte grafiku a, nad ňou, tvar, ktorým sa maskuje, potom kliknite na <em>Vytvoriť masku</em> (tiež <strong>Objekt &rsaquo; Maska krytia &rsaquo; Vytvoriť masku krytia</strong>). Najvrchnejší objekt sa stane maskou: kde je svetlá, grafika sa zobrazí a kde je tmavá, grafika zmizne, takže gradient od bielej po čiernu robí jemné vyblednutie. <em>Uvoľniť</em> vráti dva objekty späť. Použite masku pre jemný okraj alebo vinietu, ktorú tvrdý rez nemôže vytvoriť.</p>
+
+<h2 id="appearance-appearance-panel">Panel Paint Stack</h2>
+<p><strong>Panel Paint Stack</strong> (<kbd>&#8679;F6</kbd>) vypisuje všetko na maľovanie jedného objektu: jeho výplne a obrysovy, s akýmikoľvek živými efektmi nad nimi. Pretože objekt môže držať niekoľko výplní a obrysov, tu je miesto, kde ich naskladáte, napríklad široký tmavý obrys pod tenkým svetlým pre vytvorenie obrysu alebo dve výplne s rôznym krytím.</p>
+<p>Stoh sa kreslí najprv zhora, zodpovedajúc poradiu, v ktorom maľuje. Každý riadok výplne alebo obrysu má oko pre jeho skrytie, ikonu farby, ktorá otvorí výber farby, pole krytia, pole hrúbky pre obrysy a šípky pre jeho posunutie hore alebo dole, plus tlačidlo pre jeho odstránenie. <em>Pridať výplň</em> a <em>Pridať obrys</em> položia ďalší na vrch. Efekty sa zobrazia nad výplňami a obrysmi s odznakom <em>fx</em>; kliknite na efekt pre úpravu jeho možností alebo ho odstráňte z jeho riadku. Keď je vrstvený vzhľad hotový, <strong>Objekt &rsaquo; Rozbaliť vzhľad</strong> vypáči celý stoh do obyčajnej grafiky.</p>
+
+<h2 id="appearance-graphic-styles">Grafické štýly</h2>
+<p>Grafický štýl je uložený vzhľad, ktorý môžete použiť na iné objekty. <strong>Panel Grafické štýly</strong> (<kbd>&#8679;F5</kbd>) ich drží ako ikony, každá zobrazujúca svoju výplň s obrysom ako okraj ikony. Vyberte objekt a kliknite na <em>Nový štýl</em> pre uloženie jeho výplní a obrysov; kliknite na ikonu pre použitie tohto štýlu na výber a <kbd>&#8997;</kbd>-klikom na ikonu ju odstráňte. Štýly stojí za to vytvoriť, keď ten istý vzhľad, ako je domáce tlačidlo alebo štýl štítku, musísť na mnohé objekty a zostať konzistentný.</p>
+
+<h2 id="appearance-overprint">Prekrývanie</h2>
+<p><strong>Panel Atribúty</strong> (<kbd>&#8984;F11</kbd>) nastavuje prekrývanie pre tlač. <em>Prekrývanie výplne</em> a <em>Prekrývanie obrysu</em> robia, že tá farba tlačí na farbách pod nami namiesto ich vyrúbania, čo sa používa pre únik a efekty, ako čierna, ktorá tlačí nad namiesto nahradenia toho, čo je pod ním. Zapnite <strong>Zobraziť &rsaquo; Náhľad prekrývania</strong> pre zobrazenie na obrazovke; PDF export zachová nastavenie.</p>
+
+<h2 id="appearance-recolour">Premaľovanie grafiky</h2>
+<p><strong>Upraviť &rsaquo; Upraviť farby &rsaquo; Premeniť farby&#8230;</strong> vypisuje každú farbu vo výbere s tým, ako často sa používa. Kliknite na ikonu vpravo od riadku pre výber, čo sa tá farba stane, alebo na šípku medzi dvoma ikonami pre zanechanie tej farby na pokoji. Posuvníky Odtieň, Sýtosť a Jas posúvajú celú sadu spolu a dve tlačidlá náhodne preusporiadajú nové farby alebo náhodne zmenia ich sýtosť a jas, čo je rýchly spôsob, ako skúsiť variácie. Grafika sa aktualizuje počas pohybu a <em>Resetovať</em> sa vracia k farbám, s ktorými začala.</p>
+<p>Rovnaká podponuka ponúka tiež zmeny v jednom kroku: <em>Zmiešanie odpredu dozadu</em> rozširuje rad farieb medzi predným a zadným objektom, <em>Previesť na šedú</em> odstráni všetku farbu, <em>Invertovať farby</em> prevráti každú a <em>Sýtosť&#8230;</em> zvýši alebo zníži sýtosť naprieč výberom.</p>
