@@ -1,0 +1,91 @@
+<p class="lede">Symboly, štetce a vzory sú tri spôsoby, ako nakresliť jeden kus grafiky raz a znovu ho použiť. Zmeňte originál a každé použitie sa s ním zmení, takže opakovaný prvok zostáva konzistentný a zostáva rýchly na aktualizáciu.</p>
+
+<p>Skratky nižšie sú zapísané v ich macOS forme. V systéme Windows čítajte <kbd>&#8984;</kbd> ako <kbd>Ctrl</kbd>, <kbd>&#8997;</kbd> ako <kbd>Alt</kbd> a <kbd>&#8679;</kbd> ako <kbd>Shift</kbd>.</p>
+
+<h2 id="symbols-panel">Panel Symboly</h2>
+<p>Symbol je uložený kus grafiky, ktorý môžete umiestniť do dokumentu ľubovoľný počet krát. Každá kópia je <em>inštancia</em>: smeruje späť k jednej definícii namiesto toho, aby držala svoju vlastnú grafiku, takže dokument zostáva malý bez ohľadu na to, koľko inštancií umiestnite a zmena definície sa dostane k všetkým naraz. Siahnite po symboloch, keď sa rovnaký prvok opakuje, ako je strom v krajine, špendlík na mape, skrutka v montážnom kresle alebo logo, ktoré sa objaví na viacerých plochách.</p>
+<p>Otvorte panel pomocou <strong>Okno &gt; Symboly</strong> (<kbd>&#8679;&#8984;F11</kbd>) alebo z jeho karty v panelovom doku. Vypisuje symboly v dokumente podľa názvu. Kliknutie na názov ho vyberie ako aktívny symbol, ktorý je ten, ktorý Symbol Scatter kladie; aktívny symbol je zvýraznený.</p>
+
+<h3 id="symbols-make">Vytvorenie symbolu</h3>
+<p>Vyberte grafiku, ktorú chcete znovu použiť a kliknite na <strong>Nový symbol</strong>. Výber je uložený ako definícia symbolu a, na jeho mieste na plátne, je nahradený jednou inštanciou sediacou presne tam, kde bola grafika. Definícia je udržiavaná stranou, takže nezašpinuje plátno ani obyčajné vrstvy. Ak nič nepomenujete, symbol sa volá <code>Symbol 1</code>, <code>Symbol 2</code> a tak ďalej, v poradí, v ktorom ich vytvárate.</p>
+
+<h3 id="symbols-place">Umiestňovanie inštancií</h3>
+<p>Dvojkliknite na symbol v paneli pre vloženie novej inštancie do stredu aktuálneho zobrazenia. Umiestnite toľko, koľko potrebujete. Inštancia sa správa ako akýkoľvek iný objekt, keď je na plátne: vyberte ju a môžete ju presunúť, škálovať, otáčať alebo zrkadliť a nastaviť jeho krytie a miešanie, všetko bez dotýkania sa definície, pretože tieto zmeny jazdia na samotnej inštancii. Použite to na zmenu veľkosti a uhla opakovaných kusov, zanechávajúc ich spojenými s rovnakým majstrom.</p>
+
+<h3 id="symbols-edit">Úprava symbolu</h3>
+<p>Dvojkliknite na inštanciu na plátne nástrojom Výber (<kbd>V</kbd>) pre vstúpenie do vnútra definície. Všetko ostatné na strane sa stlmí a upravujete grafiku samostatne. Dvojkliknite na prázdnu časť plátna pre vystúpenie späť von. Pretože každá inštancia kreslí rovnakú definíciu, úpravu, ktorú urobíte, sa zobrazí vo všetkých naraz. To je pointa symbolu: opravte grafiku raz a celý dokument sa dohoni, namiesto hľadania každej kópie.</p>
+
+<h3 id="symbols-break">Rozbitie spojenia</h3>
+<p>Keď jedna inštancia musí líšiť od zvyšku spôsobom, ktorý presahuje pozíciu, veľkosť alebo krytie, vyberte ju a kliknite na <strong>Rozbiť spojenie</strong>. Inštancia je nahradená obyčajnou, editovateľnou kópiou definície, rovnakej veľkosti a uhla, už nespojenou so symbolom. Zmeny symbolu sa už k nej nedostanú. Tlačidlo je dostupné len, keď je vybraná inštancia symbolu.</p>
+<p>Ak chcete symbol úplne odstrániť, podržte <kbd>&#8997;</kbd> a kliknite na jeho názov v paneli. Jeho definícia a každá inštancia sa odstránia, pretože inštancia bez definície by nič nekreslila.</p>
+
+<h2 id="symbols-symbolism">Nástroje symboliky</h2>
+<p>Nástroje symboliky rozptýlia a upravia inštancie symbolov po desiatach, pod okrúhlym štetcom, namiesto po jednom. Zdieľajú jeden slot v paneli nástrojov; podržte slot pre výber medzi nimi. Pôsobia na inštancie vo vnútri výberu alebo na každú editovateľnú inštanciu v dokumente, keď nie je vybrané nič, takže môžete riadiť celé pole symbolov naraz. Podržte <kbd>&#8997;</kbd> pre obratenie účinku ktoréhokoľvek z nich.</p>
+<p>Keď je nástroj symboliky aktívny, <kbd>[</kbd> a <kbd>]</kbd> robia štetec menším a väčším a <kbd>{</kbd> a <kbd>}</kbd> znižujú a zvyšujú jeho intenzitu (ako tvrdo každé práce).</p>
+<table>
+<thead><tr><th>Nástroj</th><th>Skratka</th><th>Čo robí</th></tr></thead>
+<tbody>
+<tr><td>Symbol Scatter</td><td><kbd>&#8679;S</kbd></td><td>Ťahajte pre pokladanie inštancií aktívneho symbolu, rozložených počas pohybu; inštancie sa zozbierajú do jednej skupiny <em>Súbor symbolov</em>. Podržte <kbd>&#8997;</kbd> pre zdvihnutie inštancií späť pod štetcom</td></tr>
+<tr><td>Symbol Nudge</td><td></td><td>Posúva inštancie smerom, ktorým ťaháte, takže môžete upratať rozptýlenie bez presúvania každého kusu</td></tr>
+<tr><td>Symbol Pack</td><td></td><td>Ťahá inštancie k štetcu; <kbd>&#8997;</kbd> ich rozsypáva</td></tr>
+<tr><td>Symbol Resize</td><td></td><td>Zväčšuje inštancie pod štetcom; <kbd>&#8997;</kbd> ich zmenšuje</td></tr>
+<tr><td>Symbol Spin</td><td></td><td>Otáča inštancie, aby nasledovali smer vášho ťahania</td></tr>
+<tr><td>Symbol Tint</td><td></td><td>Tónuje inštancie smerom k aktuálnej farbe výplne, pre variáciu naprieč skupinou; <kbd>&#8997;</kbd> odstraňuje tónovanie</td></tr>
+<tr><td>Symbol Fade</td><td></td><td>Zoslabuje inštancie znížením ich krytia; <kbd>&#8997;</kbd> ich prináša späť</td></tr>
+<tr><td>Symbol Restyle</td><td></td><td>Používa grafický štýl vybraný v paneli Grafické štýly na inštancie; <kbd>&#8997;</kbd> ho čistí</td></tr>
+</tbody>
+</table>
+<p>Tri nástroje potrebujú niečo nastaviť najprv. Symbol Scatter potrebuje symbol na sprej, takže vytvorte jeden v paneli Symboly predtým, ako začnete. Symbol Restyle používa ktorýkoľvek grafický štýl je vybraný v paneli Grafické štýly, takže vyberte štýl tam najprv; Symbol Tint rovnako používa aktuálnu farbu výplne, takže nastavte výplň pred tónovaním.</p>
+
+<h2 id="symbols-brushes">Panel Štetce</h2>
+<p>Štetec rozhoduje, ako sa ťah kreslí po ceste. Namiesto obyčajnej čiary rovnakej šírky môže cesta niesť perový ťah, stopu rozptýlenej grafiky, jeden tvar rozťahnutý od konca ku koncu alebo pásovú dlaždicu. Cesta zostáva plne editovateľná pod ním: prevarujte ju a štetcový ťah nasleduje. Otvorte panel pomocou <strong>Okno &gt; Štetce</strong> (<kbd>F5</kbd>) alebo z jeho karty v panelovom doku. Každý štetec zobrazuje malý náhľad pri svojom názve.</p>
+
+<h3 id="symbols-brush-kinds">Druhy štetcov</h3>
+<p>Scissor má päť druhov štetcov. Dva sa kreslia z niekoľkých čísel a tri sa stavajú z grafiky, ktorú vyberiete.</p>
+<dl>
+  <dt>Kaligrafický</dt>
+  <dd>Naklonená, oválna špička, ktorá zhublie a schudne, keď sa cesta otáča, ako široké pero. Nastavte jeho Uhol, Zaoblenie a Veľkosť v bodoch. Použite to pre písané ťahy, podpisy a akúkoľvek čiaru, ktorá by mala vyzerať ručne kreslená.</dd>
+  <dt>Štetec</dt>
+  <dd>Zhluk jemných ťahov, ktorý sa číra ako naložený štetec. Nastavte Veľkosť v bodoch, počet štetín a krytie maľovania, aby sa prekrývajúce prechody stavali. Siahnite po ňom, keď chcete jemnú, maliarsku hranu namiesto čistej.</dd>
+  <dt>Rozptýlený</dt>
+  <dd>Posypá kópie vybrané grafiky pozdĺž cesty. Nastavte Veľkosť kópií, Rozstup medzi nimi, ako ďaleko sa Rozptýlia od čiary a ich Rotáciu, s možnosťou otáčať každú kópiu relatívne k ceste a premaľovať ju farbou obrysu. Použite to pre konfety, lístky, hviezdy alebo bubliny pozdĺž krivky.</dd>
+  <dt>Umenie</dt>
+  <dd>Rozťahuje jeden kus vybrané grafiky po celej dĺžke cesty. Nastavte jeho Šírku, s možnosťou premaľovania farbou obrysu. Použite to pre zužujúci sa atramentový ťah, stuhu, šípku alebo hrubú čiernu ktorá sa ohýba s čiarou.</dd>
+  <dt>Vzor</dt>
+  <dd>Kryje vybranú grafiku od konca ku koncu pozdĺž cesty, ako ozdobný okraj. Nastavte Mierku a Rozstup, s možnosťou premaľovania farbou obrysu. Použite to pre reťaz, lano, šitie alebo opakujúci sa rámec.</dd>
+</dl>
+
+<h3 id="symbols-brush-apply">Použitie a odstránenie štetcu</h3>
+<p>Vyberte jednu alebo viac ciest a kliknite na štetec pre nakreslenie ich ťahov ním. Cesta bez viditeľného obrysu dostane jeden, aby mal štetec čiaru, po ktorej beža. Nástroj Štetec (<kbd>B</kbd>) kreslí nové ťahy s ktorýmkoľvek štetcom je aktuálne vybraný, takže vyberte štetec a maľujte priamo na plátno. Ak chcete odstrániť štetec z vybraných ťahov a vrátiť ich na obyčajné čiary, kliknite na <strong>Odstrániť štetec</strong>.</p>
+
+<h3 id="symbols-brush-manage">Vytváranie, úprava a odstraňovanie štetcov</h3>
+<p>Kliknite na <strong>Nový štetec&hellip;</strong>, vyberte jeden z piatich druhov a nastavte jeho možnosti. Pre rozptýlený, umelecký alebo vzorový štetec vyberte grafiku, ktorú má použiť, predtým, ako otvoríte dialógové okno, pretože táto grafika sa stane štetcom. Ak chcete zmeniť štetec neskôr, vyberte ho a kliknite na <strong>Možnosti&hellip;</strong> (alebo dvojklikom naň v zozname); akýkoľvek ťah, ktorý ho používa, sa prekreslí s novými nastaveniami. <strong>Odstrániť</strong> odstraňuje vybraný štetec, po výzve; ťahy, ktoré ho používali, sa vracajú na obyčajné čiary.</p>
+
+<h2 id="symbols-patterns">Panel Vzory</h2>
+<p>Vzor je dlaždica grafiky, ktorá sa opakuje pre vyplnenie tvaru. Definujte dlaždicu raz a môžete ju nalieť do akéhokoľvek objektu ako výplň, takže textúra alebo motiv zostáva jednotný naprieč grafikou a sa aktualizuje všade, keď upravíte dlaždicu. Panel sedí v panelovom doku a rovnaké príkazy žijú pod <strong>Objekt &gt; Vzor</strong>.</p>
+
+<h3 id="symbols-pattern-make">Vytvorenie vzoru</h3>
+<p>Vyberte grafiku pre jednu dlaždicu a kliknite na <strong>Vytvoriť vzor</strong> (alebo <strong>Objekt &gt; Vzor &gt; Vytvoriť</strong>). Kópia grafiky je uložená ako opakujúca sa dlaždica a pridaná do panelu; grafika, ktorú ste nakreslili, zostáva tam, kde je. Vzory sa volajú <code>Vzor 1</code>, <code>Vzor 2</code> a tak ďalej, keď ich vytvárate.</p>
+
+<h3 id="symbols-pattern-fill">Vyplnenie vzorom</h3>
+<p>Vyberte tvar a kliknite na vzor v paneli pre nastavenie ako výplň tvaru. Bez vybraného kliknutie na vzor ho robí farbou výplne pre ďalší tvar, ktorý nakreslíte. Pretože je to výplň, vzor sa opakuje pre pokrytie tvaru a orezá sa na jeho obrys. Použite to pre pozadia, tkaniny, vegetáciu alebo akýkoľvek povrch, ktorý by sa mal čítať ako opakovanie namiesto plochéj farby. Ak chcete odstrániť vzor z dokumentu, podržte <kbd>&#8997;</kbd> a kliknite naň v paneli; tvary, ktoré boli vyplnené ňom, sa vracajú na žiadnu výplň.</p>
+
+<h3 id="symbols-pattern-edit">Úprava dlaždice</h3>
+<p>Dvojkliknite na vzor v paneli pre úpravu jeho dlaždice. Zvyšok grafiky sa stlmí a pracujete na dlaždici samostatne, s tlačidlom <strong>Dokončiť úpravu</strong> v paneli; kliknite naň (alebo použite <strong>Objekt &gt; Vzor &gt; Upraviť vzor</strong> znova), keď ste hotoví. Každý tvar vyplnený vzorom sa aktualizuje, aby zodpovedal. Môžete tiež začať úpravu vybraním tvaru, ktorý je vyplnený vzorom a výberom <strong>Upraviť vzor</strong>.</p>
+
+<h3 id="symbols-pattern-options">Možnosti dlaždice</h3>
+<p>Kliknite na tlačidlo možností dlaždice pri vzore (alebo <strong>Objekt &gt; Vzor &gt; Možnosti dlaždice&hellip;</strong>) pre kontrolu toho, ako sa dlaždica opakuje. Tieto nastavenia menia rozloženie opakovania bez zmeny grafiky v dlaždici.</p>
+<dl>
+  <dt>Typ dlaždice</dt>
+  <dd>Ako sa riadky a stĺpce zarovnávajú: Mriežka, Cihla po riadkoch, Cihla po stĺpcoch, Hex po stĺpcoch alebo Hex po riadkoch. Cihla posúva striedavé riadky alebo stĺpce ako tehly; hex naskladá dlaždice do plodiny.</dd>
+  <dt>Offset cihly</dt>
+  <dd>Pre typy cihly, ako ďaleko je každý striedavý riadok alebo stĺpec posunutý, ako percento dlaždice.</dd>
+  <dt>Prispôsobiť dlaždicu grafike</dt>
+  <dd>Prispôsobí dlaždicu ohraničeniu grafiky. Vypnite to pre nastavenie Šírky a Výšky dlaždice sami.</dd>
+  <dt>Šírka a výška</dt>
+  <dd>Veľkosť dlaždice v pixeloch, používaná, keď dlaždica nie je veľkosti podľa grafiky.</dd>
+  <dt>Horizontálne a vertikálne rozstupy</dt>
+  <dd>Medzery zanechané medzi dlaždicami, v pixeloch. Kladné hodnoty rozstupujú motiv; záporné prekrývajú dlaždice.</dd>
+  <dt>Presúvať dlaždicu s grafikou</dt>
+  <dd>Udržiava dlaždicu zarovnanú s grafikou, keď sa pohybuje, takže opakovanie cestuje s objektom.</dd>
+</dl>
