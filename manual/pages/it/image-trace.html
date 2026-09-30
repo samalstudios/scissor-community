@@ -1,0 +1,100 @@
+<p class="lede">Vettorizza trasforma un'immagine in tracciati vettoriali: un logo scansionato da carta, un abbozzo a matita o una fotografia diventa un insieme di forme riempite che puoi ridimensionare, ricolorare e modificare come qualsiasi altra cosa che disegni. Questa pagina copre cosa puoi tracciare, il pannello che lo esegue, le tre modalità e i loro preset, ogni opzione e come conservare o scartare il risultato.</p>
+
+<h2 id="image-trace-what">Cosa fa la tracciatura e cosa puoi tracciare</h2>
+<p>Un'immagine è fatta di pixel: sfoca quando la ingrandisci e non può essere rimodellata punto per punto. La tracciatura legge quei pixel e disegna tracciati vettoriali che seguono le forme che trova, così il risultato resta nitido a qualsiasi dimensione e può essere modificato, ricolorato e combinato con il resto del tuo lavoro.</p>
+<p>Tracci un <strong>livello pixel</strong>: un'immagine che hai posato o incollato, un'immagine aperta come tavola propria, oppure un livello che hai dipinto tu. Porta un'immagine con <strong>File &gt; Inserisci&hellip;</strong> (<kbd>&#8679;&#8984;P</kbd>) — arriva come livello pixel — selezionala, poi esegui la tracciatura. (Il lavoro vettoriale è già fatto di tracciati, quindi non c'è nulla da tracciare; la tracciatura legge i pixel.)</p>
+<p>La tracciatura non butta l'immagine. Costruisce un gruppo chiamato <strong>Vettorizza</strong> che contiene l'immagine originale (ora nascosta) insieme ai nuovi tracciati, posata esattamente sopra di essa. Poiché il gruppo ricorda le impostazioni con cui è stato creato, il risultato resta live: riselezionalo, cambia un'impostazione e ritrasforma. Quando sei felice lo <strong>Espandi</strong> per tenere solo i tracciati, oppure lo <strong>Rilascia</strong> per tornare all'immagine semplice.</p>
+
+<h2 id="image-trace-panel">Il pannello Vettorizza</h2>
+<p>Ogni impostazione vive nel pannello Vettorizza. Aprilo da <strong>Oggetto &gt; Vettorizza &gt; Pannello Vettorizza</strong>, oppure dalla sua scheda nel dock dei pannelli. Il pannello ha bisogno di un'immagine selezionata prima di poter fare nulla: senza nulla di adatto selezionato, il pulsante Traccia è disattivato e il pannello ti chiede di selezionare un'immagine posata.</p>
+
+<h3 id="image-trace-run">Eseguire una tracciatura</h3>
+<p>Seleziona un'immagine, scegli un preset o imposta modalità e opzioni a mano e premi <strong>Traccia</strong>. Una riga in fondo al pannello riporta l'avanzamento, leggendo <em>Tracciatura in corso&hellip;</em> mentre lavora e <em>Tracciato. Espandi per tenere solo i tracciati.</em> quando finisce. Se l'immagine non contiene nulla da cui una forma possa essere fatta, oppure non può essere letta, il pannello te lo dice e lascia l'immagine intatta.</p>
+
+<h3 id="image-trace-preview">Anteprima man mano che procedi</h3>
+<p>La casella <strong>Traccia al cambio delle impostazioni</strong>, attiva per impostazione predefinita, ritrasforma nel momento in cui cambi la modalità, un preset, un numero o una casella, così puoi giudicare ogni aggiustamento rispetto all'immagine subito. Su un'immagine grande o affollata il ridisegno richiede un momento, quindi disattivala se preferisci impostare prima diverse opzioni e premere <strong>Traccia</strong> una volta sola. Quando riselezioni una tracciatura esistente, il pannello carica le impostazioni esatte con cui è stata fatta, pronte per essere regolate e ritracciate.</p>
+
+<h3 id="image-trace-menu">I comandi del menu Oggetto</h3>
+<p>Le stesse azioni si trovano sotto <strong>Oggetto &gt; Vettorizza</strong>, cosa comoda quando il pannello è chiuso.</p>
+<table>
+  <thead><tr><th>Comando</th><th>Cosa fa</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Crea</strong></td><td>Traccia l'immagine selezionata con le impostazioni correnti, lasciando il risultato live.</td></tr>
+    <tr><td><strong>Crea ed espandi</strong></td><td>Traccia ed espande in un unico passaggio, così vai direttamente ai tracciati modificabili.</td></tr>
+    <tr><td><strong>Espandi</strong></td><td>Mantiene i tratti e scarta l'immagine (vedi sotto).</td></tr>
+    <tr><td><strong>Rilascia</strong></td><td>Elimina i tratti e torna all'immagine (vedi sotto).</td></tr>
+    <tr><td><strong>Pannello Vettorizza</strong></td><td>Porta il pannello in primo piano.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="image-trace-modes">Le tre modalità</h2>
+<p>La modalità decide come l'immagine viene ridotta prima di essere disegnata. È la prima scelta da fare, perché governa quali delle opzioni sotto si applicano.</p>
+<table>
+  <thead><tr><th>Modalità</th><th>Come riduce l'immagine</th><th>L'opzione che usa</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Bianco e nero</strong></td><td>Divide tutto in due toni, inchiostro e carta, a una luminosità che imposti.</td><td>Soglia</td></tr>
+    <tr><td><strong>Scala di grigi</strong></td><td>Riduce l'immagine a un numero impostato di livelli di grigio uniformi da nero a bianco.</td><td>Numero di colori (come livelli di grigio)</td></tr>
+    <tr><td><strong>Colore</strong></td><td>Sceglie una palette dei colori più significativi dell'immagine e mappa ogni pixel al più vicino.</td><td>Numero di colori</td></tr>
+  </tbody>
+</table>
+<p>Qualunque modalità scegli, viene creata una forma riempita per tono o colore, e le forme sono impilate dalla più grande così i dettagli più piccoli si trovano sopra. Le parti completamente trasparenti dell'immagine vengono lasciate fuori, così un ritaglio su sfondo trasparente si trasforma solo nel suo soggetto.</p>
+
+<h2 id="image-trace-presets">Preset</h2>
+<p>Un preset è un punto di partenza con nome che imposta la modalità e ogni opzione in una volta. Scegline uno dal menu in cima al pannello e, con l'anteprima attiva, l'immagine si trasforma immediatamente; tratta il risultato come una base e regola da lì. Nel momento in cui cambi qualsiasi singola opzione il menu preset passa a <strong>Personalizzato</strong>, poiché le impostazioni non corrispondono più al preset.</p>
+<table>
+  <thead><tr><th>Preset</th><th>Modalità</th><th>Usalo quando</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Foto alta fedeltà</strong></td><td>Colore</td><td>Vuoi una fotografia mantenuta vicina all'originale, con molti colori.</td></tr>
+    <tr><td><strong>Foto bassa fedeltà</strong></td><td>Colore</td><td>Una fotografia dovrebbe leggersi come poche ampie aree di colore piatto.</td></tr>
+    <tr><td><strong>3 colori</strong></td><td>Colore</td><td>Vuoi un risultato audace, tipo poster, da tre colori piatti.</td></tr>
+    <tr><td><strong>6 colori</strong></td><td>Colore</td><td>Un aspetto piatto e illustrato con una piccola palette ordinata.</td></tr>
+    <tr><td><strong>16 colori</strong></td><td>Colore</td><td>Più gamma di colori rispetto ai preset piatti, senza arrivare a una foto completa.</td></tr>
+    <tr><td><strong>Tonalità di grigio</strong></td><td>Scala di grigi</td><td>Un'immagine tonale dovrebbe mantenere le sue sfumature ma perdere il colore.</td></tr>
+    <tr><td><strong>Logo bianco e nero</strong></td><td>Bianco e nero</td><td>Trasformare un segno o logo nitido a due toni in forme cristalline.</td></tr>
+    <tr><td><strong>Arte schizzata</strong></td><td>Bianco e nero</td><td>Catturare un abbozzo a matita o inchiostro con le sue linee più libere.</td></tr>
+    <tr><td><strong>Silhouette</strong></td><td>Bianco e nero</td><td>Vuoi silhouette solide e riempite piuttosto che linee fini.</td></tr>
+    <tr><td><strong>Line art</strong></td><td>Bianco e nero</td><td>Un disegno a linea fine dove i tratti sottili devono sopravvivere.</td></tr>
+    <tr><td><strong>Disegno tecnico</strong></td><td>Bianco e nero</td><td>Lavoro a linea nitido e fedele con il maggior dettaglio possibile conservato.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="image-trace-options">Le opzioni</h2>
+<p>Sotto la modalità si trovano i controlli che modellano il risultato. Quali vengono mostrati dipende dalla modalità: Soglia appare solo per Bianco e nero, mentre il numero di colori appare per Scala di grigi e Colore.</p>
+<dl>
+  <dt>Numero di colori</dt>
+  <dd>Quanti colori (in modalità Colore) o livelli di grigio (in Scala di grigi) l'immagine viene ridotta, da 2 a 64. Meno dà un risultato più piatto e grafico con meno forme; di più mantiene l'immagine più vicina all'originale a costo di più tracciati. La modalità Bianco e nero ignora questo, poiché ha sempre due toni.</dd>
+  <dt>Soglia</dt>
+  <dd>Solo per Bianco e nero: la luminosità, da 0 a 255, in cui l'immagine si divide in inchiostro e carta. Tutto ciò che è più scuro della soglia diventa la forma disegnata; tutto ciò che è più chiaro viene trattato come sfondo. Aumentala per portare più dei toni intermedi nella forma per un risultato più pesante, abbassala per tenere solo i segni più scuri. Usala per regolare quanto di un abbozzo tenue viene raccolto.</dd>
+  <dt>Tracciati</dt>
+  <dd>Quanto da vicino i tracciati seguono i pixel, su una scala da 0 a 100. Valori alti abbracciano strettamente i bordi e mantengono le fine oscillazioni, con più punti di ancoraggio; valori bassi rilassano l'adattamento per tracciati più lisci e semplici, più leggeri da modificare. Usa un valore alto quando l'accuratezza conta e uno basso quando vuoi un contorno pulito e ordinato.</dd>
+  <dt>Angoli</dt>
+  <dd>Quanto facilmente una svolta nel contorno diventa un angolo netto invece di una curva morbida, da 0 a 100. Aumentala per lavori con angoli cristallini, come un logo o un lettering; abbassala per forme organiche che dovrebbero restare arrotondate.</dd>
+  <dt>Rumore</dt>
+  <dd>La macchia più piccola, in pixel, che può diventare una forma propria. Tutto ciò che è più piccolo viene assorbito in ciò che lo circonda. Aumentala per eliminare granelli e grana da una scansione o fotografia così puntini sparsi non diventano ciascuno un tracciato; abbassala per mantenere il genuino dettaglio fine.</dd>
+  <dt>Ignora bianco</dt>
+  <dd>Lascia fuori qualsiasi forma che risulta quasi bianca, così la carta o lo sfondo non vengono disegnati e restano trasparenti dietro i segni tracciati. Attivo per impostazione predefinita, e mostrato per la modalità Bianco e nero. Disattivalo quando un'area bianca fa parte del lavoro e deve essere una forma riempita reale.</dd>
+  <dt>Riempi</dt>
+  <dd>Dà a ogni forma tracciata un riempimento solido nel colore in cui è stata tracciata. È la scelta abitudinare ed è attiva per impostazione predefinita.</dd>
+  <dt>Contorni</dt>
+  <dd>Contorna ogni forma tracciata con un contorno nel suo proprio colore invece di, o oltre a, un riempimento. Disattivato per impostazione predefinita. Se disattivi sia Riempi che Contorni i tracciati vengono comunque creati ma non hanno nulla che li dipinge, quindi lasciane almeno uno attivo.</dd>
+</dl>
+
+<h2 id="image-trace-finish">Conservare o annullare il risultato</h2>
+<p>Una nuova tracciatura è live: i tracciati si trovano sopra l'originale nascosto dentro il gruppo Vettorizza, e puoi continuare a regolare le impostazioni. Due comandi terminano quello stato, entrambi sul pannello come pulsanti e sotto <strong>Oggetto &gt; Vettorizza</strong>. Diventano disponibili una volta selezionata una tracciatura.</p>
+<dl>
+  <dt>Espandi</dt>
+  <dd>Mantiene i tracciati e rimuove l'immagine, così il gruppo diventa lavoro vettoriale ordinario. Le impostazioni non si più applicare e non possono essere cambiate, ma ogni tracciato è ora una forma normale che puoi rimodellare, ricolorare, combinare e disporre. Usalo una volta che la tracciatura sembra giusta e vuoi lavorare sui vettori. <strong>Crea ed espandi</strong> fa la tracciatura e questo passaggio insieme.</dd>
+  <dt>Rilascia</dt>
+  <dd>Elimina i tracciati tracciati e ripristina l'immagine originale, di nuovo visibile nel suo vecchio posto. Usalo per abbandonare una tracciatura e ricominciare da zero, oppure quando alla fine ti serviva solo l'immagine.</dd>
+</dl>
+
+<h2 id="image-trace-uses">Loghi, abbozzi e fotografie</h2>
+<p>I tre punti di partenza comuni richiedono impostazioni diverse.</p>
+<dl>
+  <dt>Un logo o segno pulito</dt>
+  <dd>Parti da <strong>Logo bianco e nero</strong>. Mantieni <strong>Ignora bianco</strong> attivo così la carta esce, aumenta <strong>Angoli</strong> per angoli cristallini e <strong>Tracciati</strong> per bordi fedeli, e regola <strong>Soglia</strong> finché il segno è solido senza riempirsi. Espandi, poi imposta il tuo colore di riempimento.</dd>
+  <dt>Un abbozzo a matita o inchiostro</dt>
+  <dd>Prova <strong>Arte schizzata</strong> oppure <strong>Line art</strong>. Abbassa la <strong>Soglia</strong> per tenere solo le linee disegnate e lasciare che la carta sparisca, e aumenta un po' <strong>Rumore</strong> per eliminare la grana della carta. Line art mantiene i tratti più sottili; Arte schizzata si adatta a una mano più libera.</dd>
+  <dt>Una fotografia</dt>
+  <dd>Usa la modalità Colore con <strong>Foto alta fedeltà</strong> per una somiglianza stretta oppure <strong>Foto bassa fedeltà</strong> per un aspetto più piatto e illustrato, e imposta il <strong>numero di colori</strong> a piacimento. Lascia <strong>Ignora bianco</strong> disattivato così le aree chiare restano. Più colori significano più forme, così una tracciatura foto pesante può essere grande: riduci i colori se il risultato sembra ingombrante.</dd>
+</dl>

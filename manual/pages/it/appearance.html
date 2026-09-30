@@ -1,0 +1,134 @@
+<p class="lede">L'aspetto di una forma è il suo <em>aspetto</em>: il riempimento dentro il suo contorno, il contorno disegnato lungo di esso e l'opacità e la fusione che decidendo come si posa sopra ciò che c'è dietro. Ciascuno di questi può essere un colore piatto, una sfumatura o un motivo, e un oggetto può portarne più di uno di ciascuno alla volta. Questa pagina copre i controlli di vernice, i modelli colore, campioni, sfumature, contorni, trasparenza, il pannello Stack pittura e gli stili grafici.</p>
+
+<p>Le scorciatoie sotto sono scritte nel formato macOS. Su Windows, leggi <kbd>&#8984;</kbd> come Ctrl, <kbd>&#8997;</kbd> come Alt e <kbd>&#8679;</kbd> come Shift.</p>
+
+<figure class="shot">
+  <img src="img/artwork-landscape.png" width="1700" height="967" loading="lazy"
+       alt="Un paesaggio vettoriale di montagne, cielo e un lago, costruito da forme a riempimento piatto in Scissor." />
+  <figcaption>Un'intera scena costruita da forme riempite. Ogni fascia di colore è un tracciato con il suo riempimento.</figcaption>
+</figure>
+
+<h2 id="appearance-fill-and-stroke">Riempiimenti e contorni</h2>
+<p>Un tracciato, una forma o un pezzo di testo può contenere un <strong>riempimento</strong>, la vernice dentro il suo contorno, e un <strong>contorno</strong>, la linea disegnata lungo quel contorno. Un riempimento può essere un colore solido, una sfumatura o un motivo; un contorno può essere un colore solido o una sfumatura, con il proprio spessore e tratteggio. Anche entrambi i lati possono essere impostati su nessuno, così puoi disegnare una forma con solo un contorno, o solo un riempimento.</p>
+
+<h3 id="appearance-the-paint-chips">I chip di riempimento e contorno</h3>
+<p>Due chip sovrapposti in fondo alla barra degli strumenti contengono il riempimento e il contorno. Fai clic su uno dei due per aprire un selettore di colore; quello davanti è il lato su cui agiscono i tasti e i pannelli Colore, Sfumatura e Campioni. Premi <kbd>X</kbd> per portare l'altro lato davanti, <kbd>&#8679;X</kbd> per scambiare le due vernici, <kbd>/</kbd> per impostare il lato davanti su nessuno e <kbd>D</kbd> per tornare ai valori predefiniti: riempimento bianco, contorno nero e spessore 1 pt. Gli stessi riempimento, contorno, spessore, opacità e modalità di fusione si trovano anche insieme nel pannello Proprietà, cosa utile quando li vuoi tutti in un posto.</p>
+<p>Con nulla selezionato, questi controlli impostano lo stile che il prossimo oggetto che disegni assumerà, così puoi scegliere un colore prima di disegnare invece che dopo.</p>
+
+<h3 id="appearance-eyedropper">Copiare la vernice con il Contagocce</h3>
+<p>Il Contagocce (<kbd>I</kbd>) copia un intero aspetto dall'oggetto su cui fai clic sulla selezione. Tieni premuto <kbd>&#8679;</kbd> per prendere solo il suo colore di riempimento o contorno nel lato attivo, oppure <kbd>&#8997;</kbd> per spingere l'aspetto della selezione sull'oggetto sotto il puntatore invece. Facendo clic su un'immagine posata o un livello pixel campiona il colore sotto il puntatore nel lato attivo, così puoi prelevare un colore direttamente da una foto. Usa il Contagocce quando due oggetti devono corrispondere: campiona uno, e l'altro assume la stessa vernice in un singolo clic.</p>
+
+<h2 id="appearance-colour">Colore</h2>
+<p>Il colore si sceglie nel piccolo selettore a comparsa su ogni chip, oppure, con più controllo, nel pannello Colore.</p>
+
+<h3 id="appearance-color-panel">Il pannello Colore</h3>
+<p>Il pannello <strong>Colore</strong> (<kbd>F6</kbd>) mostra la vernice del lato attivo come una serie di cursori, un campo esadecimale e uno spettro. I chip di riempimento e contorno in alto scelgono quale lato stai modificando. Lo spettro dispone le tonalità in orizzontale, il bianco in alto e il nero in basso; fai clic o trascina al suo interno per scegliere. Tre campioni rapidi accanto impostano Nessuno, Bianco e Nero in un clic, e i pulsanti <em>Inverti</em> e <em>Complemento</em> rielaborano il colore corrente (Complemento gira la tonalità di metà giro mantenendo saturazione e luminosità).</p>
+<p>Il menu del modello colore imposta quali cursori il pannello mostra. La scelta viene mantenuta per la sessione e i nuovi campioni vengono creati in esso.</p>
+<dl>
+  <dt>Scala di grigi</dt><dd>Un singolo cursore K, dal bianco al 0% al nero al 100%.</dd>
+  <dt>RGB</dt><dd>Rosso, verde e blu da 0 a 255, il modello per il lavoro su schermo.</dd>
+  <dt>HSB</dt><dd>Tonalità in gradi, poi saturazione e luminosità come percentuali: spesso il modo più veloce per ritoccare un colore senza perderne il carattere.</dd>
+  <dt>CMYK</dt><dd>Ciano, magenta, giallo e nero come percentuali, per la stampa.</dd>
+  <dt>Web Safe RGB</dt><dd>RGB aglichiusi sui 216 colori web-safe. Quando il colore corrente non è uno di essi appare un triangolo di avviso; fai clic su di esso per agganciarsi al colore web-safe più vicino.</dd>
+</dl>
+<p>Quando il lato attivo è dipinto con un campione globale, una riga di tinta appare sopra i cursori: nomina il campione e ti permette di impostare una tinta dal 0% al 100% invece di modificare direttamente il colore, così il lavoro resta collegato al campione.</p>
+
+<h2 id="appearance-swatches">Campioni e gruppi colore</h2>
+<p>Un campione è un colore con nome salvato con il documento. Dipingere dai campioni invece che digitare valori mantiene una palette coerente e, per i campioni globali, ti permette di restylare un intero documento modificando un colore.</p>
+
+<h3 id="appearance-swatches-panel">Il pannello Campioni</h3>
+<p>Il pannello <strong>Campioni</strong> (apri da <strong>Finestra &rsaquo; Campioni</strong>) elenca i campioni del documento come griglia o come lista; la vista lista mostra anche il modello colore di ogni campione. Un clic semplice dipinge il lato attivo. <kbd>&#8679;</kbd>-clic seleziona una serie di campioni e <kbd>&#8984;</kbd>-clic aggiunge o rimuove uno dalla selezione, così puoi agire su diversi alla volta. Il fondo contiene pulsanti per cambiare vista, aprire il menu del pannello, mostrare le opzioni dei campioni, creare un gruppo colore, creare un nuovo campione ed eliminare ciò che è selezionato.</p>
+<p>Il menu del pannello aggiunge altro: <em>Aggiungi colori usati</em> e <em>Aggiungi colori selezionati</em> trasformano i colori già nel documento, o solo nella selezione, in campioni; <em>Seleziona tutti inutilizzati</em> seleziona ogni campione con cui non è dipinto nulla, pronto per l'eliminazione; e <em>Rimappa colori&#8230;</em> apre la finestra di ricolorazione descritta sotto.</p>
+
+<h3 id="appearance-process-spot-global">Campioni di processo, spot e globali</h3>
+<p>Fai doppio clic su un campione per Opzioni campione, dove imposti che tipo di colore è.</p>
+<dl>
+  <dt>Processo</dt><dd>Un colore ordinario, miscelato per il lavoro. Un campione di processo semplice è solo un colore memorizzato: modificarlo non tocca il lavoro già dipinto con esso.</dd>
+  <dt>Globale</dt><dd>Un campione di processo contrassegnato Globale mantiene il lavoro collegato ad esso, così ricolorare il campione ridipinge tutto ciò che è dipinto con esso in una volta. I campioni globali possono essere applicati come tinta.</dd>
+  <dt>Spot</dt><dd>Un inchiostro con nome, destinato a stampare su un proprio colore. I colori spot sono sempre globali.</dd>
+</dl>
+<p>Ogni documento inizia anche con un campione <strong>[Registrazione]</strong> fisso, che non ha un tipo di colore proprio e non può essere eliminato o trascinato. Usa un campione globale o spot quando un colore appare molte volte e potrebbe cambiare: un aggiornamento modifica ogni oggetto, piuttosto che cercarli uno per uno a mano.</p>
+
+<h3 id="appearance-colour-groups">Gruppi colore</h3>
+<p>I gruppi colore archiviano campioni correlati insieme, come una famiglia di tonalità o la palette di un progetto. Trascina i campioni su un gruppo per archiviarli, oppure selezionane alcuni e creane un gruppo con il pulsante Nuovo gruppo colore del pannello. Fai doppio clic sull'intestazione di un gruppo per le sue opzioni. Nel selettore di colore su ogni chip, ogni gruppo appare come una riga, così una famiglia si legge come una rampa di tonalità piuttosto che un muro di chip.</p>
+
+<h2 id="appearance-gradients">Sfumature</h2>
+<p>Una sfumatura sfuma tra due o più colori. Scissor crea sfumature lineari, radiali e libere, e sia il pannello che lo strumento su tela possono costruirle e modellarle. Usa una sfumatura per dare profondità a una forma piatta, un lavaggio morbido a uno sfondo o una lucentezza a un pulsante.</p>
+
+<h3 id="appearance-gradient-panel">Il pannello Sfumatura</h3>
+<p>Il pannello <strong>Sfumatura</strong> (<kbd>&#8984;F9</kbd>) controlla l'intera sfumatura. Fai clic sulla miniatura per riempire il lato attivo, scegli Lineare, Radiale o Libera dal menu tipo e usa il pulsante inverti per capovolgere la rampa. La rampa stessa porta i fermi: fai clic su di essa per aggiungere un fermo nel colore che già ha lì, trascina un fermo per spostarlo e trascina un rombo tra due fermi per spostare dove i due colori si incontrano. Il fermo selezionato ha il suo campione colore, un campo <em>Opacità</em> e un campo <em>Posizione</em>, ed <em>Elimina fermo</em> lo rimuove. <em>Angolo</em> ruota una sfumatura lineare o radiale, e <em>Proporzioni</em> (solo radiale) schiaccia una sfumatura radiale in un'ellisse.</p>
+<figure class="shot">
+  <img src="img/gradient.gif" width="340" height="340" loading="lazy"
+       alt="Un quadrato arrotondato riempito con una sfumatura lineare da blu ad ambra la cui direzione ruota." />
+  <figcaption>Una sfumatura lineare da blu ad ambra. Trascinando l'asse della sfumatura, o cambiando il suo angolo, la sfumatura ruota attorno alla forma.</figcaption>
+</figure>
+
+<h3 id="appearance-gradient-tool">Lo Strumento Sfumatura</h3>
+<p>Con lo Strumento Sfumatura (<kbd>G</kbd>) gli stessi controlli si trovano sul lavoro. Trascina attraverso un oggetto per posare l'asse, tenendo premuto <kbd>&#8679;</kbd> per limitarlo a passi di 45&deg;. L'asse mostra un pomello rotondo all'inizio e un pomello quadrato alla fine; trascina uno dei due per spostare quell'estremità. Fai clic sull'asse per aggiungere un fermo nel colore che già ha lì, trascina un fermo lungo di esso e tira un fermo ben lontano dall'asse per buttarlo. Trascina un rombo per spostare il punto medio. <kbd>Canc</kbd> rimuove il fermo che hai toccato per ultimo.</p>
+
+<h3 id="appearance-freeform">Sfumature libere</h3>
+<p>Una sfumatura libera posiziona punti colore ovunque sulla forma piuttosto che lungo un asse, così la sfumatura può seguire la forma del lavoro. Con lo Strumento Sfumatura, fai clic sul lavoro per piazzare un punto colore, trascinalo per spostarlo e premi <kbd>Canc</kbd> per toglierlo. Spunta <em>Collega i punti in linee</em> nel pannello per unire i punti in linee, che diffondono un colore lungo un percorso piuttosto che da un singolo punto. Usa una sfumatura libera per sfumature morbide e organiche che una rampa rettilinea non può dare.</p>
+
+<h2 id="appearance-patterns">Motivi</h2>
+<p>Un motivo è lavoro ripetuto come piastrella e usato come riempimento. Trasforma una selezione in una piastrella con <strong>Oggetto &rsaquo; Motivo &rsaquo; Crea</strong>, poi riempici qualsiasi forma dal pannello <strong>Motivi</strong>: fai clic su una piastrella per riempire, doppio clic per modificarla e <kbd>&#8997;</kbd>-clic per eliminarla. <em>Opzioni piastrella</em> imposta il tipo di piastrella, l'offset mattonella, la dimensione e la spaziatura, e se la piastrella si dimensiona e si muove con il lavoro. <strong>Modifica motivo</em> apre la piastrella sul posto con le sue copie ripetute attorno mentre lavori; fai clic su <em>Finito</em> nel pannello Motivi quando la piastrella è pronta. I motivi si adattano a texture ripetute, come strisce, punti, trame e sfondi, che sarebbero noiose disegnare a mano.</p>
+
+<h2 id="appearance-strokes">Contorni</h2>
+<p>Il pannello <strong>Contorno</strong> (<kbd>&#8984;F10</kbd>) modella la linea disegnata lungo un tracciato.</p>
+
+<h3 id="appearance-stroke-options">Spessore, terminali, giunzioni e allineamento</h3>
+<p><em>Spessore</em> imposta lo spessore del contorno in punti. I pulsanti <em>Terminale</em> decidono come finisce un tracciato aperto: piatto (tagliato di netto all'ancora), rotondo o sporgente (quadrato, ma che supera l'ancora di metà spessore). I pulsanti <em>Giunzione</em> decidono come un contorno gira un angolo: miter (una punta netta), rotondo o smussato (un taglio piatto), con un <em>Limite</em> miter che smussa le punte più appuntite perché non sporgano. <em>Allinea</em> posiziona il contorno al centro del tracciato, o interamente dentro o fuori di esso, cosa che conta quando una forma deve incontrarsi esattamente con le sue vicine.</p>
+
+<h3 id="appearance-dashes">Linee tratteggiate</h3>
+<p>Spunta <em>Linea tratteggiata</em> per spezzare il contorno in tratti. Le tre coppie tratto-spazio sotto impostano il motivo: il primo campo è una lunghezza di tratto, il successivo uno spazio, e così via, ripetendosi lungo il tracciato. Lascia vuote le coppie successive per un tratteggio semplice e uniforme.</p>
+
+<h3 id="appearance-width-profiles">Profili di spessore e Strumento Spessore</h3>
+<p>Un profilo di spessore assottiglia il contorno lungo la sua lunghezza piuttosto che mantenerlo a uno spessore unico. Scegli un profilo dal menu del pannello e una piccola anteprima mostra la forma che crea; i pulsanti accanto lo girano nell'altro verso, salvano il contorno corrente come nuovo profilo o eliminano un profilo che hai creato. Un contorno che hai modellato a mano appare come <em>Personalizzato</em> nel menu.</p>
+<p>Lo Strumento Spessore (<kbd>&#8679;W</kbd>) modella un contorno direttamente sulla tela: trascina lontano dal tracciato per allargarlo in quel punto, oppure verso di esso per restringerlo, lasciando un punto di spessore che puoi trascinare di nuovo in seguito. Usalo per dare a una linea disegnata il rigonfiamento e l'assottigliamento di un pennello o uno stilo.</p>
+
+<h3 id="appearance-brushes">Pennelli</h3>
+<p>Il pannello <strong>Pennelli</strong> (<kbd>F5</kbd>) dipinge i tratti con una forma piuttosto che una linea semplice. Contiene pennelli calligrafici, sparsi, artistici, a setola e motivo. Fai clic su un pennello per applicarlo ai tracciati selezionati; il Pennello usa quello corrente. Fai doppio clic su un pennello per le sue opzioni, usa <em>Nuovo pennello&#8230;</em> per crearne uno (i pennelli sparsi, artistici e motivo si costruiscono da lavoro selezionato) e <em>Rimuovi pennello</em> per riportare un tratto a una linea semplice.</p>
+
+<h2 id="appearance-opacity-blending">Opacità e fusione</h2>
+<p>L'opacità e la modalità di fusione decidono come un oggetto si combina con ciò che si trova sotto di esso. Si trovano nel pannello <strong>Trasparenza</strong> (<kbd>&#8679;&#8984;F10</kbd>) e anche nel pannello Proprietà.</p>
+
+<h3 id="appearance-blend-modes">Le modalità di fusione</h3>
+<p>L'opacità va dal 0% (invisibile) al 100% (solido). Il menu modalità offre sedici modalità di fusione, che si dividono in gruppi: modalità che scuriscono, modalità che schiariscono, modalità di contrasto, modalità di confronto e le quattro che prendono una parte di un colore.</p>
+<table>
+  <thead><tr><th>Modalità</th><th>Cosa fa</th></tr></thead>
+  <tbody>
+    <tr><td>Normale</td><td>Dipinge sopra ciò che è sotto, senza fusione.</td></tr>
+    <tr><td>Scurisci</td><td>Mantiene il colore più scuro, canale per canale.</td></tr>
+    <tr><td>Moltiplica</td><td>Moltiplica i due colori, scurendo sempre; il bianco lascia la base invariata.</td></tr>
+    <tr><td>Colore brucia</td><td>Scurisce la base per assumere il colore di fusione.</td></tr>
+    <tr><td>Schiarisci</td><td>Mantiene il colore più chiaro.</td></tr>
+    <tr><td>Schermo</td><td>L'inverso di Moltiplica, schiarendo sempre; il nero lascia la base invariata.</td></tr>
+    <tr><td>Colore schiarisce</td><td>Schiarisce la base per assumere il colore di fusione.</td></tr>
+    <tr><td>Sovrapponi</td><td>Moltiplica o scherma a seconda della base, aumentando il contrasto.</td></tr>
+    <tr><td>Luce soffice</td><td>Un dolce schiarisci o brucia, come se una luce morbida fosse proiettata sul lavoro.</td></tr>
+    <tr><td>Luce intensa</td><td>Moltiplica o scherma a seconda del colore di fusione, come un faretto duro.</td></tr>
+    <tr><td>Differenza</td><td>Sottrae il colore più scuro dal più chiaro; il bianco inverte la base, il nero non ha effetto.</td></tr>
+    <tr><td>Esclusione</td><td>Come Differenza, ma più dolce e a contrasto più basso.</td></tr>
+    <tr><td>Tonalità</td><td>La tonalità della fusione con la saturazione e luminosità della base.</td></tr>
+    <tr><td>Saturazione</td><td>La saturazione della fusione con la tonalità e luminosità della base.</td></tr>
+    <tr><td>Colore</td><td>La tonalità e saturazione della fusione con la luminosità della base: buona per tingere lavoro in scala di grigi.</td></tr>
+    <tr><td>Luminosità</td><td>La luminosità della fusione con la tonalità e saturazione della base.</td></tr>
+  </tbody>
+</table>
+<p>Per un gruppo, due interruttori cambiano come si fonde. <em>Contieni fusione nel gruppo</em> mantiene le modalità del gruppo dentro se stesso, così i suoi membri si fondono tra loro ma non con il lavoro dietro il gruppo. <em>Gruppo knockout</em> fa sì che ogni membro nasconda quelli sotto di esso nel gruppo invece di fondendosi attraverso di essi.</p>
+
+<h3 id="appearance-opacity-masks">Maschere di opacità</h3>
+<p>Una maschera di opacità sfuma il lavoro per tono. Seleziona il lavoro e, sopra di esso, la forma con cui mascherarlo, poi fai clic su <em>Crea maschera</em> (anche <strong>Oggetto &rsaquo; Maschera di ritaglio &rsaquo; Crea maschera di opacità</strong>). L'oggetto in cima diventa la maschera: dove è chiaro il lavoro si vede, ed è scuro il lavoro sfuma, così una sfumatura da bianco a nero crea una dissolvenza morbida. <em>Rilascia</em> restituisce i due oggetti. Usa una maschera per un bordo morbido o una vignettatura che un ritaglio netto non può creare.</p>
+
+<h2 id="appearance-appearance-panel">Il pannello Stack pittura</h2>
+<p>Il pannello <strong>Stack pittura</strong> (<kbd>&#8679;F6</kbd>) elenca tutto ciò che è dipinto su un oggetto: i suoi riempimenti e i suoi contorni, con eventuali effetti live sopra di essi. Poiché un oggetto può contenere più riempimenti e contorni, è qui che li impili, ad esempio un contorno scuro largo sotto uno chiaro sottile per creare un contorno, oppure due riempimenti a opacità diverse.</p>
+<p>La pila è disegnata dall'alto, corrispondendo all'ordine in cui dipinge. Ogni riga di riempimento o contorno ha un occhio per nasconderlo, un chip di vernice che apre il selettore di colore, un campo opacità, un campo spessore per i contorni e frecce per spostarlo su o giù nella pila, più un pulsante per rimuoverlo. <em>Aggiungi riempimento</em> e <em>Aggiungi contorno</em> ne mettono un altro sopra. Gli effetti appaiono sopra i riempimenti e i contorni con un badge <em>fx</em>; fai clic su un effetto per modificarne le opzioni, oppure rimuoverlo dalla sua riga. Quando l'aspetto a strati è finito, <strong>Oggetto &rsaquo; Espandi aspetto</em> incorpora l'intera pila in lavoro ordinario.</p>
+
+<h2 id="appearance-graphic-styles">Stili grafici</h2>
+<p>Uno stile grafico è un aspetto salvato che puoi applicare ad altri oggetti. Il pannello <strong>Stili grafici</strong> (<kbd>&#8679;F5</kbd>) li conserva come chip, ciascuno mostrando il suo riempimento con il suo contorno come bordo del chip. Seleziona un oggetto e fai clic su <em>Nuovo stile</em> per salvare i suoi riempimenti e contorni; fai clic su un chip per applicare quello stile alla selezione, e <kbd>&#8997;</kbd>-clic su un chip per eliminarlo. Gli stili valgono la pena di essere creati quando lo stesso aspetto, come un trattamento di pulsante o uno stile di etichetta, deve andare su molti oggetti e restare coerente.</p>
+
+<h2 id="appearance-overprint">Sovrastampa</h2>
+<p>Il pannello <strong>Attributi</strong> (<kbd>&#8984;F11</kbd>) imposta la sovrastampa per il lavoro di stampa. <em>Sovrastampa riempimento</em> e <em>Sovrastampa contorno</em> fanno sì che quell'inchiostri stampi sopra i colori sotto invece di eliminarli, cosa usata per il trapping ed effetti come un nero che stampa sopra invece di sostituire ciò che è sotto. Attiva <strong>Visualizza &rsaquo; Anteprima sovrastampa</strong> per vederlo su schermo; l'esportazione PDF mantiene l'impostazione.</p>
+
+<h2 id="appearance-recolour">Ricolorare il lavoro</h2>
+<p><strong>Modifica &rsaquo; Modifica colori &rsaquo; Rimappa colori&hellip;</strong> elenca ogni colore nella selezione con quante volte è usato. Fai clic sul chip a destra di una riga per scegliere cosa diventa quel colore, oppure sulla freccia tra i due chip per lasciare quel colore invariato. I cursori Tonalità, Saturazione e Luminosità spostano l'intero insieme insieme, e due pulsanti riordinano casualmente i nuovi colori o randomizzano la loro saturazione e luminosità, cosa che è un modo veloce per provare variazioni. Il lavoro si aggiorna man mano che procedi, e <em>Ripristina</em> torna ai colori da cui è partito.</p>
+<p>Lo stesso sottomenu offre anche cambiamenti in un passo: <em>Sfuma davanti a dietro</em> diffonde una serie di colori tra gli oggetti davanti e dietro, <em>Converti in scala di grigi</em> elimina tutto il colore, <em>Inverti colori</em> ciascuno, e <em>Satura&#8230;</em> aumenta o diminuisce la saturazione in tutta la selezione.</p>

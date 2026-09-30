@@ -1,0 +1,357 @@
+<p class="lede">La barra degli strumenti scorre lungo il lato sinistro della finestra e contiene ogni strumento di disegno, modifica e visualizzazione. Ogni slot è uno strumento singolo o un gruppo di strumenti correlati; questa pagina li elenca tutti, nell'ordine in cui si trovano nella barra degli strumenti, con il tasto che li seleziona e a cosa servono.</p>
+
+<p>Premi e tieni premuto uno slot, o fai clic con il pulsante destro su di esso, per aprirne il menu a comparsa e scegliere un altro strumento dal gruppo. La scorciatoia di uno strumento è un singolo tasto, e funziona ogni volta che non stai digitando in un testo o in un campo.</p>
+
+<p>Le scorciatoie sotto sono scritte nel formato macOS. Su Windows, leggi <kbd>&#8997;</kbd> come Alt, <kbd>&#8984;</kbd> come Ctrl e <kbd>&#8679;</kbd> come Shift.</p>
+
+<p>Tre abitudini si applicano a quasi ogni strumento:</p>
+<ul>
+<li>Tieni premuta la barra spaziatrice per prendere in prestito lo Strumento Mano, e rilascia per tornare a ciò che stavi usando.</li>
+<li>Tieni premuto <kbd>&#8984;</kbd> per prendere in prestito lo Strumento Selezione allo stesso modo. Lo Strumento Trasforma libera è l'eccezione: legge <kbd>&#8984;</kbd> per sé stesso.</li>
+<li><kbd>Esc</kbd> abbandona un trascinamento o un tracciato che stai disegnando a metà, lasciando il lavoro com'era.</li>
+</ul>
+
+<p>Due slot (gli strumenti Rimodella e Stampa piastrelle) sono elencati per completezza ma non hanno ancora alcun comportamento. La barra degli strumenti li segnala come in arrivo e il motore li rifiuta.</p>
+
+<h2 id="tools-selecting">Strumenti di selezione</h2>
+<p>Questi quattro selezionano ciò che vuoi lavorare in seguito. Usa lo Strumento Selezione per interi oggetti, lo Strumento Selezione diretta per le ancore e i segmenti all'interno di un tracciato, la Selezione automatica per raccogliere tutto ciò che è dipinto allo stesso modo, e il Lazzo per raccogliere a mano un gruppo di ancore.</p>
+
+<h3 id="tools-selection">Selezione</h3>
+<table>
+<thead><tr><th>Strumento</th><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+<tbody>
+<tr><td>Strumento Selezione</td><td><kbd>V</kbd></td><td>Fai clic su un oggetto per selezionarlo intero, <kbd>&#8679;</kbd>-clic per aggiungerlo o rimuoverlo, e trascina sulla tela vuota per un rettangolo di selezione. Trascina all'interno della selezione per spostarla, con <kbd>&#8679;</kbd> che limita lo spostamento a passi di 45&deg; e <kbd>&#8997;</kbd> che lascia una copia dietro di sé.</td></tr>
+</tbody>
+</table>
+<p>Con un oggetto selezionato, il riquadro di selezione porta otto maniglie. Trascina una maniglia per ridimensionare, tenendo premuto <kbd>&#8679;</kbd> per mantenere le proporzioni e <kbd>&#8997;</kbd> per ridimensionare attorno al centro; trascina appena fuori da un angolo per ruotare, con <kbd>&#8679;</kbd> che scatta a 45&deg;. Il doppio clic entra in un gruppo e lavora al suo interno, il doppio clic sul testo lo modifica, il doppio clic su un'istanza di simbolo modifica il simbolo che ogni istanza disegna, e il doppio clic lontano dal lavoro per tornare fuori.</p>
+<p>Le forme modificabili portano i propri widget: trascina un widget d'angolo per arrotondare ogni angolo della forma in una volta, oppure <kbd>&#8997;</kbd>-clic per passare l'angolo al tipo successivo. Questo è lo strumento in cui passerai più tempo, quindi vale la pena impararne bene le maniglie.</p>
+
+<h3 id="tools-direct-selection">Selezione diretta e Selezione gruppo</h3>
+<table>
+<thead><tr><th>Strumento</th><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+<tbody>
+<tr><td>Strumento Selezione diretta</td><td><kbd>A</kbd></td><td>Fai clic su un'ancora, una maniglia o un segmento e trascinalo per rimodellare il tracciato; un rettangolo di selezione sulla tela vuota raccoglie le ancore al suo interno. <kbd>&#8679;</kbd> aggiunge a ciò che è selezionato e limita un trascinamento a 45&deg;, e <kbd>&#8997;</kbd> mentre trascini una maniglia separa la coppia così l'ancora diventa un angolo.</td></tr>
+<tr><td>Strumento Selezione gruppo</td><td>&ndash;</td><td>Fai clic su un oggetto per selezionarlo; fai clic di nuovo per includere il gruppo a cui appartiene, e ancora per il gruppo superiore.</td></tr>
+</tbody>
+</table>
+<p>Usa lo Strumento Selezione diretta per ritoccare una forma dopo che è stata disegnata: sposta un'ancora, tira una singola maniglia, oppure rimodella una curva. Trascina anche le incrociazioni di una mesh di busta, piegando ciò che la busta contiene, e arrotonda un angolo alla volta di una forma live invece di tutti. Lo Strumento Selezione gruppo è il modo veloce per raggiungere un oggetto sepolto dentro gruppi annidati senza entrare e uscire da essi.</p>
+
+<h3 id="tools-magic-wand">Selezione automatica</h3>
+<table>
+<thead><tr><th>Strumento</th><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+<tbody>
+<tr><td>Strumento Selezione automatica</td><td><kbd>Y</kbd></td><td>Fai clic su un oggetto per selezionare ogni oggetto dipinto come esso. Ciò che conta come simile (riempimento, contorno, spessore, opacità, modalità di fusione) si imposta nel pannello Selezione automatica, e <kbd>&#8679;</kbd> aggiunge le nuove corrispondenze alla selezione.</td></tr>
+</tbody>
+</table>
+<p>Usalo quando vuoi cambiare ogni forma di un colore in una volta: fai clic su una rossa, poi ricolora l'intera selezione in un singolo passaggio.</p>
+
+<h3 id="tools-lasso">Lazzo</h3>
+<table>
+<thead><tr><th>Strumento</th><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+<tbody>
+<tr><td>Strumento Lazzo</td><td><kbd>Q</kbd></td><td>Trascina un ciclo a mano libera per selezionare le ancore al suo interno. <kbd>&#8679;</kbd> le aggiunge alle ancore già selezionate.</td></tr>
+</tbody>
+</table>
+<p>Usalo quando le ancore che vuoi non si trovano in un rettangolo ordinato, così un rettangolo di selezione prenderebbe troppo o troppo poco.</p>
+<p>Questo slot contiene anche gli strumenti di selezione pixel — il <strong>Rettangolo di selezione</strong>, il <strong>Ellisse di selezione</strong> e il <strong>Lazzo di selezione</strong> — che disegnano una selezione formica su un livello pixel invece di selezionare ancore vettoriali. Sono trattati nella pagina <a href="/manual/pixels/">Livelli pixel</a>.</p>
+
+<h2 id="tools-pen-type">La penna, curvatura e testo</h2>
+<p>Gli strumenti che creano nuovi tracciati e testo. La famiglia della penna ti dà il controllo esatto su ogni ancora e maniglia, lo Strumento Curvatura adatta una curva morbida attraverso i punti che piazzi, e gli Strumenti Testo impostano testo di punto, d'area, su tracciato e verticale.</p>
+
+<h3 id="tools-pen">La famiglia della penna</h3>
+<table>
+<thead><tr><th>Strumento</th><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+<tbody>
+<tr><td>Strumento Penna</td><td><kbd>P</kbd></td><td>Fai clic per piazzare un punto d'angolo, oppure premi e trascina per estrarre maniglie morbide; fai clic sulla prima ancora per chiudere il tracciato. <kbd>&#8679;</kbd> limita il nuovo punto o la maniglia a 45&deg;, e <kbd>&#8997;</kbd> mentre trascini separa le maniglie così il tracciato esce dall'ancora con il suo angolo.</td></tr>
+<tr><td>Strumento Aggiungi punto di ancoraggio</td><td><kbd>+</kbd></td><td>Fai clic su un segmento per aggiungere un'ancora, senza cambiare la forma del tracciato.</td></tr>
+<tr><td>Strumento Elimina punto di ancoraggio</td><td><kbd>&#8722;</kbd></td><td>Fai clic su un'ancora per toglierla, unendo i segmenti ai lati.</td></tr>
+<tr><td>Strumento Punto di ancoraggio</td><td><kbd>&#8679;C</kbd></td><td>Trascina un'ancora per estrarre una coppia di maniglie corrispondenti, oppure fai clic per rientrare le maniglie e lasciare un angolo. Trascina una maniglia da sola per spostare quel lato da solo; <kbd>&#8679;</kbd> la limita a 45&deg;.</td></tr>
+</tbody>
+</table>
+<p>Lo Strumento Penna è il cavallo di battaglia per il disegno preciso, dal contorno di un logo a un tracciato di lettering. Mentre ha un tracciato in corso, <kbd>Invio</kbd> o <kbd>Esc</kbd> lo completa e <kbd>Backspace</kbd> elimina l'ultima ancora. I tre aiutanti aggiunguono, rimuovono e convertono ancore su un tracciato finito; la penna e la matita sono trattate più in profondità nella pagina <a href="/manual/paths/">Tracciati</a>.</p>
+
+<h3 id="tools-curvature">Curvatura</h3>
+<table>
+<thead><tr><th>Strumento</th><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+<tbody>
+<tr><td>Strumento Curva</td><td><kbd>&#8679;~</kbd></td><td>Fai clic per piazzare punti e una curva morbida viene adattata attraverso di essi; <kbd>&#8997;</kbd>-clic piazza un punto d'angolo invece. Trascina un punto per spostarlo, fai doppio clic su un punto per alternarlo tra morbido e angolo, fai clic sul primo punto per chiudere il tracciato e fai doppio clic lontano per finire.</td></tr>
+</tbody>
+</table>
+<p>Usa lo Strumento Curvatura quando vuoi una linea fluida e preferisci piazzare punti e lasciare che Scissor calcoli le maniglie piuttosto che tirare ciascuna da solo.</p>
+
+<h3 id="tools-type">Testo</h3>
+<table>
+<thead><tr><th>Strumento</th><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+<tbody>
+<tr><td>Strumento Testo</td><td><kbd>T</kbd></td><td>Fai clic per testo di punto, trascina un riquadro per testo d'area e fai clic su testo esistente per modificarlo. Fare clic su un tracciato aperto imposta il testo lungo quel tracciato.</td></tr>
+<tr><td>Strumento Testo d'area</td><td>&ndash;</td><td>Trascina il riquadro in cui scorre il testo.</td></tr>
+<tr><td>Strumento Testo su tracciato</td><td>&ndash;</td><td>Fai clic su un tracciato e il testo scorre lungo esso. Il tracciato diventa la linea di base, quindi smette di essere lavoro a sé stante.</td></tr>
+<tr><td>Strumento Testo verticale</td><td>&ndash;</td><td>Come lo Strumento Testo, tranne che la riga di testo scorre lungo la pagina invece che attraverso.</td></tr>
+<tr><td>Strumento Modifica glifi</td><td><kbd>&#8679;T</kbd></td><td>Fai clic su un carattere per selezionarlo dalla riga, poi trascinalo per spostarlo, trascina un pomello d'angolo per ridimensionarlo o quello sopra per ruotarlo. <kbd>&#8679;</kbd> mantiene il ridimensionamento d'angolo proporzionale e fa scattare la rotazione a passi di 11.25&deg;, e <kbd>Canc</kbd> rimette il carattere dove lo aveva posizionato il testo.</td></tr>
+</tbody>
+</table>
+<p>Lo Strumento Testo da solo copre la maggior parte del lavoro: fai clic per un titolo, trascina un riquadro per un paragrafo. I pomelli laterali del riquadro Modifica glifi allungano il carattere in una sola direzione, in larghezza o in altezza, così puoi spostare lettere singole per un titolo senza spezzarle fuori dal testo. Il testo è trattato nella sua interezza nella pagina <a href="/manual/type/">Testo</a>.</p>
+
+<h2 id="tools-lines-shapes">Linee e forme</h2>
+<p>Tutto ciò che disegna una forma pronta: linee rette, archi e spirali, griglie di linee, e i rettangoli, ellissi, poligoni e stelle con cui costruisci un disegno.</p>
+
+<h3 id="tools-lines">Linee, archi, spirali e griglie</h3>
+<table>
+<thead><tr><th>Strumento</th><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+<tbody>
+<tr><td>Strumento Segmento di linea</td><td><kbd>\</kbd></td><td>Trascina per disegnare una linea retta. <kbd>&#8679;</kbd> la limita a passi di 45&deg; e <kbd>&#8997;</kbd> la disegna dal centro invece che dall'estremità.</td></tr>
+<tr><td>Strumento Arco</td><td>&ndash;</td><td>Trascina il riquadro che riempie l'arco; <kbd>&#8679;</kbd> lo rende quadrato. I tasti freccia piegano l'arco più piatto o più pieno, <kbd>C</kbd> lo chiude e lo apre, e <kbd>F</kbd> o <kbd>X</kbd> invertono la direzione della curvatura.</td></tr>
+<tr><td>Strumento Spirale</td><td>&ndash;</td><td>Trascina dal centro: la distanza imposta il raggio e la direzione imposta dove inizia la spirale. <kbd>&#8997;</kbd> inverte l'avvolgimento, <kbd>R</kbd> lo inverte definitivamente, e i tasti freccia aggiungono e rimuovono segmenti.</td></tr>
+<tr><td>Strumento Griglia rettangolare</td><td>&ndash;</td><td>Trascina la griglia, con <kbd>&#8997;</kbd> che disegna dal centro e <kbd>&#8679;</kbd> che la mantiene quadrata. Le frecce su e giù cambiano il numero di righe, sinistra e destra le colonne.</td></tr>
+<tr><td>Strumento Griglia polare</td><td>&ndash;</td><td>Trascina la griglia, con <kbd>&#8997;</kbd> che disegna dal centro e <kbd>&#8679;</kbd> che la mantiene rotonda. Le frecce su e giù cambiano gli anelli concentrici, sinistra e destra i raggi.</td></tr>
+</tbody>
+</table>
+<p>I due strumenti griglia creano un tracciato per linea, così ogni linea resta selezionabile singolarmente: usa la Griglia rettangolare per tabelle, calendari e impaginazioni, e la Griglia polare per freccette, grafici radar e quadranti di orologio. Disegnano lavoro di griglia che conservi. È una cosa diversa dalla griglia di sfondo della tavola, l'aiuto di disegno su schermo che attivi con <strong>Visualizza &rsaquo; Griglia &rsaquo; Mostra griglia</strong>, che non stampa mai e si presenta in sette tipi (quadratata, isometrica, esagonale, obliqua, rapporto aureo, motivo e prospettica). Le griglie di sfondo sono trattate nella pagina <a href="/manual/grids/">Griglie</a>. Un separato <strong>Strumento Forma griglia</strong> (<kbd>&#8679;G</kbd>) costruisce un tracciato riempito facendo clic o trascinando attraverso le celle di quella griglia di sfondo — un modo veloce per posare blocchi solidi su una griglia isometrica o esagonale.</p>
+
+<h3 id="tools-shapes">Rettangoli, ellissi e altre forme</h3>
+<table>
+<thead><tr><th>Strumento</th><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+<tbody>
+<tr><td>Strumento Rettangolo</td><td><kbd>M</kbd></td><td>Trascina per disegnare un rettangolo. <kbd>&#8679;</kbd> lo mantiene quadrato e <kbd>&#8997;</kbd> lo disegna dal centro.</td></tr>
+<tr><td>Strumento Rettangolo arrotondato</td><td>&ndash;</td><td>Lo stesso trascinamento, con angoli arrotondati; le frecce su e giù aumentano e riducono il raggio d'angolo mentre disegni.</td></tr>
+<tr><td>Strumento Ellisse</td><td><kbd>L</kbd></td><td>Trascina per disegnare un'ellisse, con <kbd>&#8679;</kbd> per un cerchio e <kbd>&#8997;</kbd> per disegnare dal centro.</td></tr>
+<tr><td>Strumento Poligono</td><td>&ndash;</td><td>Trascina dal centro; la direzione del trascinamento ruota il poligono, e <kbd>&#8679;</kbd> lo mantiene in piedi. I tasti freccia aggiungono e rimuovono lati.</td></tr>
+<tr><td>Strumento Stella</td><td>&ndash;</td><td>Trascina dal centro, ruotando la stella man mano, con <kbd>&#8679;</kbd> che la mantiene in piedi. I tasti freccia aggiungono e rimuovono punte.</td></tr>
+<tr><td>Strumento Bagliore</td><td>&ndash;</td><td>Trascina una volta per impostare il centro e la dimensione dell'alone del bagliore, poi trascina una seconda volta per tendere i suoi anelli attraverso il lavoro. Mentre trascini, le frecce sinistra e destra cambiano il numero di anelli e le frecce su e giù il numero di raggi.</td></tr>
+</tbody>
+</table>
+<p>Questi creano forme live: mantengono i loro parametri, così puoi cambiare la dimensione di un rettangolo o il numero di punte di una stella molto tempo dopo averlo disegnato. Un clic invece di un trascinamento con uno qualsiasi di essi apre una finestra di dialogo, così puoi dare alla forma misure esatte. Lo Strumento Bagliore risponde a un clic con un bagliore della dimensione che le sue opzioni richiedono.</p>
+
+<h2 id="tools-brush-erase">Pennelli, matita e gomme</h2>
+<p>Gli strumenti a mano libera. Dipingi un tratto che segue il puntatore, abbozzi un tracciato grezzo e lasci che Scissor lo sistemi, curi e ripari tracciati esistenti, oppure cancelli il lavoro. Due slot qui raggiungono anche il lato raster di un documento: il Pennello dipinge pixel e la Gomma pixel li cancella.</p>
+
+<h3 id="tools-brushes">Pennelli</h3>
+<table>
+<thead><tr><th>Strumento</th><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+<tbody>
+<tr><td>Strumento Pennello</td><td><kbd>B</kbd></td><td>Trascina per disegnare a mano libera; il tratto viene smussato mentre viene adattato alle curve e mantiene il pennello e il tratto correnti.</td></tr>
+<tr><td>Strumento Pennello di riempimento</td><td><kbd>&#8679;B</kbd></td><td>Disegna lo stesso tratto, ma lo contorna in una forma riempita e la unisce con qualsiasi lavoro che tocca che condivide il suo riempimento.</td></tr>
+<tr><td>Strumento Pennello pixel</td><td>&ndash;</td><td>Dipinge colore raster direttamente su un livello pixel nel colore di riempimento corrente, creando prima un livello pixel se non ce n'è nessuno. A differenza del Pennello, il segno non è un tracciato che puoi rimodellare in seguito: diventa parte dell'immagine.</td></tr>
+</tbody>
+</table>
+<p>Usa il Pennello per tratti espressivi e calligrafici che restano modificabili, e il Pennello di riempimento quando preferisci costruire una forma solida riempita piuttosto che una linea tracciata. <kbd>[</kbd> e <kbd>]</kbd> rendono il pennello più piccolo e più grande. Lo Strumento Pennello pixel condivide questo slot ma dipinge pixel invece che un tracciato, per sfumature e texture, e il <strong>Secchiello</strong> lo condivide anche lui, inondando un'area connessa di un livello pixel con il colore di riempimento. La dipintura su livelli pixel è trattata nella pagina <a href="/manual/pixels/">Livelli pixel</a>.</p>
+
+<h3 id="tools-pencil">Matita e riparatori di tracciato</h3>
+<table>
+<thead><tr><th>Strumento</th><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+<tbody>
+<tr><td>Strumento Schizzo</td><td><kbd>&#8679;N</kbd></td><td>Disegna in modo approssimativo e il tratto diventa la forma nitida che intendevi. Scarabocchiare sopra il lavoro invece elimina ciò che il scarabocchio copre.</td></tr>
+<tr><td>Strumento Matita</td><td><kbd>N</kbd></td><td>Disegna a mano libera e il tratto viene adattato a curve morbide. Tieni premuto <kbd>&#8997;</kbd> mentre rilasci per chiudere il tracciato, cosa che accade da solo se finisci vicino a dove hai iniziato.</td></tr>
+<tr><td>Strumento Smussa</td><td>&ndash;</td><td>Passa lungo un tracciato per uniformarne le maniglie e eliminare le ancore che lo piegano appena; un pennello più grande smussa più forte.</td></tr>
+<tr><td>Strumento Gomma tracciato</td><td>&ndash;</td><td>Passa lungo un tracciato per cancellare la parte che copri.</td></tr>
+<tr><td>Strumento Unisci</td><td>&ndash;</td><td>Passa su due estremità libere per unirle in un unico tracciato.</td></tr>
+</tbody>
+</table>
+<p>La Matita è il modo veloce per abbozzare una forma a mano; lo Schizzo è per quando vuoi che un gesto approssimativo venga letto come un rettangolo, un'ellisse o una linea pulita. Gli ultimi tre curano i tracciati esistenti: <kbd>[</kbd> e <kbd>]</kbd> ridimensionano i pennelli Smussa, Gomma tracciato e Unisci. Con lavoro selezionato questi tre agiscono solo sulla selezione; senza selezione agiscono su qualsiasi traggiato che raggiungono.</p>
+
+<h3 id="tools-cutting">Cancellare e tagliare</h3>
+<table>
+<thead><tr><th>Strumento</th><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+<tbody>
+<tr><td>Strumento Gomma</td><td><kbd>&#8679;E</kbd></td><td>Trascina un pennello rotondo per sottrarre dagli oggetti. Con una selezione vengono cancellati solo gli oggetti selezionati; altrimenti tutti i tracciati non bloccati, e <kbd>[</kbd> e <kbd>]</kbd> ridimensionano il pennello.</td></tr>
+<tr><td>Strumento Gomma pixel</td><td>&ndash;</td><td>Cancella la vernice da un livello pixel, rendendola trasparente così ciò che sotto si vede attraverso. Funziona sui livelli pixel dove la Gomma funziona sui tracciati vettoriali; <kbd>[</kbd> e <kbd>]</kbd> ridimensionano il pennello.</td></tr>
+<tr><td>Strumento Forbici</td><td><kbd>C</kbd></td><td>Fai clic su un segmento o un'ancora per tagliare il tracciato lì. Un tracciato chiuso si apre al taglio; un tracciato aperto si divide in due oggetti.</td></tr>
+<tr><td>Strumento Coltello</td><td>&ndash;</td><td>Trascina attraverso gli oggetti per affettarli in pezzi separati. <kbd>&#8997;</kbd> taglia in linea retta e <kbd>&#8679;</kbd> limita quella linea a passi di 45&deg;.</td></tr>
+</tbody>
+</table>
+<p>La Gomma scolpisce forme fuori dal lavoro riempito come cancellare a matita; le Forbici fanno un singolo taglio pulito in un punto; il Coltello affetta interi oggetti in pezzi lungo la linea che trascini. La Gomma pixel condivide lo slot della Gomma ma appartiene al lato raster, nella pagina <a href="/manual/pixels/">Livelli pixel</a>.</p>
+<p>Un altro slot della barra degli strumenti è interamente raster: i pennelli di ritocco <strong>Schiarisci</strong>, <strong>Scurisci</strong> e <strong>Spugna</strong> schiariscono, scuriscono e saturano i pixel già presenti su un livello. Dipingono come il Pennello e sono trattati, con il resto della modifica pixel, nella pagina <a href="/manual/pixels/">Livelli pixel</a>.</p>
+
+<h2 id="tools-transform">Trasformazione</h2>
+<p>Gli strumenti che spostano, ruotano, riflettono, ridimensionano, inclinano, distorcono e rimodellano ciò che è già stato disegnato. Ogni strumento di trasformazione lavora attorno a un punto di riferimento, che inizia al centro della selezione; <kbd>&#8997;</kbd>-clic imposta quel punto dove fai clic e apre la finestra di dialogo dello strumento per valori esatti. Con singole ancore selezionate, questi strumenti trasformano quelle ancore piuttosto che interi oggetti.</p>
+
+<h3 id="tools-rotate-reflect">Ruota e Rifletti</h3>
+<table>
+<thead><tr><th>Strumento</th><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+<tbody>
+<tr><td>Strumento Ruota</td><td><kbd>R</kbd></td><td>Trascina attorno al punto di riferimento per ruotare la selezione, con <kbd>&#8679;</kbd> che scatta a 45&deg; e <kbd>&#8997;</kbd> che ruota una copia e lascia l'originale. <kbd>&#8997;</kbd>-clic imposta il punto di riferimento dove hai fatto clic e apre la finestra Ruota.</td></tr>
+<tr><td>Strumento Rifletti</td><td><kbd>O</kbd></td><td>Trascina per far passare l'asse di riflessione attraverso il punto di riferimento, con <kbd>&#8679;</kbd> che lo scatta a 45&deg;. <kbd>&#8997;</kbd>-clic imposta il punto di riferimento e apre la finestra Rifletti, e <kbd>&#8997;</kbd> mentre trascini riflette una copia.</td></tr>
+</tbody>
+</table>
+<p>Usa lo Strumento Ruota per ruotare il lavoro attorno a un perno scelto piuttosto che al suo proprio centro, e lo Strumento Rifletti per costruire un disegno simmetrico: riflette una copia attraverso un asse scelto e le due metà restano corrispondenti. Entrambi gli strumenti iniziano dal centro della selezione, e scegliendo altro riporta il punto di riferimento lì.</p>
+
+<h3 id="tools-scale-shear">Ridimensiona, Inclina e Rimodella</h3>
+<table>
+<thead><tr><th>Strumento</th><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+<tbody>
+<tr><td>Strumento Ridimensiona</td><td><kbd>S</kbd></td><td>Trascina lontano dal punto di riferimento per ingrandire la selezione e verso di esso per rimpicciolirla; <kbd>&#8679;</kbd> mantiene le proporzioni e <kbd>&#8997;</kbd> ridimensiona una copia. <kbd>&#8997;</kbd>-clic imposta il punto di riferimento e apre la finestra Ridimensiona.</td></tr>
+<tr><td>Strumento Inclina</td><td>&ndash;</td><td>Trascina per inclinare la selezione attorno al punto di riferimento; <kbd>&#8679;</kbd; fissa l'inclinazione sull'asse a cui il tuo trascinamento si avvicina. <kbd>&#8997;</kbd>-clic imposta il punto di riferimento e apre la finestra Inclina.</td></tr>
+<tr><td>Strumento Rimodella</td><td>&ndash;</td><td>Elencato nella barra degli strumenti ma non ancora implementato; la palette lo segnala come in arrivo.</td></tr>
+</tbody>
+</table>
+<p>Usa lo Strumento Ridimensiona quando vuoi dimensionare il lavoro attorno a un punto fisso piuttosto che a una maniglia del riquadro di selezione, e lo Strumento Inclina per inclinare una forma per un'ombra proiettata o un effetto corsivo.</p>
+
+<h3 id="tools-width-liquify">Spessore e pennelli liquify</h3>
+<table>
+<thead><tr><th>Strumento</th><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+<tbody>
+<tr><td>Strumento Profilo spessore</td><td><kbd>&#8679;W</kbd></td><td>Trascina lontano da un tracciato con contorno per allargarlo in quel punto e verso il tracciato per restringerlo, lasciando un punto di spessore. Senza selezione funziona su qualsiasi tracciato modificabile.</td></tr>
+<tr><td>Strumento Deforma</td><td><kbd>&#8679;R</kbd></td><td>Premi e trascina un pennello rotondo per spingere i tracciati sotto di esso insieme al puntatore.</td></tr>
+<tr><td>Strumento Turbina</td><td>&ndash;</td><td>Tieni il pennello sopra il lavoro e continua a girare per tutto il tempo che lo tieni.</td></tr>
+<tr><td>Strumento Pizzica</td><td>&ndash;</td><td>Tira i tracciati sotto il pennello verso il suo centro.</td></tr>
+<tr><td>Strumento Gonfia</td><td>&ndash;</td><td>Spinge i tracciati sotto il pennello fuori dal suo centro.</td></tr>
+<tr><td>Strumento Ondula</td><td>&ndash;</td><td>Aggiunge scallopature curve ai tracciati sotto il pennello.</td></tr>
+<tr><td>Strumento Punta</td><td>&ndash;</td><td>Aggiunge punti spigolati ai tracciati sotto il pennello.</td></tr>
+<tr><td>Strumento Accartoccia</td><td>&ndash;</td><td>Ondula i tracciati sotto il pennello.</td></tr>
+</tbody>
+</table>
+<p>Lo Strumento Spessore assottiglia e gonfia un tratto a mano, per una linea tipo pennello o stilo senza cambiare pennello. I sette pennelli liquify spingono, torcono e ruvidizzano i tracciati mentre dipingi sopra di essi, per distorsioni organiche che sarebbero lente fare ancora per ancora. Tutti e sette accettano <kbd>[</kbd> e <kbd>]</kbd> per la dimensione, e <kbd>&#8679;</kbd> con quegli stessi tasti, <kbd>{</kbd> e <kbd>}</kbd>, per quanto forte spingono.</p>
+
+<h3 id="tools-free-transform">Trasforma libera e Deforma con perni</h3>
+<table>
+<thead><tr><th>Strumento</th><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+<tbody>
+<tr><td>Strumento Trasforma libera</td><td><kbd>E</kbd></td><td>Un unico riquadro che ridimensiona, ruota, inclina e distorce la selezione. Trascina una maniglia di bordo o d'angolo per ridimensionare, tieni premuto <kbd>&#8984;</kbd> su una maniglia di bordo per inclinare, trascina all'interno del riquadro per spostarlo e trascina appena fuori da un angolo per ruotarlo.</td></tr>
+<tr><td>Strumento Deforma con perni</td><td>&ndash;</td><td>Fai clic sul lavoro selezionato per piazzare un perno, poi trascina i perni per piegarlo; il lavoro mantiene la sua forma attorno ai perni che restano fermi. <kbd>&#8997;</kbd>-clic su un perno lo rimuove, <kbd>&#8679;</kbd>-clic ne raccoglie diversi, e <kbd>&#8997;</kbd>-trascina appena fuori da un perno ruota il lavoro attorno ad esso.</td></tr>
+</tbody>
+</table>
+<p>Trasforma libera è il riquadro tutto-in-uno quando vuoi ridimensionare, ruotare e inclinare in un unico gesto invece che cambiare strumento. Lavora attorno al suo punto di riferimento, che puoi trascinare ovunque, anche fuori dal riquadro; rilascialo vicino a uno dei nove punti abituali del riquadro e si stabilisce lì. Mentre ridimensioni, <kbd>&#8679;</kbd> mantiene le proporzioni e <kbd>&#8997;</kbd> ridimensiona attorno al centro invece che al punto di riferimento; mentre ruoti, <kbd>&#8679;</kbd> scatta a 45&deg;. Su una maniglia d'angolo, <kbd>&#8984;</kbd> distorce quell'angolo da solo e <kbd>&#8984;&#8997;&#8679;</kbd> distorce in prospettiva, con l'angolo vicino che rispecchia il trascinamento; il widget accanto al riquadro imposta le stesse due modalità e il vincolo di proporzione. Cambiare un modificatore a metà di un trascinamento cambia azione immediatamente, senza rilasciare.</p>
+<p>Deforma con perni serve a posare e piegare un singolo pezzo di lavoro, come flettere un braccio disegnato, fissando le parti che devono restare ferme e trascinando il resto. Legge <kbd>Canc</kbd> come rimozione dei perni selezionati invece che del lavoro, e <kbd>&#8984;A</kbd> come selezione di ogni perno. Ogni trascinamento è un passaggio da annullare, e annullare riporta i perni indietro con il lavoro che li accompagnava. Testo, immagini e istanze di simbolo non possono essere distorti e vengono lasciati come sono.</p>
+
+<h2 id="tools-build-perspective">Unisci e dividi, Riempimento area e prospettica</h2>
+<p>Strumenti che trattano le forme sovrapposte come regioni da unire e colorare, e la griglia che ti permette di disegnare e posare il lavoro in prospettica.</p>
+
+<h3 id="tools-builder-paint">Unisci e dividi e Riempimento area</h3>
+<table>
+<thead><tr><th>Strumento</th><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+<tbody>
+<tr><td>Strumento Unisci e dividi</td><td><kbd>&#8679;M</kbd></td><td>Con forme sovrapposte selezionate, trascina attraverso le regioni che vuoi unire e diventano un unico oggetto. <kbd>&#8997;</kbd>-trascina elimina le regioni che attraversi invece.</td></tr>
+<tr><td>Secchiello Riempimento area</td><td><kbd>K</kbd></td><td>Fai clic su una faccia di un gruppo Riempimento area per riempirla con la vernice corrente; <kbd>&#8997;</kbd>-clic raccoglie la vernice già presente invece di posarne. La faccia sotto il puntatore viene contornata prima che tu faccia clic.</td></tr>
+<tr><td>Strumento Selezione area</td><td><kbd>&#8679;L</kbd></td><td>Fai clic su una faccia di un gruppo Riempimento area per selezionarla, senza dipingerla.</td></tr>
+</tbody>
+</table>
+<p>Usa Unisci e dividi per disegnare alcune forme sovrapposte e poi unirle e ritagliarle nel contorno che vuoi, trascinando attraverso i pezzi. Riempimento area tratta un insieme di tracciati sovrapposti come un libro da colorare: il Secchiello inonda ogni faccia chiusa con un colore, e lo Strumento Selezione raccoglie facce e bordi così puoi restylarli, senza prima tagliare le forme.</p>
+
+<h3 id="tools-perspective">Prospettica</h3>
+<table>
+<thead><tr><th>Strumento</th><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+<tbody>
+<tr><td>Strumento Griglia prospettica</td><td><kbd>&#8679;P</kbd></td><td>Mostra la griglia e la modella: trascina i punti di fuga, trascinali su o giù per spostare l'orizzonte e trascina l'angolo vicino della griglia. <kbd>1</kbd> a <kbd>4</kbd>, o il widget su schermo, scelgono il piano su cui disegni.</td></tr>
+<tr><td>Strumento Selezione prospettica</td><td><kbd>&#8679;V</kbd></td><td>Seleziona il lavoro e trascinalo lungo il suo piano. Il lavoro che non è ancora sulla griglia viene posato sul piano attivo dove lo trascini.</td></tr>
+</tbody>
+</table>
+<p>Usali per disegnare scene e lettering che convergono verso punti di fuga, come una strada o un prodotto in scatola. Mentre la griglia è visibile, gli strumenti Rettangolo, Rettangolo arrotondato, Ellisse e Griglia rettangolare disegnano sul piano attivo invece che piatto, e <kbd>1</kbd> a <kbd>4</kbd> scelgono il piano anche da quegli strumenti.</p>
+
+<h2 id="tools-mesh-gradient">Mesh e sfumatura</h2>
+<p>I due strumenti per dipingere colore graduale in una forma: una mesh di punti colore attraverso l'oggetto, oppure una sfumatura morbida lungo un asse.</p>
+
+<h3 id="tools-mesh">Mesh</h3>
+<table>
+<thead><tr><th>Strumento</th><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+<tbody>
+<tr><td>Strumento Mesh</td><td><kbd>U</kbd></td><td>Fai clic all'interno di un oggetto per far passare una linea di mesh in ogni direzione attraverso quel punto, trasformando un tracciato semplice in una mesh. Fai clic su un punto di mesh per selezionarlo e dargli un colore dal pannello Colore, trascina un punto per spostarlo e <kbd>&#8997;</kbd>-clic su uno per togliere le linee che lo attraversano.</td></tr>
+</tbody>
+</table>
+<p>Usa una mesh per sfumature morbide e libere che una sfumatura rettilinea non può dare, come il riflesso arrotondato su un frutto o un viso.</p>
+
+<h3 id="tools-gradient">Sfumatura</h3>
+<table>
+<thead><tr><th>Strumento</th><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+<tbody>
+<tr><td>Strumento Sfumatura</td><td><kbd>G</kbd></td><td>Trascina attraverso la selezione per impostare l'asse della sua vernice attiva, con <kbd>&#8679;</kbd> che limita l'asse a passi di 45&deg;. Su lavoro che ha già una sfumatura, lavora invece sull'annotatore.</td></tr>
+</tbody>
+</table>
+<p>Trascina lo Strumento Sfumatura per dirigere una sfumatura lineare o radiale come vuoi e impostare quanto lontano arriva. Sull'annotatore, trascina un fermo lungo l'asse per spostarlo, trascina un rombo per spostare la sfumatura tra due fermi, fai clic sull'asse per aggiungere un fermo nel colore che già ha lì, e tira un fermo ben lontano dall'asse per buttarlo, purché ne restino due. <kbd>Canc</kbd> rimuove il fermo che hai toccato per ultimo. Su una sfumatura libera lo strumento lavora invece sui punti colore: fai clic sul lavoro per aggiungerne uno nel colore di riempimento e trascina un punto per spostarlo. Le sfumature sono trattate ulteriormente nella pagina <a href="/manual/appearance/">Colore e aspetto</a>.</p>
+
+<h2 id="tools-sample-morph">Campionatura, misurazione e morfologia</h2>
+<p>Copia un aspetto da un oggetto all'altro, leggi distanze e angoli dalla tela e sfuma tra forme in una serie di passi.</p>
+
+<h3 id="tools-eyedropper">Contagocce e Misura</h3>
+<table>
+<thead><tr><th>Strumento</th><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+<tbody>
+<tr><td>Strumento Contagocce</td><td><kbd>I</kbd></td><td>Fai clic su un oggetto per campionare il suo intero aspetto sulla selezione, oppure sullo stile predefinito quando non è selezionato nulla. <kbd>&#8679;</kbd> campiona solo il suo colore di riempimento o contorno nel lato attivo, e <kbd>&#8997;</kbd> fa l'opposto, applicando l'aspetto della selezione all'oggetto su cui fai clic.</td></tr>
+<tr><td>Strumento Misura</td><td>&ndash;</td><td>Trascina tra due punti per leggere la distanza, gli scostamenti e l'angolo; <kbd>&#8679;</kbd> limita la linea a passi di 45&deg;. L'ultima misura resta su schermo fino al prossimo trascinamento.</td></tr>
+</tbody>
+</table>
+<p>Il Contagocce è il modo veloce per far corrispondere un oggetto all'altro: scegli l'aspetto che ti piace e atterra sulla selezione. Usa lo Strumento Misura per controllare uno spazio o un angolo senza lasciare un segno sul lavoro.</p>
+
+<h3 id="tools-blend">Morfologia</h3>
+<table>
+<thead><tr><th>Strumento</th><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+<tbody>
+<tr><td>Strumento Morfologia</td><td><kbd>W</kbd></td><td>Fai clic su un oggetto e poi su un altro per trasformarli l'uno nell'altro attraverso una serie di passi intermedi. Per aggiungere un ulteriore oggetto a una morfologia, fai clic dentro la morfologia e poi fai clic sull'oggetto che vuoi aggiungerle.</td></tr>
+</tbody>
+</table>
+<p>Usa lo Strumento Morfologia per sfumare una forma o un colore in un altro attraverso passi uniformi, sia per una banda sfumata che per copie uniformemente spaziate e cambianti lungo un tracciato.</p>
+
+<h2 id="tools-symbols">Simboli</h2>
+<p>Un simbolo è un pezzo di lavoro che puoi posare molte volte, con ogni copia legata a un unico master. I pennelli simbolici creano e poi lavorano intere folte di queste istanze in una volta.</p>
+
+<h3 id="tools-symbolism">I pennelli simbolici</h3>
+<table>
+<thead><tr><th>Strumento</th><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+<tbody>
+<tr><td>Strumento Simbolo Sparso</td><td><kbd>&#8679;S</kbd></td><td>Trascina per posare istanze del simbolo scelto nel pannello Simboli, come un set di simboli. <kbd>&#8997;</kbd> rimuove le istanze.</td></tr>
+<tr><td>Strumento Simbolo Sposta</td><td>&ndash;</td><td>Trascina le istanze sotto il pennello insieme al puntatore.</td></tr>
+<tr><td>Strumento Simbolo Raggruppa</td><td>&ndash;</td><td>Ravvicina le istanze sotto il pennello; <kbd>&#8997;</kbd> le allontana.</td></tr>
+<tr><td>Strumento Simbolo Ridimensiona</td><td>&ndash;</td><td>Ingrandisce le istanze sotto il pennello; <kbd>&#8997;</kbd> le rimpicciolisce.</td></tr>
+<tr><td>Strumento Simbolo Ruota</td><td>&ndash;</td><td>Ruota le istanze sotto il pennello per seguire il trascinamento.</td></tr>
+<tr><td>Strumento Simbolo Tinta</td><td>&ndash;</td><td>Tinge le istanze sotto il pennello verso il colore di riempimento; <kbd>&#8997;</kbd> rimuove la tinta.</td></tr>
+<tr><td>Strumento Simbolo Sfuma</td><td>&ndash;</td><td>Sfuma le istanze sotto il pennello; <kbd>&#8997;</kbd> le riporta a piena intensità.</td></tr>
+<tr><td>Strumento Simbolo Restile</td><td>&ndash;</td><td>Applica lo stile grafico scelto nel pannello Stili grafici alle istanze sotto il pennello; <kbd>&#8997;</kbd> lo rimuove.</td></tr>
+</tbody>
+</table>
+<p>Usali per spargere e poi variare un campo di lavoro ripetuto, come alberi su una collina o stelle in un cielo: spruzzati un set, poi assottigliscilo, ridimensionalo, ruotalo e tingilo così le copie non sembrano stampate. Tutti e otto accettano <kbd>[</kbd> e <kbd>]</kbd> per la dimensione del pennello e <kbd>{</kbd> e <kbd>}</kbd> per quanto forte lavora il pennello. Agiscono sulle istanze nella selezione, oppure su ogni istanza modificabile quando non è selezionato nulla.</p>
+
+<h2 id="tools-boards-slices">Tavole e sezioni</h2>
+<p>Gli strumenti che dispongono la tela per l'output: tavole da stampa, che sono le pagine su cui si trova il tuo lavoro, e sezioni, che segnano rettangoli da esportare singolarmente.</p>
+
+<h3 id="tools-boards">Tavole</h3>
+<table>
+<thead><tr><th>Strumento</th><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+<tbody>
+<tr><td>Strumento Tavola</td><td><kbd>&#8679;O</kbd></td><td>Disegna, sposta e ridimensiona le tavole da stampa direttamente sulla tela. Trascina la tela vuota per una nuova tavola, con <kbd>&#8997;</kbd> che disegna dal centro e <kbd>&#8679;</kbd> che la mantiene quadrata; trascina all'interno di una tavola per spostarla, con <kbd>&#8679;</kbd> che limita lo spostamento a un asse; trascina una maniglia d'angolo con <kbd>&#8679;</kbd> per mantenere le proporzioni della tavola.</td></tr>
+</tbody>
+</table>
+<p>Usa lo Strumento Tavola per aggiungere pagine di dimensioni o versioni diverse di un design in un unico documento, e per ridimensionare una pagina intorno a ciò che hai disegnato. <kbd>Canc</kbd> rimuove la tavola attiva, purché ne resti una.</p>
+
+<h3 id="tools-slices">Sezioni</h3>
+<table>
+<thead><tr><th>Strumento</th><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+<tbody>
+<tr><td>Strumento Sezione</td><td><kbd>&#8679;K</kbd></td><td>Trascina un rettangolo che si esporta singolarmente; <kbd>&#8997;</kbd> disegna dal centro e <kbd>&#8679;</kbd> lo mantiene quadrato. I bordi delle sezioni si interrompono su pixel interi, così ciò che esce non è sfocato.</td></tr>
+<tr><td>Strumento Selezione sezione</td><td>&ndash;</td><td>Seleziona, sposta e ridimensiona le sezioni. <kbd>Canc</kbd> rimuove quella selezionata e un doppio clic ne apre le opzioni.</td></tr>
+</tbody>
+</table>
+<p>Usa le sezioni per affettare una tavola da stampa in pezzi che si esportano separatamente, come i pulsanti e i banner di un layout web, ciascuno come file proprio. L'esportazione è trattata nella pagina <a href="/manual/files/">Apri ed esporta</a>.</p>
+
+<h2 id="tools-navigate">Spostarsi</h2>
+<p>Gli strumenti che spostano, ruotano e ingrandiscono la vista. Nessuno di essi modifica il documento: cambiano solo il modo in cui lo stai guardando.</p>
+
+<h3 id="tools-view">Spostare la vista</h3>
+<table>
+<thead><tr><th>Strumento</th><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+<tbody>
+<tr><td>Strumento Mano</td><td><kbd>H</kbd></td><td>Trascina per spostare la vista. Tenere premuta la barra spaziatrice la prende in prestito da qualsiasi altro strumento per tutto il tempo che la tieni premuta.</td></tr>
+<tr><td>Strumento Ruota vista</td><td><kbd>&#8679;H</kbd></td><td>Trascina per ruotare la vista attorno al centro della finestra, con <kbd>&#8679;</kbd> che scatta a 15&deg;; doppio clic per rimetterla in piedi. Solo la vista ruota, mai il documento.</td></tr>
+<tr><td>Strumento Stampa piastrelle</td><td>&ndash;</td><td>Elencato nella barra degli strumenti ma non ancora implementato; la palette lo segnala come in arrivo.</td></tr>
+</tbody>
+</table>
+<p>Lo Strumento Mano scorre un disegno ingrandito senza toccare le barre di scorrimento, e lo Strumento Ruota vista inclina l'intera vista così puoi disegnare una linea inclinata a un angolo comodo, poi rimetterla dritta.</p>
+
+<h3 id="tools-zoom">Zoom</h3>
+<table>
+<thead><tr><th>Strumento</th><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+<tbody>
+<tr><td>Strumento Zoom</td><td><kbd>Z</kbd></td><td>Fai clic per ingrandire e <kbd>&#8997;</kbd>-clic per ridurre. Trascina un rettangolo su una parte del lavoro per riempire la finestra con essa.</td></tr>
+</tbody>
+</table>
+
+<h2 id="tools-fill-stroke">Controlli di riempimento e contorno</h2>
+<p>In fondo alla barra degli strumenti si trovano i campioni di riempimento e contorno, uno davanti all'altro. Il campione davanti è il lato attivo, quello su cui atterrerà la tua prossima scelta di colore. Una manciata di tasti singoli li azionano senza raggiungere i pannelli:</p>
+<table>
+<thead><tr><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+<tbody>
+<tr><td><kbd>D</kbd></td><td>Ripristina riempimento e contorno ai loro valori predefiniti.</td></tr>
+<tr><td><kbd>X</kbd></td><td>Alterna quale dei due, riempimento o contorno, è il lato attivo.</td></tr>
+<tr><td><kbd>&#8679;X</kbd></td><td>Scambia i colori di riempimento e contorno.</td></tr>
+<tr><td><kbd>/</kbd></td><td>Imposta il lato attivo su nessuna vernice.</td></tr>
+</tbody>
+</table>
+<p>Questi rendono veloci le mosse comuni: <kbd>X</kbd> per saltare tra dipingere il riempimento e il contorno, <kbd>/</kbd> per eliminare il riempimento o il contorno e <kbd>D</kbd> per tornare a un inizio semplice bianco e nero. Riempiimenti, contorni e come vengono impostati sono trattati nella pagina <a href="/manual/appearance/">Colore e aspetto</a>.</p>

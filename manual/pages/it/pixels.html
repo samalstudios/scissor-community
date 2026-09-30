@@ -1,0 +1,120 @@
+<p class="lede">Un documento Scissor può contenere pixel dipinti accanto ai suoi tracciati e testo disegnati, così un unico file può portare una texture morbida a pennello, una fotografia e un logo nitido insieme. Questa pagina copre cos'è un livello pixel, come dipingervi sopra e come si comporta come oggetto nel documento.</p>
+
+<h2 id="pixels-vector-vs-raster">Pixel contro lavoro vettoriale</h2>
+<p>Un documento Scissor contiene due tipi di lavoro fianco a fianco. Tracciati e testo sono <em>disegnati</em>: restano nitidi a qualsiasi dimensione perché sono descritti dalla loro forma, e Scissor li ridisegna ogni volta che ingrandisci o ridimensioni. Un <strong>livello pixel</strong> è <em>dipinto</em>: è una griglia di puntini colorati, come una fotografia o un dipinto a pennello, e ingrandirlo rende quei puntini più grandi piuttosto che aggiungere dettagli. Un documento può contenerne quanti ne vuoi di ciascun tipo, in qualsiasi ordine, e si impilano insieme nel pannello Livelli.</p>
+<p>Usa un livello pixel quando una forma da sola non basta: un'ombra dipinta a mano, una texture ruvida dietro un testo pulito, una macchia di colore che non deve essere un tracciato modificabile, oppure ritocchi su una fotografia posata. Mantieni loghi, diagrammi e qualsiasi cosa ridimensionerai in seguito come vettori, e usa i pixel per le parti che vogliono la sensazione della vernice.</p>
+<p>Una fotografia posata è una cosa correlata ma separata. <strong>File &gt; Inserisci&hellip;</strong> (<kbd>&#8679;&#8984;P</kbd>) porta un'immagine esistente nel documento come immagine incorporata; un livello pixel è una superficie su cui dipingi da zero dentro Scissor. Entrambi sono fatti di pixel e entrambi possono essere campionati con il contagocce, ma solo un livello pixel accetta tratti di pennello.</p>
+
+<h2 id="pixels-new">Creare un livello pixel</h2>
+<p><strong>Oggetto &gt; Livello pixel &gt; Nuovo livello pixel</strong> aggiunge una superficie vuota che copre la tavola attiva. Non devi però crearne uno prima: scegli il Pennello e dipingi, e Scissor crea il livello per te nel momento in cui il primo tratto atterra. In entrambi i casi il livello si mappa sulla tavola, così i pixel si allineano alla tavola da stampa qualunque sia la risoluzione a cui sono stati creati.</p>
+<p>Quella risoluzione viene dall'impostazione <strong>Effetti raster</strong> in <strong>File &gt; Impostazioni documento&hellip;</strong> (<kbd>&#8997;&#8984;P</kbd>): Schermo (72&nbsp;ppi), Media (150&nbsp;ppi) o Alta (300&nbsp;ppi). Un'impostazione più alta dà a un nuovo livello pixel più puntini per punto, così il lavoro a pennello resta liscio quando il pezzo viene stampato o visto in grande. Impostala prima di creare il livello, poiché il conteggio dei pixel è fissato quando la superficie viene creata.</p>
+<p>Nella shell moderna puoi anche aggiungere un livello dalla barra delle opzioni degli strumenti: con il Pennello o la Gomma pixel attivi, un pulsante <strong>Nuovo livello pixel</strong> si trova alla fine della barra.</p>
+<p><strong>Inserire un'immagine crea anche un livello pixel.</strong> Rilascia un'immagine sulla tela, usa <strong>File &gt; Inserisci&hellip;</strong>, oppure incollane una dagli appunti, e arriva come un livello pixel modificabile alla sua dimensione piuttosto che un'immagine bloccata: così puoi dipingervi sopra, mascherarla, regolarla e filtrarla subito. Aprire un'immagine con <strong>File &gt; Apri</strong> crea un nuovo documento con una tavola della dimensione dell'immagine, riempita dal livello pixel. Le foto molto grandi vengono ridimensionate per adattarsi al budget pixel. Un <strong>SVG</strong> resta vettoriale: i suoi tracciati restano modificabili, così solo le immagini bitmap (PNG, JPEG, GIF, WebP e simili) diventano livelli pixel.</p>
+<p>Un file <strong><code>.psd</code></strong> a livelli arriva più ricco: aprirne uno ricostruisce la sua pila come livelli pixel separati, mantenendo la <strong>maschera</strong> di ciascun livello, e portando testo, forme ed effetti di livello attraverso così il file atterra vicino a come appariva dove è stato creato piuttosto che come un'immagine piatta. È il modo più completo di entrare nel lavoro pixel, e tutto in questa pagina si applica poi ai livelli che arrivano.</p>
+
+<h2 id="pixels-painting">Dipingere</h2>
+
+<h3 id="pixels-brush">Il Pennello e la Gomma pixel</h3>
+<p>Due strumenti lavorano sui livelli pixel.</p>
+<table>
+  <thead><tr><th>Strumento</th><th>Dove si trova</th><th>Cosa fa</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Strumento Pennello</strong></td><td>Condivide uno slot con il Pennello (<kbd>B</kbd>) e il Pennello di riempimento (<kbd>&#8679;B</kbd>)</td><td>Posa colore che diventa parte dell'immagine</td></tr>
+    <tr><td><strong>Strumento Gomma pixel</strong></td><td>Condivide uno slot con la Gomma (<kbd>&#8679;E</kbd>), Forbici e Coltello</td><td>Cancella la vernice così ciò che sotto si vede attraverso</td></tr>
+  </tbody>
+</table>
+<p>Per raggiungere l'uno o l'altro, premi e tieni premuto lo strumento visibile nella barra degli strumenti, oppure fai clic con il pulsante destro su di esso, e scegli lo strumento pixel dall'elenco. Non confonderli con i loro vicini vettoriali: il Pennello disegna un tracciato che puoi rimodellare in seguito, mentre il Pennello pixel dipinge pixel che non si possono ri-puntare. Entrambi gli strumenti pixel mostrano un anello sulla tela alla dimensione che dipingeranno, e entrambi usano un puntatore a mirino.</p>
+<p>Trascina per dipingere o cancellare. Il segno segue il puntatore senza spazi per quanto veloce ti muovi, perché Scissor pone una serie di pennellate rotonde lungo il tratto e le mantiene uniformemente spaziate anche quando il puntatore salta. La Gomma pixel toglie l'alfa invece di dipingere sopra, così ciò che cancella diventa completamente trasparente; una piastrela cancellata fino a zero viene eliminata, così cancellare non lascia peso dietro.</p>
+
+<h3 id="pixels-colour">Dipingere nel colore di riempimento</h3>
+<p>Il Pennello dipinge nel colore di <strong>riempimento</strong> corrente. Impostalo come imposti qualsiasi riempimento: il pannello Colore, un campione, oppure, quando il Pennello è attivo nella shell moderna, il chip <strong>Colore</strong> nella barra delle opzioni degli strumenti. Se il riempimento è vuoto il Pennello ricade sul colore di contorno, e al nero se non c'è alcun colore. Scegli un colore direttamente da un livello pixel con il Contagocce quando vuoi corrispondere a vernice già posata.</p>
+
+<h3 id="pixels-controls">Dimensione, durezza e flusso</h3>
+<p>Quando il Pennello o la Gomma pixel è attivo, la barra delle opzioni degli strumenti porta le impostazioni che modellano il segno. Vivono anche nelle tue preferenze, così si portano da una sessione all'altra.</p>
+<dl>
+  <dt>Dimensione</dt><dd>Il diametro del pennello, da 1 a 2500 pixel. Premi <kbd>[</kbd> per rimpicciolire il pennello e <kbd>]</kbd> per ingrandirlo; ogni pressione cambia la dimensione di un quinto, così il passo cresce con il pennello. L'anello sulla tela mostra la dimensione corrente.</dd>
+  <dt>Durezza</dt><dd>Dove il bordo inizia a sfumare, come percentuale. Al 100% il bordo è netto; abbassandolo la pennellata si ammorbidisce verso il suo bordo con una dissolvenza morbida e senza anello visibile. Usa un pennello morbido per ombre e bagliori, uno duro per forme solide.</dd>
+  <dt>Flusso</dt><dd>Quanta vernice ogni pennellata posa, solo per il Pennello. Sotto il 100% il colore si accumula gradualmente man mano che ripassi su un'area, cosa che si adatta a sfumature e lente dissolvenze. La Gomma pixel non ha controllo di flusso.</dd>
+</dl>
+
+<h2 id="pixels-retouch">Schiarire, scurire e spugnare</h2>
+<p>Tre pennelli di ritocco lavorano sui pixel già presenti invece di posare colore, condividendo un unico slot nella barra degli strumenti. Dipingono come il Pennello: stessa dimensione, durezza e anello sulla tela, e si accumulano man mano che ripassi su un'area, così un tocco leggero è graduale e uno deciso è veloce.</p>
+<dl>
+  <dt>Schiarisci</dt><dd>Schiarisce ovunque dipingi, sollevando le ombre e aggiungendo luci.</dd>
+  <dt>Scurisci</dt><dd>Scurisce ovunque dipingi, approfondendo ombre e bordi.</dd>
+  <dt>Spugna</dt><dd>Solleva la saturazione, rendendo i colori più ricchi man mano che ci passi sopra.</dd>
+</dl>
+<p>Ciascuno lascia intoccati i pixel trasparenti, resta dentro una selezione quando ce n'è una, e l'intero tratto si annulla in un singolo passaggio.</p>
+
+<h2 id="pixels-more-tools">Secchiello, forme e sfumature</h2>
+<p>Dipingere non è solo il Pennello. Su un livello pixel tre altri strumenti pongono colore: il <strong>Secchiello</strong> inonda un'area contigua di colore simile da dove fai clic; gli <strong>strumenti forma</strong> timbrano un rettangolo, un'ellisse, una stella o un poligono direttamente nei pixel invece di disegnare un tracciato; e lo <strong>Strumento Sfumatura</strong> dipinge una sfumatura lineare o radiale attraverso la superficie. Ciascuno rispetta la selezione corrente, così puoi limitare un riempimento o una sfumatura a una regione scelta.</p>
+
+<h2 id="pixels-selecting">Selezionare pixel</h2>
+<p>Una <strong>selezione pixel</strong> — un rettangolo di selezione — limita ogni vernice e modifica alla regione dentro di esso, come uno stencil. Tre strumenti ne creano una, condividendo lo slot di selezione pixel: il <strong>Rettangolo di selezione</strong> e l'<strong>Ellisse di selezione</strong>, e un <strong>Lazzo di selezione</strong> a mano libera che tracci a mano. Trascina per disegnare una selezione; un trascinamento semplice sostituisce quella corrente.</p>
+<p>La <strong>Selezione automatica</strong> seleziona per colore invece che per forma: fai clic su un livello pixel e prende la macchia di colore connessa attorno a dove hai fatto clic, tracciando un contorno formica attorno ad essa: comodo per sollevare uno sfondo piatto o un'area colorata. Quanto vicino deve essere un colore per essere preso è la <strong>Tolleranza</strong> nelle opzioni della Selezione automatica, la stessa impostazione che usa sugli oggetti vettoriali; aumentala per raccogliere di più, riducila per restare su una corrispondenza stretta. I fori nella macchia vengono lasciati fuori dalla selezione.</p>
+<p>Le selezioni si combinano, così una forma può essere costruita da diversi tratti o clic: tieni premuto <kbd>&#8679;</kbd> per <strong>aggiungere</strong> alla selezione, <kbd>&#8997;</kbd> per <strong>sottrarre</strong>, e entrambi insieme per tenere solo la <strong>sovrapposizione</strong>: i rettangoli di selezione e la Selezione automatica si combinano tutti allo stesso modo. <strong>Seleziona &gt; Tutto</strong> (<kbd>&#8984;A</kbd>) seleziona ogni pixel, <strong>Seleziona &gt; Inverso</strong> capovolge il rettangolo di selezione e <strong>Deseleziona</strong> — <kbd>&#8984;D</kbd> su un livello pixel — lo elimina. Un contorno formica mostra la selezione sulla tela.</p>
+
+<h2 id="pixels-editing-selection">Spostare, tagliare e copiare pixel</h2>
+<p>Con una selezione impostata, lo Strumento Selezione sposta i pixel dentro di esso: trascina da dentro il rettangolo di selezione e la vernice selezionata si solleva e viaggio, cancellando dove era e portando il rettangolo di selezione con sé. Tieni premuto <kbd>&#8997;</kbd> mentre trascini per lasciare l'originale al suo posto e spostare una <strong>copia</strong>.</p>
+<p>Gli strumenti di trasformazione lavorano anche sulla selezione. Con un rettangolo di selezione impostato, il riquadro di selezione dello Strumento Selezione e lo <strong>Strumento Trasforma libera</strong> (<kbd>E</kbd>) avvolgono il rettangolo di selezione, non l'intero livello, così puoi ridimensionare, ruotare o spostare solo quella parte dell'immagine; <strong>Oggetto &gt; Trasforma</strong> e i tasti freccia agiscono su di esso allo stesso modo. I pixel sollevati fluttuano sopra il livello mentre lavori, così puoi trascinarli ancora e ancora senza perdere dettagli. Premi <kbd>Invio</kbd>, scegli un altro strumento o crea una nuova selezione per posarli, che è un singolo passaggio da annullare, oppure premi <kbd>Esc</kbd> per rimettere tutto al suo posto. Uno spostamento di pixel interi li mantiene esattamente come erano; ridimensionare o ruotare li ricampiona una volta, quando vengono posati.</p>
+<p>Le modalità <strong>Distorci libera</strong> e <strong>Distorci prospettica</strong> dello Strumento Trasforma libera funzionano anche sui pixel, su un rettangolo di selezione o su un intero livello: trascina un angolo del riquadro (o tieni premuto <kbd>&#8984;</kbd> mentre trascini uno in modalità Trasforma libera) per tirare l'immagine fuori dal vero, ad esempio per adattare una fotografia su uno schermo o un'insegna vista di scorcio. Mentre trascini, Scissor mostra un'anteprima rapida dimensionata allo schermo, così resta fluida anche su una foto grande; i pixel stessi vengono tirati una volta, a piena risoluzione, quando premi <kbd>Invio</kbd> o vai oltre, e il rettangolo di selezione segue la nuova forma.</p>
+<p>Copia (<kbd>&#8984;C</kbd>) e Taglia (<kbd>&#8984;X</kbd>) lavorano sui pixel dentro un rettangolo di selezione: copiare lascia il livello com'è, tagliare toglie i pixel. Incolla (<kbd>&#8984;V</kbd>) li mette su un <strong>nuovo livello pixel</strong> appena sopra quello da cui venivano, esattamente nello stesso posto, pronto a essere spostato o trasformato per conto suo. Gli stessi comandi si trovano in <strong>Crea &gt; Livello pixel</strong>, e la selezione guida anche i comandi di superficie: <strong>Riempi con colore di riempimento</strong> riempie solo la regione selezionata, <strong>Cancella</strong> ed <strong>Elimina</strong> la cancellano, e senza selezione ciascuno agisce sull'intero livello.</p>
+
+<h2 id="pixels-adjustments">Regolazioni</h2>
+<p>Il sottomenu <strong>Oggetto &gt; Livello pixel &gt; Regolazioni</strong> ritocca il colore di un livello pixel, limitato alla selezione quando ce n'è una. Ciascuno apre una finestra di dialogo che visualizza in anteprima sulla tela man mano che trascini.</p>
+<dl>
+  <dt>Luminosità / Contrasto, Livelli</dt><dd>Imposta la luminosità e il contrasto complessivi, oppure rimappa il punto nero, il punto bianco e la gamma per un controllo tonale più fine.</dd>
+  <dt>Tonalità / Saturazione, Vividezza</dt><dd>Sposta la tonalità e solleva o abbassa la saturazione in tutto il quadro, oppure usa Vividezza per intensificare i colori spenti lasciando quelli già vividi invariati.</dd>
+  <dt>Bilanciamento colore</dt><dd>Spingi i toni intermedi verso ciano o rosso, magenta o verde, giallo o blu.</dd>
+  <dt>Mappa sfumatura</dt><dd>Ricolora il livello per luminosità, mappando le ombre a un colore e le luci a un altro.</dd>
+  <dt>Desatura, Inverti</dt><dd>Elimina tutto il colore in grigio, oppure capovolge ogni colore nel suo opposto.</dd>
+  <dt>Soglia, Posterizza</dt><dd>Riduci l'immagine a puro bianco e nero a un livello scelto, oppure a un piccolo numero di toni per canale.</dd>
+</dl>
+
+<h2 id="pixels-filters">Filtri</h2>
+<p>Il sottomenu <strong>Filtri</strong> rimodella i pixel stessi, ancora entro la selezione.</p>
+<dl>
+  <dt>Sfocatura gaussiana</dt><dd>Ammorbidisce il livello di un importo uniforme e regolabile.</dd>
+  <dt>Nitidezza, Maschera nitidezza</dt><dd>Rende nitido il dettaglio: Maschera nitidezza dà controllo su raggio, quantità e una soglia che risparmia le aree piatte e il fine rumore.</dd>
+  <dt>Pixelizza</dt><dd>Blocca l'immagine in piastrelle quadrate per un mosaico.</dd>
+  <dt>Aggiungi rumore</dt><dd>Sparge grana attraverso la vernice.</dd>
+  <dt>Trova bordi, Rilievo</dt><dd>Traccia dove il colore cambia come linee chiare su scuro, oppure come un rilievo grigio.</dd>
+</dl>
+<p><strong>Filtri &gt; Anteprime effetti</strong> mostra il tuo livello come una griglia di miniature live, ciascuna con una regolazione o un filtro applicato, così puoi scegliere a occhio piuttosto che per nome. Scegliere una miniatura mantiene la finestra aperta. Le impostazioni dell'effetto appaiono accanto alla griglia, e la tela visualizza in anteprima il risultato man mano che le cambi. Nulla viene applicato finché non fai clic su <strong>Applica</strong> (o premi <kbd>Invio</kbd>). <strong>Annulla</kbd> o <kbd>Esc</kbd> rimette l'immagine al suo posto, e un annullamento elimina un effetto applicato. Puoi trascinare la finestra dal suo titolo per vedere la tela dietro di essa.</p>
+
+<h2 id="pixels-undo">Annullamento rapido, a base di piastrelle</h2>
+<p>Un intero tratto si annulla in un passaggio, per quanto lungo fosse: premi <kbd>&#8984;Z</kbd> una volta e l'ultimo segno sparisce, e <kbd>&#8679;&#8984;Z</kbd> lo riporta indietro. Se il primo tratto ha dovuto creare il suo livello, quel livello torna indietro con il tratto piuttosto che essere lasciato vuoto.</p>
+<p>Dietro le quinte un livello pixel è mantenuto come una griglia di piccole piastrelle, e un tratto copia solo le piastrelle che ha effettivamente toccato. Annullare mantiene istantanee complete del documento, ma un tratto costa solo le sue piastrelle piuttosto che l'intera superficie, così dipingere su un livello grande resta veloce e una lunga sessione di lavoro a pennello non riempie la memoria. Le aree piatte di un colore sono memorizzate in modo compatto, così un livello che è per lo più un unico colore occupa quasi nessuno spazio.</p>
+
+<h2 id="pixels-treating">Trattare un livello pixel come qualsiasi oggetto</h2>
+<p>Un livello pixel è un oggetto nel documento, quindi tutto ciò che sai già si applica. Selezionalo, spostalo e ridimensionalo, ruotalo, riflettilo o inclinalo da <strong>Oggetto &gt; Trasforma</strong>, dal riquadro di selezione o dallo Strumento Trasforma libera. Senza rettangolo di selezione, il riquadro avvolge i pixel dipinti del livello piuttosto che la sua intera superficie, e una trasformazione lavora su quei pixel: spostarli li lascia intoccati, mentre ridimensionare o ruotarli viene incorporato nei pixel quando premi <kbd>Invio</kbd>, scegli un altro strumento o selezioni qualcos'altro, così il livello resta dritto e il prossimo tratto di pennello atterra nel verso giusto. Imposta la sua opacità e dagli una qualsiasi delle sedici modalità di fusione dal pannello Trasparenza per far sedere il colore dipinto sopra il lavoro disegnato sotto. Fare clic seleziona il livello solo dove ha vernice, così un angolo trasparente ti lascia cliccare direttamente attraverso a ciò che è sotto. <strong>Duplica</strong> copia un livello pixel come qualsiasi oggetto: economicamente, poiché la copia condivide le sue piastrelle finché una delle due non viene dipinta.</p>
+<p><strong>Oggetto &gt; Livello pixel &gt; Unisci verso il basso</strong> appiattisce un livello pixel sul livello pixel direttamente sotto di esso e rimuove quello superiore, lasciando un unico livello con i due compositi insieme. Se i livelli si trovano sotto trasformazioni diverse — diciamo uno è stato ruotato — quello superiore viene ricampionato nella griglia di quello inferiore mentre si unisce.</p>
+<p>Due comandi agiscono sull'intera superficie in una volta:</p>
+<dl>
+  <dt>Oggetto &gt; Livello pixel &gt; Riempi con colore di riempimento</dt><dd>Inonda l'intera superficie con il colore di riempimento corrente. Usalo per posare una mano di fondo prima di dipingervi sopra, oppure per inondare un livello posato dietro altro lavoro.</dd>
+  <dt>Oggetto &gt; Livello pixel &gt; Cancella</dt><dd>Svuota la superficie senza rimuovere il livello, così puoi ricominciare la dipintura mantenendo il posto, la trasformazione, l'opacità e la modalità di fusione del livello.</dd>
+</dl>
+<p>Entrambi i comandi appaiono anche sotto <strong>Effetto &gt; Livello pixel</strong>.</p>
+
+<h2 id="pixels-masks">Maschere di livello</h2>
+<p>Una <strong>maschera di livello</strong> nasconde parti di un livello pixel senza eliminarle: il livello si vede attraverso dove la maschera è bianca ed è nascosto dove è nera, con i grigi nel mezzo per la trasparenza parziale. Poiché nulla viene cancellato, puoi dipingere la maschera avanti e indietro tutte le volte che vuoi. I comandi sono sotto <strong>Oggetto &gt; Livello pixel</strong>.</p>
+<dl>
+  <dt>Aggiungi maschera di livello</dt><dd>Collega una maschera che inizialmente rivela tutto, pronta per essere dipinta.</dd>
+  <dt>Aggiungi maschera di livello da selezione</dt><dd>Costruisce la maschera dalla selezione pixel corrente: ciò che è dentro resta, ciò che è fuori viene nascosto. Un modo veloce per tagliare una forma fuori da una fotografia in modo non distruttivo.</dd>
+  <dt>Modifica maschera</dt><dd>Attiva e disattiva la dipintura della maschera. Mentre è attiva, il Pennello, la Gomma e il Secchiello dipingono la maschera invece che il livello: dipingi con il nero (o un colore scuro) per nascondere, bianco per rivelare, grigio per sfumare. Il pennello usa la luminosità del colore di riempimento corrente, così il nero nasconde e il bianco mostra.</dd>
+  <dt>Applica maschera di livello</dt><dd>Incorpora la maschera nel livello definitivamente: i pixel nascosti diventano trasparenti, e la maschera viene rimossa.</dd>
+  <dt>Elimina maschera di livello</dt><dd>Butta la maschera e mostra di nuovo l'intero livello, intatto.</dd>
+</dl>
+<p>Un livello mascherato si esporta e si salva con la maschera già applicata, e si fonde e si trasforma come qualsiasi altro livello.</p>
+
+<h2 id="pixels-rasterize">Trasformare lavoro vettoriale in pixel: Rasterizza</h2>
+<p><strong>Oggetto &gt; Rasterizza</strong> sostituisce la selezione corrente con un'immagine incorporata di sé stessa, incorporando tracciati, testo ed eventuali effetti in pixel fissi. Usalo quando vuoi che un risultato vettoriale smetta di essere modificabile, quando un effetto è più facile da trattare come immagine piatta, oppure per passare un pezzo che deve apparire ovunque allo stesso modo senza portare con sé la sua costruzione live. Il risultato è un'immagine incorporata piuttosto che un livello pixel dipingibile, quindi conserva una copia del lavoro originale se potresti aver bisogno di modificarlo di nuovo. <strong>Visualizza &gt; Anteprima pixel</strong> (<kbd>&#8997;&#8984;Y</kbd>) ti permette di controllare come il lavoro vettoriale atterrerà sulla griglia pixel prima di impegnarti.</p>
+
+<h2 id="pixels-saving">Salvataggio ed esportazione</h2>
+<p>I documenti <code>.cut</code> conservano i livelli pixel con il resto del lavoro, impacchettati in modo che le aree piatte occupino quasi nessuno spazio e riaprano esattamente come dipinti.</p>
+<p>Come i livelli pixel lasciano il documento dipende dal formato:</p>
+<dl>
+  <dt>PNG, JPEG e WebP</dt><dd>Appiattiscono l'intero documento in pixel, così il lavoro dipinto e disegnato si fondono in un unico bitmap. PNG può mantenere la trasparenza; esporta a @2x per un risultato più nitido.</dd>
+  <dt>SVG e PDF</dt><dd>Scrive la superficie dipinta come immagine incorporata posata tra il lavoro vettoriale, così un documento che mescola lavoro disegnato e dipinto viaggia come un unico file con le sue forme ancora nitide.</dd>
+</dl>
+<p>Poiché raster e vivettoriale vivono nello stesso documento e si esportano insieme, puoi costruire un pezzo nel modo naturale: forme e testo puliti come vettori, e le parti che vogliono la sensazione della vernice, un bagliore morbido, una lavatura texturizzata, una fotografia ritoccata, come livelli pixel impilati tra di essi.</p>
