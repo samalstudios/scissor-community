@@ -1,0 +1,166 @@
+<p class="lede">Scissor fyller webbläsarfönstret med en enda redigeringsyta: en menyrad högst upp, en kontrollrad och dokumentflikar under den, verktygspaletten nedtill vänster, ritduken i mitten, och paneldockan till höger. Allt körs på din egen maskin, så ett dokument stannar där du lämnar det och inget skickas bort för att öppnas.</p>
+
+  <p>Genvägarna på denna sida är skrivna i macOS-form. På Windows och Linux, läs <kbd>⌘</kbd> som <kbd>Ctrl</kbd> och <kbd>⌥</kbd> som <kbd>Alt</kbd>; <kbd>⇧</kbd> är Shift och <kbd>⌃</kbd> är Control.</p>
+
+  <h2 id="interface-at-a-glance">Arbetsyta i översikt</h2>
+  <p>Fönstret är byggt av några få regioner som var och en svarar på en annan fråga. Lär dig var de finns en gång så blir resten av manualen lättare att läsa.</p>
+  <dl>
+    <dt>Menyrad</dt>
+    <dd>Raden med menyer längst upp, med ångra och gör om samt en kommandosökning i sin högra ände. Detta är den fullständiga listan över allt redigeraren kan göra.</dd>
+    <dt>Kontrollrad</dt>
+    <dd>Remsan precis under menyerna. Den visar det aktuella verktyget och de få kontroller som är relevanta för vad du har valt just nu.</dd>
+    <dt>Dokumentflikar</dt>
+    <dd>Till vänster om kontrollraden, en flik per öppet dokument. Panelknappen sitter längst till höger i samma rad.</dd>
+    <dt>Verktygspalett</dt>
+    <dd>Den smala kolumnen med verktyg nedtill vänsterkanten, med fyllnings- och konturkontrollen längst ner.</dd>
+    <dt>Duk och klippbräda</dt>
+    <dd>Det stora området i mitten där du ritar. De vita rektanglarna är artboards; det gråa området runt omkring är klippbrädan.</dd>
+    <dt>Paneldocka</dt>
+    <dd>Kolumnen med paneler till höger. Den glider in över duken när du behöver den och ger tillbaka utrymmet när du stänger den.</dd>
+    <dt>Statusrad</dt>
+    <dd>Den tunna linjen längst ner i fönstret, som rapporterar det aktuella verktyget, markeringen och den senaste ångringsbara åtgärden.</dd>
+  </dl>
+  <figure class="shot">
+    <img src="img/app-light.png" width="1900" height="1082" loading="lazy"
+         alt="Hela Scissor-fönstret: menyrad, kontrollrad, verktygspalett, duk och paneldocka." />
+    <figcaption>Hela fönstret. Scissor följer dina systeminställningar för ljust eller mörkt, och detta skärmdump följer det också.</figcaption>
+  </figure>
+
+  <h2 id="interface-menu-bar">Menyraden</h2>
+  <p>Tio menyer löper längst upp. De samlar alla kommandon i programmet, grupperade efter typen av arbete du gör snarare än efter var en funktion råkar bo inuti motorn.</p>
+  <table>
+    <thead><tr><th>Meny</th><th>Vad den innehåller</th></tr></thead>
+    <tbody>
+      <tr><td>Arkiv</td><td>Nytt, öppna, stäng, spara, placera, exportera, skript, dokumentinställningar och skriv ut.</td></tr>
+      <tr><td>Redigera</td><td>Ångra och gör om, urklippskommandona, hela <strong>Markera</strong>-menyn som en undermeny, färgredigering och Inställningar.</td></tr>
+      <tr><td>Ordna</td><td>Transformera, staplingsordning, justering, gruppering, samt låsa och dölja.</td></tr>
+      <tr><td>Bana</td><td>Bana- och sammansatta ban-kommandon, morfera, Shape Warp och perspektiv, beskärningsmasker, textomflöde och expandera.</td></tr>
+      <tr><td>Skapa</td><td>Mönster, upprepningar, Regionfyllning, Vektorisera, gradientnät, artboards, snitt och pixellagerkommandona.</td></tr>
+      <tr><td>Effekter</td><td>Live-effekter: vektorsetet (3D, förvräng och transformera, Kombinera former, stilisera, förvränga med mera) och en Raster-undermeny under dem.</td></tr>
+      <tr><td>Text</td><td>Typsnitt, storlek och glyfer, skapa konturer, ändra skiftläge, textflöde och teckeninfogning.</td></tr>
+      <tr><td>Visa</td><td>Utseende (ljust och mörkt), kontur- och pixelvisning, zooma, rotationsvy, linjaler, hjälplinjer, rutnät och fästning.</td></tr>
+      <tr><td>Arbetsyta</td><td>Panelerna: de sex du öppnar oftast, en Text-undermeny, en Fler paneler-undermeny för resten, och Återställ paneler.</td></tr>
+      <tr><td>Hjälp</td><td>Vad är nytt, användarmanualen, installera, Användarvillkor och Om, med ett sökfält högst upp.</td></tr>
+    </tbody>
+  </table>
+  <p>En bock bredvid ett objekt betyder att inställningen är på. Ett objekt som är gråat kan inte användas just nu, oftast för att inget är markerat eller inget dokument är öppet. Där ett kommando har en genväg visas den nedtill till höger i menyn.</p>
+
+  <h3 id="interface-command-search">Hitta ett kommando</h3>
+  <p>Du behöver inte komma ihåg vilken meny som innehåller vad. Sökknappen till höger om menyraden, märkt <em>Sök eller skriv ett kommando</em>, öppnar kommandopaletten; <kbd>⌘K</kbd> öppnar den från tangentbordet. Skriv några bokstäver och den listar alla matchande kommandon med deras menyväg och genväg, samt alla matchande verktyg. Använd <kbd>↑</kbd> och <kbd>↓</kbd> för att navigera genom resultaten, <kbd>Enter</kbd> för att köra den markerade, och <kbd>Esc</kbd> för att stänga. Nå efter denna när du vet vad du vill men inte var det finns, eller när en genväg är snabbare att skriva än att leta efter. Hjälpmenyn har ett eget sökfält som gör samma sak över menyerna.</p>
+
+  <h3 id="interface-undo-redo">Ångra och gör om</h3>
+  <p>De böjda pilarna nära högra änden av menyraden ångrar och gör om, samma som <kbd>⌘Z</kbd> och <kbd>⇧⌘Z</kbd>. Varje knapp namnger steget det skulle ångra när du hovrar över den, och statusraden visar samma sak längst ner i fönstret, så du alltid kan se vad ett tryck till skulle ångra.</p>
+
+  <h2 id="interface-tool-palette">Verktygspaletten</h2>
+  <p>Verktygen sitter i en enda kolumn nedtill vänsterkanten. De är ordnade i familjer: Markera, Rita, Text, Linje, Form, Måla, Omforma, Bygga, Provtaga, Symboler, Artboards och Visa. Kolumnen visar ett verktyg från varje familj i taget; håll pekaren över en plats och resten av den familjen utbreder sig till höger, så att du kan välja en syskon utan att kolumnen skiftar under din hand. En plats fortsätter visa vilken medlem av sin familj du senast använde.</p>
+  <p>Klicka på en plats för att välja verktyget den visar. Dess beskrivning ger verktygets namn och dess tangentbordsgenväg, till exempel <kbd>V</kbd> för markeringsverktyget, <kbd>P</kbd> för pennan eller <kbd>T</kbd> för Text. När du byter verktyg med tangentbordet lyser den matchande platsen en stund så du kan se vilken som nu är aktiv. För att se allt på en gång, en knapp nära kommandosökningen, ritad som tre prickar, öppnar en webbläsare för alla verktyg, grupperade efter familj och filtrerade medan du skriver.</p>
+
+  <h3 id="interface-fill-stroke">Fyllning och kontur</h3>
+  <p>Under verktygen finns fyllnings- och konturkontrollen: en fylad kvadrat för fyllningen, placerad inom en remsa som representerar konturen, med ett litet pilar för att byta dem. Eftersom den sitter här istället för bara i kontrollraden kan du välja en färg innan du väljer ett verktyg, och det blir vad nästa objekt ritas med. Klicka på fyllningen eller remsan för att öppna färg-, färgprov- och gradientflikarna.</p>
+  <table>
+    <thead><tr><th>Tangent</th><th>Åtgärd</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>X</kbd></td><td>Flytta fokus mellan fyllning och kontur</td></tr>
+      <tr><td><kbd>⇧X</kbd></td><td>Byt fyllning och kontur</td></tr>
+      <tr><td><kbd>D</kbd></td><td>Återgå till standard: vit fyllning, svart kontur</td></tr>
+      <tr><td><kbd>/</kbd></td><td>Ställ in den aktiva sidan till ingen</td></tr>
+    </tbody>
+  </table>
+
+  <h3 id="interface-rail-panels">Paneler bredvid verktygsraden</h3>
+  <p>Mellan fyllnings- och konturkontrollen och verktygen erbjuder paletten en kort rad med panelknappar utvalda för det verktyg du håller i: ritverktygen tar fram färgprov- och konturpanelerna inom räckhåll, textverktygen tar fram text- och styckepanelerna, och så vidare. Dessa öppnar en enda panel precis där din hand redan är. En ytterligare knapp öppnar hela dockan. På ett kort fönster viker raden ihop till en Panelknapp som listar samma val, så att paletten aldrig löper ut över underkanten.</p>
+
+  <h2 id="interface-control-bar">Kontrollraden</h2>
+  <p>Remsan under menyerna ändras med vad du gör. Den namnger det aktuella verktyget i sin vänstra ände, och till höger visar den bara de kontroller som kan verka på den aktuella markeringen: fyllning, kontur och konturtjocklek; X, Y, W och H för markeringen; och de åtgärder som är meningsfulla, såsom justering, de booleska formlägena, staplingsordning, gruppera, dela upp och duplicera. När det finns mer än plats för, samlar en sista knapp resten till en meny, så att raden aldrir flödar om medan du använder den.</p>
+  <p>Skriv i valfri sifferfält och tryck <kbd>Enter</kbd>, eller lämna fältet, för att tillämpa värdet; <kbd>↑</kbd> och <kbd>↓</kbd> stegar det, med <kbd>⇧</kbd> för tio gånger steget och <kbd>⌥</kbd> för en tiondel. Den lilla etiketten bredvid ett fält är en skrubbhjul: dra den åt vänster eller höger för att ändra värdet efter känsla. Hovra över verktygets namn för att visa det verktygets första få alternativ; klicka på namnet för att öppna dess fullständiga alternativ under raden, med alla dess växlar och siffror.</p>
+  <p>Kontrollraden är dockad i flikraden som standard, men du kan dra dess handtag för att flyta den över duken, och dubbelklicka på handtaget (eller använd dess dockningsknapp) för att sätta tillbaka den. Längs med den kan en kompakt rad bredvid ett markerat objekt som bär just dess fyllning, kontur och tjocklek, så att färgen är precis bredvid konstverket istället för på andra sidan fönstret.</p>
+
+  <h2 id="interface-quick-bar">Snabbraden</h2>
+  <p>När du markerar något flyter en liten rad bredvid det med de kontroller du når efter oftast, så att du inte behöver färdas till fönstrets kant. För former och banor innehåller den fyllning och kontur; för text innehåller den fyllningen, storleken, fetstil, kursiv och justeringen. Den håller sig ur vägen medan du drar och kommer tillbaka när du släpper. Allt på den finns också i kontrollraden och panelerna.</p>
+
+  <h2 id="interface-canvas">Duken och klippbrädan</h2>
+  <p>Mitten av fönstret är duken. Artboards är de vita rektanglarna som innehåller konstverket du tänker behålla; det gråa området runt omkring är klippbrädan. Klippbrädan är en del av dokumentet, så en skiss, ett avfall eller ett färgtest som parkerat där sparas med filen, men när du exporterar en artboard skrivs bara det som faller inom den artboardens rektangel ut.</p>
+
+  <h3 id="interface-pan-zoom">Panorera och zooma</h3>
+  <p>Håll ned <kbd>Mellanslag</kbd> för att växla till handverktyget så länge du håller det, dra sedan för att panorera; släp och ditt verktyg kommer tillbaka. Att dra med musens mittknapp panorerar också. Hjulet rullar, och hjulet med <kbd>⌘</kbd> eller <kbd>⌥</kbd> nedhållen zoomar kring pekaren.</p>
+  <table>
+    <thead><tr><th>Genväg</th><th>Zoom</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>⌘=</kbd> / <kbd>⌘-</kbd></td><td>In och ut</td></tr>
+      <tr><td><kbd>⌘0</kbd></td><td>Anpassa aktiv artboard i fönstret</td></tr>
+      <tr><td><kbd>⌥⌘0</kbd></td><td>Anpassa alla artboards i fönstret</td></tr>
+      <tr><td><kbd>⌘1</kbd></td><td>Verklig storlek</td></tr>
+    </tbody>
+  </table>
+  <p>En zoomkontroll sitter över duken med minus-, plus- och anpassningsknappar samt den aktuella procentsatsen; klicka på procentsatsen för samma anpassnings- och verklig-storlek-kommandon som en meny.</p>
+
+  <h3 id="interface-rulers-guides">Linjaler och hjälplinjer</h3>
+  <p><kbd>⌘R</kbd> visar och döljer linjalerna, som mäter i dokumentets enheter från det övre vänstra hörnet av den aktiva artboarden och bär en följare som följer pekaren. Dra ut från en linjal för att dra en hjälplinje ut på konstverket, och släpp en hjälplinje tillbaka på en linjal för att bli av med den. Du kan också förvandla en markerad bana till en hjälplinje med Gör hjälplinjer (<kbd>⌘5</kbd>) och förvandla tillbaka med Frigör hjälplinjer (<kbd>⌥⌘5</kbd>). Visa eller dölj alla hjälplinjer med <kbd>⌘;</kbd>. Smarta hjälplinjer (<kbd>⌘U</kbd>) visar justerings- och mätningstips medan du ritar och drar.</p>
+
+  <h3 id="interface-grid">Rutnätet</h3>
+  <p>Rutnätet ritas per artboard och ställs in från Visa › Rutnät eller från Rutnätspanelen. Visa eller dölj det med <kbd>⌘'</kbd> och växla fästning till det med <kbd>⇧⌘'</kbd>. Varje artboard kan använda en av sex typer av rutnät: Ortogonalt, Isometriskt, Hexagonalt, Oblikt, Guldsektion och Perspektiv. Att välja en typ slår på rutnätet så att du kan se det direkt. Rutnätet beskrivs i detalj på egen sida.</p>
+
+  <h3 id="interface-history-strip">Historikremsan</h3>
+  <p>En kolumn med små tick visas i ett hörn av duken när du flyttar pekaren nära det: detta är dokumentets historik. Hovra över ett tick för att namnge det steget, klicka på ett för att gå direkt dit, eller tryck och glid ned genom tickarna för att köra dokumentet bakåt och framåt så att du kan se en ändring komma och gå. Historikpanelen i dockan listar samma steg som text.</p>
+
+  <h2 id="interface-boards">Artboards och artboardremsan</h2>
+  <p>Artboards är vad Scissor kallar artboards. Var och en bär sitt namn ovanför sitt övre vänstra hörn, och den aktiva artboarden ritas med en starkare ram än övriga. Klicka på en artboards namn för att plocka upp artboardverktyget med den artboarden aktiv, redo att flytta, ändra storlek eller byta namn. Om en artboard har en bledd visas den runt omkring den som en röd streckad rektangel. Lägg till en från Skapa › Artboards › Ny artboard, rita och omforma artboards med artboardverktyget (<kbd>⇧O</kbd>), och ställ in en artboards storlek och namn i Artboardalternativ. Ordna om alla artboards städer dem till en rad.</p>
+  <p>En remsa med artboardsminiatyrer sitter över duken, en liten förhandsvisning per artboard plus en lägg-till-knapp i änden. Klicka på en miniatyr för att göra den artboarden aktiv och anpassa den i fönstret; klicka på namnet under den för att hoppa till den artboarden och plocka upp artboardverktyget redo att redigera den. Artboardspanelen i dockan listar dem också.</p>
+
+  <h2 id="interface-tabs">Dokumentflikar</h2>
+  <p>Öppna dokument visas som flikar till vänster om kontrollraden. En flik visar dokumentets namn, med en prick framför det medan det har osparade ändringar. Klicka på en flik för att växla till det dokumentet, eller på × för att stänga det; att stänga ett dokument med osparade ändringar frågar först. Mittenklicka på en flik för att stänga den direkt, och dra en flik på en annan för att ändra ordningen på de öppna dokumenten. Nytt (<kbd>⌥⌘N</kbd>), Öppna (<kbd>⌘O</kbd>) och Spara (<kbd>⌘S</kbd>) finns i Arkiv-menyn, och Stäng är <kbd>⌥⌘W</kbd>.</p>
+  <p>Flikarna sitter högst upp som standard. För att docka dem nedtill sidan istället, slå på <strong>Visa &rsaquo; Dokumentflikar på sidan</strong> (också i Inställningar); sidremsan kan dras bredare eller smalare efter sin högra kant, och valet kommas ihåg.</p>
+
+  <h2 id="interface-status-bar">Statusraden</h2>
+  <p>Linjen längst ner i fönstret rapporterar, från vänster till höger: en indikator för redo, namnet på det aktuella verktyget, storleken på markeringen (inget markerat, ett objekt, eller en räkning), och den åtgärd som <kbd>⌘Z</kbd> skulle ångra. Det är en tyst plats att bekräfta vad du har plockat upp och vad nästa ångeråtgärd skulle ångra.</p>
+
+  <h2 id="interface-dock">Paneldockan</h2>
+  <p>Panelerna bor i kolumnen till höger. I vila har duken hela fönstret; att be om en panel glider dockan in över duken, och att stänga den ger utrymmet tillbaka direkt. Panelknappen till höger om flikraden, och Escape-tangenten, öppnar och stänger dockan; Fönster- och Arbetsytemenyer och kommandopaletten öppnar en specifik panel.</p>
+  <figure class="shot">
+    <img src="img/editing.png" width="1900" height="1176" loading="lazy"
+         alt="Ett öppet dokument i Scissor med konstverk på artboarden och Lager- och Färgprovs-panelerna öppna i dockan." />
+    <figcaption>Ett dokument under redigering, med Lager- och Färgprovs-panelerna öppna i dockan.</figcaption>
+  </figure>
+
+  <h3 id="interface-dock-groups">De dockade panelgrupperna</h3>
+  <p>Panelerna är staplade i grupper, varje grupp en kolumn med små ikonflikar nedtill sin egen kant. Håll pekaren över en flik för att se panelens namn, och den öppna panelen namnger sig själv ovanför sitt innehåll. Som standard samlar grupperna paneler som brukar användas tillsammans:</p>
+  <ul>
+    <li><strong>Egenskaper, Lager, Artboards, Rutnät</strong>: dokumentets struktur.</li>
+    <li><strong>Färg, Färgprover, Gradient, Kontur</strong>: hur saker målas.</li>
+    <li><strong>Text, Stycke, Glyfer</strong>: text.</li>
+    <li><strong>Justera, Kombinera former, Transformera, Målstack, Transparens, 3D</strong>: forma och ordna.</li>
+    <li><strong>Stilar, Penslar, Symboler, Mönster</strong>: återanvändbara utseenden och objekt.</li>
+    <li><strong>Navigera, Info, Dokumentinfo, Historik, Åtgärder</strong>: navigera och mäta.</li>
+    <li><strong>Tillgångar, Variabler, Auto-markera, Vektorisera, Attribut</strong>: resten.</li>
+  </ul>
+
+  <h3 id="interface-rearranging">Ordna om paneler</h3>
+  <p>Layouten är din att ändra. Dra en flik längs sin egen remsa för att ändra ordningen, dra den på en annan grupps remsa för att flytta den dit, eller dra den bort från dockan för att låta den flyta över duken. Dra den tomma delen av en remsa för att lyfta ut en hel grupp, och släpp tillbaka över dockan för att sätta den hem; ett mellanrum mellan grupper accepterar en släppt flik som en ny egen grupp. Högerklicka på en flik för samma flytt via meny, inklusive Stäng panel. × högst upp på en remsa stänger den gruppen, och att dra avgränsaren mellan två grupper ger höjd till en och tar från den andra. En flytande grupp kan ändra storlek från sitt hörn.</p>
+
+  <h3 id="interface-gating">Paneler som väntar på något att göra</h3>
+  <p>En panel som inte har något att verka på just nu försvinner inte: dess flik stannar, bara nedtonad, och dess kropp visar en rad som säger vad den väntar på, till exempel att markera ett objekt eller välja textverktyget. Så att dockan inte omorganiserar sig under din hand, hålls denna väntan medan pekaren är inne i dockan och kommer ikapp när pekaren lämnar.</p>
+
+  <h3 id="interface-workspace">Öppna, dölja och återställa paneler</h3>
+  <p>Öppna en panel från Arbetsytemenyn, där de sex mest använda sitter högst upp och resten finns under Fler paneler, eller från Fönstermenyn i det klassiska gränssnittet. Många paneler har en genväg:</p>
+  <table>
+    <thead><tr><th>Panel</th><th>Genväg</th><th>Panel</th><th>Genväg</th></tr></thead>
+    <tbody>
+      <tr><td>Lager</td><td><kbd>F7</kbd></td><td>Färg</td><td><kbd>F6</kbd></td></tr>
+      <tr><td>Målstack</td><td><kbd>⇧F6</kbd></td><td>Info</td><td><kbd>F8</kbd></td></tr>
+      <tr><td>Justera</td><td><kbd>⇧F7</kbd></td><td>Transformera</td><td><kbd>⇧F8</kbd></td></tr>
+      <tr><td>Kontur</td><td><kbd>⌘F10</kbd></td><td>Gradient</td><td><kbd>⌘F9</kbd></td></tr>
+      <tr><td>Kombinera former</td><td><kbd>⇧⌘F9</kbd></td><td>Transparens</td><td><kbd>⇧⌘F10</kbd></td></tr>
+      <tr><td>Grafikstilar</td><td><kbd>⇧F5</kbd></td><td>Penslar</td><td><kbd>F5</kbd></td></tr>
+      <tr><td>Attribut</td><td><kbd>⌘F11</kbd></td><td>Symboler</td><td><kbd>⇧⌘F11</kbd></td></tr>
+      <tr><td>Tecken</td><td><kbd>⌘T</kbd></td><td>Stycke</td><td><kbd>⌥⌘T</kbd></td></tr>
+      <tr><td>Glyfer</td><td><kbd>⌥⇧F11</kbd></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+  <p>Dockan kan göras bredare genom att dra dess vänstra kant, från en bekväm två-fält-per-rad-bredd upp till en god del bredare. Din arrangement, och hur bred du lämnade dockan, kommas ihåg mellan sessioner. När dockan är stängd, sveper pekaren till fönstrets högra kant kikar den ut, så länge det inte finns konstverk under pekaren. För att ångra alla dina ändringar av layouten, välj Återställ paneler, som sätter tillbaka varje gropp till sin ursprungsplats.</p>
+  <p><kbd>Tab</kbd> döljer verktygspaletten, kontrollraden, dokumentflikarna, statusraden, panelerna och övriga skärmelement så att bara konstverket och menyraden finns kvar; tryck igen för att få tillbaka dem alla.</p>
+
+  <h2 id="interface-language">Språk</h2>
+  <p>Scissor talar engelska, tyska (Deutsch), spanska (Español), franska (Français), italienska (Italiano), katalanska (Català), tjeckiska (Čeština), danska (Dansk), norska (Norsk), polska (Polski), slovenska (Slovenčina), finska (Suomi) och svenska (Svenska). Första gången du öppnar det använder det din webbläsares språk när det är ett av dessa, och engelska annars. För att välja ett annat, klicka på globknappen i menyraden eller på välkomstskärmen, eller öppna <strong>Redigera › Inställningar</strong> (<kbd>&#8984;K</kbd>), gå till <strong>Gränssnitt</strong> och välj ett under <strong>Språk</strong>. Scissor växlar när det laddas om, och kommer ihåg valet. Menyer, paneler, dialogrutor, beskrivningar, meddelanden och Vad är nytt följer det, och siffror visas på det lokala sättet, till exempel 12,5 på tyska, även om du kan skriva antingen komma eller punkt. Dina dokument påverkas inte: lagernamn och texten i ditt konstverk förblir som du skrev dem. När gränssnittet inte är på engelska visas Användarvillkoren översatta för bekvämlighet, och den engelska versionen är den som gäller.</p>
+
+  <h2 id="interface-appearance">Ljust och mörkt</h2>
+  <p>Scissor följer din systeminställning för ljust och mörkt. För att fastställa det på ett sätt, välj Visa › Utseende och välj System, Ljust eller Mörkt. Valet kommas ihåg, och det förs vidare till duken liksom gränssnittet: klippbrädan, linjalerna och artboardsetiketterna ritas alla för att passa det tema du befinner dig i.</p>

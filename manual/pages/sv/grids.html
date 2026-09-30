@@ -1,0 +1,57 @@
+<p class="lede">Varje artboard i Scissor bär sina egna rutnät, så att olika delar av ett dokument kan ritas mot olika stödlinjer. Ett rutnät är ett ritstöd: det visas på skärmen, det skrivs aldrig ut eller exporteras, och med fästning på drar det dina punkter till sina linjer. Slå på ett rutnät med <strong>Visa &rsaquo; Rutnät &rsaquo; Visa rutnät</strong> (<kbd>&#8984;'</kbd>).</p>
+
+<h2 id="grids-choosing">Välja ett rutnät</h2>
+<p>Välj typen under <strong>Visa &rsaquo; Rutnät</strong>, och öppna sedan <strong>Rutnätspanel</strong> för att ställa in dess avstånd, hur många underdelningar som sitter mellan huvudlinjerna, dess vinkel, och var dess ursprung börjar på artboarden. Eftersom rutnätet tillhör artboarden kan ett dokument med flera artboards ge var och en det rutnät som passar arbetet på den. <strong>Fäst vid rutnät</strong> (<kbd>&#8679;&#8984;'</kbd>) får nya punkter, formhörn och dragna objekt att landa på närmaste linje.</p>
+
+<h2 id="grids-square">Kvadratiskt (ortogonalt)</h2>
+<p>Det vanliga rutnätet: jämnt fördelade horisontella och vertikala linjer. Använd det för layouter, UI-mockups, pixelstilsarbete, ikoner och allt som vill linjera upp till ett regelbundet mått.</p>
+<figure class="shot">
+  <img src="img/grid-orthogonal.png" width="1300" height="934" loading="lazy" alt="Ett kvadratiskt rutnät av jämnt fördelade horisontella och vertikala linjer på en artboard i Scissor." />
+  <figcaption>Det kvadratiska rutnätet. Jämna rader och kolumner för layout och mätt arbete.</figcaption>
+</figure>
+
+<h2 id="grids-isometric">Isometriskt</h2>
+<p>Tre uppsättningar av linjer vid 30&deg; står för de tre axlarna i en kube, så att du kan rita rum, förpackningar, spelplattor och tekniska illustrationer som lässe som fasta utan någon verklig 3D. Varje vägg följer en av de tre axlarna, så att lådar staplar och möts rent. Med rutnätet visat ritar formverktygen längs dess axlar.</p>
+<figure class="shot">
+  <img src="img/isometric-example.png" width="1600" height="1149" loading="lazy" alt="En liten stad av färgglada byggnader med fönster ritade på Scissors isometriska rutnät, varje kant följer en rutnätslinje." />
+  <figcaption>En liten stad på det isometriska rutnätet. Varje vägg och vertikal kant löper längs en rutnätslinje, så att byggnaderna sitter rätt.</figcaption>
+</figure>
+<figure class="shot">
+  <img src="img/iso-build.gif" width="820" height="589" loading="lazy" alt="En isometrisk stad byggs upp en byggnad i taget på rutnätet, varje block följer rutnätslinjerna." />
+  <figcaption>Samma stad som går upp ett block i taget. Varje byggnad fäster till rutnätet när den landar.</figcaption>
+</figure>
+
+<h2 id="grids-hexagonal">Hexagonalt</h2>
+<p>Ett vaxkaksmönster av hexagoner. Det passar spelbräden, mönsterplattor och alla layouter byggda från sexsidiga celler. Avståndet ställer in bredden på en hexagon, platt sida till platt sida.</p>
+<figure class="shot">
+  <img src="img/grid-hexagonal.png" width="1300" height="934" loading="lazy" alt="Ett vaxkaksmönster av hexagoner på en artboard i Scissor." />
+  <figcaption>Det hexagonala rutnätet. Ett vaxkaksmönster för kartor och plattarbete.</figcaption>
+</figure>
+
+<h2 id="grids-oblique">Oblikt</h2>
+<p>En familj av horisontella linjer och en sned familj i den vinkel du väljer. Det ger en enaxlig, sidovinkelprojektion, praktiskt för kavaljerstilsdiagram och sneda textstödlinjer. Ställ in snedningen i Rutnätspanelen.</p>
+<figure class="shot">
+  <img src="img/grid-oblique.png" width="1300" height="934" loading="lazy" alt="Ett oblikt rutnät: horisontella linjer korsade av en sned familj av linjer." />
+  <figcaption>Det oblika rutnätet. Horisontella linjer korsade av en snedning du ställer in.</figcaption>
+</figure>
+
+<h2 id="grids-golden">Guldsektion</h2>
+<p>Den guldsektionsrektangel som passas in på artboarden, klippt i sin kvadrat och mindre rektangel, med kvartscirkelbågarna som spårar guldsektionsspiralen. Använd den för att placera fokuspunkter och för att dimensionera element i klassisk proportion. Den skalar med artboarden snarre än till ett fast avstånd.</p>
+<figure class="shot">
+  <img src="img/grid-golden.png" width="1300" height="813" loading="lazy" alt="Ett guldsektionsrutnät: artboarden indelad i guldsektionsproportion med kvartscirkelbågarna som spårar guldsektionsspiralen." />
+  <figcaption>Det guldsektionsrutnätet. Proportionslinjer och spiralen för komposition.</figcaption>
+</figure>
+
+<h2 id="grids-pattern">Mönster</h2>
+<p>Mönsterrutnätet klistrar ett mönsterplatta över artboarden och ritar det under konstverket, så att mönstret fungerar som bakgrund och justeringsstöd på en gång – praktiskt för att lägga konstverk på en upprepning, kontrollera att en platta linjer upp, eller arbeta över en referenstextur. Välj det under <strong>Visa &rsaquo; Rutnät &rsaquo; Mönster</strong>; plattan kommer från den aktuella mönsterfärgproven, som du gör och redigerar som beskrivs på <a href="/manual/symbols/">Symboler &amp; penslar</a>-sidan. Som alla rutnät tillhör det artboarden, så att olika artboards kan bära olika mönsterbakgrunder.</p>
+
+<h2 id="grids-perspective">Perspektiv</h2>
+<p>Stödlinjer som löper till en, två eller tre försvinningspunkter på en horisont, så att du kan rita scener med verkligt djup. Ställ in det med <strong>Perspektivrutnätsverktyget</strong> (<kbd>&#8679;P</kbd>): dra i försvinningspunkterna, dra en upp eller ner för att flytta horisonten, och tryck <kbd>1</kbd> till <kbd>4</kbd> för att välja det plan du ritar på. <strong>Rutnätspanel</strong>&rsquo;s <strong>1 punkt</strong>, <strong>2 punkter</strong> och <strong>3 punkter</strong>-knappar växlar mellan inställningarna. Former ritade på rutnätet delar ett perspektiv.</p>
+<figure class="shot">
+  <img src="img/grid-perspective.png" width="1300" height="813" loading="lazy" alt="Ett tvåpunktsperspektivrutnät, dess stödlinjer konvergerar till en försvinningspunkt på varje sida om horisonten." />
+  <figcaption>Ett tvåpunktsperspektivrutnät. Stödlinjer konvergerar till en försvinningspunkt på varje sida.</figcaption>
+</figure>
+<figure class="shot">
+  <img src="img/perspective-grid.png" width="1700" height="969" loading="lazy" alt="Tre färgglada lådor ritade i tvåpunktsperspektiv på rutnätet, deras kanter konvergerar till försvinningspunkterna." />
+  <figcaption>Lådor ritade på tvåpunktsrutnätet. Deras kanter löper till försvinningspunkterna, så att de delar ett perspektiv.</figcaption>
+</figure>
