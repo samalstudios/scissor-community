@@ -1,0 +1,134 @@
+<p class="lede">Jak tvar vypadá, je jeho <em>vzhled</em>: výplň uvnitř jeho obrysu, tah kreslený podél něj a krytí a prolnutí, které rozhodují, jak sedí nad tím, co je za ním. Každý z nich může být plochou barvou, přechodem nebo vzorem a objekt může nést více než jeden z každého najednou. Tato stránka pokrývá ovládání nátěru, barevné modely, vzorky, přechody, tahy, průhlednost, panel Zásobník výplně a grafické styly.</p>
+
+<p>Zkratky níže jsou napsány ve svém formátu macOS. Na Windows čtěte <kbd>&#8984;</kbd> jako Ctrl, <kbd>&#8997;</kbd> jako Alt a <kbd>&#8679;</kbd> jako Shift.</p>
+
+<figure class="shot">
+  <img src="img/artwork-landscape.png" width="1700" height="967" loading="lazy"
+       alt="Vektorová krajina hor, jezera a nebe, stavěná z plochy vyplněných tvarů ve Scissoru." />
+  <figcaption>Celá scéna stavěná z vyplněných tvarů. Každý pás barvy je cestou s vlastní výplní.</figcaption>
+</figure>
+
+<h2 id="appearance-fill-and-stroke">Výplně a tahy</h2>
+<p>Cesta, tvar nebo kus textu může držet <strong>výplň</strong>, nátěr uvnitř jeho obrysu a <strong>tah</strong>, čáru kreslenou podél tohoto obrysu. Výplň může být plnou barvou, přechodem nebo vzorem; tah může být plnou barvou nebo přechodem, s vlastní tloušťkou a čárkováním. Obě strany mohou být také nastaveny na žádnou, takže můžete nakreslit tvar pouze s tahem nebo pouze s výplní.</p>
+
+<h3 id="appearance-the-paint-chips">Výplň a tahové čipy</h3>
+<p>Dvě překrývající se čipy v patě panelu nástrojů drží výplň a tah. Klikněte na kterýkoli pro otevřření výběru barvy; ten v předu je strana, na kterou klíče a panely Barva, Přechod a Vzorky působí. Stiskněte <kbd>X</kbd> pro přivedení druhé strany dopředu, <kbd>&#8679;X</kbd> pro prohození dvou nátěrů, <kbd>/</kbd> pro nastavení přední strany na žádnou a <kbd>D</kbd> pro návrat k výchozím: bílé výplni, černému tahu a tloušťce 1 pt. Stejná výplň, tah, tloušťka, krytí a režim prolnutí sedí také dohromady v panelu Vlastnosti, což je užitečné, když je chcete všechny na jednom místě.</p>
+<p>Bez vybraného tyto ovládací prvky nastaví styl, který převezme další objekt, který nakreslíte, takže můžete vybrat barvu před kreslením, než po něm.</p>
+
+<h3 id="appearance-eyedropper">Kopírování nátěru pomocí Kapátka</h3>
+<p>Kapátko (<kbd>I</kbd>) kopíruje celý vzhled z objektu, na který kliknete, do výběru. Podržte <kbd>&#8679;</kbd> pro pouze jeho výplň nebo barvu tahu do aktivní strany, nebo <kbd>&#8997;</kbd> pro tlačení vzhledu výběru na objekt pod ukazatelem místo toho. Kliknutí na umístěný obrázek nebo pixelovou vrstvu vzorkuje barvu pod ukazatelem do aktivní strany, takže můžete zvednout barvu přímo z fotografie. Sáhněte po Kapátku, když by se dva objekty měly shodovat: vzorkujte jeden a druhý převezme stejný nátěr jedním kliknutím.</p>
+
+<h2 id="appearance-colour">Barva</h2>
+<p>Barva se vybírá v malém vyskakovacím výběru na každém čipu, nebo, s větší kontrolou, v panelu Barva.</p>
+
+<h3 id="appearance-color-panel">Panel Barva</h3>
+<p>Panel <strong>Barva</strong> (<kbd>F6</kbd>) zobrazuje nátěr aktivní strany jako sadu posuvníků, hexadecimální pole a spektrum. Výplň a tahové čipy v horní části volí, kterou stranu upravujete. Spektrum běží odstíny napříč, bílou v horní části a černou ve spodní části; klikněte nebo táhněte v něm pro výběr. Tři rychlé vzorky vedle něj nastaví Žádnou, Bílou a Černou jedním kliknutím a tlačítka <em>Invertovat</em> a <em>Doplněk</em> přepracují aktuální barvu (Doplněk otáčí její odstín napůl kolem, zachovávajíc její sytost a jas).</p>
+<p>Nabídka barevného modelu nastavuje, které posuvníky panel zobrazuje. Volba je zachována pro relaci a nové vzorky se v ní dělají.</p>
+<dl>
+  <dt>Stupně šedi</dt><dd>Jediný posuvník K, od bílé na 0% po černou na 100%.</dd>
+  <dt>RGB</dt><dd>Červená, zelená a modrá od 0 do 255, model pro práci na obrazovce.</dd>
+  <dt>HSB</dt><dt>Odstín ve stupních, poté sytost a jas jako procenta: často nejrychlejší způsob, jak doladit barvu beze ztráty jejího charakteru.</dd>
+  <dt>CMYK</dt><dd>Kyan, purpurová, žlutá a černá jako procenta, pro tisk.</dd>
+  <dt>Web Safe RGB</dt><dd>RGB přichycené k 216 webovým bezpečným barvám. Když aktuální barva není jednou z nich, objeví se varovný trojúhelník; klikněte na něj pro přichycení k nejbližší bezpečné barvě.</dd>
+</dl>
+<p>Když je aktivní strana natřena globálním vzorkem, řádek tónu se objeví nad posuvníky: pojmenuje vzork a umožňuje nastavit tón od 0% do 100% namísto přímé úpravy barvy, takže grafika zůstává svázaná se vzorkem.</p>
+
+<h2 id="appearance-swatches">Vzorky a barevné skupiny</h2>
+<p>Vzorek je pojmenovaná barva uložená s dokumentem. Malování ze vzorků namísto zadávání hodnot udržuje paletu konzistentní a, pro globální vzorky, umožňuje přebarvit celý dokument úpravou jedné barvy.</p>
+
+<h3 id="appearance-swatches-panel">Panel Vzorky</h3>
+<p>Panel <strong>Vzorky</strong> (otevřete jej z <strong>Okno &rsaquo; Vzorky</strong>) vypisuje vzorky dokumentu jako mřížku nebo jako seznam; zobrazení seznamu také zobrazuje barevný model každého vzorku. Obyčejné kliknutí natře aktivní stranu. <kbd>&#8679;</kbd>-klik vybírá řadu vzorků a <kbd>&#8984;</kbd>-klik přidává nebo odstraňuje jednoho z výběru, takže můžete působit na několik najednou. Patka drží tlačítka pro přepínání zobrazení, otevření nabídky panelu, zobrazení možností vzorku, vytvoření barevné skupiny, vytvoření nového vzorku a smazání toho, co je vybráno.</p>
+<p>Nabídka panelu přidává víc: <em>Přidat použité barvy</em> a <em>Přidat vybrané barvy</em> mění barvy již v dokumentu, nebo pouze ve výběru, na vzorky; <em>Vybrat všechny nepoužité</em> vybírá každý vzorek, kterým nic není natřeno, připravené ke smazání; a <em>Přemapovat barvy&#8230;</em> otevře dialog přebarvení popsaný níže.</p>
+
+<h3 id="appearance-process-spot-global">Zpracovat, spot a globální vzorky</h3>
+<p>Dvojklikněte na vzorek pro Možnosti vzorku, kde nastavíte, jaký druh barvy je.</p>
+<dl>
+  <dt>Zpracovat</dt><dd>Obyčejná barva, smíchaná pro práci. Obyčejný zpracovatelský vzorek je jen uložená barva: jeho úprava nesáhne na grafiku již natřenou jím.</dd>
+  <dt>Globální</dt><dd>Zpracovatelský vzorek označený Globálním udržuje grafiku svázanou s ním, takže přebarvení vzorku přebarví vše natřené jím najednou. Globální vzorky lze použít jako tón.</dd>
+  <dt>Spot</dt><dd>Pojmenovaný inkoust, určený k tisku na vlastní desku. Spot barvy jsou vždy globální.</dd>
+</dl>
+<p>Každý dokument také začíná s fixním vzorkem <strong>[Registrace]</strong>, který nemá vlastní barevný typ a nemůže být smazán nebo přetažen. Použijte globální nebo spot vzorek, když se barva objevuje mnohokrát a může se změnit: jedna úprava aktualizuje každý objekt, namísto ručního hledání.</p>
+
+<h3 id="appearance-colour-groups">Barevné skupiny</h3>
+<p>Barevné skupiny spisují související vzorky dohromady, jako je jedna rodina odstínů nebo paleta jednoho projektu. Táhněte vzorky do skupiny pro jejich zařazení, nebo vyberte některé a vytvořte z nich skupinu tlačítkem Nová barevná skupina v panelu. Dvojklikněte na hlavičku skupiny pro její možnosti. Ve výběru barvy na každém čipu se každá skupina zobrazí jako jeden řádek, takže rodina se čte jako rampa odstínů namísto stěny čipů.</p>
+
+<h2 id="appearance-gradients">Přechody</h2>
+<p>Přechod prolíná mezi dvěma nebo více barvami. Scissor dělá lineární, radiální a volné přechody a buď panel, nebo nástroj na plátně je může stavit a tvarovat. Sáhněte po přechodu pro dání plochému tvaru hloubky, pozadí jemného přechodu nebo tlačítka lesku.</p>
+
+<h3 id="appearance-gradient-panel">Panel Přechod</h3>
+<p>Panel <strong>Přechod</strong> (<kbd>&#8984;F9</kbd>) řídí celý přechod. Klikněte na miniaturu pro vyplnění aktivní strany, zvolte Lineární, Radiální nebo Volné z nabídky typů a použijte tlačítko prohození pro převrácení rampy z konce na konec. Samotná rampa nese zastávky: klikněte na ni pro přidání zastávky v barve, která již tam je, táhněte zastávku pro její přesun a táhněte kosočtverec mezi dvěma zastávkami pro posun toho, kde se dvě barvy setkají. Vybraná zastávka má svůj vlastní barevný vzorek, pole <em>Krytí</em> a <em>Umístění</em> a <em>Smazat zastávku</em> jej odstraní. <em>Úhel</em> otáčí lineární nebo radiální přechod a <em>Poměr</strong> (pouze radiální) zplošťuje radiální přechod do elipsy.</p>
+<figure class="shot">
+  <img src="img/gradient.gif" width="340" height="340" loading="lazy"
+       alt="Zaoblený čtverec vyplněný lineárním přechodem od modré k jantarovému, jehož směr se otáčí." />
+  <figcaption>Lineární přechod od modré k jantarovému. Tažením osy přechodu nebo změnou jeho úhlu se přechod otáčí kolem tvaru.</figcaption>
+</figure>
+
+<h3 id="appearance-gradient-tool">Nástroj Přechod</h3>
+<p>S nástrojem Přechod (<kbd>G</kbd>) stejná ovládání sedí na grafice. Táhněte přes objekt pro položení osy, podržte <kbd>&#8679;</kbd> pro držení po 45&deg; krocích. Osa zobrazuje kruhový knoflík na začátku a čtvercový knoflík na konci; táhněte kterýkoli pro přesun toho konce. Klikněte na osu pro přidání zastávky v barve, která již tam je, táhněte zastávku podél ní a táhněte zastávku daleko od osy pro její odhození. Táhněte kosočtverec pro přesun středu. <kbd>Delete</kbd> odstraňuje zastávku, které jste se naposledy dotkli.</p>
+
+<h3 id="appearance-freeform">Volné přechody</h3>
+<p>Volný přechod umisťuje barevné body kdekoli na tvaru namísto podél jedné osy, takže přechod může následovat tvar grafiky. S nástrojem Přechod klikněte na grafiku pro položení barevného bodu, táhněte jej pro jeho přesun a stiskněte <kbd>Delete</kbd> pro jeho odebrání. Zaškrtněte <em>Spojit body do čar</em> v panelu pro spojení bodů do čar, což šíří barvu po průběhu namísto ven z jedné tečky. Použijte volný přechod pro jemné, organické stínování, které rovná rampa nemůže dát.</p>
+
+<h2 id="appearance-patterns">Vzory</h2>
+<p>Vzor je grafika opakovaná jako dlaždice a používaná jako výplň. Převeďte výběr na dlaždici pomocí <strong>Objekt &rsaquo; Vzor &rsaquo; Vytvořit</strong> a poté vyplňte jakýkoli tvar z něj z panelu <strong>Vzory</strong>: klikněte na dlaždici pro vyplnění, dvojklikem ji upravte a <kbd>&#8997;</kbd>-klikem ji smažte. <em>Možnosti dlaždice</em> nastavuje typ dlaždice, cihlový odsazení, velikost a mezery a zda se dlaždice mění a pohybuje s grafikou. <strong>Upravit vzor</strong> otevře dlaždici na místě s jejími kopiemi opakujícími se kolem ní, jak pracujete; klikněte na <em>Dokončit úpravy</em> v panelu Vzory, když je dlaždice správná. Vzory se hodí pro opakující se textury, jako jsou pruhy, tečky, tkaniny a pozadí, které by byly zdloužité kreslit od ruky.</p>
+
+<h2 id="appearance-strokes">Tahy</h2>
+<p>Panel <strong>Tah</strong> (<kbd>&#8984;F10</kbd>) tvaruje čáru kreslenou podél cesty.</p>
+
+<h3 id="appearance-stroke-options">Tloušťka, zakončení, spoje a zarovnání</h3>
+<p><em>Tloušťka</em> nastavuje tloušťku tahu v bodech. Tlačítka <em>Zakončení</em> rozhodují, jak se otevřená cesta končí: zarovnaná (oříznutá čtvercově na kotvě), zaoblená nebo průběžná (čtvercová, ale sahající za kotvu o polovinu tloušťky). Tlačítka <em>Spojení</em> rozhodují, jak tah otáčí roh: špičatý (ostrý hrot), zaoblený nebo zkosený (plochý řez), s limitem špičatosti, který zkosení nejostřejší body, aby nevyčnívaly. <em>Zarovnání</em> umisťuje tah na střed cesty, nebo zcela uvnitř nebo vně jí, což má význam, když se tvar musí přesně přilegt ke svým sousedům.</p>
+
+<h3 id="appearance-dashes">Čárkované čáry</h3>
+<p>Zaškrtněte <em>Čárkovaná čára</em> pro rozbití tahu na čárky. Tři páry čárka-mezera níže nastavují vzor: první pole je délka čárky, další mezera a tak dále, opakující se po cestě. Nechte pozdější páry prázdné pro jednoduché rovnoměrné čárkování.</p>
+
+<h3 id="appearance-width-profiles">Profily šířky a nástroj Šířka</h3>
+<p>Profil šířky zužuje tah po jeho délce namísto držení jedné tloušťky. Vyberte profil z nabídky panelu a malý náhled zobrazí tvar, který dělá; tlačítka vedle něj profil spustí opačně, uloží aktuální tah jako nový profil nebo smažou profil, který jste vytvořili. Tah, který jste tvarovali od ruky, se v nabídce zobrazí jako <em>Vlastní</em>.</p>
+<p>Nástroj Šířka (<kbd>&#8679;W</kbd>) tvaruje tah přímo na plátně: táhněte od cesty pro její rozšíření na tom místě, nebo k cestě pro její zúžení, zanechávající bod šířky, který můžete později znovu táhnout. Použijte to pro dání nakreslené čáře náběhu a zúžení štětce nebo pera.</p>
+
+<h3 id="appearance-brushes">Štětce</h3>
+<p>Panel <strong>Štětce</strong> (<kbd>F5</kbd>) maluje tahy tvarem namísto obyčejné čáry. Drží kaligrafické, rozptýlené, umělecké, štětinové a vzorové štětce. Klikněte na štětec pro jeho použití na vybrané cesty; Štětec používá kterýkoli štětec je aktuální. Dvojklikněte na štětec pro jeho možnosti, použijte <em>Nový štětec&#8230;</em> pro vytvoření jednoho (rozptýlené, umělecké a vzorové štětce se staví z vybrané grafiky) a <em>Odstranit štětec</em> pro vrácení tahu na obyčejnou čáru.</p>
+
+<h2 id="appearance-opacity-blending">Krytí a prolnutí</h2>
+<p>Krytí a režim prolnutí rozhodují, jak se objekt kombinuje s tím, co leží pod ním. Sedí v panelu <strong>Průhlednost</strong> (<kbd>&#8679;&#8984;F10</strong>) a také v panelu Vlastnosti.</p>
+
+<h3 id="appearance-blend-modes">Režimy prolnutí</h3>
+<p>Krytí běží od 0% (neviditelné) do 100% (plné). Nabídka režimů nabízí šestnáct režimů prolnutí, které se dělí do skupin: režimy, které ztmavují, režimy, které zesvětlují, kontrastní režimy, srovnávací režimy a čtyři, které půjčují jednu část barvy.</p>
+<table>
+  <thead><tr><th>Režim</th><th>Co dělá</th></tr></thead>
+  <tbody>
+    <tr><td>Normální</td><td>Maluje přes to, co je pod ním, bez prolnutí.</td></tr>
+    <tr><td>Ztmavit</td><td>Zachová kteroukoli barvu je tmavší, po kanálech.</td></tr>
+    <tr><td>Násobit</td><td>Násobí dvě barvy, vždy ztmavuje; bílá zachová základ nezměněný.</td></tr>
+    <tr><td>Zbarvení ztmavením</td><td>Ztmavňuje základ pro převzetí barvy prolnutí.</td></tr>
+    <tr><td>Zesvětlit</td><td>Zachová kteroukoli barvu je světlejší.</td></tr>
+    <tr><td>Záře</td><td>Inverze Násobit, vždy zesvětluje; černá zachová základ nezměněný.</td></tr>
+    <tr><td>Zbarvení zesvětlením</td><td>Zesvětluje základ pro převzetí barvy prolnutí.</td></tr>
+    <tr><td>Překrytí</td><td>Násobí nebo září podle základu, zvyšuje kontrast.</td></tr>
+    <tr><td>Měkké světlo</td><td>Jemné zesvětlení nebo ztmavení, jako by na grafiku bylo svícené měkkým světlem.</td></tr>
+    <tr><td>Tvrdé světlo</td><td>Násobí nebo září podle barvy prolnutí, jako drsný reflektor.</td></tr>
+    <tr><td>Rozdíl</td><td>Odečítá tmavší barvu od světlejší; bílá invertuje základ, černá nemá žádný účinek.</td></tr>
+    <tr><td>Vyloučení</td><td>Jako Rozdíl, ale jemnější a s nižším kontrastem.</td></tr>
+    <tr><td>Odstín</td><td>Odstín prolnutí se sytostí a jasem základu.</td></tr>
+    <tr><td>Sytost</td><td>Sytost prolnutí se odstínem a jasem základu.</td></tr>
+    <tr><td>Barva</td><td>Odstín a sytost prolnutí se jasem základu: dobré pro tónování šedé grafiky.</td></tr>
+    <tr><td>Světlost</td><td>Jas prolnutí se odstínem a sytostí základu.</td></tr>
+  </tbody>
+</table>
+<p>Pro skupinu dva přepínače mění, jak se prolíná. <em>Obsahovat prolnutí ve skupině</em> udržuje režimy skupiny uvnitř sebe, takže její členové se prolínají s sebou, ne s grafikou za skupinou. <em>Vyrazit skupinu</em> dělá, že každý člen skryje ty pod ní uvnitř skupiny namísto prolnutí se skrz ně.</p>
+
+<h3 id="appearance-opacity-masks">Masky krytí</h3>
+<p>Maska krytí zeslabuje grafiku podle tónu. Vyberte grafiku a nad ní tvar, kterým maskovat, a poté klikněte na <em>Vytvořit masku</em> (také <strong>Objekt &rsaquo; Ořezová maska &rsaquo; Vytvořit masku krytí</strong>). Horní objekt se stává maskou: kde je světlá, grafika se zobrazí a kde je tmavá, grafika vymizí, takže přechod od bílé k černé dělá jemné vyblednutí. <em>Uvolnit</em> vrací dva objekty zpět. Použijte masku pro jemný okraj nebo vinžetu, kterou tvrdý ořez nemůže dělat.</p>
+
+<h2 id="appearance-appearance-panel">Panel Zásobník výplně</h2>
+<p>Panel <strong>Zásobník výplně</strong> (<kbd>&#8679;F6</kbd>) vypisuje všechno natřené na jeden objekt: jeho výplně a tahy, s jakýmkoli živým efektem nad nimi. Protože objekt může držet několik výplní a tahů, zde je místo, kde je vrstevíte, například široký tmavý tah pod tenkým světlým pro vytvoření obrysu, nebo dvě výplně s různým krytím.</p>
+<p>Zásobník se kreslí od shora, odpovídající pořadí, v němž maluje. Každý řádek výplně nebo tahu má oko pro jeho skrytí, barevný čip otevírající výběr barvy, pole krytí, pole tloušťky pro tahy a šipky pro jeho přesun nahoru nebo dolů po zásobníku, plus tlačítko pro jeho odstranění. <em>Přidat výplň</em> a <em>Přidat tah</em> položí další na vrchol. Efekty se zobrazí nad výplněmi a tahy s odznakem <em>fx</em>; klikněte na efekt pro úpravu jeho možností, nebo jej odstraňte z jeho řádku. Když je vrstvený vzhled hotový, <strong>Objekt &rsaquo; Rozbalit vzhled</strong> vypeče celý zásobník do obyčejné grafiky.</p>
+
+<h2 id="appearance-graphic-styles">Grafické styly</h2>
+<p>Grafický styl je uložený vzhled, který můžete použít na ostatní objekty. Panel <strong>Grafické styly</strong> (<kbd>&#8679;F5</kbd>) je drží jako čipy, každý zobrazující svou výplní s tahem jako okrajem čipu. Vyberte objekt a klikněte na <em>Nový styl</em> pro uložení jeho výplní a tahů; klikněte na čip pro použití tohoto stylu na výběr a <kbd>&#8997;</kbd>-klikem na čip jej smažte. Styly stojí za to vytvářet, když stejný vzhled, jako je domácí tlačítko nebo styl štítku, musí jít na mnoho objektů a zůstat konzistentní.</p>
+
+<h2 id="appearance-overprint">Přetisk</h2>
+<p>Panel <strong>Atributy</strong> (<kbd>&#8984;F11</kbd>) nastavuje přetisk pro tiskovou práci. <em>Přetisk výplně</em> a <em>Přetisk tahu</em> dělají, že se tento inkoust tiskne přes barvy pod ním namísto jejich vyrážení, což se používá pro efekty jako černá, která tiskne přes to, co je pod ním, namísto nahrazování. Zapněte <strong>Zobrazení &rsaquo; Náhled přetisku</strong> pro jeho zobrazení na obrazovce; PDF export zachovává nastavení.</p>
+
+<h2 id="appearance-recolour">Přebarvení grafiky</h2>
+<p><strong>Úpravy &rsaquo; Upravit barvy &rsaquo; Přemapovat barvy&hellip;</strong> vypisuje každou barvu ve výběru s tím, jak často je použita. Klikněte na čip vpravo od řádku pro výběr toho, se čem se tato barva stane, nebo na šipku mezi dvěma čipy pro nechání této barvy být. Posuvníky odstínu, sytosti a jasu posunou celou sadu dohromady a dvě tlačítka náhodně přeuspořejí nové barvy nebo náhodně jejich sytost a jas, což je rychlý způsob, jak zkusit variace. Grafika se aktualizuje, jak jdete a <em>Obnovit</em> se vrací k barvám, se kterými začala.</p>
+<p>Stejná podnabídka také nabízí změny v jednom kroku: <em>Prolnout přední do zadní</em> šíří řadu barvy mezi předními a zadními objekty, <em>Převést na stupně šedi</em> odstraní všechnu barvu, <em>Invertovat barvy</em> převrací každou a <em>Sytost&#8230;</em> zvyšuje nebo snižuje sytost napříč výběrem.</p>

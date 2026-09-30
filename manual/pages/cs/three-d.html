@@ -1,0 +1,65 @@
+<p class="lede">3D a materiály převádí plochý tvar na těleso, které můžete otáčet, osvětlovat a dát mu povrch, aniž byste kdy opustili svou vektorovou grafiku. Je to živý efekt: těleso se kreslí z cesty pod ní a tato cesta zůstává plně upravitelná, takže můžete změnit obrys, barvu nebo text kdykoli a 3D se kolem něj přestaví.</p>
+
+<h2 id="three-d-opening">Otevření efektu</h2>
+<p>Vyberte nejprve objekt a poté zvolte typ objektu z <strong>Efekt &rsaquo; 3D a materiály</strong>: <em>Rovina</em>, <em>Vytlačení &amp; zkosení</em>, <em>Otáčení</em> nebo <em>Nafouknutí</em>. Každý přidá efekt a otevře panel <strong>3D a materiály</strong>, kde žije zbytek ovládání. Stejný panel se otevře sám z <strong>Okno &rsaquo; 3D a materiály</strong> nebo z <strong>Efekt &rsaquo; 3D a materiály &rsaquo; Panel 3D a materiály</strong>.</p>
+<p>Panel potřebuje něco vybraného, než může cokoli dělat; bez vybraného to říká a šedá svá ovládaní. Jakmile má objekt efekt, čtyři tlačítka typu objektu běží po horní části panelu, takže můžete přepnout tvar z vytlačení na otáčení jedním kliknutím a zachovat rotaci a osvětlení, které jste již nastavili.</p>
+<p>Protože je to efekt a ne konverze, můžete jej použít na téměř cokoli, co cesta unese: tvar, skupinu, obrys nebo živý text. Úprava zdroje, například přepsání slova nebo posunutí kotvy, spustí efekt znovu na nové grafice.</p>
+
+<h2 id="three-d-types">Čtyři typy objektů</h2>
+<p>Typ objektu rozhoduje, jak se plochý tvar čte jako těleso. Vyberte ten, který odpovídá tvaru, který hledáte.</p>
+
+<h3 id="three-d-plane">Rovina</h3>
+<p>Rovina nechá grafiku plochou a umisťuje ji jako kartu v 3D prostoru, takže jediné, co dělá, je vám dovolit otáčet a naklonit ji. Neexistuje žádná hloubka k nastavení. Sáhněte po ní, když chcete, aby kus ploché grafiky seděl pod úhlem, jako je štítek ležící na povrchu nebo odznak nakloněný pro chycení světla, bez dání mu jakékoli tloušťky.</p>
+
+<h3 id="three-d-extrude">Vytlačení a zkosení</h3>
+<p>Vytlačení tlačí tvar rovně zpět, aby mu dalo tloušťku, převádějíc obrys na tělesný blok. Zkosení zaobluje nebo ořízne přední a zadní okraje, takže nezůstanou ostré. Díry jsou zachovány: složená cesta jako prstene nebo písmeno s protilehlostí zůstává dutá celou cestou. Toto je typ pro písmo, loga, ikony a odznaky, které by se měly číst jako zdvojené nebo vyřezané.</p>
+<figure class="shot">
+  <img src="img/3d-extrude.gif" width="620" height="620" loading="lazy" alt="Plochá vektorová hvězda vytlačená do trojrozměrné hvězdy a otočená pro zobrazení její hloubky." />
+  <figcaption>Vytlačení a zkosení staví hloubku z plochého tvaru, živě. Hvězda zůstává upravitelnou cestou pod ním.</figcaption>
+</figure>
+
+<h3 id="three-d-revolve">Otáčení</h3>
+<p>Otáčení snáší tvar kolem jeho levého okraje, stejně jako profil točený na soustruhu stopí těleso. Nakreslete polovinu symetrického objektu, sklenici, láhev, míc, šachovou figuru a otáčejte ji do kruhu. Úhel snížení může být menší než celý otoček, aby zanechal řez, který zobrazuje vnitřek.</p>
+
+<h3 id="three-d-inflate">Nafouknutí</h3>
+<p>Nafouknutí nafouká tvar ven, jako by byl polštářem naplněným vzduchem, dávajíce mu jemný zaoblený povrch namísto plochého. Použijete jej pro jemná tlačítka, nafouklé odznaky, sladkosti a zaoblené samolepky, kde chcete spíš náběh než tvrdý vytlačený okraj.</p>
+
+<h2 id="three-d-shape">Hloubka, zkosení a kroky</h2>
+<p>Sekce <em>Objekt</em> drží pole, která tvarují těleso. Která se objeví, závisí na typu objektu, takže panel zobrazuje vždy pouze pole, která něco dělají pro typ v ruce.</p>
+<table>
+  <thead><tr><th>Pole</th><th>Zobrazeno pro</th><th>Co nastavuje</th></tr></thead>
+  <tbody>
+    <tr><td>Hloubka</td><td>Vytlačení a zkosení, Nafouknutí</td><td>Jak daleko je tvar tlačen zpět, nebo jak moc nafouká, v pixelech.</td></tr>
+    <tr><td>Zkosení</td><td>Vytlačení a zkosení</td><td>Velikost zaobleného nebo oříznutého okraje na přední a zadní straně, v pixelech; nechte ji na nule pro obyčejný čtvercový okraj.</td></tr>
+    <tr><td>Úhel</td><td>Otáčení</td><td>Jak daleko je profil snášen, až do celého otočku 360&deg;. Menší úhel nechá objekt otevřený, zobrazujíc jeho vnitřek.</td></tr>
+    <tr><td>Kroky</td><td>Vytlačení a zkosení, Otáčení, Nafouknutí</td><td>Kolik segmentů staví zakřivené části. Více kroků dává hladší povrch; méně jej nechá facetový.</td></tr>
+  </tbody>
+</table>
+<p>Rovina nemá žádné z těchto: nemá žádnou tloušťku k popisu. Pokud zakřivené otáčení nebo zaoblené zkosení vypadá příliš úhlovitě, zvyšte kroky; pokud chcete záměrně nízkopolygónový, facetový vzhled, snižte je.</p>
+
+<h2 id="three-d-rotation">Otočení objektu</h2>
+<p>Sekce <em>Rotace</em> nastavuje, jak objekt čelí vám. Nejrychlejší způsob je podložka náhledu: táhněte přes ni pro otočení objektu vlevo a vpravo a táhněte nahoru a dolů pro jeho naklonění dopředu a dozadu. Pro přesná úhla pole <em>X</em>, <em>Y</em> a <em>Z</em> otáčejí objekt kolem každé osy, každé od -180&deg; do 180&deg;.</p>
+<p>Nabídka rotace drží hotové pohledy, takže můžete objekt rovnou nastavit do standardního pohledu namísto nastavování:</p>
+<dl>
+  <dt>Mimo-osové přední, zadní, levé, pravé, horní, dolní</dt><dd>Třičtvrtinové pohledy, které zobrazují jednu hlavní plochu spolu s trochou horní nebo boční. Dobrá výchozí volba pro těleso, které by mělo vypadat jako těleso.</dd>
+  <dt>Izometrické levé, pravé, horní, dolní</dt><dd>Skutečné izometrické pohledy, kde jsou tři osy zkracovány stejně a čáry zůstávají rovnoběžné. Hodí se pro technickou a herní grafiku, která se musí srovnat.</dd>
+  <dt>Přední, zadní, levé, pravé, horní, dolní</dt><dd>Šest rovných pohledů, dívajících se čtvercově na jednu plochu. Užitečné pro kontrolu tvaru nebo pro plochou, přímou prezentaci.</dd>
+</dl>
+<p>Výběr předvolby vyplní pole X, Y a Z; změna kteréhokoli z nich ručně zobrazí nabídku jako <em>Vlastní rotace</em>. Pole <em>Perspektiva</em>, od 0&deg; do 160&deg;, řídí, jak silně se objekt zmenšuje: na nule zůstávají strany rovnoběžné a jak ji zvyšujete, vzdálené okraje se stahují k únikovému bodu, stejně jako skutečný objekt viděn zblízka se jeví zužovat. Přidejte trochu perspektivy pro životopisný třičtvrtinový pohled, nebo nechte ji na nule pro zachování přesného izometrického nebo plochého nastavení.</p>
+
+<h2 id="three-d-lighting">Osvětlení</h2>
+<p>Sekce <em>Osvětlení</em> rozhoduje, odkud světlo přichází a jak tvrdé je, což je to, co způsobuje, že povrch se čte jako zdvojený, vyřezaný nebo zaoblený. Nabídka osvětlení nabízí čtyři výchozí body, <em>Standardní</em>, <em>Rozptýlené</em>, <em>Zleva nahoře</em> a <em>Zprava</em> a jakákoli změna polí níže je zobrazí jako <em>Vlastní osvětlení</em>.</p>
+<dl>
+  <dt>Intenzita</dt><dd>Síla hlavního světla, jako procento. Vyšší dělá osvětlené plochy světlejšími a světlé motivy silnějšími.</dd>
+  <dt>Okolní</dt><dd>Výplňové světlo, které zvedá celý objekt, jako procento, takže stínované plouchy neklesají do černy. Zvyšte jej pro jemnější, rovnoměrnější vzhled; snižte jej pro hlubší kontrast.</dd>
+  <dt>Rotace</dt><dd>Kde se světlo nachází kolem objektu, od -180&deg; do 180&deg;, což přesouvá světlý motiv a stín na druhou stranu.</dd>
+  <dt>Výška</dt><dd>Jak vysoko je světlo nad objektem, od 0&deg; (na úrovni s ním, pro dlouhé měsíční stíny) do 90&deg; (přímo nad hlavou, pro rovnoměrné světlo).</dd>
+</dl>
+<p><em>Rozptýlené</em> dává jemný, nízkokontrastní povrch; <em>Zleva nahoře</em> a <em>Zprava</em> vrží světlo z jedné strany pro dramatičtější, sochařský vzhled. Začněte od kterékoli předvolby, která je nejblíže, a poté upravte čtyři pole podle chuti.</p>
+
+<h2 id="three-d-materials">Materiály</h2>
+<p>Tři tlačítka materiálu nastavují, jak povrch chytá světlo: <em>Plast</em>, <em>Matný</em> a <em>Kovový</em>. Plast dává jemný lesk s jasným světlým motivem, obvyklá volba pro přátelský, lisovaný vzhled. Matný odstraňuje lesk pro plochý, rovnoměrný povrch, který se čte jako papír, jína nebo tištěný povrch. Kovový dává tvrdší, vyšší kontrastní lesk pro chrom, zlato a ostatní leštěné kovy. Materiál funguje dohromady s osvětlením, takže změna jednoho stojí za to proti druhému.</p>
+
+<h2 id="three-d-expand">Zachování života a rozbalení</h2>
+<p>Všechno výše je uloženo jako jeden živý efekt na objektu, uvedený v panelu <strong>Vzhled</strong> (<kbd>&#8679;F6</kbd>) s odznakem <em>fx</em> nad výplněmi a tahy objektu. Klikněte na tuto položku pro znovu otevření panelu 3D a materiály, nebo jej odstraňte tam pro vrácení objektu zpět do plochy. Uvnitř panelu <em>Odstranit 3D</em> odstraní efekt z výběru.</p>
+<p>Zatímco je efekt živý, grafika pod ním zůstává obyčejnou, upravitelnou cestou, což je to, co vám umožňuje pokračovaladění v doladění tvaru, barvy a textu. Když je vzhled usazený a chcete výsledek jako obyčejnou vektorovou grafiku, například pro úpravu jednotlivých ploch nebo předání souboru, použijte <em>Rozbalit jako vektor</em> v panelu (stejné jako <strong>Objekt &rsaquo; Rozbalit vzhled</strong>). To vypeče těleso do cest a ukončí jeho život jako efekt, takže rozbalte kopii, pokud byste mohli chtít později změnit hloubku nebo úhel.</p>

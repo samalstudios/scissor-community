@@ -1,0 +1,166 @@
+<p class="lede">Scissor vyplňuje okno prohlížeče jedním editačním plátnem: nabídkovým řádkem v horní části, ovládacím panelem a kartami dokumentů pod ním, paletou nástrojů vlevo, kreslicím plátnem uprostřed a dokem panelů vpravo. Vše běží na vašem vlastním počítači, takže dokument zůstává tam, kam jste jej umístili, a nic není posláno pryč k otevření.</p>
+
+  <p>Zkratky na této stránce jsou napsány ve formátu macOS. Na Windows a Linuxe čtěte <kbd>⌘</kbd> jako <kbd>Ctrl</kbd> a <kbd>⌥</kbd> jako <kbd>Alt</kbd>; <kbd>⇧</kbd> je Shift a <kbd>⌃</kbd> je Control.</p>
+
+  <h2 id="interface-at-a-glance">Pracovní prostor na první pohled</h2>
+  <p>Okno je sestaveno z několika oblastí, které každá odpovídá na jinou otázku. Naučte se, kde jsou, a zbytek příručky se čte snáze.</p>
+  <dl>
+    <dt>Nabídkový řádek</dt>
+    <dd>Řádek nabídek po samém horním okraji, s vrácením a opakováním a vyhledáváním příkazů na jeho pravém konci. Toto je kompletní seznam všeho, co editor umí.</dd>
+    <dt>Ovládací panel</dt>
+    <dd>Pás pod nabídkami. Zobrazuje aktuální nástroj a několik ovládacích prvků, které jsou důležité pro to, co právě máte vybrané.</dd>
+    <dt>Karty dokumentů</dt>
+    <dd>Vlevo od ovládacího panelu, jedna karta pro každý otevřený dokument. Tlačítko panelů se nachází na konci stejného řádku.</dd>
+    <dt>Paleta nástrojů</dt>
+    <dd>Úzký sloupec nástrojů po levém okraji, s ovládáním výplně a tahu v jeho patě.</dd>
+    <dt>Plátno a podložka</dt>
+    <dd>Velká oblast uprostřed, kde kreslíte. Bílé obdélníky jsou podložky; šedý okolí je podložka.</dd>
+    <dt>Dok panelů</dt>
+    <dd>Sloupec panelů vpravo. Vysune se nad plátno, když ho potřebujete, a vrátí prostor zpět, když jej zavřete.</dd>
+    <dt>Stavový řádek</dt>
+    <dd>Tenká čára pod oknem, hlásící aktuální nástroj, výběr a poslední akci, kterou lze vrátit zpět.</dd>
+  </dl>
+  <figure class="shot">
+    <img src="img/app-light.png" width="1900" height="1082" loading="lazy"
+         alt="Celé okno Scissor: nabídkový řádek, ovládací panel, paleta nástrojů, plátno a dok panelů." />
+    <figcaption>Celé okno. Scissor následuje světlý nebo tmavý nastavení vašeho systému a tento snímek obrazovky ho také následuje.</figcaption>
+  </figure>
+
+  <h2 id="interface-menu-bar">Nabídkový řádek</h2>
+  <p>Deset nabídek běží po horní části. Shromažďují každý příkaz v programu, seskupené podle druhu práce, kterou děláte, spíše než podle toho, kde se funkce náhodou nachází uvnitř enginu.</p>
+  <table>
+    <thead><tr><th>Nabídka</th><th>Co obsahuje</th></tr></thead>
+    <tbody>
+      <tr><td>Soubor</td><td>Nový, otevřít, zavřít, uložit, umístit, exportovat, skripty, nastavení dokumentu a tisk.</td></tr>
+      <tr><td>Úpravy</td><td>Vrátit zpět a znovu, příkazy schránky, celá nabídka <strong>Výběr</strong> jako podnabídka, úprava barev a Předvolby.</td></tr>
+      <tr><td>Uspořádání</td><td>Transformace, pořadí vrstvení, zarovnání, seskupení a zamykání a skrývání.</td></tr>
+      <tr><td>Cesta</td><td>Příkazy cesty a složené cesty, morfování, deformace tvaru a perspektiva, ořezové masky, textový obtékající a rozbalování.</td></tr>
+      <tr><td>Vytvořit</td><td>Vzory, opakování, výplň oblasti, vektorizace, přechodová síť, podložky, řezy a příkazy pixelové vrstvy.</td></tr>
+      <tr><td>Efekt</td><td>Živé efekty: vektorová sada (3D, zkreslení a transformace, kombinace tvarů, stylizace, deformace a další) a podnabídka Rastrové pod nimi.</td></tr>
+      <tr><td>Text</td><td>Písmo, velikost a glyfy, vytvoření obrysů, změna velikosti písmen, tok textu a vkládání znaků.</td></tr>
+      <tr><td>Zobrazení</td><td>Vzhled (světlý a tmavý), obrysový a pixelový náhled, přiblížení, rotace pohledu, pravítka, vodítka, mřížka a přichytávání.</td></tr>
+      <tr><td>Pracovní prostor</td><td>Panely: šest, které otevíráte nejčastěji, podnabídka Text, podnabídka Další panely pro zbytek a Obnovit panely.</td></tr>
+      <tr><td>Nápověda</td><td>Co je nového, uživatelská příručka, instalace, Podmínky použití a O aplikaci, s vyhledávacím polem v horní části.</td></tr>
+    </tbody>
+  </table>
+  <p>Zaškrtnutí vedle položky znamená, že dané nastavení je zapnuto. Položka v šedé barve není v danou chvíli použitelná, obvykle proto, že není nic vybráno nebo není otevřen žádný dokument. Kde má příkaz zkratku, zobrazí se po pravé straně nabídky.</p>
+
+  <h3 id="interface-command-search">Hledání příkazu</h3>
+  <p>Nemusíte si pamatovat, která nabídka co obsahuje. Tlačítko vyhledávání vpravo od nabídkového řádku, označené <em>Hledat nebo zadat příkaz</em>, otevře paletu příkazů; <kbd>⌘K</kbd> ji otevře z klávesnice. Zadejte pár písmen a ona vypíše všechny odpovídající příkazy s jejich cestou v nabídce a zkratkou, a všechny odpovídající nástroje. Použijte <kbd>↑</kbd> a <kbd>↓</kbd> pro pohyb mezi výsledky, <kbd>Enter</kbd> pro spuštění zvýrazněného a <kbd>Esc</kbd> pro zavření. Sáhněte po tom, když víte, co chcete, ale nevíte, kde to je, nebo když je zkratka rychlejší než hledání. Nabídka Nápověda má své vlastní vyhledávací pole, které dělá totéž napříč nabídkami.</p>
+
+  <h3 id="interface-undo-redo">Vrátit zpět a znovu</h3>
+  <p>Zakřivené šipky vpravo od nabídkového řádku vrací zpět a opakují, stejně jako <kbd>⌘Z</kbd> a <kbd>⇧⌘Z</kbd>. Každé tlačítko při najetí myší pojmenuje krok, který by vrátilo zpět, a stavový řádek zobrazuje totéž pod oknem, takže vždy vidíte, co by ještě jedno stisknutí vrátilo zpět.</p>
+
+  <h2 id="interface-tool-palette">Paleta nástrojů</h2>
+  <p>Nástroje se nacházejí v jednom sloupci po levém okraji. Jsou uspořádány do rodin: Výběr, Kreslení, Text, Čára, Tvar, Malování, Přetvarování, Stavění, Vzorkování, Symboly, Podložky a Zobrazení. Sloupec zobrazuje jeden nástroj z každé rodiny najednou; najeďte myší na zbytek a zbytek se fanoučky rozevře vpravo, takže můžete vybrat sourozence bez toho, aby se sloupec posunul pod vaší rukou. Zářík zobrazuje vždy toho člena rodiny, kterého jste naposledy použili.</p>
+  <p>Klikněte na zářík pro výběr nástroje, který zobrazuje. Jeho tooltip poskytuje název nástroje a jeho jednoklávesovou zkratku, například <kbd>V</kbd> pro nástroj Výběr, <kbd>P</kbd> pro Pero nebo <kbd>T</kbd> pro Text. Když přepínáte nástroje klávesnicí, odpovídající zářík na chvíli zasvítí, takže vidíte, který je nyní aktivní. Pro zobrazení všeho najednou tlačítko poblíž vyhledávání příkazů, nakreslené jako tři tečky, otevře prohlížeč všech nástrojů, seskupených podle rodiny a filtrovaných psaním.</p>
+
+  <h3 id="interface-fill-stroke">Výplň a tah</h3>
+  <p>Pod nástroji se nachází ovládání výplně a tahu: vyplněný čtverec pro výplň, umístěný vásu, která představuje tah, s malým párem šipek pro jejich prohození. Protože se nachází zde, nejen v ovládacím panelu, můžete vybrat barvu před výběrem nástroje, a stane se tím, čím bude další objekt nakreslen. Klikněte na výplň nebo pás pro otevření barev, vzorků a přechodů.</p>
+  <table>
+    <thead><tr><th>Klávesa</th><th>Akce</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>X</kbd></td><td>Přesunout zaměření mezi výplní a tahem</td></tr>
+      <tr><td><kbd>⇧X</kbd></td><td>Prohodit výplň a tah</td></tr>
+      <tr><td><kbd>D</kbd></td><td>Vrátit se k výchozímu: bílá výplň, černý tah</td></tr>
+      <tr><td><kbd>/</kbd></td><td>Nastavit aktivní stranu na žádnou</td></tr>
+    </tbody>
+  </table>
+
+  <h3 id="interface-rail-panels">Panely vedle lišty</h3>
+  <p>Mezi ovládáním výplně a tahu a nástroji paleta nabízí krátký řádek tlačítek panelů vybraných pro nástroj, který držíte: kreslicí nástroje přinášejí vzorky a tahové panely do dosahu, textové nástroje přinášejí textové a odstavcové panely a tak dále. Tyto otevřou jeden panel přímo tam, kde je vaše ruka. Další tlačítko otevře plný dok. Na krátkém okně se řádek sbalí do jednoho tlačítka Panely, které vypisuje stejné volby, takže paleta nikdy nespadne za spodní okraj.</p>
+
+  <h2 id="interface-control-bar">Ovládací panel</h2>
+  <p>Pás pod nabídkami se mění podle toho, co děláte. Vlevo pojmenuje aktuální nástroj a vpravo zobrazuje pouze ovládací prvky, které mohou působit na aktuální výběr: výplň, tah a tloušťku tahu; X, Y, W a H výběru; a akce, které dávají smysl, jako zarovnání, boolean režimy tvarů, pořadí vrstvení, skupina, rozskupení a duplikace. Když je víc než se vejde, poslední tlačítko shromáždí zbytek do nabídky, takže panel se nikdy nepřeformátuje při používání.</p>
+  <p>Pište do jakéhokoli číselného pole a stiskněte <kbd>Enter</kbd>, nebo opusťte pole pro použití hodnoty; <kbd>↑</kbd> a <kbd>↓</kbd> ji krokují, s <kbd>⇧</kbd> pro desetinásobek kroku a <kbd>⌥</kbd> pro desetinu. Malý popisek vedle pole je škrabka: táhněte jej vlevo nebo vpravo pro změnu hodnoty od pocitu. Najeďte na název nástroje pro odhalení prvních pár možností tohoto nástroje; klikněte na název pro otevření jeho plných možností pod panelem, se všemi jeho přepínači a čísly.</p>
+  <p>Ovládací panel je ve výchozím stavu ukotven v řádku karet, ale můžete táhnout jeho úchyt pro vynoření nad plátno a dvojklikem na úchyt (nebo pomocí jeho dokovacího tlačítka) jej vrátit zpět. Vedle něj se může objevit kompaktní panel vedle vybraného objektu nesoucí pouze jeho výplň, tah a tloušťku, takže barva je přímo vedle grafiky, ne napříč oknem.</p>
+
+  <h2 id="interface-quick-bar">Rychlý panel</h2>
+  <p>Když něco vyberete, malý panel se vznese vedle něj s ovládacími prvky, které používáte nejčastěji, takže nemusíte cestovat na okraj okna. Pro tvary a cesty obsahuje výplň a tah; pro text obsahuje výplň, velikost, tučné, kurzívu a zarovnání. Zůstane z cesty při tažení a vrátí se, když pustíte. Všechno na něm je také v ovládacím panelu a panelech.</p>
+
+  <h2 id="interface-canvas">Plátno a podložka</h2>
+  <p>Střed okna je plátno. Podložky jsou bílé obdélníky, které obsahují grafiku, kterou chcete zachovat; šedý okolí je podložka. Podložka je součástí dokumentu, takže náčrtek, odstřižek nebo barevný test zaparkovaný tam je uložen se souborem, ale při exportu podložky je zapsáno pouze to, co spadá do obdélníku této podložky.</p>
+
+  <h3 id="interface-pan-zoom">Posun a přiblížení</h3>
+  <p>Podržte <kbd>Space</kbd> pro přepnutí na nástroj Ruka po dobu, po kterou jej držíte, poté táhněte pro posun; pusťte a váš nástroj se vrátí. Tažení prostředním tlačítkem myši také posouvá. Kolečko posouvá a kolečko s podrženým <kbd>⌘</kbd> nebo <kbd>⌥</kbd> přibližuje kolem ukazatele.</p>
+  <table>
+    <thead><tr><th>Zkratka</th><th>Přiblížení</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>⌘=</kbd> / <kbd>⌘-</kbd></td><td>Ven a dovnitř</td></tr>
+      <tr><td><kbd>⌘0</kbd></td><td>Přizpůsobit aktivní podložku oknu</td></tr>
+      <tr><td><kbd>⌥⌘0</kbd></td><td>Přizpůsobit všechny podložky oknu</td></tr>
+      <tr><td><kbd>⌘1</kbd></td><td>Skutečná velikost</td></tr>
+    </tbody>
+  </table>
+  <p>Ovládání přiblížení se nachází nad plátnem s tlačítky mínus, plus a přizpůsobením a aktuálním procentem; klikněte na procenta pro stejné příkazy přizpůsobení a skutečné velikosti jako nabídku.</p>
+
+  <h3 id="interface-rulers-guides">Pravítka a vodítka</h3>
+  <p><kbd>⌘R</kbd> zobrazí a skryje pravítka, která měří v jednotkách dokumentu od levého horního rohu aktivní podložky a nesou značku, která následuje ukazatel. Táhněte z pravítka pro vytáhnutí vodítka na grafiku a pusťte vodítko zpět na pravítko pro jeho zbavení se. Můžete také převést vybranou cestu na vodítko pomocí Vytvořit vodítka (<kbd>⌘5</kbd>) a převést jej zpět pomocí Uvolnit vodítka (<kbd>⌥⌘5</kbd>). Zobrazte nebo skryjte všechna vodítka pomocí <kbd>⌘;</kbd>. Chytrá vodítka (<kbd>⌘U</kbd>) zobrazují nápovědy zarovnání a měření při kreslení a tažení.</p>
+
+  <h3 id="interface-grid">Mřížka</h3>
+  <p>Mřížka se kreslí pro každou podložku a nastavuje se z Zobrazení › Mřížka nebo z panelu Mřížka. Zobrazte nebo skryjte ji pomocí <kbd>⌘'</kbd> a přepněte přichytávání k ní pomocí <kbd>⇧⌘'</kbd>. Každá podložka může používat jeden ze šesti druhů mřížky: Ortogonální, Izometrická, Hexagonální, Šikmá, Zlatý řez a Perspektivní. Výběr druhu zapne mřížku, takže ji okamžitě vidíte. Mřížka je popsána plně na své vlastní stránce.</p>
+
+  <h3 id="interface-history-strip">Pás historie</h3>
+  <p>Sloupec malých značek se objeví v rohu plátna, když přiblížíte ukazatel: toto je historie dokumentu. Najeďte na značku pro pojmenování tohoto kroku, klikněte na ni pro přímé skočení tam, nebo stiskněte a táhněte dolů značkem pro spuštění dokumentu dozadu a dopředu, takže můžete sledovat, jak změna přijde a jde. Panel Historie v doku vypisuje stejné kroky jako text.</p>
+
+  <h2 id="interface-boards">Podložky a pás podložek</h2>
+  <p>Podložky jsou to, co Scissor nazývá artboardy. Každá nese svůj název nad svým levým horním rohem a aktivní podložka je kreslena s výšším rámečkem než zbytek. Klikněte na název podložky pro zvednutí nástroje Podložka s touto podložkou aktivní, připravenou k přesunu, změně velikosti nebo přejmenování. Pokud má podložka okraje, zobrazí se kolem ní jako červená přerušovaná obdélníková. Přidejte jednu z Vytvořit › Podložky › Nová podložka, kreslete a přetvářejte podložky nástrojem Podložka (<kbd>⇧O</kbd>) a nastavte velikost a název podložky v Možnostech podložky. Přeuspořádat všechny podložky je příkaz Přeuspořádat všechny podložky.</p>
+  <p>Pás miniatur podložek se nachází nad plátnem, jeden malý náhled na podložku plus tlačítko přidání na konci. Klikněte na miniaturu pro aktivaci této podložky a její přizpůsobení oknu; klikněte na název pod ní pro skok na tuto podložku a zvednutí nástroje Podložka připraveného k úpravě. Panel Podložky v doku je také vypisuje.</p>
+
+  <h2 id="interface-tabs">Karty dokumentů</h2>
+  <p>Otevřené dokumenty se objevují jako karty vlevo od ovládacího panelu. Karta zobrazuje název dokumentu, s tečkou před ním, zatímco má neuložené změny. Klikněte na kartu pro přepnutí na tento dokument, nebo na × pro jeho zavření; zavření dokumentu s neuloženou prací se nejprve zeptá. Prostřední tlačítko myši zavře kartu rovnou a přetažení karty na jinou změní pořadí otevřených dokumentů. Nový (<kbd>⌥⌘N</kbd>), Otevřít (<kbd>⌘O</kbd>) a Uložit (<kbd>⌘S</kbd>) žijí v nabídce Soubor a Zavřít je <kbd>⌥⌘W</kbd>.</p>
+  <p>Karty se ve výchozím stavu nacházejí v horní části. Pro jejich ukotvení po straně zapněte <strong>Zobrazení &rsaquo; Karty dokumentů po straně</strong> (také v Předvolbách); boční pás lze táhnout širší nebo užší jeho pravým okrajem a volba je zapamatována.</p>
+
+  <h2 id="interface-status-bar">Stavový řádek</h2>
+  <p>Čára pod oknem hlásí zleva doprava: indikátor připravenosti, název aktuálního nástroje, velikost výběru (nic vybráno, jeden objekt nebo počet) a akci, kterou by <kbd>⌘Z</kbd> vrátilo zpět. Je to klidné místo pro potvrzení toho, co jste zvedli, a co další vrácení zpět vrátí zpět.</p>
+
+  <h2 id="interface-dok">Dok panelů</h2>
+  <p>Panely žijí ve sloupci vpravo. V klidu má plátno celé okno; požadavek na panel vysune dok nad plátno a zavření jej okamžitě vrátí prostor. Tlačítko panelů vpravo od řádku karet a klávesa Escape otevírají a zavírají dok; nabídky Okno a Pracovní prostor a paleta příkazů otevírají konkrétní panel.</p>
+  <figure class="shot">
+    <img src="img/editing.png" width="1900" height="1176" loading="lazy"
+         alt="Dokument otevřený ve Scissoru s grafikou na podložce a panely Vrstvy a Vzorky otevřené v doku." />
+    <figcaption>Dokument v úpravách, s panely Vrstvy a Vzorky otevřenými v doku.</figcaption>
+  </figure>
+
+  <h3 id="interface-dock-groups">Ukotvené skupiny panelů</h3>
+  <p>Panely jsou vrstveny ve skupinách, každá skupina je sloupec malých ikonových karet po svém vlastním okraji. Najeďte myší na kartu pro zobrazení názvu panelu a otevřený panel se pojmenuje nad svým obsahem. Ve výchozím stavu skupiny shromažďují panely, které bývají používány společně:</p>
+  <ul>
+    <li><strong>Vlastnosti, Vrstvy, Podložky, Mřížka</strong>: struktura dokumentu.</li>
+    <li><strong>Barva, Vzorky, Přechod, Tah</strong>: jak jsou věci malovány.</li>
+    <li><strong>Text, Odstavec, Glyfy</strong>: text.</li>
+    <li><strong>Zarovnání, Kombinace tvarů, Transformace, Zásobník výplně, Průhlednost, 3D</strong>: tvarování a uspořádání.</li>
+    <li><strong>Styly, Štětce, Symboly, Vzory</strong>: opakovaně použitelné vzhledy a objekty.</li>
+    <li><strong>Navigátor, Info, Info o dokumentu, Historie, Akce</strong>: pohyb a měření.</li>
+    <li><strong>Aktiva, Proměnné, Automatický výběr, Vektorizace, Atributy</strong>: zbytek.</li>
+  </ul>
+
+  <h3 id="interface-rearranging">Přeuspořádání panelů</h3>
+  <p>Rozložení je vaše ke změně. Táhněte kartu po svém pásu pro přeuspořádání, táhněte ji na pás jiné skupiny pro přesun tam, nebo ji táhněte mimo dok pro ponechání ji plovoucí nad plátnem. Táhněte prázdnou část pásu pro zvednutí celé skupiny a pusťte ji zpět nad dok pro její vrácení domů; mezera mezi skupinami přijímá puštěnou kartu jako novou skupinu. Klikněte pravým tlačítkem na kartu pro stejné přesuny nabídkou, včetně Zavřít panel. × v horní části pásu zavře tuto skupinu a tažení oddělovače mezi dvěma skupinami dává výšku jedné a bere ji od druhé. Plovoucí skupina může být změněna z jejího rohu.</p>
+
+  <h3 id="interface-gating">Panely, které čekají na něco k udělání</h3>
+  <p>Panel, který nemá v danou chvíli co dělat, nezmizí: jeho karta zůstává, pouze zeslabená, a jeho tělo zobrazuje říkající, na co čeká, jako je výběr objektu nebo výběr nástroje Text. Aby se dok nepřeformátoval pod vaší rukou, toto čekání je drženo, zatímco ukazatel je uvnitru doku a dohání se, jakmile ukazatel opustí.</p>
+
+  <h3 id="interface-workspace">Otevírání, skrývání a obnovování panelů</h3>
+  <p>Otevřete panel z nabídky Pracovní prostor, kde šest nejpoužívanějších sedí v horní části a zbytek je pod Další panely, nebo z nabídky Okno v klasickém chrome. Mnoho panelů má zkratku:</p>
+  <table>
+    <thead><tr><th>Panel</th><th>Zkratka</th><th>Panel</th><th>Zkratka</th></tr></thead>
+    <tbody>
+      <tr><td>Vrstvy</td><td><kbd>F7</kbd></td><td>Barva</td><td><kbd>F6</kbd></td></tr>
+      <tr><td>Zásobník výplně</td><td><kbd>⇧F6</kbd></td><td>Info</td><td><kbd>F8</kbd></td></tr>
+      <tr><td>Zarovnání</td><td><kbd>⇧F7</kbd></td><td>Transformace</td><td><kbd>⇧F8</kbd></td></tr>
+      <tr><td>Tah</td><td><kbd>⌘F10</kbd></td><td>Přechod</td><td><kbd>⌘F9</kbd></td></tr>
+      <tr><td>Kombinace tvarů</td><td><kbd>⇧⌘F9</kbd></td><td>Průhlednost</td><td><kbd>⇧⌘F10</kbd></td></tr>
+      <tr><td>Grafické styly</td><td><kbd>⇧F5</kbd></td><td>Štětce</td><td><kbd>F5</kbd></td></tr>
+      <tr><td>Atributy</td><td><kbd>⌘F11</kbd></td><td>Symboly</td><td><kbd>⇧⌘F11</kbd></td></tr>
+      <tr><td>Znak</td><td><kbd>⌘T</kbd></td><td>Odstavec</td><td><kbd>⌥⌘T</kbd></td></tr>
+      <tr><td>Glyfy</td><td><kbd>⌥⇧F11</kbd></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+  <p>Dok lze rozšířit tažením jeho levého okraje, od pohodlné šířky dvou políček na řádku až po dobře širší. Vaše uspořádání a jak široký jste dok nechali, je zapamatováno mezi relacemi. Když je dok zavřený, přejetí ukazatelem na pravý okraj okna jej vysune, pokud pod ukazatelem není žádná grafika. Pro vrácení všech vašich změn rozložení zvolte Obnovit panely, které vrátí každou skupinu na její počáteční místo.</p>
+  <p><kbd>Tab</kbd> skryje paletu nástrojů, ovládací panel, karty dokumentů, stavový řádek, panely a ostatní chrome na plátně, takže zůstane pouze grafika a nabídkový řádek; stiskněte jej znovu pro jejich vrácení.</p>
+
+  <h2 id="interface-language">Jazyk</h2>
+  <p>Scissor mluví anglicky, německy (Deutsch), španělsky (Español), francouzsky (Français), italsky (Italiano), katalánsky (Català), česky (Čeština), dánsky (Dansk), norsky (Norsk), polsky (Polski), slovensky (Slovenčina), finsky (Suomi) a švédsky (Svenska). Při prvním otevření používá jazyk vašeho prohlížeče, pokud je jedním z těchto, a jinak anglicky. Pro výběr jiného klikněte na tlačítko globe v nabídkovém řádku nebo na uvítací obrazovce, nebo otevřete <strong>Úpravy &rsaquo; Předvolby</strong> (<kbd>&#8984;K</kbd>), přejděte na <strong>Rozhraní</strong> a vyberte jeden pod <strong>Jazyk</strong>. Scissor se přepne při načtení a zapamatuje si volbu. Nabídky, panely, dialogy, tooltipy, zprávy a Co je nového mu následují a čísla se zobrazují místním způsobem, jako 12,5 v němčině, ačkoli můžete zadat čárku nebo tečku. Vaše dokumenty nejsou ovlivněny: názvy vrstev a text ve vaší grafice zůstávají tak, jak jste je napsali. Když rozhraní není v angličtině, Podmínky použití se zobrazí přeložené pro pohodlí a anglická verze je ta, která platí.</p>
+
+  <h2 id="interface-appearance">Světlý a tmavý</h2>
+  <p>Scissor následuje nastavení světlého a tmavého vašeho systému. Pro jeho vyřešení jedním způsobem zvolte Zobrazení › Vzhled a vyberte Systém, Světlý nebo Tmavý. Volba je zapamatována a nese se i na plátno kromě chrome: podložka, pravítka a štítky podložek se kreslí tak, aby odpovídaly tématu, ve kterém jste.</p>

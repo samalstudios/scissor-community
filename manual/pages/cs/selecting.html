@@ -1,0 +1,34 @@
+<p class="lede">Než můžete cokoli změnit, musíte říct, co změnit. Tato stránka je o výběru grafiky: rychlých kliknutích s nástroji výběru a celé nabídce <strong>Výběr</strong>, která vybírá objekty podle toho, z čeho jsou vyrobeny, prochází zásobníkem a ukládá výběr pro pozdější vrácení. V zkratkách níže je <kbd>&#8984;</kbd> <kbd>Ctrl</kbd> na Windows a Linuxu, <kbd>&#8997;</kbd> je <kbd>Alt</kbd> a <kbd>&#8679;</kbd> je Shift.</p>
+
+<h2 id="selecting-basics">Kliknutí a obdélníkový výběr</h2>
+<p><strong>Nástroj Výběr</strong> (<kbd>V</kbd>) je místo, kde většina výběrů začíná. Klikněte na objekt pro jeho výběr; podržte <kbd>&#8679;</kbd> a klikněte na další pro jeho přidání, nebo klikněte na vybraný pro jeho shození. Táhněte přes prázdné plátno pro vytáhnutí <em>obdélníkového výběru</em> a vše, čeho se dotkne, je vybráno. <strong>Nástroj Přímý výběr</strong> (<kbd>A</kbd>) dosahuje dovnitř namísto toho: vybírá jednotlivé body kotvy a segmenty cesty namísto celých objektů a <strong>Nástroj Výběr skupiny</strong> vstupuje do skupiny po jedničkách. Tyto nástroje jsou pokryté na stránkách <a href="/manual/tools/">Nástroje</a> a <a href="/manual/paths/">Cesty</a>; zbytek této stránky je nabídka Výběr, která dělá výběr, který kliknutí nemůže.</p>
+
+<h2 id="selecting-whole-document">Vše, nic a inverze</h2>
+<table>
+  <thead><tr><th>Příkaz</th><th>Zkratka</th><th>Co vybírá</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Výběr &rsaquo; Vše</strong></td><td><kbd>&#8984;A</kbd></td><td>Každý odemčený objekt v dokumentu.</td></tr>
+    <tr><td><strong>Vše na aktivní podložce</strong></td><td><kbd>&#8997;&#8984;A</kbd></td><td>Pouze grafika na podložce, na které pracujete – rychlý způsob, jak zachytit jednu stránku vícepodložkového souboru.</td></tr>
+    <tr><td><strong>Zrušit výběr</strong></td><td><kbd>&#8679;&#8984;A</kbd></td><td>Nic; vymaže aktuální výběr.</td></tr>
+    <tr><td><strong>Inverze</strong></td><td></td><td>Prohodí výběr za vše, co nebylo <em>vybráno</em>.</td></tr>
+    <tr><td><strong>Znovu vybrat</strong></td><td><kbd>&#8984;6</kbd></td><td>Vrátí výběr, který jste měli těsně před jeho vymazáním.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="selecting-stack">Procházení zásobníkem</h2>
+<p>Když se objekty překrývají, <strong>Výběr &rsaquo; Další objekt výše</strong> (<kbd>&#8997;&#8984;]</kbd>) a <strong>Další objekt níže</strong> (<kbd>&#8997;&#8984;[</kbd>) přesouvají výběr nahoru nebo dolů po hromadě na stejném místě, po jednom objektu. Je to spolehlivý způsob, jak dosáhnout tvaru pohřbeného pod ostatními, bez vytahování těch na vrchu z cesty.</p>
+
+<h2 id="selecting-same">Vybrat stejné: výběr podle toho, co mají společného</h2>
+<p>Vyberte jeden objekt a poté <strong>Výběr &rsaquo; Stejné</strong> shromáždí každý další objekt v dokumentu, který mu odpovídá na jednu vlastnost. Použijte to pro přebarvení každého tvaru jedné výplně jedním tažením, nebo pro zachycení všech tenkých tahů najednou.</p>
+<dl>
+  <dt>Vzhled</dt><dd>Celý vzhled – stejnou zásobník výplní, tahů a efektů.</dd>
+  <dt>Výplň &amp; tah</dt><dd>Stejnou výplň a stejný tah dohromady.</dd>
+  <dt>Barva výplně / Barva tahu</dt><dd>Stejnou barvu výplně, nebo stejnou barvu tahu.</dd>
+  <dt>Tloušťka tahu</dt><dd>Stejnou šířku tahu.</dd>
+  <dt>Krytí</dt><dd>Stejné krytí.</dd>
+  <dt>Režim prolnutí</dt><dd>Stejný režim prolnutí.</dd>
+  <dt>Tvar</dt><dd>Stejný druh objektu – všechny elipsy, řekněme, nebo všechny texty.</dd>
+</dl>
+
+<h2 id="selecting-saved">Uložení výběru</h2>
+<p>Výběr, který byl obtížný, stojí za to zachovat. <strong>Výběr &rsaquo; Uložit výběr&hellip;</strong> uloží aktuální sadu pod názvem; poté se objeví pod <strong>Výběr &rsaquo; Uložené výběry</strong> a jeho výběr tam znovu vybere přesně ty objekty, ať už jste od té doby klikali kdekoli. <strong>Upravit výběr&hellip;</strong> přejmenuje nebo odstraní ty, které jste uložili. Uložené výběry cestují uvnitř dokumentu <code>.cut</code>, takže tam jsou stále příště, když soubor otevřete.</p>
