@@ -1,0 +1,134 @@
+<p class="lede">Com sembla una forma és la seva <em>aparença</em>: l'emplenament dins el seu contorn, el contorn dibuixat al llarg d'aquest i l'opacitat i la fusió que decideixen com es posa sobre allò que hi ha darrere. Cadascun d'aquests pot ser un color pla, un degradat o un motiu, i un objecte pot portar-ne més d'un de cadascun alhora. Aquesta pàgina cobreix els controls de pintura, els models de color, mostres, degradats, contorns, transparència, el panell Pila de pintura i els estils gràfics.</p>
+
+<p>Les dreceres a continuació estan escrites en format macOS. A Windows, llegiu <kbd>&#8984;</kbd> com a Ctrl, <kbd>&#8997;</kbd> com a Alt i <kbd>&#8679;</kbd> com a Majúscules.</p>
+
+<figure class="shot">
+  <img src="img/artwork-landscape.png" width="1700" height="967" loading="lazy"
+       alt="Un paisatge vectorial de muntanyes, cel i un llac, construït a partir de formes amb emplenament pla a Scissor." />
+  <figcaption>Una escena sencera construïda a partir de formes emplenades. Cada franja de color és un camí amb el seu emplenament.</figcaption>
+</figure>
+
+<h2 id="appearance-fill-and-stroke">Emplenaments i contorns</h2>
+<p>Un camí, una forma o un text pot contenir un <strong>emplenament</strong>, la pintura dins el seu contorn, i un <strong>contorn</strong>, la línia dibuixada al llarg d'aquest contorn. Un emplenament pot ser un color sòlid, un degradat o un motiu; un contorn pot ser un color sòlid o un degradat, amb el seu propi gruix i traç. També es pot establir cap dels dos costats a cap, de manera que podeu dibuixar una forma amb només un contorn, o només un emplenament.</p>
+
+<h3 id="appearance-the-paint-chips">Les targetes d'emplenament i contorn</h3>
+<p>Dues targetes superposades al peu de la barra d'eines contenen l'emplenament i el contorn. Feu clic a qualsevol d'elles per obrir un selector de color; la que és davant és el costat sobre el qual actuen les tecles i els panells Color, Degradat i Mostres. Premeu <kbd>X</kbd> per portar l'altre costat davant, <kbd>&#8679;X</kbd> per intercanviar les dues pintes, <kbd>/</kbd> per establir el costat davant a cap i <kbd>D</kbd> per tornar als valors per defecte: emplenament blanc, contorn negre i gruix 1 pt. Els mateixos emplenament, contorn, gruix, opacitat i mode de fusió també es troben junts al panell Propietats, cosa útil quan els voleu tots en un lloc.</p>
+<p>Amb res seleccionat, aquests controls estableixen l'estil que assumirà el proper objecte que dibuixeu, de manera que podeu triar un color abans dibuixar en comptes de després.</p>
+
+<h3 id="appearance-eyedropper">Copiar pintura amb el Compta-gotes</h3>
+<p>El Compta-gotes (<kbd>I</kbd>) copia una aparença completa de l'objecte on feu clic a la selecció. Mantingueu premut <kbd>&#8679;</kbd> per prendre només el seu color d'emplenament o contorn al costat actiu, o bé <kbd>&#8997;</kbd> per empènyer l'aparença de la selecció a l'objecte sota el punter en comptes. Fent clic a una imatge col·locada o una capa de píxels mostreja el color sota el punter al costat actiu, de manera que podeu prendre un color directament d'una foto. Useu el Compta-gotes quan dos objectes han de coincidir: mostregeu un, i l'altre assumeix la mateixa pintura d'un sol clic.</p>
+
+<h2 id="appearance-colour">Color</h2>
+<p>El color es tria al petit selector emergent de cada targeta, o bé, amb més control, al panell Color.</p>
+
+<h3 id="appearance-color-panel">El panell Color</h3>
+<p>El panell <strong>Color</strong> (<kbd>F6</kbd>) mostra la pintura del costat actiu com un conjunt de controls lliscants, un camp hexadecimal i un espectre. Les targetes d'emplenament i contorn a dalt trien quin costat esteu editant. L'espectre disposa els matitzos en horitzontal, el blanc a dalt i el negre a sota; feu clic o arrossegueu dins d'ell per triar. Tres mostres ràpides al costat estableixen Cap, Blanc i Negre d'un clic, i els botons <em>Inverteix</em> i <em>Complement</em> reelaboren el color actual (Complement gira el matitze mig girada mantenint saturació i brillantor).</p>
+<p>El menú de model de color estableix quins controls lliscants mostra el panell. L'opció es manté per a la sessió i les noves mostres es creen en ella.</p>
+<dl>
+  <dt>Escala de grisos</dt><dd>Un únic control lliscant K, del blanc al 0% al negre al 100%.</dd>
+  <dt>RGB</dt><dd>Verd, verd i blau de 0 a 255, el model per a feina de pantalla.</dd>
+  <dt>HSB</dt><dd>Matitze en graus, després saturació i brillantor com a percentatges: sovint la manera més ràpida de retocar un color sense perdre'n el caràcter.</dd>
+  <dt>CMYK</dt><dd>Cian, magenta, groc i negre com a percentatges, per a impressió.</dd>
+  <dt>RGB segur per al web</dt><dd>RGB ajustats als 216 colors segurs per al web. Quan el color actual no és un d'ells apareix un triangle d'avís; feu clic a ell per ajustar-vos al color segur més proper.</dd>
+</dl>
+<p>Quan el costat actiu està pintat amb una mostra global, una fila de tint apareix sobre els controls lliscants: nomena la mostra i us permet establir un tint del 0% al 100% en comptes d'editar directament el color, de manera que la feina roman lligada a la mostra.</p>
+
+<h2 id="appearance-swatches">Mostres i grups de color</h2>
+<p>Una mostra és un color amb nom desat amb el document. Pintar des de mostres en comptes d'escriure valors manté una paleta coherent i, per a les mostres globals, us permet aplicar un estil nou a tot un document editant un color.</p>
+
+<h3 id="appearance-swatches-panel">El panell Mostres</h3>
+<p>El panell <strong>Mostres</strong> (obriu des de <strong>Finestra &rsaquo; Mostres</strong>) llista les mostres del document com una graella o com una llista; la vista de llista també mostra el model de color de cada mostra. Un clic simple pinta el costat actiu. <kbd>&#8679;</kbd>-clic selecciona una sèrie de mostres i <kbd>&#8984;</kbd>-clic afegeix o treu una de la selecció, de manera que podeu actuar sobre diverses alhora. El peu conté botons per canviar de vista, obrir el menú del panell, mostrar les opcions de mostra, crear un grup de color, crear una nova mostra i eliminar allò seleccionat.</p>
+<p>El menú del panell afegeix més: <em>Afegeix colors utilitzats</em> i <em>Afegeix colors seleccionats</em> converteixen els colors ja al document, o només a la selecció, en mostres; <em>Selecciona tots els no utilitzats</em> selecciona cada mostra amb la qual no s'ha pintat res, a punt per eliminar; i <em>Remapa colors&#8230;</em> obre el diàleg de recoloració descrit a sota.</p>
+
+<h3 id="appearance-process-spot-global">Mostres de procés, spot i globals</h3>
+<p>Feu doble clic a una mostra per a Opcions de mostra, on establiu quin tipus de color és.</p>
+<dl>
+  <dt>Procés</dt><dd>Un color ordinari, mesclat per a la feina. Una mostra de procés simple és només un color emmagatzemat: editar-la no toca la feina ja pintada amb ella.</dd>
+  <dt>Global</dt><dd>Una mostra de procés marcada Global manté la feina lligada a ella, de manera que acolorir la mostra torna a pintar tot allò que està pintat amb ella de cop. Les mostres globals es poden aplicar com a tint.</dd>
+  <dt>Spot</dt><dd>Una tinta amb nom, destinada a imprimir-se en una placa pròpia. Els colors spot són sempre globals.</dd>
+</dl>
+<p>Cada document també comença amb una mostra <strong>[Registre]</strong> fixa, que no té un tipus de color propi i no es pot eliminar ni arrossegar. Useu una mostra global o spot quan un color apareix moltes vegades i podria canviar: una edició actualitza cada objecte, en comptes de buscar-los un a un a mà.</p>
+
+<h3 id="appearance-colour-groups">Grups de color</h3>
+<p>Els grups de color arxiven mostres relacionades juntes, com una família de tonalitats o la paleta d'un projecte. Arrossegueu mostres a un grup per arxivar-les, o bé seleccioneu-ne algunes i creeu-ne un grup amb el botó Nou grup de color del panell. Feu doble clic a la capçalera d'un grup per a les seves opcions. Al selector de color de cada targeta, cada grup apareix com una fila, de manera que una família es llegeix com una rampa de tonalitats en comptes d'un mur de targetes.</p>
+
+<h2 id="appearance-gradients">Degradats</h2>
+<p>Un degradat sfuma entre dos o més colors. Scissor crea degradats lineals, radials i lliures, i tant el panell com l'eina sobre el llenç poden construir-los i modelar-los. Useu un degradat per donar profunditat a una forma plana, un rentat suau a un fons o una lluminositat a un botó.</p>
+
+<h3 id="appearance-gradient-panel">El panell Degradat</h3>
+<p>El panell <strong>Degradat</strong> (<kbd>&#8984;F9</kbd>) controla tot el degradat. Feu clic a la miniatura per emplenar el costat actiu, trieu Lineal, Radial o Lliure del menú de tipus i useu el botó inverteix per capgirar la rampa. La rampa mateixa porta els aturadors: feu clic a ella per afegir un aturador amb el color que ja hi té, arrossegueu un aturador per moure'l i arrossegueu un rombe entre dos aturadors per moure on es troben els dos colors. L'aturador seleccionat té la seva pròpia mostra de color, un camp <em>Opacitat</em> i un camp <em>Posició</em>, i <em>Elimina aturador</em> l'elimina. <em>Angle</em> gira un degradat lineal o radial, i <em>Proporcions</em> (només radial) achata un degradat radial en una ellipse.</p>
+<figure class="shot">
+  <img src="img/gradient.gif" width="340" height="340" loading="lazy"
+       alt="Un quadrat arrodonit emplenat amb un degradat lineal de blau a ambre la qual direcció gira." />
+  <figcaption>Un degradat lineal de blau a ambre. Arrossegant l'eix del degradat, o canviant el seu angle, el degradat gira al voltant de la forma.</figcaption>
+</figure>
+
+<h3 id="appearance-gradient-tool">L'eina Degradat</h3>
+<p>Amb l'eina Degradat (<kbd>G</kbd>) els mateixos controls es troben sobre la feina. Arrossegueu a través d'un objecte per posar l'eix, mantenint premut <kbd>&#8679;</kbd> per limitar-lo a passos de 45&deg;. L'eix mostra un pomell rodó a l'inici i un pomell quadrat al final; arrossegueu qualsevol dels dos per moure aquell extrem. Feu clic a l'eix per afegir un aturador amb el color que ja hi té, arrossegueu un aturador al llarg d'aquest i estireu un aturador ben lluny de l'eix per llençar-lo. Arrossegueu un rombe per moure el punt mitjà. <kbd>Supr</kbd> elimina l'aturador que heu tocat per darrere. Sobre una degradació lliure l'eina funciona sobre els punts de color: feu clic a la feina per afegir-ne un amb el color d'emplenament i arrossegueu un punt per moure'l. Els degradats es tracten més a la pàgina <a href="/manual/appearance/">Color i aparença</a>.</p>
+
+<h3 id="appearance-freeform">Degradats lliures</h3>
+<p>Un degradat lliure col·loca punts de color a qualsevol lloc de la forma en comptes d'al llarg d'un eix, de manera que el degradat pot seguir la forma de la feina. Amb l'eina Degradat, feu clic a la feina per col·locar un punt de color, arrossegueu-lo per moure'l i premeu <kbd>Supr</kbd> per treure'l. Marqueu <em>Uneix els punts en línies</em> al panell per unir els punts en línies, que difonen un color al llarg d'un recorregut en comptes des d'un sol punt. Useu un degradat lliure per a ombres suaus i orgàniques que una rampa rectilínia no pot donar.</p>
+
+<h2 id="appearance-patterns">Motius</h2>
+<p>Un motiu és feina repetida com una mosaic i utilitzada com a emplenament. Converteix una selecció en una mosaic amb <strong>Objecte &rsaquo; Motiu &rsaquo; Crea</strong>, després empleneu qualsevol forma des del panell <strong>Motius</strong>: feu clic a una mosaic per emplenar, doble clic per editar-la i <kbd>&#8997;</kbd>-clic per eliminar-la. <em>Opcions de mosaic</em> estableix el tipus de mosaic, el desplaçament de maó, la mida i l'espaiat, i si la mosaic es dimensiona i es mou amb la feina. <strong>Edita motiu</strong> obre la mosaic al lloc amb les seves còpies repetides al voltant mentre treballeu; feu clic a <em>Fet</em> al panell Motius quan la mosaic estigui a punt. Els motius s'adapten a textures repetides, com ratlles, punts, trames i fons, que serien tedioses de dibuixar a mà.</p>
+
+<h2 id="appearance-strokes">Contorns</h2>
+<p>El panell <strong>Contorn</strong> (<kbd>&#8984;F10</kbd>) modela la línia dibuixada al llarg d'un camí.</p>
+
+<h3 id="appearance-stroke-options">Gruix, extrems, unions i alineació</h3>
+<p><em>Gruix</em> estableix el gruix del contorn en punts. Els botons <em>Extrem</em> decideixen com acaba un camí obert: pla (tallat net a l'ancoratge), rodó o sobresortent (quadrat, però que supera l'ancoratge de la meitat del gruix). Els botons <em>Unió</em> decideixen com un contorn gira una cantonada: bisell (una punta neta), rodó o bisell pla (un tall pla), amb un <em>Límit</em> de bisell que bisella les puntes més punxegudes perquè no sobresurtin. <em>Alinea</em> col·loca el contorn al centre del camí, o íntegrament a dins o a fora, cosa que importa quan una forma ha de trobar-se exactament amb les seves veïnes.</p>
+
+<h3 id="appearance-dashes">Línies discontínues</h3>
+<p>Marqueu <em>Línia discontínua</em> per trencar el contorn en traços. Les tres parelles traç-espai a sota estableixen el patró: el primer camp és una llargada de traç, el següent un espai, i així successivament, repetint-se al llarg del camí. Deixeu buites les parelles següents per a un traç simple i uniforme.</p>
+
+<h3 id="appearance-width-profiles">Perfils de gruix i eina Gruix</h3>
+<p>Un perfil de gruix aprima el contorn al llarg de la seva llargada en comptes de mantenir-lo a un gruix únic. Trieu un perfil del menú del panell i una petita vista prèvia mostra la forma que crea; els botons al costat el giren a l'altre sentit, desen el contorn actual com a nou perfil o eliminen un perfil que heu creat. Un contorn que heu modelat a mà apareix com a <em>Personalitzat</em> al menú.</p>
+<p>L'eina Gruix (<kbd>&#8679;W</kbd>) modela un contorn directament al llenç: arrossegueu lluny del camí per eixamplar-lo en aquell punt, o bé cap a ell per estreixir-lo, deixant un punt de gruix que podeu arrossegar de nou més endavant. Useu-la per donar a una línia dibuixada l'engreiximent i l'aprimament d'un pinzell o una ploma.</p>
+
+<h3 id="appearance-brushes">Pinzells</h3>
+<p>El panell <strong>Pinzells</strong> (<kbd>F5</kbd>) pinta traços amb una forma en comptes d'una línia simple. Conté pinzells cal·ligràfics, escampats, artístics, de cerda i motiu. Feu clic a un pinzell per aplicar-lo als camins seleccionats; el Pinzell utilitza el que està actual. Feu doble clic a un pinzell per a les seves opcions, useu <em>Nou pinzell&#8230;</em> per crear-ne un (els pinzells escampats, artístics i motiu es construeixen a partir de feina seleccionada) i <em>Elimina pinzell</em> per tornar un traç a una línia simple.</p>
+
+<h2 id="appearance-opacity-blending">Opacitat i fusió</h2>
+<p>L'opacitat i el mode de fusió decideixen com un objecte es combina amb allò que hi ha sota. Es troben al panell <strong>Transparència</strong> (<kbd>&#8679;&#8984;F10</kbd>) i també al panell Propietats.</p>
+
+<h3 id="appearance-blend-modes">Els modes de fusió</h3>
+<p>L'opacitat va del 0% (invisible) al 100% (sòlid). El menú de modes ofereix setze modes de fusió, que es divideixen en grups: modes que enfosqueixen, modes que aclareixen, modes de contrast, modes de comparació i les quatre que prenen una part d'un color.</p>
+<table>
+  <thead><tr><th>Mode</th><th>Què fa</th></tr></thead>
+  <tbody>
+    <tr><td>Normal</td><td>Pinta sobre allò que hi ha sota, sense fusió.</td></tr>
+    <tr><td>Enfosqueix</td><td>Manté el color més fosc, canal per canal.</td></tr>
+    <tr><td>Multiplica</td><td>Multiplica els dos colors, enfosqueixent sempre; el blanc deixa la base intacta.</td></tr>
+    <tr><td>Color crema</td><td>Enfosqueix la base per assumir el color de fusió.</td></tr>
+    <tr><td>Aclara</td><td>Manté el color més clar.</td></tr>
+    <tr><td>Pantalla</td><td>L'invers de Multiplica, aclarint sempre; el negre deixa la base intacta.</td></tr>
+    <tr><td>Color aclara</td><td>Aclareix la base per assumir el color de fusió.</td></tr>
+    <tr><td>Superposa</td><td>Multiplica o pantalla segons la base, augmentant el contrast.</td></tr>
+    <tr><td>Llum suau</td><td>Un dolç aclarir o enfosqueix, com si una llum suau es projectés sobre la feina.</td></tr>
+    <tr><td>Llum intensa</td><td>Multiplica o pantalla segons el color de fusió, com un focus dur.</td></tr>
+    <tr><td>Diferència</td><td>Resta el color més fosc del més clar; el blanc inverteix la base, el negre no té efecte.</td></tr>
+    <tr><td>Exclusió</td><td>Com Diferència, però més suau i de contrast més baix.</td></tr>
+    <tr><td>Matís</td><td>El matís de la fusió amb la saturació i brillantor de la base.</td></tr>
+    <tr><td>Saturació</td><td>La saturació de la fusió amb el matís i brillantor de la base.</td></tr>
+    <tr><td>Color</td><td>El matís i saturació de la fusió amb la brillantor de la base: bo per acolorir feina en escala de grisos.</td></tr>
+    <tr><td>Brillantor</td><td>La brillantor de la fusió amb el matís i saturació de la base.</td></tr>
+  </tbody>
+</table>
+<p>Per a un grup, dos interruptors canvien com es fusiona. <em>Contingut de fusió al grup</em> manté els modes del grup dins d'ell mateix, de manera que els seus membres es fusionen entre ells però no amb la feina darrere el grup. <em>Grup knockout</em> fa que cada membre amagui els que hi ha sota dins el grup en comptes de fusionar-se a través d'ells.</p>
+
+<h3 id="appearance-opacity-masks">Màscares d'opacitat</h3>
+<p>Una màscara d'opacitat esvaeix la feina per to. Seleccioneu la feina i, sobre ella, la forma amb la qual màscarar, després feu clic a <em>Crea màscara</em> (també <strong>Objecte &rsaquo; Màscara de retall &rsaquo; Crea màscara d'opacitat</strong>). L'objecte de sobre es converteix en la màscara: on és clara la feina es veu, i on és fosca la feina s'esvaeix, de manera que un degradat de blanc a negre crea una transició suau. <em>Allibera</em> retorna els dos objectes. Useu una màscara per a una vora suau o una vineta que un retall net no pot crear.</p>
+
+<h2 id="appearance-appearance-panel">El panell Pila de pintura</h2>
+<p>El panell <strong>Pila de pintura</strong> (<kbd>&#8679;F6</kbd>) llista tot el que està pintat sobre un objecte: els seus emplenaments i els seus contorns, amb qualsevol efecte en viu sobre ells. Com que un objecte pot contenir diversos emplenaments i contorns, és aquí on els apileu, per exemple un contorn fosc ample sota un prim clar per crear un contorn, o bé dos emplenaments a opacitats diferents.</p>
+<p>La pila es dibuixa de dalt, coincidint amb l'ordre en què pinta. Cada fila d'emplenament o contorn té un ull per amagar-lo, una targeta de pintura que obre el selector de color, un camp d'opacitat, un camp de gruix per als contorns i fletxes per moure-la amunt o avall a la pila, més un botó per eliminar-la. <em>Afegeix emplenament</em> i <em>Afegeix contorn</em> en posen un altre a sobre. Els efectes apareixen sobre els emplenaments i els contorns amb una insígnia <em>fx</em>; feu clic a un efecte per editar-ne les opcions, o eliminar-lo de la seva fila. Quan l'aparença en capes està acabada, <strong>Objecte &rsaquo; Expandeix aparença</em> incorpora tota la pila en feina ordinària.</p>
+
+<h2 id="appearance-graphic-styles">Estils gràfics</h2>
+<p>Un estil gràfic és una aparença desada que podeu aplicar a altres objectes. El panell <strong>Estils gràfics</strong> (<kbd>&#8679;F5</kbd>) els conserva com a targetes, cadascuna mostrant el seu emplenament amb el seu contorn com a vora de la targeta. Seleccioneu un objecte i feu clic a <em>Nou estil</em> per desar els seus emplenaments i contorns; feu clic a una targeta per aplicar aquell estil a la selecció, i <kbd>&#8997;</kbd>-clic a una targeta per eliminar-la. Els estils valen la pena de crear-se quan la mateixa aparença, com un tractament de botó o un estil d'etiqueta, ha d'anar a molts objectes i romandre coherent.</p>
+
+<h2 id="appearance-overprint">Sobreimpressió</h2>
+<p>El panell <strong>Atributs</strong> (<kbd>&#8984;F11</kbd>) estableix la sobreimpressió per a feina d'impressió. <em>Sobreimprimeix emplenament</em> i <em>Sobreimprimeix contorn</em> fan que aquella tinta s'imprimeixi sobre els colors de sota en comptes de treure'ls, cosa utilitzada per a trampes i efectes com un negre que s'imprimeix sobre en comptes de substituir allò que hi ha sota. Activeu <strong>Visualitza &rsaquo; Vista prèvia de sobreimpressió</strong> per veure'l a la pantalla; l'exportació PDF manté la configuració.</p>
+
+<h2 id="appearance-recolour">Recolorar la feina</h2>
+<p><strong>Edita &rsaquo; Edita colors &rsaquo; Remapa colors&hellip;</strong> llista cada color a la selecció amb quantes vegades s'utilitza. Feu clic a la targeta a la dreta d'una fila per triar en què es converteix aquell color, o bé a la fletxa entre les dues targetes per deixar aquell color tal qual. Els controls lliscants de Matís, Saturació i Brillantor mouen tot el conjunt junts, i dos botons reordenen aleatòriament els nous colors o randomitzen la seva saturació i brillantor, cosa que és una manera ràpida de provar variacions. La feina s'actualitza a mesura que avanceu, i <em>Restableix</em> torna als colors dels quals va partir.</p>
+<p>El mateix submenú també ofereix canvis d'un pas: <em>Esvaix davant a darrere</em> difon una sèrie de colors entre els objectes de davant i de darrere, <em>Converteix a escala de grisos</em> elimina tot el color, <em>Inverteix colors</em> cadascun, i <em>Satura&#8230;</em> augmenta o redueix la saturació a tota la selecció.</p>

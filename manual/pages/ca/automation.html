@@ -1,0 +1,39 @@
+<p class="lede">Tres eines a Scissor fan la feina repetitiva per a vostè: <strong>Accions</strong> enregistren una seqüència de comandaments i la reprodueixen, <strong>Variables</strong> substitueixen text i visibilitat des d'una taula de dades de manera que un disseny es converteix en molts, i <strong>Scripts</strong> guien tot l'editor des de JavaScript. Cap d'elles necessita un compte o un servidor: com la resta de Scissor funcionen a la vostra màquina.</p>
+
+<h2 id="automation-actions">Accions: enregistra una vegada, reprodueix arreu</h2>
+<p>El panell <strong>Accions</strong> (Finestra &rsaquo; Accions) enregistra el que feu i el reprodueix sobre una nova selecció. Premeu <strong>Enregistra</strong>, executeu els comandaments que voleu capturar — alínia, desplaçament, afegeix una ombra, qualsevol que sigui la seqüència — després premeu <strong>Atura</strong> i doneu un nom a l'acció. S'uneix a la llista, mostrant quants passos conté.</p>
+<p>Feu clic a una acció per <strong>reproduir-la</strong> sobre allò que està seleccionat ara; <kbd>&#8997;</kbd>-clic a una per eliminar-la. Com que una acció és només una llista de comandaments, repeteix una rutina exacta sobre molts objectes sense que hagi de clicar-la cada vegada.</p>
+
+<h2 id="automation-variables">Variables: un disseny, moltes versions</h2>
+<p>El panell <strong>Variables</strong> (Finestra &rsaquo; Variables) converteix un disseny fix en una plantilla guiada per dades. Dues coses sobre un objecte es poden fer dinàmiques:</p>
+<dl>
+  <dt>Fes text dinàmic</dt><dd>Lliga les paraules d'un objecte de text a una variable, de manera que diferents conjunts de dades puguin posar text diferent al mateix lloc.</dd>
+  <dt>Fes visibilitat dinàmica</dt><dd>Lliga si un objecte es mostra, de manera que un conjunt pugui activar o desactivar parts del disseny.</dd>
+</dl>
+<p><strong>Deslliga</strong> torna a fer fix un objecte lligat.</p>
+
+<h3 id="automation-datasets">Conjunts de dades</h3>
+<p>Un <strong>conjunt de dades</strong> és una fila de valors per a aquelles variables — una insígnia, una targeta, un marc. <strong>Captura</strong> desa els valors actuals com a nou conjunt; les fletxes passen d'un conjunt al següent i el disseny s'actualitza per coincidir. <strong>Importa CSV&hellip;</strong> llegeix un lot sencer d'un cop — una columna per variable, una fila per conjunt — i <strong>Exporta CSV</strong> escriu els conjunts de nou fora per editar-los en un full de càlcul.</p>
+
+<h3 id="automation-batch">Exportar cada conjunt d'un cop</h3>
+<p><strong>Exporta conjunts de dades&hellip;</strong> renderitza la taula activa una vegada per cada conjunt de dades i els escriu tots en una sola passada, com a PNG, JPEG, WebP o SVG. Una fulla d'insígnies, un conjunt de bàners localitzats o una sèrie de targetes socials surten com un lot ordenat de fitxers, cadascun amb les seves dades omplertes.</p>
+
+<h2 id="automation-scripts">Scripts: guia Scissor des de JavaScript</h2>
+<p>Per a qualsevol cosa que un menu no pot expressar, un script pot. <strong>Fitxer &rsaquo; Scripts &rsaquo; Consola de scripts&hellip;</strong> obre un editor on escriviu JavaScript i el executeu sobre el document obert; <strong>Altre script&hellip;</strong> (<kbd>&#8984;F12</kbd>) executa un fitxer <code>.js</code> del disc. Un script s'executa en un Web Worker, lluny de la pàgina, de manera que no pot tocar la interfície ni els vostres fitxers excepte a través de l'objecte <code>scissor</code> que se li dóna — cada trucada s'executa al motor i es respon enrere.</p>
+<p>L'objecte <code>scissor</code> cobreix el terreny comú:</p>
+<dl>
+  <dt>Crea formes i text</dt><dd><code>scissor.rect</code>, <code>roundedRect</code>, <code>ellipse</code>, <code>polygon</code>, <code>star</code>, <code>path</code> i <code>text</code> dibuixen feina; cadascun pren una posició i una mida i un objecte d'opcions per a <code>fill</code>, <code>stroke</code> i <code>strokeWidth</code> (els colors són qualsevol color CSS).</dd>
+  <dt>Llegeix el document</dt><dd><code>await scissor.document()</code> retorna l'app, la selecció, les capes i les taules d'art com les veuen els panells; <code>scissor.selection()</code> retorna només allò que està seleccionat.</dd>
+  <dt>Actua sobre ell</dt><dd><code>scissor.select</code>, <code>group</code> i <code>undo</code>, i <code>scissor.run(command)</code> per a qualsevol comandament del motor — els mateixos comandaments que els menús envien.</dd>
+  <dt>Parla enrere</dt><dd><code>scissor.log</code> imprimeix a la consola; <code>scissor.alert</code> mostra un missatge.</dd>
+</dl>
+<p>Un breu exemple — un anell de punts de colors i una llegenda:</p>
+<pre><code>const doc = await scissor.document();
+scissor.log('Taules:', doc.artboards.length);
+for (let i = 0; i &lt; 12; i++) {
+  const a = (i / 12) * Math.PI * 2;
+  await scissor.ellipse(300 + Math.cos(a) * 120, 260 + Math.sin(a) * 120, 36, 36,
+    { fill: `hsl(${i * 30} 80% 60%)` });
+}
+await scissor.text(230, 270, 'Hola, Scissor', { size: 24 });</code></pre>
+<p>La Consola de scripts conserva el darrer codi que heu executat, de manera que un script que funciona és allà quan hi torneu.</p>

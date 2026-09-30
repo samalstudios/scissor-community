@@ -1,0 +1,166 @@
+<p class="lede">Scissor omple la finestra del navegador amb una única superfície d'edició: una barra de menús a dalt, una barra de control i les pestanyes de documents a sota, la paleta d'eines a l'esquerra, el llenç de dibuix al centre i l'acoblador de panells a la dreta. Tot funciona a la vostra màquina, de manera que un document roman on el poseu i res no s'envia enlloc per ser obert.</p>
+
+  <p>Les dreceres d'aquesta pàgina estan escrites en format macOS. A Windows i Linux, llegiu <kbd>⌘</kbd> com a <kbd>Ctrl</kbd> i <kbd>⌥</kbd> com a <kbd>Alt</kbd>; <kbd>⇧</kbd> és Majúscules i <kbd>⌃</kbd> és Control.</p>
+
+  <h2 id="interface-at-a-glance">L'espai de treball d'un cop d'ull</h2>
+  <p>La finestra està formada per unes quantes regions que cadascuna respon una pregunta diferent. Apreneu on són una vegada i la resta del manual es llegeix més fàcilment.</p>
+  <dl>
+    <dt>Barra de menús</dt>
+    <dd>La fila de menús a la part superior, amb desfer i refer i una cerca de comandaments a l'extrem dret. Aquesta és la llista completa de tot el que l'editor pot fer.</dd>
+    <dt>Barra de control</dt>
+    <dd>La franja just sota els menús. Mostra l'eina actual i el grapat de controls que importen per al que heu seleccionat en aquest moment.</dd>
+    <dt>Pestanyes de documents</dt>
+    <dd>A l'esquerra de la barra de control, una pestanya per cada document obert. El botó de panells es troba a l'extrem dret de la mateixa fila.</dd>
+    <dt>Paleta d'eines</dt>
+    <dd>L'estreta columna d'eines al llarg del costat esquerre, amb el control d'emplenament i contorn al peu.</dd>
+    <dt>Llenç i tauler</dt>
+    <dd>L'àmplia al centre on dibuixeu. Els rectangles blancs són les taules; el contorn gris és el tauler.</dd>
+    <dt>Acoblador de panells</dt>
+    <dd>La columna de panells a la dreta. Llisca sobre el llenç quan la necessiteu i retorna l'espai quan la tanqueu.</dd>
+    <dt>Barra d'estat</dt>
+    <dd>La prima línia al peu de la finestra, que informa de l'eina actual, la selecció i la darrera acció desferible.</dd>
+  </dl>
+  <figure class="shot">
+    <img src="img/app-light.png" width="1900" height="1082" loading="lazy"
+         alt="Tota la finestra de Scissor: barra de menús, barra de control, paleta d'eines, llenç i acoblador de panells." />
+    <figcaption>Tota la finestra. Scissor segueix la configuració clara o fosca del sistema, i aquesta captura també la segueix.</figcaption>
+  </figure>
+
+  <h2 id="interface-menu-bar">La barra de menús</h2>
+  <p>Deu menús es disposen a la part superior. Recullen cada comandament del programa, agrupats per tipus de feina que esteu fent en comptes de per on una funcionalitat es troba dins del motor.</p>
+  <table>
+    <thead><tr><th>Menú</th><th>Què conté</th></tr></thead>
+    <tbody>
+      <tr><td>Fitxer</td><td>Nou, obre, tanca, desa, insereix, exporta, scripts, configuració de document i impressió.</td></tr>
+      <tr><td>Edita</td><td>Desfer i refer, comandaments del porta-retalls, tot el menú <strong>Selecciona</strong> com a submenú, edició de color i Preferències.</td></tr>
+      <tr><td>Organitza</td><td>Transforma, ordre de superposició, alineació, agrupament i blocar i amagar.</td></tr>
+      <tr><td>Camí</td><td>Comandaments de camí i camí compost, morfologia, Deformació de forma i perspectiva, màscares de retall, text al voltant i expansió.</td></tr>
+      <tr><td>Crea</td><td>Motius, repeticions, Emplenament d'àrea, Vetoritza, malla degradada, taules, seccions i els comandaments de capes de píxels.</td></tr>
+      <tr><td>Efectes</td><td>Efectes en viu: el conjunt vectorial (3D, distorsiona i transforma, Formes combinades, estilitza, deforma i més) i un submenú Raster a sota.</td></tr>
+      <tr><td>Text</td><td>Tipografia, mida i glifs, crea contorns, canvia majúscules/minúscules, flux de text i inserció de caràcters.</td></tr>
+      <tr><td>Visualitza</td><td>Aparença (clara i fosca), vista prèvia de contorns i píxels, zoom, gira la vista, regles, guies, graella i ajust.</td></tr>
+      <tr><td>Espai de treball</td><td>Els panells: els sis que obriu més sovint, un submenú Text, un submenú Més panells per a la resta i Restableix panells.</td></tr>
+      <tr><td>Ajuda</td><td>Novetats, manual d'usuari, instal·la, Termes d'ús i Quant a, amb un camp de cerca a dalt.</td></tr>
+    </tbody>
+  </table>
+  <p>Una marca al costat d'un element significa que aquella configuració està activada. Un element dibuixat en gris no es pot utilitzar en aquest moment, normalment perquè no hi ha res seleccionat o no hi ha cap document obert. On un comandament té una drecera, es mostra a la dreta del menú.</p>
+
+  <h3 id="interface-command-search">Trobar un comandament</h3>
+  <p>No heu de recordar quin menú conté què. El botó de cerca a la dreta de la barra de menús, etiquetat <em>Cerca o escriu un comandament</em>, obre la paleta de comandaments; <kbd>⌘K</kbd> l'obre des del teclat. Escriviu unes quantes lletres i llista cada comandament coincident amb la seva ruta de menú i drecera, i cada eina coincident. Useu <kbd>↑</kbd> i <kbd>↓</kbd> per moure-vos pels resultats, <kbd>Retorn</kbd> per executar el destacat i <kbd>Esc</kbd> per tancar. Useu aquesta funció quan sapèu el que voleu però no on és, o quan una drecera és més ràpida d'escriure que de cercar. El menú Ajuda té el seu propi camp de cerca que fa el mateix entre els menús.</p>
+
+  <h3 id="interface-undo-redo">Desfer i refer</h3>
+  <p>Les fletxes corbes a prop de la dreta de la barra de menús desfan i refan, igual que <kbd>⌘Z</kbd> i <kbd>⇧⌘Z</kbd>. Cada botó nomena el pas que desfaria quan hi passeu el punter per sobre, i la barra d'estat mostra el mateix al peu de la finestra, de manera que sempre podeu veure què desfaria una pulsació més.</p>
+
+  <h2 id="interface-tool-palette">La paleta d'eines</h2>
+  <p>Les eines es troben en una sola columna al llarg del costat esquerre. Estan organitzades en famílies: Selecciona, Dibuixa, Text, Línia, Forma, Pinta, Remodela, Construeix, Mostreja, Símbols, Taules i Visualitza. La columna mostra una eina de cada família al cop; poseu el punter sobre una ranura i la resta d'aquesta família s'obre cap a la dreta, de manera que podeu triar una eina relacionada sense que la columna es mogui sota la vostra mà. Una ranura continua mostrant quin membre de la seva família heu utilitzat per darrere.</p>
+  <p>Feu clic a una ranura per triar l'eina que mostra. El seu indicador de funció proporciona el nom de l'eina i la seva drecera de tecla única, per exemple <kbd>V</kbd> per a l'eina Selecció, <kbd>P</kbd> per a la Ploma o <kbd>T</kbd> per a Text. Quan canvieu d'eina amb el teclat, la ranura corresponent s'il·lumina un moment perquè pugueu veure quina està activa ara. Per veure-ho tot alhora, un botó prop de la cerca de comandaments, dibuixat com tres punts, obre un navegador de cada eina, agrupat per família i filtrat mentre escriviu.</p>
+
+  <h3 id="interface-fill-stroke">Emplenament i contorn</h3>
+  <p>Sota les eines hi ha el control d'emplenament i contorn: un quadrat ple per a l'emplenament, inserit en una franja que representa el contorn, amb un petit parell de fletxes per intercanviar-los. Com que es troba aquí i no només a la barra de control, podeu triar un color abans de triar una eina, i esdevindrà el que s'utilitzarà per dibuixar l'objecte següent. Feu clic a l'emplenament o a la franja per obrir les pestanyes de color, mostres i degradats.</p>
+  <table>
+    <thead><tr><th>Tecla</th><th>Acció</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>X</kbd></td><td>Mou el focus entre emplenament i contorn</td></tr>
+      <tr><td><kbd>⇧X</kbd></td><td>Intercanvia l'emplenament i el contorn</td></tr>
+      <tr><td><kbd>D</kbd></td><td>Torna al defecte: emplenament blanc, contorn negre</td></tr>
+      <tr><td><kbd>/</kbd></td><td>Estableix el costat actiu a cap</td></tr>
+    </tbody>
+  </table>
+
+  <h3 id="interface-rail-panels">Panells al costat de la barra</h3>
+  <p>Entre el control d'emplenament i contorn i les eines, la paleta ofereix una breu fila de botons de panells triats per a l'eina que esteu utilitzant: les eines de dibuix porten les mostres i els panells de contorn a mà, les eines de text porten els panells de caràcter i paràgraf, i així successivament. Aquests obren un sol panell just on ja és la vostra mà. Un botó més obre l'acoblador complet. En una finestra baixa la fila es plega en un únic botó Panells que llista les mateixes opcions, de manera que la paleta no supera mai la vora inferior.</p>
+
+  <h2 id="interface-control-bar">La barra de control</h2>
+  <p>La franja sota els menús canvia amb el que esteu fent. Nomena l'eina actual a la seva esquerra, i a la dreta mostra només els controls que poden actuar sobre la selecció actual: l'emplenament, el contorn i el gruix del contorn; les X, Y, A i H de la selecció; i les accions que tenen sentit, com ara alinear, les modalitats booleanes, ordre de superposició, agrupar, desagrupar i duplicar. Quan n'hi ha més del que hi cap, un darrer botó recull la resta en un menú, de manera que la barra no s'organitza mai mentre la feu servir.</p>
+  <p>Escriviu en qualsevol camp numèric i premeu <kbd>Retorn</kbd>, o deixeu el camp, per aplicar el valor; <kbd>↑</kbd> i <kbd>↓</kbd> el modifiquen, amb <kbd>⇧</kbd> per deu vegades el pas i <kbd>⌥</kbd> per un dècim. L'etiqueta petita al costat d'un camp és un regulador: arrossegueu-lo a l'esquerra o a la dreta per modificar el valor al tacte. Passeu el punter sobre el nom de l'eina per revelar les primeres opcions d'aquesta eina; feu clic al nom per obrir les seves opcions completes a sota la barra, amb tots els seus interruptors i números.</p>
+  <p>La barra de control està ancorada a la fila de pestanyes per defecte, però podeu arrossegar la seva nansa per fer-la flotar sobre el llenç, i fer doble clic a la nansa (o utilitzar el seu botó d'ancoratge) per tornar-la a posar. Al seu costat, una barra compacta pot aparèixer al costat d'un objecte seleccionat que porta només el seu emplenament, contorn i gruix, de manera que el color és just al costat de la feina en comptes de a l'altre costat de la finestra.</p>
+
+  <h2 id="interface-quick-bar">La barra ràpida</h2>
+  <p>Quan seleccioneu alguna cosa, una petita barra flota al seu costat amb els controls que feu servir més sovint, de manera que no heu d'anar fins a la vora de la finestra. Per a formes i camins conté emplenament i contorn; per al text conté emplenament, mida, negreta, cursiva i alineació. Roman fora de mentre arrossegueu i torna quan deixeu anar. Tot el que conté també és a la barra de control i als panells.</p>
+
+  <h2 id="interface-canvas">El llenç i el tauler</h2>
+  <p>El centre de la finestra és el llenç. Les taules són els rectangles blancs que contenen la feina que voleu conservar; el contorn gris és el tauler. El tauler forma part del document, de manera que un esbós, un retall o un color de prova aparcat allà es desa amb el fitxer, però quan exporteu una taula només el que dins del rectangle d'aquesta taula s'escriu.</p>
+
+  <h3 id="interface-pan-zoom">Desplaçament i zoom</h3>
+  <p>Mantingueu premut <kbd>Espai</kbd> per passar a l'eina Mà tot el temps que la manteniu premuda, després arrossegueu per desplaçar-vos; deixeu anar i la vostra eina torna. Arrossegar amb el botó central del ratolí també es desplaça. La rodeta es desplaça, i la rodeta amb <kbd>⌘</kbd> o <kbd>⌥</kbd> premuts fa zoom al voltant del punter.</p>
+  <table>
+    <thead><tr><th>Drecera</th><th>Zoom</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>⌘=</kbd> / <kbd>⌘-</kbd></td><td>Augmenta i redueix</td></tr>
+      <tr><td><kbd>⌘0</kbd></td><td>Ajusta la taula activa a la finestra</td></tr>
+      <tr><td><kbd>⌥⌘0</kbd></td><td>Ajusta totes les taules a la finestra</td></tr>
+      <tr><td><kbd>⌘1</kbd></td><td>Mida real</td></tr>
+    </tbody>
+  </table>
+  <p>Un control de zoom es troba sobre el llenç amb botons menys, més i ajusta i el percentatge actual; feu clic al percentatge per a les mateixes ordres d'ajustament i mida real que un menú.</p>
+
+  <h3 id="interface-rulers-guides">Regles i guies</h3>
+  <p><kbd>⌘R</kbd> mostra i amaga les regles, que mesuren en les unitats del document des de la cantonada superior esquerra de la taula activa i porten un marcador que segueix el punter. Arrossegueu fora d'una regla per estirar una guia sobre la feina, i deixeu anar una guia sobre una regla per desfer-vos'n. També podeu convertir un camí seleccionat en una guia amb Crea guies (<kbd>⌘5</kbd>) i convertir-la de nou amb Allibera guies (<kbd>⌥⌘5</kbd>). Mostra o amaga totes les guies amb <kbd>⌘;</kbd>. Les Guies intel·ligents (<kbd>⌘U</kbd>） mostren suggeriments d'alineació i mesura mentre dibuixeu i arrossegueu.</p>
+
+  <h3 id="interface-grid">La graella</h3>
+  <p>La graella es dibuixa per taula i s'estableix des de Visualitza › Graella o des del panell Graella. Mostra o amaga-la amb <kbd>⌘'</kbd> i activa o desactiva l'ajust amb <kbd>⇧⌘'</kbd>. Cada taula pot utilitzar un dels sis tipus de graella: Ortogonal, Isomètric, Hexagonal, Oblic, Proporció àurea i Perspectiva. Triar un tipus activa la graella perquè la pugueu veure immediatament. La graella es descriu a la seva pròpia pàgina.</p>
+
+  <h3 id="interface-history-strip">La franja d'historial</h3>
+  <p>Una columna de petites marques apareix en una cantonada del llenç quan moveu el punter prop d'aquesta: aquest és l'historial del document. Passeu el punter sobre una marca per nomenar aquest pas, feu clic a una per anar-hi directament, o premeu i llisqueu avall per fer avançar i retrocedir el document perquè pugueu veure un canvi anar i venir. El panell Historial a l'acoblador llista els mateixos passos com a text.</p>
+
+  <h2 id="interface-boards">Taules i franja de taules</h2>
+  <p>Les taules són el que Scissor anomena taules d'art. Cadascuna porta el seu nom sobre la seva cantonada superior esquerra, i la taula activa es dibuixa amb un contorn més marcat que la resta. Feu clic al nom d'una taula per agafar l'eina Taula amb aquesta taula activa, a punt per moure-la, redimensionar-la o canviar-li el nom. Si una taula té sangrada, es mostra al seu voltant com un rectangle puntejat vermell. Afegiu-ne una des de Crea › Taules › Nova taula, dibuixeu i remodelleu taules amb l'eina Taula (<kbd>⇧O</kbd>) i establiu la mida i el nom d'una taula a Opcions de taula. Reorganitza totes les taules les ordena en una fila.</p>
+  <p>Una franja de miniatures de taules es troba sobre el llenç, una petita vista prèvia per taula més un botó afegeix al final. Feu clic a una miniatura per activar aquesta taula i ajustar-la a la finestra; feu clic al nom de sota per saltar a aquesta taula i agafar l'eina Taula a punt per editar-la. El panell Taules a l'acoblador també les llista.</p>
+
+  <h2 id="interface-tabs">Pestanyes de documents</h2>
+  <p>Els documents oberts apareixen com a pestanyes a l'esquerra de la barra de control. Una pestanya mostra el nom del document, amb un punt al davant mentre té canvis no desats. Feu clic a una pestanya per passar a aquest document, o a la × per tancar-la; tancar un document amb feina no demana confirmació abans. Feu clic amb el botó central a una pestanya per tancar-la immediatament, i arrossegueu una pestanya sobre una altra per reordenar els documents oberts. Nou (<kbd>⌥⌘N</kbd>), Obre (<kbd>⌘O</kbd>) i Desa (<kbd>⌘S</kbd>) són al menú Fitxer, i Tanca és <kbd>⌥⌘W</kbd>.</p>
+  <p>Les pestanyes es troben a dalt per defecte. Per ancorar-les al costat en comptes d'això, activeu <strong>Visualitza &rsaquo; Pestanyes de document laterals</strong> (també a Preferències); la franja lateral es pot arrossegada més ampla o més estreta des de la seva vora dreta, i l'opció es recorda.</p>
+
+  <h2 id="interface-status-bar">La barra d'estat</h2>
+  <p>La línia al peu de la finestra informa, d'esquerra a dreta: un indicador de disponibilitat, el nom de l'eina actual, la mida de la selecció (cap selecció, un objecte o un recompte) i l'acció que <kbd>⌘Z</kbd> desfaria. És un lloc tranquil per confirmar el que heu agafat i què desfarà el proper desfer.</p>
+
+  <h2 id="interface-dock">L'acoblador de panells</h2>
+  <p>Els panells viuen a la columna de la dreta. En repòs el llenç té tota la finestra; demanant un panell l'acoblador llisca sobre el llenç, i tancant-lo retorna l'espai immediatament. El botó de panells a la dreta de la fila de pestanyes i la tecla Esc obren i tanquen l'acoblador; els menús Finestra i Espai de treball i la paleta de comandaments obren un panell específic.</p>
+  <figure class="shot">
+    <img src="img/editing.png" width="1900" height="1176" loading="lazy"
+         alt="Un document obert a Scissor amb feina a la taula i els panells Capes i Mostres oberts a l'acoblador." />
+    <figcaption>Un document en edició, amb els panells Capes i Mostres oberts a l'acoblador.</figcaption>
+  </figure>
+
+  <h3 id="interface-dock-groups">Els grups de panells ancorats</h3>
+  <p>Els panells s'apilen en grups, cada grup una columna de petites icones de pestanya al llarg de la seva vora. Poseu el punter sobre una pestanya per veure el nom del panell, i el panell obert es nomena sobre els seus continguts. Per defecte els grups recullen panells que tendeixen a usar-se junts:</p>
+  <ul>
+    <li><strong>Propietats, Capes, Taules, Graella</strong>: l'estructura del document.</li>
+    <li><strong>Color, Mostres, Degradat, Contorn</strong>: com es pinten les coses.</li>
+    <li><strong>Caràcter, Paràgraf, Glifs</strong>: text.</li>
+    <li><strong>Alínia, Formes combinades, Transforma, Pila de pintura, Transparència, 3D</strong>: modelat i disposició.</li>
+    <li><strong>Estils, Pinzells, Símbols, Motius</strong>: aparences i objectes reutilitzables.</li>
+    <li><strong>Navegador, Info, Info document, Historial, Accions</strong>: desplaçament i mesura.</li>
+    <li><strong>Actius, Variables, Selecció automàtica, Vetoritza, Atributs</strong>: la resta.</li>
+  </ul>
+
+  <h3 id="interface-rearranging">Reorganitzar panells</h3>
+  <p>El disseny és vostre per canviar. Arrossegueu una pestanya al llarg de la seva franja per reordenar-la, arrossegueu-la a la franja d'un altre grup per moure-la allà, o arrossegueu-la fora de l'acoblador per deixar-la flotant sobre el llenç. Arrossegueu la part buida d'una franja per aixecar un grup sencer, i deixeu-lo anar sobre l'acoblador per tornar-lo a posar; un espai entre grups accepta una pestanya deixada anar com un grup propi. Feu clic amb el botó dret a una pestanya per a les mateixes operacions des del menú, inclosa Tanca panell. La × a dalt d'una franja tanca aquest grup, i arrossegueu el divisor entre dos grups dona alçada a un i la treu a l'altre. Un grup flotant es pot redimensionar des de la seva cantonada.</p>
+
+  <h3 id="interface-gating">Panells que esperen alguna cosa a fer</h3>
+  <p>Un panell que no té res sobre el qual actuar en aquest moment no desapareix: la seva pestanya roman, només atenuada, i el seu cos mostra una línia que diu què espera, com ara seleccionar un objecte o triar l'eina Text. Perquè l'acoblador no es reorganitzi sota la vostra mà, aquesta espera es manté mentre el punter és dins l'acoblador i s'actualitza un cop el punter surt.</p>
+
+  <h3 id="interface-workspace">Obrir, amagar i restablir panells</h3>
+  <p>Obre un panell des del menú Espai de treball, on els sis més utilitzats es troben a dalt i la resta és a Més panells, o des del menú Finestra al marc clàssic. Molts panells tenen una drecera:</p>
+  <table>
+    <thead><tr><th>Panell</th><th>Drecera</th><th>Panell</th><th>Drecera</th></tr></thead>
+    <tbody>
+      <tr><td>Capes</td><td><kbd>F7</kbd></td><td>Color</td><td><kbd>F6</kbd></td></tr>
+      <tr><td>Pila de pintura</td><td><kbd>⇧F6</kbd></td><td>Info</td><td><kbd>F8</kbd></td></tr>
+      <tr><td>Alínia</td><td><kbd>⇧F7</kbd></td><td>Transforma</td><td><kbd>⇧F8</kbd></td></tr>
+      <tr><td>Contorn</td><td><kbd>⌘F10</kbd></td><td>Degradat</td><td><kbd>⌘F9</kbd></td></tr>
+      <tr><td>Formes combinades</td><td><kbd>⇧⌘F9</kbd></td><td>Transparència</td><td><kbd>⇧⌘F10</kbd></td></tr>
+      <tr><td>Estils gràfics</td><td><kbd>⇧F5</kbd></td><td>Pinzells</td><td><kbd>F5</kbd></td></tr>
+      <tr><td>Atributs</td><td><kbd>⌘F11</kbd></td><td>Símbols</td><td><kbd>⇧⌘F11</kbd></td></tr>
+      <tr><td>Caràcter</td><td><kbd>⌘T</kbd></td><td>Paràgraf</td><td><kbd>⌥⌘T</kbd></td></tr>
+      <tr><td>Glifs</td><td><kbd>⌥⇧F11</kbd></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+  <p>L'acoblador es pot eixamplar arrossegant la seva vora esquerra, des d'una amplada còmoda de dos camps per fila fins a molt més ampla. La vostra disposició i l'amplada que heu deixat a l'acoblador es recorden entre sessions. Quan l'acoblador està tancat, passar el punter a la vora dreta de la finestra el fa sobresortir, sempre que no hi hagi feina sota el punter. Per desfer tots els vostres canvis al disseny, trieu Restableix panells, que torna cada grup al seu punt de partida.</p>
+  <p><kbd>Tab</kbd> amaga la paleta d'eines, la barra de control, les pestanyes de documents, la barra d'estat, els panells i la resta de la interfície sobre el llenç de manera que només quedin la feina i la barra de menús; premeu-la de nou per tornar-ho tot.</p>
+
+  <h2 id="interface-language">Idioma</h2>
+  <p>Scissor parla anglès, alemany (Deutsch), espanyol (Español), francès (Français), italià (Italiano), català (Català), txec (Čeština), danès (Dansk), noruec (Norsk), polonès (Polski), eslovac (Slovenčina), finès (Suomi) i suec (Svenska). A la primera obertura, utilitza l'idioma del navegador si és un d'aquests, i l'anglès en cas contrari. Per triar-ne un altre, feu clic al botó del món a la barra de menús o a la pantalla de benvinguda, o obriu <strong>Edita › Preferències</strong> (<kbd>&#8984;K</kbd>), aneu a <strong>Interfície</strong> i trieu-ne un sota <strong>Idioma</strong>. Scissor canvia en recarregar i recorda l'opció. Menús, panells, diàlegs, indicadors de funció, missatges i Novetats el segueixen tots, i els números es mostren en format local, com 12,5 a l'alemany, tot i que podeu escriure tant la coma com el punte. Els vostres documents no es veuen afectats: els noms de capes i el text de la vostra feina romanen com els heu escrits. Quan la interfície no és en anglès, els Termes d'ús es mostren traduïts per comoditat, i la versió en anglès és la que s'aplica.</p>
+
+  <h2 id="interface-appearance">Clar i fosc</h2>
+  <p>Scissor segueix la configuració del sistema per a clar i fosc. Per fixar-lo d'una manera, trieu Visualitza › Aparença i trieu Sistema, Clar o Fosc. L'opció es recorda i s'estén al llenç a més de la interfície: el tauler, les regles i les etiquetes de les taules es dibuixen segons el tema en què us trobeu.</p>
