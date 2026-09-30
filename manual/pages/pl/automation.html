@@ -1,0 +1,39 @@
+<p class="lede">Trzy narzędzia w Scissor wykonują za Ciebie powtarzalną pracę: <strong>Akcje</strong> nagrywają sekwencję poleceń i odtwarzają ją, <strong>Zmienne</strong> zamieniają tekst i widoczność z tabeli danych, dzięki czemu jeden projekt staje się wieloma, a <strong>Skrypty</strong> napędzają cały edytor z JavaScriptu. Żadne z nich nie potrzebuje konta ani serwera — jak reszta Scissor działają na Twoim własnym komputerze.</p>
+
+<h2 id="automation-actions">Akcje: nagraj raz, odtwórz wszędzie</h2>
+<p>Panel <strong>Akcje</strong> (Okno &rsaquo; Akcje) nagrywa to, co robisz, i odtwarza to na nowym zaznaczeniu. Naciśnij <strong>Nagraj</strong>, uruchom polecenia, które chcesz przechwycić — wyrównaj, przesuń, dodaj cień, cokolwiek jest sekwencją — a następnie naciśnij <strong>Zatrzymaj</strong> i nadaj akcji nazwę. Dołącza do listy, pokazując, ile kroków trzyma.</p>
+<p>Kliknij akcję, aby ją <strong>odtworzyć</strong> na tym, co jest teraz zaznaczone; <kbd>&#8997;</kbd>-kliknij ją, aby ją usunąć. Ponieważ akcja to tylko lista poleceń, powtarza dokładną rutynę na wielu obiektach bez klikania przez nią za każdym razem.</p>
+
+<h2 id="automation-variables">Zmienne: jeden projekt, wiele wersji</h2>
+<p>Panel <strong>Zmienne</strong> (Okno &rsaquo; Zmienne) zamienia stały projekt w szablon napędzany danymi. Dwie rzeczy na obiekcie mogą być dynamiczne:</p>
+<dl>
+  <dt>Uczyń tekst dynamicznym</dt><dd>Wiąże słowa obiektu tekstu ze zmienną, dzięki czemu różne zestawy danych mogą wpisać inny tekst w to samo miejsce.</dd>
+  <dt>Uczyń widoczność dynamiczną</dt><dd>Wiąże to, czy obiekt pokazuje się, dzięki czemu zestaw może włączać lub wyłączać części projektu.</dd>
+</dl>
+<p><strong>Odwiąż</strong> czyni powiązany obiekt stałym z powrotem.</p>
+
+<h3 id="automation-datasets">Zestawy danych</h3>
+<p><strong>Zestaw danych</strong> to jeden rząd wartości dla tych zmiennych — jedna odznaka, jedna kartka, jedna ramka. <strong>Przechwyć</strong> zapisuje bieżące wartości jako nowy zestaw; strzałki przechodzą z jednego zestawu do następnego, a projekt aktualizuje się, aby pasować. <strong>Importuj CSV&hellip;</strong> odczytuje całą partię naraz — jedna kolumna na zmienną, jeden rząd na zestaw — a <strong>Eksportuj CSV</strong> zapisuje zestawy z powrotę do edycji w arkuszu kalkulacyjnym.</p>
+
+<h3 id="automation-batch">Eksportowanie każdego zestawu naraz</h3>
+<p><strong>Eksportuj zestawy danych&hellip;</strong> renderuje aktywną planszę raz dla każdego zestawu danych i zapisuje je wszystkie w jednym przebiegu, jako PNG, JPEG, WebP lub SVG. Arkusz odznak, zestaw zlokalizowanych banerów lub seria kart społecznościowych wychodzi jako porządna partia plików, każdy z wypełnionymi własnymi danymi.</p>
+
+<h2 id="automation-scripts">Skrypty: napędzaj Scissor z JavaScriptu</h2>
+<p>Dla czegoś, czego menu nie może wyrazić, skrypt może. <strong>Plik &rsaquo; Skrypty &rsaquo; Konsola skryptów&hellip;</strong> otwiera edytor, w którym piszesz JavaScript i uruchamiasz go na otwartym dokumencie; <strong>Inny skrypt&hellip;</strong> (<kbd>&#8984;F12</kbd>) uruchamia plik <code>.js</code> z dysku. Skrypt działa w Web Worker, z dala od strony, więc nie może dotknąć interfejsu ani Twoich plików, z wyjątkiem obiektu <code>scissor</code>, który dostaje — każde wywołanie jest wykonywane na silniku i odpowiadane z powrotem.</p>
+<p>Obiekt <code>scissor</code> obejmuje wspólne obszary:</p>
+<dl>
+  <dt>Twórz kształty i tekst</dt><dd><code>scissor.rect</code>, <code>roundedRect</code>, <code>ellipse</code>, <code>polygon</code>, <code>star</code>, <code>path</code> i <code>text</code> rysują grafikę; każde przyjmuje pozycję i rozmiar oraz obiekt opcji dla <code>fill</code>, <code>stroke</code> i <code>strokeWidth</code> (kolory to dowolne kolory CSS).</dd>
+  <dt>Odczytaj dokument</dt><dd><code>await scissor.document()</code> zwraca aplikację, zaznaczenie, warstwy i plansze tak, jak je widzą panele; <code>scissor.selection()</code> zwraca tylko to, co jest zaznaczone.</dd>
+  <dt>Działaj na nim</dt><dd><code>scissor.select</code>, <code>group</code> i <code>undo</code> oraz <code>scissor.run(command)</code> dla dowolnego polecenia silnika — te same polecenia, które wysyłają menu.</dd>
+  <dt>Powiedz z powrotem</dt><dd><code>scissor.log</code> drukuje do konsoli; <code>scissor.alert</code> pokazuje komunikat.</dd>
+</dl>
+<p>Krótki przykład — pierścień kolorowych kropek i podpis:</p>
+<pre><code>const doc = await scissor.document();
+scissor.log('Plansze:', doc.artboards.length);
+for (let i = 0; i &lt; 12; i++) {
+  const a = (i / 12) * Math.PI * 2;
+  await scissor.ellipse(300 + Math.cos(a) * 120, 260 + Math.sin(a) * 120, 36, 36,
+    { fill: `hsl(${i * 30} 80% 60%)` });
+}
+await scissor.text(230, 270, 'Witaj, Scissor', { size: 24 });</code></pre>
+<p>Konsola skryptów trzyma ostatni uruchomiony kod, więc działający skrypt jest tam, gdy do niego wrócisz.</p>

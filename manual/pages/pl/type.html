@@ -1,0 +1,110 @@
+<p class="lede">Tekst w Scissor pozostaje na żywo. Możesz ponownie edytować słowa, krój pisma i odstępy w dowolnym momencie, a tekst jest rysowany prosto na płótnie w trakcie pisania, więc to, co edytujesz, to, co drukuje się i eksportuje.</p>
+
+<p>Skróty poniżej zapisane są w formacie macOS. W systemach Windows odczytuj <kbd>&#8984;</kbd> jako <kbd>Ctrl</kbd>, <kbd>&#8997;</kbd> jako <kbd>Alt</kbd> i <kbd>&#8679;</kbd> jako <kbd>Shift</kbd>.</p>
+
+<h2 id="type-tools">Narzędzia tekstu</h2>
+<p>Narzędzia tekstu dzielą jeden slot w pasku narzędzi. Wybierz slot i przytrzymaj, aby wybrać między nimi, a następnie pracuj na płótnie.</p>
+<table>
+  <thead><tr><th>Narzędzie</th><th>Skrót</th><th>Co robi</th></tr></thead>
+  <tbody>
+    <tr><td>Narzędzie Tekst</td><td><kbd>T</kbd></td><td>Kliknij dla tekstu punktowego, przeciągnij dla prostokątnej ramki tekstu obszarowego</td></tr>
+    <tr><td>Narzędzie Tekst obszarowy</td><td></td><td>Przeciągnij ramkę i wpisz do niej tekst</td></tr>
+    <tr><td>Narzędzie Tekst na ścieżce</td><td></td><td>Kliknij ścieżkę, aby uruchomić tekst wzdłuż niej</td></tr>
+    <tr><td>Narzędzie Tekst pionowy</td><td></td><td>Ustawia proste znaki w kolumnach</td></tr>
+    <tr><td>Narzędzie Edycja glifu</td><td><kbd>&#8679;T</kbd></td><td>Przesuwa, zmienia rozmiar i obraca pojedynczy znak naraz</td></tr>
+  </tbody>
+</table>
+<p>Aby edytować tekst już na stronie, kliknij go dowolnym z narzędzi tekstu, z wyjątkiem Edycji glifu, aby umieścić w nim kursor, lub kliknij dwukrotnie narzędziem Zaznacz (<kbd>V</kbd>). Naciśnij <kbd>Escape</kbd> lub kliknij poza, aby zatrzymać edycję. Z zwykłym narzędziem Tekst kliknięcie otwartej ścieżki dołącza tekst do tej ścieżki, a nie zaczyna nowego bloku, więc nie zawsze musisz sięgać po dedykowane narzędzie Tekst na ścieżce.</p>
+
+<h2 id="type-kinds">Tekst punktowy, obszarowy i na ścieżce</h2>
+<p>Tekst może siedzieć w dokumencie na trzy sposoby, a różnica polega na tym, jak mierzone są linie i gdzie się łamą. Wszystkie trzy pozostają edytowalne, przyjmują te same ustawienia Znaku i Akapitu i mogą być później zamienione w kontury.</p>
+
+<h3 id="type-point">Tekst punktowy</h3>
+<p>Kliknij raz narzędziem Tekst i pisz. Tekst rośnie z tego pojedynczego punktu i łamie się tylko tam, gdzie naciśniesz <kbd>Return</kbd>: nie ma ramki, do której się zawija. Sięgaj po tekst punktowy dla nagłówków, etykiet, kilku słów tekstu wizualnego lub czegokolwiek, co będziesz pozycjonować oko, a nie wlewać do kolumny. Jego wcięcia i odstępy akapitowe nie mają czego mierzyć, więc te kontrolki nie mają wpływu na tekst punktowy; wyrównanie jest brane z kotwicy, którą kliknąłeś.</p>
+
+<h3 id="type-area">Tekst obszarowy</h3>
+<p>Przeciągnij prostokąt narzędziem Tekst lub narzędziem Tekst obszarowy, a tekst zawija się do ramki, łamąc linie automatycznie na prawej krawędzi. Użyj tekstu obszarowego do tekstu głównego, podpisów lub dowolnego biegu tekstu, który musi pozostać w ustawionej szerokości. Gdy jest więcej tekstu, niż ramka może pomieścić, nadmiar jest ukrywany, a ramka jest oznaczana jako przepełniona; powiększ ramkę, zmniejsz tekst lub prześlij nadmiar do innej ramki (patrz poniżej). Wcięcia, wcięcie pierwszego wiersza, odstępy przed i po oraz dzielenie wyrazów mają zastosowanie do tekstu obszarowego.</p>
+
+<h3 id="type-on-a-path">Tekst na ścieżce</h3>
+<p>Kliknij ścieżkę narzędziem Tekst na ścieżce. Ścieżka staje się linią bazową i przestaje być grafiką samą w sobie, więc nie jest już wypełniana ani obrysowana. Sięgaj po to, aby uruchomić etykietę wokół odznaki, wzdłuż krzywej lub ponad kształtem. Zaznacz wynik i pojawią się trzy nawiasy: jeden na początku, jeden na końcu i jeden w środku. Przeciągnij nawias początku lub końca, aby przesunąć, gdzie tekst zaczyna i kończy się na ścieżce, przeciągnij środkowy nawias, aby przesunąć cały bieg wzdłuż, i przeciągnij środkowy nawias na drugą stronę ścieżki, aby odwrócić tekst. Tekst na ścieżce nie przyjmuje łamań linii, więc <kbd>Return</kbd> nie robi nic podczas jego edycji. Przekształć podstawową ścieżkę, a tekst podąża za jej nowymi zagięciami.</p>
+<figure class="shot">
+  <img src="img/type-on-path.png" width="1700" height="798" loading="lazy"
+       alt="Słowa 'Tekst płynie wzdłuż każdej narysowanej ścieżki' podążające za zagięciami falistej ścieżki w Scissor." />
+  <figcaption>Tekst ustawiony na falistej ścieżce. Przekształć ścieżkę, a tekst podąża za jej zagięciami; linia bazowa jest tu pokazana przerywaną.</figcaption>
+</figure>
+
+<h2 id="type-character">Panel Znak</h2>
+<p>Panel Znak (<kbd>&#8984;T</kbd> lub <strong>Okno &gt; Tekst &gt; Znak</strong>) trzyma wszystko, co dotyczy samych liter. Z zaznaczonym obiektem tekstu jego ustawienia obejmują cały obiekt: zmień krój pisma lub tracking, a każdy znak podąża. Podczas pisania krój, grubość, kursywa i rozmiar stosują się tylko do zaznaczonych znaków (zobacz <a href="#type-mixed">Mieszane style w jednym tekście</a>). Panel wyszarza się, dopóki nie edytujesz tekstu lub nie masz zaznaczonego obiektu tekstu.</p>
+
+<h3 id="type-font">Krój, grubość, styl i rozmiar</h3>
+<p>Menu kroju jest przeszukiwalne i trzyma ostatnio używane rodziny na górze. Wymienia kroje, które Twoja przeglądarka faktycznie może rysować, odczytane z systemu, gdzie zgłosi je, i w przeciwnym razie sprawdzone z zestawu typowych rodzin, więc lista pasuje do tego, co będzie renderowane, a nie do stałego katalogu.</p>
+<p>Menu grubości oferuje Light, Regular, Medium, Semibold, Bold i Heavy, ale tylko te grubości, które wybrana rodzina faktycznie ma, są wybiralne: pozostałe są wyszarzone. Przycisk kursywy obok przełącza pochylony styl w i wyłącz. Rozmiar jest ustawiany w pikselach z pola Rozmiar.</p>
+
+<h3 id="type-mixed">Mieszane style w jednym tekście</h3>
+<p>Jeden tekst może mieszać rozmiary, kolory, grubości i kursywę. Podczas pisania wybierz znaki i zmień je z szybkiego paska obok tekstu, paska opcji lub panelu Kolor. Tylko zaznaczone znaki się zmieniają, a reszta tekstu zachowuje własny styl. Gdy nic nie jest zaznaczone, zmiana stosuje się do całego tekstu jak zwykle. Style poruszają się ze swoimi znakami w miarę dalszego pisania i są zachowywane w eksportach SVG i PDF.</p>
+
+<h3 id="type-metrics">Interlinia, tracking i kerning</h3>
+<dl>
+  <dt>Interlinia</dt>
+  <dd>Odległość od jednej linii bazowej do następnej, w pikselach. Zostaw ją na 0 dla automatycznej interlinii, która stanowi 120% rozmiaru. Ustaw ją większą, aby rozerwać linie, lub mniejszą, aby zaciszyć nagłówek.</dd>
+  <dt>Tracking</dt>
+  <dd>Równomierny odstęp dodawany do lub odejmowany od każdego znaku, mierzony w tysięcznych em (więc skaluje się z rozmiarem). Dodatnie wartości rozluźniają tekst, ujemne zaciskają. Sięgaj po tracking, aby dopasować linię do szerokości lub rozłożyć kapitaliki.</dd>
+  <dt>Kerning</dt>
+  <dd>Własne odstępy pary-pary pomiędzy konkretnymi literami, takie jak przerwa pod wielkim T. Jest domyślnie włączony, na przycisku Kerning w rzędu OpenType (oznaczonym AV). Wyłącz go, aby zobaczyć surowe metryki kroju.</dd>
+</dl>
+
+<h3 id="type-align">Wyrównanie</h3>
+<p>Panel Znak ma cztery przyciski wyrównania: lewe, środkowe, prawe i wyjustowane. Lewe i prawe są względem kierunku czytania, więc oznaczają początek i koniec: tekst od prawej do lewej ustawiony na lewo wyrównuje się do wizualnej prawej. Justowanie rozciąga każdą linię, aby wypełnić miarę, więc zmienia coś tylko tam, gdzie linie się zawijają, co oznacza tekst obszarowy i tekst na ścieżce, a nie jednoliniowy tekst punktowy. Dla bardziej szczegółowych kontrolek justowania (jak ustawiany jest ostatni wiersz) użyj panelu Akapit.</p>
+
+<h3 id="type-opentype">Funkcje OpenType i kapitaliki</h3>
+<p>Pod nagłówkiem <strong>OpenType</strong> znajduje się rząd przycisków, z których każdy przełącza jedną funkcję zaznaczonego tekstu w i wyłącz:</p>
+<table>
+  <thead><tr><th>Przycisk</th><th>Funkcja</th></tr></thead>
+  <tbody>
+    <tr><td>fi</td><td>Standardowe ligatury (domyślnie włączone)</td></tr>
+    <tr><td>st</td><td>Dyskrecjonalne ligatury</td></tr>
+    <tr><td>TT</td><td>Wszystkie wielkie litery</td></tr>
+    <tr><td>T&#7472;</td><td>Kapitaliki</td></tr>
+    <tr><td>T&sup1;</td><td>Indeks górny</td></tr>
+    <tr><td>T&#8321;</td><td>Indeks dolny</td></tr>
+    <tr><td>&frac12;</td><td>Ułamki</td></tr>
+    <tr><td>1&#738;&#7511;</td><td>Liczby porządkowe</td></tr>
+    <tr><td>&#119964;</td><td>Swash</td></tr>
+    <tr><td>AV</td><td>Kerning (domyślnie włączony)</td></tr>
+  </tbody>
+</table>
+<p>Wszystkie wielkie litery rysują każdą literę jako wielką bez zmiany bazowego tekstu, więc nadal jest małą literą, gdy go edytujesz. Kapitaliki proszą krój o jego formy małych wielkich liter. Indeks górny i dolny rysują dotknięte znaki mniejszymi i przesuwają je z linii bazowej, dla znaczników przypisów, końcówek liczb porządkowych lub wzorów chemicznych.</p>
+<p>Poniżej przycisków menu stylu cyfr wybiera, jak ustawiane są liczby: Domyślny, Tabular Lining, Proportional Oldstyle, Proportional Lining lub Tabular Oldstyle. Cyfry tabularne mają wszystkie tę samą szerokość, więc kolumny liczb wyrównują się; cyfry oldstyle mają wzniesienia i opuszczenia, które lepiej siedzą w biegnącym tekście.</p>
+<p>Nie każdą funkcję można podglądać na płótnie. Ligatury włączone lub wyłączone, kerning, wielkie litery, kapitaliki i indeksy górne i dolne są rysowane podczas edycji. Dyskrecjonalne ligatury, style cyfr, ułamki, liczby porządkowe i swash są zapisywane na tekście i wpisywane do eksportowanego <code>.svg</code> jako ustawienia funkcji kroju, ale płótno ich nie pokazuje, więc traktuj te jako ustawienia czasu eksportu.</p>
+
+<h2 id="type-paragraph">Panel Akapit</h2>
+<p>Panel Akapit (<kbd>&#8997;&#8984;T</kbd> lub <strong>Okno &gt; Tekst &gt; Akapit</strong>) kontroluje, jak ustawiane są całe akapity. Jak w przypadku ustawień znaków, te stosują się do każdego akapitu obiektu tekstu.</p>
+<p>Siedem przycisków wyrównania biegnie wzdłuż góry. Pierwsze trzy to zwykłe lewe, środkowe i prawe. Następne trzy justują treść akapitu i ustawiają tylko ostatni wiersz, wyrównany lewy, środkowy lub prawy. Ostatni justuje każdą linię, w tym ostatnią, rozciągając ją do pełnej miary. Justowanie potrzebuje miejsca do zawijania, więc działa w tekście obszarowym, a nie w punktowym.</p>
+<p>Poniżej przycisków wyrównania znajdują się wcięcia: <strong>Lewe</strong> i <strong>Prawe</strong> wciągają cały akapit z boków ramki, a <strong>Pierwsza</strong> wciąga tylko pierwszy wiersz. Ujemne wcięcie pierwszego wiersza wysuwa pierwszy wiersz poza pozostałe, co jest sposobem na wcięcie wiszące. Pola <strong>Przed</strong> i <strong>Po</strong> dodają miejsce nad i pod każdym akapitem, czystszy sposób oddzielania akapitów niż pusty wiersz. Przełącznik <strong>Dziel wyrazy</strong> pozwala długim wyrazom łamać się między liniami, aby wyrównać prawą krawędź. Wcięcia i odstępy stosują się do tekstu obszarowego; tekst punktowy jest ustawiany z własnej kotwicy.</p>
+
+<h2 id="type-glyphs">Panel Glify</h2>
+<p>Panel Glify (<strong>Tekst &gt; Glify</strong>, <kbd>&#8997;&#8679;F11</kbd>) wymienia znaki bieżącego kroju według zestawu, od podstawowego łacińskiego przez greckie, cyrylickie, hebrajskie, arabskie, interpunkcję, waluty, strzałki i inne, i trzyma ostatnio używane na górze. Sięgaj po niego, aby wstawić znak, którego Twoja klawiatura nie napisej, taką jak strzałka, znak waluty lub litera z akcentem. Kliknij dwukrotnie glif, aby wpisać go w kursorze tekstu. Gdy nie ma kursora w żadnym tekście, glif jest kopiowany do schowka, dzięki czemu możesz go wkleić w innym miejscu.</p>
+
+<h2 id="type-orientation">Tekst pionowy i od prawej do lewej</h2>
+<p>Scissor może ustawiać tekst w dół strony, a nie tylko w poprzek, i może układać pisma czytane od prawej do lewej. Oba działają w tekście punktowym, obszarowym i na ścieżce, a edytor na płótnie podąża za tym samym kierunkiem co gotowa grafika.</p>
+
+<h3 id="type-vertical">Tekst pionowy</h3>
+<p>Narzędzie Tekst pionowy ustawia proste znaki, które układają się w dół, z każdą nową linią tworzącą kolumnę po lewej stronie ostatniej. W pionowej ramie obszarowej kolumna zawija się do nowej, gdy osiągnie dół. Aby przełączyć już ustawiony tekst między poziomym a pionowym, wybierz <strong>Tekst &gt; Orientacja tekstu &gt; Pozioma</strong> lub <strong>Pionowa</strong>.</p>
+
+<h3 id="type-rtl">Od prawej do lewej i arabski</h3>
+<p>Menu kierunku panelu Znak oferuje Auto, Od lewej do prawej i Od prawej do lewej. W trybie Auto kierunek jest odczytywany z samego tekstu, z jego pierwszego silnego znaku, dzięki czemu arabski lub hebrajski płynie od prawej do lewej bez Twojego ustawiania czegokolwiek. Litery arabskie przyjmują swoje połączone formy, a bieg łacińskich słów wewnątrz linii od prawej do lewej zachowuje własną kolejność od lewej do prawej. Ustaw menu na Od lewej do prawej lub Od prawej do lewej, gdy chcesz wymusić kierunek, zamiast pozwolić mu być wykrytym, na przykład dla linii zaczynającej się od liczby lub interpunkcji.</p>
+
+<h2 id="type-touch">Edycja glifu</h2>
+<p>Narzędzie Edycja glifu (<kbd>&#8679;T</kbd>) przesuwa, skaluje i obraca pojedynczy znak naraz, pozostawiając tekst w pełni edytowalnym. Sięgaj po niego, aby popchnąć pojedynczą literę dla efektu bez rozbijania słowa na kontury. Wybierz narzędzie i kliknij znak: pojawi się ramka wokół tego jednego znaku z gałką w każdym rogu, jedną po prawej stronie, jedną u dołu i jedną unoszącą się nad. Przeciągnij róg, aby skalować w obu kierunkach, gałkę boczną tylko dla szerokości, gałkę dolną tylko dla wysokości i górną gałkę, aby obrócić znak. Przytrzymaj <kbd>&#8679;</kbd> podczas przeciągania rogu, aby zachować proporcje, lub podczas obracania, aby przyciągnąć kąt. <kbd>Backspace</kbd> lub <kbd>Delete</kbd> odkłada znak z powrotem tam, gdzie go ustawił tekst, a <kbd>Escape</kbd> upuszcza zaznaczenie. Ponieważ tekst przez cały czas jest tekstem, możesz kontynuować edycję słów wokół przesuniętego znaku.</p>
+
+<h2 id="type-flow">Przepływ i opływanie tekstem</h2>
+<p>Dwie funkcje pozwalają tekstu dzielić miejsce z resztą układu: przepływ przepuszcza jedną historię przez kilka ramek, a opływanie tekstem odsuwa tekst od obiektu, który zachodzi.</p>
+
+<h3 id="type-threading">Tekst przepływowy</h3>
+<p>Zaznacz dwa lub więcej obiektów tekstu obszarowego i wybierz <strong>Tekst &gt; Tekst przepływowy &gt; Utwórz</strong>. Ich tekst jest łączony w jedną historię, która płynie z ramki do ramki w kolejności od tyłu do przodu i jest zawsze edytowana z pierwszej ramki. Użyj przepływu, aby przepuścić artykuł przez kolumny lub strony: w miarę dodawania lub usuwania tekstu, przepływa on przez łańcuch. Każda ramka pokazuje port w swoim lewym górnym i prawym dolnym rogu, z linią rysowaną do ramki, w której tekst kontynuuje. Czerwony plus w miejscu portu wyjściowego oznacza, że jest więcej tekstu, niż ramka może pomieścić. <strong>Zwolnij zaznaczenie</strong> wyciąga zaznaczone ramki z ich wątku, a <strong>Usuń przepływ</strong> przerywa cały wątek, przy czym każda ramka zachowuje tekst, który pokazywała.</p>
+
+<h3 id="type-wrap">Opływanie tekstem</h3>
+<p>Aby odsunąć tekst od kształtu, zaznacz kształt i wybierz <strong>Obiekt &gt; Opływanie tekstem &gt; Utwórz</strong>. Tekst obszarowy siedzący pod obiektem płynie wokół niego. Opływanie podąża za konturem obiektu, a nie jego ramką ograniczającą, więc tekst może przylegać do koła lub nieregularnej sylwetki. <strong>Opcje opływania tekstem&#8230;</strong> ustawia odstęp między obiektem a tekstem w pikselach i może odwrócić opływanie, aby tekst biegł wewnątrz kształtu, a nie wokół niego. <strong>Zwolnij</strong> usuwa opływanie.</p>
+
+<h2 id="type-outlines">Konwersja tekstu na kontury</h2>
+<p>Zaznacz tekst i wybierz <strong>Tekst &gt; Utwórz kontury</strong> (<kbd>&#8679;&#8984;O</kbd>), aby zamienić go w ścieżki. Sięgaj po to, gdy musisz ręcznie przekształcić kształty liter, gwarantują, że tekst będzie wyglądał identycznie na maszynie bez tego kroju, lub użyć liter jako kształtu do połączenia z inną grafiką. Kształty liter są śledzone z własnych glifów kroju w wysokiej rozdzielczości, z dopasowaniem zostawiającym prawdziwe rogi ostre, jednocześnie wygładzającym krzywe, a wynik zachowuje wypełnienie, obrys, nazwę, krycie i tryb mieszania tekstu. Słowa nie są już edytowalne jako tekst, więc zachowaj kopię, jeśli możesz chcieć je zmienić, lub cofnij za pomocą <kbd>&#8984;Z</kbd>.</p>

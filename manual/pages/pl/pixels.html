@@ -1,0 +1,120 @@
+<p class="lede">Dokument Scissor może zawierać malowane piksele obok swoich rysowanych ścieżek i tekstu, dzięki czemu pojedynczy plik może nieść miękką pędzlową teksturę, fotografię i ostre logo razem. Ta strona obejmuje, czym jest warstwa pikselowa, jak na niej malować i jak zachowuje się jako obiekt w dokumencie.</p>
+
+<h2 id="pixels-vector-vs-raster">Piksele kontra grafika wektorowa</h2>
+<p>Dokument Scissor trzyma dwa rodzaje grafiki obok siebie. Ścieżki i tekst są <em>rysowane</em>: pozostają ostre w dowolnym rozmiarze, ponieważ są opisane swoim kształtem, i Scissor rysuje je ponownie za każdym razem, gdy powiększasz lub skalujesz. <strong>Warstwa pikselowa</strong> jest <em>malowana</em>: to siatka kolorowych kropek, jak fotografia lub obraz pędzla, a powiększanie jej powiększa te kropki zamiast dodawać szczegóły. Jeden dokument może zawierać tyle każdego, ile chcesz, w dowolnej kolejności, i układają się w panelu Warstwy razem.</p>
+<p>Sięgaj po warstwę pikselową, gdy sam kształt nie wystarczy: ręcznie malowany cień, szorstka tekstura za czystym tekstem, plama koloru, która nie musi być edytowalną ścieżką, lub retusz na umieszczonym zdjęciu. Trzymaj logo, diagramy i wszystko, co będziesz później skalować, jako wektory, i używaj pikseli dla części, które chcą wyglądać jak farba.</p>
+<p>Umieszczona fotografia to powiązana, ale osobna rzecz. <strong>Plik &gt; Umieść&hellip;</strong> (<kbd>&#8679;&#8984;P</kbd>) wprowadza istniejący obraz do dokumentu jako osadzony obraz; warstwa pikselowa to powierzchnia, na której malujesz od zera wewnątrz Scissor. Obie są zbudowane z pikseli i obie mogą być próbkowane pędzlem, ale tylko warstwa pikselowa przyjmuje pociągnięcia pędzla.</p>
+
+<h2 id="pixels-new">Tworzenie warstwy pikselowej</h2>
+<p><strong>Obiekt &gt; Warstwa pikselowa &gt; Nowa warstwa pikselowa</strong> dodaje pustą powierzchnię pokrywającą aktywną planszę. Nie musisz jednak tworzyć jej najpierw: wybierz Pędzel i maluj, a Scissor tworzy warstwę dla Ciebie w momencie, gdy pierwsze pociągnięcie ląduje. W obu przypadkach warstwa mapuje się na planszę, dzięki czemu piksele wyrównują się z planszą niezależnie od rozdzielczości, w której zostały wykonane.</p>
+<p>Ta rozdzielczość pochodzi z ustawienia <strong>Efekty rastrowe</strong> w <strong>Plik &gt; Ustawienia dokumentu&hellip;</strong> (<kbd>&#8997;&#8984;P</kbd>): Ekran (72&nbsp;ppi), Średnia (150&nbsp;ppi) lub Wysoka (300&nbsp;ppi). Wyższe ustawienie daje nowej warstwie pikselowej więcej kropek na punkt, dzięki czemu praca pędzla pozostaje gładka, gdy element jest drukowany lub wyświetlany duży. Ustaw to przed stworzeniem warstwy, ponieważ liczba pikseli jest ustalona przy tworzeniu powierzchni.</p>
+<p>W nowoczesnej powłoce możesz również dodać warstwę z paska opcji narzędzia: z aktywnym Pędzlem lub Gumką pikselową, przycisk <strong>Nowa warstwa pikselowa</strong> siedzi na końcu paska.</p>
+<p><strong>Umieszczenie obrazu tworzy również warstwę pikselową.</strong> Upuść obraz na płótno, użyj <strong>Plik &gt; Umieść&hellip;</strong> lub wklej go ze schowka, i wchodzi jako edytowalna warstwa pikselowa we własnym rozmiarze, a nie zablokowany obraz — dzięki czemu możesz na nim malować, maskować, dostrajać i filtrować od razu. Otwarcie obrazu za pomocą <strong>Plik &gt; Otwórz</strong> tworzy nowy dokument, jedną planszę w rozmiarze obrazu, wypełnioną warstwą pikselową. Bardzo duże zdjęcia są pomniejszane, aby zmieścić się w budżecie pikseli. <strong>SVG</strong> pozostaje wektorowe — jego ścieżki pozostają edytowalne — więc tylko obrazy bitmapowe (PNG, JPEG, GIF, WebP i podobne) stają się warstwami pikselowymi.</p>
+<p>Warstwowy plik <strong><code>.psd</code></strong> wchodzi bogatszy: otwarcie jednego odbudowuje jego stos jako osobne warstwy pikselowe, zachowując <strong>maskę</strong> każdej warstwy, i przenosi tekst, kształty i efekty warstw, dzięki czemu plik ląduje blisko tego, jak wyglądał tam, gdzie był tworzony, a nie jako jeden płaski obraz. To najpełniejsza droga do pracy pikselowej, a wszystko na tej stronie następnie stosuje się do przybywających warstw.</p>
+
+<h2 id="pixels-painting">Malowanie</h2>
+
+<h3 id="pixels-brush">Pędzel i Gumka pikselowa</h3>
+<p>Dwa narzędzia działają na warstwach pikselowych.</p>
+<table>
+  <thead><tr><th>Narzędzie</th><th>Gdzie mieszka</th><th>Co robi</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Pędzel</strong></td><td>Dzieli slot z Pędzlem malującym (<kbd>B</kbd>) i Pędzlem wypełniającym (<kbd>&#8679;B</kbd>)</td><td>Kładzie kolor, który staje się częścią obrazu</td></tr>
+    <tr><td><strong>Gumka pikselowa</strong></td><td>Dzieli slot z Gumką (<kbd>&#8679;E</kbd>), Nożycami i Nożem</td><td>Wymazuje farbę, dzięki czemu to, co pod spodem, pokazuje się</td></tr>
+  </tbody>
+</table>
+<p>Aby dotrzeć do któregokolwiek, naciśnij i przytrzymaj widoczne narzędzie w pasku narzędzi lub kliknij je prawym przyciskiem myszy i wybierz narzędzie pikselowe z listy. Nie myl ich z ich wektorowymi sąsiadami: Pędzel malujący rysuje ścieżkę, którą możesz później przekształcić, podczas gdy Pędzel maluje piksele, których nie można ponownie wskazać. Oba narzędzia pikselowe pokazują pierścień na płótnie w rozmiarze, w którym będą malować, i oba używają wskaźnika celownika.</p>
+<p>Przeciągnij, aby malować lub wymazywać. Ślad podąża za wskaźnikiem bez przerw, jak szybko byś się nie poruszał, ponieważ Scissor układanie bieg okrągłych plam wzdłuż pociągnięcia i utrzymuje je równomiernie rozłożone, nawet gdy wskaźnik skacze. Gumka pikselowa usuwa alfę zamiast malować na niej, więc to, co czyści, staje się w pełni przezroczyste; kafelek wymazany do niczego jest odrzucany, dzięki czemu wymazywanie nie zostawia ciężaru.</p>
+
+<h3 id="pixels-colour">Malowanie kolorem wypełnienia</h3>
+<p>Pędzel maluje bieżącym kolorem <strong>wypełnienia</strong>. Ustaw go tak, jak ustawiasz dowolne wypełnienie: panel Kolor, próbka lub, gdy Pędzel jest aktywny w nowoczesnej powłoce, chips <strong>Kolor</strong> na pasku opcji narzędzia. Gdy wypełnienie jest puste, Pędzel wraca do koloru obrysu, a gdy nie ma żadnego koloru, do czerni. Wybierz kolor prosto z warstwy pikselowej Pędzlem, gdy chcesz dopasować farbę, która już jest na płótnie.</p>
+
+<h3 id="pixels-controls">Rozmiar, twardość i przepływ</h3>
+<p>Gdy Pędzel lub Gumka pikselowa jest aktywna, pasek opcji narzędzia niesie ustawienia kształtujące ślad. Siedzą one również w Twoich preferencjach, dzięki czemu przenoszą się z sesji na sesję.</p>
+<dl>
+  <dt>Rozmiar</dt><dd>Średnica pędzla, od 1 do 2500 pikseli. Naciśnij <kbd>[</kbd>, aby zmniejszyć pędzel, i <kbd>]</kbd>, aby go powiększyć; każde naciśnięcie zmienia rozmiar o piątą część, więkrok rośnie z pędzlem. Pierścień na płótnie pokazuje bieżący rozmiar.</dd>
+  <dt>Twardość</dt><dd>Gdzie krawędź zaczyna zanikać, jako procent. Na 100% krawędź jest ostra; obniż ją i plama zmiękcza się w stronę swojego obrzeża z płynnym spadkiem i bez widocznego pierścienia. Użyj miękkiego pędzla do cieni i poświat, twardego do stałych kształtów.</dd>
+  <dt>Przepływ</dt><dd>Ile farby każda plama kładzie, tylko dla Pędzla. Poniżej 100% kolor buduje się stopniowo w miarę ponownego przechodzenia przez obszar, co pasuje do cieniowania i powolnych mieszanek. Gumka pikselowa nie ma kontroli przepływu.</dd>
+</dl>
+
+<h2 id="pixels-retouch">Rozjaśnianie, przyciemnianie i gąbka</h2>
+<p>Trzy pędzle retuszujące pracują na pikselach, które już są, zamiast kładać kolor, dzieląc jeden slot w pasku narzędzi. Malują jak Pędzel — ten sam rozmiar, twardość i pierścień na płótnie — i budują się w miarę ponownego przechodzenia przez obszar, dzięki czemu lekki dotyk jest stopniowy, a mocny szybki.</p>
+<dl>
+  <dt>Rozjaśnianie</dt><dd>Rozjaśnia wszędzie, gdzie malujesz, podnoszenie cieni i dodając światła.</dd>
+  <dt>Przyciemnianie</dt><dd>Przyciemnia wszędzie, gdzie malujesz, pogłębiając cienie i krawędzie.</dd>
+  <dt>Gąbka</dt><dd>Podnosi nasycenie, czynąc kolory bogatszymi, im częściej po nich przechodzisz.</dd>
+</dl>
+<p>Każdy z nich pozostawia przezroczyste piksele nietknięte, pozostaje w zaznaczeniu, gdy takie jest ustawione, i całe pociągnięcie cofa się jednym krokiem.</p>
+
+<h2 id="pixels-more-tools">Wiadro, kształty i gradienty</h2>
+<p>Malowanie to nie tylko Pędzel. Na warstwie pikselowej trzy kolejne narzędzia kładą kolor: <strong>Wiadro</strong> zalewa spójny obszar podobnego koloru od miejsca, w którym klikasz; <strong>narzędzia kształtów</strong> stemplują prostokąt, elipsę, gwiazdę lub wielokąt prosto w piksele zamiast rysować ścieżkę; a <strong>narzędzie Gradient</strong> maluje liniową lub radialną mieszankę przez powierzchnię. Każdy z nich respektuje bieżące zaznaczenie, dzięki czemu możesz ograniczyć wypełnienie lub gradient do wybranego regionu.</p>
+
+<h2 id="pixels-selecting">Wybieranie pikseli</h2>
+<p><strong>Zaznaczenie pikselowe</strong> — zaznaczenie prostokątne — ogranicza każde malowanie i edycję do regionu wewnątrz niego, jak szablon. Trzy narzędzia tworzą jedno, dzieląc slot zaznaczenia pikselowego: <strong>Prostokątne</strong> i <strong>Elipsowe zaznaczenie prostokątne</strong> oraz ręczne <strong>Zaznaczenie lassem</strong>, które wyśledzasz ręcznie. Przeciągnij, aby narysować zaznaczenie; zwykłe przeciąganie zastępuje bieżące.</p>
+<p><strong>Automatyczne zaznaczanie</strong> wybiera według koloru zamiast według kształtu: kliknij warstwę pikselową, a ono bierze spójny fragment koloru wokół miejsca, w którym kliknąłeś, wyśledzając zaznaczenie "marszowe mrówki" wokół niego — przydatne do podniesienia płaskiego tła lub jednego kolorowego obszaru. Jak blisko kolor musi być, by być wziętym, to <strong>Tolerancja</strong> w opcjach Automatycznego zaznaczania, to samo ustawienie, którego używa na obiektach wektorowych; podnieś ją, aby zebrać więcej, obniż, aby trzymać się bliskiego dopasowania. Dziury w fragmencie są pozostawiane poza zaznaczeniem.</p>
+<p>Zaznaczenia łączą się, więc kształt może być zbudowany z kilku pociągnięć lub kliknięć: przytrzymaj <kbd>&#8679;</kbd>, aby <strong>dodać</strong> do zaznaczenia, <kbd>&#8997;</kbd>, aby <strong>odjąć</strong>, i oba razem, aby zachować tylko <strong>nakładkę</strong> — zaznaczenia prostokątne i Automatyczne zaznaczanie łączą się tak samo. <strong>Zaznacz &gt; Wszystko</strong> (<kbd>&#8984;A</kbd>) zaznacza każdy piksel, <strong>Zaznacz &gt; Odwróć</strong> odwraca zaznaczenie, a <strong>Odznacz</strong> — <kbd>&#8984;D</kbd> na warstwie pikselowej — upuszcza je. Zaznaczenie "marszowe mrówki" pokazuje zaznaczenie na płótnie.</p>
+
+<h2 id="pixels-editing-selection">Przesuwanie, wycinanie i kopiowanie pikseli</h2>
+<p>Z ustawionym zaznaczeniem narzędzie Zaznacz przesuwa piksele wewnątrz niego: przeciągnij z wnętrza zaznaczenia, a zaznaczona farba podnosi się i podróżuje, czyszcząc tam, gdzie była i niosąc zaznaczenie ze sobą. Przytrzymaj <kbd>&#8997;</kbd> podczas przeciągania, aby zostawić oryginał w miejscu i przesunąć <strong>kopię</strong>.</p>
+<p>Narzędzia przekształcania działają na zaznaczeniu również. Z zaznaczeniem ustawionym, ramka ograniczająca narzędzia Zaznacz i <strong>Dowolnego przekształcania</strong> (<kbd>E</kbd>) owijają zaznaczenie, a nie całą warstwę, dzięki czemu możesz skalować, obracać lub przesuwać tylko tę część obrazu; <strong>Obiekt &gt; Przekształć</strong> i klawisze strzałek działają na niej tak samo. Podniesione piksele pływają nad warstwą podczas pracy, dzięki czemu możesz przeciągać je wielokrotnie bez utraty szczegółów. Naciśnij <kbd>Enter</kbd>, wybierz inne narzędzie lub stwórz nowe zaznaczenie, aby je odkładać, co jest jednym krokiem do cofnięcia, lub naciśnij <kbd>Escape</kbd>, aby umieścić wszystko z powrotę tam, gdzie było. Przesunięcie o całe piksele zachowuje je dokładnie tak, jak były; skalowanie lub obracanie próbkuje je raz, gdy są odkładane.</p>
+<p>Dowolne przekształcanie <strong>Swobodne zniekształcenie</strong> i <strong>Zniekształcenie perspektywiczne</strong> działają na pikselach również, na zaznaczeniu lub na całej warstwie: przeciągnij róg ramki (lub przytrzymaj <kbd>&#8984;</kbd> podczas przeciągania jednego w trybie Dowolnego przekształcania), aby wyciągnąć obraz z prawidłowości, na przykład dopasować zdjęcie do ekranu lub znaku widzianego pod kątem. Podczas przeciągania Scissor pokazuje szybki podgląd dopasowany do ekranu, dzięki czemu pozostaje gładki nawet na dużym zdjęciu; same piksele są ciągnięte raz, w pełnej rozdzielczości, gdy naciśniesz <kbd>Enter</kbd> lub przejdziesz dalej, a zaznaczenie podąża za nowym kształtem.</p>
+<p>Kopiuj (<kbd>&#8984;C</kbd>) i Wytnij (<kbd>&#8984;X</kbd>) działają na pikselach wewnątrz zaznaczenia: kopiowanie zostawia warstwę tak, jak jest, wycinanie usuwa piksele. Wklej (<kbd>&#8984;V</kbd>) umieszcza je na <strong>nowej warstwie pikselowej</strong> tuż nad tą, z której pochodzą, dokładnie w tym samym miejscu, gotowe do przesunięcia lub przekształcenia na własną rękę. Te same polecenia są w <strong>Utwórz &gt; Warstwa pikselowa</strong>, a zaznaczenie również napędza polecenia powierzchni: <strong>Wypełnij kolorem wypełnienia</strong> wypełnia tylko zaznaczony region, <strong>Wyczyść</strong> i <strong>Usuń</strong> wymazują go, a bez zaznaczenia każde działa na całej warstwie.</p>
+
+<h2 id="pixels-adjustments">Korekty</h2>
+<p>Podmenu <strong>Obiekt &gt; Warstwa pikselowa &gt; Korekty</strong> retuszuje kolor warstwy pikselowej, ograniczone do zaznaczenia, gdy takie jest ustawione. Każde otwiera okno dialogowe, które podgląda na płótnie podczas przeciągania.</p>
+<dl>
+  <dt>Jasność / Kontrast, Poziomy</dt><dd>Ustawia ogólną jasność i kontrast lub przemapowuje punkt czarny, punkt biały i gammę dla lepszej kontroli tonalnej.</dd>
+  <dt>Ocień / Nasycenie, Wibracja</dt><dd>Przesuwa odcień i podnosi lub obniża nasycenie w całej planszy lub używa Wibracji, aby wzmocnić stonowane kolory, pozostawiając już żywe bez zmian.</dd>
+  <dt>Balans kolorów</dt><dd>Popycha średnie tony w stronę cyjanu lub czerwieni, magenty lub zieleni, żółci lub niebieskiego.</dd>
+  <dt>Mapa gradientu</dt><dd>Przekolorowuje warstwę według jej jasności, mapując cienie na jeden kolor, a światła na drugi.</dd>
+  <dt>Desaturacja, Odwróć</dt><dd>Odrzuca cały kolor do szarości lub odwraca każdy kolor do jego przeciwieństwa.</dd>
+  <dt>Próg, Posteryzacja</dt><dd>Redukuje obraz do czystej czerni i bieli na wybranym poziomie lub do małej liczby tonów na kanał.</dd>
+</dl>
+
+<h2 id="pixels-filters">Filtry</h2>
+<p>Podmenu <strong>Filtry</strong> przekształca same piksele, znowu w obrębie zaznaczenia.</p>
+<dl>
+  <dt>Rozmycie Gaussa</dt><dd>Zmiękcza warstwę równą, dostosowywalną wartością.</dd>
+  <dt>Ostry, Maska wyostrzająca</dt><dd>Ostry szczegóły — Maska wyostrzająca daje kontrolę nad promieniem, ilością i progiem oszczędzającym płaskie obszary i drobny szum.</dd>
+  <dt>Pikselizacja</dt><dd>Blokuje obraz w kwadratowe kafelki dla mozaiki.</dd>
+  <dt>Dodaj szum</dt><dd>Rozsypuje ziarno po farbie.</dd>
+  <dt>Znajdź krawędzie, Relief</dt><dd>Wyśledza, gdzie kolor się zmienia, jako jasne linie na ciemnym lub jako szary relief.</dd>
+</dl>
+<p><strong>Filtry &gt; Podgląd efektów</strong> pokazuje Twoją warstwę jako siatkę miniatur na żywo, z których każda ma zastosowany jeden korektę lub filtr, dzięki czemu możesz wybierać oko, a nie nazwę. Wybór miniatury zostawia okno otwarte. Ustawienia efektu pojawiają się obok siatki, a płótno podgląda wynik w miarę ich zmian. Nic nie jest stosowane, dopóki nie klikniesz <strong>Zastosuj</strong> (lub nie naciśniesz <kbd>Enter</kbd>). <strong>Anuluj</strong> lub <kbd>Esc</kbd> przywraca obraz, a jedno cofnięcie usuwa zastosowany efekt. Możesz przeciągnąć okno po jego tytule, aby zobaczyć płótno za nim.</p>
+
+<h2 id="pixels-undo">Szybkie, kafelkowe cofnięcie</h2>
+<p>Całe pociągnięcie cofa się jednym krokiem, jak długie by było: naciśnij <kbd>&#8984;Z</kbd> raz, a ostatni ślad znika, a <kbd>&#8679;&#8984;Z</kbd> przywraca go. Gdy pierwsze pociągnięcie musiało stworzyć swoją warstwę, ta warstwa odchodzi z pociągnięciem, zamiast zostawać pusta.</p>
+<p>Za kulisami warstwa pikselowa jest trzymana jako siatka małych kafelków, a pociągnięcie kopiuje tylko kafelki, które faktycznie dotknęło. Cofanie zachowuje pełne migawki dokumentu, ale pociągnięcie kosztuje tylko własne kafelki, a nie całą powierzchnię, dzięki czemu malowanie na dużej warstwie pozostaje szybkie, a długa sesja pracy pędzla nie zapełnia pamięci. Płaskie obszary jednego koloru są przechowywane kompaktowo, więc warstwa, która jest głównie jednym kolorem, zajmuje prawie żadnego miejsca.</p>
+
+<h2 id="pixels-treating">Traktowanie warstwy pikselowej jak każdego obiektu</h2>
+<p>Warstwa pikselowa to obiekt w dokumencie, więc wszystko, co już wiesz, stosuje się. Zaznacz ją, przesuń ją i skaluj, obracaj, odbijaj lub przechylaj z <strong>Obiekt &gt; Przekształć</strong>, ramki ograniczającej lub Dowolnego przekształcania. Bez zaznaczenia ramka owija namalowane piksele warstwy, a nie całą powierzchnię, a przekształcenie działa na tych pikselach: przesuwanie zachowuje je nietknięte, podczas gdy skalowanie lub obracanie jest wpieczone w piksele, gdy naciśniesz <kbd>Enter</kbd>, wybierzesz inne narzędzie lub coś zaznaczysz, dzięki czemu warstwa pozostaje prosto, a następne pociągnięcie pędzla ląduje właściwą stroną do góry. Ustaw jej krycie i daj jej dowolny z szesnastu trybów mieszania z panelu Przezroczystość, aby malowany kolor leżał na rysowanej grafice poniżej. Kliknięcie wybiera warstwę tylko tam, gdzie ma farbę, dzięki czemu przezroczysty róg pozwala kliknąć prosto przez to, co pod spodem. <strong>Duplikuj</strong> kopiuje warstwę pikselową jak każdy obiekt — tanio, ponieważ kopia dzieli swoje kafelki, dopóki jedna z nich nie jest malowana.</p>
+<p><strong>Obiekt &gt; Warstwa pikselowa &gt; Scal w dół</strong> spłaszcza warstwę pikselową na warstwę pikselową bezpośrednio pod nią i usuwa górną, zostawiając pojedynczą warstwę z dwiema złożonymi razem. Gdy warstwy siedzą pod różnymi przekształceniami — powiedzmy jedna została obrócona — górna jest próbkowana w siatkę dolnej w trakcie scalania.</p>
+<p>Dwa polecenia działają na całej powierzchni naraz:</p>
+<dl>
+  <dt>Obiekt &gt; Warstwa pikselowa &gt; Wypełnij kolorem wypełnienia</dt><dd>Zalewa całą powierzchnię bieżącym kolorem wypełnienia. Sięgaj po to, aby położyć podkład przed malowaniem nad nim lub zalać warstwę ustawioną za inną grafiką.</dd>
+  <dt>Obiekt &gt; Warstwa pikselowa &gt; Wyczyść</dt><dd>Opróżnia powierzchnię bez usuwania warstwy, dzięki czemu możesz zacząć malowanie od nowa, zachowując miejsce, przekształcenie, krycie i tryb mieszania warstwy.</dd>
+</dl>
+<p>Oba polecenia pojawiają się również pod <strong>Efekt &gt; Warstwa pikselowa</strong>.</p>
+
+<h2 id="pixels-masks">Maski warstw</h2>
+<p><strong>Maska warstwy</strong> ukrywa części warstwy pikselowej bez usuwania ich: warstwa pokazuje się tam, gdzia maska jest biała, i jest ukrywana tam, gdzia jest czarna, z szarościami pośrednimi dla częściowej przezroczystości. Ponieważ nic nie jest wymazywane, możesz malować maskę w przód i w tył tak często, jak chcesz. Polecenia są pod <strong>Obiekt &gt; Warstwa pikselowa</strong>.</p>
+<dl>
+  <dt>Dodaj maskę warstwy</dt><dd>Przyłącza maskę, która na początku odkrywa wszystko, gotową do malowania.</dd>
+  <dt>Dodaj maskę warstwy z zaznaczenia</dt><dd>Buduje maskę z bieżącego zaznaczenia pikselowego: to, co wewnątrz, zostaje, to, co na zewnątrz, jest ukrywane. Szybki sposób na wycięcie kształtu ze zdjęcia w sposób nieniszczący.</dd>
+  <dt>Edytuj maskę</dt><dd>Przełącza malowanie maski w i wyłącz. Gdy jest włączone, Pędzel, Gumka i Wiadro malują maskę zamiast warstwy: maluj czarnym (lub ciemnym kolorem), aby ukryć, białym, aby odkryć, szarym, aby wygładzić. Pędzel używa jasności bieżącego koloru wypełnienia, więc czarny ukrywa, a biały pokazuje.</dd>
+  <dt>Zastosuj maskę warstwy</dt><dd>Wpiecze maskę w warstwę na stałe — ukryte piksele stają się przezroczyste — i usuwa maskę.</dd>
+  <dt>Usuń maskę warstwy</dt><dd>Wyrzuca maskę i pokazuje całą warstwę z powrotę, nietkniętą.</dd>
+</dl>
+<p>Zamaskowana warstwa eksportuje się i zapisuje z już zastosowaną maską i miesza się i przekształca jak każda inna warstwa.</p>
+
+<h2 id="pixels-rasterize">Zamiana grafiki wektorowej w piksele: Rasteryzacja</h2>
+<p><strong>Obiekt &gt; Rasteryzuj</strong> zastępuje bieżące zaznaczenie osadzonym obrazem samego siebie, wpieczając ścieżki, tekst i wszelkie efekty w stałe piksele. Użyj tego, gdy chcesz, aby wynik wektorowy przestał być edytowalny, gdy efekt jest łatwiejszy do traktowania jako płaski obraz lub aby przekazać element, który powinien wyglądać tak samo wszędzie, nie niosąc swojej konstrukcji na żywo. Wynikiem jest osadzony obraz, a nie malowalna warstwa pikselowa, więc zachowaj kopię oryginalnej grafiki, jeśli możesz chcieć ją ponownie edytować. <strong>Widok &gt; Podgląd pikseli</strong> (<kbd>&#8997;&#8984;Y</kbd>) pozwala sprawdzić, jak grafika wektorowa wyląduje na siatce pikseli przed zobowiązaniem.</p>
+
+<h2 id="pixels-saving">Zapisywanie i eksportowanie</h2>
+<p>Dokumenty <code>.cut</code> zachowują warstwy pikselowe z resztą grafiki, spakowane tak, że płaskie obszary zajmują prawie żadnego miejsca i otwierają się dokładnie tak, jak zostały namalowane.</p>
+<p>Jak warstwy pikselowe opuszczają dokument, zależy od formatu:</p>
+<dl>
+  <dt>PNG, JPEG i WebP</dt><dd>Spłaszczają cały dokument do pikseli, dzięki czemu malowana i rysowana praca łączy się w jedną bitmapę. PNG może zachować przezroczystość; eksportuj przy @2x dla ostrzejszego wyniku.</dd>
+  <dt>SVG i PDF</dt><dd>Zapisują malowaną powierzchnię jako osadzony obraz umieszczony wśród grafiki wektorowej, dzięki czemu dokument mieszający rysowaną i malowaną pracę podróżuje jako jeden plik z nadal ostrymi kształtami.</dd>
+</dl>
+<p>Ponieważ rastry i wektory mieszkają w tym samym dokumencie i eksportują się razem, możesz budować element naturalną drogą: czyste kształty i tekst jako wektory, a części, które chcą wyglądać jak farba, miękka poświata, teksturowana powłoka, retuszowana fotografia, jako warstwy pikselowe ułożone wśród nich.</p>
