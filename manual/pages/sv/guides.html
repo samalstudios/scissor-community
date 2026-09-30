@@ -1,0 +1,46 @@
+<p class="lede">Linjaler, hjälplinjer och fästning är hur du linjerar upp arbete precist. Linjaler lägger en mätskala högst upp och nedtill vänster på duken, hjälplinjer ger dig linjer att bygga mot, smarta hjälplinjer visar justering och avstånd medan du drar, och mätverktyget läser avståndet och vinkeln mellan två punkter. Ingen av dessa markerar konstverket självt: hjälplinjer skrivs aldrig ut eller exporteras, och att stänga av någon av dem ändrar bara vad du ser.</p>
+
+<h2 id="guides-rulers">Linjaler</h2>
+<p>Slå på linjaler med <strong>Visa &rsaquo; Linjaler &rsaquo; Visa linjaler</strong> (<kbd>&#8984;R</kbd>). En horisontell linjal löper längs toppen av duken och en vertikal nedtill vänster. Båda är märkta med huvudtick vid märkta intervall och kortare mindre tick mellan dem; när du zoomar in och ut justeras avståndet på de märkta ticken så att de förblir läsbara.</p>
+<p>Positioner mäts från det övre vänstra hörnet av den aktiva artboarden, och siffrorna växer åt höger och nedåt. Eftersom nollpunkten sitter på den aktiva artboarden flyttar den när du växlar till en annan artboard: markera en annan artboard och linjalerna läser om från den artboardens hörn. När du flyttar pekaren över duken följer en tunn indikatorlinje dess position på varje linjal, så att du kan läsa den aktuella koordinaten med ett öga utan en panel.</p>
+<p>När vyn är vriden (med rotera-vy-verktyget) finns det ingen rak horisontell eller vertikal dokumentaxel kvar att mäta, så linjalerna stannar på plats men visar inga tick tills du återställer rotationen.</p>
+
+<h3 id="guides-units">Enheter</h3>
+<p>Linjalerna läser i dokumentets enhet. Ställ in den i <strong>Arkiv &rsaquo; Dokumentinställningar</strong> (<kbd>&#8997;&#8984;P</kbd>), som erbjuder pixlar, punkter, millimeter, centimeter, tum och picas. Välj den enhet som matchar din utdata: pixlar eller punkter för skärmarbete, millimeter eller tum för utskrift. Att ändra enhet märker om linjalerna direkt; det ändrar inte storlek på något.</p>
+
+<h2 id="guides-ruler-guides">Linjalshjälplinjer</h2>
+<p>Med linjaler visade, dra ut från en linjal för att dra en hjälplinje ut på duken. Dra ner från den övre linjalen för en horisontell hjälplinje, eller över från den vänstra linjalen för en vertikal. Hjälplinjen följer pekaren medan du håller ned knappen, och släpps där du släpper. Att dra ut en hjälplinje slår på <strong>Visa hjälplinjer</strong> om den var av, så att den nya hjälplinjen syns direkt. Om du ångrar dig, släpp den tillbaka på linjalen och den överges.</p>
+<p>En hjälplinje är en lång rak linje som når långt bortom konstverket, så att den lässe som om den löper över dokumentets bredd eller höjd. Var och en visas i Lagerpanelen som ett <em>Horisontell hjälplinje</em> eller <em>Vertikal hjälplinje</em>-objekt.</p>
+<p>För att flytta en hjälplinje senare, klicka längs dess linje med markeringsverktyget och dra, eller skjut den med piltangenterna. En hjälplinje flyttas som valfritt annat objekt, så fästning gäller medan du drar den: detta gör det enkelt att släppa en hjälplinje exakt på ett objekts kant eller ett ankare. Ett användningsfall: dra en vertikal hjälplinje till vänsterkanten på en rubrik, och justera sedan en kolumn av knappar till den så att deras vänstra sidor alla möter samma linje.</p>
+
+<h2 id="guides-managing">Dölja, låsa och rensa hjälplinjer</h2>
+<p><strong>Visa &rsaquo; Hjälplinjer &rsaquo; Visa hjälplinjer</strong> (<kbd>&#8984;;</kbd>) döljer och visar varje hjälplinje på en gång. Dölj dem medan du kontrollerar hur en design lässe utan byggnadsställningen, och få sedan tillbaka dem för att fortsätta arbeta.</p>
+<p>För att stoppa en hjälplinje från att flyttas av misstag, behandla den som det objekt den är: markera den och lås den med <strong>Objekt &rsaquo; Lås &rsaquo; Markering</strong> (<kbd>&#8984;2</kbd>), eller lås eller dölj den från Lagerpanelen. <strong>Objekt &rsaquo; Lås upp alla</strong> (<kbd>&#8997;&#8984;2</kbd>) frigör den igen, och <strong>Objekt &rsaquo; Dölja &rsaquo; Markering</strong> (<kbd>&#8984;3</kbd>) döljer en enda hjälplinje utan att röra de andra.</p>
+<p>När du är färdig med dem, tar <strong>Visa &rsaquo; Hjälplinjer &rsaquo; Rensa hjälplinjer</strong> bort varje hjälplinje i dokumentet på ett steg.</p>
+
+<h2 id="guides-make">Gör hjälplinjer från objekt</h2>
+<p>En hjälplinje behöver inte vara en vanlig horisontell eller vertikal linje. Rita valfri bana eller form, markera den, och välj <strong>Visa &rsaquo; Hjälplinjer &rsaquo; Gör hjälplinjer</strong> (<kbd>&#8984;5</kbd>) för att förvandla den till en hjälplinje. En cirkel blir en cirkelformad hjälplinje, en diagonallinje en sned, så att du kan bygga mot kurvor och vinklar som de raka linjalshjälplinjerna inte kan ge dig. Använd det för att ställa in en cirkelformad hjälplinje för att ordna element runt en skiva, eller en diagonell för att hålla en rad former på en konsekvent lutning.</p>
+<p><strong>Visa &rsaquo; Hjälplinjer &rsaquo; Frigör hjälplinjer</strong> (<kbd>&#8997;&#8984;5</kbd>) förvandlar en markerad hjälplinje tillbaka till en vanlig redigerbar bana, så att du kan återhämta en form du konverterade, eller återanvända geometrin som konstverk.</p>
+
+<h2 id="guides-smart">Smarta hjälplinjer</h2>
+<p><strong>Visa &rsaquo; Smarta hjälplinjer</strong> (<kbd>&#8984;U</kbd>) visar justeringsfeedback medan du ritar, flyttar eller ändrar storlek. När pekaren närmar sig något värt att linjera upp till visas en magenta linje och en liten etikett, och punkten dras till den. Smarta hjälplinjer läser från kanter, centrum och hörn av andra objekt, från deras ankarpunkter, och från artboardkanterna, så att en form du placerar kan fås att linjera upp med det som redan finns där utan något manuellt mätande.</p>
+<p>Smarta hjälplinjer hjälper också medan du ritar en rak dragning: när riktningen du drar kommer nära en konstruktionsvinkel (var 45&deg; från begränsningsvinkeln som ställts in i inställningar) fäster dragningen till den vinkeln, och en linje med vinkelskrivningen ritas längs den. Detta håller linjer och flyttningar verkligt horisontella, vertikala eller diagonala.</p>
+
+<h3 id="guides-spacing">Fördela objekt jämnt</h3>
+<p>När du drar ett objekt förbi två eller flera andra som sitter i en rad eller kollar, letar smarta hjälplinjer efter positionen där gapen blir lika: antingen fortsättande en jämnt fördelad rad, eller centrerande objektet i gapet mellan två grannar. När den hittar en fäster den objektet där och ritar de två matchande gapen med ändlock och en mätning, så att du kan fördela en rad artiklar jämnt med ögat och låta hjälplinjen bekräfta passningen, snarre än att justera och fördela dem efteråt.</p>
+
+<h2 id="guides-snapping">Fäst vid punkt och Fäst vid rutnät</h2>
+<p>Två fästningsväxlar sitter i <strong>Visa</strong>-menyn och fungerar oberoende av varandra och av smarta hjälplinjer.</p>
+<dl>
+  <dt>Fäst vid punkt (<kbd>&#8997;&#8984;'</kbd>)</dt>
+  <dd>Drar den punkt du placerar till punkterna på andra objekt: deras ankare, hörn och centrum, och artboardkanterna. Använd det när en ny form måste möta en befintlig exakt, såsom att starta en bana på ett lådas hörn.</dd>
+  <dt>Fäst vid rutnät (<kbd>&#8679;&#8984;'</kbd>)</dt>
+  <dd>Avrundar punkter och dragna objekt till den aktiva artboardens rutnät. Varje artboard bär sina egna rutnät, så att vad en punkt landar på beror på vilket lager du arbetar på; rutnäten själva täcks under Rutnät. Medan Fäst vid rutnät är på tar det över, så att punkter faller på rutnätslinjer snarre än på andra objekt punkter.</dd>
+</dl>
+
+<h3 id="guides-ignore">Ignorera fästning för en dragning</h3>
+<p>Håll ned <kbd>&#8997;</kbd> (Alt) medan du drar och fästningen är avstängd för den enda gesten. Släpp och den återupptas. Detta fungerar medan du ritar former, drar objekt och flyttar ankarpunkter, och det lämnar dina fästningsväxlar oförändrade, så att du kan skjuta en punkt fri från rutnätet eller en hjälplinje utan att stänga av och på något.</p>
+
+<h2 id="guides-measure">Mätverktyget</h2>
+<p>Mätverktyget läser avståndet och vinkeln mellan två punkter. Det delar en plats i verktygsraden med pipetten, så håll pipetten för att avslöja det. Dra från en punkt till en annan och en etikett visar avståndet (<code>D</code>), vinkeln, och de horisontella (<code>X</code>) och vertikala (<code>Y</code>) förskjutningarna mellan de två ändarna. Linjen och dess avläsning stannar på skärmen tills nästa dragning, så att du kan notera en mätning och fortsätta.</p>
+<p>Ändpunkterna fäster till samma punkter som smarta hjälplinjer och Fäst vid punkt använder, så att du kan mäta från ett objekts hörn till ett annats exakt. Håll ned <kbd>&#8679;</kbd> medan du drar för att begränsa mätlinjen till 45&deg;-steg. Använd det för att kontrollera gapet mellan två kolumner innan du förpliktar dig till avstånd, eller för att läsa längden och lutningen på en kant du är på väg att matcha.</p>

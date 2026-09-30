@@ -1,0 +1,100 @@
+<p class="lede">Vektorisera förvandlar en bild till vektorbanor: en logotyp skannad från papper, en blyertsskiss eller ett foto blir en uppsättning fyllda former som du kan skala, omfärglägga och redigera som allt annat du ritar. Denna sida täcker vad du kan spåra, panelen som kör det, de tre lägena och deras förinställningar, varje alternativ, och hur du behåller eller förkastar resultatet.</p>
+
+<h2 id="image-trace-what">Vad spårning gör, och vad du kan spåra</h2>
+<p>En bild är gjord av pixlar: den suddig när du förstorar den och kan inte omformas punkt för punkt. Spårning läser de pixlarna och ritar vektorbanor som följer formerna den hittar, så att resultatet förblir skarpt i valfri storlek och kan redigeras, omfärgläggas och kombineras med resten av ditt konstverk.</p>
+<p>Du spårar ett <strong>pixellager</strong>: en bild du placerat eller klistrat in, en bild öppnad som egen artboard, eller ett lager du målat själv. Ta in en bild med <strong>Arkiv &gt; Placera…</strong> (<kbd>&#8679;&#8984;P</kbd>) – den anländer som ett pixellager – markera den, och kör sedan spårningen. (Vektorkonstverk är redan gjort av banor, så det finns inget att spåra; spårning läser pixlar.)</p>
+<p>Spårningen kastar inte bort bilden. Den bygger en grupp med namnet <strong>Vektorisera</strong> som innehåller originalbilden (nu dold) tillsammans med de nya banorna, och sitter exakt över den. Eftersom gruppen kommer ihåg inställningarna den gjordes med förblir resultatet live: markera det igen, ändra en inställning och det spårar om. När du är nöjd <strong>expanderar</strong> du det för att behålla bara banorna, eller <strong>frigör</strong> det för att gå tillbaka till den vanliga bilden.</p>
+
+<h2 id="image-trace-panel">Vektoriseringspanelen</h2>
+<p>Varje inställning finns i vektoriseringspanelen. Öppna den från <strong>Objekt &gt; Vektorisera &gt; Vektoriseringspanel</strong>, eller från sin flik i paneldockan. Panelen behöver en bild markerad innan den kan göra något: utan något lämpligt valt är Spåra-knappen avstängd och panelen ber dig välja en placerad bild.</p>
+
+<h3 id="image-trace-run">Kör en spårning</h3>
+<p>Markera en bild, välj en förinställning eller ställ in läget och alternativen för hand, och tryck <strong>Spåra</strong>. En rad längst ner i panelen rapporterar framsteg, och läser <em>Spårar…</em> medan det arbetar och <em>Spårat. Expandera för att behålla bara banorna.</em> när det är klart. Om bilden inte innehåller något en form kan göras av, eller inte kan läsas, säger panelen det och lämnar bilden orörd.</p>
+
+<h3 id="image-trace-preview">Förhandsvisa som du går</h3>
+<p>Kryssrutan <strong>Spåra när inställningar ändras</strong>, på som standard, spårar om i det ögonblicket du ändrar läget, en förinställning, en siffra eller en kryssruta, så att du kan bedöma varje justering mot bilden direkt. På en stor eller livlig bild tar omritningen en stund, så stäng av den om du hellre vill ställa in flera alternativ först och trycka <strong>Spåra</strong> en gång. När du markerar en befintlig spårning igen laddar panelen de exakta inställningarna den gjordes med, redo att justeras och spåras igen.</p>
+
+<h3 id="image-trace-menu">Objekt-menyns kommandon</h3>
+<p>Samma åtgärder finns under <strong>Objekt &gt; Vektorisera</strong>, vilket är praktiskt när panelen är stängd.</p>
+<table>
+  <thead><tr><th>Kommando</th><th>Vad det gör</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Skapa</strong></td><td>Spårar den markerade bilden med de aktuella inställningarna, och lämnar resultatet live.</td></tr>
+    <tr><td><strong>Skapa och expandera</strong></td><td>Spårar och expanderar på ett steg, så att du går rakt till redigerbara banor.</td></tr>
+    <tr><td><strong>Expandera</strong></td><td>Behåller banorna och släpper bilden (se nedan).</td></tr>
+    <tr><td><strong>Frigör</strong></td><td>Förkastar banorna och återgår till bilden (se nedan).</td></tr>
+    <tr><td><strong>Vektoriseringspanel</strong></td><td>Bringar panelen fram.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="image-trace-modes">De tre lägena</h2>
+<p>Läget bestämmer hur bilden reducers innan den ritas. Det är det första valet att göra, eftersom det styr vilka av alternativen nedan som gäller.</p>
+<table>
+  <thead><tr><th>Läge</th><th>Hur det reducers bilden</th><th>Alternativet det använder</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Svart och vitt</strong></td><td>Delar allt i två toner, bläck och papper, vid en ljusstyrka du ställer in.</td><td>Tröskel</td></tr>
+    <tr><td><strong>Gråskala</strong></td><td>Reducers bilden till ett antal jämna grånivåer från svart till vitt.</td><td>Antal färger (som grå nivåer)</td></tr>
+    <tr><td><strong>Färg</strong></td><td>Väljer en palett av de mest färgsättande färgerna i bilden och mappar varje pixel till närmaste.</td><td>Antal färger</td></tr>
+  </tbody>
+</table>
+<p>Oavsett vilket läge du väljer görs en fylld form per ton eller färg, och formerna staplas störst först så att mindre detalj sitter överst. Helt transparenta delar av bilden utelämnas, så att ett utsnitt på en transparent bakgrund spåras till sitt motiv ensamt.</p>
+
+<h2 id="image-trace-presets">Förinställningar</h2>
+<p>En förinställning är en namngiven utgångspunkt som ställer in läget och varje alternativ på en gång. Välj en från menyn högst upp i panelen och, med förhandsvisning på, spåras bilden direkt; behandla resultatet som en bas och justera därifrån. I det ögonblicket du ändrar valfritt enskilt alternativ växlar förinställningsmenyn till <strong>Anpassad</strong>, eftersom inställningarna inte längre matchar förinställningen.</p>
+<table>
+  <thead><tr><th>Förinställning</th><th>Läge</th><th>Nå efter den när</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Högtrogenhetsfoto</strong></td><td>Färg</td><td>Du vill ha ett foto bevarat nära originalet, med många färger.</td></tr>
+    <tr><td><strong>Lågtrogenhetsfoto</strong></td><td>Färg</td><td>Ett foto ska lässe som några breda, platta färgområden.</td></tr>
+    <tr><td><strong>3 färger</strong></td><td>Färg</td><td>Du vill ha ett djärvt, affärsliknande resultat från tre platta färger.</td></tr>
+    <tr><td><strong>6 färger</strong></td><td>Färg</td><td>Ett platt, illustrerat utseende med en liten, städad palett.</td></tr>
+    <tr><td><strong>16 färger</strong></td><td>Färg</td><td>Mer färgtrar än de platta förinställningarna, kort av ett fullt foto.</td></tr>
+    <tr><td><strong>Grå nyanser</strong></td><td>Gråskala</td><td>Ett tongivande foto ska behålla sin skuggning men förlora sin färg.</td></tr>
+    <tr><td><strong>Svartvit logotyp</strong></td><td>Svart och vitt</td><td>Att göra en ren tvåtonsmärke eller logotyp till skarpa former.</td></tr>
+    <tr><td><strong>Skissat konst</strong></td><td>Svart och vitt</td><td>Fångar en blyerts- eller bläckskiss med dess lösare linjer.</td></tr>
+    <tr><td><strong>Silhuetter</strong></td><td>Svart och vitt</td><td>Du vill ha fasta, fyllda silhuetter snarre än fina linjer.</td></tr>
+    <tr><td><strong>Linjeverk</strong></td><td>Svart och vitt</td><td>En fin linjeteckning där tunna strökar måste överleva.</td></tr>
+    <tr><td><strong>Teknisk ritning</strong></td><td>Svart och vitt</td><td>Skarpa, trogenhetsfulla linjearbete med så många detaljer som möjligt.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="image-trace-options">Alternativen</h2>
+<p>Under läget sitter kontrollerna som formar resultatet. Vilka som visas beror på läget: Tröskel visas bara för Svart och vitt, medan antalet färger visas för Gråskala och Färg.</p>
+<dl>
+  <dt>Antal färger</dt>
+  <dd>Hur många färger (i Färgläge) eller grå nivåer (i Gråskala) bilden reducers till, från 2 upp till 64. Färre ger ett plattare, mer grafiskt resultat med färre former; fler håller bilden närare originalet på bekostnad av fler banor. Svart och vitt-läget ignorerar detta, eftersom det alltid har två toner.</dd>
+  <dt>Tröskel</dt>
+  <dd>För Svart och vitt bara: ljusstyrkan, från 0 till 255, där bilden delas i bläck och papper. Allt mörkare än tröskeln blir den ritade formen; allt ljusare behandlas som bakgrund. Höj den för att dra mer av mellan-tonerna in i formen för ett tungare resultat, sänk den för att behålla bara de märkaste märkena. Använd den för att ställa in hur mycket av en svag skiss plockas upp.</dd>
+  <dt>Banor</dt>
+  <dd>Hur nära banorna följer pixlarna, på en skala från 0 till 100. Höga värden kramar kanterna tätt och behåller fina skakningar, med fler ankarpunkter; låga värden släppar passningen för slätare, enklare banor som är lättare att redigera. Nå efter ett högt värde när noggrannhet spelar roll och ett lågt när du vill ha en ren, städad kontur.</dd>
+  <dt>Hörn</dt>
+  <dd>Hur benägen en vändning i konturen är att bli ett skarpt hörn snarre än en slät kurva, från 0 till 100. Höj den för konstverk med skarpa vinklar, såsom en logotyp eller bokstäver; sänk den för organiska former som ska förbli avrundade.</dd>
+  <dt>Brus</dt>
+  <dd>Den minsta patch, i pixlar, som får bli sin egen form. Allt mindre absorberas in i det som omger det. Höj den för att rensa flingor och korn från en skanning eller ett foto så att lösa prickar inte var och en blir en bana; sänk den för att behålla verkliga fina detaljer.</dd>
+  <dt>Ignorera vitt</dt>
+  <dd>Utelämnar valfri form som blir nära vit, så att papperet eller bakgrunden inte ritas och förblir transparent bakom de spårade märkena. På som standard, och visas för Svart och vitt-läget. Stäng av det när ett vitt område är en del av konstverket och behöver vara en verklig fylld form.</dd>
+  <dt>Fyllningar</dt>
+  <dd>Ger varje spårad form en fast fyllning i den färg den spårades som. Detta är det vanliga valet och är på som standard.</dd>
+  <dt>Konturer</dt>
+  <dd>Konturerar varje spårad form med en kontur i sin egen färg istället för, eller lika väl som, en fyllning. Av som standard. Om du stänger av både Fyllningar och Konturer skapas banorna fortfarande men har inget som målar dem, så lämna minst en på.</dd>
+</dl>
+
+<h2 id="image-trace-finish">Behåller eller återställer resultatet</h2>
+<p>En färsk spårning är live: banorna sitter över det dolda originalet inne i Vektorisera-gruppen, och du kan fortsätta justera inställningarna. Två kommandon avslutar det tillståndet, både på panelen som knappar och under <strong>Objekt &gt; Vektorisera</strong>. De blir tillgängliga när en spårning är markerad.</p>
+<dl>
+  <dt>Expandera</dt>
+  <dd>Behåller banorna och tar bort bilden, så att gruppen blir vanligt vektorkonstverk. Inställningarna gäller inte längre och kan inte ändras, men varje bana är nu en normal form du kan omforma, omfärglägga, kombinera och ordna. Nå efter detta när spårningen ser rätt ut och du vill arbeta på vektorerna. <strong>Skapa och expandera</strong> gör spårningen och detta steg tillsammans.</dd>
+  <dt>Frigör</dt>
+  <dd>Förkastar de spårade banorna och återställer originalbilden, synlig igen på sin gamla plats. Använd det för att överge en spårning och börja om, eller när du bara behövde bilden trots allt.</dd>
+</dl>
+
+<h2 id="image-trace-uses">Logotyper, skisser och foton</h2>
+<p>De tre vanliga utgångspunkterna kräver olika inställningar.</p>
+<dl>
+  <dt>En logotyp eller ren märke</dt>
+  <dd>Börja från <strong>Svartvit logotyp</strong>. Håll <strong>Ignorera vitt</strong> på så att papperet faller bort, höj <strong>Hörn</strong> för skarpa vinklar och <strong>Banor</strong> för trogenhetsfulla kanter, och justera <strong>Tröskel</strong> tills märket är fast utan att fylla i. Expandera, och ställ sedan in din egen fyllningsfärg.</dd>
+  <dt>En blyerts- eller bläckskiss</dt>
+  <dd>Prova <strong>Skissat konst</strong> eller <strong>Linjeverk</strong>. Sänk <strong>Tröskel</strong> för att behålla bara de ritade linjerna och låt papperet falla bort, och höj <strong>Brus</strong> lite för att rensa papperets korn. Linjeverk behåller tunnare strökar; Skissat konst passar en lösare hand.</dd>
+  <dt>Ett foto</dt>
+  <dd>Använd Färgläge med <strong>Högtrogenhetsfoto</strong> för en nära likelse eller <strong>Lågtrogenhetsfoto</strong> för ett plattare, illustrerat intryck, och ställ in <strong>antalet färger</strong> efter smak. Lämna <strong>Ignorera vitt</strong> av så att bleka områden stannar. Fler färger betyder fler former, så att en tung fotospårning kan bli stor: minska färgerna om resultatet känns ohanterligt.</dd>
+</dl>

@@ -1,0 +1,39 @@
+<p class="lede">Tre verktyg i Scissor gör det repetitiva arbetet åt dig: <strong>Åtgärder</strong> spelar in en sekvens av kommandon och spelar upp den, <strong>Variabler</strong> byter text och synlighet från en datatabell så att en design blir många, och <strong>Skript</strong> driver hela redigeraren från JavaScript. Ingen av dem behöver ett konto eller en server – som resten av Scissor körs de på din egen maskin.</p>
+
+<h2 id="automation-actions">Åtgärder: spela in en gång, spela upp var som helst</h2>
+<p><strong>Åtgärder</strong>-panelen (Fönster &rsaquo; Åtgärder) spelar in vad du gör och spelar upp det på en ny markering. Tryck <strong>Spela in</strong>, kör de kommandon du vill fånga – justera, förskjuta, lägga till en skugga, vad sekvensen än är – och tryck sedan <strong>Stopp</strong> och ge åtgärden ett namn. Den går med i listan, och visar hur många steg den håller.</p>
+<p>Klicka på en åtgärd för att <strong>spela upp</strong> den på vad som är markerat just nu; <kbd>&#8997;</kbd>-klicka på en för att ta bort den. Eftersom en åtgärd bara är en lista av kommandon upprepar den en exakt rutin över många objekt utan att du klickar igenom den varje gång.</p>
+
+<h2 id="automation-variables">Variabler: en design, många versioner</h2>
+<p><strong>Variabler</strong>-panelen (Fönster &rsaquo; Variabler) förvandlar en fast design till en mall driven av data. Två saker på ett objekt kan göras dynamiska:</p>
+<dl>
+  <dt>Gör text dynamisk</dt><dd>Binder ett textobjekts ord till en variabel, så att olika datamängder kan sätta olika text på samma plats.</dd>
+  <dt>Gör synlighet dynamisk</dt><dd>Binder om ett objekt visas, så att en uppsättning kan slå delar av designen på eller av.</dd>
+</dl>
+<p><strong>Avbind</strong> gör ett bundet objekt fast igen.</p>
+
+<h3 id="automation-datasets">Datamängder</h3>
+<p>En <strong>datamängd</strong> är en rad av värden för de variablerna – en namnbricka, ett kort, en ram. <strong>Fånga</strong> sparar de aktuella värdena som en ny mängd; pilarna stegar från en mängd till nästa och designen uppdateras för att matcha. <strong>Importera CSV…</strong> läser en hel omgång på en gång – en kolumn per variabel, en rad per mängd – och <strong>Exportera CSV</strong> skriver mängderna tillbaka ut för att redigera i ett kalkylblad.</p>
+
+<h3 id="automation-batch">Exportera varje mängd på en gång</h3>
+<p><strong>Exportera datamängder…</strong> renderar den aktiva artboarden en gång för varje datamängd och skriver dem alla på ett svep, som PNG, JPEG, WebP eller SVG. Ett ark med namnbrickor, en uppsättning lokaliserade banderoller eller en rad sociala kort kommer ut som en städad omgång filer, var och en med sin egen data ifylld.</p>
+
+<h2 id="automation-scripts">Skript: driva Scissor från JavaScript</h2>
+<p>För allt en meny inte kan uttrycka kan ett skript. <strong>Arkiv &rsaquo; Skript &rsaquo; Skriptkonsol…</strong> öppnar en redigerare där du skriver JavaScript och kör det mot det öppna dokumentet; <strong>Annat skript…</strong> (<kbd>&#8984;F12</kbd>) kör en <code>.js</code>-fil från disk. Ett skript körs i en Web Worker, bort från sidan, så att det inte kan röra gränssnittet eller dina filer utom genom <code>scissor</code>-objektet det ges – varje anrop utförs på motorn och besvaras tillbaka.</p>
+<p><code>scissor</code>-objektet täcker det gemensamma mark:</p>
+<dl>
+  <dt>Gör former och text</dt><dd><code>scissor.rect</code>, <code>roundedRect</code>, <code>ellipse</code>, <code>polygon</code>, <code>star</code>, <code>path</code> och <code>text</code> ritar konstverk; var och en tar en position och storlek och ett alternativobjekt för <code>fill</code>, <code>stroke</code> och <code>strokeWidth</code> (färger är valfri CSS-färg).</dd>
+  <dt>Läs dokumentet</dt><dd><code>await scissor.document()</code> returnerar appen, markeringen, lager och artboards som panelerna ser dem; <code>scissor.selection()</code> returnerar bara vad som är markerat.</dd>
+  <dt>Verka på det</dt><dd><code>scissor.select</code>, <code>group</code> och <code>undo</code>, och <code>scissor.run(command)</code> för valfri motor-kommando alls – samma kommandon som menyerna skickar.</dd>
+  <dt>Tala tillbaka</dt><dd><code>scissor.log</code> skriver till konsolen; <code>scissor.alert</code> visar ett meddelande.</dd>
+</dl>
+<p>Ett kort exempel – en ring av färgade prickar och en bildtext:</p>
+<pre><code>const doc = await scissor.document();
+scissor.log('Boards:', doc.artboards.length);
+for (let i = 0; i &lt; 12; i++) {
+  const a = (i / 12) * Math.PI * 2;
+  await scissor.ellipse(300 + Math.cos(a) * 120, 260 + Math.sin(a) * 120, 36, 36,
+    { fill: `hsl(${i * 30} 80% 60%)` });
+}
+await scissor.text(230, 270, 'Hello, Scissor', { size: 24 });</code></pre>
+<p>Skriptkonsolen håller den sista kod du körde, så att ett fungerande skript finns där när du återvänder till det.</p>

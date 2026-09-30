@@ -1,0 +1,120 @@
+<p class="lede">Ett Scissor-dokument kan håla målade pixlar bredvid sina ritade banor och text, så att en enda fil kan bära en mjuk penseltextur, ett foto och en skarp logotyp tillsammans. Denna sida täcker vad ett pixellager är, hur man målar på ett, och hur det beter sig som ett objekt i dokumentet.</p>
+
+<h2 id="pixels-vector-vs-raster">Pixlar kontra vektorkonstverk</h2>
+<p>Ett Scissor-dokument håller två slag av konstverk sida vid sida. Banor och text är <em>ritade</em>: de förblir skarpa i valfri storlek eftersom de beskrivs av sin form, och Scissor ritar om dem varje gång du zoomar eller skalar. Ett <strong>pixellager</strong> är <em>målat</strong>: det är ett rutnät av färgade prickar, som ett foto eller en penselmålning, och att förstora det gör prickarna större snarre än att lägga till detaljer. Ett dokument kan hålla så många av var och en du vill, i valfri ordning, och de staplar i Lagerpanelen tillsammans.</p>
+<p>Nå efter ett pixellager när en form ensam inte räcker till: en handritad skugga, en grov textur bakom ren text, en färgskvätt som inte behöver vara en redigerbar bana, eller retuschering över ett placerat foto. Håll logotyper, diagram och allt du kommer att ändra storlek på senare som vektorer, och använd pixlar för de delar som vill ha målningens känsla.</p>
+<p>Ett placerat foto är en relaterad men separat sak. <strong>Arkiv &gt; Placera…</strong> (<kbd>&#8679;&#8984;P</kbd>) tar in en befintlig bild i dokumentet som en inbäddad bild; ett pixellager är en yta du målar på från grunden inne i Scissor. Båda är gjorda av pixlar och båda kan provas med pipetten, men bara ett pixellager tar penselströkar.</p>
+
+<h2 id="pixels-new">Skapa ett pixellager</h2>
+<p><strong>Objekt &gt; Pixellager &gt; Nytt pixellager</strong> lägger till en tom yta som täcker den aktiva artboarden. Du behöver inte göra ett först, dock: välj penseln och måla, och Scissor skapar lagret åt dig i det ögonblicket den första ströken landar. Hur som helst mappas lagret på artboarden, så att pixlarna linjerar upp med artboarden oavsett upplösning de gjordes i.</p>
+<p>Den upplösningen kommer från <strong>Rastereffekter</strong>-inställningen i <strong>Arkiv &gt; Dokumentinställningar…</strong> (<kbd>&#8997;&#8984;P</kbd>): Skärm (72&nbsp;ppi), Medel (150&nbsp;ppi) eller Hög (300&nbsp;ppi). En högre inställning ger ett nytt pixellager fler prickar per punkt, så att penselarbetet förblir mjukt när verket skrivs ut eller visas stort. Ställ in det innan du gör lagret, eftersom pixeltalet är fast när ytan skapas.</p>
+<p>I det moderna gränssnittet kan du också lägga till ett lager från verktygsraden: med penseln eller pixelraderaren aktiv sitter en <strong>Nytt pixellager</strong>-knapp i slutet av raden.</p>
+<p><strong>Att placera en bild gör också ett pixellager.</strong> Släpp en bild på duken, använd <strong>Arkiv &gt; Placera…</strong>, eller klistra in en från urklippet, och den kommer in som ett redigerbart pixellager i sin egen storlek snarre än en låst bild – så att du kan måla på den, maskera den, justera och filtrera den direkt. Att öppna en bild med <strong>Arkiv &gt; Öppna</strong> gör ett nytt dokument med en artboard i bildens storlek, fylld av pixellagret. Mycket stora foton skalas ner för att passa pixelet. En <strong>SVG</strong> förblir vektor – dess banor förblir redigerbara – så att bara bitmappsbilder (PNG, JPEG, GIF, WebP, och liknande) blir pixellager.</p>
+<p>Ett lagerat <strong><code>.psd</code></strong>-fil kommer in rikare: att öppna en bygger om dess stapel som separata pixellager, och behåller varje lagers <strong>mask</strong>, och tar över text, former och lagereffekter så att filen lander nära hur den såg ut där den gjordes snarre än som en enda platt bild. Det är det fullständigaste sättet in i pixlarbete, och allt på denna sida gäller sedan för de lager som anländer.</p>
+
+<h2 id="pixels-painting">Måla</h2>
+
+<h3 id="pixels-brush">Penseln och pixelraderaren</h3>
+<p>Två verktyg fungerar på pixellager.</p>
+<table>
+  <thead><tr><th>Verktyg</th><th>Var det bor</th><th>Vad det gör</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Penselverktyg</strong></td><td>Delar en plats med målpenseln (<kbd>B</kbd>) och fyllpenseln (<kbd>&#8679;B</kbd>)</td><td>Lägger ner färg som blir en del av bilden</td></tr>
+    <tr><td><strong>Pixelraderingsverktyg</strong></td><td>Delar en plats med radergummit (<kbd>&#8679;E</kbd>), saxen och kniven</td><td>Gnuggar bort färg så att det som sitter under syns igenom</td></tr>
+  </tbody>
+</table>
+<p>För att nå valfri, tryck och håll det synliga verktyget i verktygsraden, eller högerklicka på det, och välj pixelverktyget från listan. Förväxla dem inte med deras vektorgrannar: målpenseln ritar en bana du kan omforma efteråt, medan penseln målar pixlar som inte kan ompekas. Båda pixelverktygen visar en ring på duken i den storlek de kommer att måla, och båda använder en hårkorspekare.</p>
+<p>Dra för att måla eller radera. Märket följer pekaren utan gap hur snabbt du än rör dig, eftersom Scissor lägger en rad av runda dabs längs ströken och håller dem jämnt fördelade även när pekaren hoppar. Pixelraderaren tar bort alfa snarre än att måla över, så att det den rensar går helt transparent; en platta raderad tillbaka till ingenting släpps, så att radering inte lämnar vikt kvar.</p>
+
+<h3 id="pixels-colour">Måla i fyllningsfärgen</h3>
+<p>Penseln målar i den aktuella <strong>fyllnings</strong>färgen. Ställ in den som du ställer in valfri fyllning: färgpanelen, en färgprov, eller, när penseln är aktiv i det moderna gränssnittet, <strong>Färg</strong>-plattan i verktygsraden. Om fyllningen är tom faller penseln tillbaka till konturfärgen, och till svart om det inte finns någon färg alls. Välj en färg direkt från ett pixellager med pipetten när du vill matcha färg som redan är nere.</p>
+
+<h3 id="pixels-controls">Storlek, hårdhet och flöde</h3>
+<p>När penseln eller pixelraderaren är aktiv bär verktygsraden inställningarna som formar märket. De finns också i dina inställningar, så att de bär över från en session till nästa.</p>
+<dl>
+  <dt>Storlek</dt><dd>Penseldiametern, från 1 upp till 200 pixlar. Tryck <kbd>[</kbd> för att göra penseln mindre och <kbd>]</kbd> för att göra den större; varje tryck ändrar storleken med en femtedel, så att steget växer med penseln. Ringen på duken visar den aktuella storleken.</dd>
+  <dt>Hårdhet</dt><dd>Var börjar börjar att tona ut, som en procent. Vid 100% är kanten krispig; sänk den och dabs mjuknar mot sin kant med en mjuk falloff och ingen synlig ring. Använd en mjuk pensel för skuggor och glödar, en hård för fasta former.</dd>
+  <dt>Flöde</dt><dd>Hur mycket färg varje dab lägger ner, för penseln bara. Under 100% byggs färgen upp gradvis när du går över en yta igen, vilket passar skuggning och långsamma blandningar. Pixelraderaren har ingen flödeskontroll.</dd>
+</dl>
+
+<h2 id="pixels-retouch">Dodge, burn och svamp</h2>
+<p>Tre retuscheringspenslar arbetar in i pixlarna som redan finns snarre än att lägga ner en färg, och delar en plats i verktygsraden. De målar som penseln – samma storlek, hårdhet och dukring – och byggs upp när du går över en yta igen, så att en lätt beröring är gradvis och en fast är snabb.</p>
+<dl>
+  <dt>Dodge</dt><dd>Ljusnar var du målar, lyfter skuggor och lägger till höjdpunkter.</dd>
+  <dt>Burn</dt><dd>Mörkar var du målar, fördjupar skuggor och kanter.</dd>
+  <dt>Svamp</dt><dd>Lyfter mättnaden, och gör färger rikare ju mer du går över dem.</dd>
+</dl>
+<p>Var och en lämnar transparenta pixlar orörda, stannar inne i en markering när en är satt, och hela ströken ångras i ett enda steg.</p>
+
+<h2 id="pixels-more-tools">Burk, former och gradienter</h2>
+<p>Målning är inte bara penseln. På ett pixellager lägger tre verktyg till ner färg: <strong>Burkverktyget</strong> överflöder en sammanhängande yta av liknande färg från där du klickar; <strong>formverktygen</strong> stämplar en rektangel, ellips, stjärna eller polygon rakt in i pixlarna istället för att rita en bana; och <strong>gradientverktyget</strong> målar en linjär eller radiell övergradering över ytan. Var och en respekterar den aktuella markeringen, så att du kan begränsa en fyllning eller en gradient till en vald region.</p>
+
+<h2 id="pixels-selecting">Markera pixlar</h2>
+<p>En <strong>pixelmarkering</strong> – en rammarkering – begränsar varje målning och redigering till regionen inne i den, på samma sätt som en mall. Tre verktyg gör en, och delar pixelmarkeringsplatsen: <strong>Rektangulär</strong> och <strong>Elliptisk ram</strong>, och en frihands <strong>Lassoram</strong> du spårar för hand. Dra för att rita en markering; en vanlig dragning ersätter den aktuella.</p>
+<p><strong>Auto-markera</strong> väljer efter färg istället för efter form: klicka på ett pixellager och det tar den sammanhängande färgpatchen runt där du klickade, och spårar en markeringsmyror kontur runt den – praktiskt för att lyfta en platt bakgrund eller ett färgat område. Hur nära en färg måste vara för att tas är <strong>Toleransen</strong> på auto-markera-alternativen, samma inställning den använder på vektorobjekt; höj den för att samla mer, sänk den för att hålla dig till en nära matchning. Hål i patch utelämnas från markeringen.</p>
+<p>Markeringar kombineras, så att en form kan byggas från flera strökar eller klick: håll ned <kbd>&#8679;</kbd> för att <strong>lägga till</strong> i markeringen, <kbd>&#8997;</kbd> för att <strong>subtrahera</strong>, och båda tillsammans för att behålla bara <strong>överlappningen</strong> – rammarkeringarna och auto-markera kombineras alla på samma sätt. <strong>Markera &gt; Alla</strong> (<kbd>&#8984;A</kbd>) markerar varje pixel, <strong>Markera &gt; Invertera</strong> vänder rammarkeringen, och <strong>Avmarkera</strong> – <kbd>&#8984;D</kbd> på ett pixellager – släpper den. En markeringsmyror kontur visar markeringen på duken.</p>
+
+<h2 id="pixels-editing-selection">Flytta, klipp ut och kopiera pixlar</h2>
+<p>Med en markering satt flyttar markeringsverktyget pixlarna inne i den: dra från inne i rammarkeringen och det markerade målet lyfts och reser, och rensar där det var och tar rammarkeringen med sig. Håll ned <kbd>&#8997;</kbd> medan du drar för att lämna originalet på plats och flytta en <strong>kopia</strong>.</p>
+<p>Transformverktygen fungerar också på markeringen. Med en rammarkering satt, omsluter markeringsverktygets avgränsningsram och <strong>Fritt transformverktyget</strong> (<kbd>E</kbd>) rammarkeringen, inte hela lagret, så att du kan skala, rotera eller flytta bara den delen av bilden; <strong>Objekt &gt; Transformera</strong> och piltangenterna verkar på det på samma sätt. De lyftade pixlarna sväv över lagret medan du arbetar, så att du kan dra dem om och om igen utan att förlora några detaljer. Tryck <kbd>Enter</kbd>, välj ett annat verktyg, eller gör en ny markering för att sätta ner dem, vilket är ett enda steg att ångra, eller tryck <kbd>Escape</kbd> för att sätta tillbaka allt där det var. En flytt med hela pixlar håller dem exakt som de var; skalning eller vridning samplar dem en gång, när de sätts ner.</p>
+<p>Fritt transformverktygets <strong>Fri förvrängning</strong> och <strong>Perspektivförvrängning</strong> fungerar också på pixlar, på en rammarkering eller på hela ett lager: dra ett hörn av rutan (eller håll ned <kbd>&#8984;</kbd> medan du drar ett i fritt transform-läge) för att dra bilden ur vinkel, till exempel för att passa ett foto på en skärm eller en skylt som ses i vinkel. Medan du drar visar Scissor en snabb förhandsvisning storleksanpassad till skärmen, så att den förblir mjuk även på ett stort foto; pixlarna själva dras en gång, i full upplösning, när du trycker <kbd>Enter</kbd> eller går vidare, och rammarkeringen följer den nya formen.</p>
+<p>Kopiera (<kbd>&#8984;C</kbd>) och klipp ut (<kbd>&#8984;X</kbd>) fungerar på pixlarna inne i en rammarkering: kopiering lämnar lagret som det är, klippning tar pixlarna ut. Klistra in (<kbd>&#8984;V</kbd>) sätter dem på ett <strong>nytt pixellager</strong> precis ovanför det de kom ifrån, på exakt samma plats, redo att flyttas eller transformeras på egen hand. Samma kommandon finns i <strong>Skapa &gt; Pixellager</strong>, och markeringen driver också ytkommandona: <strong>Fyll med fyllningsfärg</strong> fyller bara den markerade regionen, <strong>Rensa</strong> och <strong>Ta bort</strong> raderar den, och utan markering verkar var och en på hela lagret.</p>
+
+<h2 id="pixels-adjustments">Justeringar</h2>
+<p><strong>Objekt &gt; Pixellager &gt; Justeringar</strong>-undermenyn retuscherar färgen på ett pixellager, begränsad till markeringen när en är satt. Var och en öppnar en dialog som förhandsvisar på duken medan du drar.</p>
+<dl>
+  <dt>Ljusstyrka / Kontrast, Nivåer</dt><dd>Ställer in den övergripande ljusheten och kontrasten, eller omfördelar svartpunkten, vitpunkten och gammman för finare tonkontroll.</dd>
+  <dt>Nyans / Mättnad, Vibrans</dt><dd>Skiftar nyansen och lyfter eller sänker mättnaden över hela artboarden, eller använd Vibrans för att boosta de dämpade färgerna medan de redan levande lämnas ifred.</dd>
+  <dt>Färgbalans</dt><dd>Trycker mellantonerna mot cyan eller rött, magenta eller grönt, gult eller blått.</dd>
+  <dt>Gradientkarta</dt><dd>Omfärglägger lagret efter dess ljusstyrka, och mappar skuggorna till en färg och höjdpunkterna till en annan.</dd>
+  <td>Avmätta, Invertera</dt><dd>Släpper all färg till grå, eller vänder varje färg till dess motsats.</dd>
+  <dt>Tröskel, Posterisera</dt><dd>Minskar bilden till rent svart och vitt på en vald nivå, eller till ett litet antal toner per kanal.</dd>
+</dl>
+
+<h2 id="pixels-filters">Filter</h2>
+<p><strong>Filter</strong>-undermenyn omformar pixlarna själva, återigen inom markeringen.</p>
+<dl>
+  <dt>Gaussisk suddighet</dt><dd>Mjukar upp lagret med ett jämnt, justerbart belopp.</dd>
+  <dt>Skärpa, Oskarp mask</dt><dd>Gör detaljerna krispiga – Oskarp mask ger kontroll över radien, beloppet och en tröskel som skonar platta områden och fina brus.</dd>
+  <dt>Pixelera</dt><dd>Blockar bilden till kvadratiska plattor för en mosaik.</dd>
+  <dt>Lägg till brus</dt><dd>Sprider korn över målningen.</dd>
+  <dt>Hitta kanter, Relief</dt><dd>Spårar var färgen ändras som ljusa linjer på mörkt, eller som ett grått relief.</dd>
+</dl>
+<p><strong>Filter &gt; Effektförhandsvisningar</strong> visar ditt lager som ett rutnät av live-miniatyrer, var och en med en justering eller ett filter tillämpat, så att du kan välja med ögat snarre än efter namn. Att välja en miniatyr håller fönstret öppet. Effektens inställningar visas bredvid rutnätet, och duken förhandsvisar resultatet medan du ändrar dem. Ingenting tillämpas förrän du klickar <strong>Tillämpa</strong> (eller trycker <kbd>Enter</kbd>). <strong>Avbryt</strong> eller <kbd>Esc</kbd> sätter bilden tillbaka, och ett ånger tar en tillämpad effekt bort. Du kan dra fönstret efter sin rubrik för att se duken bakom det.</p>
+
+<h2 id="pixels-undo">Snabb, plattbaserad ångeråtgärd</h2>
+<p>En hel strök ångras i ett steg, hur lång den än var: tryck <kbd>&#8984;Z</kbd> en gång och det sista märket är borta, och <kbd>&#8679;&#8984;Z</kbd> får tillbaka det. Om den första ströken måste skapa sitt lager, går det lagret tillbaka med ströken snarre än att lämnas kvar tomt.</p>
+<p>Bakom kulisserna hålls ett pixellager som ett rutnät av små plattor, och en strök kopierar bara de plattor den faktiskt rörde. Att ångra håller hela dokumentögonblicksbilder, men en strök kostar bara sina egna plattor snarre än hela ytan, så att målning på ett stort lager förblir snabbt och en lång session av penselarbete fyller inte minnet. Platta områden av en färg lagras kompakt, så att ett lager som till största delen är en enda färg tar nästan ingen plats.</p>
+
+<h2 id="pixels-treating">Behandla ett pixellager som valfritt objekt</h2>
+<p>Ett pixellager är ett objekt i dokumentet, så att allt du redan vet gäller. Markera det, flytta det, och skala, rotera, spegla eller luta det från <strong>Objekt &gt; Transformera</strong>, avgränsningsramen eller fritt transformverktyget. Utan rammarkering omsluter rutan lagrets målade pixlar snarre än hela ytan, och en transformering fungerar på de pixlarna: flyttning lämnar dem orörda, medan skalning eller vridning bakas in i pixlarna när du trycker <kbd>Enter</kbd>, väljer ett annat verktyg eller markerar något annat, så att lagret förblir upprätt och nästa penselströk landar rätt vänd. Ställ in dess opacitet och ge det något av de sexton blandningslägena från transparenspanelen för att få målad färg att sitta över det ritade konstverket under. Att klicka plockar upp lagret bara där det har färg, så att ett transparent hörn låter dig klicka rakt igenom till vad som ligger under. <strong>Duplicera</strong> kopierar ett pixellager som valfritt objekt – billigt, eftersom kopian delar sina plattor tills en av dem målas på.</p>
+<p><strong>Objekt &gt; Pixellager &gt; Slå samman nedåt</strong> plattar ett pixellager på pixellagret direkt under det och tar bort det övre, och lämnar ett enda lager med de två komponerade tillsammans. Om lagren sitter under olika transformeringar – säg att ett har roterats – samplas det övre in i det nedrets rutnät när det slås samman.</p>
+<p>Två kommandon verkar på hela ytan på en gång:</p>
+<dl>
+  <dt>Objekt &gt; Pixellager &gt; Fyll med fyllningsfärg</dt><dd>Överflöder hela ytan med den aktuella fyllningsfärgen. Nå efter det för att lägga en basmålning innan du målar över den, eller för att överflöda ett lager som satts bakom annat konstverk.</dd>
+  <dt>Objekt &gt; Pixellager &gt; Rensa</dt><dd>Tömmer ytan utan att ta bort lagret, så att du kan börja måla igen medan du behåller lagrets plats, transformering, opacitet och blandningsläge.</dd>
+</dl>
+<p>Båda kommandonen finns också under <strong>Effekt &gt; Pixellager</strong>.</p>
+
+<h2 id="pixels-masks">Lagermasker</h2>
+<p>En <strong>lagermask</strong> döljer delar av ett pixellager utan att ta bort dem: lagret syns igenom där masken är vitt och döljs där den är svart, med gråtonerna däremellan för partiell transparens. Eftersom inget raderas kan du måla masken fram och tillbaka så många gånger du vill. Kommandona finns under <strong>Objekt &gt; Pixellager</strong>.</p>
+<dl>
+  <dt>Lägg till lagermask</dt><dd>Fäster en mask som visar allt från början, redo att måla på.</dd>
+  <dt>Lägg till lagermask från markering</dt><dd>Bygger masken från den aktuella pixelmarkeringen: det som är inne förblir, det som är ute döljs. Ett snabbt sätt att klippa ut en form ur ett foto icke-förstörande.</dd>
+  <dt>Redigera mask</dt><dd>Slår maskmålning på och av. Medan den är på, målar penseln, radergummit och burkverktyget masken istället för lagret: måla med svart (eller en mörk färg) för att dölja, vitt för att visa, grått för att tona ut. Penseln använder ljusheten i den aktuella fyllningsfärgen, så att svart döljer och vitt visar.</dd>
+  <dt>Tillämpa lagermask</dt><dd>Bakar masken in i lagret för gott – de dolda pixlarna blir transparenta – och tar bort masken.</dd>
+  <dt>Ta bort lagermask</dt><dd>Kastar masken och visar hela lagret igen, orört.</dd>
+</dl>
+<p>Ett maskerat lager exporteras och sparas med masken redan tillämpad, och blandar och transformeras som valfritt annat lager.</p>
+
+<h2 id="pixels-rasterize">Förvandla vektorverk till pixlar: Rasterisera</h2>
+<p><strong>Objekt &gt; Rasterisera</strong> ersätter den aktuella markeringen med en inbäddad bild av sig själv, och bakar banor, text och alla effekter till fasta pixlar. Använd detta när du vill ha ett vektorresultat att sluta vara redigerbart, när en effekt är enklare att behandla som en platt bild, eller för att överlämna en bit som ska se likadant ut överallt utan att bära sin live-konstruktion. Resultatet är en inbäddad bild snarre än ett målbart pixellager, så behåll en kopia av det ursprungliga konstverket om du kan behöva redigera det igen. <strong>Visa &gt; Pixelvisning</strong> (<kbd>&#8997;&#8984;Y</kbd>) låter dig kontrollera hur vektorverk landar på pixlrutnätet innan du förpliktar dig.</p>
+
+<h2 id="pixels-saving">Spara och exportera</h2>
+<p><code>.cut</code>-dokument håller pixellager med resten av konstverket, packade så att platta områden tar nästan ingen plats och öppnas exakt som målade.</p>
+<p>Hur pixellager lämnar dokumentet beror på formatet:</p>
+<dl>
+  <dt>PNG, JPEG och WebP</dt><dd>Plattar hela dokumentet till pixlar, så att målat och ritat arbete slås samman till en bitmap. PNG kan behålla transparens; exportera vid @2x för ett skarpare resultat.</dd>
+  <dt>SVG och PDF</dt><dd>Skriver ut den målade ytan som en inbäddad bild placerad bland vektorverket, så att ett dokument som blandar ritat och målat reser som en enda fil med sina former fortfarande skarpa.</dd>
+</dl>
+<p>Eftersom raster och vektor lever i samma dokument och exporterar tillsammans kan du bygga ett verk på det naturliga sättet: rena former och text som vektorer, och de delar som vill ha målningens känsla, en mjuk glöd, en texturerad tvätt, en retuscherad fotograf, som pixellager staplade bland dem.</p>
