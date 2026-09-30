@@ -1,0 +1,39 @@
+<p class="lede">Tre verktøy i Scissor gjør det repeterende arbeidet for deg: <strong>Handlinger</strong> spiller inn en rekke med kommandoer og spiller den av, <strong>Variabler</strong> bytter tekst og synlighet fra en tabell med data slik at én design blir mange, og <strong>Skript</strong> styrer hele redigeringsprogrammet fra JavaScript. Ingen av dem trenger en konto eller en server - som resten av Scissor kjører de på din egen maskin.</p>
+
+<h2 id="automation-actions">Handlinger: spill inn én gang, spill av overalt</h2>
+<p><strong>Handlinger</strong>-panelet (Vindu &rsaquo; Handlinger) spiller inn hva du gjør og spiller det av på et nytt utvalg. Trykk <strong>Spill inn</strong>, kjør kommandoene du vil fange - juster, forskyv, legg til en skygge, hva rekken enn er - og trykk deretter <strong>Stopp</strong> og gi handlingen et navn. Den blir med i listen, og viser hvor mange trinn den holder.</p>
+<p>Klikk på en handling for å <strong>spille</strong> den av på hva som er valgt nå; <kbd>&#8997;</kbd>-klikk på én for å slette den. Fordi en handling bare er en liste med kommandoer, gjentar den en nøyaktig rutine på mange objekter uten at du klikker gjennom den hver gang.</p>
+
+<h2 id="automation-variables">Variabler: én design, mange versjoner</h2>
+<p><strong>Variabler</strong>-panelet (Vindu &rsaquo; Variabler) gjør en fast design til en mal styrt av data. To ting på et objekt kan gjøres dynamiske:</p>
+<dl>
+  <dt>Gjør tekst dynamisk</dt><dd>Kobler et tekstobjekters ord til en variabel, slik at forskjellige datasett kan sette forskjellig tekst på samme plass.</dd>
+  <dt>Gjør synlighet dynamisk</dt><dd>Kobler om et objekt vises, slik at et sett kan slå deler av designet av eller på.</dd>
+</dl>
+<p><strong>Avbind</strong> gjør et bundet objekt fast igjen.</p>
+
+<h3 id="automation-datasets">Datasett</h3>
+<p>Et <strong>datasett</strong> er én rad med verdier for de variablene - én badge, ett kort, én ramme. <strong>Fang</strong> lagrer gjeldende verdier som et nytt sett; pilene trår fra ett sett til neste og designet oppdateres for å matche. <strong>Importer CSV…</strong> leser en hel batch på én gang - én kolonne per variabel, én rad per sett - og <strong>Eksporter CSV</strong> skriver settene tilbake ut for å redigere i et regneark.</p>
+
+<h3 id="automation-batch">Eksportere hvert sett på én gang</h3>
+<p><strong>Eksporter datasett…</strong> renderer den aktive tavlen én gang for hvert datasett og skriver dem alle på én gang, som PNG, JPEG, WebP eller SVG. Et ark med navnebadger, et sett med lokaliserte bannere eller en rekje med sosiale kort kommer ut som en ryddig batch med filer, hver med sine egne data fylt inn.</p>
+
+<h2 id="automation-scripts">Skript: styre Scissor fra JavaScript</h2>
+<p>For alt en meny ikke kan uttrykke, kan et skript det. <strong>Fil &rsaquo; Skript &rsaquo; Skriptkonsoll…</strong> åpner en redigeringsprogram hvor du skriver JavaScript og kjører det mot det åpne dokumentet; <strong>Annet skript…</strong> (<kbd>&#8984;F12</kbd>) kjører en <code>.js</code>-fil fra disken. Et skript kjører i en Web Worker, borte fra siden, slik at det ikke kan røre grensesnittet eller filene dine gjennom det <code>scissor</code>-objektet det får - hvert kall utføres på motoren og besvares.</p>
+<p><code>scissor</code>-objektet dekker det felles landet:</p>
+<dl>
+  <dt>Lag former og tekst</dt><dd><code>scissor.rect</code>, <code>roundedRect</code>, <code>ellipse</code>, <code>polygon</code>, <code>star</code>, <code>path</code> og <code>text</code> tegner kunstverk; hver tar en posisjon og størrelse og et alternativobjekt for <code>fill</code>, <code>stroke</code> og <code>strokeWidth</code> (farger er enhver CSS-farge).</dd>
+  <dt>Les dokumentet</dt><dd><code>await scissor.document()</code> returnerer appen, utvalget, lagene og tavlene slik panelene ser dem; <code>scissor.selection()</code> returnerer bare det som er valgt.</dd>
+  <dt>Virke på det</dt><dd><code>scissor.select</code>, <code>group</code> og <code>undo</code>, og <code>scissor.run(command)</code> for ethvert engine-kommando i det hele tatt - de samme kommandoene menyene sender.</dd>
+  <dt>Snakke tilbake</dt><dd><code>scissor.log</code> skriver til konsollen; <code>scissor.alert</code> viser en melding.</dd>
+</dl>
+<p>Et kort eksempel - en ring av fargede prikker og en bildetekst:</p>
+<pre><code>const doc = await scissor.document();
+scissor.log('Tavler:', doc.artboards.length);
+for (let i = 0; i &lt; 12; i++) {
+  const a = (i / 12) * Math.PI * 2;
+  await scissor.ellipse(300 + Math.cos(a) * 120, 260 + Math.sin(a) * 120, 36, 36,
+    { fill: `hsl(${i * 30} 80% 60%)` });
+}
+await scissor.text(230, 270, 'Hei, Scissor', { size: 24 });</code></pre>
+<p>Skriptkonsollen beholder siste koden du kjørte, slik at et fungerende skript er der når du kommer tilbake til det.</p>

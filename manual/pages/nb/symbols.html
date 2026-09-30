@@ -1,0 +1,91 @@
+<p class="lede">Symboler, pensler og mønstre er tre måter å tegne ett stykke kunstverk én gang og gjenbruke det. Endre originalen og hver bruk av den endres med den, slik at et gjentatt element forblir konsistent og forblir raskt å oppdatere.</p>
+
+<p>Snarveiene nedenfor er skrevet i macOS-form. På Windows leser du <kbd>&#8984;</kbd> som <kbd>Ctrl</kbd>, <kbd>&#8997;</kbd> som <kbd>Alt</kbd> og <kbd>&#8679;</kbd> som <kbd>Shift</kbd>.</p>
+
+<h2 id="symbols-panel">Symboler-panelet</h2>
+<p>Et symbol er et lagret stykke kunstverk du kan slippe inn i dokumentet et ubegrenset antall ganger. Hver kopi er en <em>instans</em>: den peker tilbake til én definisjon i stedet for å holde sitt eget kunstverk, slik at dokumentet forblir lite hvor mange instanser du enn plasserer, og en endring av definisjonen når dem alle på én gang. Grip etter symboler når samme element gjentar seg, som et tre i et landskap, en pinne på et kort, en bolt i en sammenstillingstegning, eller en logo som vises på flere tavler.</p>
+<p>Åpne panelet med <strong>Vindu &gt; Symboler</strong> (<kbd>&#8679;&#8984;F11</kbd>), eller fra fanen sin i paneldokken. Det lister symbolene i dokumentet etter navn. Å klikke på et navn velger det som det aktive symbolet, som er det Symbolsprøyten legger ned; det aktive symbolet er fremhevet.</p>
+
+<h3 id="symbols-make">Lage et symbol</h3>
+<p>Velg kunstverket du vil gjenbruke og klikk <strong>Nytt symbol</strong>. Utvalget lagres som symbolets definisjon og, på sin plass på lerretet, erstattes av én instans som sitter nøyaktig hvor kunstverket var. Definisjonen holdes på avstand, slik at den ikke roder lerretet eller de vanlige lagene. Hvis du ikke navngir noe, kalles symbolet <code>Symbol 1</code>, <code>Symbol 2</code> og så videre, i rekkefølgen du lager dem.</p>
+
+<h3 id="symbols-place">Plassere instanser</h3>
+<p>Dobbeltklikk på et symbol i panelet for å slippe en ny instans i midten av gjeldende visning. Plasser så mange du trenger. En instans oppfører seg som ethvert annet objekt når den er på lerretet: velg den og du kan flytte, skalere, rotere eller speile den, og angi opasiteten og blandingen sin, alt uten å røre definisjonen, fordi disse endringene sitter på instansen selv. Bruk dette til å variere størrelse og vinkel på gjentatte stykker mens du holder dem bundet til samme mester.</p>
+
+<h3 id="symbols-edit">Redigere et symbol</h3>
+<p>Dobbeltklikk på en instans på lerretet med Utvalgsverktøyet (<kbd>V</kbd>) for å trå inn i definisjonen. Alt annet på siden demmes, og du redigerer kunstverket på egen hånd. Dobbeltklikk på en tom del av lerretet for å trå ut igjen. Fordi hver instans tegner samme definisjon, vises redigeringen du gjør i dem alle sammen. Dette er poenget med et symbol: korriger kunstverket én gang og hele dokumentet henter opp, i stedet for å jage ned hver kopi.</p>
+
+<h3 id="symbols-break">Bryte koblingen</h3>
+<p>Når én instans må avvike fra resten på en måte som går utover posisjon, størrelse eller opasitet, velg den og klikk <strong>Bryt kobling</strong>. Instansen erstattes av en vanlig, redigerbar kopi av definisjonen, i samme størrelse og vinkel, ikke lenger bundet til symbolet. Endringer av symbolet vil ikke lenger nå den. Knappen er bare tilgjengelig mens en symbolinstans er valgt.</p>
+<p>For å fjerne et symbol helt, hold <kbd>&#8997;</kbd> og klikk på navnet i panelet. Definisjonen og hver instans av den slettes, siden en instans uten definisjon ikke ville tegne noe.</p>
+
+<h2 id="symbols-symbolism">Symbolismeverktøyene</h2>
+<p>Symbolismeverktøyene sprer og justerer symbolinstanser i knypen, under en rund penn, i stedet for én om gangen. De deler én plass i verktøylinjen; hold plassen nede for å velge blant dem. De virker på instansene inni utvalget, eller på hver redigerbar instans i dokumentet når ingenting er valgt, slik at du kan styre et helt felt av symboler på én gang. Hold <kbd>&#8997;</kbd> for å reversere effekten av hvilken som helst av dem.</p>
+<p>Mens et symbolismeverktøy er akti, gjør <kbd>[</kbd> og <kbd>]</kbd> pennen mindre og større, og <kbd>{</kbd> og <kbd>}</kbd> senker og hever intensiteten (hvor hardt hver pass virker).</p>
+<table>
+  <thead><tr><th>Verktøy</th><th>Snarvei</th><th>Hva det gjør</th></tr></thead>
+  <tbody>
+    <tr><td>Symbolsprøyte</td><td><kbd>&#8679;S</kbd></td><td>Dra for å legge ned instanser av det aktive symbolet, spredt ut mens du beveger deg; instansene samles i én <em>Symbolsett</em>-gruppe. Hold <kbd>&#8997;</kbd> for å løfte instanser ut under pennen</td></tr>
+    <tr><td>Symboldytt</td><td></td><td>Dytter instanser i retningen du drar, slik at du kan rydde en sprøyte uten å flytte hvert stykke</td></tr>
+    <tr><td>Symbolpakke</td><td></td><td>Trekker instanser sammen mot pennen; <kbd>&#8997;</kbd> sprer dem</td></tr>
+    <tr><td>Symbolskaler</td><td></td><td>Får instanser under pennen til å vokse; <kbd>&#8997;</kbd> krymper dem</td></tr>
+    <tr><td>Symbolsnu</td><td></td><td>Roterer instanser for å følge retningen til draet ditt</td></tr>
+    <tr><td>Symbolton</td><td></td><td>Toner instanser mot gjeldende fyllfarge, for variasjon over en gruppe; <kbd>&#8997;</kbd> fjerner tonen</td></tr>
+    <tr><td>Symbolton ut</td><td></td><td>Toner ut instanser ved å senke opasiteten; <kbd>&#8997;</kbd> får dem tilbake</td></tr>
+    <tr><td>Symbolstil</td><td></td><td>Bruker den grafiske stilen valgt i Grafiske stiler-panelet på instanser; <kbd>&#8997;</kbd> tømmer den</td></tr>
+  </tbody>
+</table>
+<p>Tre verktøy trenger noe satt opp først. Symbolsprøyte trenger et symbol å spraye, så lag ett i Symboler-panelet før du begynner. Symbolstil bruker hvilken som helst grafisk stil som er valgt i Grafiske stiler-panelet, så velg en stil der først; Symbolton bruker også gjeldende fyllfarge, så angi fyllet før du toner.</p>
+
+<h2 id="symbols-brushes">Pensler-panelet</h2>
+<p>En pensel bestemmer hvordan en linje tegnes langs en sti. I stedet for en vanlig linje med jevn bredde, kan stien bære en pennib-linje, et spor av spredt kunstverk, én form strukket ende til ende, eller en flistret bånd. Stien forblir fullt redigerbar under: omform den og den penslede linjen følger. Åpne panelet med <strong>Vindu &gt; Pensler</strong> (<kbd>F5</kbd>), eller fra fanen sin i paneldokken. Hver pensel viser en liten forhåndsvisning ved siden av navnet sitt.</p>
+
+<h3 id="symbols-brush-kinds">Typer pensler</h3>
+<p>Scissor har fem typer pensler. To tegnes av noen få tall, og tre bygges av kunstverk du velger.</p>
+<dl>
+  <dt>Kalligrafisk</dt>
+  <dd>En skjev, oval pennib som tykker og tynner etter hvert som stien snur, som en bred penn. Angi vinkelen sin, rundheten sin og størrelsen sin i punkter. Bruk den for skriftstrøk, signaturer og enhver linje som skal se håndtegnet ut.</dd>
+  <dt>Bust</dt>
+  <dd>En klynge av fine linjer som leser som en lastet pensel. Angi størrelsen i punkter, antall bust og maleopasiteten slik at overlappende pass bygger opp. Grip etter den når du vil ha en myk, malerkant i stedet for en ren.</dd>
+  <dt>Spred</dt>
+  <dd>Strø kopi av valgt kunstverk langs stien. Angi størrelsen til kopiene, avstanden mellom dem, hvor langt de spres fra linjen, og rotasjonen, med alternativer for å rotere hver kopi i forhold til stien og å omfarge den med linjefargen. Bruk den for konfetti, blader, stjerner eller bobler som følger en bue.</dd>
+  <dt>Kunst</dt>
+  <dd>Strekker ett stykke valgt kunstverk langs hele lengden av stien. Angi bredden, med et alternativ for å omfarge den med linjefargen. Bruk den for en tilspisset blekkstrøk, et bånd, en pil eller en grov kullmerking som bøyer med linjen.</dd>
+  <dt>Mønster</dt>
+  <dd>Fliser valgt kunstverk ende til ende langs stien, som en dekorativ kant. Angi skala og avstand, med et alternativ for å omfarge den med linjefargen. Bruk den for kjede, tau, sting eller en gjentatt ramme.</dd>
+</dl>
+
+<h3 id="symbols-brush-apply">Bruke og fjerne en pensel</h3>
+<p>Velg én eller flere stier og klikk på en pensel for å tegne linjene sine med den. En sti uten synlig linje får én slik at penselen har en linje å løpe langs. Verfpenselverktøyet (<kbd>B</kbd>) tegner nye linjer med hvilken som helst pensel som er valgt, så velg en pensel og mal rett på lerretet. For å ta en pensel av de valgte linjene og returnere dem til vanlige linjer, klikk <strong>Fjern pensel</strong>.</p>
+
+<h3 id="symbols-brush-manage">Lage, redigere og slette pensler</h3>
+<p>Klikk <strong>Ny pensel&hellip;</strong>, velg en av de fem typene, og angi alternativene. For en spredt, kunst- eller mønsterpensel, velg kunstverket den skal bruke før du åpner dialogboksen, fordi det kunstverket blir penselen. For å endre en pensel senere, velg den og klikk <strong>Alternativer&hellip;</strong> (eller dobbeltklikk den i listen); enhver linje som bruker den tegnes på nytt med de nye innstillingene. <strong>Slett</strong> fjerner den valgte pensel, etter å ha spurt; linjer som brukte den går tilbake til vanlige linjer.</p>
+
+<h2 id="symbols-patterns">Mønstre-panelet</h2>
+<p>Et mønster er en flise av kunstverk som gjentas for å fylle en form. Definer flisen én gang og du kan helle den inn i ethvert objekt som et fyll, slik at en tekstur eller et motiver forblir uniformt på tvers av kunstverket og oppdateres overalt når du redigerer flisen. Panelet sitter i paneldokken, og de samme kommandoene finnes under <strong>Objekt &gt; Mønster</strong>.</p>
+
+<h3 id="symbols-pattern-make">Lage et mønster</h3>
+<p>Velg kunstverket for én flise og klikk <strong>Lag mønster</strong> (eller <strong>Objekt &gt; Mønster &gt; Lag</strong>). En kopi av kunstverket lagres som en gjentatt flise og legges til i panelet; kunstverket du tegnet forblir der det er. Mønstre navngis <code>Mønster 1</code>, <code>Mønster 2</code> og så videre etter hvert som du lager dem.</p>
+
+<h3 id="symbols-pattern-fill">Fylle med et mønster</h3>
+<p>Velg en form og klikk på et mønster i panelet for å sette det som formens fyll. Uten noe valgt, gjør klikk på et mønster det til fyllfargen for neste form du tegner. Fordi det er et fyll, gjentas mønsteret for å dekke formen og klippes til omtrekken. Bruk dette for bakgrunner, stoffer, bladverk, eller enhver overflate som skal lese som en gjentakelse i stedet for en flat farge. For å fjerne et mønster fra dokumentet, hold <kbd>&#8997;</kbd> og klikk det i panelet; former som var fylt med det faller tilbake til ingen fyll.</p>
+
+<h3 id="symbols-pattern-edit">Redigere flisen</h3>
+<p>Dobbeltklikk på et mønster i panelet for å redigere flisen. Resten av kunstverket demmes, og du jobber på flisen på egen hånd, med en <strong>Fullfør redigering</strong>-knapp i panelet; klikk den (eller bruk <strong>Objekt &gt; Mønster &gt; Rediger mønster</strong> igjen) når du er ferdig. Hver form som er fylt med mønsteret oppdateres for å matche. Du kan også begynne å redigere ved å velge en form som er fylt med et mønster og velge <strong>Rediger mønster</strong>.</p>
+
+<h3 id="symbols-pattern-options">Flisealternativer</h3>
+<p>Klikk på flisealternativknappen ved siden av et mønster (eller <strong>Objekt &gt; Mønster &gt; Flisealternativer&hellip;</strong>) for å kontrollere hvordan flisen gjentas. Disse innstillingene endrer oppsettet til gjentakelsen uten å endre kunstverket i flisen.</p>
+<dl>
+  <dt>Flisetype</dt>
+  <dd>Hvordan rader og kolonner stilles opp: Rutenett, Murstein etter rad, Murstein etter kolonne, Heks etter kolonne eller Heks etter rad. Murstein forskyver annenhver rad eller kolonne som murverk; heks pakker flisene i en honningkake.</dd>
+  <dt>Mursteinsforskyvning</dt>
+  <dd>For murstein-typene, hvor mye hver annenhver rad eller kolonne forskyves, som prosent av flisen.</dd>
+  <dt>Flise til kunstverk</dt>
+  <dd>Passer flisen til kunstverkets grenser. Slå den av for å angi flisens bredde og høyde selv.</dd>
+  <dt>Bredde og Høyde</dt>
+  <dd>Størrelsen på flisen i piksler, brukes når flisen ikke er størrelses til kunstverket.</dd>
+  <dt>Horisontal og vertikal avstand</dt>
+  <dd>Gap etterlates mellom fliser, i piksler. Positive verdier sporer motiveret ut; negative verdier overlapper flisene.</dd>
+  <dt>Flytt flise med kunstverk</dt>
+  <dd>Holder flisen justert med kunstverket når det beveger seg, slik at gjentakelsen reiser med objektet.</dd>
+</dl>

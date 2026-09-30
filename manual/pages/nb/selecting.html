@@ -1,0 +1,34 @@
+<p class="lede">Før du kan endre noe må du si hva du vil endre. Denne siden handler om å velge kunstverk: de raske klikkene med utvalgsverktøyene, og hele <strong>Velg</strong>-menyen som velger objekter etter hva de er laget av, trinnvis gjennom stabelen, og lagrer et utvalg for å hente tilbake senere. I snarveiene nedenfor er <kbd>&#8984;</kbd> <kbd>Ctrl</kbd> på Windows og Linux, <kbd>&#8997;</kbd> er <kbd>Alt</kbd> og <kbd>&#8679;</kbd> er Shift.</p>
+
+<h2 id="selecting-basics">Klikking og markeringsrektangel</h2>
+<p><strong>Utvalgsverktøyet</strong> (<kbd>V</kbd>) er hvor det meste utvalg begynner. Klikk på et objekt for å velge det; hold <kbd>&#8679;</kbd> og klikk på et annet for å legge det til, eller klikk på et valgt for å fjerne det. Dra over tomt lerret for å trekke en <em>markeringsrektangel</em>, og alt det rører ved velges. <strong>Direkte utvalgsverktøyet</strong> (<kbd>A</kbd>) når inni i stedet: det velger individuelle ankerpunkter og stisegmenter i stedet for hele objekter, og <strong>Gruppeutvalgsverktøyet</strong> trer inn i en gruppe om gangen. Disse verktøyene dekkes på <a href="/manual/tools/">Verktøy</a>- og <a href="/manual/paths/">Stier</a>-sidene; resten av denne siden er Velg-menyen, som gjør utvalget som klikking ikke kan.</p>
+
+<h2 id="selecting-whole-document">Alt, ingenting og invertert</h2>
+<table>
+  <thead><tr><th>Kommando</th><th>Snarvei</th><th>Hva den velger</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Velg &rsaquo; Alt</strong></td><td><kbd>&#8984;A</kbd></td><td>Hvert ulåste objekt i dokumentet.</td></tr>
+    <tr><td><strong>Alt på aktiv tavle</strong></td><td><kbd>&#8997;&#8984;A</kbd></td><td>Bare kunstverket på tavlen du jobber på - den raske måten å gripe én side av en fil med flere tavler.</td></tr>
+    <tr><td><strong>Velg bort</strong></td><td><kbd>&#8679;&#8984;A</kbd></td><td>Ingenting; tømmer gjeldende utvalg.</td></tr>
+    <tr><td><strong>Inverter</strong></td><td></td><td>Bytter utvalget med alt som <em>ikke</em> var valgt.</td></tr>
+    <tr><td><strong>Velg igjen</strong></td><td><kbd>&#8984;6</kbd></td><td>Henter tilbake utvalget du hadde rett før du tømte det.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="selecting-stack">Trinnvis gjennom stabelen</h2>
+<p>Når objekter overlapper, flytter <strong>Velg &rsaquo; Neste objekt over</strong> (<kbd>&#8997;&#8984;]</kbd>) og <strong>Neste objekt under</strong> (<kbd>&#8997;&#8984;[</kbd>) utvalget opp eller ned gjennom haugen på samme sted, ett objekt om gangen. Det er den pålitelige måten å nå en form som ligger begravet under andre uten å dra de øverste ut av veien.</p>
+
+<h2 id="selecting-same">Velg lik: velge etter hva ting har til felles</h2>
+<p>Velg ett objekt, deretter samler <strong>Velg &rsaquo; Lik</strong> hvert annet objekt i dokumentet som matcher det på én egenskap. Bruk det til å omfarge hver form av ett fyll på én gang, eller å gripe alle tynne linjer på én gang.</p>
+<dl>
+  <dt>Utseende</dt><dd>Hele utseendet - samme stabel av fyll, linjer og effekter.</dd>
+  <dt>Fyll &amp; linje</dt><dd>Samme fyll og samme linje sammen.</dd>
+  <dt>Fyllfarge / Linjefarge</dt><dd>Samme fyllfarge, eller samme linjefarge.</dd>
+  <dt>Linjetykkelse</dt><dd>Samme linjebredde.</dd>
+  <dt>Opasitet</dt><dd>Samme opasitet.</dd>
+  <dt>Blandingsmodus</dt><dd>Samme blandingsmodus.</dd>
+  <dt>Form</dt><dd>Samme type objekt - alle ellipser, si, eller alle tekst.</dd>
+</dl>
+
+<h2 id="selecting-saved">Lagre et utvalg</h2>
+<p>Et vanskelig utvalg er verdt å beholde. <strong>Velg &rsaquo; Lagre utvalg…</strong> lagrer gjeldende sett under et navn; det vises deretter under <strong>Velg &rsaquo; Lagrede utvalg</strong>, og å velge det der velger nøyaktig de objektene igjen, uansett hvordan du har klikket rundt siden. <strong>Rediger utvalg…</strong> gir nytt navn eller fjerner de du har lagret. Lagrede utvalg reiser inni <code>.cut</code>-dokumentet, så de er der fremdeles neste gang du åpner filen.</p>
