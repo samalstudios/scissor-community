@@ -1,0 +1,110 @@
+<p class="lede">El text a Scissor roman en viu. Podeu tornar a editar les paraules, la tipografia i l'espaiat en qualsevol moment, i el text es dibuixa directament al llenç mentre escriviu, de manera que el que editeu és el que s'imprimeix i s'exporta.</p>
+
+<p>Les dreceres a continuació estan escrites en format macOS. A Windows, llegiu <kbd>&#8984;</kbd> com a <kbd>Ctrl</kbd>, <kbd>&#8997;</kbd> com a <kbd>Alt</kbd> i <kbd>&#8679;</kbd> com a <kbd>Majúscules</kbd>.</p>
+
+<h2 id="type-tools">Les eines de text</h2>
+<p>Les eines de text comparteixen una ranura a la barra d'eines. Seleccioneu la ranura i manteniu premuda per triar entre elles, després treballeu al llenç.</p>
+<table>
+<thead><tr><th>Eina</th><th>Drecera</th><th>Què fa</th></tr></thead>
+<tbody>
+<tr><td>Eina Text</td><td><kbd>T</kbd></td><td>Feu clic per a text de punt, arrossegueu per a un quadre rectangular de text d'àrea</td></tr>
+<tr><td>Eina Text d'àrea</td><td></td><td>Arrossegueu un quadre i escriviu-hi dins</td></tr>
+<tr><td>Eina Text sobre camí</td><td></td><td>Feu clic a un camí per fer-hi córrer el text al llarg</td></tr>
+<tr><td>Eina Text vertical</td><td></td><td>Estableix caràcters dret en columnes</td></tr>
+<tr><td>Eina Edita glifs</td><td><kbd>&#8679;T</kbd></td><td>Mou, redimensiona i gira un caràcter a la vegada</td></tr>
+</tbody>
+</table>
+<p>Per editar text ja a la pàgina, feu clic a qualsevol de les eines de text excepte Edita glifs per posar el cursor dins, o bé feu doble clic amb l'eina Selecció (<kbd>V</kbd>). Premeu <kbd>Esc</kbd>, o feu clic a un altre lloc, per deixar d'editar. Amb l'eina Text simple, fer clic a un camí obert lliga el text a aquest camí en comptes de començar un bloc nou, de manera que no sempre necessiteu l'eina Text sobre camí dedicada.</p>
+
+<h2 id="type-kinds">Text de punt, d'àrea i sobre camí</h2>
+<p>El text pot estar al document de tres maneres, i la diferència és com es mesuren les línies i on es trenquen. Tots tres romanen editables, accepten les mateixes configuracions de Caràcter i Paràgraf i es poden convertir en contorns més endavant.</p>
+
+<h3 id="type-point">Text de punt</h3>
+<p>Feu clic una vegada amb l'eina Text i escriviu. El text creix des d'aquest únic punt i només es trenca on premeu <kbd>Retorn</kbd>: no hi ha cap quadre per ajustar-s'hi. Useu el text de punt per a títols, etiquetes, unes paraules de text destacat o qualsevol cosa que posicionareu a ull en comptes de verter en una columna. Els seus sagnats i l'espaiat entre paràgrafs no tenen res amb què mesurar-se, de manera que aquests controls no tenen efecte sobre el text de punt; l'alineació es pren de l'ancoratge on heu fet clic.</p>
+
+<h3 id="type-area">Text d'àrea</h3>
+<p>Arrossegueu un rectangle amb l'eina Text o l'eina Text d'àrea i el text s'ajusta al quadre, trencant les línies automàticament a la vora dreta. Useu el text d'àrea per a cos de text, llegendes o qualsevol sèrie de text que ha de romandre dins una amplada establerta. Quan hi ha més text del que el quadre pot contenir, l'excés s'amaga i el quadre es marca com desbordat; eixampleu el quadre, reduïu el text o lligueu el desbordament a un altre quadre (vegeu a sota). Els sagnats, el sagnat de primera línia, l'espai abans i després i la sil·labil·lació s'apliquen tots al text d'àrea.</p>
+
+<h3 id="type-on-a-path">Text sobre camí</h3>
+<p>Feu clic a un camí amb l'eina Text sobre camí. El camí es converteix en la línia de base i deixa de ser feina per si mateix, de manera que ja no s'emplena ni es contorna. Useu-lo per fer córrer una etiqueta al voltant d'una insígnia, al llarg d'una corba o sobre una forma. Seleccioneu el resultat i apareixen tres claudators: una a l'inici, una al final i una al centre. Arrossegueu el claudator inicial o final per moure on comença i acaba el text al llarg del camí, arrossegueu el del centre per fer lliscar tota la sèrie al llarg d'aquest, i arrossegueu el del centre a través a l'altre costat del camí per capgirar el text. El text sobre camí no accepta salts de línia, de manera que <kbd>Retorn</kbd> no fa res mentre l'editeu. Remodeleu el camí subjacent i el text segueix les seves noves corbes.</p>
+<figure class="shot">
+  <img src="img/type-on-path.png" width="1700" height="798" loading="lazy"
+       alt="Les paraules 'El text flueix al llarg de qualsevol camí que dibuixis' seguint les corbes d'un camí ondulat a Scissor." />
+  <figcaption>Text establert sobre un camí ondulat. Remodeleu el camí i el text segueix les seves corbes; la línia de base aquí es mostra discontínua.</figcaption>
+</figure>
+
+<h2 id="type-character">El panell Caràcter</h2>
+<p>El panell Caràcter (<kbd>&#8984;T</kbd>, o bé <strong>Finestra &gt; Text &gt; Caràcter</strong>) conté tot allò que s'aplica a les lletres mateixes. Amb un objecte de text seleccionat, les seves configuracions cobreixen tot l'objecte: canvieu la tipografia o el tracking i cada caràcter segueix. Mentre escriviu, tipografia, pes, cursiva i mida s'apliquen només als caràcters seleccionats (vegeu <a href="#type-mixed">Estils mixtos en un text</a>). El panell es desactiva fins que no esteu editant text o no heu seleccionat un objecte de text.</p>
+
+<h3 id="type-font">Tipografia, pes, estil i mida</h3>
+<p>El menú de tipografia és cercable i manté les famílies utilitzades recentment a dalt. Llista les tipografies que el navegador pot dibuixar realment, llegides del sistema on pot informar-les i en cas contrari sondades a partir d'un conjunt de famílies comunes, de manera que la llista coincideix amb el que es renderitzarà en comptes d'un catàleg fix.</p>
+<p>El menú de pes ofereix Light, Regular, Medium, Semibold, Bold i Heavy, però només els pesos que la família triada té realment són seleccionables: la resta estan desactivats. El botó de cursiva al costat activa i desactiva l'estil inclinat. La mida s'estableix en píxels, des del camp Mida.</p>
+
+<h3 id="type-mixed">Estils mixtos en un text</h3>
+<p>Un text pot barrejar mides, colors, pesos i cursives. Mentra escriviu, seleccioneu alguns caràcters i canvieu-los des de la barra ràpida al costat del text, des de la barra d'opcions o des del panell Color. Només els caràcters seleccionats canvien i la resta del text manté el seu estil. Amb res seleccionat, el canvi s'applica a tot el text com sempre. Els estils viatgen amb els seus caràcters a mesura que continueu escrivint i es conserven a les exportacions SVG i PDF.</p>
+
+<h3 id="type-metrics">Interlineat, tracking i kerning</h3>
+<dl>
+  <dt>Interlineat</dt>
+  <dd>La distància d'una línia de base a la següent, en píxels. Deixeu-la a 0 per a l'interlineat automàtic, que és el 120% de la mida. Establiu-la més gran per obrir les línies, o més petita per estrènyer un títol.</dd>
+  <dt>Tracking</dt>
+  <dd>Espaiat uniforme afegit a o restat de cada caràcter, mesurat en mil·lèsimes d'em (de manera que s'escala amb la mida). Els valors positius afloen el text, els negatius l'estrenyen. Useu el tracking per ajustar una línia a una amplada o per espaiar les majúscules petites.</dd>
+  <dt>Kerning</dt>
+  <dd>L'espaiat parella per parella de la tipografia entre lletres particulars, com l'espai sota una T majúscula. Està actiu per defecte, al botó Kerning a la fila OpenType (marcat AV). Desactiveu-lo per veure les mètriques en brut de la tipografia.</dd>
+</dl>
+
+<h3 id="type-align">Alineació</h3>
+<p>El panell Caràcter té quatre botons d'alineació: esquerra, centre, dreta i justifica. Esquerra i dreta són relatives a la direcció de lectura, de manera que signifiquen inici i final: text de dreta a esquerra establert a esquerra s'alinea a la dreta visual. La justificació distribueix cada línia per omplir la mesura, de manera que només canvia alguna cosa on les línies s'ajusten, és a dir text d'àrea i text sobre camí en comptes de text de punt de línia única. Per als controls de justificació més fins (com s'estableix la darrera línia) useu el panell Paràgraf.</p>
+
+<h3 id="type-opentype">Funcions OpenType i majúscules petites</h3>
+<p>Sota l'encapçalament <strong>OpenType</strong> hi ha una fila de botons, cadascun dels quals activa o desactiva una funció del text seleccionat:</p>
+<table>
+<thead><tr><th>Botó</th><th>Funció</th></tr></thead>
+<tbody>
+<tr><td>fi</td><td>Lligadures estàndard (actives per defecte)</td></tr>
+<tr><td>st</td><td>Lligadures discrecionals</td></tr>
+<tr><td>TT</td><td>Tot majúscules</td></tr>
+<tr><td>T&#7472;</td><td>Majúscules petites</td></tr>
+<tr><td>T&sup1;</td><td>Superíndex</td></tr>
+<tr><td>T&#8321;</td><td>Subíndex</td></tr>
+<tr><td>&frac12;</td><td>Fraccions</td></tr>
+<tr><td>1&#738;&#7511;</td><td>Ordinals</td></tr>
+<tr><td>&#119964;</td><td>Swash</td></tr>
+<tr><td>AV</td><td>Kerning (actiu per defecte)</td></tr>
+</tbody>
+</table>
+<p>Tot majúscules dibuixa cada lletra com una majúscula sense canviar el text subjacent, de manera que encara és minúscula quan l'editeu. Les majúscules petites demanen a la tipografia les seves formes de majúscules petites. Superíndex i subíndex dibuixen els caràcters afectats més petits i els desplacen de la línia de base, per a marcadors de nota, desinències ordinals o fórmules químiques.</p>
+<p>Sota els botons, el menú d'estil de xifres tria com s'estableixen les xifres: Per defecte, Tabular Lining, Proporcional Oldstyle, Proporcional Lining o Tabular Oldstyle. Les xifres tabulars ocupen totes la mateixa amplada, de manera que les columnes de números s'alineen; les xifres oldstyle tenen ascensors i descensors que s'adapten millor al text corrent.</p>
+<p>No totes les funcions es poden previsualitzar al llenç. Lligadures activades o desactivades, kerning, majúscules, majúscules petites i superíndex i subíndex es dibuixen mentre editeu. Lligadures discrecionals, els estils de xifres, fraccions, ordinals i swash es registren al text i s'escriuen a l'<code>.svg</code> exportat com a configuracions de funcions de la tipografia, però el llenç no els mostra, de manera que tracteu aquells com a configuracions en temps d'exportació.</p>
+
+<h2 id="type-paragraph">El panell Paràgraf</h2>
+<p>El panell Paràgraf (<kbd>&#8997;&#8984;T</kbd>, o bé <strong>Finestra &gt; Text &gt; Paràgraf</strong>) controla com s'estableixen paràgrafs sencers. Com amb les configuracions de caràcter, aquestes s'apliquen a cada paràgraf de l'objecte de text.</p>
+<p>Set botons d'alineació corren a la part superior. Els tres primers són simples esquerra, centre i dreta. Els tres següents justifiquen el cos del paràgraf i estableixen només la darrera línia, alineada a l'esquerra, centrada o a la dreta. L'últim justifica cada línia inclosa l'darrera, estirant-la fins a la mesura completa. La justificació necessita un lloc on ajustar-se, de manera que té efecte al text d'àrea, no al text de punt.</p>
+<p>Sota els botons d'alineació hi ha els sagnats: <strong>Esquerra</strong> i <strong>Dreta</strong> estiren tot el paràgraf cap endins des dels costats del quadre, i <strong>Primera línia</strong> sagna només la primera línia. Un sagnat de primera línia negatiu fa sobresortir la primera línia enllà de les altres, que és com es crea un sagnat penjat. Els camps <strong>Abans</strong> i <strong>Després</strong> afegeixen espai a sobre i a sota de cada paràgraf, una manera més neta de separar paràgrafs que una línia buida. L'interruptor <em>Sil·laba</em> permet que les llargues es trenquin entre línies per uniformitzar la vora dreta. Els sagnats i l'espaiat s'apliquen al text d'àrea; el text de punt s'estableix des del seu propi ancoratge.</p>
+
+<h2 id="type-glyphs">El panell Glifs</h2>
+<p>El panell Glifs (<strong>Text &gt; Glifs</strong>, <kbd>&#8997;&#8679;F11</kbd>) llista els caràcters de la tipografia actual per conjunt, des del llatí bàsic passant pel grec, ciríl·lic, hebreu, aràbic, puntuació, monedes, fletxes i més, i manté els utilitzats recentment a dalt. Useu-lo per inserir un caràcter que el teclat no escriu, com una fletxa, un símbol de moneda o una lletra accentuada. Feu doble clic a un glif per escriure'l al cursor del text. Sense cap cursor en cap text, el glif es copia al porta-retalls, de manera que podeu enganxar-lo a un altre lloc.</p>
+
+<h2 id="type-orientation">Text vertical i de dreta a esquerra</h2>
+<p>Scissor pot establir text avall per la pàgina a més que a través d'aquesta, i pot establir escripts que es llegeixen de dreta a esquerra. Tots dos funcionen en text de punt, d'àrea i sobre camí, i l'editor al llenç segueix la mateixa direcció que la feina acabada.</p>
+
+<h3 id="type-vertical">Text vertical</h3>
+<p>L'eina Text vertical estableix caràcters drets que s'apilen cap avall, amb cada nova línia que forma una columna a l'esquerra de l'anterior. En un quadre d'àrea vertical, una columna s'ajusta a una nova quan arriba al fons. Per canviar text que ja heu establert entre horitzontal i vertical, trieu <strong>Text &gt; Orientació del text &gt; Horitzontal</strong> o bé <strong>Vertical</strong>.</p>
+
+<h3 id="type-rtl">De dreta a esquerra i àrab</h3>
+<p>El menú de direcció del panell Caràcter ofereix Automàtic, D'esquerra a dreta i De dreta a esquerra. A Automàtic la direcció es llegeix del text mateix, del seu primer caràcter fort, de manera que l'àrab o l'hebreu flueixen de dreta a esquerra sense que establiu res. Les lletres àrabs assumeixen les seves formes lligades, i una sèrie de paraules llatines dins d'una línia de dreta a esquerra manté el seu propi ordre d'esquerra a dreta. Establiu el menú a D'esquerra a dreta o De dreta a esquerra quan vulgueu forçar la direcció en comptes de deixar-la detectar, per exemple per a una línia que comença amb un número o una puntuació.</p>
+
+<h2 id="type-touch">Edita glifs</h2>
+<p>L'eina Edita glifs (<kbd>&#8679;T</kbd>) mou, redimensiona i gira un caràcter a la vegada deixant el text completament editable. Useu-la per moure una sola lletra per efecte sense trencar la paraula en contorns. Trieu l'eina i feu clic a un caràcter: apareix un quadre al voltant d'aquest caràcter amb un pomell a cada cantonada, un al costat dret, un a sota i un flotant a dalt. Arrossegueu una cantonada per redimensionar en totes dues direccions, el pomell lateral per l'amplada només, el de sota per l'alçada només i el de dalt per girar el caràcter. Mantingueu premut <kbd>&#8679;</kbd> mentre arrossegueu una cantonada per mantenir les proporcions, o mentre gireu per fer ajustar l'angle. <kbd>Retrocés</kbd> o <kbd>Supr</kbd> torna a posar el caràcter on l'havia posat el text, i <kbd>Esc</kbd> deixa anar la selecció. Com que el text encara és text durant tot el temps, podeu continuar editant les paraules al voltant del caràcter que heu mogut.</p>
+
+<h2 id="type-flow">Text lligat i text al voltant</h2>
+<p>Dues funcions permeten al text compartir l'espai amb la resta d'un disseny: el lligam fa córrer una història a través de diversos quadres, i el text al voltant empèny el text lluny d'un objecte que se superposa.</p>
+
+<h3 id="type-threading">Text lligat</h3>
+<p>Seleccioneu dos o més objectes de text d'àrea i trieu <strong>Text &gt; Text lligat &gt; Crea</strong>. El seu text s'uneix en una sola història que flueix de quadre en quadre en l'ordre de superposició, de darrere a davant, i sempre s'edita des del primer quadre. Useu el lligam per fer córrer un article a través de columnes o pàgines: a mesura que afegiu o traieu text, es redistribueix a través de la cadena. Cada quadre mostra un port a dalt a l'esquerra i a sota a la dreta, amb una línia dibuixada al quadre en què continua el text. Un més vermell en lloc del port de sortida significa que hi ha més text del que el quadre pot contenir. <strong>Allibera selecció</strong> treu els quadres seleccionats del seu lligam, i <strong>Elimina lligam</strong> trenca tot el lligam amb cada quadre conservant el text que estava mostrant.</p>
+
+<h3 id="type-wrap">Text al voltant</h3>
+<p>Per empènyer el text lluny d'una forma, seleccioneu la forma i trieu <strong>Objecte &gt; Text al voltant &gt; Crea</strong>. El text d'àrea que es troba sota l'objecte flueix llavors al seu voltant. L'al voltant segueix el contorn de l'objecte, no el seu quadre delimitador, de manera que el text pot adaptar-se a un cercle o una silueta irregular. <strong>Opcions de text al voltant&#8230;</strong> estableix el marge mantingut entre l'objecte i el text, en píxels, i pot invertir l'al voltant de manera que el text corra dins la forma en comptes d'al seu voltant. <strong>Allibera</strong> elimina l'al voltant.</p>
+
+<h2 id="type-outlines">Convertir text en contorns</h2>
+<p>Seleccioneu text i trieu <strong>Text &gt; Crea contorns</strong> (<kbd>&#8679;&#8984;O</kbd>) per convertir-lo en camins. Useu-lo quan necessiteu remodelar les lletres a mà, garantir que el text sigui idèntic en una màquina que no té la tipografia, o utilitzar les lletres com a forma per combinar amb altra feina. Les lletres es traçen dels glifs de la tipografia en alta resolució, amb l'adaptador que deixa les cantonades nets nets mentre alisa les corbes, i el resultat conserva l'emplenament, el contorn, el nom, l'opacitat i el mode de fusió del text. Les paraules ja no són editables com a text després, de manera que conserveu una còpia si podeu necessitar canviar-les, o bé desfeu amb <kbd>&#8984;Z</kbd>.</p>

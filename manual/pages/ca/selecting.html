@@ -1,0 +1,34 @@
+<p class="lede">Abans de poder canviar qualsevol cosa heu de dir què canvieu. Aquesta pàgina tracta de triar la feina: els clics ràpids amb les eines de selecció i el menú <strong>Selecciona</strong> sencer que agafa objectes per com són, s'endinsa a la pila i emmagatzema una selecció per tornar a portar enrere més endavant. A les dreceres a continuació, <kbd>&#8984;</kbd> és <kbd>Ctrl</kbd> a Windows i Linux, <kbd>&#8997;</kbd> és <kbd>Alt</kbd> i <kbd>&#8679;</kbd> és Majúscules.</p>
+
+<h2 id="selecting-basics">Clics i rectangles de selecció</h2>
+<p>L'<strong>eina Selecció</strong> (<kbd>V</kbd>) és on comença la major part de les seleccions. Feu clic a un objecte per seleccionar-lo; manteniu premut <kbd>&#8679;</kbd> i feu clic a un altre per afegir-lo, o feu clic a un seleccionat per treure'l. Arrossegueu sobre el llenç buit per estirar un <em>rectangle de selecció</em>, i tot el que toca es selecciona. L'<strong>eina Selecció directa</strong> (<kbd>A</kbd>) arriba a l'interior: selecciona ancoratges i segments de camí individuals en comptes d'objectes sencers, i l'<strong>eina Selecció de grup</strong> s'endinsa en un grup un nivell al cop. Aquestes eines es tracten a les pàgines <a href="/manual/tools/">Eines</a> i <a href="/manual/paths/">Camins</a>; la resta d'aquesta pàgina és el menú Selecciona, que fa la selecció que el clic no pot fer.</p>
+
+<h2 id="selecting-whole-document">Tot, cap i invers</h2>
+<table>
+  <thead><tr><th>Comandament</th><th>Drecera</th><th>Què selecciona</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Selecciona &rsaquo; Tot</strong></td><td><kbd>&#8984;A</kbd></td><td>Cada objecte no blocat del document.</td></tr>
+    <tr><td><strong>Tot a la taula activa</strong></td><td><kbd>&#8997;&#8984;A</kbd></td><td>Només la feina a la taula en què esteu treballant: la manera ràpida d'agafar una pàgina d'un fitxer multi-taula.</td></tr>
+    <tr><td><strong>Desselecciona</strong></td><td><kbd>&#8679;&#8984;A</kbd></td><td>Res; esborra la selecció actual.</td></tr>
+    <tr><td><strong>Invers</strong></td><td></td><td>Intercanvia la selecció amb tot allò que <em>no</em> estava seleccionat.</td></tr>
+    <tr><td><strong>Torna a seleccionar</strong></td><td><kbd>&#8984;6</kbd></td><td>Retorna la selecció que teníeu abans d'esborrar-la.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="selecting-stack">Recórrer la pila</h2>
+<p>Quan els objectes es superposen, <strong>Selecciona &rsaquo; Objecte següent de sobre</strong> (<kbd>&#8997;&#8984;]</kbd>) i <strong>Objecte següent de sota</strong> (<kbd>&#8997;&#8984;[</kbd>) mouen la selecció amunt o avall a la pila en el mateix punt, un objecte al cop. És la manera fiable d'arribar a una forma enterrada sota altres sense moure les de sobre.</p>
+
+<h2 id="selecting-same">Selecciona igual: triar per el que les coses comparteixen</h2>
+<p>Seleccioneu un objecte, després <strong>Selecciona &rsaquo; Igual</strong> recull cada altre objecte del document que li coincideix en un tret. Useu-lo per acolorir cada forma d'un emplenament en una sola passada, o per agafar tots els contorns prims de cop.</p>
+<dl>
+  <dt>Aparença</dt><dd>L'aparença completa: la mateixa pila d'emplenaments, contorns i efectes.</dd>
+  <dt>Emplenament i contorn</dt><dd>El mateix emplenament i el mateix contorn junts.</dd>
+  <dt>Color d'emplenament / Color de contorn</dt><dd>El mateix color d'emplenament, o bé el mateix color de contorn.</dd>
+  <dt>Gruix de contorn</dt><dd>El mateix gruix de contorn.</dd>
+  <dt>Opacitat</dt><dd>La mateixa opacitat.</dd>
+  <dt>Mode de fusió</dt><dd>El mateix mode de fusió.</dd>
+  <dt>Forma</dt><dd>El mateix tipus d'objecte: totes les ellipses, per exemple, o tot el text.</dd>
+</dl>
+
+<h2 id="selecting-saved">Desar una selecció</h2>
+<p>Una selecció elaborada val la pena de conservar. <strong>Selecciona &rsaquo; Desa la selecció&hellip;</strong> emmagatzema el conjunt actual sota un nom; apareix després sota <strong>Selecciona &rsaquo; Seleccions desades</strong>, i triant-la allà selecciona exactament aquells objectes de nou, per molt que hàgiu fet clic des d'hores. <strong>Edita la selecció&hellip;</strong> canvia el nom o elimina les que heu desat. Les seleccions desades viatgen dins del documento <code>.cut</code>, de manera que encara hi són la propera vegada que obriu el fitxer.</p>

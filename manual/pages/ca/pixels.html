@@ -1,0 +1,120 @@
+<p class="lede">Un document Scissor pot contenir píxels pintats al costat dels seus camins i text dibuixats, de manera que un sol fitxer pot portar una textura suau amb pinzell, una fotografia i un logotip nítid junts. Aquesta pàgina cobreix què és una capa de píxels, com pintar-hi a sobre i com es comporta com a objecte al document.</p>
+
+<h2 id="pixels-vector-vs-raster">Píxels contra feina vectorial</h2>
+<p>Un document Scissor conté dos tipus de feina al costat de l'altre. Camins i text es <em>dibuixen</em>: romanen nítids a qualsevol mida perquè es descriuen per la seva forma, i Scissor els torna a dibuixar cada vegada que amplieu o redimensioneu. Una <strong>capa de píxels</strong> es <em>pinta</em>: és una graella de punts de color, com una fotografia o una pintura amb pinzell, i engrandir-la fa aquests punts més grans en comptes d'afegir detall. Un document pot contenir tants de cada tipus com vulgueu, en qualsevol ordre, i s'apilen junts al panell Capes.</p>
+<p>Useu una capa de píxels quan una forma sola no n'hi prou: una ombra pintada a mà, una textura aspra darrere un text net, una taca de color que no ha de ser un camí editable, o retocs sobre una fotografia col·locada. Manteniu logotips, diagrames i qualsevol cosa que redimensionareu més endavant com a vectors, i useu píxels per a les parts que volen la sensació de la pintura.</p>
+<p>Una fotografia col·locada és una cosa relacionada però separada. <strong>Fitxer &gt; Insereix&hellip;</strong> (<kbd>&#8679;&#8984;P</kbd>) porta una imatge existent al document com a imatge incrustada; una capa de píxels és una superfície on pinteu des de zero dins de Scissor. Ambdues estan fetes de píxels i ambdues es poden mostrejar amb el compta-gotes, però només una capa de píxels accepta traços de pinzell.</p>
+
+<h2 id="pixels-new">Crear una capa de píxels</h2>
+<p><strong>Objecte &gt; Capa de píxels &gt; Nova capa de píxels</strong> afegeix una superfície buida que cobreix la taula activa. No heu de crear-ne una primer, però: trieu el Pinzell i pinteu, i Scissor crea la capa per a vostre en el moment en què el primer traç cau. En ambdós casos la capa es mapia sobre la taula, de manera que els píxels s'alineen amb la taula d'art quina que sigui la resolució a la qual es van crear.</p>
+<p>Aquesta resolució ve de la configuració <strong>Efectes raster</strong> a <strong>Fitxer &gt; Configuració de document&hellip;</strong> (<kbd>&#8997;&#8984;P</kbd>): Pantalla (72&nbsp;ppi), Mitjana (150&nbsp;ppi) o Alta (300&nbsp;ppi). Una configuració més alta dóna a una nova capa de píxels més punts per punt, de manera que la feina amb pinzell roman llisa quan el piece s'imprimeix o es veu gran. Establiu-la abans de crear la capa, atès que el recompte de píxels es fixa quan es crea la superfície.</p>
+<p>A la shell moderna també podeu afegir una capa des de la barra d'opcions de l'eina: amb el Pinzell o la Gomma de píxels actius, un botó <strong>Nova capa de píxels</strong> es troba al final de la barra.</p>
+<p><strong>Inserir una imatge també crea una capa de píxels.</strong> Deixeu anar una imatge al llenç, useu <strong>Fitxer &gt; Insereix&hellip;</strong>, o enganxeu-ne una des del porta-retalls, i arriba com una capa de píxels editable a la seva mida en comptes d'una imatge blocada: de manera que podeu pintar-hi a sobre, mascarar-la, ajustar-la i filtrar-la immediatament. Obrir una imatge amb <strong>Fitxer &gt; Obre</strong> crea un nou document amb una taula de la mida de la imatge, omplerta per la capa de píxels. Les fotos molt grans es redimensionen per adaptar-se al pressupost de píxels. Un <strong>SVG</strong> roman vectorial: els seus camins romanen editables, de manera que només les imatges bitmap (PNG, JPEG, GIF, WebP i similars) es converteixen en capes de píxels.</p>
+<p>Un fitxer <strong><code>.psd</code></strong> amb capes arriba més ric: obrir-ne un reconstrueix la seva pila com a capes de píxels separades, mantenint la <strong>màscara</strong> de cada capa, i portant text, formes i efectes de capa a través de manera que el fitxer cau prop de com es veia on es va crear en comptes d'una imatge plana. És la manera més completa d'entrar a la feina de píxels, i tot el que hi ha a aquesta pàgina s'aplica després a les capes que arriben.</p>
+
+<h2 id="pixels-painting">Pintar</h2>
+
+<h3 id="pixels-brush">El Pinzell i la Gomma de píxels</h3>
+<p>Dues eines funcionen sobre capes de píxels.</p>
+<table>
+  <thead><tr><th>Eina</th><th>On es troba</th><th>Què fa</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Eina Pinzell</strong></td><td>Comparteix una ranura amb el Pinzell (<kbd>B</kbd>) i el Pinzell d'emplenament (<kbd>&#8679;B</kbd>)</td><td>Posa color que es converteix en part de la imatge</td></tr>
+    <tr><td><strong>Eina Gomma de píxels</strong></td><td>Comparteix una ranura amb la Gomma (<kbd>&#8679;E</kbd>), Tisores i Ganivet</td><td>Esborra la pintura perquè es vegi allò que hi ha sota a través</td></tr>
+  </tbody>
+</table>
+<p>Per arribar a l'una o l'altra, premeu i manteniu premuda l'eina visible a la barra d'eines, o bé feu-hi clic amb el botó dret, i trieu l'eina de píxels de la llista. No confongueu-les amb els seus veïns vectorials: el Pinzell dibuixa un camí que podeu remodelar després, mentre que el Pinzell de píxels pinta píxels que no es poden tornar a punter. Ambdues eines de píxels mostren un anell al llenç a la mida que pintaran, i ambdues utilitzen un punter de mira.</p>
+<p>Arrossegueu per pintar o esborrar. La marca segueix el punter sense espais per ràpid que us moveu, perquè Scissor posa una sèrie de tocs rodons al llarg del traç i els manté uniformement espaiats fins i tot quan el punter salta. La Gomma de píxels treu l'alfa en comptes de pintar a sobre, de manera que allò que esborra es torna completament transparent; una mosaic esborrada fins a zero s'elimina, de manera que esborrar no deixa pes enrere.</p>
+
+<h3 id="pixels-colour">Pintar amb el color d'emplenament</h3>
+<p>El Pinzell pinta amb el color d'<strong>emplenament</strong> actual. Establiu-lo com establiu qualsevol emplenament: el panell Color, una mostra, o bé, quan el Pinzell està actiu a la shell moderna, la targeta <strong>Color</strong> a la barra d'opcions de l'eina. Si l'emplenament és buit el Pinzell cau al color de contorn, i al negre si no hi ha cap color. Trieu un color directament d'una capa de píxels amb el Compta-gotes quan vulgueu coincidir amb pintura ja posada.</p>
+
+<h3 id="pixels-controls">Mida, duresa i flux</h3>
+<p>Quan el Pinzell o la Gomma de píxels està activa, la barra d'opcions de l'eina porta les configuracions que modelen la marca. També viuen a les vostres preferències, de manera que es porten d'una sessió a l'altra.</p>
+<dl>
+  <dt>Mida</dt><dd>El diàmetre del pinzell, d'1 a 2500 píxels. Premeu <kbd>[</kbd> per empetitir el pinzell i <kbd>]</kbd> per engrandir-lo; cada pulsació canvia la mida d'un cinquè, de manera que el pas creix amb el pinzell. L'anell al llenç mostra la mida actual.</dd>
+  <dt>Duresa</dt><dd>On la vora comença a esvair, com a percentatge. Al 100% la vora és neta; baixant-la el toc s'amorriteix cap a la seva vora amb una transició suau i sense anell visible. Useu un pinzell suau per a ombres i brillors, un dur per a formes sòlides.</dd>
+  <dt>Flux</dt><dd>Quanta pintura cada toc posa, només per al Pinzell. Sota el 100% el color s'acumula gradualment a mesura que torneu a passar sobre una àrea, cosa que s'adapta a degradats i transicions lentes. La Gomma de píxels no té control de flux.</dd>
+</dl>
+
+<h2 id="pixels-retouch">Aclarir, enfosqueix i esponja</h2>
+<p>Tres pinzells de retoc treballen sobre els píxels ja presents en comptes de posar color, compartint una sola ranura a la barra d'eines. Pinten com el Pinzell: mateixa mida, duresa i anell al llenç, i s'acumulen a mesura que torneu a passar sobre una àrea, de manera que un toc lleu és gradual i un de decidit és ràpid.</p>
+<dl>
+  <dt>Aclara</dt><dt>Aclareix on pinteu, aixecant ombres i afegint llums.</dt>
+  <dt>Enfosqueix</dt><dd>Enfosqueix on pinteu, aprofundint ombres i vores.</dd>
+  <dt>Esponja</dt><dd>Aixeca la saturació, fent els colors més rics a mesura que hi passeu per sobre.</dd>
+</dl>
+<p>Cadascun deixa intocats els píxels transparents, roman dins d'una selecció quan n'hi ha una, i tot el traç es desfà d'un sol pas.</p>
+
+<h2 id="pixels-more-tools">Pot, formes i degradats</h2>
+<p>Pintar no és només el Pinzell. Sobre una capa de píxels tres altres eines posen color: el <strong>Pot de pintura</strong> inunda una àrea contigua de color similar des d'on feu clic; les <strong>eines de forma</strong> estampen un rectangle, una ellipse, una estella o un polígon directament als píxels en comptes de dibuixar un camí; i la <strong>Eina Degradat</strong> pinta una degradació lineal o radial a través de la superfície. Cadascuna respecta la selecció actual, de manera que podeu limitar un emplenament o un degradat a una regió triada.</p>
+
+<h2 id="pixels-selecting">Seleccionar píxels</h2>
+<p>Una <strong>selecció de píxels</strong> — un rectangle de selecció — limita cada pintura i edició a la regió dins d'aquest, com una plantilla. Tres enen en creen una, compartint la ranura de selecció de píxels: el <strong>Rectangle de selecció</strong> i l'<strong>Ellipse de selecció</strong>, i un <strong>Llaç de selecció</strong> a mà lliure que traceu a mà. Arrossegueu per dibuixar una selecció; un arrossegament simple substitueix l'actual.</p>
+<p>La <strong>Selecció automàtica</strong> selecciona per color en comptes de per forma: feu clic a una capa de píxels i agafa la taca de color connectada al voltant d'on heu fet clic, traçant un contorn de formiga al seu voltant: pràctic per aixecar un fons pla o una àrea acolorida. Com de proper ha de ser un color per ser pres és la <strong>Tolerància</strong> a les opcions de la Selecció automàtica, la mateixa configuració que utilitza sobre objectes vectorials; pugeu-la per recollir més, baixeu-la per romandre en una coincidència estreta. El forats a la taca es deixen fora de la selecció.</p>
+<p>Les seleccions es combinen, de manera que una forma es pot construir de diversos traços o clics: manteniu premut <kbd>&#8679;</kbd> per <strong>afegir</strong> a la selecció, <kbd>&#8997;</kbd> per <strong>restar</strong>, i tots dos junts per mantenir només la <strong>superposició</strong>: els rectangles de selecció i la Selecció automàtica es combinen tots de la mateixa manera. <strong>Selecciona &gt; Tot</strong> (<kbd>&#8984;A</kbd>) selecciona cada píxel, <strong>Selecciona &gt; Invers</strong> capgira el rectangle de selecció i <strong>Desselecciona</strong> — <kbd>&#8984;D</kbd> sobre una capa de píxels — l'elimina. Un contorn de formiga mostra la selecció al llenç.</p>
+
+<h2 id="pixels-editing-selection">Moure, tallar i copiar píxels</h2>
+<p>Amb una selecció establerta, l'eina Selecció mou els píxels dins d'aquesta: arrossegueu des de dins del rectangle de selecció i la pintura seleccionada s'aixeca i viatja, esborrant on era i portant el rectangle de selecció amb ella. Mantingueu premut <kbd>&#8997;</kbd> mentre arrossegueu per deixar l'original al seu lloc i moure una <strong>còpia</strong>.</p>
+<p>Les eines de transformació també funcionen sobre la selecció. Amb un rectangle de selecció establert, el quadre delimitador de l'eina Selecció i la <strong>Eina Transforma lliure</strong> (<kbd>E</kbd>) envolten el rectangle de selecció, no tota la capa, de manera que podeu redimensionar, girar o moure només aquella part de la imatge; <strong>Objecte &gt; Transforma</strong> i les fletxes actuen sobre ella de la mateixa manera. Els píxels aixecats floten sobre la capa mentre treballeu, de manera que podeu arrossegar-los una i altra vegada sense perdre cap detall. Premeu <kbd>Retorn</kbd>, trieu una altra eina o creeu una nova selecció per posar-los, que és un sol pas a desfer, o bé premeu <kbd>Esc</kbd> per tornar a posar-ho tot al seu lloc. Un moviment de píxels sencers els manté exactament com eren; redimensionar o girar els torna a mostrejar una vegada, quan es posen.</p>
+<p>Les modalitats <strong>Distorsió lliure</strong> i <strong>Distorsió perspectiva</strong> de l'eina Transforma lliure també funcionen sobre píxels, sobre un rectangle de selecció o sobre una capa sencera: arrossegueu una cantonada del quadre (o manteniu premut <kbd>&#8984;</kbd> mentre arrossegueu una en mode Transforma lliure) per estirar la imatge fora del recte, per exemple per adaptar una fotografia a una pantalla o un cartell vist de biaix. Mentre arrossegueu, Scissor mostra una vista prèvia ràpida dimensionada a la pantalla, de manera que roman fluida fins i tot en una foto gran; els píxels mateixos s'estiren una vegada, a resolució completa, quan premeu <kbd>Retorn</kbd> o continueu, i el rectangle de selecció segueix la nova forma.</p>
+<p>Copia (<kbd>&#8984;C</kbd>) i Talla (<kbd>&#8984;X</kbd>) funcionen sobre els píxels dins d'un rectangle de selecció: copiar deixa la capa com és, tallar treu els píxels. Enganxa (<kbd>&#8984;V</kbd>) els posa sobre una <strong>nova capa de píxels</strong> just sobre la qual venien, exactament al mateix lloc, a punt per ser moguts o transformats per compte seu. Els mateixos comandaments són a <strong>Crea &gt; Capa de píxels</strong>, i la selecció també guia les ordres de superfície: <strong>Omple amb color d'emplenament</strong> omple només la regió seleccionada, <strong>Neteja</strong> i <strong>Elimina</strong> l'esborren, i sense selecció cadascuna actua sobre tota la capa.</p>
+
+<h2 id="pixels-adjustments">Ajustaments</h2>
+<p>El submenú <strong>Objecte &gt; Capa de píxels &gt; Ajustaments</strong> retoca el color d'una capa de píxels, limitat a la selecció quan n'hi ha una. Cadascun obre un diàleg que previsualitza al llenç a mesura que arrossegueu.</p>
+<dl>
+  <dt>Brillantor / Contrast, Nivells</dt><dd>Estableix la lluminositat i el contrast generals, o bé remapa el punt negre, el punt blanc i la gamma per a un control tonal més fi.</dd>
+  <dt>Matís / Saturació, Vivesa</dt><dd>Desplaça el matís i aixeca o baixa la saturació a tot el quadre, o bé useu Vivesa per intensificar els colors apagats deixant els ja vius intactes.</dd>
+  <dt>Balanç de color</dt><dd>Els tons mitjans cap a cian o vermell, magenta o verd, groc o blau.</dd>
+  <dt>Mapa de degradat</dt><dd>Recolora la capa per brillantor, mapejant les ombres a un color i les llums a un altre.</dd>
+  <dt>Desatura, Inverteix</dt><dd>Elimina tot el color en gris, o bé capgira cada color al seu oposat.</dd>
+  <dt>Llindar, Posteritza</dt><dd>Redueix la imatge a pur blanc i negre a un nivell triat, o bé a un petit nombre de tons per canal.</dd>
+</dl>
+
+<h2 id="pixels-filters">Filtres</h2>
+<p>El submenú <strong>Filtres</strong> remodela els píxels mateixos, una vegada més dins de la selecció.</p>
+<dl>
+  <dt>Difuminat gaussià</dt><dd>Amorriteix la capa una quantitat uniforme i ajustable.</dd>
+  <dt> Nitidesa, Màscara de nitidesa</dt><dd>Fa nítid el detall: Màscara de nitidesa dóna control sobre radi, quantitat i un llindar que estalvia les àrees planes i el fi soroll.</dd>
+  <dt>Pixelitza</dt><dd>Bloca la imatge en mosaics quadrats per a un mosaic.</dd>
+  <dt>Afegeix soroll</dt><dd>Escampa gra a través de la pintura.</dd>
+  <dt>Troba vores, Relleu</dt><dd>Traça on el color canvia com a línies clares sobre fosques, o bé com un relleu gris.</dd>
+</dl>
+<p><strong>Filtres &gt; Vistes prèvies d'efectes</strong> mostra la vostra capa com una graella de miniatures en viu, cadascuna amb un ajustament o filtre aplicat, de manera que podeu triar a ull en comptes de per nom. Triar una miniatura manté la finestra oberta. Les configuracions de l'efecte apareixen al costat de la graella, i el llenç previsualitza el resultat a mesura que les canvieu. No s'aplica res fins que no feu clic a <strong>Aplica</strong> (o premeu <kbd>Retorn</kbd>). <strong>Cancel·la</kbd> o <kbd>Esc</kbd> torna a posar la imatge al seu lloc, i un desfer elimina un efecte aplicat. Podeu arrossegar la finestra pel seu titol per veure el llenç darrere d'aquesta.</p>
+
+<h2 id="pixels-undo">Desfer ràpid, basat en mosaics</h2>
+<p>Tot un traç es desfà d'un pas, per llarg que sigui: premeu <kbd>&#8984;Z</kbd> una vegada i la darrera marca desapareix, i <kbd>&#8679;&#8984;Z</kbd> la torna a portar. Si el primer traç va haver de crear la seva capa, aquella capa torna enrere amb el traç en comptes de ser deixada buida.</p>
+<p>Darrere les quintes una capa de píxels es manté com una graella de petites mosaics, i un traç només copia les mosaics que ha tocat realment. Desfer manté instantànies completes del document, però un traç només costa les seves mosaics en comptes de tota la superfície, de manera que pintar sobre una capa gran roman ràpid i una llarga sessió de feina amb pinzell no omple la memòria. Les àrees planes d'un color s'emmagatzemen de manera compacta, de manera que una capa que és majoritàriament un sol color ocupa gairebé no espai.</p>
+
+<h2 id="pixels-treating">Tractar una capa de píxels com a qualsevol objecte</h2>
+<p>Una capa de píxels és un objecte al document, de manera tot el que ja sabeu s'aplica. Seleccioneu-la, moveu-la i redimensioneu-la, gireu-la, reflectiu-la o inclineu-la des de <strong>Objecte &gt; Transforma</strong>, des del quadre delimitador o des de l'eina Transforma lliure. Sense rectangle de selecció, el quadre envolta els píxels pintats de la capa en comptes tota la seva superfície, i una transformació funciona sobre aquests píxels: moure'ls els deixa intactes, mentre que redimensionar o girar s'incorpora als píxels quan premeu <kbd>Retorn</kbd>, trieu una altra eina o seleccioneu una altra cosa, de manera que la capa roman dret i el proper traç de pinzell cau de la manera correcta. Establiu la seva opacitat i doneu-li qualsevol dels setze modes de fusió des del panell Transparència per fer seure el color pintat sobre la feina dibuixada sota. Fer clic selecciona la capa només on té pintura, de manera que una cantonada transparenta us deixa clicar directament a través a allò que hi ha sota. <strong>Duplica</strong> copia una capa de píxels com a qualsevol objecte: barret, atès que la còpia comparteix les seves mosaics fins que una d'elles es pinta.</p>
+<p><strong>Objecte &gt; Capa de píxels &rsaquo; Fusiona avall</strong> aplana una capa de píxels sobre la capa de píxels directament sota d'ella i elimina la superior, deixant una sola capa amb les dues compostes juntes. Si les capes es troben sota transformacions diferents — digem que una s'ha girat — la superior es torna a mostrejar a la graella de la inferior mentre es fusiona.</p>
+<p>Dues ordres actuen sobre tota la superfície d'un cop:</p>
+<dl>
+  <dt>Objecte &gt; Capa de píxels &rsaquo; Omple amb color d'emplenament</dt><dd>Inunda tota la superfície amb el color d'emplenament actual. Useu-la per posar una capa de fons abans de pintar-hi a sobre, o bé per inundar una capa col·locada darrere altra feina.</dd>
+  <dt>Objecte &gt; Capa de píxels &rsaquo; Neteja</dt><dd>Buida la superfície sense eliminar la capa, de manera que podeu tornar a començar la pintura mantenint el lloc, la transformació, l'opacitat i el mode de fusió de la capa.</dd>
+</dl>
+<p>Ambdues ordres també apareixen sota <strong>Efecte &gt; Capa de píxels</strong>.</p>
+
+<h2 id="pixels-masks">Màscares de capa</h2>
+<p>Una <strong>màscara de capa</strong> amaga parts d'una capa de píxels sense eliminar-les: la capa es veu a través on la màscara és blanca i s'amaga on és negra, amb els grisos al mig per a la transparència parcial. Com que no s'esborra res, podeu pintar la màscara endavant i enrere totes les vegades que vulgueu. Les ordres són sota <strong>Objecte &gt; Capa de píxels</strong>.</p>
+<dl>
+  <dt>Afegeix màscara de capa</dt><dd>Lliga una màscara que inicialment revela tot, a punt per ser pintada.</dd>
+  <dt>Afegeix màscara de capa a partir de selecció</dt><dd>Construeix la màscara a partir de la selecció de píxels actual: allò que és a dins roman, allò que és a fora s'amaga. Una manera ràpida de tallar una forma fora d'una fotografia de manera no destructiva.</dd>
+  <dt>Edita màscara</dt><dd>Activa i desactiva la pintura de la màscara. Mentre està activa, el Pinzell, la Gomma i el Pot de pintura pinten la màscara en comptes de la capa: pinteu amb negre (o un color fosc) per amagar, blanc per revelar, gris per esvair. El pinzell utilitza la lluminositat del color d'emplenament actual, de manera que el negre amaga i el blanc mostra.</dd>
+  <dt>Aplica màscara de capa</dt><dd>Incorpora la màscara a la capa de manera definitiva: els píxels amagats es tornen transparents, i la màscara s'elimina.</dd>
+  <dt>Elimina màscara de capa</dt><dd>Llença la màscara i mostra de nou tota la capa, intacta.</dd>
+</dl>
+<p>Una capa mascarada s'exporta i es desa amb la màscara ja aplicada, i es fusiona i es transforma com qualsevol altra capa.</p>
+
+<h2 id="pixels-rasterize">Convertir feina vectorial en píxels: Rasteritza</h2>
+<p><strong>Objecte &gt; Rasteritza</strong> substitueix la selecció actual per una imatge incrustada d'ella mateixa, incorporant camins, text i qualsevol efecte en píxels fixos. Useu-la quan voleu que un resultat vectorial deixe de ser editable, quan un efecte és més fàcil de tractar com a imatge plana, o per passar un piece que ha de semblar el mateix arreu sense portar la seva construcció en viu. El resultat és una imatge incrustada en comptes d'una capa de píxels pintable, de manera que conserveu una còpia de la feina original si podeu necessitar editar-la de nou. <strong>Visualitza &gt; Vista prèvia de píxels</strong> (<kbd>&#8997;&#8984;Y</kbd>) us permet comprovar com la feina vectorial caurà a la graella de píxels abans de comprometre-vos-hi.</p>
+
+<h2 id="pixels-saving">Desar i exportar</h2>
+<p>Els documents <code>.cut</code> conserven les capes de píxels amb la resta de la feina, empaquetats de manera que les àrees planes ocupin gairebé no espai i es tornin a obrir exactament com es van pintar.</p>
+<p>Com les capes de píxels surten del document depèn del format:</p>
+<dl>
+  <dt>PNG, JPEG i WebP</dt><dd>Aplana tot el document a píxels, de manera que la feina pintada i dibuixada es fusionen en un únic bitmap. PNG pot mantenir la transparència; exporteu a @2x per a un resultat més nítid.</dd>
+  <dt>SVG i PDF</dt><dd>Escriu la superfície pintada com una imatge incrustada col·locada entre la feina vectorial, de manera que un document que barreja feina dibuixada i pintada viatja com un sol fitxer amb les seves formes encara nítides.</dd>
+</dl>
+<p>Com que raster i vectorial viuen al mateix document i s'exporten junts, podeu construir un piece de la manera natural: formes i text nets com a vectors, i les parts que volen la sensació de la pintura, una brillor suau, una rentat texturitzada, una fotografia retocada, com a capes de píxels apilades entre ells.</p>
