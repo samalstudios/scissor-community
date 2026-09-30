@@ -1,0 +1,120 @@
+<p class="lede">Um documento do Scissor pode conter pixels pintados ao lado dos seus caminhos e texto desenhados, pelo que um único arquivo pode transportar uma textura suave de pincel, uma fotografia e um logótipo nítido juntos. Esta página cobre o que é uma camada de pixels, como pintar numa, e como se comporta como um objeto no documento.</p>
+
+<h2 id="pixels-vector-vs-raster">Pixels versus arte vetorial</h2>
+<p>Um documento do Scissor contém dois tipos de arte lado a lado. Caminhos e texto são <em>desenhados</em>: permanecem nítidos em qualquer tamanho porque são descritos pela sua forma, e o Scissor redesenha-os sempre que amplia ou dimensiona. Uma <strong>camada de pixels</strong> é <em>pintada</em>: é uma grelha de pontos coloridos, como uma fotografia ou uma pintura a pincel, e ampliá-la torna esses pontos maiores em vez de adicionar detalhe. Um documento pode conter tantos de cada quantos quiser, em qualquer ordem, e empilham-se no painel Camadas juntos.</p>
+<p>Use uma camada de pixels quando uma forma por si só não basta: uma sombra pintada à mão, uma textura rugosa atrás de texto limpo, uma mancha de cor que não precisa de ser um caminho editável, ou retoque sobre uma fotografia colocada. Mantenha logótipos, diagramas e qualquer coisa que redimensionará mais tarde como vetores, e use pixels para as partes que querem o toque da tinta.</p>
+<p>Uma fotografia colocada é uma coisa relacionada mas separada. <strong>Ficheiro &gt; Colocar&hellip;</strong> (<kbd>&#8679;&#8984;P</kbd>) traz uma imagem existente para o documento como uma imagem incorporada; uma camada de pixels é uma superfície em que pinta do zero dentro do Scissor. Ambas são feitas de pixels e ambas podem ser amostradas com o conta-gotas, mas apenas uma camada de pixels aceita pinceladas.</p>
+
+<h2 id="pixels-new">Criando uma camada de pixels</h2>
+<p><strong>Objeto &gt; Camada de Pixels &gt; Nova Camada de Pixels</strong> adiciona uma superfície vazia cobrindo a prancha ativa. Não tem de criar uma primeiro, no entanto: escolha o Pincel e pinte, e o Scissor cria a camada para si no momento em que a primeira pincelada assenta. De qualquer forma a camada mapeia-se na prancha, para que os pixels se alinhem com a prancha seja qual for a resolução em que foram feitos.</p>
+<p>Essa resolução vem da configuração <strong>Efeitos Raster</strong> em <strong>Ficheiro &gt; Configuração do Documento&hellip;</strong> (<kbd>&#8997;&#8984;P</kbd>): Ecrã (72&nbsp;ppi), Médio (150&nbsp;ppi) ou Alto (300&nbsp;ppi). Uma configuração mais alta dá a uma nova camada de pixels mais pontos por ponto, para que o trabalho de pincel permaneça suave quando a peça é impressa ou vista em grande. Defina-a antes de criar a camada, pois a contagem de pixels é fixa quando a superfície é criada.</p>
+<p>Na interface moderna também pode adicionar uma camada a partir da barra de opções da ferramenta: com o Pincel ou a Borracha de Pixels ativos, um botão <strong>Nova camada de pixels</strong> fica no fim da barra.</p>
+<p><strong>Colocar uma imagem também cria uma camada de pixels.</strong> Largue uma imagem na tela, use <strong>Ficheiro &gt; Colocar&hellip;</strong>, ou cole uma da área de transferência, e ela entra como uma camada de pixels editável no seu próprio tamanho em vez de uma imagem bloqueada - para que possa pintar nela, mascará-la, ajustá-la e filtrá-la imediatamente. Abrir uma imagem com <strong>Ficheiro &gt; Abrir</strong> faz um novo documento com uma prancha do tamanho da imagem, preenchida pela camada de pixels. Fotografias muito grandes são reduzidas para caber no orçamento de pixels. Um <strong>SVG</strong> permanece vetorial - os seus caminhos permanecem editáveis - por isso apenas imagens bitmap (PNG, JPEG, GIF, WebP e similares) se tornam camadas de pixels.</p>
+<p>Um arquivo <strong><code>.psd</code></strong> em camadas entra mais rico: abrir um reconstrói a sua pilha como camadas de pixels separadas, mantendo a <strong>máscara</strong> de cada camada, e traz texto, formas e efeitos de camada para que o arquivo caia perto do aspeto que tinha onde foi feito em vez de como uma imagem plana. É a maneira mais completa de entrar em trabalho de pixels, e tudo nesta página depois aplica-se às camadas que chegam.</p>
+
+<h2 id="pixels-painting">Pintura</h2>
+
+<h3 id="pixels-brush">O Pincel e a Borracha de Pixels</h3>
+<p>Duas ferramentas trabalham em camadas de pixels.</p>
+<table>
+  <thead><tr><th>Ferramenta</th><th>Onde vive</th><th>O que faz</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Pincel</strong></td><td>Partilha um slot com o Pincel de Pintura (<kbd>B</kbd>) e o Pincel de Preenchimento (<kbd>&#8679;B</kbd>)</td><td>Cola cor que se torna parte da imagem</td></tr>
+    <tr><td><strong>Borracha de Pixels</strong></td><td>Partilha um slot com a Borracha (<kbd>&#8679;E</kbd>), Tesoura e Faca</td><td>Apaga tinta para que o que está por baixo se mostre</td></tr>
+  </tbody>
+</table>
+<p>Para chegar a qualquer uma, pressione e segure a ferramenta visível na barra de ferramentas, ou clique com o botão direito nela e escolha a ferramenta de pixels da lista. Não as confunda com os seus vizinhos vetoriais: o Pincel de Pintura desenha um caminho que pode remodelar depois, enquanto o Pincel pinta pixels que não podem ser repontados. Ambas as ferramentas de pixels mostram um anel na tela no tamanho em que vão pintar, e ambas usam um cursor de mira.</p>
+<p>Arraste para pintar ou apagar. O rasto segue o cursor sem falhas por mais rápido que se mova, porque o Scissor cola uma sequência de pinceladas redondas ao longo do traço e mantém-as uniformemente espaçadas mesmo quando o cursor salta. A Borracha de Pixels remove alfa em vez de pintar por cima, pelo que o que limpa fica totalmente transparente; um ladrilho apagado até nada é descartado, para que apagar não deixe peso para trás.</p>
+
+<h3 id="pixels-colour">Pintando na cor de preenchimento</h3>
+<p>O Pincel pinta na cor de <strong>preenchimento</strong> atual. Defina-a da mesma forma que define qualquer preenchimento: o painel Cor, uma amostra, ou, quando o Pincel está ativo na interface moderna, o chip <strong>Cor</strong> na barra de opções da ferramenta. Se o preenchimento estiver vazio o Pincel recorre à cor de contorno, e a preto se não houver cor nenhuma. Escolha uma cor diretamente de uma camada de pixels com o Conta-gotas quando quiser corresponder à tinta que já está no ecrã.</p>
+
+<h3 id="pixels-controls">Tamanho, dureza e fluxo</h3>
+<p>Quando o Pincel ou a Borracha de Pixels está ativo, a barra de opções da ferramenta transporta as configurações que moldam o rasto. Também vivem nas suas preferências, para que passem de sessão em sessão.</p>
+<dl>
+  <dt>Tamanho</dt><dd>O diâmetro do pincel, de 1 a 2500 pixels. Pressione <kbd>[</kbd> para tornar o pincel menor e <kbd>]</kbd> para o tornar maior; cada pressão altera o tamanho por um quinto, pelo que o passo cresce com o pincel. O anel na tela mostra o tamanho atual.</dd>
+  <dt>Dureza</dt><dd>Onde a borda começa a desvanecer, como percentagem. A 100% a borda é nítida; diminua-a e a pincelada suaviza-se em direção ao seu aro com uma queda suave e sem anel visível. Use um pincel suave para sombras e brilhos, um duro para formas sólidas.</dd>
+  <dt>Fluxo</dt><dd>Quanta tinta cada pincelada coloca, apenas para o Pincel. Abaixo de 100% a cor constrói-se gradualmente à medida que passa novamente sobre uma área, o que se adequa a sombreamento e misturas lentas. A Borracha de Pixels não tem controlo de fluxo.</dd>
+</dl>
+
+<h2 id="pixels-retouch">Desclarear, queimar e esponja</h2>
+<p>Três pincéis de retoque trabalham nos pixels que já estão lá em vez de colocar cor, partilhando um slot na barra de ferramentas. Pintam como o Pincel - o mesmo tamanho, dureza e anel na tela - e constróem-se à medida que passa novamente sobre uma área, pelo que um toque leve é gradual e um firme é rápido.</p>
+<dl>
+  <dt>Desclarear</dt><dt>Clareia onde quer que pinte, levantando sombras e adicionando destaques.</dd>
+  <dt>Queimar</dt><dd>Escurece onde quer que pinte, aprofundando sombras e bordas.</dd>
+  <dt>Esponja</dt><dd>Eleva a saturação, tornando as cores mais ricas quanto mais passa por cima delas.</dd>
+</dl>
+<p>Cada um deixa pixels transparentes intactos, fica dentro de uma seleção quando uma está definida, e o traço inteiro desfaz-se num único passo.</p>
+
+<h2 id="pixels-more-tools">Balde, formas e gradientes</h2>
+<p>Pintar não é apenas o Pincel. Numa camada de pixels mais três ferramentas colocam cor: o <strong>Balde de Tinta</strong> inunda uma área contígua de cor similar a partir de onde clica; as <strong>ferramentas de forma</strong> carimbam um retângulo, elipse, estrela ou polígono diretamente nos pixels em vez de desenhar um caminho; e a <strong>ferramenta Gradiente</strong> pinta uma mistura linear ou radial através da superfície. Cada uma respeita a seleção atual, pelo que pode confinar um preenchimento ou gradiente a uma região escolhida.</p>
+
+<h2 id="pixels-selecting">Selecionando pixels</h2>
+<p>Uma <strong>seleção de pixels</strong> - uma seleção em área - limita cada pintura e edição à região dentro dela, como um estêncil. Três ferramentas fazem uma, partilhando o slot de seleção de pixels: a <strong>Seleção Retangular</strong> e a <strong>Seleção Elíptica</strong>, e uma <strong>Seleção Laço</strong> à mão livre que traça à mão. Arraste para desenhar uma seleção; um arrasto simples substitui a atual.</p>
+<p>A <strong>Seleção Automática</strong> seleciona por cor em vez por forma: clique numa camada de pixels e ela pega o pedaço de cor conectado à volta de onde clicou, traçando um contorno de formigas marchantes à volta dele - útil para levantar um fundo plano ou uma área colorida. Quão perto uma cor tem de ser para ser pega é a <strong>Tolerância</strong> nas opções da Seleção Automática, a mesma configuração que usa em objetos vetoriais; aumente-a para reunir mais, diminua-a para se manter numa correspondência próxima. Buracos no pedaço ficam de fora da seleção.</p>
+<p>Seleções combinam-se, pelo que uma forma pode ser construída de vários traços ou cliques: segure <kbd>&#8679;</kbd> para <strong>adicionar</strong> à seleção, <kbd>&#8997;</kbd> para <strong>subtrair</strong>, e ambos juntos para manter apenas a <strong>sobreposição</strong> - as seleções em área e a Seleção Automática combinam-se todas da mesma forma. <strong>Selecionar &gt; Tudo</strong> (<kbd>&#8984;A</kbd>) seleciona todos os pixels, <strong>Selecionar &gt; Inverter</strong> vira a seleção em área, e <strong>Desselecionar</strong> - <kbd>&#8984;D</kbd> numa camada de pixels - larga-a. Um contorno de formigas marchantes mostra a seleção na tela.</p>
+
+<h2 id="pixels-editing-selection">Mover, cortar e copiar pixels</h2>
+<p>Com uma seleção definida, a ferramenta Seleção move os pixels dentro dela: arraste de dentro da seleção e a tinta selecionada levanta-se e viaja, limpando onde estava e levando a seleção consigo. Segure <kbd>&#8997;</kbd> enquanto arrasta para deixar o original no lugar e mover uma <strong>cópia</strong>.</p>
+<p>As ferramentas de transformação também funcionam na seleção. Com uma seleção em área definida, a caixa delimitadora da ferramenta Seleção e da <strong>ferramenta Transformação Livre</strong> (<kbd>E</kbd>) envolvem a seleção, não a camada inteira, pelo que pode dimensionar, rodar ou mover apenas essa parte da imagem; <strong>Objeto &gt; Transformar</strong> e as teclas de seta atuam nela da mesma forma. Os pixels levantados flutuam acima da camada enquanto trabalha, pelo que pode arrastá-los vezes sem conta sem perder detalhe. Pressione <kbd>Enter</kbd>, escolha outra ferramenta, ou faça uma nova seleção para os assentar, o que é um único passo para desfazer, ou pressione <kbd>Escape</kbd> para repor tudo onde estava. Um movimento por pixels inteiros mantém-nos exatamente como estavam; dimensionar ou rodar reamostra-os uma vez, quando são assentados.</p>
+<p>A Transformação Livre <strong>Distorção Livre</strong> e <strong>Distorção em Perspetiva</strong> funcionam em pixels também, numa seleção em área ou numa camada inteira: arraste um canto da caixa (ou segure <kbd>&#8984;</kbd> enquanto arrasta um no modo Transformação Livre) para puxar a imagem para fora do verdadeiro, por exemplo para encaixar uma fotografia num ecrã ou num letreiro visto num ângulo. Enquanto arrasta o Scissor mostra uma pré-visualização rápida dimensionada ao ecrã, para que permaneça suave mesmo numa fotografia grande; os próprios pixels são puxados uma vez, em resolução total, quando pressiona <kbd>Enter</kbd> ou avança, e a seleção segue a nova forma.</p>
+<p>Copiar (<kbd>&#8984;C</kbd>) e Cortar (<kbd>&#8984;X</kbd>) funcionam nos pixels dentro de uma seleção em área: copiar deixa a camada como está, cortar tira os pixels. Colar (<kbd>&#8984;V</kbd>) cola-os numa <strong>nova camada de pixels</strong> logo acima daquela de onde vieram, exatamente no mesmo lugar, pronta para mover ou transformar por conta própria. Os mesmos comandos estão em <strong>Criar &gt; Camada de Pixels</strong>, e a seleção também comanda os comandos de superfície: <strong>Preencher com Cor de Preenchimento</strong> preenche apenas a região selecionada, <strong>Limpar</strong> e <strong>Eliminar</strong> apagam-na, e sem seleção cada um atua na camada inteira.</p>
+
+<h2 id="pixels-adjustments">Ajustes</h2>
+<p>O submenu <strong>Objeto &gt; Camada de Pixels &gt; Ajustes</strong> retoque a cor de uma camada de pixels, confinada à seleção quando uma está definida. Cada um abre uma caixa de diálogo que pré-visualiza na tela enquanto arrasta.</p>
+<dl>
+  <dt>Brilho / Contraste, Níveis</dt><dd>Define a claridade e contraste gerais, ou remapeia o ponto preto, ponto branco e gama para um controlo tonal mais fino.</dd>
+  <dt>Matiz / Saturação, Vibração</dt><dd>Desloca a matiz e eleva ou diminui a saturação em toda a prancha, ou usa Vibração para impulsionar as cores mudadas deixando as já vívidas em paz.</dd>
+  <dt>Balanço de Cor</dt><dd>Empurra os meios tons para ciano ou vermelho, magenta ou verde, amarelo ou azul.</dd>
+  <dt>Mapa de Gradiente</dt><dd>Recolore a camada pelo seu brilho, mapeando as sombras para uma cor e os destaques para outra.</dd>
+  <dt>Dessaturar, Inverter</dt><dd>Retira toda a cor para cinzento, ou inverte cada cor para o seu oposto.</dd>
+  <dt>Limiar, Posterizar</dt><dd>Reduz a imagem a preto e branco puros num nível escolhido, ou a um pequeno número de tons por canal.</dd>
+</dl>
+
+<h2 id="pixels-filters">Filtros</h2>
+<p>O submenu <strong>Filtros</strong> remodela os próprios pixels, novamente dentro da seleção.</p>
+<dl>
+  <dt>Desfoque Gaussiano</dt><dd>Suaviza a camada por uma quantidade uniforme e ajustável.</dd>
+  <dt>Nitidez, Máscara de Nitidez</dt><dd>Torna o detalhe nítido - Máscara de Nitidez dá controlo sobre o raio, quantidade e um limiar que poupa áreas planas e ruído fino.</dd>
+  <dt>Pixelizar</dt><dd>Bloqueia a imagem em ladrilhos quadrados para um mosaico.</dd>
+  <dt>Adicionar Ruído</dt><dd>Espalha grão pela tinta.</dd>
+  <dt>Encontrar Bordas, Relevo</dt><dd>Traça onde a cor muda como linhas claras em escuro, ou como um relevo cinzento.</dd>
+</dl>
+<p><strong>Filtros &gt; Pré-visualizações de Efeitos</strong> mostra a sua camada como uma grelha de miniaturas ao vivo, cada uma com um ajuste ou filtro aplicado, para que possa escolher a olho em vez por nome. Escolher uma miniatura mantém a janela aberta. As configurações do efeito aparecem ao lado da grelha, e a tela pré-visualiza o resultado à medida que as altera. Nada é aplicado até clicar <strong>Aplicar</strong> (ou pressionar <kbd>Enter</kbd>). <strong>Cancelar</kbd> ou <kbd>Esc</kbd> repõe a imagem, e um desfazer remove um efeito aplicado. Pode arrastar a janela pelo seu título para ver a tela por trás dela.</p>
+
+<h2 id="pixels-undo">Desfazer rápido, baseado em ladrilhos</h2>
+<p>Um traço inteiro desfaz-se num passo, por mais longo que fosse: pressione <kbd>&#8984;Z</kbd> uma vez e o último rasto desaparece, e <kbd>&#8679;&#8984;Z</kbd> traz-o de volta. Se o primeiro traço teve de criar a sua camada, essa camada volta com o traço em vez de ficar vazia.</p>
+<p>Nos bastidores uma camada de pixels é mantida como uma grelha de pequenos ladrilhos, e um traço apenas copia os ladrilhos que realmente tocou. Desfazer mantém instantâneos completos do documento, mas um traço custa apenas os seus próprios ladrilhos em vez da superfície inteira, pelo que pintar numa camada grande permanece rápido e uma sessão longa de trabalho de pincel não enche a memória. Áreas planas de uma cor são armazenadas compactamente, pelo que uma camada que é maioritariamente uma única cor ocupa quase nenhum espaço.</p>
+
+<h2 id="pixels-treating">Tratando uma camada de pixels como qualquer objeto</h2>
+<p>Uma camada de pixels é um objeto no documento, pelo que tudo o que já sabe se aplica. Selecione-a, mova-a, e dimensione, rode, reflita ou incline-a a partir de <strong>Objeto &gt; Transformar</strong>, da caixa delimitadora ou da ferramenta Transformação Livre. Sem seleção em área, a caixa envolve os pixels pintados da camada em vez da sua superfície inteira, e uma transformação atua nesses pixels: mover mantém-nos intactos, enquanto dimensionar ou rodar é cozido nos pixels quando pressiona <kbd>Enter</kbd>, escolhe outra ferramenta ou seleciona outra coisa, para que a camada permaneça direita e a próxima pincelada caia do lado certo. Defina a sua opacidade e dê-lhe qualquer dos dezasseis modos de mistura do painel Transparência para colocar cor pintada sobre a arte desenhada por baixo. Clicar seleciona a camada apenas onde tem tinta, pelo que um canto transparente lhe permite clicar diretamente através do que está por baixo. <strong>Duplicar</strong> copia uma camada de pixels como qualquer objeto - baratamente, pois a cópia partilha os seus ladrilhos até que um deles seja pintado.</p>
+<p><strong>Objeto &gt; Camada de Pixels &gt; Fundir para Baixo</strong> achata uma camada de pixels na camada de pixels diretamente abaixo dela e remove a superior, deixando uma única camada com as duas compostas juntas. Se as camadas ficam sob transformações diferentes - digamos uma foi rodada - a superior é reamostrada na grelha da inferior à medida que funde.</p>
+<p>Dois comandos atuam na superfície inteira de uma vez:</p>
+<dl>
+  <dt>Objeto &gt; Camada de Pixels &gt; Preencher com Cor de Preenchimento</dt><dd>Inunda a superfície inteira com a cor de preenchimento atual. Use-a para colocar uma camada de base antes de pintar por cima, ou para inundar uma camada colocada atrás de outra arte.</dd>
+  <dt>Objeto &gt; Camada de Pixels &gt; Limpar</dt><dd>Esvazia a superfície sem remover a camada, para que possa recomeçar a pintura mantendo o lugar, transformação, opacidade e modo de mistura da camada.</dd>
+</dl>
+<p>Ambos os comandos também aparecem sob <strong>Efeito &gt; Camada de Pixels</strong>.</p>
+
+<h2 id="pixels-masks">Máscaras de camada</h2>
+<p>Uma <strong>máscara de camada</strong> oculta partes de uma camada de pixels sem as eliminar: a camada mostra-se onde a máscara é branca e fica oculta onde é preta, com os cinzentos no meio para transparência parcial. Como nada é apagado, pode pintar a máscara para trás e para a frente tantas vezes quantas quiser. Os comandos estão sob <strong>Objeto &gt; Camada de Pixels</strong>.</p>
+<dl>
+  <dt>Adicionar Máscara de Camada</dt><dd>Liga uma máscara que revela tudo para começar, pronta para pintar.</dd>
+  <dt>Adicionar Máscara de Camada a partir da Seleção</dt><dd>Constrói a máscara a partir da seleção de pixels atual: o que está dentro fica, o que está fora é ocultado. Uma maneira rápida de cortar uma forma de uma fotografia de forma não destrutiva.</dd>
+  <dt>Editar Máscara</dt><dd>Liga e desliga a pintura de máscara. Enquanto está ligada, o Pincel, a Borracha e o Balde de Tinta pintam a máscara em vez da camada: pinte com preto (ou uma cor escura) para ocultar, branco para revelar, cinzento para desvanecer. O Pincel usa a claridade da cor de preenchimento atual, pelo que preto oculta e branco mostra.</dd>
+  <dt>Aplicar Máscara de Camada</dt><dd>Coza a máscara na camada de vez - os pixels ocultos tornam-se transparentes - e remove a máscara.</dd>
+  <dt>Eliminar Máscara de Camada</dt><dd>Deita a máscara fora e mostra a camada inteira de volta, intacta.</dd>
+</dl>
+<p>Uma camada mascarada exporta-se e guarda-se com a máscara já aplicada, e mistura-se e transforma-se como qualquer outra camada.</p>
+
+<h2 id="pixels-rasterize">Transformando arte vetorial em pixels: Rasterizar</h2>
+<p><strong>Objeto &rsaquo; Rasterizar</strong> substitui a seleção atual por uma imagem incorporada de si mesma, cozendo caminhos, texto e quaisquer efeitos em pixels fixos. Use isto quando quer que um resultado vetorial deixe de ser editável, quando um efeito é mais fácil de tratar como uma imagem plana, ou para entregar uma peça que deve ter o mesmo aspeto em todo o lado sem transportar a sua construção ao vivo. O resultado é uma imagem incorporada em vez de uma camada de pixels pintável, por isso guarde uma cópia da arte original se precisar de a editar novamente. <strong>Ver &gt; Pré-visualização de Pixels</strong> (<kbd>&#8997;&#8984;Y</kbd>) permite verificar como a arte vetorial cairá na grelha de pixels antes de se comprometer.</p>
+
+<h2 id="pixels-saving">Guardar e exportar</h2>
+<p>Documentos <code>.cut</code> guardam camadas de pixels com o resto da arte, embalados para que áreas planas ocupem quase nenhum espaço e reabram exatamente como foram pintadas.</p>
+<p>Como as camadas de pixels saem do documento depende do formato:</p>
+<dl>
+  <dt>PNG, JPEG e WebP</dt><dd>Achatam o documento inteiro em pixels, para que arte pintada e desenhada se fundam numa única bitmap. PNG pode manter transparência; exporte a @2x para um resultado mais nítido.</dd>
+  <dt>SVG e PDF</dt><dd>Escrevem a superfície pintada como uma imagem incorporada colocada entre a arte vetorial, para que um documento que mistura trabalho desenhado e pintado viaje como um único arquivo com as suas formas ainda nítidas.</dd>
+</dl>
+<p>Como raster e vetorial vivem no mesmo documento e exportam juntos, pode construir uma peça da maneira natural: formas limpas e texto como vetores, e as partes que querem o toque da tinta, um brilho suave, uma lavagem texturizada, uma fotografia retocada, como camadas de pixels empilhadas entre elas.</p>
