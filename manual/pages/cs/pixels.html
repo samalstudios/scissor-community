@@ -1,0 +1,120 @@
+<p class="lede">Dokument Scissoru může držet malované pixely vedle svých kreslených cest a textu, takže jeden soubor může nést jemnou štětcovou texturu, fotografii a čisté logo dohromady. Tato stránka pokrývá, co je pixelová vrstva, jak na ní malovat a jak se chová jako objekt v dokumentu.</p>
+
+<h2 id="pixels-vector-vs-raster">Pixely versus vektorová grafika</h2>
+<p>Dokument Scissoru drží dva druhy grafiky vedle sebe. Cesty a text jsou <em>kreslené</em>: zůstávají ostré při jakékoli velikosti, protože jsou popsány svým tvarem a Scissor je překresluje pokaždé, když přibližujete nebo měníte velikost. <strong>Pixelová vrstva</strong> je <em>malovaná</em>: je to mřížka barevných teček, jako fotografie nebo štětcový obraz a její zvětšení dělá tyto tečky větší namísto přidání detailů. Jeden dokument může držet tolik z každého, chcete, v jakémkoli pořadí a vrstí se společně v panelu Vrstvy.</p>
+<p>Sáhněte po pixelové vrstvě, když tvar sám o sobě nestačí: ručně malovaný stín, hrubá textura za čistým textem, stříkaná barva, která nemusí být upravitelnou cestou, nebo retuš umístěné fotografie. Udržujte loga, diagramy a cokoli, co budete později měnit velikost, jako vektory a použijte pixely pro části, které chtejí pocit barvy.</p>
+<p>Umístěná fotografie je související, ale samostatná věc. <strong>Soubor &gt; Umístit&hellip;</strong> (<kbd>&#8679;&#8984;P</kbd>) přináší existující obrázek do dokumentu jako vložený obrázek; pixelová vrstva je povrch, na který malujete od nuly uvnitř Scissoru. Oba jsou vyrobeny z pixelů a oba mohou být vzorkovány kapátkem, ale pouze pixelová vrstva přijímá tahy štětce.</p>
+
+<h2 id="pixels-new">Vytvoření pixelové vrstvy</h2>
+<p><strong>Objekt &gt; Pixelová vrstva &gt; Nová pixelová vrstva</strong> přidá prázdný povrch pokrývající aktivní podložku. Nemusíte však nejprve vytvořit jednu: vyberte Štětec a malujte a Scissor vytvoří vrstvu pro vás okamžikem, kdy přistane první tah. Tak či onak se vrstva mapuje na podložku, takže pixely se srovnají s artboardem, ať už byly vyrobeny v jakémkoli rozlišení.</p>
+<p>Toto rozlišení pochází z nastavení <strong>Rastrové efekty</strong> v <strong>Soubor &gt; Nastavení dokumentu&hellip;</strong> (<kbd>&#8997;&#8984;P</kbd>): Obrazovka (72&nbsp;ppi), Střední (150&nbsp;ppi) nebo Vysoké (300&nbsp;ppi). Vyšší nastavení dává nové pixelové vrstvě více teček na bod, takže štětcová práce zůstává hladká, když je kus tisknutelný nebo velký. Nastavte to před vytvořením vrstvy, protože počet pixelů je fixní, když je povrch vytvořen.</p>
+<p>V moderním shellu můžete také přidat vrstvu z panelu možností nástroje: s aktivním Štětcem nebo Pixelovou gumou tlačítko <strong>Nová pixelová vrstva</strong> sedí na konci panelu.</p>
+<p><strong>Umístění obrázku také vytvoří pixelovou vrstvu.</strong> Pusťte obrázek na plátno, použijte <strong>Soubor &gt; Umístit&hellip;</strong> nebo vložte jeden ze schránky a přijde jako upravitelná pixelová vrstva ve své vlastní velikosti namísto zamčeného obrázku – takže můžete na něj malovat, maskovat, upravovat a filtrovat ho rovnou. Otevření obrázku pomocí <strong>Soubor &gt; Otevřít</strong> vytvoří nový dokument s jednou podložkou velikosti obrázku, vyplněnou pixelovou vrstvou. Velké fotografie jsou zmenšeny, aby se vešly do rozpočtu pixelů. <strong>SVG</strong> zůstává vektorové – jeho cesty zůstávají upravitelné – takže pouze bitmapové obrázky (PNG, JPEG, GIF, WebP a podobně) se stávají pixelovými vrstvami.</p>
+<p>Vrstvený soubor <strong><code>.psd</code></strong> přijde bohatší: otevření jednoho znovu postaví jeho zásobník jako samostatné pixelové vrstvy, zachovává každý <strong>masku</strong> vrstvy a přináší texty, tvary a efekty vrstev, takže soubor přistane blízko tomu, jak vypadal tam, kde byl vyroben, namísto jednoho plochého obrázku. To je nejplnější způsob do pixelové práce a všechno na této stránce se poté vztahuje na vrstvy, které přijdou.</p>
+
+<h2 id="pixels-painting">Malování</h2>
+
+<h3 id="pixels-brush">Štětec a Pixelová guma</h3>
+<p>Dva nástroje pracují na pixelových vrstvách.</p>
+<table>
+  <thead><tr><th>Nástroj</th><th>Kde žije</th><th>Co dělá</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Nástroj Štětec</strong></td><td>Sdílí zářík se Štětcem (<kbd>B</kbd>) a Výplňovým štětcem (<kbd>&#8679;B</kbd>)</td><td>Pokládá barvu, která se stane součástí obrazu</td></tr>
+    <tr><td><strong>Nástroj Pixelová guma</strong></td><td>Sdílí zářík s Gumou (<kbd>&#8679;E</kbd>), Nůžkami a Nožem</td><td>Odře barvu, takže to, co sedí pod ní, prosvítá</td></tr>
+  </tbody>
+</table>
+<p>Pro dosažení kteréhokoli stiskněte a podržte viditelný nástroj v panelu nástrojů, nebo na něj klikněte pravým tlačítkem a zvolte pixelový nástroj ze seznamu. Nekonfuzujte je s jejich vektorovými sousedy: Štětec kreslí cestu, kterou můžete později přetvarovat, zatímco Štětec maluje pixely, které nemohou být přebody. Oba pixelové nástroje zobrazují kruh na plátně v velikosti, kterou budou malovat a oba používají ukazatel kříže.</p>
+<p>Táhněte pro malování nebo mazání. Značka následuje ukazatel bez mezer, jak rychle se pohybujete, protože Scissor pokládá řadu kruhových skvrn podél tahu a udržuje je rovnoměrně rozložené, i když ukazatel skáče. Pixelová guma bere alfa namísto malování přes, takže to, co vyčistí, jde do plně průhledné; dlaždice odřená zpět na nic je shozena, takže mazání nezanechává váhu.</p>
+
+<h3 id="pixels-colour">Malování barvou výplně</h3>
+<p>Štětec maluje v aktuální barvě <strong>výplně</strong>. Nastavte ji stejným způsobem, jak nastavíte jakoukoli výplň: panel Barva, vzorek nebo, když je Štětec aktivní v moderním shellu, čip <strong>Barva</strong> v panelu možností nástroje. Pokud je výplň prázdná, Štětec spadne na barvu tahu a na černou, pokud není žádná barva vůbec. Vyberte barvu přímo z pixelové vrstvy Kapátkem, když chcete shodovat barvu, která je již dolů.</p>
+
+<h3 id="pixels-controls">Velikost, tvrdost a tok</h3>
+<p>Když je Štětec nebo Pixelová guma aktivní, panel možností nástroje nese nastavení, která tvarují značku. Žijí také ve vašich předvolbách, takže přenesou z jedné relace do druhé.</p>
+<dl>
+  <dt>Velikost</dt><dd>Průměr štětce, od 1 do 2500 pixelů. Stiskněte <kbd>[</kbd> pro zmenšení štětce a <kbd>]</kbd> pro jeho zvětšení; každé stisknutí mění velikost o pětinu, takžkrok roste se štětcem. Kruh na plátně zobrazuje aktuální velikost.</dd>
+  <dt>Tvrdost</dt><dd>Kde okraj začíná vyblednout, jako procento. Na 100 % je okraj ostrý; snižte jej a skvrna změkčí směrem k okraju s jemným úpadkem a bez viditelného kruhu. Použijte měkký štětec pro stíny a záře, tvrdý pro plné tvary.</dd>
+  <dt>Tok</dt><dd>Kolik barvy každá skvrna položí, pouze pro Štětec. Pod 100 % se barva staví postupně, jak znovu přejdete přes oblast, což se hodí pro stínování a pomalé přechody. Pixelová guma nemá ovládání toku.</dd>
+</dl>
+
+<h2 id="pixels-retouch">Zesvětlení, ztmavení a houbování</h2>
+<p>Tři štětce retuše pracují do pixelů, které jsou již tam, namísto pokládání barvy, sdílejí jeden zářík v panelu nástrojů. Malují jako Štětec – stejná velikost, tvrdost a kruh na plátně – a staví se, jak znovu přejdete přes oblast, takže lehký dotyk je postupný a pevný je rychlý.</p>
+<dl>
+  <dt>Zesvětlení</dt><dd>Zesvětluje tam, kde malujete, zvedá stíny a přidává světlé motivy.</dd>
+  <dt>Ztmavení</dt><dd>Ztmavuje tam, kde malujete, prohlubuje stíny a okraje.</dd>
+  <dt>Houba</dt><dd>Zvedá sytost, dělá barvy bohatšími, čím víc jimi jdete.</dd>
+</dl>
+<p>Každá zanechává průhledné pixely nedotčené, zůstává uvnitř výběru, když je jeden nastaven a celý tah se vrátí jedním krokem.</p>
+
+<h2 id="pixels-more-tools">Kýbel, tvary a přechody</h2>
+<p>Malování není pouze Štětec. Na pixelové vrstvě tři další nástroje pokládají barvu: <strong>Kýbel s barvou</strong> zaplaví spojitou oblast podobné barvy tam, odkud kliknete; <strong>kreslicí nástroje</strong> razítkují obdélník, elipsu, hvězdu nebo mnohoúhelník přímo do pixelů namísto kreslení cesty a <strong>Nástroj přechodu</strong> maluje lineární nebo radiální přechod přes povrch. Každý respektuje aktuální výběr, takže můžete omezit výplň nebo přechod na vybranou oblast.</p>
+
+<h2 id="pixels-selecting">Výběr pixelů</h2>
+<p><strong>Pixelový výběr</strong> – obdélníkový výběr – omezuje každé malování a úpravy na oblast uvnitř něj, jako šablona. Tři nástroje dělají jeden, sdílejí zářík výběru pixelů: <strong>Obdélníkový</strong> a <strong>Eliptický výběr</strong> a volný <strong>Lassový výběr</strong>, který stopujete od ruky. Táhněte pro nakreslení výběru; obyčejné tažení nahradí aktuální.</p>
+<p><strong>Automatický výběr</strong> vybírá podle barvy namísto podle tvaru: klikněte na pixelovou vrstvu a vezme spojenou skvrnu barvy kolem toho, kam jste klikli, stopujíc pochodující mravence kolem ní – užitečné pro zvednutí plochého pozadí nebo jedné barevné oblasti. Jak blízko musí být barva, aby byla vzata, je <strong>Tolerance</strong> v možnostech Automatického výběru, stejné nastavení, které používá na vektorových objektech; zvyšte jej pro shromáždění více, snižte jej pro udržení přísné shody. Díry ve skvrně jsou z výběru vynechány.</p>
+<p>Výběry se kombinují, takže tvar může být stavěn z několika tahů nebo kliknutí: podržte <kbd>&#8679;</kbd> pro <strong>přidání</strong> do výběru, <kbd>&#8997;</kbd> pro <strong>odečtení</strong> a obojí dohromady pro zachování pouze <strong>překryvu</strong> – obdélníkové výběry a Automatický výběr se kombinují stejným způsobem. <strong>Výběr &gt; Vše</strong> (<kbd>&#8984;A</kbd>) vybírá každý pixel, <strong>Výběr &gt; Inverze</strong> převrací obdélníkový výběr a <strong>Zrušit výběr</strong> – <kbd>&#8984;D</kbd> na pixelové vrstvě – jej shodí. Pochodující mravence zobrazují výběr na plátně.</p>
+
+<h2 id="pixels-editing-selection">Přesun, vyjmutí a kopírování pixelů</h2>
+<p>S nastaveným výběrem nástroj Výběr přesouvá pixely uvnitř něj: táhněte zevnitř obdélníkového výběru a vybraná barva se zvedne a cestuje, čistíc tam, kde byla a nesouc obdélníkový výběr s sebou. Podržte <kbd>&#8997;</kbd> při tažení pro ponechání originálu na místě a přesun <strong>kopie</strong>.</p>
+<p>Transformační nástroje pracují na výběru také. S nastaveným obdélníkovým výběrem ohraničující rámeček nástroje Výběr a <strong>Nástroje volné transformace</strong> (<kbd>E</kbd>) obalí obdélníkový výběr, ne celou vrstvu, takže můžete změnit velikost, otočit nebo přesunout pouze tuto část obrazu; <strong>Objekt &gt; Transformace</strong> a klávesy se šipkami působí na něj stejným způsobem. Zvednuté pixely plovou nad vrstvou, zatímco pracujete, takže můžete je táhnout znovu a znovu beze ztráty detailů. Stiskněte <kbd>Enter</kbd>, vyberte jiný nástroj nebo vytvořte nový výběr pro jejich položení dolů, což je jeden krok k vrácení zpět, nebo stiskněte <kbd>Escape</kbd> pro vrácení všeho zpět tam, kde bylo. Přesun po celých pixelech je drží přesně tak, jak byly; změna velikosti nebo otáčení je jednou převzorkuje, když jsou položeny dolů.</p>
+<p>Nástroj Volné transformace <strong>Volné zkreslení</strong> a <strong>Perspektivní zkreslení</strong> fungují na pixelech také, na obdélníkovém výběru nebo na celé vrstvě: táhněte roh rámečku (nebo podržte <kbd>&#8984;</kbd> při tažení jednoho v režimu Volné transformace) pro vytáhnutí obrazu z míry, například pro vezení fotografie na obrazovku nebo nápis viděný pod úhlem. Zatímco táhnete, Scissor zobrazuje rychlý náhled velikosti obrazovky, takže zůstává hladký i na velké fotografii; samotné pixely jsou vytáhnuty jednou, v plném rozlišení, když stisknete <kbd>Enter</kbd> nebo pokračujete a obdélníkový výběr následuje nový tvar.</p>
+<p>Kopírovat (<kbd>&#8984;C</kbd>) a Vyjmout (<kbd>&#8984;X</kbd>) fungují na pixelech uvnitř obdélníkového výběru: kopírování nechávrstvu tak, jak je, vyjmout pixely bere ven. Vložit (<kbd>&#8984;V</kbd>) je položí na <strong>novou pixelovou vrstvu</strong> přímo nad tu, ze které pocházejí, přesně na stejném místě, připravenou k přesunu nebo transformaci o samotné. Stejné příkazy jsou ve <strong>Vytvořit &gt; Pixelová vrstva</strong> a výběr také řídí příkazy povrchu: <strong>Vyplnit barvou výplně</strong> vyplňuje pouze vybranou oblast, <strong>Vyčistit</strong> a <strong>Smazat</strong> ji mažou a bez výběru každý působí na celou vrstvu.</p>
+
+<h2 id="pixels-adjustments">Úpravy</h2>
+<p>Podnabídka <strong>Objekt &gt; Pixelová vrstva &gt; Úpravy</strong> retušuje barvu pixelové vrstvy, omezenou na výběr, když je jeden nastaven. Každá otevře dialog, který náhleduje na plátně, jak táhnete.</p>
+<dl>
+  <dt>Jas / Kontrast, Úrovně</dt><dd>Nastaví celkovou světlost a kontrast, nebo přemapuje černý bod, bílý bod a gammu pro jemnější tónovou kontrolu.</dd>
+  <dt>Odstín / Sytost, Živost</dt><dd>Posouvá odstín a zvyšuje nebo snižuje sytost napříč podložkou, nebo použijte Živost pro posunutí tlumených barev a nechání již živých na pokoji.</dd>
+  <dt>Barevnová vyvážení</dt><dd>Tlačí střední tóny kyanu nebo červené, purpurové nebo zelené, žluté nebo modré.</dd>
+  <dt>Přechodová mapa</dt><dd>Přebarvuje vrstvu podle jejího jasu, mapujíc stíny na jednu barvu a světlé motivy na druhou.</dd>
+  <dt>Desaturovat, Invertovat</dt><dd>Odstraní všechnu barvu do šedi, nebo převrací každou barvu na její opak.</dd>
+  <dt>Prah, Posterizovat</dt><dd>Sníží obraz na čistou černou a bílou na zvolené úrovni, nebo na malý počet tónů na kanál.</dd>
+</dl>
+
+<h2 id="pixels-filters">Filtry</h2>
+<p>Podnabídka <strong>Filtry</strong> přetvaruje samotné pixely, opět uvnitř výběru.</p>
+<dl>
+  <dt>Gaussovské rozmazání</dt><dd>Změkčí vrstvu rovnoměrným, nastavitelným množstvím.</dd>
+  <dt>Zaostřit, Neostrý filtr</dt><dd>Zostří detaily – Neostrý filtr dává kontrolu nad poloměrem, množstvím a prahem, který šetří ploché oblasti a jemný šum.</dd>
+  <dt>Pixelovat</dt><dd>Rozbíjí obraz na čtvercové dlaždice pro mozaiku.</dd>
+  <dt>Přidat šum</dt><dd>Rozptýlejí zrno přes barvu.</dd>
+  <dt>Najít okraje, Rytina</dt><dd>Stopuje, kde se barva mění, jako jasné čáry na tmavém, nebo jako šedou reliéf.</dd>
+</dl>
+<p><strong>Filtry &gt; Náhledy efektů</strong> zobrazuje vaši vrstvu jako mřížku živých miniatur, každou s jednou úpravou nebo filtrem použitým, takže můžete vybírat od oka namísto podle názvu. Výběr miniatury nechá okno otevřené. Nastavení efektu se objeví vedle mřížky a plátno náhleduje výsledek, jak je měníte. Nic není použito, dokud nekliknete na <strong>Použít</strong> (nebo stisknete <kbd>Enter</kbd>). <strong>Zrušit</strong> nebo <kbd>Esc</kbd> vrací obraz zpět a jedno vrácení zpět odstraní použitý efekt. Můžete táhnout okno jeho názvem pro zobrazení plátna za ním.</p>
+
+<h2 id="pixels-undo">Rychlé, dlaždicové vrácení zpět</h2>
+<p>Celý tah se vrátí jedním krokem, jak dlouhý byl: stiskněte <kbd>&#8984;Z</kbd> jednou a posledna značka je pryč a <kbd>&#8679;&#8984;Z</kbd> ji přivede zpět. Pokud musel první tah vytvořit svou vrstvu, tato vrstva jde zpět s tahem namísto toho, aby zůstala prázdná.</p>
+<p>Pod pokličkou se pixelová vrstva drží jako mřížka malých dlaždic a tah kopíruje pouze dlaždice, které skutečně dotkl. Vrácení zpět udržuje celé snímky dokumentu, ale tah stojí pouze své vlastní dlaždice namísto celého povrchu, takže malování na velké vrstvě zůstává rychlé a dlouhá relace štětcové práce neplní paměť. Ploché oblasti jedné barvy se ukládají kompaktně, takže vrstva, která je většinou jedna barva, zabere málo místa.</p>
+
+<h2 id="pixels-treating">Zacházení s pixelovou vrstvou jako s jakýmkoli objektem</h2>
+<p>Pixelová vrstva je objektem v dokumentu, takže platí vše, co již znáte. Vyberte ji, přesuňte ji a měňte její velikost, otočte, zrcadlete nebo zkoste z <strong>Objekt &gt; Transformace</strong>, ohraničujícího rámečku nebo nástroje Volné transformace. Bez obdélníkového výběru rámeček obalí nakreslené pixelové vrstvy namísto celého povrchu a transformace pracuje na těchto pixelech: přesun je nedotkne, zatímco změna velikosti nebo otáčení se vypeče do pixelů, když stisknete <kbd>Enter</kbd>, vyberete jiný nástroj nebo vyberete něco jiného, takže vrstva zůstává vzpřímená a další tah štětce přistane správně. Nastavte její krytí a dejte jí kterýkoli ze šestnácti režimů prolnutí z panelu Průhlednost pro posazení malované barvy nad kreslenou grafikou pod ní. Kliknutí vybírá vrstvu pouze tam, kde má barvu, takže průhledný roh vám umožňuje kliknout přímo skrz na to, co je pod ní. <strong>Duplikovat</strong> kopíruje pixelovou vrstvu jako jakýkoli objekt – levně, protože kopie sdílí své dlaždice, dokud jedna z nich není malována.</p>
+<p><strong>Objekt &gt; Pixelová vrstva &gt; Sloučit dolů</strong> zplošťuje pixelovou vrstvu na pixelovou vrstvu přímo pod ní a odstraňuje horní, zanechávajíc jednu vrstvu s oběma složenými dohromady. Pokud vrstvy sedí pod různými transformacemi – řekněme jedna byla otočena – horní je převzorkována do mřížky spodní při sloučení.</p>
+<p>Dva příkazy působí na celý povrch najednou:</p>
+<dl>
+  <dt>Objekt &gt; Pixelová vrstva &gt; Vyplnit barvou výplně</dt><dd>Zaplaví celý povrch aktuální barvou výplně. Sáhněte po ní pro položení základního nátěru před malováním přes něj, nebo pro zaplavení vrstvy nastavené za jinou grafikou.</dd>
+  <dt>Objekt &gt; Pixelová vrstva &gt; Vyčistit</dt><dd>Vyprázdní povrch bez odstranění vrstvy, takže můžete začít malovat znovu, zachovávajíc místo vrstvy, transformaci, krytí a režim prolnutí.</dd>
+</dl>
+<p>Oba příkazy se také objeví pod <strong>Efekt &gt; Pixelová vrstva</strong>.</p>
+
+<h2 id="pixels-masks">Masky vrstvy</h2>
+<p><strong>Maska vrstvy</strong> skrývá části pixelové vrstvy bez jejich mazání: vrstva prosvítá tam, kde je maska bílá a je skryta tam, kde je černá, se šedemi mezi nimi pro částečné průhlednost. Protože nic není odstraněno, můžete malovat masku zpět a dopředu, jak chcete. Příkazy jsou pod <strong>Objekt &gt; Pixelová vrstva</strong>.</p>
+<dl>
+  <dt>Přidat masku vrstvy</dt><dd>Připojí masku, která zpočátku odhaluje vše, připravenou k malování.</dd>
+  <dt>Přidat masku vrstvy z výběru</dt><dd>Staví masku z aktuálního pixelového výběru: to, co je uvnitř, zůstane, to, co je venku, je skryto. Rychlý způsob, jak vystřihnout tvar z fotografie nedestruktivně.</dd>
+  <dt>Upravit masku</dt><dd>Přepíná malování masky zapnuto a vypnuto. Zatímco je zapnuté, Štětec, Guma a Kýbel s barvou malují masku namísto vrstvy: malujte černou (nebo tmavou barvou) pro skrytí, bílou pro odhalení, šedou pro vyblednutí. Štětec používá světlost aktuální barvy výplně, takže černá skrývá a bílá zobrazuje.</dd>
+  <dt>Použít masku vrstvy</dt><dd>Vypeče masku do vrstvy natrvalo – skryté pixely se stanou průhlednými – a odstraňuje masku.</dd>
+  <dt>Smazat masku vrstvy</dt><dd>Zahodí masku a zobrazí celou vrstvu zpět, nedotčenou.</dd>
+</dl>
+<p>Maskovaná vrstva se exportuje a uloží s maskou již použitou a prolíná se a transformuje jako jakákoli jiná vrstva.</p>
+
+<h2 id="pixels-rasterize">Převod vektorové grafiky na pixely: Rasterizace</h2>
+<p><strong>Objekt &gt; Rasterizovat</strong> nahradí aktuální výběr vloženým obrazem sebe sama, vypečíc cesty, texty a jakékoli efekty do fixních pixelů. Použijte to, když chcete, aby vektorový výsledek přestal být upravitelný, když je efekt snáze zacházet jako plochý obrázek, nebo pro předání kusu, který by měl vypadat všude stejně, nesouc svou živou konstrukci. Výsledkem je vložený obrázek namísto malovatelné pixelové vrstvy, takže zachovávejte kopii původní grafiky, pokud byste mohli potřebovat ji znovu upravit. <strong>Zobrazení &gt; Náhled pixelů</strong> (<kbd>&#8997;&#8984;Y</kbd>) vám umožňuje zkontrolovat, jak vektorová grafika přistane na pixelové mřížce před závazkem.</p>
+
+<h2 id="pixels-saving">Ukládání a export</h2>
+<p>Dokumenty <code>.cut</code> udržují pixelové vrstvy se zbytkem grafiky, zabalené tak, aby ploché oblasti zabíraly málo místa a znovu se otevřely přesně tak, jak byly malovány.</p>
+<p>Jak pixelové vrstvy opouštějí dokument, závisí na formátu:</p>
+<dl>
+  <dt>PNG, JPEG a WebP</dt><dd>Zploští celý dokument do pixelů, takže malovaná a kreslená práce se sloučí do jedné bitmapy. PNG může zachovat průhlednost; exportujte při @2x pro ostřejší výsledek.</dd>
+  <dt>SVG a PDF</dt><dd>Zapíše malovaný povrch jako vložený obrázek umístěný mezi vektorovou grafikou, takže dokument míšící kreslenou a malovanou práci cestuje jako jeden soubor s jeho tvary stále čistými.</dd>
+</dl>
+<p>Protože rastrová a vektorová žijí ve stejném dokumentu a exportují se dohromady, můžete stavět kus přirozeným způsobem: čisté tvary a texty jako vektory a části, které chtějí pocit barvy, jemné záře, texturovaného přechodu, retušované fotografie, jako pixelové vrstvy vrstvené mezi nimi.</p>

@@ -1,0 +1,100 @@
+<p class="lede">Vektorizace převádí obrázek na vektorové cesty: logo naskenované z papíra, tužková skica nebo fotografie se stává sadou vyplněných tvarů, které můžete měnit velikost, přebarvit a upravovat jako cokoli jiného, co nakreslíte. Tato stránka pokrývá, co můžete vektorizovat, panel, který ji spouští, tři režimy a jejich předvolby, každou možnost a jak zachovat nebo zahodit výsledek.</p>
+
+<h2 id="image-trace-what">Co vektorizace dělá a co můžete vektorizovat</h2>
+<p>Obrázek je vyroben z pixelů: rozmazává se, kdyj jej zvětšíte a nemůže být přetvarován bod po bodu. Vektorizace čte tyto pixely a kreslí vektorové cesty, které následují tvary, které najde, takže výsledek zůstává ostrý při jakékoli velikosti a může být upravován, přebarven a kombinován se zbytkem vaší grafiky.</p>
+<p>Vektorizujete <strong>pixelovou vrstvu</strong>: obrázek, který jste umístili nebo vložili, obrázek otevřený jako vlastní podložka nebo vrstvu, kterou jste namalovali sami. Přineste obrázek pomocí <strong>Soubor &gt; Umístit&hellip;</strong> (<kbd>&#8679;&#8984;P</kbd>) – přijde jako pixelová vrstva – vyberte jej a poté spusťte vektorizaci. (Vektorová grafika je již vyrobená z cest, takže není co vektorizovat; vektorizace čte pixely.)</p>
+<p>Vektorizace nezahazuje obrázek. Staví skupinu pojmenovanou <strong>Vektorizace</strong>, která drží původní obrázek (nyní skrytý) dohromady s novými cestami, sedícími přesně nad ním. Protože skupina si pamatuje nastavení, se kterým byla vyrobena, výsledek zůstává živý: znovu vyberte jej, změňte nastavení a převektorizuje se. Když jste spokojeni, <strong>Rozbalte</strong> jej pro zachování pouze cest, nebo <strong>Uvolněte</strong> jej pro návrat k obyčejnému obrázku.</p>
+
+<h2 id="image-trace-panel">Panel Vektorizace</h2>
+<p>Každé nastavení žije v panelu Vektorizace. Otevřete jej z <strong>Objekt &gt; Vektorizace &gt; Panel Vektorizace</strong>, nebo z jeho karty v doku panelů. Panel potřebuje vybraný obrázek, než může cokoli dělat: bez vhodného vybraného je tlačítko Vektorizovat zakázáno a panel vás požádá o výběr umístěného obrázku.</p>
+
+<h3 id="image-trace-run">Spuštění vektorizace</h3>
+<p>Vyberte obrázek, zvolte předvolbu nebo nastavte režim a možnosti ručně a stiskněte <strong>Vektorizovat</strong>. Čára v patě panelu hlásí postup, čtec <em>Vektorizuji&hellip;</em> zatímco pracuje a <em>Vektorizováno. Rozbalte pro zachování pouze cest.</em>, když skončí. Pokud obrázek neobsahuje nic, z čež by se mohl stát tvar, nebo nemůže být přečten, panel vám to řekne a nechá obrázek nedotčený.</p>
+
+<h3 id="image-trace-preview">Náhled během práce</h3>
+<p>Zaškrtávací políčko <strong>Vektorizovat při změně nastavení</strong>, ve výchozím stavu zapnuté, převektorizuje okamžitě, když změníte režim, předvolbu, číslo nebo zaškrtávací políčko, takže můžete posoudit každou úpravu proti obrázku rovnou. Na velkém nebo rušném obrázku překreslení trvá chvíli, takže jej vypněte, pokud byste raději nastavili několik možností nejprve a stiskli <strong>Vektorizovat</strong> jednou. Když znovu vyberete existující vektorizaci, panel načte přesné nastavení, se kterými byla vyrobena, připravená k úpravě a opětovné vektorizaci.</p>
+
+<h3 id="image-trace-menu">Příkazy nabídky Objekt</h3>
+<p>Stejné akce sedí pod <strong>Objekt &gt; Vektorizace</strong>, což je užitečné, když je panel zavřený.</p>
+<table>
+  <thead><tr><th>Příkaz</th><th>Co dělá</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Vytvořit</strong></td><td>Vektorizuje vybraný obrázek s aktuálním nastavením, nechte výsledek živý.</td></tr>
+    <tr><td><strong>Vytvořit a rozbalit</strong></td><td>Vektorizuje a rozbalí jedním krokem, takže jdete rovnou na upravitelné cesty.</td></tr>
+    <tr><td><strong>Rozbalit</strong></td><td>Zachová cesty a zahodí obrázek (viz níže).</td></tr>
+    <tr><td><strong>Uvolnit</strong></td><td>Zahazuje cesty a vrací se k obrázku (viz níže).</td></tr>
+    <tr><td><strong>Panel Vektorizace</strong></td><td>Přivedí panel dopředu.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="image-trace-modes">Tři režimy</h2>
+<p>Režim rozhoduje, jak se obrázek před kreslením zredukuje. Je to první volba, kterou uděláte, protože řídí, která z možností níže platí.</p>
+<table>
+  <thead><tr><th>Režim</th><th>Jak zredukuje obrázek</th><th>Možnost, kterou používá</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Černá a bílá</strong></td><td>Rozdělí vše do dvou tónů, inkoustu a papír, při jasu, který nastavíte.</td><td>Práh</td></tr>
+    <tr><td><strong>Stupně šedi</strong></td><td>Zredukuje obrázek na nastavený počet rovnoměrných šedých úrovní od černé k bílé.</td><td>Počet barev (jako šedé úrovně)</td></tr>
+    <tr><td><strong>Barva</strong></td><td>Vybere paletu nejvýznamnějších barev v obrázku a mapuje každý pixel na nejbližší.</td><td>Počet barev</td></tr>
+  </tbody>
+</table>
+<p>Bez ohledu na zvolený režim se vytvoří jeden vyplněný tvar na tón nebo barvu a tvary se vrstí největší první, takže menší detail sedí na vrchu. Plně průhledné části obrázku jsou vynechány, takže výstřižek na průhledném pozadí se vektorizuje pouze na jeho předmět.</p>
+
+<h2 id="image-trace-presets">Předvolby</h2>
+<p>Předvolba je pojmenovaný výchozí bod, který nastaví režim a každou možnost najednou. Vyberte jednu z nabídky v horní části panelu a, s zapnutým náhledem, obrázek se vektorizuje okamžitě; zacházejte s výsledkem jako se základním a upravujte od něj. Okamžitě, když změníte jakoukoli jedinou možnost, se nabídka předvolby přepne na <strong>Vlastní</strong>, protože nastavení již neodpovídají předvolbě.</p>
+<table>
+  <thead><tr><th>Předvolba</th><th>Režim</th><th>Sáhněte po ní, když</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Věrná fotografie</strong></td><td>Barva</td><td>Chcete fotografii zachovat blízko originálu, s mnoha barvami.</td></tr>
+    <tr><td><strong>Nízkověrná fotografie</strong></td><td>Barva</td><td>Fotografie by se měla číst jako několik širokých, plochých barevných oblastí.</td></tr>
+    <tr><td><strong>3 barvy</strong></td><td>Barva</td><td>Chcete odvážný, plakátový výsledek ze tří plochých barev.</td></tr>
+    <tr><td><strong>6 barev</strong></td><td>Barva</td><td>Plochý, ilustrovaný vzhled s malou, čistou paletou.</td></tr>
+    <tr><td><strong>16 barev</strong></td><td>Barva</td><td>Více barevného rozsahu než ploché předvolby, ale ne celá fotografie.</td></tr>
+    <tr><td><strong>Ostíny šedi</strong></td><td>Stupně šedi</td><td>Tónový obrázek by měl zachovat své stínování, ale ztratit barvu.</td></tr>
+    <tr><td><strong>Černobílé logo</strong></td><td>Černá a bílá</td><td>Převádíte čistý dvoutónový znak nebo logo na čisté tvary.</td></tr>
+    <tr><td><strong>Skicované umění</strong></td><td>Černá a bílá</td><td>Zachycujete tužkový nebo inkoustový náčrt s jeho volnějšími čarami.</td></tr>
+    <tr><td><strong>Siluety</strong></td><td>Černá a bílá</td><td>Chcete plné, vyplněné siluety namísto jemných čar.</td></tr>
+    <tr><td><strong>Čárové umění</strong></td><td>Černá a bílá</td><td>Jemná čárová kresba, kde musí tenké tahy přežít.</td></tr>
+    <tr><td><strong>Technická kresba</strong></td><td>Černá a bílá</td><td>Čisté, věrné čárové práce s co nejvíce zachovaným detailem.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="image-trace-options">Možnosti</h2>
+<p>Pod režimem sedí ovládací prvky, které tvarují výsledek. Které jsou zobrazeny, závisí na režimu: Práh se objeví pouze pro Černou a bílou, zatímco počet barev se objeví pro Stupně šedi a Barvu.</p>
+<dl>
+  <dt>Počet barev</dt>
+  <dd>Kolik barev (v režimu Barva) nebo šedých úrovní (v režimu Stupně šedi) se obrázek zredukuje, od 2 do 64. Méně dává plošší, grafický výsledek s menším počtem tvarů; více zachovává obrázek blíže originálu za cenu většího počtu cest. Režim Černá a bílá to ignoruje, protože má vždy dva tóny.</dd>
+  <dt>Práh</dt>
+  <dd>Pouze pro Černou a bílou: jas, od 0 do 255, kde se obrázek dělí na inkoust a papír. Cokoli tmavějšího než je práh se stane kresleným tvarem; cokoli světlejšího se pojímá jako pozadí. Zvyšte jej pro vytáhnutí více středních tónů do tvaru pro těžší výsledek, snižte jej pro zachování pouze nejtmavějších značek. Použijte jej pro ladění toho, jak moc bledého náčrtu je zachyceno.</dd>
+  <dt>Cesty</dt>
+  <dd>Jak těsně cesty následují pixely, na škále od 0 do 100. Vysoké hodnoty těsně objíždějí okraje a zachovávají jemné záškrtání, s větším počtem bodů kotvy; nízké hodnoty uvolňují přístup pro hladší, jednodušší cesty, které jsou lehčí na úpravu. Sáhněte po vysoké hodnotě, když záleží na přesnosti a nízké, když chcete čistý, čistý obrys.</dd>
+  <dt>Rohy</dt>
+  <dd>Jak ochotně se záhyb v obrysu stane ostrým rohem namísto hladké křivky, od 0 do 100. Zvyšte jej pro grafiku s ostrými úhly, jako je logo nebo písmo; snižte jej pro organické tvary, které by měly zůstat zaoblené.</dd>
+  <dt>Šum</dt>
+  <dd>Nejmenší skvrna, v pixelech, která smí být svým vlastním tvarem. Cokoli menšího je pohlceno do toho, co ho obklopuje. Zvyšte jej pro vyčištění skvrn a zrna ze skenu nebo fotografie, takže nečisté tečky se nestanou každá cestou; snižte jej pro zachování skutečného jemného detailu.</dd>
+  <dt>Ignorovat bílou</dt>
+  <dd>Vynechává jakýkoli tvar, který vyjde téměř bílý, takže papír nebo pozadí se nakreslí a zůstane průhledné za vektorizovanými značkami. Ve výchozím stavu zapnuté a zobrazeno pro režim Černá a bílá. Vypněte jej, když je bílá oblast součástí grafiky a potřebuje být skutečným vyplněným tvarem.</dd>
+  <dt>Výplně</dt>
+  <dd>Dává každému vektorizovanému tvaru plnou výplní v barvě, ve které byl vektorizován. Toto je obvyklá volba a je ve výchozím stavu zapnutá.</dd>
+  <dt>Tahy</dt>
+  <dd>Obrysuje každý vektorizovaný tým tahem ve své vlastní barvě namísto, nebo stejně jako, výplně. Ve výchozím stavu vypnuté. Pokud vypnete Výplně i Tahy, cesty jsou stále vytvořeny, ale nemají nic, co je maluje, takže nechte alespoň jednu zapnutou.</dd>
+</dl>
+
+<h2 id="image-trace-finish">Zachování nebo vrácení výsledku</h2>
+<p>Čerstvá vektorizace je živá: cesty sedí nad skrytým originálem uvnitř skupiny Vektorizace a můžete pokračovat v úpravách nastavení. Dva příkazy ukončí tento stav, oba na panelu jako tlačítka a pod <strong>Objekt &gt; Vektorizace</strong>. Stanou dostupné, jakmile je vektorizace vybrána.</p>
+<dl>
+  <dt>Rozbalit</dt>
+  <dd>Zachová cesty a odstraňuje obrázek, takže se skupina stane obyčejnou vektorovou grafikou. Nastavení již neplatí a nemohou být změněna, ale každá cesta je nyní normálním tvarem, který můžete přetvarovat, přebarvit, kombinovat a uspořádat. Sáhněte po tom, jakmile vektorizace vypadá správně a chcete pracovat na vektorech. <strong>Vytvořit a rozbalit</strong> dělá vektorizaci a tento krok dohromady.</dd>
+  <dt>Uvolnit</dt>
+  <dd>Zahazuje vektorizované cesty a obnovuje původní obrázek, viditelný znovu na svém starém místě. Použijte to pro opuštění vektorizace a nový začátek, nebo když jste potřebovali obrázek po všem.</dd>
+</dl>
+
+<h2 id="image-trace-uses">Loga, skice a fotografie</h2>
+<p>Tři běžné výchozí body volají po různých nastaveních.</p>
+<dl>
+  <dt>Logo nebo čistý znak</dt>
+  <dd>Začněte od <strong>Černobílého loga</strong>. Nechte <strong>Ignorovat bílou</strong> zapnuté, aby papír vypadl, zvyšte <strong>Rohy</strong> pro ostré úhly a <strong>Cesty</strong> pro věrné okraje a laděte <strong>Práh</strong>, dokud znak není plný bez zaplnění. Rozbalte a poté nastavte svou vlastní barvu výplně.</dd>
+  <dt>Tužkový nebo inkoustový náčrt</dt>
+  <dd>Zkuste <strong>Skicované umění</strong> nebo <strong>Čárové umění</strong>. Snižte <strong>Práh</strong> pro zachování pouze kreslených čar a nechte papír vypadnout a zvyšte <strong>Šum</strong> trochu pro vyčištění zrna papíru. Čárové umění zachovává tenčí tahy; Skicované umění se hodí pro volnější ruku.</dd>
+  <dt>Fotografie</dt>
+  <dd>Použijte režim Barva s <strong>Věrnou fotografíí</strong> pro blízkou podobu nebo <strong>Nízkověrnou fotografíí</strong> pro plošší, ilustrovaný dojem a nastavte <strong>počet barev</strong> podle chuti. Nechte <strong>Ignorovat bílou</strong> vypnuté, aby světlé obrusty zůstaly. Více barev znamená více tvarů, takže těžká stopová vektorizace může být velká: snižte barvy, pokud se výsledek zdá neobratný.</dd>
+</dl>

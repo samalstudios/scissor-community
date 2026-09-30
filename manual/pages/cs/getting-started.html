@@ -1,0 +1,26 @@
+<p>Scissor se otevře v kartě prohlížeče. Neexistuje žádný účet k vytvoření a nic k instalaci před začátkem: kreslicí engine je zkompilován do WebAssembly a běží na vašem vlastním počítači, takže vaše grafika nikdy není nahrána nikam. Při první návštěvě vás uvítá uvítací obrazovka – lišta Scissor, krátký přehled toho, co aplikace umí, a Podmínky použití. Zaškrtněte <strong>Přečetl/a jsem si Podmínky použití a souhlasím s nimi</strong> a stiskněte <strong>Začít</strong> pro vstup do editoru. Druhý, volitelný checkbox se ptá, zda může Scissor počítat návštěvy pomocí anonymní analytiky; pokud jej nezaškrtnete, nenačte se žádná analytika. Tuto volbu můžete později změnit v <strong>Předvolby &gt; Soukromí</strong> a podmínky si můžete kdykoli znovu přečíst v <strong>Nápověda &gt; Podmínky použití&hellip;</strong>.</p>
+
+<p>Zkratky níže jsou napsány ve formátu macOS. Na Windows a Linuxe čtěte <kbd>⌘</kbd> jako Ctrl a <kbd>⌥</kbd> jako Alt; <kbd>⇧</kbd> je Shift.</p>
+
+<h3 id="what-you-see">Co vidíte</h3>
+<p>V horní části se nachází nabídkový řádek a pod ním ovládací panel, který se mění podle toho, co máte vybrané, a obsahuje výplň, tah, tloušťku, krytí a X, Y, W a H výběru. Nástroje běží po levém okraji; dok panelů je vpravo. Mezi nimi je plátno, s kartou pro každý otevřený dokument nad ním a stavovým řádkem pod ním zobrazujícím úroveň přiblížení, aktivní podložku, aktuální nástroj a název posledního kroku, který lze vrátit zpět.</p>
+<p>Bez otevřeného dokumentu plátno zobrazuje úvodní obrazovku s <strong>Nový dokument&hellip;</strong> a <strong>Otevřít&hellip;</strong>; dvojklik kdekoli na něj otevře soubor. Stiskněte <kbd>Tab</kbd> pro skrytí panelů a poskytnutí celého okna grafice, a znovu pro jejich návrácení. Podržte mezerník kdykoli pro posun.</p>
+
+<h3 id="first-document">Vytvoření prvního dokumentu</h3>
+<p>Zvolte <strong>Soubor &gt; Nový&hellip;</strong> (<kbd>⌥⌘N</kbd>). Dialog seskupí prázdné předvolby podle Tisk, Web, Mobil, Film &amp; Video a Umění &amp; Ilustrace; klikněte na kartu pro načtení její velikosti, nebo na ni dvojklikem okamžitě vytvořte dokument. vpravo můžete nastavit název dokumentu, šířku a výšku, jednotky a orientaci na výšku nebo šířku. <strong>Podložky</strong>, <strong>Sloupce</strong> a <strong>Mezery</strong> rozmístí více než jednu podložku do mřížky. Pod <strong>Okraji</strong> tlačítko propojení udržuje všechny čtyři strany stejné; vypněte jej pro nastavení každé strany zvlášť. <strong>Pokročilé</strong> obsahuje barevný režim (RGB nebo CMYK) a rozlišení používané rastrovými efekty. <kbd>Enter</kbd> vytvoří dokument, <kbd>Esc</kbd> zavře dialog.</p>
+<figure class="shot">
+  <img src="img/new-document.png" width="1500" height="928" loading="lazy"
+       alt="Dialog Nový dokument ve Scissoru, s předvolbami velikostí seskupenými podle použití vlevo a nastaveními dokumentu vpravo." />
+  <figcaption>Dialog Nový dokument. Vyberte předvolbu vlebo, nebo nastavte velikost, podložky a okraje vpravo.</figcaption>
+</figure>
+
+<h3 id="first-shape">Kreslení prvního tvaru</h3>
+<p>Stiskněte <kbd>M</kbd> pro nástroj Obdélník nebo <kbd>L</kbd> pro nástroj Elipsa a táhněte na plátně. Podržte <kbd>⇧</kbd> při tažení pro zachování tvaru čtverce nebo kruhu, a <kbd>⌥</kbd> pro kreslení od středu od místo od rohu. Jednoduché kliknutí místo tažení otevře malý dialog, takže můžete zadat přesnou šířku a výšku. S nástrojem Mnohoúhelník nebo Hvězda šipky nahoru a dolů mění počet stran nebo hrotů při tažení.</p>
+<p>Vzorky výplně a tahu se nacházejí v dolní části panelu nástrojů. <kbd>X</kbd> přesune mezi nimi, <kbd>⇧X</kbd> prohodí barvy, <kbd>D</kbd> se vrátí k výchozí bílé výplni a černému tahu, a <kbd>/</kbd> nastaví aktivní stranu na žádnou. Stiskněte <kbd>V</kbd> pro nástroj Výběr pro přesun a změnu velikosti toho, co jste nakreslili.</p>
+
+<h3 id="saving">Ukládání</h3>
+<p>Dokumenty Scissoru jsou soubory <code>.cut</code>. <strong>Soubor &gt; Uložit</strong> (<kbd>⌘S</kbd>) se jednou zeptá, kam by měl soubor jít, a v prohlížečích, které podporují přímý přístup k souborům, zapisuje zpět do toho samého souboru pokaždé poté. Prohlížeče bez něj uloží dokument do složky stahování. <strong>Uložit jako&hellip;</strong> je <kbd>⇧⌘S</kbd> a <strong>Uložit kopii&hellip;</strong> je <kbd>⌥⌘S</kbd>. Pro předání práce jinému programu použijte <strong>Soubor &gt; Exportovat</strong>.</p>
+<p>Když má dokument neuložené změny, Scissor udržuje kopii v úložišti prohlížeče každých pár sekund, a znovu pokaždé, když je karta skryta nebo zavřena. Pokud karta zmizí před uložením, vaše příští návštěva nabídne práci zpět s oznámením <strong>Obnovit</strong>.</p>
+
+<h3 id="installing">Instalace Scissoru</h3>
+<p>Zvolte <strong>Nápověda &gt; Nainstalovat Scissor&hellip;</strong> pro instalaci jako aplikace. Poté se otevře ve vlastním okně bez chrome prohlížeče, funguje offline a může být nastaven jako program, který otevírá soubory <code>.cut</code>. Pokud váš prohlížeč nenabídne výzvu, použijte jeho vlastní instalační možnosti v adresním řádku nebo nabídce.</p>

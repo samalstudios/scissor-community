@@ -1,0 +1,96 @@
+<p class="lede">Efekt mění, jak objekt vypadá, beze změny samotného objektu. Cesta, skupina nebo kus textu zůstává přesně tak, jak jste ji nakreslili a efekt se přepočítá nad ní pokaždé, když pohnete bodem nebo upravíte hodnotu. Efekty se vrstí v panelu Zásobník výplně, takže můžete naskládat několik na jeden objekt, přeuspořádat je a odebrat kterýkoli z nich zpět.</p>
+
+<figure class="shot">
+  <img src="img/effects-demo.png" width="1400" height="560" loading="lazy"
+       alt="Tři identické modré dlaždice zobrazující tři efekty: stín, jantarovou vnější záři a zdrsněné okraje." />
+  <figcaption>Stejná dlaždice se třemi efekty: stínem, vnější září a Zdrsněním. Každý je živý, takže dlaždice pod nimi je stále obyčejným zaobleným obdélníkem.</figcaption>
+</figure>
+
+<h2 id="effects-live-and-stacked">Živé efekty a zásobník vzhledu</h2>
+<p>Každý efekt ve Scissoru je <strong>živý</strong> a <strong>nedestruktivní</strong>. Sedí nad výplněmi a tahy objektu v panelu <strong>Vzhled</strong> (<kbd>&#8679;F6</kbd>) a běží přes celý objekt pokaždé, když se grafika nebo efekt změní. Protože původní cesta je pod ním nedotčená, můžete pokračovat v úpravě bodů kotvy, výplně nebo přepsání slov a efekt následuje. Sáhněte po efektu vždycky, když chcete vzhled, stín, ohnutí, zaoblený roh, o kterém byste se mohli rozhodnout později, namísto toho, abyste se k němu zavazali od ruky.</p>
+
+<h3 id="effects-order">Pořadí má význam</h3>
+<p>Efekty běží od spodku zásobníku nahoru a panel je vypisuje od shora, nad výplněmi a tahy. Pořadí mění výsledek: rozmazání pod stínem změkčí tvar předtím, než je stín vržen, zatímco stejné dva opačně vrátí ostrý stín a poté rozmazání celého. Pokud efekt nedělá to, co očekáváte, jeho pozice v zásobníku je první věc ke kontrole.</p>
+
+<h2 id="effects-using">Přidávání, úpravy a odstraňování efektů</h2>
+<h3 id="effects-add">Z nabídky Efekt</h3>
+<p>Vyberte objekt a poté vyberte efekt z nabídky <strong>Efekt</strong>. Položky, které otevírají dialog, zobrazí <strong>Náhled</strong>, jak měníte hodnoty, takže můžete posoudit výsledek na plátně před závazkem; celá úprava přistane jako jeden krok v historii namísto jednoho kroku na stisk klávesy. Krátká verze nabídky (Stín, Vnější záře a Gaussovské rozmazání, plus Vymazat efekty) sedí také v nabídce pravého tlačítka myši na plátně pod <strong>Efekt</strong>.</p>
+
+<h3 id="effects-appearance">V panelu Zásobník výplně</h3>
+<p>Každý efekt na vybraném objektu dostane svůj vlastní řádek v panelu Zásobník výplně, označený odznakem <em>fx</em>. Klikněte na název efektu pro znovuotevření jeho možností a jejich změnu. Klikněte na křížek na konci řádku pro odstranění tohoto jednoho efektu. Pro odebrání všech efektů z výběru najednou použijte <strong>Efekt &rsaquo; Vymazat efekty</strong>.</p>
+
+<h3 id="effects-panels">V panelech efektů</h3>
+<p>Skupina <strong>Okno &rsaquo; Efekty</strong> shromažďuje efekty do jednoho panelu pro každou část nabídky Efekt: Stylizace, Rozmazání, Zkreslení &amp; Transformace, Cesta, Kombinace tvarů a Ohnutí, s panelem 3D vedle. Každý panel vypisuje efekty této skupiny s přepínačem pro jeho zapnutí nebo vypnutí a jeho nastavení pod ním, vše upravované živě na výběru. Je to rychlejší způsob, jak zkusit efekt a upravit jeho hodnoty, než otevírat dialog pokaždé. Vypnutí přepínače odebere tento efekt z objektu. Když objekt nese více než jeden efekt stejného druhu, panel upraví první z nich a panel Zásobník výplně stále zobrazuje celý zásobník.</p>
+
+<h2 id="effects-stylize">Stylizace: stíny, záře a okraje</h2>
+<p>Podnabídka <strong>Efekt &rsaquo; Stylizace</strong> drží každodenní dokončovací efekty.</p>
+<table>
+  <thead><tr><th>Efekt</th><th>Co dělá a kdy jej použít</th><th>Hlavní možnosti</th></tr></thead>
+  <tbody>
+    <tr><td>Stín</td><td>Vrží posunutou, rozmazanou kopii objektu za něj. Použijte jej pro zvednutí tvaru, karty nebo kus textu z pozadí.</td><td>Posun X a Y, Rozmazání, Barva, Krytí.</td></tr>
+    <tr><td>Vnější záře</td><td>Šíří jemné halo barvy ven z okraje objektu. Sáhněte po ní pro neonový nápis, zvýraznění nebo záři kolem zdroje světla.</td><td>Rozmazání, Barva, Krytí.</td></tr>
+    <tr><td>Vnitřní záře</td><td>Zeslabuje barvu dovnitř z okraje namísto ven, takže světlo sedí uvnitř tvaru. Použijte jej pro vydlabání tvaru nebo naznačení vložené, osvětlené hrany.</td><td>Rozmazání, Barva, Krytí.</td></tr>
+    <tr><td>Pírko</td><td>Zeslabuje vlastní okraj objektu do průhledného po poloměru. Použijte jej pro tvar s jemným okrajem nebo jednoduchou vinžetu.</td><td>Poloměr pírka.</td></tr>
+    <tr><td>Zaoblení rohů</td><td>Zaobluje každý roh cesty na jeden poloměr. Použijete jej pro změkčení hrotů hvězdy, mnohoúhelníku nebo ručně kreslené cesty bez překreslení.</td><td>Poloměr.</td></tr>
+    <tr><td>Skicovat výplň</td><td>Vyplňuje tvar tam a zpět běžícími tahy, jako by byl skicován od ruky. Dobré pro volnou, nakreslenou výplň nebo vzhled fixy.</td><td>Úhel, Rozestup, Tloušťka tahu, Variace (jak moc tahy bloudí, 0 až 100%).</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-blur">Rozmazání</h2>
+<p><strong>Efekt &rsaquo; Rozmazání &rsaquo; Gaussovské rozmazání</strong> změkčí celý objekt o <em>Poloměr</em>, který nastavíte v pixelech. Protože zůstává živý, můžete poloměr zvýšit nebo snížit kdykoli. Použijete jej pro jemné, rozmazané pozadí, nebo jako rychlý stínový tvar sám o sobě.</p>
+
+<h2 id="effects-distort">Zkreslení a transformace</h2>
+<p>Podnabídka <strong>Efekt &rsaquo; Zkreslení &amp; Transformace</strong> přetvaruje obrys, zatímco ponechává základní cestu upravitelnou.</p>
+<table>
+  <thead><tr><th>Efekt</th><th>Co dělá a kdy jej použít</th><th>Hlavní možnosti</th></tr></thead>
+  <tbody>
+    <tr><td>Volné zkreslení</td><td>Táhne čtyři rohy rámečku objektu v malém náhledu a grafika následuje v perspektivě. Použijete jej pro napodobení perspektivy, jako je štítek sedící na nakloněném povrchu. Přepínač Náhled zobrazuje výsledek na plátně při tažení a Obnovit vrací rohy do čtverce.</td><td>Čtyři rohové úchyt, Náhled, Obnovit.</td></tr>
+    <tr><td>Sevření &amp; naboulání</td><td>Ohýbá segmenty mezi body kotvy buď dovnitř, sevřením obrysu do hrotů, nebo ven, nabouláním do výběžků. Použijete jej pro hvězdné výbuchy, skvrny a jemné okvětní tvary.</td><td>Množství, od sevřeného po naboulené.</td></tr>
+    <tr><td>Zdrsnění</td><td>Rozbíjí obrys do malých náhodných pohybů, buď ostrých nebo vyhlazených. Použijete jej pro okraj roztrhaného papíru nebo hrubší, ručně kreslenou čáru.</td><td>Velikost (jak daleko se body pohybují), Detail (jak hustě), Body: Hladké nebo Rohové.</td></tr>
+    <tr><td>Transformace</td><td>Mění velikost, přesouvá a otáčí objekt jako efekt a může zanechat sadu kopií. Použijete jej pro upravitelný řádek nebo kruh opakování, nebo pro posun a změnu velikosti tvaru bez dotknutí jeho skutečné geometrie.</td><td>Měřítko horizontální a vertikální, Přesun horizontální a vertikální, Rotace, Kopie (0 až 200).</td></tr>
+    <tr><td>Vylepšení</td><td>Posouvá body kotvy a jejich ovládací úchty o náhodné množství. Použijete jej pro vykopnutí příliš dokonalého tvaru z míry.</td><td>Horizontální a vertikální množství a zda pohybovat body kotvy, ovládací body, nebo obojí.</td></tr>
+    <tr><td>Kroutění</td><td>Otáčí vnitřek tvaru víc než jeho okraje, vinutím do víru. Použijete jej pro spiráli nebo vír.</td><td>Úhel.</td></tr>
+    <tr><td>Cik-cak</td><td>Převádí přímé segmenty na pravidelná cik-caka (Roh) nebo vlny (Hladké). Použijete jej pro vlnové podtržení, ric-rac okraj nebo zubatý okraj.</td><td>Velikost, Hřeby na segment, Body: Rohové nebo Hladké.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-path">Cesta</h2>
+<p>Podnabídka <strong>Efekt &rsaquo; Cesta</strong> přepracovává obrys objektu, zatímco ponechává zdroj upravitelný.</p>
+<table>
+  <thead><tr><th>Efekt</th><th>Co dělá a kdy jej použít</th><th>Hlavní možnosti</th></tr></thead>
+  <tbody>
+    <tr><td>Odsazení cesty</td><td>Zvětšuje nebo zmenšuje obrys o nastavenou vzdálenost. Kladné odsazení jej šíří ven, zápátečné jej táhne dovnitř. Použijete jej pro živý obrys kolem textu nebo tvaru, který drží krok při úpravách.</td><td>Odsazení, Spojení: Zkosení, Zaoblení nebo Skosení.</td></tr>
+    <tr><td>Obrys objektu</td><td>Přidá efekt Odsazení cesty nastavený na nulu, převádějící objekt (včetně živého textu) na obrysovou cestu, takže pozdější efekty mají skutečnou cestu, na kterou působit.</td><td>Žádné.</td></tr>
+    <tr><td>Obrys tahu</td><td>Převádí tah na vyplněný tvar jako efekt. Použijete jej, když chcete vyplnit tah přechodem, nebo rozmazat nebo zkreslit tah, který je jinak obyčejnou čarou.</td><td>Žádné.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-pathfinder">Kombinace tvarů</h2>
+<p>Podnabídka <strong>Efekt &rsaquo; Kombinace tvarů</strong> kombinuje tvary uvnitř skupiny s režimem tvaru, ale ponechává je jako samostatné, upravitelné cesty pod nimi. Použijte ji na skupinu a kombinovaný výsledek je to, co vidíte, zatímco každý člen může být stále přesunut nebo přebarven. Použijete jej pro vyzkoušení kombinace bez závazku, jaký by panel Kombinace tvarů představoval.</p>
+<table>
+  <thead><tr><th>Režim</th><th>Výsledek</th></tr></thead>
+  <tbody>
+    <tr><td>Přidat</td><td>Sloučí tvary skupiny do jedné oblasti.</td></tr>
+    <tr><td>Průnik</td><td>Zachová pouze to, se čím se tvary překrývají.</td></tr>
+    <tr><td>Vyloučit</td><td>Zachová vše kromě toho, se čím se překrývají.</td></tr>
+    <tr><td>Odečíst</td><td>Odstraňuje přední tvary od zadního.</td></tr>
+    <tr><td>Mínus zezadu</td><td>Odstraňuje zadní tvary od předního.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-warp">Ohnutí</h2>
+<p><strong>Efekt &rsaquo; Ohnutí</strong> ohýbá objekt podél jedné z přednastavených tvarů a zůstává živý, takže můžete pokračovat v úpravě grafiky pod ním. Použijete jej pro zakřivení nadpisu do oblouku, vlnění bananu nebo vytlačení plochého bloku do výběžku bez ztráty schopnosti měnit slova nebo barvy.</p>
+<p>Nabídka nabízí deset stylů přímo (Oblouk, Oblouk, Výběžek, Vlajka, Vlna, Ryba, Vzestup, Rybí oko, Nafouknutí a Sevření). <strong>Možnosti ohnutí&#8230;</strong> otevře celou sadu, která přidává Oblouk dolní, Oblouk horní, Ulitu dolní a Ulitu horní a umožní vám nastavit množství:</p>
+<dl>
+  <dt>Ohnutí</dt><dd>Jak silně se tvar ohýbá, od -100 % do 100 %.</dd>
+  <dt>Horizontální</dt><dd>Naklání ohnutí na jednu stranu, od -100 % do 100 %.</dd>
+  <dt>Vertikální</dt><dd>Naklonění ohnutí nahoru nebo dolů, od -100 % do 100 %.</dd>
+</dl>
+<p>Stejné styly ohnutí lze použít jako obálku přetvarování namísto toho, což mění samotnou cestu namísto zůstání živé: viz <a href="#transform-envelope">Deformace tvaru</a>. Nástroj Ohnutí a ostatní nástroje tekutiny přetvarují tažením na plátně a jsou pokryté v <a href="#tools-width-liquify">referenci nástrojů</a>.</p>
+
+<h2 id="effects-3d">3D a materiály</h2>
+<p><strong>Efekt &rsaquo; 3D a materiály</strong> převádí plochý tvar na těleso: rovinu, vytlačení a zkosení, otáčení nebo nafouknutí. Jako ostatní je to živý efekt, takže plochá cesta zůstává tam k úpravě a těleso se přestaví, kdyj je změníte. Hloubka, zkosení, rotace, osvětlení a povrch se nastavují v panelu 3D a materiály. Protože má víc ovládání než jeden dialog, má 3D svou vlastní stránku: viz <a href="/manual/three-d/">3D</a>.</p>
+
+<h2 id="effects-expand">Převod efektů na grafiku</h2>
+<p>Efekt zůstává živý tak dlouho, jak chcete. Když je vzhled usazený a potřebujete výsledek jako obyčejné, upravitelné cesty, například pro předání souboru nebo přetvarování výstupu efektu od ruky, zvolte <strong>Objekt &rsaquo; Rozbalit vzhled</strong>. Vypeče celý zásobník vzhledu, včetně efektů, do obyčejné grafiky. To nemůže být poté upravováno jako efekt, takže rozbalte pouze, když jste si jistí. Pro odebrání efektů bez vypečení je odstraňte po jednom v panelu Zásobník výplně nebo vymažte je všechny pomocí <strong>Efekt &rsaquo; Vymazat efekty</strong>.</p>
+<p>Nabídka Efekt také vypisuje <strong>Rasterizovat</strong>, což není živý efekt: převádí výběr na pixely tam a tam. Malování a pixelové vrstvy jsou pokryté na stránce <a href="/manual/pixels/">Pixelové vrstvy</a>.</p>

@@ -1,0 +1,78 @@
+<p class="lede">Dokument je to, co otevřete, kreslíte v něm a uložíte. Každý dokument obsahuje jednu nebo více podložek: obdélníky, které vymezují grafiku, která se tiskne nebo exportuje. Tato stránka pokrývá zahájení dokumentu a nastavení jeho velikosti, změnu tohoto nastavení později a práci s podložkami, od jedné stránky po sadu v jednom souboru. V zkratkách níže je <kbd>&#8984;</kbd> <kbd>Ctrl</kbd> na Windows a Linuxu a <kbd>&#8997;</kbd> je <kbd>Alt</kbd>.</p>
+
+<h2 id="documents-new">Zahájení nového dokumentu</h2>
+<p><strong>Soubor &rsaquo; Nový&hellip;</strong> (<kbd>&#8997;&#8984;N</kbd>) otevře dialog Nový dokument. Levá část dialogu je police s hotovými předvolbami; vpravo, pod <strong>Detaily předvolby</strong>, je místo, kde pojmenujete dokument a nastavíte jeho přesnou velikost, jednotky, orientaci, počet podložek, okraje a zpracování barev. Vyberte předvolbu pro vyplnění těchto polí, upravte cokoli, co chcete, a poté stiskněte <strong>Vytvořit</strong>. <strong>Zavřít</strong> odejde bez vytvoření dokumentu.</p>
+
+<figure class="shot">
+  <img src="img/new-document.png" width="1500" height="928" loading="lazy"
+       alt="Dialog Nový dokument: karty a karty předvolby vlevo a Detaily předvolby vpravo s názvem, velikostí, jednotkami, orientací, podložkami, okraji a barevnými poli." />
+  <figcaption>Dialog Nový dokument. Karty předvolby vlevo vyplňují velikost; panel Detaily předvolby vpravo je místo, kde nastavíte přesnou šířku, výšku, jednotky, počet podložek a okraje před stisknutím Vytvořit.</figcaption>
+</figure>
+
+<h3 id="documents-presets">Prázdné předvolby dokumentu</h3>
+<p>Karty v horní části seskupují předvolby podle druhu práce, pro kterou se hodí. Klikněte na kartu pro zobrazení jejích karet a poté klikněte na kartu pro načtení její velikosti, jednotek a (pro tisk) jejích okrajů. Dvojklikem na kartu vytvoříte dokument rovnou.</p>
+<table>
+  <thead><tr><th>Skupina</th><th>Co obsahuje</th></tr></thead>
+  <tbody>
+    <tr><td>Tisk</td><td>Letter, Legal, Tabloid, A3, A4, A5 a Business Card, v palcích nebo milimetrech, každý s již nastaveným standardním tiskovým okrajem.</td></tr>
+    <tr><td>Web</td><td>Běžné velikosti obrazovky a plochy v pixelech: 1366 &times; 768, Full HD (1920 &times; 1080), velikost notebooku, velká webová velikost a čtvercové a vysoké sociální velikosti (1080 &times; 1080 a 1080 &times; 1920).</td></tr>
+    <tr><td>Mobil</td><td>Velikosti telefonu, velkého telefonu, tabletu, velkého tabletu a hodinek v pixelech, pro práci na rozhraní.</td></tr>
+    <tr><td>Film &amp; Video</td><td>Velikosti snímků HDTV 1080p, HD 720p, UHD 4K a Cinema 2K.</td></tr>
+    <tr><td>Umění &amp; Ilustrace</td><td>Plakát, pohlednice, plátno 1000 &times; 1000, ikona 512 &times; 512 a čtvercová stránka skicáku.</td></tr>
+  </tbody>
+</table>
+<p>Předvolby jsou pouze výchozím bodem. Nic nebrání vám zadat velikost, kterou žádná předvolba neuvádí; nechání polí tak, jak jste je nastavili, jednoduše znamená, že žádná karta zůstane zvýrazněna.</p>
+
+<h3 id="documents-size">Název, velikost, jednotky a orientace</h3>
+<p>Pole <strong>Název</strong> nastavuje, jak se dokument jmenuje ve své kartě a v exportovaných názvech souborů. Pod ním <strong>W</strong> a <strong>H</strong> jsou šířka a výška podložky. Nabídka <strong>Jednotky</strong> volí, jak se ty a ostatní měření čtou: pixely, body, milimetry, centimetry, palce nebo piky. Změna jednotek převádí čísla již v polích, než je vymaže, takže přechod z milimetrů na palce zachovává stejnou skutečnou velikost.</p>
+<p>Dvě tlačítka orientace, na výšku a na šířku, otočí velikost na bok. Stisknutí toho, které neodpovídá aktuální šířce a výšce, je prohodí; zadání nové šířky a výšky, které obrátí tvar, převrátí značku orientace, aby odpovídala. Použijte to pro rozložení, řekněme, stránky A4 výškově nebo šířkově bez přepisování čísel.</p>
+
+<h3 id="documents-boards-columns">Podložky, sloupce a mezery</h3>
+<p>Dokument může začít s více než jednou podložkou. <strong>Podložky</strong> nastaví, kolik jich vytvořit, všechny stejné velikosti. <strong>Sloupce</strong> nastaví, kolik jich sedí vedle sebe před začátkem dalšího řádku a <strong>Mezery</strong> je mezera mezi nimi. Čtyři podložky se dvěma sloupci vytvoří blok dva na dva; stejné čtyři se jedním sloupcem vytvoří jeden sloupec. Každá podložka se jmenuje <em>Podložka 1</em>, <em>Podložka 2</em> a tak dále a můžete je později přejmenovat a přeuspořádat.</p>
+<p>Tímto způsobem začínáte práci, která je ve skutečnosti několika stránkami nebo několika velikostmi najednou: šestistránkový leták nebo jeden soubor, který nese telefon, tablet a desktopovou verzi stejné obrazovky, takže zůstávají pohromadě a exportují se jedním průchodem.</p>
+
+<h3 id="documents-bleed">Okraje</h3>
+<p>Okraje jsou extra okraj kolem podložky, určený pro tisk: grafika, která běží až na okraj, je kreslena do okrajů, aby po ořezu papíru nezbyla žádná bílá linka podél řezu. Čtyři pole nastaví horní, dolní, levý a pravý okraj zvlášť. Tlačítko propojení mezi nimi, ve výchozím stavu zapnuté, udržuje všechny čtyři stejné, takže zadání jedné hodnoty vyplní ostatní; vypněte jej pro nastavení jiného okraje na každé straně. Tiskové předvolby přicházejí s již vyplněnými okraji; práce na obrazovce a videa obvykle nepotřebuje žádné, takže je nechte na nule.</p>
+
+<h3 id="documents-advanced">Pokročilé: barevný režim a rastrové efekty</h3>
+<p>Pod <strong>Pokročilým</strong> jsou dvě volby, které tón dokumentu. Barevný režim je buď RGB, pro cokoli zobrazovaného na obrazovce, nebo CMYK, pro práci směřující k komerčnímu tisku. <strong>Rastrové efekty</strong> nastavuje rozlišení, při kterém jsou vykreslovány efekty, které se musí stát pixely, jako je stín, rozmazání nebo záře: Obrazovka (72 ppi) pro práci na obrazovce, Střední (150 ppi) nebo Vysoké (300 ppi) pro tisk. Nastavte ji tak, aby odpovídala tomu, kam grafika skončí, aby tyto efekty nebyly ani hrubé, ani zbytečně těžké.</p>
+
+<h2 id="documents-setup">Změna nastavení později</h2>
+<p>Žádná z těchto voleb není uzamčena při vytvoření. <strong>Soubor &rsaquo; Nastavení dokumentu&hellip;</strong> (<kbd>&#8997;&#8984;P</kbd>) znovu otevře hlavní nastavení pro dokument, ve kterém jste: jednotky, barevný režim, šířku a výšku aktivní podložky, jednu hodnotu okrajů použitou na všechny čtyři strany a rozlišení rastrových efektů. Použijte to, když se práce změní v půli cesty, například když potřebujete obrazovkový mock-up převést na tisk a přepnout ho na CMYK, nebo když se ukáže, že podložka má špatnou velikost. Pro přidání podložek, změnu velikosti jednotlivých podložek nebo nastavení různých okrajů na straně po faktu použijte nástroje podložek popsané níže, ne tento dialog.</p>
+
+<h2 id="documents-boards">Podložky</h2>
+<p>Podložka (artboard) je obdélník, který definuje hotový kus: jeho okraje jsou to, na čež se tisk nebo export ořezává. Vše, co kreslíte, žije na sdíleném plátně, ale pouze to, co sedí na podložce, je výstupem. Dokument vždy má alespoň jednu podložku a může jich mít tolik, kolik práce potřebuje. Několik podložek v jednom souboru je způsob, jak udržet související kusy pohromadě: stránky brožury, plakát a jeho sociální verze nebo celá sada ikon, všechny sdílející stejné barvy, styly a symboly.</p>
+
+<h3 id="documents-board-tool">Nástroj Podložka</h3>
+<p>Nástroj Podložka (<kbd>&#8679;O</kbd>) upravuje podložky přímo na plátně, stejně jako nástroj výběru upravuje grafiku. S ním aktivním:</p>
+<dl>
+  <dt>Přidat podložku</dt>
+  <dd>Táhněte obdélník na prázdné části plátna. Podržte <kbd>&#8679;</kbd> pro zachování čtverce při tažení, nebo <kbd>&#8997;</kbd> pro kreslení od středu. Průběžné zobrazení velikosti následuje roh. Tažení příliš malé na podložku je zahozeno.</dd>
+  <dt>Přesunout podložku</dt>
+  <dd>Táhněte zevnitř podložky pro její přesun, s vším, co na ní je. Podržte <kbd>&#8679;</kbd> pro omezení přesunu na jednu osu.</dd>
+  <dt>Změnit velikost podložky</dt>
+  <dd>Táhněte jeden z úchytů na okrajích nebo rozích aktivní podložky. Podržte <kbd>&#8679;</kbd> na rohu pro zachování proporcí podložky.</dd>
+  <dt>Aktivovat podložku</dt>
+  <dd>Klikněte na jakoukoli podložku pro její výběr. Aktivní podložka zobrazuje své úchyt a svou velikost.</dd>
+  <dt>Smazat podložku</dt>
+  <dd>S aktivní podložkou stiskněte <kbd>Delete</kbd> nebo <kbd>Backspace</kbd>. Poslední zbývající podložka nemůže být smazána, takže dokument vždy zachová jednu.</dd>
+</dl>
+<p>Dvojklik na nástroj Podložka otevře dialog Možnosti podložky pro aktivní podložku, popsaný níže.</p>
+
+<h3 id="documents-boards-panel">Panel Podložky</h3>
+<p>Otevřete jej z jeho karty v doku panelů. Vypisuje každou podložku podle čísla, názvu a velikosti v pixelech. Klikněte na řádek pro aktivaci této podložky a její okamžité přizpůsobení oknu, což je nejrychlejší způsob, jak skákat mezi stránkami vícepodložkového dokumentu. Dvojklikem na řádek otevřete Možnosti podložky pro něj. Tlačítka v patě panelu přidají novou podložku a přeuspořádají je všechny. Nová podložka je také v nabídce <strong>Vytvořit &rsaquo; Podložky</strong>, která umístí novou podložku velikosti poslední přímo vpravo od ní.</p>
+
+<h3 id="documents-board-options">Možnosti podložky</h3>
+<p>Možnosti podložky nastavují detaily jedné podložky podle čísla, ne tažením. Dávají <strong>Název</strong> podložky, nabídku <strong>Předvolba</strong>, která ji změní na jakoukoli z vestavěných velikostí, její <strong>Šířku</strong> a <strong>Výšku</strong>, její pozici <strong>X</strong> a <strong>Y</strong> na plátně a volbu orientace. Dosažete ji dvojklikem na řádek podložky v panelu Podložky, dvojklikem na nástroj Podložka nebo z <strong>Vytvořit &rsaquo; Podložky &rsaquo; Možnosti podložky&hellip;</strong>. Pojmenování podložek dobrými názvy stojí za chvíli, kterou to trvá: názvy se stávají součástí názvů souborů při exportu, takže <em>cover</em> a <em>back</em> se exportují užitečněji než <em>Podložka 1</em> a <em>Podložka 2</em>.</p>
+
+<h3 id="documents-active">Aktivní podložka</h3>
+<p>Jedna podložka je vždy aktivní a několik příkazů pracuje pouze s ní. <strong>Výběr &rsaquo; Vše na aktivní podložce</strong> (<kbd>&#8997;&#8984;A</kbd>) zvedne pouze grafiku na ní. Každá podložka nese svou vlastní mřížku, takže mřížka, kterou nastavíte, se použije na aktivní podložku (viz stránka <a href="/manual/grids/">Mřížky</a>). Tisk vytiskne aktivní podložku. Kliknutí na podložku nástrojem Podložka nebo na řádek v panelu Podložky je způsob, jak změnit, která podložka je aktivní.</p>
+
+<h3 id="documents-rearrange">Přeuspořádání podložek</h3>
+<p><strong>Vytvořit &rsaquo; Podložky &rsaquo; Přeuspořádat všechny podložky&hellip;</strong>, nebo tlačítko Přeuspořádat v panelu Podložky, uklidní každou podložku do čistého uspořádání jedním krokem, nesouc grafiku každé podložky s sebou, takže nic nezůstane pozadu. Nabídka <strong>Rozložení</strong> nabízí mřížku vyplněnou po řádcích nebo sloupcích, nebo jeden řádek nebo sloupec. <strong>Sloupce</strong> nastavuje, kolik podložek sedí napříč mřížkou a <strong>Mezery</strong> mezery mezi nimi. Je to způsob, jak vrátit pořádek do souboru, jehož podložky se rozptýlily při práci, nebo seřadit sadu, která byla kreslena na žádném konkrétním místě.</p>
+
+<h3 id="documents-fit">Přizpůsobení podložky zobrazení</h3>
+<p>Pro zarámování podložky na obrazovce použijte <strong>Zobrazení &rsaquo; Přizpůsobit podložku oknu</strong> (<kbd>&#8984;0</kbd>), které přiblíží aktivní podložku, aby vyplnila okno. <strong>Přizpůsobit vše oknu</strong> (<kbd>&#8997;&#8984;0</kbd>) se stáhne zpět pro zobrazení všech podložek najednou, užitečné pro zobrazení celého vícepodložkového dokumentu. <strong>Skutečná velikost</strong> (<kbd>&#8984;1</kbd>) nastaví přiblížení na 100 %, takže pixel na podložce je pixel na obrazovce.</p>
+
+<h2 id="documents-export">Každá podložka se exportuje samostatně</h2>
+<p>Podložky jsou jednotkou výstupu: export zapíše jeden soubor na podložku, každý ořezaný na okraje této podložky a pojmenovaný podle ní. To je to, co dělá vícepodložkový soubor hodnotným. Sada ikon kreslených na jejich vlastních malých podložkách, nebo rozložení telefonu, tabletu a desktopu na třech podložkách, vyjde jako čistá sada samostatných souborů jedním průchodem. Výběr formátů a měřítek, export vybraných podložek a tisk jsou všechny pokryté na stránce <a href="/manual/files/">Otevření a export</a>; Export pro obrazovky konkrétně vypisuje vaše podložky, takže je můžete zapsat všechny dohromady.</p>
