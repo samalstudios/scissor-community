@@ -1,0 +1,39 @@
+<p class="lede">Drei Werkzeuge in Scissor erledigen die wiederkehrende Arbeit für Sie: <strong>Aktionen</strong> zeichnen eine Sequenz von Befehlen auf und spielen sie ab, <strong>Variablen</strong> tauschen Text und Sichtbarkeit aus einer Datentabelle, sodass ein Design zu vielen wird, und <strong>Skripte</strong> steuern den ganzen Editor von JavaScript aus. Keines davon braucht ein Konto oder einen Server – wie der Rest von Scissor laufen sie auf Ihrem eigenen Gerät.</p>
+
+<h2 id="automation-actions">Aktionen: einmal aufzeichnen, überall wiedergeben</h2>
+<p>Das <strong>Aktionen</strong>-Panel (Fenster &rsaquo; Aktionen) zeichnet auf, was was Sie tun, und spielt es auf einer neuen Auswahl ab. Drücken Sie <strong>Aufzeichnen</strong>, führen Sie die Befehle aus, die Sie erfassen möchten – ausrichten, versetzen, einen Schatten hinzufügen, was auch immer die Sequenz ist – dann drücken Sie <strong>Stopp</strong> und geben Sie der Aktion einen Namen. Sie tritt der Liste bei und zeigt, wie viele Schritte sie hält.</p>
+<p>Klicken Sie auf eine Aktion, um sie auf das, was jetzt ausgewählt ist, <strong>abzuspielen</strong>; <kbd>&#8997;</kbd>-Klick auf eine, um sie zu löschen. Weil eine Aktion nur eine Liste von Befehlen ist, wiederholt sie eine genaue Routine über viele Objekte, ohne dass Sie jedes Mal durch sie klicken müssen.</p>
+
+<h2 id="automation-variables">Variablen: ein Design, viele Versionen</h2>
+<p>Das <strong>Variablen</strong>-Panel (Fenster &rsaquo; Variablen) verwandelt ein festes Design in eine Vorlage, die von Daten gesteuert wird. Zwei Dinge an einem Objekt können dynamisch gemacht werden:</p>
+<dl>
+  <dt>Text dynamisch machen</dt><dd>Bindet die Wörter eines Textobjekts an eine Variable, sodass verschiedene Datensätze unterschiedlichen Text an derselben Stelle setzen können.</dd>
+  <dt>Sichtbarkeit dynamisch machen</dt><dd>Bindet, ob ein Objekt angezeigt wird, sodass ein Satz Teile des Designs ein- oder ausschalten kann.</dd>
+</dl>
+<p><strong>Bindung lösen</strong> macht ein gebundenes Objekt wieder fest.</p>
+
+<h3 id="automation-datasets">Datensätze</h3>
+<p>Ein <strong>Datensatz</strong> ist eine Reihe von Werten für diese Variablen – ein Badge, eine Karte, ein Rahmen. <strong>Erfassen</strong> speichert die aktuellen Werte als neuen Satz; die Pfeile schalten von einem Satz zum nächsten, und das Design aktualisiert sich, um zu passen. <strong>CSV importieren…</strong> liest einen ganzen Batch auf einmal – eine Spalte pro Variable, eine Reihe pro Satz – und <strong>CSV exportieren</strong> schreibt die Sätze zurück, um in einer Tabellenkalkulation bearbeitet zu werden.</p>
+
+<h3 id="automation-batch">Jeden Satz auf einmal exportieren</h3>
+<p><strong>Datensätze exportieren…</strong> rendert das aktive Board einmal für jeden Datensatz und schreibt sie alle in einem Durchgang, als PNG, JPEG, WebP oder SVG. Ein Blatt Namensschilder, ein Satz lokalisierter Banner oder eine Reihe von Social-Media-Karten kommt als ein ordentlicher Batch von Dateien heraus, jede mit ihren eigenen Daten gefüllt.</p>
+
+<h2 id="automation-scripts">Skripte: Scissor von JavaScript aus steuern</h2>
+<p>Für alles, was ein Menü nicht ausdrücken kann, kann ein Skript. <strong>Datei &rsaquo; Skripte &rsaquo; Skript-Konsole…</strong> öffnet einen Editor, in dem Sie JavaScript schreiben und es gegen das geöffnete Dokument ausführen; <strong>Anderes Skript…</strong> (<kbd>&#8984;F12</kbd>) führt eine <code>.js</code>-Datei von der Festplatte aus. Ein Skript läuft in einem Web Worker, weg von der Seite, also kann es nicht die Oberfläche oder Ihre Dateien berühren, außer durch das <code>scissor</code>-Objekt, das es bekommt – jeder Aufruf wird an die Engine getragen und zurück beantwortet.</p>
+<p>Das <code>scissor</code>-Objekt deckt den gemeinsamen Boden ab:</p>
+<dl>
+  <dt>Formen und Text erstellen</dt><dd><code>scissor.rect</code>, <code>roundedRect</code>, <code>ellipse</code>, <code>polygon</code>, <code>star</code>, <code>path</code> und <code>text</code> zeichnen Grafik; jeder nimmt eine Position und Größe und ein Options-Objekt für <code>fill</code>, <code>stroke</code> und <code>strokeWidth</code> (Farben sind beliebige CSS-Farben).</dd>
+  <dt>Das Dokument lesen</dt><dd><code>await scissor.document()</code> gibt die App, Auswahl, Ebenen und Artboards so zurück, wie die Panels sie sehen; <code>scissor.selection()</code> gibt nur das zurück, was ausgewählt ist.</dd>
+  <dt>Darauf wirken</dt><dd><code>scissor.select</code>, <code>group</code> und <code>undo</code> und <code>scissor.run(command)</code> für jeden Engine-Befehl überhaupt – dieselben Befehle, die die Menüs senden.</dd>
+  <dt>Zurücksprechen</dt><dd><code>scissor.log</code> druckt auf die Konsole; <code>scissor.alert</code> zeigt eine Nachricht.</dd>
+</dl>
+<p>Ein kurzes Beispiel – ein Ring aus farbigen Punkten und eine Beschriftung:</p>
+<pre><code>const doc = await scissor.document();
+scissor.log('Boards:', doc.artboards.length);
+for (let i = 0; i &lt; 12; i++) {
+  const a = (i / 12) * Math.PI * 2;
+  await scissor.ellipse(300 + Math.cos(a) * 120, 260 + Math.sin(a) * 120, 36, 36,
+    { fill: `hsl(${i * 30} 80% 60%)` });
+}
+await scissor.text(230, 270, 'Hallo, Scissor', { size: 24 });</code></pre>
+<p>Die Skript-Konsole behält den letzten Code, den Sie ausgeführt haben, also ist ein funktionierendes Skript da, wenn Sie zu ihm zurückkehren.</p>

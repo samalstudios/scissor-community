@@ -1,0 +1,91 @@
+<p class="lede">Symbole, Pinsel und Muster sind drei Wege, um ein Stück Grafik einmal zu zeichnen und wiederzuverwenden. Ändern Sie das Original, und jede Verwendung ändert sich mit ihm, sodass ein wiederholtes Element konsistent bleibt und schnell zu aktualisieren ist.</p>
+
+<p>Die untenstehenden Kürzel sind in ihrer macOS-Form geschrieben. Unter Windows lesen Sie <kbd>&#8984;</kbd> als <kbd>Strg</kbd>, <kbd>&#8997;</kbd> als <kbd>Alt</kbd> und <kbd>&#8679;</kbd> als <kbd>Umschalt</kbd>.</p>
+
+<h2 id="symbols-panel">Das Symbole-Panel</h2>
+<p>Ein Symbol ist ein gespeichertes Stück Grafik, das Sie beliebig oft in das Dokument legen können. Jede Kopie ist eine <em>Instanz</em>: Sie zeigt auf die eine Definition statt ihre eigene Grafik zu halten, also bleibt das Dokument klein, egal wie viele Instanzen Sie platzieren, und eine Änderung der Definition erreicht alle auf einmal. Greifen Sie zu Symbolen, wenn dasselbe Element wiederkehrt, wie ein Baum in einer Landschaft, ein Pin auf einer Karte, einer Schraube in einer Zeichnung oder ein Logo, das auf mehreren Boards erscheint.</p>
+<p>Öffnen Sie das Panel mit <strong>Fenster &gt; Symbole</strong> (<kbd>&#8679;&#8984;F11</strong>) oder von seinem Tab im Panel-Dock. Es listet die Symbole des Dokuments nach Namen auf. Das Klicken auf einen Namen wählt es als das aktive Symbol aus, das das Symbol-Streuen legt; das aktive Symbol ist hervorgehoben.</p>
+
+<h3 id="symbols-make">Ein Symbol erstellen</h3>
+<p>Wählen Sie die Grafik, die Sie wiederverwenden möchten, und klicken Sie auf <strong>Neues Symbol</strong>. Die Auswahl wird als die Definition des Symbols gespeichert und an ihrer Stelle auf der Zeichenfläche durch eine einzelne Instanz ersetzt, die genau dort sitzt, wo die Grafik war. Die Definition wird beiseite gehalten, also verwirrt sie nicht die Zeichenfläche oder die gewöhnlichen Ebenen. Wenn Sie nichts benennen, heißt das Symbol <code>Symbol 1</code>, <code>Symbol 2</code> und so weiter, in der Reihenfolge, in der Sie sie erstellen.</p>
+
+<h3 id="symbols-place">Instanzen platzieren</h3>
+<p>Doppelklicken Sie auf ein Symbol im Panel, um eine frische Instanz in der Mitte der aktuellen Ansicht zu legen. Platzieren Sie so viele, wie Sie brauchen. Eine Instanz verhält sich wie jedes andere Objekt, sobald sie auf der Zeichenfläche ist: Wählen Sie sie aus, und Sie können sie bewegen, skalieren, drehen oder spiegeln und ihre Deckkraft und Mischung einstellen, alles ohne die Definition zu berühren, weil diese Änderungen auf der Instanz selbst liegen. Verwenden Sie dies, um Größe und Winkel wiederholter Stücke zu variieren, während sie an denselben Meister gebunden bleiben.</p>
+
+<h3 id="symbols-edit">Ein Symbol bearbeiten</h3>
+<p>Doppelklicken Sie auf eine Instanz auf der Zeichenfläche mit dem Auswahl-Werkzeug (<kbd>V</kbd>), um in die Definition zu steigen. Alles andere auf der Seite wird gedimmt, und Sie bearbeiten die Grafik für sich. Doppelklicken Sie auf einen leeren Teil der Zeichenfläche, um wieder herauszusteigen. Weil jede Instanz dieselbe Definition zeichnet, erscheint die Bearbeitung, die Sie machen, in allen zusammen. Das ist der Punkt eines Symbols: Korrigieren Sie die Grafik einmal, und das ganze Dokument holt auf, anstatt jede Kopie zu jagen.</p>
+
+<h3 id="symbols-break">Die Verbindung brechen</h3>
+<p>Wenn eine Instanz sich von den anderen auf eine Wege unterscheiden muss, die über Position, Größe oder Deckkraft hinausgeht, wählen Sie sie aus und klicken Sie auf <strong>Verbindung brechen</strong>. Die Instanz wird durch eine gewöhnliche, bearbeitbare Kopie der Definition ersetzt, in derselben Größe und demselben Winkel, nicht mehr an das Symbol gebunden. Änderungen des Symbols erreichen sie nicht mehr. Die Schaltfläche ist nur verfügbar, während eine Symbolinstanz ausgewählt ist.</p>
+<p>Um ein Symbol ganz zu entfernen, halten Sie <kbd>&#8997;</kbd> und klicken Sie auf seinen Namen im Panel. Seine Definition und jede Instanz davon werden gelöscht, da eine Instanz ohne Definition nichts zeichnen würde.</p>
+
+<h2 id="symbols-symbolism">Die Symbolwerkzeuge</h2>
+<p>Die Symbolwerkzeuge streuen und passen Symbolinstanzen im Handgelenk an, unter einem runden Pinsel, statt einzeln. Sie teilen einen Slot in der Werkzeugleiste; halten Sie den Slot, um unter ihnen zu wählen. Sie wirken auf die Instanzen innerhalb der Auswahl oder auf jede editierbare Instanz im Dokument, wenn nichts ausgewählt ist, sodass Sie ein ganzes Feld von Symbolen auf einmal steuern können. Halten Sie <kbd>&#8997;</kbd>, um die Wirkung von ihnen umzukehren.</p>
+<p>Während ein Symbolwerkzeug aktiv ist, machen <kbd>[</kbd> und <kbd>]</kbd> den Pinsel kleiner und größer, und <kbd>{</kbd> und <kbd>}</kbd> senken und erhöhen seine Intensität (wie hart jeder Durchgang arbeitet).</p>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Kürzel</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td>Symbol-Streuen</td><td><kbd>&#8679;S</kbd></td><td>Ziehen, um Instanzen des aktiven Symbols zu legen, verteilt, während Sie sich bewegen; die Instanzen sammeln sich in einer <em>Symbolset</em>-Gruppe. Halten Sie <kbd>&#8997;</kbd>, um Instanzen unter dem Pinsel wieder herauszuheben</td></tr>
+    <tr><td>Symbol-Schieben</td><td></td><td>Schiebt Instanzen in die Richtung, in die Sie ziehen, sodass Sie eine Streuung ordnen können, ohne jedes Stück zu bewegen</td></tr>
+    <tr><td>Symbol-Packen</td><td></td><td>Zieht Instanzen zum Pinsel zusammen; <kbd>&#8997;</kbd> breitet sie aus</td></tr>
+    <tr><td>Symbol-Skalieren</td><td></td><td>Lässt Instanzen unter dem Pinsel wachsen; <kbd>&#8997;</kbd> schrumpft sie</td></tr>
+    <tr><td>Symbol-Drehen</td><td></td><td>Dreht Instanzen, um der Richtung Ihres Ziehens zu folgen</td></tr>
+    <tr><td>Symbol-Tönen</td><td></td><td>Tönt Instanzen Richtung der aktuellen Füllfarbe, für Variation über eine Gruppe; <kbd>&#8997;</kbd> entfernt die Tönung</td></tr>
+    <tr><td>Symbol-Verblassen</td><td></td><td>Lässt Instanzen verblassen, indem ihre Deckkraft gesenkt wird; <kbd>&#8997;</kbd> bringt sie zurück</td></tr>
+    <tr><td>Symbol-Umgestalten</td><td></td><td>Wendet den im Grafikstile-Panel gewählten Grafikstil auf Instanzen an; <kbd>&#8997;</kbd> löscht ihn</td></tr>
+  </tbody>
+</table>
+<p>Drei Werkzeuge brauchen etwas, das zuerst eingerichtet wird. Symbol-Streuen braucht ein Symbol zum Sprühen, also erstellen Sie eines im Symbole-Panel, bevor Sie beginnen. Symbol-Umgestalten wendet den an, der im Grafikstile-Panel gewählt ist, also wählen Sie dort zuerst einen Stil; Symbol-Tönen verwendet ebenfalls die aktuelle Füllfarbe, also stellen Sie die Füllfarbe ein, bevor Sie tönen.</p>
+
+<h2 id="symbols-brushes">Das Pinsel-Panel</h2>
+<p>Ein Pinsel entscheidet, wie eine Kontur entlang eines Pfads gezeichnet wird. Statt einer gewöhnlichen Linie gleicher Breite kann der Pfad einen Federstrich, eine Spur verteilter Grafik, eine Form, die Ende für Ende gestreckt wird, oder ein gebändertes Band tragen. Der Pfad bleibt vollständig bearbeitbar darunter: Formen Sie ihn um, und die pinselgezeichnete Kontur folgt. Öffnen Sie das Panel mit <strong>Fenster &gt; Pinsel</strong> (<kbd>F5</kbd>) oder von seinem Tab im Panel-Dock. Jeder Pinsel zeigt eine kleine Vorschau neben seinem Namen.</p>
+
+<h3 id="symbols-brush-kinds">Arten von Pinsel</h3>
+<p>Scissor hat fünf Arten von Pinsel. Zwei werden aus ein paar Zahlen gezeichnet, und drei werden aus Grafik gebaut, die Sie auswählen.</p>
+<dl>
+  <dt>Kalligrafisch</dt>
+  <dd>Eine schräge, ovale Feder, die sich verdünnt und verdickt, während der Pfad sich dreht, wie eine Breitfeder. Stellen Sie ihren Winkel, ihre Rundheit und ihre Größe in Punkten ein. Verwenden Sie sie für Beschriftungsstriche, Signaturen und jede Linie, die von Hand gezeichnet aussehen soll.</dd>
+  <dt>Borsten</dt>
+  <dd>Ein Bündel feiner Striche, das wie ein beladener Pinsel gelesen wird. Stellen Sie die Größe in Punkten, die Anzahl der Borsten und die Farbdeckkraft ein, sodass sich überlappende Durchgänge aufbauen. Greifen Sie hierher, wenn Sie eine weiche, malerische Kante statt einer sauberen wollen.</dd>
+  <dt>Streuen</dt>
+  <dd>Streut Kopien ausgewählter Grafik entlang des Pfads. Stellen Sie die Größe der Kopien, den Abstand zwischen ihnen, wie weit sie von der Linie streuen und ihre Drehung ein, mit Optionen, jede Kopie relativ zum Pfad zu drehen und sie mit der Konturfarbe neu zu färben. Verwenden Sie sie für Konfetti, Blätter, Sterne oder Blasen, die einer Kurve folgen.</dd>
+  <dt>Kunst</dt>
+  <dd>Streckt ein Stück ausgewählter Grafik über die gesamte Länge des Pfads. Stellen Sie ihre Breite ein, mit einer Option, sie mit der Konturfarbe neu zu färben. Verwenden Sie sie für eine sich verjüngende Tintenstrich, ein Band, einen Pfeil oder eine raue Kohlemarkierung, die sich mit der Linie biegt.</dd>
+  <dt>Muster</dt>
+  <dd>Kachelt ausgewählte Grafik Ende für Ende entlang des Pfads, wie ein dekorativer Rand. Stellen Sie Skalierung und Abstand ein, mit einer Option, sie mit der Konturfarbe neu zu färben. Verwenden Sie sie für Kette, Seil, Nähte oder einen wiederholenden Rahmen.</dd>
+</dl>
+
+<h3 id="symbols-brush-apply">Einen Pinsel anwenden und entfernen</h3>
+<p>Wählen Sie einen oder mehr Pfade und klicken Sie auf einen Pinsel, um ihre Konturen damit zu zeichnen. Ein Pfad ohne sichtbare Kontur erhält eine, sodass der Pinsel eine Linie hat, entlang der er laufen kann. Das Malpinsel-Werkzeug (<kbd>B</kbd>) zeichnet neue Striche mit dem jeweils aktuell gewählten Pinsel, also wählen Sie einen Pinsel und malen Sie direkt auf die Zeichenfläche. Um einen Pinsel von den ausgewählten Konturen zu entfernen und sie auf gewöhnliche Linien zurückzusetzen, klicken Sie auf <strong>Pinsel entfernen</strong>.</p>
+
+<h3 id="symbols-brush-manage">Pinsel erstellen, bearbeiten und löschen</h3>
+<p>Klicken Sie auf <strong>Neuer Pinsel&hellip;</strong>, wählen Sie eine der fünf Arten, und stellen Sie seine Optionen ein. Für einen Streu-, Kunst- oder Musterpinsel wählen Sie die Grafik, die er verwenden soll, bevor Sie den Dialog öffnen, da diese Grafik zum Pinsel wird. Um einen Pinsel später zu ändern, wählen Sie ihn aus und klicken Sie auf <strong>Optionen&hellip;</strong> (oder doppelklicken Sie ihn in der Liste); jede Kontur, die ihn verwendet, zeichnet mit den neuen Einstellungen neu. <strong>Löschen</strong> entfernt den ausgewählten Pinsel, nachdem er gefragt hat; Konturen, die ihn verwendeten, gehen auf gewöhnliche Linien zurück.</p>
+
+<h2 id="symbols-patterns">Das Muster-Panel</h2>
+<p>Ein Muster ist eine Kachel aus Grafik, die sich wiederholt, um eine Form zu füllen. Definieren Sie die Kachel einmal, und Sie können sie in jedes Objekt als Füllung gießen, sodass eine Textur oder ein Motiv über die Grafik gleichmäßig bleibt und sich überall aktualisiert, wenn Sie die Kachel bearbeiten. Das Panel sitzt im Panel-Dock, und dieselben Befehle leben unter <strong>Objekt &gt; Muster</strong>.</p>
+
+<h3 id="symbols-pattern-make">Ein Muster erstellen</h3>
+<p>Wählen Sie die Grafik für eine Kachel und klicken Sie auf <strong>Muster erstellen</strong> (oder <strong>Objekt &gt; Muster &gt; Erstellen</strong>). Eine Kopie der Grafik wird als wiederholende Kachel gespeichert und dem Panel hinzugefügt; die Grafik, die Sie gezeichnet haben, bleibt, wo sie ist. Muster werden <code>Muster 1</code>, <code>Muster 2</code> und so weiter benannt, während Sie sie erstellen.</p>
+
+<h3 id="symbols-pattern-fill">Mit einem Muster füllen</h3>
+<p>Wählen Sie eine Form und klicken Sie auf ein Muster im Panel, um es als Füllung der Form einzustellen. Mit nichts ausgewählt macht das Klicken auf ein Muster es zur Füllfarbe für die nächste Form, die Sie zeichnen. Weil es eine Füllung ist, wiederholt sich das Muster, um die Form zu bedecken, und wird auf ihren Umriss zugeschnitten. Verwenden Sie dies für Hintergründe, Stoffe, Laub oder jede Oberfläche, die als Wiederholung statt als flache Farbe gelesen werden soll. Um ein Muster aus dem Dokument zu entfernen, halten Sie <kbd>&#8997;</kbd> und klicken Sie darauf im Panel; Formen, die damit gefüllt waren, fallen auf keine Füllung zurück.</p>
+
+<h3 id="symbols-pattern-edit">Die Kachel bearbeiten</h3>
+<p>Doppelklicken Sie auf ein Muster im Panel, um seine Kachel zu bearbeiten. Der Rest der Grafik wird gedimmt, und Sie arbeiten an der Kachel für sich, mit einer Schaltfläche <strong>Bearbeitung beenden</strong> im Panel; klicken Sie darauf (oder verwenden Sie <strong>Objekt &gt; Muster &gt; Muster bearbeiten</strong> erneut), wenn Sie fertig sind. Jede Form, die mit dem Muster gefüllt ist, aktualisiert sich, um zu passen. Sie können auch mit der Bearbeitung beginnen, indem Sie eine Form auswählen, die mit einem Muster gefüllt ist, und <strong>Muster bearbeiten</strong> wählen.</p>
+
+<h3 id="symbols-pattern-options">Kacheleinstellungen</h3>
+<p>Klicken Sie auf die Kacheleinstellungen-Schaltfläche neben einem Muster (oder <strong>Objekt &gt; Muster &gt; Kacheleinstellungen&hellip;</strong>), um zu steuern, wie sich die Kachel wiederholt. Diese Einstellungen ändern das Layout der Wiederholung, ohne die Grafik in der Kachel zu ändern.</p>
+<dl>
+  <dt>Kacheltyp</dt>
+  <dd>Wie Reihen und Spalten sich ausrichten: Gitter, Ziegel nach Reihe, Ziegel nach Spalte, Hex nach Spalte oder Hex nach Reihe. Ziegel versetzt abwechselnde Reihen oder Spalten wie Mauerwerk; Hex packt die Kacheln in ein Wabenmuster.</dd>
+  <dt>Ziegelversatz</dt>
+  <dd>Für die Ziegelarten, wie weit jede abwechselnde Reihe oder Spalte verschoben wird, als Prozent der Kachel.</dd>
+  <dt>Kachel an Grafik anpassen</dt>
+  <dd>Passt die Kachel an die Grenzen der Grafik an. Schalten Sie es aus, um die Breite und Höhe der Kachel selbst einzustellen.</dd>
+  <dt>Breite und Höhe</dt>
+  <dd>Die Größe der Kachel in Pixeln, verwendet, wenn die Kachel nicht an die Grafik angepasst wird.</dd>
+  <dt>Horizontaler und vertikaler Abstand</dt>
+  <dd>Lücken, die zwischen Kacheln gelassen werden, in Pixeln. Positive Werte setzen das Motiv auseinander; negative überlappen die Kacheln.</dd>
+  <dt>Kachel mit Grafik bewegen</dt>
+  <dd>Hält die Kachel mit der Grafik ausgerichtet, wenn sie sich bewegt, sodass die Wiederholung mit dem Objekt reist.</dd>
+</dl>

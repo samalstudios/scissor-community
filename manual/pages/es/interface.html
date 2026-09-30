@@ -1,0 +1,166 @@
+<p class="lede">Scissor llena la ventana del navegador con una única superficie de edición: una barra de menús en la parte superior, una barra de control y pestañas de documento debajo de ella, la paleta de herramientas a la izquierda, el lienzo de dibujo en el centro y el panel de acoplamiento a la derecha. Todo se ejecuta en tu propia máquina, de modo que un documento permanece donde lo pones y nada se envía a ningún sitio para ser abierto.</p>
+
+  <p>Los atajos en esta página están escritos en formato macOS. En Windows y Linux, lee <kbd>⌘</kbd> como <kbd>Ctrl</kbd> y <kbd>⌥</kbd> como <kbd>Alt</kbd>; <kbd>⇧</kbd> es Shift y <kbd>⌃</kbd> es Control.</p>
+
+  <h2 id="interface-at-a-glance">El espacio de trabajo de un vistazo</h2>
+  <p>La ventana está construida a partir de unas pocas regiones que responden cada una a una pregunta diferente. Aprende dónde están una vez y el resto del manual se lee más fácilmente.</p>
+  <dl>
+    <dt>Barra de menús</dt>
+    <dd>La fila de menús en la parte superior, con deshacer y rehacer y un buscador de comandos en su extremo derecho. Esta es la lista completa de todo lo que el editor puede hacer.</dd>
+    <dt>Barra de control</dt>
+    <dd>La franja justo debajo de los menús. Muestra la herramienta actual y el puñado de controles que importan para lo que tienes seleccionado en este momento.</dd>
+    <dt>Pestañas de documento</dt>
+    <dd>A la izquierda de la barra de control, una pestaña por cada documento abierto. El botón de paneles se sitúa en el extremo derecho de la misma fila.</dd>
+    <dt>Paleta de herramientas</dt>
+    <dd>La estrecha columna de herramientas por el borde izquierdo, con el control de relleno y contorno al pie.</dd>
+    <dt>Lienzo y mesa de trabajo</dt>
+    <dd>La gran zona en el centro donde dibujas. Los rectángulos blancos son las mesas; el área gris que las rodea es la mesa de trabajo.</dd>
+    <dt>Panel de acoplamiento</dt>
+    <dd>La columna de paneles a la derecha. Se desliza sobre el lienzo cuando la necesitas y devuelve el espacio cuando la cierras.</dd>
+    <dt>Barra de estado</dt>
+    <dd>La fina línea a lo largo del pie de la ventana, que informa de la herramienta actual, la selección y la última acción deshacible.</dd>
+  </dl>
+  <figure class="shot">
+    <img src="img/app-light.png" width="1900" height="1082" loading="lazy"
+         alt="La ventana completa de Scissor: barra de menús, barra de control, paleta de herramientas, lienzo y panel de acoplamiento." />
+    <figcaption>La ventana completa. Scissor sigue la configuración clara u oscura de tu sistema, y esta captura también.</figcaption>
+  </figure>
+
+  <h2 id="interface-menu-bar">La barra de menús</h2>
+  <p>Diez menús se extienden por la parte superior. Reúnen cada comando del programa, agrupados por el tipo de trabajo que estás realizando en lugar de por dónde vive una característica dentro del motor.</p>
+  <table>
+    <thead><tr><th>Menú</th><th>Qué contiene</th></tr></thead>
+    <tbody>
+      <tr><td>Archivo</td><td>Nuevo, abrir, cerrar, guardar, colocar, exportar, scripts, configuración de documento e imprimir.</td></tr>
+      <tr><td>Edición</td><td>Deshacer y rehacer, los comandos del portapapeles, todo el menú <strong>Seleccionar</strong> como submenú, edición de color y Preferencias.</td></tr>
+      <tr><td>Organizar</td><td>Transformar, orden de apilamiento, alineación, agrupar, y bloquear y ocultar.</td></tr>
+      <tr><td>Trazado</td><td>Comandos de trazado y trazado compuesto, morfar, Deformar forma y perspectiva, máscaras de recorte, ajuste de texto y expandir.</td></tr>
+      <tr><td>Crear</td><td>Patrones, repeticiones, Relleno de región, Vectorizar, malla de degradado, mesas, cortes y los comandos de capa de píxeles.</td></tr>
+      <tr><td>Efectos</td><td>Efectos en vivo: el conjunto vectorial (3D, distorsionar y transformar, Combinar formas, estilizar, deformar y más) y un submenú de trama debajo de ellos.</td></tr>
+      <tr><td>Texto</td><td>Fuente, tamaño y glifos, crear contornos, cambiar mayúsculas, flujo de texto e inserción de caracteres.</td></tr>
+      <tr><td>Ver</td><td>Apariencia (clara y oscura), vista previa de contorno y píxeles, zoom, rotar vista, reglas, guías, la rejilla y el ajuste.</td></tr>
+      <tr><td>Espacio de trabajo</td><td>Los paneles: los seis que más abres, un submenú de Texto, un submenú Más paneles para el resto, y Restablecer paneles.</td></tr>
+      <tr><td>Ayuda</td><td>Novedades, el manual de usuario, instalar, los Términos de Uso y Acerca de, con un campo de búsqueda en la parte superior.</td></tr>
+    </tbody>
+  </table>
+  <p>Una marca junto a un elemento significa que esa configuración está activa. Un elemento dibujado en gris no se puede usar en este momento, normalmente porque no hay nada seleccionado o no hay ningún documento abierto. Donde un comando tiene un atajo, se muestra en el lado derecho del menú.</p>
+
+  <h3 id="interface-command-search">Encontrar un comando</h3>
+  <p>No tienes que recordar qué menú contiene qué. El botón de búsqueda a la derecha de la barra de menús, etiquetado <em>Buscar o escribir un comando</em>, abre la paleta de comandos; <kbd>⌘K</kbd> la abre desde el teclado. Escribe unas letras y lista cada comando coincidente con su ruta de menú y atajo, y cada herramienta coincidente. Usa <kbd>↑</kbd> y <kbd>↓</kbd> para moverte por los resultados, <kbd>Enter</kbd> para ejecutar el resaltado y <kbd>Esc</kbd> para cerrar. Recurre a esto cuando sabes lo que quieres pero no dónde está, o cuando un atajo es más rápido de escribir que de buscar. El menú Ayuda tiene su propio campo de búsqueda que hace lo mismo en todos los menús.</p>
+
+  <h3 id="interface-undo-redo">Deshacer y rehacer</h3>
+  <p>Las flechas curvas cerca de la derecha de la barra de menús deshacen y rehacen, igual que <kbd>⌘Z</kbd> y <kbd>⇧⌘Z</kbd>. Cada botón nombra el paso que revertiría cuando pasas el cursor sobre él, y la barra de estado muestra lo mismo al pie de la ventana, de modo que siempre puedes ver lo que una pulsación más desharía.</p>
+
+  <h2 id="interface-tool-palette">La paleta de herramientas</h2>
+  <p>Las herramientas se sitúan en una sola columna por el borde izquierdo. Están organizadas en familias: Seleccionar, Dibujar, Texto, Línea, Forma, Pintar, Remodelar, Construir, Muestrear, Símbolos, Mesas y Vista. La columna muestra una herramienta de cada familia a la vez; posa el puntero sobre una ranura y el resto de esa familia se despliega a la derecha, de modo que puedes elegir una herramienta hermana sin que la columna se desplace bajo tu mano. Una ranura sigue mostrando el miembro de su familia que usaste por última vez.</p>
+  <p>Haz clic en una ranura para elegir la herramienta que muestra. Su información sobre herramientas da el nombre de la herramienta y su atajo de tecla única, por ejemplo <kbd>V</kbd> para la herramienta Selección, <kbd>P</kbd> para el Bolígrafo o <kbd>T</kbd> para Texto. Cuando cambias de herramienta con el teclado, la ranura correspondiente se ilumina un momento para que puedas ver cuál está ahora activa. Para ver todo a la vez, un botón cerca del buscador de comandos, dibujado como tres puntos, abre un navegador de todas las herramientas, agrupadas por familia y filtradas mientras escribes.</p>
+
+  <h3 id="interface-fill-stroke">Relleno y contorno</h3>
+  <p>Debajo de las herramientas está el control de relleno y contorno: un cuadrado relleno para el relleno, situado dentro de una banda que representa el contorno, con un pequeño par de flechas para intercambiarlos. Porque está aquí y no solo en la barra de control, puedes elegir un color antes de elegir una herramienta, y se convierte en lo que se usará para dibujar el siguiente objeto. Haz clic en el relleno o en la banda para abrir las pestañas de color, muestras y degradado.</p>
+  <table>
+    <thead><tr><th>Tecla</th><th>Acción</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>X</kbd></td><td>Mover el foco entre relleno y contorno</td></tr>
+      <tr><td><kbd>⇧X</kbd></td><td>Intercambiar el relleno y el contorno</td></tr>
+      <tr><td><kbd>D</kbd></td><td>Volver al valor por defecto: relleno blanco, contorno negro</td></tr>
+      <tr><td><kbd>/</kbd></td><td>Establecer el lado activo en ninguno</td></tr>
+    </tbody>
+  </table>
+
+  <h3 id="interface-rail-panels">Paneles junto a la barra</h3>
+  <p>Entre el control de relleno y contorno y las herramientas, la paleta ofrece una corta fila de botones de panel elegidos para la herramienta que estás sosteniendo: las herramientas de dibujo acercan los paneles de muestras y contorno, las herramientas de texto acercan los paneles de carácter y párrafo, y así sucesivamente. Estos abren un solo panel justo donde ya está tu mano. Un botón adicional abre el panel completo. En una ventana baja la fila se pliega en un solo botón Paneles que lista las mismas opciones, de modo que la paleta nunca se sale por el borde inferior.</p>
+
+  <h2 id="interface-control-bar">La barra de control</h2>
+  <p>La franja debajo de los menús cambia según lo que estás haciendo. Nombra la herramienta actual a su izquierda, y a la derecha muestra solo los controles que pueden actuar sobre la selección actual: el relleno, el contorno y el grosor del contorno; las X, Y, W y H de la selección; y las acciones que tienen sentido, como alinear, los modos de forma booleanos, orden de apilamiento, agrupar, desagrupar y duplicar. Cuando hay más de lo que cabe, un botón final recoge el resto en un menú, de modo que la barra nunca se reorganiza mientras la usas.</p>
+  <p>Escribe en cualquier campo numérico y pulsa <kbd>Enter</kbd>, o sal del campo, para aplicar el valor; <kbd>↑</kbd> y <kbd>↓</kbd> lo incrementan, con <kbd>⇧</kbd> para diez veces el incremento y <kbd>⌥</kbd> para una décima parte. La pequeña etiqueta junto a un campo es un deslizador: arrástrala a la izquierda o a la derecha para cambiar el valor al tacto. Pasa el cursor sobre el nombre de la herramienta para revelar las primeras opciones de esa herramienta; haz clic en el nombre para abrir sus opciones completas debajo de la barra, con todos sus interruptores y números.</p>
+  <p>La barra de control está acoplada en la fila de pestañas por defecto, pero puedes arrastrar su asa para flotarla sobre el lienzo, y hacer doble clic en el asa (o usar su botón de acoplamiento) para devolverla. Junto a ella, una barra compacta puede aparecer junto a un objeto seleccionado que lleva solo su relleno, contorno y grosor, de modo que el color está justo al lado de la obra en lugar de al otro lado de la ventana.</p>
+
+  <h2 id="interface-quick-bar">La barra rápida</h2>
+  <p>Cuando seleccionas algo, una pequeña barra flota junto a ella con los controles que más utilizas, de modo que no tienes que desplazarte al borde de la ventana. Para formas y trazados contiene el relleno y el contorno; para texto contiene el relleno, el tamaño, negrita, cursiva y la alineación. Permanece fuera de tu camino mientras arrastras y vuelve cuando sueltas. Todo lo que contiene también está en la barra de control y en los paneles.</p>
+
+  <h2 id="interface-canvas">El lienzo y la mesa de trabajo</h2>
+  <p>El centro de la ventana es el lienzo. Las mesas son los rectángulos blancos que contienen la obra que pretendes conservar; el área gris que las rodea es la mesa de trabajo. La mesa de trabajo es parte del documento, de modo que un boceto, un recorte o una prueba de color aparcados ahí se guardan con el archivo, pero cuando exportas una mesa solo se escribe lo que cae dentro del rectángulo de esa mesa.</p>
+
+  <h3 id="interface-pan-zoom">Desplazarse y hacer zoom</h3>
+  <p>Mantén <kbd>Espacio</kbd> para cambiar a la herramienta Mano mientras la mantengas pulsada, luego arrastra para desplazarte; suelta y tu herramienta vuelve. Arrastrar con el botón central del ratón también desplaza. La rueda desplaza, y la rueda con <kbd>⌘</kbd> o <kbd>⌥</kbd> mantenido hace zoom alrededor del puntero.</p>
+  <table>
+    <thead><tr><th>Atajo</th><th>Zoom</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>⌘=</kbd> / <kbd>⌘-</kbd></td><td>Acercar y alejar</td></tr>
+      <tr><td><kbd>⌘0</kbd></td><td>Ajustar la mesa activa en la ventana</td></tr>
+      <tr><td><kbd>⌥⌘0</kbd></td><td>Ajustar todas las mesas en la ventana</td></tr>
+      <tr><td><kbd>⌘1</kbd></td><td>Tamaño real</td></tr>
+    </tbody>
+  </table>
+  <p>Un control de zoom se sitúa sobre el lienzo con botones de menos, más y ajustar y el porcentaje actual; haz clic en el porcentaje para los mismos comandos de ajustar y tamaño real como un menú.</p>
+
+  <h3 id="interface-rulers-guides">Reglas y guías</h3>
+  <p><kbd>⌘R</kbd> muestra y oculta las reglas, que miden en las unidades de documento desde la esquina superior izquierda de la mesa activa y llevan un marcador que sigue al puntero. Arrastra desde una regla para sacar una guía sobre la obra, y suelta una guía de vuelta en una regla para deshacerte de ella. También puedes convertir un trazado seleccionado en una guía con Crear guías (<kbd>⌘5</kbd>) y revertirlo con Liberar guías (<kbd>⌥⌘5</kbd>). Muestra u oculta todas las guías con <kbd>⌘;</kbd>. Las guías inteligentes (<kbd>⌘U</kbd>) muestran sugerencias de alineación y medición mientras dibujas y arrastras.</p>
+
+  <h3 id="interface-grid">La rejilla</h3>
+  <p>La rejilla se dibuja por mesa y se configura desde Ver › Rejilla o desde el panel Rejilla. Muestra u oculta con <kbd>⌘'</kbd> y activa o desactiva el ajuste a ella con <kbd>⇧⌘'</kbd>. Cada mesa puede usar uno de seis tipos de rejilla: Ortogonal, Isométrica, Hexagonal, Oblicua, Proporción áurea y Perspectiva. Elegir un tipo activa la rejilla para que la puedas ver de inmediato. La rejilla se describe en detalle en su propia página.</p>
+
+  <h3 id="interface-history-strip">La franja de historial</h3>
+  <p>Una columna de pequeñas marcas aparece en una esquina del lienzo cuando mueves el puntero cerca de ella: este es el historial del documento. Pasa el cursor sobre una marca para nombrar ese paso, haz clic en una para saltar directamente a ella, o mantén pulsado y deslízate por las marcas para ejecutar el documento hacia adelante y hacia atrás para que puedas ver un cambio ir y venir. El panel Historial en el panel de acoplamiento lista los mismos pasos como texto.</p>
+
+  <h2 id="interface-boards">Mesas y la franja de mesas</h2>
+  <p>Las mesas son lo que Scissor llama mesas de trabajo. Cada una lleva su nombre sobre su esquina superior izquierda, y la mesa activa se dibuja con un marco más fuerte que el resto. Haz clic en el nombre de una mesa para recoger la herramienta Mesa con esa mesa activa, lista para moverla, redimensionarla o renombrarla. Si una mesa tiene sangrado, se muestra a su alrededor como un rectángulo rojo discontinuo. Añade una desde Crear › Mesas › Nueva mesa, dibuja y remodela mesas con la herramienta Mesa (<kbd>⇧O</kbd>), y establece el tamaño y nombre de una mesa en Opciones de mesa. Reorganizar todas las mesas las ordena en una fila.</p>
+  <p>Una franja de miniaturas de mesas se sitúa sobre el lienzo, una pequeña vista previa por mesa más un botón de añadir al final. Haz clic en una miniatura para activar esa mesa y ajustarla en la ventana; haz clic en el nombre debajo de ella para saltar a esa mesa y recoger la herramienta Mesa lista para editarla. El panel Mesas en el panel de acoplamiento también las lista.</p>
+
+  <h2 id="interface-tabs">Pestañas de documento</h2>
+  <p>Los documentos abiertos aparecen como pestañas a la izquierda de la barra de control. Una pestaña muestra el nombre del documento, con un punto delante mientras tiene cambios sin guardar. Haz clic en una pestaña para cambiar a ese documento, o en la × para cerrarlo; cerrar un documento con trabajo sin guardar pregunta primero. Haz clic con el botón central en una pestaña para cerrarla directamente, y arrastra una pestaña sobre otra para reordenar los documentos abiertos. Nuevo (<kbd>⌥⌘N</kbd>), Abrir (<kbd>⌘O</kbd>) y Guardar (<kbd>⌘S</kbd>) viven en el menú Archivo, y Cerrar es <kbd>⌥⌘W</kbd>.</p>
+  <p>Las pestañas se sitúan en la parte superior por defecto. Para acoplarlas en el lateral en su lugar, activa <strong>Ver &rsaquo; Pestañas de documento en el lateral</strong> (también en Preferencias); la franja lateral se puede arrastrar para ensancharla o estrecharla por su borde derecho, y la elección se recuerda.</p>
+
+  <h2 id="interface-status-bar">La barra de estado</h2>
+  <p>La línea a lo largo del pie de la ventana informa, de izquierda a derecha: un indicador de listo, el nombre de la herramienta actual, el tamaño de la selección (nada seleccionado, un objeto o un recuento), y la acción que <kbd>⌘Z</kbd> desharía. Es un lugar tranquilo para confirmar lo que has recogido y lo que el próximo deshacer revertirá.</p>
+
+  <h2 id="interface-dock">El panel de acoplamiento</h2>
+  <p>Los paneles viven en la columna de la derecha. En reposo el lienzo tiene toda la ventana; pedir un panel desliza el panel de acoplamiento sobre el lienzo, y cerrarlo devuelve el espacio directamente. El botón de paneles a la derecha de la fila de pestañas, y la tecla Escape, abren y cierran el panel de acoplamiento; los menús Ventana y Espacio de trabajo y la paleta de comandos abren un panel específico.</p>
+  <figure class="shot">
+    <img src="img/editing.png" width="1900" height="1176" loading="lazy"
+         alt="Un documento abierto en Scissor con obra en la mesa y los paneles Capas y Muestras abiertos en el panel de acoplamiento." />
+    <figcaption>Un documento en edición, con los paneles Capas y Muestras abiertos en el panel de acoplamiento.</figcaption>
+  </figure>
+
+  <h3 id="interface-dock-groups">Los grupos de paneles acoplados</h3>
+  <p>Los paneles se apilan en grupos, cada grupo una columna de pequeñas pestañas de iconos a lo largo de su propio borde. Posa el puntero sobre una pestaña para ver el nombre del panel, y el panel abierto se nombra a sí mismo sobre su contenido. Por defecto los grupos reúnen paneles que tienden a usarse juntos:</p>
+  <ul>
+    <li><strong>Propiedades, Capas, Mesas, Rejilla</strong>: la estructura del documento.</li>
+    <li><strong>Color, Muestras, Degradado, Contorno</strong>: cómo se pintan las cosas.</li>
+    <li><strong>Carácter, Párrafo, Glifos</strong>: texto.</li>
+    <li><strong>Alinear, Combinar formas, Transformar, Pila de pintura, Transparencia, 3D</strong>: dar forma y organizar.</li>
+    <li><strong>Estilos, Pinceles, Símbolos, Patrones</strong>: apariencias y objetos reutilizables.</li>
+    <li><strong>Navegador, Información, Información de documento, Historial, Acciones</strong>: moverse y medir.</li>
+    <li><strong>Activos, Variables, Auto-selección, Vectorizar, Atributos</strong>: el resto.</li>
+  </ul>
+
+  <h3 id="interface-rearranging">Reorganizar paneles</h3>
+  <p>La disposición es tuya para cambiarla. Arrastra una pestaña a lo largo de su propia franja para reordenarla, arrástrala a la franja de otro grupo para moverla ahí, o arrástrala fuera del panel de acoplamiento para dejarla flotando sobre el lienzo. Arrastra la parte vacía de una franja para levantar un grupo completo, y suéltalo de vuelta sobre el panel de acoplamiento para devolverlo a su sitio; un hueco entre grupos acepta una pestaña soltada como un grupo nuevo propio. Haz clic derecho en una pestaña para los mismos movimientos por menú, incluyendo Cerrar panel. La × en la parte superior de una franja cierra ese grupo, y arrastrar el divisor entre dos grupos da altura a uno y la quita del otro. Un grupo flotante se puede redimensionar desde su esquina.</p>
+
+  <h3 id="interface-gating">Paneles que esperan a tener algo que hacer</h3>
+  <p>Un panel que no tiene nada que actuar en este momento no desaparece: su pestaña permanece, solo atenuada, y su cuerpo muestra una línea diciendo qué está esperando, como seleccionar un objeto o elegir la herramienta Texto. Para que el panel de acoplamiento no se reorganice bajo tu mano, esta espera se mantiene mientras el puntero está dentro del panel de acoplamiento y se actualiza una vez que el puntero sale.</p>
+
+  <h3 id="interface-workspace">Abrir, ocultar y restablecer paneles</h3>
+  <p>Abre un panel desde el menú Espacio de trabajo, donde los seis más usados se sitúan en la parte superior y el resto está bajo Más paneles, o desde el menú Ventana en el marco clásico. Muchos paneles tienen un atajo:</p>
+  <table>
+    <thead><tr><th>Panel</th><th>Atajo</th><th>Panel</th><th>Atajo</th></tr></thead>
+    <tbody>
+      <tr><td>Capas</td><td><kbd>F7</kbd></td><td>Color</td><td><kbd>F6</kbd></td></tr>
+      <tr><td>Pila de pintura</td><td><kbd>⇧F6</kbd></td><td>Información</td><td><kbd>F8</kbd></td></tr>
+      <tr><td>Alinear</td><td><kbd>⇧F7</kbd></td><td>Transformar</td><td><kbd>⇧F8</kbd></td></tr>
+      <tr><td>Contorno</td><td><kbd>⌘F10</kbd></td><td>Degradado</td><td><kbd>⌘F9</kbd></td></tr>
+      <tr><td>Combinar formas</td><td><kbd>⇧⌘F9</kbd></td><td>Transparencia</td><td><kbd>⇧⌘F10</kbd></td></tr>
+      <tr><td>Estilos gráficos</td><td><kbd>⇧F5</kbd></td><td>Pinceles</td><td><kbd>F5</kbd></td></tr>
+      <tr><td>Atributos</td><td><kbd>⌘F11</kbd></td><td>Símbolos</td><td><kbd>⇧⌘F11</kbd></td></tr>
+      <tr><td>Carácter</td><td><kbd>⌘T</kbd></td><td>Párrafo</td><td><kbd>⌥⌘T</kbd></td></tr>
+      <tr><td>Glifos</td><td><kbd>⌥⇧F11</kbd></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+  <p>El panel de acoplamiento se puede ensanchar arrastrando su borde izquierdo, desde un ancho cómodo de dos campos por fila hasta bastante más ancho. Tu disposición, y lo ancho que dejaste el panel de acoplamiento, se recuerdan entre sesiones. Cuando el panel de acoplamiento está cerrado, deslizar el puntero al borde derecho de la ventana lo asoma, siempre que no haya obra debajo del puntero. Para deshacer todos tus cambios en la disposición, elige Restablecer paneles, que devuelve cada grupo a su posición inicial.</p>
+  <p><kbd>Tab</kbd> oculta la paleta de herramientas, la barra de control, las pestañas de documento, la barra de estado, los paneles y el resto del marco del lienzo para que solo queden la obra y la barra de menús; pulsa de nuevo para traerlos todos de vuelta.</p>
+
+  <h2 id="interface-language">Idioma</h2>
+  <p>Scissor habla inglés, alemán (Deutsch), español (Español), francés (Français), italiano (Italiano), catalán (Català), checo (Čeština), danés (Dansk), noruego (Norsk), polaco (Polski), eslovaco (Slovenčina), finlandés (Suomi) y sueco (Svenska). La primera vez que lo abres, usa el idioma de tu navegador cuando es uno de estos, e inglés en caso contrario. Para elegir otro, haz clic en el botón del globo en la barra de menús o en la pantalla de bienvenida, o abre <strong>Edición › Preferencias</strong> (<kbd>&#8984;K</kbd>), ve a <strong>Interfaz</strong> y elige uno bajo <strong>Idioma</strong>. Scissor cambia cuando se recarga, y recuerda la elección. Los menús, paneles, diálogos, informaciones sobre herramientas, mensajes y Novedades la siguen, y los números se muestran de la manera local, como 12,5 en alemán, aunque puedes escribir tanto una coma como un punto. Tus documentos no se ven afectados: los nombres de las capas y el texto de tu obra permanecen como los escribiste. Cuando la interfaz no está en inglés, los Términos de Uso se muestran traducidos por conveniencia, y la versión en inglés es la que se aplica.</p>
+
+  <h2 id="interface-appearance">Claro y oscuro</h2>
+  <p>Scissor sigue la configuración del sistema para claro y oscuro. Para fijarlo de una manera, elige Ver › Apariencia y elige Sistema, Claro u Oscuro. La elección se recuerda, y se extiende al lienzo así como al marco: la mesa de trabajo, las reglas y las etiquetas de las mesas se dibujan para adaptarse al tema en el que estás.</p>

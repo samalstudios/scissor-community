@@ -10,6 +10,16 @@ Public home for [Scissor](https://scissor.studio), the vector and pixel design s
 
 Each page is an HTML fragment in `manual/pages/`, styled by `manual/manual.css`, with images in `manual/img/` (a `name-light.png` gets a `name-dark.png` twin for dark mode when one exists). The Scissor site picks up this repository on every deploy.
 
+### Translations
+
+The manual is translated into multiple languages. Each language has its own subdirectory under `manual/pages/`:
+
+- `manual/pages/de/` — German (Deutsch)
+- `manual/pages/es/` — Spanish (Español)
+- `manual/pages/fr/` — French (Français)
+
+The English original lives directly in `manual/pages/`. The build script (`scripts/build-manual.mjs` in the main Scissor repo) detects all language subdirectories and builds each into its own `/manual/<lang>/` path.
+
 ---
 
 © Samal Studios. The manual is licensed under [CC BY-NC-ND 4.0](manual/LICENSE) and the sample files under [CC BY 4.0](samples/LICENSE); see [LICENSE.md](LICENSE.md). The Scissor application itself is proprietary.

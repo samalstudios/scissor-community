@@ -1,0 +1,93 @@
+<p class="lede">Ein Effekt ändert, wie ein Objekt aussieht, ohne das Objekt selbst zu ändern. Der Pfad, die Gruppe oder das Textstück bleibt genau so, wie Sie es gezeichnet haben, und der Effekt wird jedes Mal neu berechnet, wenn Sie einen Punkt bewegen oder einen Wert bearbeiten. Effekte stapeln sich im Farbstapel-Panel, sodass Sie mehrere auf einem Objekt stapeln, sie neuordnen und jeden wieder entfernen können.</p>
+
+<figure class="shot">
+  <img src="img/effects-demo.png" width="1400" height="560" loading="lazy"
+       alt="Drei identische blaue Kacheln, die drei Effekte zeigen: einen Schlagschatten, ein bernsteinfarbenes äußeres Glühen und raue Kanten." />
+  <figcaption>Dieselbe Kachel mit drei Effekten: ein Schlagschatten, ein äußeres Glühen und Errauen. Jeder ist live, sodass die Kachel darunter immer noch ein gewöhnliches abgerundetes Rechteck ist.</figcaption>
+</figure>
+
+<h2 id="effects-live-and-stacked">Live-Effekte und der Erscheinungsbild-Stapel</h2>
+<p>Jeder Effekt in Scissor ist <strong>live</strong> und <strong>nicht-destruktiv</strong>. Er sitzt über den Füllungen und Konturen des Objekts im <strong>Erscheinungsbild</strong>-Panel (<kbd>&#8679;F6</kbd>) und läuft über das ganze Objekt, jedes Mal wenn die Grafik oder der Effekt sich ändert. Weil der Originalpfad unberührt darunter liegt, können Sie weiterhin Ankerpunkte bearbeiten, die Füllfarbe wechseln oder die Wörter neu tippen, und der Effekt folgt. Greifen Sie zu einem Effekt, wenn Sie einen Look, einen Schatten, eine Biegung, eine abgerundete Ecke wollen, die Sie später vielleicht anders entscheiden, statt sich von Hand festzulegen.</p>
+
+<h3 id="effects-order">Reihenfolge ist wichtig</h3>
+<p>Effekte laufen von unten im Stapel nach oben, und das Panel listet sie oben zuerst, über den Füllungen und Konturen. Die Reihenfolge ändert das Ergebnis: Ein Weichzeichner unter einem Schatten weicht die Form aus, bevor der Schatten geworfen wird, während dieselben zwei in umgekehrter Reihenfolge einen scharfen Schatten werfen und dann die ganze Menge weichzeichnen. Wenn ein Effekt nicht das tut, was Sie erwarten, ist seine Position im Stapel das Erste, was Sie überprüfen sollten.</p>
+
+<h2 id="effects-using">Effekte hinzufügen, bearbeiten und entfernen</h2>
+<h3 id="effects-add">Aus dem Effekt-Menü</h3>
+<p>Wählen Sie ein Objekt, dann wählen Sie einen Effekt aus dem <strong>Effekt</strong>-Menü. Einträge, die einen Dialog öffnen, zeigen eine <strong>Vorschau</strong>, während Sie ihre Werte ändern, sodass Sie das Ergebnis auf der Zeichenfläche beurteilen können, bevor Sie sich festlegen; die ganze Bearbeitung landet als ein einziger Schritt im Verlauf, nicht ein Schritt pro Tastendruck. Eine kurze Version des Menüs (Schlagschatten, Äußeres Glühen und Gaußscher Weichzeichner, plus Effekte löschen) sitzt auch im Rechtsklick-Menü der Zeichenfläche unter <strong>Effekt</strong>.</p>
+
+<h3 id="effects-appearance">Im Farbstapel-Panel</h3>
+<p>Jeder Effekt auf dem ausgewählten Objekt bekommt seine eigene Zeile im Farbstapel-Panel, markiert mit einem <em>fx</em>-Abzeichen. Klicken Sie auf den Namen des Effekts, um seine Optionen wieder zu öffnen und zu ändern. Klicken Sie auf das Kreuz am Ende der Zeile, um diesen einen Effekt zu entfernen. Um jeden Effekt von der Auswahl auf einmal zu streifen, verwenden Sie <strong>Effekt &rsaquo; Effekte löschen</strong>.</p>
+
+<h3 id="effects-panels">In den Effekt-Panels</h3>
+<p>Die <strong>Fenster &rsaquo; Effekte</strong>-Gruppe sammelt die Effekte in ein Panel für jeden Teil des Effekt-Menüs: Stilisieren, Weichzeichnen, Verzeren &amp; Transformieren, Pfad, Formen kombinieren und Verformen, mit dem 3D-Panel daneben. Jedes Panel listet die Effekte dieser Gruppe mit einem Schalter, um einen ein- oder auszuschalten, und seinen Einstellungen direkt darunter, alle live auf der Auswahl bearbeitet. Es ist ein schnellerer Weg, einen Effekt auszuprobieren und seine Werte anzupassen, als jedes Mal einen Dialog zu öffnen. Das Ausschalten eines Schalters nimmt diesen Effekt wieder vom Objekt. Wenn ein Objekt mehr als einen Effekt derselben Art trägt, bearbeitet das Panel den ersten davon, und das Farbstapel-Panel zeigt weiterhin den ganzen Stapel.</p>
+
+<h2 id="effects-stylize">Stilisieren: Schatten, Glühen und Kanten</h2>
+<p>Das Untermenü <strong>Effekt &rsaquo; Stilisieren</strong> hält die alltäglichen Feinbearbeitungs-Effekte.</p>
+<table>
+  <thead><tr><th>Effekt</th><th>Was er macht, und wann</th><th>Hauptoptionen</th></tr></thead>
+  <tbody>
+    <tr><td>Schlagschatten</td><td>Wirft eine versetzte, weiche Kopie des Objekts hinter es. Verwenden Sie es, um eine Form, eine Karte oder einen Text vom Hintergrund zu heben.</td><td>X- und Y-Versatz, Weichzeichnen, Farbe, Deckkraft.</td></tr>
+    <tr><td>Äußeres Glühen</td><td>Verbreitet weichen Farbhalos von der Kante des Objekts nach außen. Greifen Sie hierher für ein Neonzeichen, eine Hervorhebung oder ein Glühen um eine Lichtquelle.</td><td>Weichzeichnen, Farbe, Deckkraft.</td></tr>    <tr><td>Inneres Glühen</td><td>Lässt eine Farbe von der Kante nach innen verblassen statt nach außen, sodass das Licht innerhalb der Form sitzt. Verwenden Sie es, um eine Form auszuhöhlen oder einen eingesetzten, beleuchteten Rand zu suggerieren.</td><td>Weichzeichnen, Farbe, Deckkraft.</td></tr>    <tr><td>Feder</td><td>Lässt die eigene Kante des Objekts über einen Radius auf transparent verblassen. Verwenden Sie es für eine weichkantige Form oder eine einfache Vignette.</td><td>Federungsradius.</td></tr>
+    <tr><td>Runde Ecken</td><td>Rundet jede Ecke des Pfads auf einen Radius. Verwenden Sie es, um die Punkte eines Sterns, eines Polygons oder eines handgezeichneten Pfads zu glätten, ohne ihn neu zu zeichnen.</td><td>Radius.</td></tr>
+    <tr><td>Skizzenfüllung</td><td>Füllt die Form mit einer Hin-und-Her-Reihe von Strichen, als ob von Hand skizziert. Gut für eine lockere, eingezeichnete Füllung oder einen Marker-Look.</td><td>Winkel, Abstand, Konturstärke, Variation (wie sehr die Striche wandern, 0 bis 100%).</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-blur">Weichzeichnen</h2>
+<p><strong>Effekt &rsaquo; Weichzeichnen &rsaquo; Gaußscher Weichzeichner</strong> weicht das ganze Objekt um einen <em>Radius</em> aus, den Sie in Pixeln einstellen. Weil es live bleibt, können Sie den Radius jederzeit erhöhen oder verringern. Verwenden Sie es für einen weichen, unscharfen Hintergrund oder als schnelle weiche Schattenform für sich allein.</p>
+
+<h2 id="effects-distort">Verzeren und Transformieren</h2>
+<p>Das Untermenü <strong>Effekt &rsaquo; Verzeren &amp; Transformieren</strong> formt den Umriss um, während der zugrunde liegende Pfad bearbeitbar bleibt.</p>
+<table>
+  <thead><tr><th>Effekt</th><th>Was er macht, und wann</th><th>Hauptoptionen</th></tr></thead>
+  <tbody>
+    <tr><td>Freie Verzerrung</td><td>Zieht die vier Ecken des Rahmens des Objekts in einer kleinen Vorschau, und die Grafik folgt in Perspektive. Verwenden Sie es, um eine Perspektive vorzutäuschen, wie ein Etikett, das auf einer schrägen Fläche liegt. Ein Vorschau-Schalter zeigt das Ergebnis auf der Zeichenfläche, während Sie ziehen, und Zurücksetzen bringt die Ecken zurück aufrecht.</td><td>Die vier Eckgriffe, Vorschau, Zurücksetzen.</td></tr>
+    <tr><td>Zusammendrücken &amp; Aufblasen</td><td>Biegt die Segmente zwischen Ankerpunkten entweder nach innen, wobei der Umriss in Spitzen zusammendrückt, oder nach außen, wobei er in Wölbungen aufbläht. Verwenden Sie es für Sternexplosionen, Blasen und weiche Blütenblattformen.</td><td>Betrag, von zusammendrückend bis aufblasend.</td></tr>    <tr><td>Errauen</td><td>Zerbricht den Umriss in kleine zufällige Bewegungen, entweder scharf oder geglättet. Verwenden Sie es für eine zerrissene Papierkante oder eine rauere, handgezeichnete Linie.</td><td>Größe (wie weit Punkte sich bewegen), Detail (wie dicht), Punkte: Glatt oder Ecke.</td></tr>
+    <tr><td>Transformieren</td><td>Skaliert, bewegt und dreht das Objekt als Effekt und kann einen Satz von Kopien hinterlassen. Verwenden Sie es für eine bearbeitbare Reihe oder einen Ring von Wiederholungen oder um eine Form zu verschieben und zu skalieren, ohne ihre echte Geometrie zu berühren.</td><td>Horizontal und Vertikal skalieren, Horizontal und Vertikal bewegen, Drehen, Kopien (0 bis 200).</td></tr>
+    <tr><td>Tweak</td><td>Verschiebt Ankerpunkte und ihre Kontrollgriffe um einen zufälligen Betrag. Verwenden Sie es, um eine zu perfekte Form leicht aus dem Lot zu bringen.</td><td>Horizontaler und vertikaler Betrag, und ob Ankerpunkte, Kontrollpunkte oder beide bewegt werden.</td></tr>
+    <tr><td>Drehen</td><td>Dreht das Innere der Form mehr als seine Ränder, wobei es sie in einen Strudel windet. Verwenden Sie es für eine Spirale oder einen Strudel.</td><td>Winkel.</td></tr>
+    <tr><td>Zickzack</td><td>Verwandelt gerade Segmente in regelmäßige Zickzack (Ecke) oder Wellen (Glatt). Verwenden Sie es für eine Wellen-Unterstreichung, eine Zickzack-Border oder eine gezackte Kante.</td><td>Größe, Wellen pro Segment, Punkte: Ecke oder Glatt.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-path">Pfad</h2>
+<p>Das Untermenü <strong>Effekt &rsaquo; Pfad</strong> bearbeitet den Umriss des Objekts, während die Quelle bearbeitbar bleibt.</p>
+<table>
+  <thead><tr><th>Effekt</th><th>Was er macht, und wann</th><th>Hauptoptionen</th></tr></thead>
+  <tbody>
+    <tr><td>Pfad versetzen</td><td>Wächst oder schrumpft den Umriss um eine festgelegte Distanz. Ein positiver Versatz breitet ihn nach außen aus, ein negativer zieht ihn ein. Verwenden Sie es für eine live Kontur um Text oder eine Form, die mit Ihnen Schritt hält, während Sie bearbeiten.</td><td>Versatz, Verbindungen: Spitze, Rund oder Fase.</td></tr>
+    <tr><td>Objekt umreißen</td><td>Fügt einen Pfad versetzen-Effekt bei null ein, der das Objekt (live Text inklusive) in einen umrissenen Pfad verwandelt, sodass spätere Effekte einen echten Pfad haben, auf dem wirken können.</td><td>Keine.</td></tr>
+    <tr><td>Kontur umwandeln</td><td>Verwandelt die Kontur in eine gefüllte Form als Effekt. Verwenden Sie es, wenn Sie eine Kontur mit einem Verlauf füllen möchten oder eine Kontur federn oder verzerren, die sonst eine gewöhnliche Linie ist.</td><td>Keine.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-pathfinder">Formen kombinieren</h2>
+<p>Das Untermenü <strong>Effekt &rsaquo; Formen kombinieren</strong> kombiniert die Formen innerhalb einer Gruppe mit einem Formmodus, lässt sie aber als separate, bearbeitbare Pfade darunter. Wenden Sie es auf eine Gruppe an, und das kombinierte Ergebnis ist, was Sie sehen, während jedes Mitglied noch bewegt oder neu gefärbt werden kann. Verwenden Sie es, um eine Kombination auszuprobieren, ohne sich festzulegen, wie es das Formen kombinieren-Panel tun würde.</p>
+<table>
+  <thead><tr><th>Modus</th><th>Ergebnis</th></tr></thead>
+  <tbody>
+    <tr><td>Hinzufügen</td><td>Führt die Formen der Gruppe zu einer Region zusammen.</td></tr>
+    <tr><td>Schnittmenge</td><td>Behält nur, wo sich die Formen überlappen.</td></tr>
+    <tr><td>Ausschließen</td><td>Behält alles außer wo sie sich überlappen.</td></tr>
+    <tr><td>Abziehen</td><td>Entfernt die vorderen Formen von der hinteren.</td></tr>
+    <tr><td>Minus Hintergrund</td><td>Entfernt die hinteren Formen von der vorderen.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-warp">Verformen</h2>
+<p><strong>Effekt &rsaquo; Verformen</strong> biegt das Objekt entlang einer Reihe von voreingestellten Formen und bleibt live, sodass Sie die Grafik darunter weiter bearbeiten können. Verwenden Sie es, um eine Überschrift zu einem Bogen zu krümmen, einen Banner wellen zu lassen oder einen flachen Block in eine Wölbung zu drücken, ohne die Fähigkeit aufzugeben, die Wörter oder die Farben zu ändern.</p>
+<p>Das Menü bietet zehn Stile direkt (Bogen, Gewölbe, Wölbung, Flagge, Welle, Fisch, Anheben, Fischblase, Aufblasen und Zusammendrücken). <strong>Verformungsoptionen&#8230;</strong> öffnet den vollen Satz, der Bogen Unten, Bogen Oben, Schale Unten und Schale Oben hinzufügt, und lässt Sie den Betrag einstellen:</p>
+<dl>
+  <dt>Biegen</dt><td>Wie stark sich die Form biegt, von -100% bis 100%.</td></dd>
+  <dt>Horizontal</dt><td>Neigt die Biegung auf eine Seite, von -100% bis 100%.</td></dd>
+  <dt>Vertikal</dt><td>Neigt die Biegung nach oben oder unten, von -100% bis 100%.</td></dd>
+</dl>
+<p>Dieselben Verformungsstile können stattdessen als Umformungshülle angewendet werden, die den Pfad selbst ändert, statt live zu bleiben: Siehe <a href="#transform-envelope">Formverzerrung</a>. Das Verformungs-Werkzeug und die anderen Verflüssigungswerkzeuge formen durch Ziehen auf der Zeichenfläche und werden unter <a href="#tools-width-liquify">der Werkzeugreferenz</a> behandelt.</p>
+
+<h2 id="effects-3d">3D und Materialien</h2>
+<p><strong>Effekt &rsaquo; 3D und Materialien</strong> verwandelt eine flache Form in einen Festkörper: eine Fläche, eine Extrusion und Fase, eine Drehung oder eine Aufblähung. Wie die anderen ist es ein Live-Effekt, also bleibt der flache Pfad da, um bearbeitet zu werden, und der Festkörper baut sich neu, wenn Sie ihn ändern. Die Tiefe, Fase, Drehung, Beleuchtung und Oberfläche werden im 3D- und Materialien-Panel eingestellt. Weil es mehr Steuerelemente als ein einziger Dialog hat, hat 3D eine eigene Seite: Siehe <a href="/manual/de/three-d/">3D</a>.</p>
+
+<h2 id="effects-expand">Effekte in Grafik verwandeln</h2>
+<p>Ein Effekt bleibt live, so lange Sie ihn wollen. Wenn der Look feststeht und Sie das Ergebnis als gewöhnliche, bearbeitbare Pfade brauchen, zum Beispiel um die Datei weiterzugeben oder die Ausgabe des Effekts von Hand zu formen, wählen Sie <strong>Objekt &rsaquo; Erscheinung erweitern</strong>. Es backt den ganzen Erscheinungsbild-Stapel, Effekte inklusive, auf gewöhnliche Grafik. Dies kann danach nicht mehr als Effekt bearbeitet werden, also erst erweitern, wenn Sie sicher sind. Um Effekte zu entfernen, ohne etwas zu backen, entfernen Sie sie einzeln im Farbstapel-Panel oder löschen Sie sie alle mit <strong>Effekt &rsaquo; Effekte löschen</strong>.</p>
+<p>Das Effekt-Menü listet auch <strong>Rastern</strong>, das kein Live-Effekt ist: Es verwandelt die Auswahl in Pixel, da und dann. Malen und Pixel-Ebenen werden auf der <a href="/manual/de/pixels/">Pixel-Ebenen</a>-Seite behandelt.</p>

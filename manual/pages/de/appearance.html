@@ -1,0 +1,134 @@
+<p class="lede">Wie eine Form aussieht, ist ihr <em>Erscheinungsbild</em>: die Füllung innerhalb ihres Umrisses, die Kontur, die entlang gezeichnet wird, und die Deckkraft und der Füllmodus, die entscheiden, wie sie über dem sitzt, was dahinter liegt. Jede davon kann eine flache Farbe, ein Verlauf oder ein Muster sein, und ein Objekt kann mehr von jeder gleichzeitig tragen. Diese Seite behandelt die Mal-Steuerungen, die Farbmodelle, Muster, Verläufe, Konturen, Transparenz, das Farbstapel-Panel und Grafikstile.</p>
+
+<p>Die untenstehenden Kürzel sind in ihrer macOS-Form geschrieben. Unter Windows lesen Sie <kbd>&#8984;</kbd> als Strg, <kbd>&#8997;</kbd> als Alt und <kbd>&#8679;</kbd> als Umschalt.</p>
+
+<figure class="shot">
+  <img src="img/artwork-landscape.png" width="1700" height="967" loading="lazy"
+       alt="Eine Vektor-Landschaft aus Bergen, See und Himmel, gebaut aus flach gefüllten Formen in Scissor." />
+  <figcaption>Eine ganze Szene, gebaut aus gefüllten Formen. Jede Farbband ist ein Pfad mit eigener Füllung.</figcaption>
+</figure>
+
+<h2 id="appearance-fill-and-stroke">Füllungen und Konturen</h2>
+<p>Ein Pfad, eine Form oder ein Text können eine <strong>Füllung</strong>, die Farbe innerhalb ihres Umrisses, und eine <strong>Kontur</strong>, die Linie, die entlang dieses Umrisses gezeichnet wird, enthalten. Eine Füllung kann eine solide Farbe, ein Verlauf oder ein Muster sein; eine Kontur kann eine solide Farbe oder ein Verlauf sein, mit eigener Stärke und Strichmuster. Beide Seiten können auch auf keine gesetzt werden, sodass Sie eine Form nur mit Kontur oder nur mit Füllung zeichnen können.</p>
+
+<h3 id="appearance-the-paint-chips">Die Füll- und Kontur-Chips</h3>
+<p>Zwei überlappende Chips am Fuß der Werkzeugleiste halten die Füllung und die Kontur. Klicken Sie auf einen, um einen Farbwähler zu öffnen; der vordere ist die Seite, auf die die Tasten und die Farb-, Verlauf- und Muster-Panels wirken. Drücken Sie <kbd>X</kbd>, um die andere Seite nach vorne zu bringen, <kbd>&#8679;X</kbd>, um die beiden Farben zu vertauschen, <kbd>/</kbd>, um die vordere Seite auf keine zu setzen, und <kbd>D</kbd>, um zu den Standardwerten zurückzukehren: eine weiße Füllung, eine schwarze Kontur und eine 1-pt-Stärke. Dieselbe Füllung, Kontur, Stärke, Deckkraft und Füllmodus sitzen auch zusammen im Eigenschaften-Panel, was praktisch ist, wenn Sie alle an einem Ort wollen.</p>
+<p>Wenn nichts ausgewählt ist, stellen diese Steuerelemente den Stil ein, den das nächste Objekt, das Sie zeichnen, übernehmen wird, sodass Sie eine Farbe wählen können, bevor Sie zeichnen, statt danach.</p>
+
+<h3 id="appearance-eyedropper">Farbe mit der Pipette kopieren</h3>
+<p>Die Pipette (<kbd>I</kbd>) kopiert ein ganzes Erscheinungsbild vom Objekt, auf das Sie klicken, auf die Auswahl. Halten Sie <kbd>&#8679;</kbd>, um nur seine Füll- oder Konturfarbe auf die aktive Seite zu übernehmen, oder <kbd>&#8997;</kbd>, um stattdessen das Erscheinungsbild der Auswahl auf das Objekt unter dem Zeiger zu drücken. Das Klicken auf ein platziertes Bild oder eine Pixel-Ebene tastet die Farbe unter dem Zeiger auf die aktive Seite ab, sodass Sie eine Farbe direkt aus einem Foto heben können. Greifen Sie zur Pipette, wenn zwei Objekte übereinstimmen sollen: Nehmen Sie eine, und die andere übernimmt dieselbe Farbe mit einem Klick.</p>
+
+<h2 id="appearance-colour">Farbe</h2>
+<p>Farbe wird im kleinen Popup-Farbwähler auf jedem Chip gewählt oder, mit mehr Kontrolle, im Farb-Panel.</p>
+
+<h3 id="appearance-color-panel">Das Farb-Panel</h3>
+<p>Das <strong>Farb</strong>-Panel (<kbd>F6</kbd>) zeigt die Farbe der aktiven Seite als einen Satz Schieberegler, ein hexadezimales Feld und ein Spektrum. Füll- und Kontur-Chips oben wählen, welche Seite Sie bearbeiten. Das Spektrum verläuft Farbton quer, oben weiß und unten schwarz; klicken oder ziehen Sie darin, um zu wählen. Drei schnelle Muster daneben setzen Nichts, Weiß und Schwarz mit einem Klick, und die Schaltflächen <em>Invertieren</em> und <em>Komplement</em> bearbeiten die aktuelle Farbe neu (Komplement dreht ihren Farbton um die Hälfte, während er Sättigung und Helligkeit behält).</p>
+<p>Das Farbmodell-Menü legt fest, welche Schieberegler das Panel zeigt. Die Wahl wird für die Sitzung behalten, und neue Muster werden darin erstellt.</p>
+<dl>
+  <dt>Graustufen</dt><dd>Ein einzelner K-Schieberegler, von weiß bei 0% bis schwarz bei 100%.</dd>
+  <dt>RGB</dt><dd>Rot, Grün und Blau von 0 bis 255, das Modell für Bildschirmarbeit.</dd>
+  <dt>HSB</dt><dd>Farbton in Grad, dann Sättigung und Helligkeit als Prozente: oft der schnellste Weg, um eine Farbe zu verschieben, ohne ihren Charakter zu verlieren.</dd>
+  <dt>CMYK</dt><dd>Cyan, Magenta, Gelb und Schwarz als Prozente, für Druck.</dd>
+  <dt>Web-Safe RGB</dt><dd>RGB, eingefangen in die 216 web-sicheren Farben. Wenn die aktuelle Farbe keine davon ist, erscheint ein Warnsymbol; klicken Sie darauf, um auf die nächste web-sichere Farbe einzufangen.</dd>
+</dl>
+<p>Wenn die aktive Seite mit einem globalen Muster bemalt ist, erscheint über den Schiebereglern eine Tönungsreihe: Sie nennt das Muster und lässt Sie eine Tönung von 0% bis 100% einstellen, anstatt die Farbe direkt zu bearbeiten, sodass die Grafik mit dem Muster verbunden bleibt.</p>
+
+<h2 id="appearance-swatches">Muster und Farbgruppen</h2>
+<p>Ein Muster ist eine benannte Farbe, die mit dem Dokument gespeichert wird. Das Malen aus Mustern statt das Eingeben von Werten hält eine Palette konsistent und ermöglicht es bei globalen Mustern, ein ganzes Dokument neu zu färben, indem man eine Farbe bearbeitet.</p>
+
+<h3 id="appearance-swatches-panel">Das Muster-Panel</h3>
+<p>Das <strong>Muster</strong>-Panel (öffnen Sie es über <strong>Fenster &rsaquo; Muster</strong>) listet die Muster des Dokuments als Gitter oder als Liste; die Listenansicht zeigt auch das Farbmodell jedes Musters. Ein einfacher Klick malt die aktive Seite. <kbd>&#8679;</kbd>-Klick wählt eine Reihe von Mustern aus, und <kbd>&#8984;</kbd>-Klick fügt eines hinzu oder entfernt es aus der Auswahl, sodass Sie auf mehrere gleichzeitig wirken können. Der Fuß enthält Schaltflächen zum Wechseln der Ansicht, zum Öffnen des Panel-Menüs, zum Anzeigen von Musteroptionen, zum Erstellen einer Farbgruppe, zum Erstellen eines neuen Musters und zum Löschen des Gewählten.</p>
+<p>Das Panel-Menü fügt mehr hinzu: <em>Verwendete Farben hinzufügen</em> und <em>Ausgewählte Farben hinzufügen</em> verwandeln die Farben, die bereits im Dokument sind, oder nur in der Auswahl, in Muster; <em>Alle ungenutzten auswählen</em> wählt jedes Muster aus, das nichts bemalt, bereit zum Löschen; und <em>Farben neu zuordnen&#8230;</em> öffnet den unten beschriebenen Neufärbungsdialog.</p>
+
+<h3 id="appearance-process-spot-global">Prozess-, Sonder- und globale Muster</h3>
+<p>Doppelklicken Sie auf ein Muster für Musteroptionen, wo Sie festlegen, welche Art von Farbe es ist.</p>
+<dl>
+  <dt>Prozess</dt><dd>Eine gewöhnliche Farbe, gemischt für den Auftrag. Ein gewöhnliches Prozessmuster ist nur eine gespeicherte Farbe: Bearbeiten berührt keine Grafik, die bereits damit bemalt ist.</dd>
+  <dt>Global</dt><dd>Ein Prozessmuster, das als Global markiert ist, hält die Grafik mit ihm verbunden, sodass das Neufärben des Musters alles damit bemalt auf einmal neu färbt. Globale Muster können als Tönung angewendet werden.</dd>
+  <dt>Sonderfarbe</dt><dd>Eine benannte Tinte, die auf einer eigenen Platte gedruckt werden soll. Sonderfarben sind immer global.</dd>
+</dl>
+<p>Jedes Dokument beginnt auch mit einem festen <strong>[Registrierung]</strong>-Muster, das keinen eigenen Farbtyp hat und nicht gelöscht oder verschoben werden kann. Verwenden Sie ein globales oder Sondermuster, wenn eine Farbe oft vorkommt und sich ändern könnte: Eine Bearbeitung aktualisiert jedes Objekt, anstatt sie von Hand zu jagen.</p>
+
+<h3 id="appearance-colour-groups">Farbgruppen</h3>
+<p>Farbgruppen ordnen zusammengehörige Muster, wie eine Schattierungsfamilie oder die Palette eines Projekts. Ziehen Sie Muster auf eine Gruppe, um sie einzuordnen, oder wählen Sie einige aus und erstellen Sie daraus eine Gruppe mit der Schaltfläche „Neue Farbgruppe" im Panel. Doppelklicken Sie auf den Kopf einer Gruppe für ihre Optionen. Im Farbwähler auf jedem Chip zeigt jede Gruppe als eine Reihe, sodass eine Familie als eine Rampe von Schattierungen statt einer Wand von Chips gelesen wird.</p>
+
+<h2 id="appearance-gradients">Verläufe</h2>
+<p>Ein Verlauf mischt zwischen zwei oder mehr Farben. Scissor erstellt lineare, radiale und freiform-Verläufe, und entweder das Panel oder das On-Canvas-Werkzeug kann sie bauen und formen. Greifen Sie zu einem Verlauf, um einer flachen Form Tiefe zu geben, einem Hintergrund eine weiche Wäsche oder einem Button einen Glanz.</p>
+
+<h3 id="appearance-gradient-panel">Das Verlauf-Panel</h3>
+<p>Das <strong>Verlauf</strong>-Panel (<kbd>&#8984;F9</kbd>) steuert den ganzen Verlauf. Klicken Sie auf die Miniatur, um die aktive Seite zu füllen, wählen Sie Linear, Radial oder Freiform aus dem Typmenü, und verwenden Sie die Umkehr-Schaltfläche, um die Rampe Ende für Ende zu drehen. Die Rampe selbst trägt die Stopps: Klicken Sie darauf, um einen Stopp in der Farbe hinzuzufügen, die dort bereits ist, ziehen Sie einen Stopp, um ihn zu bewegen, und ziehen Sie eine Raute zwischen zwei Stopps, um zu verschieben, wo sich die beiden Farben treffen. Der ausgewählte Stopp hat eigenes Farbmuster, ein <em>Deckkraft</em>-Feld und ein <em>Position</em>-Feld, und <em>Stopp löschen</em> entfernt ihn. <em>Winkel</em> dreht einen linearen oder radialen Verlauf, und <em>Aspekt</em> (nur radial) drückt einen radialen Verlauf in eine Ellipse.</p>
+<figure class="shot">
+  <img src="img/gradient.gif" width="340" height="340" loading="lazy"
+       alt="Ein abgerundetes Quadrat, gefüllt mit einem blau-bernstein linearen Verlauf, dessen Richtung sich herumdreht." />
+  <figcaption>Ein linearer Verlauf von Blau zu Bernstein. Das Ziehen der Verlaufsachse oder das Ändern seines Winkels dreht die Mischung um die Form.</figcaption>
+</figure>
+
+<h3 id="appearance-gradient-tool">Das Verlaufs-Werkzeug</h3>
+<p>Mit dem Verlaufs-Werkzeug (<kbd>G</kbd>) sitzen dieselben Steuerelemente auf der Grafik. Ziehen Sie über ein Objekt, um die Achse zu legen, halten Sie <kbd>&#8679;</kbd>, um sie auf 45&deg;-Schritte zu halten. Die Achse zeigt einen runden Knopf am Anfang und einen quadratischen Knopf am Ende; ziehen Sie einen, um dieses Ende zu bewegen. Klicken Sie auf die Achse, um einen Stopp in der Farbe hinzuzufügen, die dort bereits ist, ziehen Sie einen Stopp entlang, und ziehen Sie einen Stopp weit von der Achse, um ihn wegzuwerfen. Ziehen Sie eine Raute, um den Mittelpunkt zu bewegen. <kbd>Entf</kbd> entfernt den Stopp, den Sie zuletzt berührt haben.</p>
+
+<h3 id="appearance-freeform">Freiform-Verläufe</h3>
+<p>Ein Freiform-Verlauf platziert Farbpunkte überall auf der Form statt entlang einer Achse, sodass die Mischung der Form der Grafik folgen kann. Mit dem Verlaufs-Werkzeug klicken Sie auf die Grafik, um einen Farbpunkt zu setzen, ziehen Sie einen, um ihn zu bewegen, und drücken Sie <kbd>Entf</kbd>, um ihn wegzunehmen. Aktivieren Sie <em>Punkte in Linien verbinden</em> im Panel, um die Punkte in Linien zu verbinden, was eine Farbe entlang einer Reihe statt von einem einzelnen Punkt aus verteilt. Verwenden Sie einen Freiform-Verlauf für weiche, organische Schattierungen, die eine gerade Rampe nicht geben kann.</p>
+
+<h2 id="appearance-patterns">Muster</h2>
+<p>Ein Muster ist Grafik, die als Kachel wiederholt wird und als Füllung verwendet wird. Verwandeln Sie eine Auswahl in eine Kachel mit <strong>Objekt &rsaquo; Muster &rsaquo; Erstellen</strong>, dann füllen Sie jede Form damit aus dem <strong>Muster</strong>-Panel: Klicken Sie auf eine Kachel zum Füllen, doppelklicken Sie, um sie zu bearbeiten, und <kbd>&#8997;</kbd>-Klick, um sie zu löschen. <em>Kacheleinstellungen</strong> legen den Kacheltyp, den Ziegelversatz, die Größe und den Abstand fest und ob die Kachel mit der Grafik skaliert und bewegt wird. <strong>Muster bearbeiten</strong> öffnet die Kachel an Ort und Stelle, wobei ihre Kopien sich während der Arbeit wiederholen; klicken Sie auf <em>Bearbeitung beenden</em> im Muster-Panel, wenn die Kachel stimmt. Muster eignen sich für sich wiederholende Texturen, wie Streifen, Punkte, Webarten und Hintergründe, die mühsam von Hand zu zeichnen wären.</p>
+
+<h2 id="appearance-strokes">Konturen</h2>
+<p>Das <strong>Kontur</strong>-Panel (<kbd>&#8984;F10</kbd>) formt die Linie, die entlang eines Pfads gezeichnet wird.</p>
+
+<h3 id="appearance-stroke-options">Stärke, Enden, Verbindungen und Ausrichtung</h3>
+<p><em>Stärke</em> legt die Dicke der Kontur in Punkten fest. Die <em>Ende</em>-Schaltflächen entscheiden, wie ein offener Pfad endet: Stumpf (quadratisch am Anker abgeschnitten), Rund oder Vorspringend (quadratisch, aber um die Hälfte der Stärke über den Anker hinaus). Die <em>Ecke</em>-Schaltflächen entscheiden, wie eine Kontur eine Ecke dreht: Spitze (eine scharfe Spitze), Rund oder Fase (ein flacher Schnitt), mit einer Spitzen<em>Begrenzung</em>, die die schärfsten Punkte abschneidet, sodass sie nicht auswachsen. <em>Ausrichtung</em> platziert die Kontur auf der Mitte des Pfads oder vollständig innerhalb oder außerhalb, was wichtig ist, wenn eine Form sich genau an ihre Nachbarn anschließen muss.</p>
+
+<h3 id="appearance-dashes">Gestrichelte Linien</h3>
+<p>Aktivieren Sie <em>Gestrichelte Linie</em>, um die Kontur in Striche zu brechen. Die drei Strich-Lücken-Paare darunter legen das Muster fest: Das erste Feld ist eine Strichlänge, das nächste eine Lücke und so weiter, wiederholend um den Pfad. Lassen Sie spätere Paare leer für einen einfachen gleichmäßigen Strich.</p>
+
+<h3 id="appearance-width-profiles">Breitenprofile und das Breiten-Werkzeug</h3>
+<p>Ein Breitenprofil verjüngt die Kontur entlang ihrer Länge, statt sie auf eine Stärke zu halten. Wählen Sie ein Profil aus dem Menü des Panels, und eine kleine Vorschau zeigt die Form, die es macht; die Schaltflächen daneben laufen das Profil in die andere Richtung, speichern die aktuelle Kontur als neues Profil oder löschen ein von Ihnen erstelltes Profil. Eine Kontur, die Sie von Hand geformt haben, zeigt als <em>Benutzerdefiniert</em> im Menü.</p>
+<p>Das Breiten-Werkzeug (<kbd>&#8679;W</kbd>) formt eine Kontur direkt auf der Zeichenfläche: Ziehen Sie vom Pfad weg, um ihn an dieser Stelle zu breiten, oder auf ihn zu, um ihn zu verengen, wobei ein Breitenpunkt zurückbleibt, den Sie später wieder ziehen können. Verwenden Sie es, um einer gezeichneten Linie die Wölbung und Verjüngung eines Pinsels oder einer Feder zu geben.</p>
+
+<h3 id="appearance-brushes">Pinsel</h3>
+<p>Das <strong>Pinsel</strong>-Panel (<kbd>F5</kbd>) malt Konturen mit einer Form statt einer gewöhnlichen Linie. Es enthält kalligrafische, Streu-, Kunst-, Borsten- und Musterpinsel. Klicken Sie auf einen Pinsel, um ihn auf die ausgewählten Pfade anzuwenden; der Malpinsel verwendet den jeweils aktuellen Pinsel. Doppelklicken Sie auf einen Pinsel für seine Optionen, verwenden Sie <em>Neuer Pinsel&#8230;</em>, um einen zu erstellen (Streu-, Kunst- und Musterpinsel werden aus ausgewählter Grafik erstellt), und <em>Pinsel entfernen</em>, um eine Kontur auf eine gewöhnliche Linie zurückzusetzen.</p>
+
+<h2 id="appearance-opacity-blending">Deckkraft und Füllmodi</h2>
+<p>Deckkraft und Füllmodus entscheiden, wie ein Objekt sich mit dem verbindet, was darunter liegt. Sie sitzen im <strong>Transparenz</strong>-Panel (<kbd>&#8679;&#8984;F10</kbd>) und auch im Eigenschaften-Panel.</p>
+
+<h3 id="appearance-blend-modes">Die Füllmodi</h3>
+<p>Die Deckkraft läuft von 0% (unsichtbar) bis 100% (solide). Das Modus-Menü bietet sechzehn Füllmodi, die in Gruppen fallen: Modi, die verdunkeln, Modi, die aufhellen, Kontrastmodi, Vergleichsmodi und die vier, die einen Teil einer Farbe entleihen.</p>
+<table>
+  <thead><tr><th>Modus</th><th>Was er macht</th></tr></thead>
+  <tbody>
+    <tr><td>Normal</td><td>Malt über dem, was darunter ist, ohne Mischung.</td></tr>
+    <tr><td>Verdunkeln</td><td>Behält jeweils die dunklere Farbe, Kanal für Kanal.</td></tr>
+    <tr><td>Multiplizieren</td><td>Multipliziert die zwei Farben, immer verdunkelnd; Weiß lässt die Basis unverändert.</td></tr>
+    <tr><td>Farbe nachbelichten</td><td>Verdunkelt die Basis, um die Mischfarbe zu übernehmen.</td></tr>
+    <tr><td>Aufhellen</td><td>Behält jeweils die hellere Farbe.</td></tr>
+    <tr><td>Negativ multiplizieren</td><td>Die Umkehrung von Multiplizieren, immer aufhellend; Schwarz lässt die Basis unverändert.</td></tr>
+    <tr><td>Farbe abwedeln</td><td>Hellt die Basis auf, um die Mischfarbe zu übernehmen.</td></tr>
+    <tr><td>Ineinanderkopieren</td><td>Multipliziert oder negativ multipliziert je nach Basis, erhöht den Kontrast.</td></tr>
+    <tr><td>Weiches Licht</td><td>Ein sanftes Abwedeln oder Nachbelichten, als ob ein weiches Licht auf die Grafik schiene.</td></tr>
+    <tr><td>Hartes Licht</td><td>Multipliziert oder negativ multipliziert je nach Mischfarbe, wie ein hartes Scheinwerferlicht.</td></tr>
+    <tr><td>Differenz</td><td>Zieht die dunklere Farbe von der helleren ab; Weiß kehrt die Basis um, Schwarz hat keine Wirkung.</td></tr>
+    <tr><td>Ausschließen</td><td>Wie Differenz, aber weicher und mit geringerem Kontrast.</td></tr>
+    <tr><td>Farbton</td><td>Der Farbton der Mischung mit Sättigung und Helligkeit der Basis.</td></tr>
+    <tr><td>Sättigung</td><td>Die Sättigung der Mischung mit Farbton und Helligkeit der Basis.</td></tr>
+    <tr><td>Farbe</td><td>Der Farbton und die Sättigung der Mischung mit der Helligkeit der Basis: gut zum Einfärben von Graustufengrafik.</td></tr>
+    <tr><td>Luminanz</td><td>Die Helligkeit der Mischung mit Farbton und Sättigung der Basis.</td></tr>
+  </tbody>
+</table>
+<p>Für eine Gruppe ändern zwei Schalter, wie sie sich mischen. <em>Füllung auf Gruppe beschränken</em> hält die Modi der Gruppe innerhalb ihrer selbst, sodass ihre Mitglieder miteinander sich mischen, nicht mit der Grafik hinter der Gruppe. <em>Durchschlaggruppe</em> lässt jedes Mitglied die unter ihm verbergen, statt durch sie hindurchzuscheinen.</p>
+
+<h3 id="appearance-opacity-masks">Deckkraftmasken</h3>
+<p>Eine Deckkraftmaske lässt Grafik nach Ton verblassen. Wählen Sie die Grafik und darüber die Form, mit der maskiert werden soll, dann klicken Sie auf <em>Maske erstellen</em> (auch <strong>Objekt &rsaquo; Clipping-Maske &rsaquo; Deckkraftmaske erstellen</strong>). Das oberste Objekt wird zur Maske: Wo es hell ist, zeigt die Grafik, und wo es dunkel ist, verblasst sie, sodass ein Weiß-zu-Schwarz-Verlauf einen sanften Übergang macht. <em>Freigeben</em> gibt die zwei Objekte zurück. Verwenden Sie eine Maske für eine weiche Kante oder eine Vignette, die ein harter Schnitt nicht kann.</p>
+
+<h2 id="appearance-appearance-panel">Das Farbstapel-Panel</h2>
+<p>Das <strong>Farbstapel</strong>-Panel (<kbd>&#8679;F6</kbd>) listet alles, was auf ein Objekt gemalt ist: seine Füllungen und seine Konturen, mit allen Live-Effekten darüber. Weil ein Objekt mehrere Füllungen und Konturen enthalten kann, ist dies, wo Sie sie stapeln, zum Beispiel eine breite dunkle Kontur unter einer dünnen hellen, um einen Umriss zu machen, oder zwei Füllungen mit unterschiedlichen Deckkraften.</p>
+<p>Der Stapel wird von oben gezeichnet, passend zur Reihenfolge, in der er malt. Jede Füllungs- oder Konturzeile hat ein Auge, um sie zu verbergen, einen Farbchip, der den Farbwähler öffnet, ein Deckkraftfeld, ein Stärkefeld für Konturen und Pfeile, um sie im Stapel nach oben oder unten zu bewegen, plus eine Schaltfläche, um sie zu entfernen. <em>Füllung hinzufügen</em> und <em>Kontur hinzufügen</em> setzen eine weitere oben drauf. Effekte erscheinen über den Füllungen und Konturen mit einem <em>fx</em>-Abzeichen; klicken Sie auf einen Effekt, um seine Optionen zu bearbeiten, oder entfernen Sie ihn von seiner Zeile. Wenn das gestaffelte Aussehen fertig ist, backt <strong>Objekt &rsaquo; Erscheinung erweitern</strong> den ganzen Stapel auf gewöhnliche Grafik.</p>
+
+<h2 id="appearance-graphic-styles">Grafikstile</h2>
+<p>Ein Grafikstil ist ein gespeichertes Erscheinungsbild, das Sie auf andere Objekte anwenden können. Das <strong>Grafikstile</strong>-Panel (<kbd>&#8679;F5</kbd>) hält sie als Chips, von denen jeder seine Füllung mit seiner Kontur als Chip-Rand zeigt. Wählen Sie ein Objekt und klicken Sie auf <em>Neuer Stil</em>, um seine Füllungen und Konturen zu speichern; klicken Sie auf einen Chip, um diesen Stil auf die Auswahl anzuwenden, und <kbd>&#8997;</kbd>-Klick auf einen Chip, um ihn zu löschen. Stile sind es wert, erstellt zu werden, wenn derselbe Look, wie eine Haus-Button-Behandlung oder ein Label-Stil, auf vielen Objekten erscheinen und konsistent bleiben muss.</p>
+
+<h2 id="appearance-overprint">Überdrucken</h2>
+<p>Das <strong>Attribute</strong>-Panel (<kbd>&#8984;F11</kbd>) legt das Überdrucken für Druckarbeit fest. <em>Füllung überdrucken</em> und <em>Kontur überdrucken</em> lassen diese Farbe über den Farben darunter drucken, statt sie auszustreichen, was für Fangschritte und Effekte wie Schwarz verwendet wird, das darüber druckt, statt zu ersetzen, was darunter ist. Aktivieren Sie <strong>Ansicht &rsaquo; Überdruckenvorschau</strong>, um es auf dem Bildschirm zu sehen; PDF-Export behält die Einstellung.</p>
+
+<h2 id="appearance-recolour">Grafik neu färben</h2>
+<p><strong>Bearbeiten &rsaquo; Farben bearbeiten &rsaquo; Farben neu zuordnen&#8230;</strong> listet jede Farbe in der Auswahl mit der Häufigkeit ihres Gebrauchs. Klicken Sie auf den Chip rechts von einer Zeile, um zu wählen, was diese Farbe wird, oder auf den Pfeil zwischen den zwei Chips, um diese Farbe in Ruhe zu lassen. Farbton-, Sättigungs- und Helligkeitsschieberegler verschieben den ganzen Satz zusammen, und zwei Schaltflächen ordnen die neuen Farben zufällig neu oder randomisieren ihre Sättigung und Helligkeit, was ein schneller Weg ist, Varianten zu probieren. Die Grafik aktualisiert sich während Sie arbeiten, und <em>Zurücksetzen</em> kehrt zu den Farben zurück, mit denen sie begann.</p>
+<p>Dasselbe Untermenü bietet auch Ein-Schritt-Änderungen: <em>Vordergrund zu Hintergrund mischen</em> verteilt eine Reihe von Farben zwischen den Vorder- und Hintergrundobjekten, <em>In Graustufen umwandeln</em> lässt alle Farben fallen, <em>Farben invertieren</em> kehrt jede um, und <em>Sättigen&#8230;</em> erhöht oder verringert die Sättigung über die Auswahl.</p>

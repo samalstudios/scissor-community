@@ -1,0 +1,91 @@
+<p class="lede">Les symboles, les pinceaux et les motifs sont trois façons de dessiner une illustration une fois et de la réutiliser. Modifiez l'original et chaque utilisation change avec lui, donc un élément répété reste cohérent et rapide à mettre à jour.</p>
+
+<p>Les raccourcis ci-dessous sont écrits sous leur forme macOS. Sur Windows, lisez <kbd>&#8984;</kbd> comme <kbd>Ctrl</kbd>, <kbd>&#8997;</kbd> comme <kbd>Alt</kbd> et <kbd>&#8679;</kbd> comme <kbd>Maj</kbd>.</p>
+
+<h2 id="symbols-panel">Le panneau Symboles</h2>
+<p>Un symbole est une illustration enregistrée que vous pouvez déposer dans le document un nombre illimité de fois. Chaque copie est une <em>instance</em> : elle pointe vers la définition unique plutôt que de contenir sa propre illustration, donc le document reste petit quel que soit le nombre d'instances que vous placez, et un changement de la définition les atteint toutes à la fois. Utilisez les symboles lorsque le même élément revient, comme un arbre dans un paysage, une épingle sur une carte, un boulon dans un dessin d'ensemble, ou un logo qui apparaît sur plusieurs plans.</p>
+<p>Ouvrez le panneau avec <strong>Fenêtre &gt; Symboles</strong> (<kbd>&#8679;&#8984;F11</kbd>), ou depuis son onglet dans le dock de panneaux. Il liste les symboles du document par nom. Cliquer sur un nom le sélectionne comme symbole actif, celui que le Scatter de symboles dépose ; le symbole actif est mis en surbrillance.</p>
+
+<h3 id="symbols-make">Créer un symbole</h3>
+<p>Sélectionnez l'illustration que vous voulez réutiliser et cliquez sur <strong>Nouveau symbole</strong>. La sélection est stockée comme définition du symbole et, à sa place sur le canevas, est remplacée par une seule instance posée exactement là où l'illustration se trouvait. La définition est conservée hors du chemin, donc elle ne encombre ni le canevas ni les calques ordinaires. Si vous ne nommez rien, le symbole s'appelle <code>Symbole 1</code>, <code>Symbole 2</code> et ainsi de suite, dans l'ordre où vous les créez.</p>
+
+<h3 id="symbols-place">Placer des instances</h3>
+<p>Double-cliquez sur un symbole dans le panneau pour déposer une instance fraîche au centre de la vue actuelle. Placez-en autant que vous avez besoin. Une instance se comporte comme n'importe quel autre objet une fois sur le canevas : sélectionnez-la et vous pouvez la déplacer, la mettre à l'échelle, la faire pivoter ou la refléter, et définir son opacité et sa fusion, sans toucher la définition, parce que ces changements chevauchent l'instance elle-même. Utilisez cela pour varier la taille et l'angle de pièces répétées tout en les gardant liées au même maître.</p>
+
+<h3 id="symbols-edit">Modifier un symbole</h3>
+<p>Double-cliquez sur une instance sur le canevas avec l'outil Sélection (<kbd>V</kbd>) pour entrer dans la définition. Tout le reste sur la page s'estompe, et vous modifiez l'illustration seule. Double-cliquez sur une partie vide du canevas pour ressortir. Parce que chaque instance dessine la même définition, la modification que vous faites apparaît dans toutes ensemble. C'est le but d'un symbole : corrigez l'illustration une fois et tout le document se rattrape, plutôt que de chasser chaque copie.</p>
+
+<h3 id="symbols-break">Rompre le lien</h3>
+<p>Lorsqu'une instance doit différer des autres d'une manière qui va au-delà de la position, de la taille ou de l'opacité, sélectionnez-la et cliquez sur <strong>Rompre le lien</strong>. L'instance est remplacée par une copie ordinaire et modifiable de la définition, de la même taille et du même angle, non plus liée au symbole. Les changements du symbole ne l'atteindront plus. Le bouton n'est disponible que pendant qu'une instance de symbole est sélectionnée.</p>
+<p>Pour supprimer entièrement un symbole, maintenez <kbd>&#8997;</kbd> et cliquez sur son nom dans le panneau. Sa définition et chaque instance sont supprimées, puisqu'une instance sans définition ne dessinerait rien.</p>
+
+<h2 id="symbols-symbolism">Les outils de symbolisme</h2>
+<p>Les outils de symbolisme dispersent et ajustent des instances de symboles par poignées, sous une brosse ronde, plutôt qu'une à la fois. Ils partagent un seul emplacement dans la barre d'outils ; maintenez l'emplacement pour choisir parmi eux. Ils agissent sur les instances dans la sélection, ou sur chaque instance modifiable du document lorsque rien n'est sélectionné, de sorte que vous pouvez diriger tout un champ de symboles à la fois. Maintenez <kbd>&#8997;</kbd> pour inverser l'effet de l'un d'eux.</p>
+<p>Pendant qu'un outil de symbolisme est actif, <kbd>[</kbd> et <kbd>]</kbd> rendent la brosse plus petite et plus grande, et <kbd>{</kbd> et <kbd>}</kbd> diminuent et augmentent son intensité (à quel point chaque passage travaille).</p>
+<table>
+<thead><tr><th>Outil</th><th>Raccourci</th><th>Ce qu'il fait</th></tr></thead>
+<tbody>
+<tr><td>Scatter de symboles</td><td><kbd>&#8679;S</kbd></td><td>Glissez pour déposer des instances du symbole actif, espacées pendant que vous vous déplacez ; les instances se rassemblent dans un seul groupe <em>Ensemble de symboles</em>. Maintenez <kbd>&#8997;</kbd> pour retirer des instances sous la brosse</td></tr>
+<tr><td>Poussée de symboles</td><td></td><td>Pousse les instances dans la direction où vous glissez, de sorte que vous puissiez ranger un scatter sans déplacer chaque pièce</td></tr>
+<tr><td>Regroupement de symboles</td><td></td><td>Rassemble les instances vers la brosse ; <kbd>&#8997;</kbd> les écarte</td></tr>
+<tr><td>Redimensionnement de symboles</td><td></td><td>Agrandit les instances sous la brosse ; <kbd>&#8997;</kbd> les rétrécit</td></tr>
+<tr><td>Rotation de symboles</td><td></td><td>Fait pivoter les instances pour suivre la direction de votre glisser</td></tr>
+<tr><td>Teinte de symboles</td><td></td><td>Teint les instances vers la couleur de fond actuelle, pour la variation à travers un groupe ; <kbd>&#8997;</kbd> retire la teinte</td></tr>
+<tr><td>Fondu de symboles</td><td></td><td>Estompe les instances en diminuant leur opacité ; <kbd>&#8997;</kbd> les ramène</td></tr>
+<tr><td>Restylage de symboles</td><td></td><td>Applique le style graphique choisi dans le panneau Styles graphiques aux instances ; <kbd>&#8997;</kbd> l'efface</td></tr>
+</tbody>
+</table>
+<p>Trois outils ont besoin de quelque chose configuré d'abord. Le Scatter de symboles a besoin d'un symbole à vaporiser, alors créez-en un dans le panneau Symboles avant de commencer. Le Restylage de symboles applique le style graphique choisi dans le panneau Styles graphiques, alors choisissez-y un style d'abord ; la Teinte de symboles utilise de même la couleur de fond actuelle, alors définissez le fond avant de teinter.</p>
+
+<h2 id="symbols-brushes">Le panneau Pinceaux</h2>
+<p>Un pinceau décide comment un contour est dessiné le long d'un tracé. Au lieu d'une simple ligne d'épaisseur régulière, le tracé peut porter un contour de plume, une traînée d'illustrations dispersées, une forme étirée de bout en bout, ou une bande tuilée. Le tracé reste entièrement modifiable en dessous : remodeler et le contour brossé suit. Ouvrez le panneau avec <strong>Fenêtre &gt; Pinceaux</strong> (<kbd>F5</kbd>), ou depuis son onglet dans le dock de panneaux. Chaque pinceau affiche un petit aperçu à côté de son nom.</p>
+
+<h3 id="symbols-brush-kinds">Types de pinceau</h3>
+<p>Scissor a cinq types de pinceau. Deux sont dessinés à partir de quelques nombres, et trois sont construits à partir d'une illustration que vous sélectionnez.</p>
+<dl>
+  <dt>Calligraphique</dt>
+  <dd>Une plume ovale inclinée qui s'épaissit et s'affine pendant que le tracé tourne, comme une plume large. Définissez son Angle, sa Rondeur et sa Taille en points. Utilisez-la pour les traits de lettrage, les signatures et toute ligne censée sembler dessinée à la main.</dd>
+  <dt>Poils</dt>
+  <dd>Un groupe de traits fins qui se lit comme un pinceau chargé. Définissez la Taille en points, le nombre de Poils et l'Opacité de peinture pour que les passages qui se chevauchent s'accumulent. Utilisez-la lorsque vous voulez un bord doux et pictural plutôt qu'un bord net.</dd>
+  <dt>Dispersion</dt>
+  <dd>Éparpille des copies de l'illustration sélectionnée le long du tracé. Définissez la Taille des copies, l'Espacement entre elles, à quel point elles se Dispersent loin de la ligne, et leur Rotation, avec des options pour faire pivoter chaque copie par rapport au tracé et pour la recolorer avec la couleur de contour. Utilisez-la pour les confettis, les feuilles, les étoiles ou les bulles qui traînent une courbe.</dd>
+  <dt>Artiste</dt>
+  <dd>Étire une illustration sélectionnée sur toute la longueur du tracé. Définissez sa Largeur, avec une option pour la recolorer avec la couleur de contour. Utilisez-la pour un trait d'encre effilé, un ruban, une flèche ou une marque de charbon rugueuse qui se courbe avec la ligne.</dd>
+  <dt>Motif</dt>
+  <dd>Tuile l'illustration sélectionnée de bout en bout le long du tracé, comme une bordure décorative. Définissez l'Échelle et l'Espacement, avec une option pour la recolorer avec la couleur de contour. Utilisez-la pour la chaîne, la corde, la couture ou un cadre répétitif.</dd>
+</dl>
+
+<h3 id="symbols-brush-apply">Appliquer et retirer un pinceau</h3>
+<p>Sélectionnez un ou plusieurs tracés et cliquez sur un pinceau pour dessiner leurs contours avec celui-ci. Un tracé sans contour visible en reçoit un pour que le pinceau ait une ligne le long de laquelle courir. L'outil Pinceau (<kbd>B</kbd>) dessine de nouveaux traits avec le pinceau actuellement choisi, alors choisissez un pinceau et peignez directement sur le canevas. Pour retirer un pinceau des contours sélectionnés et les ramener à des lignes simples, cliquez sur <strong>Supprimer le pinceau</strong>.</p>
+
+<h3 id="symbols-brush-manage">Créer, modifier et supprimer des pinceaux</h3>
+<p>Cliquez sur <strong>Nouveau pinceau…</strong>, choisissez l'un des cinq types, et définissez ses options. Pour un pinceau de dispersion, artiste ou motif, sélectionnez l'illustration qu'il doit utiliser avant d'ouvrir la boîte de dialogue, puisque cette illustration devient le pinceau. Pour modifier un pinceau plus tard, sélectionnez-le et cliquez sur <strong>Options…</strong> (ou double-cliquez dessus dans la liste) ; tout contour utilisant celui-ci se redessine avec les nouveaux réglages. <strong>Supprimer</strong> retire le pinceau sélectionné, après demande de confirmation ; les contours qui l'utilisaient reviennent à des lignes simples.</p>
+
+<h2 id="symbols-patterns">Le panneau Motifs</h2>
+<p>Un motif est une tuile d'illustration qui se répète pour remplir une forme. Définissez la tuile une fois et vous pouvez la verser dans n'importe quel objet comme fond, donc une texture ou un motif reste uniforme à travers l'illustration et se met à jour partout lorsque vous modifiez la tuile. Le panneau se trouve dans le dock de panneaux, et les mêmes commandes vivent sous <strong>Objet &gt; Motif</strong>.</p>
+
+<h3 id="symbols-pattern-make">Créer un motif</h3>
+<p>Sélectionnez l'illustration pour une tuile et cliquez sur <strong>Créer un motif</strong> (ou <strong>Objet &gt; Motif &gt; Créer</strong>). Une copie de l'illustration est stockée comme tuile répétitive et ajoutée au panneau ; l'illustration que vous avez dessinée reste où elle est. Les motifs sont nommés <code>Motif 1</code>, <code>Motif 2</code> et ainsi de mesure que vous les créez.</p>
+
+<h3 id="symbols-pattern-fill">Remplir avec un motif</h3>
+<p>Sélectionnez une forme et cliquez sur un motif dans le panneau pour le définir comme fond de la forme. Sans rien de sélectionné, cliquer sur un motif en fait la couleur de fond pour la prochaine forme que vous dessinez. Parce que c'est un fond, le motif se répète pour couvrir la forme et est rogné à son contour. Utilisez cela pour les arrière-plans, les tissus, le feuillage, ou toute surface qui doit se lire comme une répétition plutôt qu'une couleur plate. Pour retirer un motif du document, maintenez <kbd>&#8997;</kbd> et cliquez dessus dans le panneau ; les formes qui étaient remplies avec celui-ci reviennent à aucun fond.</p>
+
+<h3 id="symbols-pattern-edit">Modifier la tuile</h3>
+<p>Double-cliquez sur un motif dans le panneau pour modifier sa tuile. Le reste de l'illustration s'estompe et vous travaillez sur la tuile seule, avec un bouton <strong>Terminer la modification</strong> dans le panneau ; cliquez dessus (ou utilisez <strong>Objet &gt; Motif &gt; Modifier le motif</strong> à nouveau) lorsque vous avez terminé. Chaque forme remplie avec le motif se met à jour pour correspondre. Vous pouvez également commencer à modifier en sélectionnant une forme remplie avec un motif et en choisissant <strong>Modifier le motif</strong>.</p>
+
+<h3 id="symbols-pattern-options">Options de tuile</h3>
+<p>Cliquez sur le bouton d'options de tuile à côté d'un motif (ou <strong>Objet &gt; Motif &gt; Options de tuile…</strong>) pour contrôler comment la tuile se répète. Ces réglages changent la disposition de la répétition sans changer l'illustration dans la tuile.</p>
+<dl>
+  <dt>Type de tuile</dt>
+  <dd>Comment les rangées et colonnes s'alignent : Grille, Brique par rangée, Brique par colonne, Hex par colonne ou Hex par rangée. Brique décale les rangées ou colonnes alternées comme une maçonnerie ; hex empile les tuiles en nid d'abeille.</dd>
+  <dt>Décalage de brique</dt>
+  <dd>Pour les types brique, à quel point chaque rangée ou colonne alternée est décalée, en pourcentage de la tuile.</dd>
+  <dt>Ajuster la tuile à l'illustration</dt>
+  <dd>Ajuste la tuile aux limites de l'illustration. Désactivez-la pour définir vous-même la Largeur et la Hauteur de la tuile.</dd>
+  <dt>Largeur et hauteur</dt>
+  <dd>La taille de la tuile en pixels, utilisée lorsque la tuile n'est pas ajustée à l'illustration.</dd>
+  <dt>Espacement horizontal et vertical</dt>
+  <dd>Écarts laissés entre les tuiles, en pixels. Les valeurs positives espacent le motif ; les valeurs négatives chevauchent les tuiles.</dd>
+  <dt>Déplacer la tuile avec l'illustration</dt>
+  <dd>Garde la tuile alignée sur l'illustration lorsqu'elle se déplace, donc la répétition voyage avec l'objet.</dd>
+</dl>

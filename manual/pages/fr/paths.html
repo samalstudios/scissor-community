@@ -1,0 +1,153 @@
+<p class="lede">Chaque objet vectoriel dans Scissor est construit à partir de tracés : une chaîne de points d'ancrage reliés par des segments droits ou courbes. Cette page couvre comment les dessiner, les remodeler point par point, et les commandes qui les joignent, les décalent, les contourent et les combinent.</p>
+
+<p>Les raccourcis sont écrits sous leur forme macOS. Sur Windows, lisez <kbd>&#8984;</kbd> comme Ctrl, <kbd>&#8997;</kbd> comme Alt et <kbd>&#8679;</kbd> comme Maj.</p>
+
+<h2 id="paths-anchors-and-handles">Points d'ancrage, poignées et forme d'un tracé</h2>
+<p>Un tracé est une série de points d'ancrage. Entre deux points d'ancrage voisins se trouve un segment, qui est droit lorsqu'aucun des deux points d'ancrage ne s'étire vers lui et courbe lorsque l'un ou les deux s'étirent. L'étirement d'un point d'ancrage est défini par ses deux poignées de direction : la poignée entrante façonne le segment arrivant au point d'ancrage, et la poignée sortante façonne le segment le quittant. Glissez une poignée plus loin et la courbe se renfle plus fortement vers elle. Un tracé peut être ouvert, avec deux extrémités libres, ou fermé, où le dernier point d'ancrage rejoint le premier.</p>
+
+<h3 id="paths-corner-and-smooth">Points de coin et points lisses</h3>
+<p>Un point d'ancrage est soit un coin, soit un point lisse. À un point lisse, les deux poignées sont verrouillées en ligne droite à travers le point d'ancrage, de sorte que la courbe passe sans cassure et reste continue. À un point de coin, les deux côtés sont indépendants : le tracé peut changer de direction brusquement, et un côté peut être droit pendant que l'autre est courbe. La plupart des formes mélangent les deux, des points lisses le long des parties fluides et des points de coin là où un bord tourne.</p>
+<dl>
+  <dt>Point lisse</dt>
+  <dd>Poignées liées ensemble en ligne. Utilisez ceux-ci le long d'une courbe qui doit se lire comme un balayage continu, comme le côté d'une feuille ou la cuvette d'une lettre.</dd>
+  <dt>Point de coin</dt>
+  <dd>Poignées qui se déplacent séparément, ou un point sans poignées du tout. Utilisez ceux-ci à la pointe d'une étoile, au coin d'une boîte, ou partout où une courbe doit rencontrer un bord droit.</dd>
+</dl>
+
+<h3 id="paths-direct-selection">Points d'ancrage, poignées et outil Sélection directe</h3>
+<p>L'outil Sélection directe (<kbd>A</kbd>) travaille sur les parties d'un tracé. Cliquez sur un point d'ancrage pour le sélectionner, <kbd>&#8679;</kbd>-cliquez pour en ajouter ou en retirer un, ou glissez un cadre de sélection sur l'espace vide pour attraper chaque point d'ancrage à l'intérieur. Glisser des points d'ancrage sélectionnés les déplace ; <kbd>&#8679;</kbd> limite le déplacement à des pas de 45&deg;. Utilisez-le chaque fois qu'une forme est presque correcte et que seuls un ou deux points doivent être ajustés.</p>
+<p>Glissez une poignée pour changer la courbe de son côté. Les poignées appartenant à un point d'ancrage lisse se déplacent ensemble, de sorte que la courbe reste continue ; maintenez <kbd>&#8997;</kbd> en glissant pour rompre ce lien et diriger un côté seul, et <kbd>&#8679;</kbd> pour limiter la poignée à un angle. Vous pouvez également glisser un segment lui-même : un segment courbe se courbe sous le pointeur, et un segment droit emporte ses deux points d'ancrage avec lui.</p>
+<p>L'outil Sélection de groupe partage cet emplacement et choisit des objets entiers dans un groupe plutôt que des points d'ancrage. Cliquez une fois pour l'objet le plus interne, cliquez à nouveau pour sortir vers le groupe qui l'entoure.</p>
+
+<h2 id="paths-drawing">Outils de dessin</h2>
+<p>Scissor a trois outils pour créer un tracé à partir de zéro. La Plume donne un contrôle exact point par point, l'outil Courbure ajuste une courbe lisse à travers les points que vous placez, et le Crayon suit librement votre main.</p>
+<table>
+  <thead><tr><th>Outil</th><th>Raccourci</th><th>Idéal pour</th></tr></thead>
+  <tbody>
+    <tr><td>Plume</td><td><kbd>P</kbd></td><td>Contours précis où chaque point d'ancrage et poignée est placé délibérément.</td></tr>
+    <tr><td>Courbure</td><td><kbd>&#8679;~</kbd></td><td>Courbes fluides définies par quelques points de passage, sans manipulation de poignées.</td></tr>
+    <tr><td>Crayon</td><td><kbd>N</kbd></td><td>Formes lâches dessinées à la main et esquisses rapides.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="paths-pen">L'outil Plume</h3>
+<p>L'outil Plume (<kbd>P</kbd>) construit un tracé point par point. Cliquez pour déposer un point d'ancrage de coin ; appuyez et glissez à la place et le point d'ancrage garde des poignées, de sorte que le tracé le quitte comme une courbe. Maintenez <kbd>&#8679;</kbd> en glissant pour limiter la poignée à des pas de 45&deg;, et maintenez <kbd>&#8997;</kbd> pour ne déplacer que la poignée sortante, ce qui transforme le point d'ancrage en coin et libère le segment suivant du précédent.</p>
+<p>Pendant qu'un tracé est ouvert, l'outil change lorsque vous le déplacez dessus. Sur le premier point d'ancrage, il ferme le tracé ; sur un segment, il ajoute un point d'ancrage ; sur un point d'ancrage existant, il en retire un. Sans tracé en cours, se déplacer sur l'extrémité libre d'un tracé ouvert reprend ce tracé pour que vous continuiez à dessiner depuis celui-ci. <kbd>Entrée</kbd> ou <kbd>Échap</kbd> termine le tracé et le laisse ouvert ; <kbd>Suppr</kbd> retire le dernier point d'ancrage placé.</p>
+
+<h3 id="paths-curvature">L'outil Courbure</h3>
+<p>L'outil Courbure (<kbd>&#8679;~</kbd>) ajuste une courbe lisse à travers les points sur lesquels vous cliquez, avec un aperçu suivant le pointeur pendant que vous avancez. <kbd>&#8997;</kbd>-cliquez pour déposer un point de coin plutôt qu'un point lisse, et double-cliquez sur n'importe quel point pour le faire passer de l'un à l'autre. Glissez un point pour le déplacer et la courbe se réajuste. Cliquez sur le premier point pour fermer la forme, ou appuyez sur <kbd>Entrée</kbd> pour terminer. <kbd>Suppr</kbd> retire le dernier point et <kbd>Échap</kbd> abandonne le tracé. Utilisez-le lorsque vous vous souciez plus de la forme de la courbe que des points d'ancrage exacts, puisqu'il calcule les poignées pour vous.</p>
+
+<h3 id="paths-pencil">L'outil Crayon</h3>
+<p>L'outil Crayon (<kbd>N</kbd>) dessine à main levée : appuyez, dessinez et relâchez, et Scissor ajuste un tracé lisse à travers la trace. Relâchez près de l'endroit où vous avez commencé, ou maintenez <kbd>&#8997;</kbd> en terminant, et le tracé se ferme en une forme. Le résultat est un tracé ouvert contouré dans la couleur de contour actuelle, de sorte qu'il est prêt à être conservé comme ligne ou à être rempli. La fidélité avec laquelle le tracé ajusté épouse votre mouvement est définie par la préférence Fidélité du crayon, de « précise », qui conserve plus de points d'ancrage et chaque oscillation, à « lisse », qui utilise moins de points d'ancrage et défroisse la ligne. Utilisez-le pour esquisser, signer et toute forme qui doit sembler dessinée à la main plutôt que construite.</p>
+
+<h2 id="paths-editing-points">Modifier les points d'un tracé</h2>
+
+<h3 id="paths-add-remove-convert">Ajouter, supprimer et convertir des points</h3>
+<p>La Plume partage son emplacement de barre d'outils avec l'Outil Ajout de point d'ancrage (<kbd>+</kbd>), l'Outil Suppression de point d'ancrage (<kbd>&#8722;</kbd>) et l'outil Point d'ancrage (<kbd>&#8679;C</kbd>). L'Ajout de point d'ancrage dépose un nouveau point sur un segment sans changer la courbe ; la Suppression de point d'ancrage retire le point sur lequel vous cliquez et laisse le tracé combler l'écart. Avec l'outil Point d'ancrage, glissez depuis un point d'ancrage de coin pour en tirer une paire de poignées assorties, le rendant lisse ; glissez une poignée seule pour séparer la paire de sorte que les deux côtés se déplacent séparément, le rendant à nouveau coin ; et cliquez sur un point d'ancrage lisse pour lui retirer ses poignées en un coin net.</p>
+<p>Objet &rsaquo; Tracé a les mêmes modifications en tant que commandes qui travaillent sur toute la sélection à la fois. Ajouter des points d'ancrage place un nouveau point d'ancrage au milieu de chaque segment, doublant le nombre de points sans changer la forme, ce qui est pratique avant une déformation ou un gauchissement qui a besoin de plus de points pour se courber proprement. Supprimer des points d'ancrage retire les points d'ancrage que vous avez sélectionnés avec l'outil Sélection directe et réajuste le tracé à travers ce qui reste.</p>
+
+<h3 id="paths-reshape-tools">Remodeler à la main : outils Lissage, Gomme de tracé et Jonction</h3>
+<p>Trois outils de type brosse remodelent un tracé là où vous glissez plutôt qu'à un point d'ancrage unique. Ils agissent sur les tracés sélectionnés, ou sur n'importe quel tracé sous la brosse lorsque rien n'est sélectionné, et <kbd>[</kbd> et <kbd>]</kbd> rétrécissent et agrandissent la brosse.</p>
+<dl>
+  <dt>Outil Lissage</dt>
+  <dd>Glissez le long d'un tracé pour le détendre, en éclaircissant les points d'ancrage et en adoucissant les bosses. Utilisez-le pour calmer une ligne de crayon tremblante ou un bord vectorisé.</dd>
+  <dt>Outil Gomme de tracé</dt>
+  <dd>Glissez le long d'un tracé pour effacer la partie que vous traversez, le divisant ou le raccourcissant. Utilisez-le pour rogner une queue parasite sur une ligne.</dd>
+  <dt>Outil Jonction</dt>
+  <dd>Frottez sur deux extrémités ouvertes et elles sont jointes, étendant ou rognant les tracés pour se rencontrer proprement à un coin. Utilisez-le pour combler un écart là où deux traits auraient dû se rencontrer.</dd>
+</dl>
+
+<h3 id="paths-cutting">Couper un tracé : Ciseaux et Couteau</h3>
+<p>L'outil Ciseaux (<kbd>C</kbd>) coupe à un seul endroit. Cliquez sur un segment ou un point d'ancrage et le tracé est divisé à cet endroit : un tracé fermé s'ouvre à la coupe, et un tracé ouvert se divise en deux objets séparés. Utilisez-le pour découper une ouverture dans un cercle, ou pour diviser une forme pour que les moitiés puissent être stylisées différemment.</p>
+<p>Le Couteau tranche droit à travers une illustration. Glissez la lame sur un objet pour le couper en pièces séparées le long de la ligne tracée ; maintenez <kbd>&#8997;</kbd> pour couper en ligne droite, et ajoutez <kbd>&#8679;</kbd> pour limiter cette ligne à des pas de 45&deg;. Avec quelque chose de sélectionné, seuls les objets sélectionnés sont coupés ; sinon tout ce que la lame traverse l'est. Utilisez-le pour scinder une forme pleine en plusieurs pièces fermées d'un seul trait.</p>
+
+<h2 id="paths-commands">Commandes de tracé</h2>
+<p>Objet &rsaquo; Tracé rassemble les opérations qui agissent sur des tracés entiers à la fois.</p>
+<table>
+  <thead><tr><th>Commande</th><th>Raccourci</th><th>Ce qu'elle fait</th></tr></thead>
+  <tbody>
+    <tr><td>Jonction</td><td><kbd>&#8984;J</kbd></td><td>Relie des extrémités ouvertes en un seul tracé, ou ferme un seul tracé ouvert.</td></tr>
+    <tr><td>Moyenne&hellip;</td><td><kbd>&#8997;&#8984;J</kbd></td><td>Déplace les points d'ancrage sélectionnés vers leur position commune.</td></tr>
+    <tr><td>Contour du contour</td><td></td><td>Transforme un contour en une forme remplie du même contour.</td></tr>
+    <tr><td>Décalage du tracé&hellip;</td><td></td><td>Crée une copie agrandie ou rétrécie d'une distance définie.</td></tr>
+    <tr><td>Inverser la direction du tracé</td><td></td><td>Inverse le sens dans lequel le tracé s'écoule.</td></tr>
+    <tr><td>Simplifier&hellip;</td><td></td><td>Réduit le nombre de points d'ancrage.</td></tr>
+    <tr><td>Ajouter des points d'ancrage</td><td></td><td>Ajoute un point au milieu de chaque segment.</td></tr>
+    <tr><td>Supprimer des points d'ancrage</td><td></td><td>Supprime les points d'ancrage sélectionnés.</td></tr>
+    <tr><td>Diviser en grille&hellip;</td><td></td><td>Coupe la sélection en une grille de rangées et de colonnes.</td></tr>
+    <tr><td>Nettoyer&hellip;</td><td></td><td>Supprime les points errants, les objets non peints et les textes vides.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="paths-join-average">Jonction et moyenne</h3>
+<p>Jonction (<kbd>&#8984;J</kbd>) fonctionne sur des tracés ouverts. Avec deux tracés ouverts séparés sélectionnés, elle relie leurs extrémités les plus proches en un seul tracé ; avec un seul tracé ouvert, elle joint les deux extrémités libres pour le fermer. Les extrémités qui se trouvent déjà l'une sur l'autre sont fusionnées en un seul point d'ancrage. Utilisez-la pour fermer une forme que vous avez dessinée comme contour ouvert, ou pour coudre deux traits à moitié dessinés ensemble.</p>
+<p>Moyenne (<kbd>&#8997;&#8984;J</kbd>) déplace les points d'ancrage sélectionnés vers leur position moyenne partagée. La boîte de dialogue propose l'axe horizontal, qui aligne les points à une hauteur commune ; l'axe vertical, qui les aligne en colonne ; ou les deux, qui les empilent tous au même endroit. Utilisez-la pour niveler une rangée de points ou pour rapprocher deux extrémités avant de les joindre.</p>
+
+<h3 id="paths-simplify">Simplifier</h3>
+<p>Simplifier redessine les tracés sélectionnés avec moins de points d'ancrage, en restant dans une précision que vous définissez : une précision plus stricte reste proche de l'original au prix de plus de points, une plus lâche lisse la forme jusqu'à une poignée. Utilisez-le pour nettoyer un tracé vectorisé ou dessiné à la main qui porte beaucoup plus de points que la forme n'en nécessite, ce qui le rend plus léger à éditer et à rendre.</p>
+
+<h3 id="paths-offset">Décalage du tracé</h3>
+<p>Décalage du tracé construit un nouveau tracé à une distance définie de l'original : un décalage positif agrandit le contour vers l'extérieur et se place derrière l'original, un décalage négatif le rétrécit vers l'intérieur et se place devant. Le réglage Jonctions décide comment les coins sortants sont traités, comme un bec pointu (Miter), arrondi (Round) ou aplati (Bevel), avec une limite de bec qui plafonne la longueur d'un coin pointu avant qu'il ne soit rogné. Utilisez-le pour dessiner une bordure régulière autour d'une forme, pour insérer une forme pour un filet, ou pour épaissir une forme fine. Décalage du tracé est également disponible sous Effet &rsaquo; Tracé comme un effet en direct qui recalcule lorsque la forme change.</p>
+
+<h3 id="paths-outline-stroke">Contour du contour</h3>
+<p>Contour du contour remplace un tracé contouré par une forme remplie qui a exactement le contour du contour. Une fois contourné, la largeur ne se met plus à l'échelle avec l'objet et ne peut pas être modifiée comme contour, mais le contour peut être remodelé point par point, rempli d'un dégradé ou combiné avec d'autres formes. Utilisez-le lorsque vous avez besoin que le contour se comporte comme une illustration : pour donner à une ligne un bord effilé ou varié que vous ajustez ensuite à la main, ou pour maintenir les graisseurs de ligne d'un design fixes lorsqu'il est mis à l'échelle. Il est également disponible comme effet en direct, sous Effet &rsaquo; Tracé.</p>
+
+<h3 id="paths-reverse">Inverser la direction du tracé</h3>
+<p>Inverser la direction du tracé inverse l'ordre dans lequel les points d'ancrage s'écoulent, de sorte que le tracé parcourt l'autre sens. La direction se montre rarement d'elle-même, mais elle décide quel contour est le trou dans un tracé composé et où une pinceau ou une pointe de flèche commence et finit. Utilisez-la lorsqu'un trou dans un tracé composé se remplit en plein, ou lorsque le texte sur un tracé ou le début et la fin d'un contour se trouvent du mauvais côté.</p>
+
+<h2 id="paths-live-shapes">Formes modifiables et leurs widgets</h2>
+<p>Les rectangles, rectangles arrondis, ellipses et polygones restent dynamiques : ils conservent leurs paramètres et reconstruisent leur tracé chaque fois que vous en changez un. Pendant que vous glissez une forme, <kbd>&#8679;</kbd; la rend régulière et <kbd>&#8997;</kbd> la dessine depuis le centre. Les flèches fonctionnent aussi pendant le glisser, haut et droite ajoutent, bas et gauche soustrayent, changeant les côtés d'un polygone, les pointes d'une étoile ou le rayon des coins d'un rectangle arrondi.</p>
+<p>Sélectionnez une seule forme dynamique et de petites poignées rondes apparaissent juste à l'intérieur de ses coins ; elles sont masquées lorsque la forme est trop petite à l'écran pour les montrer clairement. Glissez-en une avec l'outil Sélection (<kbd>V</kbd>) pour arrondir tous les coins à la fois, ou avec la Sélection directe pour n'arrondir que le coin que vous tenez. <kbd>&#8997;</kbd>-cliquez sur une poignée de coin pour la faire passer par arrondi, inversé et chanfrein, là encore les quatre coins avec l'outil Sélection, un coin avec la Sélection directe.</p>
+<p>Une ellipse affiche une poignée carrée à la place : une sur une ellipse entière, et une à chaque extrémité de la part une fois que vous en avez ouvert une. Glissez-en une pour ouvrir un secteur hors de la forme, avec <kbd>&#8679;</kbd> alignant l'angle sur des pas de 15&deg; ; ramener l'extrémité vers le départ restaure l'ellipse entière. Le panneau Propriétés contient les mêmes valeurs en nombres : rayon et type de coin, rayons par coin, côtés du polygone, et début et fin de part en degrés. Une forme dynamique conserve ces contrôles jusqu'à ce que vous modifiiez son tracé directement, ce qui le transforme en tracé ordinaire.</p>
+
+<h2 id="paths-combining">Combiner des formes : Fusion et séparation et Combinaison de formes</h2>
+<p>Lorsque deux formes ou plus se chevauchent, vous voulez souvent une seule nouvelle forme : une union, un trou, ou la pièce où elles se croisent. Scissor offre deux façons d'y parvenir. La Fusion et séparation est directe et visuelle ; le panneau Combinaison de formes applique les mêmes opérations sous forme de boutons. Les deux conservent les courbes plutôt que de les aplatir en segments de droite.</p>
+
+<h3 id="paths-shape-builder">L'outil Fusion et séparation</h3>
+<p>L'outil Fusion et séparation (<kbd>&#8679;M</kbd>) fonctionne sur deux tracés sélectionnés ou plus. Il divise leurs chevauchements en régions et met en surbrillance celle sur laquelle se trouve le pointeur ; glissez une ligne à travers plusieurs régions pour les fusionner en un seul objet, qui prend l'apparence de la forme dont il provient, ou <kbd>&#8997;</kbd>-glissez à travers elles pour les supprimer. Utilisez-le pour construire une forme à l'œil, en ajoutant les parties que vous voulez et en effaçant celles que vous ne voulez pas, sans vous arrêter pour choisir une commande à chaque étape.</p>
+
+<h3 id="paths-pathfinder-shape-modes">Modes de forme de Combinaison de formes</h3>
+<p>Le panneau Combinaison de formes (<kbd>&#8679;&#8984;F9</kbd>) s'ouvre avec quatre modes de forme, chacun remplaçant les tracés sélectionnés par un seul tracé combiné. Le résultat prend l'apparence de l'objet du dessus, sauf pour Moins devant, qui conserve l'apparence de celui du dessous.</p>
+<dl>
+  <dt>Unir</dt>
+  <dd>Fusionne chaque forme sélectionnée en un seul contour. Utilisez-le pour souder des pièces qui se chevauchent en une seule silhouette, comme un nuage à partir d'une rangée de cercles.</dd>
+  <dt>Moins devant</dt>
+  <dd>Conserve la forme la plus en arrière et découpe tout ce qui est empilé devant elle. Utilisez-le pour mordre un morceau dans une forme, comme scinder un croissant de lune de deux cercles.</dd>
+  <dt>Intersection</dt>
+  <dd>Conserve uniquement la zone que chaque forme sélectionnée partage. Utilisez-il pour rogner une illustration à une région commune, comme la lentille où deux cercles se croisent.</dd>
+  <dt>Exclusion</dt>
+  <dd>Conserve tout sauf les chevauchements, qui deviennent des trous. Utilisez-il pour faire un anneau, ou un maillon de chaîne, où les parties qui se croisent disparaissent.</dd>
+</dl>
+
+<figure class="shot">
+  <img src="img/combine.gif" width="760" height="441" loading="lazy"
+       alt="Trois formes qui se chevauchent, un cercle, un carré arrondi et un cercle, fusionnant en une seule silhouette combinée." />
+  <figcaption>Unir (ou un glisser avec la Fusion et séparation) fusionne des formes qui se chevauchent en un seul contour qui conserve ses courbes.</figcaption>
+</figure>
+
+<h3 id="paths-pathfinders">Les autres opérations de Combinaison de formes</h3>
+<p>Sous les modes de forme se trouvent six pathfinders. Ceux-ci vous laissent plusieurs pièces, rassemblées en groupe, plutôt qu'un seul tracé combiné. Moins derrière correspond à son homonyme en mode de forme mais conserve la forme du dessus.</p>
+<dl>
+  <dt>Diviser</dt>
+  <dd>Coupe les formes en faces séparées le long de chaque ligne qu'elles croisent, chaque face prenant la couleur de la forme du dessus qui la couvre. Utilisez-le pour diviser un design en pièces peintes, comme les cellules d'un vitrail.</dd>
+  <dt>Rognage</dt>
+  <dd>Supprime la partie cachée de chaque forme là où une forme au-dessus la couvre. Chaque pièce conserve son propre fond et rien n'est fusionné ; les contours sont supprimés. Utilisez-le pour aplanir des illustrations empilées à couleurs plates pour qu'aucune couleur ne s'imprime sur une autre.</dd>
+  <dt>Fusionner</dt>
+  <dd>Rogne les parties cachées, puis unit les pièces voisines qui partagent une couleur de fond. Utilisez-il pour ranger une illustration à couleurs plates, en joignant les régions de même couleur en formes uniques.</dd>
+  <dt>Découper</dt>
+  <dd>Conserve uniquement les parties des formes inférieures qui tombent dans la forme la plus en avant, qui est ensuite écartée. Utilisez-il pour rogner une illustration à un cadre et intégrer le recadrage aux tracés, plutôt que de garder un masque de découpe en direct.</dd>
+  <dt>Moins derrière</dt>
+  <dd>Conserve la forme la plus en avant et découpe tout ce qui se trouve derrière elle. Utilisez-il lorsque la forme du dessus est celle à conserver et que les formes en dessous doivent y sculpter.</dd>
+  <dt>Contour</dt>
+  <dd>Transforme chaque limite de région en ligne ouverte, contourée dans la couleur de fond dont elle provient. Utilisez-il pour extraire le squelette des bords d'un ensemble de formes qui se chevauchent.</dd>
+</dl>
+<p>Effet &rsaquo; Combinaison de formes applique Ajouter, Intersection, Exclusion, Soustraction et Moins derrière comme effets en direct sur un groupe à la place, laissant les objets intacts et modifiables en dessous. Utilisez les versions d'effet lorsque vous pourrez encore vouloir déplacer les pièces plus tard ; utilisez le panneau lorsque la forme combinée est définitive.</p>
+
+<h2 id="paths-compound-and-masks">Tracés composés et masques de découpe</h2>
+<p>Objet &rsaquo; Tracé composé &rsaquo; Créer (<kbd>&#8984;8</kbd>) replie les tracés sélectionnés en un seul objet rempli par la règle pair-impair, de sorte qu'un contour intérieur découpe un trou à travers celui qui l'entoure. Le résultat prend l'apparence de l'objet le plus bas dans la sélection. Libérer (<kbd>&#8997;&#8679;&#8984;8</kbd>) rend chaque contour comme un tracé à part entière. Utilisez un tracé composé pour toute forme avec un trou, comme le contre de la lettre O ou une rondelle.</p>
+<p>Objet &rsaquo; Masque de découpe &rsaquo; Créer (<kbd>&#8984;7</kbd>) utilise l'objet sélectionné le plus en avant, qui doit être un tracé, pour rogner tout ce qui se trouve en dessous. Scissor les met tous dans un groupe de découpe et efface le fond et le contour du tracé de masque lui-même. Libérer (<kbd>&#8997;&#8984;7</kbd>) transforme le groupe de découpe en groupe ordinaire, de sorte que rien n'est plus rogné et que chaque objet, le tracé de masque inclus, reste où il était. Créer un masque d'opacité dans le même sous-menu masque par tonalité plutôt que par contour, de sorte que les parties plus claires du masque apparaissent et les parties plus sombres se cachent.</p>
+
+<h2 id="paths-smart-guides">Repères intelligents et aimantation</h2>
+<p>Les repères intelligents (Affichage &rsaquo; Repères intelligents, <kbd>&#8984;U</kbd>) surveillent l'illustration visible et les plans pendant que vous dessinez ou glissez. Ce que vous déplacez s'aimante aux bords, centres et points d'ancrage de ses voisins, et une ligne revient à ce avec quoi il s'est aligné, étiquetée avec le type de correspondance : point d'ancrage, centre, coin ou alignement.</p>
+<p>Deux autres repères apparaissent d'eux-mêmes. Lorsque l'objet que vous déplacez se trouverait à la même distance de ses voisins qu'ils le sont les uns des autres, il s'aimante là et les deux espaces égaux sont dessinés avec la mesure affichée ; cela fonctionne aussi bien pour continuer une série d'objets régulièrement espacés que pour centrer un objet dans l'écart entre deux. Et lorsque vous glissez loin d'un point de départ, la direction s'aimante sur une ligne de construction tous les 45&deg; à partir de l'angle de contrainte, dessinée comme une longue ligne avec l'angle à côté.</p>
+<p>Vers le point (<kbd>&#8997;&#8984;'</kbd>) et Vers la grille (<kbd>&#8679;&#8984;'</kbd>) sont des interrupteurs séparés dans le menu Affichage. Avec Vers la grille activé, tout atterrit sur la subdivision de grille et les repères intelligents s'écartent.</p>

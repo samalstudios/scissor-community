@@ -1,0 +1,110 @@
+<p class="lede">Le texte dans Scissor reste en direct. Vous pouvez rééditer les mots, la police et l'espacement à tout moment, et le texte est dessiné directement sur le canevas pendant que vous tapez, de sorte que ce que vous modifiez est ce qui s'imprime et s'exporte.</p>
+
+<p>Les raccourcis ci-dessous sont écrits sous leur forme macOS. Sur Windows, lisez <kbd>&#8984;</kbd> comme <kbd>Ctrl</kbd>, <kbd>&#8997;</kbd> comme <kbd>Alt</kbd> et <kbd>&#8679;</kbd> comme <kbd>Maj</kbd>.</p>
+
+<h2 id="type-tools">Les outils de texte</h2>
+<p>Les outils de texte partagent un seul emplacement dans la barre d'outils. Choisissez l'emplacement et maintenez pour choisir parmi eux, puis travaillez sur le canevas.</p>
+<table>
+<thead><tr><th>Outil</th><th>Raccourci</th><th>Ce qu'il fait</th></tr></thead>
+<tbody>
+<tr><td>Outil Texte</td><td><kbd>T</kbd></td><td>Cliquez pour du texte ponctuel, glissez pour un cadre rectangulaire de texte en zone</td></tr>
+<tr><td>Outil Texte en zone</td><td></td><td>Glissez un cadre et tapez dedans</td></tr>
+<tr><td>Outil Texte sur tracé</td><td></td><td>Cliquez sur un tracé pour y faire courir le texte</td></tr>
+<tr><td>Outil Texte vertical</td><td></td><td>Place des caractères droits en colonnes</td></tr>
+<tr><td>Outil Édition de glyphe</td><td><kbd>&#8679;T</kbd></td><td>Déplace, redimensionne et fait pivoter un caractère à la fois</td></tr>
+</tbody>
+</table>
+<p>Pour modifier du texte déjà sur la page, cliquez dessus avec l'un des outils de texte sauf l'Édition de glyphe pour y placer le curseur, ou double-cliquez dessus avec l'outil Sélection (<kbd>V</kbd>). Appuyez sur <kbd>Échap</kbd>, ou cliquez ailleurs, pour arrêter la modification. Avec l'outil Texte simple, cliquer sur un tracé ouvert y attache du texte plutôt que de commencer un nouveau bloc, de sorte que vous n'avez pas toujours besoin de saisir l'outil Texte sur tracé dédié.</p>
+
+<h2 id="type-kinds">Texte ponctuel, en zone et sur tracé</h2>
+<p>Le texte peut se trouver dans le document de trois façons, et la différence réside dans la façon dont les lignes sont mesurées et où elles se cassent. Les trois restent modifiables, acceptent les mêmes réglages Caractère et Paragraphe, et peuvent être transformés en contours plus tard.</p>
+
+<h3 id="type-point">Texte ponctuel</h3>
+<p>Cliquez une fois avec l'outil Texte et tapez. Le texte grandit depuis ce point unique et ne se casse que là où vous appuyez sur <kbd>Entrée</kbd> : il n'y a pas de cadre contre lequel s'enrouler. Utilisez le texte ponctuel pour les titres, les étiquettes, quelques mots de texte de présentation, ou tout ce que vous positionnerez à l'œil plutôt que de verser dans une colonne. Ses retraits et espacements de paragraphe n'ont rien contre quoi mesurer, donc ces contrôles n'ont aucun effet sur le texte ponctuel ; l'alignement est pris depuis l'ancrage sur lequel vous avez cliqué.</p>
+
+<h3 id="type-area">Texte en zone</h3>
+<p>Glissez un rectangle avec l'outil Texte ou l'outil Texte en zone et le texte s'enroule pour s'adapter au cadre, cassant les lignes automatiquement au bord droit. Utilisez le texte en zone pour le corps de texte, les légendes, ou toute série de texte qui doit rester dans une largeur définie. Lorsqu'il y a plus de texte que le cadre ne peut en contenir, le surplus est masqué et le cadre est marqué comme débordant ; agrandissez le cadre, réduisez le texte, ou faites couler le débordement dans un autre cadre (voir ci-dessous). Les retraits, le retrait de première ligne, l'espace avant et après et la césure s'appliquent tous au texte en zone.</p>
+
+<h3 id="type-on-a-path">Texte sur tracé</h3>
+<p>Cliquez sur un tracé avec l'outil Texte sur tracé. Le tracé devient la ligne de base et cesse d'être une illustration à part entière, de sorte qu'il n'est plus rempli ni contouré. Utilisez-le pour faire courir une étiquette autour d'un badge, le long d'une courbe, ou au-dessus d'une forme. Sélectionnez le résultat et trois crochets apparaissent : un au début, un à la fin et un au milieu. Glissez le crochet de début ou de fin pour déplacer où le texte commence et finit le long du tracé, glissez le crochet du milieu pour faire glisser toute la série le long de celui-ci, et glissez le crochet du milieu à travers vers l'autre côté du tracé pour retourner le texte. Le texte sur tracé n'accepte pas de sauts de ligne, donc <kbd>Entrée</kbd> ne fait rien pendant que vous le modifiez. Remodeler le tracé sous-jacent et le texte suit ses nouveaux courbes.</p>
+<figure class="shot">
+  <img src="img/type-on-path.png" width="1700" height="798" loading="lazy"
+       alt="Les mots « Le texte suit n'importe quel tracé que vous dessinez » suivant les courbes d'un tracé ondulé dans Scissor." />
+  <figcaption>Du texte posé sur un tracé ondulé. Remodeler le tracé et le texte suit ses courbes ; la ligne de base est ici affichée en pointillés.</figcaption>
+</figure>
+
+<h2 id="type-character">Le panneau Caractère</h2>
+<p>Le panneau Caractère (<kbd>&#8984;T</kbd>, ou <strong>Fenêtre &gt; Texte &gt; Caractère</strong>) contient tout ce qui s'applique aux lettres elles-mêmes. Avec un objet texte sélectionné, ses réglages couvrent l'objet entier : changez la police ou le crénage et chaque caractère suit. Pendant la frappe, la police, la graisse, l'italique et la taille ne s'appliquent qu'aux caractères sélectionnés (voir <a href="#type-mixed">Styles mixtes dans un texte</a>). Le panneau se grise jusqu'à ce que vous modifiiez du texte ou ayez un objet texte sélectionné.</p>
+
+<h3 id="type-font">Police, graisse, style et taille</h3>
+<p>Le menu de police est recherchable et conserve les familles que vous avez utilisées récemment en haut. Il liste les polices que votre navigateur peut réellement dessiner, lues depuis le système là où il les rapporte et sinon sondées à partir d'un ensemble de familles courantes, de sorte que la liste correspond à ce qui s'affichera plutôt qu'à un catalogue fixe.</p>
+<p>Le menu de graisse propose Light, Regular, Medium, Semibold, Bold et Heavy, mais seules les graisses que la famille choisie possède réellement sont sélectionnables : les autres sont estompées. Le bouton d'italique à côté active et désactive le style incliné. La taille est définie en pixels, depuis le champ Taille.</p>
+
+<h3 id="type-mixed">Styles mixtes dans un texte</h3>
+<p>Un texte peut mélanger des tailles, des couleurs, des graisses et des italiques. Pendant la frappe, sélectionnez des caractères et modifiez-les depuis la barre rapide à côté du texte, la barre d'options ou le panneau Couleur. Seuls les caractères sélectionnés changent, et le reste du texte conserve son propre style. Sans rien de sélectionné, le changement s'applique à tout le texte comme d'habitude. Les styles se déplacent avec leurs caractères pendant que vous continuez à taper, et ils sont conservés dans les exports SVG et PDF.</p>
+
+<h3 id="type-metrics">Interligne, crénage et chassage</h3>
+<dl>
+  <dt>Interligne</dt>
+  <dd>La distance d'une ligne de base à la suivante, en pixels. Laissez-la à 0 pour un interligne automatique, qui est 120 % de la taille. Définissez-la plus grande pour ouvrir les lignes, ou plus petite pour resserrer un titre.</dd>
+  <dt>Crénage</dt>
+  <dd>Un espacement régulier ajouté à ou retiré de chaque caractère, mesuré en millièmes d'em (pour qu'il se mette à l'échelle avec la taille). Les valeurs positives desserrent le texte, les négatives le resserrent. Utilisez le crénage pour ajuster une ligne à une largeur ou pour espacer des petites capitales.</dd>
+  <dt>Chassage</dt>
+  <dd>L'espacement propre de la police entre des lettres particulières, comme l'écart sous un T majuscule. Il est activé par défaut, sur le bouton Chassage dans la rangée OpenType (marqué AV). Désactivez-le pour voir les métriques brutes de la police.</dd>
+</dl>
+
+<h3 id="type-align">Alignement</h3>
+<p>Le panneau Caractère a quatre boutons d'alignement : gauche, centre, droite et justifier. Gauche et droite sont relatifs au sens de lecture, donc ils signifient début et fin : un texte de droite à gauche réglé sur gauche s'aligne sur la droite visuelle. La justification étend chaque ligne pour remplir la mesure, donc elle ne change quelque chose que là où les lignes s'enroulent, ce qui signifie le texte en zone et le texte sur tracé plutôt que le texte ponctuel sur une seule ligne. Pour les contrôles de justification plus fins (comment la dernière ligne est définie), utilisez le panneau Paragraphe.</p>
+
+<h3 id="type-opentype">Fonctions OpenType et petites capitales</h3>
+<p>Sous l'en-tête <strong>OpenType</strong> se trouve une rangée de boutons, chacun activant ou désactivant une fonction du texte sélectionné :</p>
+<table>
+<thead><tr><th>Bouton</th><th>Fonction</th></tr></thead>
+<tbody>
+<tr><td>fi</td><td>Ligatures standard (activées par défaut)</td></tr>
+<tr><td>st</td><td>Ligatures discrétionnaires</td></tr>
+<tr><td>TT</td><td>Majuscules</td></tr>
+<tr><td>T&#7472;</td><td>Petites capitales</td></tr>
+<tr><td>T&sup1;</td><td>Exposant</td></tr>
+<tr><td>T&#8321;</td><td>Indice</td></tr>
+<tr><td>&frac12;</td><td>Fractions</td></tr>
+<tr><td>1&#738;&#7511;</td><td>Ordinaux</td></tr>
+<tr><td>&#119964;</td><td>Swash</td></tr>
+<tr><td>AV</td><td>Chassage (activé par défaut)</td></tr>
+</tbody>
+</table>
+<p>Les majuscules dessinent chaque lettre en capitale sans changer le texte sous-jacent, de sorte qu'elle reste en minuscule lorsque vous la modifiez. Les petites capitales demandent à la police ses formes de petites capitales. L'exposant et l'indice dessinent les caractères affectés plus petits et les décalent de la ligne de base, pour les marqueurs de note de bas de page, les terminaisons ordinales ou les formules chimiques.</p>
+<p>Sous les boutons, le menu de style de chiffres choisit comment les chiffres sont définis : Default, Tabular Lining, Proportional Oldstyle, Proportional Lining ou Tabular Oldstyle. Les chiffres tabulaires prennent tous la même largeur, de sorte que les colonnes de chiffres s'alignent ; les chiffres oldstyle ont des ascenseurs et descenseurs qui se posent mieux dans le texte courant.</p>
+<p>Toutes les fonctions ne peuvent pas être prévisualisées sur le canevas. Les ligatures activées ou désactivées, le chassage, les majuscules, les petites capitales et l'exposant et l'indice sont dessinés pendant que vous modifiez. Les ligatures discrétionnaires, les styles de chiffres, les fractions, les ordinaux et le swash sont enregistrés sur le texte et écrits dans le <code>.svg</code> exporté en tant que paramètres de fonction de police, mais le canevas ne les affiche pas, alors traitez ceux-ci comme des réglages au moment de l'export.</p>
+
+<h2 id="type-paragraph">Le panneau Paragraphe</h2>
+<p>Le panneau Paragraphe (<kbd>&#8997;&#8984;T</kbd>, ou <strong>Fenêtre &gt; Texte &gt; Paragraphe</strong>) contrôle comment des paragraphes entiers sont définis. Comme pour les réglages de caractère, ceux-ci s'appliquent à chaque paragraphe de l'objet texte.</p>
+<p>Sept boutons d'alignement longent le haut. Les trois premiers sont gauche, centre et droite simples. Les trois suivants justifient le corps du paragraphe et ne définissent que la dernière ligne, alignée à gauche, centrée ou à droite. Le dernier justifie chaque ligne y compris la dernière, l'étendant à la pleine mesure. La justification a besoin d'un endroit où s'enrouler, donc elle prend effet dans le texte en zone, pas dans le texte ponctuel.</p>
+<p>Sous les boutons d'alignement se trouvent les retraits : <strong>Gauche</strong> et <strong>Droite</strong> rentrent tout le paragraphe des côtés du cadre, et <strong>Première ligne</strong> n'indente que la première ligne. Un retrait de première ligne négatif fait sortir la première ligne au-delà des autres, ce qui est comme créer un retrait négatif. Les champs <strong>Avant</strong> et <strong>Après</strong> ajoutent de l'espace au-dessus et en dessous de chaque paragraphe, une façon plus propre de séparer les paragraphes qu'une ligne vide. L'interrupteur <strong>Césure</strong> permet aux mots longs de se casser entre les lignes pour égaliser le bord droit. Les retraits et espacements s'appliquent au texte en zone ; le texte ponctuel est défini depuis son propre ancrage.</p>
+
+<h2 id="type-glyphs">Le panneau Glyphes</h2>
+<p>Le panneau Glyphes (<strong>Texte &gt; Glyphes</strong>, <kbd>&#8997;&#8679;F11</kbd>) liste les caractères de la police actuelle par ensemble, du Latin de base au grec, cyrillique, hébreu, arabe, ponctuation, monnaie, flèches et plus, et conserve ceux que vous avez utilisés récemment en haut. Utilisez-le pour insérer un caractère que votre clavier ne peut pas taper, comme une flèche, un symbole monétaire ou une lettre accentuée. Double-cliquez sur un glyphe pour le taper au curseur de texte. Sans curseur dans aucun texte, le glyphe est copié dans le presse-papiers à la place, de sorte que vous pouvez le coller ailleurs.</p>
+
+<h2 id="type-orientation">Texte vertical et de droite à gauche</h2>
+<p>Scissor peut définir du texte le long de la page ainsi qu'à travers, et peut disposer des scripts qui se lisent de droite à gauche. Les deux fonctionnent en texte ponctuel, en zone et sur tracé, et l'éditeur sur le canevas suit le même sens que l'illustration finie.</p>
+
+<h3 id="type-vertical">Texte vertical</h3>
+<p>L'outil Texte vertical place des caractères droits qui s'empilent vers le bas, chaque nouvelle ligne formant une colonne à gauche de la précédente. Dans un cadre de zone verticale, une colonne s'enroule vers une nouvelle lorsqu'elle atteint le bas. Pour faire passer du texte déjà défini entre horizontal et vertical, choisissez <strong>Texte &gt; Orientation du texte &gt; Horizontal</strong> ou <strong>Vertical</strong>.</p>
+
+<h3 id="type-rtl">De droite à gauche et arabe</h3>
+<p>Le menu de direction du panneau Caractère propose Auto, Gauche à droite et Droite à gauche. Sur Auto, la direction est lue depuis le texte lui-même, depuis son premier caractère fort, de sorte que l'arabe ou l'hébreu coule de droite à gauche sans que vous n'ayez rien à définir. Les lettres arabes prennent leurs formes jointes, et une série de mots latins dans une ligne de droite à gauche conserve son propre ordre de gauche à droite. Réglez le menu sur Gauche à droite ou Droite à gauche lorsque vous voulez forcer la direction plutôt que la laisser détectée, par exemple pour une ligne qui commence par un chiffre ou une ponctuation.</p>
+
+<h2 id="type-touch">Édition de glyphe</h2>
+<p>L'outil Édition de glyphe (<kbd>&#8679;T</kbd>) déplace, met à l'échelle et fait pivoter un caractère à la fois tout en laissant le texte entièrement modifiable. Utilisez-le pour ajuster une seule lettre pour l'effet sans diviser le mot en contours. Choisissez l'outil et cliquez sur un caractère : un cadre apparaît autour de ce caractère avec une poignée à chaque coin, une sur le côté droit, une en bas et une flottant au-dessus. Glissez un coin pour mettre à l'échelle dans les deux sens, la poignée latérale pour la largeur seule, la poignée du bas pour la hauteur seule, et la poignée du haut pour faire pivoter le caractère. Maintenez <kbd>&#8679;</kbd> en glissant un coin pour conserver les proportions, ou en pivotant pour aligner l'angle. <kbd>Retour arrière</kbd> ou <kbd>Suppr</kbd> remet le caractère là où le texte l'avait placé, et <kbd>Échap</kbd> abandonne la sélection. Parce que le texte est encore du texte tout au long, vous pouvez continuer à modifier les mots autour du caractère que vous avez déplacé.</p>
+
+<h2 id="type-flow">Chaînage et habillage de texte</h2>
+<p>Deux fonctions permettent au texte de partager l'espace avec le reste d'une mise en page : le chaînage fait couler une histoire à travers plusieurs cadres, et l'habillage de texte éloigne le texte d'un objet qu'il chevauche.</p>
+
+<h3 id="type-threading">Texte chaîné</h3>
+<p>Sélectionnez deux objets de texte en zone ou plus et choisissez <strong>Texte &gt; Texte chaîné &gt; Créer</strong>. Leur texte est joint en une seule histoire qui coule de cadre en cadre dans l'ordre d'empilement, de l'arrière vers l'avant, et est toujours modifié depuis le premier cadre. Utilisez le chaînage pour faire courir un article à travers des colonnes ou des pages : pendant que vous ajoutez ou retirez du texte, il reflow à travers la chaîne. Chaque cadre affiche un port en haut à gauche et en bas à droite, avec une ligne tracée vers le cadre dans lequel le texte continue. Un plus rouge à la place du port sortant signifie qu'il y a plus de texte que le cadre ne peut en contenir. <strong>Libérer la sélection</strong> retire les cadres sélectionnés de leur chaîne, et <strong>Supprimer le chaînage</strong> rompt la chaîne entière, chaque cadre conservant le texte qu'il affichait.</p>
+
+<h3 id="type-wrap">Habillage de texte</h3>
+<p>Pour éloigner le texte d'une forme, sélectionnez la forme et choisissez <strong>Objet &gt; Habillage de texte &gt; Créer</strong>. Le texte en zone qui se trouve en dessous de l'objet coule alors autour de celui-ci. L'habillage suit le contour de l'objet, pas sa boîte englobante, de sorte que le texte peut épouser un cercle ou une silhouette irrégulière. <strong>Options d'habillage de texte…</strong> définit le jeu conservé entre l'objet et le texte, en pixels, et peut inverser l'habillage pour que le texte coule à l'intérieur de la forme plutôt qu'autour. <strong>Libérer</strong> supprime l'habillage.</p>
+
+<h2 id="type-outlines">Convertir le texte en contours</h2>
+<p>Sélectionnez du texte et choisissez <strong>Texte &gt; Créer des contours</strong> (<kbd>&#8679;&#8984;O</kbd>) pour le transformer en tracés. Utilisez-le lorsque vous avez besoin de remodeler les lettres à la main, garantir que le texte soit identique sur une machine qui n'a pas la police, ou utiliser les lettres comme forme à combiner avec d'autres illustrations. Les lettres sont tracées depuis les glyphes propres de la police en haute résidence, avec l'ajusteur laissant les vrais coins nets tout en lissant les courbes, et le résultat conserve le fond, le contour, le nom, l'opacité et le mode de fusion du texte. Les mots ne sont plus modifiables en tant que texte ensuite, alors conservez une copie si vous pourrez avoir besoin de les changer, ou annulez avec <kbd>&#8984;Z</kbd>.</p>

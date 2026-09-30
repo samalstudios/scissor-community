@@ -1,0 +1,153 @@
+<p class="lede">Cada objeto vectorial en Scissor está construido a partir de trazados: una cadena de puntos de anclaje unidos por segmentos rectos o curvos. Esta página cubre cómo dibujarlos, cómo remodelarlos punto por punto, y los comandos que los unen, desplazan, contornean y combinan.</p>
+
+<p>Los atajos están escritos en formato macOS. En Windows, lee <kbd>&#8984;</kbd> como Ctrl, <kbd>&#8997;</kbd> como Alt y <kbd>&#8679;</kbd> como Shift.</p>
+
+<h2 id="paths-anchors-and-handles">Anclajes, tiradores y la forma de un trazado</h2>
+<p>Un trazado es una serie de puntos de anclaje. Entre dos anclajes vecinos hay un segmento, que es recto cuando ningún anclaje se extiende hacia él y curvo cuando uno o ambos lo hacen. La extensión de un anclaje está establecida por sus dos tiradores de dirección: el tirador de entrada da forma al segmento que llega al anclaje, y el tirador de salida da forma al segmento que sale de él. Arrastra un tirador más lejos y la curva se abomba más fuertemente hacia él. Un trazado puede ser abierto, con dos extremos sueltos, o cerrado, donde el último anclaje se une de vuelta al primero.</p>
+
+<h3 id="paths-corner-and-smooth">Puntos de esquina y suaves</h3>
+<p>Un anclaje es una esquina o un punto suave. En un punto suave los dos tiradores están bloqueados en una línea recta a través del anclaje, de modo que la curva pasa sin un ángulo y permanece continua. En un punto de esquina los dos lados son independientes: el trazado puede cambiar de dirección bruscamente, y un lado puede ser recto mientras el otro es curvo. La mayoría de las formas mezclan los dos, puntos suaves a lo largo de las partes fluidas y puntos de esquina donde un borde gira.</p>
+<dl>
+  <dt>Punto suave</dt>
+  <dd>Tiradores unidos en una línea. Úsalos a lo largo de una curva que debe leerse como un barrido continuo, como el lateral de una hoja o el cuenco de una letra.</dd>
+  <dt>Punto de esquina</dt>
+  <dd>Tiradores que se mueven por separado, o un punto sin tiradores en absoluto. Úsalos en la punta de una estrella, la esquina de una caja, o donde una curva debe encontrarse con un borde recto.</dd>
+</dl>
+
+<h3 id="paths-direct-selection">Anclajes, tiradores y la herramienta Selección directa</h3>
+<p>La herramienta Selección directa (<kbd>A</kbd>) trabaja sobre las partes de un trazado. Haz clic en un anclaje para seleccionarlo, haz <kbd>&#8679;</kbd>-clic para añadir o quitar uno, o arrastra un marco sobre el espacio vacío para atrapar cada anclaje dentro de él. Arrastrar anclajes seleccionados los mueve; <kbd>&#8679;</kbd> restringe el movimiento a pasos de 45&deg;. Recurre a ella siempre que una forma está casi bien y solo uno o dos puntos necesitan un empujón.</p>
+<p>Arrastra un tirador para cambiar la curva en su lado. Los tiradores que pertenecen a un anclaje suave se mueven juntos, de modo que la curva permanece continua; mantén <kbd>&#8997;</kbd> mientras arrastras para romper ese vínculo y dirigir un lado solo, y <kbd>&#8679;</kbd> para limitar el tirador a un ángulo. También puedes arrastrar un segmento mismo: un segmento curvo se dobla bajo el puntero, y uno recto arrastra sus dos anclajes consigo.</p>
+<p>La herramienta Selección de grupo comparte esta ranura y selecciona objetos completos de un grupo en lugar de anclajes. Haz clic una vez para el objeto más interno, haz clic de nuevo para salir al grupo que lo rodea.</p>
+
+<h2 id="paths-drawing">Herramientas de dibujo</h2>
+<p>Scissor tiene tres herramientas para establecer un trazado desde cero. El Bolígrafo da control exacto punto por punto, la herramienta Curvatura ajusta una curva suave a través de los puntos que colocas, y el Lápiz sigue tu mano libremente.</p>
+<table>
+  <thead><tr><th>Herramienta</th><th>Atajo</th><th>Ideal para</th></tr></thead>
+  <tbody>
+    <tr><td>Bolígrafo</td><td><kbd>P</kbd></td><td>Contornos precisos donde cada anclaje y tirador se coloca a propósito.</td></tr>
+    <tr><td>Curvatura</td><td><kbd>&#8679;~</kbd></td><td>Curvas fluidas definidas por unos pocos puntos de paso, sin lidiar con tiradores.</td></tr>
+    <tr><td>Lápiz</td><td><kbd>N</kbd></td><td>Formas sueltas dibujadas a mano y bocetos rápidos.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="paths-pen">La herramienta Bolígrafo</h3>
+<p>La herramienta Bolígrafo (<kbd>P</kbd>) construye un trazado punto por punto. Haz clic para colocar un anclaje de esquina; mantén pulsado y arrastra en su lugar y el anclaje conserva tiradores, de modo que el trazado sale de él como una curva. Mantén <kbd>&#8679;</kbd> mientras arrastras para limitar el tirador a pasos de 45&deg;, y mantén <kbd>&#8997;</kbd> para mover solo el tirador de salida, lo que convierte el anclaje en una esquina y libera el siguiente segmento del último.</p>
+<p>Mientras un trazado está abierto la herramienta cambia al moverte sobre él. Sobre el primer anclaje cierra el trazado, sobre un segmento añade un anclaje, y sobre un anclaje existente lo elimina. Sin ningún trazado en curso, moverte sobre el extremo suelto de un trazado abierto recoge ese trazado para que continúes dibujando desde él. <kbd>Enter</kbd> o <kbd>Esc</kbd> finaliza el trazado y lo deja abierto; <kbd>Supr</kbd> elimina el anclaje que colocaste por último.</p>
+
+<h3 id="paths-curvature">La herramienta Curvatura</h3>
+<p>La herramienta Curvatura (<kbd>&#8679;~</kbd>) ajusta una curva suave a través de los puntos en los que haces clic, con una vista previa que sigue al puntero mientras avanzas. Haz <kbd>&#8997;</kbd>-clic para colocar un punto de esquina en lugar de uno suave, y doble clic en cualquier punto para alternar entre los dos. Arrastra un punto para moverlo y la curva se reajusta. Haz clic en el primer punto para cerrar la forma, o pulsa <kbd>Enter</kbd> para terminar. <kbd>Supr</kbd> elimina el último punto y <kbd>Esc</kbd> abandona el trazado. Úsala cuando te importa más la forma de la curva que los anclajes exactos, ya que calcula los tiradores por ti.</p>
+
+<h3 id="paths-pencil">La herramienta Lápiz</h3>
+<p>La herramienta Lápiz (<kbd>N</kbd>) dibuja a mano alzada: mantén pulsado, dibuja y suelta, y Scissor ajusta un trazado suave a través del rastro. Suelta cerca de donde empezaste, o mantén <kbd>&#8997;</kbd> mientras terminas, y el trazado se cierra en una forma. El resultado es un trazado abierto contorneado en el color de contorno actual, de modo que está listo para conservar como línea o para rellenar. Qué tan estrechamente el trazado ajustado sigue tu movimiento se establece en la preferencia de fidelidad del Lápiz, desde preciso, que mantiene más anclajes y cada temblor, hasta suave, que usa menos anclajes y alisa la línea. Recurre a ella para esbozar, firmas, y cualquier forma que debe parecer dibujada a mano en lugar de construida.</p>
+
+<h2 id="paths-editing-points">Editar puntos en un trazado</h2>
+
+<h3 id="paths-add-remove-convert">Añadir, eliminar y convertir puntos</h3>
+<p>El Bolígrafo comparte su ranura en la barra de herramientas con Añadir punto de anclaje (<kbd>+</kbd>), Eliminar punto de anclaje (<kbd>&#8722;</kbd>) y la herramienta Punto de anclaje (<kbd>&#8679;C</kbd>). Añadir punto de anclaje coloca un nuevo punto en un segmento sin cambiar la curva; Eliminar punto de anclaje quita el punto en el que haces clic y deja que el trazado cierre el hueco. Con la herramienta Punto de anclaje, arrastra desde un anclaje de esquina para sacar un par de tiradores igualados, convirtiéndolo en suave; arrastra un solo tirador para romper el par de modo que los dos lados se muevan por separado, convirtiéndolo de vuelta en esquina; y haz clic en un anclaje suave para despojar sus tiradores hasta una esquina afilada.</p>
+<p>Objeto &rsaquo; Trazado tiene las mismas ediciones como comandos que trabajan sobre toda la selección a la vez. Añadir puntos de anclaje coloca un nuevo anclaje en el medio de cada segmento, duplicando el número de puntos sin cambiar la forma, lo cual es útil antes de una distorsión o deformación que necesita más puntos para doblarse limpiamente. Eliminar puntos de anclaje quita los anclajes que has seleccionado con la herramienta Selección directa y reajusta el trazado a través de lo que queda.</p>
+
+<h3 id="paths-reshape-tools">Remodelar a mano: Suavizar, Borrador de trazado y Unir</h3>
+<p>Tres herramientas tipo pincel remodelan un trazado donde arrastras en lugar de en un solo anclaje. Actúan sobre los trazados seleccionados, o sobre cualquier trazado bajo el pincel cuando no hay nada seleccionado, y <kbd>[</kbd> y <kbd>]</kbd> encogen y agrandan el pincel.</p>
+<dl>
+  <dt>Herramienta Suavizar</dt>
+  <dd>Arrastra a lo largo de un trazado para relajarlo, adelgazando anclajes y suavizando bultos. Úsala para calmar una línea de lápiz temblorosa o un borde trazado.</dd>
+  <dt>Herramienta Borrador de trazado</dt>
+  <dd>Arrastra a lo largo de un trazado para borrar la parte que cruzas, dividiéndolo o acortándolo. Úsala para recortar una cola suelta de una línea.</dd>
+  <dt>Herramienta Unir</dt>
+  <dd>Frota sobre dos extremos abiertos y se unen, extendiendo o recortando los trazados para encontrarse limpiamente en una esquina. Úsala para cerrar un hueco donde dos trazos deberían haberse encontrado.</dd>
+</dl>
+
+<h3 id="paths-cutting">Cortar un trazado: Tijeras y Cuchilla</h3>
+<p>La herramienta Tijeras (<kbd>C</kbd>) corta en un solo lugar. Haz clic en un segmento o un anclaje y el trazado se divide ahí: un trazado cerrado se abre en el corte, y un trazado abierto se rompe en dos objetos separados. Úsala para cortar una abertura en un círculo, o para dividir una forma en dos para que las mitades puedan estilarse de manera diferente.</p>
+<p>La Cuchilla corta a través de la obra. Arrastra la hoja sobre un objeto para cortarlo en piezas separadas a lo largo de la línea dibujada; mantén <kbd>&#8997;</kbd> para cortar en línea recta, y añade <kbd>&#8679;</kbd> para limitar esa línea a pasos de 45&deg;. Con algo seleccionado, solo se cortan los objetos seleccionados; de lo contrario, todo lo que la hoja cruza. Úsala para tallar una forma rellena en varias piezas cerradas de un solo trazo.</p>
+
+<h2 id="paths-commands">Comandos de trazado</h2>
+<p>Objeto &rsaquo; Trazado reúne las operaciones que actúan sobre trazados completos a la vez.</p>
+<table>
+  <thead><tr><th>Comando</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+  <tbody>
+    <tr><td>Unir</td><td><kbd>&#8984;J</kbd></td><td>Enlaza extremos abiertos en un solo trazado, o cierra un único trazado abierto.</td></tr>
+    <tr><td>Promediar…</td><td><kbd>&#8997;&#8984;J</kbd></td><td>Mueve los anclajes seleccionados a su posición común.</td></tr>
+    <tr><td>Contornear contorno</td><td></td><td>Convierte un contorno en una forma rellena del mismo contorno.</td></tr>
+    <tr><td>Desplazar trazado…</td><td></td><td>Hace una copia agrandada o encogida por una distancia establecida.</td></tr>
+    <tr><td>Invertir dirección del trazado</td><td></td><td>Invierte el sentido en que discurre el trazado.</td></tr>
+    <tr><td>Simplificar…</td><td></td><td>Reduce el número de puntos de anclaje.</td></tr>
+    <tr><td>Añadir puntos de anclaje</td><td></td><td>Añade un punto en el medio de cada segmento.</td></tr>
+    <tr><td>Eliminar puntos de anclaje</td><td></td><td>Elimina los anclajes seleccionados.</td></tr>
+    <tr><td>Dividir en cuadrícula…</td><td></td><td>Corta la selección en una cuadrícula de filas y columnas.</td></tr>
+    <tr><td>Limpiar…</td><td></td><td>Elimina puntos sueltos, objetos sin pintar y texto vacío.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="paths-join-average">Unir y promediar</h3>
+<p>Unir (<kbd>&#8984;J</kbd>) funciona en trazados abiertos. Con dos trazados abiertos separados seleccionados, enlaza sus extremos más cercanos en un solo trazado; con un único trazado abierto, une los dos extremos sueltos para cerrarlo. Los extremos que ya se sitúan uno encima del otro se fusionan en un solo anclaje. Úsala para cerrar una forma que dibujaste como un contorno abierto, o para coser dos trazos a medio dibujar.</p>
+<p>Promediar (<kbd>&#8997;&#8984;J</kbd>) mueve los anclajes seleccionados a su posición promedio compartida. El diálogo ofrece el eje horizontal, que alinea los puntos a una altura común; el eje vertical, que los alinea en una columna; o ambos, que los apila todos en un punto. Recurre a ella para nivelar una fila de puntos o para juntar dos extremos antes de unirlos.</p>
+
+<h3 id="paths-simplify">Simplificar</h3>
+<p>Simplificar redibuja los trazados seleccionados con menos puntos de anclaje, manteniéndose dentro de una precisión que estableces: una precisión más ajustada se mantiene cerca del original a costa de más puntos, una más suave alisa la forma hasta un puñado. Úsala para limpiar un trazado trazado o dibujado a mano que lleva muchos más puntos de los que la forma necesita, lo que lo hace más ligero de editar y renderizar.</p>
+
+<h3 id="paths-offset">Desplazar trazado</h3>
+<p>Desplazar trazado construye un trazado nuevo a una distancia establecida del original: un desplazamiento positivo agranda el contorno hacia afuera y se sitúa detrás del original, un desplazamiento negativo lo encoge hacia adentro y se sitúa delante. La opción de Uniones decide cómo se tratan las esquinas hacia afuera, como una unión en inglete afilada, una redondeada o una biselada, con un límite de inglete que limita cuánto puede extenderse una esquina afilada antes de recortarse. Úsala para dibujar un borde uniforme alrededor de una forma, para insertar una forma para una línea clave, o para engordar una forma fina. Desplazar trazado también está disponible bajo Efecto &rsaquo; Trazado como un efecto en vivo que se recalcula cuando la forma cambia.</p>
+
+<h3 id="paths-outline-stroke">Contornear contorno</h3>
+<p>Contornear contorno reemplaza un trazado contorneado por una forma rellena que tiene exactamente el contorno del trazo. Una vez contorneado, el ancho ya no escala con el objeto y no se puede editar como contorno, pero el contorno se puede remodelar punto por punto, rellenar con un degradado, o combinar con otras formas. Recurre a ella cuando necesitas que el contorno se comporte como obra: para dar a una línea un borde afilado o variable que luego ajustas a mano, o para mantener los grosores de línea de un diseño fijos cuando se escala. También está disponible como un efecto en vivo, bajo Efecto &rsaquo; Trazado.</p>
+
+<h3 id="paths-reverse">Invertir dirección del trazado</h3>
+<p>Invertir dirección del trazado invierte el orden en que los anclajes recorren el trazado, de modo que el trazado viaja en la otra dirección. La dirección rara vez se muestra por sí misma, pero decide qué contorno es el agujero en un trazado compuesto y dónde empieza y termina un pincel o una punta de flecha. Úsala cuando un agujero en un trazado compuesto se rellena sólido, o cuando el texto en un trazado o el inicio y fin de un contorno se sitúan en el lado equivocado.</p>
+
+<h2 id="paths-live-shapes">Formas editables y sus controles</h2>
+<p>Los rectángulos, rectángulos redondeados, elipses y polígonos permanecen vivos: mantienen sus parámetros y reconstruyen su trazado cada vez que cambias uno. Mientras arrastras una forma, <kbd>&#8679;</kbd> la hace regular y <kbd>&#8997;</kbd> la dibuja desde el centro. Las flechas del teclado también funcionan durante el arrastre, arriba y derecha añaden, abajo y izquierda restan, cambiando los lados de un polígono, las puntas de una estrella, o el radio de las esquinas de un rectángulo redondeado.</p>
+<p>Selecciona una sola forma viva y aparecen pequeñas asas redondas justo dentro de sus esquinas; se ocultan cuando la forma es demasiado pequeña en pantalla para mostrarlas claramente. Arrastra una con la herramienta Selección (<kbd>V</kbd>) para redondear todas las esquinas a la vez, o con Selección directa para redondear solo la esquina que estás sosteniendo. Haz <kbd>&#8997;</kbd>-clic en una asa de esquina para cambiarla por redondeada, invertida y biselada, de nuevo las cuatro esquinas con la herramienta Selección, una esquina con Selección directa.</p>
+<p>Una elipse muestra una asa cuadrada en su lugar: una en una elipse completa, y una en cada extremo del sector una vez que has abierto uno. Arrastra una para abrir un sector fuera de la forma, con <kbd>&#8679;</kbd> ajustando el ángulo a pasos de 15&deg;; llevando el extremo de vuelta al inicio restaura la elipse completa. El panel Propiedades contiene los mismos valores como números: radio y tipo de esquina, radios por esquina, lados del polígono, y inicio y fin del sector en grados. Una forma viva mantiene estos controles hasta que editas su trazado directamente, lo que lo convierte en un trazado ordinario.</p>
+
+<h2 id="paths-combining">Combinar formas: Fusionar y dividir y Combinar formas</h2>
+<p>Cuando dos o más formas se superponen, a menudo quieres una única forma nueva de ellas: una unión, un agujero, o la pieza donde se cruzan. Scissor ofrece dos maneras de llegar ahí. Fusionar y dividir es directo y visual; el panel Combinar formas aplica las mismas operaciones como botones. Ambos mantienen las curvas en lugar de aplanarlas a segmentos de línea.</p>
+
+<h3 id="paths-shape-builder">La herramienta Fusionar y dividir</h3>
+<p>La herramienta Fusionar y dividir (<kbd>&#8679;M</kbd>) funciona en dos o más trazados seleccionados. Divide sus superposiciones en regiones y resalta aquella sobre la que está el puntero; arrastra una línea a través de varias regiones para fusionarlas en un objeto, que toma la apariencia de la forma de la que proviene, o haz <kbd>&#8997;</kbd>-arrastre a través de ellas para eliminarlas. Úsala para construir una forma a ojo, añadiendo las partes que quieres y borrando las que no, sin parar a elegir un comando para cada paso.</p>
+
+<h3 id="paths-pathfinder-shape-modes">Modos de forma de Combinar formas</h3>
+<p>El panel Combinar formas (<kbd>&#8679;&#8984;F9</kbd>) se abre con cuatro modos de forma, cada uno de los cuales reemplaza los trazados seleccionados por un único trazado combinado. El resultado toma la apariencia del objeto superior, excepto Menos frontal, que mantiene la apariencia del inferior.</p>
+<dl>
+  <dt>Unir</dt>
+  <dd>Fusiona cada forma seleccionada en un solo contorno. Úsala para soldar piezas superpuestas en una única silueta, como una nube a partir de una fila de círculos.</dd>
+  <dt>Menos frontal</dt>
+  <dd>Conserva la forma más atrás y corta todo lo apilado delante de ella. Úsala para morder un trozo de una forma, como tallar una luna creciente de dos círculos.</dd>
+  <dt>Intersecar</dt>
+  <dd>Conserva solo el área que comparte cada forma seleccionada. Úsala para recortar la obra a una región común, como la lente donde se cruzan dos círculos.</dd>
+  <dt>Excluir</dt>
+  <dd>Conserva todo excepto las superposiciones, que se convierten en agujeros. Úsala para hacer un anillo, o un eslabón de cadena, donde las partes que se cruzan desaparecen.</dd>
+</dl>
+
+<figure class="shot">
+  <img src="img/combine.gif" width="760" height="441" loading="lazy"
+       alt="Tres formas superpuestas, un círculo, un cuadrado redondeado y un círculo, fusionándose en una única silueta combinada." />
+  <figcaption>Unir (o un arrastre con Fusionar y dividir) fusiona formas superpuestas en un único contorno que mantiene sus curvas.</figcaption>
+</figure>
+
+<h3 id="paths-pathfinders">Las otras operaciones de Combinar formas</h3>
+<p>Debajo de los modos de forma se sitúan seis pathfinders. Estos te dejan con varias piezas, reunidas en un grupo, en lugar de un único trazado combinado. Menos trasero coincide con su homólogo de modo de forma pero mantiene la forma superior.</p>
+<dl>
+  <dt>Dividir</dt>
+  <dd>Corta las formas en caras separadas a lo largo de cada línea que se cruzan, cada cara tomando el color de la forma superior que la cubre. Úsala para romper un diseño en piezas pintables, como las celdas de un panel de vidrieras.</dd>
+  <dt>Recortar</dt>
+  <dd>Elimina la parte oculta de cada forma donde una forma de arriba la cubre. Cada pieza conserva su propio relleno y nada se fusiona; los contornos se eliminan. Úsala para aplanar obra apilada de color plano de modo que ningún color se imprima encima de otro.</dd>
+  <dt>Fusionar</dt>
+  <dd>Recorta las partes ocultas, luego une las piezas vecinas que comparten un color de relleno. Úsala para ordenar una ilustración de color plano, uniendo regiones del mismo color en formas únicas.</dd>
+  <dt>Recortar a</dt>
+  <dd>Conserva solo las partes de las formas inferiores que caen dentro de la forma más alta, que se descarta entonces. Úsala para recortar la obra a un marco y hornear el recorte en los trazados, en lugar de mantener una máscara de recorte en vivo.</dd>
+  <dt>Menos trasero</dt>
+  <dd>Conserva la forma más al frente y corta todo lo que hay detrás de ella. Úsala cuando la forma superior es la que se conserva y las formas debajo de ella deben tallar en ella.</dd>
+  <dt>Contornear</dt>
+  <dd>Convierte cada límite de región en una línea abierta, contorneada en el color de relleno del que proviene. Úsala para sacar el esqueleto de bordes de un conjunto de formas superpuestas.</dd>
+</dl>
+<p>Efecto &rsaquo; Combinar formas aplica Añadir, Intersecar, Excluir, Restar y Menos trasero como efectos en vivo sobre un grupo en su lugar, dejando los objetos originales intactos y editables debajo. Recurre a las versiones de efecto cuando aún quieras mover las piezas después; recurre al panel cuando la forma combinada es definitiva.</p>
+
+<h2 id="paths-compound-and-masks">Trazados compuestos y máscaras de recorte</h2>
+<p>Objeto &rsaquo; Trazado compuesto &rsaquo; Crear (<kbd>&#8984;8</kbd>) pliega los trazados seleccionados en un objeto relleno por la regla par-impar, de modo que un contorno interior corta un agujero a través del que lo rodea. El resultado toma la apariencia del objeto más bajo en la selección. Liberar (<kbd>&#8997;&#8679;&#8984;8</kbd>) devuelve cada contorno como un trazado propio. Usa un trazado compuesto para cualquier forma con un agujero, como el contra de la letra O o una arandela.</p>
+<p>Objeto &rsaquo; Máscara de recorte &rsaquo; Crear (<kbd>&#8984;7</kbd>) usa el objeto seleccionado más alto, que debe ser un trazado, para recortar todo lo que está debajo. Scissor los coloca todos en un grupo de recorte y borra el relleno y contorno del propio trazado de máscara. Liberar (<kbd>&#8997;&#8984;7</kbd>) convierte el grupo de recorte de vuelta en un grupo ordinario, de modo que nada se recorta más y cada objeto, incluido el trazado de máscara, permanece donde estaba. Crear máscara de opacidad en el mismo submenú enmascara por tono en lugar de por contorno, de modo que las partes más claras de la máscara se dejan ver y las más oscuras se ocultan.</p>
+
+<h2 id="paths-smart-guides">Guías inteligentes y ajuste</h2>
+<p>Las guías inteligentes (Ver &rsaquo; Guías inteligentes, <kbd>&#8984;U</kbd>) vigilan la obra visible y las mesas mientras dibujas o arrastras. Lo que estás moviendo se ajusta a los bordes, centros y anclajes de sus vecinos, y aparece una línea de vuelta a lo que se alineó, etiquetada con el tipo de coincidencia: anclaje, centro, esquina o alineación.</p>
+<p>Otras dos guías aparecen por sí mismas. Cuando el objeto que estás moviendo se situaría a la misma distancia de sus vecinos como ellos entre sí, se ajusta ahí y los dos huecos iguales se dibujan con la medición mostrada; esto funciona tanto para continuar una serie de objetos espaciados uniformemente como para centrar uno en el hueco entre dos. Y cuando arrastras desde un punto de partida, la dirección se ajusta a una línea de construcción cada 45&deg; desde el ángulo de restricción, dibujada como una línea larga con el ángulo al lado.</p>
+<p>Ajustar a punto (<kbd>&#8997;&#8984;'</kbd>) y Ajustar a rejilla (<kbd>&#8679;&#8984;'</kbd>) son interruptores independientes en el menú Ver. Con Ajustar a rejilla activado, todo cae en la subdivisión de la rejilla y las guías inteligentes se apartan.</p>
