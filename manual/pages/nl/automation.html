@@ -1,0 +1,39 @@
+<p class="lede">Drie gereedschappen in Scissor doen het repetitieve werk voor u: <strong>Acties</strong> nemen een reeks commando's op en spelen het af, <strong>Variabelen</strong> wisselen tekst en zichtbaarheid uit een tabel met gegevens zodat één ontwerp veel wordt, en <strong>Scripts</strong> besturen de hele editor vanuit JavaScript. Geen ervan heeft een account of een server nodig — net als de rest van Scissor draaien ze op uw eigen machine.</p>
+
+<h2 id="automation-actions">Acties: één keer opnemen, overal afspelen</h2>
+<p>Het <strong>Acties</strong>-paneel (Venster &rsaquo; Acties) neemt op wat u doet en speelt het op een nieuwe selectie af. Druk op <strong>Opnemen</strong>, voer de commando's uit die u wilt vastleggen — uitlijnen, compenseren, een schaduw toevoegen, wat de reeks ook is — en druk dan op <strong>Stop</strong> en geef de actie een naam. Het treedt de lijst bij, tonend hoeveel stappen het bevat.</p>
+<p>Klik op een actie om het op wat nu is geselecteerd af te spelen; <kbd>&#8997;</kbd>-klik eréén om het te verwijderen. Omdat een actie slechts een lijst van commando's is, herhaalt het een exacte routine over veel objecten zonder dat u er elke keer doorheen hoeft te klikken.</p>
+
+<h2 id="automation-variables">Variabelen: één ontwerp, veel versies</h2>
+<p>Het <strong>Variabelen</strong>-paneel (Venster &rsaquo; Variabelen) verandert een vast ontwerp in een sjabloon dat door gegevens wordt aangestuurd. Twee dingen op een object kunnen dynamisch worden gemaakt:</p>
+<dl>
+  <dt>Tekst dynamisch maken</dt><dd>Verbindt de woorden van een tekstobject aan een variabele, zodat verschillende gegevenssets verschillende tekst op dezelfde plaats kunnen zetten.</dd>
+  <dt>Zichtbaarheid dynamisch maken</dt><dd>Verbindt of een object toont, zodat een set delen van het ontwerp aan of uit kan zetten.</dd>
+</dl>
+<p><strong>Ontbinden</strong> maakt een gebonden object vast weer.</p>
+
+<h3 id="automation-datasets">Gegevenssets</h3>
+<p>Een <strong>gegevensset</strong> is één rij waarden voor die variabelen — één badge, één kaart, één frame. <strong>Vastleggen</strong> slaat de huidige waarden op als een nieuwe set; de pijlen stappen van de ene set naar de volgende en het ontwerp werkt bij om overeen te komen. <strong>CSV importeren…</strong> leest een hele batch tegelijk — één kolom per variabele, één rij per set — en <strong>CSV exporteren</strong> schrijft de sets terug uit om in een spreadsheet te bewerken.</p>
+
+<h3 id="automation-batch">Elke set tegelijk exporteren</h3>
+<p><strong>Gegevenssets exporteren…</strong> rendert het actieve bord één keer voor elke gegevensset en schrijft ze allemaal in één keer uit, als PNG, JPEG, WebP of SVG. Een vel naambadges, een set gelokaliseerde banners of een reeks sociale kaarten komt eruit als een netje batch van bestanden, elk met zijn eigen gegevens ingevuld.</p>
+
+<h2 id="automation-scripts">Scripts: Scissor besturen vanuit JavaScript</h2>
+<p>Voor alles wat een menu niet kan uitdrukken, kan een script het. <strong>Bestand &rsaquo; Scripts &rsaquo; Scriptconsole…</strong> opent een editor waarin u JavaScript schrijft en het tegen het geopende document uitvoert; <strong>Ander script…</strong> (<kbd>&#8984;F12</kbd>) voert een <code>.js</code>-bestand vanaf de schijf uit. Een script draait in een Web Worker, weg van de pagina, dus het kan de interface of uw bestanden niet aanraken behalve door het <code>scissor</code>-object dat het krijgt — elk bevel wordt op de engine uitgevoerd en beantwoord.</p>
+<p>Het <code>scissor</code>-object bestekt het gemeenschappelijke terrein:</p>
+<dl>
+  <dt>Vormen en tekst maken</dt><dd><code>scissor.rect</code>, <code>roundedRect</code>, <code>ellipse</code>, <code>polygon</code>, <code>star</code>, <code>path</code> en <code>text</code> tekenen werk; elk neemt een positie en grootte en een optieobject voor <code>fill</code>, <code>stroke</code> en <code>strokeWidth</code> (kleuren zijn elke CSS-kleur).</dd>
+  <dt>Het document lezen</dt><dd><code>await scissor.document()</code> geeft de app, selectie, laag en artboards terug zoals de panelen ze zien; <code>scissor.selection()</code> geeft alleen wat is geselecteerd terug.</dd>
+  <dt>Erop werken</dt><dd><code>scissor.select</code>, <code>group</code> en <code>undo</code>, en <code>scissor.run(command)</code> voor elk engine-commando überhaupt — dezelfde commando's die de menu's sturen.</dd>
+  <dt>Terugpraten</dt><dd><code>scissor.log</code> drukt naar de console; <code>scissor.alert</code> toont een bericht.</dd>
+</dl>
+<p>Een kort voorbeeld — een ring van gekleurde stippen en een bijschrift:</p>
+<pre><code>const doc = await scissor.document();
+scissor.log('Borden:', doc.artboards.length);
+for (let i = 0; i &lt; 12; i++) {
+  const a = (i / 12) * Math.PI * 2;
+  await scissor.ellipse(300 + Math.cos(a) * 120, 260 + Math.sin(a) * 120, 36, 36,
+    { fill: `hsl(${i * 30} 80% 60%)` });
+}
+await scissor.text(230, 270, 'Hallo, Scissor', { size: 24 });</code></pre>
+<p>Het Scriptconsole bewaart de laatste code die u heeft uitgevoerd, dus een werkend script is er wanneer u erop terugkomt.</p>

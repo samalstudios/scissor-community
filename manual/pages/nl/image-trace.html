@@ -1,0 +1,100 @@
+<p class="lede">Vectoriseren verandert een afbeelding in vectorpaden: een logo dat van papier is gescand, een potloodschets of een foto wordt een set gevulde vormen die u kunt schalen, herkleuren en bewerken zoals al het andere dat u tekent. Deze pagina behandelt wat u kunt traceren, het paneel dat het uitvoert, de drie modi en hun vooraf ingestelde waarden, elke optie, en hoe u het resultaat behoudt of verwijdert.</p>
+
+<h2 id="image-trace-wat">Wat traceren doet, en wat u kunt traceren</h2>
+<p>Een afbeelding is gemaakt van pixels: het vervaagt wanneer u het vergroot en kan niet punt voor punt worden vervormd. Traceren leest die pixels en tekent vectorpaden die de vormen volgen die het vindt, zodat het resultaat scherp blijft in elke grootte en kan worden bewerkt, herkleurd en gecombineerd met de rest van uw werk.</p>
+<p>U traceert een <strong>pixel-laag</strong>: een afbeelding die u heeft geplaatst of geplakt, een foto die als een eigen bord is geopend, of een laag die u zelf heeft beschilderd. Breng een afbeelding in met <strong>Bestand &gt; Plaatsen…</strong> (<kbd>&#8679;&#8984;P</kbd>) — het komt erin als een pixel-laag — selecteer het, en voer de trace uit. (Vectorwerk is al gemaakt van paden, dus er is niets te traceren; traceren leest pixels.)</p>
+<p>De trace gooit de afbeelding niet weg. Het bouwt een groep genaamd <strong>Vectoriseren</strong> die de originele afbeelding (nu verborgen) samen met de nieuwe paden bevat, er precies overheen zittend. Omdat de groep de instellingen onthoudt waarmee het is gemaakt, blijft het resultaat live: selecteer het opnieuw, verander een instelling en het traceert opnieuw. Wanneen u tevreden bent, <strong>Breidt</strong> u het uit om alleen de paden te behouden, of <strong>Geeft</strong> u het vrij om terug te gaan naar de gewone afbeelding.</p>
+
+<h2 id="image-trace-panel">Het Vectoriseren-paneel</h2>
+<p>Elke instelling leeft in het Vectoriseren-paneel. Open het vanuit <strong>Object &gt; Vectoriseren &gt; Vectoriseren-paneel</strong>, of vanuit zijn tabblad in de paneeldock. Het paneel heeft een afbeelding geselecteerd nodig voordat het iets kan doen: met niets geschikt geselecteerd, is de Traceer-knop uitgeschakeld en vraagt het paneel u een geplaatste afbeelding te selecteren.</p>
+
+<h3 id="image-trace-run">Een trace uitvoeren</h3>
+<p>Selecteer een afbeelding, kies een vooraf ingestelde waarde of stel de modi en opties met de hand in, en druk op <strong>Traceer</strong>. Een lijn onderaan het paneel rapporteert de voortgang, <em>Traceren…</em> lezend terwijl het werkt en <em>Getraceerd. Uitbreiden om alleen de paden te behouden.</em> wanneer het klaar is. Als de afbeelding niets bevat waar een vorm van kan worden gemaakt, of niet kan worden gelezen, zegt het paneel dat en laat het de afbeelding onaangeroerd.</p>
+
+<h3 id="image-trace-preview">Voorbeelden terwijl u doorgaat</h3>
+<p>Het <strong>Traceer bij instellingen wijzigen</strong>-vinkje, standaard aan, traceert opnieuw op het moment dat u de modus, een vooraf ingestelde waarde, een getal of een vinkje verandert, zodat elke aanpassing direct tegen de afbeelding kunt beoordelen. Op een grote of drukke afbeelding duurt het opnieuw tekenen even, dus schakel het uit als u liever eerst verscheidene opties instelt en één keer op <strong>Traceer</strong> drukt. Wanneer u een bestaande trace opnieuw selecteert, laadt het paneel de exacte instellingen waarmee het is gemaakt, klaar om te worden aangepast en opnieuw te traceren.</p>
+
+<h3 id="image-trace-menu">De Object-menu-commando's</h3>
+<p>Dezelfde acties staan onder <strong>Object &gt; Vectoriseren</strong>, wat handig is wanneer het paneel is gesloten.</p>
+<table>
+  <thead><tr><th>Commando</th><th>Wat het doet</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Maken</strong></td><td>Traceert de geselecteerde afbeelding met de huidige instellingen, het resultaat live latend.</td></tr>
+    <tr><td><strong>Maken en uitbreiden</strong></td><td>Traceert en breidt in één stap uit, zodat u direct naar bewerkbare paden gaat.</td></tr>
+    <tr><td><strong>Uitbreiden</strong></td><td>Behoudt de paden en laat de afbeelding vallen (zie hieronder).</td></tr>
+    <tr><td><strong>Vrijgeven</strong></td><td>Verwijdert de paden en keert terug naar de afbeelding (zie hieronder).</td></tr>
+    <tr><td><strong>Vectoriseren-paneel</strong></td><td>Brengt het paneel naar voren.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="image-trace-modes">De drie modi</h2>
+<p>De modus bepaalt hoe de afbeelding wordt gereduceerd voordat het wordt getekend. Het is de eerste keuze om te maken, omdat het bepaalt welke van de opties hieronder van toepassing zijn.</p>
+<table>
+  <thead><tr><th>Modus</th><th>Hoe het de afbeelding reduceert</th><th>De optie die het gebruikt</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Zwart en wit</strong></td><td>Verdeelt alles in twee tonen, inkt en papier, op een helderheid die u instelt.</td><td>Drempel</td></tr>
+    <tr><td><strong>Grijswaarden</strong></td><td>Reduceert de afbeelding tot een bepaald aantal gelijke grijze niveaus van zwart tot wit.</td><td>Aantal kleuren (als grijze niveaus)</td></tr>
+    <tr><td><strong>Kleur</strong></td><td>Kiest een palet van de meest veelzeggende kleuren in de afbeelding en beeldt elke pixel naar de dichtstbijzijnde in.</td><td>Aantal kleuren</td></tr>
+  </tbody>
+</table>
+<p>Welke modus u ook kiest, er wordt één gevulde vorm per toon of kleur gemaakt, en de vormen worden van groot naar klein gestapeld zodat kleinere detail bovenop zit. Volledig transparante delen van de afbeelding blijven uitgesloten, zodat een uitgeknipte op een transparante achtergrond traceert tot alleen zijn onderwerp.</p>
+
+<h2 id="image-trace-presets">Vooraf ingestelde waarden</h2>
+<p>Een vooraf ingestelde waarde is een benoemd startpunt dat de modus en elke optie tegelijk instelt. Kies eréén uit het menu bovenaan het paneel en, met voorbeeld aan, traceert de afbeelding direct; behandel het resultaat als een basis en pas vanaf daar aan. Op het moment dat u één enkele optie verandert, schakelt het vooraf ingestelde waardemenu over op <strong>Aangepast</strong>, omdat de instellingen niet meer overeenkomen met de vooraf ingestelde waarde.</p>
+<table>
+  <thead><tr><th>Vooraf ingestelde waarde</th><th>Modus</th><th>Greep hiervoor wanneer</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Hoge-trouwheid foto</strong></td><td>Kleur</td><td>U een foto dicht bij het origineel wilt behouden, met veel kleuren.</td></tr>
+    <tr><td><strong>Lage-trouwheid foto</strong></td><td>Kleur</td><td>Een foto moet lezen als een paar brede, vlakke kleureengebieden.</td></tr>
+    <tr><td><strong>3 kleuren</strong></td><td>Kleur</td><td>U een gedurfd, posterachtig resultaat uit drie vlakke kleuren wilt.</td></tr>
+    <tr><td><strong>6 kleuren</strong></td><td>Kleur</td><td>Een vlakke, geïllustreerde look met een klein, net palet.</td></tr>
+    <tr><td><strong>16 kleuren</strong></td><td>Kleur</td><td>Meer kleurenbereik dan de vlakke vooraf ingestelde waarden, kort van een volledige foto.</td></tr>
+    <tr><td><strong>Grijstinten</strong></td><td>Grijswaarden</td><td>Een tonale afbeelding zijn schaduw moet behouden maar zijn kleur moet verliezen.</td></tr>
+    <tr><td><strong>Zwart-wit logo</strong></td><td>Zwart en wit</td><td>Een schone twee-teken markering of logo omzetten in scherpe vormen.</td></tr>
+    <tr><td><strong>Geschetste kunst</strong></td><td>Zwart en wit</td><td>Een potlood- of inktschets met zijn losere lijnen vastleggen.</td></tr>
+    <tr><td><strong>Silhouetten</strong></td><td>Zwart en wit</td><td>U vaste, gevulde silhouetten wilt in plaats van fijnere lijnen.</td></tr>
+    <tr><td><strong>Lijnkunst</strong></td><td>Zwart en wit</td><td>Een fijn lijntekening waar dunne lijnen moeten overleven.</td></tr>
+    <tr><td><strong>Tekening</strong></td><td>Zwart en wit</td><td>Scherpe, trouwe lijnwerk met zoveel mogelijk detail behouden.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="image-trace-options">De opties</h2>
+<p>Onder de modus staan de besturingselementen die het resultaat vormgeven. Welke worden getoond hangt af van de modus: Drempel verschijnt alleen voor Zwart en wit, terwijl het aantal kleuren verschijnt voor Grijswaarden en Kleur.</p>
+<dl>
+  <dt>Aantal kleuren</dt>
+  <dd>Hoeveel kleuren (in Kleur-modus) of grijze niveaus (in Grijswaarden) de afbeelding wordt gereduceerd, van 2 tot 64. Minder geeft een vlakker, grafisch resultaat met minder vormen; meer houdt de afbeelding dichter bij het origineel ten koste van meer paden. Zwart en wit-modus negeert dit, omdat het altijd twee tonen heeft.</dd>
+  <dt>Drempel</dt>
+  <dd>Alleen voor Zwart en wit: de helderheid, van 0 tot 255, waar de afbeelding in inkt en papier verdeelt. Alles donkerder dan de drempel wordt de getekende vorm; alles lichter wordt als achtergrond behandeld. Verhoog het om meer van de middentoonen in de vorm te trekken voor een zwaarder resultaat, verlaag het om alleen de donkerste tekenen te behouden. Gebruik het om af te stellen hoeveel van een vage schets wordt opgepikt.</dd>
+  <dt>Paden</dt>
+  <dd>Hoe nauw de paden de pixels volgen, op een schaal van 0 tot 100. Hoge waarden knuffelen de randen strak en behouden fijn hobbel, met meer ankerpunten; lage waarden ontspannen de pasvorm voor gladere, eenvoudigere paden die lichter zijn om te bewerken. Greep naar een hoge waarde wanneer nauwkeurigheid ertoe doet en een lage wanneer u een schone, nette omtrek wilt.</dd>
+  <dt>Hoeken</dt>
+  <dd>Hoe graag een draai in de omtrek een scherpe hoek wordt in plaats van een gladde boog, van 0 tot 100. Verhoog het voor werk met scherpe hoeken, zoals een logo of lettering; verlaag het voor organische vormen die rond moeten blijven.</dd>
+  <dt>Ruis</dt>
+  <dd>Het kleinste bakje, in pixels, dat als een eigen vorm mag worden gemaakt. Alles kleiner wordt in wat het omringt opgenomen. Verhoog het om spikkels en korrels uit een scan of foto te halen zodat verdwaalde stippen niet elk een pad worden; verlaag het om echt fijn detail te behouden.</dd>
+  <dt>Wit negeren</dt>
+  <dd>Laat elke vorm die bijna wit uitkomt weg, zodat het papier of de achtergrond niet wordt getekend en transparant achter de getraceerde tekenen blijft. Standaard aan, en getoond voor Zwart en wit-modus. Schakel het uit wanneer een wit gebied deel van het werk is en een echte gevulde vorm moet zijn.</dd>
+  <dt>Vullingen</dt>
+  <dd>Geeft elke getraceerde vorm een vaste vulling in de kleur waarin het is getraceerd. Dit is de gebruikelijke keuze en staat standaard aan.</dd>
+  <dt>Lijnen</dt>
+  <dd>Omlijnt elke getraceerde vorm met een lijn in zijn eigen kleur in plaats van, of naast, een vulling. Standaard uit. Als u zowel Vullingen als Lijnen uitschakelt, worden de paden nog steeds gemaakt maar hebben niets dat hen beschildert, dus laat er minstens één aan.</dd>
+</dl>
+
+<h2 id="image-trace-finish">Het resultaat behouden of terugdraaien</h2>
+<p>Een verser trace is live: de paden zitten over het verborgen origineel binnen de Vectoriseren-groep, en u kunt de instellingen blijven aanpassen. Twee commando's beëinden die staat, beide op het paneel als knoppen en onder <strong>Object &gt; Vectoriseren</strong>. Ze worden beschikbaar zodra een trace is geselecteerd.</p>
+<dl>
+  <dt>Uitbreiden</dt>
+  <dd>Behoudt de paden en verwijdert de afbeelding, zodat de groep gewoon vectorwerk wordt. De instellingen zijn niet meer van toepassing en kunnen niet worden veranderd, maar elk pad is nu een normale vorm die u kunt vervormen, herkleuren, combineren en rangschikken. Greep hiervoor zodma de trace er goed uitziet en u aan de vectors wilt werken. <strong>Maken en uitbreiden</strong> doet de trace en deze stap samen.</dd>
+  <dt>Vrijgeven</dt>
+  <dd>Verwijdert de getraceerde paden en herstelt de originele afbeelding, opnieuw zichtbaar op zijn oude plek. Gebruik het om een trace te verlaten en opnieuw te beginnen, of wanneer u de afbeelding alleen maar nodig had.</dd>
+</dl>
+
+<h2 id="image-trace-uses">Logo's, schetsen en foto's</h2>
+<p>De drie veelvoorkomende startpunten vragen om verschillende instellingen.</p>
+<dl>
+  <dt>Een logo of schone markering</dt>
+  <dd>Begin vanuit <strong>Zwart-wit logo</strong>. Houd <strong>Wit negeren</strong> aan zodat het papier uitvalt, verhoog <strong>Hoeken</strong> voor scherpe hoeken en <strong>Paden</strong> voor trouwe randen, en stel <strong>Drempel</strong> af totdat de markering vast is zonder op te vullen. Breidt uit, en stel dan uw eigen vulkleur in.</dd>
+  <dt>Een potlood- of inktschets</dt>
+  <dd>Probeer <strong>Geschetste kunst</strong> of <strong>Lijnkunst</strong>. Verlaag de <strong>Drempel</strong> om alleen de getekende lijnen te behouden en het papier te laten vervallen, en verhoog <strong>Ruis</strong> een beetje om de korrels van het papier te verwijderen. Lijnkunst behoudt dunnere lijnen; Geschetste kunst past bij een losse hand.</dd>
+  <dt>Een foto</dt>
+  <dd>Gebruik Kleur-modus met <strong>Hoge-trouwheid foto</strong> voor een nauwkeurige gelijkenis of <strong>Lage-trouwheid foto</strong> voor een vlakkere, geïllustreerde uitstraling, en stel het <strong>aantal kleuren</strong> naar smaak in. Laat <strong>Wit negeren</strong> uit zodat bleke gebieden blijven. Meer kleuren betekenen meer vormen, dus een zware fototrace kan groot zijn: verminder de kleuren als het resultaat onhandelbaar aanvoelt.</dd>
+</dl>
