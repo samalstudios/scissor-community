@@ -1,0 +1,357 @@
+<p class="lede">Pasek narzędzi biegnie w dół po lewej stronie okna i trzyma każde narzędzie rysujące, edytujące i wyświetlające. Każdy slot to pojedyncze narzędzie lub grupa powiązanych; ta strona wymienia je wszystkie, w kolejności, w jakiej siedzą w pasku narzędzi, z klawiszem, który wybiera każde, i tym, do czego służy.</p>
+
+<p>Naciśnij i przytrzymaj slot lub kliknij go prawym przyciskiem myszy, aby otworzyć jego menu rozwijane i wybrać inne narzędzie z grupy. Skrót narzędzia to pojedyncze naciśnięcie klawisza i działa zawsze, gdy nie piszesz w tekście lub polu.</p>
+
+<p>Skróty poniżej zapisane są w formacie macOS. W systemach Windows odczytuj <kbd>&#8997;</kbd> jako Alt, <kbd>&#8984;</kbd> jako Ctrl i <kbd>&#8679;</kbd> jako Shift.</p>
+
+<p>Trzy nawyki stosują się do prawie każdego narzędzia:</p>
+<ul>
+<li>Przytrzymaj spację, aby pożyczyć narzędzie Ręka, i puść, aby wrócić do tego, co używałeś.</li>
+<li>Przytrzymaj <kbd>&#8984;</kbd>, aby pożyczyć narzędzie Zaznacz w ten sam sposób. Narzędzie Dowolne przekształcanie jest wyjątkiem: samo odczytuje <kbd>&#8984;</kbd>.</li>
+<li><kbd>Esc</kbd> porzuca przeciąganie lub ścieżkę, którą jesteś w połowie rysowania, zostawiając grafikę tak, jak była.</li>
+</ul>
+
+<p>Dwa sloty (narzędzia Przekształć i Mozaika drukarska) są wymienione dla kompletności, ale nie mają jeszcze zachowania za sobą. Pasek narzędzi oznacza je jako wkrótce dostępne, a silnik je odrzuca.</p>
+
+<h2 id="tools-selecting">Narzędzia zaznaczania</h2>
+<p>Te cztery wybierają to, czym chcesz zająć się następnie. Sięgaj po narzędzie Zaznacz dla całych obiektów, narzędzie Zaznacz bezpośrednio dla punktów kotwicznych i segmentów wewnątrz ścieżki, Automatyczne zaznaczanie, aby zebrać wszystko pomalowane tak samo, i Lasso, aby zamieść grupę kotwic ręcznie.</p>
+
+<h3 id="tools-selection">Zaznacz</h3>
+<table>
+<thead><tr><th>Narzędzie</th><th>Skrót</th><th>Co robi</th></tr></thead>
+<tbody>
+<tr><td>Narzędzie Zaznacz</td><td><kbd>V</kbd></td><td>Kliknij obiekt, aby zaznaczyć go całego, <kbd>&#8679;</kbd>-kliknij, aby dodać lub usunąć jeden, i przeciągnij po pustym płótnie dla zaznaczenia prostokątnego. Przeciągnij wewnątrz zaznaczenia, aby go przesunąć, z <kbd>&#8679;</kbd> trzymającym przesunięcie w krokach co 45&deg; i <kbd>&#8997;</kbd> zostawiającym kopię.</td></tr>
+</tbody>
+</table>
+<p>Z zaznaczonym obiektem ramka ograniczająca niesie osiem uchwytów. Przeciągnij uchwyt, aby skalować, przytrzymując <kbd>&#8679;</kbd>, aby zachować proporcje, i <kbd>&#8997;</kbd>, aby skalować wokół środka; przeciągnij tuż za rogiem, aby obrócić, z <kbd>&#8679;</kbd> przyciągającym do 45&deg;. Dwuklik wchodzi do grupy i pracuje wewnątrz niej, dwuklik tekstu edytuje go, dwuklik instancji symbolu edytuje symbol, który rysuje każda instancja, i dwuklik poza grafiką wychodzi z powrotem.</p>
+<p>Edytowalne kształty niosą własne widżety: przeciągnij widżet narożnika, aby zaokrąglić każdy narożnik kształtu naraz, lub <kbd>&#8997;</kbd>-kliknij go, aby przejść narożnik do następnego rodzaju. To narzędzie, w którym spędzisz najwięcej czasu, więc warto dobrze poznać jego uchwyty.</p>
+
+<h3 id="tools-direct-selection">Zaznacz bezpośrednio i Zaznacz grupę</h3>
+<table>
+<thead><tr><th>Narzędzie</th><th>Skrót</th><th>Co robi</th></tr></thead>
+<tbody>
+<tr><td>Narzędzie Zaznacz bezpośrednio</td><td><kbd>A</kbd></td><td>Kliknij kotwicę, uchwyt lub segment i przeciągnij, aby przekształcić ścieżkę; zaznaczenie prostokątne po pustym płótnie podnosi kotwice wewnątrz niego. <kbd>&#8679;</kbd> dodaje do wybranych i trzyma przeciąganie w krokach co 45&deg;, a <kbd>&#8997;</kbd> podczas przeciągania uchwytu rozbija parę, dzięki czemu kotwica staje się narożna.</td></tr>
+<tr><td>Narzędzie Zaznacz grupę</td><td>&ndash;</td><td>Kliknij obiekt, aby go zaznaczyć; kliknij ponownie, aby objąć grupę, do której należy, i ponownie dla grupy powyżej.</td></tr>
+</tbody>
+</table>
+<p>Użyj narzędzia Zaznacz bezpośrednio, aby doprecyzować kształt po narysowaniu: popchnij jedną kotwicę, pociągnij pojedynczy uchwyt lub przekształć krzywę. Przeciąga również skrzyżowania siatki koperty, zginając to, co koperta trzyma, i zaokrągla jeden narożnik kształtu na żywo naraz, zamiast wszystkich. Narzędzie Zaznacz grupę to szybki sposób na dotarcie do obiektu pogrzebionego w zagnieżdżonych grupach bez wchodzenia i wychodzenia z nich.</p>
+
+<h3 id="tools-magic-wand">Automatyczne zaznaczanie</h3>
+<table>
+<thead><tr><th>Narzędzie</th><th>Skrót</th><th>Co robi</th></tr></thead>
+<tbody>
+<tr><td>Narzędzie Automatyczne zaznaczanie</td><td><kbd>Y</kbd></td><td>Kliknij obiekt, aby zaznaczyć każdy obiekt pomalowany tak samo. Co liczy się jako podobne (wypełnienie, obrys, grubość obrysu, krycie, tryb mieszania) ustawia się w panelu Automatycznego zaznaczania, a <kbd>&#8679;</kbd> dodaje nowe dopasowania do zaznaczenia.</td></tr>
+</tbody>
+</table>
+<p>Sięgaj po to, gdy chcesz zmienić każdy kształt jednego koloru naraz: kliknij czerwony, a następnie przemaluj całe zaznaczenie jednym krokiem.</p>
+
+<h3 id="tools-lasso">Lasso</h3>
+<table>
+<thead><tr><th>Narzędzie</th><th>Skrót</th><th>Co robi</th></tr></thead>
+<tbody>
+<tr><td>Narzędzie Lasso</td><td><kbd>Q</kbd></td><td>Przeciągnij swobodną pętlę, aby zaznaczyć kotwice wewnątrz niej. <kbd>&#8679;</kbd> dodaje je do już wybranych kotwic.</td></tr>
+</tbody>
+</table>
+<p>Użyj go, gdy kotwice, które chcesz, nie siedzą w schludnym prostokącie, więc zaznaczenie prostokątne złapałoby za dużo lub za mało.</p>
+<p>Ten slot trzyma również narzędzia zaznaczenia pikselowego — <strong>Prostokątne zaznaczenie</strong>, <strong>Elipsowe zaznaczenie</strong> i <strong>Zaznaczenie lassem</strong> — które rysują zaznaczenie "marszowe mrówki" na warstwie pikselowej zamiast wybierania kotwic wektorowych. Są opisane na stronie <a href="/manual/pixels/">Warstwy pikselowe</a>.</p>
+
+<h2 id="tools-pen-type">Pióro, krzywa i tekst</h2>
+<p>Narzędzia, które układają nowe ścieżki i tekst. Rodzina pióra daje dokładną kontrolę nad każdą kotwicą i uchwytem, narzędzie Krzywa dopasowuje gładką krzywę przez punkty, które stawiasz, a narzędzia Tekst ustawiają tekst punktowy, obszarowy, na ścieżce i pionowy.</p>
+
+<h3 id="tools-pen">Rodzina pióra</h3>
+<table>
+<thead><tr><th>Narzędzie</th><th>Skrót</th><th>Co robi</th></tr></thead>
+<tbody>
+<tr><td>Narzędzie Pióro</td><td><kbd>P</kbd></td><td>Kliknij, aby upuścić punkt narożny, lub naciśnij i przeciągnij, aby wyciągnąć z niego gładkie uchwyty; kliknij pierwszą kotwicę, aby zamknąć ścieżkę. <kbd>&#8679;</kbd> trzyma nowy punkt lub uchwyt w krokach co 45&deg;, a <kbd>&#8997;</kbd> podczas przeciągania rozbija uchwyty, dzięki czemu ścieżka odchodzi od kotwicy pod własnym kątem.</td></tr>
+<tr><td>Narzędzie Dodaj punkt kotwiczny</td><td><kbd>+</kbd></td><td>Kliknij segment, aby dodać kotwicę, bez zmiany kształtu ścieżki.</td></tr>
+<tr><td>Narzędzie Usuń punkt kotwiczny</td><td><kbd>&#8722;</kbd></td><td>Kliknij kotwicę, aby ją usunąć, łącząc segmenty po obu stronach.</td></tr>
+<tr><td>Narzędzie Punkt kotwiczny</td><td><kbd>&#8679;C</kbd></td><td>Przeciągnij kotwicę, aby wyciągnąć dopasowaną parę uchwytów, lub kliknij ją, aby wciągnąć uchwyty i zostawić narożnik. Przeciągnij jeden uchwyt osobno, aby przesunąć tylko tę stronę; <kbd>&#8679;</kbd> trzyma go w krokach co 45&deg;.</td></tr>
+</tbody>
+</table>
+<p>Narzędzie Pióro to podstawa precyzyjnego rysowania, od konturu logo po ścieżkę tekstu. Gdy ma ścieżkę w trakcie, <kbd>Enter</kbd> lub <kbd>Esc</kbd> kończy ją, a <kbd>Backspace</kbd> cofa ostatnią kotwicę. Trzy pomocniki dodają, usuwają i konwertują kotwice na gotowej ścieżce; pióro i ołówek są opisane głębiej na stronie <a href="/manual/paths/">Ścieżki</a>.</p>
+
+<h3 id="tools-curvature">Krzywa</h3>
+<table>
+<thead><tr><th>Narzędzie</th><th>Skrót</th><th>Co robi</th></tr></thead>
+<tbody>
+<tr><td>Narzędzie Krzywa</td><td><kbd>&#8679;~</kbd></td><td>Kliknij, aby upuścić punkty, a gładka krzywa jest dopasowywana przez nie; <kbd>&#8997;</kbd>-klik upuszcza punkt narożny zamiast tego. Przeciągnij punkt, aby go przesunąć, kliknij dwukrotnie punkt, aby przełączyć między gładkim a narożnym, kliknij pierwszy punkt, aby zamknąć ścieżkę, i kliknij dwukrotnie poza nią, aby zakończyć.</td></tr>
+</tbody>
+</table>
+<p>Sięgaj po narzędzie Krzywa, gdy chcesz płynnej linii i wolisz stawiać punkty i pozwolić Scissor wyliczyć uchwyty, zamiast ciągnąć każdy samodzielnie.</p>
+
+<h3 id="tools-type">Tekst</h3>
+<table>
+<thead><tr><th>Narzędzie</th><th>Skrót</th><th>Co robi</th></tr></thead>
+<tbody>
+<tr><td>Narzędzie Tekst</td><td><kbd>T</kbd></td><td>Kliknij dla tekstu punktowego, przeciągnij prostokąt dla tekstu obszarowego i kliknij istniejący tekst, aby go edytować. Kliknięcie otwartej ścieżki ustawia tekst biegnący wzdłuż tej ścieżki.</td></tr>
+<tr><td>Narzędzie Tekst obszarowy</td><td>&ndash;</td><td>Przeciągnij ramkę, w której tekst płynie.</td></tr>
+<tr><td>Narzędzie Tekst na ścieżce</td><td>&ndash;</td><td>Kliknij ścieżkę, a tekst biegnie wzdłuż niej. Ścieżka staje się linią bazową, więc przestaje być grafiką samą w sobie.</td></tr>
+<tr><td>Narzędzie Tekst pionowy</td><td>&ndash;</td><td>To samo co narzędzie Tekst, z tą różnicą, że linia tekstu biegnie w dół strony, a nie w poprzek.</td></tr>
+<tr><td>Narzędzie Edycja glifu</td><td><kbd>&#8679;T</kbd></td><td>Kliknij znak, aby wybrać go z linii, a następnie przeciągnij, aby go przesunąć, przeciągnij narożną gałkę, aby zmienić rozmiar, lub gałkę nad nim, aby go obrócić. <kbd>&#8679;</kbd> zachowuje proporcje zmiany rozmiaru narożnika i przyciąga obrót do kroków co 11.25&deg;, a <kbd>Delete</kbd> odkłada znak tam, gdzie go ustawił tekst.</td></tr>
+</tbody>
+</table>
+<p>Samo narzędzie Tekst obejmuje większość pracy: kliknij dla nagłówka, przeciągnij prostokąt dla akapitu. Boczne gałki ramki Edycji glifu rozciągają znak tylko w jednym kierunku, w poprzek dla szerokości i wzdłuż dla wysokości, dzięki czemu możesz rozciągać pojedyncze litery w tytule bez wyciągania ich z tekstu. Tekst jest opisany w pełni na stronie <a href="/manual/type/">Tekst</a>.</p>
+
+<h2 id="tools-lines-shapes">Linie i kształty</h2>
+<p>Wszystko, co rysuje gotową formę: proste linie, łuki i spirale, siatki linii oraz prostokąty, elipsy, wielokąty i gwiazdy, z których budujesz rysunek.</p>
+
+<h3 id="tools-lines">Linie, łuki, spirale i siatki</h3>
+<table>
+<thead><tr><th>Narzędzie</th><th>Skrót</th><th>Co robi</th></tr></thead>
+<tbody>
+<tr><td>Narzędzie Odcinek linii</td><td><kbd>\</kbd></td><td>Przeciągnij, aby narysować prostą linię. <kbd>&#8679;</kbd> trzyma ją w krokach co 45&deg;, a <kbd>&#8997;</kbd> rysuje ją od środka, a nie od końca.</td></tr>
+<tr><td>Narzędzie Łuk</td><td>&ndash;</td><td>Przeciągnij prostokąt, który wypełnia łuk; <kbd>&#8679;</kbd> kwadratuje ten prostokąt. Klawisze strzałek zginają łuk płaskiej lub pełniejszy, <kbd>C</kbd> zamyka i otwiera go, a <kbd>F</kbd> lub <kbd>X</kbd> odwraca, w którą stronę się wygina.</td></tr>
+<tr><td>Narzędzie Spirala</td><td>&ndash;</td><td>Przeciągnij od środka: odległość ustala promień, a kierunek ustala, gdzia spirala zaczyna się. <kbd>&#8997;</kbd> odwraca nawijanie, <kbd>R</kbd> odwraca je na stałe, a klawisze strzałek dodają i usuwają segmenty.</td></tr>
+<tr><td>Narzędzie Siatka prostokątna</td><td>&ndash;</td><td>Przeciągnij siatkę, z <kbd>&#8997;</kbd> rysując od środka i <kbd>&#8679;</kbd> trzymając ją kwadratową. Strzałki w górę i w dół zmieniają liczbę rzędów, w lewo i w prawo kolumn.</td></tr>
+<tr><td>Narzędzie Siatka biegunowa</td><td>&ndash;</td><td>Przeciągnij siatkę, z <kbd>&#8997;</kbd> rysując od środka i <kbd>&#8679;</kbd> trzymając ją okrągłą. Strzałki w górę i w dół zmieniają liczbę koncentrycznych pierścieni, w lewo i w prawo promieniastych szprych.</td></tr>
+</tbody>
+</table>
+<p>Dwa narzędzia siatki tworzą po jednej ścieżce na linię, dzięki czemu każda linia pozostaje wybieralna na własną rękę: użyj Siatki prostokątnej do tabel, kalendarzy i rusztowań układu, a Siatki biegunowej do tarcz loterii, wykresów radarowych i tarcz zegarów. Rysują grafikę siatki, którą zachowujesz. To coś innego niż siatka tła planszy, pomoc rysunkowa na ekranie, którą włączasz za pomocą <strong>Widok &rsaquo; Siatka &rsaquo; Pokaż siatkę</strong>, która nigdy się nie drukuje i jest dostępna w siedmiu rodzajach (kwadratowa, izometryczna, sześciokątna, ukośna, złotej proporcji, wzorzec i perspektywiczna). Siatki tła są opisane na stronie <a href="/manual/grids/">Siatki</a>. Osobne <strong>Narzędzie Kształt siatki</strong> (<kbd>&#8679;G</kbd>) buduje wypełnioną ścieżkę przez kliknięcie lub przeciąganie przez komórki tej siatki tła — szybki sposób na układanie stałych bloków na siatkę izometryczną lub sześciokątną.</p>
+
+<h3 id="tools-shapes">Prostokąty, elipsy i inne kształty</h3>
+<table>
+<thead><tr><th>Narzędzie</th><th>Skrót</th><th>Co robi</th></tr></thead>
+<tbody>
+<tr><td>Narzędzie Prostokąt</td><td><kbd>M</kbd></td><td>Przeciągnij, aby narysować prostokąt. <kbd>&#8679;</kbd> trzyma go kwadratowym, a <kbd>&#8997;</kbd> rysuje go od środka.</td></tr>
+<tr><td>Narzędzie Zaokrąglony prostokąt</td><td>&ndash;</td><td>To samo przeciąganie, z zaokrąglonymi narożnikami; strzałki w górę i w dół powiększają i pomniejszają promień narożnika w miarę rysowania.</td></tr>
+<tr><td>Narzędzie Elipsa</td><td><kbd>L</kbd></td><td>Przeciągnij, aby narysować elipsę, z <kbd>&#8679;</kbd> dla koła i <kbd>&#8997;</kbd> dla rysowania od środka.</td></tr>
+<tr><td>Narzędzie Wielokąt</td><td>&ndash;</td><td>Przeciągnij od środka; kierunek przeciągania obraca wielokąt, a <kbd>&#8679;</kbd> trzyma go prosto. Klawisze strzałek dodają i usuwają boki.</td></tr>
+<tr><td>Narzędzie Gwiazda</td><td>&ndash;</td><td>Przeciągnij od środka, obracając gwiazdę w miarę rysowania, z <kbd>&#8679;</kbd> trzymając ją prosto. Klawisze strzałek dodają i usuwają punkty.</td></tr>
+<tr><td>Narzędzie Flara</td><td>&ndash;</td><td>Przeciągnij raz, aby ustawić środek i rozmiar poświaty flary, a następnie przeciągnij drugi raz, aby naciągnąć jej pierścienie przez grafikę. Podczas przeciągania strzałki w lewo i w prawo zmieniają liczbę pierścieni, a strzałki w górę i w dół liczbę promieni.</td></tr>
+</tbody>
+</table>
+<p>Te tworzą kształty na żywo: zachowują swoje parametry, dzięki czemu możesz zmienić rozmiar prostokąta lub liczbę punktów gwiazdy długo po narysowaniu. Kliknięcie zamiast przeciągania z dowolnym z nich otwiera okno dialogowe, dzięki czemu możesz dać kształtowi dokładne wymiary. Narzędzie Flara odpowiada na kliknięcie flarem o rozmiarze, o który proszą jego opcje.</p>
+
+<h2 id="tools-brush-erase">Pędzle, ołówek i gumki</h2>
+<p>Narzędzia swobodne. Maluj pociągnięcie podążające za wskaźnikiem, szkicuj szczególną ścieżkę i pozwól Scissor ją posprzątać, pielęgnowaj i naprawiaj istniejące ścieżki lub wymazuj grafikę. Dwa sloty tutaj dotykają również strony rastrowej dokumentu: Pędzel maluje piksele, a Gumka pikselowa je czyści.</p>
+
+<h3 id="tools-brushes">Pędzle</h3>
+<table>
+<thead><tr><th>Narzędzie</th><th>Skrót</th><th>Co robi</th></tr></thead>
+<tbody>
+<tr><td>Narzędzie Pędzel malujący</td><td><kbd>B</kbd></td><td>Przeciągnij, aby rysować swobodnie; kreska jest wygładzana w miarę dopasowywania do krzywych i zachowuje bieżący pędzel i obrys.</td></tr>
+<tr><td>Narzędzie Pędzel wypełniający</td><td><kbd>&#8679;B</kbd></td><td>Rysuje tę samą kreskę, ale konturuje ją w wypełniony kształt i scala ją z grafiką, której dotyka i która dzieli jej wypełnienie.</td></tr>
+<tr><td>Narzędzie Pędzel</td><td>&ndash;</td><td>Maluje kolor rastrowy prosto na warstwę pikselową w bieżącym kolorze wypełnienia, tworząc najpierw warstwę pikselową, jeśli jej nie ma. W przeciwieństwie do Pędzla malującego, ślad nie jest ścieżką, którą możesz później przekształcić: staje się częścią obrazu.</td></tr>
+</tbody>
+</table>
+<p>Użyj Pędzla malującego dla ekspresyjnych, kaligraficznych kresek, które pozostają edytowalne, i Pędzla wypełniającego, gdy woliś budować stały wypełniony kształt niż obrysowaną linię. <kbd>[</kbd> i <kbd>]</kbd> czynią pędzel mniejszym i większym. Narzędzie Pędzel dzieli ten slot, ale maluje piksele zamiast ścieżki, do cieniowania i tekstury, a <strong>Wiadro</strong> dzieli je również, zalewając spójny obszar warstwy pikselowej kolorem wypełnienia. Malowanie na warstwach pikselowych jest opisane na stronie <a href="/manual/pixels/">Warstwy pikselowe</a>.</p>
+
+<h3 id="tools-pencil">Ołówek i narzędzia naprawiające ścieżki</h3>
+<table>
+<thead><tr><th>Narzędzie</th><th>Skrót</th><th>Co robi</th></tr></thead>
+<tbody>
+<tr><td>Narzędzie Szkic</td><td><kbd>&#8679;N</kbd></td><td>Rysuj szczególnie, a kreska stanie się czystym kształtem, który miałeś na myśli. Szarpięcie przez grafikę wybija to, czego szarpięcie pokrywa.</td></tr>
+<tr><td>Narzędzie Ołówek</td><td><kbd>N</kbd></td><td>Rysuj swobodnie, a kreska jest dopasowywana do gładkich krzywych. Przytrzymaj <kbd>&#8997;</kbd> podczas puszczenia, aby zamknąć ścieżkę, co również dzieje się samo, gdy kończysz blisko miejsca, w którym zacząłeś.</td></tr>
+<tr><td>Narzędzie Wygładź</td><td>&ndash;</td><td>Przeciągnij wzdłuż ścieżki, aby wyrównać jej uchwyty i odrzucić kotwice, które ledwo ją zginają; większy pędzel wygładza mocniej.</td></tr>
+<tr><td>Narzędzie Wymaż ścieżkę</td><td>&ndash;</td><td>Przeciągnij wzdłuż ścieżki, aby wymazać część, którą pokrywasz.</td></tr>
+<tr><td>Narzędzie Połącz</td><td>&ndash;</td><td>Przetrzyj przez dwa luźne końce, aby połączyć je w jedną ścieżkę.</td></tr>
+</tbody>
+</table>
+<p>Ołówek to szybki sposób na szkicowanie kształtu ręcznie; Shaper jest do tego, gdy chcesz, aby szczególny gest był odczytywany jako czysty prostokąt, elipsa lub linia. Ostatnie trzy pielęgnują istniejące ścieżki: <kbd>[</kbd> i <kbd>]</kbd> zmieniają rozmiar pędzli Wygładź, Wymaż ścieżkę i Połącz. Z grafiką zaznaczoną te trzy działają tylko na zaznaczeniu; bez zaznaczenia działają na każdej ścieżce, którą dosięgną.</p>
+
+<h3 id="tools-cutting">Wymazywanie i cięcie</h3>
+<table>
+<thead><tr><th>Narzędzie</th><th>Skrót</th><th>Co robi</th></tr></thead>
+<tbody>
+<tr><td>Narzędzie Gumka</td><td><kbd>&#8679;E</kbd></td><td>Przeciągnij okrągły pędzel, aby odejmować od obiektów. Z zaznaczeniem tylko zaznaczone obiekty są wymazywane; w przeciwnym razie każda niezablokowana ścieżka jest, a <kbd>[</kbd> i <kbd>]</kbd> zmieniają rozmiar pędzla.</td></tr>
+<tr><td>Narzędzie Gumka pikselowa</td><td>&ndash;</td><td>Wymazuje farbę z warstwy pikselowej, czyszcząc ją do przezroczystości, dzięki czemu to, co pod spodem, pokazuje się. Działa na warstwach pikselowych, gdzie Gumka działa na ścieżkach wektorowych; <kbd>[</kbd> i <kbd>]</kbd> zmieniają rozmiar pędzla.</td></tr>
+<tr><td>Narzędzie Nożyce</td><td><kbd>C</kbd></td><td>Kliknij segment lub kotwicę, aby przeciąć ścieżkę w tym miejscu. Zamknięta ścieżka otwiera się w cięciu; otwarta ścieżka rozpadaje się na dwa obiekty.</td></tr>
+<tr><td>Nóż</td><td>&ndash;</td><td>Przeciągnij przez obiekty, aby rozciąć je na osobne kawałki. <kbd>&#8997;</kbd> tnie prosto, a <kbd>&#8679;</kbd> trzyma tę linię w krokach co 45&deg;.</td></tr>
+</tbody>
+</table>
+<p>Gumka wydrąża kształty z wypełnionej grafiki jak wymazywanie ołówkiem; Nożyce robią pojedyncze czyste cięcie w punkcie; Nóż tnie całe obiekty na kawałki wzdłuż przeciąganej linii. Gumka pikselowa dzieli slot z Gumką, ale należy do strony rastrowej, na stronie <a href="/manual/pixels/">Warstwy pikselowe</a>.</p>
+<p>Jeszcze jeden slot paska narzędzi jest całkowicie rastrowy: pędzle retuszujące <strong>Rozjaśnianie</strong>, <strong>Przyciemnianie</strong> i <strong>Gąbka</strong> rozjaśniają, przyciemniają i nasycają piksele już na warstwie. Malują jak Pędzel i są opisane, z resztą edycji pikseli, na stronie <a href="/manual/pixels/">Warstwy pikselowe</a>.</p>
+
+<h2 id="tools-transform">Przekształcanie</h2>
+<p>Narzędzia, które przesuwają, obracają, odbijają, skalują, przechylają, zniekształcają i przekształcają już narysowane. Każde narzędzie przekształcania działa wokół punktu odniesienia, który zaczyna się od środka zaznaczenia; <kbd>&#8997;</kbd>-kliknięcie ustawia ten punkt tam, gdzie klikasz, i otwiera okno dialogowe narzędzia dla dokładnych wartości. Z zaznaczonymi pojedynczymi kotwicami te narzędzia przekształcają te kotwice, a nie całe obiekty.</p>
+
+<h3 id="tools-rotate-reflect">Obróć i Odbij</h3>
+<table>
+<thead><tr><th>Narzędzie</th><th>Skrót</th><th>Co robi</th></tr></thead>
+<tbody>
+<tr><td>Narzędzie Obróć</td><td><kbd>R</kbd></td><td>Przeciągnij wokół punktu odniesienia, aby obrócić zaznaczenie, z <kbd>&#8679;</kbd> przyciągającym do 45&deg; i <kbd>&#8997;</kbd> obracającym kopię i zostawiającym oryginał. <kbd>&#8997;</kbd>-kliknij, aby umieścić punkt odniesienia tam, gdzie kliknąłeś, i otworzyć okno dialogowe Obróć.</td></tr>
+<tr><td>Narzędzie Odbij</td><td><kbd>O</kbd></td><td>Przeciągnij, aby przesunąć oś lustra przez punkt odniesienia, z <kbd>&#8679;</kbd> przyciągającym ją do 45&deg;. <kbd>&#8997;</kbd>-kliknij ustawia punkt odniesienia i otwiera okno dialogowe Odbij, a <kbd>&#8997;</kbd> podczas przeciągania odbija kopię.</td></tr>
+</tbody>
+</table>
+<p>Sięgaj po narzędziu Obróć, aby obrócić grafikę wokół wybranego zawiasu, a nie jej własnego środka, i po narzędziu Odbij, aby zbudować symetryczny rysunek: odbij kopię przez wybraną oś, a dwie połowy pozostają dopasowane. Oba narzędzia zaczynają od środka zaznaczenia, a wybranie czegoś innego przywraca punkt odniesienia tam.</p>
+
+<h3 id="tools-scale-shear">Skaluj, Przechyl i Przekształć</h3>
+<table>
+<thead><tr><th>Narzędzie</th><th>Skrót</th><th>Co robi</th></tr></thead>
+<tbody>
+<tr><td>Narzędzie Skaluj</td><td><kbd>S</kbd></td><td>Przeciągnij od punktu odniesienia, aby powiększyć zaznaczenie, i do niego, aby je zmniejszyć; <kbd>&#8679;</kbd> zachowuje proporcje, a <kbd>&#8997;</kbd> skaluje kopię. <kbd>&#8997;</kbd>-kliknij ustawia punkt odniesienia i otwiera okno dialogowe Skaluj.</td></tr>
+<tr><td>Narzędzie Przechyl</td><td>&ndash;</td><td>Przeciągnij, aby przechylić zaznaczenie wokół punktu odniesienia; <kbd>&#8679;</kbd> osadza przechylenie na tej osi, do której Twoje przeciąganie się pochyla. <kbd>&#8997;</kbd>-kliknij ustawia punkt odniesienia i otwiera okno dialogowe Przechyl.</td></tr>
+<tr><td>Narzędzie Przekształć</td><td>&ndash;</td><td>Wymienione w pasku narzędzi, ale nie zaimplementowane jeszcze; paleta oznacza je jako wkrótce dostępne.</td></tr>
+</tbody>
+</table>
+<p>Użyj narzędzia Skaluj, gdy chcesz zmienić rozmiar grafiki wokół stałego punktu, a nie uchwytu ramki ograniczającej, i narzędzia Przechyl, aby przechylić kształt dla rzucanego cienia lub odczytu kursywy.</p>
+
+<h3 id="tools-width-liquify">Grubość i pędzle płynne</h3>
+<table>
+<thead><tr><th>Narzędzie</th><th>Skrót</th><th>Co robi</th></tr></thead>
+<tbody>
+<tr><td>Narzędzie Profil grubości</td><td><kbd>&#8679;W</kbd></td><td>Przeciągnij od obrysowanego ścieżki, aby poszerzyć ją tam, i do niej, aby ją zwęźić, zostawiając punkt grubości. Bez zaznaczenia działa na każdej edytowalnej ścieżce.</td></tr>
+<tr><td>Narzędzie Deformacja</td><td><kbd>&#8679;R</kbd></td><td>Przytrzymaj i przeciągnij okrągły pędzel, aby popychać ścieżki pod nim razem z wskaźnikiem.</td></tr>
+<tr><td>Narzędzie Twirl</td><td>&ndash;</td><td>Przytrzymaj pędzel nad grafiką i on nadal nawija, tak długo, jak go trzymasz.</td></tr>
+<tr><td>Narzędzie Ściskanie</td><td>&ndash;</td><td>Wciąga ścieżki pod pędzlem do jego środka.</td></tr>
+<tr><td>Narzędzie Puchnięcie</td><td>&ndash;</td><td>Wypycha ścieżki pod pędzlem od jego środka.</td></tr>
+<tr><td>Narzędzie Ripple</td><td>&ndash;</td><td>Dodaje krzywe muszle do ścieżek pod pędzlem.</td></tr>
+<tr><td>Narzędzie Spike</td><td>&ndash;</td><td>Dodaje kolczaste punkty do ścieżek pod pędzlem.</td></tr>
+<tr><td>Narzędzie Crumple</td><td>&ndash;</td><td>Faluję ścieżki pod pędzlem.</td></tr>
+</tbody>
+</table>
+<p>Narzędzie Grubość zwęża i puchnie obrys ręcznie, dla linii jak pióro lub pędzel bez przełączania pędzli. Siedem pędzli płynnych popycha, skręca i szorstko przekształca ścieżki w miarę malowania nad nimi, dla organicznego zniekształcenia, które byłoby wolne do zrobienia kotwica po kotwicy. Wszystkie siedem przyjmuje <kbd>[</kbd> i <kbd>]</kbd> dla rozmiaru, a <kbd>&#8679;</kbd> z tymi samymi klawiszami, <kbd>{</kbd> i <kbd>}</kbd>, dla tego, jak mocno popychają.</p>
+
+<h3 id="tools-free-transform">Dowolne przekształcanie i Pin Warp</h3>
+<table>
+<thead><tr><th>Narzędzie</th><th>Skrót</th><th>Co robi</th></tr></thead>
+<tbody>
+<tr><td>Narzędzie Dowolne przekształcanie</td><td><kbd>E</kbd></td><td>Jedna ramka, która skaluje, obraca, przechyla i zniekształca zaznaczenie. Przeciągnij uchwyt krawędzi lub rogu, aby skalować, przytrzymaj <kbd>&#8984;</kbd> na uchwycie krawędzi, aby przechylić, przeciągnij wewnątrz ramki, aby ją przesunąć, i przeciągnij tuż za rogiem, aby ją obrócić.</td></tr>
+<tr><td>Narzędzie Pin Warp</td><td>&ndash;</td><td>Kliknij zaznaczoną grafikę, aby upuścić pinezkę, a następnie przeciągnij pinezki, aby ją zginać; grafika zachowuje swój kształt wokół pinezek, które pozostają w miejscu. <kbd>&#8997;</kbd>-klik pinezki usuwa ją, <kbd>&#8679;</kbd>-klik podnosi kilka, a <kbd>&#8997;</kbd>-przeciąganie tuż za pinezką obraca grafikę wokół niej.</td></tr>
+</tbody>
+</table>
+<p>Dowolne przekształcanie to ramka wszystko-w-jednym, gdy chcesz skalować, obracać i przechylać jednym gestem zamiast przełączania narzędzi. Działa wokół swojego punktu odniesienia, który możesz przeciągnąć gdziekolwiek, nawet poza ramkę; upuść go blisko jednego z dziewięciu zwykłych miejsc ramki i osiądzie tam. Podczas skalowania <kbd>&#8679;</kbd> zachowuje proporcje, a <kbd>&#8997;</kbd> skaluje wokół środka, a nie punktu odniesienia; podczas obracania <kbd>&#8679;</kbd> przyciąga do 45&deg;. Na uchwycie rogu <kbd>&#8984;</kbd> zniekształca ten róg samodzielnie, a <kbd>&#8984;&#8997;&#8679;</kbd> zniekształca w perspektywie, z sąsiednim rogiem odbijającym przeciąganie; widżet obok ramki ustawia te same dwa tryby i przełącznik ograniczenia. Zmiana modyfikatora w połowie przeciągania przełącza natychmiast, bez puszczenia.</p>
+<p>Pin Warp służy do pozycjonowania i zginania pojedynczego fragmentu grafiki, jak zginanie narysowanej ręki, przez przypinanie części, które powinny trzymać się nieruchomo, i przeciąganie reszty. Odczytuje <kbd>Delete</kbd> jako usuwanie zaznaczonych pinezek, a nie grafiki, i <kbd>&#8984;A</kbd> jako zaznaczanie wszystkich pinezek. Każde przeciąganie to jeden krok do cofnięcia, a cofnięcie przywraca pinezki z grafiką, z którą poszły. Tekst, obrazy i instancje symboli nie mogą być zniekształcane i są zostawiane tak, jak są.</p>
+
+<h2 id="tools-build-perspective">Połącz i Podziel, Wypełnienie obszaru i perspektywa</h2>
+<p>Narzędzia, które traktują nakładające się kształty jako regiony do połączenia i pokolorowania, oraz siatka pozwalająca rysować i umieszczać grafikę w perspektywie.</p>
+
+<h3 id="tools-builder-paint">Połącz i Podziel i Wypełnienie obszaru</h3>
+<table>
+<thead><tr><th>Narzędzie</th><th>Skrót</th><th>Co robi</th></tr></thead>
+<tbody>
+<tr><td>Narzędzie Połącz i Podziel</td><td><kbd>&#8679;M</kbd></td><td>Z zaznaczonymi nakładającymi się kształtami przeciągnij przez regiony, które chcesz połączyć, i staną się jednym obiektem. <kbd>&#8997;</kbd>-przeciąganie usuwa regiony, które przecinasz.</td></tr>
+<tr><td>Wiadro wypełnienia obszaru</td><td><kbd>K</kbd></td><td>Kliknij ścianę grupy Wypełnienia obszaru, aby wypełnić ją bieżącą farbą; <kbd>&#8997;</kbd>-kliknij pobiera farbę już tam zamiast kładać jakąkolwiek. Ścianka pod wskaźnikiem jest obrysowana przed kliknięciem.</td></tr>
+<tr><td>Narzędzie Zaznacz obszar</td><td><kbd>&#8679;L</kbd></td><td>Kliknij ścianę grupy Wypełnienia obszaru, aby ją zaznaczyć, bez malowania.</td></tr>
+</tbody>
+</table>
+<p>Użyj Połącz i Podziel, aby narysować kilka nakładających się kształtów, a następnie scalić i przyciąć je w kontur, którego chcesz, przeciągając przez kawałki. Wypełnienie obszaru traktuje zestaw nakładających się ścieżek jak książkę do kolorowania: Wiadro zalewa każdą zamkniętą ścianę kolorem, a narzędzie Zaznacz wybiera ściany i krawędzie, dzięki czemu możesz je przestylizować, bez wcześniejszego rozcinania kształtów.</p>
+
+<h3 id="tools-perspective">Perspektywa</h3>
+<table>
+<thead><tr><th>Narzędzie</th><th>Skrót</th><th>Co robi</th></tr></thead>
+<tbody>
+<tr><td>Narzędzie Siatka perspektywiczna</td><td><kbd>&#8679;P</kbd></td><td>Pokazuje siatkę i kształtuje ją: przeciągnij punkty zbiegania, przeciągnij jeden w górę lub w dół, aby przesunąć horyzont, i przeciągnij bliski róg siatki. <kbd>1</kbd> do <kbd>4</kbd> lub widżet na ekranie wybierają płaszczyznę, na której rysujesz.</td></tr>
+<tr><td>Narzędzie Zaznacz perspektywę</td><td><kbd>&#8679;V</kbd></td><td>Zaznacza grafikę i przeciąga ją wzdłuż jej płaszczyzny. Grafika, która nie jest jeszcze na siatce, jest odkładana na aktywnej płaszczyznie tam, gdzie ją przeciągasz.</td></tr>
+</tbody>
+</table>
+<p>Sięgaj po te, aby rysować sceny i tekst odchodzące w punkty zbiegania, takie jak ulica lub produkt w pudełku. Gdy siatka jest pokazana, narzędzia Prostokąt, Zaokrąglony prostokąt, Elipsa i Siatka prostokątna rysują na aktywnej płaszczyznie zamiast płasko, a <kbd>1</kbd> do <kbd>4</kbd> wybierają płaszczyznę z tych narzędzi również.</p>
+
+<h2 id="tools-mesh-gradient">Siatka i gradient</h2>
+<p>Dwa narzędzia do malowania stopniowanego koloru w kształcie: siatka punktów koloru przez obiekt lub gładka mieszanka wzdłuż osi.</p>
+
+<h3 id="tools-mesh">Siatka</h3>
+<table>
+<thead><tr><th>Narzędzie</th><th>Skrót</th><th>Co robi</th></tr></thead>
+<tbody>
+<tr><td>Narzędzie Siatka</td><td><kbd>U</kbd></td><td>Kliknij wewnątrz obiektu, aby poprowadzić linię siatki w każdą stronę przez ten punkt, zamieniając zwykłą ścieżkę w siatkę. Kliknij punkt siatki, aby go wybrać i dać mu kolor z panelu Kolor, przeciągnij punkt, aby go przesunąć, i <kbd>&#8997;</kbd>-kliknij, aby usunąć linie przez niego.</td></tr>
+</tbody>
+</table>
+<p>Użyj siatki do miękkich, swobodnych cieniowania, których prosty gradient nie może dać, takiego jak zaokrąglone światło na owocu lub twarzy.</p>
+
+<h3 id="tools-gradient">Gradient</h3>
+<table>
+<thead><tr><th>Narzędzie</th><th>Skrót</th><th>Co robi</th></tr></thead>
+<tbody>
+<tr><td>Narzędzie Gradient</td><td><kbd>G</kbd></td><td>Przeciągnij przez zaznaczenie, aby ustawić oś jego aktywnej farby, z <kbd>&#8679;</kbd> trzymając oś w krokach co 45&deg;. Na grafice, która ma już gradient, pracuj z adnotatorem.</td></tr>
+</tbody>
+</table>
+<p>Przeciągnij narzędzie Gradient, aby wskazać liniową lub radialną mieszankę w kierunku, którego chcesz, i ustawić, jak daleko biegnie. Na adnotatorze przeciągnij punkt wzdłuż osi, aby go przesunąć, przeciągnij romb, aby przesunąć mieszankę między dwoma punktami, kliknij oś, aby dodać punkt w kolorze, który już tam ma, i wyciągnij punkt daleko od osi, aby go odrzucć, o ile zostaną dwa. <kbd>Delete</kbd> usuwa ostatni dotknięty punkt. Na gradiencie swobodnym narzędzie działa na punktach koloru zamiast tego: kliknij grafikę, aby dodać jeden w kolorze wypełnienia, i przeciągnij punkt, aby go przesunąć. Gradienty są opisane dalej na stronie <a href="/manual/appearance/">Kolor i wygląd</a>.</p>
+
+<h2 id="tools-sample-morph">Próbki, pomiary i morfowanie</h2>
+<p>Kopiuj wygląd z jednego obiektu na drugi, odczytuj odległości i kąty z płótna i mieszaj między kształtami w serii kroków.</p>
+
+<h3 id="tools-eyedropper">Pędzel i Mierz</h3>
+<table>
+<thead><tr><th>Narzędzie</th><th>Skrót</th><th>Co robi</th></tr></thead>
+<tbody>
+<tr><td>Narzędzie Pędzel</td><td><kbd>I</kbd></td><td>Kliknij obiekt, aby pobrać jego cały wygląd na zaznaczenie lub na domyślny styl, gdy nic nie jest zaznaczone. <kbd>&#8679;</kbd> pobiera tylko jego kolor wypełnienia lub obrysu na aktywną stronę, a <kbd>&#8997;</kbd> działa odwrotnie, stosując wygląd zaznaczenia do obiektu, który klikasz.</td></tr>
+<tr><td>Narzędzie Mierz</td><td>&ndash;</td><td>Przeciągnij między dwoma punktami, aby odczytać odległość, przesunięcia i kąt; <kbd>&#8679;</kbd> trzyma linię w krokach co 45&deg;. Ostatni pomiar pozostaje na ekranie do następnego przeciągania.</td></tr>
+</tbody>
+</table>
+<p>Pędzel to szybki sposób na dopasowanie jednego obiektu do drugiego: wybierz wygląd, który lubisz, i ląduje na zaznaczeniu. Użyj narzędzia Mierz, aby sprawdzić przerwę lub kąt bez zostawiania śladu na grafice.</p>
+
+<h3 id="tools-blend">Morf</h3>
+<table>
+<thead><tr><th>Narzędzie</th><th>Skrót</th><th>Co robi</th></tr></thead>
+<tbody>
+<tr><td>Narzędzie Morf</td><td><kbd>W</kbd></td><td>Kliknij jeden obiekt, a następnie drugi, aby morfować między nimi przez serię kroków pośrednich. Aby wziąć kolejny obiekt do morfu, kliknij wewnątrz morfu, a następnie kliknij obiekt, który chcesz do niego dodać.</td></tr>
+</tbody>
+</table>
+<p>Sięgaj po narzędziu Morf, aby zmieszać jeden kształt lub kolor w drugi w równych krokach, czy to dla płynnego cieniowanego paska, czy równo rozłożonych, zmieniających się kopii wzdłuż ścieżki.</p>
+
+<h2 id="tools-symbols">Symbole</h2>
+<p>Symbol to fragment grafiki, który możesz umieścić wiele razy, z każdą kopią powiązaną z jednym wzorcem. Pędzle symbolizmu układają i pracują na całych tłumach tych instancji naraz.</p>
+
+<h3 id="tools-symbolism">Pędzle symbolizmu</h3>
+<table>
+<thead><tr><th>Narzędzie</th><th>Skrót</th><th>Co robi</th></tr></thead>
+<tbody>
+<tr><td>Symbol Scatter</td><td><kbd>&#8679;S</kbd></td><td>Przeciągnij, aby układać instancje symbolu wybranego w panelu Symbole jako zestaw symboli. <kbd>&#8997;</kbd> usuwa instancje z powrotem.</td></tr>
+<tr><td>Symbol Nudge</td><td>&ndash;</td><td>Przeciąga instancje pod pędzlem razem z wskaźnikiem.</td></tr>
+<tr><td>Symbol Pack</td><td>&ndash;</td><td>Zbiera instancje pod pędzlem; <kbd>&#8997;</kbd> rozprasza je.</td></tr>
+<tr><td>Symbol Resize</td><td>&ndash;</td><td>Powiększa instancje pod pędzlem; <kbd>&#8997;</kbd> pomniejsza je.</td></tr>
+<tr><td>Symbol Spin</td><td>&ndash;</td><td>Obraca instancje pod pędzlem, aby podążały za przeciąganiem.</td></tr>
+<tr><td>Symbol Tint</td><td>&ndash;</td><td>Barwi instancje pod pędzlem w stronę koloru wypełnienia; <kbd>&#8997;</kbd> usuwa barwienie.</td></tr>
+<tr><td>Symbol Fade</td><td>&ndash;</td><td>Wygładza instancje pod pędzlem; <kbd>&#8997;</kbd> przywraca je do pełnej siły.</td></tr>
+<tr><td>Symbol Restyle</td><td>&ndash;</td><td>Stosuje styl graficzny wybrany w panelu Style graficzne do instancji pod pędzlem; <kbd>&#8997;</kbd> usuwa go.</td></tr>
+</tbody>
+</table>
+<p>Użyj tych, aby rozproszyć, a następnie zróżnicować pole powtarzającej się grafiki, takiej jak drzewa na zboczu lub gwiazdy na niebie: spryskaj zestaw, a następnie rozrzedź go, zmień rozmiar, obróć i barw, aby kopie nie wyglądały jak stemple. Wszystkie osiem przyjmuje <kbd>[</kbd> i <kbd>]</kbd> dla rozmiaru pędzla i <kbd>{</kbd> i <kbd>}</kbd> dla tego, jak mocno pędzel działa. Działają na instancjach w zaznaczeniu lub na każdej edytowalnej instancji, gdy nic nie jest zaznaczone.</p>
+
+<h2 id="tools-boards-slices">Plansze i wycinki</h2>
+<p>Narzędzia, które układają płótno do wyjścia: artbleedy, które są stronami, na których siedzi Twoja grafika, i wycinki, które wyznaczają prostokąty do eksportu na własną rękę.</p>
+
+<h3 id="tools-boards">Plansze</h3>
+<table>
+<thead><tr><th>Narzędzie</th><th>Skrót</th><th>Co robi</th></tr></thead>
+<tbody>
+<tr><td>Narzędzie Plansza</td><td><kbd>&#8679;O</kbd></td><td>Rysuje, przesuwa i zmienia rozmiar artbledów prosto na płótnie. Przeciągnij puste płótno dla nowej planszy, z <kbd>&#8997;</kbd> rysując od środka i <kbd>&#8679;</kbd> trzymając ją kwadratową; przeciągnij wewnątrz planszy, aby ją przesunąć, z <kbd>&#8679;</kbd> trzymającym przesunięcie do jednej osi; przeciągnij uchwyt rogu z <kbd>&#8679;</kbd>, aby zachować proporcje planszy.</td></tr>
+</tbody>
+</table>
+<p>Sięgaj po narzędziu Plansza, aby dodać strony dla różnych rozmiarów lub wersji projektu w jednym dokumencie i aby zmienić rozmiar strony wokół tego, co narysowałeś. <kbd>Delete</kbd> usuwa aktywną planszę, o ile zostaje jedna.</p>
+
+<h3 id="tools-slices">Wycinki</h3>
+<table>
+<thead><tr><th>Narzędzie</th><th>Skrót</th><th>Co robi</th></tr></thead>
+<tbody>
+<tr><td>Narzędzie Wycinek</td><td><kbd>&#8679;K</kbd></td><td>Przeciągnij prostokąt, który eksportuje się na własną rękę; <kbd>&#8997;</kbd> rysuje od środka, a <kbd>&#8679;</kbd> trzyma go kwadratowym. Krawędzie wycinka osiądają na całych pikselach, więc to, co wychodzi, nie jest rozmyte.</td></tr>
+<tr><td>Narzędzie Zaznacz wycinek</td><td>&ndash;</td><td>Wybiera, przesuwa i zmienia rozmiar wycinków. <kbd>Delete</kbd> usuwa zaznaczony, a dwuklik otwiera jego opcje.</td></tr>
+</tbody>
+</table>
+<p>Użyj wycinków, aby rozbić jeden artbled na kawałki, które eksportują się osobno, takie jak przyciski i banery układu webowego, każdy jako własny plik. Eksportowanie jest opisane na stronie <a href="/manual/files/">Otwieranie i eksport</a>.</p>
+
+<h2 id="tools-navigate">Poruszanie się</h2>
+<p>Narzędzia, które przesuwają, obracają i powiększają widok. Żadne z nich nie zmienia dokumentu: zmieniają tylko to, jak na niego patrzysz.</p>
+
+<h3 id="tools-view">Przesuwanie widoku</h3>
+<table>
+<thead><tr><th>Narzędzie</th><th>Skrót</th><th>Co robi</th></tr></thead>
+<tbody>
+<tr><td>Narzędzie Ręka</td><td><kbd>H</kbd></td><td>Przeciągnij, aby przesunąć widok. Przytrzymanie spacji pożycza je z każdego innego narzędzia tak długo, jak je trzymasz.</td></tr>
+<tr><td>Narzędzie Obróć widok</td><td><kbd>&#8679;H</kbd></td><td>Przeciągnij, aby obrócić widok wokół środka okna, z <kbd>&#8679;</kbd> przyciągającym do 15&deg;; dwuklik ustawia go z powrotę prosto. Tylko widok się obraca, nigdy dokument.</td></tr>
+<tr><td>Narzędzie Mozaika drukarska</td><td>&ndash;</td><td>Wymienione w pasku narzędzi, ale nie zaimplementowane jeszcze; paleta oznacza je jako wkrótce dostępne.</td></tr>
+</tbody>
+</table>
+<p>Narzędzie Ręka przewija powiększony rysunek bez dotykania pasków przewijania, a narzędzie Obróć widok chyla cały widok, abyś mógł narysować ukośną linię pod wygodnym kątem, a następnie ustawić ją z powrotę prosto.</p>
+
+<h3 id="tools-zoom">Powiększenie</h3>
+<table>
+<thead><tr><th>Narzędzie</th><th>Skrót</th><th>Co robi</th></tr></thead>
+<tbody>
+<tr><td>Narzędzie Powiększenie</td><td><kbd>Z</kbd></td><td>Kliknij, aby powiększyć, i <kbd>&#8997;</kbd>-kliknij, aby pomniejszyć. Przeciągnij prostokąt przez część grafiki, aby wypełnić okno nią.</td></tr>
+</tbody>
+</table>
+
+<h2 id="tools-fill-stroke">Kontrolki wypełnienia i obrysu</h2>
+<p>U dołu paska narzędzi siedzą próbki wypełnienia i obrysu, jedna przed drugą. Przednia próbka to aktywna strona, ta, na którą ląduje Twój następny wybór koloru. Garść pojedynczych klawiszy obsługuje je bez sięgania po panele:</p>
+<table>
+<thead><tr><th>Skrót</th><th>Co robi</th></tr></thead>
+<tbody>
+<tr><td><kbd>D</kbd></td><td>Resetuje wypełnienie i obrys do ich domyślnych wartości.</td></tr>
+<tr><td><kbd>X</kbd></td><td>Przełącza, która z wypełnienia lub obrysu jest aktywną stroną.</td></tr>
+<tr><td><kbd>&#8679;X</kbd></td><td>Zamienia kolory wypełnienia i obrysu.</td></tr>
+<tr><td><kbd>/</kbd></td><td>Ustawia aktywną stronę na brak farby.</td></tr>
+</tbody>
+</table>
+<p>Te czynią częste ruchy szybkimi: <kbd>X</kbd>, aby przeskakiwać między malowaniem wypełnienia i obrysu, <kbd>/</kbd>, aby upuścić wypełnienie lub obrys na brak, i <kbd>D</kbd>, aby wrócić do zwykłego czarno-białego startu. Wypełnienia, obrysy i sposób ich ustawiania są opisane na stronie <a href="/manual/appearance/">Kolor i wygląd</a>.</p>

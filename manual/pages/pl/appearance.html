@@ -1,0 +1,134 @@
+<p class="lede">Wygląd kształtu to jego <em>wygląd</em>: wypełnienie wewnątrz jego konturu, obrys rysowany wzdłuż niego oraz krycie i mieszanie, które decydują, jak leży na tym, co za nim. Każdy z nich może być płaskim kolorem, gradientem lub wzorcem, a obiekt może nosić więcej niż jeden z każdego naraz. Ta strona obejmuje kontrolki malowania, modele kolorów, próbki, gradienty, obrysy, przezroczystość, panel Stos malowania i style graficzne.</p>
+
+<p>Skróty poniżej zapisane są w formacie macOS. W systemach Windows odczytuj <kbd>&#8984;</kbd> jako Ctrl, <kbd>&#8997;</kbd> jako Alt i <kbd>&#8679;</kbd> jako Shift.</p>
+
+<figure class="shot">
+  <img src="img/artwork-landscape.png" width="1700" height="967" loading="lazy"
+       alt="Wektorowy krajobraz gór, nieba i jeziora, zbudowany z kształtów wypełnionych płasko w Scissor." />
+  <figcaption>Cała scena zbudowana z wypełnionych kształtów. Każdy pasek koloru to ścieżka z własnym wypełnieniem.</figcaption>
+</figure>
+
+<h2 id="appearance-fill-and-stroke">Wypełnienia i obrysy</h2>
+<p>Ścieżka, kształt lub fragment tekstu może zawierać <strong>wypełnienie</strong>, farbę wewnątrz jego konturu, i <strong>obrys</strong>, linię rysowaną wzdłuż tego konturu. Wypełnienie może być jednolitym kolorem, gradientem lub wzorcem; obrys może być jednolitym kolorem lub gradientem, z własną grubością i kreską. Każda strona może być również ustawiona na brak, więc możesz narysować kształt tylko z obrysem lub tylko z wypełnieniem.</p>
+
+<h3 id="appearance-the-paint-chips">Wypełnienie i obrys</h3>
+<p>Dwie nakładające się chipsy u dołu paska narzędzi trzymają wypełnienie i obrys. Kliknij dowolny, aby otworzyć próbnik koloru; ten z przodu to strona, na którą działają klawisze oraz panele Kolor, Próbki i Gradient. Naciśnij <kbd>X</kbd>, aby przyciągnąć drugą stronę na przód, <kbd>&#8679;X</kbd>, aby zamienić dwa kolory, <kbd>/</kbd>, aby ustawić przednią stronę na brak, i <kbd>D</kbd>, aby wrócić do domyślnych: białe wypełnienie, czarny obrys i grubość 1 pt. To samo wypełnienie, obrys, grubość, krycie i tryb mieszania siedzą razem w panelu Właściwości, co jest przydatne, gdy chcesz je wszystkie w jednym miejscu.</p>
+<p>Gdy nic nie jest zaznaczone, te kontrolki ustalają styl, który przejmie następny narysowany obiekt, dzięki czemu możesz wybrać kolor przed rysowaniem, a nie po.</p>
+
+<h3 id="appearance-eyedropper">Kopiowanie farby za pomocą Pędzla</h3>
+<p>Pędzel (<kbd>I</kbd>) kopiuje cały wygląd z obiektu, który klikasz, na zaznaczenie. Przytrzymaj <kbd>&#8679;</kbd>, aby wziąć tylko jego kolor wypełnienia lub obrysu na aktywną stronę, lub <kbd>&#8997;</kbd>, aby wypchnąć wygląd zaznaczenia na obiekt pod wskaźnikiem. Kliknięcie umieszczonego obrazu lub warstwy pikselowej pobiera kolor pod wskaźnikiem na aktywną stronę, dzięki czemu możesz podnieść kolor prosto ze zdjęcia. Sięgaj po Pędzel, gdy dwa obiekty powinny się zgadzać: pobierz jeden, a drugi przejmuje tę samę farbę jednym kliknięciem.</p>
+
+<h2 id="appearance-colour">Kolor</h2>
+<p>Kolor wybierany jest w małym wyskakującym próbniku na każdym chipie lub, z większą kontrolą, w panelu Kolor.</p>
+
+<h3 id="appearance-color-panel">Panel Kolor</h3>
+<p>Panel <strong>Kolor</strong> (<kbd>F6</kbd>) pokazuje farbę aktywnej strony jako zestaw suwaków, pole heksadecymalne i widmo. Chipsy wypełnienia i obrysu u góry wybierają, którą stronę edytujesz. Widmo biegnie odcieniami w poprzek, białe u góry i czarne u dołu; kliknij lub przeciągnij w nim, aby wybrać. Trzy szybkie próbki obok ustawiają Brak, Biały i Czarny jednym kliknięciem, a przyciski <em>Odwrotny</em> i <em>Uzupełniający</em> przerabiają bieżący kolor (Uzupełniający obraca jego odcień o pół zachowując jego nasycenie i jasność).</p>
+<p>Menu modelu koloru ustala, które suwaki pokazuje panel. Wybór jest zachowywany dla sesji, a nowe próbki są w nim tworzone.</p>
+<dl>
+  <dt>Skala szarości</dt><dd>Pojedynczy suwak K, od białego przy 0% do czarnego przy 100%.</dd>
+  <dt>RGB</dt><dd>Czerwony, zielony i niebieski od 0 do 255, model do pracy ekranowej.</dd>
+  <dt>HSB</dt><dd>Ocień w stopniach, a następnie nasycenie i jasność jako procenty: często najszybszy sposób na poprawkę koloru bez utraty jego charakteru.</dd>
+  <dt>CMYK</dt><dd>Cyjan, magenta, żółć i czarny jako procenty, do druku.</dd>
+  <dt>Web Safe RGB</dt><dd>RGB przylegające do 216 kolorów bezpiecznych dla webu. Gdy bieżący kolor nie jest jednym z nich, pojawia się trójkąt ostrzegawczy; kliknij go, aby przylegnąć do najbliższego koloru bezpiecznego.</dd>
+</dl>
+<p>Gdy aktywna strona jest malowana globalną próbką, nad suwakami pojawia się rząd odcieni: nazywa próbkę i pozwala ustawić odcień od 0% do 100%, zamiast edytować kolor wprost, dzięki czemu grafika pozostaje powiązana z próbką.</p>
+
+<h2 id="appearance-swatches">Próbki i grupy kolorów</h2>
+<p>Próbka to nazwany kolor zapisany z dokumentem. Malowanie z próbek zamiast wpisywania wartości utrzymuje paletę spójną, a w przypadku próbek globalnych pozwala przemalować cały dokument edycją jednego koloru.</p>
+
+<h3 id="appearance-swatches-panel">Panel Próbki</h3>
+<p>Panel <strong>Próbki</strong> (otwórz z <strong>Okno &rsaquo; Próbki</strong>) wymienia próbki dokumentu jako siatkę lub listę; widok listy pokazuje również model koloru każdej próbki. Zwykłe kliknięcie maluje aktywną stronę. <kbd>&#8679;</kbd>-klik wybiera ciąg próbek, a <kbd>&#8984;</kbd>-klik dodaje lub usuwa jedną z zaznaczenia, dzięki czemu możesz działać na kilku naraz. Stopka zawiera przyciski przełączania widoku, otwierania menu panelu, pokazywania opcji próbki, tworzenia grupy kolorów, tworzenia nowej próbki i usuwania wybranego.</p>
+<p>Menu panelu dodaje więcej: <em>Dodaj użyte kolory</em> i <em>Dodaj zaznaczone kolory</em> zamieniają kolory już w dokumencie lub tylko w zaznaczeniu w próbki; <em>Zaznacz wszystkie nieużywane</em> wybiera każdą próbkę, której nic nie jest malowane, gotową do usunięcia; a <em>Przemapuj kolory&#8230;</em> otwiera okno dialogowe przekolorowania opisane poniżej.</p>
+
+<h3 id="appearance-process-spot-global">Próbki procesowe, spotowe i globalne</h3>
+<p>Kliknij dwukrotnie próbkę, aby Opcje próbki, gdzie ustawiasz, jaki rodzaj koloru to jest.</p>
+<dl>
+  <dt>Procesowy</dt><dd>Zwykły kolor, mieszany dla zadania. Zwykła próbka procesowa to tylko zapisany kolor: edycja jej nie dotyczy grafiki już niej malowanej.</dd>
+  <dt>Globalny</dt><dd>Próbka procesowa oznaczona jako Globalna utrzymuje grafikę powiązaną z nią, dzięki czemu przekolorowanie próbki przemalowuje wszystko nią malowane naraz. Próbki globalne mogą być stosowane jako odcień.</dd>
+  <dt>Spotowy</dt><dd>Nazwana tusz, przeznaczony do druku na własnej płycie. Kolory spotowe są zawsze globalne.</dd>
+</dl>
+<p>Każdy dokument zaczyna się od stałej próbki <strong>[Rejestracja]</strong>, która nie ma własnego typu koloru i nie może być usunięta ani przeciągnięta. Użyj próbki globalnej lub spotowej, gdy kolor pojawia się wiele razy i może się zmienić: jedna edycja aktualizuje każdy obiekt, zamiast polować na nie ręcznie.</p>
+
+<h3 id="appearance-colour-groups">Grupy kolorów</h3>
+<p>Grupy kolorów katalogują powiązane próbki, takie jak jedna rodzina odcieni lub paleta jednego projektu. Przeciągnij próbki na grupę, aby je zakatalogować, lub wybierz kilka i stwórz z nich grupę przyciskiem Nowa grupa kolorów w panelu. Kliknij dwukrotnie nagłówek grupy, aby uzyskać jej opcje. W próbniku koloru na każdym chipie każda grupa pokazuje się jako jeden rząd, dzięki czemu rodzina czyta się jako rampa odcieni, a nie ściana chipsów.</p>
+
+<h2 id="appearance-gradients">Gradienty</h2>
+<p>Gradient miesza między dwoma lub więcej kolorami. Scissor tworzy gradienty liniowe, radialne i swobodne, i zarówno panel, jak i narzędzie na płótnie mogą je budować i kształtować. Sięgaj po gradient, aby dać płaskiemu kształtowi głębi, tle miękką powłokę lub przyciskowi połysk.</p>
+
+<h3 id="appearance-gradient-panel">Panel Gradient</h3>
+<p>Panel <strong>Gradient</strong> (<kbd>&#8984;F9</kbd>) napędza cały gradient. Kliknij miniaturę, aby wypełnić aktywną stronę, wybierz Liniowy, Radialny lub Swobodny z menu typu i użyj przycisku odwrócenia, aby odwrócić rampę końcami. Sama rampa niesie punkty: kliknij ją, aby dodać punkt w kolorze, który już tam ma, przeciągnij punkt, aby go przesunąć, i przeciągnij romb między dwoma punktami, aby przesunąć miejsce spotkania dwóch kolorów. Zaznaczony punkt ma własną próbkę koloru, pole <em>Krycie</em> i pole <em>Położenie</em>, a <em>Usuń punkt</em> usuwa go. <em>Kąt</em> obraca gradient liniowy lub radialny, a <em>Proporcje</em> (tylko radialny) spłaszcza gradient radialny w elipsę.</p>
+<figure class="shot">
+  <img src="img/gradient.gif" width="340" height="340" loading="lazy"
+       alt="Zaokrąglony kwadrat wypełniony gradientem liniowym od niebieskiego do bursztynowego, którego kierunek obraca się." />
+  <figcaption>Gradient liniowy od niebieskiego do bursztynowego. Przeciąganie osi gradientu lub zmiana ją kąta obraca mieszankę wokół kształtu.</figcaption>
+</figure>
+
+<h3 id="appearance-gradient-tool">Narzędzie Gradient</h3>
+<p>Z narzędziem Gradient (<kbd>G</kbd>) te same kontrolki siedzą na grafice. Przeciągnij przez obiekt, aby ułożyć oś, przytrzymując <kbd>&#8679;</kbd>, aby przytrzymać ją w krokach co 45&deg;. Oś pokazuje okrągłą gałkę na początku i kwadratową gałkę na końcu; przeciągnij dowolną, aby przesunąć ten koniec. Kliknij oś, aby dodać punkt w kolorze, który już tam ma, przeciągnij punkt wzdłuż niej i wyciągnij punkt daleko od osi, aby go odrzucić. Przeciągnij romb, aby przesunąć punkt środkowy. <kbd>Delete</kbd> usuwa ostatni dotknięty punkt.</p>
+
+<h3 id="appearance-freeform">Gradienty swobodne</h3>
+<p>Gradient swobodny umieszcza punkty koloru w dowolnym miejscu kształtu, a nie wzdłuż jednej osi, dzięki czemu mieszanka może podążać za formą grafiki. Z narzędziem Gradient kliknij grafikę, aby upuścić punkt koloru, przeciągnij punkt, aby go przesunąć, i naciśnij <kbd>Delete</kbd>, aby go usunąć. Zaznacz <em>Połącz punkty w linie</em> w panelu, aby połączyć punkty w linie, które rozprowadzają kolor wzdłuż biegu, a nie z pojedynczej kropki. Użyj gradientu swobodnego do miękkiej, organicznej cieniowania, które prosta rampa nie może dać.</p>
+
+<h2 id="appearance-patterns">Wzorce</h2>
+<p>Wzorzec to grafika powtarzana jako kafelek i używana jako wypełnienie. Zamień zaznaczenie w kafelek za pomocą <strong>Obiekt &rsaquo; Wzorzec &rsaquo; Utwórz</strong>, a następnie wypełnij nim dowolny kształt z panelu <strong>Wzorce</strong>: kliknij kafelek, aby wypełnić, kliknij dwukrotnie, aby edytować, i <kbd>&#8997;</kbd>-kliknij, aby usunąć. <em>Opcje kafelka</em> ustawiają typ kafelka, przesunięcie cegły, rozmiar i odstęp oraz to, czy kafelek rozmiar i porusza się z grafiką. <strong>Edytuj wzorzec</strong> otwiera kafelek w miejscu z jego kopiami powtarzającymi się wokół niego podczas pracy; kliknij <em>Zakończ edycję</em> w panelu Wzorce, gdy kafelek jest gotowy. Wzorce nadają się do powtarzających się tekstur, takich jak paski, kropki, sploty i tła, które byłoby żmudno rysować ręcznie.</p>
+
+<h2 id="appearance-strokes">Obrysy</h2>
+<p>Panel <strong>Obrys</strong> (<kbd>&#8984;F10</kbd>) kształtuje linię rysowaną wzdłuż ścieżki.</p>
+
+<h3 id="appearance-stroke-options">Grubość, zakończenia, połączenia i wyrównanie</h3>
+<p><em>Grubość</em> ustala grubość obrysu w punktach. Przyciski <em>Zakończenie</em> decydują, jak kończy się otwarta ścieżka: ścięte (cięte prosto na kotwicy), okrągłe lub wysunięte (kwadratowe, ale sięgające poza kotwicę o połowę grubości). Przyciski <em>Narożnik</em> decydują, jak obrys skręca w rogu: szpiczaty (ostry punkt), okrągły lub sfazowany (płaskie cięcie), z limitem szczytu sfazowującym najostrzejsze punkty, aby nie wybiegały. <em>Wyrównanie</em> umieszcza obrys na środku ścieżki lub całkowicie wewnątrz lub na zewnątrz, co ma znaczenie, gdy kształt musi dokładnie przylegać do sąsiadów.</p>
+
+<h3 id="appearance-dashes">Linie przerywane</h3>
+<p>Zaznacz <em>Linia przerywana</em>, aby rozbić obrys na kreski. Trzy pary kreski i przerwy poniżej ustalają wzorzec: pierwsze pole to długość kreski, następne przerwa i tak dalej, powtarzając się wokół ścieżki. Pozostaw późniejsze pary puste dla prostej równomiernej kreski.</p>
+
+<h3 id="appearance-width-profiles">Profile grubości i narzędzie Grubość</h3>
+<p>Profil grubości zwęża obrys wzdłuż jego długości, zamiast trzymać go w jednej grubości. Wybierz profil z menu panelu, a mały podgląd pokazuje kształt, który tworzy; przyciski obok odwracają profil w drugą stronę, zapisują bieżący obrys jako nowy profil lub usuwają stworzony profil. Obrys, który ukształtowałeś ręcznie, pokazuje się w menu jako <em>Własny</em>.</p>
+<p>Narzędzie Grubość (<kbd>&#8679;W</kbd>) kształtuje obrys bezpośrednio na płótnie: przeciągnij od ścieżki, aby ją poszerzyć w tym punkcie, lub do niej, aby ją zwęźić, zostawiając punkt grubości, który możesz później ponownie przeciągnąć. Użyj go, aby nadać narysowanej linii puchnięcie i zwężenie pędzla lub pióra.</p>
+
+<h3 id="appearance-brushes">Pędzle</h3>
+<p>Panel <strong>Pędzle</strong> (<kbd>F5</kbd>) maluje obrysy kształtem, a nie zwykłą linią. Zawiera pędzle kaligraficzne, rozproszone, artystyczne, włosowe i wzorcowe. Kliknij pędzel, aby zastosować go do zaznaczonych ścieżek; Pędzel malujący używa bieżącego pędzla. Kliknij dwukrotnie pędzel, aby uzyskać jego opcje, użyj <em>Nowy pędzel&#8230;</em>, aby stworzyć jeden (pędzle rozproszone, artystyczne i wzorcowe budują się z zaznaczonej grafiki), i <em>Usuń pędzel</em>, aby zwróć obrys do zwykłej linii.</p>
+
+<h2 id="appearance-opacity-blending">Krycie i mieszanie</h2>
+<p>Krycie i tryb mieszania decydują, jak obiekt łączy się z tym, co leży pod nim. Siedzą w panelu <strong>Przezroczystość</strong> (<kbd>&#8679;&#8984;F10</kbd>) i również w panelu Właściwości.</p>
+
+<h3 id="appearance-blend-modes">Tryby mieszania</h3>
+<p>Krycie biegnie od 0% (niewidzialne) do 100% (stałe). Menu trybu oferuje szesnaście trybów mieszania, które dzielą się na grupy: tryby przyciemniające, tryby rozjaśniające, tryby kontrastowe, tryby porównawcze i cztery, które pożyczają jedną część koloru.</p>
+<table>
+  <thead><tr><th>Tryb</th><th>Co robi</th></tr></thead>
+  <tbody>
+    <tr><td>Normalny</td><td>Maluje na tym, co pod spodem, bez mieszania.</td></tr>
+    <tr><td>Przyciemnij</td><td>Zachowuje ciemniejszy kolor, kanał po kanale.</td></tr>
+    <tr><td>Mnożenie</td><td>Mnoży dwa kolory, zawsze przyciemniając; biały pozostawia podstawę bez zmian.</td></tr>
+    <tr><td>Rozżarzenie</td><td>Przyciemnia podstawę, aby przejął kolor mieszania.</td></tr>
+    <tr><td>Rozjaśnij</td><td>Zachowuje jaśniejszy kolor.</td></tr>
+    <tr><td>Ekran</td><td>Odwrotność Mnożenia, zawsze rozjaśniająca; czarny pozostawia podstawę bez zmian.</td></tr>
+    <tr><td>Wypalenie</td><td>Rozjaśnia podstawę, aby przejął kolor mieszania.</td></tr>
+    <tr><td>Nakładka</td><td>Mnoży lub ekranuje w zależności od podstawy, podnosząc kontrast.</td></tr>
+    <tr><td>Miękkie światło</td><td>Łagodne wypalenie lub rozżarzenie, jakby miękkie światło było świecące na grafikę.</td></tr>
+    <tr><td>Twarde światło</td><td>Mnoży lub ekranuje w zależności od koloru mieszania, jak ostre reflektor.</td></tr>
+    <tr><td>Różnica</td><td>Odejmuje ciemniejszy kolor od jaśniejszego; biały odwraca podstawę, czarny nie ma efektu.</td></tr>
+    <tr><td>Wykluczenie</td><td>Podobne do Różnicy, ale łagodniejsze i o niższym kontraście.</td></tr>
+    <tr><td>Ocień</td><td>Ocień mieszania z nasyceniem i jasnością podstawy.</td></tr>
+    <tr><td>Nasycenie</td><td>Nasycenie mieszania z odcieniem i jasnością podstawy.</td></tr>
+    <tr><td>Kolor</td><td>Ocień i nasycenie mieszania z jasnością podstawy: dobre do barwienia grafiki w skali szarości.</td></tr>
+    <tr><td>Jasność</td><td>Jasność mieszania z odcieniem i nasyceniem podstawy.</td></tr>
+  </tbody>
+</table>
+<p>Dla grupy dwa przełączniki zmieniają sposób mieszania. <em>Ogranicz mieszanie do grupy</em> utrzymuje tryby grupy wewnątrz niej, więc jej członkowie mieszają się ze sobą, ale nie z grafiką za grupą. <em>Przebijająca grupa</em> sprawia, że każdy członek ukrywa te pod nim w grupie, zamiast mieszania się przez nie.</p>
+
+<h3 id="appearance-opacity-masks">Maski krycia</h3>
+<p>Maska krycia wygładza grafikę według tonu. Zaznacz grafikę i, na górze, kształt do maskowania, a następnie kliknij <em>Utwórz maskę</em> (również <strong>Obiekt &rsaquo; Maska przycinająca &rsaquo; Utwórz maskę krycia</strong>). Górny obiekt staje się maską: tam, gdzie jest jasny, grafika pokazuje się, a tam, gdzie ciemny, zanika, dzięki czemu gradient od białego do czarnego tworzy miękkie wyjście. <em>Zwolnij</em> oddaje dwa obiekty. Użyj maski do miękkiej krawędzi lub winiety, której twarde przycięcie nie może stworzyć.</p>
+
+<h2 id="appearance-appearance-panel">Panel Stos malowania</h2>
+<p>Panel <strong>Stos malowania</strong> (<kbd>&#8679;F6</kbd>) wymienia wszystko, co namalowane na jednym obiekcie: jego wypełnienia i obrysy, z efektami na żywo nad nimi. Ponieważ obiekt może zawierać kilka wypełnień i obrysów, to tutaj je układasz, na przykład szeroki ciemny obrys pod cienkim jasnym, aby stworzyć kontur, lub dwa wypełnienia o różnym kryciu.</p>
+<p>Stos jest rysowany od góry, zgodnie z kolejnością malowania. Każdy rząd wypełnienia lub obrysu ma oko, aby go ukryć, próbkę koloru otwierającą próbnik koloru, pole krycia, pole grubości dla obrysów i strzałki przesuwające go w górę lub w dół stosu, plus przycisk usuwania. <em>Dodaj wypełnienie</em> i <em>Dodaj obrys</em> kładą kolejny na górze. Efekty pokazują się nad wypełnieniami i obrysami z odznaką <em>fx</em>; kliknij efekt, aby edytować jego opcje, lub usuń go z jego rzędu. Gdy warstwowy wygląd jest gotowy, <strong>Obiekt & Rozwiń wygląd</strong> wpiecze cały stos w zwykłą grafikę.</p>
+
+<h2 id="appearance-graphic-styles">Style graficzne</h2>
+<p>Styl graficzny to zapisany wygląd, który możesz stosować do innych obiektów. Panel <strong>Style graficzne</strong> (<kbd>&#8679;F5</kbd>) trzyma je jako chipsy, z których każdy pokazuje swoje wypełnienie z obrysem jako obwódką chipsu. Zaznacz obiekt i kliknij <em>Nowy styl</em>, aby zapisać jego wypełnienia i obrysy; kliknij chips, aby zastosować ten styl do zaznaczenia, i <kbd>&#8997;</kbd>-kliknij chips, aby go usunąć. Style są warte tworzenia, gdy ten sam wygląd, takie jak domowe przyciskowe traktowanie lub styl etykiety, musi iść na wiele obiektów i pozostać spójny.</p>
+
+<h2 id="appearance-overprint">Nadruk</h2>
+<p>Panel <strong>Atrybuty</strong> (<kbd>&#8984;F11</kbd>) ustawia nadrukowanie do druku. <em>Nadruk wypełnienia</em> i <em>Nadruk obrysu</em> sprawiają, że tusz drukuje się na kolorach pod nim zamiast je wybijać, co jest używane do pułapek i efektów takich jak czarny, który drukuje się na tym, co pod nim, zamiast zastępować. Włącz <strong>Widok &rsaquo; Podgląd nadruku</strong>, aby zobaczyć to na ekranie; eksport PDF zachowuje ustawienie.</p>
+
+<h2 id="appearance-recolour">Przekolorowanie grafiki</h2>
+<p><strong>Edycja &rsaquo; Edytuj kolory &rsaquo; Przemapuj kolory&hellip;</strong> wymienia każdy kolor w zaznaczeniu z tym, jak często jest używany. Kliknij chips po prawej stronie rzędu, aby wybrać, czym ten kolor się staje, albo strzałkę między dwoma chipsami, aby pozostawić ten kolor bez zmian. Suwaki Odcień, Nasycenie i Jasność przesuwają cały zestaw razem, a dwa przyciski losowo przestawiają nowe kolory lub randomizują ich nasycenie i jasność, co jest szybkim sposobem na wypróbowanie wariantów. Grafika aktualizuje się w miarę postępu, a <em>Reset</em> wraca do kolorów, z których zaczynała.</p>
+<p>To samo podmenu oferuje również zmiany jednokrokowe: <em>Od przodu do tyłu</em> rozprowadza bieg kolorów między obiektami przod i tył, <em>Konwertuj na skalę szarości</em> odrzuca cały kolor, <em>Odwroć kolory</em> odwraca każdy, a <em>Nasycenie&hellip;</em> podnosi lub obniża nasycenie w całym zaznaczeniu.</p>

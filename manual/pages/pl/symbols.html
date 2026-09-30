@@ -1,0 +1,91 @@
+<p class="lede">Symbole, pędzle i wzorce to trzy sposoby narysowania jednego elementu grafiki raz i wielokrotnego użycia go. Zmień oryginał, a każde użycie zmienia się z nim, dzięki czemu powtarzający się element pozostaje spójny i szybki do aktualizacji.</p>
+
+<p>Skróty poniżej zapisane są w formacie macOS. W systemach Windows odczytuj <kbd>&#8984;</kbd> jako <kbd>Ctrl</kbd>, <kbd>&#8997;</kbd> jako <kbd>Alt</kbd> i <kbd>&#8679;</kbd> jako <kbd>Shift</kbd>.</p>
+
+<h2 id="symbols-panel">Panel Symbole</h2>
+<p>Symbol to zapisany fragment grafiki, który możesz upuścić w dokumencie dowolną liczbę razy. Każda kopia to <em>instancja</em>: wskazuje z powrotem na jedną definicję, zamiast trzymać własną grafikę, dzięki czemu dokument pozostaje mały, niezależnie od tego, ile instancji umieścisz, a zmiana definicji dociera do wszystkich naraz. Sięgaj po symbole, gdy ten sam element się powtarza, taki jak drzewo w krajobrazie, pinezka na mapie, śruba w rysunku złożeniowym lub logo pojawiające się na kilku planszach.</p>
+<p>Otwórz panel za pomocą <strong>Okno &gt; Symbole</strong> (<kbd>&#8679;&#8984;F11</kbd>) lub z jego karty w doku paneli. Wymienia symbole w dokumencie według nazwy. Kliknięcie nazwy zaznacza ją jako aktywny symbol, który jest tym, co Symbol Scatter kładzie; aktywny symbol jest podświetlony.</p>
+
+<h3 id="symbols-make">Tworzenie symbolu</h3>
+<p>Zaznacz grafikę, którą chcesz ponownie użyć, i kliknij <strong>Nowy symbol</strong>. Zaznaczenie jest przechowywane jako definicja symbolu i, w jego miejscu na płótnie, zastępowane jest pojedynczą instancją siedzącą dokładnie tam, gdzia była grafika. Definicja jest trzymana na uboczu, dzięki czemu nie zaśmieca płótna ani zwykłych warstw. Jeśli nic nie nazwiesz, symbol nazywa się <code>Symbol 1</code>, <code>Symbol 2</code> i tak dalej, w kolejności ich tworzenia.</p>
+
+<h3 id="symbols-place">Umieszczanie instancji</h3>
+<p>Kliknij dwukrotnie symbol w panelu, aby upuścić świeżą instancję w środku bieżącego widoku. Umieść tyle, ile potrzebujesz. Instancja zachowuje się jak każdy inny obiekt, gdy jest na płótnie: zaznacz ją i możesz ją przesuwać, skalować, obracać lub odbijać i ustawiać jej krycie i mieszanie, wszystko bez dotykania definicji, ponieważ te zmiany jadą na samej instancji. Użyj tego, aby zmieniać rozmiar i kąt powtarzanych elementów, utrzymując je powiązanymi z tym samym wzorcem.</p>
+
+<h3 id="symbols-edit">Edycja symbolu</h3>
+<p>Kliknij dwukrotnie instancję na płótnie narzędziem Zaznacz (<kbd>V</kbd>), aby wejść do definicji. Wszystko inne na stronie wyszarza się i edytujesz grafikę na własną rękę. Kliknij dwukrotnie pustą część płótnia, aby wyjść z powrotem. Ponieważ każda instancja rysuje tę samą definicję, edycja, którą wykonasz, pojawia się we wszystkich razem. To jest sens symbolu: popraw grafikę raz, a cały dokument nadąża, zamiast polować na każdą kopię.</p>
+
+<h3 id="symbols-break">Przerwanie łącza</h3>
+<p>Gdy jedna instancja musi różnić się od reszty w sposób wykraczający poza pozycję, rozmiar lub krycie, zaznacz ją i kliknij <strong>Przerwij łącze</strong>. Instancja jest zastępowana zwykłą, edytowalną kopią definicji, w tym samym rozmiarze i kącie, nie już powiązaną z symbolem. Zmiany symbolu nie będą już do niej docierać. Przycisk jest dostępny tylko wtedy, gdy zaznaczona jest instancja symbolu.</p>
+<p>Aby całkowicie usunąć symbol, przytrzymaj <kbd>&#8997;</kbd> i kliknij jego nazwę w panelu. Jego definicja i każda jego instancja są usuwane, ponieważ instancja bez definicji nie rysowałaby niczego.</p>
+
+<h2 id="symbols-symbolism">Narzędzia symbolizmu</h2>
+<p>Narzędzia symbolizmu rozpraszają i dostrajają instancje symboli garściami, pod okrągłym pędzlem, zamiast pojedynczo. Dzielą jeden slot w pasku narzędzi; przytrzymaj slot, aby wybrać między nimi. Działają na instancjach w zaznaczeniu lub na każdej edytowalnej instancji w dokumencie, gdy nic nie jest zaznaczone, dzięki czemu możesz kierować całym polem symboli naraz. Przytrzymaj <kbd>&#8997;</kbd>, aby odwrócić efekt dowolnego z nich.</p>
+<p>Gdy narzędzie symbolizmu jest aktywne, <kbd>[</kbd> i <kbd>]</kbd> zmniejszają i zwiększają pędzel, a <kbd>{</kbd> i <kbd>}</kbd> obniżają i podnoszą jego intensywność (jak mocno każdy przebieg działa).</p>
+<table>
+  <thead><tr><th>Narzędzie</th><th>Skrót</th><th>Co robi</th></tr></thead>
+  <tbody>
+    <tr><td>Symbol Scatter</td><td><kbd>&#8679;S</kbd></td><td>Przeciągnij, aby układać instancje aktywnego symbolu, rozłożone w miarę ruchu; instancje zbierają się w jednej grupie <em>Zestaw symboli</em>. Przytrzymaj <kbd>&#8997;</kbd>, aby wyciągnąć instancje z powrotę spod pędzla</td></tr>
+    <tr><td>Symbol Nudge</td><td></td><td>Popchnij instancje w kierunku, w którym przeciągasz, dzięki czemu możesz uporządkować rozproszenie bez przesuwania każdego elementu</td></tr>
+    <tr><td>Symbol Pack</td><td></td><td>Przyciąga instancje do pędzla; <kbd>&#8997;</kbd> rozprosza je</td></tr>
+    <tr><td>Symbol Resize</td><td></td><td>Powiększa instancje pod pędzlem; <kbd>&#8997;</kbd> pomniejsza je</td></tr>
+    <tr><td>Symbol Spin</td><td></td><td>Obraca instancje, aby podążały za kierunkiem przeciągania</td></tr>
+    <tr><td>Symbol Tint</td><td><td>Barwi instancje w stronę bieżącego koloru wypełnienia, dla zmienności w grupie; <kbd>&#8997;</kbd> usuwa barwienie</td></tr>
+    <tr><td>Symbol Fade</td><td></td><td>Wygładza instancje, obniżając ich krycie; <kbd>&#8997;</kbd> przywraca je</td></tr>
+    <tr><td>Symbol Restyle</td><td></td><td>Stosuje styl graficzny wybrany w panelu Style graficzne do instancji; <kbd>&#8997;</kbd> czyści go</td></tr>
+  </tbody>
+</table>
+<p>Trzy narzędzia wymagają czegoś ustawionego najpierw. Symbol Scatter potrzebuje symbolu do spryskania, więc stwórz jeden w panelu Symbole przed rozpoczęciem. Symbol Restyle stosuje styl graficzny wybrany w panelu Style graficzne, więc wybierz styl tam najpierw; Symbol Tint również używa bieżącego koloru wypełnienia, więc ustaw wypełnienie przed barwieniem.</p>
+
+<h2 id="symbols-brushes">Panel Pędzle</h2>
+<p>Pędzel decyduje, jak obrys jest rysowany wzdłuż ścieżki. Zamiast zwykłej linii o równym rozmiarze, ścieżka może nieść obrys pióra, ślad rozproszonej grafiki, jeden kształt rozciągnięty od końca do końca lub kafelowy pasek. Ścieżka pozostaje w pełni edytowalna pod spodem: przekształć ją, a obrys pędzla podąża. Otwórz panel za pomocą <strong>Okno &gt; Pędzle</strong> (<kbd>F5</kbd>) lub z jego karty w doku paneli. Każdy pędzel pokazuje mały podgląd obok swojej nazwy.</p>
+
+<h3 id="symbols-brush-kinds">Rodzaje pędzli</h3>
+<p>Scissor ma pięć rodzajów pędzli. Dwa są rysowane z kilku liczb, a trzy są budowane z grafiki, którą zaznaczysz.</p>
+<dl>
+  <dt>Kaligraficzny</dt>
+  <dd>Ukośna, owalna pióra, która pogrubia i cienieje, gdy ścieżka się skręca, jak szerokie pióro. Ustaw jego Kąt, Okrągłość i Rozmiar w punktach. Użyj go do kaligraficznych kresek, podpisów i każdej linii, która ma wyglądać ręcznie rysowana.</dd>
+  <dt>Włosowy</dt>
+  <dd>Klaster cienkich kresek, który czyta się jak naładowany pędzel. Ustaw Rozmiar w punktach, liczbę włosów i Krycie farby, aby nakładające się przebiegi się budowały. Sięgaj po niego, gdy chcesz miękkiego, malarskiego obrysu zamiast czystego.</dd>
+  <dt>Rozproszony</dt>
+  <dd>Rozsypuje kopie zaznaczonej grafiki wzdłuż ścieżki. Ustaw Rozmiar kopii, Odstęp między nimi, jak daleko Rozpraszają się od linii i ich Obrót, z opcjami obracania każdej kopii względem ścieżki i przemalowania jej kolorem obrysu. Użyj go do konfetti, liści, gwiazd lub bąbelków biegnących za krzywą.</dd>
+  <dt>Artystyczny</dt>
+  <dd>Rozciąga jeden fragment zaznaczonej grafiki na całej długości ścieżki. Ustaw jego Szerokość, z opcją przemalowania go kolorem obrysu. Użyj go do zwężającego się tuszowego pociągnięcia, wstążki, strzałki lub grubego znaku węgla, który zgina się z linią.</dd>
+  <dt>Wzorcowy</dt>
+  <dd>Kafelkuje zaznaczoną grafikę od końca do końca wzdłuż ścieżki, jak dekoracyjna ramka. Ustaw Skalę i Odstęp, z opcją przemalowania go kolorem obrysu. Użyj go do łańcucha, liny, szycia lub powtarzającej się ramki.</dd>
+</dl>
+
+<h3 id="symbols-brush-apply">Stosowanie i usuwanie pędzla</h3>
+<p>Zaznacz jedną lub więcej ścieżek i kliknij pędzel, aby rysować ich obrysy nim. Ścieżka bez widocznego obrysu dostaje jeden, aby pędzel miał linię do biegania. Pędzel malujący (<kbd>B</kbd>) rysuje nowe obrysy z bieżącym pędzlem, więc wybierz pędzel i maluj prosto na płótnie. Aby zdjąć pędzel z zaznaczonych obrysów i zwrócić je do zwykłych linii, kliknij <strong>Usuń pędzel</strong>.</p>
+
+<h3 id="symbols-brush-manage">Tworzenie, edycja i usuwanie pędzli</h3>
+<p>Kliknij <strong>Nowy pędzel&hellip;</strong>, wybierz jeden z pięciu rodzajów i ustaw jego opcje. Dla pędzla rozproszonego, artystycznego lub wzorcowego zaznacz grafikę, której powinien używać, przed otwarciem okna dialogowego, ponieważ ta grafika staje się pędzlem. Aby zmienić pędzel później, zaznacz go i kliknij <strong>Opcje&hellip;</strong> (lub kliknij dwukrotnie go na liście); każdy obrys używający go przerysowuje się z nowymi ustawieniami. <strong>Usuń</strong> usuwa zaznaczony pędzel, po zapytaniu; obrysy, które go używały, wracą do zwykłych linii.</p>
+
+<h2 id="symbols-patterns">Panel Wzorce</h2>
+<p>Wzorzec to kafelek grafiki, który powtarza się, aby wypełnić kształt. Zdefiniuj kafelek raz i możesz wlać go do dowolnego obiektu jako wypełnienie, dzięki czemu tekstura lub motyw pozostaje jednolity w całej grafice i aktualizuje się wszędzie, gdy edytujesz kafelek. Panel siedzi w doku paneli, a te same polecenia mieszkają pod <strong>Obiekt &gt; Wzorzec</strong>.</p>
+
+<h3 id="symbols-pattern-make">Tworzenie wzorca</h3>
+<p>Zaznacz grafikę dla jednego kafelka i kliknij <strong>Utwórz wzorzec</strong> (lub <strong>Obiekt &gt; Wzorzec &gt; Utwórz</strong>). Kopia grafiki jest przechowywana jako powtarzający się kafelek i dodawana do panelu; grafika, którą narysowałeś, zostaje w miejscu. Wzorce nazywają się <code>Wzorzec 1</code>, <code>Wzorzec 2</code> i tak dalej, w miarę ich tworzenia.</p>
+
+<h3 id="symbols-pattern-fill">Wypełnianie wzorcem</h3>
+<p>Zaznacz kształt i kliknij wzorzec w panelu, aby ustawić go jako wypełnienie kształtu. Gdy nic nie jest zaznaczone, kliknięcie wzorca czyni go kolorem wypełnienia dla następnego kształtu, który narysujesz. Ponieważ to wypełnienie, wzorzec powtarza się, aby pokryć kształt, i jest przycinany do jego konturu. Użyj tego do tł, tkanin, liści lub każdej powierzchni, która powinna czytać się jako powtórzenie, a nie płaski kolor. Aby usunąć wzorzec z dokumentu, przytrzymaj <kbd>&#8997;</kbd> i kliknij go w panelu; kształty, które były nim wypełnione, wracają do braku wypełnienia.</p>
+
+<h3 id="symbols-pattern-edit">Edycja kafelka</h3>
+<p>Kliknij dwukrotnie wzorzec w panelu, aby edytować jego kafelek. Reszta grafiki wyszarza się i pracujesz na kafelku na własną rękę, z przyciskiem <strong>Zakończ edycję</strong> w panelu; kliknij go (lub użyj <strong>Obiekt &gt; Wzorzec &gt; Edytuj wzorzec</strong> ponownie), gdy skończysz. Każdy kształt wypełniony wzorcem aktualizuje się, aby pasować. Możesz również zacząć edycję, zaznaczając kształt wypełniony wzorcem i wybierając <strong>Edytuj wzorzec</strong>.</p>
+
+<h3 id="symbols-pattern-options">Opcje kafelka</h3>
+<p>Kliknij przycisk opcji kafelka obok wzorca (lub <strong>Obiekt &gt; Wzorzec &gt; Opcje kafelka&hellip;</strong>), aby kontrolować, jak kafelek powtarza się. Te ustawienia zmieniają układ powtórzenia bez zmiany grafiki w kafelku.</p>
+<dl>
+  <dt>Typ kafelka</dt>
+  <dd>Jak rzędy i kolumny wyrównują się: Siatka, Cegła wierszami, Cegła kolumnami, Sześcian kolumnami lub Sześcian wierszami. Cegła przesuwa naprzemienne rzędy lub kolumny jak mur; sześcian pakuje kafelki w plaster miodu.</dd>
+  <dt>Przesunięcie cegły</dt>
+  <dd>Dla typów cegły, jak daleko każdy naprzemienny rząd lub kolumna jest przesuwany, jako procent kafelka.</dd>
+  <dt>Dopasuj kafelek do grafiki</dt>
+  <dd>Dopasowuje kafelek do granic grafiki. Wyłącz to, aby ustawić Szerokość i Wysokość kafelka samodzielnie.</dd>
+  <dt>Szerokość i Wysokość</dt>
+  <dd>Rozmiar kafelka w pikselach, używany, gdy kafelek nie jest dopasowany do grafiki.</dd>
+  <dt>Poziome i pionowe odstępy</dt>
+  <dd>Przerwy pozostawiane między kafelkami, w pikselach. Dodatnie wartości rozpraszają motyw; ujemne nakładają kafelki.</dd>
+  <dt>Przesuwaj kafelek z grafiką</dt>
+  <dd>Utrzymuje kafelek wyrównany do grafiki, gdy się porusza, dzięki czemu powtórzenie podróżuje z obiektem.</dd>
+</dl>
