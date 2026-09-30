@@ -1,0 +1,166 @@
+<p class="lede">Scissor vult het browservenster met een enkel bewerkingsvlak: een menubalk bovenaan, een opdrachtbalk en documenttabbladen eronder, de gereedschapslinkerzijde links, het tekencanvas in het midden, en de paneeldock rechts. Alles draait op uw eigen machine, zodat een document blijft waar u het plaatst en niets wordt weggestuurd om te worden geopend.</p>
+
+  <p>Sneltoetsen op deze pagina zijn geschreven in de macOS-vorm. Op Windows en Linux leest u <kbd>⌘</kbd> als <kbd>Ctrl</kbd> en <kbd>⌥</kbd> als <kbd>Alt</kbd>; <kbd>⇧</kbd> is Shift en <kbd>⌃</kbd> is Control.</p>
+
+  <h2 id="interface-at-a-glance">De werkruimte in één oogopslag</h2>
+  <p>Het venster is opgebouwd uit een paar gebieden die elk een andere beantwoorden. Leer waar ze zijn één keer en de rest van de handleiding leest gemakkelijker.</p>
+  <dl>
+    <dt>Menubalk</dt>
+    <dd>De rij menu's langs de bovenkant, met ongedaan maken en opnieuw uitvoeren en een opdrachtzoeken aan het rechteruiteinde. Dit is de volledige lijst van alles wat de editor kan doen.</dd>
+    <dt>Opdrachtbalk</dt>
+    <dd>De strook direct onder de menu's. Het toont het huidige gereedschap en de handjevol besturingselementen die ertoe doen voor wat u nu heeft geselecteerd.</dd>
+    <dt>Documenttabbladen</dt>
+    <dd>Links van de opdrachtbalk, één tabblad per geopend document. De paneelknop bevindt zich helemaal rechts op dezelfde rij.</dd>
+    <dt>Gereedschapslinkerzijde</dt>
+    <dd>De smalle kolom gereedschappen langs de linkerrand, met de vulling- en lijnbesturing aan de onderkant.</dd>
+    <dt>Canvas en kleefbord</dt>
+    <dd>Het grote gebied in het midden waar u tekent. De witte rechthoeken zijn borden; de grijze omgeving is het kleefbord.</dd>
+    <dt>Paneeldock</dt>
+    <dd>De kolom panelen aan de rechterkant. Het schuift over het canvas in wanneer u het nodig heeft en geeft de ruimte terug wanneer u het sluit.</dd>
+    <dt>Statusbalk</dt>
+    <dd>De dunne lijn langs de onderkant van het venster, die het huidige gereedschap, de selectie en de laatste ongedaan maken-actie rapporteert.</dd>
+  </dl>
+  <figure class="shot">
+    <img src="img/app-light.png" width="1900" height="1082" loading="lazy"
+         alt="Het hele Scissor-venster: menubalk, opdrachtbalk, gereedschapslinkerzijde, canvas en paneeldock." />
+    <figcaption>Het hele venster. Scissor volgt de lichte of donkere instelling van uw systeem, en deze screenshot volgt dat ook.</figcaption>
+  </figure>
+
+  <h2 id="interface-menu-bar">De menubalk</h2>
+  <p>Tien menu's lopen langs de bovenkant. Ze verzamelen elk commando in het programma, gegroepeerd naar het soort werk dat u doet in plaats van naar waar een functie toevallig in de engine zit.</p>
+  <table>
+    <thead><tr><th>Menu</th><th>Wat het bevat</th></tr></thead>
+    <tbody>
+      <tr><td>Bestand</td><td>Nieuw, openen, sluiten, opslaan, plaatsen, exporteren, scripts, documentinstellingen en afdrukken.</td></tr>
+      <tr><td>Bewerken</td><td>Ongedaan maken en opnieuw uitvoeren, het klembordcommando's, het hele <strong>Selecteren</strong>-menu als submenu, kleurbewerking, en Voorkeuren.</td></tr>
+      <tr><td>Rangschikken</td><td>Transformeren, stapelvolgorde, uitlijning, groeperen, en vergrendelen en verbergen.</td></tr>
+      <tr><td>Pad</td><td>Pad- en samengesteld pad-commando's, morpheren, Vormvervorming en perspectief, afsnijdenmaskers, tekstomloop en uitbreiden.</td></tr>
+      <tr><td>Maken</td><td>Patronen, herhalingen, Gebiedsvulling, Vectoriseren, verloopmesh, borden, segmenten en de pixel-lagcommando's.</td></tr>
+      <tr><td>Effecten</td><td>Live effecten: de vectorset (3D, vervormen en transformeren, Vormen combineren, stiliseren, vervormen en meer) en een Raster-submenu eronder.</td></tr>
+      <tr><td>Tekst</td><td>Lettertype, grootte en tekens, omtrekken maken, hoofdletters wijzigen, tekstloop en tekeninvoeging.</td></tr>
+      <tr><td>Beeld</td><td>Uiterlijk (licht en donker), omtrek- en pixelvoorbeeld, zoomen, draaien beeld, liniaals, hulplijnen, het raster en uitlijning.</td></tr>
+      <tr><td>Werkruimte</td><td>De panelen: de zes die u het meest opent, een Tekst-submenu, een Meer panelen-submenu voor de rest, en Panelen resetten.</td></tr>
+      <tr><td>Help</td><td>Wat is er nieuw, de gebruikershandleiding, installeren, de Gebruiksvoorwaarden en Info, met een zoekveld bovenaan.</td></tr>
+    </tbody>
+  </table>
+  <p>Een vinkje naast een item betekent dat die instelling aan is. Een item in grijs getekend kan op dit moment niet worden gebruikt, meestal omdat er niets is geselecteerd of geen document is geopend. Waar een commando een sneltoets heeft, wordt deze aan de rechterkant van het menu getoond.</p>
+
+  <h3 id="interface-command-search">Een commando vinden</h3>
+  <p>U hoeft niet te onthouden welke menu wat bevat. De zoekknop rechts van de menubalk, gelabeld <em>Zoeken of typ een commando</em>, opent het commandopalet; <kbd>⌘K</kbd> opent het vanaf het toetsenbord. Typ een paar letters en het toont elk overeenkomstig commando met het menupad en de sneltoets, en elk overeenkomstig gereedschap. Gebruik <kbd>↑</kbd> en <kbd>↓</kbd> om door de resultaten te bewegen, <kbd>Enter</kbd> om de gemarkeerde uit te voeren, en <kbd>Esc</kbd> om te sluiten. Greep hiervoor als u weet wat u wilt maar niet waar het is, of wanneer een sneltoets sneller te typen is dan te zoeken. Het Help-menu heeft een eigen zoekveld dat hetzelfde doet in alle menu's.</p>
+
+  <h3 id="interface-undo-redo">Ongedaan maken en opnieuw uitvoeren</h3>
+  <p>De gebogen pijlen rechts van de menubalk maken ongedaan en voeren opnieuw uit, hetzelfde als <kbd>⌘Z</kbd> en <kbd>⇧⌘Z</kbd>. Elke knop noemt de stap die zie zou terugdraaien wanneer u eroverheen beweegt, en de statusbalk toont hetzelfde onderaan het venster, zodat u altijd kunt zien wat nog een druk ongedaan zou maken.</p>
+
+  <h2 id="interface-tool-palette">De gereedschapslinkerzijde</h2>
+  <p>De gereedschappen zitten in een enkele kolom langs de linkerrang. Ze zijn gerangschikt in families: Selecteren, Tekenen, Tekst, Lijn, Vorm, Verf, Vorm wijzigen, Bouwen, Monsteren, Symbolen, Borden en Beeld. De kolom toont één gereedschap per familie tegelijk; rust de pointer op een vak en de rest van die familie waait naar rechts uit, zodat u een verwant gereedschap kunt kiezen zonder dat de kolom onder uw hand verschuift. Een vak blijft tonen welk lid van zijn familie u het laatst heeft gebruikt.</p>
+  <p>Klik op een vak om het gereedschap te kiezen dat het toont. De tooltip geeft de naam van het gereedschap en zijn sneltoets, bijvoorbeeld <kbd>V</kbd> voor het Selectie-gereedschap, <kbd>P</kbd> voor de Pen of <kbd>T</kbd> voor Tekst. Wanneer u van gereedschap wisselt met het toetsenbord, licht het bijpassende vak even op zodat u kunt zien welk er nu actief is. Om alles tegelijk te zien, opent een knop nabij het opdrachtzoeken, getekend als drie stippen, een browser van elk gereedschap, gegroepeerd per familie en gefilterd terwijl u typt.</p>
+
+  <h3 id="interface-fill-stroke">Vulling en lijn</h3>
+  <p>Onder de gereedschappen bevindt zich de vulling- en lijnbesturing: een gevuld vierkant voor de vulling, geplaatst in een band die voor de lijn staat, met een klein paar pijlen om ze om te wisselen. Omdat het hier zit in plaats van alleen in de opdrachtbalk, kunt u een kleur kiezen voordat u een gereedschap kiest, en het wordt wat het volgende object mee wordt getekend. Klik op de vulling of de band om de kleur-, stalen- en verlooptabbladen te openen.</p>
+  <table>
+    <thead><tr><th>Toets</th><th>Actie</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>X</kbd></td><td>Verplaats focus tussen vulling en lijn</td></tr>
+      <tr><td><kbd>⇧X</kbd></td><td>Wissel de vulling en de lijn om</td></tr>
+      <tr><td><kbd>D</kbd></td><td>Keer terug naar de standaard: witte vulling, zwarte lijn</td></tr>
+      <tr><td><kbd>/</kbd></td><td>Stel de actieve kant op niets in</td></tr>
+    </tbody>
+  </table>
+
+  <h3 id="interface-rail-panels">Panelen naast de rail</h3>
+  <p>Tussen de vulling- en lijnbesturing en de gereedschappen biedt de gereedschapslinkerzijde een korte rij paneelknoppen gekozen voor het gereedschap dat u vasthoudt: de teken gereedschappen brengen de stalen- en lijnpanelen binnen handbereik, de tekstgereedschappen brengen de tekst- en alinea-panelen, en zo verder. Deze openen een enkel paneel precies waar uw hand al is. Een verdere knop opent de volledige dock. Op een kort venster vouwt de rij samen tot één Panelen-knop die dezelfde keuzes opsomt, zodat de gereedschapslinkerzijde nooit van de onderrand afloopt.</p>
+
+  <h2 id="interface-control-bar">De opdrachtbalk</h2>
+  <p>De strook onder de menu's verandert met wat u doet. Het noemt het huidige gereedschap aan de linkerkant, en rechts toont het alleen de besturingselementen die kunnen werken op de huidige selectie: de vulling, lijn en lijndikte; de X, Y, B en H van de selectie; en de acties die zinvol zijn, zoals uitlijnen, de booleaanse vormmodi, stapelvolgorde, groeperen, degroeperen en dupliceren. Wanneer er meer is dan past, verzamelt een laatste knop de rest in een menu, zodat de balk nooit opnieuw vloeit terwijl u het gebruikt.</p>
+  <p>Typ in een getalveld en druk op <kbd>Enter</kbd>, of verlaat het veld, om de waarde toe te passen; <kbd>↑</kbd> en <kbd>↓</kbd> stappen het, met <kbd>⇧</kbd> voor tien keer de stap en <kbd>⌥</kbd> voor een tiende. Het kleine label naast een veld is een sleepregelaar: sleep het links of rechts om de waarde aan te voelen te veranderen. Beweeg de naam van het gereedschap over om de eerste paar opties van dat gereedschap te tonen; klik op de naam om de volledige opties eronder te openen, met alle schakelaars en getallen.</p>
+  <p>De opdrachtbalk is standaard gedokt in de tabbladrij, maar u kunt zijn handvat slepen om het over het canvas te laten zweven, en dubbelklik op het handvat (of gebruik de dock-knop) om het terug te plaatsen. Naast hem kan een compacte balk naast een geselecteerd object verschijnen met alleen de vulling, lijn en dikte ervan, zodat kleur direct naast het werk ligt in plaats van aan de andere kant van het venster.</p>
+
+  <h2 id="interface-quick-bar">De snelbalk</h2>
+  <p>Wanneer u iets selecteert, zweeft een kleine balk naast het met de besturingselementen die u het meest nodig heeft, zodat u niet hoeft te reizen naar de rand van het venster. Voor vormen en paden bevat het de vulling en lijn; voor tekst bevat het de vulling, de grootte, vet, cursief en de uitlijning. Het blijft uit de weg terwijl u sleept en komt terug wanneer u loslaat. Alles erop staat ook in de opdrachtbalk en de panelen.</p>
+
+  <h2 id="interface-canvas">Het canvas en kleefbord</h2>
+  <p>Het midden van het venster is het canvas. Borden zijn de witte rechthoeken die het werk bevatten dat u wilt behouden; de grijze omgeving is het kleefbord. Het kleefbord maakt deel uit van het document, dus een schets, een restje of een kleurentest die daar geparkeerd is, wordt met het bestand opgeslagen, maar bij het exporteren van een bord wordt alleen wat binnen de rechthoek van dat bord valt weggeschreven.</p>
+
+  <h3 id="interface-pan-zoom">Schuiven en zoomen</h3>
+  <p>Houd <kbd>Spatie</kbd> ingedrukt om over te schakelen naar het Hand-gereedschap zolang u het ingedrukt houdt, en sleep om te schuiven; laat los en uw gereedschap komt terug. Slepen met de middelmuisknop schuift ook. Het wiel scrollt, en het wiel met <kbd>⌘</kbd> of <kbd>⌥</kbd> ingedrukt zoomen rond de pointer.</p>
+  <table>
+    <thead><tr><th>Sneltoets</th><th>Zoom</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>⌘=</kbd> / <kbd>⌘-</kbd></td><td>In en uit</td></tr>
+      <tr><td><kbd>⌘0</kbd></td><td>Actieve bord in het venster passen</td></tr>
+      <tr><td><kbd>⌥⌘0</kbd></td><td>Alle borden in het venster passen</td></tr>
+      <tr><td><kbd>⌘1</kbd></td><td>Ware grootte</td></tr>
+    </tbody>
+  </table>
+  <p>Een zoombesturing ligt over het canvas met min-, plus- en passen-knoppen en het huidige percentage; klik op het percentage voor dezelfde pas-en ware grootte-commando's als een menu.</p>
+
+  <h3 id="interface-rulers-guides">Liniaals en hulplijnen</h3>
+  <p><kbd>⌘R</kbd> toont en verbergt de liniaals, die in de eenheden van het document meten vanaf de linkerbovenhoek van het actieve bord en een marker volgen die de pointer volgt. Sleep vanuit een liniaal om een hulplijn naar het werk te trekken, en zet een hulplijn terug op een liniaal om hem te verwijderen. U kunt ook een geselecteerd pad omzetten in een hulplijn met Hulplijnen maken (<kbd>⌘5</kbd>) en het terugzetten met Hulplijnen vrijgeven (<kbd>⌥⌘5</kbd>). Toon of verberg alle hulplijnen met <kbd>⌘;</kbd>. Slimme hulplijnen (<kbd>⌘U</kbd>) tonen uitlijnings- en meet terwijl u tekent en sleept.</p>
+
+  <h3 id="interface-grid">Het raster</h3>
+  <p>Het raster wordt per bord getekend en ingesteld via Beeld › Raster of via het Raster-paneel. Toon of verberg het met <kbd>⌘'</kbd> en schakel uitlijning ernaartoe in met <kbd>⇧⌘'</kbd>. Elk bord kan een van zes soorten raster gebruiken: Orthogonaal, Isometrisch, Zeshoekig, Obliq, Gulden Snede en Perspectief. Kiezen van een soort schakelt het raster in zodat u het direct kunt zien. Het raster wordt volledig beschreven op zijn eigen pagina.</p>
+
+  <h3 id="interface-history-strip">De geschiedenisstrook</h3>
+  <p>Een kolom kleine streepjes verschijnt in een hoek van het canvas wanneer u de pointer erbij beweegt: dit is de geschiedenis van het document. Beweeg over een streepje om die stap te noemen, klik erop om er direct heen te gaan, of druk en sleep door de streepjes om het document achteruit en vooruit te laten lopen zodat u een verandering ziet komen en gaan. Het Geschiedenis-paneel in de dock somt dezelfde stappen op als tekst.</p>
+
+  <h2 id="interface-boards">Borden en de bordstrook</h2>
+  <p>Borden zijn wat Scissor artboards noemt. Elk draagt zijn naam boven de linkerbovenhoek, en het actieve bord wordt getekend met een sterker frame dan de rest. Klik op de naam van een bord om het Bord-gereedschap op te pakken met dat bord actief, klaar om het te verplaatsen, te vergroten of te verkleinen of te hernoemen. Als een bord een afloop heeft, wordt deze eromheen getekend als een rode gestippelde rechthoek. Voeg er een toe via Maken › Borden › Nieuw bord, teken en vervorm borden met het Bord-gereedschap (<kbd>⇧O</kbd>), en stel de grootte en naam van een bord in Bordopties. Borden herschikken rukt ze op tot een rij.</p>
+  <p>Een strook bordminiaturen ligt over het canvas, één klein voorbeeld per bord plus een toevoegknop aan het einde. Klik op een miniature om dat bord actief te maken en het in het venster te passen; klik op de naam eronder om naar dat bord te springen en het Bord-gereedschap op te pakken klaar om het te bewerken. Het Borden-paneel in de dock somt ze eveneens op.</p>
+
+  <h2 id="interface-tabs">Documenttabbladen</h2>
+  <p>Geopende documenten verschijnen als tabbladen links van de opdrachtbalk. Een tabblad toont de naam van het document, met een stipje ervoor terwijl het niet-opgeslagen wijzigingen heeft. Klik op een tabblad om naar dat document te schakelen, of op de × om het te sluiten; het sluiten van een document met niet-opgeslagen werk vraagt eerst. Middenklik op een tabblad om het direct te sluiten, en sleep een tabblad op een andere om de geopende documenten te herordenen. Nieuw (<kbd>⌥⌘N</kbd>), Openen (<kbd>⌘O</kbd>) en Opslaan (<kbd>⌘S</kbd>) bevinden zich in het Bestand-menu, en Sluiten is <kbd>⌥⌘W</kbd>.</p>
+  <p>De tabbladen zitten standaard bovenaan. Om ze langs de zijkant te dokken, schakelt u <strong>Beeld &rsaquo; Documenttabbladen aan de zijkant</strong> in (ook in Voorkeuren); de zijkantstrook kan breder of smaller worden gesleepen via de rechterrand, en de keuze wordt onthouden.</p>
+
+  <h2 id="interface-status-bar">De statusbalk</h2>
+  <p>De lijn langs de onderkant van het venster rapporteert, van links naar rechts: een gereed-indicator, de naam van het huidige gereedschap, de grootte van de selectie (niets geselecteerd, één object, of een aantal), en de actie die <kbd>⌘Z</kbd> ongedaan zou maken. Het is een rustige plek om te bevestigen wat u heeft opgepakt en wat de volgende ongedaan maken zal terugdraaien.</p>
+
+  <h2 id="interface-dock">De paneeldock</h2>
+  <p>Panelen leven in de kolom aan de rechterkant. In rust heeft het canvas het hele venster; het vragen van een paneel schuift de dock over het canvas in, en het sluiten ervan geeft de ruimte direct terug. De paneelknop rechts van de tabbladrij, en de Escape-toets, openen en sluiten de dock; het Venster- en Werkruimte-menu's en het commandopalet openen een specifiek paneel.</p>
+  <figure class="shot">
+    <img src="img/editing.png" width="1900" height="1176" loading="lazy"
+         alt="Een document geopend in Scissor met werk op het bord en de Lagen- en Stalen-panelen geopend in de dock." />
+    <figcaption>Een document in bewerking, met de Lagen- en Stalen-panelen geopend in de dock.</figcaption>
+  </figure>
+
+  <h3 id="interface-dock-groups">De gedokte paneelgroepen</h3>
+  <p>Panelen zijn gestapeld in groepen, elke groep een kolom kleine pictogramtabbladen langs zijn eigen rand. Rust de pointer op een tabblad om de naam van het paneel te zien, en het geopende paneel noemt zichzelf boven de inhoud. Standaard verzamelen de groepen panelen die vaak samen worden gebruikt:</p>
+  <ul>
+    <li><strong>Eigenschappen, Lagen, Borden, Raster</strong>: de structuur van het document.</li>
+    <li><strong>Kleur, Stalen, Verloop, Lijn</strong>: hoe dingen worden beschilderd.</li>
+    <li><strong>Tekst, Alinea, Tekens</strong>: tekst.</li>
+    <li><strong>Uitlijnen, Vormen combineren, Transformeren, Verfstapel, Transparantie, 3D</strong>: vormgeven en rangschikken.</li>
+    <li><strong>Stijlen, Penselen, Symbolen, Patronen</strong>: herbruikbare uiterlijken en objecten.</li>
+    <li><strong>Navigator, Info, Documentinfo, Geschiedenis, Acties</strong>: navigeren en meten.</li>
+    <li><strong>Middelen, Variabelen, Auto-Selecteren, Vectoriseren, Attributen</strong>: de rest.</li>
+  </ul>
+
+  <h3 id="interface-rearranging">Panelen herordenen</h3>
+  <p>De lay-out is van u om te veranderen. Sleep een tabblad langs zijn eigen strook om het te herordenen, sleep het naar de strook van een andere groep om het daarheen te verplaatsen, of sleep het uit de dock om het over het canvas te laten zweven. Sleep het lege deel van een strook om een hele groep eruit te tillen, en zet het terug over de dock om het thuis te plaatsen; een tussenruimte tussen groepen accepteert een neergezette tabblad als een nieuwe groep op zich. Klik met de rechtermuisknop op een tabblad voor dezelfde verplaatsingen via het menu, inclusief Paneel sluiten. De × bovenaan een strook sluit die groep, en het slepen van de scheiding tussen twee groepen geeft hoogte aan het ene en neemt het van de andere. Een zwevende groep kan vanuit de hoek worden vergroot of verkleind.</p>
+
+  <h3 id="interface-gating">Panelen die wachten op iets om te doen</h3>
+  <p>Een paneel dat op dit moment niets te doen heeft verdwijnt niet: zijn tabblad blijft, alleen gedimd, en zijn inhoud toont een lijn die zegt waar het op wacht, zoals het selecteren van een object of het kiezen van het Tekst-gereedschap. Zodat de dock niet onder uw hand herschikt, wordt dit wachten vastgehouden terwijl de pointer in de dock is en het haalt op zodra de pointer vertrekt.</p>
+
+  <h3 id="interface-workspace">Panelen openen, verbergen en resetten</h3>
+  <p>Open een paneel via het Werkruimte-menu, waar de zes meestgebruikte bovenaan staan en de rest onder Meer panelen, of via het Venster-menu in de klassieke chrome. Veel panelen hebben een sneltoets:</p>
+  <table>
+    <thead><tr><th>Paneel</th><th>Sneltoets</th><th>Paneel</th><th>Sneltoets</th></tr></thead>
+    <tbody>
+      <tr><td>Lagen</td><td><kbd>F7</kbd></td><td>Kleur</td><td><kbd>F6</kbd></td></tr>
+      <tr><td>Verfstapel</td><td><kbd>⇧F6</kbd></td><td>Info</td><td><kbd>F8</kbd></td></tr>
+      <tr><td>Uitlijnen</td><td><kbd>⇧F7</kbd></td><td>Transformeren</td><td><kbd>⇧F8</kbd></td></tr>
+      <tr><td>Lijn</td><td><kbd>⌘F10</kbd></td><td>Verloop</td><td><kbd>⌘F9</kbd></td></tr>
+      <tr><td>Vormen combineren</td><td><kbd>⇧⌘F9</kbd></td><td>Transparantie</td><td><kbd>⇧⌘F10</kbd></td></tr>
+      <tr><td>Grafische stijlen</td><td><kbd>⇧F5</kbd></td><td>Penselen</td><td><kbd>F5</kbd></td></tr>
+      <tr><td>Attributen</td><td><kbd>⌘F11</kbd></td><td>Symbolen</td><td><kbd>⇧⌘F11</kbd></td></tr>
+      <tr><td>Teken</td><td><kbd>⌘T</kbd></td><td>Alinea</td><td><kbd>⌥⌘T</kbd></td></tr>
+      <tr><td>Tekens</td><td><kbd>⌥⇧F11</kbd></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+  <p>De dock kan worden verbreed door de linkerrand te slepen, van een comfortabele twee-velden-per-rij breedte tot aanzienlijk breder. Uw schikking, en hoe breed u de dock liet, worden tijdens sessies onthouden. Wanneer de dock is gesloten, veegt de pointer naar de rechterrand van het venster het eruit, zolang er geen werk onder de pointer ligt. Om al uw wijzigingen aan de lay-out ongedaan te maken, kiest u Panelen resetten, dat elke groep terugplaatst naar zijn startplek.</p>
+  <p><kbd>Tab</kbd> verbergt de gereedschapslinkerzijde, de opdrachtbalk, de documenttabbladen, de statusbalk, de panelen en de andere canvas-chrome zodat alleen het werk en de menubalk overblijven; druk eropnieuw om ze allemaal terug te brengen.</p>
+
+  <h2 id="interface-language">Taal</h2>
+  <p>Scissor spreekt Engels, Duits (Deutsch), Spaans (Español), Frans (Français), Italiaans (Italiano), Catalaans (Català), Tsjechisch (Čeština), Deens (Dansk), Noors (Norsk), Pools (Polski), Slowaaks (Slovenčina), Fins (Suomi) en Zweeds (Svenska). De eerste keer dat u het opent, gebruikt het de taal van uw browser wanneer het een van deze is, en Engels in andere gevallen. Om een andere te kiezen, klik op de werbolknop in de menubalk of op het welkomstscherm, of open <strong>Bewerken › Voorkeuren</strong> (<kbd>&#8984;K</kbd>), ga naar <strong>Interface</strong> en kies er een onder <strong>Taal</strong>. Scissor schakelt over wanneer het opnieuw laadt, en onthoudt de keuze. Menu's, panelen, dialoogvensters, tooltips, berichten en Wat is er nieuw volgen het allemaal, en getallen worden op de lokale manier getoond, zoals 12,5 in het Duits, hoewel u zowel een komma als een punt kunt typen. Uw documenten worden niet beïnvloed: laagnamen en de tekst in uw werk blijven zoals u ze heeft geschreven. Wanneer de interface niet in het Engels is, worden de Gebruiksvoorwaarden vertoond vertaald voor het gemak, en de Engelse versie is de toepasselijke.</p>
+
+  <h2 id="interface-appearance">Licht en donker</h2>
+  <p>Scissor volgt de systeeminstelling voor licht en donker. Om het op één manier vast te zetten, kiest u Beeld › Uiterlijk en kiest Systeem, Licht of Donker. De keuze wordt onthouden, en het draagt door naar het canvas evenals de chrome: het kleefbord, de liniaals en de bordlabels worden allemaal getekend om bij het thema te passen waarin u zich bevindt.</p>

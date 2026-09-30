@@ -1,0 +1,134 @@
+<p class="lede">Siten, miltä muoto näyttää, on sen <em>ulkoasu</em>: täyte ääriviivansa sisällä, reunaviiva, joka piirretään sen ympärille, ja peittävyys ja sekoitus, jotka päättävät, miten se asettuu sen päälle, mikä on sen takana. Jokainen näistä voi olla tasainen väri, liukuväri tai kuvio ja kohde voi kantaa useampaa kuin yhtä kustakin kerrallaan. Tämä sivu kattaa maalausohjaimet, värimallit, näytteet, liukuvärit, reunaviivat, läpinäkyvyyden, Maalapino-paneelin ja graafiset tyylit.</p>
+
+<p>Alla olevat pikanäppäimet on kirjoitettu macOS-muodossa. Windowsilla lue <kbd>&#8984;</kbd> Ctrl:ksi, <kbd>&#8997;</kbd> Alt:ksi ja <kbd>&#8679;</kbd> Shift:ksi.</p>
+
+<figure class="shot">
+  <img src="img/artwork-landscape.png" width="1700" height="967" loading="lazy"
+       alt="Vektori maisema vuorista, taivaasta ja järvestä, rakennettu täysistä täytetyistä muodoista Scissorissa." />
+  <figcaption>Koko kohtaus rakennettu täytetyistä muodoista. Jokainen värialue on polku omalla täytteellään.</figcaption>
+</figure>
+
+<h2 id="appearance-fill-and-stroke">Täytteet ja reunaviivat</h2>
+<p>Polku, muoto tai tekstinpätkä voi kantaa <strong>täytettä</strong>, maalista sen ääriviivan sisällä, ja <strong>reunaviivaa</strong>, viivaa, joka piirretään tämän ääriviivan ympärille. Täyte voi olla tasainen väri, liukuväri tai kuvio; reunaviiva voi olla tasainen väri tai liukuväri, omalla paksuudellaan ja katkoviivallaan. Kumpikaan puoli voidaan myös asettaa tyhjäksi, jotta voit piirtää muodon vain reunaviivalla tai vain täytteellä.</p>
+
+<h3 id="appearance-the-paint-chips">Täyte- ja reunaviivakuvakkeet</h3>
+<p>Kaksi päällekkäistä kuvaketta työkalupalkin alaosassa pitävät täytteen ja reunaviivan. Napsauta kumpaakaan avataksesi värivalitsimen; edessä oleva on se puoli, johon näppäimet ja Väri-, Liukuväri- ja Näytteet-paneelit vaikuttavat. Paina <kbd>X</kbd> tuodaksesi toisen puolen eteen, <kbd>&#8679;X</kbd> vaihtaaksesi kaksi väriä, <kbd>/</kbd> asettaaksesi etualan tyhjäksi ja <kbd>D</kbd> palataksesi oletuksiin: valkoinen täyte, musta reunaviiva ja 1 pt paksuus. Sama täyte, reunaviiva, paksuus, peittävyys ja sekoitustila ovat myös yhdessä Ominaisuudet-paneelissa, mikä on kätevää, kun haluat kaikki yhdessä paikassa.</p>
+<p>Ilman valintaa nämä ohjaimet asettavat tyylin, jonka seuraava piirtämäsi kohde ottaa, jotta voit valita värin ennen piirtämistä sen jälkeen.</p>
+
+<h3 id="appearance-eyedropper">Maalaaminen pipettikynällä</h3>
+<p>Pipetti (<kbd>I</kbd>) kopioi koko ulkoasun napsauttamastasi kohteesta valintaan. Pidä <kbd>&#8679;</kbd> ottaaksesi vain sen täytteen tai reunaviivan värin aktiiviseen puoleen tai <kbd>&#8997;</kbd> työntääksesi valinnan ulkoasun napsauttamaasi kohteeseen sijaan. Napsauttamalla sijoitettua kuvaa tai pikselitasoa otetaan näyte väristä osoittimen alla aktiiviseen puoleen, jotta voit nostaa värin suoraan valokuvasta. Käytä pipettiä, kun kaksi kohdetta pitäisi saada vastaamaan toisiaan: ota näyte yhdestä ja toinen saa saman maalauksen yhdellä napsautuksella.</p>
+
+<h2 id="appearance-colour">Väri</h2>
+<p>Väri valitaan pienestä ponnahdusikkunan valitsimesta kummassakin kuvakkeessa tai, enemmän hallintaa, Väri-paneelista.</p>
+
+<h3 id="appearance-color-panel">Väri-paneeli</h3>
+<p><strong>Väri</strong>-paneeli (<kbd>F6</kbd>) näyttää aktiivisen puolen maalauksen joukkoa liukureita, heksadesimaalikenttä ja spektri. Täyte- ja reunaviivakuvakkeet ylhäällä valitsevat, kota puolta muokkaat. Spektri kulkee sävyissä poikki, valkoisella ylhäällä ja mustalla alhaalla; napsauta tai vedä siinä valitaksesi. Kolme nopeaa näytettä vieressä asettavat Tyhjän, Valkoisen ja Mustan yhdellä napsautuksella ja <em>Käännä</em>- ja <em>Täydennä</em>-painikkeet käsittelevät nykyistä väriä (Täydennä kääntää sen sävyn puolessa välissä säilyttäen kylläisyyden ja kirkkauden).</p>
+<p>Värimallivalikko asettaa, mitä liukureita paneeli näyttää. Valinta säilyy istunnossa ja uudet näytteet tehdään siinä.</p>
+<dl>
+  <dt>Harmaa</dt><dd>Yksi K-liukuri, valkoisella 0%:lla mustaan 100%:iin.</dd>
+  <dt>RGB</dt><dd>Punainen, vihreä ja sininen 0:sta 255:een, malli näytöllä työskentelyyn.</dd>
+  <dt>HSB</dt><dd>Sävy asteissa, sitten kylläisyys ja kirkkaus prosentteina: usein nopein tapa nyökätä väriä menettämättä sen luonnetta.</dd>
+  <dt>CMYK</dt><dd>Syaani, magenta, keltainen ja musta prosentteina, painamista varten.</dd>
+  <dt>Web Safe RGB</dt><dd>RGB kohdistettuna 216 web-turvalliseen väriin. Kun nykyinen väri ei ole yksi niistä, varoituskolmio ilmestyy; napsauta sitä kohdistaaksesi lähimpään web-turvalliseen väriin.</dd>
+</dl>
+<p>Kun aktiivinen puoli on maailtu globaalilla näytellä, liukureiden yläpuolelle ilmestyy sävyrivi: se nimeää näytteen ja antaa asettaa sävyn 0%:sta 100%:iin värin muokkaamisen sijaan, jotta teos pysyy linkitettynä näytteeseen.</p>
+
+<h2 id="appearance-swatches">Näytteet ja värihmät</h2>
+<p>Näyte on nimetty väri, joka on tallennettu asiakirjaan. Maalaaminen näytteistä arvojen kirjoittamisen sijaan pitää paletin yhtenäisenä ja, globaaleille näytteille, antaa värittää koko asiakirjan muokkaamalla yhtä väriä.</p>
+
+<h3 id="appearance-swatches-panel">Näytteet-paneeli</h3>
+<p><strong>Näytteet</strong>-paneeli (avaa kohteesta <strong>Ikkuna &rsaquo; Näytteet</strong>) listaa asiakirjan näytteet ruudukkona tai listana; listanäkymä näyttää myös jokaisen näytteen värimallin. Tavallinen napsautus maalaa aktiivisen puolen. <kbd>&#8679;</kbd>-napsautus valitaan joukon näytteitä ja <kbd>&#8984;</kbd>-napsautus lisää tai poistaa yhden valinnasta, jotta voit vaikuttaa useampaan kerrallaan. Alareuna sisältää painikkeet näkymän vaihtamiseen, paneelin valikon avaamiseen, näytteen asetusten näyttämiseen, väiryhmän luomiseen, uuden näytteen luomiseen ja valitun poistamiseen.</p>
+<p>Paneelin valikko lisää enemmän: <em>Lisää käytetyt värit</em> ja <em>Lisää valitut värit</em> muuttavat värit jo asiakirjassa tai vain valinnassa näytteiksi; <em>Valitse kaikki käyttämättömät</em> valitsee jokaisen näytteen, jolla mitään ei ole maailtu, valmiiksi poistettavaksi; ja <em>Vaihda värejä&#8230;</em> avaa alla kuvatun värinvaihdon valintaikkunan.</p>
+
+<h3 id="appearance-process-spot-global">Prosessi-, spot- ja globaalit näytteet</h3>
+<p>Kaksoisnapsauta näytettä Näytteen asetuksissa, missä asetat, minkä tyyppinen väri se on.</p>
+<dl>
+  <dt>Prosessi</dt><dd>Tavallinen väri, sekoitettu työtä varten. Tavallinen prosessinäyte on vain tallennettu väri: sen muokkaus ei koske teokseen, joka on jo maailtu sillä.</dd>
+  <dt>Globaali</dt><dd>Prosessinäyte merkitty Globaaliksi pitää teoksen linkitettynä siihen, joten näytteen värittäminen värittää kaiken sillä maalatun kerralla. Globaaleja näytteitä voidaan käyttää sävynä.</dd>
+  <dt>Spot</dt><dd>Nimetty muste, tarkoitettu tulostettavaksi omalla levyllään. Spot-värit ovat aina globaaleja.</dd>
+</dl>
+<p>Jokainen asiakirja alkaa myös kiinteällä <strong>[Rekisteröinti]</strong>-näytteellä, jolla ei ole omaa värityyppiään eikä sitä voi poistaa tai siirtää. Käytä globaalia tai spot-näytettä, kun väri esiintyy useasti ja saattaa muuttua: yksi muokkaus päivittää jokaisen kohteen etsimällä niitä käsin sijaan.</p>
+
+<h3 id="appearance-colour-groups">Värihmät</h3>
+<p>Värihmät arkistoida liittyvät näytteet yhteen, kuten yhden sävyperheen tai yhden projektin paletin. Vedä näytteitä ryhmään arkistaaksesi ne tai valitse muutama ja luo niistä ryhmä paneelin Uusi väryhmä -painikkeella. Kaksoisnapsauta ryhmän otsikkoa sen asetuksia varten. Kummassakin kuvakkeessa oleva värinvalitsin näyttää jokaisen ryhmän yhtenä rivinä, jotta perhe luetaan sävyasteikkona seinien sijaan.</p>
+
+<h2 id="appearance-gradients">Liukuvärit</h2>
+<p>Liukuväri sekoittaa kahden tai useamman värin välillä. Scissor tekee lineaarisia, radiaalisia ja vapaamuotoisia liukuvärejä ja joko paneeli tai piirtoalueen työkalu voi rakentaa ja muotoilla niitä. Käytä liukuväriä antaaksesi tasaiselle muodolle syvyyttä, taustalle pehmeän tai napinille kiiltoa.</p>
+
+<h3 id="appearance-gradient-panel">Liukuväri-paneeli</h3>
+<p><strong>Liukuväri</strong>-paneeli (<kbd>&#8984;F9</kbd>) ajaa koko liukuväriä. Napsauta pienoiskuvaa täyttääksesi aktiivisen puolen, valitse Lineaarinen, Radiaalinen tai Vapaamuotoinen tyypivalikosta ja käytä kääntöpainiketta kääntääksesi rampun päät päittäin. Itse rampu kantaa pysäytyspisteitä: napsauta sitä lisätäksesi pysäytyspisteen värissä, joka jo siellä on, vedä pysäytyspistettä siirtääksesi sitä ja vedä timanttia kahden pysäytyspisteen välillä siirtääksesi, missä kaksi väriä kohtaa. Valittu pysäytyspiste omalla värillaan, <em>Peittävyys</em>-kentällä ja <em>Sijainti</em>-kentällä ja <em>Poista pysäytyspiste</em> poistaa sen. <em>Kulma</em> kääntää lineaarista tai radiaalista liukuväriä ja <em>Suhde</em> (vain radiaalinen) puristaa radiaalisen liukuvärin ellipsiksi.</p>
+<figure class="shot">
+  <img src="img/gradient.gif" width="340" height="340" loading="lazy"
+       alt="Pyöristetty neliö täytetty sinisestä keltaiseen lineaarisella liukuvärillä, jonka suunta kääntyy." />
+  <figcaption>Lineaarinen liukuväri sinisestä keltaiseen. Liukuvärin akselin vetäminä tai kulman muuttaminen pyörittää sekoitusta muodon ympärille.</figcaption>
+</figure>
+
+<h3 id="appearance-gradient-tool">Liukuväri-työkalu</h3>
+<p>Liukuväri-työkalulla (<kbd>G</kbd>) samat ohjaimet ovat teoksella. Vedä kohteen yli asettaaksesi akselin, pidä <kbd>&#8679;</kbd> pitääksesi sen 45&deg; askelussa. Akseli näyttää pyöreän nupin alussa ja neliönupin lopussa; vedä kumpaakaan siirtääksesi kyseistä päätä. Napsauta akselia lisätäksesi pysäytyspisteen värissä, joka jo siellä on, vedä pysäytyspistettä sen pitkin ja vedä pysäytyspiste kauas akselista heittääksesi sen pois. Vedä timanttia siirtääksesi keskipistettä. <kbd>Delete</kbd> poistaa viimeksi kosketetun pysäytyspisteen. Vapaamuotoisessa liukuvärissä työkalu toimii väripisteissä sijaan: napsauta teosta lisätäksesi yhden täytteen värissä ja vedä pistettä siirtääksesi sitä. Liukuvärit on kuvattu lisää <a href="/manual/fi/appearance/">Väri ja ulkoasu</a> -sivulla.</p>
+
+<h3 id="appearance-freeform">Vapaamuotoiset liukuvärit</h3>
+<p>Vapaamuotoinen liukuväri sijoittaa väripisteitä minne tahansa muodossa yhden akselin sijaan, joten sekoitus voi seurata teoksen muotoa. Liukuväri-työkalulla napsauta teosta asettaaksesi väripisteen, vedä sitä siirtääksesi sitä ja paina <kbd>Delete</kbd> poistaaksesi sen. Valitse <em>Kiinnitä pisteet viivoiksi</em> paneelissa liittääksesi pisteet viivoiksi, mikä levittää värin juoksuun yhden pisteen sijaan. Käytä vapaamuotoista liukuväriä pehmeään, orgaaniseen varjotukseen, joka suora rampi ei voi antaa.</p>
+
+<h2 id="appearance-patterns">Kuviot</h2>
+<p>Kuvio on teosta, joka toistetaan tiilenä ja käytetään täytteenä. Muuta valinta tiileksi <strong>Objekti &rsaquo; Kuvio &rsaquo; Luo</strong> -komennolla, sitten täytä tahansa muoto siitä <strong>Kuviot</strong>-paneelista: napsauta tiiltä täyttääksesi, kaksoisnapsauta muokataksesi ja <kbd>&#8997;</kbd>-napsauta poistaaksesi. <em>Tiilen asetukset</em> asettavat tiilen tyypin, tiilen siirron, koon ja välin ja sen, muuttuuko tiili teoksen mukana. <strong>Muokkaa kuviota</strong> avaa tiilen paikallaan kopioinaan ympärillään työn aikana; napsauta <em>Valmis muokkaus</em> Kuviot-paneelissa, kun tiili on oikea. Kuviot sopivat toistaviin tekstuureihin, kuten viivoihin, pisteisiin, kudoksiin ja taustoihin, joita olisi ikävä piirtää käsin.</p>
+
+<h2 id="appearance-strokes">Reunaviivat</h2>
+<p><strong>Reunaviiva</strong>-paneeli (<kbd>&#8984;F10</kbd>) muotoilee viivaa, joka piirretään polun ympärille.</p>
+
+<h3 id="appearance-stroke-options">Paksuus, päät, liitokset ja tasaus</h3>
+<p><em>Paksuus</em> asettaa reunaviivan paksuuden pisteissä. <em>Pää</em>-painikkeet päättävät, miten avoin polku päättyy: tasainen (neliöity ankkurissa), pyöreä tai ulkoneva (neliö, mutta ulottuu ankkurin puoliväliin). <em>Liitos</em>-painikkeet päättävät, miten reunaviiva kääntää kulman: miteri (terävä kärki), pyöreä tai viisto (tasainen leikkaus), miteri-rajoituksella, joka viistää terävimpiä kärkiä, jotta ne eivät nouse esiin. <em>Tasaus</em> sijoittaa reunaviivan polun keskelle tai kokonaan sisään tai ulos, mikä on merkityksellistä, kun muodon pitää kohdistua naapureihinsa.</p>
+
+<h3 id="appearance-dashes">Katkoviivat</h3>
+<p>Valitse <em>Katkoviiva</em> jakamaan reunaviiva katkolviivoiksi. Kolme viiva- ja väliparia alla asettavat kuvion: ensimmäinen kenttä on viivan pituus, seuraava väli ja niin edelleen, toistuen polun ympärille. Jätä myöhemmin tyhjiksi yksinkertaiseen tasaisen viivaan.</p>
+
+<h3 id="appearance-width-profiles">Leveysprofiilit ja Leveys-työkalu</h3>
+<p>Leveysprofiili kapenee reunaviivan pituuden suhteen yhden paksuuden sijaan. Valitse profiili paneelin valikosta ja pieni esikatselu näyttää sen tekemän muodon; vieressä olevat painikkeet kääntävät profiilin toisin päin, tallentavat nykyisen reunaviivan uudeksi profiiliksi tai poistavat tekemäsi profiilin. Käsin muokattu reunaviiva näyttää valikossa <em>Mukautettu</em>.</p>
+<p>Leveys-työkalu (<kbd>&#8679;W</kbd>) muotoilee reunaviivan suoraan piirtoalueella: vedä pois polusta leventääksesi sitä siinä tai kohti polkua kaventaaksesi sitä, jättäen leveyspisteen, jota voit vetää uudelleen myöhemmin. Käytä tätä antamaan piirretylle viivalle sivellimen tai kynän pullistuma ja kavennus.</p>
+
+<h3 id="appearance-brushes">Sivellint</h3>
+<p><strong>Sivellint</strong>-paneeli (<kbd>F5</kbd>) maalaa vedot muodon sijaan tavallisella viivalla. Se sisältää kalligrafiset, hajautetut, taiteen, harjan ja kuviosivellintejä. Napsauta sivellintä soveltaaksesi sitä valittuihin polkuihin; Sivellint-työkalu käyttää kumpaa tahansa sivellintä on aktiivinen. Kaksoisnapsauta sivellintä sen asetuksia varten, käytä <em>Uusi sivellin&hellip;</em> luodaksesi yhden (hajautetut, taiteen ja kuviosivellint rakennetaan valitusta teoksesta) ja <em>Poista sivellin</em> palauttaaksesi vedon tavalliseksi viivaksi.</p>
+
+<h2 id="appearance-opacity-blending">Peittävyys ja sekoitus</h2>
+<p>Peittävyys ja sekoitustila päättävät, miten kohde yhdistyy siihen, mikä on sen alla. Ne ovat <strong>Läpinäkyvyys</strong>-paneelissa (<kbd>&#8679;&#8984;F10</kbd>) ja myös Ominaisuudet-paneelissa.</p>
+
+<h3 id="appearance-blend-modes">Sekoitustilat</h3>
+<p>Peittävyys juoksee 0%:sta (näkymätön) 100%:iin (kiinteä). Tilavalikko tarjoaa kuusitoista sekoitustilaa, jotka jakautuvat ryhmiin: tummennetut, valaistetut, kontrastiset, vertailun ja neljä, jotka lainaavat yhden osan väristä.</p>
+<table>
+  <thead><tr><th>Tila</th><th>Mitä se tekee</th></tr></thead>
+  <tbody>
+    <tr><td>Normaali</td><td>Maalaa sen päälle, mikä on alla, ilman sekoitusta.</td></tr>
+    <tr><td>Tummenna</td><td>Säilyttää kumpi tahansa väri on tummempi, kanavalla kanavalle.</td></tr>
+    <tr><td>Kertaa</td><td>Kertaa kaksi väriä, aina tummentaen; valkoinen jättää pohjan ennalleen.</td></tr>
+    <tr><td>Color Burn</td><td>Tummennet pohjan ottamaan sekoitusvärinsä.</td></tr>
+    <tr><td>Vaalenna</td><td>Säilyttää kumpi tahansa väri on vaaleampi.</td></tr>
+    <tr><td>Screen</td><td>Kertaa käänteinen, aina valaistaen; musta jättää pohjan ennalleen.</td></tr>
+    <tr><td>Color Dodge</td><td>Vaalennet pohjan ottamaan sekoitusvärinsä.</td></tr>
+    <tr><td>Overlay</td><td>Kertaa tai Screen riippuen pohjasta, nostaen kontrastia.</td></tr>
+    <tr><td>Soft Light</td><td>Pehmeä valaistus tai polttaminen, kuin pehmeä valo säteillyt teokseen.</td></tr>
+    <tr><td>Hard Light</td><td>Kertaa tai Screen riippuen sekoitusväristä, kuin kova valokeila.</td></tr>
+    <tr><td>Ero</td><td>Vähentää tummemman värin vaaleammasta; valkoinen kääntää pohjan, musta ei vaikuta.</td></tr>
+    <tr><td>Sulje ulos</td><td>Kuten Ero, mutta pehmeämpi ja alhaisempi kontrasti.</td></tr>
+    <tr><td>Sävy</td><td>Sekoituksen sävy pohjan kylläisyyden ja kirkkauden kanssa.</td></tr>
+    <tr><td>Kylläisyys</td><td>Sekoituksen kylläisyys pohjan sävyn ja kirkkauden kanssa.</td></tr>
+    <tr><td>Väri</td><td>Sekoituksen sävy ja kylläisyys pohjan kirkkauden kanssa: hyvä täysinharmaan teoksen sävyttämiseen.</td></tr>
+    <tr><td>Kirkkaus</td><td>Sekoituksen kirkkaus pohjan sävyn ja kylläisyyden kanssa.</td></tr>
+  </tbody>
+</table>
+<p>Ryhmälle kaksi kytkintä muuttavat, miten se sekoittuu. <em>Rajoita sekoitus ryhmään</em> pitää ryhmän tilat itsessään, joten sen jäsenet sekoittavat toisiinsa mutta eivät teoksen kanssa ryhmän takana. <em>Knockout Group</em> tekee jokaisen jäsenen piilottamaan sen alla olevat ryhmän sisällä sen sijaan, että sekoittaisi niiden läpi.</p>
+
+<h3 id="appearance-opacity-masks">Peittävyysmaskit</h3>
+<p>Peittävyysmaski himmeää teosta sävyn mukaan. Valitse teos ja, sen päälle, muoto, jolla se maskataan, sitten napsauta <em>Luo maski</em> (myös <strong>Objekti &rsaquo; Leikkausmaski &rsaquo; Luo peittävyysmaski</strong>). Ylin kohda tulee maskiksi: missä se on vaalea, teos näkyy ja missä se on tumma, teos himmeää, joten valkoisesta mustaan liukuväri tekee pehmeän himmennyksen. <em>Vapauta</em> palauttaa kaksi kohdetta takaisin. Käytä maskia pehmeään reunaan tai vinettiin, jota kova leikkaus ei voi tehdä.</p>
+
+<h2 id="appearance-appearance-panel">Maalapino-paneeli</h2>
+<p><strong>Maalapino</strong>-paneeli (<kbd>&#8679;F6</kbd>) listaa kaiken maalatun yhden kohteelle: sen täytteet ja reunaviivat, kaikki live-tehosteet niiden päällä. Koska kohde voi kantaa useita täytteitä ja reunaviivoja, täällä ne pinotaan, esimerkiksi leveä tumma reunaviiva ohuen vaalean alle ääriviivaksi tai kaksi täytettä eri peittävyydellä.</p>
+<p>Pino piirretään ensin ylhäältä, vastaamaan järjestystä, jolla se maalaa. Jokainen täyte- tai reunaviivarivi on silmällä piilotettaessa, värillä, joka avaa värinvalitsimen, peittävyyskentällä, paksuuskentällä reunaviivoille ja nuolilla siirtääksesi sitä ylös tai alas alas, plus painikkeella poistaaksesi sen. <em>Lisää täyte</em> ja <em>Lisää reunaviiva</em> laittavat toisen päälle. Tehosteet näkyvät täytteiden ja reunaviivojen yläpuolella <em>fx</em>-merkillä; napsauta tehostetta muokataksesi sen asetuksia tai poistaaksesi sen riviltään. Kun kerrostettu ulkoasu on valmis, <strong>Objekti &rsaquo; Laajenna ulkoasu</strong> paistaa koko pinon tavalliseksi teokseksi.</p>
+
+<h2 id="appearance-graphic-styles">Graafiset tyylit</h2>
+<p>Graafinen tyylin on tallennettu ulkoasu, jonka voit soveltaa muihin kohteisiin. <strong>Graafiset tyylit</strong>-paneeli (<kbd>&#8679;F5</kbd>) pitää niitä kuvakkeina, kukin näyttäen täytteensä reunaviivalla kuvakkeen reunana. Valitse kohde ja napsauta <em>Uusi tyyli</em> tallentaaksesi sen täytteet ja reunaviivat; napsauta kuvaketta soveltaaksesi tätä tyylin valintaan ja <kbd>&#8997;</kbd>-napsauta kuvaketta poistaaksesi sen. Tyylit kannattaa tehdä, kun sama ulkoasu, kuten kotipainikkeen käsittely tai nimikkeen tyyli, tulee monelle kohteelle ja pysyy yhtenäisenä.</p>
+
+<h2 id="appearance-overprint">Ylikirjoitus</h2>
+<p><strong>Määritteet</strong>-paneeli (<kbd>&#8984;F11</kbd>) asettaa ylikirjoituksen painotyötä varten. <em>Täytteen ylikirjoitus</em> ja <em>Reunaviivan ylikirjoitus</em> tekevät, että muste tulostuu värien päälle niiden poistamisen sijaan, mitä käytetään painovärien kiinnittämiseen ja tehosteisiin, kuten musta, joka tulostuu sen sijaan, että korvaisi sen alla olevan. Kytke <strong>Näytä &rsaquo; Ylikirjoituksen esikatselu</strong> nähdäksesi sen näytöllä; PDF-vienti säilyttää asetuksen.</p>
+
+<h2 id="appearance-recolour">Teoksen värinvaihto</h2>
+<p><strong>Muokkaa &rsaquo; Muokkaa värejä &rsaquo; Vaihda värejä&#8230;</strong> listaa jokaisen värin valinnassa sen käyttömäärällä. Napsauta rivin oikealla puolella olevaa kuvaketta valitaksesi, mitä väri tulee, tai nuolta kahden kuvakkeen välillä jättääksesi värin rauhaan. Sävy-, kylläisyys- ja kirkkausliukurit siirtävät koko joukon yhdessä ja kaksi painiketta satunnaisesti järjestävät uudet värit uudelleen tai satunnaistavat niiden kylläisyyden ja kirkkauden, mikä on nopea tapa kokeilla variaatioita. Teos päivittyy liikkuessasi ja <em>Palauta</em> palaa väreihin, joilla se alkoi.</p>
+<p>Sama alavalikko tarjoaa myös yhden vaiheen muutoksia: <em>Sekoita etualalta taakse</em> levittää värien joukon etummaisen ja takimmaisen kohteiden välillä, <em>Muuta harmaaksi</em> kaataa kaiken värin, <em>Käännä värit</em> kääntää jokaisen ja <em>Kylläisyys&#8230;</em> nostaa tai laskee kylläisyyttä valinnan läpi.</p>

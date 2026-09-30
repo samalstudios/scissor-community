@@ -1,0 +1,89 @@
+<p class="lede">L'apparence d'une forme est son <em>apparence</em> : le fond à l'intérieur de son contour, le contour dessiné le long de celui-ci, et l'opacité et le mode de fusion qui décident de la façon dont il se pose sur ce qui se trouve derrière. Chacun de ceux-ci peut être une couleur plate, un dégradé ou un motif, et un objet peut en porter plusieurs de chaque à la fois. Cette page couvre les contrôles de peinture, les modèles de couleur, les nuanciers, les dégradés, les contours, la transparence, le panneau Pile de peinture et les styles graphiques.</p>
+
+<p>Les raccourcis ci-dessous sont écrits sous leur forme macOS. Sur Windows, lisez <kbd>&#8984;</kbd> comme Ctrl, <kbd>&#8997;</kbd> comme Alt et <kbd>&#8679;</kbd> comme Maj.</p>
+
+<figure class="shot">
+  <img src="img/artwork-landscape.png" width="1700" height="967" loading="lazy"
+       alt="Un paysage vectoriel de montagnes, ciel et lac, construit à partir de formes à fond plat dans Scissor." />
+  <figcaption>Une scène entière construite à partir de formes remplies. Chaque bande de couleur est un tracé avec son propre fond.</figcaption>
+</figure>
+
+<h2 id="appearance-fill-and-stroke">Fonds et contours</h2>
+<p>Un tracé, une forme ou un texte peut contenir un <strong>fond</strong>, la peinture à l'intérieur de son contour, et un <strong>contour</strong>, la ligne dessinée le long de ce contour. Un fond peut être une couleur plate, un dégradé ou un motif ; un contour peut être une couleur plate ou un dégradé, avec sa propre épaisseur et son propre tireté. Chaque côté peut également être défini sur aucun, de sorte que vous pouvez dessiner une forme avec seulement un contour, ou seulement un fond.</p>
+
+<h3 id="appearance-the-paint-chips">Les puces de fond et de contour</h3>
+<figure class="shot">
+  <img src="img/gradient.gif" width="340" height="340" loading="lazy"
+       alt="Un carré arrondi rempli d'un dégradé linéaire bleu vers ambre dont la direction balaie." />
+  <figcaption>Un dégradé linéaire du bleu à l'ambre. Faire glisser l'axe du dégradé, ou changer son angle, balaie le mélange autour de la forme.</figcaption>
+</figure>
+
+<h3 id="appearance-gradient-tool">L'outil Dégradé</h3>
+<p>Avec l'outil Dégradé (<kbd>G</kbd>), les mêmes contrôles se trouvent sur l'illustration. Glissez à travers un objet pour poser l'axe, en maintenant <kbd>&#8679;</kbd> pour le limiter à des pas de 45&deg;. L'axe affiche une poignée ronde au début et une poignée carrée à la fin ; glissez l'une ou l'autre pour déplacer cette extrémité. Cliquez sur l'axe pour ajouter un arrêt dans la couleur qu'il y a déjà, glissez un arrêt le long de celui-ci, et tirez un arrêt bien loin de l'axe pour le jeter. Glissez un losange pour déplacer le point médian. <kbd>Suppr</kbd> retire le dernier arrêt touché.</p>
+
+<h3 id="appearance-freeform">Dégradés libres</h3>
+<p>Un dégradé libre place des points de couleur n'importe où sur la forme plutôt que le long d'un axe, de sorte que le mélange peut suivre la forme de l'illustration. Avec l'outil Dégradé, cliquez sur l'illustration pour déposer un point de couleur, glissez-en un pour le déplacer, et appuyez sur <kbd>Suppr</kbd> pour le retirer. Cochez <em>Relier les points en lignes</em> dans le panneau pour joindre les points en lignes, ce qui étale une couleur le long d'une série plutôt que depuis un point unique. Utilisez un dégradé libre pour un ombrage doux et organique qu'une rampe rectiligne ne peut pas donner.</p>
+
+<h2 id="appearance-patterns">Motifs</h2>
+<p>Un motif est une illustration répétée comme tuile et utilisée comme fond. Transformez une sélection en tuile avec <strong>Objet &rsaquo; Motif &rsaquo; Créer</strong>, puis remplissez n'importe quelle forme avec celle-ci depuis le panneau <strong>Motifs</strong> : cliquez sur une tuile pour remplir, double-cliquez pour la modifier, et <kbd>&#8997;</kbd>-cliquez pour la supprimer. <em>Options de tuile</em> définit le type de tuile, le décalage de brique, la taille et l'espacement, et si la tuile se dimensionne et se déplace avec l'illustration. <strong>Modifier le motif</strong> ouvre la tuile sur place avec ses copies se répétant autour pendant que vous travaillez ; cliquez sur <em>Terminer la modification</em> dans le panneau Motifs lorsque la tuile est correcte. Les motifs conviennent aux textures répétées, comme les rayures, les points, les tissus et les arrière-plans, qui seraient fastidieux à dessiner à la main.</p>
+
+<h2 id="appearance-strokes">Contours</h2>
+<p>Le panneau <strong>Contour</strong> (<kbd>&#8984;F10</kbd>) façonne la ligne dessinée le long d'un tracé.</p>
+
+<h3 id="appearance-stroke-options">Épaisseur, terminaisons, jonctions et alignement</h3>
+<p><em>Épaisseur</em> définit l'épaisseur du contour en points. Les boutons <em>Terminaison</em> décident comment un tracé ouvert se termine : bout (coupé net au point d'ancrage), rond ou saillant (carré, mais dépassant le point d'ancrage de la moitié de l'épaisseur). Les boutons <em>Coin</em> décident comment un contour tourne un coin : bec (une pointe fine), rond ou biseau (une coupe plate), avec une <em>Limite</em> de bec qui biseaute les pointes les plus fines pour qu'elles ne s'étirent pas. <em>Aligner</em> place le contour sur le centre du tracé, ou entièrement à l'intérieur ou à l'extérieur, ce qui compte lorsqu'une forme doit s'ajuster exactement à ses voisines.</p>
+
+<h3 id="appearance-dashes">Lignes en pointillés</h3>
+<p>Cochez <em>Ligne en pointillés</em> pour diviser le contour en tirets. Les trois paires tiret-écart ci-dessous définissent le motif : le premier champ est une longueur de tiret, le suivant un écart, et ainsi de suite, se répétant autour du tracé. Laissez les paires suivantes vides pour un tiret simple et régulier.</p>
+
+<h3 id="appearance-width-profiles">Profils de largeur et outil Largeur</h3>
+<p>Un profil de largeur effile le contour le long de sa longueur plutôt que de le maintenir à une épaisseur unique. Choisissez un profil dans le menu du panneau et un petit aperçu montre la forme qu'il crée ; les boutons à côté l'inversent, enregistrent le contour actuel comme nouveau profil, ou supprimez un profil que vous avez créé. Un contour que vous avez façonné à la main s'affiche comme <em>Personnalisé</em> dans le menu.</p>
+<p>L'outil Largeur (<kbd>&#8679;W</kbd>) façonne un contour directement sur le canevas : glissez loin du tracé pour l'élargir à cet endroit, ou vers lui pour le rétrécir, laissant un point de largeur derrière que vous pouvez glisser à nouveau plus tard. Utilisez-le pour donner à une ligne dessinée le gonflement et l'effilement d'un pinceau ou d'une plume.</p>
+
+<h3 id="appearance-brushes">Pinceaux</h3>
+<p>Le panneau <strong>Pinceaux</strong> (<kbd>F5</kbd>) peint des contours avec une forme plutôt qu'une simple ligne. Il contient des pinceaux calligraphiques, de dispersion, artistes, de poils et de motifs. Cliquez sur un pinceau pour l'appliquer aux tracés sélectionnés ; le Pinceau utilise le pinceau actuel. Double-cliquez sur un pinceau pour ses options, utilisez <em>Nouveau pinceau…</em> pour en créer un (les pinceaux de dispersion, artistes et de motifs sont construits à partir d'une illustration sélectionnée), et <em>Supprimer le pinceau</em> pour ramener un contour à une simple ligne.</p>
+
+<h2 id="appearance-opacity-blending">Opacité et fusion</h2>
+<p>L'opacité et le mode de fusion décident comment un objet se combine avec ce qui se trouve en dessous. Ils se trouvent dans le panneau <strong>Transparence</strong> (<kbd>&#8679;&#8984;F10</kbd>), et aussi dans le panneau Propriétés.</p>
+
+<h3 id="appearance-blend-modes">Les modes de fusion</h3>
+<p>L'opacité va de 0 % (invisible) à 100 % (plein). Le menu de mode propose seize modes de fusion, qui se répartissent en groupes : des modes qui assombrissent, des modes qui éclaircissent, des modes de contraste, des modes de comparaison, et les quatre qui empruntent une partie d'une couleur.</p>
+<table>
+  <thead><tr><th>Mode</th><th>Ce qu'il fait</th></tr></thead>
+  <tbody>
+    <tr><td>Normal</td><td>Peint par-dessous ce qui est en dessous, sans fusion.</td></tr>
+    <tr><td>Obscurcir</td><td>Conserve la couleur la plus sombre, canal par canal.</td></tr>
+    <tr><td>Produit</td><td>Multiplie les deux couleurs, assombrissant toujours ; le blanc laisse la base inchangée.</td></tr>
+    <tr><td>Densité couleur +</td><td>Assombrit la base pour adopter la couleur de fusion.</td></tr>
+    <tr><td>Éclaircir</td><td>Conserve la couleur la plus claire.</td></tr>
+    <tr><td>Écran</td><td>L'inverse de Produit, éclaircissant toujours ; le noir laisse la base inchangée.</td></tr>
+    <tr><td>Densité couleur -</td><td>Éclaircit la base pour adopter la couleur de fusion.</td></tr>
+    <tr><td>Incrustation</td><td>Multiplie ou écran selon la base, augmentant le contraste.</td></tr>
+    <tr><td>Lumière tamisée</td><td>Un éclaircissement ou assombrissement doux, comme si une lumière douce était projetée sur l'illustration.</td></tr>
+    <tr><td>Lumière crue</td><td>Multiplie ou écran selon la couleur de fusion, comme un projecteur dur.</td></tr>
+    <tr><td>Différence</td><td>Soustrait la couleur la plus sombre de la plus claire ; le blanc inverse la base, le noir n'a aucun effet.</td></tr>
+    <tr><td>Exclusion</td><td>Comme Différence, mais plus doux et moins contrasté.</td></tr>
+    <tr><td>Teinte</td><td>La teinte de la fusion avec la saturation et la luminosité de la base.</td></tr>
+    <tr><td>Saturation</td><td>La saturation de la fusion avec la teinte et la luminosité de la base.</td></tr>
+    <tr><td>Couleur</td><td>La teinte et la saturation de la fusion avec la luminosité de la base : idéal pour teinter des illustrations en niveaux de gris.</td></tr>
+    <tr><td>Luminosité</td><td>La luminosité de la fusion avec la teinte et la saturation de la base.</td></tr>
+  </tbody>
+</table>
+<p>Pour un groupe, deux interrupteurs changent la façon dont il fusionne. <em>Limiter la fusion au groupe</em> maintient les modes du groupe à l'intérieur de celui-ci, de sorte que ses membres fusionnent entre eux mais pas avec l'illustration derrière le groupe. <em>Groupe de knockout</em> fait que chaque membre cache ceux en dessous dans le groupe plutôt que de fusionner à travers eux.</p>
+
+<h3 id="appearance-opacity-masks">Masques d'opacité</h3>
+<p>Un masque d'opacité estompe une illustration par tonalité. Sélectionnez l'illustration et, au-dessus, la forme avec laquelle masquer, puis cliquez sur <em>Créer un masque</em> (aussi <strong>Objet &rsaquo; Masque de découpe &rsaquo; Créer un masque d'opacité</strong>). L'objet du dessus devient le masque : là où il est clair, l'illustration apparaît, et là où il est sombre, l'illustration s'estompe, de sorte qu'un dégradé du blanc au noir crée un fondu doux. <em>Libérer</em> rend les deux objets. Utilisez un masque pour un bord doux ou un vignettage qu'un découpage net ne peut pas faire.</p>
+
+<h2 id="appearance-appearance-panel">Le panneau Pile de peinture</h2>
+<p>Le panneau <strong>Pile de peinture</strong> (<kbd>&#8679;F6</kbd>) liste tout ce qui est peint sur un objet : ses fonds et ses contours, avec les effets en direct au-dessus. Parce qu'un objet peut contenir plusieurs fonds et contours, c'est ici que vous les empilez, par exemple un contour large et sombre sous un contour fin et clair pour créer un filet, ou deux fonds à différentes opacités.</p>
+<p>La pile est dessinée du haut en premier, correspondant à l'ordre dans lequel elle peint. Chaque rangée de fond ou de contour a un œil pour le masquer, une puce de peinture qui ouvre le sélecteur de couleur, un champ d'opacité, un champ d'épaisseur pour les contours, et des flèches pour le monter ou le descendre dans la pile, plus un bouton pour le retirer. <em>Ajouter un fond</em> et <em>Ajouter un contour</em> en mettent un autre au-dessus. Les effets s'affichent au-dessus des fonds et contours avec un badge <em>fx</em> ; cliquez sur un effet pour modifier ses options, ou le retirer de sa rangée. Lorsque l'aspect en couches est terminé, <strong>Objet &rsaquo; Développer l'apparence</strong> fige toute la pile en illustration ordinaire.</p>
+
+<h2 id="appearance-graphic-styles">Styles graphiques</h2>
+<p>Un style graphique est une apparence enregistrée que vous pouvez appliquer à d'autres objets. Le panneau <strong>Styles graphiques</strong> (<kbd>&#8679;F5</kbd>) les conserve sous forme de puces, chacune montrant son fond avec son contour comme bordure de la puce. Sélectionnez un objet et cliquez sur <em>Nouveau style</em> pour enregistrer ses fonds et contours ; cliquez sur une puce pour appliquer ce style à la sélection, et <kbd>&#8997;</kbd>-cliquez sur une puce pour la supprimer. Les styles valent la peine d'être créés lorsque le même aspect, comme un traitement de bouton de maison ou un style d'étiquette, doit aller sur de nombreux objets et rester cohérent.</p>
+
+<h2 id="appearance-overprint">Surimpression</h2>
+<p>Le panneau <strong>Attributs</strong> (<kbd>&#8984;F11</kbd>) définit la surimpression pour le travail d'impression. <em>Surimprimer le fond</em> et <em>Surimprimer le contour</em> font que cette encre s'imprime par-dessus les couleurs en dessous plutôt que de les percer, ce qui est utilisé pour le recouvrement et pour des effets comme un noir qui s'imprime par-dessus plutôt que de remplacer ce qui se trouve dessous. Activez <strong>Affichage &rsaquo; Aperçu de surimpression</strong> pour le voir à l'écran ; l'export PDF conserve le réglage.</p>
+
+<h2 id="appearance-recolour">Recolorier une illustration</h2>
+<p><strong>Édition &rsaquo; Modifier les couleurs &rsaquo; Remapper les couleurs…</strong> liste chaque couleur de la sélection avec sa fréquence d'utilisation. Cliquez sur la puce à droite d'une rangée pour choisir ce que cette couleur devient, ou sur la flèche entre les deux puces pour laisser cette couleur intacte. Les curseurs Teinte, Saturation et Luminosité décalent l'ensemble complet ensemble, et deux boutons réorganisent aléatoirement les nouvelles couleurs ou randomisent leur saturation et luminosité, ce qui est un moyen rapide d'essayer des variations. L'illustration se met à jour pendant que vous avancez, et <em>Réinitialiser</em> revient aux couleurs de départ.</p>
+<p>Le même sous-menu propose également des changements en une étape : <em>Fondre du devant vers l'arrière</em> étale une série de couleurs entre les objets avant et arrière, <em>Convertir en niveaux de gris</em> supprime toute couleur, <em>Inverser les couleurs</em> inverse chacune, et <em>Saturer…</em> augmente ou diminue la saturation dans la sélection.</p>

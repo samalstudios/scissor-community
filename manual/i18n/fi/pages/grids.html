@@ -1,0 +1,57 @@
+<p class="lede">Jokainen alusta Scissorissa kantaa omaa ruudukkoaan, joten eri osia asiakirjasta voidaan piirtää eri apuviivoja vasten. Ruudukko on piirustusapuviiva: se näkyy näytöllä, ei koskaan tulostu eikä vietä ja kohdistuksen ollessa päällä se vetää pisteisiinsä sen viivoille. Ruudukko kytketään päälle <strong>Näytä &rsaquo; Ruudukko &rsaquo; Näytä ruudukko</strong> (<kbd>&#8984;'</kbd>) -komennolla.</p>
+
+<h2 id="grids-choosing">Ruudukon valitseminen</h2>
+<p>Valitse tyyppi <strong>Näytä &rsaquo; Ruudukko</strong> -kohdasta, sitten avaa <strong>Ruudukko-paneeli</strong> asettaaksesi sen välin, kuinka monta jakoa on pääviivojen välillä, sen kulman ja mistä sen alku alkaa alustalla. Koska ruudukko kuuluu alustaan, asiakirjalla, jossa on useita alustoja, jokaiselle voidaan antaa ruudukko, joka sopii työhön siinä. <strong>Kohdista ruudukkoon</strong> (<kbd>&#8679;&#8984;'</kbd>) tekee, että uudet pisteet, muotojen kulmat ja vedetyt kohteet laskeutuvat lähimpään viivaan.</p>
+
+<h2 id="grids-square">Neliö (ortogonaalinen)</h2>
+<p>Tavallinen ruudukko: tasaisesti välitetyt vaaka- ja pystysuorat viivat. Käytä sitä asetteluihin, UI-mockupeihin, pikselityyliseen työhön, kuvakkeisiin ja mihin tahansa, mikä haluaa tasautua säännölliseen mittaan.</p>
+<figure class="shot">
+  <img src="img/grid-orthogonal.png" width="1300" height="934" loading="lazy" alt="Neliöruudukko tasaisesti välitettyjä vaaka- ja pystysuoria viivoja alustalla Scissorissa." />
+  <figcaption>Neliöruudukko. Tasaiset rivit ja sarakkeet asetteluun ja mitattuun työhön.</figcaption>
+</figure>
+
+<h2 id="grids-isometric">Isoometrinen</h2>
+<p>Kolme viivasarjaa 30&deg; edustavat kuution kolmea akselia, jotta voit piirtää huoneita, pakkauksia, peliruutuja ja teknisiä kuvituksia, jotka lukeutuvat kiinteiksi ilman todellista 3D:tä. Jokainen seinä seuraa kolmea akselia, joten laatikot pinoutuvat ja kohtaavat puhtaasti. Kun ruudukko näkyy, muototyökalut piirtävät sen akselien mukaan.</p>
+<figure class="shot">
+  <img src="img/isometric-example.png" width="1600" height="1149" loading="lazy" alt="Pieni kaupunki värillisistä rakennuksista ikkunoineen piirrettynä Scissorin isoometriselle ruudukolle, jokainen reuna seuraa ruudukon viivaa." />
+  <figcaption>Pieni kaupunki isoometrisella ruudukolla. Jokainen seinä ja pystysuora reuna kulkee ruudukon viivaa pitkin, joten rakennukset istuvat oikein.</figcaption>
+</figure>
+<figure class="shot">
+  <img src="img/iso-build.gif" width="820" height="589" loading="lazy" alt="Isoometrinen kaupunki rakennukselta toiselta ruudukolla, jokainen lohko seuraa ruudukon viivoja." />
+  <figcaption>Sama kaupunki rakennukselta toiselta. Jokainen rakennus kohdistuu ruudukkoon, kun se laskeutuu.</figcaption>
+</figure>
+
+<h2 id="grids-hexagonal">Kuusikulmio</h2>
+<p>Hunajakenno kuusikulmioista. Sopii lautapelien karttoihin, kuvioruutuihin ja mihin tahansa asetteluun, joka on rakennettu kuusikulmaisista soluista. Väli asettaa yhden kuusikulmion leveyden, tasaisesta sivusta tasaiseen sivuun.</p>
+<figure class="shot">
+  <img src="img/grid-hexagonal.png" width="1300" height="934" loading="lazy" alt="Hunajakennokuusikulmioruudukko alustalla Scissorissa." />
+  <figcaption>Kuusikulmioruudukko. Hunajakenno karttoihin ja ruututyöhön.</figcaption>
+</figure>
+
+<h2 id="grids-oblique">Vinokulma</h2>
+<p>Yksi vaakasuorien viivojen suku ja yksi vinosti valitsemallasi kulmalla. Antaa yhden akselin, sivulta katsottavan projektion, kätevää kavaljeeri-tyyppisiin kaavioihin ja vinoviivoihin. Aseta vino Ruudukko-paneelissa.</p>
+<figure class="shot">
+  <img src="img/grid-oblique.png" width="1300" height="934" loading="lazy" alt="Vinokulmaruudukko: vaakasuorat viivat leikkaavat vinosti kulman viivaa." />
+  <figcaption>Vinokulmaruudukko. Vaakasuorat viivat leikkaavat asettamasi vinon.</figcaption>
+</figure>
+
+<h2 id="grids-golden">Kultainen leikkaus</h2>
+<p>Kultainen suorakulmio sovitettuna alustaan, leikattuna neliöön ja pienempään suorakulmioon, neljänneskaarien kanssa, jotka jäljittävät kultaisen spiraa. Käytä tätä asettaaksesi polttopisteitä ja koon elementtejä klassisessa suhteessa. Se skaalautuu alustan mukaan kiinteän välin sijaan.</p>
+<figure class="shot">
+  <img src="img/grid-golden.png" width="1300" height="813" loading="lazy" alt="Kultaisen leikkauksen ruudukko: alusta jaettuna kultaisessa suhteessa neljänkskaareilla, jotka jäljittävät kultaista spiraa." />
+  <figcaption>Kultaisen leikkauksen ruudukko. Suhteelliset viivat ja spiraa kompotaatiota varten.</figcaption>
+</figure>
+
+<h2 id="grids-pattern">Kuvio</h2>
+<p>Kuvioruudukko kuvioi kuvionäytteen alustan yli ja piirtää sen teoksen alle, joten kuvio toimii taustana ja samalla tasausapuviivana — kätevää asettaessa teosta toistoon, tarkistaakseen ruudun täsmäämistä tai työskennellessä referenssitekstuurin päällä. Valitse se <strong>Näytä &rsaquo; Ruudukko &rsaquo; Kuvio</strong> -kohdasta; ruutu tulee nykyisestä kuvionäytteestä, jonka teet ja muokkaat <a href="/manual/fi/symbols/">Symbolit ja sivellint</a> -sivulla kuvatulla tavalla. Kuten kaikki ruudukot se kuuluu alustaan, joten eri alustat voivat kantaa eri kuviotaustoja.</p>
+
+<h2 id="grids-perspective">Perspektiivi</h2>
+<p>Apuviivat, jotka kulkevat yhteen, kahteen tai kolmeen kadonpisteeseen horisontilla, jotta voit piirtää kohtauksia todellisella syvyydellä. Aseta se <strong>Perspektiiviruudukko-työkalulla</strong> (<kbd>&#8679;P</kbd>): vetää kadonpisteitä, vetää yhtä ylös tai alas siirtääkseen horisontin ja paina <kbd>1</kbd> - <kbd>4</kbd> valitaksesi tason, jolla piirrät. <strong>Ruudukko-paneelin</strong>in <strong>1 piste</strong>, <strong>2 pistettä</strong> ja <strong>3 pistettä</strong> -painikkeet vaihtavat asetusten välillä. Ruudukolle piirretyt muodot jakavat yhden perspektiivin.</p>
+<figure class="shot">
+  <img src="img/grid-perspective.png" width="1300" height="813" loading="lazy" alt="Kahden pisteen perspektiiviruudukko, sen apuviivat kertyvät kadonpisteeseen kummallakin puolella horisonttia." />
+  <figcaption>Kahden pisteen perspektiiviruudukko. Apuviivat kertyvät kadonpisteeseen kummallakin puolella.</figcaption>
+</figure>
+<figure class="shot">
+  <img src="img/perspective-grid.png" width="1700" height="969" loading="lazy" alt="Kolme värillistä laatikkoa piirrettynä kahden pisteen perspektiivissä ruudukolla, niiden reunat kertyvät kadonpisteisiin." />
+  <figcaption>Laatikot piirretty kahden pisteen ruudukolle. Niiden reunat kulkevat kadonpisteisiin, joten ne jakavat yhden perspektiivin.</figcaption>
+</figure>

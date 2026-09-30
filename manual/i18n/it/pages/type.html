@@ -1,0 +1,110 @@
+<p class="lede">Il testo in Scissor resta live. Puoi modificare le parole, il carattere e la spaziatura in qualsiasi momento, e il testo viene disegnato direttamente sulla tela mentre digiti, così ciò che modifichi è ciò che si stampa ed esporta.</p>
+
+<p>Le scorciatoie sotto sono scritte nel formato macOS. Su Windows, leggi <kbd>&#8984;</kbd> come <kbd>Ctrl</kbd>, <kbd>&#8997;</kbd> come <kbd>Alt</kbd> e <kbd>&#8679;</kbd> come <kbd>Shift</kbd>.</p>
+
+<h2 id="type-tools">Gli strumenti di testo</h2>
+<p>Gli strumenti di testo condividono un slot nella barra degli strumenti. Seleziona lo slot e tieni premuto per scegliere tra di essi, poi lavora sulla tela.</p>
+<table>
+<thead><tr><th>Strumento</th><th>Scorciatoia</th><th>Cosa fa</th></tr></thead>
+<tbody>
+<tr><td>Strumento Testo</td><td><kbd>T</kbd></td><td>Fai clic per testo di punto, trascina per un riquadro rettangolare di testo d'area</td></tr>
+<tr><td>Strumento Testo d'area</td><td></td><td>Trascina un riquadro e digita al suo interno</td></tr>
+<tr><td>Strumento Testo su tracciato</td><td></td><td>Fai clic su un tracciato per far scorrere il testo lungo di esso</td></tr>
+<tr><td>Strumento Testo verticale</td><td></td><td>Imposta caratteri in piedi in colonne</td></tr>
+<tr><td>Strumento Modifica glifi</td><td><kbd>&#8679;T</kbd></td><td>Sposta, ridimensiona e ruota un carattere alla volta</td></tr>
+</tbody>
+</table>
+<p>Per modificare testo già in pagina, fai clic su di esso con uno qualsiasi degli strumenti di testo tranne Modifica glifi per mettere il cursore al suo interno, oppure fai doppio clic con lo Strumento Selezione (<kbd>V</kbd>). Premi <kbd>Esc</kbd>, o fai clic altrove, per smettere di modificare. Con lo Strumento Testo semplice, fare clic su un tracciato aperto collega il testo a quel tracciato invece di iniziare un nuovo blocco, così non hai sempre bisogno di usare lo Strumento Testo su tracciato dedicato.</p>
+
+<h2 id="type-kinds">Testo di punto, d'area e su tracciato</h2>
+<p>Il testo può stare nel documento in tre modi, e la differenza è come le righe vengono misurate e dove si interrompono. Tutti e tre restano modificabili, accettano le stesse impostazioni Carattere e Paragrafo e possono essere trasformati in contorni in seguito.</p>
+
+<h3 id="type-point">Testo di punto</h3>
+<p>Fai clic una volta con lo Strumento Testo e digita. Il testo cresce da quel singolo punto e si interrompe solo dove premi <kbd>Invio</kbd>: non c'è un riquadro in cui andare a capo. Usa il testo di punto per titoli, etichette, poche parole di testo in rilievo o qualsiasi cosa posizionerai a occhio piuttosto che versare in una colonna. I suoi rientri e la spaziatura tra paragrafi non hanno nulla su cui misurarsi, quindi quei controlli non hanno effetto sul testo di punto; l'allineamento viene preso dall'ancora su cui hai fatto clic.</p>
+
+<h3 id="type-area">Testo d'area</h3>
+<p>Trascina un rettangolo con lo Strumento Testo o lo Strumento Testo d'area e il testo va a capo per adattarsi al riquadro, interrompendo le righe automaticamente al bordo destro. Usa il testo d'area per corpo del testo, didascalie o qualsiasi serie di testo che deve restare entro una larghezza impostata. Quando c'è più testo di quanto il riquadro possa contenerne, l'eccesso viene nascosto e il riquadro viene segnato come in overflow; ingrandisci il riquadro, riduci il testo o collega l'overflow in un altro riquadro (vedi sotto). Rientri, rientro prima riga, spazio prima e dopo e sillabazione si applicano tutti al testo d'area.</p>
+
+<h3 id="type-on-a-path">Testo su tracciato</h3>
+<p>Fai clic su un tracciato con lo Strumento Testo su tracciato. Il tracciato diventa la linea di base e smette di essere lavoro a sé stante, quindi non è più riempito né contornato. Usalo per far scorrere un'etichetta attorno a un badge, lungo una curva o sopra una forma. Seleziona il risultato e appaiono tre parentesi: una all'inizio, una alla fine e una al centro. Trascina la parentesi iniziale o finale per spostare dove il testo inizia e finisce lungo il tracciato, trascina quella centrale per far scorrere tutta la serie lungo di esso, e trascina quella centrale oltre dall'altro lato del tracciato per capovolgere il testo. Il testo su tracciato non accetta interruzioni di riga, quindi <kbd>Invio</kbd> non fa nulla mentre lo modifichi. Rimodella il tracciato sottostante e il testo segue le sue nuove pieghe.</p>
+<figure class="shot">
+  <img src="img/type-on-path.png" width="1700" height="798" loading="lazy"
+       alt="Le parole 'Il testo scorre lungo qualsiasi tracciato che disegni' seguendo le pieghe di un tracciato ondulato in Scissor." />
+  <figcaption>Testo impostato su un tracciato ondulato. Rimodella il tracciato e il testo segue le sue pieghe; la linea di base qui è mostrata tratteggiata.</figcaption>
+</figure>
+
+<h2 id="type-character">Il pannello Carattere</h2>
+<p>Il pannello Carattere (<kbd>&#8984;T</kbd>, oppure <strong>Finestra &gt; Testo &gt; Carattere</strong>) contiene tutto ciò che si applica alle lettere stesse. Con un oggetto di testo selezionato, le sue impostazioni coprono l'intero oggetto: cambi il carattere o il tracking e ogni carattere segue. Mentre digiti, carattere, peso, corsivo e dimensione si applicano solo ai caratteri selezionati (vedi <a href="#type-mixed">Stili misti in un testo</a>). Il pannello si disattiva finché non stai modificando testo o non hai selezionato un oggetto di testo.</p>
+
+<h3 id="type-font">Carattere, peso, stile e dimensione</h3>
+<p>Il menu carattere è ricercabile e mantiene le famiglie usate di recente in alto. Elenca i caratteri che il browser può effettivamente disegnare, letti dal sistema dove può segnalati e altrimenti sondati da un insieme di famiglie comuni, così la lista corrisponde a ciò che verrà reso piuttosto che a un catalogo fisso.</p>
+<p>Il menu peso offre Light, Regular, Medium, Semibold, Bold e Heavy, ma solo i pesi che la famiglia scelta ha davvero sono selezionabili: gli altri sono disattivati. Il pulsante corsivo accanto attiva e disattiva lo stile inclinato. La dimensione si imposta in pixel, dal campo Dimensione.</p>
+
+<h3 id="type-mixed">Stili misti in un testo</h3>
+<p>Un testo può mescolare dimensioni, colori, pesi e corsivi. Mentre digiti, seleziona alcuni carattere e cambiali dalla barra rapida accanto al testo, dalla barra delle opzioni o dal pannello Colore. Solo i carattere selezionati cambiano e il resto del testo mantiene il proprio stile. Con nulla selezionato, la modifica si applica all'intero testo come sempre. Gli stili viaggiano con i loro caratteri man mano che continui a digitare e vengono conservati nelle esportazioni SVG e PDF.</p>
+
+<h3 id="type-metrics">Interlinea, tracking e kerning</h3>
+<dl>
+  <dt>Interlinea</dt>
+  <dd>La distanza da una linea di base alla successiva, in pixel. Lasciala a 0 per l'interlinea automatica, che è il 120% della dimensione. Impostala più grande per aprire le righe, oppure più piccola per stringere un titolo.</dd>
+  <dt>Tracking</dt>
+  <dd>Spaziatura uniforme aggiunta a o sottratta da ogni carattere, misurata in millesimi di em (così si scala con la dimensione). Valori positivi allentano il testo, negativi lo stringono. Usa il tracking per adattare una riga a una larghezza o per spaziare le maiuscole piccole.</dd>
+  <dt>Kerning</dt>
+  <dd>La spaziatura coppia per coppia del carattere tra lettere particolari, come lo spazio sotto una T maiusola. È attivo per impostazione predefinita, sul pulsante Kerning nella riga OpenType (contrassegnato AV). Disattivalo per vedere le metriche grezze del carattere.</dd>
+</dl>
+
+<h3 id="type-align">Allineamento</h3>
+<p>Il pannello Carattere ha quattro pulsanti di allineamento: sinistra, centro, destra e giustifica. Sinistra e destra sono relative alla direzione di lettura, quindi significano inizio e fine: testo da destra a sinistra impostato a sinistra si allinea alla destra visiva. La giustificazione distribuisce ogni riga per riempire la misura, quindi cambia qualcosa solo dove le righe vanno a capo, cioè testo d'area e testo su tracciato piuttosto che testo di punto a riga singola. Per i controlli di giustificazione più fini (come viene impostata l'ultima riga) usa il pannello Paragrafo.</p>
+
+<h3 id="type-opentype">Funzioni OpenType e maiuscole piccole</h3>
+<p>Sotto l'intestazione <strong>OpenType</strong> c'è una riga di pulsanti, ciascuno dei quali attiva o disattiva una funzione del testo selezionato:</p>
+<table>
+<thead><tr><th>Pulsante</th><th>Funzione</th></tr></thead>
+<tbody>
+<tr><td>fi</td><td>Legature standard (attive per impostazione predefinita)</td></tr>
+<tr><td>st</td><td>Legature discrezionali</td></tr>
+<tr><td>TT</td><td>Tutto maiuscolo</td></tr>
+<tr><td>T&#7472;</td><td>Maiuscole piccole</td></tr>
+<tr><td>T&sup1;</td><td>Apice</td></tr>
+<tr><td>T&#8321;</td><td>Pedice</td></tr>
+<tr><td>&frac12;</td><td>Frazioni</td></tr>
+<tr><td>1&#738;&#7511;</td><td>Ordinali</td></tr>
+<tr><td>&#119964;</td><td>Swash</td></tr>
+<tr><td>AV</td><td>Kerning (attivo per impostazione predefinita)</td></tr>
+</tbody>
+</table>
+<p>Tutto maiuscolo disegna ogni lettera come una maiusola senza cambiare il testo sottostante, quindi è ancora minuscolo quando lo modifichi. Le maiuscole piccole chiedono al carattere le sue forme maiuscole piccole. Apice e pedice disegnano i carattere interessati più piccoli e li spostano dalla linea di base, per marcatori di nota, desinenze ordinali o formule chimiche.</p>
+<p>Sotto i pulsanti, il menu stile cifre sceglie come vengono impostate le cifre: Default, Tabular Lining, Proportional Oldstyle, Proportional Lining o Tabular Oldstyle. Le cifre tabellari occupano tutte la stessa larghezza, così le colonne di numeri si allineano; le cifre oldstyle hanno ascendenti e discendenti che si adattano meglio al testo corrente.</p>
+<p>Non ogni funzione può essere visualizzata in anteprima sulla tela. Legature attive o disattive, kerning, maiuscole, maiuscole piccole e apice e pedice vengono disegnati mentre modifichi. Legature discrezionali, gli stili cifra, frazioni, ordinali e swash vengono registrati sul testo e scritti nell'<code>.svg</code> esportato come impostazioni delle funzioni del carattere, ma la tela non li mostra, quindi trattali come impostazioni al momento dell'esportazione.</p>
+
+<h2 id="type-paragraph">Il pannello Paragrafo</h2>
+<p>Il pannello Paragrafo (<kbd>&#8997;&#8984;T</kbd>, oppure <strong>Finestra &gt; Testo &gt; Paragrafo</strong>) controlla come vengono impostati interi paragrafi. Come per le impostazioni carattere, queste si applicano a ogni paragrafo dell'oggetto di testo.</p>
+<p>Sette pulsanti di allineamento corrono lungo la parte superiore. I primi tre sono semplici sinistra, centro e destra. I successivi tre giustificano il corpo del paragrafo e impostano solo l'ultima riga, allineata a sinistra, centrata o a destra. L'ultimo giustifica ogni riga inclusa l'ultima, stirandola fino alla misura completa. La giustificazione ha bisogno di un posto dove andare a capo, quindi ha effetto nel testo d'area, non nel testo di punto.</p>
+<p>Sotto i pulsanti di allineamento ci sono i rientri: <strong>Sinistro</strong> e <strong>Destro</strong> tirano l'intero paragrafo dentro dai lati del riquadro, e <strong>Prima riga</strong> rientra solo la prima riga. Un rientro di prima riga negativo fa sporgere la prima riga oltre le altre, che è come si crea un rientro sporgente. I campi <strong>Prima</strong> e <strong>Dopo</strong> aggiungono spazio sopra e sotto ogni paragrafo, un modo più pulito di separare i paragrafi rispetto a una riga vuota. L'interruttore <em>Sillaba</em> consente alle parole lunghe di interrompersi tra le righe per uniformare il bordo destro. Rientri e spaziatura si applicano al testo d'area; il testo di punto si imposta dalla propria ancora.</p>
+
+<h2 id="type-glyphs">Il pannello Glifi</h2>
+<p>Il pannello Glifi (<strong>Testo &gt; Glifi</strong>, <kbd>&#8997;&#8679;F11</kbd>) elenca i caratteri del carattere corrente per set, dal latino di base greco, cirillico, ebraico, arabo, punteggiatura, valute, frecce e altro, e mantiene quelli usati di recente in alto. Usalo per inserire un carattere che la tastiera non digita, come una freccia, un simbolo di valuta o una lettera accentata. Fai doppio clic su un glifo per digitarlo al cursore del testo. Senza alcun cursore in un testo, il glifo viene copiato negli appunti, così puoi incollarlo altrove.</p>
+
+<h2 id="type-orientation">Testo verticale e da destra a sinistra</h2>
+<p>Scissor può impostare il testo lungo la pagina oltre che attraverso di essa, e può impostare script che si leggono da destra a sinistra. Entrambi funzionano nel testo di punto, d'area e su tracciato, e l'editor sulla tela segue la stessa direzione del lavoro finito.</p>
+
+<h3 id="type-vertical">Testo verticale</h3>
+<p>Lo Strumento Testo verticale imposta caratteri in piedi che si impilano verso il basso, con ogni nuova riga che forma una colonna a sinistra della precedente. In un riquadro d'area verticale, una colonna va a capo in una nuova quando raggiunge il fondo. Per cambiare testo che hai già impostato tra orizzontale e verticale, scegli <strong>Testo &gt; Orientamento testo &gt; Orizzontale</strong> oppure <strong>Verticale</strong>.</p>
+
+<h3 id="type-rtl">Da destra a sinistra e arabo</h3>
+<p>Il menu direzione del pannello Carattere offre Auto, Da sinistra a destra e Da destra a sinistra. Su Auto la direzione viene letta dal testo stesso, dal suo primo carattere forte, così l'arabo o l'ebraico scorrono da destra a sinistra senza che tu imposti nulla. Le lettere arabe assumono le loro forme legate, e una serie di parole latine dentro una riga da destra a sinistra mantiene il proprio ordine da sinistra a destra. Impost il menu su Da sinistra a destra o Da destra a sinistra quando vuoi forzare la direzione piuttosto che lasciarla rilevare, ad esempio per una riga che inizia con un numero o una punteggiatura.</p>
+
+<h2 id="type-touch">Modifica glifi</h2>
+<p>Lo Strumento Modifica glifi (<kbd>&#8679;T</kbd>) sposta, ridimensiona e ruota un carattere alla volta lasciando il testo completamente modificabile. Usalo per spostare una singola lettera per effetto senza spezzare la parola in contorni. Seleziona lo strumento e fai clic su un carattere: appare un riquadro attorno a quel carattere con un pomello a ogni angolo, uno sul lato destro, uno in basso e uno fluttuante sopra. Trascina un angolo per ridimensionare in entrambe le direzioni, il pomello laterale per la larghezza da solo, quello inferiore per l'altezza da solo e quello superiore per ruotare il carattere. Tieni premuto <kbd>&#8679;</kbd> mentre trascini un angolo per mantenere le proporzioni, oppure mentre ruoti per far scattare l'angolo. <kbd>Backspace</kbd> o <kbd>Canc</kbd> rimette il carattere dove lo aveva posizionato il testo, e <kbd>Esc</kbd> rilascia la selezione. Poiché il testo è ancora testo per tutto il tempo, puoi continuare a modificare le parole intorno al carattere che hai spostato.</p>
+
+<h2 id="type-flow">Collegamento testo e testo attorno</h2>
+<p>Due funzioni permettono al testo di condividere lo spazio con il resto di un layout: il collegamento fa scorrere una storia attraverso diversi riquadri, e il testo attorno spinge il testo lontano da un oggetto che sovrappone.</p>
+
+<h3 id="type-threading">Testo collegato</h3>
+<p>Seleziona due o più oggetti di testo d'area e scegli <strong>Testo &gt; Testo collegato &gt; Crea</strong>. Il loro testo viene unito in una unica storia che scorre di riquadro in riquadro nell'ordine di sovrapposizione, da dietro a davanti, e viene sempre modificato dal primo riquadro. Usa il collegamento per far scorrere un articolo attraverso colonne o pagine: man mano che aggiungi o rimuovi testo, si riadatta attraverso la catena. Ogni riquadro mostra una porta in alto a sinistra e in basso a destra, con una linea disegnata al riquadro in cui il testo continua. Un più rosso al posto della porta in uscita significa che c'è più testo di quanto il riquadro possa contenerne. <strong>Rilascia selezione</strong> toglie i riquadri selezionati dal loro collegamento, e <strong>Rimuovi collegamento</strong> rompe l'intero collegamento con ogni riquadro che conserva il testo che stava mostrando.</p>
+
+<h3 id="type-wrap">Testo attorno</h3>
+<p>Per spingere il testo lontano da una forma, seleziona la forma e scegli <strong>Oggetto &gt; Testo attorno &gt; Crea</strong>. Il testo d'area che si trova sotto l'oggetto scorre poi attorno ad esso. L'attorno segue il contorno dell'oggetto, non il suo riquadro di selezione, così il testo può adattarsi a un cerchio o una sagoma irregolare. <strong>Opzioni testo attorno&#8230;</strong> imposta il margine mantenuto tra l'oggetto e il testo, in pixel, e può invertire l'attorno così il testo scorre dentro la forma invece che attorno. <strong>Rilascia</strong> rimuove l'attorno.</p>
+
+<h2 id="type-outlines">Convertire il testo in contorni</h2>
+<p>Seleziona del testo e scegli <strong>Testo &gt; Crea contorni</strong> (<kbd>&#8679;&#8984;O</kbd>) per trasformarlo in tracciati. Usalo quando hai bisogno di rimodellare le lettere a mano, garantire che il testo sia identico su una macchina che non ha il carattere, oppure usare le lettere come forma da combinare con altro lavoro. Le lettere vengono tracciate dai glifi del carattere ad alta risoluzione, con l'adattatore che lascia gli angoli netti netti mentre smussa le curve, e il risultato conserva il riempimento, il contorno, il nome, l'opacità e la modalità di fusione del testo. Le parole non sono più modificabili come testo in seguito, quindi conserva una copia se potresti aver bisogno di cambiarle, oppure annulla con <kbd>&#8984;Z</kbd>.</p>

@@ -1,0 +1,31 @@
+{
+  "chrome": {
+    "Manual": "Podręcznik",
+    "Shortcuts": "Skróty",
+    "Open the editor": "Otwórz edytor",
+    "Skip to the content": "Przejdź do treści",
+    "Search the manual": "Szukaj w podręczniku",
+    "Search the manual…": "Szukaj w podręczniku…",
+    "Breadcrumb": "Ścieżka nawigacji",
+    "More pages": "Więcej stron",
+    "Previous": "Poprzednia",
+    "Next": "Następna",
+    "Language": "Język",
+    "Scissor by Samal Studios.": "Scissor od Samal Studios.",
+    "Third-party licences": "Licencje stron trzecich",
+    "| Scissor manual": "| Podręcznik Scissor",
+    "Scissor user manual: every tool, menu and shortcut": "Podręcznik użytkownika Scissor: każde narzędzie, menu i skrót",
+    "Scissor user manual": "Podręcznik użytkownika Scissor"
+  },
+  "groups": {
+    "Get started": "Pierwsze kroki",
+    "Draw": "Rysowanie",
+    "Arrange & build": "Organizuj i buduj",
+    "Layout & pixels": "Układ i piksele",
+    "Panels": "Panele",
+    "Files & reference": "Pliki i odniesienia"
+  },
+  "nav": {},
+  "meta": {},
+  "keywords": {}
+}

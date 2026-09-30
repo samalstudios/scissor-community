@@ -1,0 +1,165 @@
+<p class="lede">Allt som ändrar var ett objekt sitter, hur stort det är eller vilket håll det vänder finns här: flytta och skala för hand, exakta numeriska transformeringar, justera och stapla, live-upprepningar, morfer, kuvert och att förvandla en platt form till en fast.</p>
+
+<p>Genvägarna nedan är skrivna i deras macOS-form. På Windows och Linux, läs <kbd>⌘</kbd> som Ctrl, <kbd>⌥</kbd> som Alt och <kbd>⇧</kbd> som Shift.</p>
+
+<h2 id="transform-select-move">Markera och flytta</h2>
+<p>Innan du kan transformera något måste du säga vad. Nå efter dessa först: markeringsverktygen bestämmer vad en dragning, ett numeriskt kommando eller ett panelfält ska verka på.</p>
+
+<h3 id="transform-selection-tools">Markeringsverktygen</h3>
+<table>
+  <thead><tr><th>Verktyg</th><th>Genväg</th><th>Vad det plockar upp</th></tr></thead>
+  <tbody>
+    <tr><td>Markeringsverktyg</td><td><kbd>V</kbd></td><td>Hela objekt och grupper.</td></tr>
+    <tr><td>Direktmarkeringsverktyg</td><td><kbd>A</kbd></td><td>Enskilda ankarpunkter och bansegment.</td></tr>
+    <tr><td>Gruppmarkeringsverktyg</td><td></td><td>Ett objekt inne i en grupp; varje ytterligare klick utvidgar till gruppen runt det.</td></tr>
+  </tbody>
+</table>
+<p>Shift-klicka lägger till ett objekt i markeringen eller släpper det igen. Dra på tom duk för att rammarkera en rektangel, och håll ned <kbd>⇧</kbd> för att lägga till vad rammarkeringen fångar till det som redan är markerat. Att dubbelklicka på en grupp med markeringsverktyget stegar in i den så att du kan arbeta på en medlem utan att dela upp.</p>
+
+<h3 id="transform-moving">Flytta en markering</h3>
+<p>Dra ett markerat objekt för att flytta det. Att hålla ned <kbd>⌥</kbd> lämnar en kopia kvar och drar den istället, vilket är det snabba sättet att duplicera på plats och flytta i en rörelse. Att hålla ned <kbd>⇧</kbd> begränsar flytten till 45°-steg mätta från begränsningsvinkeln som ställts in i Inställningar, och stänger av fästning; utan <kbd>⇧</kbd> fäster markeringen till närliggande kanter, centrum och vinklar. Piltangenterna skjuter med tangentbordssteget, <kbd>⇧</kbd> med en pil skjuter med tio gånger det, och <kbd>⌥</kbd> med en pil skjuter en kopia.</p>
+
+<h3 id="transform-bounding-box">Avgränsningsramen: skala och rotera för hand</h3>
+<p>Markeringens avgränsningsram bär åtta handtag. Dra ett för att skala: <kbd>⇧</kbd> behåller proportionerna och <kbd>⌥</kbd> skalar kring centrum snarre än kring motsatt handtag. Precis utanför ett hörn går pekaren in i rotationszonen; dra där för att vrida markeringen kring ruts centrum, med <kbd>⇧</kbd> som fäster till 45°. Efter en rotation lämnas ramen sned med konstverket. <strong>Objekt &rsaquo; Transformera &rsaquo; Återställ avgränsningsram</strong> kvadrerar upp den igen så att senare bredd- och höjedredigeringar läses längs sidans axlar.</p>
+
+<h2 id="transform-numeric">Numeriska transformeringar</h2>
+<p>Att dra är snabbt men ungefärligt. När ett värde måste vara exakt, eller detsamma på många objekt, skriv det. Transformerpanelen håller de levande siffrorna för markeringen, och <strong>Objekt &rsaquo; Transformera</strong>-undermenyn håller engångskommandon med ett kopieringsalternativ.</p>
+
+<h3 id="transform-panel">Transformerpanelen</h3>
+<p>Transformerpanelen (<kbd>⇧F8</kbd>) visar X, Y, W och H i pixlar för markeringen; skriv ett värde och tryck Return för att ställa in det. Under dem, roterar ⟳-fältet markeringen med en vinkel och ⧄-fältet lutar den med en, och vardera återgår till noll när det tillämpats. Panelen behöver något markerat; utan något valt nedtonar den och säger det.</p>
+<p>Egenskapspanelen upprepar X, Y, W och H med ett rotationsfält och två knappar som vänder markeringen horisontellt eller vertikalt kring sitt eget centrum, så att de vanligaste rörelserna är till hands utan att öppna en andra panel.</p>
+
+<h3 id="transform-commands">Flytta, Rotera, Spegla, Skala och Luta</h3>
+<p><strong>Objekt &rsaquo; Transformera</strong> innehåller de numeriska kommandona. Var och en öppnar en liten dialog, och var och en (utom Move, som är en direkt förskjutning) transformerar kring referenspunkten. Kopieringsrutan i varje dialog tillämpar ändringen på en kopia och lämnar originalet orört, vilket är hur du bygger ett speglat par eller en skalad eko på ett steg.</p>
+<table>
+  <thead><tr><th>Kommando</th><th>Genväg</th><th>Fält</th></tr></thead>
+  <tbody>
+    <tr><td>Flytta…</td><td><kbd>⇧⌘M</kbd></td><td>Horisontell, Vertikal, Kopiera.</td></tr>
+    <tr><td>Rotera…</td><td></td><td>Vinkel, Kopiera.</td></tr>
+    <tr><td>Spegla…</td><td></td><td>Axel (Horisontell eller Vertikal), Vinkel, Kopiera.</td></tr>
+    <tr><td>Skala…</td><td></td><td>Horisontell %, Vertikal %, Kopiera.</td></tr>
+    <tr><td>Luta…</td><td></td><td>Lutningsvinkel,axelvinkel, Kopiera.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="transform-each-again">Transformera var och Transformera igen</h3>
+<p><strong>Transformera var och…</strong> (<kbd>⌥⇧⌘D</kbd>) skalar, flyttar, roterar och speglar varje markerat objekt kring <em>sitt eget</em> centrum snarre än markeringens delade centrum. Dess dialog tar Skala H och V, Flytta H och V, en Rotera-vinkel, Spegla X och Spegla Y kryssrutor, och Kopiera. Nå efter det för att skaka ut eller fälla ut en uppsättning objekt så att var och en vänder och växer på plats istället för att kringgå gruppen.</p>
+<p><strong>Transformera igen</strong> (<kbd>⌘D</kbd>) upprepar den senaste transformeringen på den aktuella markeringen. Flytta ett objekt, och tryck sedan <kbd>⌘D</kbd> några gånger, och du får en jämnt stegad rad; kombinera det med <kbd>⌥</kbd>-dra en kopia för att bygga upprepande mönster för hand.</p>
+
+<h2 id="transform-tools">Transformverktygen och referenspunkten</h2>
+<p>Rotera (<kbd>R</kbd>), Spegla (<kbd>O</kbd>), Skala (<kbd>S</kbd>) och Luta-verktygen fungerar var och en kring en referenspunkt, ritad som ett litet hårkors. Den börjar i mitten av markeringen; klicka var som helst på duken för att flytta den dit, och markera något annat sätter den tillbaka i det nya centrumet. Dra sedan på duken för att vrida, spegla, skala eller snedställa kring den punkten.</p>
+<p><kbd>⇧</kbd> begränsar varje verktyg: 45°-steg för Rotera och Spegla, lika horisontell och vertikal för Skala, en axel för Luta. Att hålla ned <kbd>⌥</kbd> under dragningen transformerar en kopia och lämnar originalet. <kbd>⌥</kbd>-klicka placerar referenspunkten och öppnar det verktygets numeriska dialog med punkten redan inställd, så att du kan vrida en form runt ett hörn med en exakt vinkel.</p>
+
+<h2 id="transform-free">Fritt transformverktyg</h2>
+<p>Fritt transformverktyget (<kbd>E</kbd>) sätter flyttning, skalning, rotation, lutning och två slag av förvrängning på en enda avgränsningsram. Dra inne i rutan för att flytta den, dra ett handtag för att skala, och dra precis utanför ett hörn för att rotera, med <kbd>⇧</kbd> som fäster till 45°. Använd det när du vill prova flera slag av ändring i en gest utan att byta verktyg mellan varje.</p>
+<p>Markeringsverktygets ruta kan också förvränga: håll ned <kbd>Ctrl</kbd> (eller <kbd>&#8984;</kbd>) medan du drar ett av dess hörnmatt för att flytta det hörnet ensamt, istället för att skala. Det fungerar på former och på foton lika; på pixlar följer en snabb förhandsvisning dragningen och resultatet räknas ut när du trycker <kbd>Enter</kbd>.</p>
+
+<h3 id="transform-free-widget">Widgeten</h3>
+<p>En liten widget sväv bredvid rutan med fyra knappar, var och en namnger sig själv när du hovrar över den: <strong>Begränsa</strong>, <strong>Fritt transform</strong>, <strong>Perspektivförvrängning</strong> och <strong>Fri förvrängning</strong>. Begränsa gör skalning proportionell utan att hålla ned <kbd>⇧</kbd>; med den på, frigör <kbd>⇧</kbd> proportionerna istället. De två förvrängningslägena lämnar bara de fyra hörnmattarna att dra i.</p>
+
+<h3 id="transform-free-keys">Förvränga från tangentbordet</h3>
+<p>Du kan nå samma förvrängningar utan att lämna standardläget. Håll ned <kbd>⌘</kbd> på ett kanthandtag för att luta längs den kanten. Håll ned <kbd>⌘</kbd> på ett hörn för att förvränga det fritt för sig självt; lägg till <kbd>⇧</kbd> för att begränsa hörnets färd till 45°. Håll ned <kbd>⌘⌥⇧</kbd> på ett hörn för perspektiv, där det intilliggande hörnet speglar dragningen. Att trycka eller släppa en modifierare halvvägs genom en dragning växlar åtgärden direkt, och namnet den slutar på, Skala, Luta, Perspektivförvrängning eller Fri förvrängning, är vad steget kallas i historikpanelen efteråt. Text, placerade bilder och symbolinstanser kan inte förvrängas; de lämnas som de är, och Scissor säger till dig det när en dragning hoppar över dem.</p>
+
+<h3 id="transform-free-reference">Referenspunkten</h3>
+<p>Referenspunkten sitter i mitten av rutan som ett hårkors, och du kan dra den vart som helst; på egen hand flyttar den ingenting. Rutan roterar och skalar sedan kring den, och den reser med konstverket när du flyttar markeringen. Släpp den nära en av ruts nio punkter (de fyra hörnen, de fyra kanternas mittpunkter eller centrumet) och den stannar på den punkten. Att hålla ned <kbd>⌥</kbd> medan du skalar ignorerar en placerad referenspunkt och skalar kring centrumet. Att luta en sida med <kbd>⌘</kbd> håller också en placerad referenspunkt still.</p>
+
+<h3 id="transform-free-pins">Flytta handtagen</h3>
+<p>Slå på <strong>Flytta handtag</strong> i snabbraden (eller alternativraden) medan fritt transform är aktivt, och dra ett hörnmatt flyttar det hörnet för sig självt, utan att röra konstverket. Nära en ankarpunkt stannar den på den. Stäng av Flytta handtag igen och dra ett flyttat hörn: formen skalar så att hörnet följer pekaren, och varje annat punkt behåller samma proportionella avstånd från vad som håller still, vilket är det motsatta hörnet, den placerade referenspunkten, eller centrumet medan <kbd>⌥</kbd> hålls ned. <kbd>⇧</kbd> behåller proportionerna. Flyttade hörn reser med konstverket, och att dubbelklicka på ett sätter tillbaka alla fyra på rutan.</p>
+
+<h2 id="transform-align-arrange">Justera, ordna och gruppera</h2>
+<p>Dessa kommandon ställer in hur objekt linjerar upp med varandra, vilket sitter framför vilket, och vilka som samlas, låses in eller döljs medan du arbetar på resten.</p>
+
+<h3 id="transform-align">Justera och fördela</h3>
+<p>Justera-panelen (<kbd>⇧F7</kbd>) har tre rader. <strong>Justera objekt</strong> linjerar markeringen till vänster, centrerad eller höger, och överst, mitten eller nederst. <strong>Fördela objekt</strong> sprider tre eller fler objekt så att deras överkanter, centrum, underkanter, vänstra kanter, centrum eller högra kanter faller på jämna intervall. <strong>Fördela avstånd</strong> ställer in ett lika gap mellan dem vertikalt eller horisontellt. Menyn på panelen väljer om allt justeras till markeringen eller till artboarden. Justering behöver minst ett objekt (ett enskilt objekt justeras till artboarden); fördelning behöver tre, och panelen gråar de knapparna tills du har dem. De sex justeringarna finns också under <strong>Objekt &rsaquo; Justera</strong>.</p>
+
+<h3 id="transform-arrange">Ordna: staplingsordning</h3>
+<p>Varje objekt sitter på en nivå i stapeln, och <strong>Objekt &rsaquo; Ordna</strong> flyttar markeringen genom den.</p>
+<table>
+  <thead><tr><th>Kommando</th><th>Genväg</th></tr></thead>
+  <tbody>
+    <tr><td>Placera överst</td><td><kbd>⇧⌘]</kbd></td></tr>
+    <tr><td>Placera framåt</td><td><kbd>⌘]</kbd></td></tr>
+    <tr><td>Placera bakåt</td><td><kbd>⌘[</kbd></td></tr>
+    <tr><td>Placera nederst</td><td><kbd>⇧⌘[</kbd></td></tr>
+  </tbody>
+</table>
+
+<h3 id="transform-grouping">Gruppera, låsa och dölja</h3>
+<dl>
+  <dt><strong>Gruppera</strong> (<kbd>⌘G</kbd>) och <strong>Dela upp</strong> (<kbd>⇧⌘G</kbd>)</dt>
+  <dd>Samla objekt så att de flyttar och transformeras som en, eller frigör dem igen. En grupp kan nås genom att dubbelklicka på den med markeringsverktyget.</dd>
+  <dt><strong>Lås &rsaquo; Markering</strong> (<kbd>⌘2</kbd>) och <strong>Lås upp alla</strong> (<kbd>⌥⌘2</kbd>)</dt>
+  <dd>Att låsa gör objekt oplockbara så att de stannar på plats medan du arbetar över dem; Lås upp alla frigör allt som var låst.</dd>
+  <dt><strong>Dölja &rsaquo; Markering</strong> (<kbd>⌘3</kbd>) och <strong>Visa alla</strong> (<kbd>⌥⌘3</kbd>)</dt>
+  <dd>Att dölja tar objekt bort från duken utan att ta bort dem, vilket rensar en trång scen ner till den del du redigerar; Visa alla får tillbaka dem.</dd>
+</dl>
+
+<h2 id="transform-repeat">Live-upprepningar</h2>
+<p><strong>Objekt &rsaquo; Upprepa</strong> bygger många kopior från ett objekt och håller dem live: redigera originalet och varje kopia följer. Nå efter en upprepning när konstverket är regelbundet, en blomma av identiska kronblad eller ett rutnät av ikoner, så att du kan forma ett element och låta resten följa det.</p>
+<dl>
+  <dt><strong>Radiell…</strong></dt>
+  <dd>Ringar kopiorna runt ett centrum. Dialogen ställer in Instanser och Radie.</dd>
+  <dt><strong>Rutnät…</strong></dt>
+  <dd>Lägger kopiorna i rader och kolumner. Dialogen ställer in Kolumner, Rader, Horisontellt avstånd och Vertikalt avstånd.</dd>
+  <dt><strong>Spegel…</strong></dt>
+  <dd>Speglar kopiorna över en axel. Dialogen ställer in axeln (vertikal eller horisontell) och en förskjutning.</dd>
+</dl>
+<p>Med en upprepning markerad, exponerar egenskapspaneln samma kontroller för senare justering: instanser och radie för en radiell upprepning; kolumner, rader och horisontellt och vertikalt avstånd för ett rutnät; och förskjutningen och spegelaxeln för en spegel. <strong>Frigör</strong> förvandlar kopiorna till vanligt, separat redigerbart konstverk när du är klar.</p>
+<figure class="shot">
+  <img src="img/repeat.gif" width="640" height="640" loading="lazy"
+       alt="Ett enda blått kronblad upprepat runt ett centrum av en radiell upprepning, och fyller i till en tolvbladig blomma när antalet stiger." />
+  <figcaption>Ett kronblad och en radiell upprepning. När antalet stiger från ett till tolv fylls blomman i; omforma det enda kronbladet och hela saker ändras med det.</figcaption>
+</figure>
+
+<h2 id="transform-morph">Morfer</h2>
+<p>En morf fyller gapet mellan två objekt med en serie mellanliggande former, var och en ett steg närmare den nästa. Det är verktyget för skuggövergångar mellan färger och för jämnt fördelade upprepningar längs en bana.</p>
+<p>Morfverktyget (<kbd>W</kbd>) morfar ett objekt till ett annat: klicka på det första, sedan det andra. Att klicka på en tredje för kedjan vidare, och att klicka inne i en befintlig morf lägger till det objektet i den. <strong>Objekt &rsaquo; Morf</strong> innehåller resten:</p>
+<table>
+  <thead><tr><th>Kommando</th><th>Genväg</th><th>Vad det gör</th></tr></thead>
+  <tbody>
+    <tr><td>Skapa</td><td><kbd>⌥⌘B</kbd></td><td>Morfar de markerade objekten tillsammans.</td></tr>
+    <tr><td>Frigör</td><td><kbd>⌥⇧⌘B</kbd></td><td>Ger tillbaka nyckelobjekten och släpper stegen.</td></tr>
+    <td>Morfalternativ…</td><td></td><td>Ställer in avstånd och orientering (se nedan).</td></tr>
+    <tr><td>Expandera</td><td></td><td>Förvandlar de mellanliggande stegen till verkliga, redigerbara objekt.</td></tr>
+    <td>Ersätt ryggrad</td><td></td><td>Böjer raden av steg längs en markerad bana.</td></tr>
+    <td>Vänd ryggrad</td><td></td><td>Byter vilken ände av ryggraden varje nyckelobjekt sitter på.</td></tr>
+    <td>Vänd fram till bak</td><td></td><td>Vänder staplingsordningen av stegen.</td></tr>
+  </tbody>
+</table>
+<p><strong>Morfalternativ…</strong> ställer in Avstånd till Angivna steg (ett fast antal mellanliggande), Angivet avstånd (ett fast gap i pixlar, fyller så många som får plats) eller Slät färg (så många steg som det tar för en slät färgblandning), och ställer in Orientering till Anpassa till sida eller Anpassa till bana. En morf förblir live och följer sina nyckelobjekt, så att redigera endera ände räknar om hela raden.</p>
+<figure class="shot">
+  <img src="img/morph.gif" width="760" height="316" loading="lazy"
+       alt="En blå stjärna morfar till en amber cirkel genom en växande rad av mellanliggande former." />
+  <figcaption>En morf från en stjärna till en cirkel. När stegantalet stiger fyller fler mellanliggande former gapet, var och en lite närmare den nästa.</figcaption>
+</figure>
+
+<h2 id="transform-envelope">Shape Warp</h2>
+<p><strong>Objekt &rsaquo; Shape Warp</strong> böjer konstverk för att passa en form medan det förblir redigerbart under. Använd det för att passa en logotyp till en banderoll, böja en textrad, eller trycka ett platt mönster ut i en bukt. Det finns tre sätt att göra en.</p>
+<dl>
+  <dt><strong>Skapa med förvrängning…</strong> (<kbd>⌥⇧⌘W</kbd>)</dt>
+  <dd>Böjer markeringen med ett av de inbyggda förvrängningsstilarna (Arc, Arch, Bulge, Flag, Wave, Fish, Rise, Fisheye, Inflate, Squeeze och skal- och bågvarianterna), styrda av Böj, Horisontell och Vertikal belopp.</dd>
+  <dt><strong>Skapa med översta objekt</strong> (<kbd>⌥⌘C</kbd>)</dt>
+  <dd>Använder den främsta markerade formen som kuvert och häller allt under den in i den konturen. Behöver två eller fler objekt: behållaren överst, konstverket under.</dd>
+  <dt><strong>Skapa med nät…</strong> (<kbd>⌥⌘M</kbd>)</dt>
+  <dd>Lägger ett rutnät av de rader och kolumner du ber om över markeringen. Det förblir live: växla till direktmarkeringsverktyget (<kbd>A</kbd>) och dra valfri överläggning i nätet för att böja vad det håller, så många gånger du vill.</dd>
+</dl>
+<p><strong>Frigör</strong> ger konstverket tillbaka som det var, tillsammans med kuvertformen; <strong>Expandera</strong> behåller böjningen och släpper kuvertet, och lämnar förvrängda banor.</p>
+
+<h2 id="transform-3d">3D från en vektorform</h2>
+<p><strong>Effekt &rsaquo; 3D och material</strong> förvandlar en platt form till en fast. Det förblir en live-effekt, så att den ursprungliga banan finns kvar att redigera, och kopian på skärmen byggs om varje gång du ändrar den.</p>
+<dl>
+  <dt><strong>Extrudera &amp; avfasning</strong></dt>
+  <dd>Ger formen djup, med en avfasad kant om du vill ha en.</dd>
+  <dt><strong>Rotera upp</strong></dt>
+  <dd>Snurrar en profil runt en axel till en vänd form.</dd>
+  <dt><strong>Blås upp</strong></dt>
+  <dd>Puffar upp formen som om den var fylld.</dd>
+  <dt><strong>Plan</strong></dt>
+  <dd>Lutar den platta formen i rymden utan att lägga till djup.</dd>
+</dl>
+<p>3D och material-panelen vrider objektet på X-, Y- och Z-axlarna, ställer in ljusets rotation och höjd, och väljer en plast-, matte- eller metallyta, med djup- och avfasningsfält för extruderingen.</p>
+<figure class="shot">
+  <img src="img/3d-extrude.gif" width="620" height="620" loading="lazy"
+       alt="En platt vektorstjärna extruderas till en tredimensionell stjärna och vriden för att visa sitt djup." />
+  <figcaption>Extrudera &amp; avfasning bygger djup från en platt form, live. Stjärnan förblir en redigerbar bana under.</figcaption>
+</figure>

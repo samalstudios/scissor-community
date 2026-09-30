@@ -1,0 +1,96 @@
+<p class="lede">Een effect verandert hoe een object eruitziet zonder het object zelf te veranderen. Het pad, de groep of het stuktekst blijft precies zoals u het heeft getekend, en het effect wordt er bovenop opnieuw berekend elke keer dat u een punt verplaatst of een waarde bewerkt. Effecten stapelen in het Verfstapel-paneel, zodat u er verscheidene op één object kunt stapelen, ze kunt herordenen en elk ervan weer kunt afnemen.</p>
+
+<figure class="shot">
+  <img src="img/effects-demo.png" width="1400" height="560" loading="lazy"
+       alt="Drie identieke blauwe tegels die drie effecten tonen: een slagschaduw, een amber buitenste gloed, en geribbelde randen." />
+  <figcaption>Dezelfde tegel met drie effecten: een slagschaduw, een buitenste gloed en Geribbeld. Elk is live, dus de tegel eronder is nog steeds een gewone afgeronde rechthoek.</figcaption>
+</figure>
+
+<h2 id="effects-live-and-stacked">Live effecten en de uiterlijkstapel</h2>
+<p>Elk effect in Scissor is <strong>live</strong> en <strong>niet-destructief</strong>. Het zit boven de vullingen en lijnen van het object in het <strong>Uiterlijk</strong>-paneel (<kbd>&#8679;F6</kbd>) en loopt over het hele object elke keer dat het werk of het effect verandert. Omdat het originele pad eronder onaangeroerd blijft, kunt u ankers blijven bewerken, de vulkleur wisselen of de woorden opnieuw typen, en het effect volgt mee. Greep naar een effect wanneer u een look, een schaduw, een buiging, een afgeronde hoek, die u later van gedachte zou kunnen veranderen, wilt in plaats van het met de door te committeren.</p>
+
+<h3 id="effects-order">Volgorde is van belang</h3>
+<p>Effecten lopen van onderen de stapel omhoog, en het paneel somt ze bovenaf op, boven de vullingen en lijnen. De volgorde verandert het resultaat: een vervaging onder een slagschaduw verzacht de vorm voordat de schaduw wordt geworpen, terwijl dezelfde twee de andere kant op een scherpe schaduw werpt en dan alles tezamen vervaagt. Als een effect niet doet wat u verwacht, is zijn positie in de stapel het eerste om te controleren.</p>
+
+<h2 id="effects-using">Effecten toevoegen, bewerken en verwijderen</h2>
+<h3 id="effects-add">Vanuit het Effect-menu</h3>
+<p>Selecteer een object, en kies dan een effect uit het <strong>Effect</strong>-menu. Items die een dialoogvenster openen tonen een <strong>Voorbeeld</strong> terwijl u hun waarden verandert, zodat u het resultaat op het canvas kunt beoordelen voordat u zich inlaat; de hele bewerking landt als één stap in de geschiedenis in plaats van één stap per toetsaanslag. Een korte versie van het menu (Slagschaduw, Buitenste gloed en Gaussische vervaging, plus Effecten wissen) zit ook in het rechtermuisknopmenu van het canvas onder <strong>Effect</strong>.</p>
+
+<h3 id="effects-appearance">In het Verfstapel-paneel</h3>
+<p>Elk effect op het geselecteerd object krijgt zijn eigen rij in het Verfstapel-paneel, gemarkeerd met een <em>fx</em>-badge. Klik op de naam van het effect om zijn opties te heropenen en ze te veranderen. Klik op het kruisje aan het einde van de rij om dat ene effect te verwijderen. Om elk effect in één keer van de selectie af te nemen, gebruikt u <strong>Effect &rsaquo; Effecten wissen</strong>.</p>
+
+<h3 id="effects-panels">In de Effecten-panelen</h3>
+<p>De <strong>Venster &rsaquo; Effecten</strong>-groep verzamelt de effecten in één paneel per deel van het Effect-menu: Stiliseren, Vervagen, Vervormen &amp; Transformeren, Pad, Vormen combineren en Vervormen, met het 3D-paneel ernaast. Elk paneel somt de effecten van die groep op met een schakelaar om één aan of uit te schakelen en zijn instellingen eronder, allemaal live op de selectie bewerkt. Het is een snellere manier om een effect te proberen en zijn waarden aan te passen dan elke keer een dialoogvenster te openen. Een schakelaar uitschakelen neemt dat effect van het object af. Wanneer een object meer dan één effect van dezelfde soort draagt, bewerkt het paneel het eerste ervan en het Verfstapel-paneel toont nog steeds de hele stapel.</p>
+
+<h2 id="effects-stylize">Stiliseren: schaduwen, gloed en randen</h2>
+<p>Het <strong>Effect &rsaquo; Stiliseren</strong>-submenu bevat de alledaagse afgewerkings-effecten.</p>
+<table>
+  <thead><tr><th>Effect</th><th>Wat het doet, en wanneer u het gebruikt</th><th>Hoofdopties</th></tr></thead>
+  <tbody>
+    <tr><td>Slagschaduw</td><td>Worpt een gecompenseerde, vervagde kopie van het object erachter. Gebruik het om een vorm, een kaart of een stuk tekst van de achtergrond te tillen.</td><td>X- en Y-compensatie, Vervaging, Kleur, Dekking.</td></tr>
+    <tr><td>Buitenste gloed</td><td>Verspreidt een zachte halo van kleur naar buiten vanaf de rand van het object. Greep hiervoor voor een neonbord, een accentuering, of een gloed rond een lichtbron.</td><td>Vervaging, Kleur, Dekking.</td></tr>
+    <tr><td>Binnenste gloed</td><td>Verzaagt een kleur naar binnen vanaf de rand in plaats van naar buiten, zodat het licht binnen de vorm zit. Gebruik het om een vorm uit te holen of een ingezette, verlichte rand suggereren.</td><td>Vervaging, Kleur, Dekking.</td></tr>
+    <tr><td>Verwazen</td><td>Verzaagt de eigen rand van het object tot transparant over een straal. Gebruik het voor een zachte rand van een vorm of een eenvoudig vignet.</td><td>Verwazingsstraal.</td></tr>
+    <tr><td>Hoeken afronden</td><td>Rondt elke hoek van het pad op één straal af. Gebruik het om de punten van een ster, een veelhoek of een handgetekend pad te verzachten zonder het opnieuw te tekenen.</td><td>Straal.</td></tr>
+    <tr><td>Schetsvulling</td><td>Vult de vorm met een heen-en-weer reeks lijnen, alsof met de hand geschetst. Goed voor een losse, ingetekende vulling of een markeringspen-look.</td><td>Hoek, Tussenruimte, Lijndikte, Variatie (hoeveel de lijnen dwalen, 0 tot 100%).</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-blur">Vervagen</h2>
+<p><strong>Effect &rsaquo; Vervagen &rsaquo; Gaussische vervaging</strong> verzacht het hele object met een <em>Straal</em> die u in pixels instelt. Omdat het live blijft, kunt u de straal op elk gewenst moment verhogen of verlagen. Gebruik het voor een zachte, onscherpe achtergrond, of als een snelle zachte schaduvwervorming op zichzelf.</p>
+
+<h2 id="effects-distort">Vervormen en transformeren</h2>
+<p>Het <strong>Effect &rsaquo; Vervormen &amp; Transformeren</strong>-submenu vervormt de omtrek terwijl het onderliggende pad bewerkbaar blijft.</p>
+<table>
+  <thead><tr><th>Effect</th><th>Wat het doet, en wanneer u het gebruikt</th><th>Hoofdopties</th></tr></thead>
+  <tbody>
+    <tr><td>Vrije vervorming</td><td>Sleep de vier hoeken van het kader van het object in een klein voorbeeld, en het werk volgt in perspectief. Gebruik het om een perspectief te faken, zoals een label dat op een schuin vlak zit. Een Voorbeeld-schakelaar toont het resultaat op het canvas terwijl u sleept, en Reset brengt de hoeken terug naar vierkant.</td><td>De vier hoekhandvatten, Voorbeeld, Reset.</td></tr>
+    <tr><td>Knijpen &amp; Zwellen</td><td>Buigt de segmenten tussen ankerpunten ofwel naar binnen, de omtrek in punten knijpend, ofwel naar buiten, hem in builen zwellend. Gebruik het voor sterblobs, blobs en zachte bloemblaadjes.</td><td>Hoeveelheid, van geknijpt tot gezwollen.</td></tr>
+    <tr><td>Geribbeld</td><td>Breekt de omtrek in kleine willekeurige bewegingen, ofwel scherp ofwel glad. Gebruik het voor een gescheurde papierrand of een ruwere, handgetekende lijn.</td><td>Grootte (hoe ver punten bewegen), Detail (hoe dicht), Punten: Zacht of Hoek.</td></tr>
+    <tr><td>Transformeren</td><td>Schaalt, verplaatst en draait het object als een effect, en kan een set kopieën achterlaten. Gebruik het voor een bewerkbare rij of ring van herhalingen, of om een vorm te verplaatsen en te vervormen zonder zijn werkelijke geometrie aan te raken.</td><td>Schalen horizontaal en verticaal, Verplaatsen horizontaal en verticaal, Draaien, Kopieën (0 tot 200).</td></tr>
+    <tr><td>Knikken</td><td>Verschuift ankerpunten en hun besturingshandvatten met een willekeurige hoeveelheid. Gebruik het om een te perfecte vorm een beetje uit het rechte te knikken.</td><td>Horizontale en verticale hoeveelheid, en of Ankerpunten, Besturingspunten, of beide moeten bewegen.</td></tr>
+    <tr><td>Draaien</td><td>Draait het binnenste van de vorm meer dan zijn randen, hem in een werveling windend. Gebruik het voor een spiraal of een wervelwind.</td><td>Hoek.</td></tr>
+    <tr><td>Zigzag</td><td>Verandert rechte segmenten in regelmatige zigzags (Hoek) of golven (Zacht). Gebruik het voor een golvende onderstreping, een kantrand of een scherpe rand.</td><td>Grootte, Ribbel per segment, Punten: Hoek of Zacht.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-path">Pad</h2>
+<p>Het <strong>Effect &rsaquo; Pad</strong>-submenu verwerkt de omtrek van het object terwijl de bron bewerkbaar laat.</p>
+<table>
+  <thead><tr><th>Effect</th><th>Wat het doet, en wanneer u het gebruikt</th><th>Hoofdopties</th></tr></thead>
+  <tbody>
+    <tr><td>Pad compenseren</td><td>Laat de omtrek met een bepaalde afstand groeien of krimpen. Een positieve compensatie spreidt hem naar buiten, een negatieve trekt hem naar binnen. Gebruik het voor een live omtrek rond tekst of een vorm die mee schrijft terwijl u bewerkt.</td><td>Compensatie, Verbindingen: Mitre, Rond of Bevel.</td></tr>
+    <tr><td>Object omtrekken</td><td>Voegt een Pad compenseren-effect toe dat op nul is ingesteld, waardoor het object (live tekst inbegrepen) een omtrekken pad wordt zodat latere effecten een echt pad hebben om op te werken.</td><td>Geen.</td></tr>
+    <tr><td>Lijn omtrekken</td><td>Verandert de lijn in een gevulde vorm als een effect. Gebruik het wanneer u een lijn met een verloop wilt vullen, of een lijn die anders een gewone lijn is wilt vervagen of vervormen.</td><td>Geen.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-pathfinder">Vormen combineren</h2>
+<p>Het <strong>Effect &rsaquo; Vormen combineren</strong>-submenu combineert de vormen binnen een groep met een vormmodus, maar houdt ze eronder als afzonderlijke, bewerkbare paden. Pas het op een groep toe en het gecombineerde resultaat is wat u ziet, terwijl elk lid nog steeds kan worden verplaatst of herkleurd. Gebruik het om een combinatie te proberen zonder zich in te laten zoals het Vormen combineren-paneel zou doen.</p>
+<table>
+  <thead><tr><th>Modus</th><th>Resultaat</th></tr></thead>
+  <tbody>
+    <tr><td>Toevoegen</td><td>Voegt de vormen van de groep samen tot één gebied.</td></tr>
+    <tr><td>Doorsnede</td><td>Behoudt alleen waar de vormen elkaar overlappen.</td></tr>
+    <tr><td>Uitsluiten</td><td>Behoudt alles behalve waar ze elkaar overlappen.</td></tr>
+    <tr><td>Aftrekken</td><td>Verwijdert de voorste vormen van de achterste.</td></tr>
+    <tr><td>Minus achtergrond</td><td>Verwijdert de achterste vormen van de voorste.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-warp">Vervormen</h2>
+<p><strong>Effect &rsaquo; Vervormen</strong> buigt het object langs één van een set vooraf ingestelde vormen, en blijft live zodat u het werk eronder kunt blijven bewerken. Gebruik het om een kopregel in een boog te buigen, een banner te golven, of een vlakke blok in een buil te duwen, zonder de mogelijkheid op te geven om de woorden of de kleuren te veranderen.</p>
+<p>Het menu biedt tien stijlen direct (Boog, Boogvorm, Buil, Vlag, Golf, Vis, Stijgen, Visoog, Opblazen en Samendrukken). <strong>Vervormingsopties&#8230;</strong> opent de volledige set, die Benedenboog, Bovenboog, Benedenschelp en Bovenschelp toevoegt, en laat u de hoeveelheid instellen:</p>
+<dl>
+  <dt>Buigen</dt><dd>Hoe sterk de vorm buigt, van -100% tot 100%.</dd>
+  <dt>Horizontaal</dt><dd>Leunt de buiging naar één kant, van -100% tot 100%.</dd>
+  <dt>Verticaal</dt><dd>Kantelt de buiging omhoog of omlaag, van -100% tot 100%.</dd>
+</dl>
+<p>Dezelfde vervormingsstijlen kunnen ook als een vervormende enveloppe worden toegepast, die het pad zelf verandert in plaats van live te blijven: zie <a href="#transform-envelope">Vormvervorming</a>. Het Vervormen-gereedschap en de andere vervormingsgereedschappen vervormen door op het canvas te sleepen en worden behandeld onder <a href="#tools-width-liquify">het gereedschapsreferentie</a>.</p>
+
+<h2 id="effects-3d">3D en Materialen</h2>
+<p><strong>Effect &rsaquo; 3D en Materialen</strong> verandert een vlakke vorm in een vast lichaam: een vlak, een uitdraaiing en afschuining, een rotatie of een opblazing. Net als de andere is het een live effect, dus het vlakke pad blijft er om te bewerken en het vast lichaam wordt opnieuw gebouwd wanneer u het verandert. De diepte, afschuining, draaiing, belichting en het oppervlak worden ingesteld in het 3D en Materialen-paneel. Omdat het meer besturingselementen heeft dan één dialoogvenster, heeft 3D een eigen pagina: zie <a href="/manual/three-d/">3D</a>.</p>
+
+<h2 id="effects-expand">Effecten omzetten in werk</h2>
+<p>Een effect blijft live zolang u het wilt. Wanneer de look is vastgelegd en u het resultaat als gewone, bewerkbare paden nodig heeft, bijvoorbeeld om het bestand door te geven of de uitvoer van het effect met de hand te vervormen, kiest u <strong>Object &rsaquo; Uiterlijk uitbreiden</strong>. Het bakt de hele uiterlijkstapel, effecten inbegrepen, tot gewoon werk. Dit kan daarna niet meer als effect worden bewerkt, dus breidt uit pas zeker als u zeker bent. Om effecten af te nemen zonder iets te bakken, verwijdert u ze één voor één in het Verfstapel-paneel of wist u ze allemaal met <strong>Effect &rsaquo; Effecten wissen</strong>.</p>
+<p>Het Effect-menu somt ook <strong>Rasteriseren</strong>, wat geen live effect is: het converteert de selectie in pixels op dat moment. Beschilderen en pixel-lagen worden behandeld op de <a href="/manual/pixels/">Pixel-lagen</a>-pagina.</p>

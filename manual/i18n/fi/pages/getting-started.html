@@ -1,0 +1,26 @@
+<p>Scissor avautuu selaimen välilehteen. Tiliä ei tarvitse luoda eikä mitään asentaa ennen kuin aloitat: piirtoekooti on koottu WebAssemblyksi ja toimii omalla koneellanne, joten teoksenne ei koskaan ladata minnekään. Ensimmäisellä kerralla teitä toivottaa tervetuloa näyttö — Scissor-kettu, lyhyt katselu sovelluksen toimintoihin ja käyttöehdot. Valitse <strong>Olen lukenut käyttöehdot ja hyväksyn ne</strong> ja paina <strong>Aloita</strong> päästäksesi editoriin. Toinen, valintaruutu kysyy, saako Scissor laskea käynit anonyymillä analytiikalla; jos jätät sen pois, analytiikkaa ei ladata lainkaan. Voit muuttaa tätä valintaa myöhemmin kohdasta <strong>Asetukset &gt; Tietosuoja</strong> ja lukea ehdot uudelleen milloin tahansa kohdasta <strong>Ohje &gt; Käyttöehdot&hellip;</strong>.</p>
+
+<p>Alla olevat pikanäppäimet on kirjoitettu macOS-muodossa. Windowsilla ja Linuxilla lue <kbd>⌘</kbd> Ctrl:ksi ja <kbd>⌥</kbd> Alt:ksi; <kbd>⇧</kbd> on Shift.</p>
+
+<h3 id="what-you-see">Mitä näet</h3>
+<p>Ylhäällä on valikkorivi ja sen alla komentorivi, joka muuttuu valintanne mukaan ja sisältää täytteen, reunaviivan, paksuuden, peittävyyden ja valinnan X, Y, W ja H. Työkalut kulkevat vasemmassa reunassa; paneelialue on oikealla. Niiden välissä on piirtoalue, jonka yläpuolella on välilehti jokaiselle avoimelle asiakirjalle ja alapuolella tilarivi, joka näyttää zoomauksen, aktiivisen alustan, käytössä olevan työkalun ja viimeisen peruutettavan vaiheen nimen.</p>
+<p>Kun asiakirjaa ei ole auki, piirtoalue näyttää aloitusnäytön, jossa on <strong>Uusi asiakirja&hellip;</strong> ja <strong>Avaa&hellip;</strong>; kaksoisnapsautus missä tahansa avaa tiedoston. Paina <kbd>Tab</kbd> piilottaaksesi paneelit ja antaaksesi teokselle koko ikkunan, ja uudelleen palauttaaksesi ne. Pidä välilyöntiä tahdon mukaan siirtyäksesi.</p>
+
+<h3 id="first-document">Ensimmäisen asiakirjan luominen</h3>
+<p>Valitse <strong>Tiedosto &gt; Uusi&hellip;</strong> (<kbd>⌥⌘N</kbd>). Valintaikkuna ryhmittelee tyhjät esiasetukset Paino, Web, Mobiili, Filmi &amp; Video ja Taide &amp; Kuvitus; korttia napsauttamalla lataa sen koon tai kaksoisnapsauttamalla luo asiakirjan heti. Oikealla voit asettaa asiakirjan nimen, leveyden ja korkeuden, yksiköt ja pysty- tai vaaka-asennon. <strong>Alustat</strong>, <strong>Sarakkeet</strong> ja <strong>Välit</strong> asettavat useamman kuin yhden alustan ruudukkoon. Kohdassa <strong>Leikkaus</strong> linkkipainike pitää kaikki neljä sivua samana; kytke se pois asettaaksesi ne erikseen. <strong>Edistynyt</strong> sisältää väritilan (RGB tai CMYK) ja rasteritehosteiden käytettävän resoluution. <kbd>Enter</kbd> luo asiakirjan, <kbd>Esc</kbd> sulkee valintaikkunan.</p>
+<figure class="shot">
+  <img src="img/new-document.png" width="1500" height="928" loading="lazy"
+       alt="Scissorin Uusi asiakirja -valintaikkuna, jossa vasemmalla koot käyttötarkoituksen mukaan ja oikealla asiakirjan asetukset." />
+  <figcaption>Uusi asiakirja -valintaikkuna. Valitse esiasetus vasemmalla tai aseta koko, alustat ja leikkaus oikealla.</figcaption>
+</figure>
+
+<h3 id="first-shape">Ensimmäisen muodon piirtäminen</h3>
+<p>Paina <kbd>M</kbd> suorakulmio- tai <kbd>L</kbd> ellipsityökalua ja vedä piirtoalueella. Pidä <kbd>⇧</kbd> vedon aikana pitääksesi muotoa neliönä tai ympyränä ja <kbd>⌥</kbd> piirtääksesi keskeltä kulman sijaan. Yksi napsautus vedon sijaan avaa pienen valintaikkunan, johon voit tarkat leveyden ja korkeuden. Monikulmio- tai tähtityökalulla ylös- ja alas-nuolet muuttavat sivujen tai kärkien määrää vedon aikana.</p>
+<p>Täyte- ja reunaviivakuvakkeet ovat työkalupalkin alaosassa. <kbd>X</kbd> siirtää tarkennusta niiden välillä, <kbd>⇧X</kbd> vaihtaa kaksi väriä, <kbd>D</kbd> palaa oletusvalkoiseen täyteeseen ja mustaan reunaviivaan ja <kbd>/</kbd> asettaa aktiivisen puolen tyhjäksi. Paina <kbd>V</kbd> valintatyökalua siirtääksesi ja muuttaaksesi kokoa.</p>
+
+<h3 id="saving">Tallentaminen</h3>
+<p>Scissor-asiakirjat ovat <code>.cut</code>-tiedostoja. <strong>Tiedosto &gt; Tallenna</strong> (<kbd>⌘S</kbd>) kysyy kerran, minne tiedoston pitäisi mennä ja selaimissa, jotka tukevat suoraa tiedoston käyttöä, kirjoittaa takaisin samaan tiedostoon joka kerta. Selaimissa ilman tätä asiakirja tallentaa latauskansioon. <strong>Tallenna nimellä&hellip;</strong> on <kbd>⇧⌘S</kbd> ja <strong>Tallenna kopio&hellip;</strong> on <kbd>⌥⌘S</kbd>. Jos haluat luovuttaa työn toiseen ohjelmaan, käytä <strong>Tiedosto &gt; Vie</strong>.</p>
+<p>Kun asiakirjassa on tallentamattomia muutoksia, Scissor säilyttää kopion selaimen omassa tallennustilassa muutaman sekunnin välein ja uudelleen aina, kun välilehti piilotetaan tai suljetaan. Jos välilehti katoaa ennen tallennusta, seuraava käynti tarjoaa työn takaisin <strong>Palauta</strong> -ilmoituksella.</p>
+
+<h3 id="installing">Scissorin asentaminen</h3>
+<p>Valitse <strong>Ohje &gt; Asenna Scissor&hellip;</strong> asentaaksesi sen sovelluksena. Se avautuu sitten omassa ikkunassaan ilman selaimen kromia, toimii offline-tilassa ja voidaan asettaa ohjelmaksi, joka avaa <code>.cut</code>-tiedostot. Jos selaimesi ei tarjoa asennuskehotetta, käytä sen omaa asennusvaihtoehtoa osoitepalkissa tai valikossa.</p>

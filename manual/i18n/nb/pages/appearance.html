@@ -1,0 +1,134 @@
+<p class="lede">Hvordan en form ser ut er dens <em>utseende</em>: fyll inni omtrekken, linjen tegnet langs den, og opasiteten og blandingen som bestemmer hvordan den ligger over det som er bak. Hver av dem kan være en flat farge, en gradient eller et mønster, og et objekt kan bære mer enn én av hver på én gang. Denne siden dekker malekontrollene, fargemodellene, fargeprøver, gradienter, linjer, gjennomsiktighet, Malestabel-panelet og grafiske stiler.</p>
+
+<p>Snarveier nedenfor er skrevet i macOS-form. På Windows leser du <kbd>&#8984;</kbd> som Ctrl, <kbd>&#8997;</kbd> som Alt og <kbd>&#8679;</kbd> som Shift.</p>
+
+<figure class="shot">
+  <img src="img/artwork-landscape.png" width="1700" height="967" loading="lazy"
+       alt="Et vektorlandskap med fjell, himmel og en innsjø, bygget av flatfylte former i Scissor." />
+  <figcaption>En hel scene bygget av fylte former. Hver fargebånd er en sti med sitt eget fyll.</figcaption>
+</figure>
+
+<h2 id="appearance-fill-and-stroke">Fyll og linjer</h2>
+<p>En sti, form eller bit tekst kan ha et <strong>fyll</strong>, maleri inni omtrekken, og en <strong>linje</strong>, linjen tegnet langs den omtrekken. Et fyll kan være en fast farge, en gradient eller et mønster; en linje kan være en fast farge eller en gradient, med sin egen tykkelse og strek. Begge sider kan også settes til ingen, slik at du kan tegne en form med bare en linje, eller bare et fyll.</p>
+
+<h3 id="appearance-the-paint-chips">Fyll- og linjechipsene</h3>
+<p>To overlappende chips nederst på verktøylinjen inneholder fyll og linjen. Klikk på hvilken som helst for å åpne en fargevelger; den foran er siden som tastene og Farge-, Fargeprøver- og Gradient-panelene virker på. Trykk <kbd>X</kbd> for å bringe den andre siden frem, <kbd>&#8679;X</kbd> for å bytte de to fargene, <kbd>/</kbd> for foran siden til ingen, og <kbd>D</kbd> for å gå tilbake til standard: hvitt fyll, svart linje og 1 pt tykkelse. Samme fyll, linje, tykkelse, opasitet og blandingsmodus sitter også sammen i Egenskaper-panelet, noe som er praktisk når du vil ha dem alle på ett sted.</p>
+<p>Uten noe valgt setter disse kontrollene stilen som det neste objektet du tegner skal ta, slik at du kan velge en farge før du tegner i stedet for etter.</p>
+
+<h3 id="appearance-eyedropper">Kopiere maleri med Pipetten</h3>
+<p>Pipetten (<kbd>I</kbd>) kopierer et helt utseende fra objektet du klikker på til utvalget. Hold <kbd>&#8679;</kbd> for å ta bare fyllfargen eller linjefargen til den aktive siden, eller <kbd>&#8997;</kbd> for å dytte utvalgets utseende på objektet under pekeren i stedet. Å klikke på et plassert bilde eller et piksellag prøver fargen under pekeren til den aktive siden, slik at du kan løfte en farge rett ut av et bilde. Grip etter Pipetten når to objekter skal matche: prøv den ene, og den andre tar samme maleri i ett klikk.</p>
+
+<h2 id="appearance-colour">Farge</h2>
+<p>Farge velges i den lille pop-upvelgeren på hvert chip, eller, med mer kontroll, i Farge-panelet.</p>
+
+<h3 id="appearance-color-panel">Farge-panelet</h3>
+<p><strong>Farge</strong>-panelet (<kbd>F6</kbd>) viser den aktive sidens maleri som et sett med glidebrytere, et heksadesimalt felt og et spektrum. Fyll- og linjechips øverst velger hvilken side du redigerer. Spektruet løper nyanser på tvers, hvitt øverst og svart nederst; klikk eller dra i det for å velge. Tre raske fargeprøver ved siden av setter Ingen, Hvit og Svart på én klikk, og <em>Inverter</em>- og <em>Komplement</em>-knappene bearbeider gjeldende farge (Komplement vender nyansen halvveis rundt mens den beholder metningen og lysheten).</p>
+<p>Fargemodellmenyen angir hvilke glidebrytere panelet viser. Valget beholdes for økten, og nye fargeprøver lages i det.</p>
+<dl>
+  <dt>Gråtoner</dt><dd>Én K-glidebryter, fra hvitt på 0% til svart på 100%.</dd>
+  <dt>RGB</dt><dd>Rødt, grønt og blått fra 0 til 255, modellen for skjermarbeid.</dd>
+  <dt>HSB</dt><dd>Nyanser i grader, deretter metning og lyshet som prosenter: ofte den raskeste måten å justere en farge på uten å miste karakteren.</dd>
+  <dt>CMYK</dt><dd>Cyan, magenta, gul og svart som prosenter, for trykk.</dd>
+  <dt>Web Safe RGB</dt><dd>RGB festet til de 216 web-sikre fargene. Når gjeldende farge ikke er en av dem, vises en advarselstrekant; klikk den for å feste til nærmeste web-sikre farge.</dd>
+</dl>
+<p>Når den aktive siden er malt med en global fargeprøve, vises en tonerad over glidebryterne: den navngir prøven og lar deg angi en tone fra 0% til 100% i stedet for å redigere fargen direkte, slik at kunstverket forblir koblet til prøven.</p>
+
+<h2 id="appearance-swatches">Fargeprøver og fargegrupper</h2>
+<p>En fargeprøve er en navngitt farge lagret med dokumentet. Å male fra fargeprøver i stedet for å skrive inn verdier holder et palett konsistent, og for globale fargeprøver lar deg style om et hele dokument ved å redigere én farge.</p>
+
+<h3 id="appearance-swatches-panel">Fargeprøver-panelet</h3>
+<p><strong>Fargeprøver</strong>-panelet (åpne det fra <strong>Vindu &rsaquo; Fargeprøver</strong>) lister dokumentets fargeprøver som et rutenett eller en liste; listevisningen viser også hver fargeprøves fargemodus. Et vanlig klikk maler den aktive siden. <kbd>&#8679;</kbd>-klikk velger en rekke fargeprøver og <kbd>&#8984;</kbd>-klikk legger til eller fjerner én fra utvalget, slik at du kan virke på flere på én gang. Bunnlinjen inneholder knapper for å bytte visning, åpne panelmeny, vise fargeprøvealternativer, lage en fargegruppe, lage en ny fargeprøve og slette det som er valgt.</p>
+<p>Panelmenyen legger til mer: <em>Legg til brukte farger</em> og <em>Legg til valgte farger</em> gjør fargene som allerede er i dokumentet, eller bare i utvalget, til fargeprøver; <em>Velg alle ubrukte</em> plukker ut hver fargeprøve ingenting males med, klar til sletting; og <em>Tilordne farger&#8230;</em> åpner dialogboksen for omfarging som er beskrevet nedenfor.</p>
+
+<h3 id="appearance-process-spot-global">Prosess-, spot- og globale fargeprøver</h3>
+<p>Dobbeltklikk på en fargeprøve for Fargeprøvealternativer, hvor du angir hva slags farge den er.</p>
+<dl>
+  <dt>Prosess</dt><dd>En vanlig farge, blandet for jobben. En vanlig prosessfargeprøve er bare en lagret farge: å redigere den berører ikke kunstverket som allerede er malt med den.</dd>
+  <dt>Global</dt><dd>En prosessfargeprøve merket Global holder kunstverket koblet til den, slik at omfarging av prøven omfarger alt som er malt med den på én gang. Globale fargeprøver kan brukes som en tone.</dd>
+  <dt>Spot</dt><dd>En navngiftet mente, ment til å skrives ut på egen plate. Spotfarger er alltid globale.</dd>
+</dl>
+<p>Hvert dokument starter også med en fast <strong>[Registrering]</strong>-fargeprøve, som ikke har sin egen fargetype og ikke kan slettes eller dras. Bruk en global eller spotfargeprøve når en farge dukker opp mange ganger og kan endres: én redigering oppdaterer hvert objekt, i stedet for å jage dem ned for hånd.</p>
+
+<h3 id="appearance-colour-groups">Fargegrupper</h3>
+<p>Fargegrupper arkiverer relaterte fargeprøver sammen, som én nyansfamilie eller ett prosjekts palett. Dra fargeprøver på en gruppe for å arkivere dem, eller velg noen og lag en gruppe av dem med panelens Ny fargegruppe-knapp. Dobbeltklikk på en gruppes topptekst for alternativene. I fargevelgeren på hvert chip viser hver gruppe som én rad, slik at en familie leser som en rampe av nyanser i stedet for en vegg av chips.</p>
+
+<h2 id="appearance-gradients">Gradienter</h2>
+<p>En gradient blander mellom to eller flere farger. Scissor lager lineære, radiale og frie gradienter, og både panelet eller lerretverktøyet kan bygge og forme dem. Grip etter en gradient for å gi en flat form dybde, en bakgrunn en myk vask, eller en knapp en glans.</p>
+
+<h3 id="appearance-gradient-panel">Gradient-panelet</h3>
+<p><strong>Gradient</strong>-panelet (<kbd>&#8984;F9</kbd>) styrer hele gradienten. Klikk på miniatyren for å fylle den aktive siden, velg Lineær, Radial eller Fri fra typemenyen, og bruk reverser-knappen for å vende rampen ende for ende. Selve rampen bærer stoppene: klikk den for å legge til et stopp i fargen den allerede har der, dra et stopp for å flytte det, og dra en diamant mellom to stopp for å skyve hvor de to fargene møtes. Det valgte stoppet har sin egen fargeprøve, et <em>Opasitet</em>-felt og et <em>Plassering</em>-felt, og <em>Slett stopp</em> fjerner det. <em>Vinkel</em> roterer en lineær eller radial gradient, og <em>Aspekt</em> (bare radial) klemmer en radial gradient til en ellipse.</p>
+<figure class="shot">
+  <img src="img/gradient.gif" width="340" height="340" loading="lazy"
+       alt="Et avrundet firkant fylt med en blå-til-amber lineær gradient hvis retning sveiper rundt." />
+  <figcaption>En lineær gradient fra blå til amber. Å dra gradientaksen, eller endre vinkelen, svermer blandingen rundt formen.</figcaption>
+</figure>
+
+<h3 id="appearance-gradient-tool">Gradientverktøyet</h3>
+<p>Med Gradientverktøyet (<kbd>G</kbd>) sitter de samme kontrollene på kunstverket. Dra over et objekt for å legge ned aksen, og hold <kbd>&#8679;</kbd> for å holde den på 45&deg; trinn. Aksen viser en rund knop på starten og en firkantet knop på slutten; dra hvilken som helst for å flytte den enden. Klikk på aksen for å legge til et stopp i fargen den allerede har der, dra et stopp langs den, og dra et stopp godt unna aksen for å kaste det. Dra en diamant for å flytte midtpunktet. <kbd>Delete</kbd> fjerner stoppet du sist berørte.</p>
+
+<h3 id="appearance-freeform">Fri gradienter</h3>
+<p>En fri gradient plasserer fargepunkter hvor som helst på formen i stedet for langs én akse, slik at blandingen kan følge kunstverkets form. Med Gradientverktøyet, klikk på kunstverket for å slippe et fargepunkt, dra ett for å flytte det, og trykk <kbd>Delete</kbd> for å ta det vekk. Kryss av for <em>Streng punktene til linjer</em> i panelet for å forbinde punktene til linjer, noe som sprer en farge langs en rekke i stedet for ut fra ett enkelt prikk. Bruk en fri gradient for myk, organisk skygging som en rett ramp ikke kan gi.</p>
+
+<h2 id="appearance-patterns">Mønstre</h2>
+<p>Et mønster er kunstverk som gjentas som en flise og brukes som fyll. Gjør et utvalg til en flise med <strong>Objekt &rsaquo; Mønster &rsaquo; Lag</strong>, og fyll hvilken som helst form med det fra <strong>Mønstre</strong>-panelet: klikk på en flise for å fylle, dobbeltklikk for å redigere den, og <kbd>&#8997;</kbd>-klikk for å slette den. <em>Flisealternativer</strong> angir flisetypen, mursteinsforskyvningen, størrelsen og avstanden, og om flisen skalerer og beveger seg med kunstverket. <strong>Rediger mønster</strong> åpner flisen på stedet med kopiene som gjentas rundt den mens du jobber; klikk <em>Fullfør redigering</em> i Mønstre-panelet når flisen er riktig. Mønstre passer til gjentatte teksturer, som striper, prikker, vev og bakgrunner, som ville være kjedelig å tegne for hånd.</p>
+
+<h2 id="appearance-strokes">Linjer</h2>
+<p><strong>Linje</strong>-panelet (<kbd>&#8984;F10</kbd>) former linjen som tegnes langs en sti.</p>
+
+<h3 id="appearance-stroke-options">Tykkelse, ender, sammenføy og justering</h3>
+<p><em>Tykkelse</em> angir linjens tykkelse i punkter. <em>Ende</em>-knappene bestemmer hvordan en åpen sti slutter: butt (kuttet av i firkant på ankeret), rund, eller projiserende (firkant, men som rekker forbi ankeret med halve tykkelsen). <em>Hjørne</em>-knappene bestemmer hvordan en linje snur et hjørne: mitre (en skarp spiss), rund, eller bevel (et flatt kutt), med en mitre-<em>Grense</em> som beveler de skarpeste spissene slik at de ikke stikker ut. <em>Juster</em> plasserer linjen på midten av stien, eller helt inni eller utenfor den, noe som betyr noe når en form må slås opp nøyaktig mot naboene sine.</p>
+
+<h3 id="appearance-dashes">Stiplede linjer</h3>
+<p>Kryss av for <em>Stiplet linje</em> for å bryte linjen opp i streker. De tre strek-og-mellomrom-parene nedenfor angir mønsteret: det første feltet er en streklengde, det neste et mellomrom, og så videre, gjentatt rundt stien. La senere par stå tomme for en enkel jevn strek.</p>
+
+<h3 id="appearance-width-profiles">Breddeprofiler og Breddeverktøyet</h3>
+<p>En breddeprofil taperer linjen langs lengden i stedet for å holde den på én tykkelse. Velg en profil fra panelens meny og en liten forhåndsvisning viser formen den lager; knappene ved siden av kjører profilen den andre veien, lagrer gjeldende linje som en ny profil, eller sletter en profil du har laget. En linje du har formet for hånd vises som <em>Tilpasset</em> i menyen.</p>
+<p>Breddeverktøyet (<kbd>&#8679;W</kbd>) former en linje direkte på lerretet: dra bort fra stien for å gjøre den bredere på det punktet, eller mot den for å gjøre den smalere, og etterlater et breddepunkt som du kan dra igjen senere. Bruk det til å gi en tegnet linje svelget og taperingen til en pensel eller penn.</p>
+
+<h3 id="appearance-brushes">Pensler</h3>
+<p><strong>Pensler</strong>-panelet (<kbd>F5</kbd>) maler linjer med en form i stedet for en vanlig linje. Det inneholder kalligrafiske, spredte, kunst-, bust- og mønsterpensler. Klikk på en pensel for å bruke den på de valgte stiene; Verfpenselen bruker hvilken som helst pensel som er aktiv. Dobbeltklikk på en pensel for alternativene, bruk <em>Ny pensel&#8230;</em> for å lage en (spredte, kunst- og mønsterpensler bygges av valgt kunstverk), og <em>Fjern pensel</em> for å returnere en linje til en vanlig linje.</p>
+
+<h2 id="appearance-opacity-blending">Opasitet og blanding</h2>
+<p>Opasitet og blandingsmodusen bestemmer hvordan et objekt kombineres med det som ligger under det. De sitter i <strong>Gjennomsiktighet</strong>-panelet (<kbd>&#8679;&#8984;F10</kbd>), og også i Egenskaper-panelet.</p>
+
+<h3 id="appearance-blend-modi">Blandingsmodiene</h3>
+<p>Opasitet løper fra 0% (usynlig) til 100% (solid). Modusmenyen tilbyr seksten blandingsmodier, som faller i grupper: modier som gjør mørkere, modier som gjør lysere, kontrastmodier, sammenligningsmodier, og de fire som låner én del av en farge.</p>
+<table>
+  <thead><tr><th>Modus</th><th>Hva den gjør</th></tr></thead>
+  <tbody>
+    <tr><td>Normal</td><td>Maler over det som er under, uten blanding.</td></tr>
+    <tr><td>Mørkere</td><td>Beholder hvilken som helst farge som er mørkere, kanal for kanal.</td></tr>
+    <tr><td>Multipliser</td><td>Multipliserer de to fargene, alltid mørkere; hvitt lar uendret.</td></tr>
+    <tr><td>Farge brenn</td><td>Mørkere for å ta på blandingsfargen.</td></tr>
+    <tr><td>Lysere</td><td>Beholder hvilken som helst farge som er lysere.</td></tr>
+    <tr><td>Lys</td><td>Inversen av Multipliser, alltid lysere; svart lar uendret.</td></tr>
+    <tr><td>Farge lysne</td><td>Lysner opp for å ta på blandingsfargen.</td></tr>
+    <tr><td>Overlegg</td><td>Multipliserer eller lyser avhengig av grunnlaget, og øker kontrasten.</td></tr>
+    <tr><td>Myk lys</td><td>En myk lysne eller brenn, som om et myk lys skinte på kunstverket.</td></tr>
+    <tr><td>Hardt lys</td><td>Multipliserer eller lyser avhengig av blandingsfargen, som en hard spotlight.</td></tr>
+    <tr><td>Differanse</td><td>Trekker den mørkere fargen fra den lysere; hvitt inverterer grunnlaget, svart har ingen effekt.</td></tr>
+    <tr><td>Ekskludering</td><td>Som Differanse, men mykere og med lavere kontrast.</td></tr>
+    <tr><td>Nyans</td><td>Nyansen til blandingen med metningen og lysheten til grunnlaget.</td></tr>
+    <tr><td>Metning</td><td>Metningen til blandingen med nyansen og lysheten til grunnlaget.</td></tr>
+    <tr><td>Farge</td><td>Nyansen og metningen til blandingen med lysheten til grunnlaget: bra for å tone gråskala-kunstverk.</td></tr>
+    <tr><td>Lyshet</td><td>Lysheten til blandingen med nyansen og metningen til grunnlaget.</td></tr>
+  </tbody>
+</table>
+<p>For en gruppe endrer to brytere hvordan den blander. <em>Begrens blanding til gruppe</em> holder gruppens modier inne i seg selv, slik at medlemmene blander med hverandre men ikke med kunstverket bak gruppen. <em>Knockout-gruppe</em> får hvert medlem å skjule de under seg i gruppen i stedet for å blande seg ned gjennom dem.</p>
+
+<h3 id="appearance-opacity-masks">Opasitetsmasker</h3>
+<p>En opasitetsmaske toner ut kunstverk etter tone. Velg kunstverket og, på toppen av det, formen å maskere med, og klikk deretter <em>Lag maske</em> (også <strong>Objekt &rsaquo; Klippemaske &rsaquo; Lag opasitetsmaske</strong>). Det øverste objektet blir masken: hvor det er lyst vises kunstverket, og hvor det er mørkt tones kunstverket ut, slik at en hvit-til-svart gradient gir en myk overgang. <em>Frigi</em> gir de to objektene tilbake. Bruk en maske for en myk kant eller et vignette som et hardt klipp ikke kan lage.</p>
+
+<h2 id="appearance-appearance-panel">Malestabel-panelet</h2>
+<p><strong>Malestabel</strong>-panelet (<kbd>&#8679;F6</kbd>) lister alt som er malt på ett objekt: fyllene og linjene, med eventuelle live-effekter over dem. Fordi et objekt kan ha flere fyll og linjer, er dette hvor du stabeler dem, for eksempel en bred mørk linje under en tynn lys for å lage en omtrek, eller to fyll med forskjellig opasitet.</p>
+<p>Stabelen tegnes øverst først, i samsvar med rekkefølgen den maler. Hver fyll- eller linjerad har et øye for å skjule den, et malerichip som åpner fargevelgeren, et opasitetfelt, et tykkelsesfelt for linjer, og piler for å flytte den opp eller ned stabelen, pluss en knapp for å fjerne den. <em>Legg til fyll</em> og <em>Legg til linje</em> setter en til på toppen. Effekter vises over fyll og linjene med et <em>fx</em>-merke; klikk en effekt for å redigere alternativene, eller fjern den fra raden sin. Når det lagrede utseendet er ferdig, <strong>Objekt &rsaquo; Utvid utseende</strong> baker hele stabelen ned til vanlig kunstverk.</p>
+
+<h2 id="appearance-graphic-styles">Grafiske stiler</h2>
+<p>En grafisk stil er et lagret utseende du kan bruke på andre objekter. <strong>Grafiske stiler</strong>-panelet (<kbd>&#8679;F5</kbd>) beholder dem som chips, hver viser sitt fyll med sin linje som chipets kant. Velg et objekt og klikk <em>Ny stil</em> for å lagre fyllene og linjene; klikk på et chip for å bruke den stilen på utvalget, og <kbd>&#8997;</kbd>-klikk på et chip for å slette det. Stiler er verdt å lage når samme utseende, som en husbehandling av en knap eller en etikettstil, skal på mange objekter og forbli konsistent.</p>
+
+<h2 id="appearance-overprint">Overtrykk</h2>
+<p><strong>Attributter</strong>-panelet (<kbd>&#8984;F11</kbd>) angir overtrykk for trykkarbeid. <em>Overtrykk fyll</em> og <em>Overtrykk linje</em> får den til å skrives ut på toppen av fargene under i stedet for å stanser dem ut, noe som brukes til fangearbeid og for effekter som et svart som skrives ut over i stedet for å erstatte det som er under det. Slå på <strong>Vis &rsaquo; Overtrykk-forhåndsvisning</strong> for å se det på skjermen; PDF-eksport beholder innstillingen.</p>
+
+<h2 id="appearance-recolour">Omfarge kunstverk</h2>
+<p><strong>Rediger &rsaquo; Rediger farger &rsaquo; Tilordne farger&#8230;</strong> lister hver farge i utvalget med hvor ofte den brukes. Klikk på chipen til høyre for en rad for å velge hva den fargen blir, eller på pilen mellom de to chipene for å la den fargen være i fred. Nyans-, metnings- og lyshets-glidebrytere skifter hele settet sammen, og to knapper tilordner de nye fargene tilfeldig eller tilfeldiggjør metningen og lysheten, noe som er en rask måte å prøve varianter på. Kunstverket oppdateres mens du går, og <em>Tilbakestill</em> går tilbake til fargene det startet med.</p>
+<p>Samme undermeny tilbyr også endringer på én trinn: <em>Bland front til bak</em> sprer en rekke farger mellom for- og bakobjektene, <em>Konverter til gråtoner</em> fjerner all farge, <em>Inverter farger</em> vender hver om, og <em>Metning&#8230;</em> hever eller senker metningen på tvers av utvalget.</p>

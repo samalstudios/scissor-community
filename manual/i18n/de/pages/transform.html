@@ -1,0 +1,165 @@
+<p class="lede">Alles, was ändert, wo ein Objekt sitzt, wie groß es ist oder wohin es schaut, lebt hier: Bewegen und Skalieren von Hand, genaue numerische Transformationen, Ausrichten und Stapeln, Live-Wiederholungen, Morphen, Hüllen und das Verwandeln einer flachen Form in einen Festkörper.</p>
+
+<p>Die untenstehenden Kürzel sind in ihrer macOS-Form geschrieben. Unter Windows und Linux lesen Sie <kbd>⌘</kbd> als Strg, <kbd>⌥</kbd> als Alt und <kbd>⇧</kbd> als Umschalt.</p>
+
+<h2 id="transform-select-move">Auswählen und Bewegen</h2>
+<p>Bevor Sie etwas transformieren können, müssen Sie sagen, was. Greifen Sie zuerst hierher: Die Auswahlwerkzeuge entscheiden, worauf ein Ziehen, ein numerischer Befehl oder ein Panel-Feld wirken wird.</p>
+
+<h3 id="transform-selection-tools">Die Auswahlwerkzeuge</h3>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Kürzel</th><th>Was es auswählt</th></tr></thead>
+  <tbody>
+    <tr><td>Auswahl-Werkzeug</td><td><kbd>V</kbd></td><td>Ganze Objekte und Gruppen.</td></tr>
+    <tr><td>Direktauswahl-Werkzeug</td><td><kbd>A</kbd></td><td>Einzelne Ankerpunkte und Pfadsegmente.</td></tr>
+    <tr><td>Gruppenauswahl-Werkzeug</td><td></td><td>Ein Objekt innerhalb einer Gruppe; jeder weitere Klick erweitert sich zur Gruppe darum herum.</td></tr>
+  </tbody>
+</table>
+<p>Umschalt-Klick fügt ein Objekt zur Auswahl hinzu oder entfernt es wieder. Ziehen Sie auf der leeren Zeichenfläche, um eine Marquee zu markieren, und halten Sie <kbd>⇧</kbd>, um alles, was die Marquee fängt, zur bereits Ausgewählten hinzuzufügen. Ein Doppelklick auf eine Gruppe mit dem Auswahl-Werkzeug steigt hinein, sodass Sie an einem Mitglied arbeiten können, ohne die Gruppierung aufzuheben.</p>
+
+<h3 id="transform-moving">Eine Auswahl bewegen</h3>
+<p>Ziehen Sie ein ausgewähltes Objekt, um es zu bewegen. Halten Sie <kbd>⌥</kbd>, und es lässt eine Kopie zurück und zieht stattdessen, was der schnelle Weg ist, um zu duplizieren und in einer Bewegung neu zu positionieren. Halten Sie <kbd>⇧;</kbd>, und die Bewegung auf 45&deg;-Schritte gemessen vom Beschränkungswinkel, der in den Einstellungen festgelegt ist, beschränken und schaltet das Einrasten aus; ohne <kbd>⇧;</kbd> rastet die Auswahl an nahegelegenen Rändern, Mittelpunkten und Winkeln ein. Pfeiltasten schieben um den Tastaturinkrement, <kbd>⇧;</kbd> mit einem Pfeil schieben um zehnmal so viel, und <kbd>⌥;</kbd> mit einem Pfeil schieben eine Kopie.</p>
+
+<h3 id="transform-bounding-box">Der Begrenzungsrahmen: Skalieren und Drehen von Hand</h3>
+<p>Der Begrenzungsrahmen der Auswahl trägt acht Griffe. Ziehen Sie einen, um zu skalieren: <kbd>⇧;</kbd> hält die Proportionen, und <kbd>⌥;</kbd> skaliert um die Mitte statt um den gegenüberliegenden Griff. Knapp außerhalb einer Ecke betritt der Zeiger den Rotationsbereich; ziehen Sie dorthin, um die Auswahl um die Mitte des Rahmens zu drehen, wobei <kbd>⇧;</kbd> auf 45&deg; einrastet. Nach einer Drehung bleibt der Rahmen schräg zur Grafik. <strong>Objekt &rsaquo; Transformieren &rsaquo; Begrenzungsrahmen zurücksetzen</strong> richtet ihn wieder auf, sodass spätere Breiten- und Höhenbearbeitungen entlang der Seitenachsen abgelesen werden.</p>
+
+<h2 id="transform-numeric">Numerische Transformationen</h2>
+<p>Ziehen ist schnell, aber ungenau. Wenn ein Wert genau sein muss oder derselbe auf vielen Objekten, tippen Sie ihn. Das Transformieren-Panel hält die Live-Zahlen für die Auswahl, und das Untermenü <strong>Objekt &rsaquo; Transformieren</strong> hält Einmal-Befehle mit einer Kopier-Option.</p>
+
+<h3 id="transform-panel">Das Transformieren-Panel</h3>
+<p>Das Transformieren-Panel (<kbd>⇧F8</kbd>) zeigt X, Y, B und H in Pixeln für die Auswahl; tippen Sie einen Wert und drücken Sie Return, um ihn einzustellen. Darunter dreht das ⟳-Feld die Auswahl um einen Winkel, und das ⧄-Feld verzieht sie um einen, wobei beide nach der Anwendung auf Null zurückkehren. Das Panel braucht etwas Ausgewähltes; ohne Auswahl wird es gedimmt und sagt es.</p>
+<p>Das Eigenschaften-Panel wiederholt X, Y, B und H mit einem Rotationsfeld und zwei Schaltflächen, die die Auswahl horizontal oder vertikal um ihre eigene Mitte spiegeln, sodass die häufigsten Bewegungen griffbereit sind, ohne ein zweites Panel zu öffnen.</p>
+
+<h3 id="transform-commands">Bewegen, Drehen, Spiegeln, Skalieren und Verzerren</h3>
+<p><strong>Objekt &rsaquo; Transformieren</strong> hält die numerischen Befehle. Jeder öffnet einen kleinen Dialog, und jeder (außer Bewegen, das eine direkte Verschiebung ist) transformiert um den Referenzpunkt. Das Kopier-Feld in jedem Dialog wendet die Änderung auf eine Duplikat an und lässt das Original unberührt, wie Sie ein gespiegeltes Paar oder ein skaliertes Echo in einem Schritt bauen.</p>
+<table>
+  <thead><tr><th>Befehl</th><th>Kürzel</th><th>Felder</th></tr></thead>
+  <tbody>
+    <tr><td>Bewegen…</td><td><kbd>⇧⌘M</kbd></td><td>Horizontal, Vertikal, Kopieren.</td></tr>
+    <tr><td>Drehen…</td><td></td><td>Winkel, Kopieren.</td></tr>
+    <tr><td>Spiegeln…</td><td></td><td>Achse (Horizontal oder Vertikal), Winkel, Kopieren.</td></tr>
+    <tr><td>Skalieren…</td><td></td><td>Horizontal %, Vertikal %, Kopieren.</td></tr>
+    <tr><td>Verzerren…</td><td></td><td>Verzerrungswinkel, Achsenwinkel, Kopieren.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="transform-each-again">Transformieren Einzeln und Transformieren Wiederholen</h3>
+<p><strong>Transformieren Einzeln…</strong> (<kbd>⌥⇧⌘D</kbd>) skaliert, bewegt, dreht und spiegelt jedes ausgewählte Objekt um <em>seine eigene</em> Mitte statt die geteilte Mitte der Auswahl. Sein Dialog nimmt Skalieren H und V, Bewegen H und V, einen Drehwinkel, Spiegeln X und Spiegeln Y-Kontrollkästchen und Kopieren. Greifen Sie hierher, um eine Gruppe von Objekten zu verzerren oder auszufächern, sodass jedes sich an Ort und Stelle dreht und wächst, statt um die Gruppe zu kreisen.</p>
+<p><strong>Transformieren Wiederholen</strong> (<kbd>⌘D</kbd>) wiederholt die letzte Transformation auf der aktuellen Auswahl. Bewegen Sie ein Objekt, dann drücken Sie <kbd>⌘D</kbd> ein paar Mal, und Sie erhalten eine gleichmäßig abgestufte Reihe; kombinieren Sie es mit <kbd>⌥;</kbd>-Ziehen einer Kopie, um wiederholende Muster von Hand zu bauen.</p>
+
+<h2 id="transform-tools">Die Transformationswerkzeuge und der Referenzpunkt</h2>
+<p>Die Dreh- (<kbd>R</kbd>), Spiegel- (<kbd>O</kbd>), Skalier- (<kbd>S</kbd>) und Verzerrungs-Werkzeuge arbeiten jeweils um einen Referenzpunkt, gezeichnet als ein kleines Fadenkreuz. Er beginnt in der Mitte der Auswahl; klicken Sie irgendwo auf der Zeichenfläche, um ihn dorthin zu bewegen, und das Auswählen von etwas anderem setzt ihn zurück an die neue Mitte. Dann ziehen Sie auf der Zeichenfläche, um um diesen Punkt zu drehen, zu spiegeln, zu skalieren oder zu verzerren.</p>
+<p><kbd>⇧;</kbd> beschränkt jedes Werkzeug: 45&deg;-Schritte für Drehen und Spiegeln, gleiches Horizontal und Vertikal für Skalieren, eine Achse für Verzerren. Halten Sie <kbd>⌥;</kbd> während des Ziehens, transformiert es eine Kopie und lässt das Original. <kbd>⌥;</kbd>-Klick platziert den Referenzpunkt und öffnet den numerischen Dialog dieses Werkzeugs mit dem Punkt bereits eingestellt, sodass Sie eine Form um eine Ecke um einen genauen Winkel drehen können.</p>
+
+<h2 id="transform-free">Das Freie Transformieren-Werkzeug</h2>
+<p>Das Freie Transformieren-Werkzeug (<kbd>E</kbd>) legt Bewegen, Skalieren, Drehen, Verzerren und zwei Arten der Verzerrung auf einen Begrenzungsrahmen. Ziehen Sie innerhalb des Rahmens, um ihn zu bewegen, ziehen Sie einen Griff, um zu skalieren, und ziehen Sie knapp außerhalb einer Ecke, um zu drehen, wobei <kbd>⇧;</kbd> auf 45&deg; einrastet. Verwenden Sie es, wenn Sie mehrere Arten von Änderungen in einer Geste ausprobieren möchten, ohne zwischen jedem das Werkzeug zu wechseln.</p>
+<p>Der Rahmen des Auswahl-Werkzeugs kann auch verzerrn: Halten Sie <kbd>Strg</kbd> (oder <kbd>&#8984;</kbd>), während Sie einen der Eckgriffe ziehen, um diese Ecke allein zu bewegen, statt zu skalieren. Es funktioniert auf Formen und Fotos gleichermaßen; auf Pixeln folgt eine schnelle Vorschau dem Ziehen, und das Ergebnis wird berechnet, wenn Sie <kbd>Enter</kbd> drücken.</p>
+
+<h3 id="transform-free-widget">Das Widget</h3>
+<p>Ein kleines Widget schwebt neben dem Rahmen mit vier Schaltflächen, von denen jede sich selbst benennt, wenn Sie mit dem Zeiger darüberfahren: <strong>Beschränken</strong>, <strong>Freies Transformieren</strong>, <strong>Perspektivische Verzerrung</strong> und <strong>Freie Verzerrung</strong>. Beschränken macht die Skalierung proportional, ohne <kbd>⇧;</kbd> zu halten; wenn es an ist, gibt <kbd>⇧;</kbd> die Proportionen stattdessen frei. Die zwei Verzerrungsmodi lassen nur die vier Eckgriffe zum Ziehen übrig.</p>
+
+<h3 id="transform-free-keys">Verzerrn von der Tastatur</h3>
+<p>Sie können dieselben Verzerrungen erreichen, ohne den Standardmodus zu verlassen. Halten Sie <kbd>⌘</kbd> an einem Randgriff, um entlang dieses Randes zu verzerren. Halten Sie <kbd>⌘</kbd> an einer Ecke, um sie frei auf sich selbst zu verzerrn; fügen Sie <kbd>⇧;</kbd> hinzu, um die Reise der Ecke auf 45&deg; zu beschränken. Halten Sie <kbd>⌘⌥⇧;</kbd> an einer Ecke für Perspektive, wo die benachbarte Ecke das Ziehen spiegelt. Das Drücken oder Loslassen eines Modifikators mitten im Ziehen schaltet die Aktion sofort um, und der Name, auf dem es endet, Skalieren, Verzerren, Perspektivische Verzerrung oder Freie Verzerrung, ist, wie der Schritt danach im Verlaufs-Panel genannt wird. Text, platziere Bilder und Symbolinstanzen können nicht verzerrt werden; sie bleiben, wie sie sind, und Scissor sagt es Ihnen, wenn ein Ziehen sie überspringt.</p>
+
+<h3 id="transform-free-reference">Der Referenzpunkt</h3>
+<p>Der Referenzpunkt sitzt als Fadenkreuz in der Mitte des Rahmens, und Sie können ihn überall hin ziehen; allein bewegt er nichts. Der Rahmen dreht und skaliert sich dann um ihn, und er reist mit der Grafik, wenn Sie die Auswahl bewegen. Legen Sie ihn nahe einem der neun Punkte des Rahmens ab (die vier Ecken, die vier Randmitten oder die Mitte), und er setzt sich auf diesen Punkt. Halten Sie <kbd>⌥;</kbd> während des Skalierens, ignoriert einen platzierten Referenzpunkt und skaliert um die Mitte. Das Verzerren eines Randes mit <kbd>⌘</kbd> hält auch einen platzierten Referenzpunkt still.</p>
+
+<h3 id="transform-free-pins">Die Griffe bewegen</h3>
+<p>Aktivieren Sie <strong>Griffe bewegen</strong> in der Schnellleiste (oder der Optionsleiste), während Freies Transformieren aktiv ist, und das Ziehen einer Ecke des Rahmens bewegt diese Ecke allein, ohne die Grafik zu berühren. Nahe einem Ankerpunkt setzt er sich auf ihn ein. Schalten Sie Griffe bewegen wieder aus und ziehen Sie eine bewegte Ecke: Die Form skaliert, sodass diese Ecke dem Zeiger folgt, und jeder andere Punkt behält denselben proportionalen Abstand von dem, was still hält, was die gegenüberliegende Ecke, der platzierte Referenzpunkt oder die Mitte ist, während <kbd>⌥;</kbd> gehalten wird. <kbd>⇧;</kbd> hält die Proportionen. Bewegte Ecken reisen mit der Grafik, und ein Doppelklick auf eine setzt alle vier wieder auf den Rahmen.</p>
+
+<h2 id="transform-align-arrange">Ausrichten, Anordnen und Gruppieren</h2>
+<p>Diese Befehle legen fest, wie Objekte aufeinander ausgerichtet sind, welches vor welchem sitzt, und welche gesammelt, weggesperrt oder verborgen werden, während Sie an dem Rest arbeiten.</p>
+
+<h3 id="transform-align">Ausrichten und verteilen</h3>
+<p>Das Ausrichten-Panel (<kbd>⇧F7</kbd>) hat drei Reihen. <strong>Objekte ausrichten</strong> richtet die Auswahl links, mittig oder rechts und oben, mittig oder unten aus. <strong>Objekte verteilen</strong> verteilt drei oder mehr Objekte, sodass ihre Oberkanten, Mittelpunkte, Unterkanten, linken Ränder, Mittelpunkte oder rechten Ränder in gleichen Intervallen fallen. <strong>Abstände verteilen</strong> legt eine gleiche Lücke zwischen ihnen vertikal oder horizontal fest. Das Menü im Panel wählt, ob alles an der Auswahl oder am Board ausgerichtet wird. Ausrichten braucht mindestens ein Objekt (ein einzelnes Objekt richtet sich am Board aus); Verteilen braucht drei, und das Panel greift diese Schaltflächen, bis Sie sie haben. Die sechs Ausrichtungen erscheinen auch unter <strong>Objekt &rsaquo; Ausrichten</strong>.</p>
+
+<h3 id="transform-arrange">Anordnen: Stapelreihenfolge</h3>
+<p>Jedes Objekt sitzt auf einer Ebene im Stapel, und <strong>Objekt &rsaquo; Anordnen</strong> bewegt die Auswahl hindurch.</p>
+<table>
+  <thead><tr><th>Befehl</th><th>Kürzel</th></tr></thead>
+  <tbody>
+    <tr><td>Nach vorne bringen</td><td><kbd>⇧⌘]</kbd></td></tr>
+    <tr><td>Nach vorne</td><td><kbd>⌘]</kbd></td></tr>
+    <tr><td>Nach hinten</td><td><kbd>⌘[</kbd></td></tr>
+    <tr><td>Nach hinten bringen</td><td><kbd>⇧⌘[</kbd></td></tr>
+  </tbody>
+</table>
+
+<h3 id="transform-grouping">Gruppieren, Sperren und Verbergen</h3>
+<dl>
+  <dt><strong>Gruppieren</strong> (<kbd>⌘G</kbd>) und <strong>Gruppierung aufheben</strong> (<kbd>⇧⌘G</kbd>)</dt>
+  <dd>Sammelt Objekte, sodass sie sich als Eine bewegen und transformieren, oder gibt sie wieder frei. Eine Gruppe kann mit dem Auswahl-Werkzeug doppelklickend betreten werden.</dd>
+  <dt><strong>Sperren &rsaquo; Auswahl</strong> (<kbd>⌘2</kbd>) und <strong>Alle entsperren</strong> (<kbd>⌥⌘2</kbd>)</dt>
+  <dd>Sperren macht Objekte unwählbar, sodass sie an Ort und Stelle bleiben, während Sie darüber arbeiten; Alle entsperren befreit alles, was gesperrt war.</dd>
+  <dt><strong>Verbergen &rsaquo; Auswahl</strong> (<kbd>⌘3</kbd>) und <strong>Alle anzeigen</strong> (<kbd>⌥⌘3</kbd>)</dt>
+  <dd>Verbergen nimmt Objekte von der Zeichenfläche, ohne sie zu löschen, was eine belebte Szene auf den Teil reduziert, den Sie bearbeiten; Alle anzeigen bringt sie zurück.</dd>
+</dl>
+
+<h2 id="transform-repeat">Live-Wiederholungen</h2>
+<p><strong>Objekt &rsaquo; Wiederholen</strong> baut viele Kopien von einem Objekt und hält sie live: Bearbeiten Sie das Original, und jede Kopie folgt. Greifen Sie zu einer Wiederholung, wenn die Grafik regelmäßig ist, eine Blume aus identischen Blütenblättern oder ein gekacheltes Gitter von Icons, sodass Sie ein Element formen und den Rest es verfolgen lassen können.</p>
+<dl>
+  <dt><strong>Radial…</strong></dt>
+  <dd>Ringt die Kopien um eine Mitte. Der Dialog legt Instanzen und Radius fest.</dd>
+  <dt><strong>Gitter…</strong></dt>
+  <dd>Legt die Kopien in Reihen und Spalten. Der Dialog legt Spalten, Reihen, Horizontalen Abstand und Vertikalen Abstand fest.</dd>
+  <dt><strong>Spiegel…</strong></dt>
+  <dd>Spiegelt die Kopien über eine Achse. Der Dialog legt die Achse (vertikal oder horizontal) und einen Versatz fest.</dd>
+</dl>
+<p>Mit einer Wiederholung ausgewählt, legt das Eigenschaften-Panel dieselben Steuerelemente für die spätere Abstimmung frei: Instanzen und Radius für eine radiale Wiederholung; Spalten, Reihen und horizontale und vertikale Abstände für ein Gitter; und der Versatz und die Spiegelachse für eine Spiegelung. <strong>Freigeben</strong> verwandelt die Kopien in gewöhnliche, separat bearbeitbare Grafik, wenn Sie fertig sind.</p>
+<figure class="shot">
+  <img src="img/repeat.gif" width="640" height="640" loading="lazy"
+       alt="Ein einzelnes blaues Blütenblatt, das durch eine radiale Wiederholung um eine Mitte wiederholt wird und sich zu einer zwölfteiligen Blume füllt, während die Anzahl steigt." />
+  <figcaption>Ein Blütenblatt und eine radiale Wiederholung. Während die Anzahl von eins auf zwölf steigt, füllt sich die Blume; formen Sie das einzelne Blütenblatt um, und das ganze Ding ändert sich mit ihm.</figcaption>
+</figure>
+
+<h2 id="transform-morph">Morphe</h2>
+<p>Ein Morph füllt die Lücke zwischen zwei Objekten mit einer Reihe von Zwischenformen, jede einen Schritt näher an die nächste. Es ist das Werkzeug für Schattierungen zwischen Farben und für gleichmäßig verteilte Wiederholungen entlang eines Pfads.</p>
+<p>Das Morph-Werkzeug (<kbd>W</kbd>) morpht ein Objekt in ein anderes: Klicken Sie das erste, dann das zweite. Ein Klick auf ein drittes trägt die Kette fort, und ein Klick in einen bestehenden Morph fügt dieses Objekt hinzu. <strong>Objekt &rsaquo; Morph</strong> hält den Rest:</p>
+<table>
+  <thead><tr><th>Befehl</th><th>Kürzel</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td>Erstellen</td><td><kbd>⌥⌘B</kbd></td><td>Morpht die ausgewählten Objekte zusammen.</td></tr>
+    <tr><td>Freigeben</td><td><kbd>⌥⇧⌘B</kbd></td><td>Gibt die Schlüsselobjekte zurück und lässt die Schritte fallen.</td></tr>
+    <tr><td>Morphoptionen…</td><td></td><td>Legt Abstand und Ausrichtung fest (siehe unten).</td></tr>
+    <tr><td>Erweitern</td><td></td><td>Verwandelt die Zwischenschritte in echte, bearbeitbare Objekte.</td></tr>
+    <tr><td>Rückgrat ersetzen</td><td></td><td>Biegt die Schrittreihe entlang eines ausgewählten Pfads.</td></tr>
+    <tr><td>Rückgrat umkehren</td><td></td><td>Vertauscht, welches Ende des Rückgrats jedes Schlüsselobjekt sitzt.</td></tr>
+    <tr><td>Vorder- nach Hintergrund umkehren</td><td></td><td>Kehrt die Stapelreihenfolge der Schritte um.</td></tr>
+  </tbody>
+</table>
+<p><strong>Morphoptionen…</strong> legt den Abstand auf Angegebene Schritte (eine feste Anzahl von Zwischenformen), Angegebener Abstand (eine feste Lücke in Pixeln, die so viele füllt, wie passen) oder Glatte Farbe (so viele Schritte, wie es für eine glatte Farbmischung braucht) und legt die Ausrichtung auf Am Ausrichten an Seite oder Am Ausrichten an Pfad. Ein Morph bleibt live und folgt seinen Schlüsselobjekten, sodass das Bearbeiten beider Enden die ganze Reihe neu fließen lässt.</p>
+<figure class="shot">
+  <img src="img/morph.gif" width="760" height="316" loading="lazy"
+       alt="Ein blauer Stern, der sich durch eine wachsende Reihe von Zwischenformen in einen bernsteinfarbenen Kreis morpht." />
+  <figcaption>Ein Morph von einem Stern zu einem Kreis. Während die Schrittzahl steigt, füllen mehr Zwischenformen die Lücke, jede ein wenig näher an die nächste.</figcaption>
+</figure>
+
+<h2 id="transform-envelope">Formverzerrung</h2>
+<p><strong>Objekt &rsaquo; Formverzerrung</strong> biegt Grafik, um in eine Form zu passen, während sie darunter bearbeitbar bleibt. Verwenden Sie es, um ein Logo an einen Banner anzupassen, eine Textzeile zu krümmen oder ein flaches Muster in eine Wölbung zu drücken. Es gibt drei Wege, eine zu machen.</p>
+<dl>
+  <dt><strong>Mit Verformung erstellen…</strong> (<kbd>⌥⇧⌘W</kbd>)</dt>
+  <dd>Biegt die Auswahl mit einer der eingebauten Verformungsstile (Bogen, Gewölbe, Wölbung, Flagge, Welle, Fisch, Anheben, Fischblase, Aufblasen, Zusammendrücken und die Schalen- und Bogenvarianten), gesteuert durch Biegen, Horizontale und Vertikale Beträge.</dd>
+  <dt><strong>Mit oberem Objekt erstellen</strong> (<kbd>⌥⌘C</kbd>)</dt>
+  <dd>Verwendet die vorderste ausgewählte Form als Hülle und gießt alles darunter in diesen Umriss. Braucht zwei oder mehr Objekte: den Container oben, die Grafik darunter.</dd>
+  <dt><strong>Mit Gitter erstellen…</strong> (<kbd>⌥⌘M</kbd>)</dt>
+  <dd>Legt ein Gitter aus den Reihen und Spalten, die Sie verlangen, über die Auswahl. Es bleibt live: Wechseln Sie zum Direktauswahl-Werkzeug (<kbd>A</kbd>) und ziehen Sie eine beliebige Kreuzung des Gitters, um zu biegen, was es hält, so oft Sie möchten.</dd>
+</dl>
+<p><strong>Freigeben</strong> gibt die Grafik zurück, wie sie war, zusammen mit der Hüllenform; <strong>Erweitern</strong> behält die Biegung und lässt die Hülle fallen, wobei verzerrte Pfade übrig bleiben.</p>
+
+<h2 id="transform-3d">3D aus einer Vektorform</h2>
+<p><strong>Effekt &rsaquo; 3D und Materialien</strong> verwandelt eine flache Form in einen Festkörper. Es bleibt ein Live-Effekt, also ist der Originalpfad noch da, um bearbeitet zu werden, und die Kopie auf dem Bildschirm baut sich neu, wenn Sie ihn ändern.</p>
+<dl>
+  <dt><strong>Extrudieren &amp; Fase</strong></dt>
+  <dd>Gibt der Form Tiefe, mit einer gefasten Kante, wenn Sie eine wollen.</dd>
+  <dt><strong>Drehen</strong></dt>
+  <dd>Dreht ein Profil um eine Achse zu einer gedrehten Form.</dd>
+  <dt><strong>Aufblasen</strong></dt>
+  <dd>Bläst die Form auf, als ob sie gefüllt wäre.</dd>
+  <dt><strong>Fläche</strong></dt>
+  <dd>Neigt die flache Form im Raum, ohne Tiefe hinzuzufügen.</dd>
+</dl>
+<p>Das 3D- und Materialien-Panel dreht das Objekt auf der X-, Y- und Z-Achse, legt die Drehung und Höhe des Lichts fest und wählt eine Kunststoff-, Matte- oder Metall-Oberfläche, mit Tiefe- und Fase-Feldern für die Extrusion.</p>
+<figure class="shot">
+  <img src="img/3d-extrude.gif" width="620" height="620" loading="lazy"
+       alt="Ein flacher Vektorstern, der in einen dreidimensionalen Stern extrudiert und gedreht wird, um seine Tiefe zu zeigen." />
+  <figcaption>Extrudieren &amp; Fase baut Tiefe aus einer flachen Form, live. Der Stern bleibt ein bearbeitbarer Pfad darunter.</figcaption>
+</figure>

@@ -1,0 +1,165 @@
+<p class="lede">Tout ce qui change où un objet se trouve, sa taille ou la direction à laquelle il fait face se trouve ici : déplacer et mettre à l'échelle à la main, transformations numériques exactes, alignement et empilement, répétitions en direct, interpolations, enveloppes et transformation d'une forme plate en solide.</p>
+
+<p>Les raccourcis ci-dessous sont écrits sous leur forme macOS. Sur Windows et Linux, lisez <kbd>⌘</kbd> comme Ctrl, <kbd>⌥</kbd> comme Alt et <kbd>⇧</kbd> comme Maj.</p>
+
+<h2 id="transform-select-move">Sélectionner et déplacer</h2>
+<p>Avant de pouvoir transformer quoi que ce soit, vous devez dire quoi. Saisissez ceux-ci d'abord : les outils de sélection décident sur quoi un glisser, une commande numérique ou un champ de panneau agira.</p>
+
+<h3 id="transform-selection-tools">Les outils de sélection</h3>
+<table>
+  <thead><tr><th>Outil</th><th>Raccourci</th><th>Ce qu'il choisit</th></tr></thead>
+  <tbody>
+    <tr><td>Outil Sélection</td><td><kbd>V</kbd></td><td>Objets et groupes entiers.</td></tr>
+    <tr><td>Outil Sélection directe</td><td><kbd>A</kbd></td><td>Points d'ancrage individuels et segments de tracé.</td></tr>
+    <tr><td>Outil Sélection de groupe</td><td></td><td>Un objet dans un groupe ; chaque clic supplémentaire s'élargit au groupe qui l'entoure.</td></tr>
+  </tbody>
+</table>
+<p><kbd>⇧</kbd>-cliquer ajoute un objet à la sélection ou le retire à nouveau. Glissez sur le canevas vide pour créer un cadre de sélection rectangulaire, et maintenez <kbd>⇧</kbd> pour ajouter tout ce que le cadre attrape à ce qui est déjà sélectionné. Double-cliquer sur un groupe avec l'outil Sélection entre à l'intérieur pour que vous puissiez travailler sur un membre sans dégrouper.</p>
+
+<h3 id="transform-moving">Déplacer une sélection</h3>
+<p>Glissez un objet sélectionné pour le déplacer. Maintenir <kbd>⌥</kbd> laisse une copie derrière et glisse celle-ci à la place, ce qui est le moyen rapide de dupliquer sur place et de repositionner en un seul mouvement. Maintenir <kbd>⇧</kbd> contraint le déplacement à des pas de 45&deg; mesurés depuis l'angle de contrainte défini dans les Préférences, et désactive l'aimantation ; sans <kbd>⇧</kbd> la sélection s'aimante aux bords, centres et angles proches. Les flèches du clavier poussent par l'incrément clavier, <kbd>⇧</kbd> avec une flèche pousse par dix fois cela, et <kbd>⌥</kbd> avec une flèche pousse une copie.</p>
+
+<h3 id="transform-bounding-box">La boîte englobante : mise à l'échelle et rotation à la main</h3>
+<p>La boîte englobante de la sélection porte huit poignées. Glissez-en une pour mettre à l'échelle : <kbd>⇧</kbd> conserve les proportions et <kbd>⌥</kbd> met à l'échelle autour du centre plutôt que de la poignée opposée. Juste à l'extérieur d'un coin, le pointeur entre dans la zone de rotation ; glissez-y pour faire pivoter la sélection autour du centre de la boîte, avec <kbd>⇧</kbd> s'alignant sur 45&deg;. Après une rotation, la boîte reste inclinée avec l'illustration. <strong>Objet &rsaquo; Transformation &rsaquo; Réinitialiser la boîte englobante</strong> la remet en carré pour que les modifications de largeur et hauteur ultérieures se lisent le long des axes de la page.</p>
+
+<h2 id="transform-numeric">Transformations numériques</h2>
+<p>Glisser est rapide mais approximatif. Lorsqu'une valeur doit être exacte, ou la même sur de nombreux objets, tapez-la. Le panneau Transformation contient les chiffres en direct pour la sélection, et le sous-menu <strong>Objet &rsaquo; Transformation</strong> contient des commandes ponctuelles avec une option Copie.</p>
+
+<h3 id="transform-panel">Le panneau Transformation</h3>
+<p>Le panneau Transformation (<kbd>⇧F8</kbd>) affiche X, Y, L et H en pixels pour la sélection ; tapez une valeur et appuyez sur Entrée pour la définir. En dessous, le champ ⟳ fait pivoter la sélection d'un angle et le champ ⧄ la cisaille d'un angle, chacun revenant à zéro une fois appliqué. Le panneau a besoin de quelque chose de sélectionné ; sans rien de choisi, il s'estompe et le dit.</p>
+<p>Le panneau Propriétés répète X, Y, L et H avec un champ de rotation et deux boutons qui retournent la sélection horizontalement ou verticalement autour de son propre centre, de sorte que les mouvements les plus courants sont à portée de main sans ouvrir un second panneau.</p>
+
+<h3 id="transform-commands">Déplacer, Rotation, Miroir, Mise à l'échelle et Cisaillement</h3>
+<p><strong>Objet &rsaquo; Transformation</strong> contient les commandes numériques. Chacune ouvre une petite boîte de dialogue, et chacune (sauf Déplacer, qui est un déplacement direct) transforme autour du point de référence. La case Copie dans chaque boîte de dialogue applique le changement à un double et laisse l'original intact, ce qui est comme construire une paire miroir ou un écho mis à l'échelle en une seule étape.</p>
+<table>
+  <thead><tr><th>Commande</th><th>Raccourci</th><th>Champs</th></tr></thead>
+  <tbody>
+    <tr><td>Déplacer…</td><td><kbd>⇧⌘M</kbd></td><td>Horizontal, Vertical, Copie.</td></tr>
+    <tr><td>Rotation…</td><td></td><td>Angle, Copie.</td></tr>
+    <tr><td>Miroir…</td><td></td><td>Axe (Horizontal ou Vertical), Angle, Copie.</td></tr>
+    <tr><td>Mise à l'échelle…</td><td></td><td>Horizontal %, Vertical %, Copie.</td></tr>
+    <tr><td>Cisaillement…</td><td></td><td>Angle de cisaillement, Angle d'axe, Copie.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="transform-each-again">Transformer chacun et Transformer à nouveau</h3>
+<p><strong>Transformer chacun…</strong> (<kbd>⌥⇧⌘D</kbd>) met à l'échelle, déplace, fait pivoter et reflète chaque objet sélectionné autour de <em>son propre</em> centre plutôt que du centre partagé de la sélection. Sa boîte de dialogue prend Mise à l'échelle H et V, Déplacer H et V, un angle de Rotation, des cases à cocher Miroir X et Miroir Y, et Copie. Utilisez-le pour bousculer ou éventail un ensemble d'objets de sorte que chacun tourne et grandisse sur place plutôt qu'en orbite autour du groupe.</p>
+<p><strong>Transformer à nouveau</strong> (<kbd>⌘D</kbd>) répète la dernière transformation sur la sélection actuelle. Déplacez un objet, puis appuyez sur <kbd>⌘D</kbd> quelques fois, et vous obtenez une rangée régulièrement espacée ; combinez-le avec <kbd>⌥</kbd>-glisser une copie pour construire des motifs répétitifs à la main.</p>
+
+<h2 id="transform-tools">Les outils de transformation et le point de référence</h2>
+<p>Les outils Rotation (<kbd>R</kbd>), Miroir (<kbd>O</kbd>), Mise à l'échelle (<kbd>S</kbd>) et Cisaillement travaillent chacun autour d'un point de référence, dessiné comme une petite mire. Il commence au centre de la sélection ; cliquez n'importe où sur le canevas pour l'y déplacer, et sélectionner autre chose le remet au nouveau centre. Puis glissez sur le canevas pour tourner, refléter, mettre à l'échelle ou incliner autour de ce point.</p>
+<p><kbd>⇧</kbd> contraint chaque outil : des pas de 45&deg; pour Rotation et Miroir, horizontal et vertical égaux pour Mise à l'échelle, un axe pour Cisaillement. Maintenir <kbd>⌥</kbd> pendant le glisser transforme une copie et laisse l'original. <kbd>⌥</kbd>-cliquer place le point de référence et ouvre la boîte de dialogue numérique de cet outil avec le point déjà défini, de sorte que vous pouvez faire pivoter une forme autour d'un coin d'un angle exact.</p>
+
+<h2 id="transform-free">L'outil Transformation libre</h2>
+<p>L'outil Transformation libre (<kbd>E</kbd>) met le déplacement, la mise à l'échelle, la rotation, le cisaillement et deux types de déformation sur une seule boîte englobante. Glissez à l'intérieur de la boîte pour la déplacer, glissez une poignée pour mettre à l'échelle, et glissez juste à l'extérieur d'un coin pour faire pivoter, avec <kbd>⇧</kbd> s'alignant sur 45&deg;. Utilisez-le lorsque vous voulez essayer plusieurs types de changement en un seul geste sans changer d'outil entre chacun.</p>
+<p>La boîte de l'outil Sélection peut aussi déformer : maintenez <kbd>Ctrl</kbd> (ou <kbd>&#8984;</kbd>) en glissant l'une de ses poignées de coin pour déplacer ce coin seul, au lieu de mettre à l'échelle. Cela fonctionne sur les formes et les photos de la même manière ; sur les pixels, un aperçu rapide suit le glisser et le résultat est calculé lorsque vous appuyez sur <kbd>Entrée</kbd>.</p>
+
+<h3 id="transform-free-widget">Le widget</h3>
+<p>Un petit widget flotte à côté de la boîte avec quatre boutons, chacun se nommant lorsque vous le survolez : <strong>Contraindre</strong>, <strong>Transformation libre</strong>, <strong>Déformation perspective</strong> et <strong>Déformation libre</strong>. Contraindre rend la mise à l'échelle proportionnelle sans maintenir <kbd>⇧</kbd> ; avec lui activé, <kbd>⇧</kbd> libère les proportions à la place. Les deux modes de déformation ne laissent que les quatre poignées de coin à tirer.</p>
+
+<h3 id="transform-free-keys">Déformer depuis le clavier</h3>
+<p>Vous pouvez atteindre les mêmes déformations sans quitter le mode par défaut. Maintenez <kbd>⌘</kbd> sur une poignée de bord pour cisailler le long de ce bord. Maintenez <kbd>⌘</kbd> sur un coin pour le déformer librement seul ; ajoutez <kbd>⇧</kbd> pour contraindre le déplacement du coin à 45&deg;. Maintenez <kbd>⌘⌥⇧</kbd> sur un coin pour la perspective, où le coin voisin reflète le glisser. Appuyer ou relâcher un modificateur en cours de glisser change l'action immédiatement, et le nom sur lequel elle se termine, Mise à l'échelle, Cisaillement, Déformation perspective ou Déformation libre, est le nom sous lequel l'étape est appelée dans le panneau Historique ensuite. Le texte, les images placées et les instances de symboles ne peuvent pas être déformés ; ils sont laissés tels quels, et Scissor vous le dit lorsqu'un glisser les ignore.</p>
+
+<h3 id="transform-free-reference">Le point de référence</h3>
+<p>Le point de référence se trouve au milieu de la boîte comme une mire, et vous pouvez le glisser n'importe où ; seul, il ne déplace rien. La boîte tourne et se met à l'échelle autour de lui, et il voyage avec l'illustration lorsque vous déplacez la sélection. Déposez-le près de l'un des neuf points de la boîte (les quatre coins, les quatre milieux de bord ou le centre) et il s'y fixe. Maintenir <kbd>⌥</kbd> pendant la mise à l'échelle ignore un point de référence placé et met à l'échelle autour du centre. Cisailler un côté avec <kbd>⌘</kbd> maintient également un point de référence placé immobile.</p>
+
+<h3 id="transform-free-pins">Déplacer les poignées</h3>
+<p>Activez <strong>Déplacer les poignées</strong> dans la barre rapide (ou la barre d'options) pendant que la Transformation libre est active, et glisser un coin de la boîte déplace ce corner seul, sans toucher l'illustration. Près d'un point d'ancrage, il s'y fixe. Désactivez Déplacer les poignées à nouveau et glissez un coin déplacé : la forme se met à l'échelle pour que ce coin suive le pointeur, et chaque autre point conserve la même distance proportionnelle à ce qui reste immobile, qui est le coin opposé, le point de référence placé, ou le centre pendant que <kbd>⌥</kbd> est maintenu. <kbd>⇧</kbd> conserve les proportions. Les coins déplacés voyagent avec l'illustration, et double-cliquer sur l'un remet les quatre sur la boîte.</p>
+
+<h2 id="transform-align-arrange">Aligner, disposer et grouper</h2>
+<p>Ces commandes définissent comment les objets s'alignent les uns avec les autres, lequel se trouve devant lequel, et lesquels sont rassemblés, verrouillés ou masqués pendant que vous travaillez sur le reste.</p>
+
+<h3 id="transform-align">Aligner et répartir</h3>
+<p>Le panneau Aligner (<kbd>⇧F7</kbd>) a trois rangées. <strong>Aligner les objets</strong> aligne la sélection à gauche, au centre ou à droite, et en haut, au milieu ou en bas. <strong>Répartir les objets</strong> répartit trois objets ou plus pour que leurs sommets, centres, bords inférieurs, bords gauches, centres ou bords droits tombent à intervalles réguliers. <strong>Répartir l'espacement</strong> définit un écart égal entre eux verticalement ou horizontalement. Le menu du panneau choisit si tout s'aligne sur la sélection ou sur le plan. L'alignement nécessite au moins un objet (un objet unique s'aligne sur le plan) ; la répartition en nécessite trois, et le panneau grise ces boutons jusqu'à ce que vous les ayez. Les six alignements apparaissent également sous <strong>Objet &rsaquo; Aligner</strong>.</p>
+
+<h3 id="transform-arrange">Disposition : ordre d'empilement</h3>
+<p>Chaque objet se trouve à un niveau dans la pile, et <strong>Objet &rsaquo; Disposer</strong> déplace la sélection à travers celui-ci.</p>
+<table>
+  <thead><tr><th>Commande</th><th>Raccourci</th></tr></thead>
+  <tbody>
+    <tr><td>Mettre au premier plan</td><td><kbd>⇧⌘]</kbd></td></tr>
+    <tr><td>Avancer</td><td><kbd>⌘]</kbd></td></tr>
+    <tr><td>Reculer</td><td><kbd>⌘[</kbd></td></tr>
+    <tr><td>Mettre en arrière-plan</td><td><kbd>⇧⌘[</kbd></td></tr>
+  </tbody>
+</table>
+
+<h3 id="transform-grouping">Grouper, verrouiller et masquer</h3>
+<dl>
+  <dt><strong>Grouper</strong> (<kbd>⌘G</kbd>) et <strong>Dégrouper</strong> (<kbd>⇧⌘G</kbd>)</dt>
+  <dd>Rassemble des objets pour qu'ils se déplacent et se transforment comme un seul, ou les libère à nouveau. Un groupe peut être entré en double-cliquant dessus avec l'outil Sélection.</dd>
+  <dt><strong>Verrouiller &rsaquo; Sélection</strong> (<kbd>⌘2</kbd>) et <strong>Tout déverrouiller</strong> (<kbd>⌥⌘2</kbd>)</dt>
+  <dd>Le verrouillage rend des objets insélectionables pour qu'ils restent en place pendant que vous travaillez par-dessus ; Tout déverrouiller libère tout ce qui était verrouillé.</dd>
+  <dt><strong>Masquer &rsaquo; Sélection</strong> (<kbd>⌘3</kbd>) et <strong>Tout afficher</strong> (<kbd>⌥⌘3</kbd>)</dt>
+  <dd>Le masquage retire des objets du canevas sans les supprimer, ce qui dégage une scène encombrée jusqu'à la partie que vous modifiez ; Tout afficher les ramène.</dd>
+</dl>
+
+<h2 id="transform-repeat">Répétitions en direct</h2>
+<p><strong>Objet &rsaquo; Répéter</strong> construit de nombreuses copies d'un objet et les maintient en direct : modifiez l'original et chaque copie suit. Utilisez une répétition lorsque l'illustration est régulière, une fleur de pétales identiques ou une grille d'icônes en mosaïque, de sorte que vous puissiez façonner un élément et laisser le reste le suivre.</p>
+<dl>
+  <dt><strong>Radiale…</strong></dt>
+  <dd>Anneau les copies autour d'un centre. La boîte de dialogue définit Instances et Rayon.</dd>
+  <dt><strong>Grille…</strong></dt>
+  <dd>Dispose les copies en rangées et colonnes. La boîte de dialogue définit Colonnes, Rangées, Espacement horizontal et Espacement vertical.</dd>
+  <dt><strong>Miroir…</strong></dt>
+  <dd>Reflète les copies à travers un axe. La boîte de dialogue définit l'axe (vertical ou horizontal) et un Décalage.</dd>
+</dl>
+<p>Avec une répétition sélectionnée, le panneau Propriétés expose les mêmes contrôles pour un réglage ultérieur : instances et rayon pour une répétition radiale ; colonnes, rangées et espacements horizontal et vertical pour une grille ; et le décalage et l'axe miroir pour un miroir. <strong>Libérer</strong> transforme les copies en illustration ordinaire, modifiable séparément, lorsque vous avez terminé.</p>
+<figure class="shot">
+  <img src="img/repeat.gif" width="640" height="640" loading="lazy"
+       alt="Un seul pétale bleu répété autour d'un centre par une répétition radiale, se remplissant en une fleur à douze pétales à mesure que le nombre augmente." />
+  <figcaption>Un pétale et une répétition radiale. À mesure que le nombre passe de un à douze, la fleur se remplit ; remodelez le pétale unique et tout change avec lui.</figcaption>
+</figure>
+
+<h2 id="transform-morph">Interpolations</h2>
+<p>Une interpolation comble l'écart entre deux objets avec une série de formes intermédiaires, chacune un pas plus proche de la suivante. C'est l'outil pour les transitions ombrées entre les couleurs et pour les répétitions régulièrement espacées le long d'un tracé.</p>
+<p>L'outil Interpolation (<kbd>W</kbd>) interpole un objet en un autre : cliquez sur le premier, puis sur le second. Cliquer sur un troisième prolonge la chaîne, et cliquer dans une interpolation existante y ajoute cet objet. <strong>Objet &rsaquo; Interpolation</strong> contient le reste :</p>
+<table>
+  <thead><tr><th>Commande</th><th>Raccourci</th><th>Ce qu'elle fait</th></tr></thead>
+  <tbody>
+    <tr><td>Créer</td><td><kbd>⌥⌘B</kbd></td><td>Interpoler les objets sélectionnés ensemble.</td></tr>
+    <tr><td>Libérer</td><td><kbd>⌥⇧⌘B</kbd></td><td>Rend les objets clés et supprime les étapes.</td></tr>
+    <tr><td>Options d'interpolation…</td><td></td><td>Définit l'espacement et l'orientation (voir ci-dessous).</td></tr>
+    <tr><td>Développer</td><td></td><td>Transforme les étapes intermédiaires en objets réels et modifiables.</td></tr>
+    <tr><td>Remplacer la colonne</td><td></td><td>Courbe la série d'étapes le long d'un tracé sélectionné.</td></tr>
+    <tr><td>Inverser la colonne</td><td></td><td>Échange l'extrémité de la colonne à laquelle se trouve chaque objet clé.</td></tr>
+    <tr><td>Inverser l'avant vers l'arrière</td><td></td><td>Inverse l'ordre d'empilement des étapes.</td></tr>
+  </tbody>
+</table>
+<p><strong>Options d'interpolation…</strong> définit Espacement sur Étapes spécifiées (un nombre fixe d'intermédiaires), Distance spécifiée (un écart fixe en pixels, remplissant autant que possible) ou Couleur lisse (autant d'étapes qu'il n'en faut pour un mélange de couleurs lisse), et définit Orientation sur Aligner sur la page ou Aligner sur le tracé. Une interpolation reste en direct et suit ses objets clés, de sorte que modifier l'une ou l'autre extrémité reflow toute la série.</p>
+<figure class="shot">
+  <img src="img/morph.gif" width="760" height="316" loading="lazy"
+       alt="Une étoile bleue s'interpolant en un cercle ambre à travers une rangée croissante de formes intermédiaires." />
+  <figcaption>Une interpolation d'une étoile à un cercle. À mesure que le nombre d'étapes augmente, plus de formes intermédiaires comblent l'écart, chacune un peu plus proche de la suivante.</figcaption>
+</figure>
+
+<h2 id="transform-envelope">Déformation de forme</h2>
+<p><strong>Objet &rsaquo; Déformation de forme</strong> courbe une illustration pour l'adapter à une forme tout en la gardant modifiable en dessous. Utilisez-la pour adapter un logo à une bannière, courber une ligne de texte, ou pousser un motif plat dans un renflement. Il y a trois façons de créer une déformation.</p>
+<dl>
+  <dt><strong>Créer avec déformation…</strong> (<kbd>⌥⇧⌘W</kbd>)</dt>
+  <dd>Courbe la sélection avec l'un des styles de déformation intégrés (Arc, Arche, Renflement, Drapeau, Vague, Poisson, Montée, Œil de poisson, Gonflage, Écrasement et les variantes coquille et arc), contrôlés par les montants Courber, Horizontal et Vertical.</dd>
+  <dt><strong>Créer avec l'objet du dessus</strong> (<kbd>⌥⌘C</kbd>)</dt>
+  <dd>Utilise la forme sélectionnée la plus en avant comme enveloppe et verse tout ce qui se trouve en dessous dans ce contour. Nécessite deux objets ou plus : le conteneur au-dessus, l'illustration en dessous.</dd>
+  <dt><strong>Créer avec maillage…</strong> (<kbd>⌥⌘M</kbd>)</dt>
+  <dd>Pose une grille des rangées et colonnes que vous demandez sur la sélection. Elle reste en direct : passez à l'outil Sélection directe (<kbd>A</kbd>) et glissez n'importe quel croisement du maillage pour courber ce qu'il contient, autant de fois que vous voulez.</dd>
+</dl>
+<p><strong>Libérer</strong> rend l'illustration telle qu'elle était, avec la forme d'enveloppe ; <strong>Développer</strong> conserve la courbe et abandonne l'enveloppe, laissant des tracés déformés.</p>
+
+<h2 id="transform-3d">3D à partir d'une forme vectorielle</h2>
+<p><strong>Effet &rsaquo; 3D et Matériaux</strong> transforme une forme plate en solide. Elle reste un effet en direct, donc le tracé d'origine est toujours là à modifier, et la copie à l'écran se reconstruit chaque fois que vous la changez.</p>
+<dl>
+  <dt><strong>Extrusion et biseau</strong></dt>
+  <dd>Donne de la profondeur à la forme, avec un bord biseauté si vous le souhaitez.</dd>
+  <dt><strong>Révolution</strong></dt>
+  <dd>Fait tourner un profil autour d'un axe en une forme de révolution.</dd>
+  <dt><strong>Gonflage</strong></dt>
+  <dd>Gonfle la forme comme si elle était remplie.</dd>
+  <dt><strong>Plan</strong></dt>
+  <dd>Incline la forme plate dans l'espace sans ajouter de profondeur.</dd>
+</dl>
+<p>Le panneau 3D et Matériaux fait pivoter l'objet sur les axes X, Y et Z, définit la rotation et la hauteur de la lumière, et choisit une surface plastique, mate ou métallique, avec des champs Profondeur et Biseau pour l'extrusion.</p>
+<figure class="shot">
+  <img src="img/3d-extrude.gif" width="620" height="620" loading="lazy"
+       alt="Une étoile vectorielle plate extrudée en une étoile tridimensionnelle et tournée pour montrer sa profondeur." />
+  <figcaption>Extrusion et biseau construit de la profondeur à partir d'une forme plate, en direct. L'étoile reste un tracé modifiable en dessous.</figcaption>
+</figure>

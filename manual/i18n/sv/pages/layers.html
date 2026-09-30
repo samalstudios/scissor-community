@@ -1,0 +1,85 @@
+<p class="lede">Lagerpanelen är kartan över ett dokument: varje lager, grupp och objekt i en lista, staplade i den ordning de sitter på sidan. Använd den för att visa och dölja, låsa, byta namn, ändra ordning och markera, och för att se med ett ögat vilket lager valfritt objekt bor på.</p>
+
+<p>Genvägarna nedan är skrivna i deras macOS-form. På Windows och Linux, läs <kbd>&#8984;</kbd> som Ctrl, <kbd>&#8997;</kbd> som Alt och <kbd>&#8679;</kbd> som Shift.</p>
+
+<h2 id="layers-panel">Lagerpanelen</h2>
+<p>Öppna den från <strong>Fönster &rsaquo; Lager</strong> (<kbd>F7</kbd>). Listan håller dina lager på översta nivån, med innehållet i varje lager kapslat under det: grupper, banor, text, bilder och pixellager, ritade som ett träd du kan öppna och stänga. En behållare (ett lager eller en grupp) bär en liten triangel till vänster om sin rad; klicka på den för att vika in behållaren eller öppna upp den. Djupa dokument förblir läsbara eftersom du kan kolla ihop de delar du inte arbetar på.</p>
+<p>Två knappar sitter längst ner i panelen. <strong>Skapa nytt lager</strong> lägger till ett tomt lager precis ovanför det som är aktivt just nu och gör det nya aktivt. <strong>Ta bort markering</strong> tar bort vad som är markerat; ett dokument behåller alltid minst ett lager, så det sista återstående lagret kan inte tas bort på detta sätt. För att byta namn på valfritt lager, grupp eller objekt, dubbelklicka på dess namn i listan, skriv, och tryck <kbd>Enter</kbd>. Att namngena delarna av ett livligt dokument är det snabbaste sättet att hålla det navigerbart.</p>
+
+<h3 id="layers-row">Vad varje rad visar</h3>
+<p>Läser en rad från vänster till höger:</p>
+<table>
+  <thead><tr><th>Del</th><th>Vad den gör</th></tr></thead>
+  <tbody>
+    <tr><td>Öga</td><td>Visar eller döljer det lagret, gruppen eller objektet. En rad med ögat av ritas inte och skrivs inte ut eller exporteras.</td></tr>
+    <tr><td>Lås</td><td>Låser eller upplåser raden. Ett låst objekt kan inte markeras eller redigeras på duken.</td></tr>
+    <tr><td>Färgplatta</td><td>Bara på lager-rader: lagrets färgetikett, används för att tonade det lagrets markeringsmärken och markeringar.</td></tr>
+    <tr><td>Triangel</td><td>Bara på behållare: öppnar eller stänger lagret eller gruppen för att visa vad som finns inne.</td></tr>
+    <tr><td>Typikon</td><td>Markerar grupper och beskärningsgrupper (en beskärningsgrupp ritas med en streckad kontur).</td></tr>
+    <tr><td>Namn</td><td>Namnet, eller en platshållare i vinkelparenteser såsom <code>&lt;Bana&gt;</code> eller <code>&lt;Grupp&gt;</code> när en sak är namnlös. Dubbelklicka för att byta namn.</td></tr>
+    <tr><td>Markeringskvadrat</td><td>Längst till höger: en liten kvadrat i lagrets färg som visas på varje rad som innehåller en del av den aktuella markeringen.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="layers-groups">Lager och grupper</h2>
+<p>Lager är dokumentets översta lådor. De finns för att hålla orelaterade delar av konstverket isär: en bakgrund på ett lager, huvudritningen på ett annat, etiketter på ett tredje. Eftersom ett lager sitter i roten av trädet, flyttar att dölja, låsa eller ändra ordning på det allt det håller i ett steg.</p>
+<p>En grupp är en mindre behållare som bor inne i ett lager (eller inne i en annan grupp) och reser med konstverket. Gruppering är hur du binder delarna av en sak ihop, bitarna i en logotyp eller en ikon, så att de flyttar, skalar och staplas som en enhet. Grupper öppnas och stängs i panelen med sin egen triangel, precis som lager gör.</p>
+<p>Lager och grupper beter sig lika på ett viktigt sätt: var och en kan visas eller döljas, låsas eller upplåsas, och var och en kan bära sin egen opacitet och blandningsläge som gäller allt inne i den. Skillnaden är en av roll. Lager organiserar hela dokumentet; grupper binder enskilda objekt.</p>
+
+<h3 id="layers-grouping">Gruppera och dela upp</h3>
+<p>Markera två eller fler objekt och välj <strong>Objekt &rsaquo; Gruppera</strong> (<kbd>&#8984;G</kbd>) för att samla dem i en grupp. <strong>Objekt &rsaquo; Dela upp</strong> (<kbd>&#8679;&#8984;G</kbd>) tar objekten i en markerad grupp tillbaka ut igen. Grupper kan kapslas, så en grupp av grupper är bra; varje <kbd>&#8679;&#8984;G</kbd> skalar av ett lager. Nå efter en grupp när du finner dig själv att markera samma handfull objekt om och om igen.</p>
+
+<h2 id="layers-stacking">Staplingsordning: fram och bak</h2>
+<p>Objekt ritas bakifrån och fram, så ett objekt närmare fram täcker de bakom det där de överlappar. Panelen visar denna ordning direkt: den översta raden är det främsta objektet, och den nedersta raden är det längst bak. Att ändra ordning på ett objekt ändrar vad som täcker vad.</p>
+<p>Det snabbaste sättet att ändra ordning är att dra: ta tag i en rad och släpp den högre eller lägre i listan för att flytta den genom stapeln, eller släpp den på ett lager eller en grupp för att flytta objektet <em>in i</em> den. Att dra är också hur du flyttar ett markerat objekt till ett annat lager – utan klipp ut och klistra in.</p>
+<p>Flytta en markering genom stapeln med <strong>Objekt &rsaquo; Ordna</strong>:</p>
+<table>
+  <thead><tr><th>Kommando</th><th>Genväg</th><th>Effekt</th></tr></thead>
+  <tbody>
+    <tr><td>Placera överst</td><td><kbd>&#8679;&#8984;]</kbd></td><td>Helt till framsidan av sitt lager.</td></tr>
+    <tr><td>Placera framåt</td><td><kbd>&#8984;]</kbd></td><td>Ett steg mot framsidan.</td></tr>
+    <tr><td>Placera bakåt</td><td><kbd>&#8984;[</kbd></td><td>Ett steg mot baksidan.</td></tr>
+    <tr><td>Placera nederst</td><td><kbd>&#8679;&#8984;[</kbd></td><td>Helt till baksidan av sitt lager.</td></tr>
+  </tbody>
+</table>
+<p>Använd dessa när en form du behöver är dold bakom en annan, eller när en bakgrund har hamnat ovanpå ritningen. För att arbeta genom objekt som sitter ett ovanpå det andra, stegar <strong>Markera &rsaquo; Nästa objekt ovanför</strong> (<kbd>&#8997;&#8984;]</kbd>) och <strong>Nästa objekt nedanför</strong> (<kbd>&#8997;&#8984;[</kbd>) markeringen upp och ner i stapeln, vilket är praktiskt för att nå något begravt under annat konstverk.</p>
+
+<h2 id="layers-visibility">Visa och dölja</h2>
+<p>Klicka på ögat på valfri rad för att dölja det lagret, gruppen eller objektet; klicka igen för att få tillbaka det. En dold rad tar ingen del i ritning, utskrift eller export, så att dölja är det säkra sättet att få något ur vägen utan att ta bort det. Använd det för att jämföra två versioner av en detalj, eller för att rensa en trång duk ner till den del du arbetar på.</p>
+<p>Menyn erbjuder samma för den aktuella markeringen: <strong>Objekt &rsaquo; Dölja &rsaquo; Markering</strong> (<kbd>&#8984;3</kbd>) döljer vad som är markerat, och <strong>Objekt &rsaquo; Visa alla</strong> (<kbd>&#8997;&#8984;3</kbd>) avslöjar allt som var dolt.</p>
+
+<h2 id="layers-locking">Låsa</h2>
+<p>Klicka på låset på en rad för att låsa den. Ett låst objekt förblir synligt men kan inte markeras eller ändras på duken, så det är ur skadans väg medan du arbetar runt det. Att låsa ett lager skyddar allt på det på en gång. Lås bakgrunden medan du ritar över den, eller lås ett färdigt element så att en slumpmässig dragning inte kan flytta det.</p>
+<p>Från menyn, <strong>Objekt &rsaquo; Lås &rsaquo; Markering</strong> (<kbd>&#8984;2</kbd>) låser vad som är markerat, och <strong>Objekt &rsaquo; Lås upp alla</strong> (<kbd>&#8997;&#8984;2</kbd>) frigör allt igen. Att låsa ett markerat objekt släpper också det ur markeringen, eftersom en låst sak inte längre är något du kan verka på.</p>
+
+<h2 id="layers-selecting">Markera och det aktiva lagret</h2>
+<p>Klicka på en objekts rad i panelen för att markera det objektet på duken. Håll ned <kbd>&#8679;</kbd>, <kbd>&#8984;</kbd> eller <kbd>Ctrl</kbd> medan du klickar för att lägga till ett annat objekt i markeringen, så att du kan bygga upp en markering från listan utan att jaga små former på sidan.</p>
+<p>Att klicka på en <em>lager</em>-rad gör något annat: det gör det lagret till det aktiva lagret, markerat med en färgad stapel nedtill dess vänstra kant. Nytt konstverk du ritar, placerar eller klistrar in läggs till i det aktiva lagret, så att klicka på ett lager innan du börjar bestämmer var det arbetet landar. Att skapa ett nytt lager gör det aktivt direkt.</p>
+<p>Markeringskvadraten till höger om varje rad binder panelen till duken. Den visas, i lagrets färg, på varje rad som innehåller en del av den aktuella markeringen, och den är fylld på de exakta objekten som är markerade. Eftersom märket reser upp i trädet, visar en nedåtblick i listan både vad som är markerat och vilka lager och grupper de objekten sitter i.</p>
+
+<h2 id="layers-colours">Färgetiketter</h2>
+<p>Varje lager får en färg från en fast sekvens (ljusblått, rött, grönt, blått, gult och så vidare, tolv totalt, och cyklar när du lägger till fler lager). Den färgen är lagrets etikett. Den visas som plattan bredvid lagrets namn, och den tonar markeringsmärkena i panelen tillsammans med markeringsmarkeringarna och avgränsningsramen som ritas på duken för objekt på det lagret. Poängen är snabb identifiering: när du markerar något och dess ram kommer upp grönt, vet du genast att det tillhör det gröna lagret. Att sprida ett dokument över några väl namngivna, olikfärgade lager gör det mycket lättare att hålla reda på var allt finns.</p>
+
+<h2 id="layers-masks">Beskärnings- och opacitetsmasker</h2>
+<p>Ett lager eller en grupp kan bära sin egen opacitet och blandningsläge, båda ställda in i <strong>Transparens</strong>-panelen (<strong>Fönster &rsaquo; Transparens</strong>, <kbd>&#8679;&#8984;F10</kbd>). Samma panel innehåller <strong>Begränsa blandning till grupp</strong>, som håller en grupps blandningslägen blandande bara med varandra snarre än med vad som ligger under, och <strong>Knockout-grupp</strong>, där varje objekt i gruppen döljer de under det istället för att synas igenom dem. Masker går ett steg längre och låter ett objekt styra var, eller hur starkt, annat konstverk syns.</p>
+
+<h3 id="layers-clip">Beskärningsmasker</h3>
+<p>En beskärningsmask beskär konstverk till en form. Markera två eller fler objekt och välj <strong>Objekt &rsaquo; Beskärningsmask &rsaquo; Skapa</strong> (<kbd>&#8984;7</kbd>). Det översta markerade objektet blir beskärningsbanan, och allt under det visas bara inne i den formen; resten beskärs bort. Resultatet är en beskärningsgrupp, ritad i panelen med en streckad ikon. <strong>Frigör</strong> (<kbd>&#8997;&#8984;7</kbd>) ångrar det och ger objekten tillbaka. Nå efter detta för att beskära ett foto eller ett mönster till en cirkel, en bokstav, eller valfri kontur du ritar överst.</p>
+
+<h3 id="layers-opacity-mask">Opacitetsmasker</h3>
+<p>En opacitetsmask tonar ut konstverk enligt ljusheten i ett annat objekt. Markera två eller fler objekt och välj <strong>Objekt &rsaquo; Beskärningsmask &rsaquo; Gör opacitetsmask</strong>, eller använd <strong>Gör mask</strong> i transparenspanelen. Det översta objektet blir masken: där det är ljus syns konstverket under i fullt, där det är mörkt tonar konstverket ut till ingenting, med gråtonerna däremellan gerande partiell transparens. <strong>Frigör opacitetsmask</strong> tar isär den igen. Använd en vit-till-svart gradient som mask för att tona ut en bild mot en kant, eller för att bygga de mjuka vignetter och övergångar som en enda platt opacitetsvärde inte kan ge.</p>
+
+<h2 id="layers-organising">Organisera ett dokument</h2>
+<p>Lite struktur tidigt spar mycket jakt senare. Några vanor som sig av:</p>
+<dl>
+  <dt>Ett lager per angelägenhet</dt>
+  <dd>Håll bakgrunden, huvudkonstverket och texten på separata, namngivna lager. Du kan sedan dölja, låsa eller ändra ordning på en hel del av ritningen på ett enda klick.</dd>
+  <dt>Lås det du inte rör</dt>
+  <dd>Lås lagren runt det du arbetar på så att ett slumpmässigt klick eller en dragning inte kan störa dem, och lås upp dem igen med <kbd>&#8997;&#8984;2</kbd> när du behöver det.</dd>
+  <dt>Gruppera de saker som rör sig tillsammans</dt>
+  <dd>Bind delarna av ett enda element i en grupp så att det beter sig som ett objekt, och reservera lager för de större indelningarna av dokumentet.</dd>
+  <dt>Ställ in det aktiva lagret innan du ritar</dt>
+  <dd>Klicka på det lager du vill lägga till i först, så att nytt konstverk landerar på rätt plats snarre än ovanpå vad som fanns där.</dd>
+  <dt>Låt färgerna guida dig</dt>
+  <dd>Lita på lagrens färger: när en markeringar markering matchar en lagerplatta, vet du exakt var det objektet bor utan att öppna en sak.</dd>
+</dl>

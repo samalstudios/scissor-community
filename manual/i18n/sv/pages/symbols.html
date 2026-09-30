@@ -1,0 +1,91 @@
+<p class="lede">Symboler, penslar och mönster är tre sätt att rita ett konstverk en gång och återanvända det. Ändra originalet och varje användning av det ändras med det, så att ett upprepat element förblir konsekvent och förblir snabbt att uppdatera.</p>
+
+<p>Genvägarna nedan är skrivna i deras macOS-form. På Windows, läs <kbd>&#8984;</kbd> som <kbd>Ctrl</kbd>, <kbd>&#8997;</kbd> som <kbd>Alt</kbd> och <kbd>&#8679;</kbd> som <kbd>Shift</kbd>.</p>
+
+<h2 id="symbols-panel">Symbolpanelen</h2>
+<p>En symbol är ett sparat konstverk som du kan släppa in i dokumentet valfritt många gånger. Varje kopia är en <em>instans</em>: den pekar tillbaka till den enda definitionen snarre än att hålla sitt eget konstverk, så att dokumentet förblir litet oavsett hur många instanser du placerar, och en ändring av definitionen når alla dem på en gång. Nå efter symboler när samma element återkommer, såsom ett träd i ett landskap, en nål på en karta, en bult i en monteringsritning, eller en logotyp som visas på flera artboards.</p>
+<p>Öppna panelen med <strong>Fönster &gt; Symboler</strong> (<kbd>&#8679;&#8984;F11</kbd>), eller från sin flik i paneldockan. Den listar symbolerna i dokumentet efter namn. Att klicka på ett namn markerar den som den aktiva symbolen, vilken är den som symbolspridningen lägger ner; den aktiva symbolen är markerad.</p>
+
+<h3 id="symbols-make">Skapa en symbol</h3>
+<p>Markera konstverket du vill återanvända och klicka på <strong>Ny symbol</strong>. Markeringen sparas som symbolens definition och, på dess plats på duken, ersätts av en enda instans som sitter exakt där konstverket var. Definitionen hålls undan, så att den inte tränger duken eller de vanliga lagren. Om du inte namnger något kallas symbolen <code>Symbol 1</code>, <code>Symbol 2</code> och så vidare, i den ordning du gör dem.</p>
+
+<h3 id="symbols-place">Placera instanser</h3>
+<p>Dubbelklicka på en symbol i panelen för att släppa en ny instans i mitten av den aktuella vyn. Placera så många du behöver. En instans beter sig som valfritt annat objekt när den väl är på duken: markera den och du kan flytta, skala, rotera eller spegla den, och ställa in dess opacitet och blandning, allt utan att röra definitionen, eftersom dessa ändringar åker på instansen själv. Använd detta för att variera storlek och vinkel på upprepta bitar medan du håller dem bundna till samma original.</p>
+
+<h3 id="symbols-edit">Redigera en symbol</h3>
+<p>Dubbelklicka på en instans på duken med markeringsverktyget (<kbd>V</kbd>) för att stega in i definitionen. Allt annat på sidan nedtonas, och du redigerar konstverket på egen hand. Dubbelklicka på en tom del av duken för att stega tillbaka ut. Eftersom varje instans ritar samma definition visas den redigering du gör i alla dem tillsammans. Det är poängen med en symbol: korrigera konstverket en gång och hela dokumentet kommer ikapp, snarre än att jaga varje kopia.</p>
+
+<h3 id="symbols-break">Bryta länken</h3>
+<p>När en instans behöver skilja sig från resten på ett sätt som går bortom position, storlek eller opacitet, markera den och klicka på <strong>Bryt länk</strong>. Instansen ersätts av en vanlig, redigerbar kopia av definitionen, i samma storlek och vinkel, inte längre bunden till symbolen. Ändringar av symbolen når den inte längre. Knappen är tillgänglig bara medan en symbolinstans är markerad.</p>
+<p>För att ta bort en symbol helt, håll ned <kbd>&#8997;</kbd> och klicka på dess namn i panelen. Dess definition och varje instans av den tas bort, eftersom en instans utan definition skulle rita ingenting.</p>
+
+<h2 id="symbols-symbolism">Symbolverktygen</h2>
+<p>Symbolverktygen sprider och justerar symbolinstanser i knippen, under en rund pensel, snarre än en i taget. De delar en plats i verktygsraden; håll platsen för att välja bland dem. De verkar på instanserna inne i markeringen, eller på varje redigerbar instans i dokumentet när inget är markerat, så att du kan styra ett helt fält av symboler på en gång. Håll ned <kbd>&#8997;</kbd> för att växla effekten av valfri av dem.</p>
+<p>Medan ett symbolverktyg är aktivt gör <kbd>[</kbd> och <kbd>]</kbd> penseln mindre och större, och <kbd>{</kbd> och <kbd>}</kbd> sänker och höjer dess intensitet (hur hårt varje pass verkar).</p>
+<table>
+<thead><tr><th>Verktyg</th><th>Genväg</th><th>Vad det gör</th></tr></thead>
+<tbody>
+<tr><td>Symbolspridning</td><td><kbd>&#8679;S</kbd></td><td>Dra för att lägga ner instanser av den aktiva symbolen, fördelade som du rör dig; instanserna samlas i en <strong>Symboluppsättnings</strong>grupp. Håll ned <kbd>&#8997;</kbd> för att lyfta instanser tillbaka ut under penseln</td></tr>
+<tr><td>Symbolskjutning</td><td></td><td>Skjuter instanser i den riktning du drar, så att du kan städa en spridning utan att flytta varje bit</td></tr>
+<tr><td>Symbolpackning</td><td></td><td>Drar ihop instanser mot penseln; <kbd>&#8997;</kbd> sprider isär dem</td></tr>
+<tr><td>Symbolskalning</td><td></td><td>Ökar instanser under penseln; <kbd>&#8997;</kbd> minskar dem</td></tr>
+<tr><td>Symbolvridning</td><td></td><td>Vrider instanser för att följa riktningen på din dragning</td></tr>
+<tr><td>Symboltoning</td><td></td><td>Tonerar instanser mot den aktuella fyllningsfärgen, för variation över en grupp; <kbd>&#8997;</kbd> tar bort toningen</td></tr>
+<tr><td>Symboltoningsborttagning</td><td></td><td>Tonerar bort instanser genom att sänka deras opacitet; <kbd>&#8997;</kbd> får tillbaka dem</td></tr>
+<tr><td>Symbolomformning</td><td></td><td>Tillämpar den grafiska stil som valts i grafikstilspanelen på instanser; <kbd>&#8997;</kbd> rensar den</td></tr>
+</tbody>
+</table>
+<p>Tre verktyg behöver något ställt in först. Symbolspridning behöver en symbol att spreja, så gör en i symbolpanelen innan du börjar. Symbolomformning tillämpar vilken grafisk stil som valts i grafikstilspanelen, så välj en stil där först; Symboltoning använder likaså den aktuella fyllningsfärgen, så ställ in fyllningen innan du tonerar.</p>
+
+<h2 id="symbols-brushes">Penselspanelen</h2>
+<p>En pensel bestämmer hur en strök ritas längs en bana. Istället för en vanlig linje av jämn bredd kan banan bära en penna-strök, ett spår av spritt konstverk, en form sträckt ände till ände, eller ett klistrat band. Banan förblir fullt redigerbar under: omforma den och den penselströken följer. Öppna panelen med <strong>Fönster &gt; Penslar</strong> (<kbd>F5</kbd>), eller från sin flik i paneldockan. Varje pensel visar en liten förhandsvisning bredvid sitt namn.</p>
+
+<h3 id="symbols-brush-kinds">Penseltyper</h3>
+<p>Scissor har fem sorters penslar. Två ritas från några få siffror, och tre byggs från konstverk du markerar.</p>
+<dl>
+  <dt>Kalligrafisk</dt>
+  <dd>En vinklad, oval stift som tjocknar och tunna när banan vänder, som en bred penna. Ställ in dess vinkel, dess rundhet och dess storlek i punkter. Använd den för bokstavsströkar, signaturer och alla linjer menade att se handritade ut.</dd>
+  <dt>Borst</dt>
+  <dd>Ett klustra av fina strökar som lässe som en laddad pensel. Ställ in storleken i punkter, antalet borst och målningsopaciteten så att överlappande pass byggs upp. Nå efter den när du vill ha en mjuk, målarkant snarre än en ren.</dd>
+  <dt>Sprid</dt>
+  <dd>Strö kopior av markerat konstverk längs banan. Ställ in storleken på kopiorna, avståndet mellan dem, hur långt de sprider från linjen, och deras rotation, med alternativ för att rotera varje kopia i förhållande till banan och omfärglägga den med konturfärgen. Använd den för konfetter, löv, stjärnor eller bubblor som följer en kurva.</dd>
+  <dt>Konst</dt>
+  <dd>Sträcker ett markerat konstverk längs hela banans längd. Ställ in dess bredd, med ett alternativ för att omfärglägga den med konturfärgen. Använd den för en avsmalnande bläckströk, ett band, en pil eller ett grovt kolstreck som böjer med linjen.</dd>
+  <dt>Mönster</dt>
+  <dd>Klistrar markerat konstverk ände till ände längs banan, som en dekorativ kant. Ställ in skalan och avståndet, med ett alternativ för att omfärglägga den med konturfärgen. Använd den för kedja, rep, sömmar eller en upprepad ram.</dd>
+</dl>
+
+<h3 id="symbols-brush-apply">Tillämpa och ta bort en pensel</h3>
+<p>Markera en eller fler banor och klicka på en pensel för att rita deras strökar med den. En bana uten synlig kontur får en så att penseln har en linje att löpa längs. Målpenselverktyget (<kbd>B</kbd>) ritar nya strökar med vilken pensel som är vald just nu, så välj en pensel och måla direkt på duken. För att ta bort en pensel från de markerade strökarna och återföra dem till vanliga linjer, klicka på <strong>Ta bort pensel</strong>.</p>
+
+<h3 id="symbols-brush-manage">Skapa, redigera och ta bort penslar</h3>
+<p>Klicka på <strong>Ny pensel&hellip;</strong>, välj en av de fem sorterna, och ställ in dess alternativ. För en spridnings-, konst- eller mönsterpensel, markera konstverket den ska använda innan du öppnar dialogrutan, eftersom det konstverket blir penseln. För att ändra en pensel senare, markera den och klicka på <strong>Alternativ&hellip;</strong> (eller dubbelklicka på den i listan); valfri strök som använder den ritar om med de nya inställningarna. <strong>Ta bort</strong> tar bort den markerade penseln, efter att ha frågat; strökar som använde den går tillbaka till vanliga linjer.</p>
+
+<h2 id="symbols-patterns">Mönsterpanelen</h2>
+<p>Ett mönster är en platta av konstverk som upprepas för att fylla en form. Definiera plattan en gång och du kan hälla den i valfritt objekt som en fyllning, så att en textur eller ett motiv förblir enhetligt över konstverket och uppdateras överallt när du redigerar plattan. Panelen sitter i paneldockan, och samma kommandon finns under <strong>Objekt &gt; Mönster</strong>.</p>
+
+<h3 id="symbols-pattern-make">Skapa ett mönster</h3>
+<p>Markera konstverket för en platta och klicka på <strong>Skapa mönster</strong> (eller <strong>Objekt &gt; Mönster &gt; Skapa</strong>). En kopia av konstverket sparas som en upprepad platta och läggs till i panelen; konstverket du ritade stannar där det är. Mönster namnges <code>Mönster 1</code>, <code>Mönster 2</code> och så vidare allt eftersom du gör dem.</p>
+
+<h3 id="symbols-pattern-fill">Fylla med ett mönster</h3>
+<p>Markera en form och klicka på ett mönster i panelen för att ställa in det som formens fyllning. Utan något markerat gör att klicka på ett mönster det till fyllningsfärgen för nästa form du ritar. Eftersom det är en fyllning upprepas mönstret för att täcka formen och beskärs till dess kontur. Använd detta för bakgrunder, tyger, lövverk, eller alla ytor som ska lässe som en upprepning snarre än en fast färg. För att ta bort ett mönster från dokumentet, håll ned <kbd>&#8997;</kbd> och klicka på det i panelen; former som var fyllda med det faller tillbaka till ingen fyllning.</p>
+
+<h3 id="symbols-pattern-edit">Redigera plattan</h3>
+<p>Dubbelklicka på ett mönster i panelen för att redigera dess platta. Resten av konstverket nedtonas och du arbetar på plattan på egen hand, med en <strong>Slutför redigering</strong>-knapp i panelen; klicka på den (eller använd <strong>Objekt &gt; Mönster &gt; Redigera mönster</strong> igen) när du är färdig. Varje form fylld med mönstret uppdateras för att matcha. Du kan också börja redigera genom att markera en form som är fylld med ett mönster och välja <strong>Redigera mönster</strong>.</p>
+
+<h3 id="symbols-pattern-options">Plattalternativ</h3>
+<p>Klicka på plattalternativknappen bredvid ett mönster (eller <strong>Objekt &gt; Mönster &gt; Plattalternativ&hellip;</strong>) för att styra hur plattan upprepas. Dessa inställningar ändrar layouten av upprepningen utan att ändra konstverket i plattan.</p>
+<dl>
+  <dt>Plattatyp</dt>
+  <dd>Hur rader och kolumner linjerar upp: Rutnät, Tegel efter rad, Tegel efter kolumn, Hex efter kolumn eller Hex efter rad. Tegel förskjuter alternerande rader eller kolumner som tegelverk; hex packar plattorna i ett vaxkaksmönster.</dd>
+  <dt>Tegelförskjutning</dt>
+  <dd>För tegeltyperna, hur långt varje alternerande rad eller kolumn förskjuts, som en procent av plattan.</dd>
+  <dt>Storlek platta efter konstverk</dt>
+  <dd>Passar plattan till konstverkets gränser. Stäng av den för att ställa in plattans bredd och höjd själv.</dd>
+  <dt>Bredd och höjd</dt>
+  <dd>Plattans storlek i pixlar, används när plattan inte storleksanpassas efter konstverket.</dd>
+  <dt>Horisontellt och vertikalt avstånd</dt>
+  <dd>Gap som lämnas mellan plattor, i pixlar. Positiva värden fördelar motivet; negativa värden överlappar plattorna.</dd>
+  <dt>Flytta platta med konstverk</dt>
+  <dd>Håller platten i linje med konstverket när det flyttar, så att upprepningen reser med objektet.</dd>
+</dl>

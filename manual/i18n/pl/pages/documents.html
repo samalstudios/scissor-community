@@ -1,0 +1,78 @@
+<p class="lede">Dokument to to, co otwierasz, w nim rysujesz i zapisujesz. Każdy dokument zawiera jedną lub więcej plansz: prostokąty, które wyznaczają grafikę, która jest drukowana lub eksportowana. Ta strona obejmuje tworzenie dokumentu i ustawianie jego rozmiaru, zmianę tej konfiguracji później oraz pracę z planszami, od pojedynczej strony do zestawu w jednym pliku. W skrótach poniżej <kbd>&#8984;</kbd> to <kbd>Ctrl</kbd> w systemach Windows i Linux, a <kbd>&#8997;</kbd> to <kbd>Alt</kbd>.</p>
+
+<h2 id="documents-new">Tworzenie nowego dokumentu</h2>
+<p><strong>Plik &rsaquo; Nowy&hellip;</strong> (<kbd>&#8997;&#8984;N</kbd>) otwiera okno dialogowe Nowy dokument. Lewa strona okna to półka gotowych presetów; prawa, pod <strong>Szczegóły presetu</strong>, to miejsce, w którym nazywasz dokument i ustawiasz jego dokładny rozmiar, jednostki, orientację, liczbę plansz, spad i obsługę kolorów. Wybierz preset, aby wypełnić te pola, dostosuj wszystko, co chcesz, a następnie naciśnij <strong>Utwórz</strong>. <strong>Zamknij</strong> pozostawia bez tworzenia dokumentu.</p>
+
+<figure class="shot">
+  <img src="img/new-document.png" width="1500" height="928" loading="lazy"
+       alt="Okno dialogowe Nowy dokument: karty i karty presetów po lewej oraz Szczegóły presetu po prawej z polami nazwy, rozmiaru, jednostek, orientacji, planszy, spadu i koloru." />
+  <figcaption>Okno dialogowe Nowy dokument. Karty presetów po lewej wypełniają rozmiar; panel Szczegóły presetu po prawej to miejsce, w którym ustawiasz dokładną szerokość, wysokość, jednostki, liczbę plansz i spad przed naciśnięciem Utwórz.</figcaption>
+</figure>
+
+<h3 id="documents-presets">Puste presety dokumentów</h3>
+<p>Karty u góry grupują presety według rodzaju pracy, do której pasują. Kliknij kartę, aby pokazać jej karty, a następnie kliknij kartę, aby wczytać jej rozmiar, jednostki i (dla druku) jej spad. Dwuklik karty tworzy dokument od razu.</p>
+<table>
+  <thead><tr><th>Grupa</th><th>Co zawiera</th></tr></thead>
+  <tbody>
+    <tr><td>Druk</td><td>Letter, Legal, Tabloid, A3, A4, A5 i Wizytówka, w calach lub milimetrach, każda z ustawionym standardowym spadem druku.</td></tr>
+    <tr><td>Web</td><td>Typowe rozmiary ekranu i pulpitu w pikselach: 1366 &times; 768, Full HD (1920 &times; 1080), rozmiar laptopa, duży rozmiar webowy oraz kwadratowe i wysokie rozmiary społecznościowe (1080 &times; 1080 i 1080 &times; 1920).</td></tr>
+    <tr><td>Mobile</td><td>Rozmiary telefonu, dużego telefonu, tabletu, dużego tabletu i zegarka w pikselach, do pracy nad interfejsem.</td></tr>
+    <tr><td>Film &amp; Wideo</td><td>Rozmiary klatek HDTV 1080p, HD 720p, UHD 4K i Cinema 2K.</td></tr>
+    <tr><td>Sztuka &amp; Ilustracja</td><td>Plakat, Pocztówka, płótno 1000 &times; 1000, ikona 512 &times; 512 i kwadratowa strona szkicownika.</td></tr>
+  </tbody>
+</table>
+<p>Presety to tylko punkt wyjścia. Nic nie przeszkadza wpisać rozmiaru, którego żaden preset nie wymienia; pozostawienie pól tak, jak je ustawiłeś, po prostu oznacza, że żadna karta nie pozostaje podświetlona.</p>
+
+<h3 id="documents-size">Nazwa, rozmiar, jednostki i orientacja</h3>
+<p>Pole <strong>Nazwa</strong> ustala, jak dokument nazywa się na swojej karcie i w nazwach eksportowanych plików. Pod nim <strong>W</strong> i <strong>H</strong> to szerokość i wysokość planszy. Menu <strong>Jednostki</strong> wybiera, jak te i inne pomiary są odczytywane: piksele, punkty, milimetry, centymetry, cale lub piki. Zmiana jednostek przelicza liczby już w polach, a nie czyści je, więc przejście z milimetrów na cale zachowuje ten sam rzeczywisty rozmiar.</p>
+<p>Dwa przyciski orientacji, pionowa i pozioma, obracają rozmiar na bok. Naciśnięcie tego, który nie pasuje do bieżącej szerokości i wysokości, zamienia je; wpisanie nowej szerokości i wysokości, które odwracają kształt, przełącza znacznik orientacji na pasujący. Użyj tego, aby ułożyć, powiedzmy, stronę A4 pionowo lub poziomo bez przepisywania liczb.</p>
+
+<h3 id="documents-boards-columns">Plansze, kolumny i odstępy</h3>
+<p>Dokument może zaczynać się z więcej niż jedną planszą. <strong>Plansze</strong> ustala, ile ich utworzyć, wszystkie tego samego rozmiaru. <strong>Kolumny</strong> ustala, ile z nich siedzi obok siebie przed rozpoczęciem następnego rzędu, a <strong>Odstępy</strong> to przerwa pozostawiana między nimi. Cztery plansze z dwiema kolumnami tworzą blok dwa na dwa; te same cztery z jedną kolumną tworzą pojedynczy stos. Każda plansza nazywa się <em>Plansza 1</em>, <em>Plansza 2</em> i tak dalej, a możesz je później przemianować i przebudować.</p>
+<p>Tak zaczynasz pracę, która jest w rzeczywistości wieloma stronami lub wieloma rozmiarami naraz: sześciostronicowa broszura lub jeden plik, który niesie wersję telefonu, tabletu i pulpitu tego samego ekranu, aby pozostały razem i eksportowały się w jednym przebiegu.</p>
+
+<h3 id="documents-bleed">Spad</h3>
+<p>Spad to dodatkowy margines wokół planszy, przeznaczony do druku: grafika biegnąca do krawędzi jest rysowana w spadzie, aby po obcięciu papieru nie pozostała biała smużka wzdłuż cięcia. Cztery pola ustawiają spad góry, dołu, lewej i prawej strony osobno. Przycisk łącza między nimi, domyślnie włączony, utrzymuje wszystkie cztery równe, więc wpisanie jednej wartości wypełnia pozostałe; wyłącz go, aby ustawić inny spad po każdej stronie. Presety druku mają spad już wypełniony; praca ekranowa i wideo zwykle nie potrzebuje żadnego, więc zostaw go na zerze.</p>
+
+<h3 id="documents-advanced">Zaawansowane: tryb koloru i efekty rastrowe</h3>
+<p>Pod <strong>Zaawansowane</strong> znajdują się dwa wybory, które ustalają charakter dokumentu. Tryb koloru to RGB, dla wszystkiego, co jest pokazywane na ekranie, lub CMYK, dla pracy kierowanej do komercyjnej drukarni. <strong>Efekty rastrowe</strong> ustala rozdzielczość, w której renderowane są efekty, które muszą stać się pikselami, takie jak cień, rozmycie lub poświata: Ekran (72 ppi) do pracy ekranowej, Średnia (150 ppi) lub Wysoka (300 ppi) do druku. Ustaw to tak, aby pasowało do miejsca, w którym grafika trafi, aby te efekty nie były ani zbyt gruboziarniste, ani niepotrzebnie ciężkie.</p>
+
+<h2 id="documents-setup">Zmiana konfiguracji później</h2>
+<p>Żaden z tych wyborów nie jest zablokowany przy tworzeniu. <strong>Plik &rsaquo; Ustawienia dokumentu&hellip;</strong> (<kbd>&#8997;&#8984;P</kbd>) ponownie otwiera główne ustawienia dokumentu, w którym jesteś: jednostki, tryb koloru, szerokość i wysokość aktywnej planszy, pojedyncza wartość spadu stosowana do wszystkich czterech stron oraz rozdzielczość efektów rastrowych. Użyj tego, gdy praca zmienia kształt w trakcie, na przykład gdy makietę ekranową trzeba przenieść do druku i przełączyć ją na CMYK, gdy plansza okazuje się miały zły rozmiar. Aby dodać plansze, zmienić rozmiar pojedynczych plansz lub ustawić różne spady po stronach po fakcie, użyj narzędzi planszy opisanych poniżej, a nie tego okna dialogowego.</p>
+
+<h2 id="documents-boards">Plansze</h2>
+<p>Plansza (artbled) to prostokąt, który definiuje gotowy element: jego krawędzie są tym, do czego druk lub eksport przycina. Wszystko, co rysujesz, mieszka na wspólnym płótnie, ale tylko to, co siedzi na planszy, jest wypisywane. Dokument zawsze ma co najmniej jedną planszę i może mieć ich tyle, ile potrzebuje praca. Kilka plansz w jednym pliku to sposób na trzymanie powiązanych elementów razem: strony broszury, plakat i jego wersje społecznościowe lub cały zestaw ikon, wszystkie dzielące te same kolory, style i symbole.</p>
+
+<h3 id="documents-board-tool">Narzędzie Plansza</h3>
+<p>Narzędzie Plansza (<kbd>&#8679;O</kbd>) edytuje plansze bezpośrednio na płótnie, tak jak narzędzie zaznaczania edytuje grafikę. Z nim aktywnym:</p>
+<dl>
+  <dt>Dodaj planszę</dt>
+  <dd>Przeciągnij prostokąt na pustej części płótna. Przytrzymaj <kbd>&#8679;</kbd>, aby zachować kwadrat podczas przeciągania, lub <kbd>&#8997;</kbd>, aby rysować od środka. Biegący odczyt rozmiaru podąża za rogiem. Przeciąganie zbyt małe, aby być planszą, jest odrzucane.</dd>
+  <dt>Przesuń planszę</dt>
+  <dd>Przeciągnij z wnętrza planszy, aby ją przesunąć, razem z wszystkim, co na niej jest. Przytrzymaj <kbd>&#8679;</kbd>, aby ograniczyć przesunięcie do jednej osi.</dd>
+  <dt>Zmień rozmiar planszy</dt>
+  <dd>Przeciągnij jeden z uchwytów na krawędziach lub rogach aktywnej planszy. Przytrzymaj <kbd>&#8679;</kbd> na rogu, aby zachować proporcje planszy.</dd>
+  <dt>Ustaw planszę jako aktywną</dt>
+  <dd>Kliknij dowolną planszę, aby ją zaznaczyć. Aktywna plansza pokazuje swoje uchwyty i swój rozmiar.</dd>
+  <dt>Usuń planszę</dt>
+  <dd>Z aktywną planszą naciśnij <kbd>Delete</kbd> lub <kbd>Backspace</kbd>. Ostatnia pozostała plansza nie może być usunięta, więc dokument zawsze zachowuje jedną.</dd>
+</dl>
+<p>Dwuklik na narzędziu Plansza otwiera okno dialogowe Opcje planszy dla aktywnej planszy, opisane poniżej.</p>
+
+<h3 id="documents-boards-panel">Panel Plansze</h3>
+<p>Otwórz go z jego karty w doku paneli. Wymienia każdą planszę według numeru, nazwy i rozmiaru w pikselach. Kliknij wiersz, aby ustawić tę planszę jako aktywną i od razu dopasować ją do okna, co najszybszy sposób na przeskakiwanie między stronami dokumentu wieloplanszowego. Kliknij dwukrotnie wiersz, aby otworzyć Opcje planszy dla niego. Przyciski u dołu panelu dodają nową planszę i porządkują je wszystkie. Nowa plansza jest również w menu <strong>Utwórz &rsaquo; Plansze</strong>, które umieszcza świeżą planszę o rozmiarze ostatniej tuż po jej prawej stronie.</p>
+
+<h3 id="documents-board-options">Opcje planszy</h3>
+<p>Opcje planszy ustawiają szczegóły jednej planszy według numeru, a nie przez przeciąganie. Daje <strong>Nazwę</strong> planszy, menu <strong>Preset</strong>, które zmienia jej rozmiar na dowolny z wbudowanych rozmiarów, jej <strong>Szerokość</strong> i <strong>Wysokość</strong>, jej pozycję <strong>X</strong> i <strong>Y</strong> na płótnie oraz wybór orientacji. Osiągniesz ją przez dwuklik wiersza planszy w panelu Plansze, przez dwuklik narzędzia Plansza lub z <strong>Utwórz &rsaquo; Plansze &rsaquo; Opcje planszy&hellip;</strong>. Dobre nazewnictwo plansz jest warte chwili: nazwy stają się częścią nazw plików podczas eksportu, więc <em>okładka</em> i <em>tył</em> eksportują się bardziej użytecznie niż <em>Plansza 1</em> i <em>Plansza 2</em>.</p>
+
+<h3 id="documents-active">Aktywna plansza</h3>
+<p>Jedna plansza jest zawsze aktywna, a kilka poleceń działa tylko na niej. <strong>Zaznacz &rsaquo; Wszystko na aktywnej planszy</strong> (<kbd>&#8997;&#8984;A</kbd>) podnosi tylko grafikę na niej. Każda plansza niesie własną siatkę, więc ustawiona siatka dotyczy aktywnej planszy (zobacz stronę <a href="/manual/grids/">Siatki</a>). Drukowanie drukuje aktywną planszę. Kliknięcie planszy narzędziem Plansza lub wiersza w panelu Plansze to sposób zmiany tego, która plansza jest aktywna.</p>
+
+<h3 id="documents-rearrange">Przebudowanie plansz</h3>
+<p><strong>Utwórz &rsaquo; Plansze &rsaquo; Rozmieść wszystkie plansze&hellip;</strong> lub przycisk Rozmieść w panelu Plansze porządkuje każdę planszę w schludny układ w jednym kroku, niosąc grafikę każdej planszy ze sobą, aby nic nie zostało. Menu <strong>Układ</strong> oferuje siatkę wypełnianą wierszami lub kolumnami lub pojedynczy rząd lub kolumnę. <strong>Kolumny</strong> ustala, ile plansz mieści się w siatce, a <strong>Odstępy</strong> przerwę między nimi. To sposób na przywrócenie porządku plikowi, którego planszeszeszesz się rozjechały podczas pracy, lub ustawienie zestawu, który był rysowany bez konkretnego miejsca.</p>
+
+<h3 id="documents-fit">Dopasowanie planszy do widoku</h3>
+<p>Aby umieścić planszę na ekranie, użyj <strong>Widok &rsaquo; Dopasuj planszę do okna</strong> (<kbd>&#8984;0</kbd>), która powiększa aktywną planszę, aby wypełniła okno. <strong>Dopasuj wszystko do okna</strong> (<kbd>&#8997;&#8984;0</kbd>) oddala, aby pokazać wszystkie plansze naraz, przydatne do obejrzenia całego dokumentu wieloplanszowego. <strong>Rzeczywisty rozmiar</strong> (<kbd>&#8984;1</kbd>) ustawia powiększenie na 100%, więc piksel na planszy to piksel na ekranie.</p>
+
+<h2 id="documents-export">Każda plansza eksportuje się osobno</h2>
+<p>Plansze to jednostka wyjścia: eksport zapisuje jeden plik na planszę, każdy przycięty do krawędzi tej planszy i nazwany od niej. To właśnie czyni dokument wieloplanszowy wartościowym. Zestaw ikon narysowanych na własnych małych planszach lub układ telefonu, tabletu i pulpitu na trzech planszach wychodzi jako schludny zestaw osobnych plików w jednym przebiegu. Wybór formatów i skal, eksport wybranych plansz i drukowanie są opisane na stronie <a href="/manual/files/">Otwieranie i eksport</a>; Eksport do ekranów w szczególności wymienia Twoje plansze, abyś mógł zapisać je wszystkie razem.</p>

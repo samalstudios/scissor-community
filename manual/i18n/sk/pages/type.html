@@ -1,0 +1,110 @@
+<p class="lede">Text v Scissor zostáva živý. Môžete znova upraviť slová, písmo a rozstup v akomkoľvek bode a text sa kreslí priamo na plátno počas písania, takže to, čo upravujete, je to, čo sa tlačí a exportuje.</p>
+
+<p>Skratky nižšie sú zapísané v ich macOS forme. V systéme Windows čítajte <kbd>&#8984;</kbd> ako <kbd>Ctrl</kbd>, <kbd>&#8997;</kbd> ako <kbd>Alt</kbd> a <kbd>&#8679;</kbd> ako <kbd>Shift</kbd>.</p>
+
+<h2 id="type-tools">Textové nástroje</h2>
+<p>Textové nástroje zdieľajú jeden slot v paneli nástrojov. Vyberte slot a podržte pre výber medzi nimi, potom pracujte na plátne.</p>
+<table>
+<thead><tr><th>Nástroj</th><th>Skratka</th><th>Čo robí</th></tr></thead>
+<tbody>
+<tr><td>Nástroj Text</td><td><kbd>T</kbd></td><td>Kliknite pre bodový text, ťahajte pre obdĺžnikový rámec plošného textu</td></tr>
+<tr><td>Nástroj Plošný text</td><td></td><td>Ťahajte rámec a píšte do neho</td></tr>
+<tr><td>Nástroj Text na ceste</td><td></td><td>Kliknite na cestu pre spustenie textu po nej</td></tr>
+<tr><td>Nástroj Vertikálny text</td><td></td><td>Nastavuje vzporné znaky do stĺpcov</td></tr>
+<tr><td>Nástroj Úprava znaku</td><td><kbd>&#8679;T</kbd></td><td>Presúva, mení veľkosť a otáča jeden znak po druhom</td></tr>
+</tbody>
+</table>
+<p>Ak chcete upraviť text, ktorý je už na strane, kliknite naň s ktorýmkoľvek z textových nástrojov okrem Úpravy znaku pre umiestnenie kurzora do neho alebo dvojklikom naň nástrojom Výber (<kbd>V</kbd>). Stlačte <kbd>Escape</kbd> alebo kliknite mimo pre zastavenie úprav. S obyčajným nástrojom Text kliknutie na otvorenú cestu pripojí text k tejto ceste namiesto spustenia nového bloku, takže nemusíte vždy siahnať po dedikovanom nástroji Text na ceste.</p>
+
+<h2 id="type-kinds">Bodový, plošný a cestový text</h2>
+<p>Text môže sedieť v dokumente tromi spôsobmi a rozdiel je v tom, ako sa riadky merajú a kde sa lámajú. Všetci traja zostávajú editovateľní, berú rovnaké nastavenia Znaku a Odstavca a môžu byť neskôr premenené na obrysy.</p>
+
+<h3 id="type-point">Bodový text</h3>
+<p>Kliknite raz s nástrojom Text a píšte. Text rastie z jedného bodu a láma sa len tam, kde stlačíte <kbd>Return</kbd>: neexistuje rámec, ktorý by obtekal. Siahnite po bodovom texte pre nadpisy, štítky, niekoľko slov zobrazovacieho textu alebo čokoľvek, čo budete umiestňovať podľa oka nalievať do stĺpca. Jeho odsadenia a rozstupy odstavcov nemajú čo merať, takže tieto ovládacie prvky nemajú na bodový text žiadny účinok; zarovnanie sa berie z ukotvenia, na ktoré ste klikli.</p>
+
+<h3 id="type-area">Plošný text</h3>
+<p>Ťahajte obdĺžnik s nástrojom Text alebo nástrojom Plošný text a text sa obtečie do rámu, lámajúc riadky automaticky na pravom okraji. Použite plošný text pre telo textu, popisy alebo akýkoľvek text, ktorý musí zostať v rámci nastaveného rozmeru. Keď je viac textu, než rámec dokáže držať, nadbytok je skrytý a rámec je označený ako preplnený; zväčšite rámec, zmenšite text alebo preplňte pretečenie do ďalšieho rámu (pozrite nižšie). Odsadenia, odsadenie prvého riadka, medzera pred a za a delenie slov sa všetky použijú na plošný text.</p>
+
+<h3 id="type-on-a-path">Text na ceste</h3>
+<p>Kliknite na cestu nástrojom Text na ceste. Cesta sa stane základnou čiarou a prestane byť grafikou samo o sebe, takže už nie je vyplnená ani obrysovaná. Siahnite po tomto pre spustenie štítku po odznaku, pozdĺž krivky alebo cez vrch tvaru. Vyberte výsledok a objavia sa tri zátvorky: jedna na začiatku, jedna na konci a jedna v strede. Ťahajte zátvorku začiatku alebo konca pre presunutie, kde text začína a končí po ceste, ťahajte strednú zátvorku pre posunutie celého behu pozdĺž a ťahajte strednú zátvorku cez na druhú stranu cesty pre prevrátenie textu. Text na ceste neprijíma zalomenie riadkov, takže <kbd>Return</kbd> nerobí nič, kým ho upravujete. Prevarujte základnú cestu a text nasleduje jej nové ohnutia.</p>
+<figure class="shot">
+  <img src="img/type-on-path.png" width="1700" height="798" loading="lazy"
+       alt="Slová 'Text tečie po akejkoľvek ceste, ktorú nakreslíte' nasledujúce ohnutia vlnovitej cesty v Scissor." />
+  <figcaption>Text na vlnovitej ceste. Prevarujte cestu a text nasleduje jej ohnutia; základná čiara je tu zobrazená prerušovaná.</figcaption>
+</figure>
+
+<h2 id="type-character">Panel Znak</h2>
+<p>Panel Znak (<kbd>&#8984;T</kbd>, alebo <strong>Okno &gt; Text &gt; Znak</strong>) drží všetko, čo sa používa na samotné písmeno. S vybraným textovým objektom jeho nastavenia pokrývajú celý objekt: zmeňte písmo alebo tracking a každý znak nasleduje. Počas písania sa písmo, hrúbka, kurzíva a veľkosť použijú len na vybrané znaky (pozrite <a href="#type-mixed">Zmiešané štýly v jednom texte</a>). Panel sa zoslabne, kým neupravujete text alebo nemáte vybraný textový objekt.</p>
+
+<h3 id="type-font">Písmo, hrúbka, štýl a veľkosť</h3>
+<p>Ponuka písma je vyhľadávateľná a drží rodiny, ktoré ste naposledy použili, v hornej časti. Vypisuje písma, ktoré váš prehliadač dokáže skutočne kresliť, čítané zo systému, kde ich hlási, inak skúmané z sady bežných rodín, takže zoznam zodpovedá tomu, čo sa vykreslí, nie pevnému katalógu.</p>
+<p>Ponuka hrúbky ponúka Light, Regular, Medium, Semibold, Bold a Heavy, ale len hrúbky, ktoré zvolená rodina skutočné má, sú vybrateľné: ostatné sú stlmené. Tlačidlo kurzívy vedľa zapína a vypína šikmý štýl. Veľkosť sa nastavuje v pixeloch z poľa Veľkosť.</p>
+
+<h3 id="type-mixed">Zmiešané štýly v jednom texte</h3>
+<p>Jeden text môže miešať veľkosti, farby, hrúbky a kurzívy. Počas písania vyberte niekoľko znakov a zmeňte ich z rýchleho panelu pri texte, z panelu možností alebo z panelu Farba. Len vybrané znaky sa zmenia a zvyšok textu zachová svoj štýl. Bez vybraného sa zmena použije na celý text ako obyčajne. Štýly sa pohybujú so svojmi znakmi počas ďalšieho písania a zachovávajú sa v exportoch SVG a PDF.</p>
+
+<h3 id="type-metrics">Riadkovanie, tracking a kerning</h3>
+<dl>
+  <dt>Riadkovanie</dt>
+  <dd>Vzdialenosť od jednej základnej čiary k ďalšej, v pixeloch. Nechajte na 0 pre automatické riadkovanie, ktoré je 120% veľkosti. Nastavte väčšie pre otvorenie riadkov alebo menšie pre zhuštenie nadpisu.</dd>
+  <dt>Tracking</dt>
+  <dd>Rovnaký rozstup pridaný k alebo odčítaný od každého znaku, meraný v tisícich em (takže sa škáluje s veľkosťou). Kladné hodnoty uvoľňujú text, záporné ho zhušťujú. Siahnite po trackingu pre zarovnanie riadka na šírku alebo pre rozloženie malých písmen.</dd>
+  <dt>Kerning</dt>
+  <dd>Vlastné párové rozstupy písma medzi konkrétnymi písmenami, ako je medzera pod veľkým T. Je predvolene zapnuté, na tlačidle Kerning v riadku OpenType (označené AV). Vypnite ho pre zobrazenie surových metrík písma.</dd>
+</dl>
+
+<h3 id="type-align">Zarovnanie</h3>
+<p>Panel Znak má štyri tlačidlá zarovnania: vľavo, stred, vpravo a zarovnať do bloku. Vľavo a vpravo sú relatívne k smeru čítania, takže znamenajú začiatok a koniec: text sprava doľava nastavený na vľavo sa zarovná k vizuálnemu pravému okraju. Zarovnanie do bloku rozširuje každý riadok pre vyplnenie riadka, takže mení len tam, kde sa riadky lámajú, čo znamená plošný text a text na ceste namiesto jednoriadkového bodového textu. Pre jemnejšie ovládanie zarovnania (ako sa nastavuje posledný riadok) použite panel Odstavec.</p>
+
+<h3 id="type-opentype">Vlastnosti OpenType a malé písmená</h3>
+<p>Pod hlavičkou <strong>OpenType</strong> je rad tlačidiel, z ktorých každé prepína jednu vlastnosť vybraného textu:</p>
+<table>
+<thead><tr><th>Tlačidlo</th><th>Vlastnosť</th></tr></thead>
+<tbody>
+<tr><td>fi</td><td>Štandardné ligatúry (predvolene zapnuté)</td></tr>
+<tr><td>st</td><td>Diskrečné ligatúry</td></tr>
+<tr><td>TT</td><td>Všetky veľké písmená</td></tr>
+<tr><td>T&#7472;</td><td>Malé písmená</td></tr>
+<tr><td>T&sup1;</td><td>Horný index</td></tr>
+<tr><td>T&#8321;</td><td>Dolný index</td></tr>
+<tr><td>&frac12;</td><td>Zlomky</td></tr>
+<tr><td>1&#738;&#7511;</td><td>Poradové číslovky</td></tr>
+<tr><td>&#119964;</td><td>Swash</td></tr>
+<tr><td>AV</td><td>Kerning (predvolene zapnuté)</td></tr>
+</tbody>
+</table>
+<p>Všetky veľké písmená kreslia každé písmeno ako veľké bez zmeny základného textu, takže je stále malé, keď ho upravujete. Malé písmená žiadajú písmo o jeho tvary malých písmen. Horný a dolný index kreslia ovplyvnené znaky menšie a posúva ich od základnej čiary, pre poznámky pod čiarou, poradové prípony alebo chemické vzorce.</p>
+<p>Pod tlačidlami ponuka štýlu číslic vyberá, ako sa nastavujú číslice: Predvolený, Tabular Lining, Proportional Oldstyle, Proportional Lining alebo Tabular Oldstyle. Tabular číslice majú všetky rovnakú šírku, takže stĺpce čísel sa zarovnávajú; oldstyle číslice majú vzostupy a spusty, ktoré sedia lepšie v bežnom texte.</p>
+<p>Nie každá vlastnosť sa dá zobraziť na plátne. Ligatúry zapnuté alebo vypnuté, kerning, veľké písmená, malé písmená a horný a dolný index sa kreslia počas úpravy. Diskrečné ligatúry, štýly číslic, zlomky, poradové číslovky a swash sa zaznamenajú na texte a zapíšu sa do exportovaného <code>.svg</code> ako nastavenia vlastností písma, ale plátno ich nezobrazuje, takže tieto považujte za nastavenia v čase exportu.</p>
+
+<h2 id="type-paragraph">Panel Odstavec</h2>
+<p>Panel Odstavec (<kbd>&#8997;&#8984;T</kbd>, alebo <strong>Okno &gt; Text &gt; Odstavec</strong>) ovláda, ako sa nastavujú celé odstavce. Ako pri nastaveniach znaku sa tieto použijú na každý odstavec textového objektu.</p>
+<p>Sedem tlačidiel zarovnania beží naprieč vrchom. Prvé tri sú obyčajné vľavo, stred a vpravo. Ďalšie tri zarovnávajú telo odstavca a nastavujú len posledný riadok, zarovnaný vľavo, stred alebo vpravo. Posledné zarovnáva každý riadok vrátane posledného, rozťahujúc ho na celú šírku. Zarovnanie do bloku potrebuje niečo, čím sa obteka, takže sa použije v plošnom texte, nie v bodovom texte.</p>
+<p>Pod tlačidlami zarovnania sú odsadenia: <strong>Vľavo</strong> a <strong>Vpravo</strong> potiahnu celý odstavec zo strán rámu a <strong>Prvý</strong> odsadzuje len prvý riadok. Záporné odsadenie prvého riadka vyvesí prvý riadok za ostatné, čo je spôsob, ako vytvoriť odsadenie prvého riadka. Polia <strong>Pred</strong> a <strong>Za</strong> pridávajú medzeru nad a pod každým odstavcom, čistejší spôsob oddelenia odstavcov ako prázdny riadok. Prepínač <em>Deliť slová</em> umožňuje dlhým slovám sa lámať naprieč riadkami pre vyrovnanie pravého okraja. Odsadenia a rozstupy sa použijú na plošný text; bodový text sa nastavuje od svojho vlastného ukotvenia.</p>
+
+<h2 id="type-glyphs">Panel Znaky</h2>
+<p>Panel Znaky (<strong>Text &gt; Znaky</strong>, <kbd>&#8997;&#8679;F11</kbd>) vypisuje znaky aktuálneho písma podľa sady, od Basic Latin cez Grécky, Cyriliku, Hebrejský, Arabský, interpunkcu, meny, šípky a viac a drží tie, ktoré ste naposledy použili, v hornej časti. Siahnite po ňom pre vloženie znaku, ktorý vaša klávesnica napíše, ako je šípka, znak meny alebo diakritické písmeno. Dvojkliknite na znak pre jeho zadanie na pozíciu textového kurzora. Bez kurzora sa znak skopíruje do schránky namiesto, aby ste ho mohli prilepiť inde.</p>
+
+<h2 id="type-orientation">Vertikálny a sprava-dolava text</h2>
+<p>Scissor dokáže nastaviť text dolu po strane rovnako ako naprieč a dokáže rozložiť písma, ktoré sa čítajú sprava doľava. Obe fungujú v bodovom, plošnom a cestovom texte a editor na plátne nasleduje rovnaký smer ako hotová grafika.</p>
+
+<h3 id="type-vertical">Vertikálny text</h3>
+<p>Nástroj Vertikálny text nastavuje vzporné znaky, ktoré sa naskladajú dolu, pričom každý nový riadok tvorí stĺpec vľavo od posledného. Vo vertikálnom plošnom rámci sa stĺpec obtečie do nového, keď dosiahne spodok. Ak chcete prepnúť text, ktorý ste už nastavili, medzi horizontálnym a vertikálnym, vyberte <strong>Text &gt; Orientácia textu &gt; Horizontálna</strong> alebo <strong>Vertikálna</strong>.</p>
+
+<h3 id="type-rtl">Sprava doľava a arabčina</h3>
+<p>Ponuka smeru v paneli Znak ponúka Auto, Zľava doprava a Sprava doľava. Pri Auto sa smer číta samotného textu, z jeho prvého silného znaku, takže arabčina alebo hebrejčina tečie sprava doľava bez toho, aby ste niečo nastavili. Arabské písmena berú svoje spojené tvary a rad latinských slov vnútri riadku sprava doľava zachová svoj vlastný poriadok zľava doprava. Nastavte ponuku na Zľava doprava alebo Sprava doľava, keď chcete vynútiť smer namiesto neho nechať detekovať, napríklad pre riadok, ktorý začína číslom alebo interpunkciou.</p>
+
+<h2 id="type-touch">Úprava znaku</h2>
+<p>Nástroj Úprava znaku (<kbd>&#8679;T</kbd>) presúva, mení veľkosť a otáča jeden znak po druhom, zanechávajúc text plne editovateľný. Siahnite po ňom pre posunutie jedného písmena pre efekt bez rozbichnutia slova na obrysy. Vyberte nástroj a kliknite na znak: objaví sa rámec okolo tohto jedného znaku s kolíkom na každom rohu, jedným na pravej strane, jedným v spodnej časti a jedným plávajúcim nad ním. Ťahajte roh pre zmenu veľkosti v oboch smeroch, bočné kolíko pre šírku samu, spodné kolíko pre výšku samu a horné kolíko pre otočenie znaku. Podržte <kbd>&#8679;</kbd> počas ťahania rohom pre zachovanie proporcií alebo počas otáčania pre prichytanie uhlu. <kbd>Backspace</kbd> alebo <kbd>Delete</kbd> vráti znak tam, kam ho text umiestnil a <kbd>Escape</kbd> zahodí výber. Pretože text je po celej dobe stále textom, môžete pokračovať v úpravách slov okolo znaku, ktorý ste presunuli.</p>
+
+<h2 id="type-flow">Preplňovanie a obtekanie textu</h2>
+<p>Dve funkcie umožňujú textu zdieľať priestor so zvyškom rozloženia: preplňovanie spúšťa jeden príbeh cez niekoľko rámecov a obtekanie textu text odťahuje od objektu, s ktorým sa prekrýva.</p>
+
+<h3 id="type-threading">Preplňovaný text</h3>
+<p>Vyberte dva alebo viac objektov plošného textu a vyberte <strong>Text &gt; Preplňovaný text &gt; Vytvoriť</strong>. Ich text sa spojí do jedného príbehu, ktorý tečie z rámu do rámu v poradí vrstvenia, odzadu dopredu, a sa vždy upravuje z prvého rámu. Použite preplňovanie pre spustenie článku naprieč stĺpcami alebo stranami: keď pridávate alebo odstraňujete text, preteká cez reťazec. Každý rámec zobrazuje port v ľavom hornom a pravom dolnom rohu, s čiarou k rámu, do ktorého text pokračuje. Čierny plus namiesto odchádzajúceho portu znamená, že je viac textu, než rámec dokáže držať. <strong>Uvoľniť výber</strong> vyberie vybrané rámecy z ich vlákna a <strong>Odstrániť preplňovanie</strong> rozbije celé vlákno, pričom každý rámec zachová text, ktorý zobrazoval.</p>
+
+<h3 id="type-wrap">Obtekanie textu</h3>
+<p>Ak chcete odťiahnuť text od tvaru, vyberte tvar a vyberte <strong>Objekt &gt; Obtekanie textu &gt; Vytvoriť</strong>. Plošný text, ktorý sedí pod objektom, sa potom obtečie okolo neho. Obtekanie nasleduje obrys objektu, nie jeho obdĺžnik výberu, takže text môže objíždiť kruh alebo nepravidelnú siluetu. <strong>Možnosti obtekania textu&#8230;</strong> nastavuje medzeru medzi objektom a textom v pixeloch a môže invertovať obtekanie, takže text beží vnútra tvaru namiesto okolo neho. <strong>Uvoľniť</strong> odstráni obtekanie.</p>
+
+<h2 id="type-outlines">Prevod textu na obrysy</h2>
+<p>Vyberte text a vyberte <strong>Text &gt; Vytvoriť obrysy</strong> (<kbd>&#8679;&#8984;O</kbd>) pre jeho premenu na cesty. Siahnite po tomto, keď potrebujete prevarovať tvary písmen ručne, zaručiť, že text vyzerá identicky na stroji, ktorý nemá písmo, alebo použiť písmená ako tvar na kombinovanie s inou grafikou. Tvary písmen sú značené z vlastných glyfov písma vo vysokom rozlíšení, pričom zoraľovač zachováva ostré rohy ostrými a vyhladzuje krivky a výsledok zachová výplň, obrys, názov, krytie a režim miešania textu. Slova už neskôr nie sú editovateľné ako text, takže zachovajte kópiu, ak ich budete potrebovať zmeniť, alebo vráťte späť pomocou <kbd>&#8984;Z</kbd>.</p>

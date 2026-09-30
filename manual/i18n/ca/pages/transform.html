@@ -1,0 +1,165 @@
+<p class="lede">Tot el que canvia on es troba un objecte, com de gran és o de quin costat mira es troba aquí: moviment i redimensionament a mà, transformacions numèriques exactes, alineació i apilament, repeticions en viu, morfologies, busts i la transformació d'una forma plana en un sòlid.</p>
+
+<p>Les dreceres a continuació estan escrites en format macOS. A Windows i Linux, llegiu <kbd>⌘</kbd> com a Ctrl, <kbd>⌥</kbd> com a Alt i <kbd>⇧</kbd> com a Majúscules.</p>
+
+<h2 id="transform-select-move">Seleccionar i moure</h2>
+<p>Abans de poder transformar qualsevol cosa heu de dir què. Useu aquestes primer: les eines de selecció decideixen sobre què actuarà un arrossegament, un comandament numèric o un camp de panell.</p>
+
+<h3 id="transform-selection-tools">Les eines de selecció</h3>
+<table>
+  <thead><tr><th>Eina</th><th>Drecera</th><th>Què selecciona</th></tr></thead>
+  <tbody>
+    <tr><td>Eina Selecció</td><td><kbd>V</kbd></td><td>Objectes i grups sencers.</td></tr>
+    <tr><td>Eina Selecció directa</td><td><kbd>A</kbd></td><td>Ancoratges i segments de camí individuals.</td></tr>
+    <tr><td>Eina Selecció de grup</td><td></td><td>Un objecte dins d'un grup; cada clic següent s'eixampla al grup que l'envolta.</td></tr>
+  </tbody>
+</table>
+<p>Feu Majúscules-clic per afegir un objecte a la selecció o treure'l de nou. Arrossegueu sobre el llenç buit per a un rectangle de selecció, i manteniu premut <kbd>⇧</kbd> per afegir allò que el rectangle atrapa a allò ja seleccionat. Fent doble clic a un grup amb l'eina Selecció hi entreu dins per treballar sobre un membre sense desagrupar.</p>
+
+<h3 id="transform-moving">Moure una selecció</h3>
+<p>Arrossegueu un objecte seleccionat per moure'l. Mantingueu premut <kbd>⌥;</kbd> deixa una còpia enrere i arrossega aquella en comptes, que és la manera ràpida de duplicar al lloc i reposicionar en un sol moviment. Mantingueu premut <kbd>⇧;</kbd> restringeix el moviment a passos de 45&deg; mesurats des de l'angle de restricció establert a Preferències, i desactiva l'ajust; sense <kbd>⇧;</kbd> la selecció s'ajusta a vores, centres i angles propers. Les fletxes mouen de l'increment del teclat, <kbd>⇧;</kbd> amb una fletxa mou deu vegades això, i <kbd>⌥;</kbd> amb una fletxa mou una còpia.</p>
+
+<h3 id="transform-bounding-box">El quadre delimitador: redimensionar i girar a mà</h3>
+<p>El quadre delimitador de la selecció porta vuit nanses. Arrossegueu-ne una per redimensionar: <kbd>⇧;</kbd> manté les proporcions i <kbd>⌥;</kbd> redimensiona al voltant del centre en comptes de la nansa oposada. Just fora d'una cantonada el punter entra a la zona de rotació; arrossegueu allà per girar la selecció al voltant del centre del quadre, amb <kbd>⇧;</kbd> que s'ajusta a 45&deg;. Després d'una rotació el quadre roman inclinat amb la feina. <strong>Objecte &rsaquo; Transforma &rsaquo; Restableix quadre delimitador</strong> el torna a posar en escarreta perquè les edicions posteriors d'amplada i alçada es llegeixin al llarg dels eixos de la pàgina.</p>
+
+<h2 id="transform-numeric">Transformacions numèriques</h2>
+<p>Arrossegar és ràpid però aproximat. Quan un valor ha de ser exacte, o el mateix en molts objectes, escriviu-lo. El panell Transforma conté els valors en viu per a la selecció, i el submenú <strong>Objecte &rsaquo; Transforma</strong> conté comandaments d'un sol ús amb una opció Còpia.</p>
+
+<h3 id="transform-panel">El panell Transforma</h3>
+<p>El panell Transforma (<kbd>⇧F8</kbd>) mostra X, Y, A i H en píxels per a la selecció; escriviu un valor i premeu Retorn per establir-lo. Sota d'ells, el camp ⟳ gira la selecció un angle i el camp ⧄ la inclina un, cadascun tornant a zero un cop aplicat. El panell necessita alguna cosa seleccionada; sense res es desactiva i ho diu.</p>
+<p>El panell Propietats repeteix X, Y, A i H amb un camp de rotació i dos botons que capgiren la selecció horitzontalment o verticalment al voltant del seu propi centre, de manera que els moviments més comuns són a mà sense obrir un segon panell.</p>
+
+<h3 id="transform-commands">Mou, Gira, Reflexa, Redimensiona i Inclina</h3>
+<p><strong>Objecte &rsaquo; Transforma</strong> conté els comandaments numèrics. Cadascun obre un petit diàleg, i cadascun (excepte Mou, que és un desplaçament directe) transforma al voltant del punt de referència. La casella Còpia a cada diàleg aplica el canvi a una còpia i deixa l'original intacte, que és com es construeix una parella reflectida o un eco redimensionat en un pas.</p>
+<table>
+  <thead><tr><th>Comandament</th><th>Drecera</th><th>Camps</th></tr></thead>
+  <tbody>
+    <tr><td>Mou&hellip;</td><td><kbd>⇧⌘M</kbd></td><td>Horitzontal, Vertical, Còpia.</td></tr>
+    <tr><td>Gira&hellip;</td><td></td><td>Angle, Còpia.</td></tr>
+    <tr><td>Reflexa&hellip;</td><td></td><td>Eix (Horitzontal o Vertical), Angle, Còpia.</td></tr>
+    <tr><td>Redimensiona&hellip;</td><td></td><td>% Horitzontal, % Vertical, Còpia.</td></tr>
+    <tr><td>Inclina&hellip;</td><td></td><td>Angle d'inclinació, Angle de l'eix, Còpia.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="transform-each-again">Transforma individuals i Transforma de nou</h3>
+<p><strong>Transforma individuals&hellip;</strong> (<kbd>⌥⇧⌘D</kbd>) redimensiona, mou, gira i reflecteix cada objecte seleccionat al voltant del <em>seu propi</em> centre en comptes del centre compartit de la selecció. El seu diàleg accepta Redimensiona H i V, Mou H i V, un angle Gira, caselles Reflexa X i Reflexa Y i Còpia. Useu-la per dispersar o ventallar un conjunt d'objectes de manera que cadascun es gira i creix al lloc en comptes d'orbitar al voltant del grup.</p>
+<p><strong>Transforma de nou</strong> (<kbd>⌘D</kbd>) repeteix la darrera transformació sobre la selecció actual. Mou un objecte, després premeu <kbd>⌘D</kbd> unes quantes vegades, i obteniu una fila uniformement esglaonada; combineu-lo amb <kbd>⌥;</kbd>-arrossegament d'una còpia per construir patrons repetits a mà.</p>
+
+<h2 id="transform-tools">Les eines de transformació i el punt de referència</h2>
+<p>Les eines Gira (<kbd>R</kbd>), Reflexa (<kbd>O</kbd>), Redimensiona (<kbd>S</kbd>) i Inclina cadascuna funcionen al voltant d'un punt de referència, dibuixat com una petita mira. Comença al centre de la selecció; feu clic a qualsevol lloc del llenç per moure'l allà, i seleccionant una altra cosa el torna al nou centre. Després arrossegueu al llenç per girar, reflectir, redimensionar o inclinar al voltant d'aquest punt.</p>
+<p><kbd>⇧;</kbd> restringeix cada eina: passos de 45&deg; per a Gira i Reflexa, horitzontal i vertical iguals per a Redimensiona, un eix per a Inclina. Mantingueu premut <kbd>⌥;</kbd> durant l'arrossegament transforma una còpia i deixa l'original. <kbd>⌥;</kbd>-clic col·loca el punt de referència i obre el diàleg numèric d'aquesta eina amb el punt ja establert, de manera que podeu fer girar una forma al voltant d'una cantonada un angle exacte.</p>
+
+<h2 id="transform-free">L'eina Transforma lliure</h2>
+<p>L'eina Transforma lliure (<kbd>E</kbd>) posa moviment, redimensionament, rotació, inclinació i dos tipus de distorsió en un únic quadre delimitador. Arrossegueu dins del quadre per moure'l, arrossegueu una nansa per redimensionar i arrossegueu just fora d'una cantonada per girar, amb <kbd>⇧;</kbd> que s'ajusta a 45&deg;. Useu-la quan vulgueu provar diversos tipus de canvi en un sol gest en comptes de canviar d'eina entre l'un i l'altre.</p>
+<p>El quadre de l'eina Selecció també pot distorsionar: manteniu premut <kbd>Ctrl</kbd> (o <kbd>&#8984;</kbd>) mentre arrossegueu una de les seves nanses de cantonada per moure aquella cantonada sola, en comptes de redimensionar. Funciona sobre formes i fotos per igual; sobre píxels una vista prèvia ràpida segueix l'arrossegament i el resultat es calcula quan premeu <kbd>Retorn</kbd>.</p>
+
+<h3 id="transform-free-widget">El giny</h3>
+<p>Un petit giny flota al costat del quadre amb quatre botons, cadascun que es nomena quan hi passeu per sobre: <strong>Restringeix</strong>, <strong>Transforma lliure</strong>, <strong>Distorsió perspectiva</strong> i <strong>Distorsió lliure</strong>. Restringeix fa que el redimensionament sigui proporcional sense mantenir premut <kbd>⇧;</kbd>; amb ell activat, <kbd>⇧;</kbd> allibera les proporcions en comptes. Les dos modalitats de distorsió deixen només les quatre nanses de cantonada per estirar.</p>
+
+<h3 id="transform-free-keys">Distorsionar des del teclat</h3>
+<p>Podeu arribar a les mateixes distorsions sense sortir del mode per defecte. Mantingueu premut <kbd>⌘</kbd> a una nansa de vora per inclinar al llarg d'aquella vora. Mantingueu premut <kbd>⌘</kbd> a una cantonada per distorsionar-la lliurement per si sola; afegiu <kbd>⇧;</kbd> per restringir el recorregut de la cantonada a 45&deg;. Mantingueu premut <kbd>⌘⌥⇧;</kbd> a una cantonada per a perspectiva, on la cantonada veïna reflecteix l'arrossegament. Premiar o deixar anar un modificador a mitges d'un arrossegament canvia d'acció immediatament, i el nom en què acaba, Redimensiona, Inclina, Distorsió perspectiva o Distorsió lliure, és com el pas es diu al panell Historial després. Text, imatges col·locades i instàncies de símbol no es poden distorsionar i es deixen com són, i Scissor us ho diu quan un arrossegament els omet.</p>
+
+<h3 id="transform-free-reference">El punt de referència</h3>
+<p>El punt de referència es troba al centre del quadre com una mira, i podeu arrossegar-lo a qualsevol lloc; per si sol no mou res. El quadre llavors gira i redimensiona al seu voltant, i viatja amb la feina quan moveu la selecció. Deixeu-lo anar prop d'un dels nou punts del quadre (les quatre cantonades, els quatre punts mitjans de les vores o el centre) i s'hi estableix. Mantingueu premut <kbd>⌥;</kbd> mentre redimensioneu ignora un punt de referència col·locat i redimensiona al voltant del centre. Inclinat un costat amb <kbd>⌘</kbd> també manté quiet un punt de referència col·locat.</p>
+
+<h3 id="transform-free-pins">Moure les nanses</h3>
+<p>Activeu <strong>Mou nanses</strong> a la barra ràpida (o a la barra d'opcions) mentre Transforma lliure està activa, i arrossegar una cantonada del quadre mou aquella cantonada sola, sense tocar la feina. Prop d'un punt d'ancoratge s'hi estableix. Desactiveu Mou nanses de nou i arrossegueu una cantonada moguda: la forma es redimensiona de manera que aquella cantonada segueixi el punter, i cada altre punt manté la mateixa distància proporcional des del que roman quiet, que és la cantonada oposada, el punt de referència col·locat o el centre mentre <kbd>⌥;</kbd> està premut. <kbd>⇧;</kbd> manté les proporcions. Les cantonades mogudes viatgen amb la feina, i fent doble clic a una les torna a posar totes quatre al quadre.</p>
+
+<h2 id="transform-align-arrange">Alinear, organitzar i agrupar</h2>
+<p>Aquests comandaments estableixen com els objectes s'alineen entre ils, quin es troba davant de quin, i quins es recullen, s'amaguen o s'amaguen mentre treballeu sobre la resta.</p>
+
+<h3 id="transform-align">Alínia i distribueix</h3>
+<p>El panell Alínia (<kbd>⇧F7</kbd>) té tres files. <strong>Alínia objectes</strong> alinea la selecció a l'esquerra, centre o dreta, i a dalt, al mig o a baix. <strong>Distribueix objectes</strong> distribueix tres o més objectes de manera que les seves vores superiors, centres, inferiors, vores esquerres, centres o vores dretes cauen a intervals uniformes. <strong>Distribueix espaiat</strong> estableix un espai igual entre ells verticalment o horitzontalment. El menú del panell tria si tot s'alinea a la selecció o a la taula. L'alineació necessita almenys un objecte (un objecte sol s'alinea a la taula); la distribució n'en necessita tres, i el panell desactiva aquells botons fins que no els teniu. Les sis alineacions també apareixen sota <strong>Objecte &rsaquo; Alínia</strong>.</p>
+
+<h3 id="transform-arrange">Organitza: ordre de superposició</h3>
+<p>Cada objecte es troba a un nivell de la pila, i <strong>Objecte &rsaquo; Organitza</strong> mou la selecció a través d'aquest.</p>
+<table>
+  <thead><tr><th>Comandament</th><th>Drecera</th></tr></thead>
+  <tbody>
+    <tr><td>Porta al davant</td><td><kbd>⇧⌘]</kbd></td></tr>
+    <tr><td>Porta endavant</td><td><kbd>⌘]</kbd></td></tr>
+    <tr><td>Envia enrere</td><td><kbd>⌘[</kbd></td></tr>
+    <tr><td>Envia al darrere</td><td><kbd>⇧⌘[</kbd></td></tr>
+  </tbody>
+</table>
+
+<h3 id="transform-grouping">Agrupar, blocar i amagar</h3>
+<dl>
+  <dt><strong>Agrupa</strong> (<kbd>⌘G</kbd>) i <strong>Desagrupa</strong> (<kbd>⇧⌘G</kbd>)</dt>
+  <dd>Recull els objectes perquè es moguin i es transformin com un, o bé allibera'ls de nou. Un grup es pot entrar fent doble clic a ell amb l'eina Selecció.</dd>
+  <dt><strong>Bloca &rsaquo; Selecció</strong> (<kbd>⌘2</kbd>) i <strong>Desbloca-ho tot</strong> (<kbd>⌥⌘2</kbd>)</dt>
+  <dd>El blocatge fa que els objectes no es puguin seleccionar perquè romanin quiets mentre treballeu sobre ells; Desbloca-ho tot allibera tot allò que estava blocat.</dd>
+  <dt><strong>Amaga &rsaquo; Selecció</strong> (<kbd>⌘3</kbd>) i <strong>Mostra-ho tot</strong> (<kbd>⌥⌘3</kbd>)</dt>
+  <dd>Amagar treu els objectes del llenç sense eliminar-los, cosa que desocupa una escena plena fins a la part que esteu editant; Mostra-ho tot els torna a portar.</dd>
+</dl>
+
+<h2 id="transform-repeat">Repeticions en viu</h2>
+<p><strong>Objecte &rsaquo; Repeteix</strong> construeix moltes còpies d'un objecte i les manté en viu: editeu l'original i cada còpia segueix. Useu una repetició quan la feina és regular, una flor de pètals idèntics o una graella de mosaic d'icones, de manera que podeu donar forma a un element i deixar que la resta el segueixi.</p>
+<dl>
+  <dt><strong>Radial&hellip;</strong></dt>
+  <dd>Disposa les còpies en cercle al voltant d'un centre. El diàleg estableix Instàncies i Radi.</dd>
+  <dt><strong>Graella&hellip;</strong></dt>
+  <dd>Disposa les còpies en files i columnes. El diàleg estableix Columnes, Files, Espaiat horitzontal i Espaiat vertical.</dd>
+  <dt><strong>Reflexa&hellip;</strong></dt>
+  <dd>Reflecteix les còpies a través d'un eix. El diàleg estableix l'eix (vertical o horitzontal) i un Desplaçament.</dd>
+</dl>
+<p>Amb una repetició seleccionada, el panell Propietats exposa els mateixos controls per a un ajust posterior: instàncies i radi per a una repetició radial; columnes, files i espaiat horitzontal i vertical per a una graella; i el desplaçament i l'eix de reflexió per a una reflexió. <strong>Allibera</strong> converteix les còpies en feina ordinària i editable per separat quan heu acabat.</p>
+<figure class="shot">
+  <img src="img/repeat.gif" width="640" height="640" loading="lazy"
+       alt="Un únic pètal blau repetit al voltant d'un centre per una repetició radial, que s'omple en una flor de dotze pètals a mesura que el recompte augmenta." />
+  <figcaption>Un pètal i una repetició radial. A mesura que el recompte puja d'un a dotze la flor s'omple; remodelleu el pètal individual i la tota cosa canvia amb ell.</figcaption>
+</figure>
+
+<h2 id="transform-morph">Morfologies</h2>
+<p>Una morfologia omple l'espai entre dos objectes amb una sèrie de formes intermèdies, cadascuna un pas més a prop de la següent. És l'eina per a transicions degradades entre colors i per a repeticions uniformement espaiades al llarg d'un camí.</p>
+<p>L'eina Morfologia (<kbd>W</kbd>) transforma un objecte en un altre: feu clic al primer, després al segon. Fent clic a un terç la cadena continua, i fent clic dins d'una morfologia existent afegeix aquell objecte a ella. <strong>Objecte &rsaquo; Morfologia</strong> conté la resta:</p>
+<table>
+  <thead><tr><th>Comandament</th><th>Drecera</th><th>Què fa</th></tr></thead>
+  <tbody>
+    <tr><td>Crea</td><td><kbd>⌥⌘B</kbd></td><td>Transforma els objectes seleccionats junts.</td></tr>
+    <tr><td>Allibera</td><td><kbd>⌥⇧⌘B</kbd></td><td>Retorna els objectes clau i elimina els passos.</td></tr>
+    <tr><td>Opcions de morfologia&hellip;</td><td></td><td>Estableix espaiat i orientació (vegeu a sota).</td></tr>
+    <tr><td>Expandeix</td><td></td><td>Converteix els passos intermedis en objectes reals i editables.</td></tr>
+    <tr><td>Substitueix columna</td><td></td><td>Doblega la sèrie de passos al llarg d'un camí seleccionat.</td></tr>
+    <tr><td>Inverteix columna</td><td></td><td>Intercanvia a quin extrem de la columna es troba cada objecte clau.</td></tr>
+    <tr><td>Inverteix davant a darrere</td><td></td><td>Capgira l'ordre de superposició dels passos.</td></tr>
+  </tbody>
+</table>
+<p><strong>Opcions de morfologia&hellip;</strong> estableix Espaiat a Passos especificats (un nombre fix d'intermedis), Distància especificada (un interval fix en píxels, omplint els que hi càpiguen) o Color suau (tants passos com calgui per a una transició de color uniforme), i estableix Orientació a Alinea a la pàgina o Alinea al camí. Una morfologia roman en viu i segueix els seus objectes clau, de manera que editar qualsevol extrem redistribueix tota la sèrie.</p>
+<figure class="shot">
+  <img src="img/morph.gif" width="760" height="316" loading="lazy"
+       alt="Una estella blau que es transforma en un cercle ambre a través d'una fila creixent de formes intermèdies." />
+  <figcaption>Una morfologia d'estella a cercle. A mesura que el recompte de passos puja, més formes intermèdies omplen l'espai, cadascuna una mica més a prop de la següent.</figcaption>
+</figure>
+
+<h2 id="transform-envelope">Deformació de forma</h2>
+<p><strong>Objecte &rsaquo; Deformació de forma</strong> doblega la feina per adaptar-la a una forma mantenent-la editable sota. Useu-la per adaptar un logotip a un bàner, corbar una línia de text o empènyer un patró pla en un bony. Hi ha tres maneres de crear-ne una.</p>
+<dl>
+  <dt><strong>Crea amb deformació&hellip;</strong> (<kbd>⌥⇧⌘W</kbd>)</dt>
+  <dd>Doblega la selecció amb un dels estils de deformació integrats (Arc, Arc de cercle, Bony, Onada, Peix, Pujada, Ull de peix, Infla, Estrènyer i les variants closca i arc), controlades per les quantitats Corba, Horitzontal i Vertical.</dd>
+  <dt><strong>Crea amb objecte superior</strong> (<kbd>⌥⌘C</kbd>)</dt>
+  <dd>Utilitza la forma seleccionada més alta com a bust i hi versa tot allò que hi ha sota. Necessita dos o més objectes: el contenidor a sobre, la feina a sota.</dd>
+  <dt><strong>Crea amb malla&hellip;</strong> (<kbd>⌥⌘M</kbd>)</dt>
+  <dd>Posa una graella de les files i columnes que demaneu sobre la selecció. Roman en viu: passeu a l'eina Selecció directa (<kbd>A</kbd>) i arrossegueu qualsevol intersecció de la malla per doblegar allò que conté, totes les vegades que vulgueu.</dd>
+</dl>
+<p><strong>Allibera</strong> retorna la feina com era, juntament amb la forma bust; <strong>Expandeix</strong> manté la corba i deixa anar el bust, deixant camins distorsionats.</p>
+
+<h2 id="transform-3d">3D des d'una forma vectorial</h2>
+<p><strong>Efecte &rsaquo; 3D i Materials</strong> converteix una forma plana en un sòlid. Roman com a efecte en viu, de manera que el camí original encara és allà per editar i la còpia a la pantalla es reconstrueix cada vegada que el canvieu.</p>
+<dl>
+  <dt><strong>Extrudeix i bisella</strong></dt>
+  <dd>Dona profunditat a la forma, amb una vora bisellada si voleu.</dd>
+  <dt><strong>Revol</strong></dt>
+  <dd>Gira un perfil al voltant d'un eix en una forma tornada.</dd>
+  <dt><strong>Infla</strong></dt>
+  <dd>Infla la forma com si estigués plena.</dd>
+  <dt><strong>Pla</strong></dt>
+  <dd>Inclina la forma plana a l'espai sense afegir profunditat.</dd>
+</dl>
+<p>El panell 3D i Materials gira l'objecte als eixos X, Y i Z, estableix la rotació i l'alçada de la llum i trie una superfície plàstica, opaca o metàl·lica, amb camps Profunditat i Bisell per a l'extrusió.</p>
+<figure class="shot">
+  <img src="img/3d-extrude.gif" width="620" height="620" loading="lazy"
+       alt="Una estella vectorial plana que s'extrudeix en una estella tridimensional i es gira per mostrar la seva profunditat." />
+  <figcaption>Extrudeix i bisella construeix profunditat des d'una forma plana, en viu. La estella roman un camí editable sota.</figcaption>
+</figure>

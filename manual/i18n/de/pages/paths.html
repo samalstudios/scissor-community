@@ -1,0 +1,153 @@
+<p class="lede">Jedes Vektorobjekt in Scissor besteht aus Pfaden: eine Kette von Ankerpunkten, die durch gerade oder gebogene Segmente verbunden sind. Diese Seite behandelt, wie man sie zeichnet, wie man sie Punkt für Punkt umformt und die Befehle, die sie verbinden, versetzen, umreißen und kombinieren.</p>
+
+<p>Die Kürzel sind in ihrer macOS-Form geschrieben. Unter Windows lesen Sie <kbd>&#8984;</kbd> als Strg, <kbd>&#8997;</kbd> als Alt und <kbd>&#8679;</kbd> als Umschalt.</p>
+
+<h2 id="paths-anchors-and-handles">Anker, Griffe und die Form eines Pfads</h2>
+<p>Ein Pfad ist eine Reihe von Ankerpunkten. Zwischen zwei benachbarten Ankern liegt ein Segment, das gerade ist, wenn keiner der Anker sich danach ausstreckt, und gebogen, wenn einer oder beide es tun. Die Reichweite eines Ankers wird durch seine zwei Richtungsgriffe bestimmt: der eingehende Griff formt das Segment, das den Anker erreicht, und der ausgehende Griff formt das Segment, das ihn verlässt. Ziehen Sie einen Griff weiter aus, und die Krümmung wölbt sich stärker in seine Richtung. Ein Pfad kann offen sein, mit zwei losen Enden, oder geschlossen, wo der letzte Anker zum ersten zurückkehrt.</p>
+
+<h3 id="paths-corner-and-smooth">Eck- und glatte Punkte</h3>
+<p>Ein Anker ist entweder eine Ecke oder ein glatter Punkt. An einem glatten Punkt sind die zwei Griffe in eine gerade Linie durch den Anker gesperrt, sodass die Krümmung ohne Knick durchläuft und kontinuierlich bleibt. An einem Eckpunkt sind die zwei Seiten unabhängig: der Pfad kann scharf die Richtung wechseln, und die eine Seite kann gerade sein, während die andere krümmt. Die meisten Formen mischen die beiden, glatte Punkte an den fließenden Teilen und Eckpunkte, wo eine Kante abknickt.</p>
+<dl>
+  <dt>Glatter Punkt</dt>
+  <dd>Griffe, die in einer Linie zusammengehalten werden. Verwenden Sie sie entlang einer Krümmung, die als ein kontinuierlicher Schwung gelesen werden soll, wie die Seite eines Blatts oder der Buchstabe einer Schale.</dd>
+  <dt>Eckpunkt</dt>
+  <dd>Griffe, die sich getrennt bewegen, oder ein Punkt ohne Griffe. Verwenden Sie sie an der Spitze eines Sterns, der Ecke einer Box oder überall, wo eine Krümmung auf eine gerade Kante treffen soll.</dd>
+</dl>
+
+<h3 id="paths-direct-selection">Anker, Griffe und das Direktauswahl-Werkzeug</h3>
+<p>Das Direktauswahl-Werkzeug (<kbd>A</kbd>) arbeitet an den Teilen eines Pfads. Klicken Sie auf einen Anker, um ihn auszuwählen, <kbd>&#8679;</kbd>-Klick, um einen hinzuzufügen oder zu entfernen, oder ziehen Sie eine Marquee über den leeren Raum, um jeden Anker darin zu fassen. Das Ziehen ausgewählter Anker bewegt sie; <kbd>&#8679;</kbd> beschränkt die Bewegung auf 45&deg;-Schritte. Greifen Sie hierher, wenn eine Form fast richtig ist und nur ein oder zwei Punkte geschoben werden müssen.</p>
+<p>Ziehen Sie einen Griff, um die Krümmung auf seiner Seite zu ändern. Griffe, die zu einem glatten Anker gehören, bewegen sich zusammen, sodass die Krümmung kontinuierlich bleibt; halten Sie <kbd>&#8997;</kbd> während des Ziehens, um diese Verbindung zu brechen und eine Seite allein zu steuern, und <kbd>&#8679;</kbd>, um den Griff auf einen Winkel zu halten. Sie können auch ein Segment selbst ziehen: ein gebogenes Segment biegt sich unter dem Zeiger, und ein gerades trägt beide seiner Anker mit.</p>
+<p>Das Gruppenauswahl-Werkzeug teilt diesen Slot und wählt ganze Objekte aus einer Gruppe statt Anker. Ein Klick für das innerste Objekt, ein weiterer Klick, um zur Gruppe darüber auszusteigen.</p>
+
+<h2 id="paths-drawing">Zeichenwerkzeuge</h2>
+<p>Scissor hat drei Werkzeuge, um einen Pfad von Grund auf zu legen. Der Stift gibt genaue Kontrolle Punkt für Punkt, das Krümmungs-Werkzeug legt eine glatte Kurve durch Punkte, die Sie setzen, und der Bleistift folgt Ihrer Hand frei.</p>
+<table>
+  <thead><tr><th>Werkzeug</th><th>Kürzel</th><th>Am besten für</th></tr></thead>
+  <tbody>
+    <tr><td>Stift</td><td><kbd>P</kbd></td><td>Präzise Umrisse, bei denen jeder Anker und Griff mit Absicht platziert ist.</td></tr>
+    <tr><td>Krümmung</td><td><kbd>&#8679;~</kbd></td><td>Fließende Kurven, definiert durch ein paar Durchgangspunkte, ohne Griff-Gezänk.</td></tr>
+    <tr><td>Bleistift</td><td><kbd>N</kbd></td><td>Lockere, handgezeichnete Formen und schnelle Skizzen.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="paths-pen">Das Stift-Werkzeug</h3>
+<p>Das Stift-Werkzeug (<kbd>P</kbd>) baut einen Pfad Punkt für Punkt. Klicken Sie, um einen Eckanker zu setzen; drücken Sie stattdessen und ziehen Sie, und der Anker behält Griffe, sodass der Pfad als Kurve verlässt. Halten Sie <kbd>&#8679;</kbd> während des Ziehens, um den Griff auf 45&deg;-Schritte zu halten, und halten Sie <kbd>&#8997;</kbd>, um nur den ausgehenden Griff zu bewegen, was den Anker in eine Ecke verwandelt und das nächste Segment vom letzten befreit.</p>
+<p>Während ein Pfad offen ist, ändert sich das Werkzeug, wenn Sie es darüber bewegen. Über dem ersten Anker schließt es den Pfad, über einem Segment fügt es einen Anker hinzu und über einem vorhandenen Anker entfernt er einen. Ohne einen Pfad in Arbeit bewegen Sie sich über das lose Ende eines offenen Pfads, wird dieser Pfad aufgenommen, sodass Sie von ihm aus weiterzeichnen können. <kbd>Enter</kbd> oder <kbd>Esc</kbd> beendet den Pfad und lässt ihn offen; <kbd>Entf</kbd> entfernt den zuletzt platzierten Anker.</p>
+
+<h3 id="paths-curvature">Das Krümmungs-Werkzeug</h3>
+<p>Das Krümmungs-Werkzeug (<kbd>&#8679;~</kbd>) legt eine glatte Kurve durch die Punkte, die Sie klicken, mit einer Vorschau, die zum Zeiger läuft, während Sie arbeiten. <kbd>&#8997;</kbd>-Klick setzt stattdessen einen Eckpunkt, und ein Doppelklick auf einen Punkt wechselt ihn zwischen den beiden. Ziehen Sie einen Punkt, um ihn zu bewegen, und die Krümmung passt sich neu an. Klicken Sie auf den ersten Punkt, um die Form zu schließen, oder drücken Sie <kbd>Enter</kbd>, um zu beenden. <kbd>Entf</kbd> entfernt den letzten Punkt und <kbd>Esc</kbd> bricht den Pfad ab. Verwenden Sie es, wenn Ihnen die Form der Krümmung wichtiger ist als die genauen Anker, da es die Griffe für Sie ausrechnet.</p>
+
+<h3 id="paths-pencil">Das Bleistift-Werkzeug</h3>
+<p>Das Bleistift-Werkzeug (<kbd>N</kbd>) zeichnet frei: Drücken Sie, zeichnen Sie und lassen Sie los, und Scissor legt einen glatten Pfad durch die Spur. Lassen Sie nahe dem Startpunkt los oder halten Sie <kbd>&#8997;</kbd> beim Beenden, und der Pfad schließt sich zu einer Form. Das Ergebnis ist ein konturierter offener Pfad in der aktuellen Konturfarbe, sodass er bereit ist, als Linie behalten oder gefüllt zu werden. Wie genau der angepasste Pfad Ihrer Bewegung folgt, wird durch die Bleistift-Treue-Einstellung festgelegt, von genau, das mehr Anker und jede Wibbel hält, bis glatt, das weniger Anker verwendet und die Linie glättet. Greifen Sie hierher für Skizzen, Signaturen und jede Form, die handgezeichnet statt konstruiert aussehen soll.</p>
+
+<h2 id="paths-editing-points">Punkte auf einem Pfad bearbeiten</h2>
+
+<h3 id="paths-add-remove-convert">Punkte hinzufügen, entfernen und umwandeln</h3>
+<p>Der Stift teilt seinen Werkzeug-Slot mit Ankerpunkt hinzufügen (<kbd>+</kbd>), Ankerpunkt entfernen (<kbd>&#8722;</kbd>) und dem Ankerpunkt-Werkzeug (<kbd>&#8679;C</kbd>). Ankerpunkt hinzufügen setzt einen neuen Punkt auf ein Segment, ohne die Krümmung zu ändern; Ankerpunkt entfernen entfernt den angeklickten Punkt und lässt den Pfad die Lücke schließen. Mit dem Ankerpunkt-Werkzeug ziehen Sie von einem Eckanker aus, um ein passendes Paar Griffe herauszuziehen, was ihn glatt macht; ziehen Sie einen einzelnen Griff, um das Paar zu brechen, sodass sich die zwei Seiten getrennt bewegen, was ihn wieder in eine Ecke verwandelt; und klicken Sie auf einen glatten Anker, um seine Griffe auf eine scharfe Ecke zu streifen.</p>
+<p>Objekt &rsaquo; Pfad hat dieselben Bearbeitungen als Befehle, die auf die ganze Auswahl auf einmal wirken. Ankerpunkte hinzufügen setzt einen neuen Anker in die Mitte jedes Segments, verdoppelt die Punktzahl, ohne die Form zu ändern, was vor einer Verzerrung oder Verformung praktisch ist, die mehr Punkte braucht, um sich sauber zu biegen. Ankerpunkte entfernen entfernt die Anker, die Sie mit dem Direktauswahl-Werkzeug ausgewählt haben, und passt den Pfad durch das, was übrig bleibt, neu an.</p>
+
+<h3 id="paths-reshape-tools">Umformen von Hand: Glätten, Pfadradierer und Verbinden</h3>
+<p>Drei pinselartige Werkzeuge formen einen Pfad um, wo Sie ziehen, statt an einem einzelnen Anker. Sie wirken auf die ausgewählten Pfade oder auf jeden Pfad unter dem Pinsel, wenn nichts ausgewählt ist, und <kbd>[</kbd> und <kbd>]</kbd> verkleinern und vergrößern den Pinsel.</p>
+<dl>
+  <dt>Glätten-Werkzeug</dt>
+  <dd>Ziehen Sie entlang eines Pfads, um ihn zu entspannen, Anker auszudünnen und Unebenheiten zu glätten. Verwenden Sie es, um eine zittrige Bleistiftlinie oder eine gerasterte Kante zu beruhigen.</dd>
+  <dt>Pfadradierer-Werkzeug</dt>
+  <dd>Ziehen Sie entlang eines Pfads, um den Teil wegzureiben, den Sie kreuzen, und ihn zu teilen oder zu verkürzen. Verwenden Sie es, um einen verirrten Schwanz von einer Linie zu trimmen.</dd>
+  <dt>Verbinden-Werkzeug</dt>
+  <dd>Schrubben Sie über zwei offene Enden, und sie werden verbunden, wobei die Pfade verlängert oder gekürzt werden, um sich sauber an einer Ecke zu treffen. Verwenden Sie es, um eine Lücke zu schließen, wo sich zwei Striche hätten treffen sollen.</dd>
+</dl>
+
+<h3 id="paths-cutting">Einen Pfad schneiden: Schere und Messer</h3>
+<p>Das Scheren-Werkzeug (<kbd>C</kbd>) schneidet an einer einzelnen Stelle. Klicken Sie auf ein Segment oder einen Anker, und der Pfad wird dort geteilt: ein geschlossener Pfad öffnet am Schnitt, und ein offener Pfad zerbricht in zwei separate Objekte. Verwenden Sie es, um eine Öffnung in einen Kreis zu schnippen oder eine Form zu teilen, sodass die Hälften unterschiedlich gestaltet werden können.</p>
+<p>Das Messer schneidet quer durch die Grafik. Ziehen Sie die Klinge über ein Objekt, um es entlang der gezeichneten Linie in separate Stücke zu schneiden; halten Sie <kbd>&#8997;</kbd>, um in einer geraden Linie zu schneiden, und fügen Sie <kbd>&#8679;</kbd> hinzu, um diese Linie auf 45&deg;-Schritte zu halten. Wenn etwas ausgewählt ist, werden nur die ausgewählten Objekte geschnitten; sonst wird alles, was die Klinge kreuzt, geschnitten. Verwenden Sie es, um eine gefüllte Form in einem Zug in mehrere geschlossene Stücke zu schneiden.</p>
+
+<h2 id="paths-commands">Pfad-Befehle</h2>
+<p>Objekt &rsaquo; Pfad sammelt die Operationen, die auf ganze Pfade auf einmal wirken.</p>
+<table>
+  <thead><tr><th>Befehl</th><th>Kürzel</th><th>Was es macht</th></tr></thead>
+  <tbody>
+    <tr><td>Verbinden</td><td><kbd>&#8984;J</kbd></td><td>Verbindet offene Enden zu einem Pfad oder schließt einen einzelnen offenen Pfad.</td></tr>
+    <tr><td>Mittel&hellip;</td><td><kbd>&#8997;&#8984;J</kbd></td><td>Bewegt ausgewählte Anker auf ihre gemeinsame Position.</td></tr>
+    <tr><td>Kontur umwandeln</td><td></td><td>Wandelt eine Kontur in eine gefüllte Form desselben Umrisses um.</td></tr>
+    <tr><td>Pfad versetzen&hellip;</td><td></td><td>Erstellt eine Kopie, die um eine festgelegte Distanz gewachsen oder geschrumpft ist.</td></tr>
+    <tr><td>Pfadrichtung umkehren</td><td></td><td>Kehrt um, in welche Richtung der Pfad läuft.</td></tr>
+    <tr><td>Vereinfachen&hellip;</td><td></td><td>Reduziert die Anzahl der Ankerpunkte.</td></tr>
+    <tr><td>Ankerpunkte hinzufügen</td><td></td><td>Fügt einen Punkt in die Mitte jedes Segments hinzu.</td></tr>
+    <tr><td>Ankerpunkte entfernen</td><td></td><td>Entfernt die ausgewählten Anker.</td></tr>
+    <tr><td>In Gitter aufteilen&hellip;</td><td></td><td>Teilt die Auswahl in ein Gitter aus Reihen und Spalten.</td></tr>
+    <tr><td>Aufräumen&hellip;</td><td></td><td>Löscht verirrte Punkte, ungemalte Objekte und leeren Text.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="paths-join-average">Verbunden und mitteln</h3>
+<p>Verbinden (<kbd>&#8984;J</kbd>) funktioniert an offenen Pfaden. Mit zwei separaten offenen Pfaden ausgewählt, verbindet es ihre nächsten Enden zu einem Pfad; mit einem einzelnen offenen Pfad verbindet es die zwei losen Enden, um ihn zu schließen. Enden, die bereits aufeinander liegen, werden zu einem Anker zusammengeführt. Verwenden Sie es, um eine Form zu schließen, die Sie als offenen Umriss gezeichnet haben, oder um zwei halb gezeichnete Striche zusammenzunähen.</p>
+<p>Mittel (<kbd>&#8997;&#8984;J</kbd>) bewegt die ausgewählten Anker auf ihre gemeinsame Durchschnittsposition. Der Dialog bietet die horizontale Achse, die die Punkte auf eine gemeinsame Höhe bringt; die vertikale Achse, die sie in eine Spalte bringt; oder beide, die alle auf einen Stapel. Greifen Sie hierher, um eine Reihe von Punkten zu niveln oder zwei Enden zusammenzubringen, bevor Sie sie verbinden.</p>
+
+<h3 id="paths-simplify">Vereinfachen</h3>
+<p>Vereinfachen zeichnet die ausgewählten Pfade mit weniger Ankern neu, innerhalb einer Genauigkeit, die Sie einstellen: eine engere Genauigkeit bleibt nahe am Original auf Kosten von mehr Punkten, eine lockerere glättet die Form auf eine Handvoll. Verwenden Sie es, um einen gerasterten oder handgezeichneten Pfad aufzuräumen, der weit mehr Punkte trägt, als die Form braucht, was ihn leichter zu bearbeiten und zu rendern macht.</p>
+
+<h3 id="paths-offset">Pfad versetzen</h3>
+<p>Pfad versetzt baut einen frischen Pfad in einer festgelegten Distanz vom Original: ein positiver Versatz wächst den Umriss nach außen und sitzt hinter dem Original, ein negativer Versatz schrumpft ihn nach innen und sitzt davor. Die Verbindungs-Einstellung entscheidet, wie nach außen liegende Ecken behandelt werden, als scharfe Spitze, gerundete Rundung oder abgeflachte Fase, mit einer Spitzenbegrenzung, die die Länge einer scharfen Ecke begrenzt, bevor sie abgeschnitten wird. Verwenden Sie es, um einen gleichmäßigen Rand um eine Form zu zeichnen, eine Form für eine Schlüssellinie einzurichten oder eine dünne Form zu fetten. Pfad versetzt ist auch unter Effekt &rsaquo; Pfad als Live-Effekt verfügbar, der neu berechnet wird, wenn sich die Form ändert.</p>
+
+<h3 id="paths-outline-stroke">Kontur umwandeln</h3>
+<p>Kontur umwandeln ersetzt einen konturierten Pfad durch eine gefüllte Form, die genau den Umriss der Kontur hat. Einmal umgewandelt, skaliert die Breite nicht mehr mit dem Objekt und kann nicht als Kontur bearbeitet werden, aber der Umriss kann Punkt für Punkt umgeformt, mit einem Verlauf gefüllt oder mit anderen Formen kombiniert werden. Greifen Sie hierher, wenn Sie brauchen, dass sich die Kontur wie Grafik verhält: um einer Linie eine sich verjüngende oder variierende Kante zu geben, die Sie dann von Hand anpassen, oder um die Linienstärken eines Designs festzuhalten, wenn es skaliert wird. Es ist auch als Live-Effekt verfügbar, unter Effekt &rsaquo; Pfad.</p>
+
+<h3 id="paths-reverse">Pfadrichtung umkehren</h3>
+<p>Pfadrichtung umkehren kehrt die Reihenfolge um, in der die Anker laufen, sodass der Pfad in die andere Richtung reist. Richtung zeigt sich selten von selbst, aber sie entscheidet, welcher Umriss das Loch in einem Verbundpfad ist und wo ein Pinsel oder Pfeilspitze beginnt und endet. Verwenden Sie es, wenn ein Loch in einem Verbundpfad solide gefüllt ist oder wenn Text auf einem Pfad oder der Anfang und das Ende einer Kontur auf der falschen Seite sitzen.</p>
+
+<h2 id="paths-live-shapes">Bearbeitbare Formen und ihre Widgets</h2>
+<p>Rechtecke, abgerundete Rechtecke, Ellipsen und Polygone bleiben live: Sie behalten ihre Parameter und bauen ihren Pfad neu, wenn Sie einen ändern. Während Sie eine Form ziehen, macht <kbd>&#8679;</kbd> sie regelmäßig und <kbd>&#8997;</kbd> zeichnet sie von der Mitte. Die Pfeiltasten funktionieren auch während des Ziehens, oben und rechts fügen hinzu, unten und links ziehen ab, und ändern die Seiten eines Polygons, die Punkte eines Sterns oder den Eckenradius eines abgerundeten Rechtecks.</p>
+<p>Wählen Sie eine einzelne live Form, und kleine runde Griffe erscheinen knapp in ihren Ecken; sie werden verborgen, wenn die Form auf dem Bildschirm zu klein ist, um sie klar zu zeigen. Ziehen Sie einen mit dem Auswahl-Werkzeug (<kbd>V</kbd>), um alle Ecken auf einmal zu runden, oder mit Direktauswahl, um nur die Ecke zu runden, die Sie halten. <kbd>&#8997;</kbd>-Klick auf einen Eckengriff, ihn durch rückwärts, invertiert und abgeschrägt zu schalten, wieder alle vier Ecken mit dem Auswahl-Werkzeug, eine Ecke mit Direktauswahl.</p>
+<p>Eine Ellipse zeigt stattdessen einen quadratischen Griff: einen auf einer ganzen Ellipse und einen an jedem Ende des Kuchens, sobald Sie einen geöffnet haben. Ziehen Sie einen, um ein Stück aus der Form zu öffnen, wobei <kbd>&#8679;</kbd> den Winkel auf 15&deg;-Schritte einrastet; das Zurückbringen des Endes zum Anfang stellt die ganze Ellipse wieder her. Das Eigenschaften-Panel hält dieselben Werte als Zahlen: Radius und Ecktyp, Radien pro Ecke, Polygonseiten und Kuchenanfang und -ende in Grad. Eine live Form behält diese Steuerelemente, bis Sie ihren Pfad direkt bearbeiten, was sie in einen gewöhnlichen Pfad verwandelt.</p>
+
+<h2 id="paths-combining">Formen kombinieren: Verbinden &amp; Teilen und Formen kombinieren</h2>
+<p>Wenn sich zwei oder mehr Formen überlappen, wollen Sie oft eine einzige neue Form daraus: eine Vereinigung, ein Loch oder das Stück, wo sie sich kreuzen. Scissor bietet zwei Wege, dorthin zu gelangen. Das Verbinden &amp; Teilen ist direkt und visuell; das Formen kombinieren-Panel wendet dieselben Operationen als Schaltflächen an. Beide behalten Kurven, anstatt sie in Liniensegmente zu verflachen.</p>
+
+<h3 id="paths-shape-builder">Das Verbinden &amp; Teilen-Werkzeug</h3>
+<p>Das Verbinden &amp; Teilen-Werkzeug (<kbd>&#8679;M</kbd>) arbeitet an zwei oder mehr ausgewählten Pfaden. Es teilt ihre Überlappungen in Regionen und hebt diejenige hervor, über der der Zeiger ist; ziehen Sie eine Linie über mehrere Regionen, um sie zu einem Objekt zusammenzuführen, das das Erscheinungsbild der Form annimmt, aus der es stammt, oder <kbd>&#8997;</kbd>-Ziehen Sie darüber, um sie zu löschen. Verwenden Sie es, um eine Form nach Augenmaß zu bauen, indem Sie die Teile hinzufügen, die Sie wollen, und die Teile wegreiben, die Sie nicht wollen, ohne für jeden Schritt einen Befehl wählen zu müssen.</p>
+
+<h3 id="paths-pathfinder-shape-modes">Formen kombinieren-Formmodi</h3>
+<p>Das Formen kombinieren-Panel (<kbd>&#8679;&#8984;F9</kbd>) öffnet mit vier Formmodi, von denen jeder die ausgewählten Pfade durch einen kombinierten Pfad ersetzt. Das Ergebnis übernimmt das Erscheinungsbild des oberen Objekts, außer Minus Vordergrund, das das Erscheinungsbild des unteren behält.</p>
+<dl>
+  <dt>Vereinigen</dt>
+  <dd>Führt jede ausgewählte Form zu einem Umriss zusammen. Verwenden Sie es, um überlappende Teile zu einer einzigen Silhouette zu schweißen, wie eine Wolke aus einer Reihe von Kreisen.</dd>
+  <dt>Minus Vordergrund</dt>
+  <dd>Behält die hinterste Form und schneidet alles ab, was vor ihr gestapelt ist. Verwenden Sie es, um ein Stück aus einer Form herauszuschneiden, wie einen Halbmond aus zwei Kreisen zu schneiden.</dd>
+  <dt>Schnittmenge</dt>
+  <dd>Behält nur den Bereich, den jede ausgewählte Form gemeinsam hat. Verwenden Sie es, um Grafik auf eine gemeinsame Region zuzuschneiden, wie die Linse, wo sich zwei Kreise kreuzen.</dd>
+  <dt>Ausschließen</dt>
+  <dd>Behält alles außer den Überlappungen, die zu Löchern werden. Verwenden Sie es, um einen Ring oder ein Kiederelement zu machen, wo die kreuzenden Teile herausfallen.</dd>
+</dl>
+
+<figure class="shot">
+  <img src="img/combine.gif" width="760" height="441" loading="lazy"
+       alt="Drei überlappende Formen, ein Kreis, ein abgerundetes Quadrat und ein Kreis, die zu einer kombinierten Silhouette verschmelzen." />
+  <figcaption>Vereinigen (oder ein Ziehen mit dem Verbinden &amp; Teilen) führt überlappende Formen zu einem einzigen Umriss zusammen, der seine Kurven behält.</figcaption>
+</figure>
+
+<h3 id="paths-pathfinders">Die anderen Formen kombinieren-Operationen</h3>
+<p>Unter den Formmodi befinden sich sechs Pathfinder. Diese lassen Sie mit mehreren Stücken zurück, die in einer Gruppe gesammelt sind, statt einem kombinierten Pfad. Minus Hintergrund entspricht seinem Formmodi-Namen, behält aber die obere Form.</p>
+<dl>
+  <dt>Teilen</dt>
+  <dd>Schneidet die Formen entlang jeder Linie, in der sie sich kreuzen, in separate Flächen, wobei jede Fläche die Farbe der oberen Form annimmt, die sie bedeckt. Verwenden Sie es, um ein Design in malbare Stücke zu brechen, wie die Zellen eines Glasmosaikpanels.</dd>
+  <dt>Zuschneiden</dt>
+  <dd>Entfernt den verborgenen Teil jeder Form, wo eine Form darüber ihn bedeckt. Jedes Stück behält seine eigene Füllung und nichts wird zusammengeführt; Konturen werden fallengelassen. Verwenden Sie es, um gestapelte Flächengrafik zu verflachen, sodass keine Farbe auf eine andere druckt.</dd>
+  <dt>Zusammenführen</dt>
+  <dd>Schneidet die verborgenen Teile ab und vereinigt dann benachbarte Stücke, die eine Füllfarbe teilen. Verwenden Sie es, um eine Flächen-Illustration aufzuräumen und gleichbige Regionen zu einzelnen Formen zusammenzuführen.</dd>
+  <dt>Zuschneiden</dt>
+  <dd>Behält nur die Teile der unteren Formen, die innerhalb der obersten Form liegen, die dann verworfen wird. Verwenden Sie es, um Grafik auf einen Rahmen zuzuschneiden und den Schnitt in die Pfade zu backen, statt eine Live-Clipping-Maske zu behalten.</dd>
+  <dt>Minus Hintergrund</dt>
+  <dd>Behält die vorderste Form und schneidet alles ab, was hinter ihr liegt. Verwenden Sie es, wenn die obere Form die Behaltene ist und die Formen darunter in sie schneiden sollen.</dd>
+  <dt>Umriss</dt>
+  <dd>Wandelt jede Regionsgrenze in eine offene Linie um, konturiert in der Füllfarbe, aus der sie stammt. Verwenden Sie es, um das Gerüst der Kanten aus einem Satz überlappender Formen herauszuziehen.</dd>
+</dl>
+<p>Effekt &rsaquo; Formen kombinieren wendet Hinzufügen, Schneiden, Ausschließen, Abziehen und Minus Hintergrund als Live-Effekte auf eine Gruppe an und lässt die Originalobjekte darunter intakt und bearbeitbar. Greifen Sie zu den Effekt-Versionen, wenn Sie die Teile später noch bewegen möchten; greifen Sie zum Panel, wenn die kombinierte Form endgültig ist.</p>
+
+<h2 id="paths-compound-and-masks">Verbundpfade und Clipping-Masken</h2>
+<p>Objekt &rsaquo; Verbundpfad &rsaquo; Erstellen (<kbd>&#8984;8</kbd>) faltet die ausgewählten Pfade zu einem Objekt, das durch die gerade-ungerade-Regel gefüllt wird, sodass ein innerer Umriss ein Loch durch den darum herum schneidet. Das Ergebnis übernimmt das Erscheinungsbild des niedrigsten Objekts in der Auswahl. Freigeben (<kbd>&#8997;&#8679;&#8984;8</kbd>) gibt jeden Umriss als eigenen Pfad zurück. Verwenden Sie einen Verbundpfad für jede Form mit einem Loch, wie den Buchstaben O oder eine Unterlegscheibe.</p>
+<p>Objekt &rsaquo; Clipping-Maske &rsaquo; Erstellen (<kbd>&#8984;7</kbd>) verwendet das oberste ausgewählte Objekt, das ein Pfad sein muss, um alles darunter zu zuschneiden. Scissor setzt sie alle in eine Clipping-Gruppe und löscht die eigene Füllung und Kontur des Maskenpfads. Freigeben (<kbd>&#8997;&#8984;7</kbd>) verwandelt die Clipping-Gruppe zurück in eine gewöhnliche Gruppe, sodass nichts mehr zugeschnitten wird und jedes Objekt, Maskenpfad inklusive, dort bleibt, wo es war. Deckkraftmaske erstellen im selben Untermenü maskiert nach Ton statt nach Umriss, sodass hellere Teile der Maske durchscheinen und dunklere verbergen.</p>
+
+<h2 id="paths-smart-guides">Smart Guides und Einrasten</h2>
+<p>Smart Guides (Ansicht &rsaquo; Smart Guides, <kbd>&#8984;U</kbd>) beobachten die sichtbare Grafik und die Boards, während Sie zeichnen oder ziehen. Was Sie bewegen, rastet an den Rändern, Mittelpunkten und Ankern seiner Nachbarn ein, und eine Linie erscheint zurück zu dem, womit es sich ausgerichtet hat, beschriftet mit der Art der Übereinstimmung: Anker, Mitte, Ecke oder Ausrichtung.</p>
+<p>Zwei weitere Guides erscheinen von selbst. Wenn das Objekt, das Sie bewegen, denselben Abstand von seinen Nachbarn hätte wie diese voneinander, rastet es dort ein, und die zwei gleichen Lücken werden mit der Messung gezeichnet; dies funktioniert sowohl für das Fortsetzen einer Reihe gleichmäßig verteilter Objekte als auch für das Zentrieren eines in der Lücke zwischen zwei. Und wenn Sie von einem Startpunkt wegziehen, rastet die Richtung auf eine Konstruktionslinie alle 45&deg; vom Beschränkungswinkel ein, gezeichnet als lange Linie mit dem Winkel daneben.</p>
+<p>Punkt einrasten (<kbd>&#8997;&#8984;'</kbd>) und Raster einrasten (<kbd>&#8679;&#8984;'</kbd>) sind separate Schalter im Ansicht-Menü. Wenn Raster einrasten aktiviert ist, landet alles auf der Rasterunterteilung und die Smart Guides treten beiseite.</p>

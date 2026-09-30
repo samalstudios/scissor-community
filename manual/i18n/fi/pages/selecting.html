@@ -1,0 +1,34 @@
+<p class="lede">Ennen kuin voit muuttaa mitään, sinun on sanottava, mitä muuttaa. Tämä sivu on teoksen valitsemisesta: nopeista napsautuksista valintatyökaluilla ja koko <strong>Valitse</strong>-valikosta, joka valitsee kohteet sen mukaan, mistä ne on tehty, käy pinon läpi ja tallentaa valinnan myöhemmin palautettavaksi. Alla olevissa pikanäppäimissä <kbd>&#8984;</kbd> on <kbd>Ctrl</kbd> Windowsilla ja Linuxilla, <kbd>&#8997;</kbd> on <kbd>Alt</kbd> ja <kbd>&#8679;</kbd> on Shift.</p>
+
+<h2 id="selecting-basics">Napsauttaminen ja valintakaari</h2>
+<p><strong>Valintatyökalu</strong> (<kbd>V</kbd>) on se, missä useimmat valinnat alkavat. Napsauta kohdetta valitaksesi sen; pidä <kbd>&#8679;</kbd> ja napsauta toista lisätäksesi sen tai napsauta valittua poistaaksesi sen. Vedä tyhjän piirtoalueen yli vedääksesi <em>valintakaaren</em> ja kaikki, mitä se koskettaa, on valittu. <strong>Suora valintatyökalu</strong> (<kbd>A</kbd>)) ulottuu sisään: se valitsee yksittäiset ankkurit ja polun segmentit kokonaisten kohteiden sijaan ja <strong>Ryhmän valintatyökalu</strong> astuu ryhmään kerrallaan. Nämä työkalut on kuvattu <a href="/manual/fi/tools/">Työkalut</a> ja <a href="/manual/fi/paths/">Polut</a> -sivuilla; tämän sivun loppuosa on Valitse-valikko, joka tekee valinnan, jota napsauttaminen ei voi.</p>
+
+<h2 id="selecting-whole-document">Kaikki, ei mitään ja käänteinen</h2>
+<table>
+  <thead><tr><th>Komento</th><th>Pikanäppäin</th><th>Mitä se valitsee</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Valitse &rsaquo; Kaikki</strong></td><td><kbd>&#8984;A</kbd></td><td>Jokainen lukitsematon kohde asiakirjassa.</td></tr>
+    <tr><td><strong>Kaikki aktiivisella alustalla</strong></td><td><kbd>&#8997;&#8984;A</kbd></td><td>Vain teos alustalla, jolla työskentelet — nopea tapa ottaa yksi sivu monialustaisesta tiedostosta.</td></tr>
+    <tr><td><strong>Poista valinta</strong></td><td><kbd>&#8679;&#8984;A</kbd></td><td>Ei mitään; tyhjentää nykyisen valinnan.</td></tr>
+    <tr><td><strong>Käänteinen</strong></td><td></td><td>Vaihtaa valinnan kaikkeen, mikä ei ollut <em>valittu</em>.</td></tr>
+    <tr><td><strong>Valitse uudelleen</strong></td><td><kbd>&#8984;6</kbd></td><td>Tuo takaisin valinnan, joka oli juuri ennen kuin tyhjensit sen.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="selecting-stack">Pinon läpi käyminen</h2>
+<p>Kun kohteet ovat päällekkäin, <strong>Valitse &rsaquo; Seuraava kohde ylhäällä</strong> (<kbd>&#8997;&#8984;]</kbd>) ja <strong>Seuraava kohde alhaalla</strong> (<kbd>&#8997;&#8984;[</kbd>) siirtävät valinnan ylös tai alas pinossa samassa paikassa, yksi kohde kerrallaan. Se on luotettava tapa päästä muotojen alle, jotka ovat muiden alla, siirtämättä ylempänä olevia pois tieltä.</p>
+
+<h2 id="selecting-same">Valitse samat: valitse sen mukaan, mitä ne jakavat</h2>
+<p>Valitse yksi kohde, sitten <strong>Valitse &rsaquo; Samat</strong> kerää jokaisen muun kohteen asiakirjassa, joka vastaa sitä yhdellä ominaisuudella. Käytä tätä värittämällä kaikki yhden täytteen muodot yhdellä vedolla tai ottamalla kaikki ohuet reunaviivat kerralla.</p>
+<dl>
+  <dt>Ulkoasu</dt><dd>Koko ulkoasu — sama pino täytteitä, reunaviivoja ja tehosteita.</dd>
+  <dt>Täyte ja reunaviiva</dt><dd>Sama täyte ja sama reunaviiva yhdessä.</dd>
+  <dt>Täytteen väri / Reunaviivan väri</dt><dd>Sama täytteen väri tai sama reunaviivan väri.</dd>
+  <dt>Reunaviivan paksuus</dt><dd>Sama reunaviivan leveys.</dd>
+  <dt>Peittävyys</dt><dd>Sama peittävyys.</dd>
+  <dt>Sekoitustila</dt><dd>Sama sekoitustila.</dd>
+  <dt>Muoto</dt><dd>Sama kohdetyyppi — kaikki ellipsit, sanotaan, tai kaikki teksti.</dd>
+</dl>
+
+<h2 id="selecting-saved">Valinnan tallentaminen</h2>
+<p>Monimutkainen valinta on säilyttämisen arvoinen. <strong>Valitse &rsaquo; Tallenna valinta&hellip;</strong> tallentaa nykyisen joukon nimellä; se sitten ilmestyy <strong>Valitse &rsaquo; Tallennetut valinnat</strong> -kohtaan ja valitseminen siellä valitsee juuri ne kohteet uudelleen, mitä tahansa olet napsauttanut sen jälkeen. <strong>Muokkaa valintaa&hellip;</strong> nimeää uudelleen tai poistaa tallentamasi. Tallennetut valinnat matkustavat <code>.cut</code>-asiakirjan mukana, joten ne ovat siellä vielä seuraavalla kerralla, kun avaat tiedoston.</p>

@@ -1,0 +1,96 @@
+<p class="lede">Un effetto cambia l'aspetto di un oggetto senza modificare l'oggetto stesso. Il tracciato, il gruppo o il pezzo di testo resta esattamente come lo hai disegnato, e l'effetto viene ricalcolato sopra ogni volta che sposti un punto o modifichi un valore. Gli effetti si impilano nel pannello Stack pittura, così puoi impilarne diversi su un oggetto, riordinarli e toglierne uno qualsiasi di nuovo.</p>
+
+<figure class="shot">
+  <img src="img/effects-demo.png" width="1400" height="560" loading="lazy"
+       alt="Tre piastrelle blu identiche che mostrano tre effetti: un'ombra proiettata, un bagliore esterno ambra e bordi ruvidizzati." />
+  <figcaption>La stessa piastrella con tre effetti: un'ombra proiettata, un bagliore esterno e Ruvidizza. Ciascuno è live, così la piastrella sotto è ancora un rettangolo arrotondato semplice.</figcaption>
+</figure>
+
+<h2 id="effects-live-and-stacked">Effetti live e pila dell'aspetto</h2>
+<p>Ogni effetto in Scissor è <strong>live</strong> e <strong>non distruttivo</strong>. Si trova sopra i riempimenti e i contorni dell'oggetto nel pannello <strong>Aspetto</strong> (<kbd>&#8679;F6</kbd>) e viene eseguito su tutto l'oggetto ogni volta che il lavoro o l'effetto cambia. Poiché il tracciato originale è intatto sotto, puoi continuare a modificare le ancore, cambiare il colore di riempimento o ridigitare le parole, e l'effetto segue. Usa un effetto ogni volta che vuoi un aspetto, un'ombra, una piega, un angolo arrotondato, che potresti cambiare idea in seguito, piuttosto che impegnartici a mano.</p>
+
+<h3 id="effects-order">L'ordine conta</h3>
+<p>Gli effetti vengono eseguiti dal basso della pila verso l'alto, e il pannello li elenca dall'alto, sopra i riempimenti e i contorni. L'ordine cambia il risultato: una sfocatura sotto un'ombra proiettata smussa la forma prima che l'ombra venga proiettata, mentre gli stessi due nell'altro verso proiettano un'ombra netta e poi sfocano tutto. Se un effetto non fa ciò che ti aspetti, la sua posizione nella pila è la prima cosa da controllare.</p>
+
+<h2 id="effects-using">Aggiungere, modificare e rimuovere effetti</h2>
+<h3 id="effects-add">Dal menu Effetto</h3>
+<p>Seleziona un oggetto, poi scegli un effetto dal menu <strong>Effetto</strong>. Le voci che aprono una finestra di dialogo mostrano un'<strong>Anteprima</strong> man mano che cambi i loro valori, così puoi giudicare il risultato sulla tela prima di confermare; l'intera modifica atterra come un singolo passaggio nella cronologia invece che un passaggio per tasto. Una versione breve del menu (Ombra proiettata, Bagliore esterno e Sfocatura gaussiana, più Cancella effetti) si trova anche nel menu del clic destro sotto tela sotto <strong>Effetto</strong>.</p>
+
+<h3 id="effects-appearance">Nel pannello Stack pittura</h3>
+<p>Ogni effetto sull'oggetto selezionato ha la sua riga nel pannello Stack pittura, contrassegnata con un badge <em>fx</em>. Fai clic sul nome dell'effetto per riaprirne le opzioni e modificarle. Fai clic sulla croce alla fine della riga per rimuovere quell'effetto. Per eliminare ogni effetto dalla selezione in una volta, usa <strong>Effetto &rsaquo; Cancella effetti</strong>.</p>
+
+<h3 id="effects-panels">Nei pannelli Effetti</h3>
+<p>Il gruppo <strong>Finestra &rsaquo; Effetti</strong> raccoglie gli effetti in un pannello per ogni parte del menu Effetto: Stilizza, Sfocatura, Distorci e Trasforma, Tracciato, Forme combinate e Deforma, con il pannello 3D accanto. Ogni pannello elenca gli effetti di quel gruppo con un interruttore per attivarli o disattivarli e le loro impostazioni subito sotto, tutte modificate live sulla selezione. È un modo più veloce per provare un effetto e regolarne i valori che aprire una finestra di dialogo ogni volta. Disattivare un interruttore rimuove quell'effetto dall'oggetto. Quando un oggetto porta più di uno effetto dello stesso tipo, il pannello modifica il primo e il pannello Stack pittura mostra ancora l'intera pila.</p>
+
+<h2 id="effects-stylize">Stilizza: ombre, bagliori e bordi</h2>
+<p>Il sottomenu <strong>Effetto &rsaquo; Stilizza</strong> contiene gli effetti di finitura di tutti i giorni.</p>
+<table>
+  <thead><tr><th>Effetto</th><th>Cosa fa, e quando usarlo</th><th>Opzioni principali</th></tr></thead>
+  <tbody>
+    <tr><td>Ombra proiettata</td><td>Proietta una copia sfocata e scostata dell'oggetto dietro di esso. Usala per staccare una forma, una scheda o un pezzo di testo dallo sfondo.</td><td>Scostamento X e Y, Sfocatura, Colore, Opacità.</td></tr>
+    <tr><td>Bagliore esterno</td><td>Diffonde un alone morbido di colore verso l'esterno dal bordo dell'oggetto. Usalo per un'insegna al neon, una evidenziazione o un bagliore attorno a una fonte di luce.</td><td>Sfocatura, Colore, Opacità.</td></tr>
+    <tr><td>Bagliore interno</td><td>Sfuma un colore verso l'interno dal bordo invece che verso l'esterno, così la luce si trova dentro la forma. Usalo per scavare una forma o suggerire un bordo incassato e illuminato.</td><td>Sfocatura, Colore, Opacità.</td></tr>
+    <tr><td>Piuma</td><td>Sfuma il bordo dell'oggetto in trasparenza su un raggio. Usalo per una forma a bordo morbido o una semplice vignettatura.</td><td>Raggio piuma.</td></tr>
+    <tr><td>Arrotonda angoli</td><td>Arrotonda ogni angolo del tracciato a un raggio. Usalo per ammorbidire le punte di una stella, un poligono o un tracciato disegnato a mano senza ridisegnarlo.</td><td>Raggio.</td></tr>
+    <tr><td>Riempimento schizzo</td><td>Riempie la forma con una serie di tratti avanti e indietro, come se fossero schizzati a mano. Buono per un riempimento libero e disegnato o un effetto pennarello.</td><td>Angolo, Spaziatura, Spessore tratto, Variazione (quanto i tratti vaganano, da 0 a 100%).</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-blur">Sfocatura</h2>
+<p><strong>Effetto &rsaquo; Sfocatura &rsaquo; Sfocatura gaussiana</strong> ammorbidisce l'intero oggetto di un <em>Raggio</em> che imposti in pixel. Poiché resta live, puoi aumentare o diminuire il raggio in qualsiasi momento. Usalo per uno sfondo morbido e fuori fuoco, oppure come una rapida forma d'ombra morbida a sé stante.</p>
+
+<h2 id="effects-distort">Distorci e trasforma</h2>
+<p>Il sottomenu <strong>Effetto &rsaquo; Distorci e Trasforma</strong> rimodella il contorno mantenendo il tracciato sottostante modificabile.</p>
+<table>
+  <thead><tr><th>Effetto</th><th>Cosa fa, e quando usarlo</th><th>Opzioni principali</th></tr></thead>
+  <tbody>
+    <tr><td>Distorci libera</td><td>Trascina i quattro angoli del riquadro dell'oggetto in una piccola anteprima, e il lavoro segue in prospettica. Usalo per simulare una prospettica, come un'etichetta appoggiata su una superficie inclinata. Un interruttore Anteprima mostra il risultato sulla tela mentre trascini, e Ripristina rimette gli angoli in squadra.</td><td>Le quattro maniglie d'angolo, Anteprima, Ripristina.</td></tr>
+    <tr><td>Pizzica e gonfia</td><td>Piega i segmenti tra le ancore verso l'interno, pizzicando il contorno in punte, oppure verso l'esterno, gonfiandolo in rigonfiamenti. Usalo per esplosioni stellari, blob e forme petalo morbide.</td><td>Quantità, da pizzicato a gonfio.</td></tr>
+    <tr><td>Ruvidizza</td><td>Spezza il contorno in piccoli movimenti casuali, netti o smussati. Usalo per un bordo strappato o una linea più ruvida e disegnata a mano.</td><td>Dimensione (quanto lontano si muovono i punti), Dettaglio (quanto densamente), Punti: Morbido o Angolo.</td></tr>
+    <tr><td>Trasforma</td><td>Ridimensiona, sposta e ruota l'oggetto come effetto, e può lasciare una serie di copie dietro. Usalo per una fila o un anello di ripetizioni modificabili, oppure per spostare e ridimensionare una forma senza toccare la sua geometria reale.</td><td>Ridimensiona orizzontale e verticale, Sposta orizzontale e verticale, Ruota, Copie (da 0 a 200).</td></tr>
+    <tr><td>Ritocca</td><td>Sposta le ancore e le loro maniglie di controllo di un importo casuale. Usalo per slegare una forma troppo perfetta.</td><td>Quantità orizzontale e verticale, e se spuntare Punti di ancoraggio, Punti di controllo o entrambi.</td></tr>
+    <tr><td>Ruota</td><td>Ruota l'interno della forma più dei suoi bordi, avvolgendola in una spirale. Usalo per una spirale o un vortice.</td><td>Angolo.</td></tr>
+    <tr><td>Zig Zag</td><td>Trasforma i segmenti retti in zig-zag regolari (Angolo) o onde (Morbido). Usalo per una sottolineatura ondulata, un bordo ric-rac o un bordo frastagliato.</td><td>Dimensione, Creste per segmento, Punti: Angolo o Morbido.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-path">Tracciato</h2>
+<p>Il sottomenu <strong>Effetto &rsaquo; Tracciato</strong> rielabora il contorno dell'oggetto lasciando la sorgente modificabile.</p>
+<table>
+  <thead><tr><th>Effetto</th><th>Cosa fa, e quando usarlo</th><th>Opzioni principali</th></tr></thead>
+  <tbody>
+    <tr><td>Tracciato offset</td><td>Ingrandisce o rimpicciolisce il contorno di una distanza impostata. Un offset positivo lo diffonde verso l'esterno, uno negativo lo tira dentro. Usalo per un contorno live attorno a un testo o una forma che segue il ritmo mentre modifichi.</td><td>Offset, Giunzioni: Miter, Round o Bevel.</td></tr>
+    <tr><td>Contorna oggetto</td><td>Aggiunge un effetto Tracciato offset impostato a zero, trasformando l'oggetto (testo live incluso) in un tracciato contornato così gli effetti successivi hanno un tracciato reale su cui agire.</td><td>Nessuna.</td></tr>
+    <tr><td>Contorna tratto</td><td>Trasforma il contorno in una forma riempita come effetto. Usalo quando vuoi riempire un contorno con una sfumatura, oppure piumare o distorcere un contorno che altrimenti è una linea semplice.</td><td>Nessuna.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-pathfinder">Forme combinate</h2>
+<p>Il sottomenu <strong>Effetto &rsaquo; Forme combinate</strong> combina le forme dentro un gruppo con una modalità forma, ma le mantiene come tracciati separati e modificabili sotto. Applicato a un gruppo, il risultato combinato è ciò che vedi, mentre ogni membro può ancora essere spostato o ricolorato. Usalo per provare una combinazione senza impegnartici nel modo in cui farebbe il pannello Forme combinate.</p>
+<table>
+  <thead><tr><th>Modalità</th><th>Risultato</th></tr></thead>
+  <tbody>
+    <tr><td>Aggiungi</td><td>Unisce le forme del gruppo in una regione.</td></tr>
+    <tr><td>Interseca</td><td>Mantiene solo dove le forme si sovrappongono.</td></tr>
+    <tr><td>Escludi</td><td>Mantiene tutto tranne dove si sovrappongono.</td></tr>
+    <tr><td>Sottrai</td><td>Rimuove le forme davanti da quella dietro.</td></tr>
+    <tr><td>Meno dietro</td><td>Rimuove le forme dietro da quella davanti.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-warp">Deforma</h2>
+<p><strong>Effetto &rsaquo; Deforma</strong> piega l'oggetto lungo una di una serie di forme preimpostate e resta live così puoi continuare a modificare il lavoro sotto. Usalo per curvare un titolo in un archi, ondeggiare un banner o spingere un blocco piatto in un rigonfiamento, senza rinunciare alla possibilità di cambiare le parole o i colori.</p>
+<p>Il menu offre dieci stili direttamente (Arco, Arco di cerchio, Rigonfiamento, Bandiera, Onda, Pesce, Salita, Occhio di pesce, Gonfia e Stringi). <strong>Opzioni deformazione&hellip;</strong> apre il set completo, che aggiunge Arco inferiore, Arco superiore, Conchiglia inferiore e Conchiglia superiore, e ti permette di regolare la quantità:</p>
+<dl>
+  <dt>Piega</dt><dd>Quanto fortemente la forma si piega, da -100% a 100%.</dd>
+  <dt>Orizzontale</dt><dd>Piega l'inclinazione da un lato, da -100% a 100%.</dd>
+  <dt>Verticale</dt><dd>Alza o abbassa l'inclinazione, da -100% a 100%.</dd>
+</dl>
+<p>Gli stili di deformazione stessi possono essere applicati come busta di rimodellazione invece, che modifica il tracciato stesso piuttosto che restare live: vedi <a href="#transform-envelope">Deformazione forma</a>. Lo Strumento Deforma e gli altri strumenti liquify rimodellano trascinando sulla tela e sono trattati sotto <a href="#tools-width-liquify">il riferimento strumenti</a>.</p>
+
+<h2 id="effects-3d">3D e Materiali</h2>
+<p><strong>Effetto &rsaquo; 3D e Materiali</strong> trasforma una forma piatta in un solido: un piano, un'estrusione e smussatura, una rivoluzione o un gonfiaggio. Come gli altri è un effetto live, così il tracciato piatto resta lì da modificare e il solido si ricostruisce quando lo cambi. Profondità, smussatura, rotazione, illuminazione e superficie si impostano nel pannello 3D e Materiali. Poiché ha più controlli di una singola finestra di dialogo, 3D ha una sua pagina: vedi <a href="/manual/three-d/">3D</a>.</p>
+
+<h2 id="effects-expand">Trasformare gli effetti in lavoro</h2>
+<p>Un effetto resta live per tutto il tempo che vuoi. Quando l'aspetto è sistemato e hai bisogno del risultato come tracciati semplici e modificabili, ad esempio per passare il file o rimodellare a mano il risultato dell'effetto, scegli <strong>Oggetto &rsaquo; Espandi aspetto</strong>. Incorpora l'intera pila dell'aspetto, effetti inclusi, in lavoro ordinario. Questo non può più essere modificato come effetto in seguito, quindi espandi solo quando sei sicuro. Per rimuovere gli effetti senza incorporare nulla, rimuovili uno alla volta nel pannello Stack pittura oppure cancellali tutti con <strong>Effetto &rsaquo; Cancella effetti</strong>.</p>
+<p>Il menu Effetto elenca anche <strong>Rasterizza</strong>, che non è un effetto live: converte la selezione in pixel lì e subito. La dipintura e i livelli pixel sono trattati nella pagina <a href="/manual/pixels/">Livelli pixel</a>.</p>

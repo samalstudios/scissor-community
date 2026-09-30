@@ -1,0 +1,134 @@
+<p class="lede">Hvordan en form ser ud, er dens <em>udseende</em>: udfyldningen inde i dens kontur, stregoverfladen tegnet langs den og opaciteten og blandingen, der beslutter, hvordan den sidder over det, der er bag den. Hver af disse kan være en flad farve, en gradient eller et mønster, og et objekt kan bære mere end én af hver på én gang. Denne side dækker malingskontrollerne, farvemodellerne, farveprøver, gradienter, stregoverflader, gennemsigtighed, Malingstak-panelet og grafiske stilarter.</p>
+
+<p>Genvejene nedenfor er skrevet i deres macOS-format. På Windows skal du læse <kbd>&#8984;</kbd> som Ctrl, <kbd>&#8997;</kbd> som Alt og <kbd>&#8679;</kbd> som Shift.</p>
+
+<figure class="shot">
+  <img src="img/artwork-landscape.png" width="1700" height="967" loading="lazy"
+       alt="En vektorlandskab af bjerge, himmel og en sø, bygget af fladudfyldte former i Scissor." />
+  <figcaption>En hel scene bygget af udfyldte former. Hver farvebånd er en sti med sin egen udfyldning.</figcaption>
+</figure>
+
+<h2 id="appearance-fill-and-stroke">Udfyldninger og stregoverflader</h2>
+<p>En sti, form eller stykke tekst kan holde en <strong>udfyldning</strong>, malingen inde i dens kontur, og en <strong>stregoverflade</strong>, linjen tegnet langs den kontur. En udfyldning kan være en solid farve, en gradient eller et mønster; en stregoverflade kan være en solid farve eller en gradient, med sin egen tykkelse og streg. Begge sider kan også indstilles til ingen, så du kan tegne en form kun med en stregoverflade eller kun med en udfyldning.</p>
+
+<h3 id="appearance-the-paint-chips">Udfyldnings- og stregchips</h3>
+<p>To overlappende chips i bunden af værktøjslinjen holder udfyldningen og stregoverfladen. Klik på hvilken som helst for at åbne en farvevælger; den forreste er den side, som tasterne og Farve-, Gradient- og Farveprøver-panelerne virker på. Tryk på <kbd>X</kbd> for at bringe den anden side foran, <kbd>&#8679;X</kbd> for at bytte de to malinger, <kbd>/</kbd> for at indstille den forreste side til ingen og <kbd>D</kbd> for at vende tilbage til standard: hvid udfyldning, sort stregoverflade og 1 pt tykkelse. Samme udfyldning, stregoverflade, tykkelse, opacitet og blandingstilstand sidder også sammen i Egenskaber-panelet, hvilket er praktisk, når du vil have dem alle på ét sted.</p>
+<p>Uden valgt indstiller disse kontroller den stil, som det næste objekt, du tegner, overtager, så du kan vælge en farve før du tegner i stedet for efter.</p>
+
+<h3 id="appearance-eyedropper">Kopiering af maling med pipetten</h3>
+<p>Pipetten (<kbd>I</kbd>) kopierer et hele udseende fra det objekt, du klikker på, til markeringen. Hold <kbd>&#8679;</kbd> for kun at tage dens udfyldning eller stregfarve til den aktive side, eller <kbd>&#8997;</kbd> for at trykke markeringens udseende på det objekt under markøren i stedet. Klik på et placeret billede eller et pixellag prøver farven under markøren til den aktive side, så du kan løfte en farve direkte ud af et foto. Gå efter pipetten, når to objekter skal matche: prøv én, og den anden overtager samme maling med ét klik.</p>
+
+<h2 id="appearance-colour">Farve</h2>
+<p>Farve vælges i den lille pop-op-vælger på hvert chip eller, med mere kontrol, i Farvepanelet.</p>
+
+<h3 id="appearance-color-panel">Farvepanelet</h3>
+<p><strong>Farve</strong>-panelet (<kbd>F6</kbd>) viser den aktive sides maling som et sæt af skyderne, et heksadecimelt felt og et spektrum. Udfyldnings- og stregchips øverst vælger, hvilken side du redigerer. Spektruet løber nuancer på tværs, hvidt øverst og sort nederst; klik eller træk i det for at vælge. Tre hurtige farveprøver ved siden af det indstiller Ingen, Hvid og Sort med ét klik, og <em>Invertér</em>- og <em>Komplement</em>-knapperne omarbejder den aktuelle farve (Komplement vender dens nuance halvvejs rundt og bevarer dens mætning og lysstyrke).</p>
+<p>Farvemodelmenuen indstiller, hvilke skyder panelet viser. Valget bevares for sessionen, og nye farveprøver laves i det.</p>
+<dl>
+  <dt>Gråtoner</dt><dd>En enkelt K-skyder, fra hvid ved 0% til sort ved 100%.</dd>
+  <dt>RGB</dt><dd>Rød, grøn og blå fra 0 til 255, modellen til skærmarbejde.</dd>
+  <dt>HSB</dt><dd>Nuance i grader, derefter mætning og lysstyrke som procenter: ofte den hurtigste måde at justere en farve på uden at miste dens karakter.</dd>
+  <dt>CMYK</dt><dd>Cyan, magenta, gul og sort som procenter, til udskrift.</dd>
+  <dt>Web Safe RGB</dt><dd>RGB fastgjort til de 216 websikre farver. Når den aktuelle farve ikke er en af dem, vises en advarselstrekant; klik på den for at fastgøre til den nærmeste websikre farve.</dd>
+</dl>
+<p>Når den aktive side er malet med en global farveprøve, vises en tonrække over skyderne: den navngiver prøven og lader dig indstille en tone fra 0% til 100% i stedet for at redigere farven direkte, så grafikken forbliver knyttet til prøven.</p>
+
+<h2 id="appearance-swatches">Farveprøver og farvegrupper</h2>
+<p>En farveprøve er en navngivet farve gemt med dokumentet. Male fra farveprøver i stedet for at skrive værdier holder en palet konsistent og, for globale farveprøver, lader dig omfarve et hele dokument ved at redigere én farve.</p>
+
+<h3 id="appearance-swatches-panel">Farveprøver-panelet</h3>
+<p><strong>Farveprøver</strong>-panelet (åbn det fra <strong>Vindue &rsaquo; Farveprøver</strong>) opfører dokumentets farveprøver som et gitter eller en liste; listevisningen viser også hver farveprøves farvemodel. Et almindeligt klik maler den aktive side. <kbd>&#8679;</kbd>-klik vælger en række af farveprøver, og <kbd>&#8984;</kbd>-klik tilføjer eller fjerner én fra markeringen, så du kan virke på flere på én gang. Foden indeholder knapper til at skifte visning, åbne panelmenuen, vise farveprøveindstillinger, lave en farvegruppe, lave en ny farveprøve og slette det, der er valgt.</p>
+<p>Panelmenuen tilføjer mere: <em>Tilføj brugte farver</em> og <em>Tilføj valgte farver</em> vender farverne allerede i dokumentet eller kun i markeringen til farveprøver; <em>Vælg alle ubrugte</em> vælger hver farveprøve, intet er malet med, klar til at blive slettet; og <em>Omfordel farver&#8230;</em> åbner omdialog beskrevet nedenfor.</p>
+
+<h3 id="appearance-process-spot-global">Proces-, spot- og globale farveprøver</h3>
+<p>Dobbeltklik på en farveprøve for Farveprøveindstillinger, hvor du indstiller, hvilken type farve den er.</p>
+<dl>
+  <dt>Proces</dt><dd>En almindelig farve, blandet til jobbet. En almindelig procesfarveprøve er bare en gemt farve: redigering af den berører ikke grafik, der allerede er malet med den.</dd>
+  <dt>Global</dt><dd>En procesfarveprøve markeret Global forbinder grafikken til den, så omkolorering af prøven omfarver alt, der er malet med den, på én gang. Globale farveprøver kan anvendes som en tone.</dd>
+  <dt>Spot</dt><dd>En navngivet farve, beregnet til at udskrives på sin egen plade. Spotfarver er altid globale.</dd>
+</dl>
+<p>Hvert dokument starter også med en fast <strong>[Registrering]</strong>-farveprøve, som ikke har sin egen farvetype og ikke kan slettes eller trækkes. Brug en global eller spotfarveprøve, når en farve optræder mange gange og kan ændres: én redigering opdaterer hvert objekt i stedet for at lede efter dem i hånden.</p>
+
+<h3 id="appearance-colour-groups">Farvegrupper</h3>
+<p>Farvegrupper arkiverer beslægtede farveprøver sammen, som én nuancefamilie eller én projektpalet. Træk farveprøver ind i en gruppe for at arkivere dem, eller vælg nogle og lav en gruppe af dem med panelets Ny farvegruppe-knap. Dobbeltklik på en gruppes overskrift for dens indstillinger. I farvevælgeren på hvert chip vises hver gruppe som én række, så en familie læses som en rampe af nuancer i stedet for en væg af chips.</p>
+
+<h2 id="appearance-gradients">Gradienter</h2>
+<p>En gradient blander mellem to eller flere farver. Scissor laver lineære, radiale og frie gradienter, og enten panelet eller værktøjet på lærredet kan bygge og forme dem. Gå efter en gradient for at give en flad form dybde, en baggrund et blødt skyl eller en knap en glans.</p>
+
+<h3 id="appearance-gradient-panel">Gradientpanelet</h3>
+<p><strong>Gradient</strong>-panelet (<kbd>&#8984;F9</kbd>) styrer hele gradienten. Klik på miniaturen for at udfyldte den aktive side, vælg Lineær, Radial eller Fri fra typemenuen, og brug vendeknappen for at vende rampen ende for ende. Selve rampen bærer stoppene: klik på den for at tilføje et stop i den farve, der allerede er der, træk et stop for at flytte det, og træk en diamant mellem to stop for at skifte, hvor de to farver mødes. Det valgte stop har sin egen farveprøve, et <em>Opacitets</em>-felt og et <em>Placering</em>-felt, og <em>Slet stop</em> fjerner det. <em>Vinkel</em> drejer en lineær eller radial gradient, og <em>Aspekt</em> (kun radial) flader en radial gradient til en ellipse.</p>
+<figure class="shot">
+  <img src="img/gradient.gif" width="340" height="340" loading="lazy"
+       alt="Et afrundet kvadrat udfyldt med en lineær gradient fra blå til rågul, hvis retning drejer rundt." />
+  <figcaption>En lineær gradient fra blå til rågul. At trække gradientaksen eller ændre dens vinkel drejer blandingen rundt formen.</figcaption>
+</figure>
+
+<h3 id="appearance-gradient-tool">Gradientværktøjet</h3>
+<p>Med Gradientværktøjet (<kbd>G</kbd>) sidder de samme kontroller på grafikken. Træk på tværs af et objekt for at lægge aksen, hold <kbd>&#8679;</kbd> for at holde den til 45&deg;-trin. Aksen viser en rund knap i starten og en firkantet knap i slutningen; træk hvilken som helst for at flytte den ende. Klik på aksen for at tilføje et stop i den farve, der allerede er der, træk et stop langs den, og træk et stop langt væk fra aksen for at smide det væk. Træk en diamant for at flytte midtpunktet. <kbd>Delete</kbd> fjerner det stop, du sidst rørte. På en fri gradient fungerer værket med farvepunkter i stedet: klik på grafikken for at tilføje én i udfyldningsfarven, og træk et punkt for at flytte det. Gradienter dækkes yderligere på siden <a href="/manual/appearance/">Farve &amp; udseende</a>.</p>
+
+<h3 id="appearance-freeform">Fri gradienter</h3>
+<p>En fri gradient placerer farvepunkter helst på formen i stedet for langs én akse, så blandingen kan følge grafikkens form. Med Gradientværktøjet klikker du på grafikken for at placere et farvepunkt, trækker du det for at flytte det og trykker du på <kbd>Delete</kbd> for at fjerne det. Afkryds <em>Træk punkterne sammen til linjer</em> i panelet for at forbinde punkterne til linjer, hvilket spredder en farve langs et løb i stedet for ud fra en enkelt prik. Brug en fri gradient til blød, organisk skyggegivning, som en lige ramp ikke kan give.</p>
+
+<h2 id="appearance-patterns">Mønstre</h2>
+<p>Et mønster er grafik, der gentages som en flise og bruges som en udfyldning. Vælg en markering til en flise med <strong>Objekt &rsaquo; Mønster &rsaquo; Opret</strong>, og udfyld derefter enhver form med det fra <strong>Mønstre</strong>-panelet: klik på en flise for at udfylde, dobbeltklik for at redigere den, og <kbd>&#8997;</kbd>-klik for at slette den. <em>Fliseindstillinger</em> indstiller flisetypen, mønsterforskydningen, størrelsen og mellemrummet, og hvorvidt flisen skifter størrelse og bevæger sig med grafikken. <strong>Rediger mønster</strong> åbner flisen på plads med dens kopier omkring den, mens du arbejder; klik på <em>Færdig med redigering</em> i Mønstre-panelet, når flisen er rigtig. Mønstre passer til gentagelser af teksturer, som striber, prikke, vævninger og baggrunde, som ville være kedelige at tegne i hånden.</p>
+
+<h2 id="appearance-strokes">Stregoverflader</h2>
+<p><strong>Streg</strong>-panelet (<kbd>&#8984;F10</kbd>) former linjen tegnet langs en sti.</p>
+
+<h3 id="appearance-stroke-options">Tykkelse, ender, sammenføjninger og justering</h3>
+<p><em>Tykkelse</em> indstiller stregoverfladens tykkelse i punkter. <em>Ender</em>-knapperne beslutter, hvordan en åben sti ender: stumps (skåret firkantet af ved ankeret), rund eller projicerende (firkantet, men nående forbi ankeret med halvdelen af tykkelsen). <em>Sammenføjninger</em>-knapperne beslutter, hvordan en stregoverflade drejer et hjørne: mitre (en skarp spids), rund eller bevel (et fladt snid), med en mitregrænse, der bevæller de skarpeste spidser, så de ikke stikker ud. <em>Justering</em> placerer stregoverfladen på stiens centrum eller helt inden for eller uden for den, hvilket har betydning, når en form skal passe præcist til sine naboer.</p>
+
+<h3 id="appearance-dashes">Stiplede linjer</h3>
+<p>Afkryds <em>Stiplet linje</em> for at bryde stregoverfladen i streger. De tre streg-mellemrum-par nedenfor indstiller mønsteret: det første felt er en streglængde, det næste et mellemrum og så videre, der gentager sig langs stien. Lad senere par være tomme til en simpel jævn streg.</p>
+
+<h3 id="appearance-width-profiles">Breddeprofiler og Breddeværktøjet</h3>
+<p>En breddeprofil indsnævrer stregoverfladen langs dens længde i stedet for at holde den til én tykkelse. Vælg en profil fra panelets menu, og en lille forhåndsvisning viser den form, den laver; knapperne ved siden af den kører profilen den anden vej, gemmer den aktuelle stregoverflade som en ny profil eller sletter en profil, du har lavet. En stregoverflade, du har formet i hånden, vises som <em>Tilpasset</em> i menuen.</p>
+<p>Breddeværktøjet (<kbd>&#8679;W</kbd>) former en stregoverflade direkte på lærredet: træk væk fra stien for at gøre den bredere der, eller mod stien for at gøre den smallere, hvorved der efterlades et breddepunkt, som du kan trække igen senere. Brug den til at give en tegnet linje en pen- eller penselsvulning og indsnævring.</p>
+
+<h3 id="appearance-brushes">Pensler</h3>
+<p><strong>Pensler</strong>-panelet (<kbd>F5</kbd>) maler strøg med en form i stedet for en almindelig linje. Det indeholder kalligrafiske, spredte, kunst-, børste- og mønsterpensler. Klik på en pensel for at anvende den på de valgte stier; Penslen bruger den pensel, der er aktuel. Dobbeltklik på en pensel for dens indstillinger, brug <em>Ny pensel&#8230;</em> for at lave én (spredte, kunst- og mønsterpensler bygges af valgt grafik) og <em>Fjern pensel</em> for at returnere en stregoverflade til en almindelig linje.</p>
+
+<h2 id="appearance-opacity-blending">Opacitet og blanding</h2>
+<p>Opaciteten og blandingstilstanden beslutter, hvordan et objekt kombineres med det, der ligger under det. De sidder i <strong>Gennemsigtighed</strong>-panelet (<kbd>&#8679;&#8984;F10</kbd>) og også i Egenskaber-panelet.</p>
+
+<h3 id="appearance-blend-modes">Blandingstilstandene</h3>
+<p>Opaciteten løber fra 0% (usynlig) til 100% (solid). Tilstandmenuen tilbyder seksten blandingstilstande, som falder i grupper: tilstande, der mørkner, tilstande, der lysner, kontrasttilstande, sammenligningstilstande og de fire, der låner én del af en farve.</p>
+<table>
+  <thead><tr><th>Tilstand</th><th>Hvad det gør</th></tr></thead>
+  <tbody>
+    <tr><td>Normal</td><td>Maler over det, der er under, uden blanding.</td></tr>
+    <tr><td>Mørkne</td><td>Bevarer hvilken som helst farve er mørkere, kanal for kanal.</td></tr>
+    <tr><td>Multiplicér</td><td>Multiplicerer de to farver, altid mørkere; hvid efterlader grundlaget uændret.</td></tr>
+    <tr><td>Farvemørkning</td><td>Mørkner grundlaget for at optage blandingsfarven.</td></tr>
+    <tr><td>Lysne</td><td>Bevarer hvilken som helst farve er lysere.</td></tr>
+    <tr><td>Skærm</td><td>Det inverse af Multiplicér, altid lysnende; sort efterlader grundlaget uændret.</td></tr>
+    <tr><td>Farvelysning</td><td>Lysner grundlaget for at optage blandingsfarven.</td></tr>
+    <tr><td>Overlejring</td><td>Multiplicerer eller skærer afhængigt af grundlaget og øger kontrasten.</td></tr>
+    <tr><td>Blødt lys</td><td>En blød lysning eller mørkning, som om et blødt lys blev skinnet på grafikken.</td></tr>
+    <tr><td>Hårdt lys</td><td>Multiplicerer eller skærer afhængigt af blandingsfarven, som en skarp projektor.</td></tr>
+    <tr><td>Forskel</td><td>Trækker den mørkere farve fra den lysere; hvid inverterer grundlaget, sort har ingen effekt.</td></tr>
+    <tr><td>Eksklusion</td><td>Som Forskel, men blødere og med lavere kontrast.</td></tr>
+    <tr><td>Nuance</td><td>Blandingens nuance med grundlagets mætning og lysstyrke.</td></tr>
+    <tr><td>Mætning</td><td>Blandingens mætning med grundlagets nuance og lysstyrke.</td></tr>
+    <tr><td>Farve</td><td>Blandingens nuance og mætning med grundlagets lysstyrke: god til at tone gråtonet grafik.</td></tr>
+    <tr><td>Lysstyrke</td><td>Blandingens lysstyrke med grundlagets nuance og mætning.</td></tr>
+  </tbody>
+</table>
+<p>For en gruppe ændrer to kontakter, hvordan den blander. <em>Begræns blanding til gruppe</bevarer gruppens tilstande inde i sig selv, så dens medlemmer blander med hinanden, men ikke med grafikken bag gruppen. <em>Knockout-gruppe</em> får hvert medlem til at skjule dem under det i gruppen i stedet for at blande ned gennem dem.</p>
+
+<h3 id="appearance-opacity-masks">Opacitetsmasker</h3>
+<p>En opacitetsmaske falmer grafik efter tone. Vælg grafikken og oven på den formen, der skal maskeres med, og klik derefter på <em>Lav maske</em> (også <strong>Objekt &rsaquo; Beskæringsmaske &rsaquo; Opret opacitetsmaske</strong>). Det øverste objekt bliver til masken: hvor den er lys, vises grafikken, og hvor den er mørk, falmer grafikken ud, så en hvid-til-sort gradient laver en blød fade. <em>Frigiv</em> giver de to objekter tilbage. Brug en maske til en blød kant eller en vignette, som et hårdt snid ikke kan lave.</p>
+
+<h2 id="appearance-appearance-panel">Malingstak-panelet</h2>
+<p><strong>Malingstak</strong>-panelet (<kbd>&#8679;F6</kbd>) opfører alt, der er malet på ét objekt: dets udfyldninger og stregoverflader med eventuelle levende effekter over dem. Fordi et objekt kan holde flere udfyldninger og stregoverflader, er det her, du staker dem, for eksempel en bred mørk stregoverflade under en tynd lys for at lave en kontur, eller to udfyldninger med forskellige opaciteter.</p>
+<p>Stakken tegnes øverst først, matchende den rækkefølge, den maler. Hver udfyldnings- eller stregoverfladerække har et øje for at skjule den, et farvechip, der åbner farvevælgeren, et opacitetsfelt, et tykkelsesfelt til stregoverflader og pile til at flytte den op eller ned ad stakken, plus en knap for at fjerne den. <em>Tilføj udfyldning</em> og <em>Tilføj stregoverflade</lægger en anden øverst. Effekter vises over udfyldningerne og stregoverfladerne med et <em>fx</em>-mærke; klik på en effekt for at redigere dens muligheder eller fjerne den fra dens række. Når det lagrede udseende er færdigt, bager <strong>Objekt &rsaquo; Udvid udseende</strong> hele stakken ned i almindelig grafik.</p>
+
+<h2 id="appearance-graphic-styles">Grafiske stilarter</h2>
+<p>En grafisk stil er et gemt udseende, du kan anvende på andre objekter. <strong>Grafiske stilarter</strong>-panelet (<kbd>&#8679;F5</kbd>) beholder dem som chips, hver viser sin udfyldning med sin stregoverflade som chipets kant. Vælg et objekt og klik på <em>Ny stil</em> for at gemme dets udfyldninger og stregoverflader; klik på et chip for at anvende den stil på markeringen, og <kbd>&#8997;</kbd>-klik på et chip for at slette det. Stilarter er værd at lave, når det samme udseende, som en hjemmeknapbehandling eller en etiketstil, skal på mange objekter og forblive konsistent.</p>
+
+<h2 id="appearance-overprint">Overtryk</h2>
+<p><strong>Attributter</strong>-panelet (<kbd>&#8984;F11</kbd>) indstiller overtryk til udskriftsarbejde. <em>Overtryk udfyldning</em> og <em>Overtryk streg</em> får den farve til at udskrives oven på farverne under den i stedet for at slå dem ud, hvilkes bruges til fældning og effekter som en sort, der udskrives over i stedet for at erstatte det, der er under den. Slå <strong>Vis &rsaquo; Overtrykforhåndsvisning</strong> til for at se det på skærmen; PDF-eksport bevarer indstillingen.</p>
+
+<h2 id="appearance-recolour">Omdeling af grafik</h2>
+<p><strong>Rediger &rsaquo; Rediger farver &rsaquo; Omfordel farver&hellip;</strong> opfører hver farve i markeringen med, hvor ofte den bruges. Klik på chipet til højre for en række for at vælge, hvad den farve bliver, eller på pilen mellem de to chips for at lade den farve være. Nuance-, mætnings- og lysstyrkeskyderne skifter hele sættet sammen, og to knapper omfordeler tilfældigt de nye farver eller tilfældiggør deres mætning og lysstyrke, hvilket er en hurtig måde at prøve variationer på. Grafikken opdateres, mens du går, og <em>Nulstil</em> vender tilbage til de farver, den startede med.</p>
+<p>Samme undermenu tilbyder også ændringer på ét trin: <em>Bland forrest til bagest</em> spredder en række af farver mellem forreste og bageste objekter, <em>Konvertér til gråtoner</em> fjerner al farve, <em>Invertér farver</em> vender hver enkelt, og <em>Mætning&#8230;</em> hæver eller sænker mætning på tværs af markeringen.</p>

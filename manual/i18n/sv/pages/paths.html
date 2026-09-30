@@ -1,0 +1,153 @@
+<p class="lede">Varje vektorobjekt i Scissor är byggt av banor: en kedja av ankarpunkter förenade av raka eller kurviga segment. Denna sida täcker hur man ritar dem, hur man omformar dem punkt för punkt, och kommandona som förenar, förskjuter, konturerar och kombinerar dem.</p>
+
+<p>Genvägarna är skrivna i deras macOS-form. På Windows, läs <kbd>&#8984;</kbd> som Ctrl, <kbd>&#8997;</kbd> som Alt och <kbd>&#8679;</kbd> som Shift.</p>
+
+<h2 id="paths-anchors-and-handles">Ankare, handtag och en banas form</h2>
+<p>En bana är en rad ankarpunkter. Mellan två intilliggande ankare ligger ett segment, som är rakt när inget av ankaren når mot det och kurvigt när ett eller båda gör. Ett ankares räckvidd ställs in av dess två riktningshandtag: det inkommande handtaget formar segmentet som anländer till ankaret, och det utgående handtaget formar segmentet som lämnar det. Dra ett handtag längre ut och kurvan buktar starkare mot den. En bana kan vara öppen, med två lösa ändar, eller stängd, där det sista ankaret förenar tillbaka till det första.</p>
+
+<h3 id="paths-corner-and-smooth">Hörn- och slätpunkter</h3>
+<p>Ett ankare är antingen ett hörn eller en slätpunkt. På en slätpunkt är de två handtagen låsta till en rak linje genom ankaret, så att kurvan passerar genom utan en knä och förblir kontinuerlig. På en hörnpunkt är de två sidorna oberoende: banan kan ändra riktning skarpt, och en sida kan vara rak medan den andra är kurvig. De flesta former blandar de två, slätpunkter längs de flytande delarna och hörnpunkter där en kant vänder.</p>
+<dl>
+  <dt>Slätpunkt</dt>
+  <dd>Handtagen bundna till en linje. Använd dessa längs en kurva som ska läsas som ett enda kontinuerligt svep, såsom en bladsida eller en bokstavsskål.</dd>
+  <dt>Hörnpunkt</dt>
+  <dd>Handtag som flyttas isär, eller en punkt utan handtag alls. Använd dessa på en stjärnas spets, en lådas hörn, eller varhelst en kurva ska möta en rak kant.</dd>
+</dl>
+
+<h3 id="paths-direct-selection">Ankare, handtag och direktmarkeringsverktyget</h3>
+<p>Direktmarkeringsverktyget (<kbd>A</kbd>) arbetar på delarna av en bana. Klicka på ett ankare för att markera det, <kbd>&#8679;</kbd>-klicka för att lägga till eller ta bort ett, eller dra en rammarkering över tom yta för att fånga varje ankare inne i den. Att dra markerade ankare flyttar dem; <kbd>&#8679;</kbd> begränsar flytten till 45&deg;-steg. Nå efter det när en form är nästan rätt och bara en eller två punkter behöver skjutas.</p>
+<p>Dra ett handtag för att ändra kurvan på dess sida. Handtag som tillhör ett slätt ankare flyttas tillsammans, så att kurvan förblir kontinuerlig; håll ned <kbd>&#8997;</kbd> medan du drar för att bryta den länken och styra en sida ensam, och <kbd>&#8679;</kbd> för att hålla handtaget till en vinkel. Du kan också dra ett segment självt: ett kurvigt segment böjer sig under pekaren, och ett rakt bär båda sina ankare med sig.</p>
+<p>Gruppmarkeringsverktyget delar denna plats och plockar upp hela objekt ur en grupp snarare än ankare. Klicka en gång för det innersta objektet, klicka igen för att stega ut till gruppen runt det.</p>
+
+<h2 id="paths-drawing">Ritverktyg</h2>
+<p>Scissor har tre verktyg för att lägga en bana från grunden. Pennan ger exakt kontroll punkt för punkt, kurvaturverktyget passar en slät kurva genom punkter du placerar, och blyertspennan följer din hand fritt.</p>
+<table>
+  <thead><tr><th>Verktyg</th><th>Genväg</th><th>Bäst för</th></tr></thead>
+  <tbody>
+    <tr><td>Penna</td><td><kbd>P</kbd></td><td>Exakta konturer där varje ankare och handtag är placerat medvetet.</td></tr>
+    <tr><td>Kurvatur</td><td><kbd>&#8679;~</kbd></td><td>Flytande kurvor definierade av några genomgående punkter, utan handtagskrångel.</td></tr>
+    <tr><td>Blyertspenna</td><td><kbd>N</kbd></td><td>Lösa, handritade former och snabba skisser.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="paths-pen">Pennverktyget</h3>
+<p>Pennverktyget (<kbd>P</kbd>) bygger en bana punkt för punkt. Klicka för att släppa ett hörnankare; tryck och dra istället så behåller ankaret handtag, så att banan lämnar det som en kurva. Håll ned <kbd>&#8679;</kbd> medan du drar för att hålla handtaget till 45&deg;-steg, och håll ned <kbd>&#8997;</kbd> för att flytta bara det utgående handtaget, vilket förvandlar ankaret till ett hörn och frigör nästa segment från det sista.</p>
+<p>Medan en bana är öppen ändras verktyget när du flyttar över den. Över det första ankaret stänger den banan, över ett segment lägger den till ett ankare, och över ett befintligt ankare tar den bort ett. Utan någon bana på gång, flyttar du över den lösa änden av en öppen bana plockar den upp den banan så att du fortsätter rita från den. <kbd>Enter</kbd> eller <kbd>Esc</kbd> avslutar banan och lämnar den öppen; <kbd>Delete</kbd> tar bort det ankare du sist placerade.</p>
+
+<h3 id="paths-curvature">Kurvaturverktyget</h3>
+<p>Kurvaturverktyget (<kbd>&#8679;~</kbd>) passar en slät kurva genom de punkter du klickar på, med en förhandsvisning som löper till pekaren som du går. <kbd>&#8997;</kbd>-klicka för att släppa en hörnpunkt snarare än en slät, och dubbelklicka på valfri punkt för att växla den mellan de två. Dra en punkt för att flytta den och kurvan passar om. Klicka på den första punkten för att stänga formen, eller tryck <kbd>Enter</kbd> för att avsluta. <kbd>Delete</kbd> tar bort den sista punkten och <kbd>Esc</kbd> överger banan. Använd det när du bryr dig mer om kurvans form än de exakta ankarna, eftersom det räknar ut handtagen åt dig.</p>
+
+<h3 id="paths-pencil">Blyertspennverktyget</h3>
+<p>Blyertspennverktyget (<kbd>N</kbd>) ritar för hand: tryck, rita, och släpp, och Scissor passar en slät bana genom spåret. Släpp nära där du började, eller håll ned <kbd>&#8997;</kbd> medan du avslutar, och banan stängs till en form. Resultatet är en konturerad öppen bana i den aktuella konturfärgen, så att den är redo att behålla som en linje eller fylla. Hur nära den passade banan kramar din rörelse ställs in av blyertspennans trogenhet, från noggrann, som behåller fler ankare och varje skakning, till slät, som använder färre ankare och stryker ut linjen. Nå efter den för skissering, signaturer, och alla former som ska se handritade ut snarare än konstruerade.</p>
+
+<h2 id="paths-editing-points">Redigera punkter på en bana</h2>
+
+<h3 id="paths-add-remove-convert">Lägg till, ta bort och konvertera punkter</h3>
+<p>Pennan delar sin verktygsradsplats med Lägg till ankarpunkt (<kbd>+</kbd>), Ta bort ankarpunkt (<kbd>&#8722;</kbd>) och Ankarpunktverktyget (<kbd>&#8679;C</kbd>). Lägg till ankarpunkt släpper en ny punkt på ett segment utan att ändra kurvan; Ta bort ankarpunkt tar bort den punkt du klickar på och låter banan stänga gapet. Med Ankarpunktverktyget, dra från ett hörnankare för att dra ut ett matchat par handtag, och förvandla det till slät; dra ett enskilt handtag för att bryta paret så att de två sidorna flyttas isär, och förvandla det tillbaka till ett hörn; och klicka på ett slätt ankare för att dra av dess handtag till ett skarpt hörn.</p>
+<p>Objekt &rsaquo; Bana har samma redigeringar som kommandon som fungerar på hela markeringen på en gång. Lägg till ankarpunkter sätter ett nytt ankare i mitten av varje segment, vilket fördubblar punktantalet utan att ändra formen, vilket är praktiskt innan en förvrängning eller förvrängning som behöver fler punkter att böja rent. Ta bort ankarpunkter tar ut de ankare du har markerat med direktmarkeringsverktyget och passar om banan genom det som finns kvar.</p>
+
+<h3 id="paths-reshape-tools">Omforma för hand: Slätthållnings-, baneraderings- och föreningsverktygen</h3>
+<p>Tre penselstil verktyg omformar en bana där du drar snarare än vid ett enskilt ankare. De verkar på de markerade banorna, eller på valfri bana under penseln när inget är markerat, och <kbd>[</kbd> och <kbd>]</kbd> krymper och ökar penseln.</p>
+<dl>
+  <dt>Slätthållningsverktyg</dt>
+  <dd>Dra längs en bana för att släta ut den, tunna ut ankare och mjuka ut knölar. Använd det för att lugna en skakig blyertslinje eller en spårad kant.</dd>
+  <dt>Baneraderingsverktyg</dt>
+  <dd>Dra längs en bana för att gnugga bort den del du korsar, och dela eller förkorta den. Använd det för att trimma bort en sträv svans från en linje.</dd>
+  <dt>Föreningsverktyg</dt>
+  <dd>Skrubba över två öppna ändar och de förenas, och förlänger eller trimmar banorna för att möta rent i ett hörn. Använd det för att stänga ett gap där två strökar skulle ha mötts.</dd>
+</dl>
+
+<h3 id="paths-cutting">Klippa en bana: sax och kniv</h3>
+<p>Saxverktyget (<kbd>C</kbd>) klipper på ett enda ställe. Klicka på ett segment eller ett ankare och banan delas där: en stängd bana öppnas vid snittet, och en öppen bana bryts i två separata objekt. Använd det för att klippa en öppning i en cirkel, eller för att bryta isär en form så att halvorna kan ställas in olika.</p>
+<p>Kniven skär rakt över konstverk. Dra klingan över ett objekt för att klippa det i separata bitar längs den ritade linjen; håll ned <kbd>&#8997;</kbd> för att klippa i en rak linje, och lägg till <kbd>&#8679;</kbd> för att hålla den linjen till 45&deg;-steg. Med något markerat klippas bara de markerade objekten; annars allt klingan korsar. Använd det för att skära en fylld form i flera stängda bitar på ett strök.</p>
+
+<h2 id="paths-paths">Ban-kommandon</h2>
+<p>Objekt &rsaquo; Bana samlar operationerna som verkar på hela banor på en gång.</p>
+<table>
+  <thead><tr><th>Kommando</th><th>Genväg</th><th>Vad det gör</th></tr></thead>
+  <tbody>
+    <tr><td>Förena</td><td><kbd>&#8984;J</kbd></td><td>Förenar öppna ändar till en bana, eller stänger en enda öppen bana.</td></tr>
+    <tr><td>Medelvärde&hellip;</td><td><kbd>&#8997;&#8984;J</kbd></td><td>Flyttar markerade ankare till deras gemensamma position.</td></tr>
+    <tr><td>Konturera kontur</td><td></td><td>Förvandlar en kontur till en fylld form med samma kontur.</td></tr>
+    <tr><td>Förskjut bana&hellip;</td><td></td><td>Gör en kopia förstorad eller förminskad med ett visst avstånd.</td></tr>
+    <tr><td>Vänd banriktning</td><td></td><td>Vänder vilken väg banan löper.</td></tr>
+    <tr><td>Förenkla&hellip;</td><td></td><td>Minskar antalet ankarpunkter.</td></tr>
+    <tr><td>Lägg till ankarpunkter</td><td></td><td>Lägger till en punkt i mitten av varje segment.</td></tr>
+    <tr><td>Ta bort ankarpunkter</td><td></td><td>Tar bort de markerade ankarna.</td></tr>
+    <tr><td>Dela upp i rutnät&hellip;</td><td></td><td>Klipper markeringen till ett rutnät av rader och kolumner.</td></tr>
+    <tr><td>Städa upp&hellip;</td><td></td><td>Tar bort lösa punkter, ofärgade objekt och tom text.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="paths-join-average">Förena och medelvärde</h3>
+<p>Förena (<kbd>&#8984;J</kbd>) fungerar på öppna banor. Med två separata öppna banor markerade, förenar deras närmaste ändar till en bana; med en enda öppen bana, förenar de två lösa ändarna för att stänga den. Ändar som redan sitter ovanpå varandra förenas till ett ankare. Använd det för att stänga en form du ritade som en öppen kontur, eller för att sy ihop två halvritade strökar.</p>
+<p>Medelvärde (<kbd>&#8997;&#8984;J</kbd>) flyttar de markerade ankarna till deras delade medelvärdesposition. Dialogrutan erbjuder den horisontella axeln, som linjerar punkterna till en gemensamma höjd; den vertikala axeln, som linjerar dem i en kolumn; eller båda, som staplar dem alla på en plats. Nå efter det för att jämna ut en rad punkter eller för att föra två ändar ihop innan du förenar dem.</p>
+
+<h3 id="paths-simplify">Förenkla</h3>
+<p>Förenkla ritar om de markerade banorna med färre ankarpunkter, och stannar inom en noggrannhet du ställer in: en stramare noggrannhet håller nära originalet på bekostnad av fler punkter, en glesare slätar formen ner till en handfull. Använd det för att städa upp en spårad eller handritad bana som bär långt fler punkter än formen behöver, vilket gör den lättare att redigera och rendera.</p>
+
+<h3 id="paths-offset">Förskjut bana</h3>
+<p>Förskjut bana bygger en ny bana ett visst avstånd från originalet: en positiv förskjutning ökar konturen utåt och sitter bakom originalet, en negativ förskjutning krymper den inåt och sitter framför. Föreningen bestämmer hur utåtriktade hörnen behandlas, som en skarp Mitre, en avrundad Round eller en flat Bevel, med en mitergräns som täcker hur långt ett skarpt hörn får löpa innan det beskärs. Använd det för att rita en jämkant runt en form, för att infoga en form för en keyline, eller för att göra en tjock form tjockare. Förskjut bana finns också under Effekt &rsaquo; Bana som en live-effekt som räknas om när formen ändras.</p>
+
+<h3 id="paths-outline-stroke">Konturera kontur</h3>
+<p>Konturera kontur ersätter en konturerad bana med en fylld form som har exakt konturens kontur. När den väl är konturerad skalar inte bredden längre med objektet och kan inte redigeras som en kontur, men konturen kan omformas punkt för punkt, fyllas med en gradient, eller kombineras med andra former. Nå efter det när du behöver att konturen ska bete sig som konstverk: för att ge en linje en avsmalnande eller varierad kant du sedan justerar för hand, eller för att hålla en design linjevikter fasta när den skalas. Den finns också som en live-effekt, under Effekt &rsaquo; Bana.</p>
+
+<h3 id="paths-reverse">Vänd banriktning</h3>
+<p>Vänd banriktning vänder ordningen ankarna löper i, så att banan åker runt det andra hållet. Riktningen visar sällan sig själv, men den bestämmer vilken kontur som är hålet i en sammansatt bana och var en pilspets eller pilhuvud börjar och slutar. Använd det när ett hål i en sammansatt bana fyller i sig, eller när text på en bana eller en konturs start och slut sitter på fel sida.</p>
+
+<h2 id="paths-live-shapes">Redigerbara former och deras widgets</h2>
+<p>Rektanglar, avrundade rektanglar, ellipser och polygoner förblir live: de behåller sina parametrar och bygger om sin bana varje gång du ändrar en. Medan du drar ut en form, gör <kbd>&#8679;</kbd> den regelrätt och <kbd>&#8997;</kbd> ritar den från centrum. Piltangenterna fungerar också under dragningen, upp och höger lägger till, ner och vänster tar bort, och ändrar en polygons sidor, en stjärnas spetsar, eller en avrundad rektangels hörnradie.</p>
+<p>Markera en enda live-form och små runda handtag visas precis inne i dess hörn; de döljs när formen är för liten på skärmen för att visa dem tydligt. Dra ett med markeringsverktyget (<kbd>V</kbd>) för att runda alla hörnen på en gång, eller med direktmarkering för att runda bara det hörn du håller i. <kbd>&#8997;</kbd>-klicka på ett hörnmatt för att stega det genom rund, inverterad och avfasad, återigen alla fyra hörnen med markeringsverktyget, ett hörn med direktmarkering.</p>
+<p>En ellips visar ett kvadratiskt handtag istället: ett på en hel ellips, och ett i vardera änden av pajen när du har öppnat en. Dra ett för att öppna en kil ur formen, med <kbd>&#8679;</kbd> som fäster vinkeln till 15&deg;-steg; att föra änden tillbaka runt till starten återställer hela ellipsen. Egenskapspanelen innehåller samma värden som siffror: radie och hörntyp, per-hörn radier, polygons sidor, och pajens start och slut i grader. En live-form behåller dessa kontroller tills du redigerar dess bana direkt, vilket förvandlar den till en vanlig bana.</p>
+
+<h2 id="paths-combining">Kombinera former: Förena &amp; dela och Kombinera former</h2>
+<p>När två eller fler former överlappar vill du ofta ha en enda ny form ur dem: en union, ett hål, eller biten där de korsar. Scissor erbjuder två sätt att komma dit. Förena &amp; dela är direkt och visuellt; Kombinera former-panelen tillämpar samma operationer som knappar. Båda behåller kurvor snarare än att platta ut dem till linjesegment.</p>
+
+<h3 id="paths-shape-builder">Förena &amp; dela-verktyget</h3>
+<p>Förena &amp; dela-verktyget (<kbd>&#8679;M</kbd>) fungerar på två eller fler markerade banor. Det delar upp deras överlappningar i regioner och markerar vilken som helst pekaren är över; dra en linje över flera regioner för att förena dem till ett objekt, som tar utseendet från den form det kom ifrån, eller <kbd>&#8997;</kbd>-dra över dem för att ta bort dem. Använd det för att bygga en form med öga, lägga till de delar du vill ha och gnugga bort de du inte vill, utan att ställa in för att välja ett kommando för varje steg.</p>
+
+<h3 id="paths-pathfinder-shape-modes">Kombinera former-formlägen</h3>
+<p>Kombinera former-panelen (<kbd>&#8679;&#8984;F9</kbd>) öppnas med fyra formlägen, var och en ersätter de markerade banorna med en kombinerad bana. Resultatet tar utseendet från det översta objektet, utom Minus fram, som behåller utseendet från det nedersta.</p>
+<dl>
+  <dt>Förena</dt>
+  <dd>Förenar varje markerad form till en kontur. Anveld det för att svetsa överlappande bitar till en enda silhuett, såsom ett moln från en rad cirklar.</dd>
+  <dt>Minus fram</dt>
+  <dd>Behåller den bakre formen och skär bort allt som staplas framför den. Använd det för att bita ut en bit ur en form, såsom att skära ut en halvmåne från två cirklar.</dd>
+  <dt>Skär</dt>
+  <dd>Behåller bara det område varje markerad form delar. Använd det för att trimma konstverk ner till en gemensam region, såsom linsen där två cirklar korsar.</dd>
+  <dt>Uteslut</dt>
+  <dd>Behåller allt utom överlappningarna, som blir hål. Använd det för att göra en ring, eller en kedjelänk, där de korsande delarna faller bort.</dd>
+</dl>
+
+<figure class="shot">
+  <img src="img/combine.gif" width="760" height="441" loading="lazy"
+       alt="Tre överlappande former, en cirkel, en avrundad kvadrat och en cirkel, som förenas till en kombinerad silhuett." />
+  <figcaption>Förena (eller en dragning med Förena &amp; dela) förenar överlappande former till en enda kontur som behåller sina kurvor.</figcaption>
+</figure>
+
+<h3 id="paths-pathfinders">De andra Kombinera former-operationerna</h3>
+<p>Under formlägen sitter sex pathfinder. Dessa lämnar er med flera bitar, samlade i en grupp, snarare än en kombinerad bana. Minus bak matchar sin formläges namne men behåller den övre formen.</p>
+<dl>
+  <dt>Dela</dt>
+  <dd>Klipper formerna till separata sidor längs varje linje de korsar, varje sida tar färgen från den översta formen som täcker den. Använd det för att bryta en design till målbara bitar, som cellerna i ett mönsterglasfönster.</dd>
+  <dt>Trimma</dt>
+  <dd>Tar bort den dolda delen av varje form där en form ovanför täcker den. Varje bit behåller sin egen fyllning och inget förenas; konturer släpps. Anveld det för att platta ut staplade plattfärgsverk så att ingen färg skrivs ut ovanpå en annan.</dd>
+  <dt>Förena</dt>
+  <dd>Trimmar bort de dolda delarna, och förenar sedan intilliggande bitar som delar en fyllningsfärg. Använd det för att städa upp en plattfärgsillustration, och förena sammafärgade regioner till enskilda former.</dd>
+  <dt>Beskär</dt>
+  <dd>Behåller bara de delarna av de nedre formerna som faller inom den översta formen, som sedan kastas bort. Använd det för att beskära konstverk till en ram och baka in beskärningen i banorna, snarare än att behålla en live-beskärningsmask.</dd>
+  <dt>Minus bak</dt>
+  <dd>Behåller den främsta formen och skär bort allt bakom den. Använd det när den övre formen är den som ska behållas och formerna under den ska skära in i den.</dd>
+  <dt>Kontur</dt>
+  <dd>Förvandlar varje regionsgräns till en öppen linje, konturerad i den färg den kom ifrån. Använd det för att dra ut skelettet av kanter ur en uppsättning överlappande former.</dd>
+</dl>
+<p>Effekt &rsaquo; Kombinera former tillämpar Lägg till, Skär, Uteslut, Subtrahera och Minus bak som live-effekter på en grupp istället, och lämnar de ursprungliga objekten intakta och redigerbara under. Nå efter effektversionerna när du kanske fortfarande vill flytta runt delarna senare; nå efter panelen när den kombinerade formen är slutgiltig.</p>
+
+<h2 id="paths-compound-and-masks">Sammansatta banor och beskärningsmasker</h2>
+<p>Objekt &rsaquo; Sammansatt bana &rsaquo; Skapa (<kbd>&#8984;8</kbd>) viker de markerade banorna till ett objekt fyllt med jämn-udda-regeln, så att en inre kontur skär ett hål genom den runt omkring. Resultatet tar utseendet från det lägsta objektet i markeringen. Frigör (<kbd>&#8997;&#8679;&#8984;8</kbd>) ger varje kontur tillbaka som en egen bana. Använd en sammansatt bana för valfri form med ett hål, såsom bokstål O:s innersta eller en bricka.</p>
+<p>Objekt &rsaquo; Beskärningsmask &rsaquo; Skapa (<kbd>&#8984;7</kbd>) använder det översta markerade objektet, som måste vara en bana, för att beskära allt under det. Scissor lägger dem alla i en beskärningsgrupp och rensar maskbanans egen fyllning och kontur. Frigör (<kbd>&#8997;&#8984;7</kbd>) förvandlar beskärningsgruppen tillbaka till en vanlig grupp, så att inget beskärs längre och varje objekt, maskbanan inkluderad, stannar där det var. Gör opacitetsmask i samma undermeny maskerar efter ton snarare än efter kontur, så att ljusare delar av masken syns igenom och mörkare delar döljer.</p>
+
+<h2 id="paths-smart-guides">Smarta hjälplinjer och fästning</h2>
+<p>Smarta hjälplinjer (Visa &rsaquo; Smarta hjälplinjer, <kbd>&#8984;U</kbd>) bevakar det synliga konstverket och artboards medan du ritar eller drar. Vad du flyttar fäster till kanter, centrum och ankare av dess grannar, och en linje visas tillbaka till det det linjades upp med, märkt med typen av matchning: ankare, centrum, hörn eller justera.</p>
+<p>Två ytterligare hjälplinjer visas på egen hand. När objektet du flyttar skulle sitta på samma avstånd från sina grannar som de sitter från varandra, fäster det där och de två lika gapen ritas med mätningen visad; detta fungerar både för att fortsätta en rad jämnt fördelade objekt och för att centrera ett i gapet mellan två. Och när du drar bort från en startpunkt, fäster riktningen till en konstruktionslinje var 45&deg; från begränsningsvinkeln, ritad som en lång linje med vinkeln bredvid.</p>
+<p>Fäst vid punkt (<kbd>&#8997;&#8984;'</kbd>) och Fäst vid rutnät (<kbd>&#8679;&#8984;'</kbd>) är separata växlar i Visa-menyn. Med Fäst vid rutnät på, landar allt på rutnätsunderdelningen och de smarta hjälplinjerna står åt sidan.</p>

@@ -1,0 +1,96 @@
+<p class="lede">Tehoste muuttaa, miten kohde näyttää, muuttamatta itse kohdetta. Polku, ryhmä tai tekstinpätkä pysyy täsmälleen sellaisena kuin sen piirrit ja tehoste lasketaan uudelleen sen päälle aina, kun siirrät pistettä tai muutat arvoa. Tehosteet pinoutuvat Maalapino-paneeliin, jotta voit pinota useita yhdelle kohteelle, järjestää ne uudelleen ja ottaa minkä tahansa niistä pois takaisin.</p>
+
+<figure class="shot">
+  <img src="img/effects-demo.png" width="1400" height="560" loading="lazy"
+       alt="Kolme samansinistä laattaa näyttävät kolme tehostetta: varjon, keltaisen ulkohehkun ja karkeat reunat." />
+  <figcaption>Sama laatta kolmella tehosteella: varjo, ulkohehkutus ja Roughen. Jokainen on live, joten laatta sen alla on edelleen tavallinen pyöristetty suorakulmio.</figcaption>
+</figure>
+
+<h2 id="effects-live-and-stacked">Live-tehosteet ja ulkoasupino</h2>
+<p>Jokainen tehoste Scissorissa on <strong>live</strong> ja <strong>tuhoamaton</strong>. Se istuu kohteen täytteiden ja reunaviivojen yläpuolella <strong>Ulkoasu</strong>-paneelissa (<kbd>&#8679;F6</kbd>) ja juoksee koko kohteen yli aina, kun teos tai tehoste muuttuu. Koska alkuperäinen polku on koskettamaton alla, voit jatkaa ankkureiden muokkaamista, vaihtaa täytteen väriä tai kirjoittaa sanat uudelleen ja tehoste seuraa. Käytä tehostetta aina, kun haluat ulkoasun, varjon, taivutuksen, pyöristetyn kulman, josta saatat vielä toisin ajatella, sen sijaan, että sitoutuisit siihen käsin.</p>
+
+<h3 id="effects-order">Järjestys on merkityksellinen</h3>
+<p>Tehosteet juoksevat pinon pohjalta ylöspäin ja paneeli listaa ne ensin ylhäältä, täytteiden ja reunaviivojen yläpuolella. Järjestys muuttaa tulosta: sumennus varjon alla sumettaa muodon ennen kuin varjo heitetään, kun taas samat kaksi käänteisesti heittävät terävän varjon ja sitten sumennettavat kaiken. Jos tehoste ei tee, mitä odotat, sen sijainti pinossa on ensimmäinen asia tarkistaa.</p>
+
+<h2 id="effects-using">Tehosteiden lisääminen, muokkaaminen ja poistaminen</h2>
+<h3 id="effects-add">Tehoste-valikosta</h3>
+<p>Valitse kohde, sitten valitse tehoste <strong>Tehoste</strong>-valikosta. Kohdat, jotka avaavat valintaikkunan, näyttävät <strong>Esikatselun</strong>, kun muutat niiden arvoja, jotta voit arvioida tulosta piirtoalueella ennen kuin sitoudut; koko muokkaus laskeutuu yhdeksi vaiheeksi historiaan yhden näppäinpainalluksen sijaan. Lyhyt versio valikosta (Drop Shadow, Outer Glow ja Gaussian Blur, plus Clear Effects) on myös piirtoalueen hiiren oikean painikkeen valikossa <strong>Tehoste</strong> alla.</p>
+
+<h3 id="effects-appearance">Maalapino-paneelissa</h3>
+<p>Jokainen tehoste valitulla kohteella saa oman rivinsä Maalapino-paneelissa, merkittynä <em>fx</em>-merkillä. Napsauta tehosteen nimeä avataksesi sen asetukset uudelleen ja muuttaaksesi niitä. Napsauta rivin lopussa olevaa ristiä poistaaksesi kyseisen tehosteen. Jos haluat poistaa kaikki tehosteet valinnasta kerralla, käytä <strong>Tehoste &rsaquo; Tyhjennä tehosteet</strong>.</p>
+
+<h3 id="effects-panels">Tehostepaneeleissa</h3>
+<p><strong>Ikkuna &rsaquo; Tehosteet</strong> -ryhmä kerää tehosteet yhteen paneeliin jokaisekseen Tehoste-valikon osasta: Stylize, Blur, Distort &amp; Transform, Path, Combine Shapes ja Warp, 3D-paneelin kanssa. Jokainen paneeli listaa kyseisen ryhmän tehosteet kytkimellä kytkeä päälle tai pois ja sen asetukset juuri alla, kaikki muokattu live valintaan. Se on nopeampi tapa kokeilla tehostetta ja säätää sen arvoja kuin valintaikkunan avaaminen joka kerta. Kytkimen kytkeminen pois ottaa kyseisen tehosteen pois kohteesta. Kun kohde kantaa useampaa kuin yhtä saman tyyppistä tehostetta, paneeli muokkaa ensimmäistä niistä ja Maalapino-paneeli näyttää edelleen koko pinon.</p>
+
+<h2 id="effects-stylize">Tyylittely: varjot, hehkut ja reunat</h2>
+<p><strong>Tehoste &rsaquo; Stylize</strong> -alavalikko pitää jokapäiväiset viimeistelytehosteet.</p>
+<table>
+  <thead><tr><th>Tehoste</th><th>Mitä se tekee ja milloin käyttää</th><th>Päävaihtoehdot</th></tr></thead>
+  <tbody>
+    <tr><td>Drop Shadow</td><td>Heittää siirretyn, sumennetun kopion kohteesta taakse. Käytä nostaaksesi muodon, kortin tai tekstin taustasta.</td><td>X- ja Y-siirto, Sumennus, Väri, Peittävyys.</td></tr>
+    <tr><td>Outer Glow</td><td>Levittää pehmeän hehkuvärin kohteen reunalta ulospäin. Käytä neonkirjoitukseen, korostukseen tai valonlähteen ympärille.</td><td>Sumennus, Väri, Peittävyys.</td></tr>
+    <tr><td>Inner Glow</td><td>Himmeää värin sisääpäin reunalta ulos sijaan, joten valo on muodon sisällä. Käytä tyhjentääksesi muotoa tai viittaamaan upotettuun, valaistuun reunaan.</td><td>Sumennus, Väri, Peittävyys.</td></tr>
+    <tr><td>Feather</td><td>Himmeää kohteen oman reunan läpinäkyväksi säteellä. Käytä pehmeäreunaiseen muotoon tai yksinkertaiseen vinettiin.</td><td>Himmytyssäde.</td></tr>
+    <tr><td>Round Corners</td><td>Pyöristää jokaisen polun kulman yhteen säteen. Käytä pehmittääksesi tähden, monikulmion tai käsin piirretyn polun kulmat uudelleen piirtämättä.</td><td>Säde.</td></tr>
+    <tr><td>Sketch Fill</td><td>Täyttää muodon edestakaisin vedoin, kuin käsin luonnosteltu. Hyvä vapaaseen, piirrettyyn täyteeseen tai tussimaiseen ulkoasuun.</td><td>Kulma, Väli, Reunaviivan paksuus, Vaihtelu (kuinka paljon vedot vaeltavat, 0-100%).</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-blur">Sumennus</h2>
+<p><strong>Tehoste &rsaquo; Blur &rsaquo; Gaussian Blur</strong> pehmentää koko kohteen <em>Säteellä</strong>, jonka asetat pikseleinä. Koska se pysyy live, voit nostaa tai laskea sädettä milloin tahansa. Käytä tätä pehmeään, epätarkkaan taustaan tai nopeaan pehmeän varjomaiseen muotoon itsenään.</p>
+
+<h2 id="effects-distort">Väännös ja muunnos</h2>
+<p><strong>Tehoste &rsaquo; Väännös &amp; Muunnos</strong> -alavalikko muotoilee ääriviivaa pitäen taustapolku muokattavana.</p>
+<table>
+  <thead><tr><th>Tehoste</th><th>Mitä se tekee ja milloin käyttää</th><th>Päävaihtoehdot</th></tr></thead>
+  <tbody>
+    <tr><td>Free Distort</td><td>Vetää kohteen laatikon neljä kulmaa pienessä esikatselussa ja teos seuraa perspektiivissä. Käytä jäljittelemään perspektiiviä, kuten etikettä, joka on vinossa pinnalla. Esikatselu-kytkin näyttää tuloksen piirtoalueella vedon aikana ja Palauta palauttaat kulmat neliöön.</td><td>Neljä kulmaa, Esikatselu, Palauta.</td></tr>
+    <tr><td>Pinch &amp; Swell</td><td>Taivuttaa segmentit ankkureiden välissä joko sisään, puristaen ääriviivaa piikiksi, tai ulos, pullistaen sitä pullistumiksi. Käytä tähtipurskauksia, läpikuultavia ja pehmeitä terälehtiä.</td><td>Määrä, puristetusta pullistettuun.</td></tr>
+    <tr><td>Rough</td><td>Rikkoa ääriviivän pieniin satunnaisiin liikkeisiin, joko teräviin tai tasaisiin. Käytä revittyyn paperireunaan tai karkeampaan, käsin piirrettyyn viivaan.</td><td>Koko (kuinka kauas pisteet liikkuvat), Yksityiskohta (kuinka tiheästi), Pisteet: Tasainen tai Kulma.</td></tr>
+    <tr><td>Transform</td><td>Skaalaa, siirtää ja kääntää kohteen tehosteena ja voi jättää joukon kopioita taakse. Käytä muokattavaan riviin tai rengastoistoon tai siirtääksesi ja muuttaaksesi muodon kokoa koskematta sen todelliseen geometriaan.</td><td>Vaakasuora ja pystysuora skaalaus, Vaakasuora ja pystysuora siirto, Kierto, Kopiot (0-200).</td></tr>
+    <tr><td>Tweak</td><td>Siirtää ankkureita ja niiden kahvoja satunnaisella määrällä. Käytä kopauttaaksesi liian täydellisen muodon hiukan oikeasta.</td><td>Vaakasuora ja pystysuora määrä ja siirretäänkö Ankkurit, Ohjaukset tai molemmat.</td></tr>
+    <tr><td>Twist</td><td>Kääntää muodon sisällä enemmän kuin sen reunat, kiertelemällä sen spiraaliksi. Käytä spiraaliin tai pyörreeseen.</td><td>Kulma.</td></tr>
+    <tr><td>Zig Zag</td><td>Muuttaa suorat segmentit säännöllisiksi siksakoiksi (Kulma) tai aalloiksi (Tasainen). Käytä aaltomaiseen alleviivaukseen, ric-rac-reunaan tai terävään reunaan.</td><td>Koko, Harjannaisia segmenttiä kohden, Pisteet: Kulma tai Tasainen.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-path">Polku</h2>
+<p><strong>Tehoste &rsaquo; Polku</strong> -alavalikko käsittelee kohteen ääriviivaa jättäen lähteen muokattavaksi.</p>
+<table>
+  <thead><tr><th>Tehoste</th><th>Mitä se tekee ja milloin käyttää</th><th>Päävaihtoehdot</th></tr></thead>
+  <tbody>
+    <tr><td>Offset Path</td><td>Kasvattaa tai pienentää ääriviivaa asetetulla etäisyydellä. Positiivinen siirto levittää sitä ulospäin, negatiivinen vetää sisääpäin. Käytä live-ääriviivaa tekstin tai muodon ympärille, joka säilyttää tahdin muokatessasi.</td><td>Siirto, Liitokset: Miter, Round tai Bevel.</td></tr>
+    <tr><td>Outline Object</td><td>Lisää Offset Path -tehosteen asetettuna nollaan, muuttaen kohteen (live-tekstin mukaan lukien) ääriviivoitetuksi poluksi, jotta myöhemmillä tehosteilla on todellinen polku, johon vaikuttaa.</td><td>Ei mitään.</td></tr>
+    <tr><td>Outline Stroke</td><td>Muuttaa reunaviivan täytetyksi muodoksi tehosteena. Käytä täyttääksesi reunaviivan liukuvärillä tai himmeääksesi tai vääntääksesi reunaviivan, joka on muuten tavallinen viiva.</td><td>Ei mitään.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-pathfinder">Yhdistä muotoja</h2>
+<p><strong>Tehoste &rsaquo; Yhdistä muotoja</strong> -alavalikko yhdistää ryhmän sisällä olevat muodot muotojen kanssa, mutta pitää ne erillisinä, muokattavina poluina alla. Käytä sitä ryhmään ja yhdistetty tulos on se, mitä näet, kun taas jokainen jäsen voidaan edelleen siirtää tai värittää. Käytä tätä kokeillaksesi yhdistelmää sitoutumatta siihen kuin Yhdistä muotoja -paneelissa tekevät.</p>
+<table>
+  <thead><tr><th>Tila</th><th>Tulos</th></tr></thead>
+  <tbody>
+    <tr><td>Lisää</td><td>Yhdistää ryhmän muodot yhdeksi alueeksi.</td></tr>
+    <tr><td>Leikkaus</td><td>Säilyttää vain missä muodot ovat päällekkäin.</td></tr>
+    <tr><td>Sulje ulos</td><td>Säilyttää kaiken paitsi missä ne ovat päällekkäin.</td></tr>
+    <tr><td>Vähennä</td><td>Poistaa etummaiset muodot takimmasta.</td></tr>
+    <tr><td>Minus Back</td><td>Poistaa takimmaiset muodot etummaista.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-warp">Väännös</h2>
+<p><strong>Tehoste &rsaquo; Väännös</strong> taivuttaa kohteen yhden valmiiden muotojen mukaiseksi ja pysyy live, jotta voit jatkaa teoksen muokkaamista sen alla. Käytä tätä taivuttaaksesi otsikon kaareksi, aaltoaaksesi banneria tai työntääksesi tasaista lohkoa pullistumaan luovuttamatta kyvystä muuttaa sanoja tai värejä.</p>
+<p>Valikko tarjoaa kymmenen tyyliä suoraan (Arc, Arch, Bulge, Flag, Wave, Fish, Rise, Fisheye, Inflate ja Squeeze). <strong>Väännösasetukset&#8230;</strong> avaa koko joukon, joka lisää Arc Lower, Arc Upper, Shell Lower ja Shell Upper ja antaa asettaa määrän:</p>
+<dl>
+  <dt>Taivutus</dt><dd>Kuinka voimakkaasti muoto taipuu, -100%:sta 100%:iin.</dd>
+  <dt>Vaakasuora</dt><dd>Taivuttaa taivutuksen toiseen suuntaan, -100%:sta 100%:iin.</dd>
+  <dt>Pystysuora</dt><dd>Kallistaa taivutuksen ylös tai alas, -100%:sta 100%:iin.</dd>
+</dl>
+<p>Samat väännön tyylejä voidaan soveltaa myös muokkauskääreenä, joka muuttaa itse polkua sen sijaan, että pysyisi live: katso <a href="#transform-envelope">Shape Warp</a>. Väännöstyökalu ja muut muotoilusivellintä muokkaavat vetämällä piirtoalueella ja on kuvattu <a href="#tools-width-liquify">työkalujen viitteessä</a>.</p>
+
+<h2 id="effects-3d">3D ja Materiaalit</h2>
+<p><strong>Tehoste &rsaquo; 3D ja Materiaalit</strong> muuttaa tason muodon kiinteäksi: tason, pursotuksen ja viiston, kierron tai pullotuksen. Kuten muutkin se on live-tehoste, joten tasainen polku on siellä edelleen muokattavaksi ja kiinteä rakentuu uudelleen, kun muutat sitä. Syvyys, viisto, kierto, valaistus ja pinta asetetaan 3D ja Materiaalit-paneelissa. Koska sillä on enemmän ohjaimia kuin yhdessä valintaikkunassa, 3D:llä on oma sivunsa: katso <a href="/manual/fi/three-d/">3D</a>.</p>
+
+<h2 id="effects-expand">Tehosteiden muuntaminen teokseksi</h2>
+<p>Tehoste pysyy live niin kauan kuin haluat. Kun ulkoasu on vakiintunut ja tarvitset tuloksen tavallisina, muokattavina poluina, esimerkiksi tiedostoa vietäessä tai tehosteen tuloksen muokkaamiseksi käsin, valitse <strong>Objekti &rsaquo; Laajenna ulkoasu</strong>. Se paistaa koko ulkoasupinon, tehosteet mukaan lukien, tavalliseksi teokseksi. Tätä ei voi enää muokata tehosteena jälkikäteen, joten laajenna vasta, kun olet varma. Jos haluat poistaa tehosteet paistamatta mitään, poista ne yksitellen Maalapino-paneelissa tai tyhjennä ne kaikki <strong>Tehoste &rsaquo; Tyhjennä tehosteet</strong> -komennolla.</p>
+<p>Tehoste-valikko listaa myös <strong>Rasteroi</strong>, joka ei ole live-tehoste: se muuttaa valinnan pikseleiksi siinä ja sillä hetkellä. Maalaaminen ja pikselitasot on kuvattu <a href="/manual/fi/pixels/">Pikselitasot</a> -sivulla.</p>

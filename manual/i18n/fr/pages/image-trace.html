@@ -1,0 +1,100 @@
+<p class="lede">Vectorisation transforme une image en tracés vectoriels : un logo scanné depuis du papier, un croquis au crayon ou une photographie devient un ensemble de formes remplies que vous pouvez mettre à l'échelle, recolorer et modifier comme tout ce que vous dessinez. Cette page couvre ce que vous pouvez vectoriser, le panneau qui l'exécute, les trois modes et leurs préréglages, chaque option, et comment conserver ou écarter le résultat.</p>
+
+<h2 id="image-trace-what">Ce que fait la vectorisation, et ce que vous pouvez vectoriser</h2>
+<p>Une image est faite de pixels : elle se floute lorsque vous l'agrandissez et ne peut pas être remodelée point par point. La vectorisation lit ces pixels et dessine des tracés vectoriels qui suivent les formes qu'elle trouve, de sorte que le résultat reste net à toute taille et peut être modifié, recoloré et combiné avec le reste de votre illustration.</p>
+<p>Vous vectorisez un <strong>calque pixel</strong> : une image que vous avez importée ou collée, une image ouverte comme son propre plan, ou un calque que vous avez peint vous-même. Amenez une image avec <strong>Fichier &gt; Importer…</strong> (<kbd>&#8679;&#8984;P</kbd>) — elle arrive en tant que calque pixel — sélectionnez-la, puis lancez la vectorisation. (L'illustration vectorielle est déjà faite de tracés, donc il n'y a rien à vectoriser ; la vectorisation lit les pixels.)</p>
+<p>La vectorisation ne jette pas l'image. Elle construit un groupe nommé <strong>Vectorisation</strong> qui contient l'image d'origine (maintenant masquée) avec les nouveaux tracés, posée exactement dessus. Parce que le groupe se souvient des réglages avec lesquels il a été fait, le résultat reste en direct : resélectionnez-le, changez un réglage et il se re-vectorise. Lorsque vous êtes satisfait, vous le <strong>Développez</strong> pour ne garder que les tracés, ou le <strong>Libérez</strong> pour revenir à l'image simple.</p>
+
+<h2 id="image-trace-panel">Le panneau Vectorisation</h2>
+<p>Chaque réglage se trouve dans le panneau Vectorisation. Ouvrez-le depuis <strong>Objet &gt; Vectorisation &gt; Panneau Vectorisation</strong>, ou depuis son onglet dans le dock de panneaux. Le panneau a besoin d'une image sélectionnée avant de pouvoir faire quoi que ce soit : sans rien de choisi convenablement, le bouton Vectoriser est désactivé et le panneau vous demande de sélectionner une image importée.</p>
+
+<h3 id="image-trace-run">Lancer une vectorisation</h3>
+<p>Sélectionnez une image, choisissez un préréglage ou définissez le mode et les options à la main, et appuyez sur <strong>Vectoriser</strong>. Une ligne en bas du panneau rapporte la progression, lisant <em>Vectorisation…</em> pendant qu'elle travaille et <em>Vectorisé. Développez pour ne garder que les tracés.</em> lorsqu'elle termine. Si l'image ne contient rien dont une forme peut être faite, ou ne peut pas être lue, le panneau vous le dit et laisse l'image intacte.</p>
+
+<h3 id="image-trace-preview">Prévisualiser pendant que vous avancez</h3>
+<p>La case <strong>Vectoriser au changement de réglages</strong>, activée par défaut, re-vectorise au moment où vous changez le mode, un préréglage, un nombre ou une case, de sorte que vous pouvez juger chaque ajustement contre l'image immédiatement. Sur une image grande ou chargée, le redessin prend un moment, alors désactivez-la si vous préférez définir plusieurs options d'abord et appuyer sur <strong>Vectoriser</strong> une fois. Lorsque vous resélectionnez une vectorisation existante, le panneau charge les réglages exacts avec lesquels elle a été faite, prêts à être ajustés et vectorisés à nouveau.</p>
+
+<h3 id="image-trace-menu">Les commandes du menu Objet</h3>
+<p>Les mêmes actions se trouvent sous <strong>Objet &gt; Vectorisation</strong>, ce qui est pratique lorsque le panneau est fermé.</p>
+<table>
+  <thead><tr><th>Commande</th><th>Ce qu'elle fait</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Créer</strong></td><td>Vectorise l'image sélectionnée avec les réglages actuels, laissant le résultat en direct.</td></tr>
+    <tr><td><strong>Créer et développer</strong></td><td>Vectorise et développe en une seule étape, donc vous allez directement aux tracés modifiables.</td></tr>
+    <tr><td><strong>Développer</strong></td><td>Garde les tracés et abandonne l'image (voir ci-dessous).</td></tr>
+    <tr><td><strong>Libérer</strong></td><td>Écarte les tracés et revient à l'image (voir ci-dessous).</td></tr>
+    <tr><td><strong>Panneau Vectorisation</strong></td><td>Amène le panneau en avant.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="image-trace-modes">Les trois modes</h2>
+<p>Le mode décide comment l'image est réduite avant d'être dessinée. C'est le premier choix à faire, car il gouverne lesquelles des options ci-dessous s'appliquent.</p>
+<table>
+  <thead><tr><th>Mode</th><th>Comment il réduit l'image</th><th>L'option qu'il utilise</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Noir et blanc</strong></td><td>Divise tout en deux tons, encre et papier, à une luminosité que vous définissez.</td><td>Seuil</td></tr>
+    <tr><td><strong>Niveaux de gris</strong></td><td>Réduit l'image à un nombre défini de niveaux de gris réguliers du noir au blanc.</td><td>Nombre de couleurs (en niveaux de gris)</td></tr>
+    <tr><td><strong>Couleur</strong></td><td>Choisit une palette des couleurs les plus parlantes de l'image et mappe chaque pixel à la plus proche.</td><td>Nombre de couleurs</td></tr>
+  </tbody>
+</table>
+<p>Quel que soit le mode choisi, une forme remplie est créée par ton ou couleur, et les formes sont empilées de la plus grande en premier pour que les détails plus petits se posent dessus. Les parties entièrement transparentes de l'image sont laissées de côté, donc un découpage sur fond transparent se vectorise en son sujet seul.</p>
+
+<h2 id="image-trace-presets">Préréglages</h2>
+<p>Un préréglage est un point de départ nommé qui définit le mode et chaque option à la fois. Choisissez-en un dans le menu en haut du panneau et, avec l'aperçu activé, l'image se vectorise immédiatement ; traitez le résultat comme une base et ajustez à partir de là. Au moment où vous changez une seule option, le menu de préréglage passe à <strong>Personnalisé</strong>, puisque les réglages ne correspondent plus au préréglage.</p>
+<table>
+  <thead><tr><th>Préréglage</th><th>Mode</th><th>Utilisez-le quand</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Haute fidélité photo</strong></td><td>Couleur</td><td>Vous voulez une photographie conservée proche de l'original, avec beaucoup de couleurs.</td></tr>
+    <tr><td><strong>Basse fidélité photo</strong></td><td>Couleur</td><td>Une photographie doit se lire comme quelques zones larges et plates de couleur.</td></tr>
+    <tr><td><strong>3 couleurs</strong></td><td>Couleur</td><td>Vous voulez un résultat audacieux, style affiche, à partir de trois couleurs plates.</td></tr>
+    <tr><td><strong>6 couleurs</strong></td><td>Couleur</td><td>Un aspect illustré et plat avec une petite palette ordonnée.</td></tr>
+    <tr><td><strong>16 couleurs</strong></td><td>Couleur</td><td>Plus de gamme de couleurs que les préréglages plats, sans atteindre une photo complète.</td></tr>
+    <tr><td><strong>Nuances de gris</strong></td><td>Niveaux de gris</td><td>Une image tonale doit garder ses ombrages mais perdre sa couleur.</td></tr>
+    <tr><td><strong>Logo noir et blanc</strong></td><td>Noir et blanc</td><td>Transformer un signe ou logo net à deux tons en formes nettes.</td></tr>
+    <tr><td><strong>Art esquissé</strong></td><td>Noir et blanc</td><td>Capturer un croquis au crayon ou à l'encre avec ses lignes plus lâches.</td></tr>
+    <tr><td><strong>Silhouettes</strong></td><td>Noir et blanc</td><td>Vous voulez des silhouettes pleines et remplies plutôt que des lignes fines.</td></tr>
+    <tr><td><strong>Dessin au trait</strong></td><td>Noir et blanc</td><td>Un dessin au trait fin où les traits fins doivent survivre.</td></tr>
+    <tr><td><strong>Dessin technique</strong></td><td>Noir et blanc</td><td>Un travail au trait net et fidèle avec autant de détails conservés que possible.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="image-trace-options">Les options</h2>
+<p>Sous le mode se trouvent les contrôles qui façonnent le résultat. Lesquels sont affichés dépend du mode : le Seuil n'apparaît que pour le Noir et blanc, tandis que le nombre de couleurs apparaît pour les Niveaux de gris et la Couleur.</p>
+<dl>
+  <dt>Nombre de couleurs</dt>
+  <dd>Combien de couleurs (en mode Couleur) ou de niveaux de gris (en Niveaux de gris) l'image est réduite, de 2 à 64. Moins donne un résultat plus plat et graphique avec moins de formes ; plus garde l'image plus proche de l'original au prix de plus de tracés. Le mode Noir et blanc ignore ceci, car il a toujours deux tons.</dd>
+  <dt>Seuil</dt>
+  <dd>Pour le Noir et blanc uniquement : la luminosité, de 0 à 255, où l'image se divise en encre et papier. Tout ce qui est plus sombre que le seuil devient la forme dessinée ; tout ce qui est plus clair est traité comme arrière-plan. Augmentez-le pour attirer plus de demi-teintes dans la forme pour un résultat plus lourd, diminuez-le pour ne garder que les marques les plus sombres. Utilisez-le pour régler la quantité d'un croquis faible qui est captée.</dd>
+  <dt>Tracés</dt>
+  <dd>À quel point les tracés épousent les pixels, sur une échelle de 0 à 100. Les valeurs élevées épousent les bords étroitement et gardent les fines oscillations, avec plus de points d'ancrage ; les valeurs basses détendent l'ajustement pour des tracés plus lisses et simples, plus légers à modifier. Utilisez une valeur élevée lorsque la précision compte et une valeur basse lorsque vous voulez un contour propre et ordonné.</dd>
+  <dt>Coins</dt>
+  <dd>À quel point un virage dans le contour devient un coin net plutôt qu'une courbe lisse, de 0 à 100. Augmentez-le pour des illustrations aux angles nets, comme un logo ou un lettrage ; diminuez-le pour des formes organiques qui doivent rester arrondies.</dd>
+  <dt>Bruit</dt>
+  <dd>La plus petite tache, en pixels, autorisée à devenir sa propre forme. Tout ce qui est plus petit est absorbé par ce qui l'entoure. Augmentez-le pour éliminer les speckles et le grain d'un scan ou d'une photographie pour que les points errants ne deviennent pas chacun un tracé ; diminuez-il pour garder les fins détails authentiques.</dd>
+  <dt>Ignorer le blanc</dt>
+  <dd>Laisse de côté toute forme qui ressort presque blanche, donc le papier ou l'arrière-plan n'est pas dessiné et reste transparent derrière les marques vectorisées. Activé par défaut, et affiché pour le mode Noir et blanc. Désactivez-le lorsqu'une zone blanche fait partie de l'illustration et doit être une vraie forme remplie.</dd>
+  <dt>Fonds</dt>
+  <dd>Donne à chaque forme vectorisée un fond plat dans la couleur dont elle a été vectorisée. C'est le choix habituel et il est activé par défaut.</dd>
+  <dt>Contours</dt>
+  <dd>Contoure chaque forme vectorisée d'un contour dans sa propre couleur au lieu de, ou en plus d'un fond. Désactivé par défaut. Si vous désactivez à la fois Fonds et Contours, les tracés sont toujours créés mais n'ont rien qui les peint, alors laissez au moins l'un activé.</dd>
+</dl>
+
+<h2 id="image-trace-finish">Conserver ou revenir sur le résultat</h2>
+<p>Une vectorisation fraîche est en direct : les tracés se posent sur l'original masqué dans le groupe Vectorisation, et vous pouvez continuer à ajuster les réglages. Deux commandes mettent fin à cet état, toutes deux sur le panneau sous forme de boutons et sous <strong>Objet &gt; Vectorisation</strong>. Elles deviennent disponibles une fois une vectorisation sélectionnée.</p>
+<dl>
+  <dt>Développer</dt>
+  <dd>Garde les tracés et retire l'image, de sorte que le groupe devient une illustration vectorielle ordinaire. Les réglages ne s'appliquent plus et ne peuvent pas être modifiés, mais chaque tracé est maintenant une forme normale que vous pouvez remodeler, recolorer, combiner et disposer. Utilisez-le une fois que la vectorisation semble correcte et que vous voulez travailler sur les vecteurs. <strong>Créer et développer</strong> fait la vectorisation et cette étape ensemble.</dd>
+  <dt>Libérer</dt>
+  <dd>Écarte les tracés vectorisés et restaure l'image d'origine, visible à nouveau à son ancienne place. Utilisez-le pour abandonner une vectorisation et recommencer, ou lorsque vous n'aviez besoin de l'image après tout.</dd>
+</dl>
+
+<h2 id="image-trace-uses">Logos, croquis et photographies</h2>
+<p>Les trois points de départ courants appellent des réglages différents.</p>
+<dl>
+  <dt>Un logo ou signe net</dt>
+  <dd>Partez de <strong>Logo noir et blanc</strong>. Gardez <strong>Ignorer le blanc</strong> activé pour que le papier disparaisse, augmentez <strong>Coins</strong> pour des angles nets et <strong>Tracés</strong> pour des bords fidèles, et réglez <strong>Seuil</strong> jusqu'à ce que le signe soit plein sans se remplir. Développez, puis définissez votre propre couleur de fond.</dd>
+  <dt>Un croquis au crayon ou à l'encre</dt>
+  <dd>Essayez <strong>Art esquissé</strong> ou <strong>Dessin au trait</strong>. Diminuez le <strong>Seuil</strong> pour ne garder que les lignes dessinées et laisser le papier disparaître, et augmentez un peu <strong>Bruit</strong> pour éliminer le grain du papier. Le Dessin au trait garde des traits plus fins ; l'Art esquissé convient à une main plus lâche.</dd>
+  <dt>Une photographie</dt>
+  <dd>Utilisez le mode Couleur avec <strong>Haute fidélité photo</strong> pour une ressemblance proche ou <strong>Basse fidélité photo</strong> pour un aspect plus plat et illustré, et définissez le <strong>nombre de couleurs</strong> à votre goût. Laissez <strong>Ignorer le blanc</strong> désactivé pour que les zones pâles restent. Plus de couleurs signifie plus de formes, donc une vectorisation photo lourde peut être volumineuse : réduisez les couleurs si le résultat semble ingérable.</dd>
+</dl>

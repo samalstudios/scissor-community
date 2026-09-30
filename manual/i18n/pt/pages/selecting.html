@@ -1,0 +1,34 @@
+<p class="lede">Antes de poder alterar qualquer coisa, tem de dizer o que alterar. Esta página é sobre escolher arte: os cliques rápidos com as ferramentas de seleção e o menu <strong>Selecionar</strong> inteiro que escolhe objetos pelo que são feitos, percorre a pilha e guarda uma seleção para trazer de volta mais tarde. Nos atalhos abaixo, <kbd>&#8984;</kbd> é <kbd>Ctrl</kbd> no Windows e Linux, <kbd>&#8997;</kbd> é <kbd>Alt</kbd> e <kbd>&#8679;</kbd> é Shift.</p>
+
+<h2 id="selecting-basics">Clicar e selecionar em área</h2>
+<p>A <strong>ferramenta Seleção</strong> (<kbd>V</kbd>) é onde começa a maioria das seleções. Clique num objeto para o selecionar; segure <kbd>&#8679;</kbd> e clique noutro para o adicionar, ou clique num selecionado para o remover. Arraste através de tela vazia para puxar uma <em>seleção em área</em>, e tudo o que ela toca é selecionado. A <strong>ferramenta Seleção Direta</strong> (<kbd>A</kbd>) chega ao invés: escolhe pontos de âncora e segmentos de caminho individuais em vez de objetos inteiros, e a <strong>ferramenta Seleção de Grupo</strong> entra num grupo de cada vez. Essas ferramentas são cobertas nas páginas <a href="/manual/tools/">Ferramentas</a> e <a href="/manual/paths/">Caminhos</a>; o resto desta página é o menu Selecionar, que faz a escolha que o clique não consegue.</p>
+
+<h2 id="selecting-whole-document">Tudo, nada e inverter</h2>
+<table>
+  <thead><tr><th>Comando</th><th>Atalho</th><th>O que seleciona</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Selecionar &rsaquo; Tudo</strong></td><td><kbd>&#8984;A</kbd></td><td>Todos os objetos desbloqueados no documento.</td></tr>
+    <tr><td><strong>Tudo na Prancha Ativa</strong></td><td><kbd>&#8997;&#8984;A</kbd></td><td>Apenas a arte na prancha em que está a trabalhar - a maneira rápida de apanhar uma página de um arquivo com várias pranchas.</td></tr>
+    <tr><td><strong>Desselecionar</strong></td><td><kbd>&#8679;&#8984;A</kbd></td><td>Nada; limpa a seleção atual.</td></tr>
+    <tr><td><strong>Inverter</strong></td><td></td><td>Troca a seleção por tudo o que <em>não</em> estava selecionado.</td></tr>
+    <tr><td><strong>Reselecionar</strong></td><td><kbd>&#8984;6</kbd></td><td>Traz de volta a seleção que tinha mesmo antes de a limpar.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="selecting-stack">Percorrer a pilha</h2>
+<p>Quando objetos se sobrepõem, <strong>Selecionar &rsaquo; Próximo Objeto Acima</strong> (<kbd>&#8997;&#8984;]</kbd>) e <strong>Próximo Objeto Abaixo</strong> (<kbd>&#8997;&#8984;[</kbd>) movem a seleção para cima ou para baixo na pilha no mesmo local, um objeto de cada vez. É a maneira confiável de alcançar uma forma enterrada debaixo de outras sem arrastar as de cima para fora do caminho.</p>
+
+<h2 id="selecting-same">Selecionar Semelhante: escolher pelo que as coisas partilham</h2>
+<p>Selecione um objeto, depois <strong>Selecionar &rsaquo; Semelhante</strong> reúne todos os outros objetos no documento que correspondem a ele numa característica. Use-o para recolorir todas as formas de um preenchimento de uma só vez ou para apanhar todos os contornos finos de uma vez.</p>
+<dl>
+  <dt>Aparência</dt><dd>O aspeto inteiro - a mesma pilha de preenchimentos, contornos e efeitos.</dd>
+  <dt>Preenchimento e Contorno</dt><dd>O mesmo preenchimento e o mesmo contorno juntos.</dd>
+  <dt>Cor de Preenchimento / Cor de Contorno</dt><dd>A mesma cor de preenchimento ou a mesma cor de contorno.</dd>
+  <dt>Espessura do Contorno</dt><dd>A mesma largura de contorno.</dd>
+  <dt>Opacidade</dt><dd>A mesma opacidade.</dd>
+  <dt>Modo de Mistura</dt><dd>O mesmo modo de mistura.</dd>
+  <dt>Forma</dt><dd>O mesmo tipo de objeto - todas as elipses, digamos, ou todo o texto.</dd>
+</dl>
+
+<h2 id="selecting-saved">Guardar uma seleção</h2>
+<p>Uma seleção trabalhosa vale a pena guardar. <strong>Selecionar &rsaquo; Guardar Seleção&hellip;</strong> armazena o conjunto atual sob um nome; ele depois aparece sob <strong>Selecionar &rsaquo; Seleções Guardadas</strong>, e escolhê-lo lá seleciona exatamente esses objetos novamente, independentemente de como clicou desde então. <strong>Editar Seleção&hellip;</strong> renomeia ou remove as que guardou. Seleções guardadas viajam dentro do documento <code>.cut</code>, pelo que ainda estão lá na próxima vez que abrir o arquivo.</p>

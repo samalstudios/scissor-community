@@ -1,0 +1,34 @@
+<p class="lede">Innan du kan ändra något måste du säga vad som ska ändras. Denna sida handlar om att välja konstverk: de snabba klicken med markeringsverktygen, och hela <strong>Markera</strong>-menyn som plockar upp objekt efter vad de är gjorda av, stegar genom stapeln, och sparar en markering att ta tillbaka senare. I genvägarna nedan är <kbd>&#8984;</kbd> <kbd>Ctrl</kbd> på Windows och Linux, <kbd>&#8997;</kbd> är <kbd>Alt</kbd> och <kbd>&#8679;</kbd> är Shift.</p>
+
+<h2 id="selecting-basics">Klicka och rammarkera</h2>
+<p><strong>Markeringsverktyget</strong> (<kbd>V</kbd>) är där det mesta markerandet börjar. Klicka på ett objekt för att markera det; håll ned <kbd>&#8679;</kbd> och klicka på ett annat för att lägga till det, eller klicka på ett markerat för att släppa det. Dra över tom duk för att dra en <em>rammarkering</em>, och allt den rör vid markeras. <strong>Direktmarkeringsverktyget</strong> (<kbd>A</kbd>) når inne i istället: det plockar upp enskilda ankarpunkter och bansegment snarare än hela objekt, och <strong>gruppmarkeringsverktyget</strong> stegar in i en grupp i taget. Dessa verktyg täcks på <a href="/manual/tools/">Verktyg</a>- och <a href="/manual/paths/">Banor</a>-sidorna; resten av denna sida är Markera-menyn, som gör det markerande som klick inte kan.</p>
+
+<h2 id="selecting-whole-document">Alla, inga och invertera</h2>
+<table>
+  <thead><tr><th>Kommando</th><th>Genväg</th><th>Vad det markerar</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Markera &rsaquo; Alla</strong></td><td><kbd>&#8984;A</kbd></td><td>Varje olåst objekt i dokumentet.</td></tr>
+    <tr><td><strong>Alla på aktiv artboard</strong></td><td><kbd>&#8997;&#8984;A</kbd></td><td>Bara konstverket på den artboard du arbetar på – det snabba sättet att plocka upp en sida i en flerdokumentfil.</td></tr>
+    <tr><td><strong>Avmarkera</strong></td><td><kbd>&#8679;&#8984;A</kbd></td><td>Ingenting; rensar den aktuella markeringen.</td></tr>
+    <tr><td><strong>Invertera</strong></td><td></td><td>Byter markeringen mot allt som <em>inte</em> var markerat.</td></tr>
+    <tr><td><strong>Återmarkera</strong></td><td><kbd>&#8984;6</kbd></td><td>Tar tillbaka markeringen du hade precis innan du rensade den.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="selecting-stack">Stega genom stapeln</h2>
+<p>När objekt överlappar, flyttar <strong>Markera &rsaquo; Nästa objekt ovanför</strong> (<kbd>&#8997;&#8984;]</kbd>) och <strong>Nästa objekt nedanför</strong> (<kbd>&#8997;&#8984;[</kbd>) markeringen upp eller ner genom högen på samma ställe, ett objekt i taget. Det är det pålitliga sättet att nå en form begravd under andra utan att flytta de ovanför ur vägen.</p>
+
+<h2 id="selecting-same">Markera samma: plocka efter vad saker delar</h2>
+<p>Markera ett objekt, och sedan samlar <strong>Markera &rsaquo; Samma</strong> varje annat objekt i dokumentet som matchar det på ett drag. Använd det för att färglägga varje form av en fyllning i ett enda svep, eller för att plocka upp alla tunna konturer på en gång.</p>
+<dl>
+  <dt>Utseende</dt><dd>Hela utseendet – samma stapel av fyllningar, konturer och effekter.</dd>
+  <dt>Fyllning &amp; kontur</dt><dd>Samma fyllning och samma kontur tillsammans.</dd>
+  <dt>Fyllningsfärg / Konturfärg</dt><dd>Samma fyllningsfärg, eller samma konturfärg.</dd>
+  <dt>Konturtjocklek</dt><dd>Samma konturbredd.</dd>
+  <dt>Opacitet</dt><dd>Samma opacitet.</dd>
+  <dt>Blandningsläge</dt><dd>Samma blandningsläge.</dd>
+  <dt>Form</dt><dd>Samma typ av objekt – alla ellipser, säg, eller all text.</dd>
+</dl>
+
+<h2 id="selecting-saved">Spara en markering</h2>
+<p>En krånglig markering är värd att behålla. <strong>Markera &rsaquo; Spara markering…</strong> sparar den aktuella uppsättningen under ett namn; den visas sedan under <strong>Markera &rsaquo; Sparade markeringar</strong>, och att välja den där markerar exakt de objekten igen, oavsett hur du har klickat runt sedan dess. <strong>Redigera markering…</strong> döper om eller tar bort de du har sparat. Sparade markeringar reser inne i <code>.cut</code>-dokumentet, så de finns kvar nästa gång du öppnar filen.</p>

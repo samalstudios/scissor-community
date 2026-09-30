@@ -1,0 +1,165 @@
+<p class="lede">Tudo o que altera onde um objeto fica, o seu tamanho ou a direção que enfrenta vive aqui: mover e dimensionar à mão, transformações numéricas exatas, alinhar e empilhar, repetições ao vivo, morfes, envelopes e transformar uma forma plana num sólido.</p>
+
+<p>Os atalhos abaixo estão escritos no formato macOS. No Windows e Linux, leia <kbd>⌘</kbd> como Ctrl, <kbd>⌥</kbd> como Alt e <kbd>⇧</kbd> como Shift.</p>
+
+<h2 id="transform-select-move">Selecionar e mover</h2>
+<p>Antes de poder transformar qualquer coisa, tem de dizer o que. Use estes primeiro: as ferramentas de seleção decidem sobre o que um arrasto, um comando numérico ou um campo de painel atuará.</p>
+
+<h3 id="transform-selection-tools">As ferramentas de seleção</h3>
+<table>
+  <thead><tr><th>Ferramenta</th><th>Atalho</th><th>O que escolhe</th></tr></thead>
+  <tbody>
+    <tr><td>Ferramenta Seleção</td><td><kbd>V</kbd></td><td>Objetos e grupos inteiros.</td></tr>
+    <tr><td>Ferramenta Seleção Direta</td><td><kbd>A</kbd></td><td>Pontos de âncora e segmentos de caminho individuais.</td></tr>
+    <tr><td>Ferramenta Seleção de Grupo</td><td></td><td>Um objeto dentro de um grupo; cada clique adicional alarga para o grupo à volta dele.</td></tr>
+  </tbody>
+</table>
+<p>Shift-clique adiciona um objeto à seleção ou remove-o de volta. Arraste em tela vazia para selecionar em área, e segure <kbd>⇧</kbd> para adicionar o que a seleção em área apanhar ao que já está selecionado. Clicar duas vezes num grupo com a ferramenta Seleção entra nele para poder trabalhar num membro sem desagrupar.</p>
+
+<h3 id="transform-moving">Movendo uma seleção</h3>
+<p>Arraste um objeto selecionado para o mover. Segurar <kbd>⌥</kbd> deixa uma cópia para trás e arrasta essa em vez disso, o que é a maneira rápida de duplicar no local e reposicionar num só movimento. Segurar <kbd>⇧</kbd> restringe o movimento a passos de 45&deg; medidos a partir do ângulo de restrição definido em Preferências, e desliga o ajuste; sem <kbd>⇧</kbd> a seleção ajusta-se a bordas, centros e ângulos próximos. As teclas de seta deslocam pelo incremento do teclado, <kbd>⇧</kbd> com uma seta desloca dez vezes isso, e <kbd>⌥</kbd> com uma seta desloca uma cópia.</p>
+
+<h3 id="transform-bounding-box">A caixa delimitadora: dimensionar e rodar à mão</h3>
+<p>A caixa delimitadora da seleção transporta oito alças. Arraste uma para dimensionar: <kbd>⇧</kbd> mantém as proporções e <kbd>⌥</kbd> dimensiona em torno do centro em vez da alça oposta. Mesmo fora de um canto o cursor entra na zona de rotação; arraste aí para rodar a seleção em torno do centro da caixa, com <kbd>⇧</kbd> ajustando a 45&deg;. Depois de uma rotação a caixa fica inclinada com a arte. <strong>Objeto &rsaquo; Transformar &rsaquo; Repor Caixa Delimitadora</strong> endireita-a novamente para que edições posteriores de largura e altura sejam lidas ao longo dos eixos da página.</p>
+
+<h2 id="transform-numeric">Transformações numéricas</h2>
+<p>Arrastar é rápido mas aproximado. Quando um valor tem de ser exato, ou o mesmo em muitos objetos, digite-o. O painel Transformar mantém os números atuais para a seleção, e o submenu <strong>Objeto &rsaquo; Transformar</strong> mantém comandos de uma vez com uma opção Cópia.</p>
+
+<h3 id="transform-panel">O painel Transformar</h3>
+<p>O painel Transformar (<kbd>⇧F8</kbd>) mostra X, Y, L e A em pixels para a seleção; digite um valor e pressione Return para o definir. Abaixo deles, o campo ⟳ roda a seleção por um ângulo e o campo ⧄ inclina-a por um, cada um voltando a zero depois de aplicado. O painel precisa de algo selecionado; com nada escolhido esmaece-se e diz isso.</p>
+<p>O painel Propriedades repete X, Y, L e A com um campo de rotação e dois botões que viram a seleção horizontal ou verticalmente em torno do seu próprio centro, pelo que os movimentos mais comuns estão à mão sem abrir um segundo painel.</p>
+
+<h3 id="transform-commands">Mover, Rodar, Refletir, Dimensionar e Inclinar</h3>
+<p><strong>Objeto &rsaquo; Transformar</strong> contém os comandos numéricos. Cada um abre uma pequena caixa de diálogo, e cada um (exceto Mover, que é um deslocamento direto) transforma em torno do ponto de referência. A caixa Cópia em cada caixa de diálogo aplica a alteração a uma duplicata e deixa o original intacto, o que é como constrói um par espelhado ou um eco dimensionado de uma só vez.</p>
+<table>
+  <thead><tr><th>Comando</th><th>Atalho</th><th>Campos</th></tr></thead>
+  <tbody>
+    <tr><td>Mover&hellip;</td><td><kbd>⇧⌘M</kbd></td><td>Horizontal, Vertical, Cópia.</td></tr>
+    <tr><td>Rodar&hellip;</td><td></td><td>Ângulo, Cópia.</td></tr>
+    <tr><td>Refletir&hellip;</td><td></td><td>Eixo (Horizontal ou Vertical), Ângulo, Cópia.</td></tr>
+    <tr><td>Dimensionar&hellip;</td><td></td><td>Percentagem Horizontal, Percentagem Vertical, Cópia.</td></tr>
+    <tr><td>Inclinar&hellip;</td><td></td><td>Ângulo de Inclinação, Ângulo de Eixo, Cópia.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="transform-each-again">Transformar Cada e Transformar Novamente</h3>
+<p><strong>Transformar Cada&hellip;</strong> (<kbd>⌥⇧⌘D</kbd>) dimensiona, move, roda e reflete cada objeto selecionado em torno do <em>seu próprio</em> centro em vez do centro partilhado da seleção. A sua caixa de diálogo aceita Dimensionar H e V, Mover H e V, um ângulo de Rodar, caixas de Refletir X e Refletir Y, e Cópia. Use-o para perturbar ou lequeiar um conjunto de objetos para que cada um gire e cresça no local em vez de orbitar o grupo.</p>
+<p><strong>Transformar Novamente</strong> (<kbd>⌘D</kbd>) repete a última transformação na seleção atual. Mova um objeto, depois pressione <kbd>⌘D</kbd> algumas vezes, e obtém uma fileira uniformemente escalonada; combine-o com <kbd>⌥</kbd>-arrastar uma cópia para construir padrões repetidos à mão.</p>
+
+<h2 id="transform-tools">As ferramentas de transformação e o ponto de referência</h2>
+<p>As ferramentas Rodar (<kbd>R</kbd>), Refletir (<kbd>O</kbd>), Dimensionar (<kbd>S</kbd>) e Inclinar funcionam cada uma em torno de um ponto de referência, desenhado como uma pequena mira. Começa no centro da seleção; clique em qualquer lugar na tela para o mover para aí, e selecionar outra coisa repõe-o no novo centro. Depois arraste na tela para rodar, espelhar, dimensionar ou inclinar em torno desse ponto.</p>
+<p><kbd>⇧</kbd> restringe cada ferramenta: passos de 45&deg; para Rodar e Refletir, igual horizontal e vertical para Dimensionar, um eixo para Inclinar. Segurar <kbd>⌥</kbd> durante o arrasto transforma uma cópia e deixa o original. <kbd>⌥</kbd>-clique coloca o ponto de referência e abre a caixa de diálogo numérica dessa ferramenta com o ponto já definido, pelo que pode rodar uma forma em torno de um canto por um ângulo exato.</p>
+
+<h2 id="transform-free">A ferramenta Transformação Livre</h2>
+<p>A ferramenta Transformação Livre (<kbd>E</kbd>) coloca mover, dimensionar, rodar, inclinar e dois tipos de distorção numa única caixa delimitadora. Arraste dentro da caixa para a mover, arraste uma alça para dimensionar, e arraste mesmo fora de um canto para rodar, com <kbd>⇧</kbd> ajustando a 45&deg;. Use-a quando quer experimentar vários tipos de alteração num só gesto sem trocar de ferramentas entre eles.</p>
+<p>A caixa da ferramenta Seleção também pode distorcer: segure <kbd>Ctrl</kbd> (ou <kbd>&#8984;</kbd>) enquanto arrasta uma das suas alças de canto para mover esse canto sozinho, em vez de dimensionar. Funciona em formas e fotografias igualmente; num pixels uma pré-visualização rápida segue o arrasto e o resultado é calculado quando pressiona <kbd>Enter</kbd>.</p>
+
+<h3 id="transform-free-widget">O widget</h3>
+<p>Um pequeno widget flutua ao lado da caixa com quatro botões, cada um nomeando-se quando passa o cursor sobre ele: <strong>Restringir</strong>, <strong>Transformação Livre</strong>, <strong>Distorção em Perspetiva</strong> e <strong>Distorção Livre</strong>. Restringir torna o dimensionamento proporcional sem segurar <kbd>⇧</kbd>; com ele ligado, <kbd>⇧</kbd> liberta as proporções em vez disso. Os dois modos de distorção deixam apenas as quatro alças de canto para puxar.</p>
+
+<h3 id="transform-free-keys">Distorcer a partir do teclado</h3>
+<p>Pode alcançar as mesmas distorções sem sair do modo padrão. Segure <kbd>⌘</kbd> numa alça de borda para inclinar ao longo dessa borda. Segure <kbd>⌘</kbd> num canto para o distorcer livremente por conta própria; adicione <kbd>⇧</kbd> para restringir a viagem do canto a 45&deg;. Segure <kbd>⌘⌥⇧</kbd> num canto para perspetiva, onde o canto vizinho espelha o arrasto. Pressionar ou soltar um modificador a meio do arrasto alterna a ação imediatamente, e o nome em que termina, Dimensionar, Inclinar, Distorção em Perspetiva ou Distorção Livre, é como a etapa é chamada no painel Histórico depois. Texto, imagens colocadas e instâncias de símbolos não podem ser distorcidos; ficam como estão, e o Scissor diz-lhe isso quando um arrasto os ignora.</p>
+
+<h3 id="transform-free-reference">O ponto de referência</h3>
+<p>O ponto de referência fica no meio da caixa como uma mira, e pode arrastá-lo para qualquer lugar; por si só não move nada. A caixa então roda e dimensiona em torno dele, e viaja com a arte quando move a seleção. Largue-o perto de um dos nove pontos da caixa (os quatro cantos, os quatro meios de borda ou o centro) e assenta nesse ponto. Segurar <kbd>⌥</kbd> enquanto dimensiona ignora um ponto de referência colocado e dimensiona em torno do centro. Inclinar um lado com <kbd>⌘</kbd> também segura um ponto de referência colocado no lugar.</p>
+
+<h3 id="transform-free-pins">Movendo as alças</h3>
+<p>Ligue <strong>Mover Alças</strong> na barra rápida (ou na barra de opções) enquanto a Transformação Livre está ativa, e arrastar um canto da caixa move esse canto sozinho, sem tocar na arte. Perto de um ponto de âncora assenta nele. Desligue Mover Alças de volta e arraste um canto movido: a forma dimensiona para que o canto siga o cursor, e todos os outros pontos mantêm a mesma distância proporcional do que fica paro, que é o canto oposto, o ponto de referência colocado, ou o centro enquanto <kbd>⌥</kbd> está segurado. <kbd>⇧</kbd> mantém as proporções. Cantos movidos viajam com a arte, e clicar duas vezes num deles repõe todos os quatro na caixa.</p>
+
+<h2 id="transform-align-arrange">Alinhar, organizar e agrupar</h2>
+<p>Estes comandos definem como os objetos se alinham uns com os outros, qual fica à frente de qual, e quais são recolhidos, bloqueados ou ocultos enquanto trabalha no resto.</p>
+
+<h3 id="transform-align">Alinhar e distribuir</h3>
+<p>O painel Alinhar (<kbd>⇧F7</kbd>) tem três fileiras. <strong>Alinhar Objetos</strong> alinha a seleção à esquerda, centro ou direita, e ao topo, meio ou base. <strong>Distribuir Objetos</strong> espalha três ou mais objetos para que os seus topos, centros, bases, bordas esquerdas, centros ou bordas direitas caiam em intervalos uniformes. <strong>Distribuir Espaçamento</strong> define um espaço igual entre eles vertical ou horizontalmente. O menu no painel escolhe se tudo se alinha à seleção ou à prancha. Alinhar precisa de pelo menos um objeto (um objeto único alinha-se à prancha); distribuir precisa de três, e o painel esmaece esses botões até os ter. Os seis alinhamentos também aparecem sob <strong>Objeto &rsaquo; Alinhar</strong>.</p>
+
+<h3 id="transform-arrange">Organizar: ordem de empilhamento</h3>
+<p>Cada objeto fica num nível da pilha, e <strong>Objeto &rsaquo; Organizar</strong> move a seleção através dela.</p>
+<table>
+  <thead><tr><th>Comando</th><th>Atalho</th></tr></thead>
+  <tbody>
+    <tr><td>Trazer para Frente</td><td><kbd>⇧⌘]</kbd></td></tr>
+    <tr><td>Trazer para a Frente</td><td><kbd>⌘]</kbd></td></tr>
+    <tr><td>Enviar para Trás</td><td><kbd>⌘[</kbd></td></tr>
+    <tr><td>Enviar para o Fundo</td><td><kbd>⇧⌘[</kbd></td></tr>
+  </tbody>
+</table>
+
+<h3 id="transform-grouping">Agrupar, bloquear e ocultar</h3>
+<dl>
+  <dt><strong>Agrupar</strong> (<kbd>⌘G</kbd>) e <strong>Desagrupar</strong> (<kbd>⇧⌘G</kbd>)</dt>
+  <dd>Reúne objetos para que se movam e transformem como um, ou liberta-os de volta. Um grupo pode ser entrado clicando duas vezes nele com a ferramenta Seleção.</dd>
+  <dt><strong>Bloquear &rsaquo; Seleção</strong> (<kbd>⌘2</kbd>) e <strong>Desbloquear Tudo</strong> (<kbd>⌥⌘2</kbd>)</dt>
+  <dd>Bloquear torna objetos não selecionáveis para que fiquem no lugar enquanto trabalha sobre eles; Desbloquear Tudo liberta tudo o que estava bloqueado.</dd>
+  <dt><strong>Ocultar &rsaquo; Seleção</strong> (<kbd>⌘3</kbd>) e <strong>Mostrar Tudo</strong> (<kbd>⌥⌘3</kbd>)</dt>
+  <dd>Ocultar tira objetos da tela sem os eliminar, o que limpa uma cena ocupada até à parte que está a editar; Mostrar Tudo traz-nos de volta.</dd>
+</dl>
+
+<h2 id="transform-repeat">Repetições ao vivo</h2>
+<p><strong>Objeto &rsaquo; Repetir</strong> constrói muitas cópias a partir de um objeto e mantém-nas ao vivo: edite o original e cada cópia segue. Use uma repetição quando a arte é regular, uma flor de pétalas idênticas ou uma grelha de ícones em mosaico, para que possa moldar um elemento e deixar o resto segui-lo.</p>
+<dl>
+  <dt><strong>Radial&hellip;</strong></dt>
+  <dd>Anela as cópias à volta de um centro. A caixa de diálogo define Instâncias e Raio.</dd>
+  <dt><strong>Grelha&hellip;</strong></dt>
+  <dd>Dispõe as cópias em fileiras e colunas. A caixa de diálogo define Colunas, Fileiras, Espaçamento Horizontal e Espaçamento Vertical.</dd>
+  <dt><strong>Espelho&hellip;</strong></dt>
+  <dd>Reflete as cópias através de um eixo. A caixa de diálogo define o eixo (vertical ou horizontal) e um Deslocamento.</dd>
+</dl>
+<p>Com uma repetição selecionada, o painel Propriedades expõe os mesmos controlos para ajuste posterior: instâncias e raio para uma repetição radial; colunas, fileiras e espaçamentos horizontal e vertical para uma grelha; e o deslocamento e eixo de espelho para um espelho. <strong>Libertar</strong> transforma as cópias em arte comum, separadamente editável quando termina.</p>
+<figure class="shot">
+  <img src="img/repeat.gif" width="640" height="640" loading="lazy"
+       alt="Uma única pétala azul repetida à volta de um centro por uma repetição radial, preenchendo-se numa flor de doze pétalas à medida que a contagem aumenta." />
+  <figcaption>Uma pétala e uma repetição radial. À medida que a contagem sobe de um a doze a flor preenche-se; remodele a pétala única e tudo muda com ela.</figcaption>
+</figure>
+
+<h2 id="transform-morph">Morfes</h2>
+<p>Um morfo preenche a lacuna entre dois objetos com uma série de formas intermédias, cada um um passo mais perto do seguinte. É a ferramenta para transições sombreadas entre cores e repetições uniformemente espaçadas ao longo de um caminho.</p>
+<p>A ferramenta Morfo (<kbd>W</kbd>) morfa um objeto noutro: clique no primeiro, depois no segundo. Clicar num terceiro continua a cadeia, e clicar dentro de um morfo existente adiciona esse objeto a ele. <strong>Objeto &rsaquo; Morfo</strong> contém o resto:</p>
+<table>
+  <thead><tr><th>Comando</th><th>Atalho</th><th>O que faz</th></tr></thead>
+  <tbody>
+    <tr><td>Criar</td><td><kbd>⌥⌘B</kbd></td><td>Morfa os objetos selecionados juntos.</td></tr>
+    <tr><td>Libertar</td><td><kbd>⌥⇧⌘B</kbd></td><td>Devolve os objetos-chave e deita fora os passos.</td></tr>
+    <tr><td>Opções de Morfo&hellip;</td><td></td><td>Define espaçamento e orientação (veja abaixo).</td></tr>
+    <tr><td>Expandir</td><td></td><td>Transforma os passos intermédios em objetos reais e editáveis.</td></tr>
+    <tr><td>Substituir Espinha</td><td></td><td>Dobra a sequência de passos ao longo de um caminho selecionado.</td></tr>
+    <tr><td>Inverter Espinha</td><td></td><td>Troca que ponta da espinha cada objeto-chave fica em cada extremidade.</td></tr>
+    <tr><td>Inverter Frente para Trás</td><td></td><td>Inverte a ordem de empilhamento dos passos.</td></tr>
+  </tbody>
+</table>
+<p><strong>Opções de Morfo&hellip;</strong> define Espaçamento para Passos Especificados (um número fixo de intermédios), Distância Especificada (um espaço fixo em pixels, preenchendo tantos quantos couberem) ou Cor Suave (tantos passos quantos os necessários para uma mistura de cor suave) e define Orientação para Alinhar à Página ou Alinhar ao Caminho. Um morfo permanece ao vivo e segue os seus objetos-chave, pelo que editar qualquer extremidade reflui toda a sequência.</p>
+<figure class="shot">
+  <img src="img/morph.gif" width="760" height="316" loading="lazy"
+       alt="Uma estrela azul morfando num círculo âmbar através de uma fileira crescente de formas intermédias." />
+  <figcaption>Um morfo de uma estrela a um círculo. À medida que a contagem de passos sobe, mais formas intermédias preenchem a lacuna, cada um um pouco mais perto do seguinte.</figcaption>
+</figure>
+
+<h2 id="transform-envelope">Deformação de Forma</h2>
+<p><strong>Objeto &rsaquo; Deformação de Forma</strong> dobra arte para caber numa forma enquanto a mantém editável por baixo. Use-a para encaixar um logótipo num banner, curvar uma linha de texto, ou empurrar um padrão plano para uma saliência. Há três maneiras de fazer uma.</p>
+<dl>
+  <dt><strong>Criar com Deformação&hellip;</strong> (<kbd>⌥⇧⌘W</kbd>)</dt>
+  <dd>Dobra a seleção com um dos estilos de deformação embutidos (Arco, Arquitrave, Saliência, Bandeira, Onda, Peixe, Ascensão, Olho de Peixe, Inflar, Espremer e as variantes de concha e arco), controlados por valores de Dobrar, Horizontal e Vertical.</dd>
+  <dt><strong>Criar com Objeto Superior</strong> (<kbd>⌥⌘C</kbd>)</dt>
+  <dd>Usa a forma mais à frente selecionada como envelope e despeja tudo o que está abaixo nesse contorno. Precisa de dois ou mais objetos: o contêiner em cima, a arte por baixo.</dd>
+  <dt><strong>Criar com Malha&hellip;</strong> (<kbd>⌥⌘M</kbd>)</dt>
+  <dd>Coloca uma grelha das fileiras e colunas que pedir sobre a seleção. Permanece ao vivo: mude para a ferramenta Seleção Direta (<kbd>A</kbd>) e arraste qualquer cruzamento da malha para dobrar o que segura, tantas vezes quantas quiser.</dd>
+</dl>
+<p><strong>Libertar</strong> devolve a arte como estava, junto com a forma do envelope; <strong>Expandir</strong> mantém a dobra e deita fora o envelope, deixando caminhos distorcidos.</p>
+
+<h2 id="transform-3d">3D a partir de uma forma vetorial</h2>
+<p><strong>Efeito &rsaquo; 3D e Materiais</strong> transforma uma forma plana num sólido. Permanece um efeito ao vivo, pelo que o caminho original ainda está lá para editar, e a cópia no ecrã reconstrói-se sempre que o altera.</p>
+<dl>
+  <dt><strong>Extrudar e Biselar</strong></dt>
+  <dd>Dá profundidade à forma, com uma borda biselada se quiser uma.</dd>
+  <dt><strong>Revolver</strong></dt>
+  <dd>Gira um perfil à volta de um eixo numa forma torneada.</dd>
+  <dt><strong>Inflar</strong></dt>
+  <dd>Enche a forma como se estivesse cheia.</dd>
+  <dt><strong>Plano</strong></dt>
+  <dd>Inclina a forma plana no espaço sem adicionar profundidade.</dd>
+</dl>
+<p>O painel 3D e Materiais roda o objeto nos eixos X, Y e Z, define a rotação e altura da luz, e escolhe uma superfície plástica, fosca ou metálica, com campos de Profundidade e Bisel para a extrusão.</p>
+<figure class="shot">
+  <img src="img/3d-extrude.gif" width="620" height="620" loading="lazy"
+       alt="Uma estrela vetorial plana a ser extrudada numa estrela tridimensional e rodada para mostrar a sua profundidade." />
+  <figcaption>Extrudar e Biselar constrói profundidade a partir de uma forma plana, ao vivo. A estrela permanece um caminho editável por baixo.</figcaption>
+</figure>

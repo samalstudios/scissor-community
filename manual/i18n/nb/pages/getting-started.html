@@ -1,0 +1,26 @@
+<p>Scissor åpnes i en nettleserfane. Det er ingen konto å opprette og ingenting å installere før du begynner: tegnemotoren er kompilert til WebAssembly og kjører på din egen maskin, slik at arbeidet ditt aldri blir lastet opp noe sted. Ved ditt første besøk møter deg en velkomstskjerm - Scissor-reven, en kort omvisning i hva appen gjør, og Brukervilkårene. Kryss av for <strong>Jeg har lest og godtar Brukervilkårene</strong> og trykk <strong>Kom i gang</strong> for å komma inn i redigeringsprogrammet. Et annet, valgfritt avhør spør om Scissor kan telle besøk med anonymistatistikk; å la det avslås lastes det ingen statistikk i det hele tatt. Du kan endre det valget senere under <strong>Innstillinger &gt; Personvern</strong>, og lese vilkårene når som helst fra <strong>Hjelp &gt; Brukervilkår&hellip;</strong>.</p>
+
+<p>Snarveiene nedenfor er skrevet i macOS-form. På Windows og Linux leser du <kbd>⌘</kbd> som Ctrl og <kbd>⌥</kbd> som Alt; <kbd>⇧</kbd> er Shift.</p>
+
+<h3 id="what-you-see">Hva du ser</h3>
+<p>Øverst sitter menylinjen og, under den, kontrollinjen, som endrer seg med hva du har valgt og inneholder fyll, linje, tykkelse, opasitet og X, Y, B og H for utvalget. Verktøyene løper nedover langs venstre kant; paneldokken er til høyre. Mellom dem ligger lerretet, med en fanen for hvert åpne dokument over det og en statuslinje under som viser zoomnivået, den aktive tavlen, det gjeldende verktøyet og navnet på siste angrebbare trinn.</p>
+<p>Uten noe åpnt dokument viser lerretet en startskjerm med <strong>Nytt dokument…</strong> og <strong>Åpne…</strong>; dobbeltklikk hvor som helst på det åpner en fil. Trykk <kbd>Tab</kbd> for å skjule panelene og gi kunstverket hele vinduet, og igjen for å få dem tilbake. Hold mellomromstasten nede når som helst for å panorere.</p>
+
+<h3 id="first-document">Opprette ditt første dokument</h3>
+<p>Velg <strong>Fil &gt; Nytt…</strong> (<kbd>⌥⌘N</kbd>). Dialogboksen grupperer maler under Trykk, Web, Mobil, Film &amp; Video og Kunst &amp; Illustrasjon; klikk på et kort for å laste størrelsen, eller dobbeltklikk på det for å opprette dokumentet med en gang. Til høyre kan du angi dokumentnavnet, bredde og høyde, enhetene, og stående eller liggende retning. <strong>Tavler</strong>, <strong>Kolonner</strong> og <strong>Avstand</strong> legger ut mer enn en tavle i et rutenett. Under <strong>Bled</strong> holder koblingsknappen alle fire sider like; slå den av for å sette dem hver for seg. <strong>Avansert</strong> inneholder fargemodusen (RGB eller CMYK) og oppløsningen som brukes av rastereffekter. <kbd>Enter</kbd> oppretter dokumentet, <kbd>Esc</kbd> lukker dialogboksen.</p>
+<figure class="shot">
+  <img src="img/new-document.png" width="1500" height="928" loading="lazy"
+       alt="Dialogboksen Nytt dokument i Scissor, med størrelsesmaler gruppert etter bruk til venstre og dokumentinnstillinger til høyre." />
+  <figcaption>Dialogboksen Nytt dokument. Velg en mal til venstre, eller angi størrelse, tavler og bled til høyre.</figcaption>
+</figure>
+
+<h3 id="first-shape">Tegne en første form</h3>
+<p>Trykk <kbd>M</kbd> for rektangelverktøyet eller <kbd>L</kbd> for ellipseverktøyet og dra på lerretet. Hold <kbd>⇧</kbd> mens du drar for å holde formen firkantet eller rund, og <kbd>⌥</kbd> for å tegne ut fra midten i stedet for fra hjørnet. Et enkelt klikk i stedet for en dra åpner en liten dialogboks, slik at du kan skrive inn en nøyaktig bredde og høyde. Med polygon- eller stjerneverktøyet endrer piltastene opp og ned antall sider eller punkter mens du drar.</p>
+<p>Fyll- og linjefargene sitter nederst på verktøylinjen. <kbd>X</kbd> flytter fokus mellom dem, <kbd>⇧X</kbd> bytter de to fargene, <kbd>D</kbd> går tilbake til standard hvitt fyll og svart linje, og <kbd>/</kbd> setter den aktive til ingen. Trykk <kbd>V</kbd> for utvalgsverktøyet for å flytte og endre størrelse på det du har tegnet.</p>
+
+<h3 id="saving">Lagring</h3>
+<p>Scissor-dokumenter er <code>.cut</code>-filer. <strong>Fil &gt; Lagre</strong> (<kbd>⌘S</kbd>) spør én gang hvor filen skal ligge og, i nettlesere som støtter direkte filtilgang, skriver tilbake til den samme filen hver gang etterpå. Nettlesere uten det lagrer dokumentet i nedlastingsmappen din i stedet. <strong>Lagre som…</strong> er <kbd>⇧⌘S</kbd> og <strong>Lagre en kopi…</strong> er <kbd>⌥⌘S</kbd>. For å overlevere arbeid til et annet program bruker du <strong>Fil &gt; Eksporter</strong>.</p>
+<p>Mens et dokument har ulagrede endringer beholder Scissor en kopi i nettleserens egen lagring hvert par sekunder, og igje når fanen skjules eller lukkes. Hvis fanen forsvinner før du lagrer, tilbyr ditt neste besøk arbeidet tilbake med en <strong>Gjenopprett</strong>-melding.</p>
+
+<h3 id="installing">Installere Scissor</h3>
+<p>Velg <strong>Hjelp &gt; Installer Scissor…</strong> for å installere det som en app. Det åpnes da i eget vindu uten nettleserchrome, fungerer frakoblet, og kan settes til å være programmet som åpner <code>.cut</code>-filer. Hvis nettleseren din ikke tilbyr spørsmålet, bruk dens eige installasjonsvalg i adresselinjen eller menyen.</p>

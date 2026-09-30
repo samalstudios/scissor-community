@@ -1,0 +1,153 @@
+<p class="lede">Jokainen vektorikohde Scissorissa on rakennettu poluista: ankkureiden ketju, jotka on yhdistetty suoria tai kaarevilla segmenteillä. Tämä sivu kattaa, miten niitä piirretään, miten niitä muokataan pisteeltä toiselle ja komennot, jotka liittävät, siirtävät, ääriviivoittavat ja yhdistävät niitä.</p>
+
+<p>Pikanäppäimet on kirjoitettu macOS-muodossa. Windowsilla lue <kbd>&#8984;</kbd> Ctrl:ksi, <kbd>&#8997;</kbd> Alt:ksi ja <kbd>&#8679;</kbd> Shift:ksi.</p>
+
+<h2 id="paths-anchors-and-handles">Ankkurit, kahvat ja polun muoto</h2>
+<p>Polku on ankkureiden juoksema. Kahden vierekkäisen ankkurin välissä on segmentti, joka on suora, kun kumpikaan ankkuri ei ulotu siihen, ja kaareva, kun yksi tai molemmat ulottuvat. Ankkurin ulottuvuus määritetään sen kahdella suuntakahvalla: saapuva kahva muotoilee segmenttiä, joka saapuu ankkuriin, ja lähtevä kahva muotoilee segmenttiä, joka lähtee siitä. Vedä kahvaa kauemmas ja kaare kääntyy voimakkaammin sitä kohti. Polku voi olla avoin, kahden vapaan pään kanssa, tai suljettu, jossa viimeinen ankkuri liittyy takaisin ensimmäiseen.</p>
+
+<h3 id="paths-corner-and-smooth">Kulma- ja tasaiset pisteet</h3>
+<p>Ankkuri on joko kulma tai tasainen piste. Tasaisessa pisteessä kahvat ovat lukittuna suoraan viivaan ankkurin läpi, joten kaare kulkee läpi ilman kinkkua ja pysyy jatkuvana. Kulmapisteessä kaksi puolta ovat riippumattomia: polku voi muuttaa suuntaa äkkiä ja toinen puoli voi olla suora kun taas toinen on kaareva. Useimmat muodot sekoittavat molempia, tasaisia pisteitä virtaavien osien pitkin ja kulmapisteitä siellä, missä reuna kääntyy.</p>
+<dl>
+  <dt>Tasainen piste</dt>
+  <dd>Kahvat sidottuina viivaan. Käytä näitä kaarella, joka pitäisi lukea yhtenä jatkuvana vetona, kuten lehden sivu tai kirjan kupla.</dd>
+  <dt>Kulmapiste</dt>
+  <dd>Kahvat, jotka liikkuvat erilleen, tai piste ilman kahvoja lainkaan. Käytä näitä tähden kärjen, laatikon kulman tai minkä tahansa kaaren ja suoran reunan kohdalla.</dd>
+</dl>
+
+<h3 id="paths-direct-selection">Ankkurit, kahvat ja suora valintatyökalu</h3>
+<p>Suora valintatyökalu (<kbd>A</kbd>) toimii polun osissa. Napsauta ankkuria valitaksesi sen, <kbd>&#8679;</kbd>-napsauta lisätäksesi tai poistaaksesi yhden tai vedä valintakaari tyhjän tilan yli ottaaksesi kaikki ankkurit sisään. Valittujen ankkureiden vetäminen siirtää niitä; <kbd>&#8679;</kbd> rajoittaa siirron 45&deg; askeluihin. Käytä sitä aina, kun muoto on melkein oikein ja vain yksi tai kaksi pistettä tarvitsee nyökätystä.</p>
+<p>Vedä kahvaa muuttaaksesi kaarta sen puolella. Tasaisen ankkurin kuuluvat kahvat liikkuvat yhdessä, joten kaare pysyy jatkuvana; pidä <kbd>&#8997;</kbd> vedon aikana murtamaan tämä linkki ja ohjataksesi yhtä puolta yksin ja <kbd>&#8679;</kbd> pitääksesi kahvan kulmassa. Voit myös vetää itä segmenttiä: kaareva segmentti taipuu osoittimen alla ja suora vie molemmat ankkurinsa mukanaan.</p>
+<p>Ryhmän valintatyökalu jakaa tämän paikan ja valitsee kokonaisia kohteita ryhmästä ankkureiden sijaan. Napsauta kerran sisimmäisen kohteelle, napsauta uudelleen astuaksesi ulos ryhmään ympärillä.</p>
+
+<h2 id="paths-drawing">Piirtotyökalut</h2>
+<p>Scissorilla on kolme työkalua polun asettamiseksi alusta. Kynä antaa tarkkaan hallinnan jokaiseen ankkuriin ja kahvaan, Kaarevuustyökalu sovittaa tasaisen kaaren asettamillesi pisteille ja kynä seuraa kättäsi vapaasti.</p>
+<table>
+  <thead><tr><th>Työkalu</th><th>Pikanäppäin</th><th>Paras</th></tr></thead>
+  <tbody>
+    <tr><td>Kynä</td><td><kbd>P</kbd></td><td>Tarkat ääriviivat, joissa jokainen ankkuri ja kahva on asetettu tarkoituksella.</td></tr>
+    <tr><td>Kaarevuus</td><td><kbd>&#8679;~</kbd></td><td>Virtaavat kaaret, jotka määritellään muutamalla läpipisteellä ilman kahvojen vääntämistä.</td></tr>
+    <tr><td>Kynä</td><td><kbd>N</kbd></td><td>Vapaat, käsin piirretyt muodot ja nopeat luonnokset.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="paths-pen">Kynä-työkalu</h3>
+<p>Kynä-työkalu (<kbd>P</kbd>) rakentaa polun pisteeltä toiselle. Napsauta asettaaksesi kulma-ankkurin; paina ja vedä sijaan ja ankkuri säilyttää kahvat, joten polku lähtee siitä kaarena. Pidä <kbd>&#8679;</kbd> vedon aikana pitääksesi kahvan 45&deg; askelussa ja pidä <kbd>&#8997;</kbd> liikuttaaksesi vain lähtevää kahvaa, joka muuttaa ankkurin kulmaksi ja vapauttaa seuraavan segmentin edellisestä.</p>
+<p>Kun polku on auki, työkalu muuttuu liikkuessasi sen yli. Ensimmäisen ankkurin päällä se sulkee polun, segmentin päällä se lisää ankkurin ja olemassa olevan ankkurin päällä se poistaa sen. Ilman käynnissä olevaa polkua, liikkuminen avoimen polun vapaan pään päälle ottaa kyseisen polun käyttöön, jotta voit jatkaa piirtämistä siitä. <kbd>Enter</kbd> tai <kbd>Esc</kbd> lopettaa polun ja jättää sen avoimeksi; <kbd>Delete</kbd> poistaa viimeksi asettamasi ankkurin.</p>
+
+<h3 id="paths-curvature">Kaarevuustyökalu</h3>
+<p>Kaarevuustyökalu (<kbd>&#8679;~</kbd>) sovittaa tasaisen kaaren napsauttamillesi pisteille, esikatselulla juoksemaan osoittimeen mentäessä. <kbd>&#8997;</kbd>-napsauta asettaaksesi kulmapisteen tasaisen sijaan ja kaksoisnapsauta mitä tahansa pistettä vaihtaaksesi niiden välillä. Vedä pistettä siirtääksesi sitä ja kaare sovittuu uudelleen. Napsauta ensimmäistä pistettä sulkeaksesi muodon tai paina <kbd>Enter</kbd> lopettaaksesi. <kbd>Delete</kbd> poistaa viimeisen pisteen ja <kbd>Esc</kbd> hylkää polun. Käytä tätä, kun kaaren muoto on tärkeämpi kuin tarkat ankkurit, koska se laskee kahvat puolestasi.</p>
+
+<h3 id="paths-pencil">Kynä-työkalu</h3>
+<p>Kynä-työkalu (<kbd>N</kbd>) piirtää vapaasti: paina, piirrä ja pustu ja Scissor sovittaa taisan polun jälkeen. Pustu lähellä missä aloitit tai pidä <kbd>&#8997;</kbd> lopettaessasi ja polku sulkeutuu muodoksi. Tuloksena on avoin polku nykyisessä reunaviivan värissä, joten se on valmis säilytettäväksi viivaksi tai täytettäväksi. Kuinka tiiviisti sovittelu polkaisee liikettäsi, asetetaan kynän uskollisuusasetuksesta, tarkasta, joka säilyttää enemmän ankkureita ja jokaisen värinän, tasaisesta, joka käyttää vähemmän ankkureita ja suoristaa viivan. Käytä tätä luonnostelemiseen, allekirjoituksiin ja mihin tahansa muotoon, joka pitäisi näyttää käsin piirretyltä eikä rakennetulta.</p>
+
+<h2 id="paths-editing-points">Pisteiden muokkaus polulla</h2>
+
+<h3 id="paths-add-remove-convert">Pisteiden lisääminen, poistaminen ja muuntaminen</h3>
+<p>Kynä jakaa työkalupaikkansa Lisää ankkuri (<kbd>+</kbd>), Poista ankkuri (<kbd>&#8722;</kbd>) ja Ankkurityökalun (<kbd>&#8679;C</kbd>) kanssa. Lisää ankkuri asettaa uuden pisteen segmenttiin muuttamatta kaaren muotoa; Poista ankkuri poistaa napsauttamasi ankkurin ja antaa polun sulkea aukon. Ankkurityökalulla vedä kulma-ankkurista vetääksesi vastaavan parin kahvoista, muuttaen sen tasaiseksi; vedä yksittäistä kahvaa murtamaan pari, jotta kaksi puolta liikkuvat erilleen, muuttaen sen takaisin kulmaksi ja napsauta tasainen ankkuri riisumaan sen kahvat teräväksi kulmaksi.</p>
+<p>Objekti › Polku -kohdassa on samat muokkaukset komentoina, jotka toimivat koko valintaan kerralla. Lisää ankkurit asettaa uuden ankkurin jokaisen segmentin keskelle kaksinkertaistaen pistemäärän muuttamatta muotoa, mikä on kätevää ennen väännöstä tai muunnosta, joka tarvitsee enemmän pisteitä taipuakseen puhtaasti. Poista ankkurit poistaa valitsemasi suoralla valintatyökalulla ja sovittaa polun sen, mikä jää jälkeen.</p>
+
+<h3 id="paths-reshape-tools">Muokkaus käsin: Tasenna, Polun pyyhkijä ja Liitä</h3>
+<p>Kolme sivellintyökalua muokkaa polkua siellä, missä vedät, yksittäisen ankkurin sijaan. Ne toimivat valituilla poluilla tai tahansa polulla, jonka sivellin koskettaa, kun mitään ei ole valittu ja <kbd>[</kbd> ja <kbd>]</kbd> pienentävät ja suurentavat sivellintä.</p>
+<dl>
+  <dt>Tasenna-työkalu</dt>
+  <dd>Viivaa polun pitkin rentouttaaksesi sitä, ohentaen ankkureita ja pehmittäen kohoumia. Käytä tätä rauhoittaamaan hermostunutta kynäviivaa tai jäljitettyä reunaa.</dd>
+  <dt>Polun pyyhkijä-työkalu</dt>
+  <dd>Viivaa polun pitkin pyyhkäistäksesi peittämäsi osan, jakamalla tai lyhentämällä sitä. Käytä tätä leikkaamaan suomatonta häntää viivasta.</dd>
+  <dt>Liitä-työkalu</dt>
+  <dd>Viivaa kahden avoimen pään yli liittääksesi ne, pidentäen tai lyhentäen polkuja kohdatakseen puhtaasti kulmassa. Käytä tätä sulkemaan aukko, missä kaksi vetoa olisi pitänyt kohdata.</dd>
+</dl>
+
+<h3 id="paths-cutting">Polun leikkaaminen: Sakset ja Veitsi</h3>
+<p>Sakset-työkalu (<kbd>C</kbd>) leikkaa yhdessä paikassa. Napsauta segmenttiä tai ankkuria ja polku jakautuu siinä: suljettu polku avautuu leikkauksessa ja avoin polku jakautuu kahteen erilliseen kohteeseen. Käytä tätä leikkaamaan aukko ympyrään tai jakamaan muoto, jotta puolet voidaan värittää eri tavalla.</p>
+<p>Veitsi leikkaa suoraan teoksen läpi. Veitsi terällä kohtaan leikkaa sen erillisiin osiin piirretyn viivan pitkin; pidä <kbd>&#8997;</kbd> leikkaaksesi suoralla viivalla ja lisää <kbd>&#8679;</kbd> pitääksesi tämän viivan 45&deg; askelussa. Kun jotain on valittu, vain valitut kohteet leikataan; muuten kaikki, mitä terä koskettaa, leikataan. Käytä tätä leikkaamaan täytetty muoto useammaksi suljetuksi kappaleeksi yhdellä vedolla.</p>
+
+<h2 id="paths-commands">Polkukomennot</h2>
+<p>Objekti › Polku kerää toiminnot, jotka vaikuttavat kokonaisiin polkuin kerralla.</p>
+<table>
+  <thead><tr><th>Komento</th><th>Pikanäppäin</th><th>Mitä se tekee</th></tr></thead>
+  <tbody>
+    <tr><td>Liitä</td><td><kbd>&#8984;J</kbd></td><td>Liittää vapaat päät yhdeksi poluksi tai sulkee yhden avoimen polun.</td></tr>
+    <tr><td>Keskiarvo&hellip;</td><td><kbd>&#8997;&#8984;J</kbd></td><td>Siirtää valitut ankkurit yhteiseen sijaintiinsa.</td></tr>
+    <tr><td>Reunaviivan ääriviivat</td><td></td><td>Muuttaa reunaviivan täytettyksi muodoksi samalla ääriviivalla.</td></tr>
+    <tr><td>Siirrä polkua&hellip;</td><td></td><td>Tekee kasvaneen tai pienentyneen kopion asetetulla etäisyydellä.</td></tr>
+    <tr><td>Käännä polun suunta</td><td></td><td>Kääntää, mihin suuntaan polku kulkee.</td></tr>
+    <tr><td>Yksinkertaista&hellip;</td><td></td><td>Vähentää ankkureiden määrää.</td></tr>
+    <tr><td>Lisää ankkurit</td><td></td><td>Lisää pisteen jokaisen segmentin keskelle.</td></tr>
+    <tr><td>Poista ankkurit</td><td></td><td>Poistaa valitut ankkurit.</td></tr>
+    <tr><td>Jaa ruudukkoon&hellip;</td><td></td><td>Leikkaa valinnan ruudukon riveihin ja sarakkeisiin.</td></tr>
+    <tr><td>Siivoa&hellip;</td><td></td><td>Poistaa yksinäiset pisteet, maalaamattomat kohteet ja tyhjän tekstin.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="paths-join-average">Liittäminen ja keskiarvo</h3>
+<p>Liitä (<kbd>&#8984;J</kbd>) toimii avoimilla poluilla. Kahden erillisen avoimen polun ollessa valittuna se liittää niiden lähimmät päät yhdeksi poluksi; yhden avoimen polun kanssa se liittää kaksi vapaata päätä sulkeakseen ne. Päät, jotka ovat jo päällekkäin, sulautuvat yhdeksi ankkuriksi. Käytä tätä sulkeaksesi muodon, jonka piirrit avoimena ääriviivana, tai saadaksesi kaksi puolittain piirrettyä vetoa yhteen.</p>
+<p>Keskiarvo (<kbd>&#8997;&#8984;J</kbd>) siirtää valitut ankkurit jaettuun keskiarvonsa. Valintaikkuna tarjoaa vaaka-akselin, joka suoristaa pisteet yhteiseen korkeuteen; pystyakselin, joka suoristaa ne sarakkeeseen; tai molemmat, jotka pinottavat ne kaikki yhteen paikkaan. Käytä tätä tasataksesi rivin pisteitä tai tuodaksesi kaksi päätä toisiinsa ennen kuin liität ne.</p>
+
+<h3 id="paths-simplify">Yksinkertaistaminen</h3>
+<p>Yksinkertaista piirtää uudelleen valitut polut vähemmällä ankkureilla, pysyen asettamassasi tarkkuudessa: tiukempi tarkkuus pysyy lähempänä alkuperäistä useammalla pisteellä, loovempi suoristaa muodon muutamaksi. Käytä tätä siivoamaan jäljitettyä tai käsin piirrettyä polkua, joka kantaa enemmän pisteitä kuin muoto tarvitsee, mikä tekee siitä helpomman muokata ja renderöidä.</p>
+
+<h3 id="paths-offset">Polun siirtäminen</h3>
+<p>Polun siirtäminen rakentaa tuoreen polun asetetulla etäisyydellä alkuperäistä: positiivinen siirto kasvattaa ääriviivaa ulospäin ja istuu alkuperään, negatiivinen siirto pienentää sisääpäin ja istuu eteen. Liitosasetus päättää, miten ulkoiset kulmat käsitellään, terävänä Miterinä, pyöreänä Roundina tai tasana Bevelinä, miteri-rajoituksella, joka rajoittaa, kuinka pitkä terävä kulma saa juosta ennen kuin se leikataan. Käytä tätä piirtääksesi tasaisen reunan muodon ympärille, upottamaan muotoa keyline-viivaksi tai paksuntamaan ohutta muotoa. Polun siirtäminen on saatavilla myös tehosteena Tehoste › Polku -kohdassa live-tehosteena, joka laskee uudelleen, kun muoto muuttuu.</p>
+
+<h3 id="paths-outline-stroke">Reunaviivan ääriviivat</h3>
+<p>Reunaviivan ääriviivat korvaa viivatun polun täytetyllä muodolla, jolla on tarkasti reunaviivan ääriviiva. Ääriviivoittamisen jälkeen leveys ei enää skaalaa kohteeksi eikä sitä voi muokata reunaviivana, mutta ääriviivaa voi muokata pisteeltä toiselle, täyttää liukuvärillä tai yhdistää muiden muotojen kanssa. Käytä tätä, kun haluat reunaviivan käyttäytyvän teoksena: antaa viivalle kapeneva tai vaihtuva reuna, jonka sitten säädetään käsin, tai pitää suunnittelun viivapaksuudet kiinteinä, kun sitä skaalataan. Se on saatavilla myös live-tehosteena, Tehoste › Polku -kohdassa.</p>
+
+<h3 id="paths-reverse">Polun suunnan kääntäminen</h3>
+<p>Polun suunnan kääntäminen kääntää järjestyksen, jolla ankkurit kulkevat, joten polku matkustaa toiseen suuntaan. Suunta harvoin näkyy itsessään, mutta se päättää, mikä ääriviiva on reikä yhdistetyssä polussa ja missä sivellin tai nuolenkärki alkaa ja loppuu. Käytä tätä, kun reikä yhdistetyssä polussa täyttää kiinteästi tai kun teksti polulla tai reunaviivan alku ja loppu ovat väärällä puolella.</p>
+
+<h2 id="paths-live-shapes">Muokattavat muotot ja niiden widgetit</h2>
+<p>Suorakulmiot, pyöristetyt suorakulmiot, ellipsit ja monikulmiot pysyvät elävinä: ne säilyttävät parametrinsa ja rakentavat polkunsa uudelleen aina, kun muutat yhtä. Vedon aikana <kbd>&#8679;</kbd> tekee siitä säännöllisen ja <kbd>&#8997;</kbd> piirtää sen keskeltä. Näppäimet toimivat vedon aikana myös, ylös ja oikea lisäävät, alas ja vasen vähentävät, muuttaen monikulmion sivuja, tähden kärkiä tai pyöristetyn suorakulmion kulman sädettä.</p>
+<p>Valitse yksi elävä muoto ja pienet pyöreet kahvat ilmestyvät juuri sen kulmien sisäpuolelle; ne piilotetaan, kun muoto on liian pieni näytöllä näkyäksi selvästi. Vedä yhtä valintatyökalulla (<kbd>V</kbd>) pyöristääksesi kaikki kulmat kerralla tai suoralla valinnalla pyöristääksesi vain pidettyä kulmaa. <kbd>&#8997;</kbd>-napsauta kulmakahvaa astettaaksesi sen pyöristetylä, käänteisellä ja viistoksi, jälleen kaikki neljä kulmaa valintatyökalulla, yksi kulma suoralla valinnalla.</p>
+<p>Ellipsi näyttää neliön kahvan sijaan: yhden koko ellipsillä ja yhden kummallakin puolella siitä, kun olet avannut yhden. Vedä yhtä vetääksesi kiilan muodosta, <kbd>&#8679;</kbd> kohdistaa kulman 15&deg; askeluihin; tuoden pään takaisin alkuun palauttaa koko ellipsin. Ominaisuudet-paneeli pitää samat arvot numeroina: säde ja kulman tyyppi, kulmakohtaiset säteet, monikulmion sivut ja siivun alku ja loppu asteina. Elävä muoto säilyttää nämä ohjaimet, kunnes muokkaat sen polkua suoraan, joka muuttaa sen tavalliseksi poluksi.</p>
+
+<h2 id="paths-combining">Muotojen yhdistäminen: Yhdistä ja Jaa sekä Yhdistä muotoja</h2>
+<p>Kun kaksi tai useampi muotoa on päällekkäin, usein haluat yhden uuden muodon niistä: yhdisteen, reiän tai osan, missä ne leikkaavat. Scissor tarjoaa kaksi tapaa päästä sinne. Yhdistä ja Jaa on suora ja visuaalinen; Yhdistä muotoja -paneeli soveltaa samoja toimintoja painikkeina. Molemmat säilyttävät kaaret eikä tasosta niitä segmenteiksi.</p>
+
+<h3 id="paths-shape-builder">Yhdistä ja Jaa -työkalu</h3>
+<p>Yhdistä ja Jaa -työkalu (<kbd>&#8679;M</kbd>) toimii kahdella tai useammalla valitulla polulla. Se jakaa niiden päällekkäisyydet alueiksi ja korostaa sitä, jonka päällä osoitin on; vedä viiva useamman alueen yli yhdistääksesi ne yhdeksi kohteeksi, joka ottaa ulkoasun muodosta, josta se tuli, tai <kbd>&#8997;</kbd>-vedä niiden yli poistaaksesi ne. Käytä tätä rakentaaksesi muodon silmällä, lisäämällä osia, jotka haluat ja pyyhkäisten pois ne, joita et halua, pysähtymättä valitsemaan komentoa jokaiseen vaiheeseen.</p>
+
+<h3 id="paths-pathfinder-shape-modes">Yhdistä muotoja -muodot</h3>
+<p>Yhdistä muotoja -paneeli (<kbd>&#8679;&#8984;F9</kbd>) avautuu neljällä muodolla, jokainen korvaa valitut polut yhdellä yhdistetyllä polulla. Tulos ottaa ylimmän kohteen ulkoasun, paitsi Minus Front, joka säilyttää alimman.</p>
+<dl>
+  <dt>Yhdistä</dt>
+  <dd>Yhdistää jokaisen valitun muodon yhdeksi ääriviivaksi. Käytä tätä hitsaamaan päällekkäisiä paloja yhdeksi siluetiksi, kuten pilvi rivista ympyröitä.</dd>
+  <dt>Minus Front</dt>
+  <dd>Säilyttää alimman muodon ja leikkaa kaiken, mikä on pinottuna sen päälle. Käytä tätä puristamaan palan muodosta, kuten kuu kahdesta ympyrästä.</dd>
+  <dt>Leikkaus</dt>
+  <dd>Säilyttää vain alueen, jonka jokainen valittu muoto jakaa. Käytä tätä rajaamaan teos yhteiseen alueeseen, kuten linssi, missä kaksi ympyrää leikkaa.</dd>
+  <dt>Sulje ulos</dt>
+  <dd>Säilyttää kaiken paitsi päällekkäisyydet, jotka tulevat reiksi. Käytä tätä tekemään rengas tai ketjun lenkki, missä leikkaavat osat putoavat ulos.</dd>
+</dl>
+
+<figure class="shot">
+  <img src="img/combine.gif" width="760" height="441" loading="lazy"
+       alt="Kolme päällekkäistä muotoa, ympyrä, pyöristetty neliö ja ympyrä, sulautumassa yhdeksi yhdistyneeksi siluetiksi." />
+  <figcaption>Yhdistä (tai Yhdistä ja Jaa -työkalun veto) yhdistää päällekkäiset muodot yhdeksi ääriviivaksi, joka säilyttää kaarensa.</figcaption>
+</figure>
+
+<h3 id="paths-pathfinders">Muut Yhdistä muotoja -toiminnot</h3>
+<p>Muotojen alla on kuusi pathfinderia. Nämä jättävät sinulle useampia kappaleita, kerättynä ryhmään, yhdistetyn polun sijaan. Minus Back vastaa muoto-versionsa nimeä, mutta säilyttää ylimmän muodon.</p>
+<dl>
+  <dt>Jaa</dt>
+  <dd>Leikkaa muodot erillisiin pintaviivoihin jokaisen viivan pitkin, jolla ne leikkaavat, kukin pinta ottaa ylimmän muodon värinsä, joka peittää sen. Käytä tätä jakamaan suunnitus maalattaviksi paloiksi, kuten lasimaaliruudun solut.</dd>
+  <dt>Rajaa</dt>
+  <dd>Poistaa jokaisen muodon piilotetun osan, missä ylempänä oleva muoto peittää sen. Jokainen pala säilyttää oman täytteensä eikä mitään sulauteta; reunaviivat heitetään. Käytä tätä tasauttamaan pinotun täysvärin teoksen, jotta mikään väri ei tulosta toisen päälle.</dd>
+  <dt>Yhdistä</dt>
+  <dd>Rajaa piilotetut osat ja yhdistää vierekkäiset palat, jotka jakavat täytteen värin. Käytä tätä siivoamaan täysvärin kuvitusta, liittämällä samanväriset alueet yksittäisiksi muodoiksi.</dd>
+  <dt>Rajaa</dt>
+  <dd>Säilyttää vain alempien muotojen osat, jotka osuvat ylimpään muotoon, joka sitten hylätään. Käytä tätä leikkaamaan teos kehykseen ja paistamaan rajauksen poluihin live-leikkausmaskin sijaan.</dd>
+  <dt>Minus Back</dt>
+  <dd>Säilyttää etummaisen muodon ja leikkaa kaiken sen takana. Käytä tätä, kun ylin muoto on säilyttäjä ja sen alla olevat muodot pitäisi leikata siihen.</dd>
+  <dt>Ääriviiva</dt>
+  <dd>Muutta jokainen alueen raja avoimeksi viivaksi, viivatettuna täytteen värillä, josta se tuli. Käytä tätä vetämään luuranko reunoista päällekkäisten muotojen joukosta.</dd>
+</dl>
+<p>Tehoste › Yhdistä muotoja soveltaa Lisää, Leikkaus, Sulje ulos, Vähennä ja Minus Back live-tehosteina ryhmään sijaan, jättäen alkuperäiset kohteet koskettomiksi ja muokattaviksi alle. Käytä tehosteversioita, kun saatat haluta siirtää osia vielä myöhemmin; käytä paneelia, kun yhdistetty muoto on lopullinen.</p>
+
+<h2 id="paths-compound-and-masks">Yhdistetyt polut ja leikkausmaskit</h2>
+<p>Objekti › Yhdistetty polku › Luo (<kbd>&#8984;8</kbd>) taittaa valitut polut yhdeksi kohteeksi täytettynä parillisen-parittoman säännöllä, joten sisempi ääriviiva leikkaa reiän ympäröivään. Tulos ottaa valinnan alimman kohteen ulkoasun. Vapauta (<kbd>&#8997;&#8679;&#8984;8</kbd>) palauttaa jokaisen ääriviivan omana polkunaan. Käytä yhdistettyä polkua mihin tahansa muotoon, jossa on reikä, kuten kirjain O:n laskos tai alus.</p>
+<p>Objekti › Leikkausmaski › Luo (<kbd>&#8984;7</kbd>) käyttää ylintä valittua kohdetta, joka täytyy olla polku, leikatakseen kaiken sen alla. Scissor laittaa ne kaikki leikkausryhmään ja tyhjentää maskin polun oman täytteen ja reunaviivan. Vapauta (<kbd>&#8997;&#8984;7</kbd>) muuttaa leikkausryhmän takaisin tavalliseksi ryhmäksi, joten mitään ei enää leikata ja jokainen kohda, maskin polku mukaan lukien, pysyy siellä, missä se oli. Luo peittävyysmaski samassa alavalikossa maskaa sävyn mukaan ääriviivan sijaan, joten vaaleammat osat maskia läpäistävät ja tummemmat piilottavat.</p>
+
+<h2 id="paths-smart-guides">Älykkäät apuviivat ja kohdistus</h2>
+<p>Älykkäät apuviivat (Näytä › Älykkäät apuviivat, <kbd>&#8984;U</kbd>) seuraavat näkyvää teosta ja alustoja piirrettäessä tai vedettäessä. Mitä siirrät, kohdistuu naapureidensa reunoihin, keskuksiin ja ankkureihin ja viiva ilmestyy takaisin siihen, mihin se tasautui, merkittynä vastaavuuden tyypillä: ankkuri, keskus, kulma tai tasaus.</p>
+<p>Kaksi muuta apuviivaa ilmestyvät itsestään. Kun siirrettävä kohde olisi samalla etäisyydellä naapureistaan kuin naapurit toisistaan, se kohdistuu sinne ja kaksi samansuurta väliä piirretään mittauksen kanssa; tämä toimii sekä tasaisesti välitetyn jatkamiseen että yhden keskittämiseen kahden välissä. Ja kun vedät aloituspisteestä, suunta kohdistuu rakennusviivaan joka 45&deg; kulman rajoitinkulmasta, piirrettynä pitkänä viivana kulman vieressä.</p>
+<p>Kohdista pisteeseen (<kbd>&#8997;&#8984;'</kbd>) ja Kohdista ruudukkoon (<kbd>&#8679;&#8984;'</kbd>) ovat erilliset kytkimet Näytä-valikossa. Kun Kohdista ruudukkoon on päällä, kaikki laskeutuu ruudukon jaotteluun ja älykkäät apuviivat vetäytyvät.</p>

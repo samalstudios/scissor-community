@@ -1,0 +1,65 @@
+<p class="lede">3D i Materials converteix una forma plana en un sòlid que podeu girar, il·luminar i donar una superfície, sense mai deixar enrere la vostra feina vectorial. És un efecte en viu: el sòlid es dibuixa des del camí de sota, i aquest camí roman completament editable, de manera que podeu canviar el contorn, el color o el text en qualsevol moment i el 3D es reconstrueix al voltant.</p>
+
+<h2 id="three-d-opening">Obrir l'efecte</h2>
+<p>Seleccioneu primer un objecte, després trieu un tipus d'objecte des de <strong>Efecte &rsaquo; 3D i Materials</strong>: <em>Pla</em>, <em>Extrudeix i bisella</em>, <em>Revol</em> o bé <em>Infla</em>. Cadascun afegeix l'efecte i obre el panell <strong>3D i Materials</strong>, on viuen la resta de controls. El mateix panell s'obre per si mateix des de <strong>Finestra &rsaquo; 3D i Materials</strong> o bé des de <strong>Efecte &rsaquo; 3D i Materials &rsaquo; Panell 3D i Materials</strong>.</p>
+<p>El panell necessita alguna cosa seleccionada abans de poder fer res; sense selecció ho diu i desactiva els seus controls. Un cop un objecte té l'efecte, els quatre botons de tipus d'objecte corren a la part superior del panell, de manera que podeu passar d'una extrusió a una revolució d'un clic i mantenir la rotació i la il·luminació que ja heu establert.</p>
+<p>Com que és un efecte i no una conversió, podeu aplicar-lo a gairebé tot allò que un camí pot contenir: una forma, un grup, un contorn o text en viu. Editar la font, per exemple tornar a escriure una paraula o moure un ancoratge, torna a executar l'efecte sobre la feina nova.</p>
+
+<h2 id="three-d-types">Els quatre tipus d'objecte</h2>
+<p>El tipus d'objecte decideix com la forma plana es llegeix com a sòlid. Trieu la que coincideix amb la forma que voleu obtenir.</p>
+
+<h3 id="three-d-plane">Pla</h3>
+<p>Pla deixa la feina plana i la col·loca com una targeta a l'espai 3D, de manera que tot el que fa és permetreu girar-la i inclinar-la. No hi ha profunditat a establir. Useu-lo quan voleu una peça de feina plana que es troba en un angle, com una etiqueta tombada sobre una superfície o una insígnia inclinada per captar la llum, sense donar-li gruix.</p>
+
+<h3 id="three-d-extrude">Extrudeix i bisella</h3>
+<p>Extrudeix empèny la forma dret endarrere per donar-li gruix, convertint un contorn en un bloc sòlid. Un bisell arrodoneix o talla les vores davant i darrere perquè no romanin nets. El forats es mantenen: un camí compost com un anell o una lletra amb el contra roman cavat a través de tot el recorregut. És el tipus a utilitzar per a lettering, logotips, icones i insígnies que han de llegir-se com a relleus o esculpits.</p>
+<figure class="shot">
+  <img src="img/3d-extrude.gif" width="620" height="620" loading="lazy" alt="Una estella vectorial plana que s'extrudeix en una estella tridimensional i es gira per mostrar la seva profunditat." />
+  <figcaption>Extrudeix i bisella construeix profunditat des d'una forma plana, en viu. La estella roman un camí editable sota.</figcaption>
+</figure>
+
+<h3 id="three-d-revolve">Revol</h3>
+<p>Revol arrossega la forma al llarg de la seva vora esquerra, de la manera en què un perfil girat en un torn traça un sòlid. Dibuixeu la meitat d'un objecte simètric, un got, una ampolla, una bol, una peça d'escacs, i revolueu-la en rodó. L'angle de barregat pot ser inferior a un gir complet per deixar una secció que mostri l'interior.</p>
+
+<h3 id="three-d-inflate">Infla</h3>
+<p>Infla empèny la forma cap a fora, com si coixí plena d'aire, donant-li una cara suau i arrodonida en comptes de plana. Useu-lo per a botons suaus, insígnies inflades, dolços i adhesius arrodonits on voleu un bony en comptes d'una vora extruida dura.</p>
+
+<h2 id="three-d-shape">Profunditat, bisell i passos</h2>
+<p>La secció <em>Objecte</em> conté els camps que modelen el sòlid. Quins apareixen depèn del tipus d'objecte, de manera que el panell només mostra mai els camps que fan alguna cosa pel tipus en qüesti&oacute;.</p>
+<table>
+  <thead><tr><th>Camp</th><th>Mostrat per a</th><th>Què estableix</th></tr></thead>
+  <tbody>
+    <tr><td>Profunditat</td><td>Extrudeix i bisella, Infla</td><td>Com de lluny la forma és empès enrere, o com s'infla, en píxels.</td></tr>
+    <tr><td>Bisell</td><td>Extrudeix i bisella</td><td>La mida de la vora arrodonida o tallada a la part de davant i de darrere, en píxels; deixeu-lo a zero per a una vora quadrada simple.</td></tr>
+    <tr><td>Angle</td><td>Revol</td><td>Fins on el perfil és arrossegat, fins a un gir complet de 360&deg;. Un angle inferior deixa l'obert, mostrant el seu interior.</td></tr>
+    <tr><td>Passos</td><td>Extrudeix i bisella, Revol, Infla</td><td>Quants segments construeixen les parts corbes. Més passos donen una superfície més llisa; menys la deixen facetada.</td></tr>
+  </tbody>
+</table>
+<p>Pla no té cap d'aquests: no té gruix a descriure. Si una revolució corba o un bisell arrodonit sembla massa angular, pugeu els passos; si voleu expressament un aspecte low-poly i facetat, baixeu-los.</p>
+
+<h2 id="three-d-rotation">Girar l'objecte</h2>
+<p>La secció <em>Rotació</em> estableix com l'objecte us mira de cara. La manera més ràpida és el pad de vista prèvia: arrossegueu a través d'ell per fer girar l'objecte a esquerra i a dreta, i arrossegueu amunt i avall per inclinar-lo endavant i enrere. Per a angles exacts, els camps <em>X</em>, <em>Y</em> i <em>Z</em> giren l'objecte al voltant de cada eix, cadascun de -180&deg; a 180&deg;.</p>
+<p>El menú de rotació conté punts de vista fets, de manera que podeu fer caure l'objecte directament en una vista estàndard en comptes d'ajustar-la:</p>
+<dl>
+  <dt>Fora de l'eix Davant, Darrere, Esquerra, Dreta, Sobre, Sota</dt><dd>Vistes de tres quarts que mostren una cara principal juntament amb una mica del costat superior o lateral. Un bon defecte per a un sòlid que ha de semblar un sòlid.</dd>
+  <dt>Isomètric Esquerra, Dreta, Sobre, Sota</dt><dd>Vistes isomètriques veritables, on els tres eixos s'escurcen igualment i les línies romanen paral·leles. S'adapta a feina tècnica i d'estil joc que s'ha d'alinear.</dd>
+  <dt>Davant, Darrere, Esquerra, Dreta, Sobre, Sota</dt><dd>Les sis vistes frontals, mirant de cara a una cara. Pràctics per comprovar la forma o per a una presentació plana i frontal.</dd>
+</dl>
+<p>Triar un predefinit omple els camps X, Y i Z; canviar-ne qualsevol a mà mostra el menú com a <em>Rotació personalitzada</em>. El camp <em>Perspectiva</em>, de 0&deg; a 160&deg;, controla com de fortament l'objecte retrocedeix: a zero les vores romanen paral·leles, i a mesura que la pugeu les vores llunyanes es cap a un punt de fuga, de la manera en què un objecte real vist de prop sembla aprimar-se. Afegiu una mica de perspectiva per a una vista de tres quarts realista, o deixeu-la a zero per mantenir exacta una configuració isomètrica o frontal.</p>
+
+<h2 id="three-d-lighting">Il·luminació</h2>
+<p>La secció <em>Il·luminació</em> decideix d'on ve la llum i com de forta és, i és el que fa que la superfíssi es llegeixi com a relleu, esculpida o arrodonida. Un menú d'il·luminació ofereix quatre punts de partida, <em>Estàndard</em>, <em>Difusa</em>, <em>A dalt a l'esquerra</em> i <em>Dreta</em>, i qualsevol canvi als camps a sota el mostra com a <em>Il·luminació personalitzada</em>.</p>
+<dl>
+  <dt>Intensitat</dt><dd>La força de la llum principal, com a percentatge. Més alta fa les cares il·luminades més clares i els highlights més forts.</dd>
+  <dt>Ambient</dt><dd>Una llum de reompliment que aixeca tot l'objecte, com a percentatge, de manera que les cares ombroses no caiguin al negre. Pugeu-la per a un aspecte més suau i uniformitat; baixeu-la per a un contrast més profund.</dd>
+  <dt>Rotació</dt><dd>On la llum es troba al voltant de l'objecte, de -180&deg; a 180&deg;, que mou el highlight i l'ombra a l'altre costat.</dd>
+  <dt>Alçada</dt><dd>Com de alta la llum és sobre l'objecte, de 0&deg; (a la seva alçada, per a ombres llargues i rasents) a 90&deg; (directament a sobre, per a llum uniforme).</dd>
+</dl>
+<p><em>Difusa</em> dóna un acabat suau i de baix contrast; <em>A dalt a l'esquerra</em> i <em>Dreta</em> llancen la llum des d'un costat per a un aspecte més dramàtic i esculpit. Comenceu pel predefinit més proper, després ajusteu els quatre camps al gust.</p>
+
+<h2 id="three-d-materials">Materials</h2>
+<p>Tres botons de material estableixen com la superfície captura la llum: <em>Plàstic</em>, <em>Opac</em> i <em>Metall</em>. Plàstic dóna una lluminositat suau amb un highlight clar, l'opció habitual per a un aspecte amicable i motllat. Opac elimina la lluminositat per a un acabat pla i uniforme, que es llegeix com paper, argila o superfície impresa. Metall dóna una lluminositat més dura i de contrast més alt, per a crom, or i altres metalls lluïts. El material funciona juntament amb la il·luminació, de manera que un canvi a un val la pena de comprovar-se respecte a l'altre.</p>
+
+<h2 id="three-d-expand">Mantenir-lo en viu i expandir</h2>
+<p>Tot l'anterior s'emmagatzema com un únic efecte en viu sobre l'objecte, llistat al panell <strong>Aparença</strong> (<kbd>&#8679;F6</kbd>) amb una insígnia <em>fx</em> sobre els emplenaments i els contorns de l'objecte. Feu clic a aquella entrada per tornar a obrir el panell 3D i Materials, o bé elimineu-la allà per tornar l'objecte a pla. Dins el panell, <em>Elimina 3D</em> treu l'efecte de la selecció.</p>
+<p>Mentre l'efecte és en viu la feina de sota roman un camí simple i editable, i és el que us permet continuar ajustant la forma, el color i el text. Quan l'aparença està resolta i voleu el resultat com a feina vectorial ordinària, per exemple per editar les cares individuals o per passar el fitxer, useu <em>Expandeix com a vector</em> al panell (el mateix que <strong>Objecte &rsaquo; Expandeix aparença</strong>). Això incorpora el sòlid en camins i acaba la seva vida com a efecte, de manera que expandiu una còpia si encara podeu necessitar canviar la profunditat o l'angle més endavant.</p>

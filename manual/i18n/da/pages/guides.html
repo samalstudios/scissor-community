@@ -1,0 +1,46 @@
+<p class="lede">Linealer, hjælpelinjer og fastgøring er, hvordan du justerer arbejde præcist. Linealer lægger et mål op ad øverste og venstre kant af lærredet, hjælpelinjer giver dig linjer at bygge op imod, smarte hjælpelinjer viser justering og afstand, mens du trækker, og Måleværktøjet læser afstanden og vinklen mellem to punkter. Ingen af disse markerer selve grafikken: hjælpelinjer udskrives eller eksporteres aldrig, og at slå enhver af dem fra ændrer kun, hvad du ser.</p>
+
+<h2 id="guides-rulers">Linealer</h2>
+<p>Slå linealer til med <strong>Vis &rsaquo; Linealer &rsaquo; Vis linealer</strong> (<kbd>&#8984;R</kbd>). En vandret lineal løber langs toppen af lærredet, og en lodret ned ad venstre side. Begge er markeret med hovedtick ved navngivne intervaller og kortere mellemtick imellem; efterhånden som du zoomer ind og ud, justeres afstanden mellem de navngivne ticks, så de forbliver læselige.</p>
+<p>Positioner måles fra det øverste venstre hjørne af den aktive artboard, og talene vokser mod højre og nedad. Fordi nulpunktet sidder på den aktive tavle, flytter skift til en anden tavle det: vælg en anden tavle, og linealerne læses fra den tavles hjørne igen. Mens du bevæger markøren over lærredet, følger en tynd indikatorlinje dens placering på hver lineal, så du kan læse den aktuelle koordinat på et øjekast uden et panel.</p>
+<p>Når visningen er drejet (med Rotér visningsværktøjet), er der ikke nogen lige vandret eller lodret dokumentakse tilbage at måle, så linealerne forbliver på plads, men viser ingen ticks, før du nulstiller rotationen.</p>
+
+<h3 id="guides-units">Enheder</h3>
+<p>Linealerne læser i dokumentets enhed. Indstil den i <strong>Filer &rsaquo; Dokumentopsætning</strong> (<kbd>&#8997;&#8984;P</kbd>), som tilbyder pixels, punkter, millimeter, centimeter, tommer og pica. Vælg den enhed, der matcher dit output: pixels eller punkter til skærmarbejde, millimeter eller tommer til udskrift. Skift af enheder genmærker linealerne med det samme; det ændrer størrelsen på noget.</p>
+
+<h2 id="guides-ruler-guides">Linealhjælpelinjer</h2>
+<p>Med linealer vist skal du trække ud af en lineal for at trække en hjælpelinje ud på lærredet. Træk ned fra den øverste lineal for en vandret hjælpelinje eller på tværs af fra den venstre lineal for en lodret. Hjælpelinjen følger markøren, mens du holder knappen, og lander, hvor du slipper. At trække en hjælpelinje ud slår <strong>Vis hjælpelinjer</strong> til, hvis den var slukket, så den nye hjælpelinje er synlig med det samme. Hvis du beslutter dig imod den, skal du slippe den tilbage på linealen, og den opgives.</p>
+<p>En hjælpelinje er en lang lige linje, der når langt forbi grafikken, så den læses, som om den løber dokumentets bredde eller højde. Hver vises i Lag-panelet som et <em>Vandret hjælpelinje</em>- eller <em>Lodret hjælpelinje</em>-objekt.</p>
+<p>For at flytte en hjælpelinje senere skal du klikke langs dens linje med Markeringsværktøjet og trække, eller skubbe den med piltasterne. En hjælpelinje bevæger sig som ethvert andet objekt, så fastgøring gælder, mens du trækker den: det gør det ligetil at slippe en hjælpelinje præcist på et objekts kant eller et anker. Et anvendelsesfælde: træk en lodret hjælpelinje til venstre kant af en overskrift, og justér derefter en kolonne af knapper til den, så deres venstre sider alle møder samme linje.</p>
+
+<h2 id="guides-managing">Skjul, lås og ryd hjælpelinjer</h2>
+<p><strong>Vis &rsaquo; Hjælpelinjer &rsaquo; Vis hjælpelinjer</strong> (<kbd>&#8984;;</kbd>) skjuler og viser alle hjælpelinjer på én gang. Skjul dem, mens du tjekker, hvordan et design læser uden stilladset, og bring dem derefter tilbage for at fortsætte arbejdet.</p>
+<p>For at forhindre en hjælpelinje i at blive flyttet ved et uheld, skal du behandle den som det objekt, den er: vælg den og lås den med <strong>Objekt &rsaquo; Lås &rsaquo; Markering</strong> (<kbd>&#8984;2</kbd>), eller lås eller skjul den fra Lag-panelet. <strong>Objekt &rsaquo; Lås op alt</strong> (<kbd>&#8997;&#8984;2</kbd>) frigiver den igen, og <strong>Objekt &rsaquo; Skjul &rsaquo; Markering</strong> (<kbd>&#8984;3</kbd>) skjuler én hjælpelinje uden at røre de andre.</p>
+<p>Når du er færdig med dem, fjerner <strong>Vis &rsaquo; Hjælpelinjer &rsaquo; Ryd hjælpelinjer</strong> alle hjælpelinjer i dokumentet på ét trin.</p>
+
+<h2 id="guides-make">Lavning af hjælpelinjer fra objekter</h2>
+<p>En hjælpelinje behøver ikke at være en almindelig vandret eller lodret linje. Tegn enhver sti eller form, vælg den, og vælge <strong>Vis &rsaquo; Hjælpelinjer &rsaquo; Lav hjælpelinjer</strong> (<kbd>&#8984;5</kbd>) for at vende den til en hjælpelinje. En cirkel bliver til en cirkulær hjælpelinje, en diagonal linje til en skæv, så du kan bygge op imod kurver og vinkler, som de lige linealhjælpelinjer ikke kan give. Brug den til at oprette en cirkulær hjælpelinje til at arrangere elementer omkring en skive, eller en diagonal for at holde en række former på en ensartet hældning.</p>
+<p><strong>Vis &rsaquo; Hjælpelinjer &rsaquo; Frigiv hjælpelinjer</strong> (<kbd>&#8997;&#8984;5</kbd>) vender en valgt hjælpelinje tilbage til en almindelig redigerbar sti, så du kan genskabe en form, du konverterede, eller genbruge geometrien som grafik.</p>
+
+<h2 id="guides-smart">Smarte hjælpelinjer</h2>
+<p><strong>Vis &rsaquo; Smarte hjælpelinjer</strong> (<kbd>&#8984;U</kbd>) viser justeringsfeedback, mens du tegner, flytter eller ændrer størrelse. Efterhånden som markøren nærmer sig noget, der er værd at justere til, vises en magenta linje og en lille etiket, og punktet trækkes til den. Smarte hjælpelinjer læses fra kanterne, centra og hjørnerne af andre objekter, fra deres ankerpunkter og fra artboard-kanterne, så en form, du placerer, kan få linjer op med det, der allerede er der, uden manuel måling.</p>
+<p>Smarte hjælpelinjer hjælper også under tegning af et lige træk: når retningen, du trækker i, kommer tæt på en konstruktionsvinkel (hver 45&deg; fra begrænsningsvinklen indstillet i indstillinger), fastgøres trækket til den vinkel, og en linje med vinkelskiltet tegnes langs den. Det holder linjer og bevægelser virkelig vandrette, lodrette eller diagonale.</p>
+
+<h3 id="guides-spacing">Jævnt forskudte objekter</h3>
+<p>Når du trækker et objekt forbi to eller flere andre, der sidder i en række eller kolonne, leder de smarte hjælpelinjer efter den placering, hvor afstandene kommer ud lige: enten fortsættelse af en jævn forskudt række eller centrering af objektet i mellemrummet mellem to naboer. Når den finder én, fastgøres objektet der og tegner de to matchende mellemrum med endekapper og en måling, så du kan forskudte en række varer efter øje og lade hjælpelinjen bekræfte passformen i stedet for at fordele dem bagefter.</p>
+
+<h2 id="guides-snapping">Fastgør til punkt og Fastgør til gitter</h2>
+<p>To fastgøringskontakter sidder i <strong>Vis</strong>-menuen og fungerer uafhængigt af hinanden og af de smarte hjælpelinjer.</p>
+<dl>
+  <dt>Fastgør til punkt (<kbd>&#8997;&#8984;'</kbd>)</dt>
+  <dd>Trækker det punkt, du placerer, til punkterne på andre objekter: deres ankre, hjørner og centra og artboard-kanterne. Brug den, når en ny form skal møde en eksisterende præcist, som at starte en sti på hjørnet af en kasse.</dd>
+  <dt>Fastgør til gitter (<kbd>&#8679;&#8984;'</kbd>)</dt>
+  <dd>Afrunder punkter og trukne objekter til den aktive tavles gitter. Hver tavle bærer sit eget gitter, så hvad et punkt lander på, afhænger af, hvilket tavle du arbejder på; selve gitterne dækkes under Gitre. Mens Fastgør til gitter er tændt, overtager det, så punkter falder på gitterlinjer i stedet for på andre objekters punkter.</dd>
+</dl>
+
+<h3 id="guides-ignore">Ignorering af fastgøring for ét træk</h3>
+<p>Hold <kbd>&#8997;</kbd> (Alt) nede, mens du trækker, og fastgøringen suspenderes for denne gestus alene. Slip, og den genoptages. Dette fungerer under tegning af former, trækning af objekter og flytning af ankerpunkter og efterlader dine fastgøringskontakter uændrede, så du kan skubbe ét punkt fri af gitteret eller en hjælpelinje uden at slå noget fra og til.</p>
+
+<h2 id="guides-measure">Måleværktøjet</h2>
+<p>Måleværktøjet læser afstanden og vinklen mellem to punkter. Det deler en plads i værktøjslinjen med Pipetten, så hold Pipetten nede for at afsløre det. Træk fra ét punkt til et andet, og en etiket viser afstanden (<code>D</code>), vinklen og de vandrette (<code>X</code>) og lodrette (<code>Y</code>) forskydninger mellem de to ender. Linjen og dens aflæsning forbliver på skærmen til dit næste træk, så du kan notere en måling og fortsætte.</p>
+<p>Endepunkterne fastgøres til de samme punkter, som de smarte hjælpelinjer og Fastgør til punkt bruger, så du kan måle præcist fra et objekts hjørne til et andet. Hold <kbd>&#8679;</kbd> nede under træk for at begrænse målelinjen til 45&deg;-trin. Brug den til at tjekke afstanden mellem to kolonner, før du forpligter dig til en afstand, eller til at læse længden og hældningen af en kant, du er ved at matche.</p>

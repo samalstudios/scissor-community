@@ -1,0 +1,65 @@
+<p class="lede">3D et Matériaux transforme une forme plate en un solide que vous pouvez tourner, éclairer et auquel donner une surface, sans jamais quitter votre illustration vectorielle. C'est un effet en direct : le solide est dessiné depuis le tracé en dessous, et ce tracé reste entièrement modifiable, de sorte que vous pouvez changer le contour, la couleur ou le texte à tout moment et la 3D se reconstruit autour.</p>
+
+<h2 id="three-d-opening">Ouvrir l'effet</h2>
+<p>Sélectionnez d'abord un objet, puis choisissez un type d'objet dans <strong>Effet &rsaquo; 3D et Matériaux</strong> : <em>Plan</em>, <em>Extrusion et biseau</em>, <em>Révolution</em> ou <em>Gonflage</em>. Chacun ajoute l'effet et ouvre le panneau <strong>3D et Matériaux</strong>, où vivent le reste des contrôles. Le même panneau s'ouvre seul depuis <strong>Fenêtre &rsaquo; 3D et Matériaux</strong> ou depuis <strong>Effet &rsaquo; 3D et Matériaux &rsaquo; Panneau 3D et Matériaux</strong>.</p>
+<p>Le panneau a besoin de quelque chose de sélectionné avant de pouvoir faire quoi que ce soit ; sans rien de sélectionné, il le dit et grise ses contrôles. Une fois qu'un objet a l'effet, les quatre boutons de type d'objet longent le haut du panneau, de sorte que vous pouvez faire passer une forme d'une extrusion à une révolution en un clic et conserver la rotation et l'éclairage déjà définis.</p>
+<p>Parce que c'est un effet et non une conversion, vous pouvez le poser sur presque tout ce qu'un tracé peut contenir : une forme, un groupe, un contour ou du texte en direct. Modifier la source, par exemple retaper un mot ou ajuster un point d'ancrage, réexécute l'effet sur la nouvelle illustration.</p>
+
+<h2 id="three-d-types">Les quatre types d'objet</h2>
+<p>Le type d'objet décide comment la forme plate est lue comme un solide. Choisissez celui qui correspond à la forme que vous recherchez.</p>
+
+<h3 id="three-d-plane">Plan</h3>
+<p>Le Plan laisse l'illustration plate et la place comme une carte dans l'espace 3D, donc tout ce qu'il fait est de vous permettre de la tourner et de l'incliner. Il n'y a pas de profondeur à définir. Utilisez-le lorsque vous voulez qu'une illustration plate se trouve à un angle, comme une étiquette posée sur une surface ou un badge incliné pour capter la lumière, sans lui donner d'épaisseur.</p>
+
+<h3 id="three-d-extrude">Extrusion et biseau</h3>
+<p>L'extrusion pousse la forme droit vers l'arrière pour lui donner de l'épaisseur, transformant un contour en bloc solide. Un biseau arrondit ou coupe les bords avant et arrière pour qu'ils ne restent pas nets. Les trous sont conservés : un tracé composé tel qu'un anneau ou une lettre avec un contre reste creux de part en part. C'est le type à utiliser pour le lettrage, les logos, les icônes et les badges qui doivent se lire comme en relief ou sculptés.</p>
+<figure class="shot">
+  <img src="img/3d-extrude.gif" width="620" height="620" loading="lazy" alt="Une étoile vectorielle plate extrudée en une étoile tridimensionnelle et tournée pour montrer sa profondeur." />
+  <figcaption>Extrusion et biseau construit de la profondeur à partir d'une forme plate, en direct. L'étoile reste un tracé modifiable en dessous.</figcaption>
+</figure>
+
+<h3 id="three-d-revolve">Révolution</h3>
+<p>La révolution balaie la forme autour de son bord gauche, comme un profil tourné sur un tour trace un solide. Dessinez la moitié d'un objet symétrique, un verre, une bouteille, un bol, un pion d'échecs, et révolutionnez-le en rond. L'angle de balayage peut être inférieur à un tour complet pour laisser une coupe qui montre l'intérieur.</p>
+
+<h3 id="three-d-inflate">Gonflage</h3>
+<p>Le gonflage gonfle la forme vers l'extérieur, comme si elle était un coussin rempli d'air, lui donnant une face douce et arrondie au lieu d'une face plate. Utilisez-le pour des boutons doux, des badges rembourrés, des bonbons et des autocollants arrondis où vous voulez un gonflement plutôt qu'un bord extrudé dur.</p>
+
+<h2 id="three-d-shape">Profondeur, biseau et étapes</h2>
+<p>La section <em>Objet</em> contient les champs qui façonnent le solide. Lesquels apparaissent dépendent du type d'objet, de sorte que le panneau n'affiche jamais que les champs qui font quelque chose pour le type en question.</p>
+<table>
+  <thead><tr><th>Champ</th><th>Affiché pour</th><th>Ce qu'il définit</th></tr></thead>
+  <tbody>
+    <tr><td>Profondeur</td><td>Extrusion et biseau, Gonflage</td><td>Jusqu'où la forme est poussée vers l'arrière, ou à quel point elle gonfle, en pixels.</td></tr>
+    <tr><td>Biseau</td><td>Extrusion et biseau</td><td>La taille du bord arrondi ou coupé sur l'avant et l'arrière, en pixels ; laissez-le à zéro pour un bord carré simple.</td></tr>
+    <tr><td>Angle</td><td>Révolution</td><td>Jusqu'où le profil est balayé, jusqu'à un tour complet de 360&deg;. Un angle plus petit laisse l'objet ouvert, montrant son intérieur.</td></tr>
+    <tr><td>Étapes</td><td>Extrusion et biseau, Révolution, Gonflage</td><td>Combien de segments construisent les parties courbes. Plus d'étapes donnent une surface plus lisse ; moins la laissent facettée.</td></tr>
+  </tbody>
+</table>
+<p>Le Plan n'a aucun de ceux-ci : il n'a pas d'épaisseur à décrire. Si une révolution courbe ou un biseau arrondi semble trop anguleux, augmentez les étapes ; si vous voulez un aspect low-poly, facetté intentionnellement, diminuez-les.</p>
+
+<h2 id="three-d-rotation">Faire pivoter l'objet</h2>
+<p>La section <em>Rotation</em> définit comment l'objet fait face à vous. Le moyen le plus rapide est le pavé d'aperçu : glissez à travers pour faire pivoter l'objet à gauche et à droite, et glissez vers le haut et le bas pour l'incliner vers l'avant et l'arrière. Pour des angles exacts, les champs <em>X</em>, <em>Y</em> et <em>Z</em> font pivoter l'objet autour de chaque axe, chacun de -180&deg; à 180&deg;.</p>
+<p>Le menu de rotation contient des points de vue prêts à l'emploi, de sorte que vous pouvez poser l'objet directement dans une vue standard plutôt qu'en composer une :</p>
+<dl>
+  <dt>Hors axe Avant, Arrière, Gauche, Droite, Haut, Bas</dt><dd>Vues trois quarts qui montrent une face principale avec un peu du haut ou du côté. Un bon défaut pour un solide qui doit ressembler à un solide.</dd>
+  <dt>Isométrique Gauche, Droite, Haut, Bas</dt><dd>Vues véritablement isométriques, où les trois axes sont raccourcis également et les lignes restent parallèles. Convient aux illustrations techniques et de style jeu qui doivent s'aligner.</dd>
+  <dt>Avant, Arrière, Gauche, Droite, Haut, Bas</dt><dd>Les six vues de face, regardant carrément une face. Pratique pour vérifier la forme ou pour une présentation plate de face.</dd>
+</dl>
+<p>Choisir un préréglage remplit les champs X, Y et Z ; en modifier un à la main affiche le menu comme <em>Rotation personnalisée</em>. Le champ <em>Perspective</em>, de 0&deg; à 160&deg;, contrôle à quel point l'objet s'éloigne : à zéro les côtés restent parallèles, et à mesure que vous l'augmentez les bords éloignés se rapprochent vers un point de fuite, comme un vrai objet vu de près semble s'effiler. Ajoutez un peu de perspective pour une vue trois quarts réaliste, ou laissez-la à zéro pour garder une configuration isométrique ou de face exacte.</p>
+
+<h2 id="three-d-lighting">Éclairage</h2>
+<p>La section <em>Éclairage</em> décide d'où vient la lumière et à quel point elle est dure, ce qui fait que la surface se lit comme en relief, sculptée ou arrondie. Un menu d'éclairage propose quatre points de départ, <em>Standard</em>, <em>Diffus</em>, <em>Haut gauche</em> et <em>Droite</em>, et toute modification des champs ci-dessous l'affiche comme <em>Éclairage personnalisé</em>.</p>
+<dl>
+  <dt>Intensité</dt><dd>La force de la lumière principale, en pourcentage. Plus élevée rend les faces éclairées plus claires et les reflets plus forts.</dd>
+  <dt>Ambiance</dt><dd>Une lumière de remplissage qui soulève l'objet entier, en pourcentage, de sorte que les faces ombrées ne tombent pas dans le noir. Augmentez-la pour un aspect plus doux et régulier ; diminuez-la pour un contraste plus profond.</dd>
+  <dt>Rotation</dt><dd>Où se trouve la lumière autour de l'objet, de -180&deg; à 180&deg;, ce qui déplace le reflet et l'ombre de l'autre côté.</dd>
+  <dt>Hauteur</dt><dd>À quel point la lumière est haute au-dessus de l'objet, de 0&deg; (à niveau, pour de longues ombres rasantes) à 90&deg; (plein zénith, pour une lumière uniforme).</dd>
+</dl>
+<p><em>Diffus</em> donne un fini doux et à faible contraste ; <em>Haut gauche</em> et <em>Droite</em> projettent la lumière d'un côté pour un aspect plus dramatique et sculpté. Partez du préréglage le plus proche, puis ajustez les quatre champs à votre goût.</p>
+
+<h2 id="three-d-materials">Matériaux</h2>
+<p>Trois boutons de matériau définissent comment la surface attrape la lumière : <em>Plastique</em>, <em>Mat</em> et <em>Métal</em>. Le plastique donne un éclat doux avec un reflet net, le choix habituel pour un aspect amical et moulé. Le mat retire l'éclat pour un fini plat et régulier, qui se lit comme du papier, de l'argile ou une surface imprimée. Le métal donne un éclat plus dur et à contraste plus élevé, pour le chrome, l'or et d'autres métaux polis. Le matériau fonctionne avec l'éclairage, donc un changement de l'un vaut la peine d'être vérifié par rapport à l'autre.</p>
+
+<h2 id="three-d-expand">Garder en direct et développer</h2>
+<p>Tout ce qui précède est stocké comme un seul effet en direct sur l'objet, listé dans le panneau <strong>Apparence</strong> (<kbd>&#8679;F6</kbd>) avec un badge <em>fx</em> au-dessus des fonds et contours de l'objet. Cliquez sur cette entrée pour rouvrir le panneau 3D et Matériaux, ou le supprimer là pour ramener l'objet à plat. Dans le panneau, <em>Supprimer la 3D</em> retire l'effet de la sélection.</p>
+<p>Pendant que l'effet est en direct, l'illustration en dessous reste un tracé ordinaire et modifiable, ce qui vous permet de continuer à ajuster la forme, la couleur et le texte. Lorsque l'aspect est fixé et que vous voulez le résultat sous forme d'illustration vectorielle ordinaire, par exemple pour modifier les faces individuelles ou transmettre le fichier, utilisez <em>Développer en vectoriel</em> dans le panneau (identique à <strong>Objet &rsaquo; Développer l'apparence</strong>). Cela fige le solide en tracés et met fin à sa vie en tant qu'effet, alors développez une copie si vous pourrez encore vouloir changer la profondeur ou l'angle plus tard.</p>

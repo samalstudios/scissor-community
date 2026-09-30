@@ -1,0 +1,91 @@
+<p class="lede">Symboler, pensler og mønstre er tre måder at tegne ét stykke grafik én gang og genbruge det på. Ændr originalen, og hver brug af den ændrer sig med den, så et gentaget element forbliver konsistent og forbliver hurtigt at opdatere.</p>
+
+<p>Genvejene nedenfor er skrevet i deres macOS-format. På Windows skal du læse <kbd>&#8984;</kbd> som <kbd>Ctrl</kbd>, <kbd>&#8997;</kbd> som <kbd>Alt</kbd> og <kbd>&#8679;</kbd> som <kbd>Shift</kbd>.</p>
+
+<h2 id="symbols-panel">Symbol-panelet</h2>
+<p>Et symbol er et gemt stykke grafik, du kan placere i dokumentet et vilkårligt antal gange. Hver kopi er en <em>instans</em>: den peger tilbage til én definition i stedet for at holde sin egen grafik, så dokumentet forbliver lille, uanset hvor mange instanser du placerer, og en ændring af definitionen når dem alle på én gang. Gå efter symboler, når det samme element gentages, som et træ i et landskab, en nål på et kort, en skrue i en sammenstillingstegning eller et logo, der optræder på flere tavler.</p>
+<p>Åbn panelet med <strong>Vindue &gt; Symboler</strong> (<kbd>&#8679;&#8984;F11</kbd>) eller fra dets fane i paneldokken. Det opfører symbolerne i dokumentet efter navn. Klik på et navn for at vælge det som det aktive symbol, hvilket er det, Symbolspredning lægger ned; det aktive symbol er fremhævet.</p>
+
+<h3 id="symbols-make">Oprettelse af et symbol</h3>
+<p>Vælg den grafik, du vil genbruge, og klik på <strong>Nyt symbol</strong>. Markeringen gemmes som symbolets definition og erstattes på lærredet af én instans, der sidder præcis, hvor grafikken var. Definitionen holdes ud af vejen, så den ikke roder lærredet eller de almindelige lag. Hvis du ikke navngiver noget, hedder symbolet <code>Symbol 1</code>, <code>Symbol 2</code> og så videre, i den rækkefølge, du laver dem.</p>
+
+<h3 id="symbols-place">Placering af instanser</h3>
+<p>Dobbeltklik på et symbol i panelet for at slippe en frisk instans i midten af den aktuelle visning. Placér så mange, som du har brug for. En instans opfører sig som ethvert andet objekt, når den er på lærredet: vælg den, og du kan flytte, skalere, rotere eller spejle den og indstille dens opacitet og blanding, alt uden at røre definitionen, fordi disse ændringer kører på selve instansen. Brug dette til at variere størrelsen og vinklen af gentagne stykker, mens du holder dem knyttet til samme mester.</p>
+
+<h3 id="symbols-edit">Redigering af et symbol</h3>
+<p>Dobbeltklik på en instans på lærredet med Markeringsværktøjet (<kbd>V</kbd>) for at træde ind i definitionen. Alt andet på siden nedtones, og du redigerer grafikken for sig selv. Dobbeltklik på en tom del af lærredet for at træde ud igen. Fordi hver instans tegner samme definition, vises den redigering, du laver, i dem alle sammen. Dette er pointen med et symbol: ret grafikken én gang, og hele dokumentet indhenter, i stedet for at lede efter hver kopi.</p>
+
+<h3 id="symbols-break">Brydning af linket</h3>
+<p>Når én instans har brug for at adskille sig fra resten på en måde, der går ud over placering, størrelse eller opacitet, skal du vælge den og klikke på <strong>Bryd link</strong>. Instansen erstattes af en almindelig, redigerbar kopi af definitionen i samme størrelse og vinkel og er ikke længere knyttet til symbolet. Ændringer af symbolet når den ikke længere. Knappen er kun tilgængelig, mens en symbolinstans er valgt.</p>
+<p>For at fjerne et symbol helt skal du holde <kbd>&#8997;</kbd> nede og klikke på dets navn i panelet. Dens definition og hver instans af den slettes, fordi en instans uden definition ikke ville tegne noget.</p>
+
+<h2 id="symbols-symbolism">Symbolismeværktøjerne</h2>
+<p>Symbolismeværktøjerne spredter og justerer symbolinstanser i hånden under en rund pensel i stedet for én ad gangen. De deler én plads i værktøjslinjen; hold pladsen nede for at vælge mellem dem. De virker på instanserne inde i markeringen eller på hver redigerbar instans i dokumentet, når intet er valgt, så du kan styre et hele felt af symboler på én gang. Hold <kbd>&#8997;</kbd> nede for at vende effekten af enhver af dem.</p>
+<p>Mens et symbolismeværktøj er aktiv, gør <kbd>[</kbd> og <kbd>]</kbd> penslen mindre og større, og <kbd>{</kbd> og <kbd>}</kbd> sænker og hæver dens intensitet (hvor hårdt hvert passager arbejder).</p>
+<table>
+<thead><tr><th>Værktøj</th><th>Genvej</th><th>Hvad det gør</th></tr></thead>
+<tbody>
+<tr><td>Symbolspredning</td><td><kbd>&#8679;S</kbd></td><td>Træk for at lægge instanser af det aktuelle symbol, forskudt, mens du bevæger dig; instanserne samles i én <em>Symbolsæt</em>-gruppe. Hold <kbd>&#8997;</kbd> for at løfte instanser ud under penslen igen</td></tr>
+<tr><td>Symbolskubning</td><td></td><td>Skubber instanserne under penslen i den retning, du trækker, så du kan rydde en spredning op uden at flytte hvert stykke</td></tr>
+<tr><td>Symbolpakning</td><td></td><td>Trækker instanserne under penslen sammen; <kbd>&#8997;</kbd> spreder dem</td></tr>
+<tr><td>Symbolstørrelse</td><td></td><td>Forstørrer instanserne under penslen; <kbd>&#8997;</kbd> formindsker dem</td></tr>
+<tr><td>Symbolrotation</td><td></td><td>Drejer instanserne under penslen for at følge dit træk</td></tr>
+<tr><td>Symboldækning</td><td></td><td>Dækker instanserne under penslen mod den aktuelle udfyldningsfarve for variation på tværs af en gruppe; <kbd>&#8997;</kbd> fjerner dækningen</td></tr>
+<tr><td>Symboludtoning</td><td></td><td>Udtoner instanserne under penslen ved at sænke deres opacitet; <kbd>&#8997;</kbd> bringer dem tilbage</td></tr>
+<tr><td>Symbolstil</td><td></td><td>Anvender den grafiske stil, der er valgt i Grafiske stilarter-panelet, på instanserne under penslen; <kbd>&#8997;</kbd> rydder den</td></tr>
+</tbody>
+</table>
+<p>Tre værktøjer har brug for noget oprettet først. Symbolspredning har brug for et symbol at spray, så lav ét i Symbol-panelet, før du begynder. Symbolstil anvender den grafiske stil, der er valgt i Grafiske stilarter-panelet, så vælge en stil der først; Symboldækning bruger også den aktuelle udfyldningsfarve, så indstil udfyldningen før dækning.</p>
+
+<h2 id="symbols-brushes">Pensler-panelet</h2>
+<p>En pensel beslutter, hvordan en stregoverflade tegnes langs en sti. I stedet for en almindelig linje med jævn bredde kan stien bære en penstrå, et spor af spredt grafik, én form strækket ende til ende eller et bånd. Stien forbliver fuldt redigerbar under den: omform den, og penselstrøget følger. Åbn panelet med <strong>Vindue &gt; Pensler</strong> (<kbd>F5</kbd>) eller fra dets fane i paneldokken. Hver pensel viser en lille forhåndsvisning ved siden af sit navn.</p>
+
+<h3 id="symbols-brush-kinds">Typer af pensler</h3>
+<p>Scissor har fem typer af pensler. To tegnes fra et par tal, og tre bygges af grafik, du vælger.</p>
+<dl>
+  <dt>Kalligrafisk</dt>
+  <dd>En skæv, oval spids, der tynder og fortynder, mens stien drejer, som en bred pen. Indstil dens vinkel, rundhed og størrelse i punkter. Brug den til bogstavstrøg, underskrifter og enhver linje, der skal se håndtegnet ud.</dd>
+  <dt>Børste</dt>
+  <dd>En klynge af fine strøg, der læses som en ladt pensel. Indstil størrelsen i punkter, antallet af børster og malingsopacitet, så overlappende passager opbygges. Gå efter den, når du vil have en blød, malerisk kant i stedet for en ren.</dd>
+  <dt>Spredt</dt>
+  <dd>Strøer kopier af valgt grafik langs stien. Indstil kopiernes størrelse, afstanden mellem dem, hvor langt de spredes fra linjen og deres rotation, med muligheder for at rotere hver kopi i forhold til stien og omfarve den med stregfarven. Brug den til konfetti, blade, stjerner eller bobler, der spor en kurve.</dd>
+  <dt>Kunst</dt>
+  <dd>Strækker ét stykke af valgt grafik langs hele stiens længde. Indstil dens bredde med en mulighed for at omfarve den med stregfarven. Brug den til en indsnævrende blækstrøg, et bånd, en pil eller en grov kulstreg, der bøjer sig med linjen.</dd>
+  <dt>Mønster</dt>
+  <dd>Fliserer valgt grafik ende til ende langs stien, som en dekorativ kant. Indstil skala og afstand med en mulighed for at omfarve den med stregfarven. Brug den til kæde, syning eller en gentagende ramme.</dd>
+</dl>
+
+<h3 id="symbols-brush-apply">Anvendelse og fjernelse af en pensel</h3>
+<p>Vælg en eller flere stier og klik på en pensel for at tegne deres strøgoverflader med den. En sti uden synlig stregoverflade får én, så penslen har en linje at køre langs. Penselværktøjet (<kbd>B</kbd>) tegner nye strøg med den pensel, der er aktuelt valgt, så vælg en pensel og mal direkte på lærredet. For at fjerne en pensel fra de valgte strøgoverflader og returnere dem til almindelige linjer skal du klikke på <strong>Fjern pensel</strong>.</p>
+
+<h3 id="symbols-brush-manage">Oprettelse, redigering og sletning af pensler</h3>
+<p>Klik på <strong>Ny pensel&hellip;</strong>, vælg én af de fem typer, og indstil dens muligheder. For en spredt, kunst- eller mønsterpensel skal du vælge den grafik, den skal bruge, før du åbner dialogen, da denne grafik bliver til penslen. For at ændre en pensel senere skal du vælge den og klikke på <strong>Indstillinger&hellip;</strong> (eller dobbeltklikke på den i listen); ethvert strøg, der bruger den, tegnes igen med de nye indstillinger. <strong>Slet</strong> fjerner den valgte pensel efter at have spurgt; strøg, der brugte den, vender tilbage til almindelige linjer.</p>
+
+<h2 id="symbols-patterns">Mønstre-panelet</h2>
+<p>Et mønster er en flise af grafik, der gentages for at udfylde en form. Definér flisen én gang, og du kan hælde den i ethvert objekt som en udfyldning, så en tekstur eller et motiv forbliver ensartet på tværs af grafikken og opdateres overalt, når du redigerer flisen. Panelet sidder i paneldokken, og de samme kommandoer findes under <strong>Objekt &gt; Mønster</strong>.</p>
+
+<h3 id="symbols-pattern-make">Oprettelse af et mønster</h3>
+<p>Vælg grafikken til én flise og klik på <strong>Lav mønster</strong> (eller <strong>Objekt &gt; Mønster &gt; Opret</strong>). En kopi af grafikken gemmes som en gentagende flise og føjes til panelet; grafikken, du tegnede, forbliver, hvor den er. Mønstre hedder <code>Mønster 1</code>, <code>Mønster 2</code> og så videre, som du laver dem.</p>
+
+<h3 id="symbols-pattern-fill">Udfyldning med et mønster</h3>
+<p>Vælg en form og klik på et mønster i panelet for at indstille det som formens udfyldning. Uden valgt klikker du på et mønster for at gøre det til udfyldningsfarven for den næste form, du tegner. Fordi det er en udfyldning, gentages mønsteret for at dække formen og beskæres til dens kontur. Brug dette til baggrunde, stoffer, løv eller enhver overflade, der skal læses som en gentagelse i stedet for en flad farve. For at fjerne et mønster fra dokumentet skal du holde <kbd>&#8997;</kbd> nede og klikke på det i panelet; former, der blev udfyldt med det, falder tilbage til ingen udfyldning.</p>
+
+<h3 id="symbols-pattern-edit">Redigering af flisen</h3>
+<p>Dobbeltklik på et mønster i panelet for at redigere dets flise. Resten af grafikken nedtones, og du arbejder på flisen for sig selv med en <strong>Færdig med redigering</strong>-knap i panelet; klik på den (eller brug <strong>Objekt &gt; Mønster &gt; Rediger mønster</strong> igen), når du er færdig. Hver form, der er udfyldt med mønsteret, opdateres for at matche. Du kan også starte redigeringen ved at vælge en form, der er udfyldt med et mønster, og vælge <strong>Rediger mønster</strong>.</p>
+
+<h3 id="symbols-pattern-options">Fliseindstillinger</h3>
+<p>Klik på fliseindstillingsknappen ved siden af et mønster (eller <strong>Objekt &gt; Mønster &gt; Fliseindstillinger&hellip;</strong>) for at styre, hvordan flisen gentages. Disse indstillinger ændrer layoutet af gentagelsen uden at ændre grafikken i flisen.</p>
+<dl>
+  <dt>Flisetype</dt>
+  <dd>Hvordan rækker og kolonner linjer op: Gitter, Murværk efter række, Murværk efter kolonne, Hex efter kolonne eller Hex efter række. Murværk forskuder alternative rækker eller kolonner som murværk; hex pakker fliserne i en bikage.</dd>
+  <dt>Murværksforskydning</dt>
+  <dd>For murværktyperne, hvor langt hver alternativ række eller kolonne er skubbet, som en procentdel af flisen.</dd>
+  <dt>Tilpas flise til grafik</dt>
+  <dd>Tilpasser flisen til grafikkens grænser. Slå den fra for at indstille flisens bredde og højde selv.</dd>
+  <dt>Bredde og højde</dt>
+  <dd>Flisens størrelse i pixels, bruges, når flisen ikke er tilpasset grafik.</dd>
+  <dt>Vandret og lodret afstand</dt>
+  <dd>Mellemrum mellem fliser, i pixels. Positive værdier spreder motivet; negative værdier overlapper fliserne.</dd>
+  <dt>Flyt flise med grafik</dt>
+  <dd>Holder flisen justeret med grafikken, når den bevæger sig, så gentagelsen rejser med objektet.</dd>
+</dl>

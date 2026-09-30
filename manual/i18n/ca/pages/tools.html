@@ -1,0 +1,357 @@
+<p class="lede">La barra d'eines corre llarg del costat esquerre de la finestra i conté cada eina de dibuix, edició i visualització. Cada ranura és una eina individual o un grup d'eines relacionades; aquesta pàgina les llista totes, en l'ordre en què es troben a la barra d'eines, amb la tecla que les selecciona i per a què serveixen.</p>
+
+<p>Premeu i manteniu premuda una ranura, o feu-hi clic amb el botó dret, per obrir el seu menú desplegable i triar una altra eina del grup. La drecera d'una eina és una única tecla, i funciona sempre que no estigueu escrivint en un text o en un camp.</p>
+
+<p>Les dreceres a continuació estan escrites en format macOS. A Windows, llegiu <kbd>&#8997;</kbd> com a Alt, <kbd>&#8984;</kbd> com a Ctrl i <kbd>&#8679;</kbd> com a Majúscules.</p>
+
+<p>Tres costums s'apliquen a gairebé totes les eines:</p>
+<ul>
+<li>Mantingueu premuda la barra espaiadora per agafar en préstec l'eina Mà, i deixeu anar per tornar al que estàveu utilitzant.</li>
+<li>Mantingueu premut <kbd>&#8984;</kbd> per agafar en préstec l'eina Selecció de la mateixa manera. L'eina Transforma lliure és l'excepció: llegeix <kbd>&#8984;</kbd> per ella mateixa.</li>
+<li><kbd>Esc</kbd> abandona un arrossegament o un camí que esteu dibuixant a meitat, deixant la feina com era.</li>
+</ul>
+
+<p>Dues ranures (les eines Remodela i Mosaic d'impressió) s'inclouen per completitud però encara no tenen cap comportament. La barra d'eines les marca com a properes i el motor les rebutja.</p>
+
+<h2 id="tools-selecting">Eines de selecció</h2>
+<p>Aquestes quatre trien el que voleu treballar a continuació. Useu l'eina Selecció per a objectes sencers, l'eina Selecció directa per als ancoratges i segments dins d'un camí, la Selecció automàtica per recollir tot el que està pintat igual, i el Llaç per recollir a mà un grapat d'ancoratges.</p>
+
+<h3 id="tools-selection">Selecció</h3>
+<table>
+<thead><tr><th>Eina</th><th>Drecera</th><th>Què fa</th></tr></thead>
+<tbody>
+<tr><td>Eina Selecció</td><td><kbd>V</kbd></td><td>Feu clic a un objecte per seleccionar-lo sencer, <kbd>&#8679;</kbd>-clic per afegir-lo o treure'l, i arrossegueu sobre el llenç buit per un rectangle de selecció. Arrossegueu dins de la selecció per moure-la, amb <kbd>&#8679;</kbd> que limita el moviment a passos de 45&deg; i <kbd>&#8997;</kbd> que deixa una còpia enrere.</td></tr>
+</tbody>
+</table>
+<p>Amb un objecte seleccionat, el quadre delimitador vuit nanses. Arrossegueu una nansa per redimensionar, mantenint premut <kbd>&#8679;</kbd> per mantenir les proporcions i <kbd>&#8997;</kbd> per redimensionar al voltant del centre; arrossegueu just fora d'una cantonada per girar, amb <kbd>&#8679;</kbd> que s'ajusta a 45&deg;. El doble clic entra en un grup i hi treballa dins, el doble clic al text l'edita, el doble clic a una instància de símbol edita el símbol que cada instància dibuixa, i el doble clic lluny de la feina per tornar a sortir.</p>
+<p>Les formes editables porten els seus propis ginys: arrossegueu un giny de cantonada per arrodonir totes les cantonades de la forma de cop, o bé <kbd>&#8997;</kbd>-clic per passar la cantonada al tipus següent. Aquesta és l'eina en què passareu més temps, de manera que val la pena aprendre'n bé les nanses.</p>
+
+<h3 id="tools-direct-selection">Selecció directa i Selecció de grup</h3>
+<table>
+<thead><tr><th>Eina</th><th>Drecera</th><th>Què fa</th></tr></thead>
+<tbody>
+<tr><td>Eina Selecció directa</td><td><kbd>A</kbd></td><td>Feu clic a un ancoratge, una nansa o un segment i arrossegueu-lo per remodelar el camí; un rectangle de selecció sobre el llenç buit recull els ancoratges que hi ha dins. <kbd>&#8679;</kbd> afegeix a allò seleccionat i limita un arrossegament a 45&deg;, i <kbd>&#8997;</kbd> mentre arrossegueu una nansa separa la parella de manera que l'ancoratge es converteix en una cantonada.</td></tr>
+<tr><td>Eina Selecció de grup</td><td>&ndash;</td><td>Feu clic a un objecte per seleccionar-lo; feu clic de nou per incloure el grup al qual pertany, i una altra vegada pel grup de sobre.</td></tr>
+</tbody>
+</table>
+<p>Useu l'eina Selecció directa per retocar una forma després d'haver-la dibuixada: mou un ancoratge, estira una sola nansa, o remodela una corba. També arrossega les interseccions d'una malla de bust, doblegant el que el bust conté, i arrodonit una cantonada al cop d'una forma viva en comptes de totes. L'eina Selecció de grup és la manera ràpida d'arribar a un objecte enterrat dins de grups niuats sense entrar i sortir d'ells.</p>
+
+<h3 id="tools-magic-wand">Selecció automàtica</h3>
+<table>
+<thead><tr><th>Eina</th><th>Drecera</th><th>Què fa</th></tr></thead>
+<tbody>
+<tr><td>Eina Selecció automàtica</td><td><kbd>Y</kbd></td><td>Feu clic a un objecte per seleccionar cada objecte pintat com ell. El que compta com a similar (emplenament, contorn, gruix, opacitat, mode de fusió) s'estableix al panell Selecció automàtica, i <kbd>&#8679;</kbd> afegeix les noves coincidències a la selecció.</td></tr>
+</tbody>
+</table>
+<p>Useu-la quan vulgueu canviar cada forma d'un color de cop: feu clic a una vermella, després acoloriu tota la selecció en un sol pas.</p>
+
+<h3 id="tools-lasso">Llaç</h3>
+<table>
+<thead><tr><th>Eina</th><th>Drecera</th><th>Què fa</th></tr></thead>
+<tbody>
+<tr><td>Eina Llaç</td><td><kbd>Q</kbd></td><td>Arrossegueu un bucle a mà lliure per seleccionar els ancoratges que hi ha dins. <kbd>&#8679;</kbd> els afegeix als ancoratges ja seleccionats.</td></tr>
+</tbody>
+</table>
+<p>Useu-la quan els ancoratges que voleu no es troben en un rectangle ordenat, de manera que un rectangle de selecció agafaria massa o massa poc.</p>
+<p>Aquesta ranura també conté les eines de selecció de píxels — el <strong>Rectangle de selecció</strong>, l'<strong>Ellipse de selecció</strong> i el <strong>Llaç de selecció</strong> — que dibuixen una selecció de formiga sobre una capa de píxels en comptes de seleccionar ancoratges vectorials. Es tracten a la pàgina <a href="/manual/pixels/">Capes de píxels</a>.</p>
+
+<h2 id="tools-pen-type">La ploma, curvatura i text</h2>
+<p>Les eines que creen nous camins i text. La família de la ploma us dóna el control exacte sobre cada ancoratge i nansa, l'eina Curvatura adapta una corba suau a través dels puntus que col·loqueu, i les eines Text estableixen text de punt, d'àrea, de camí i vertical.</p>
+
+<h3 id="tools-pen">La família de la ploma</h3>
+<table>
+<thead><tr><th>Eina</th><th>Drecera</th><th>Què fa</th></tr></thead>
+<tbody>
+<tr><td>Eina Ploma</td><td><kbd>P</kbd></td><td>Feu clic per col·locar un punt de cantonada, o premeu i arrossegueu per extreure nanses suaus; feu clic al primer ancoratge per tancar el camí. <kbd>&#8679;</kbd> limita el nou punt o la nansa a 45&deg;, i <kbd>&#8997;</kbd> mentre arrossegueu separa les nanses de manera que el camí surt de l'ancoratge amb el seu angle.</td></tr>
+<tr><td>Eina Afegeix punt d'ancoratge</td><td><kbd>+</kbd></td><td>Feu clic a un segment per afegir un ancoratge, sense canviar la forma del camí.</td></tr>
+<tr><td>Eina Elimina punt d'ancoratge</td><td><kbd>&#8722;</kbd></td><td>Feu clic a un ancoratge per treure'l, unint els segments als costats.</td></tr>
+<tr><td>Eina Punt d'ancoratge</td><td><kbd>&#8679;C</kbd></td><td>Arrossegueu un ancoratge per extreure una parella de nanses corresponents, o feu clic per fer entrar les nanses i deixar una cantonada. Arrossegueu una nansa sola per moure aquell costat només; <kbd>&#8679;</kbd> la limita a 45&deg;.</td></tr>
+</tbody>
+</table>
+<p>L'eina Ploma és el cavall de batalla per al dibuix precís, des del contorn d'un logotip fins a un camí de lettering. Mentre té un camí en curs, <kbd>Retorn</kbd> o <kbd>Esc</kbd> el finalitza i <kbd>Retrocés</kbd> elimina el darrer ancoratge. Els tres ajudants afegeixen, eliminen i converteixen ancoratges sobre un camí acabat; la ploma i la matita es tracten amb més profunditat a la pàgina <a href="/manual/paths/">Camins</a>.</p>
+
+<h3 id="tools-curvature">Curvatura</h3>
+<table>
+<thead><tr><th>Eina</th><th>Drecera</th><th>Què fa</th></tr></thead>
+<tbody>
+<tr><td>Eina Corba</td><td><kbd>&#8679;~</kbd></td><td>Feu clic per col·locar punts i una corba suau s'hi adapta a través; <kbd>&#8997;</kbd>-clic col·loca un punt de cantonada en comptes. Arrossegueu un punt per moure'l, feu doble clic a un punt per alternar-lo entre suau i cantonada, feu clic al primer punt per tancar el camí i feu doble clic lluny per acabar.</td></tr>
+</tbody>
+</table>
+<p>Useu l'eina Curvatura quan voleu una línia fluida i preferiu col·locar punts i deixar que Scissor calculi les nanses en comptes d'estirar-les una a una.</p>
+
+<h3 id="tools-type">Text</h3>
+<table>
+<thead><tr><th>Eina</th><th>Drecera</th><th>Què fa</th></tr></thead>
+<tbody>
+<tr><td>Eina Text</td><td><kbd>T</kbd></td><td>Feu clic per a text de punt, arrossegueu un quadre per a text d'àrea i feu clic a text existent per editar-lo. Fer clic a un camí obert estableix el text al llarg d'aquest camí.</td></tr>
+<tr><td>Eina Text d'àrea</td><td>&ndash;</td><td>Arrossegueu el quadre en què flueix el text.</td></tr>
+<tr><td>Eina Text sobre camí</td><td>&ndash;</td><td>Feu clic a un camí i el text hi corre al llarg. El camí es converteix en la línia de base, deixa de ser feina per si mateix.</td></tr>
+<tr><td>Eina Text vertical</td><td>&ndash;</td><td>Igual que l'eina Text, excepte que la línia de text corre avall per la pàgina en comptes d'ample.</td></tr>
+<tr><td>Eina Edita glifs</td><td><kbd>&#8679;T</kbd></td><td>Feu clic a un caràcter per seleccionar-lo de la línia, després arrossegueu-lo per moure'l, arrossegueu un pomell de cantonada per redimensionar-lo o el de dalt per girar-lo. <kbd>&#8679;</kbd> manté el redimensionament de cantonada proporcional i fa ajustar el gir a passos de 11.25&deg;, i <kbd>Supr</kbd> torna a posar el caràcter on l'havia posat el text.</td></tr>
+</tbody>
+</table>
+<p>L'eina Text sola cobreix la major part de la feina: feu clic per a un títol, arrossegueu un quadre per a un paràgraf. Els pomells laterals del quadre Edita glifs estiren el caràcter en una sola direcció, en amplada o en alçada, de manera que podeu moure lletres individuals per a un títol sense trencar-les fora del text. El text es tracta íntegrament a la pàgina <a href="/manual/type/">Text</a>.</p>
+
+<h2 id="tools-lines-shapes">Línies i formes</h2>
+<p>Tot el que dibuixa una forma feta: línies rectes, arcs i espirals, graelles de línies, i els rectangles, ellipses, polígons i estelles amb què construeix un dibuix.</p>
+
+<h3 id="tools-lines">Línies, arcs, espirals i graelles</h3>
+<table>
+<thead><tr><th>Eina</th><th>Drecera</th><th>Què fa</th></tr></thead>
+<tbody>
+<tr><td>Eina Segment de línia</td><td><kbd>\</kbd></td><td>Arrossegueu per dibuixar una línia recta. <kbd>&#8679;</kbd> la limita a passos de 45&deg; i <kbd>&#8997;</kbd> la dibuixa des del centre en comptes del final.</td></tr>
+<tr><td>Eina Arc</td><td>&ndash;</td><td>Arrossegueu el quadre que omple l'arc; <kbd>&#8679;</kbd> el fa quadrat. Les fletxes dobleguen l'arc més pla o més ple, <kbd>C</kbd> el tanc i l'obre, i <kbd>F</kbd> o <kbd>X</kbd> inverteixen la direcció de la corba.</td></tr>
+<tr><td>Eina Espiral</td><td>&ndash;</td><td>Arrossegueu des del centre: la distància estableix el radi i la direcció estableix on comença l'espiral. <kbd>&#8997;</kbd> inverteix l'enrotllament, <kbd>R</kbd> l'inverteix definitivament, i les fletxes afegeixen i treuen segments.</td></tr>
+<tr><td>Eina Graella rectangular</td><td>&ndash;</td><td>Arrossegueu la graella, amb <kbd>&#8997;</kbd> que dibuixa des del centre i <kbd>&#8679;</kbd> que la manté quadrada. Les fletxes amunt i avall canvien el nombre de files, esquerra i dreta les columnes.</td></tr>
+<tr><td>Eina Graella polar</td><td>&ndash;</td><td>Arrossegueu la graella, amb <kbd>&#8997;</kbd> que dibuixa des del centre i <kbd>&#8679;</kbd> que la manté rodona. Les fletxes amunt i avall canvien els anells concèntrics, esquerra i dreta els radis.</td></tr>
+</tbody>
+</table>
+<p>Les dues eines de graella creen un camí per línia, de manera que cada línia roman seleccionable per si sola: useu la Graella rectangular per a taules, calendaris i estructures de disseny, i la Graella polar per a dards, gràfics de radar i esferes de rellotge. Dibuixen feina de graella que conserveu. És una cosa diferent de la graella de fons de la taula, l'ajuda de dibuix a pantalla que activeu amb <strong>Visualitza &rsaquo; Graella &rsaquo; Mostra graella</strong>, que no s'imprimeix mai i es presenta en set tipus (quadrada, isomètric, hexagonal, oblic, proporció àurea, motiu i perspectiva). Les graelles de fons es tracten a la pàgina <a href="/manual/grids/">Graelles</a>. Una <strong>Eina Forma de graella</strong> (<kbd>&#8679;G</kbd>) separada construeix un camí emplenat fent clic o arrossegant a través de les cel·les d'aquesta graella de fons: una manera ràpida de col·locar blocs sòlids sobre una graella isomètrica o hexagonal.</p>
+
+<h3 id="tools-shapes">Rectangles, ellipses i altres formes</h3>
+<table>
+<thead><tr><th>Eina</th><th>Drecera</th><th>Què fa</th></tr></thead>
+<tbody>
+<tr><td>Eina Rectangle</td><td><kbd>M</kbd></td><td>Arrossegueu per dibuixar un rectangle. <kbd>&#8679;</kbd> el manté quadrat i <kbd>&#8997;</kbd> el dibuixa des del centre.</td></tr>
+<tr><td>Eina Rectangle arrodonit</td><td>&ndash;</td><td>El mateix arrossegament, amb cantonades arrodonides; les fletxes amunt i avall augmenten i redueixen el radi de cantonada mentre dibuixeu.</td></tr>
+<tr><td>Eina Ellipse</td><td><kbd>L</kbd></td><td>Arrossegueu per dibuixar una ellipse, amb <kbd>&#8679;</kbd> per a un cercle i <kbd>&#8997;</kbd> per dibuixar des del centre.</td></tr>
+<tr><td>Eina Polígon</td><td>&ndash;</td><td>Arrossegueu des del centre; la direcció de l'arrossegament gira el polígon, i <kbd>&#8679;</kbd> el manté dret. Les fletxes afegeixen i treuen costats.</td></tr>
+<tr><td>Eina Estella</td><td>&ndash;</td><td>Arrossegueu des del centre, girant l'estella a mesura que avanceu, amb <kbd>&#8679;</kbd> que la manté dret. Les fletxes afegeixen i treuen puntes.</td></tr>
+<tr><td>Eina Brillantor</td><td>&ndash;</td><td>Arrossegueu un cop per establir el centre i la mida de l'halo de la brillantor, després arrossegueu un segon cop per estirar els seus anells a través de la feina. Mentre arrossegueu, les fletxes esquerra i dreta canvien el nombre d'anells i les fletxes amunt i avall el nombre de raigs.</td></tr>
+</tbody>
+</table>
+<p>Aquestes creen formes vives: mantenen els seus paràmetres, de manera que podeu canviar la mida d'un rectangle o el nombre de puntes d'una estella molt de temps després d'haver-lo dibuixat. Un clic en lloc d'un arrossegament amb qualsevol d'elles obre un diàleg, de manera que podeu donar a la forma mesures exactes. L'eina Brillantor respon a un clic amb una brillantor de la mida que les seves opcions demanen.</p>
+
+<h2 id="tools-brush-erase">Pinzells, matita i gomes</h2>
+<p>Les eines a mà lliure. Pinteu un traç que segueix el punter, esbósseu un camí rudimentari i deixeu que Scissor l'ordene, cuireu i repareu camins existents, o esborreu feina. Dues ranures aquí també arriben al costat raster d'un document: el Pinzell pinta píxels i la Gomma de píxels els esborra.</p>
+
+<h3 id="tools-brushes">Pinzells</h3>
+<table>
+<thead><tr><th>Eina</th><th>Drecera</th><th>Què fa</th></tr></thead>
+<tbody>
+<tr><td>Eina Pinzell</td><td><kbd>B</kbd></td><td>Arrossegueu per dibuixar a mà lliure; el traç s'allisar mentre s'adapta a corbes i manté el pinzell i el traç actuals.</td></tr>
+<tr><td>Eina Pinzell d'emplenament</td><td><kbd>&#8679;B</kbd></td><td>Dibuixa el mateix traç, però el contorna en una forma emplenada i la fusiona amb qualsevol feina que toqui que comparteixi el seu emplenament.</td></tr>
+<tr><td>Eina Pinzell de píxels</td><td>&ndash;</td><td>Pinta color raster directament sobre una capa de píxels amb el color d'emplenament actual, creant primer una capa de píxels si no n'hi ha cap. A diferència del Pinzell, la marca no és un camí que pugueu remodelar més endavant: es converteix en part de la imatge.</td></tr>
+</tbody>
+</table>
+<p>Useu el Pinzell per a traços expressius i cal·ligràfics que romanen editables, i el Pinzell d'emplenament quan preferiu construir una forma sòlida emplenada en comptes d'una línia traçada. <kbd>[</kbd> i <kbd>]</kbd> fan el pinzell més petit i més gran. L'eina Pinzell de píxels comparteix aquesta ranura però pinta píxels en comptes d'un camí, per a ombres i textures, i el <strong>Pot de pintura</strong> també la comparteix, inundant una àrea connectada d'una capa de píxels amb el color d'emplenament. La pintura sobre capes de píxels es tracta a la pàgina <a href="/manual/pixels/">Capes de píxels</a>.</p>
+
+<h3 id="tools-pencil">Matita i reparadors de camí</h3>
+<table>
+<thead><tr><th>Eina</th><th>Drecera</th><th>Què fa</th></tr></thead>
+<tbody>
+<tr><td>Eina Esbós</td><td><kbd>&#8679;N</kbd></td><td>Dibuixeu aproximadament i el traç esdevé la forma neta que volíeu. Garabatejar sobre la feina en comptes elimina allò que el garabat cobreix.</td></tr>
+<tr><td>Eina Matita</td><td><kbd>N</kbd></td><td>Dibuixeu a mà lliure i el traç s'adapta a corbes suaus. Mantingueu premut <kbd>&#8997;</kbd> mentre deixeu anar per tancar el camí, cosa que passa sola si acabeu prop d'on vau començar.</td></tr>
+<tr><td>Eina Alisa</td><td>&ndash;</td><td>Passeu al llarg d'un camí per uniformar-ne les nanses i eliminar els ancoratges que el dobleguen lleument; un pinzell més gran alisa més fort.</td></tr>
+<tr><td>Eina Gomma de camí</td><td>&ndash;</td><td>Passeu al llarg d'un camí per esborrar la part que cobriu.</td></tr>
+<tr><td>Eina Uneix</td><td>&ndash;</td><td>Passeu sobre dos extrems lliures per unir-los en un sol camí.</td></tr>
+</tbody>
+</table>
+<p>La Matita és la manera ràpida d'esbossar una forma a mà; l'Esbós és per a quan voleu que un gest aproximat es llegeixi com un rectangle, una ellipse o una línia neta. Els tres darrers curen camins existents: <kbd>[</kbd> i <kbd>]</kbd> redimensionen els pinzells Alisa, Gomma de camí i Uneix. Amb feina seleccionada aquests tres actuen només sobre la selecció; sense selecció actuen sobre qualsevol camí que arribin.</p>
+
+<h3 id="tools-cutting">Esborrar i tallar</h3>
+<table>
+<thead><tr><th>Eina</th><th>Drecera</th><th>Què fa</th></tr></thead>
+<tbody>
+<tr><td>Eina Gomma</td><td><kbd>&#8679;E</kbd></td><td>Arrossegueu un pinzell rodó per restar dels objectes. Amb una selecció només s'esborren els objectes seleccionats; altrament tots els camins no blocats, i <kbd>[</kbd> i <kbd>]</kbd> redimensionen el pinzell.</td></tr>
+<tr><td>Eina Gomma de píxels</td><td>&ndash;</td><td>Esborra la pintura d'una capa de píxels, fent-la transparent perquè es vegi allò que hi ha sota. Funciona sobre capes de píxels on la Gomma funciona sobre camins vectorials; <kbd>[</kbd> i <kbd>]</kbd> redimensionen el pinzell.</td></tr>
+<tr><td>Eina Tisores</td><td><kbd>C</kbd></td><td>Feu clic a un segment o un ancoratge per tallar el camí allà. Un camí tancat s'obre al tall; un camí obert es divideix en dos objectes.</td></tr>
+<tr><td>Eina Ganivet</td><td>&ndash;</td><td>Arrossegueu a través dels objectes per tallar-los en peces separades. <kbd>&#8997;</kbd> talla en línia recta i <kbd>&#8679;</kbd> limita aquella línia a passos de 45&deg;.</td></tr>
+</tbody>
+</table>
+<p>La Gomma esculpeix formes fora de la feina emplenada com esborrar amb llapis; les Tisores fan un sol tall net en un punt; el Ganivet talla objectes sencers en peces al llarg de la línia que arrossegueu. La Gomma de píxels comparteix la ranura de la Gomma però pertany al costat raster, a la pàgina <a href="/manual/pixels/">Capes de píxels</a>.</p>
+<p>Una altra ranura de la barra d'eines és íntegrament raster: els pinzells de retoc <strong>Aclara</strong>, <strong>Enfosqueix</strong> i <strong>Esponja</strong> aclareixen, enfosquixen i saturen els píxels ja presents a una capa. Pinten com el Pinzell i es tracten, amb la resta d'edició de píxels, a la pàgina <a href="/manual/pixels/">Capes de píxels</a>.</p>
+
+<h2 id="tools-transform">Transformació</h2>
+<p>Les eines que mouen, giren, reflecteixen, redimensionen, inclinen, distorsionen i remodelen allò que ja està dibuixat. Cada eina de transformació funciona al voltant d'un punt de referència, que comença al centre de la selecció; <kbd>&#8997;</kbd>-clic estableix aquell punt on feu clic i obre el diàleg de l'eina per a valors exactes. Amb ancoratges individuals seleccionats, aquestes eines transformen aquells ancoratges en comptes d'objectes sencers.</p>
+
+<h3 id="tools-rotate-reflect">Gira i Reflexa</h3>
+<table>
+<thead><tr><th>Eina</th><th>Drecera</th><th>Què fa</th></tr></thead>
+<tbody>
+<tr><td>Eina Gira</td><td><kbd>R</kbd></td><td>Arrossegueu al voltant del punt de referència per girar la selecció, amb <kbd>&#8679;</kbd> que s'ajusta a 45&deg; i <kbd>&#8997;</kbd> que gira una còpia i deixa l'original. <kbd>&#8997;</kbd>-clic estableix el punt de referència on heu fet clic i obre el diàleg Gira.</td></tr>
+<tr><td>Eina Reflexa</td><td><kbd>O</kbd></td><td>Arrossegueu per fer passar l'eix de reflexió a través del punt de referència, amb <kbd>&#8679;</kbd> que l'ajusta a 45&deg;. <kbd>&#8997;</kbd>-clic estableix el punt de referència i obre el diàleg Reflexa, i <kbd>&#8997;</kbd> mentre arrossegueu reflecteix una còpia.</td></tr>
+</tbody>
+</table>
+<p>Useu l'eina Gira per girar la feina al voltant d'un pivot triat en comptes del seu propi centre, i l'eina Reflexa per construir un dibuix simètric: reflectiu una còpia a través d'un eix triat i les dues meitats romanen coincidents. Ambdues eines comencen des del centre de la selecció, i triant una altra cosa hi torna el punt de referència.</p>
+
+<h3 id="tools-scale-shear">Redimensiona, Inclina i Remodela</h3>
+<table>
+<thead><tr><th>Eina</th><th>Drecera</th><th>Què fa</th></tr></thead>
+<tbody>
+<tr><td>Eina Redimensiona</td><td><kbd>S</kbd></td><td>Arrossegueu lluny del punt de referència per engrandir la selecció i cap a ell per empetitir-la; <kbd>&#8679;</kbd> manté les proporcions i <kbd>&#8997;</kbd> redimensiona una còpia. <kbd>&#8997;</kbd>-clic estableix el punt de referència i obre el diàleg Redimensiona.</td></tr>
+<tr><td>Eina Inclina</td><td>&ndash;</td><td>Arrossegueu per inclinar la selecció al voltant del punt de referència; <kbd>&#8679;</kbd> fixa la inclinació en l'eix al qual el vostre arrossegament s'acosta. <kbd>&#8997;</kbd>-clic estableix el punt de referència i obre el diàleg Inclina.</td></tr>
+<tr><td>Eina Remodela</td><td>&ndash;</td><td>Inclosa a la barra d'eines però encara no implementada; la paleta la marca com a propera.</td></tr>
+</tbody>
+</table>
+<p>Useu l'eina Redimensiona quan vulgueu dimensionar la feina al voltant d'un punt fix en comptes d'una nansa del quadre delimitador, i l'eina Inclina per inclinar una forma per a una ombra projectada o un efecte de cursiva.</p>
+
+<h3 id="tools-width-liquify">Gruix i pinzells de liquify</h3>
+<table>
+<thead><tr><th>Eina</th><th>Drecera</th><th>Què fa</th></tr></thead>
+<tbody>
+<tr><td>Eina Perfil de gruix</td><td><kbd>&#8679;W</kbd></td><td>Arrossegueu lluny d'un camí amb contorn per eixamplar-lo en aquell punt i cap al camí per estreixir-lo, deixant un punt de gruix. Sense selecció funciona sobre qualsevol camí editable.</td></tr>
+<tr><td>Eina Deforma</td><td><kbd>&#8679;R</kbd></td><td>Premeu i arrossegueu un pinzell rodó per empènyer els camins que hi ha sota juntament amb el punter.</td></tr>
+<tr><td>Eina Torbellí</td><td>&ndash;</td><td>Mantingueu el pinzell sobre la feina i continua girant tot el temps que el manteniu.</td></tr>
+<tr><td>Eina Pessiga</td><td>&ndash;</td><td>Estira els camins sota el pinzell cap al seu centre.</td></tr>
+<tr><td>Eina Infla</td><td>&ndash;</td><td>Empènyer els camins sota el pinzell fora del seu centre.</td></tr>
+<tr><td>Eina Ones</td><td>&ndash;</td><td>Afegeix corbes escopidores als camins sota el pinzell.</td></tr>
+<tr><td>Eina Punxa</td><td>&ndash;</td><td>Afegeix punts punxeguts als camins sota el pinzell.</td></tr>
+<tr><td>Eina Arruga</td><td>&ndash;</td><td>Onega els camins sota el pinzell.</td></tr>
+</tbody>
+</table>
+<p>L'eina Gruix aprima i engreixa un traç a mà, per a una línia tipus pinzell o ploma sense canviar de pinzell. Els set pinzells de liquify empènyen, torcen i aspreten els camins mentre pinteu sobre ells, per a distorsions orgàniques que serien lentes de fer ancoratge per ancoratge. Tots set accepten <kbd>[</kbd> i <kbd>]</kbd> per la mida, i <kbd>&#8679;</kbd> amb aquestes mateixes tecles, <kbd>{</kbd> i <kbd>}</kbd>, per la força amb què empènyen.</p>
+
+<h3 id="tools-free-transform">Transforma lliure i Deforma amb claus</h3>
+<table>
+<thead><tr><th>Eina</th><th>Drecera</th><th>Què fa</th></tr></thead>
+<tbody>
+<tr><td>Eina Transforma lliure</td><td><kbd>E</kbd></td><td>Un únic quadre que redimensiona, gira, inclina i distorsiona la selecció. Arrossegueu una nansa de vora o de cantonada per redimensionar, manteniu premut <kbd>&#8984;</kbd> a una nansa de vora per inclinar, arrossegueu dins del quadre per moure'l i arrossegueu just fora d'una cantonada per girar-lo.</td></tr>
+<tr><td>Eina Deforma amb claus</td><td>&ndash;</td><td>Feu clic a la feina seleccionada per col·locar un clau, després arrossegueu les claus per doblegar-la; la feina manté la seva forma al voltant de les claus que romanen fixes. <kbd>&#8997;</kbd>-clic a un clau l'elimina, <kbd>&#8679;</kbd>-clic n'agafa diversos, i <kbd>&#8997;</kbd>-arrossegament just fora d'un clau gira la feina al voltant d'aquest.</td></tr>
+</tbody>
+</table>
+<p>Transforma lliure és el quadre tot-en-un quan vulgueu redimensionar, girar i inclinar en un sol gest en comptes de canviar d'eina. Funciona al voltant del seu punt de referència, que podeu arrossegar a qualsevol lloc, fins i tot fora del quadre; deixeu-lo anar prop d'un dels nou punts habituals del quadre i s'hi establiu. Mentre redimensioneu, <kbd>&#8679;</kbd> manté les proporcions i <kbd>⌥</kbd> redimensiona al voltant del centre en comptes del punt de referència; mentre gireu, <kbd>&#8679;</kbd> s'ajusta a 45&deg;. A una nansa de cantonada, <kbd>&#8984;</kbd> distorsiona aquella cantonada sola i <kbd>&#8984;&#8997;&#8679;</kbd> distorsiona en perspectiva, amb la cantonada veïna que reflecteix l'arrossegament; el giny al costat del quadre estableix els mateixos dos modes i el restrictor de proporcions. Canviar un modificador a mitges d'un arrossegament canvia d'acció immediatament, sense deixar anar.</p>
+<p>Deforma amb claus serveix per posar i doblegar una sola peça de feina, com flexionar un braç dibuixat, fixant les parts que han de romandre quietes i arrossegant la resta. Llegeix <kbd>Supr</kbd> com a eliminació de les claus seleccionades en comptes de la feina, i <kbd>&#8984;A</kbd> com a selecció de cada clau. Cada arrossegament és un pas a desfer, i desfer retorna les claus amb la feina que les acompanyava. Text, imatges i instàncies de símbol no es poden distorsionar i es deixen com són.</p>
+
+<h2 id="tools-build-perspective">Uneix i divideix, Emplenament d'àrea i perspectiva</h2>
+<p>Eines que tracten les formes superposades com a regions a unir i acolorir, i la graella que us permet dibuixar i col·locar feina en perspectiva.</p>
+
+<h3 id="tools-builder-paint">Uneix i divideix i Emplenament d'àrea</h3>
+<table>
+<thead><tr><th>Eina</th><th>Drecera</th><th>Què fa</th></tr></thead>
+<tbody>
+<tr><td>Eina Uneix i divideix</td><td><kbd>&#8679;M</kbd></td><td>Amb formes superposades seleccionades, arrossegueu a través de les regions que voleu unir i es converteixen en un sol objecte. <kbd>&#8997;</kbd>-arrossegament elimina les regions que travessa en comptes.</td></tr>
+<tr><td>Pot Emplenament d'àrea</td><td><kbd>K</kbd></td><td>Feu clic a una cara d'un grup Emplenament d'àrea per omplir-la amb la pintura actual; <kbd>&#8997;</kbd>-clic recull la pintura ja present en comptes de posar-ne. La cara sota el punter es contorna abans que feu clic.</td></tr>
+<tr><td>Eina Selecció d'àrea</td><td><kbd>&#8679;L</kbd></td><td>Feu clic a una cara d'un grup Emplenament d'àrea per seleccionar-la, sense pintar-la.</td></tr>
+</tbody>
+</table>
+<p>Useu Uneix i divideix per dibuixar unes quantes formes superposades i després unir-les i retallar-les en el contorn que voleu, arrossegant a través de les peces. Emplenament d'àrea tracta un conjunt de camins superposats com un llibre per acolorir: el Pot inunda cada cara tancada amb un color, i l'eina Selecció recull cares i vores perquè pugueu aplicar-los estils, sense tallar primer les formes.</p>
+
+<h3 id="tools-perspective">Perspectiva</h3>
+<table>
+<thead><tr><th>Eina</th><th>Drecera</th><th>Què fa</th></tr></thead>
+<tbody>
+<tr><td>Eina Graella perspectiva</td><td><kbd>&#8679;P</kbd></td><td>Mostra la graella i la modela: arrossegueu els punts de fuga, arrossegueu-los amunt o avall per moure l'horitzó i arrossegueu la cantonada propera de la graella. <kbd>1</kbd> a <kbd>4</kbd>, o el giny a la pantalla, trien el planol sobre el qual dibuixeu.</td></tr>
+<tr><td>Eina Selecció perspectiva</td><td><kbd>&#8679;V</kbd></td><td>Selecciona la feina i l'arrossega al llarg del seu planol. La feina que encara no és a la graella es col·loca al planol actiu on l'arrossegueu.</td></tr>
+</tbody>
+</table>
+<p>Useu-les per dibuixar escenes i lettering que convergeixen cap a punts de fuga, com un carrer o un producte en caixa. Mentre la graella és visible, les eines Rectangle, Rectangle arrodonit, Ellipse i Graella rectangular dibuixen sobre el planol actiu en comptes de pla, i <kbd>1</kbd> a <kbd>4</kbd> trien el planol també des d'aquestes eines.</p>
+
+<h2 id="tools-mesh-gradient">Malla i degradat</h2>
+<p>Les dues eines per pintar color gradual dins d'una forma: una malla de punts de color a través de l'objecte, o bé una degradació suau al llarg d'un eix.</p>
+
+<h3 id="tools-mesh">Malla</h3>
+<table>
+<thead><tr><th>Eina</th><th>Drecera</th><th>Què fa</th></tr></thead>
+<tbody>
+<tr><td>Eina Malla</td><td><kbd>U</kbd></td><td>Feu clic dins d'un objecte per fer passar una línia de malla en cada direcció a través d'aquest punt, convertint un camí senzill en una malla. Feu clic a un punt de malla per seleccionar-li i donar-li un color des del panell Color, arrossegueu un punt per moure'l i <kbd>&#8997;</kbd>-clic a un per treure les línies que el travessen.</td></tr>
+</tbody>
+</table>
+<p>Useu una malla per a ombres suaus i lliures que una degradació rectilínia no pot donar, com l'highlight arrodonit d'una fruita o una cara.</p>
+
+<h3 id="tools-gradient">Degradat</h3>
+<table>
+<thead><tr><th>Eina</th><th>Drecera</th><th>Què fa</th></tr></thead>
+<tbody>
+<tr><td>Eina Degradat</td><td><kbd>G</kbd></td><td>Arrossegueu a través de la selecció per establir l'eix de la seva pintura activa, amb <kbd>&#8679;</kbd> que limita l'eix a passos de 45&deg;. Sobre feina que ja té un degradat, treballeu sobre l'anotador.</td></tr>
+</tbody>
+</table>
+<p>Arrossegueu l'eina Degradat per dirigir una degradació lineal o radial com vulgueu i establir fins on arriba. A l'anotador, arrossegueu un aturador al llarg de l'eix per moure'l, arrossegueu un rombe per desplaçar la degradació entre dos aturadors, feu clic a l'eix per afegir un aturador amb el color que ja hi té, i estireu un aturador ben lluny de l'eix per llençar-lo, sempre que en quedin dos. <kbd>Supr</kbd> elimina l'aturador que heu tocat per darrere. Sobre una degradació lliure l'eina funciona sobre els punts de color: feu clic a la feina per afegir-ne un amb el color d'emplenament i arrossegueu un punt per moure'l. Els degradats es tracten més a la pàgina <a href="/manual/appearance/">Color i aparença</a>.</p>
+
+<h2 id="tools-sample-morph">Mostreig, mesura i morfologia</h2>
+<p>Copieu una aparença d'un objecte a un altre, llegiu distàncies i angles del lenç i sfumeu entre formes en una sèrie de passos.</p>
+
+<h3 id="tools-eyedropper">Compta-gotes i Mesura</h3>
+<table>
+<thead><tr><th>Eina</th><th>Drecera</th><th>Què fa</th></tr></thead>
+<tbody>
+<tr><td>Eina Compta-gotes</td><td><kbd>I</kbd></td><td>Feu clic a un objecte per mostrejar la seva aparença completa a la selecció, o bé a l'estil per defecte quan no hi ha res seleccionat. <kbd>&#8679;</kbd> mostreja només el seu color d'emplenament o contorn al costat actiu, i <kbd>&#8997;</kbd> fa el contrari, aplicant l'aparença de la selecció a l'objecte on feu clic.</td></tr>
+<tr><td>Eina Mesura</td><td>&ndash;</td><td>Arrossegueu entre dos punts per llegir la distància, els desplaçaments i l'angle; <kbd>&#8679;</kbd> limita la línia a passos de 45&deg;. L'última mesura roman a la pantalla fins al proper arrossegament.</td></tr>
+</tbody>
+</table>
+<p>El Compta-gotes és la manera ràpida de fer coincidir un objecte amb un altre: trieu l'aparença que us agrada i cau a la selecció. Useu l'eina Mesura per comprovar un espai o un angle sense deixar una marca a la feina.</p>
+
+<h3 id="tools-blend">Morfologia</h3>
+<table>
+<thead><tr><th>Eina</th><th>Drecera</th><th>Què fa</th></tr></thead>
+<tbody>
+<tr><td>Eina Morfologia</td><td><kbd>W</kbd></td><td>Feu clic a un objecte i després a un altre per transformar l'un en l'altre a través d'una sèrie de passos intermedis. Per afegir un objecte més a una morfologia, feu clic dins la morfologia i després feu clic a l'objecte que voleu afegir-hi.</td></tr>
+</tbody>
+</table>
+<p>Useu l'eina Morfologia per sfumar una forma o un color en un altre a través de passos uniformes, sigui per una franja degradada o per còpies uniformement espaiades i canviants al llarg d'un camí.</p>
+
+<h2 id="tools-symbols">Símbols</h2>
+<p>Un símbol és una peça de feina que podeu col·locar moltes vegades, amb cada còpia lligada a un únic mestre. Els pinzells simbòlics creen i despré treballen sencers enjardinstes d'aquestes instàncies de cop.</p>
+
+<h3 id="tools-symbolism">Els pinzells simbòlics</h3>
+<table>
+<thead><tr><th>Eina</th><th>Drecera</th><th>Què fa</th></tr></thead>
+<tbody>
+<tr><td>Eina Símbol Escampadora</td><td><kbd>&#8679;S</kbd></td><td>Arrossegueu per col·locar instàncies del símbol triat al panell Símbols, com un conjunt de símbols. <kbd>&#8997;</kbd> elimina les instàncies.</td></tr>
+<tr><td>Eina Símbol Empenta</td><td>&ndash;</td><td>Arrossega les instàncies sota el pinzell juntament amb el punter.</td></tr>
+<tr><td>Eina Símbol Agrupa</td><td>&ndash;</td><td>Apropa les instàncies sota el pinzell; <kbd>&#8997;</kbd> les separa.</td></tr>
+<tr><td>Eina Símbol Redimensiona</td><td>&ndash;</td><td>Engrandeix les instàncies sota el pinzell; <kbd>&#8997;</kbd> les empetiteix.</td></tr>
+<tr><td>Eina Símbol Gira</td><td>&ndash;</td><td>Gira les instàncies sota el pinzell per seguir l'arrossegament.</td></tr>
+<tr><td>Eina Símbol Tinta</td><td>&ndash;</td><td>Tinta les instàncies sota el pinzell cap al color d'emplenament; <kbd>&#8997;</kbd> treu la tinta.</td></tr>
+<tr><td>Eina Símbol Esvaeix</td><td>&ndash;</td><td>Esvaeix les instàncies sota el pinzell; <kbd>&#8997;</kbd> les retorna a plena intensitat.</td></tr>
+<tr><td>Eina Símbol Restil</td><td>&ndash;</td><td>Aplica l'estil gràfic triat al panell Estils gràfics a les instàncies sota el pinzell; <kbd>&#8997;</kbd> l'elimina.</td></tr>
+</tbody>
+</table>
+<p>Useu-les per escampar i després variar un camp de feina repetida, com arbres d'un turó o estrelles en un cel: ruixeu un conjunt, després aprimar-lo, redimensionar-lo, girar-lo i acolorir-lo perquè les còpies no semblin estampades. Tots vuit accepten <kbd>[</kbd> i <kbd>]</kbd> per la mida del pinzell i <kbd>{</kbd> i <kbd>}</kbd> per la força amb què treballa el pinzell. Actuen sobre les instàncies a la selecció, o sobre cada instància editable quan no hi ha res seleccionat.</p>
+
+<h2 id="tools-boards-slices">Taules i seccions</h2>
+<p>Les eines que disponguen el llenç per a la sortida: taules d'art, que són les pàgines on es troba la vostra feina, i seccions, que marquen rectangles per exportar individualment.</p>
+
+<h3 id="tools-boards">Taules</h3>
+<table>
+<thead><tr><th>Eina</th><th>Drecera</th><th>Què fa</th></tr></thead>
+<tbody>
+<tr><td>Eina Taula</td><td><kbd>&#8679;O</kbd></td><td>Dibuixa, mou i redimensiona taules d'art directament al llenç. Arrossegueu el llenç buit per a una nova taula, amb <kbd>&#8997;</kbd> que dibuixa des del centre i <kbd>&#8679;</kbd> que la manté quadrada; arrossegueu dins d'una taula per moure-la, amb <kbd>&#8679;</kbd> que limita el moviment a un eix; arrossegueu una nansa de cantonada amb <kbd>&#8679;</kbd> per mantenir les proporcions de la taula.</td></tr>
+</tbody>
+</table>
+<p>Useu l'eina Taula per afegir pàgines de mides o versions diferents d'un disseny en un sol document, i per redimensionar una pàgina al voltant del que heu dibuixat. <kbd>Supr</kbd> elimina la taula activa, sempre que en quedi una.</p>
+
+<h3 id="tools-slices">Seccions</h3>
+<table>
+<thead><tr><th>Eina</th><th>Drecera</th><th>Què fa</th></tr></thead>
+<tbody>
+<tr><td>Eina Secció</td><td><kbd>&#8679;K</kbd></td><td>Arrossegueu un rectangle que s'exporta individualment; <kbd>&#8997;</kbd> dibuixa des del centre i <kbd>&#8679;</kbd> el manté quadrat. Les vores de les seccions s'ajusten a píxels sencers, de manera que el que surt no està difuminat.</td></tr>
+<tr><td>Eina Selecció de secció</td><td>&ndash;</td><td>Selecciona, mou i redimensiona seccions. <kbd>Supr</kbd> elimina la seleccionada i un doble clic n'obre les opcions.</td></tr>
+</tbody>
+</table>
+<p>Useu les seccions per tallar una taula d'art en peces que s'exporten separadament, com els botons i els bàners d'un disseny web, cadascun com a fitxer propi. L'exportació es tracta a la pàgina <a href="/manual/files/">Obre i exporta</a>.</p>
+
+<h2 id="tools-navigate">Moure's</h2>
+<p>Les eines que desplacen, giren i amplien la vista. Cap d'elles modifica el document: només canvien com el mireu.</p>
+
+<h3 id="tools-view">Moure la vista</h3>
+<table>
+<thead><tr><th>Eina</th><th>Drecera</th><th>Què fa</th></tr></thead>
+<tbody>
+<tr><td>Eina Mà</td><td><kbd>H</kbd></td><td>Arrossegueu per desplaçar la vista. Mantenir premuda la barra espaiadora l'agafa en préstec de qualsevol altra eina tot el temps que la manteniu premuda.</td></tr>
+<tr><td>Eina Gira vista</td><td><kbd>&#8679;H</kbd></td><td>Arrossegueu per girar la vista al voltant del centre de la finestra, amb <kbd>&#8679;</kbd> que s'ajusta a 15&deg;; doble clic per tornar-la a posar dret. Només gira la vista, mai el document.</td></tr>
+<tr><td>Eina Mosaic d'impressió</td><td>&ndash;</td><td>Inclosa a la barra d'eines però encara no implementada; la paleta la marca com a propera.</td></tr>
+</tbody>
+</table>
+<p>L'eina Mà desplaça un dibuix ampliat sense tocar les barres de desplaçament, i l'eina Gira vista inclina tota la vista perquè pugueu dibuixar una línia inclinada en un angle còmod, després tornar-la a posar recta.</p>
+
+<h3 id="tools-zoom">Zoom</h3>
+<table>
+<thead><tr><th>Eina</th><th>Drecera</th><th>Què fa</th></tr></thead>
+<tbody>
+<tr><td>Eina Zoom</td><td><kbd>Z</kbd></td><td>Feu clic per ampliar i <kbd>&#8997;</kbd>-clic per reduir. Arrossegueu un rectangle sobre una part de la feina per omplir la finestra amb ella.</td></tr>
+</tbody>
+</table>
+
+<h2 id="tools-fill-stroke">Controls d'emplenament i contorn</h2>
+<p>Al peu de la barra d'eines hi ha les mostres d'emplenament i contorn, una davant de l'altra. La mostra davant és el costat actiu, aquell on caurà la vostra propera elecció de color. Un grapat de tecles úniques les accionen sense arribar als panells:</p>
+<table>
+<thead><tr><th>Drecera</th><th>Què fa</th></tr></thead>
+<tbody>
+<tr><td><kbd>D</kbd></td><td>Restableix l'emplenament i el contorn als seus valors per defecte.</td></tr>
+<tr><td><kbd>X</kbd></td><td>Alterna quin dels dos, emplenament o contorn, és el costat actiu.</td></tr>
+<tr><td><kbd>&#8679;X</kbd></td><td>Intercanvia els colors d'emplenament i contorn.</td></tr>
+<tr><td><kbd>/</kbd></td><td>Estableix el costat actiu a cap pintura.</td></tr>
+</tbody>
+</table>
+<p>Aquestes fan ràpides les moviments habituals: <kbd>X</kbd> per saltar entre pintar l'emplenament i el contorn, <kbd>/</kbd> per eliminar l'emplenament o el contorn i <kbd>D</kbd> per tornar a un inici senzill blanc i negre. Els emplenaments, els contorns i com s'estableixen es tracten a la pàgina <a href="/manual/appearance/">Color i aparença</a>.</p>

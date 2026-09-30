@@ -1,0 +1,165 @@
+<p class="lede">Alles dat verandert waar een object zit, hoe groot het is of welke kant het opkijkt, leeft hier: verplaatsen en schalen met de hand, exacte numerieke transformaties, uitlijnen en stapelen, live herhalingen, morfes, enveloppen en een vlakke vorm tot een vast lichaam maken.</p>
+
+<p>Sneltoetsen hieronder zijn geschreven in hun macOS-vorm. Op Windows en Linux leest u <kbd>⌘</kbd> als Ctrl, <kbd>⌥</kbd> als Alt en <kbd>⇧</kbd> als Shift.</p>
+
+<h2 id="transform-select-move">Selecteren en verplaatsen</h2>
+<p>Voordat u iets kunt transformeren, moet u zeggen wat. Greep hiernaartoe eerst: de selectiegereedschappen bepalen waar een sleep, een numeriek commando of een paneelveld op zal werken.</p>
+
+<h3 id="transform-selection-tools">De selectiegereedschappen</h3>
+<table>
+  <thead><tr><th>Gereedschap</th><th>Sneltoets</th><th>Wat het kiest</th></tr></thead>
+  <tbody>
+    <tr><td>Selectie-gereedschap</td><td><kbd>V</kbd></td><td>Hele objecten en groepen.</td></tr>
+    <tr><td>Directe selectie-gereedschap</td><td><kbd>A</kbd></td><td>Individuele ankerpunten en padsegmenten.</td></tr>
+    <tr><td>Groepselectie-gereedschap</td><td></td><td>Één object binnen een groep; elke verdere klik verbreedt naar de groep eromheen.</td></tr>
+  </tbody>
+</table>
+<p>Shift-klik voegt een object toe aan de selectie of laat het eruit vallen. Sleep op leeg canvas om een rechthoek te markeren, en houd <kbd>⇧</kbd> ingedrukt om wat de marquee vangt toe te voegen aan wat al is geselecteerd. Dubbelklikken op een groep met het Selectie-gereedschap stapt erin zodat u op één lid kunt werken zonder te degroeperen.</p>
+
+<h3 id="transform-moving">Een selectie verplaatsen</h3>
+<p>Sleep een geselecteerd object om het te verplaatsen. <kbd>⌥</kbd> ingedrukt houdend laat een kopie achter en sleept die in plaats daarvan, wat de snelste manier is om op plaats te dupliceren en te herpositioneren in één beweging. <kbd>⇧</kbd> ingedrukt houdend beperkt de verplaatsing tot 45° stappen gemeten vanaf de beperkingshoek die in Voorkeuren is ingesteld, en schakelt uitlijning uit; zonder <kbd>⇧</kbd> uitlijnt de selectie op nabijgelegen randen, midden en hoeken. Pijltoetsen duwen met het toetsenbordincrement, <kbd>⇧</kbd> met een pijl duwt tien keer zoveel, en <kbd>⌥</kbd> met een pijl duwt een kopie.</p>
+
+<h3 id="transform-bounding-box">Het begrenzingskader: schalen en draaien met de hand</h3>
+<p>Het begrenzingskader van de selectie draagt acht handvatten. Sleep eréén om te schalen: <kbd>⇧</kbd> behoudt de verhoudingen en <kbd>⌥</kbd> schaalt over het midden in plaats van over het tegenoverliggende handvat. Net buiten een hoek komt de pointer in de draaizone; sleep daar om de selectie over het midden van het kader te draaien, met <kbd>⇧</kbd> die op 45° vastzet. Na een draaiing blijft het kader met het werk schuin staan. <strong>Object &rsaquo; Transformeren &rsaquo; Begrenzingskader resetten</strong> maakt het weer vierkant zodat latere breedte- en hoogtebewerkingen langs de pagina-assen lezen.</p>
+
+<h2 id="transform-numeric">Numerieke transformaties</h2>
+<p>Slepen is snel maar benaderend. Wanneer een waarde exact moet zijn, of dezelfde op veel objecten, typt u. Het Transformeren-paneel bevat de live cijfers voor de selectie, en het <strong>Object &rsaquo; Transformeren</strong>-submenu bevat eenmalige commando's met een Kopie-optie.</p>
+
+<h3 id="transform-panel">Het Transformeren-paneel</h3>
+<p>Het Transformeren-paneel (<kbd>⇧F8</kbd>) toont X, Y, B en H in pixels voor de selectie; typ een waarde en druk op Return om het in te stellen. Daaronder, draait het ⟳-veld de selectie over een hoek en scheert het ⧄-veld het over één, elk terugkeerend naar nul zodra toegepast. Het paneel heeft iets geselecteerd nodig; met niets gekozen dimt het en zegt het dat.</p>
+<p>Het Eigenschappen-paneel herhaalt X, Y, B en H met een draaiingsveld en twee knoppen die de selectie horizontaal of verticaal over zijn eigen midden keren, zodat de meest voorkomende verplaatsingen binnen handbereik zijn zonder een tweede paneel te openen.</p>
+
+<h3 id="transform-commands">Verplaatsen, Draaien, Spiegelen, Schalen en Scheren</h3>
+<p><strong>Object &rsaquo; Transformeren</strong> bevat de numerieke commando's. Elk opent een klein dialoogvenster, en elk (behalve Verplaatsen, een directe verplaatsing) transformeert over het referentiepunt. Het Kopie-vakje in elk dialoogvenster past de verandering op een duplicaat toe en laat het origineel onaangeroerd, wat is hoe u een gespiegeld paar of een geschaalde echo in één stap bouwt.</p>
+<table>
+  <thead><tr><th>Commando</th><th>Sneltoets</th><th>Velden</th></tr></thead>
+  <tbody>
+    <tr><td>Verplaatsen…</td><td><kbd>⇧⌘M</kbd></td><td>Horizontaal, Verticaal, Kopie.</td></tr>
+    <tr><td>Draaien…</td><td></td><td>Hoek, Kopie.</td></tr>
+    <tr><td>Spiegelen…</td><td></td><td>As (Horizontaal of Verticaal), Hoek, Kopie.</td></tr>
+    <tr><td>Schalen…</td><td></td><td>Horizontaal %, Verticaal %, Kopie.</td></tr>
+    <tr><td>Scheren…</td><td></td><td>Scheerhoek, Ashoek, Kopie.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="transform-each-again">Transformeren elk en Opnieuw transformeren</h3>
+<p><strong>Transformeren elk…</strong> (<kbd>⌥⇧⌘D</kbd>) schaalt, verplaatst, draait en spiegelt elk geselecteerd object over <em>zijn eigen</em> midden in plaats van het gedeelde midden van de selectie. Zijn dialoogvenster neemt Schalen H en V, Verplaatsen H en V, een Draaihoek, Spiegelen X en Spiegelen Y-vinkjes, en Kopie. Greep hiervoor om een set objectjes te vervannen of uit te waaien zodat elk op zijn plaats draait en groeit in plaats van om de groep te draaien.</p>
+<p><strong>Opnieuw transformeren</strong> (<kbd>⌘D</kbd>) herhaalt de laatste transformatie op de huidige selectie. Verplaats een object, druk dan een paar keer op <kbd>⌘D</kbd>, en u krijgt een gelijkmatig gestapelde rij; combineer het met <kbd>⌥</kbd>-slepen van een kopie om met de hand herhalende patronen te bouwen.</p>
+
+<h2 id="transform-tools">De transformatie-gereedschappen en het referentiepunt</h2>
+<p>Het Draaien (<kbd>R</kbd>), Spiegelen (<kbd>O</kbd>), Schalen (<kbd>S</kbd>) en Scheren-gereedschap werken elk over een referentiepunt, getekend als een kleine kruisvisier. Het begint op het midden van de selectie; klik ergens op het canvas om het daar te verplaatsen, en iets anders selecteren zet het terug op het nieuwe midden. Dan sleept u op het canvas om te draaien, spiegelen, schalen of scheren over dat punt.</p>
+<p><kbd>⇧</kbd> beperkt elk gereedschap: 45° stappen voor Draaien en Spiegelen, gelijk horizontaal en verticaal voor Schalen, één as voor Scheren. <kbd>⌥</kbd> ingedrukt houdend tijdens de sleep transformeert een kopie en laat het origineel. <kbd>⌥</kbd>-klikken plaatst het referentiepunt en opent het numerieke dialoogvenster van dat gereedschap met het punt al ingesteld, zodat u een vorm over een hoek met een exacte hoek kunt draaien.</p>
+
+<h2 id="transform-free">Het Vrije transformatie-gereedschap</h2>
+<p>Het Vrije transformatie-gereedschap (<kbd>E</kbd>) zet verplaatsen, schalen, draaien, scheren en twee soorten vervorming op één begrenzingskader. Sleep binnen het kader om het te verplaatsen, sleep een handvat om te schalen, en sleep net buiten een hoek om te draaien, met <kbd>⇧</kbd> die op 45° vastzet. Gebruik het wanneer u meerdere soorten verandering in één beweging wilt proberen zonder van gereedschap te wisselen tussen elke.</p>
+<p>Het kader van het Selectie-gereedschap kan ook vervormen: houd <kbd>Ctrl</kbd> (of <kbd>&#8984;</kbd>) ingedrukt terwijl u een van zijn hoekhandvatten sleept om die hoek alleen te verplaatsen, in plaats van te schalen. Het werkt op vormen en op foto's eveneens; op pixels volgt een snel voorbeeld de sleep en het resultaat wordt uitgewerkt wanneer u op <kbd>Enter</kbd> drukt.</p>
+
+<h3 id="transform-free-widget">De widget</h3>
+<p>Een kleine widget zweeft naast het kader met vier knoppen, elk zichzelf noemend wanneer u erover beweegt: <strong>Beperken</strong>, <strong>Vrije transformatie</strong>, <strong>Perspectiefvervorming</strong> en <strong>Vrije vervorming</strong>. Beperken maakt schaalverhoudingen proportioneel zonder <kbd>⇧</kbd> ingedrukt te houden; met het aan, bevrijd <kbd>⇧</kbd> de verhoudingen in plaats daarvan. De twee vervormingsmodi laten alleen de vier hoekhandvatten over om aan te trekken.</p>
+
+<h3 id="transform-free-keys">Vervormen vanaf het toetsenbord</h3>
+<p>U kunt dezelfde vervormingen bereiken zonder de standaardmodus te verlaten. Houd <kbd>⌘</kbd> ingedrukt op een randhandvat om langs die rand te scheren. Houd <kbd>⌘</kbd> ingedrukt op een hoek om hem vrij op zichzelf te vervormen; voeg <kbd>⇧</kbd> toe om de reis van de hoek tot 45° te beperken. Houd <kbd>⌘⌥⇧</kbd> ingedrukt op een hoek voor perspectief, waar de naburige hoek de sleep weerspiegelt. Een modifier onderweg indrukken of loslaten schakelt de actie direct om, en de naam waar het eindigt, Schalen, Scheren, Perspectiefvervorming of Vrije vervorming, is wat de stap daarna in het Geschiedenis-paneel heet. Typen, geplaatste afbeeldingen en symboolinstanties kunnen niet worden vervormd; ze blijven zoals ze zijn, en Scissor zegt het u wanneer een sleep ze overslaat.</p>
+
+<h3 id="transform-free-reference">Het referentiepunt</h3>
+<p>Het referentiepunt zit in het midden van het kader als een kruisvisier, en u kunt het overal heen slepen; op zichzelf verplaatst het niets. Het kader draait en schaalt erover, en het reist met het werk wanneer u de selectie verplaatst. Zet het neer bij één van de negen punten van het kader (de vier hoeken, de vier randmiddens of het midden) en het vestigt zich op dat punt. <kbd>⌥</kbd> ingedrukt houdend tijdens het schalen negeert een geplaatst referentiepunt en schaalt over het midden. Een zijde met <kbd>⌘</kbd> scheren houdt ook een geplaatst referentiepunt stil.</p>
+
+<h3 id="transform-free-pins">De handvatten verplaatsen</h3>
+<p>Schakel <strong>Handvatten verplaatsen</strong> in de snelbalk (of de optiebalk) in terwijl Vrije transformatie actief is, en het slepen van een hoek van het kader verplaatst die hoek op zichzelf, zonder het werk aan te raken. Nabij een ankerpunt vestigt het zich erop. Schakel Handvatten verplaatsen weer uit en sleep een verplaatste hoek: de vorm schaalt zodat die hoek de pointer volgt, en elk ander punt behoudt dezelfde proportionele afstand van wat stil blijft, wat de tegenoverliggende hoek is, het geplaatste referentiepunt, of het midden terwijl <kbd>⌥</kbd> wordt ingedrukt. <kbd>⇧</kbd> behoudt de verhoudingen. Verplaatste hoeken reizen met het werk, en dubbelklikken op één zet alle vier terug op het kader.</p>
+
+<h2 id="transform-align-arrange">Uitlijnen, rangschikken en groeperen</h2>
+<p>Deze commando's stellen in hoe objecten op elkaar uitlijnen, welke voor welke zit, en welke worden verzameld, opgesloten of verborgen terwijl u aan de rest werkt.</p>
+
+<h3 id="transform-align">Uitlijnen en verdelen</h3>
+<p>Het Uitlijnen-paneel (<kbd>⇧F7</kbd>) heeft drie rijen. <strong>Objecten uitlijnen</strong> lijnt de selectie links, gecentreerd of rechts, en boven, midden of onder uit. <strong>Objecten verdelen</strong> spreidt drie of meer objecten zodat hun bovenkanten, midden, onderkanten, linkerranden, midden of rechterranden op gelijke intervallen vallen. <strong>Tussenruimte verdelen</strong> stelt een gelijkmatige tussenruimte tussen hen verticaal of horizontaal in. Het menu op het paneel kiest of alles op de selectie of op het bord uitlijnt. Uitlijnen heeft minstens één object nodig (een enkel object lijnt op het bord uit); verdelen heeft drie nodig, en het paneel grijst die knoppen uit totdat u ze heeft. De zes uitlijningen verschijnen ook onder <strong>Object &rsaquo; Uitlijnen</strong>.</p>
+
+<h3 id="transform-arrange">Rangschikken: stapelvolgorde</h3>
+<p>Elk object zit op een niveau in de stapel, en <strong>Object &rsaquo; Rangschikken</strong> verplaatst de selectie erdoorheen.</p>
+<table>
+  <thead><tr><th>Commando</th><th>Sneltoets</th></tr></thead>
+  <tbody>
+    <tr><td>Breng naar voren</td><td><kbd>⇧⌘]</kbd></td></tr>
+    <tr><td>Breng vooruit</td><td><kbd>⌘]</kbd></td></tr>
+    <tr><td>Breng achteruit</td><td><kbd>⌘[</kbd></td></tr>
+    <tr><td>Breng naar achteren</td><td><kbd>⇧⌘[</kbd></td></tr>
+  </tbody>
+</table>
+
+<h3 id="transform-grouping">Groeperen, vergrendelen en verbergen</h3>
+<dl>
+  <dt><strong>Groeperen</strong> (<kbd>⌘G</kbd>) en <strong>Degroeperen</strong> (<kbd>⇧⌘G</kbd>)</dt>
+  <dd>Verzamel objecten zodat ze als één bewegen en transformeren, of bevrijdt ze opnieuw. Een groep kan worden betreden door erop te dubbelklikken met het Selectie-gereedschap.</dd>
+  <dt><strong>Vergrendelen &rsaquo; Selectie</strong> (<kbd>⌘2</kbd>) en <strong>Alles ontgrendelen</strong> (<kbd>⌥⌘2</kbd>)</dt>
+  <dd>Vergrendelen maakt objecten onkiesbaar zodat ze op hun plaats blijven terwijl u eroverheen werkt; Alles ontgrendelen bevrijdt alles dat was vergrendeld.</dd>
+  <dt><strong>Verbergen &rsaquo; Selectie</strong> (<kbd>⌘3</kbd>) en <strong>Alles tonen</strong> (<kbd>⌥⌘3</kbd>)</dt>
+  <dd>Verbergen haalt objecten van het canvas zonder ze te verwijderen, wat een drukke scène tot het deel dat u bewerkt terugbrengt; Alles tonen brengt ze terug.</dd>
+</dl>
+
+<h2 id="transform-repeat">Live herhalingen</h2>
+<p><strong>Object &rsaquo; Herhalen</strong> bouwt veel kopieën uit één object en houdt ze live: bewerk het origineel en elke kopie volgt. Greep naar een herhaling wanneer het werk regelmatig is, een bloem van identieke blaadjes of een tegelraster van pictogrammen, zodat u één element kunt vormgeven en de rest het laat volgen.</p>
+<dl>
+  <dt><strong>Radiaal…</strong></dt>
+  <dd>Ringt de kopieën rond een midden. Het dialoogvenster stelt Exemplaren en Straal in.</dd>
+  <dt><strong>Raster…</strong></dt>
+  <dd>Legt de kopieën in rijen en kolommen. Het dialoogvenster stelt Kolommen, Rijen, Horizontale tussenruimte en Verticale tussenruimte in.</dd>
+  <dt><strong>Spiegel…</strong></dt>
+  <dd>Spiegelt de kopieën over een as. Het dialoogvenster stelt de as (verticaal of horizontaal) en een Compensatie in.</dd>
+</dl>
+<p>Met een herhaling geselecteerd, biedt het Eigenschappen-paneel dezelfde besturingselementen voor later afstellen: exemplaren en straal voor een radiale herhaling; kolommen, rijen en horizontale en verticale tussenruimte voor een raster; en de compensatie en spiegelas voor een spiegel. <strong>Vrijgeven</strong> verandert de kopieën in gewone, afzonderlijk bewerkbare kunst wanneer u klaar bent.</p>
+<figure class="shot">
+  <img src="img/repeat.gif" width="640" height="640" loading="lazy"
+       alt="Eén enkele blauw bloemblaadje herhaald rond een midden door een radiale herhaling, dat zich tot een twaalfbloemblaadjes bloem vult naarmate het aantal stijgt." />
+  <figcaption>Eén bloemblaadje en een radiale herhaling. Naarmate het aantal van één naar twaalf klimt, vult de bloem zich; vorm het ene bloemblaadje opnieuw en het hele verandert ermee.</figcaption>
+</figure>
+
+<h2 id="transform-morph">Morfes</h2>
+<p>Een morfe vult de kans tussen twee objecten met een reeks tussenvormen, elke een stap dichter bij de volgende. Het is het gereedschap voor schaduwovergangen tussen kleuren en voor gelijkmatig verdeelde herhalingen langs een pad.</p>
+<p>Het Morfe-gereedschap (<kbd>W</kbd>) morfé één object in een ander: klik het eerste, dan het tweede. Een derde klikken zet de ketting voort, en klikken in een bestaande morfe voegt dat object eraan toe. <strong>Object &rsaquo; Morfe</strong> bevat de rest:</p>
+<table>
+  <thead><tr><th>Commando</th><th>Sneltoets</th><th>Wat het doet</th></tr></thead>
+  <tbody>
+    <tr><td>Maken</td><td><kbd>⌥⌘B</kbd></td><td>Morfé de geselecteerde objecten samen.</td></tr>
+    <tr><td>Vrijgeven</td><td><kbd>⌥⇧⌘B</kbd></td><td>Geeft de sleutelobjecten terug en laat de stappen vallen.</td></tr>
+    <tr><td>Morfe-opties…</td><td></td><td>Stelt spatiëring en oriëntatie in (zie hieronder).</td></tr>
+    <tr><td>Uitbreiden</td><td></td><td>Verandert de tussenstappen in echte, bewerkbare objecten.</td></tr>
+    <tr><td>Rugvleugel vervangen</td><td></td><td>Buigt de reeks stappen langs een geselecteerd pad.</td></tr>
+    <tr><td>Rugvleugel omkeren</td><td></td><td>Wisselt welke kant van de rugvleugel elk sleutelobject zit.</td></tr>
+    <tr><td>Voor naar achter omkeren</td><td></td><td>Keert de stapelvolgorde van de stappen om.</td></tr>
+  </tbody>
+</table>
+<p><strong>Morfe-opties…</strong> stelt Spatiëring in op Gespecificeerde stappen (een vast aantal tussenstappen), Gespecificeerde afstand (een vaste kans in pixels, zoveel als erin passen) of Zachte kleur (zoveel stappen als het kost voor een zachte kleurmenging), en stelt Oriëntatie in op Uitlijnen op pagina of Uitlijnen op pad. Een morfe blijft live en volgt zijn sleutelobjecten, dus bewerken van beide uiteinden laat de hele reeks opnieuw stromen.</p>
+<figure class="shot">
+  <img src="img/morph.gif" width="760" height="316" loading="lazy"
+       alt="Een blauw ster die morfé naar een amber cirkel door een groeiende rij tussenvormen." />
+  <figcaption>Een morfe van een ster naar een cirkel. Naarmate het aantal stappen stijgt, vullen meer tussenvormen de kans, elke een beetje dichter bij de volgende.</figcaption>
+</figure>
+
+<h2 id="transform-envelope">Vormvervorming</h2>
+<p><strong>Object &rsaquo; Vormvervorming</strong> buigt werk om in een vorm te passen terwijl het eronder bewerkbaar blijft. Gebruik het om een logo op een banner te passen, een rij tekst te buigen, of een vlakke patroon in een buil te duwen. Er zijn drie manieren om eréén te maken.</p>
+<dl>
+  <dt><strong>Maken met vervorming…</strong> (<kbd>⌥⇧⌘W</kbd>)</dt>
+  <dd>Buigt de selectie met een van de ingebouwde vervormingsstijlen (Boog, Boogvorm, Buil, Vlag, Golf, Vis, Stijgen, Visoog, Opblazen, Samendrukken en de schelp- en boogvarianten), bestuurd door Buig-, Horizontale en Verticale hoeveelheden.</dd>
+  <dt><strong>Maken met bovenste object</strong> (<kbd>⌥⌘C</kbd>)</dt>
+  <dd>Gebruikt de voorste geselecteerde vorm als de enveloppe en giet alles eronder in die omtrek. Heeft twee of meer objecten nodig: de container boven, het werk eronder.</dd>
+  <dt><strong>Maken met mesh…</strong> (<kbd>⌥⌘M</kbd>)</dt>
+  <dd>Legt een raster van de rijen en kolommen die u vraagt over de selectie. Het blijft live: schakel over naar het Directe selectie-gereedschap (<kbd>A</kbd>) en sleep elke kruising van de mesh om het wat het bevat te buigen, zo vaak als u wilt.</dd>
+</dl>
+<p><strong>Vrijgeven</strong> geeft het werk terug zoals het was, samen met de enveloppevorm; <strong>Uitbreiden</strong> behoudt de buiging en laat de enveloppe vallen, vervormende paden achterlatend.</p>
+
+<h2 id="transform-3d">3D uit een vectorvorm</h2>
+<p><strong>Effect &rsaquo; 3D en Materialen</strong> verandert een vlakke vorm in een vast lichaam. Het blijft een live effect, dus het originele pad is er nog om te bewerken, en de kopie op het scherm wordt opnieuw gebouwd wanneer u het verandert.</p>
+<dl>
+  <dt><strong>Uitdraaien &amp; Afschuinen</strong></dt>
+  <dd>Geeft de vorm diepte, met een afgeschuinde rand als u die wilt.</dd>
+  <dt><strong>Roteren</strong></dt>
+  <dd>Draait een profiel rond een as tot een gedraaide vorm.</dd>
+  <dt><strong>Opblazen</strong></dt>
+  <dd>Blazen de vorm op alsof hij was gevuld.</dd>
+  <dt><strong>Vlak</strong></dt>
+  <dd>Kantelt de vlakke vorm in de ruimte zonder diepte toe te voegen.</dd>
+</dl>
+<p>Het 3D en Materialen-paneel draait het object op de X-, Y- en Z-assen, stelt de rotatie en hoogte van het licht in, en kiest een plastic, mat of metaal oppervlak, met Diepte- en Afschuin-velden voor het uitdraaien.</p>
+<figure class="shot">
+  <img src="img/3d-extrude.gif" width="620" height="620" loading="lazy"
+       alt="Een vlakke vectorster die wordt uitgedraaid tot een driedimensionale ster en wordt gedraaid om zijn diepte te tonen." />
+  <figcaption>Uitdraaien &amp; Afschuinen bouwt diepte uit een vlakke vorm, live. De ster blijft eronder een bewerkbaar pad.</figcaption>
+</figure>

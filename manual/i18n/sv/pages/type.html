@@ -1,0 +1,110 @@
+<p class="lede">Text i Scissor förblir live. Du kan redigera orden, typsnittet och avstånden när som helst, och texten ritas direkt på duken medan du skriver, så det du redigerar är det som skrivs ut och exporteras.</p>
+
+<p>Genvägarna nedan är skrivna i deras macOS-form. På Windows, läs <kbd>&#8984;</kbd> som <kbd>Ctrl</kbd>, <kbd>&#8997;</kbd> som <kbd>Alt</kbd> och <kbd>&#8679;</kbd> som <kbd>Shift</kbd>.</p>
+
+<h2 id="type-tools">Textverktygen</h2>
+<p>Textverktygen delar en plats i verktygsraden. Välj platsen och håll för att välja bland dem, och arbeta sedan på duken.</p>
+<table>
+<thead><tr><th>Verktyg</th><th>Genväg</th><th>Vad det gör</th></tr></thead>
+<tbody>
+<tr><td>Textverktyg</td><td><kbd>T</kbd></td><td>Klicka för punkttext, dra för en rektangulär ram av ytatext</td></tr>
+<tr><td>Ytatextverktyg</td><td></td><td>Dra ut en ram och skriv i den</td></tr>
+<tr><td>Text på bana-verktyg</td><td></td><td>Klicka på en bana för att köra text längs den</td></tr>
+<tr><td>Vertikaltextverktyg</td><td></td><td>Ställer upprätta tecken i kolumner</td></tr>
+<tr><td>Glyfredigeringsverktyg</td><td><kbd>&#8679;T</kbd></td><td>Flyttar, ändrar storlek och vrider ett tecken i taget</td></tr>
+</tbody>
+</table>
+<p>För att redigera text som redan finns på sidan, klicka på den med valfritt av textverktygen utom Glyfredigering för att sätta markören i den, eller dubbelklicka på den med markeringsverktyget (<kbd>V</kbd>). Tryck <kbd>Escape</kbd>, eller klicka bort, för att sluta redigera. Med det vanliga textverktyget, klicka på en öppen bana fäster text till den banan snarare än att starta ett nytt block, så du behöver inte alltid nå efter det dedikerade Text på bana-verktyget.</p>
+
+<h2 id="type-kinds">Punkt-, yta- och banbaserad text</h2>
+<p>Text kan sitta i dokumentet på tre sätt, och skillnaden är hur raderna mäts och var de bryts. Alla tre förblir redigerbara, tar samma tecken- och styckeinställningar, och kan förvandlas till konturer senare.</p>
+
+<h3 id="type-point">Punkttext</h3>
+<p>Klicka en gång med textverktyget och skriv. Texten växer från den enda punkten och bryts bara där du trycker <kbd>Return</kbd>: det finns ingen ram att mota in i. Nå efter punkttext för rubriker, etiketter, några ord displaytext, eller allt du kommer att positionera med ögat snarre än att hälla i en kolumn. Dess indrag och styckeavstånd har inget att mäta mot, så dessa kontroller har ingen effekt på punkttext; justeringen tas från det ankare du klickade på.</p>
+
+<h3 id="type-area">Ytatext</h3>
+<p>Dra ut en rektangel med textverktyget eller ytatextverktyget och texten motas in i ramen, och bryter rader automatiskt vid den högra kanten. Använd ytatext för brödtext, bildtexter, eller valfri text som måste stanna inom en given bredd. När det finns mer text än ramen kan hålla, döljs överskottet och ramen markeras som överflödande; gör ramen större, krymp texten, eller tråda överskottet in i en annan ram (se nedan). Indrag, första radsindrag, utrymme före och efter, och avstavning gäller alla ytatext.</p>
+
+<h3 id="type-on-a-path">Text på en bana</h3>
+<p>Klicka på en bana med text på bana-verktyget. Banan blir baslinjen och slutar vara konstverk i egen rätt, så den fylls inte längre eller kontureras. Nå efter detta för att köra en etikett runt en sköld, längs en kurva, eller över en forms topp. Markera resultatet och tre parenteser visas: en i början, en i slutet och en i mitten. Dra start- eller slutparentesen för att flytta var texten börjar och slutar längs banan, dra mittparentesen för att glida hela raden längs, och dra mittparentesen över till andra sidan banan för att vända texten. Text på en bana tar inga radbrytningar, så <kbd>Return</kbd> gör ingenting medan du redigerar den. Omforma den underliggande banan och texten följer dess nya böjningar.</p>
+<figure class="shot">
+  <img src="img/type-on-path.png" width="1700" height="798" loading="lazy"
+       alt="Orden 'Text löper längs valfri bana du ritar' följer en vågig banas böjningar i Scissor." />
+  <figcaption>Text satt på en vågig bana. Omforma banan och texten följer dess böjningar; baslinjen här visas streckad.</figcaption>
+</figure>
+
+<h2 id="type-character">Teckenpanelen</h2>
+<p>Teckenpanelen (<kbd>&#8984;T</kbd>, eller <strong>Fönster &gt; Text &gt; Tecken</strong>) innehåller allt som gäller själva bokstäverna. Med ett textobjekt markerat, täcker dess inställningar hela objektet: ändra typsnittet eller spänningen och varje tecken följer. Medan du skriver, gäller typsnitt, vikt, kursiv och storlek bara de markerade tecknen (se <a href="#type-mixed">Blandade stilar i en text</a>). Panelen gråas ut tills du redigerar text eller har ett textobjekt markerat.</p>
+
+<h3 id="type-font">Typsnitt, vikt, stil och storlek</h3>
+<p>Typsnittsmenyn är sökbar och håller de familjer du har använt nyligen högst upp. Den listar de typsnitt din webbläsare faktiskt kan rita med, lästa från systemet där det rapporterar dem och annars probade från en uppsättning vanliga familjer, så att listan matchar vad som renderas snarre än en fast katalog.</p>
+<p>Viktenmenyn erbjuder Light, Regular, Medium, Semibold, Bold och Heavy, men bara de vikter den valda familjen verkligen har är valbara: övrige är nedtonade. Kursivknappen bredvid slår den snedstilade stilen på och av. Storleken ställs in i pixlar, från storleksfältet.</p>
+
+<h3 id="type-mixed">Blandade stilar i en text</h3>
+<p>En text kan blanda storlekar, färger, vikter och kursiv. Medan du skriver, markera några tecken och ändra dem från snabbraden bredvid texten, alternativraden eller färgpanelen. Bara de markerade teckenen ändras, och resten av texten behåller sin egen stil. Utan något markerat gäller ändringen hela texten som vanligt. Stilarna följer med sina tecken som du fortsätter skriva, och de sparas i SVG- och PDF-exporter.</p>
+
+<h3 id="type-metrics">Radavstånd, spänning och kerning</h3>
+<dl>
+  <dt>Radavstånd</dt>
+  <dd>Avståndet från en baslinje till nästa, i pixlar. Lämna det på 0 för automatiskt radavstånd, som är 120% av storleken. Ställ in det större för att öppna upp raderna, eller mindre för att dra ihop en rubrik.</dd>
+  <dt>Spänning</dt>
+  <dd>Jämnt avstånd som läggs till eller tas från varje tecken, mätt i tusendelar av en em (så att det skalar med storleken). Positiva värden löser upp texten, negativa värden drar ihop den. Nå efter spänning för att passa en rad till en bredd eller för att utsmälta små versaler.</dd>
+  <dt>Kerning</dt>
+  <dd>Typsnittets egen par-för-par-avstånd mellan särskilda bokstäver, såsom gapet under ett versalt T. Det är på som standard, på kerningknappen i OpenType-raden (märkt AV). Stäng av det för att se typsnittets råa mått.</dd>
+</dl>
+
+<h3 id="type-align">Justering</h3>
+<p>Teckenpanelen har fyra justeringsknappar: vänster, centrerad, höger och mota. Vänster och höger är relativa till läsriktningen, så de betyder start och slut: höger-till-vänster-text satt till vänster justeras till visuell höger. Mota sprider varje rad för att fylla måttet, så det ändrar bara något där rader motas, vilket betyder ytatext och text på en bana snarre än enradig punkttext. För de finare motainställningarna (hur sista raden sätts) använd styckepanelen.</p>
+
+<h3 id="type-opentype">OpenType-funktioner och små versaler</h3>
+<p>Under <strong>OpenType</strong>-rubriken finns en rad med knappar, var och en växlar en funktion av den markerade texten på eller av:</p>
+<table>
+<thead><tr><th>Knapp</th><th>Funktion</th></tr></thead>
+<tbody>
+<tr><td>fi</td><td>Standardligaturer (på som standard)</td></tr>
+<tr><td>st</td><td>Valfria ligaturer</td></tr>
+<tr><td>TT</td><td>Alla versaler</td></tr>
+<tr><td>T&#7472;</td><td>Små versaler</td></tr>
+<tr><td>T&sup1;</td><td>Upphöjd</td></tr>
+<tr><td>T&#8321;</td><td>Nedsänkt</td></tr>
+<tr><td>&frac12;</td><td>Bråk</td></tr>
+<tr><td>1&#738;&#7511;</td><td>Ordinal</td></tr>
+<tr><td>&#119964;</td><td>Swash</td></tr>
+<tr><td>AV</td><td>Kerning (på som standard)</td></tr>
+</tbody>
+</table>
+<p>Alla versaler ritar varje bokstav som en versal utan att ändra den underliggande texten, så den är fortfarande gemener när du redigerar den. Små versaler ber typsnittet om dess små versalsformer. Upphöjd och nedsänkt ritar de berörda tecknen mindre och skiftar dem från baslinjen, för fotnotsmarkörer, ordinaländelser eller kemiska formler.</p>
+<p>Under knapparna väljer sifferstilsmenyn hur siffror sätts: Standard, Tabell-linjerande, Proportionell gammal stil, Proportionell linjerande eller Tabell-gammal stil. Tabellsiffror tar alla samma bredd, så att kolumner av siffror linjerar upp; gammalstilssiffror har upp- och nedåtriktade delar som sitter bättre i löpande text.</p>
+<p>Inte varje funktion kan förhandsvisas på duken. Ligaturer på eller av, kerning, versaler, små versaler och upphöjda/nedsänkta ritas som du redigerar. Valfria ligaturer, sifferstilarna, bråk, ordinal och swash registreras på texten och skrivs in i den exporterade <code>.svg</code> som typsnittsfunktionsinställningar, men duken visar dem inte, så behandla dem som exporttidsinställningar.</p>
+
+<h2 id="type-paragraph">Styckepanelen</h2>
+<p>Styckepanelen (<kbd>&#8997;&#8984;T</kbd>, eller <strong>Fönster &gt; Text &gt; Stycke</strong>) styr hur hela stycken sätts. Som med teckeninställningarna gäller dessa varje stycke av textobjektet.</p>
+<p>Sju justeringsknappar löper överst. De första tre är vanliga vänster, centrerad och höger. De nästa tre motar brödtexten i stycket och ställer bara sista raden, vänsterjusterad, centrerad eller högerjusterad. Den sista motar varje rad inklusive den sista, och sträcker den till hela måttet. Mota behöver något att mota in i, så det träder i kraft i ytatext, inte i punkttext.</p>
+<p>Under justeringsknapparna finns indragen: <strong>Vänster</strong> och <strong>Höger</strong> drar hela stycket in från sidans sidor, och <strong>Första</strong> indrag bara första raden. Ett negativt första radsindrag hänger första raden utanför de andra, vilket är hur man gör ett hängande indrag. <strong>Före</strong> och <strong>Efter</strong>-fälten lägger till utrymme ovanför och under varje stycke, ett renare sätt att separera stycken än en tom rad. <strong>Avstavningsväxeln</strong> låter långa ord brytas över rader för att jämna ut den högra kanten. Indrag och avstånd gäller ytatext; punkttext sätts från sitt eget ankare.</p>
+
+<h2 id="type-glyphs">Glyferpanelen</h2>
+<p>Glyferpanelen (<strong>Text &gt; Glyfer</strong>, <kbd>&#8997;&#8679;F11</kbd>) listar tecknen i det aktuella typsnittet efter uppsättning, från Basic Latin genom grekiska, kyrilliska, hebreiska, arabiska, interpunktion, valuta, pilar och mer, och håller de du har använt nyligen högst upp. Nå efter den för att infoga ett tecken ditt tangentbord inte kan skriva, såsom en pil, ett valutatecken eller en bokstav med accent. Dubbelklicka på en glyf för att skriva den vid textmarkören. Utan markör i någon text kopieras glyfen till urklippet istället, så att du kan klistra in den någon annanstans.</p>
+
+<h2 id="type-orientation">Vertikal och höger-till-vänster-text</h2>
+<p>Scissor kan sätta text ned över sidan liksom över den, och kan layoutera skrifter som läses höger till vänster. Båda fungerar i punkt-, yta- och banbaserad text, och redigeraren på duken följer samma riktning som det färdiga konstverket.</p>
+
+<h3 id="type-vertical">Vertikaltext</h3>
+<p>Vertikaltextverktyget sätter upprätta tecken som staplar nedåt, med varje ny rad som bildar en kolumn till vänster om den sista. I en vertikal ytaram motas en kolumn till en ny när den når botten. För att växla text du redan satt mellan horisontell och vertikal, välj <strong>Text &gt; Textorientering &gt; Horisontell</strong> eller <strong>Vertikal</strong>.</p>
+
+<h3 id="type-rtl">Höger till vänster och arabiska</h3>
+<p>Teckenpanelens riktningsmenyn erbjuder Auto, Vänster till höger och Höger till vänster. På Auto läses riktningen från texten själv, från dess första starka tecken, så att arabiska eller hebreiska flödar höger till vänster utan att du ställer in något. Arabiska bokstäver tar sina sammanslagna former, och en rad latinska ord inne i en höger-till-vänster-rad behåller sin egen vänster-till-höger-ordning. Ställ in menyn till Vänster till höger eller Höger till vänster när du vill tvinga riktningen snarre än att låta den upptäckas, till exempel för en rad som börjar med en siffra eller interpunktion.</p>
+
+<h2 id="type-touch">Glyfredigering</h2>
+<p>Glyfredigeringsverktyget (<kbd>&#8679;T</kbd>) flyttar, skalar och vrider ett tecken i taget medan den lämnar texten fullt redigerbar. Nå efter det för att skjuta en enda bokstav för effekt utan att bryta ordet isär till konturer. Välj verktyget och klicka på ett tecken: en ruta visas runt det enda tecknet med en knapp i varje hörn, en på högersidan, en längst ner och en svävande ovanför. Dra ett hörn för att skala i båda riktningarna, sidoknappen för bredd ensam, nederknappen för höjd ensam, och överknappen för att vrida tecknet. Håll ned <kbd>&#8679;</kbd> medan du drar ett hörn för att behålla proportionerna, eller medan du vrid för att fästa vinkeln. <kbd>Backspace</kbd> eller <kbd>Delete</kbd> sätter tillbaka tecknet där texten satte det, och <kbd>Escape</kbd> släpper valet. Eftersom texten fortfarande är text genomgående kan du fortsätta redigera orden runt tecknet du flyttade.</p>
+
+<h2 id="type-flow">Trådning och textomflöde</h2>
+<p>Två funktioner låter text dela utrymme med resten av en layout: trådning kör en berättelse genom flera ramar, och textomflöde trycker text bort från ett objekt den överlappar.</p>
+
+<h3 id="type-threading">Trådad text</h3>
+<p>Markera två eller flera ytatextobjekt och välj <strong>Text &gt; Trådad text &gt; Skapa</strong>. Deras text förenas till en berättelse som flödar från ram till ram i staplingsordning, bakifrån och fram, och redigeras alltid från den första ramen. Använd trådning för att köra en artikel över kolumner eller sidor: när du lägger till eller tar bort text, räknas den om genom kedjan. Varje ram visar en port i sitt övre vänstra och nedre högra hörn, med en linje ritad till ramen texten fortsätter i. Ett rött plus i stället för den utgående porten betyder att det finns mer text än ramen kan hålla. <strong>Frigör markering</strong> tar de markerade ramarna ur sin tråd, och <strong>Ta bort trådning</strong> bryter hela tråden med varje ram behållande den text den visade.</p>
+
+<h3 id="type-wrap">Textomflöde</h3>
+<p>För att tryka text bort från en form, markera formen och välj <strong>Objekt &gt; Textomflöde &gt; Skapa</strong>. Ytatext som sitter under objektet flödar sedan runt det. Omflödet följer objektets kontur, inte dess avgränsningsram, så att text kan krama en cirkel eller en oregelbunden silhuett. <strong>Textomflödesalternativ&#8230;</strong> ställer in det avstånd som hålls mellan objektet och texten, i pixlar, och kan invertera omflödet så att texten löper inne i formen istället för runt den. <strong>Frigör</strong> tar bort omflödet.</p>
+
+<h2 id="type-outlines">Konvertera text till konturer</h2>
+<p>Markera lite text och välj <strong>Text &gt; Skapa konturer</strong> (<kbd>&#8679;&#8984;O</kbd>) för att förvandla den till banor. Nå efter detta när du behöver omforma bokstavsformerna för hand, garantera att texten ser identisk ut på en maskin som saknar typsnittet, eller använda bokstäverna som en form att kombinera med annat konstverk. Bokstavsformerna spåras från typsnittets egna glyfer i hög upplösning, med passaren som lämna verkliga hörna skarpta medan den slätar kurvorna, och resultatet behåller textens fyllning, kontur, namn, opacitet och blandningsläge. Orden är inte längre redigerbara som text efteråt, så behåll en kopia om du kan behöva ändra dem, eller ångra med <kbd>&#8984;Z</kbd>.</p>

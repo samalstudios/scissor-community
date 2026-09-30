@@ -1,0 +1,357 @@
+<p class="lede">Verktøylinjen løper nedover langs venstre side av vinduet og holder hvert tegne-, redigerings- og visningsverktøy. Hver plass er ett enkelt verktøy eller en gruppe med beslektede; denne siden lister dem alle op, i rekkefølgen de sitter i verktøylinjen, med tasten som velger hvert og hva det er for.</p>
+
+<p>Trykk og hold en plass, eller høyreklikk den, for å åpne flyouten og velge et annet verktøy fra gruppen. En verktøys snarvei er ett enkelt tastetrykk, og det fungerer når du ikke skriver i tekst eller et felt.</p>
+
+<p>Snarveiene nedenfor er skrevet i macOS-form. På Windows leser du <kbd>&#8997;</kbd> som Alt, <kbd>&#8984;</kbd> som Ctrl og <kbd>&#8679;</kbd> som Shift.</p>
+
+<p>Tre vaner gjelder for nesten hvert verktøy:</p>
+<ul>
+<li>Hold mellomromstasten for å låne Håndverktøyet, og slipp for å gå tilbake til det du brukte.</li>
+<li>Hold <kbd>&#8984;</kbd> for å låne Utvalgsverktøyet på samme måte. Det frie transformasjonsverktøyet er unntaket: det leser <kbd>&#8984;</kbd> selv.</li>
+<li><kbd>Esc</kbd> forlater en dra eller en sti du er halvveis med å tegne, og etterlater kunstverket slik det var.</li>
+</ul>
+
+<p>To plasser (Omforming- og Print Tiling-verktøyene) er oppført for fullstens skyld, men har ingen bakinnføring ennå. Verktøylinjen merker dem som kommer snart, og motoren slår dem ned.</p>
+
+<h2 id="tools-selecting">Utvalgsverktøy</h2>
+<p>Disse fire velger ut hva du vil jobbe med videre. Grip etter Utvalgsverktøyet for hele objekter, Direkte utvalgsverktøyet for anker og segmenter inni en sti, Auto-Velg for å samle opp alt som er malt likt, og Lasso for å feie opp en klynge anker for hånd.</p>
+
+<h3 id="tools-selection">Utvalg</h3>
+<table>
+<thead><tr><th>Verktøy</th><th>Snarvei</th><th>Hva det gjør</th></tr></thead>
+<tbody>
+<tr><td>Utvalgsverktøy</td><td><kbd>V</kbd></td><td>Klikk på et objekt for å velge det hele, <kbd>&#8679;</kbd>-klikk for å legge til eller fjerne ett, og dra over tomt lerret for en markeringsrektangel. Dra inne i utvalget for å flytte det, med <kbd>&#8679;</kbd> som holder flyttingen til 45&deg; trinn og <kbd>&#8997;</kbd> som etterlater en kopi.</td></tr>
+</tbody>
+</table>
+<p>Med et objekt valgt, bærer avgrensningsrammen åtte håndtak. Dra et håndtak for å skalere, og hold <kbd>&#8679;</kbd> for å beholde proporsjonene og <kbd>&#8997;</kbd> for å skalere om midten; dra rett utenfor et hjørne for å rotere, med <kbd>&#8679;</kbd> som fester til 45&deg;. Dobbeltklikk trer inn i en gruppe og jobber inni den, dobbeltklikk tekst for å redigere den, dobbeltklikk en symbolinstans for å redigere symbolet som hver instans tegner, og dobbeltklikk bort fra kunstverket for å trå ut igjen.</p>
+<p>Redigerbare former bærer sine egne skjermelementer: dra et hjørneskjermelement for å runde alle hjørnene av formen av på én gang, eller <kbd>&#8997;</kbd>-klikk det for å trå hjørnet til neste type. Dette er verktøyet du vil tilbringe mest tid i, så det er verdt å lære håndtakene sine godt.</p>
+
+<h3 id="tools-direct-selection">Direkte utvalg og Gruppeutvalg</h3>
+<table>
+<thead><tr><th>Verktøy</th><th>Snarvei</th><th>Hva det gjør</th></tr></thead>
+<tbody>
+<tr><td>Direkte utvalgsverktøy</td><td><kbd>A</kbd></td><td>Klikk på et anker, et håndtak eller et segment, og dra det for å omforme stien; en markeringsrektangel over tomt lerret plukker ankerne inni opp. <kbd>&#8679;</kbd> legger til hva som er valgt og holder en dra til 45&deg;, og <kbd>&#8997;</kbd> mens du drar et håndtak bryter paret slik at ankeret blir et hjørne.</td></tr>
+<tr><td>Gruppeutvalgsverktøy</td><td>&ndash;</td><td>Klikk på et objekt for å velge det; klikk det igjen for å ta med gruppen det hører til, og igjen for gruppen over det.</td></tr>
+</tbody>
+</table>
+<p>Bruk Direkte utvalgsverktøyt til å finjustere en form etter at den er tegnet: dyt ett anker, trek ett enkelt håndtak, eller omform en bue. Det drar også kryssingene til en konvolutts mesh, og bøyer hva konvolutten holder, og det runder ett hjørne av en live form av om gangen i stedet for alle. Gruppeutvalgsverktøyet er den raskeste måten å nå et objekt som er begravet i geneste grupper uten å trå inn og ut av dem.</p>
+
+<h3 id="tools-magic-wand">Auto-Velg</h3>
+<table>
+<thead><tr><th>Verktøy</th><th>Snarvei</th><th>Hva det gjør</th></tr></thead>
+<tbody>
+<tr><td>Auto-Velg-verktøy</td><td><kbd>Y</kbd></td><td>Klikk på et objekt for å velge hvert objekt som er malt likt. Hva som som likt (fyll, linje, linjetykkelse, opasitet, blandingsmodus) angis i Auto-Velg-panelet, og <kbd>&#8679;</kbd> legger de nye treffene til i utvalget.</td></tr>
+</tbody>
+</table>
+<p>Grip etter dette når du vil endre hver form av én farge på én gang: klikk på en rød, og farg deretter hele utvalget på én gang.</p>
+
+<h3 id="tools-lasso">Lasso</h3>
+<table>
+<thead><tr><th>Verktøy</th><th>Snarvei</th><th>Hva det gjør</th></tr></thead>
+<tbody>
+<tr><td>Lassoverktøy</td><td><kbd>Q</kbd></td><td>Dra en fri sløyfe for å velge ankerne inni den. <kbd>&#8679;</kbd> legger dem til de allerede valgte ankerne.</td></tr>
+</tbody>
+</table>
+<p>Bruk det når ankerne du vil ha ikke sitter i en pen rektangel, slik at en markeringsrektangel ville fange for mye eller for lite.</p>
+<p>Denne plassen inneholder også pikselutvalgsverktøyene - <strong>Rektangulær markeringsrektangel</strong>, <strong>Elliptisk markeringsrektangel</strong> og <strong>Lasso-markeringsrektangel</strong> - som tegner en myrtebevegelse-utvalg på et piksellag i stedet for å velge vektoranker. De dekkes på <a href="/manual/pixels/">Piksellag</a>-siden.</p>
+
+<h2 id="tools-pen-type">Pennen, krumingen og teksten</h2>
+<p>Verktøyene som legger nye stier og tekst. Pennfamilien gir deg nøyaktig kontroll over hvert anker og håndtak, Krumingsverktøyet passer en myk bue gjennom punkter du plasserer, og Tekstverktøyene setter punkt-, område-, sti- og vertikal tekst.</p>
+
+<h3 id="tools-pen">Pennfamilien</h3>
+<table>
+<thead><tr><th>Verktøy</th><th>Snarvei</th><th>Hva det gjør</th></tr></thead>
+<tbody>
+<tr><td>Pennverktøy</td><td><kbd>P</kbd></td><td>Klikk for å slippe et hjørneanker, eller trykk og dra for å trekke glatte håndtak ut; klikk på første anker for å lukke stien. <kbd>&#8679;</kbd> holder det nye punktet eller håndtaket på 45&deg; trinn, og <kbd>&#8997;</kbd> mens du drar bryter håndtakene slik at stien forlater ankeret på sin egen vinkel.</td></tr>
+<tr><td>Legg til ankerpunkt-verktøy</td><td><kbd>+</kbd></td><td>Klikk på et segment for å legge til et anker der, uten å endre stiens form.</td></tr>
+<tr><td>Fjern ankerpunkt-verktøy</td><td><kbd>&#8722;</kbd></td><td>Klikk på et anker for å fjerne det, segmentene på begge sider sammenføyende.</td></tr>
+<tr><td>Ankerpunkt-verktøy</td><td><kbd>&#8679;C</kbd></td><td>Dra et anker for å trekke et matchet par håndtak ut, eller klikk det for å trekke håndtakene tilbake og etterlate et hjørne. Dra ett håndtak på egen hånd for å bevege den siden alene; <kbd>&#8679;</kbd> holder det på 45&deg;.</td></tr>
+</tbody>
+</table>
+<p>Pennverktøyet er arbeidshesten for nøyaktig tegning, fra en logo-omtrek til en skriftsti. Mens det har en sti underveis, fullfører <kbd>Enter</kbd> eller <kbd>Esc</kbd> den og tar <kbd>Backspace</kbd> siste ankeret tilbake. De tre hjelperne legger til, fjerner og konverterer anker på en ferdig sti; pennen og blyanten behandles dypere på <a href="/manual/paths/">Stier</a>-siden.</p>
+
+<h3 id="tools-curvature">Kruming</h3>
+<table>
+<thead><tr><th>Verktøy</th><th>Snarvei</th><th>Hva det gjør</th></tr></thead>
+<tbody>
+<tr><td>Krumingsverktøy</td><td><kbd>&#8679;~</kbd></td><td>Klikk for å slippe punkter og en myk bue blir passet gjennom dem; <kbd>&#8997;</kbd>-klikk slipper et hjørnepunkt i stedet. Dra et punkt for å flytte det, dobbeltklikk et punkt for å bytte det mellom mykt og hjørne, klikk første punkt for å lukke stien, og dobbeltklikk bort fra den for å fullføre.</td></tr>
+</tbody>
+</table>
+<p>Grip etter Krumingsverktøyet når du vil ha en flytende linje og heller vil plassere punkter og la Scissor regne ut hådstakene enn å trekke hvert selv.</p>
+
+<h3 id="tools-type">Tekst</h3>
+<table>
+<thead><tr><th>Verktøy</th><th>Snarvei</th><th>Hva det gjør</th></tr></thead>
+<tbody>
+<tr><td>Tekstverktøy</td><td><kbd>T</kbd></td><td>Klikk for punkttekst, dra for et rektangulært ramme av områdetekst, og klikk på eksisterende tekst for å redigere den. Å klikke på en åpen sti setter teksten til å løpe langs den stien.</td></tr>
+<tr><td>Områdetekstverktøy</td><td>&ndash;</td><td>Dra ut rammen og skriv i den.</td></tr>
+<tr><td>Tekst på sti-verktøy</td><td>&ndash;</td><td>Klikk en sti og teksten løper langs den. Stien blir grunnlinjen, slik at den slutter å være kunstverk i seg selv.</td></tr>
+<tr><td>Vertikal tekstverktøy</td><td>&ndash;</td><td>Det samme som Tekstverktøyet, bortsett fra at tekstlinjen løper nedover siden i stedet for på tvers av den.</td></tr>
+<tr><td>Tegnredigeringsverktøy</td><td><kbd>&#8679;T</kbd></td><td>Klikk et tegn for å plukke det ut av sin linje, og dra det for å flytte det, dra en hjørneknop for å skalere det eller knoppen over for å rotere det. <kbd>&#8679;</kbd> holder en hjørneskala proporsjonell og fester rotasjonen til 11.25&deg; trinn, og <kbd>Delete</kbd> setter tegnet tilbake der teksten satte det.</td></tr>
+</tbody>
+</table>
+<p>Tekstverktøyet alene dekker det meste arbeidet: klikk for en overskrift, dra en ramme for et avsnitt. Sideknappene på Tegnredigeringsrammen strekker tegnet én vei alene, på tvers for bredde og langs for høyde, slik at du kan trekke individuelle bokstaver rundt en tittel uten å brike dem ut av teksten. Tekst behandles fullstendig på <a href="/manual/type/">Tekst</a>-siden.</p>
+
+<h2 id="tools-lines-shapes">Linjer og former</h2>
+<p>Alt som tegner en ferdig form: rette linjer, buer og spiraler, ruter av linjer, og rektanglene, ellipsene, polygonene og stjernene waaruit du een tekening opbouwt.</p>
+
+<h3 id="tools-lines">Linjer, buer, spiraler og ruter</h3>
+<table>
+<thead><tr><th>Verktøy</th><th>Snarvei</th><th>Hva det gjør</th></tr></thead>
+<tbody>
+<tr><td>Linjestykke-verktøy</td><td><kbd>\</kbd></td><td>Dra for å tegne en rett linje. <kbd>&#8679;</kbd> holder den på 45&deg; trinn og <kbd>&#8997;</kbd> tegner den fra midten i stedet for fra enden.</td></tr>
+<tr><td>Bue-verktøy</td><td>&ndash;</td><td>Dra ut rammen fyller buen; <kbd>&#8679;</kbd> gjør rammen firkantet. Piltastene bøyer buen flatere eller fyllere, <kbd>C</kbd> lukker og åpner den, og <kbd>F</kbd> eller <kbd>X</kbd> vender hvilken vei den buer.</td></tr>
+<tr><td>Spiral-verktøy</td><td>&ndash;</td><td>Dra ut fra midten: avstanden angir radiusen og retningen angir hvor spiralen begynner. <kbd>&#8997;</kbd> reverserer vindingen, <kbd>R</kbd> reverserer den for godt, og piltastene legger til og fjerner segmenter.</td></tr>
+<tr><td>Rektangulær rute-verktøy</td><td>&ndash;</td><td>Dra rutenettet ut, med <kbd>&#8997;</kbd> som tegner fra midten og <kbd>&#8679;</kbd> som holder det firkantet. Piltastene opp og ned endrer antall rader, venstre og høyre kolonnene.</td></tr>
+<tr><td>Polær rute-verktøy</td><td>&ndash;</td><td>Dra rutenettet ut, med <kbd>&#8997;</kbd> som tegner fra midten og <kbd>&#8679;</kbd> som holder det rundt. Piltastene opp og ned endrer de konsentriske ringene, venstre og høyre de radiale eakene.</td></tr>
+</tbody>
+</table>
+<p>De to ruteverktøyene lager én sti per linje, slik at hver linje forblir valgbar på egen hånd: bruk det rektangulære ruteret for tabeller, kalendere og oppsettstillater, og det polære ruteret for dartbord, radardiagrammer og klokkeskiver. De tegner rutekunst du beholder. Det er en annen ting enn tavlens bakgrunnsrute, skjermtegnehjelpemidlet du slår på med <strong>Vis &rsaquo; Ruter &rsaquo; Vis ruter</strong>, som aldri skrives ut og kommer i sju typer (kvadratisk, isometrisk, heksagonal, skjev, gylden snitt, mønster og perspektiv). Bakgrunnsrutene behandles på <a href="/manual/grids/">Rutenett</a>-siden. Et separat <strong>Ruteform-verktøy</strong> (<kbd>&#8679;G</kbd>) bygger en fylt sti ved å klikke eller dra over cellene i det bakgrunnsruteet - en rask måte å legge solide blokker på et isometrisk eller heksagonalt rutenett.</p>
+
+<h3 id="tools-shapes">Rektangeler, ellipser og andre former</h3>
+<table>
+<thead><tr><th>Verktøy</th><th>Snarvei</th><th>Hva det gjør</th></tr></thead>
+<tbody>
+<tr><td>Rektangelverktøy</td><td><kbd>M</kbd></td><td>Dra for å tegne et rektangel. <kbd>&#8679;</kbd> holder det firkantet og <kbd>&#8997;</kbd> tegner det fra midten.</td></tr>
+<tr><td>Avrundet rektangelverktøy</td><td>&ndash;</td><td>Samme dra, med avrundede hjørner; piltastene opp og ned får hjørneradiusen til å krympe og vokse mens du tegner.</td></tr>
+<tr><td>Ellipseverktøy</td><td><kbd>L</kbd></td><td>Dra for å tegne en ellips, med <kbd>&#8679;</kbd> for en sirkel og <kbd>&#8997;</kbd> for å tegne fra midten.</td></tr>
+<tr><td>Polygonverktøy</td><td>&ndash;</td><td>Dra ut fra midten; retningen på draet roterer polygonet, og <kbd>&#8679;</kbd> holder det oppreist. Piltastene legger til og fjerner sider.</td></tr>
+<tr><td>Stjerneverktøy</td><td>&ndash;</td><td>Dra ut fra midten, og roter stjernen mens du går, med <kbd>&#8679;</kbd> som holder den oppreist. Piltastene legger til og fjerner punkter.</td></tr>
+<tr><td>Flare-verktøy</td><td>&ndash;</td><td>Dra én gang for å angi midten og størrelsen på flarens halo, og dra en andre gang for å spre ringene over kunstverket. Mens du drar, endrer piltastene venstre og høyre antall ringer og piltastene opp og ned antall stråler.</td></tr>
+</tbody>
+</table>
+<p>Disse lager live former: de beholder parameterne sine, slik at du kan endre størrelsen på et rektangel eller punkttallet på en stjerne lenge etter at du har tegnet det. Et klikk i stedet for en dra med dem åpner en dialogboks, slik at du kan gi formen eksakte mål i stedet. Flare-verktøyet svarer på et klikk med en flare av størrelsen dets alternativer ber om.</p>
+
+<h2 id="tools-brush-erase">Pensler, blyanter og slett</h2>
+<p>Frihandsverktøyene. Mal et strøk som følger pekeren, skissér en grov sti og la Scissor rydde den opp, stell og eksisterende stier, eller gni kunstverk bort. To plasser her når også raster-siden av et dokument: Verfpenselen maler piksler og Pikselsletten tømmer dem.</p>
+
+<h3 id="tools-brushes">Pensler</h3>
+<table>
+<thead><tr><th>Verktøy</th><th>Snarvei</th><th>Hva det gjør</th></tr></thead>
+<tbody>
+<tr><td>Verfpenselverktøy</td><td><kbd>B</kbd></td><td>Dra for å tegne frihånd; strøket jevnes ut mens det tilpasses buer, og det beholder gjeldende pensel og linje.</td></tr>
+<tr><td>Fyllpenselverktøy</td><td><kbd>&#8679;B</kbd></td><td>Tegner samme strøk, men omtrekker det til en fylt form og fletter det sammen med ethvert kunstverk det rører som deler dets fyll.</td></tr>
+<tr><td>Penselverktøy</td><td>&ndash;</td><td>Maler rasterfarge rett på et piksellag i gjeldende fyllfarge, og lager først et piksellag hvis det ikke er noen. I motsetning til Verfpenselen er merket ikke en sti du kan omforme senere: det blir en del av bildet.</td></tr>
+</tbody>
+</table>
+<p>Bruk Verfpenselen for uttrykksfulle, kalligrafiske strøk som forblir redigerbare, og Fyllpenselen når du heller vil bygge opp en solid fylt form enn en streket linje. <kbd>[</kbd> og <kbd>]</kbd> gjør pennen mindre og større. Penselverktøyet deler denne plassen, men maler piksler i stedet for en sti, for skygging og tekstur, og <strong>Malingsbøtten</strong> deler den også, og flommer et sammenhengende område av et piksellag med fyllfargen. Maling på piksellag behandles på <a href="/manual/pixels/">Piksellag</a>-siden.</p>
+
+<h3 id="tools-pencil">Blyanten og sti-pleierne</h3>
+<table>
+<thead><tr><th>Verktøy</th><th>Snarvei</th><th>Hva det gjør</th></tr></thead>
+<tbody>
+<tr><td>Skisseverktøy</td><td><kbd>&#8679;N</kbd></td><td>Tegn grott og strøket blir den skarpe formen du mente. Sjablèring over kunstverk ponser ut hva sjablèringen dekker.</td></tr>
+<tr><td>Blyantverktøy</td><td><kbd>N</kbd></td><td>Dra frihånd og strøket tilpasses glatte buer. Hold <kbd>&#8997;</kbd> mens du slipper for å lukke stien, noe som også skjer av seg selv hvis du fullfører nær hvor du startet.</td></tr>
+<tr><td>Jevn-verktøy</td><td>&ndash;</td><td>Mal langs en sti for å jevne ut håndtakene og la ankerene som knapt buer den falle; en større penn jevner hardere.</td></tr>
+<tr><td>Stislett-verktøy</td><td>&ndash;</td><td>Mal langs en sti for å gni ut delen du dekker.</td></tr>
+<tr><td>Sammenføy-verktøy</td><td>&ndash;</td><td>Gni over to åpne ender for å føye dem til én sti.</td></tr>
+</tbody>
+</table>
+<p>Blyanten er den raskeste måten å skissere en form for hånd; Shaper er for når du vil at en grov gest skal lese som en pen rektangel, ellips eller linje. De siste tre steller eksisterende stier: <kbd>[</kbd> og <kbd>]</kbd> endrer størrelsen på Jevn-, Stislett- og Sammenføy-penslene. Med kunstverk valgt, virker disse tre på utvalget alene; uten noe valgt, virker de på enhver sti de når.</p>
+
+<h3 id="tools-cutting">Sletting og kutting</h3>
+<table>
+<thead><tr><th>Verktøy</th><th>Snarvei</th><th>Hva det gjør</th></tr></thead>
+<tbody>
+<tr><td>Slettverktøy</td><td><kbd>&#8679;E</kbd></td><td>Dra en rund penn for å trekke fra objekter. Med et utvalg, blir bare de valgte objektene slettet; ellers hver ulåste sti, og <kbd>[</kbd> og <kbd>]</kbd> endrer pennestørrelsen.</td></tr>
+<tr><td>Pikselslettverktøy</td><td>&ndash;</td><td>Gni maling av et piksellag, og tømmer det til gjennomsiktig slik at det som sitter under vises gjennom. Det fungerer på piksellag hvor Slettet fungerer på vektorstier; <kbd>[</kbd> og <kbd>]</kbd> endrer pennestørrelsen.</td></tr>
+<tr><td>Saksverktøy</td><td><kbd>C</kbd></td><td>Klikk et segment eller et anker for å kutte stien der. En lukket sti åpnes på kuttet; en åpen sti brettes i to objekter.</td></tr>
+<tr><td>Kniv</td><td>&ndash;</td><td>Dra over objekter for å kutte dem i separate stykker. <kbd>&#8997;</kbd> kutter i en rett linje og <kbd>&#8679;</kbd> holder den linjen på 45&deg; trinn.</td></tr>
+</tbody>
+</table>
+<p>Slettet skjærer former ut av fylt kunstverk som å gni ut blyant; Saksen gjør ett rent kutt på et punkt; Kniven skjærer hele objekter i stykker langs linjen du tegner. Pikselsletten deler Slettets plass, men hører til raster-siden, på <a href="/manual/pixels/">Piksellag</a>-siden.</p>
+<p>Nok en verktøylinjplass er helt raster: <strong>Dodge</strong>, <strong>Brenn</strong> og <strong>Svamp</strong> retusjeringspensler lysner, gjør mørkere og metter pikslerne som allerede er på et lag. De maler som Pennen og behandles, sammen med resten av pikselredigering, på <a href="/manual/pixels/">Piksellag</a>-siden.</p>
+
+<h2 id="tools-transform">Transformerende</h2>
+<p>Verktøyene som flytter, roterer, speiler, skalerer, krenger, forvrenger og omformer det som allerede er tegnet. Hvert transformasjonsverktøy virker om et referansepunkt, som starter på midten av utvalget; <kbd>&#8997;</kbd>-klikk setter det punktet der du klikker og åpner verktøyets dialog for nøyaktige verdier. Med individuelle anker valgt, transformerer disse verktøyene die anker i stedet for hele objekter.</p>
+
+<h3 id="tools-rotate-reflect">Rotere og Speile</h3>
+<table>
+<thead><tr><th>Verktøy</th><th>Snarvei</th><th>Hva det gjør</th></tr></thead>
+<tbody>
+<tr><td>Roter-verktøy</td><td><kbd>R</kbd></td><td>Dra rundt referansepunktet for å rotere utvalget, med <kbd>&#8679;</kbd> som fester til 45&deg; og <kbd>&#8997;</kbd> som roterer en kopi og etterlater originalen. <kbd>&#8997;</kbd>-klikk setter referansepunktet der du klikket og åpner Roter-dialogen.</td></tr>
+<tr><td>Speilverktøy</td><td><kbd>O</kbd></td><td>Dra for å svinge speilaksen gjennom referansepunktet, med <kbd>&#8679;</kbd> som fester den til 45&deg;. <kbd>&#8997;</kbd>-klikk angir referansepunktet og åpner Speil-dialogen, og <kbd>&#8997;</kbd> mens du drar speiler en kopi.</td></tr>
+</tbody>
+</table>
+<p>Grip etter Roter-verktøyet for å rotere kunstverk om et valgt dreipunkt i stedet for sin egen midte, og Speilverktøyet for å bygge en symmetrisk tegning: speil en kopi over en valgt akse og de to halvene forblir matchet. Begge verktøyene starter på midten av utvalget, og å velge noe annet setter referansepunktet tilbake dit.</p>
+
+<h3 id="tools-scale-shear">Skalér, Krenge og Omforme</h3>
+<table>
+<thead><tr><th>Verktøy</th><th>Snarvei</th><th>Hva det gjør</th></tr></thead>
+<tbody>
+<tr><td>Skalér-verktøy</td><td><kbd>S</kbd></td><td>Dra bort fra referansepunktet for å få utvalget til å vokse og mot det for å krympe det; <kbd>&#8679;</kbd> beholder proporsjonene og <kbd>&#8997;</kbd> skalerer en kopi. <kbd>&#8997;</kbd>-klikk angir referansepunktet og åpner Skalér-dialogen.</td></tr>
+<tr><td>Krenge-verktøy</td><td>&ndash;</td><td>Dra for å kantele utvalget om referansepunktet; <kbd>&#8679;</kbd> setter kantlingen på hvilken aksen din dra helter mot. <kbd>&#8997;</kbd>-klikk angir referansepunktet og åpner Krenge-dialogen.</td></tr>
+<tr><td>Omforme-verktøy</td><td>&ndash;</td><td>Oppført i verktøylinjen, men ennå ikke implementert; paletten merker det som kommer snart.</td></tr>
+</tbody>
+</table>
+<p>Bruk Skalér-verktøyet når du vil skalere kunstverk om et fast punkt i stedet for et avgrensningsrammehåndtak, og Krenge-verktøyet for å kantele en form for en kastskygge eller en kursiv følelse.</p>
+
+<h3 id="tools-width-liquify">Bredde og utflytelsespenslene</h3>
+<table>
+<thead><tr><th>Verktøy</th><th>Snarvei</th><th>Hva det gjør</th></tr></thead>
+<tbody>
+<tr><td>Linjeprofil-verktøy</td><td><kbd>&#8679;W</kbd></td><td>Dra bort fra en streket sti for å gjøre den bredere der og mot den for å gjøre den smalere, og etterlater et breddepunkt. Uten noe valgt fungerer det på enhver redigerbar sti.</td></tr>
+<tr><td>Forvreng-verktøy</td><td><kbd>&#8679;R</kbd></td><td>Hold og dra en rund penn for å skyve stier under den sammen med pekeren.</td></tr>
+<tr><td>Snurr-verktøy</td><td>&ndash;</td><td>Hold pennen over kunstverk og det fortsetter å snurre så lenge du holder det.</td></tr>
+<tr><td>Klem-verktøy</td><td>&ndash;</td><td>Trekker stier under pennen inn mot midten.</td></tr>
+<tr><td>Svell-verktøy</td><td>&ndash;</td><td>Skyver stier under pennen ut fra midten.</td></tr>
+<tr><td>Rippel-verktøy</td><td>&ndash;</td><td>Legger til buede skjell på stier under pennen.</td></tr>
+<tr><td>Spiss-verktøy</td><td>&ndash;</td><td>Legger til spissige punkter på stier under pennen.</td></tr>
+<tr><td>Krekkel-verktøy</td><td>&ndash;</td><td>Ripper stier under pennen.</td></tr>
+</tbody>
+</table>
+<p>Breddeverktøyet taperer og svermer en strøk for hånd, for en penn- eller penselaktig linje uten å bytte pensel. De sju utflytelsespelsene skyver, snurrer og grover stier mens du maler over dem, for organisk forvrenging som ville være trengsomt å gjøre anker for anker. Alle sju tar <kbd>[</kbd> og <kbd>]</kbd> for størrelse, og <kbd>&#8679;</kbd> med de samme tastene, <kbd>{</kbd> og <kbd>}</kbd>, for hvor hardt de skyver.</p>
+
+<h3 id="tools-free-transform">Fri transformasjon og Pin Warp</h3>
+<table>
+<thead><tr><th>Verktøy</th><th>Snarvei</th><th>Hva det gjør</th></tr></thead>
+<tbody>
+<tr><td>Fri transformasjonsverktøy</td><td><kbd>E</kbd></td><td>Én ramme som skalerer, roterer, krenger og forvrenger utvalget. Dra et kant- eller hjørnehåndtak for å skalere, hold <kbd>&#8984;</kbd> på et kanthåndtak for å krenge, dra inne i rammen for å flytte den, og dra rett utenfor et hjørne for å rotere.</td></tr>
+<tr><td>Pin Warp-verktøy</td><td>&ndash;</td><td>Klikk det valgte kunstverket for å slippe en pin, og dra pinsene for å bøye det; kunstverket beholder formen rundt pinsene som holder i ro. <kbd>&#8997;</kbd>-klikk en pin fjerner den, <kbd>&#8679;</kbd>-klikk plukker opp flere, og <kbd>&#8997;</kbd>-dra rett utenfor en pin roterer kunstverket om den.</td></tr>
+</tbody>
+</table>
+<p>Fri transformasjon er alt-i-étt-rammen når du vil skalere, rotere og krenge på én bevegelse i stedet for å bytte verktøy mellom hver. Det virker om referansepunktet sitt, som du kan dra hvor som helst, selv utenfor rammen; slipp det nær ett av rammen ni vanlige steder og det slår seg fast der. Mens du skalerer, holder <kbd>&#8679;</kbd> proporsjonene og <kbd>&#8997;</kbd> skalerer om midten i stedet for referansepunktet; mens du roterer, fester <kbd>&#8679;</kbd> til 45&deg;. På et hjørnehåndtak forvrenger <kbd>&#8984;</kbd> det hjørnet på egen hånd og <kbd>&#8984;&#8997;&#8679;</kbd> forvrenger i perspektiv, med nabohjørnet som speiler draet; skjermelementet ved siden av rammen angir de samme to modi og begrensningsbryteren. Å endre en modifierer halvveis gjennom en dra bytter handlingen med en gang, uten å slippe.</p>
+<p>Pin Warp er for å posere og bøye ett enkelt stykke kunstverk, som å bøye en tegnet arm, ved å pinne delene som skal holde i ro og dra resten. Det leser <kbd>Delete</kbd> som fjerning av de valgte pinsene i stedet for kunstverket, og <kbd>&#8984;A</kbd> som valg av hver pin. Hvert dra er ett trinn å angre, og angre bringer pinsene tilbake med kunstverket de fulgte. Tekst, plasserte bilder og symbolinstanser kan ikke forvrenges, og etterlates som de er.</p>
+
+<h2 id="tools-build-perspective">Slå sammen &amp; Del, Områdefyll og perspektiv</h2>
+<p>Verktøyene som behandler overlappende former som områder å kombinere og farge, og rutenettet som lar deg tegne og plassere kunstverk i perspektiv.</p>
+
+<h3 id="tools-builder-paint">Slå sammen &amp; Del og Områdefyll</h3>
+<table>
+<thead><tr><th>Verktøy</th><th>Snarvei</th><th>Hva det gjør</th></tr></thead>
+<tbody>
+<tr><td>Slå sammen &amp; Del-verktøy</td><td><kbd>&#8679;M</kbd></td><td>Med overlappende former valgt, dra over områdene du vil slå sammen og de blir ett objekt. <kbd>&#8997;</kbd>-dra fjerner områdene du krysser i stedet.</td></tr>
+<tr><td>Områdefyll-bøtte</td><td><kbd>K</kbd></td><td>Klikk et flate av en Områdefyll-gruppe for å fylle det med gjeldende maling; <kbd>&#8997;</kbd>-klikk plukker opp malingen som allerede er der i stedet for å legge noe ned. Flaten under pekeren omtrekkes før du klikker.</td></tr>
+<tr><td>Områdeutvalgsverktøy</td><td><kbd>&#8679;L</kbd></td><td>Klikk et flate av en Områdefyll-gruppe for å velge det, uten å male det.</td></tr>
+</tbody>
+</table>
+<p>Bruk Slå sammen &amp; Del til å tegne noen overlappende former og deretter slå dem sammen og trimme dem til omtrekken du vil ha, ved å dra over stykkene. Områdefyll behandler et sett overlappende stier som et fargeleggingsbok: bøtten flommer hvert lukket flate med en farge, og utvalgsverktøyet plukker flater og kanter slik at du kan omstile dem, uten å kutte formene fra hverandre først.</p>
+
+<h3 id="tools-perspective">Perspektiv</h3>
+<table>
+<thead><tr><th>Verktøy</th><th>Snarvei</th><th>Hva det gjør</th></tr></thead>
+<tbody>
+<tr><td>Perspektiv-rute-verktøy</td><td><kbd>&#8679;P</kbd></td><td>Viser rutenettet og former det: dra forsvinningspunktene, dra ett opp eller ned for å flytte horisonten, og dra rutenettets nære hjørne. <kbd>1</kbd> til <kbd>4</kbd>, eller skjermelementet på skjermen, velger planet du tegner på.</td></tr>
+<tr><td>Perspektivutvalgsverktøy</td><td><kbd>&#8679;V</kbd></td><td>Velg kunstverk og dra det langs planet. Kunstverk som ennå ikke er på rutenettet, settes ned på det aktive planet der du drar det.</td></tr>
+</tbody>
+</table>
+<p>Grip etter disse for å tegne scener og skrift som trekker mot forsvinningspunkter, som en gate eller et produkt i eske. Mens rutenettet viser, tegner Rektangel, Avrundet rektangel, Ellipse og Rektangulær rute-verktøyene på det aktive planet i stedet for flatt, og <kbd>1</kbd> til <kbd>4</kbd> velger planet fra de verktøyene også.</p>
+
+<h2 id="tools-mesh-gradient">Mesh og gradient</h2>
+<p>De to verktøyene for å male gradert farge inn i en form: et mesh av fargepunkter over objektet, eller en glatt blanding langs en akse.</p>
+
+<h3 id="tools-mesh">Mesh</h3>
+<table>
+<thead><tr><th>Verktøy</th><th>Snarvei</th><th>Hva det gjør</th></tr></thead>
+<tbody>
+<tr><td>Mesh-verktøy</td><td><kbd>U</kbd></td><td>Klikk inne i et objekt for å legge en meshlinje hver vei gjennom det punktet, og gjøre en vanlig sti til en mesh. Klikk et meshpunkt for å velge det og gi det en farge fra Farge-panelet, dra et punkt for å flytte det, og <kbd>&#8997;</kbd>-klikk ett for å fjerne linjene gjennom det.</td></tr>
+</tbody>
+</table>
+<p>Bruk et mesh for myk, fri skygging som en rett gradient ikke kan gi, som den avrundede fremhevingen på et stukke fruit eller et ansikt.</p>
+
+<h3 id="tools-gradient">Gradient</h3>
+<table>
+<thead><tr><th>Verktøy</th><th>Snarvei</th><th>Hva det gjør</th></tr></thead>
+<tbody>
+<tr><td>Gradientverktøy</td><td><kbd>G</kbd></td><td>Dra over utvalget for å legge ned aksen til dets aktive maling, med <kbd>&#8679;</kbd> som holder aksen på 45&deg; trinn. Over kunstverk som allerede har en gradient, jobber du i stedet med annotatoren.</td></tr>
+</tbody>
+</table>
+<p>Dra Gradientverktøyet for å gi en lineær eller radial blanding retningen du vil og angi hvor langt den løper. På annotatoren, dra et stopp langs aksen for å flytte det, dra en diamant for å skyve blandingen mellom to stopp, klikk aksen for å legge til et stopp i fargen den allerede har der, og dra et stopp godt unna aksen for å kaste det, så lenge to er igjen. <kbd>Delete</kbd> fjerner stoppet du sist berørte. På en fri gradient fungerer verktøyet i fargepunkter i stedet: klikk kunstverket for å legge til ett i fyllfargen, og dra et punkt for å flytte det. Gradienter behandles videre på <a href="/manual/appearance/">Farge &amp; utseende</a>-siden.</p>
+
+<h2 id="tools-sample-morph">Prøve, måle og morfe</h2>
+<p>Kopier et utseende fra ett objekt til et annet, les avstander og vinkler fra lerretet, og bland mellom former i en rekke med trinn.</p>
+
+<h3 id="tools-eyedropper">Pipet og Mål</h3>
+<table>
+<thead><tr><th>Verktøy</th><th>Snarvei</th><th>Hva det gjør</th></tr></thead>
+<tbody>
+<tr><td>Pipetverktøy</td><td><kbd>I</kbd></td><td>Klikk på et objekt for å prøve hele utseendet på utvalget, eller på standardstilen når ingenting er valgt. <kbd>&#8679;</kbd> prøver bare fyllfargen eller linjefargen til den aktive siden, og <kbd>&#8997;</kbd> fungerer den andre veien, og bruker utvalgets utseende på objektet du klikker.</td></tr>
+<tr><td>Mål-verktøy</td><td>&ndash;</td><td>Dra mellom to punkter for å lese avstanden, forskyvningene og vinkelen; <kbd>&#8679;</kbd> holder linjen på 45&deg; trinn. Siste måling forblir på skjermen til neste dra.</td></tr>
+</tbody>
+</table>
+<p>Pipetten er den raskeste måten å få ett objekt til å matche et annet: plukk utseendet du liker og det lander på utvalget. Bruk Mål-verktøyet for å sjekke et gap eller en vinkel uten å legge et merke på kunstverket.</p>
+
+<h3 id="tools-blend">Morfe</h3>
+<table>
+<thead><tr><th>Verktøy</th><th>Snarvei</th><th>Hva det gjør</th></tr></thead>
+<tbody>
+<tr><td>Morfe-verktøy</td><td><kbd>W</kbd></td><td>Klikk på det ene objektet og deretter et annet for å morfe mellom dem gjennom en rekke med mellomtrinn. For å ta et videre objekt i en morfe, klikk inne i morfen og klikk deretter objektet du vil legge til.</td></tr>
+</tbody>
+</table>
+<p>Grip etter Morfe-verktøyet for å blande én form eller farge inn i en annen over jevne trinn, enten for en myk skyggeband eller jevnt fordelte, skiftende kopier langs en sti.</p>
+
+<h2 id="tools-symbols">Symboler</h2>
+<p>Et symbol er et stykke kunstverk du kan plassere mange ganger, med hver kopi knyttet til én mester. Symbolismeverktøyene legger ned og jobber deretter hele mengder av disse instansene på én gang.</p>
+
+<h3 id="tools-symbolism">Symbolismeverktøyene</h3>
+<table>
+<thead><tr><th>Verktøy</th><th>Snarvei</th><th>Hva det gjør</th></tr></thead>
+<tbody>
+<tr><td>Symbolsprøyte-verktøy</td><td><kbd>&#8679;S</kbd></td><td>Dra for å legge ned instanser av symbolet valgt i Symboler-panelet, som et symbolsett. <kbd>&#8997;</kbd> tar instanser ut igjen.</td></tr>
+<tr><td>Symboldytt-verktøy</td><td>&ndash;</td><td>Dra instansene under pennen med pekeren.</td></tr>
+<tr><td>Symbolpakke-verktøy</td><td>&ndash;</td><td>Trekker instansene under pennen sammen; <kbd>&#8997;</kbd> sprer dem.</td></tr>
+<tr><td>Symbolskaler-verktøy</td><td>&ndash;</td><td>Får instansene under pennen til å vokse; <kbd>&#8997;</kbd> krymper dem.</td></tr>
+<tr><td>Symbolsnu-verktøy</td><td>&ndash;</td><td>Roterer instansene under pennen for å følge draet.</td></tr>
+<tr><td>Symbolton-verktøy</td><td>&ndash;</td><td>Toner instansene under pennen mot fyllfargen; <kbd>&#8997;</kbd> fjerner tonen.</td></tr>
+<tr><td>Symbolton-ut-verktøy</td><td>&ndash;</td><td>Toner instansene under pennen ut; <kbd>&#8997;</kbd> får dem tilbake på full styrke.</td></tr>
+<tr><td>Symbolstil-verktøy</td><td>&ndash;</td><td>Bruker den grafiske stilen valgt i Grafiske stiler-panelet på instansene under pennen; <kbd>&#8997;</kbd> fjerner den.</td></tr>
+</tbody>
+</table>
+<p>Bruk disse for å spreder og deretter variere et felt av gjentatt kunstverk, som trær over en ås eller stjerner på en himmel: spray et sett, og tynn det ut, skaler det, snu det og farg det slik at ikke kopiene ser stemplede ut. Alle åtte tar <kbd>[</kbd> og <kbd>]</kbd> for pennestørrelse og <kbd>{</kbd> og <kbd>}</kbd> for hvor hardt pennen jobber. De virker på instansene i utvalget, eller på hver redigerbar instans når ingenting er valgt.</p>
+
+<h2 id="tools-boards-slices">Tavler og skiver</h2>
+<p>Verktøyene som legger lerretet for utdata: artboards, sidene som kunstverket ditt sitter på, og skiver, som markerer rektangler for å eksportere på egen hånd.</p>
+
+<h3 id="tools-boards">Tavler</h3>
+<table>
+<thead><tr><th>Verktøy</th><th>Snarvei</th><th>Hva det gjør</th></tr></thead>
+<tbody>
+<tr><td>Tavle-verktøy</td><td><kbd>&#8679;O</kbd></td><td>Tegn, flytt og endre størrelse på artboards direkte på lerretet. Dra tomt lerret for en ny tavle, med <kbd>&#8997;</kbd> som tegner fra midten og <kbd>&#8679;</kbd> som holder den firkantet; dra inne i en tavle for å flytte den, med <kbd>&#8679;</kbd> som holder flyttingen til én akse; dra et hjørnehåndtak med <kbd>&#8679;</kbd> for å beholde tavlens proporsjoner.</td></tr>
+</tbody>
+</table>
+<p>Grip etter Tavle-verktøyet for å legge til sider for forskjellige størrelser eller versjoner av et design i ett dokument, og for å endre størrelse på en side rundt det du har tegnet. <kbd>Delete</kbd> fjerner den aktive tavlen, så lenge én er igjen.</p>
+
+<h3 id="tools-slices">Skiver</h3>
+<table>
+<thead><tr><th>Verktøy</th><th>Snarvei</th><th>Hva det gjør</th></tr></thead>
+<tbody>
+<tr><td>Skive-verktøy</td><td><kbd>&#8679;K</kbd></td><td>Dra ut et rektangel som eksporterer på egen hånd; <kbd>&#8997;</kbd> tegner fra midten og <kbd>&#8679;</kbd> holder det firkantet. Skivekantene slår seg fast på hele piksler, slik at det som kommer ut ikke er uklart.</td></tr>
+<tr><td>Skiveutvalgsverktøy</td><td>&ndash;</td><td>Plukk, flytt og endre størrelse på skiver. <kbd>Delete</kbd> fjerner den valgte og en dobbeltklikk åpner alternativene.</td></tr>
+</tbody>
+</table>
+<p>Bruk skiver for å klippe én artboard i stykker som eksporterer separat, som knappene og bannerne i en weboppsett, hver som sin egen fil. Eksportering behandles på <a href="/manual/files/">Åpne &amp; eksporter</a>-siden.</p>
+
+<h2 id="tools-navigate">Bevege seg rundt</h2>
+<p>Verktøyene som panorerer, roterer og zoomer visningen. Ingen av dem endrer dokumentet: de endrer bare hvordan du ser på det.</p>
+
+<h3 id="tools-view">Flytte visningen</h3>
+<table>
+<thead><tr><th>Verktøy</th><th>Snarvei</th><th>Hva det gjør</th></tr></thead>
+<tbody>
+<tr><td>Håndverktøy</td><td><kbd>H</kbd></td><td>Dra for å panorere visningen. Å holde mellomromstasten låner det fra ethvert annet verktøy så lenge du holder det.</td></tr>
+<tr><td>Roter visning-verktøy</td><td><kbd>&#8679;H</kbd></td><td>Dra for å rotere visningen om midten av vinduet, med <kbd>&#8679;</kbd> som fester til 15&deg;; dobbeltklikk for å sette den rett opp igjen. Bare visningen roterer, aldri dokumentet.</td></tr>
+<tr><td>Print Tiling-verktøy</td><td>&ndash;</td><td>Oppført i verktøylinjen, men ennå ikke implementert; paletten merker det som kommer snart.</td></tr>
+</tbody>
+</table>
+<p>Håndverktøyet scroller en innzoomet tegning uten å røre rullefeltene, og Roter visning-verktøyet heller hele visningen slik at du kan tegne en skrå linje på en komfortabel vinkel, og deretter sette den rett igjen.</p>
+
+<h3 id="tools-zoom">Zoom</h3>
+<table>
+<thead><tr><th>Verktøy</th><th>Snarvei</th><th>Hva det gjør</th></tr></thead>
+<tbody>
+<tr><td>Zoom-verktøy</td><td><kbd>Z</kbd></td><td>Klikk for å zoome inn og <kbd>&#8997;</kbd>-klikk for å zoome ut. Dra et rektangel over en del av kunstverket for å fylle vinduet med det.</td></tr>
+</tbody>
+</table>
+
+<h2 id="tools-fill-stroke">Fyll- og linjekontroller</h2>
+<p>Nederst på verktøylinjen sitter fyll- og linjefargene, én foran den andre. Den foran er den aktive kant, den som din neste fargekeuze lander oppå. En håndfull enkeltaster styrer dem uten å nå panelene:</p>
+<table>
+<thead><tr><th>Snarvei</th><th>Hva det gjør</th></tr></thead>
+<tbody>
+<tr><td><kbd>D</kbd></td><td>Tilbakestiller fyll og linje til standardverdiene.</td></tr>
+<tr><td><kbd>X</kbd></td><td>Bytter hvilken av fyll eller linje som er den aktive kanten.</td></tr>
+<tr><td><kbd>&#8679;X</kbd></td><td>Bytter fyll- og linjefargene.</td></tr>
+<tr><td><kbd>/</kbd></td><td>Setter den aktive fargen til ingen maling.</td></tr>
+</tbody>
+</table>
+<p>Disse gjør de vanlige trekkene raske: <kbd>X</kbd> for å hoppe mellom å male fyll og linje, <kbd>/</kbd> for å slippe fyll eller linje til ingen, og <kbd>D</kbd> for å komme tilbake til en vanlig svart-hvit start. Fyll, linjer og hvordan de angis, behandles på <a href="/manual/appearance/">Farge &amp; utseende</a>-siden.</p>

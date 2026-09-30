@@ -1,0 +1,96 @@
+<p class="lede">Efekt mení, ako objekt vyzerá, bez zmeny samotného objektu. Cesta, skupina alebo kus textu zostáva presne tak, ako ste ho nakreslili a efekt sa prepočíta nad ním vždy, keď presuniete bod alebo upravíte hodnotu. Efekty sa naskladávajú v paneli Paint Stack, takže môžete naskladať niekoľko na jeden objekt, preusporiadať ich a odstrániť ktorýkoľvek z nich späť.</p>
+
+<figure class="shot">
+  <img src="img/effects-demo.png" width="1400" height="560" loading="lazy"
+       alt="Tri rovnaké modré dlaždice zobrazujúce tri efekty: tieň, jantárovú vonkajšiu skvornu a zhrubé okraje." />
+  <figcaption>Rovnaká dlaždica s tromi efektmi: tieň, vonkajšia skvorna a Roughen. Každý je živý, takže dlaždica pod nimi je stále obyčajným zaobleným obdĺžnikom.</figcaption>
+</figure>
+
+<h2 id="effects-live-and-stacked">Živé efekty a stoh vzhľadu</h2>
+<p>Každý efekt v Scissor je <strong>živý</strong> a <strong>neškodný</strong>. Sedí nad výplňami a obrysmi objektu v <strong>paneli Vzhľad</strong> (<kbd>&#8679;F6</kbd>) a beží nad celým objektom vždy, keď sa grafika alebo efekt zmení. Pretože pôvodná cesta je pod ním nedotknutá, môžete pokračovať v úprave bodov ukotvenia, vymeniť farbu výplne alebo prepísať slová a efekt nasleduje. Siahnite po efekte vždy, keď chcete vzhľad, tieň, ohnutie, zaoblený roh, o ktorom by ste sa mohli neskôr rozmýšľať inak, namiesto toho, aby ste sa k tomu zaviazali ručne.</p>
+
+<h3 id="effects-order">Poradie záleží</h3>
+<p>Efekty bežia od spodku stohu nahor a panel ich vypisuje najprv zhora, nad výplňami a obrysmi. Poradie mení výsledok: rozmazanie pod tieňom zhladí tvar predtým, ako sa tieň odhodia, zatiaľ čo rovnaké dve opačne odhodia ostrý tieň a potom rozmazanie celého. Ak efekt nerobí, čo očakávate, jeho pozícia v stohu je prvá vec, ktorú skontrolujte.</p>
+
+<h2 id="effects-using">Pridávanie, úprava a odstraňovanie efektov</h2>
+<h3 id="effects-add">Z ponuky Efekt</h3>
+<p>Vyberte objekt, potom vyberte efekt z ponuky <strong>Efekt</strong>. Položky, ktoré otvárajú dialógové okno, zobrazia <strong>Náhľad</strong>, keď meníte ich hodnoty, takže môžte posúdiť výsledok na plátne predtým, ako sa k nemu zavážete; celá úprava pristane ako jeden krok v histórii namiesto jedného kroku na stlačenie klávesu. Krátka verzia ponuky (Drop Shadow, Outer Glow a Gaussian Blur, plus Clear Effects) sedí tiež v ponuke pravého tlačidla myši na plátne pod <strong>Efekt</strong>.</p>
+
+<h3 id="effects-appearance">V paneli Paint Stack</h3>
+<p>Každý efekt na vybranom objekte dostane svoj vlastný riadok v paneli Paint Stack, označený odznakom <em>fx</em>. Kliknite na názov efektu pre opätovné otvorenie jeho možností a ich zmenu. Kliknite na koniec riadku pre odstránenie tohto jedného efektu. Ak chcete odstrániť všetky efekty z výberu naraz, použite <strong>Efekt &rsaquo; Vyčistiť efekty</strong>.</p>
+
+<h3 id="effects-panels">V paneloch efektov</h3>
+<p>Skupina <strong>Okno &rsaquo; Efekty</strong> zoskupuje efekty do jedného panelu pre každú časť ponuky Efekt: Stylize, Blur, Distort &amp; Transform, Path, Combine Shapes a Warp, s panelom 3D vedľa. Každý panel vypisuje efekty tejto skupiny s prepínačom na zapnutie alebo vypnutie a jeho nastaveniami hneď pod, všetko upravované živo na výbere. Je to rýchlejší spôsob skúšania efektu a úpravy jeho hodnôt než otváranie dialógového okna každý krát. Vypnutie prepínača odstráni tento efekt z objektu. Keď objekt nesie viac ako jeden efekt rovnakého druhu, panel upravuje prvý z nich a panel Paint Stack stále zobrazuje celý stoh.</p>
+
+<h2 id="effects-stylize">Stylizácia: tiene, skvorny a okraje</h2>
+<p>Podponuka <strong>Efekt &rsaquo; Stylize</strong> drží každodenné dokončovacie efekty.</p>
+<table>
+  <thead><tr><th>Efekt</th><th>Čo robí a kedy ho použiť</th><th>Hlavné možnosti</th></tr></thead>
+  <tbody>
+    <tr><td>Drop Shadow</td><td>Odhadzje posunutý, rozmazaný duplikát objektu za ním. Použite to pre zdvihnutie tvaru, karty alebo kusu textu od pozadia.</td><td>Posunutie X a Y, Rozmazanie, Farba, Krytie.</td></tr>
+    <tr><td>Outer Glow</td><td>Rozširuje jemnú skvornu farby vonkajšie od okraja objektu. Siahnite po ňom pre neonový nápis, zvýraznenie alebo skvornu okola zdroja svetla.</td><td>Rozmazanie, Farba, Krytie.</td></tr>
+    <tr><td>Inner Glow</td><td>Zoslabuje farbu dovnútra od okraja namiesto vonkajšie, takže svetlo sedí vo vnútri tvaru. Použite to pre vydutie tvaru alebo naznačenie vloženého, osvetleného okraja.</td><td>Rozmazanie, Farba, Krytie.</td></tr>
+    <tr><td>Feather</td><td>Zoslabuje vlastný okraj objektu do priesvitnosti po polomere. Použite to pre tvar s jemným okrajom alebo jednoduchú vinietu.</td><td>Polomer vyostrenia.</td></tr>
+    <tr><td>Round Corners</td><td>Zaobluje každý roh cesty na jeden polomer. Použite to pre zmäkčenie hrotov hviezdy, mnohouholníka alebo ručne kreslenej cesty bez jej prekresľovania.</td><td>Polomer.</td></tr>
+    <tr><td>Sketch Fill</td><td>Vyplňuje tvar tam-tam behom ťahov, ako keby bol očiernený ručne. Vhodné pre voľnú, nakreslenú výplň alebo vzhľad fixovacej ceruzky.</td><td>Uhol, Rozstup, Hrúbka obrysu, Variácia (ako veľa sa ťahy potulujú, 0 až 100%).</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-blur">Rozmazanie</h2>
+<p><strong>Efekt &rsaquo; Blur &rsaquo; Gaussian Blur</strong> zhladí celý objekt o <em>Polomer</em>, ktorý nastavíte v pixeloch. Pretože zostáva živý, môžete kedykoľvek zvýšiť alebo znížiť polomer. Použite to pre jemné, rozmazané pozadie alebo ako rýchly jemný tieňový tvar sám o sebe.</p>
+
+<h2 id="effects-distort">Skreslenie a transformácia</h2>
+<p>Podponuka <strong>Efekt &rsaquo; Skreslenie &amp; Transformácia</strong> prevaruje obrys, zanechávajúc základnú cestu editovateľnou.</p>
+<table>
+  <thead><tr><th>Efekt</th><th>Čo robí a kedy ho použiť</th><th>Hlavné možnosti</th></tr></thead>
+  <tbody>
+    <tr><td>Free Distort</td><td>Ťahá štyri rohy obdĺžnika objektu v malom náhľade a grafika nasleduje v perspektíve. Použite to na napodobnenie perspektívy, ako je štítok sediaci na naklonenej ploche. Prepínač Náhľad zobrazuje výsledok na plátne počas ťahania a Reset vráti rohy do štvorca.</td><td>Štyri rohové rukoväte, Náhľad, Reset.</td></tr>
+    <tr><td>Pinch &amp; Swell</td><td>Ohýba segmenty medzi bodmi ukotvenia buď dovnútra, štipliac obrys do hrotov, alebo vonkajšie, nafukujúc ho do vydutí. Použite to pre hviezdné výbuchy, škvrny a jemné tvarové lístky.</td><td>Množstvo, od štipnutého po nafúknuté.</td></tr>
+    <tr><td>Roughen</td><td>Rozbíja obrys na malé náhodné pohyby, buď ostré alebo vyhladené. Použite to pre okraj roztrhnutého papiera alebo hrubšiu, ručne kreslenú čiaru.</td><td>Veľkosť (ako ďaleko sa body pohybujú), Detail (ako husto), Body: Hladké alebo Rohové.</td></tr>
+    <tr><td>Transform</td><td>Škáluje, presúva a otáča objekt ako efekt a môže zanechať sadu kópií pozadu. Použite to pre editovateľný riadok alebo prstencové opakovania alebo pre posunutie a zmenu veľkosti tvaru bez dotýkania sa jeho skutočnej geometrie.</td><td>Horizontálne a vertikálne škálovanie, Horizontálne a vertikálne presunutie, Rotácia, Kópie (0 až 200).</td></tr>
+    <tr><td>Tweak</td><td>Posúva body ukotvenia a ich ovládacie rukoväte o náhodné množstvo. Použite to pre vykopnutie príliš dokonalého tvaru z miery.</td><td>Horizontálne a vertikálne množstvo a či presunúť Body ukotvenia, Ovládacie body alebo obe.</td></tr>
+    <tr><td>Twist</td><td>Otáča vnútro tvaru viac než jeho okraje, vinúc ho do víra. Použite to pre špiráli alebo vír.</td><td>Uhol.</td></tr>
+    <tr><td>Zig Zag</td><td>Premení rovné segmenty na pravidelné záhady (Rohové) alebo vlny (Hladké). Použite to pre vlnovité podčiarknutie, ric-rac okraj alebo cik-cak okraj.</td><td>Veľkosť, Hrebeň na segment, Body: Rohové alebo Hladké.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-path">Cesta</h2>
+<p>Podponuka <strong>Efekt &rsaquo; Cesta</strong> prepracováva obrys objektu, zanechávajúc zdroj editovateľný.</p>
+<table>
+  <thead><tr><th>Efekt</th><th>Čo robí a kedy ho použiť</th><th>Hlavné možnosti</th></tr></thead>
+  <tbody>
+    <tr><td>Offset Path</td><td>Zväčšuje alebo zmenšuje obrys o nastavenú vzdialenosť. Kladný posun ho rozširuje vonkajšie, záporný potiahne dovnútra. Použite to pre živý obrys okolo textu alebo tvaru, ktorý udržiava tempo počas úpravy.</td><td>Posunutie, Spojenia: Miter, Round alebo Bevel.</td></tr>
+    <tr><td>Outline Object</td><td>Pridáva efekt Offset Path nastavený na nulu, premenujúc objekt (vrátane živého textu) na obrysovanú cestu, aby mali neskoršie efekty skutočnú cestu, na ktorej pôsobia.</td><td>Žiadne.</td></tr>
+    <tr><td>Outline Stroke</td><td>Premení obrys na vyplnený tvar ako efekt. Použite to, keď chcete vyplniť obrys gradientom alebo vyostriť alebo skresliť obrys, ktorý je inak obyčajnou čiarou.</td><td>Žiadne.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-pathfinder">Kombinovanie tvarov</h2>
+<p>Podponuka <strong>Efekt &rsaquo; Kombinovanie tvarov</strong> kombinuje tvary vo vnútri skupiny s režimom tvarov, ale zachováva ich ako samostatné, editovateľné cesty pod nimi. Použite to na skupinu a kombinovaný výsledok je to, čo vidíte, zatiaľ čo každý člen sa stále dá presunúť alebo premaľovať. Použite to na skúšanie kombinácie bez záväzku, aký by robil panel Kombinovanie tvarov.</p>
+<table>
+  <thead><tr><th>Režim</th><th>Výsledok</th></tr></thead>
+  <tbody>
+    <tr><td>Pridať</td><td>Zlúči tvary skupiny do jednej oblasti.</td></tr>
+    <tr><td>Priesečník</td><td>Zachová len tam, kde sa tvary prekrývajú.</td></tr>
+    <tr><td>Vylúčiť</td><td>Zachová všetko okrem toho, kde sa prekrývajú.</td></tr>
+    <tr><td>Odčítať</td><td>Odstráni predné tvary z predného.</td></tr>
+    <tr><td>Minus Back</td><td>Odstráni zadné tvary z predného.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-warp">Deformácia</h2>
+<p><strong>Efekt &rsaquo; Deformácia</strong> ohýba objekt pozdĺž jednej z predvolených tvarov a zostáva živý, takže môžete pokračovať v úprave grafiky pod ním. Použite to pre zakrivenie nadpisu do oblúka, zvláčnenie banera alebo vytlačenie plochého bloku do vydutia bez straty schopnosti meniť slová alebo farby.</p>
+<p>Ponuka ponúka desať štýlov priamo (Arc, Arch, Bulge, Flag, Wave, Fish, Rise, Fisheye, Inflate a Squeeze). <strong>Možnosti deformácie&#8230;</strong> otvára celú sadu, ktorá pridáva Arc Lower, Arc Upper, Shell Lower a Shell Upper a umožňuje nastaviť množstvo:</p>
+<dl>
+  <dt>Ohnutie</dt><dd>Ako silne sa tvar ohýba, od -100% do 100%.</dd>
+  <dt>Horizontálne</dt><dd>Nakláňa ohnutie na jednu stranu, od -100% do 100%.</dd>
+  <dt>Vertikálne</dt><dd>Nakláňa ohnutie hore alebo dole, od -100% do 100%.</dd>
+</dl>
+<p>Rovnaké štýly deformácie sa dajú použiť aj ako obálka prevarovania, ktorá mení samotnú cestu namiesto toho, aby zostala živá: pozrite <a href="#transform-envelope">Shape Warp</a>. Nástroj Deformácia a ostatné nástroje na skreslenie prevarujú ťahaním na plátne a sú pokryté v <a href="#tools-width-liquify">referencii nástrojov</a>.</p>
+
+<h2 id="effects-3d">3D a Materiály</h2>
+<p><strong>Efekt &rsaquo; 3D a Materiály</strong> premení plochý tvar na pevný: plochu, vytlačenie a zkosenie, rotáciu alebo nafúknutie. Ako ostatné je to živý efekt, takže plochá cesta zostáva tam na úpravu a pevná sa staví znova, keď ju zmeníte. Hĺbka, zkosenie, rotácia, osvetlenie a povrch sa nastavujú v paneli 3D a Materiály. Pretože má viac ovládacích prvkov než jedno dialógové okno, má 3D svoju vlastnú stránku: pozrite <a href="/manual/sk/three-d/">3D</a>.</p>
+
+<h2 id="effects-expand">Premena efektov na grafiku</h2>
+<p>Efekt zostáva živý tak dlho, ako chcete. Keď je vzhľad usadený a potrebujete výsledok ako obyčajné, editovateľné cesty, napríklad na odovzdanie súboru alebo prevarovanie výstupu efektu ručne, vyberte <strong>Objekt &rsaquo; Rozbaliť vzhľad</strong>. Vypáči celý stoh vzhľadu, vrátane efektov, do obyčajnéj grafiky. Toto sa nedá neskôr upravovať ako efekt, takže rozbalte len keď ste si istí. Ak chcete odstrániť efekty bez vypáčenia, odstráňte ich po jednom v paneli Paint Stack alebo vyčistite ich všetkým pomocou <strong>Efekt &rsaquo; Vyčistiť efekty</strong>.</p>
+<p>Ponuka Efekt vypisuje tiež <strong>Rasterizovať</strong>, ktorý nie je živým efektom: premení výber na pixely tam a potom. Maľovanie a pixelové vrstvy sú pokryté na stránke <a href="/manual/sk/pixels/">Pixelové vrstvy</a>.</p>

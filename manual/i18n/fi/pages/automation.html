@@ -1,0 +1,39 @@
+<p class="lede">Kolme työkalua Scissorissa tekevät toistuvan työn puolestasi: <strong>Toiminnot</strong> tallentavat komentosarjan ja toistavat sen, <strong>Muuttujat</strong> vaihtavat tekstiä ja näkyvyyttä datataulukosta, jotta yksi suunnittelu tulee moniksi ja <strong>Skriptit</strong> ajavat koko editoria JavaScriptistä. Mikään niistä ei tarvitse tiliä tai palvelinta — kuten loput Scissorista ne toimivat omalla koneellasi.</p>
+
+<h2 id="automation-actions">Toiminnot: tallenna kerran, toista missä tahansa</h2>
+<p><strong>Toiminnot</strong>-paneeli (Ikkuna › Toiminnot) tallentaa, mitä teet ja toistaa sen uudella valinnalla. Paina <strong>Tallenna</strong>, suorita komennot, jotka haluat kaapata — tasaus, siirto, varjon lisääminen, mikä tahansa sarja — sitten paina <strong>Lopeta</strong> ja anna toiminnolle nimi. Se liittyy listaan, näyttäen, kuinka monta askelta se kantaa.</p>
+<p>Napsauta toimintoa <strong>toistaaksesi</strong> sen siihen, mikä on nyt valittuna; <kbd>&#8997;</kbd>-napsauta sitä poistaaksesi sen. Koska toiminto on vain komentojen lista, se toistaa tarkan rutiinin useiden kohteiden läpi ilman, että napsautat sitä joka kerta.</p>
+
+<h2 id="automation-variables">Muuttujat: yksi suunnittelu, monta versiota</h2>
+<p><strong>Muuttujat</strong>-paneeli (Ikkuna › Muuttujat) muuttaa kiinteän suunnittelun datalla ajettavaksi malliksi. Kahdet asiat kohteessa voidaan tehdä dynaamisiksi:</p>
+<dl>
+  <dt>Tee tekstistä dynaaminen</dt><dd>Sitoo tekstikohteen sanat muuttujaan, jotta eri datasarjat voivat laittaa eri tekstin samaan paikkaan.</dd>
+  <dt>Tee näkyvyys dynaamiseksi</dt><dd>Sitoo sen, näkyykö kohde, jotta sarja voi kytkeä osia suunnittelusta päälle ja pois.</dd>
+</dl>
+<p><strong>Irrota</strong> tekee sidotun kohteen kiinteäksi takaisin.</p>
+
+<h3 id="automation-datasets">Datasarjat</h3>
+<p><strong>Datasarja</strong> on yksi rivi arvoja näille muuttujille — yksi nimikortti, yksi kortti, yksi kehys. <strong>Kaappaa</strong> tallentaa nykyiset arvot uudeksi sarjaksi; nuolivat siirtyvät sarjasta toiseen ja suunnittelu päivittyy vastaamaan. <strong>Tuo CSV&hellip;</strong> lukee koko erän kerrallaan — yksi sarake muuttujaa kohden, yksi rivi sarjaa kohden — ja <strong>Vie CSV</strong> kirjoittaa sarjat takaisin muokattavaksi taulukkolaskentaohjelmassa.</p>
+
+<h3 id="automation-batch">Kaikkien sarjojen vienti kerralla</h3>
+<p><strong>Vie datasarjat&hellip;</strong> renderöi aktiivisen alustan kerran jokaista datasarjaa varten ja kirjoittaa ne kaikki yhdellä kerralla, PNG, JPEG, WebP tai SVG:nä. Nimikorttisarja, lokalisoitujen bannerien sarja tai sosiaalisten korttien sarja tulee ulos siistinä tiedostojen eränä, kukin omalla datallaan täytettynä.</p>
+
+<h2 id="automation-scripts">Skriptit: Scissorin ajaminen JavaScriptistä</h2>
+<p>Kaikkeen, mitä valikko ei voi ilmaista, skripti voi. <strong>Tiedosto &rsaquo; Skriptit &rsaquo; Skriptikonsoli&hellip;</strong> avaa editorin, johon kirjoitat JavaScriptin ja ajat sen avointa asiakirjaa vastaan; <strong>Muu skripti&hellip;</strong> (<kbd>&#8984;F12</kbd>) ajaa <code>.js</code>-tiedoston levyltä. Skripti ajossa Web Workerissa, sivun ulkopuolella, jotta se ei voi käyttää käyttöliittymää tai tiedostoja paitsi <code>scissor</code>-objektia, joka sille annetaan — jokainen kutsu suoritetaan moottorilla ja vastaus palautetaan.</p>
+<p><code>scissor</code>-objekti kattaa yhteisen maan:</p>
+<dl>
+  <dt>Muotojen ja tekstin luominen</dt><dd><code>scissor.rect</code>, <code>roundedRect</code>, <code>ellipse</code>, <code>polygon</code>, <code>star</code>, <code>path</code> ja <code>text</code> piirtävät teosta; kukin ottaa sijainnin ja koon ja options-objektin <code>fill</code>, <code>stroke</code> ja <code>strokeWidth</code> (värit ovat tahansa CSS-väriä).</dd>
+  <dt>Asiakirjan lukeminen</dt><dd><code>await scissor.document()</code> palauttaa sovelluksen, valinnan, tasot ja artboardit kuten paneelit näkevät ne; <code>scissor.selection()</code> palauttaa vain sen, mikä on valittu.</dd>
+  <dt>Vaikuttaminen siihen</dt><dd><code>scissor.select</code>, <code>group</code> ja <code>undo</code> ja <code>scissor.run(command)</code> mihin tahansa moottorin komentoon — samat komennot, jotka valikot lähettävät.</dd>
+  <dt>Puhuminen takaisin</dt><dd><code>scissor.log</code> tulostaa konsoliin; <code>scissor.alert</code> näyttää viestin.</dd>
+</dl>
+<p>Lyhyt esimerkki — rengas värillisiä pisteitä ja otsikko:</p>
+<pre><code>const doc = await scissor.document();
+scissor.log('Alustat:', doc.artboards.length);
+for (let i = 0; i &lt; 12; i++) {
+  const a = (i / 12) * Math.PI * 2;
+  await scissor.ellipse(300 + Math.cos(a) * 120, 260 + Math.sin(a) * 120, 36, 36,
+    { fill: `hsl(${i * 30} 80% 60%)` });
+}
+await scissor.text(230, 270, 'Hei, Scissor', { size: 24 });</code></pre>
+<p>Skriptikonsoli pitää viimeisen koodin, jonka ajoit, joten toimiva skripti on siellä, kun palaat siihen.</p>

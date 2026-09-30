@@ -1,0 +1,120 @@
+<p class="lede">Et Scissor-dokument kan holde malte pixels ved siden af dets tegnede stier og tekst, så én enkelt fil kan bære en blød penseltekstur, et foto og et skarpt logo sammen. Denne side dækker, hvad et pixellag er, hvordan man maler på ét, og hvordan det opfører sig som et objekt i dokumentet.</p>
+
+<h2 id="pixels-vector-vs-raster">Pixels versus vektorgrafik</h2>
+<p>Et Scissor-dokument holder to typer af grafik side om side. Stier og tekst er <em>tegnede</em>: de forbliver skarpe i enhver størrelse, fordi de er beskrevet af deres form, og Scissor tegner dem igen, hver gang du zoomer eller skalerer. Et <strong>pixellag</strong> er <em>malet</em>: det er et gitter af farvede prikker, som et foto eller et penselmaleri, og forstørrelse af det gør disse prikker større i stedet for at tilføje detaljer. Ét dokument kan holde så mange af hver, du vil, i enhver rækkefølge, og de stables sammen i Lag-panelet.</p>
+<p>Gå efter et pixellag, når en form alene ikke er nok: en håndtegnet skygde, en grov tekstur bag ren tekst, en farvestråle, der ikke behøver at være en redigerbar sti, eller retouchering over et placeret foto. Hold logoer, diagrammer og alt, du vil ændre størrelse på senere, som vektorer, og brug pixels til de dele, der ønsker følelsen af maling.</p>
+<p>Et placeret foto er en beslægtet, men separat ting. <strong>Filer &gt; Placér&hellip;</strong> (<kbd>&#8679;&#8984;P</kbd>) bringer et eksisterende billede ind i dokumentet som et indlejret billede; et pixellag er en overflade, du maler på fra bunden inde i Scissor. Begge er lavet af pixels, og begge kan prøveudtages med pipetten, men kun et pixellag tager penselstrøg.</p>
+
+<h2 id="pixels-new">Oprettelse af et pixellag</h2>
+<p><strong>Objekt &gt; Pixellag &gt; Nyt pixellag</strong> tilføjer en tom overflade, der dækker den aktive tavle. Du behøver dog ikke at lave én først: vælg Penslen og mal, og Scissor oprettager laget for dig i det øjeblik, det første strøg lander. Uanset hvordan mapper laget til tavlen, så pixelsne linjer op med artboardet, uanset hvilken opløsning de blev lavet i.</p>
+<p>Denne opløsning kommer fra <strong>Rasteffekter</strong>-indstillingen i <strong>Filer &gt; Dokumentopsætning&hellip;</strong> (<kbd>&#8997;&#8984;P</kbd>): Skærm (72&nbsp;ppi), Medium (150&nbsp;ppi) eller Høj (300&nbsp;ppi). En højere indstilling giver et nyt pixellag flere prikker pr. punkt, så penselarbejde forbliver glat, når stykket udskrives eller vises stort. Indstil det, før du laver laget, da pixelantallet er fast, når overfladen oprettes.</p>
+<p>I det moderne skal kan du også tilføje et lag fra værktøjsindstillingslinjen: med Penslen eller Pixelviskeren aktiv sidder en <strong>Nyt pixellag</strong>-knap i slutningen af linjen.</p>
+<p><strong>Placering af et billede laver også et pixellag.</strong> Slip et billede på lærredet, brug <strong>Filer &gt; Placér&hellip;</strong>, eller indsæt ét fra udklipsholderen, og det kommer ind som et redigerbart pixellag i sin egen størrelse i stedet for et låst billede - så du kan male på det, maskere det, justere og filtrere det med det samme. Åbning af et billede med <strong>Filer &gt; Åbn</strong> laver et nyt dokument med én tavle i billedets størrelse, udfyldt af pixellaget. Meget store fotos skaleres ned for at passe i pixelbudgettet. Et <strong>SVG</strong> forbliver vektor - dets stier forbliver redigerbare - så kun bitmap-billeder (PNG, JPEG, GIF, WebP og lignende) bliver til pixellag.</p>
+<p>Et lagdelt <strong><code>.psd</code></strong>-fil kommer rigere ind: åbning af ét genopbygger dets stak som separate pixellag, bevarer hvert lags <strong>maske</strong> og bringer tekst, former og lageffekter over, så filen lander tæt på, hvordan det så ud, hvor det blev lavet, i stedet for som ét fladt billede. Det er den fuldeste måde at komme ind i pixelarbejde på, og alt på denne side gælder derefter for de lag, der ankommer.</p>
+
+<h2 id="pixels-painting">Mal</h2>
+
+<h3 id="pixels-brush">Penslen og Pixelviskeren</h3>
+<p>To værktøjer arbejder på pixellag.</p>
+<table>
+  <thead><tr><th>Værktøj</th><th>Hvor det bor</th><th>Hvad det gør</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Penselværktøj</strong></td><td>Deler en plads med Penslen (<kbd>B</kbd>) og Udfyldningspenslen (<kbd>&#8679;B</kbd>)</td><td>Lægger farve, der bliver en del af billedet</td></tr>
+    <tr><td><strong>Pixelviskerværktøj</strong></td><td>Deler en plads med Viskeren (<kbd>&#8679;E</kbd>), Sakse og Kniv</td><td>Gnider maling af, så det, der sidder under det, skinner igennem</td></tr>
+  </tbody>
+</table>
+<p>For at nå hvilken som helst af dem skal du trykke og holde det synlige værktøj i værktøjslinjen eller højreklikke på det og vælge pixelværktøjet fra listen. Forveksl dem ikke med deres vektornaboer: Penslen tegner en sti, du kan omforme senere, mens Penslen maler pixels, der ikke kan ompunktes. Begge pixelværktøjer viser en ring på lærredet i den størrelse, de vil male med, og begge bruger en krydsmarkør.</p>
+<p>Træk for at male eller viske ud. Mærket følger markøren uden huller, hvor hurtigt du end bevæger dig, fordi Scissor lægger en række runde dabs langs strøget og holder dem jævnt forskudte, selv når markøren springer. Pixelviskeren tager alfa af i stedet for at male over, så det, den rydder, går fuldt gennemsigtigt; en flise visket tilbage til intet kasseres, så viskning efterlader ikke vægt.</p>
+
+<h3 id="pixels-colour">Mal i udfyldningsfarven</h3>
+<p>Penslen maler i den aktuelle <strong>udfyldningsfarve</strong>. Indstil den på samme måde, som du indstiller enhver udfyldning: Farvepanelet, en farveprøve eller, når Penslen er aktiv i det moderne skal, <strong>Farve</strong>-chipet i værktøjsindstillingslinjen. Hvis udfyldningen er tom, falder Penslen tilbage på stregfarven og til sort, hvis der ikke er nogen farve overhovedet. Vælg en farve direkte af et pixellag med pipetten, når du vil matche maling, der allerede er der.</p>
+
+<h3 id="pixels-controls">Størrelse, hårdhed og flow</h3>
+<p>Når Penslen eller Pixelviskeren er aktiv, bærer værktøjsindstillingslinjen de indstillinger, der former mærket. De findes også i dine indstillinger, så de bæres fra én session til den næste.</p>
+<dl>
+  <dt>Størrelse</dt><dd>Penselens diameter, fra 1 til 2500 pixels. Tryk på <kbd>[</kbd> for at gøre penslen mindre og <kbd>]</kbd> for at gøre den større; hvert tryk ændrer størrelsen med en femtedel, så trinet vokser med penslen. Ringen på lærredet viser den aktuelle størrelse.</dd>
+  <dt>Hårdhed</dt><dd>Hvor kanten begynder at falme, som en procent. Ved 100% er kanten skarp; sænk den, og dabet blødgøres mod dens kant med en blød fald og ingen synlig ring. Brug en blød pensel til skygger og glød, en hård til solide former.</dd>
+  <dt>Flow</dt><dd>Hvor meget maling hvert dab lægger ned, kun for Penslen. Under 100% opbygges farven gradvist, efterhånden som du går over et område igen, hvilket passer til skyggegivning og langsomme blandinger. Pixelviskeren har ingen flow-kontrol.</dd>
+</dl>
+
+<h2 id="pixels-retouch">Lysning, mørkning og svampning</h2>
+<p>Tre retoucheringspensler arbejder ind i de pixels, der allerede er der, i stedet for at lægge en farve, deler én plads i værktøjslinjen. De maler som Penslen - samme størrelse, hårdhed og lærredsring - og opbygges, efterhånden som du går over et område igen, så en let berøring er gradvis og en fast er hurtig.</p>
+<dl>
+  <dt>Lysne</dt><dd>Lysner, hvor du maler, løfter skygger og tilføjer højlys.</dd>
+  <dt>Mørkne</dt><dd>Mørkner, hvor du maler, dybere skygger og kanter.</dd>
+  <dt>Svamp</dt><dd>Løfter mætning, gør farverne rigere, jo mere du går over dem.</dd>
+</dl>
+<p>Hver efterlader gennemsigtige pixels urørte, forbliver inde i en markering, når én er indstillet, og hele strøget fortrydes i ét trin.</p>
+
+<h2 id="pixels-more-tools">Spand, former og gradienter</h2>
+<p>Mal er ikke kun Penslen. På et pixellag lægger tre andre værktøjer farve: <strong>Malerspand</strong> oversvømmer et sammenhængende område af lignende farve fra, hvor du klikker; <strong>formværktøjerne</strong> stempler et rektangel, en ellipse, en stjerne eller en polygon direkte ind i pixelsne i stedet for at tegne en sti; og <strong>Gradientværktøjet</strong> maler en lineær eller radial blanding på tværs af overfladen. Hver respekterer den aktuelle markering, så du kan begrænse en udfyldning eller en gradient til et valgt område.</p>
+
+<h2 id="pixels-selecting">Valg af pixels</h2>
+<p>En <strong>pixelmarkering</strong> - en marquee - begrænser hver mal og redigering til området inde i den, som en skabelon. Tre værktøjer laver én og deler markeringspladsen: <strong>Rektangulær</strong> og <strong>Elliptisk markering</strong> og en frihånds <strong>Lassomarkering</strong>, som du sporer i hånden. Træk for at tegne en markering; et almindeligt træk erstatter den aktuelle.</p>
+<p><strong>Automatisk markering</strong> vælger efter farve i stedet for efter form: klik på et pixellag, og det tager den sammenhængende plet af farve omkring det, du klikkede på og sporer en marching-ants kontur omkring den - praktisk til at løfte en flad baggrund eller ét farvet område. Hvor tæt en farve skal være for at blive taget, er <strong>Tolerance</strong> i Automatisk markering-indstillingerne, den samme indstilling, den bruger på vektorobjekter; høj den for at samle mere, sænk den for at holde til et tæt match. Huller i pletten udelades fra markeringen.</p>
+<p>Markeringer kombineres, så en form kan bygges af flere strøg eller klik: hold <kbd>&#8679;</kbd> for at <strong>tilføje</strong> til markeringen, <kbd>&#8997;</kbd> for at <strong>trække fra</strong>, og begge sammen for kun at beholde <strong>overlapningen</strong> - marqueeerne og Automatisk markering kombineres alle på samme måde. <strong>Vælg &gt; Alt</strong> (<kbd>&#8984;A</kbd>) vælger hver pixel, <strong>Vægt &gt; Invers</strong> vender marqueeen, og <strong>Fravælg</strong> - <kbd>&#8984;D</kbd> på et pixellag - slipper den. En marching-ants kontur viser markeringen på lærredet.</p>
+
+<h2 id="pixels-editing-selection">Flytning, klipning og kopiering af pixels</h2>
+<p>Med en markering indstillet flytter Markeringsværktøjet pixelsne inde i den: træk indefra marqueeen, og den valgte maling løfter og rejser og rydder, hvor den var og bærer marqueeen med sig. Hold <kbd>&#8997;</kbd> under træk for at efterlade originalen på plads og flytte en <strong>kopi</strong>.</p>
+<p>Transformationsværktøjerne fungerer også på markeringen. Med en marquee indstillet omslutter Markeringsværktøjets og <strong>Det frie transformværktøjs</strong> (<kbd>E</kbd>) afgrænsningsrammen marqueeen, ikke hele laget, så du kan skalere, rotere eller flytte kun den del af billedet; <strong>Objekt &gt; Transformering</strong> og piltasterne virker på det på samme måde. Løftede pixels flyder over laget, mens du arbejder, så du kan trække dem igen og igen uden at miste nogen detaljer. Tryk på <kbd>Enter</kbd>, vælg et andet værktøj eller lav en ny markering for at sætte dem ned, hvilket er ét trin at fortryde, eller tryk på <kbd>Escape</kbd> for at sætte alt tilbage, hvor det var. En flytning med hele pixels holder dem præcis, som de var; skalering eller drejning resampler dem én gang, når de sættes ned.</p>
+<p>Det frie transformværktøjs <strong>Fri forvrængning</strong> og <strong>Perspektivforvrængning</strong> fungerer på pixels også, på en marquee eller på hele laget: træk et hjørne af rammen (eller hold <kbd>&#8984;</kbd> nede, mens du trækker ét i Fri transformering-tilstand) for at trække billedet ud af takt, for eksempel for at passe et foto på en skærm eller et skilt set i en vinkel. Mens du trækker, viser Scissor en hurtig forhåndsvisning i skærmstørrelse, så den forbliver glat, selv på et store foto; selve pixelsne trækkes én gang i fuld opløsning, når du trykker på <kbd>Enter</kbd> eller går videre, og marqueeen følger den nye form.</p>
+<p>Kopiér (<kbd>&#8984;C</kbd>) og Klip (<kbd>&#8984;X</kbd>) fungerer på pixelsne inde i en marquee: kopiering efterlader laget, som det er, klipning tager pixelsne ud. Indsæt (<kbd>&#8984;V</kbd>) sætter dem på et <strong>nyt pixellag</strong> lige over det, de kom fra, præcis på samme sted, klar til at blive flyttet eller transformeret for sig selv. De samme kommandoer findes i <strong>Opret &gt; Pixellag</strong>, og markeringen driver også overfladekommandoerne: <strong>Udfyld med udfyldningsfarve</strong> udfylder kun det valgte område, <strong>Ryd</strong> og <strong>Slet</strong> visker det, og uden markering virker hver på hele laget.</p>
+
+<h2 id="pixels-adjustments">Justeringer</h2>
+<p>Undermenuen <strong>Objekt &gt; Pixellag &gt; Justeringer</strong> retoucherer farven på et pixellag, begrænset til markeringen, når én er indstillet. Hver åbner en dialog, der forhåndsviser på lærredet, mens du trækker.</p>
+<dl>
+  <dt>Lysstyrke / Kontrast, Niveauer</dt><dd>Indstiller den overordnede lysstyrke og kontrast eller omlægger sortpunkt, hvidpunkt og gamma for finere tonale kontrol.</dd>
+  <dt>Nuance / Mætning, Vibrance</dt><dd>Skifter nuancen og løfter eller sænker mætning på tværs af tavlen, eller brug Vibrance til at støtte de dæmpede farver, mens du efterlader de allerede levende alene.</dd>
+  <dt>Farvebalance</dt><dd>Skubber midttonerne mod cyan eller rød, magenta eller grøn, gul eller blå.</dd>
+  <dt>Gradientkort</dt><dd>Omfarver laget efter dets lysstyrke og mapper skyggerne til én farve og højlysene til en anden.</dd>
+  <dt>Afmæt, Invertér</dt><dd>Fjerner al farve til grå, eller vender hver farve til dens modpol.</dd>
+  <dt>Tærskel, Posterisér</dt><dd>Reducerer billedet til ren sort og hvid på et valgt niveau eller til et lille antal toner pr. kanal.</dd>
+</dl>
+
+<h2 id="pixels-filters">Filtre</h2>
+<p>Undermenuen <strong>Filtre</strong> omformer selve pixelsne, igen inde i markeringen.</p>
+<dl>
+  <dt>Gaussisk sløring</dt><dd>Blødgør laget med en jævn, justerbar mængde.</dd>
+  <dt>Skærp, Uskarp maske</dt><dd>Gør detaljerne skarpe - Uskarp maske giver kontrol over radius, mængde og en tærskel, der skåner flade områder og fin støj.</dd>
+  <dt>Pixelér</dt><dd>Blokerer billedet i firkantede fliser til en mosaik.</dd>
+  <dt>Tilføj støj</dt><dd>Spredder korn på tværs af malingen.</dd>
+  <dt>Find kanter, Præg</dt><dd>Sporer, hvor farven skifter, som lyse linjer på mørke, eller som en grå relief.</dd>
+</dl>
+<p><strong>Filtre &gt; Effektforhåndsvisninger</strong> viser dit lag som et gitter af levende miniaturer, hver med én justering eller ét filter anvendt, så du kan vælge efter øje i stedet for efter navn. Valg af en miniature holder vinduet åbent. Effektens indstillinger vises ved siden af gitteret, og lærredet forhåndsviser resultatet, mens du ændrer dem. Intet anvendes, før du klikker på <strong>Anvend</strong> (eller trykker på <kbd>Enter</kbd>). <strong>Annuller</strong> eller <kbd>Esc</kbd> sætter billedet tilbage, og én fortrydelse tager en anvendt effekt væk. Du kan trække vinduet ved dets titel for at se lærredet bag det.</p>
+
+<h2 id="pixels-undo">Hurtig, flisebaseret fortrydelse</h2>
+<p>Hele strøget fortrydes i ét trin, uanset hvor langt det var: tryk på <kbd>&#8984;Z</kbd> én gang, og det sidste mærke er væk, og <kbd>&#8679;&#8984;Z</kbd> bringer det tilbage. Hvis det første strøg måtte oprette sit lag, går det lag tilbage med strøget i stedet for at blive efterladt tomt.</p>
+<p>Bag kulisserne holdes et pixellag som et gitter af små fliser, og et strøg kopierer kun de fliser, det faktisk rørte. Fortrydelse holder hele dokument snapshots, men et strøg koster kun sine egne fliser i stedet for hele overfladen, så mal på et stort lag forbliver hurtigt, og en lang session med penselarbejde fylder ikke hukommelsen. Flade områder af én farve gemmes kompakt, så et lag, der for det meste er én farve, tager næsten ingen plads.</p>
+
+<h2 id="pixels-treating">Behandling af et pixellag som ethvert objekt</h2>
+<p>Et pixellag er et objekt i dokumentet, så alt, du allerede ved, gælder. Vælg det, flyt det, og skalér, rotér, spejl eller skær det fra <strong>Objekt &gt; Transformering</strong>, afgrænsningsrammen eller Det frie transformværktøj. Uden marquee omslutter rammen lagets malte pixels i stedet for hele overfladen, og en transformering virker på disse pixels: flytning berører dem ikke, mens skalering eller drejning bages ind i pixelsne, når du trykker på <kbd>Enter</kbd>, vælger et andet værktøj eller vælger noget andet, så laget forbliver oprejst, og det næste penselstrøg lande den rigtige vej op. Indstil dets opacitet og giv det enhver af de seksten blandingstilstande fra Gennemsigtighed-panelet for at sidde malet farve over den tegnede grafik under det. Klik vælger laget kun, hvor det har maling, så et gennemsigtigt hjørne lader dig klikke direkte igennem til det, der er under det. <strong>Dupliker</strong> kopierer et pixellag som ethvert objekt - billigt, fordi kopien deler dets fliser, indtil én af dem males på.</p>
+<p><strong>Objekt &gt; Pixellag &gt; Flet ned</strong> flader et pixellag ud på pixellaget direkte under det og fjerner det øverste og efterlader et enkelt lag med de to komponeret sammen. Hvis lagene sidder under forskellige transformeringer - lad os sige én er blevet drejet - resample den øverste ind i den nedres gitter, mens den flettes.</p>
+<p>To kommandoer virker på hele overfladen på én gang:</p>
+<dl>
+  <dt>Objekt &gt; Pixellag &gt; Udfyld med udfyldningsfarve</dt><dd>Oversvømmer hele overfladen med den aktuelle udfyldningsfarve. Gå efter den for at lægge en grundlak, før du maler over den, eller for at oversvømme et lag, der er sat bag anden grafik.</dd>
+  <dt>Objekt &gt; Pixellag &gt; Ryd</dt><dd>Tømmer overfladen uden at fjerne laget, så du kan begynde male igen, mens du bevarer lagets placering, transformering, opacitet og blandingstilstand.</dd>
+</dl>
+<p>Begge kommandoer vises også under <strong>Effekt &gt; Pixellag</strong>.</p>
+
+<h2 id="pixels-masks">Lagmasker</h2>
+<p>En <strong>lagmaske</strong> skjuler dele af et pixellag uden at slette dem: laget skinner igennem, hvor masken er hvid, og er skjult, hvor den er sort, med gråtonerne imellem til delvis gennemsigtighed. Fordi intet slettes, kan du male masken frem og tilbage, så ofte du vil. Kommandoerne er under <strong>Objekt &gt; Pixellag</strong>.</p>
+<dl>
+  <dt>Tilføj lagmaske</dt><dd>Tilknytter en maske, der afslører alt til at starte med, klar til at male på.</dd>
+  <dt>Tilføj lagmaske fra markering</dt><dd>Bygger masken fra den aktuelle pixelmarkering: det, der er inde, forbliver, det, der er uden for, skjules. En hurtig måde at skære en form ud af et foto på ikke-destruktivt.</dd>
+  <dt>Rediger maske</dt><dd>Skifter malning af masken til og fra. Mens den er tændt maler Penslen, Viskeren og Malerspand masken i stedet for laget: mal med sort (eller en mørk farve) for at skjule, hvid for at afsløre, grå for at falme. Penslen bruger lysstyrken af den aktuelle udfyldningsfarve, så sort skjuler og hvid viser.</dd>
+  <dt>Anvend lagmaske</dt><dd>Bager masken ind i laget for godt - de skjulte pixels bliver gennemsigtige - og fjerner masken.</dd>
+  <dt>Slet lagmaske</dt><dd>Smider masken væk og viser hele laget igen, urørt.</dd>
+</dl>
+<p>Et maskeret lag eksporteres og gemmes med masken allerede anvendt og blander og transformeres som ethvert andet lag.</p>
+
+<h2 id="pixels-rasterize">Vending af vektorgrafik til pixels: Rasterisering</h2>
+<p><strong>Objekt &gt; Rasterisér</strong> erstatter den aktuelle markering med et indlejret billede af sig selv og bager stierne, teksten og eventuelle effekter ind i faste pixels. Brug denne, når du vil have et vektorresultat til at ophøre med at være redigerbart, når en effekt er lettere at behandle som et fladt billede, eller for at overdrage et stykke, der skal se ens ud alle steder uden at bære sin levende konstruktion. Resultatet er et indlejret billede i stedet for et malbart pixellag, så behold en kopi af originalgrafikken, hvis du måske har brug for at redigere den igen. <strong>Vis &gt; Pixelforhåndsvisning</strong> (<kbd>&#8997;&#8984;Y</kbd>) lader dig tjekke, hvordan vektorgrafik lander på pixelgitteret, før du forpligter dig.</p>
+
+<h2 id="pixels-saving">Gemning og eksport</h2>
+<p><code>.cut</code>-dokumenter holder pixellag med resten af grafikken, pakket, så flade områder tager næsten ingen plads og genåbnes præcis, som de blev malet.</p>
+<p>Hvordan pixellag forlader dokumentet, afhænger af formatet:</p>
+<dl>
+  <dt>PNG, JPEG og WebP</dt><dd>Flader hele dokumentet til pixels, så malet og tegnet arbejde smelter sammen til én bitmap. PNG kan bevare gennemsigtighed; eksportér ved @2x for et skarpere resultat.</dd>
+  <dt>SVG og PDF</dt><dd>Skriver den malte overflade ud som et indlejret billede placeret blandt vektorgrafikken, så et dokument, der blander tegnet og malet arbejde, rejser som én fil med dens former stadig skarpe.</dd>
+</dl>
+<p>Fordi raster og vektor lever i samme dokument og eksporeres sammen, kan du bygge et stykke på den naturlige måde: rene former og tekst som vektorer og de dele, der ønsker følelsen af maling, en blød glød, en teksturvask, et retoucheret foto, som pixellag stablet blandt dem.</p>

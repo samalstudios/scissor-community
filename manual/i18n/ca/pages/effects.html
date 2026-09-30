@@ -1,0 +1,96 @@
+<p class="lede">Un efecte canvia l'aparença d'un objecte sense modificar l'objecte mateix. El camí, el grup o el text roman exactament com el vau dibuixar, i l'esfecte es recalcula a sobre cada vegada que moveu un punt o modifiqueu un valor. Els efectes s'apilen al panell Pila de pintura, de manera que podeu apilar-ne diversos sobre un objecte, reordenar-los i treure'n qualsevol de nou.</p>
+
+<figure class="shot">
+  <img src="img/effects-demo.png" width="1400" height="560" loading="lazy"
+       alt="Tres rajoles blaves idèntiques que mostren tres efectes: una ombra projectada, una brillor externa ambre i vores asprejades." />
+  <figcaption>La mateixa rajola amb tres efectes: una ombra projectada, una brillor externa i Aspreja. Cadascú és en viu, de manera que la rajola de sota és encara un rectangle arrodonit simple.</figcaption>
+</figure>
+
+<h2 id="effects-live-and-stacked">Efectes en viu i pila d'aparença</h2>
+<p>Cada efecte a Scissor és <strong>en viu</strong> i <strong>no destructiu</strong>. Es troba sobre els emplenaments i els contorns de l'objecte al panell <strong>Aparença</strong> (<kbd>&#8679;F6</kbd>) i s'executa sobre tot l'objecte cada vegada que la feina o l'efecte canvia. Com que el camí original és intacte sota, podeu continuar editant els ancoratges, canviant el color d'emplenament o tornant a escriure les paraules, i l'efecte segueix. Useu un efecte cada vegada que vulgueu una aparença, una ombra, una corba, una cantonada arrodonida, que podríeu canviar d'opinió més endavant, en comptes de comprometre-vos-hi a mà.</p>
+
+<h3 id="effects-order">L'ordre importa</h3>
+<p>Els efectes s'executen de baix de la pila cap amunt, i el panell els llista de dalt, sobre els emplenaments i els contorns. L'ordre canvia el resultat: un difuminat sota una ombra projectada alisa la forma abans que l'ombra es projecti, mentre que els mateixos dos a l'altre sentit projecten una ombra neta i després difuminen tot. Si un efecte no fa el que espereu, la seva posició a la pila és la primera cosa a comprovar.</p>
+
+<h2 id="effects-using">Afegir, editar i eliminar efectes</h2>
+<h3 id="effects-add">Des del menú Efecte</h3>
+<p>Seleccioneu un objecte, després trieu un efecte del menú <strong>Efecte</strong>. Les entrades que obren un diàleg mostren una <strong>Vista prèvia</strong> a mesura que canvieu els seus valors, de manera que podeu jutjar el resultat al llenç abans de confirmar; tota l'edició cau com un sol pas a l'historial en comptes de un pas per tecla. Una versió breu del menú (Ombra projectada, Brillor extern i Difuminat gaussià, més Neteja efectes) també es troba al menú del clic dret sobre el llenç sota <strong>Efecte</strong>.</p>
+
+<h3 id="effects-appearance">Al panell Pila de pintura</h3>
+<p>Cada efecte sobre l'objecte seleccionat té la seva fila al panell Pila de pintura, marcada amb una insígnia <em>fx</em>. Feu clic al nom de l'efecte per tornar a obrir-ne les opcions i modificar-les. Feu clic a la creu al final de la fila per eliminar aquest efecte. Per eliminar cada efecte de la selecció d'un cop, useu <strong>Efecte &rsaquo; Neteja efectes</strong>.</p>
+
+<h3 id="effects-panels">Als panells Efectes</h3>
+<p>El grup <strong>Finestra &rsaquo; Efectes</strong> recull els efectes en un panell per cada part del menú Efecte: Estilitza, Difumina, Distorcia i Transforma, Camí, Formes combinades i Deforma, amb el panell 3D al costat. Cada panell llista els efectes d'aquest grup amb un interruptor per activar-los o desactivar-los i les seves configuracions just a sota, totes editades en viu sobre la selecció. És una manera més ràpida de provar un efecte i ajustar-ne els valors que obrir un diàleg cada vegada. Desactivar un interruptor treu aquest efecte de l'objecte. Quan un objecte porta més d'un efecte del mateix tipus, el panell edita el primer i el panell Pila de pintura continua mostrant tota la pila.</p>
+
+<h2 id="effects-stylize">Estilitza: ombres, brillors i vores</h2>
+<p>El submenú <strong>Efecte &rsaquo; Estilitza</strong> conté els efectes de acabament de tots els dies.</p>
+<table>
+  <thead><tr><th>Efecte</th><th>Què fa, i quan utilitzar-lo</th><th>Opcions principals</th></tr></thead>
+  <tbody>
+    <tr><td>Ombra projectada</td><td>Projecta una còpia difuminada i desplaçada de l'objecte darrere seu. Useu-la per aixecar una forma, una targeta o un text del fons.</td><td>Desplaçament X i Y, Difuminat, Color, Opacitat.</td></tr>
+    <tr><td>Brillor extern</td><td>Difon un halo suau de color cap a fora des de la vora de l'objecte. Useu-lo per a un cartell de neó, un ressaltat o una brillor al voltant d'una font de llum.</td><td>Difuminat, Color, Opacitat.</td></tr>
+    <tr><td>Brillor intern</td><td>Esvaeix un color cap a dins des de la vora en comptes de cap a fora, de manera que la llum es troba dins la forma. Useu-lo per buidar una forma o suggerir una vora incassada i il·luminada.</td><td>Difuminat, Color, Opacitat.</td></tr>
+    <tr><td>Ploma</td><td>Esvaeix la vora de l'objecte a transparent sobre un radi. Useu-lo per a una forma de vora suau o una vineta simple.</td><td>Radi de ploma.</td></tr>
+    <tr><td>Arrodonir cantonades</td><td>Arrodoneix cada cantonada del camí a un radi. Useu-lo per suavitzar les puntes d'una estella, un polígon o un camí dibuixat a mà sense tornar a dibuixar-lo.</td><td>Radi.</td></tr>
+    <tr><td>Emplenament d'esbós</td><td>Omple la forma amb una sèrie de traços d'anada i tornada, com si fossin esbossats a mà. Bo per a un emplenament lliure i dibuixat o un efecte de retolador.</td><td>Angle, Espaiat, Gruix de traç, Variació (quant divaguen els traços, de 0 a 100%).</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-blur">Difuminat</h2>
+<p><strong>Efecte &rsaquo; Difumina &rsaquo; Difuminat gaussià</strong> suavitza tot l'objecte un <em>Radi</em> que establiu en píxels. Com que roman en viu, podeu pujar o baixar el radi en qualsevol moment. Useu-lo per a un fons suau i fora de focus, o bé com a una ràpida forma d'ombra suau per si sola.</p>
+
+<h2 id="effects-distort">Distorcia i transforma</h2>
+<p>El submenú <strong>Efecte &rsaquo; Distorcia i Transforma</strong> remodela el contorn mantenint el camí subjacent editable.</p>
+<table>
+  <thead><tr><th>Efecte</th><th>Què fa, i quan utilitzar-lo</th><th>Opcions principals</th></tr></thead>
+  <tbody>
+    <tr><td>Distorsió lliure</td><td>Arrossega les quatre cantonades del quadre de l'objecte en una petita vista prèvia, i la faina segueix en perspectiva. Useu-la per simular una perspectiva, com una etiqueta apagada sobre una superfície inclinada. Un interruptor Vista prèvia mostra el resultat al llenç mentre arrossegueu, i Restableix torna les cantonades a escarreta.</td><td>Les quatre nanses de cantonada, Vista prèvia, Restableix.</td></tr>
+    <tr><td>Pessiga i infla</td><td>Doblega els segments entre ancoratges cap a dins, pessigant el contorn en puntes, o cap a fora, inflant-lo en bony. Useu-lo per a explosions estel·lars, blobs i formes de pètal suaus.</td><td>Quantitat, de pessigat a inflat.</td></tr>
+    <tr><td>Aspreja</td><td>Trenca el contorn en petits moviments aleatoris, nets o alisats. Useu-lo per a una vora estripada o una línia més aspra i dibuixada a mà.</td><td>Mida (fins on es mouen els punts), Detall (com de densament), Punts: Suau o Cantonada.</td></tr>
+    <tr><td>Transforma</td><td>Redimensiona, mou i gira l'objecte com a efecte, i pot deixar un conjunt de còpies enrere. Useu-lo per a una fila o un anell de repeticions editables, o per moure i redimensionar una forma sense tocar la seva geometria real.</td><td>Redimensiona horitzontal i vertical, Mou horitzontal i vertical, Gira, Còpies (de 0 a 200).</td></tr>
+    <tr><td>Retoca</td><td>Desplaça els ancoratges i les seves nanses de control una quantitat aleatòria. Useu-la per desajustar una forma massa perfecta.</td><td>Quantitat horitzontal i vertical, i si moure Ancoratges, Punts de control o tots dos.</td></tr>
+    <tr><td>Gira</td><td>Gira l'interior de la forma més que les seves vores, enrotllant-la en una espiral. Useu-lo per a una espiral o un remolí.</td><td>Angle.</td></tr>
+    <tr><td>Zig Zag</td><td>Converteix els segments rectes en zig-zags regulars (Cantonada) o ones (Suau). Useu-lo per a una subratllat ondulada, una vora ric-rac o una vora dentada.</td><td>Mida, Crestes per segment, Punts: Cantonada o Suau.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-path">Camí</h2>
+<p>El submenú <strong>Efecte &rsaquo; Camí</strong> reelabora el contorn de l'objecte deixant la font editable.</p>
+<table>
+  <thead><tr><th>Efecte</th><th>Què fa, i quan utilitzar-lo</th><th>Opcions principals</th></tr></thead>
+  <tbody>
+    <tr><td>Camí de desplaçament</td><td>Engrandeix o empetiteix el contorn una distància establerta. Un desplaçament positiu el difon cap a fora, un negatiu l'estreu cap a dins. Useu-lo per a un contorn en viu al voltant d'un text o una forma que segueix el ritme mentre editeu.</td><td>Desplaçament, Unions: Bisell, Rodó o Bisell pla.</td></tr>
+    <tr><td>Contorna objecte</td><td>Afegeix un efecte Camí de desplaçament establert a zero, convertint l'objecte (text en viu inclòs) en un camí contornat perquè els efectes posteriors tinguin un camí real sobre el qual actuar.</td><td>Cap.</td></tr>
+    <tr><td>Contorna traç</td><td>Converteix el contorn en una forma emplenada com a efecte. Useu-lo quan vulgueu emplenar un contorn amb un degradat, o bé plumar o distorsionar un contorn que altrament és una línia simple.</td><td>Cap.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-pathfinder">Formes combinades</h2>
+<p>El submenú <strong>Efecte &rsaquo; Formes combinades</strong> combina les formes dins d'un grup amb un mode de forma, però les manté com a camins separats i editables sota. Aplicat a un grup, el resultat combinat és el que veieu, mentre que cada membre encara es pot moure o acolorir. Useu-lo per provar una combinació sense comprometre-vos de la manera que ho faria el panell Formes combinades.</p>
+<table>
+  <thead><tr><th>Mode</th><th>Resultat</th></tr></thead>
+  <tbody>
+    <tr><td>Afegeix</td><td>Uneix les formes del grup en una regió.</td></tr>
+    <tr><td>Intersecció</td><td>Manté només on les formes es superposen.</td></tr>
+    <tr><td>Exclou</td><td>Manté tot excepte on es superposen.</td></tr>
+    <tr><td>Resta</td><td>Elimina les formes de davant de la de darrere.</td></tr>
+    <tr><td>Menys darrere</td><td>Elimina les formes de darrere de la de davant.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-warp">Deforma</h2>
+<p><strong>Efecte &rsaquo; Deforma</strong> doblega l'objecte al llarg d'una de una sèrie de formes preestablertes i roman en viu perquè pugueu continuar editant la feina sota. Useu-lo per corbar un títol en un arc, ondular un bàner o empènyer un bloc pla en un bony, sense renunciar a la possibilitat de canviar les paraules o els colors.</p>
+<p>El menú ofereix deu estils directament (Arc, Arc de cercle, Bony, Bandera, Onada, Peix, Pujada, Ull de peix, Infla i Estrènyer). <strong>Opcions de deformació&hellip;</strong> obre el conjunt complet, que afegeix Arc inferior, Arc superior, Closca inferior i Closca superior, i us permet ajustar la quantitat:</p>
+<dl>
+  <dt>Corba</dt><dd>Com de fortament la forma es doblega, de -100% a 100%.</dd>
+  <dt>Horitzontal</dt><dd>Inclina la corba cap a un costat, de -100% a 100%.</dd>
+  <dt>Vertical</dt><dd>Apuja o abaixa la corba, de -100% a 100%.</dd>
+</dl>
+<p>Els estils de deformació mateixos es poden aplicar com a bust de remodelació en comptes, que modifica el camí mateix en comptes de romandre en viu: vegeu <a href="#transform-envelope">Deformació de forma</a>. L'eina Deforma i les altres eines de liquify remodelen arrossegant al llenç i es tracten sota <a href="#tools-width-liquify">la referència d'eines</a>.</p>
+
+<h2 id="effects-3d">3D i Materials</h2>
+<p><strong>Efecte &rsaquo; 3D i Materials</strong> converteix una forma plana en un sòlid: un pla, una extrusió i bisell, una revolució o un inflat. Com els altres és un efecte en viu, de manera que el camí pla roman allà per editar i el sòlid es reconstrueix quan el canvieu. Profunditat, bisell, rotació, il·luminació i superfície s'estableixen al panell 3D i Materials. Com que té més controls d'un sol diàleg, 3D té la seva pròpia pàgina: vegeu <a href="/manual/three-d/">3D</a>.</p>
+
+<h2 id="effects-expand">Convertir efectes en feina</h2>
+<p>Un efecte roman en viu tot el temps que vulgueu. Quan l'aparença està resolta i necessiteu el resultat com a camins simples i editables, per exemple per passar el fitxer o remodelar a mà el resultat de l'efecte, trieu <strong>Objecte &rsaquo; Expandeix aparença</strong>. Incorpora tota la pila d'aparença, efectes inclosos, en feina ordinària. Això ja no es pot editar com a efecte després, de manera que expandiu només quan estigueu segur. Per treure els efectes sense incorporar res, traieu-los un a un al panell Pila de pintura o bé netejeu-los tots amb <strong>Efecte &rsaquo; Neteja efectes</strong>.</p>
+<p>El menú Efecte també llista <strong>Rasteritza</strong>, que no és un efecte en viu: converteix la selecció en píxels allà i al moment. La pintura i les capes de píxels es tracten a la pàgina <a href="/manual/pixels/">Capes de píxels</a>.</p>

@@ -1,0 +1,65 @@
+<p class="lede">3D i Materiały zamienia płaski kształt w bryłę, którą możesz obracać, oświetlać i nadawać jej powierzchnię, nigdy nie opuszczając swojej grafiki wektorowej. To efekt na żywo: bryła jest rysowana z ścieżki pod spodem, a ta ścieżka pozostaje w pełni edytowalna, więc możesz zmienić kontur, kolor lub tekst w dowolnym momencie, a 3D przebudowuje się wokół niego.</p>
+
+<h2 id="three-d-opening">Otwieranie efektu</h2>
+<p>Najpierw zaznacz obiekt, a następnie wybierz typ obiektu z <strong>Efekt &rsaquo; 3D i Materiały</strong>: <em>Płaszczyzna</em>, <em>Wyciągnij i sfazuj</em>, <em>Obróć</em> lub <em>Nadmuchaj</em>. Każdy z nich dodaje efekt i otwiera panel <strong>3D i Materiały</strong>, w którym znajduje się reszta kontrolek. Ten sam panel otwiera się samodzielnie z <strong>Okno &rsaquo; 3D i Materiały</strong> lub z <strong>Efekt &rsaquo; 3D i Materiały &rsaquo; Panel 3D i Materiały</strong>.</p>
+<p>Panel potrzebuje czegoś zaznaczonego, zanim cokolwiek zrobi; gdy nic nie wybrano, mówi o tym i wyszarza swoje kontrolki. Gdy obiekt ma efekt, cztery przyciski typu obiektu biegną wzdłuż góry panelu, dzięki czemu możesz przełączyć kształt z wyciągnięcia na obrót jednym kliknięciem i zachować obrót i oświetlenie, które już ustawiłeś.</p>
+<p>Ponieważ to efekt, a nie konwersja, możesz nałożyć go na niemal wszystko, co może zawierać ścieżka: kształt, grupę, kontur lub tekst na żywo. Edycja źródła, na przykład przepisanie słowa lub popchnięcie kotwicy, ponownie uruchamia efekt na nowej grafice.</p>
+
+<h2 id="three-d-types">Cztery typy obiektów</h2>
+<p>Typ obiektu decyduje, jak płaski kształt jest odczytywany jako bryła. Wybierz ten, który pasuje do formy, której szukasz.</p>
+
+<h3 id="three-d-plane">Płaszczyzna</h3>
+<p>Płaszczyzna zostawia grafikę płaską i umieszcza ją jako kartę w przestrzeni 3D, więc wszystko, co robi, to pozwala Ci obracać i chylać ją. Nie ma głębi do ustawienia. Sięgaj po nią, gdy chcesz, aby płaska grafika siedziała pod kątem, taka jak etykieta odchylona na powierzchni lub odznaka przekrzywiona, aby złapać światło, bez nadawania jej żadnej grubości.</p>
+
+<h3 id="three-d-extrude">Wyciągnij i sfazuj</h3>
+<p>Wyciągnij popycha kształt prosto w tył, aby dać mu grubość, zamieniając kontur w bryłkowaty blok. Faza zaokrągla lub tnie przednie i tylne krawędzie, aby nie zostały ostre. Dziury są zachowywane: ścieżka złożona taka jak pierścień lub litera z wnętrzem pozostaje wydrążona na całej długości. To typ do użycia dla tekstu, logo, ikon i odznak, które powinny odczytywać się jako wypukłe lub wyrzeźbione.</p>
+<figure class="shot">
+  <img src="img/3d-extrude.gif" width="620" height="620" loading="lazy" alt="Płaski wektorowy gwiazda wyciągana w trójwymiarową gwiazdę i obracana, aby pokazać swoją głębię." />
+  <figcaption>Wyciągnij i sfazuj buduje głębię z płaskiego kształtu, na żywo. Gwiazda pozostaje edytowalną ścieżką pod spodem.</figcaption>
+</figure>
+
+<h3 id="three-d-revolve">Obróć</h3>
+<p>Obróć zamieszcza kształt wokół jego lewej krawędzii, tak jak profil obracany na tokarce śledzi bryłę. Narysuj połowę symetrycznego obiektu, szklankę, butelkię, miskę, figurę szachową i obróć ją w okrąg. Kąt obrotu może być mniejszy niż pełny obrót, aby zostawić przekrój pokazujący wnętrze.</p>
+
+<h3 id="three-d-inflate">Nadmuchaj</h3>
+<p>Nadmuchaj pompuje kształt na zewnątrz, jakby był poduszką wypełnioną powietrzem, dając miękką zaokrągloną powierzchnię zamiast płaskiej. Użyj go do miękkich przycisków, poduszonych odznak, słodyczy i zaokrąglonych naklejek, gdzie chcesz puchnięcia, a nie twardego wyciągniętego obrysu.</p>
+
+<h2 id="three-d-shape">Głębię, fazę i kroki</h2>
+<p>Sekcja <em>Obiekt</em> zawiera pola kształtujące bryłę. Które z nich się pojawiają, zależy od typu obiektu, więc panel pokazuje tylko pola, które robią coś dla typu w ręku.</p>
+<table>
+  <thead><tr><th>Pole</th><th>Pokazane dla</th><th>Co ustawia</th></tr></thead>
+  <tbody>
+    <tr><td>Głębokość</td><td>Wyciągnij i sfazuj, Nadmuchaj</td><td>Jak daleko kształt jest popychany w tył lub jak bardzo puchnie, w pikselach.</td></tr>
+    <tr><td>Faza</td><td>Wyciągnij i sfazuj</td><td>Rozmiar zaokrąglonej lub ściętej krawędzi z przodu i z tyłu, w pikselach; zostaw ją na zerze dla zwykłej kwadratowej krawędzi.</td></tr>
+    <tr><td>Kąt</td><td>Obróć</td><td>Jak daleko profil jest zamieszczony, do pełnego obrotu 360&deg;. Mniejszy kąt zostawia obiekt otwarty, pokazując jego wnętrze.</td></tr>
+    <tr><td>Kroki</td><td>Wyciągnij i sfazuj, Obróć, Nadmuchaj</td><td>Ile segmentów buduje krzywe części. Więcej kroków daje gładszą powierzchnię; mniej zostawia ją fasetowaną.</td></tr>
+  </tbody>
+</table>
+<p>Płaszczyzna nie ma żadnego z tych: nie ma grubości do opisania. Gdy krzywy obrót lub zaokrąglona faza wygląda zbyt kątowo, podnieś kroki; gdy celowo chcesz niskopoligonowy, fasetowany wygląd, obniż je.</p>
+
+<h2 id="three-d-rotation">Obracanie obiektu</h2>
+<p>Sekcja <em>Obrót</em> ustawia, jak obiekt jest skierowany do Ciebie. Najszybszy sposób to podgląd: przeciągnij po nim, aby obrócić obiekt w lewo i prawo, i przeciągnij w górę i w dół, aby go pochylić do przodu i do tyłu. Dla dokładnych kątów pola <em>X</em>, <em>Y</em> i <em>Z</em> obracają obiekt wokół każdej osi, każda od -180&deg; do 180&deg;.</p>
+<p>Menu obrotu zawiera gotowe punkty widoku, dzięki czemu możesz upuścić obiekt prosto w standardowy widok zamiast wybijać go:</p>
+<dl>
+  <dt>Z osi Przód, Tył, Lewo, Prawo, Góra, Dół</dt><dd>Widoki z trzech czterech, które pokazują jedną główną ścianę razem z odrobiną góry lub boku. Dobry domyślny wybór dla bryły, która powinna wyglądać jak bryła.</dd>
+  <dt>Izometryczne Lewo, Prawo, Góra, Dół</dt><dd>Prawdziwe widoki izometryczne, w których trzy osi są równo skrócone i linie pozostają równoległe. Pasuje do grafiki technicznej i w stylu gier, która musi się zgadzać.</dd>
+  <dt>Przód, Tył, Lewo, Prawo, Góra, Dół</dt><dd>Sześć widoków prosto, patrzących prosto na jedną ścianę. Przydatne do sprawdzenia kształtu lub płaskiego, frontowego przedstawienia.</dd>
+</dl>
+<p>Wybór presetu wypełnia pola X, Y i Z; zmiana któregokolwich z nich ręcznie pokazuje menu jako <em>Własny obrót</em>. Pole <em>Perspektywa</em>, od 0&deg; do 160&deg;, kontroluje, jak silnie obiekt się oddala: na zero boki pozostają równoległe, a w miarę podnoszenia dalsze krawędzie wciągają się w stronę punktu zbiegania, tak jak prawdziwy obiekt widziany z bliska wydaje się zwężać. Dodaj trochę perspektywy dla realistycznego widoku z trzech czterech lub zostaw ją na zerze, aby zachować izometryczne lub płaskie ustawienie dokładne.</p>
+
+<h2 id="three-d-lighting">Oświetlenie</h2>
+<p>Sekcja <em>Oświetlenie</em> decyduje, skąd pochodzi światło i jak silne jest, co sprawia, że powierzchnia odczytywa się jako wypukła, wyrzeźbiona lub zaokrąglona. Menu oświetlenia oferuje cztery punkty wyjścia, <em>Standardowe</em>, <em>Diffuse</em>, <em>Góra lewo</em> i <em>Prawo</em>, a jakakolwiek zmiana pól poniżej pokazuje je jako <em>Własne oświetlenie</em>.</p>
+<dl>
+  <dt>Intensywność</dt><dd>Siła głównego światła, jako procent. Wyższa sprawia, że oświetlone ściany są jaśniejsze, a podświetlenia silniejsze.</dd>
+  <dt>Ambient</dt><dd>Światło wypełniające, które podnosi cały obiekt, jako procent, tak że zacienione ściany nie spadają do czerni. Podnieś je dla miększego, bardziej równego wyglądu; obniż dla głębszego kontrastu.</dd>
+  <dt>Obrót</dt><dd>Gdzie światło siedzi wokół obiektu, od -180&deg; do 180&deg;, co przesuwa podświetlenie i cień na drugą stronę.</dd>
+  <dt>Wysokość</dt><dd>Jak wysoko światło jest nad obiektem, od 0&deg; (na poziomie z nim, dla długich, płaskich cieni) do 90&deg; (prosto nad głową, dla równego światła).</dd>
+</dl>
+<p><em>Diffuse</em> daje miękkie, niskokontrastowe wykończenie; <em>Góra lewo</em> i <em>Prawo</em> rzucają światło z jednej strony dla bardziej dramatycznego, rzeźbionego wyglądu. Zacznij od presetu, który jest najbliższy, a następnie dostosuj cztery pola do smaku.</p>
+
+<h2 id="three-d-materials">Materiały</h2>
+<p>Trzy przyciski materiałów ustawiają, jak powierzchnia łapie światło: <em>Plastik</em>, <em>Mat</em> i <em>Metal</em>. Plastik daje miękki połysk z wyraźnym podświetleniem, zwykły wybór dla przyjaznego, formowanego wyglądu. Mat usuwa połysk dla płaskiego, równego wykończenia, które odczytywa się jako papier, glina lub powierzchnia drukowana. Metal daje twardszy, wyższy kontrast połysku, dla chromu, złota i innych polerowanych metalów. Materiał współpracuje z oświetleniem, więc zmiana jednego jest warta sprawdzenia pod kątem drugiego.</p>
+
+<h2 id="three-d-expand">Zachowanie na żywo i rozwijanie</h2>
+<p>Wszystko powyżej jest przechowywane jako jeden efekt na żywo na obiekcie, wymieniony w panelu <strong>Wygląd</strong> (<kbd>&#8679;F6</kbd>) z odznaką <em>fx</em> nad wypełnieniami i obrysami obiektu. Kliknij ten wpis, aby ponownie otworzyć panel 3D i Materiały, lub usuń go tam, aby przywrócić obiekt do płaskiego. Wewnątrz panelu <em>Usuń 3D</em> zdejmuje efekt z zaznaczenia.</p>
+<p>Gdy efekt jest na żywo, grafika pod spodem pozostaje zwykłą, edytowalną ścieżką, co pozwala Ci nadal dostrajać kształt, kolor i tekst. Gdy wygląd jest ustalony i chcesz wynik jako zwykłą grafikę wektorową, na przykład do edycji poszczególnych ścian lub przekazania pliku, użyj <em>Rozwiń jako wektor</em> w panelu (to samo co <strong>Obiekt &rsaquo; Rozwiń wygląd</strong>). To wpiecze bryłę w ścieżki i kończy jej życie jako efektu, więc rozwijaj kopię, jeśli możesz chcieć jeszcze zmienić głębię lub kąt później.</p>

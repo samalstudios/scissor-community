@@ -1,0 +1,100 @@
+<p class="lede">Wektoryzacja zamienia obraz w ścieżki wektorowe: logo zeskanowane z papieru, szkic ołówkiem lub fotografia staje się zestawem wypełnionych kształtów, które możesz skalować, przemalowywać i edytować jak wszystko inne, co rysujesz. Ta strona obejmuje to, co możesz śledzić, panel, który to napędza, trzy tryby i ich presety, każdą opcję oraz sposób zachowania lub odrzucenia wyniku.</p>
+
+<h2 id="image-trace-what">Co robi śledzenie i co możesz śledzić</h2>
+<p>Obraz zbudowany jest z pikseli: rozmywa się, gdy go powiększasz, i nie może być przekształcony punkt po punkcie. Śledzenie odczytuje te piksele i rysuje ścieżki wektorowe podążające za kształtami, które znajduje, dzięki czemu wynik pozostaje ostry w dowolnym rozmiarze i może być edytowany, przemalowywany i łączony z resztą Twojej grafiki.</p>
+<p>Śledzisz <strong>warstwę pikselową</strong>: obraz, który umieściłeś lub wkleiłeś, obraz otwarty jako własna plansza lub warstwę, którą namalowałeś sam. Wprowadź obraz za pomocą <strong>Plik &gt; Umieść&hellip;</strong> (<kbd>&#8679;&#8984;P</kbd>) — przybywa jako warstwa pikselowa — zaznacz go, a następnie uruchom śledzenie. (Grafika wektorowa już jest zbudowana z ścieżek, więc nie ma czego śledzić; śledzenie odczytuje piksele.)</p>
+<p>Śledzenie nie wyrzuca obrazu. Buduje grupę o nazwie <strong>Wektoryzacja</strong>, która zawiera oryginalny obraz (teraz ukryty) razem z nowymi ścieżkami, siedzącym dokładnie nad nim. Ponieważ grupa pamięta ustawienia, z którymi została stworzona, wynik pozostaje na żywo: zaznacz ją ponownie, zmień ustawienie i śledzi ponownie. Gdy jesteś zadowolony, <strong>Rozwiń</strong> ją, aby zachować tylko ścieżki, lub <strong>Zwolnij</strong>, aby wrócić do zwykłego obrazu.</p>
+
+<h2 id="image-trace-panel">Panel Wektoryzacja</h2>
+<p>Wszystko ustawienie mieszka w panelu Wektoryzacja. Otwórz go z <strong>Obiekt &gt; Wektoryzacja &gt; Panel Wektoryzacja</strong> lub z jego karty w doku paneli. Panel potrzebuje zaznaczonego obrazu, zanim cokolwiek zrobi: gdy nic odpowiedniego nie wybrano, przycisk Śledź jest wyłączony, a panel prosi o zaznaczenie umieszczonego obrazu.</p>
+
+<h3 id="image-trace-run">Uruchamianie śledzenia</h3>
+<p>Zaznacz obraz, wybierz preset lub ustaw tryb i opcje ręcznie i naciśnij <strong>Śledź</strong>. Linia u dołu panelu raportuje postęp, odczytując <em>Śledzenie&hellip;</em> podczas pracy i <em>Śledzono. Rozwiń, aby zachować tylko ścieżki.</em>, gdy kończy. Gdy obraz nie zawiera niczego, z czego można zrobić kształt, lub nie może być odczytany, panel mówi Ci o tym i zostawia obraz nietknięty.</p>
+
+<h3 id="image-trace-preview">Podgląd w trakcie</h3>
+<p>Pole <strong>Śledź przy zmianie ustawień</strong>, domyślnie włączone, śledzi ponownie w momencie zmiany trybu, presetu, liczby lub pola, dzięki czemu możesz ocenić każdą korektę na bieżąco. Na dużym lub ruchliwym obrazie przerysowanie zajmuje chwilę, więc wyłącz to, jeśli wolisz ustawić kilka opcji najpierw i nacisnąć <strong>Śledź</strong> raz. Gdy ponownie zaznaczysz istniejące śledzenie, panel ładuje dokładne ustawienia, z którymi zostało stworzone, gotowe do dostosowania i ponownego śledzenia.</p>
+
+<h3 id="image-trace-menu">Polecenia menu Obiekt</h3>
+<p>Te same działania siedzą pod <strong>Obiekt &gt; Wektoryzacja</strong>, co jest przydatne, gdy panel jest zamknięty.</p>
+<table>
+  <thead><tr><th>Polecenie</th><th>Co robi</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Utwórz</strong></td><td>Śledzi zaznaczony obraz z bieżącymi ustawieniami, zostawiając wynik na żywo.</td></tr>
+    <tr><td><strong>Utwórz i rozwiń</strong></td><td>Śledzi i rozwija w jednym kroku, więc przechodzisz prosto do edytowalnych ścieżek.</td></tr>
+    <tr><td><strong>Rozwiń</strong></td><td>Zachowuje ścieżki i odrzuca obraz (patrz poniżej).</td></tr>
+    <tr><td><strong>Zwolnij</strong></td><td>Odrzuca ścieżki i wraca do obrazu (patrz poniżej).</td></tr>
+    <tr><td><strong>Panel Wektoryzacja</strong></td><td>Wysuwa panel na przód.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="image-trace-modes">Trzy tryby</h2>
+<p>Tryb decyduje, jak obraz jest redukowany przed narysowaniem. To pierwszy wybór do zrobienia, ponieważ rządzi, które z poniższych opcji mają zastosowanie.</p>
+<table>
+  <thead><tr><th>Tryb</th><th>Jak redukuje obraz</th><th>Opcja, której używa</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Czarno-biały</strong></td><td>Dzieli wszystko na dwa tony, tusz i papier, przy jasności, którą ustawiasz.</td><td>Próg</td></tr>
+    <tr><td><strong>Skala szarości</strong></td><td>Redukuje obraz do ustawionej liczby równych poziomów szarości od czerni do bieli.</td><td>Liczba kolorów (jako poziomy szarości)</td></tr>
+    <tr><td><strong>Kolor</strong></td><td>Wybiera paletę najbardziej charakterystycznych kolorów w obrazie i mapuje każdy piksel na najbliższy.</td><td>Liczba kolorów</td></tr>
+  </tbody>
+</table>
+<p>Niezależnie od wybranego trybu, na ton lub kolor tworzony jest jeden wypełniony kształt, a kształty układają się od największego, dzięki czemu mniejsze detale siedzą na górze. W pełni przezroczyste części obrazu są pomijane, dzięki czemu wycięcie na przezroczystym tle śledzi się samego podmiotu.</p>
+
+<h2 id="image-trace-presets">Presety</h2>
+<p>Preset to nazwany punkt wyjścia, który ustawia tryb i każdą opcję naraz. Wybierz jeden z menu u góry panelu i, z włączonym podglądem, obraz śledzi się natychmiast; traktuj wynik jako bazę i dostosowuj od tamtej pory. W momencie zmiany jakiejkolwiek pojedynczej opcji menu presetu przełącza się na <strong>Własny</strong>, ponieważ ustawienia już nie pasują do presetu.</p>
+<table>
+  <thead><tr><th>Preset</th><th>Tryb</th><th>Sięgaj po niego, gdy</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Wysoka wierność zdjęcia</strong></td><td>Kolor</td><td>Chcesz, aby fotografia była zachowana blisko oryginału, z wieloma kolorami.</td></tr>
+    <tr><td><strong>Niska wierność zdjęcia</strong></td><td>Kolor</td><td>Fotografia powinna czytać się jako kilka szerokich, płaskich obszarów koloru.</td></tr>
+    <tr><td><strong>3 kolory</strong></td><td>Kolor</td><td>Chcesz odważnego, plakatowego wyniku z trzech płaskich kolorów.</td></tr>
+    <tr><td><strong>6 kolorów</strong></td><td>Kolor</td><td>Płaski, ilustrowany wygląd z małą, schludną paletą.</td></tr>
+    <tr><td><strong>16 kolorów</strong></td><td>Kolor</td><td>Więcej zakresu kolorów niż płaszcze presety, ale nie pełne zdjęcie.</td></tr>
+    <tr><td><strong>Odcienie szarości</strong></td><td>Skala szarości</td><td>Obraz tonalny powinien zachować swoje cienie, ale stracić kolor.</td></tr>
+    <tr><td><strong>Czarno-białe logo</strong></td><td>Czarno-biały</td><td>Zamiana czystego dwukolorowego znaku lub logo w ostre kształty.</td></tr>
+    <tr><td><strong>Szkicowana sztuka</strong></td><td>Czarno-biały</td><td>Przechwycenie szkicu ołówkiem lub tuszem z jego luźniejszymi liniami.</td></tr>
+    <tr><td><strong>Sylwetki</strong></td><td>Czarno-biały</td><td>Chcesz stałych, wypełnionych sylwetek, a nie drobnych linii.</td></tr>
+    <tr><td><strong>Grafika liniowa</strong></td><td>Czarno-biały</td><td>Dobry rysunek liniowy, w którym cienkie kreski muszą przetrwać.</td></tr>
+    <tr><td><strong>Rysunek techniczny</strong></td><td>Czarno-biały</td><td>Ostry, wierny rysunek liniowy z zachowaniem jak największej liczby szczegółów.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="image-trace-options">Opcje</h2>
+<p>Poniżej trybu siedzą kontrolki kształtujące wynik. Które z nich są pokazywane, zależy od trybu: Próg pojawia się tylko dla Czarno-białego, podczas gdy liczba kolorów pojawia się dla Skali szarości i Koloru.</p>
+<dl>
+  <dt>Liczba kolorów</dt>
+  <dd>Ile kolorów (w trybie Kolor) lub poziomów szarości (w Skali szarości) obraz jest redukowany, od 2 do 64. Mniej daje płaski, bardziej graficzny wynik z mniejszą liczbą kształtów; więcej zachowuje obraz bliżej oryginału kosztem większej liczby ścieżek. Tryb Czarno-biały ignoruje to, ponieważ zawsze ma dwa tony.</dd>
+  <dt>Próg</dt>
+  <dd>Tylko dla Czarno-białego: jasność, od 0 do 255, przy której obraz dzieli się na tusz i papier. Wszystko ciemniejsze niż próg staje się rysowanym kształtem; wszystko jaśniejsze traktowane jest jako tło. Podnieś go, aby wciągnąć więcej średnich tonów w kształt dla cięższego wyniku, obniż, aby zachować tylko ciemniejsze znaki. Użyj go, aby dostosować, jak bardzo bladego szkicu jest wychwytywane.</dd>
+  <dt>Ścieżki</dt>
+  <dd>Jak ściśle ścieżki przylegają do pikseli, w skali od 0 do 100. Wysokie wartości przylegają do krawędzi ciasno i zachowują drobne wahania, z większą liczbą punktów kotwicznych; niskie wartości rozluźniają dopasowanie dla gładziejszych, prostszych ścieżek, które są lżejsze do edycji. Sięgaj po wysoką wartość, gdy dokładność ma znaczenie, i po niską, gdy chcesz czysty, schludny kontur.</dd>
+  <dt>Narożniki</dt>
+  <dd>Jak chętnie skręt w konturze staje się ostrym narożnikiem, a nie gładką krzywą, od 0 do 100. Podnieś go dla grafiki z ostrymi kątami, takiej jak logo lub tekst; obniż dla organicznych kształtów, które powinny pozostać zaokrąglone.</dd>
+  <dt>Szum</dt>
+  <dd>Najmniejszy fragment, w pikselach, który może stać się własnym kształtem. Wszystko mniejsze jest wchłaniane przez to, co go otacza. Podnieś go, aby wyczyścić kropki i ziarno ze skanu lub fotografii, aby przypadkowe kropki nie zamieniały się każda w ścieżkę; obniż, aby zachować prawdziwe drobne szczegóły.</dd>
+  <dt>Ignoruj biel</dt>
+  <dd>Pomija każdy kształt, który wychodzi prawie biały, więc papier lub tło nie jest rysowane i pozostaje przezroczute za śledzonymi znakami. Domyślnie włączone i pokazywane dla trybu Czarno-biały. Wyłącz to, gdy biały obszar jest częścią grafiki i musi być prawdziwym wypełnionym kształtem.</dd>
+  <dt>Wypełnienia</dt>
+  <dd>Daje każdemu śledzonemu kształtowi stałe wypełnienie w kolorze, w którym został śledzony. To zwykły wybór i jest domyślnie włączony.</dd>
+  <dt>Obrysy</dt>
+  <dd>Obrysowuje każdy śledzony kształt obrysem we własnym kolorze zamiast lub także jak wypełnienie. Domyślnie wyłączone. Jeśli wyłączysz zarówno Wypełnienia, jak i Obrysy, ścieżki nadal są tworzone, ale nic ich nie maluje, więc zostaw co najmniej jedno włączone.</dd>
+</dl>
+
+<h2 id="image-trace-finish">Zachowanie lub cofnięcie wyniku</h2>
+<p>Świeże śledzenie jest na żywo: ścieżki siedzą nad ukrytym oryginałem w grupie Wektoryzacja i możesz nadal dostosowywać ustawienia. Dwa polecenia kończą ten stan, oba na panelu jako przyciski i pod <strong>Obiekt &gt; Wektoryzacja</strong>. Stają się dostępne po zaznaczeniu śledzenia.</p>
+<dl>
+  <dt>Rozwiń</dt>
+  <dd>Zachowuje ścieżki i usuwa obraz, dzięki czemu grupa staje się zwykłą grafiką wektorową. Ustawienia już nie mają zastosowania i nie mogą być zmienione, ale każda ścieżka jest teraz zwykłym kształtem, który możesz przekształcać, przemalowywać, łączyć i porządkować. Sięgaj po to, gdy śledzenie wygląda dobrze i chcesz pracować na wektorach. <strong>Utwórz i rozwiń</strong> robi śledzenie i ten krok razem.</dd>
+  <dt>Zwolnij</dt>
+  <dd>Odrzuca śledzone ścieżki i przywraca oryginalny obraz, widoczny z powrotę w swoim starym miejscu. Użyj go, aby porzucić śledzenie i zacząć od nowa lub gdy potrzebowałeś tylko obrazu po wszystkim.</dd>
+</dl>
+
+<h2 id="image-trace-uses">Logo, szkice i fotografie</h2>
+<p>Trzy typowe punkty wyjścia wymagają różnych ustawień.</p>
+<dl>
+  <dt>Logo lub czysty znak</dt>
+  <dd>Zacznij od <strong>Czarno-białe logo</strong>. Zostaw <strong>Ignoruj biel</strong> włączone, aby papier odpadł, podnieś <strong>Narożniki</strong> dla ostrych kątów i <strong>Ścieżki</strong> dla wiernych krawędzi i dostosuj <strong>Próg</strong>, aż znak będzie stały bez wypełniania. Rozwiń, a następnie ustaw własny kolor wypełnienia.</dd>
+  <dt>Szkic ołówkiem lub tuszem</dt>
+  <dd>Wypróbuj <strong>Szkicowana sztuka</strong> lub <strong>Grafika liniowa</strong>. Obniż <strong>Próg</strong>, aby zachować tylko narysowane linie i pozwolić papieru odpaść, i podnieś <strong>Szum</strong> trochę, aby wyczyścić ziarno papieru. Grafika liniowa zachowuje cieńsze kreski; Szkicowana sztuka pasuje do luźniejszej ręki.</dd>
+  <dt>Fotografia</dt>
+  <dd>Użyj trybu Kolor z <strong>Wysoka wierność zdjęcia</strong> dla bliskiego podobieństwa lub <strong>Niska wierność zdjęcia</strong> dla płaszczego, ilustrowanego wyglądu i ustaw <strong>liczbę kolorów</strong> do smaku. Zostaw <strong>Ignoruj biel</strong> wyłączone, aby jasne obszary pozostały. Więcej kolorów oznacza więcej kształtów, więc ciężkie śledzenie zdjęcia może być duże: zmniejsz kolory, gdy wynik wydaje się nieporęczny.</dd>
+</dl>

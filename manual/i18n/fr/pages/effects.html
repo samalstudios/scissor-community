@@ -1,0 +1,96 @@
+<p class="lede">Un effet change l'apparence d'un objet sans changer l'objet lui-même. Le tracé, le groupe ou le texte reste exactement tel que vous l'avez dessiné, et l'effet est recalculé par-dessus chaque fois que vous déplacez un point ou modifiez une valeur. Les effets s'empilent dans le panneau Pile de peinture, de sorte que vous pouvez en empiler plusieurs sur un objet, les réorganiser et en retirer n'importe lequel à nouveau.</p>
+
+<figure class="shot">
+  <img src="img/effects-demo.png" width="1400" height="560" loading="lazy"
+       alt="Trois tuiles bleues identiques montrant trois effets : une ombre portée, une lueur extérieure ambre et des bords rugueux." />
+  <figcaption>La même tuile avec trois effets : une ombre portée, une lueur extérieure et Rugosité. Chacun est en direct, donc la tuile en dessous est toujours un simple rectangle arrondi.</figcaption>
+</figure>
+
+<h2 id="effects-live-and-stacked">Effets en direct et pile d'apparence</h2>
+<p>Chaque effet dans Scissor est <strong>en direct</strong> et <strong>non destructif</strong>. Il se trouve au-dessus des fonds et contours de l'objet dans le panneau <strong>Apparence</strong> (<kbd>&#8679;F6</kbd>) et s'exécute sur l'objet entier chaque fois que l'illustration ou l'effet change. Parce que le tracé d'origine est intact en dessous, vous pouvez continuer à modifier les points d'ancrage, échanger la couleur de fond ou retaper les mots, et l'effet suit. Utilisez un effet chaque fois que vous voulez un aspect, une ombre, une courbe, un coin arrondi, que vous pourrez changer d'avis plus tard, plutôt que de vous y engager à la main.</p>
+
+<h3 id="effects-order">L'ordre compte</h3>
+<p>Les effets s'exécutent du bas de la pile vers le haut, et le panneau les liste du haut en premier, au-dessus des fonds et contours. L'ordre change le résultat : un flou sous une ombre portée adoucit la forme avant que l'ombre ne soit projetée, tandis que les deux dans l'autre sens projettent une ombre nette puis floutent l'ensemble. Si un effet ne fait pas ce que vous attendez, sa position dans la pile est la première chose à vérifier.</p>
+
+<h2 id="effects-using">Ajouter, modifier et supprimer des effets</h2>
+<h3 id="effects-add">Depuis le menu Effet</h3>
+<p>Sélectionnez un objet, puis choisissez un effet dans le menu <strong>Effet</strong>. Les éléments qui ouvrent une boîte de dialogue affichent un <strong>Aperçu</strong> pendant que vous changez leurs valeurs, de sorte que vous pouvez juger le résultat sur le canevas avant de vous engager ; toute la modification se présente comme une seule étape dans l'historique plutôt qu'une étape par frappe. Une version courte du menu (Ombre portée, Lueur extérieure et Flou gaussien, plus Effacer les effets) se trouve également dans le menu contextuel du canevas sous <strong>Effet</strong>.</p>
+
+<h3 id="effects-appearance">Dans le panneau Pile de peinture</h3>
+<p>Chaque effet sur l'objet sélectionné a sa propre rangée dans le panneau Pile de peinture, marquée d'un badge <em>fx</em>. Cliquez sur le nom de l'effet pour rouvrir ses options et les modifier. Cliquez sur la croix à la fin de la rangée pour retirer cet effet unique. Pour supprimer tous les effets de la sélection d'un coup, utilisez <strong>Effet &rsaquo; Effacer les effets</strong>.</p>
+
+<h3 id="effects-panels">Dans les panneaux d'effets</h3>
+<p>Le groupe <strong>Fenêtre &rsaquo; Effets</strong> rassemble les effets dans un panneau pour chaque partie du menu Effet : Stylisation, Flou, Déformation et transformation, Tracé, Combinaison de formes et Déformation, avec le panneau 3D à côté. Chaque panneau liste les effets de ce groupe avec un interrupteur pour activer ou désactiver l'un et ses réglages juste en dessous, tous modifiés en direct sur la sélection. C'est un moyen plus rapide d'essayer un effet et d'ajuster ses valeurs que d'ouvrir une boîte de dialogue à chaque fois. Désactiver un interrupteur retire cet effet de l'objet. Lorsqu'un objet porte plus d'un effet du même type, le panneau modifie le premier d'entre eux et le panneau Pile de peinture affiche toujours la pile entière.</p>
+
+<h2 id="effects-stylize">Stylisation : ombres, lueurs et bords</h2>
+<p>Le sous-menu <strong>Effet &rsaquo; Stylisation</strong> contient les effets de finition courants.</p>
+<table>
+  <thead><tr><th>Effet</th><th>Ce qu'il fait, et quand l'utiliser</th><th>Options principales</th></tr></thead>
+  <tbody>
+    <tr><td>Ombre portée</td><td>Projette une copie décalée et floue de l'objet derrière lui. Utilisez-la pour détacher une forme, une carte ou un texte de l'arrière-plan.</td><td>Décalage X et Y, Flou, Couleur, Opacité.</td></tr>
+    <tr><td>Lueur extérieure</td><td>Étend un halo doux de couleur vers l'extérieur depuis le bord de l'objet. Utilisez-la pour un enseigne néon, un reflet, ou une lueur autour d'une source lumineuse.</td><td>Flou, Couleur, Opacité.</td></tr>
+    <tr><td>Lueur intérieure</td><td>Estompe une couleur vers l'intérieur depuis le bord au lieu de l'extérieur, de sorte que la lumière se trouve à l'intérieur de la forme. Utilisez-la pour évider une forme ou suggérer un rebord encastré et éclairé.</td><td>Flou, Couleur, Opacité.</td></tr>
+    <tr><td>Plume</td><td>Estompe le bord propre de l'objet vers la transparence sur un rayon. Utilisez-la pour une forme à bord doux ou un simple vignettage.</td><td>Rayon de plume.</td></tr>
+    <tr><td>Arrondi des coins</td><td>Arrondit chaque coin du tracé d'un rayon. Utilisez-la pour adoucir les pointes d'une étoile, d'un polygone ou d'un tracé dessiné à main levée sans le redessiner.</td><td>Rayon.</td></tr>
+    <tr><td>Remplissage esquissé</td><td>Remplit la forme avec une série d'allers-retours de traits, comme si elle était esquissée à la main. Idéal pour un remplissage lâche dessiné à la main ou un style marqueur.</td><td>Angle, Espacement, Épaisseur du contour, Variation (à quel point les traits errent, de 0 à 100 %).</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-blur">Flou</h2>
+<p><strong>Effet &rsaquo; Flou &rsaquo; Flou gaussien</strong> adoucit l'objet entier d'un <em>Rayon</em> que vous définissez en pixels. Parce qu'il reste en direct, vous pouvez augmenter ou diminuer le rayon à tout moment. Utilisez-le pour un arrière-plan doux et flou, ou comme une forme d'ombre douce rapide à lui seul.</p>
+
+<h2 id="effects-distort">Déformation et transformation</h2>
+<p>Le sous-menu <strong>Effet &rsaquo; Déformation et transformation</strong> remodèle le contour tout en gardant le tracé sous-jacent modifiable.</p>
+<table>
+  <thead><tr><th>Effet</th><th>Ce qu'il fait, et quand l'utiliser</th><th>Options principales</th></tr></thead>
+  <tbody>
+    <tr><td>Déformation libre</td><td>Glisse les quatre coins de la boîte de l'objet dans un petit aperçu, et l'illustration suit en perspective. Utilisez-la pour simuler une perspective, comme une étiquette posée sur une surface inclinée. Un interrupteur Aperçu affiche le résultat sur le canevas pendant que vous glissez, et Réinitialiser remet les coins en carré.</td><td>Les quatre poignées de coin, Aperçu, Réinitialiser.</td></tr>
+    <tr><td>Pincement et renflement</td><td>Courbe les segments entre les points d'ancrage soit vers l'intérieur, pinçant le contour en pointes, soit vers l'extérieur, le gonflant en renflements. Utilisez-la pour les étoiles éclatées, les blobs et les formes de pétales doux.</td><td>Montant, du pincé au gonflé.</td></tr>
+    <tr><td>Rugosité</td><td>Divise le contour en petits mouvements aléatoires, soit nets soit lissés. Utilisez-la pour un bord de papier déchiré ou une ligne plus rugueuse dessinée à la main.</td><td>Taille (jusqu'où les points se déplacent), Détail (densité), Points : Lisse ou Coin.</td></tr>
+    <tr><td>Transformation</td><td>Met à l'échelle, déplace et fait pivoter l'objet en tant qu'effet, et peut laisser un ensemble de copies derrière. Utilisez-la pour une rangée ou un anneau de répétitions modifiables, ou pour ajuster et redimensionner une forme sans toucher sa géométrie réelle.</td><td>Mise à l'échelle horizontale et verticale, Déplacement horizontal et vertical, Rotation, Copies (0 à 200).</td></tr>
+    <tr><td>Ajustement</td><td>Décale les points d'ancrage et leurs poignées de contrôle d'une quantité aléatoire. Utilisez-la pour dérégler légèrement une forme trop parfaite.</td><td>Montant horizontal et vertical, et si déplacer les points d'ancrage, les points de contrôle ou les deux.</td></tr>
+    <tr><td>Torsion</td><td>Fait tourner l'intérieur de la forme plus que ses bords, l'enroulant en tourbillon. Utilisez-la pour une spirale ou un tourbillon.</td><td>Angle.</td></tr>
+    <tr><td>Zigzag</td><td>Transforme les segments droits en zigzags réguliers (Coin) ou en vagues (Lisse). Utilisez-la pour un soulignement ondulé, un bord ric-rac ou un bord denté.</td><td>Taille, Crêtes par segment, Points : Coin ou Lisse.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-path">Tracé</h2>
+<p>Le sous-menu <strong>Effet &rsaquo; Tracé</strong> remodèle le contour de l'objet tout en laissant la source modifiable.</p>
+<table>
+  <thead><tr><th>Effet</th><th>Ce qu'il fait, et quand l'utiliser</th><th>Options principales</th></tr></thead>
+  <tbody>
+    <tr><td>Décalage du tracé</td><td>Agrandit ou rétrécit le contour d'une distance définie. Un décalage positif l'étend vers l'extérieur, un négatif le tire vers l'intérieur. Utilisez-la pour un contour en direct autour d'un texte ou d'une forme qui suit pendant que vous modifiez.</td><td>Décalage, Jonctions : Bec, Rond ou Biseau.</td></tr>
+    <tr><td>Contour de l'objet</td><td>Ajoute un effet Décalage du tracé réglé sur zéro, transformant l'objet (texte en direct inclus) en tracé contourné pour que les effets ultérieurs aient un vrai tracé sur lequel agir.</td><td>Aucune.</td></tr>
+    <tr><td>Contour du contour</td><td>Transforme le contour en forme remplie en tant qu'effet. Utilisez-la lorsque vous voulez remplir un contour avec un dégradé, ou plumer ou déformer un contour qui autrement est une simple ligne.</td><td>Aucune.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-pathfinder">Combinaison de formes</h2>
+<p>Le sous-menu <strong>Effet &rsaquo; Combinaison de formes</strong> combine les formes à l'intérieur d'un groupe avec un mode de forme, mais les garde comme des tracés séparés et modifiables en dessous. Appliquez-le à un groupe et le résultat combiné est ce que vous voyez, tandis que chaque membre peut encore être déplacé ou recoloré. Utilisez-le pour essayer une combinaison sans vous y engager comme le ferait le panneau Combinaison de formes.</p>
+<table>
+  <thead><tr><th>Mode</th><th>Résultat</th></tr></thead>
+  <tbody>
+    <tr><td>Ajouter</td><td>Fusionne les formes du groupe en une seule région.</td></tr>
+    <tr><td>Intersection</td><td>Conserve uniquement l'endroit où les formes se chevauchent.</td></tr>
+    <tr><td>Exclusion</td><td>Conserve tout sauf l'endroit où elles se chevauchent.</td></tr>
+    <tr><td>Soustraction</td><td>Retire les formes avant de celle arrière.</td></tr>
+    <tr><td>Moins derrière</td><td>Retire les formes arrière de celle avant.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-warp">Déformation</h2>
+<p><strong>Effet &rsaquo; Déformation</strong> courbe l'objet le long d'une forme prédéfinie et reste en direct pour que vous puissiez continuer à modifier l'illustration en dessous. Utilisez-la pour courber un titre en arche, onduler une bannière, ou pousser un bloc plat dans un renflement, sans abandonner la capacité de changer les mots ou les couleurs.</p>
+<p>Le menu propose dix styles directement (Arc, Arche, Renflement, Drapeau, Vague, Poisson, Montée, Œil de poisson, Gonflage et Écrasement). <strong>Options de déformation…</strong> ouvre l'ensemble complet, qui ajoute Arc inférieur, Arc supérieur, Coquille inférieure et Coquille supérieure, et vous permet de régler le montant :</p>
+<dl>
+  <dt>Courber</dt><dd>À quel point la forme se courbe, de -100 % à 100 %.</dd>
+  <dt>Horizontal</dt><dd>Penche la courbe d'un côté, de -100 % à 100 %.</dd>
+  <dt>Vertical</dt><dd>Basculer la courbe vers le haut ou le bas, de -100 % à 100 %.</dd>
+</dl>
+<p>Les mêmes styles de déformation peuvent être appliqués comme enveloppe de remodelage à la place, ce qui change le tracé lui-même plutôt que de rester en direct : voir <a href="#transform-envelope">Déformation de forme</a>. L'outil Déformation et les autres outils de liquéfaction remodelent en glissant sur le canevas et sont couverts sous <a href="#tools-width-liquify">la référence des outils</a>.</p>
+
+<h2 id="effects-3d">3D et Matériaux</h2>
+<p><strong>Effet &rsaquo; 3D et Matériaux</strong> transforme une forme plate en solide : un plan, une extrusion et un biseau, une révolution ou un gonflage. Comme les autres, c'est un effet en direct, donc le tracé plat reste là à modifier et le solide se reconstruit lorsque vous le changez. La profondeur, le biseau, la rotation, l'éclairage et la surface sont définis dans le panneau 3D et Matériaux. Parce qu'il a plus de contrôles qu'une seule boîte de dialogue, la 3D a sa propre page : voir <a href="/manual/three-d/">3D</a>.</p>
+
+<h2 id="effects-expand">Transformer des effets en illustration</h2>
+<p>Un effet reste en direct aussi longtemps que vous le souhaitez. Lorsque l'aspect est fixé et que vous avez besoin du résultat sous forme de tracés ordinaires et modifiables, par exemple pour transmettre le fichier ou remodeler la sortie de l'effet à la main, choisissez <strong>Objet &rsaquo; Développer l'apparence</strong>. Elle fige toute la pile d'apparence, effets inclus, en illustration ordinaire. Cela ne peut plus être modifié en tant qu'effet ensuite, alors développez uniquement lorsque vous êtes sûr. Pour retirer des effets sans rien figer, retirez-les un par un dans le panneau Pile de peinture ou effacez-les tous avec <strong>Effet &rsaquo; Effacer les effets</strong>.</p>
+<p>Le menu Effet liste également <strong>Rastériser</strong>, qui n'est pas un effet en direct : il convertit la sélection en pixels sur-le-champ. La peinture et les calques pixel sont couverts sur la page <a href="/manual/pixels/">Calques pixel</a>.</p>

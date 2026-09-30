@@ -1,0 +1,85 @@
+<p class="lede">O painel Camadas é o mapa de um documento: cada camada, grupo e objeto numa lista, empilhados na ordem em que ficam na página. Use-o para mostrar e ocultar, bloquear, renomear, reordenar e selecionar, e para ver de relance em que camada qualquer objeto vive.</p>
+
+<p>Os atalhos abaixo estão escritos no formato macOS. No Windows e Linux, leia <kbd>&#8984;</kbd> como Ctrl, <kbd>&#8997;</kbd> como Alt e <kbd>&#8679;</kbd> como Shift.</p>
+
+<h2 id="layers-panel">O painel Camadas</h2>
+<p>Abra-o em <strong>Janela &rsaquo; Camadas</strong> (<kbd>F7</kbd>). A lista mantém as suas camadas no nível superior, com o conteúdo de cada camada aninhado abaixo dela: grupos, caminhos, texto, imagens e camadas de pixels, desenhados como uma árvore que pode abrir e fechar. Um contêiner (uma camada ou grupo) transporta um pequeno triângulo à esquerda da sua fileira; clique nele para dobrar o contêiner ou abri-lo. Documentos profundos permanecem legíveis porque pode recolher as partes em que não está a trabalhar.</p>
+<p>Dois botões ficam na base do painel. <strong>Criar Nova Camada</strong> adiciona uma camada vazia logo acima da que está atualmente ativa e torna a nova ativa. <strong>Eliminar Seleção</strong> remove o que quer que esteja selecionado; um documento mantém sempre pelo menos uma camada, pelo que a última camada restante não pode ser eliminada desta forma. Para renomear qualquer camada, grupo ou objeto, clique duas vezes no seu nome na lista, digite e pressione <kbd>Enter</kbd>. Nomear as partes de um documento ocupado é a maneira mais rápida de o manter navegável.</p>
+
+<h3 id="layers-row">O que cada fileira mostra</h3>
+<p>Lendo uma fileira da esquerda para a direita:</p>
+<table>
+  <thead><tr><th>Parte</th><th>O que faz</th></tr></thead>
+  <tbody>
+    <tr><td>Olho</td><td>Mostra ou oculta essa camada, grupo ou objeto. Uma fileira com o olho desligado não é desenhada nem impressa nem exportada.</td></tr>
+    <tr><td>Cadeado</td><td>Bloqueia ou desbloqueia a fileira. Um objeto bloqueado não pode ser selecionado nem editado na tela.</td></tr>
+    <tr><td>Chip de cor</td><td>Apenas em fileiras de camada: a etiqueta de cor da camada, usada para tingir as marcas de seleção e destaques dessa camada.</td></tr>
+    <tr><td>Triângulo</td><td>Apenas em contêineres: abre ou fecha a camada ou grupo para revelar o que está dentro.</td></tr>
+    <tr><td>Ícone de tipo</td><td>Marca grupos e grupos de recorte (um grupo de recorte é desenhado com um contorno tracejado).</td></tr>
+    <tr><td>Nome</td><td>O nome, ou um placeholder em parêngulos angulares como <code>&lt;Caminho&gt;</code> ou <code>&lt;Grupo&gt;</code> quando algo não tem nome. Clique duas vezes para renomear.</td></tr>
+    <tr><td>Quadrado de seleção</td><td>Na borda direita: um pequeno quadrado na cor da camada que aparece em qualquer fileira que contenha parte da seleção atual.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="layers-groups">Camadas e grupos</h2>
+<p>As camadas são os contentores de nível superior de um documento. Existem para manter partes não relacionadas da arte separadas: um fundo numa camada, o desenho principal noutra, etiquetas numa terceira. Como uma camada está na raiz da árvore, ocultar, bloquear ou reordenar move tudo o que contém de uma só vez.</p>
+<p>Um grupo é um contêiner menor que vive dentro de uma camada (ou dentro de outro grupo) e viaja com a arte. Agrupar é como liga as partes de uma coisa, os pedaços de um logótipo ou ícone, para que se movam, dimensionem e empilhem como uma unidade. Grupos abrem e fecham no painel com o seu próprio triângulo, exatamente como as camadas.</p>
+<p>Camadas e grupos comportam-se de maneira igual num aspeto importante: cada um pode ser mostrado ou oculto, bloqueado ou desbloqueado, e cada um pode transportar a sua própria opacidade e modo de mistura que se aplicam a tudo dentro dele. A diferença é de papel. Camadas organizam o documento inteiro; grupos ligam objetos individuais.</p>
+
+<h3 id="layers-grouping">Agrupar e desagrupar</h3>
+<p>Selecione dois ou mais objetos e escolha <strong>Objeto &rsaquo; Agrupar</strong> (<kbd>&#8984;G</kbd>) para os reunir num grupo. <strong>Objeto &rsaquo; Desagrupar</strong> (<kbd>&#8679;&#8984;G</kbd>) tira os objetos de um grupo selecionado de volta. Grupos podem ser aninhados, pelo que um grupo de grupos é aceitável; cada <kbd>&#8679;&#8984;G</kbd> descasca um nível. Use um grupo sempre que se encontrar a selecionar o mesmo punhado de objetos vezes sem conta.</p>
+
+<h2 id="layers-stacking">Ordem de empilhamento: frente e trás</h2>
+<p>Os objetos são desenhados de trás para a frente, pelo que um objeto mais perto da frente cobre os que estão atrás onde se sobrepõem. O painel mostra esta ordem diretamente: a fileira do topo é o objeto mais à frente, e a fileira de baixo é o mais atrás. Reordenar um objeto altera o que cobre o quê.</p>
+<p>A maneira mais rápida de reordenar é arrastar: agarre uma fileira e largue-a mais acima ou mais abaixo na lista para a mover através da pilha, ou largue-a sobre uma camada ou grupo para mover o objeto <em>para dentro</em> dele. Arrastar também é como move um objeto selecionado para uma camada diferente - sem cortar e colar.</p>
+<p>Mova uma seleção através da pilha com <strong>Objeto &rsaquo; Organizar</strong>:</p>
+<table>
+  <thead><tr><th>Comando</th><th>Atalho</th><th>Efeito</th></tr></thead>
+  <tbody>
+    <tr><td>Trazer para Frente</td><td><kbd>&#8679;&#8984;]</kbd></td><td>Até à frente da sua camada.</td></tr>
+    <tr><td>Trazer para a Frente</td><td><kbd>&#8984;]</kbd></td><td>Um passo em direção à frente.</td></tr>
+    <tr><td>Enviar para Trás</td><td><kbd>&#8984;[</kbd></td><td>Um passo em direção a trás.</td></tr>
+    <tr><td>Enviar para o Fundo</td><td><kbd>&#8679;&#8984;[</kbd></td><td>Até ao fundo da sua camada.</td></tr>
+  </tbody>
+</table>
+<p>Use estes quando uma forma de que precisa está oculta atrás de outra, ou quando um fundo acabou em cima do desenho. Para trabalhar através de objetos que ficam uns sobre os outros, <strong>Selecionar &rsaquo; Próximo Objeto Acima</strong> (<kbd>&#8997;&#8984;]</kbd>) e <strong>Próximo Objeto Abaixo</strong> (<kbd>&#8997;&#8984;[</kbd>) percorrem a seleção para cima e para baixo na pilha, o que é útil para alcançar algo enterrado debaixo de outra arte.</p>
+
+<h2 id="layers-visibility">Mostrar e ocultar</h2>
+<p>Clique no olho em qualquer fileira para ocultar essa camada, grupo ou objeto; clique novamente para o trazer de volta. Uma fileira oculta não participa no desenho, impressão ou exportação, pelo que ocultar é a maneira segura de tirar algo do caminho sem o eliminar. Use-o para comparar duas versões de um detalhe, ou para limpar uma tela ocupada até à parte em que está a trabalhar.</p>
+<p>O menu oferece o mesmo para a seleção atual: <strong>Objeto &rsaquo; Ocultar &rsaquo; Seleção</strong> (<kbd>&#8984;3</kbd>) oculta o que está selecionado, e <strong>Objeto & Mostrar Tudo</strong> (<kbd>&#8997;&#8984;3</kbd>) revela tudo o que estava oculto.</p>
+
+<h2 id="layers-locking">Bloquear</h2>
+<p>Clique no cadeado numa fileira para a bloquear. Um objeto bloqueado permanece visível mas não pode ser selecionado nem alterado na tela, pelo que fica fora de perigo enquanto trabalha à volta dele. Bloquear uma camada protege tudo nela de uma vez. Bloqueie o fundo enquanto desenha por cima dele, ou bloqueie um elemento acabado para que um arrasto acidental não o consiga mover.</p>
+<p>A partir do menu, <strong>Objeto &rsaquo; Bloquear &rsaquo; Seleção</strong> (<kbd>&#8984;2</kbd>) bloqueia o que está selecionado, e <strong>Objeto & Desbloquear Tudo</strong> (<kbd>&#8997;&#8984;2</kbd>) liberta tudo de volta. Bloquear um objeto selecionado também o remove da seleção, pois uma coisa bloqueada deixa de ser algo sobre o qual pode atuar.</p>
+
+<h2 id="layers-selecting">Selecionar e a camada ativa</h2>
+<p>Clique na fileira de um objeto no painel para selecionar esse objeto na tela. Segure <kbd>&#8679;</kbd>, <kbd>&#8984;</kbd> ou <kbd>Ctrl</kbd> enquanto clica para adicionar outro objeto à seleção, pelo que pode construir uma seleção a partir da lista sem caçar pequenas formas na página.</p>
+<p>Clicar numa fileira de <em>camada</em> faz algo diferente: torna essa camada a camada ativa, marcada com uma barra colorida ao longo da sua borda esquerda. Arte nova que desenha, cola ou cola é adicionada à camada ativa, pelo que clicar numa camada antes de começar decide onde esse trabalho vai parar. Criar uma nova camada torna-a ativa imediatamente.</p>
+<p>O quadrado de seleção à direita de cada fileira liga o painel à tela. Aparece, na cor da camada, em cada fileira que contém parte da seleção atual, e está preenchido nos objetos exatos que estão selecionados. Como a marca viaja para cima na árvore, um olhar pela lista mostra tanto o que está selecionado como em que camadas e grupos esses objetos ficam.</p>
+
+<h2 id="layers-colours">Etiquetas de cor</h2>
+<p>Cada camada recebe uma cor de uma sequência fixa (azul claro, vermelho, verde, azul, amarelo e assim por diante, doze no total, ciclando à medida que adiciona mais camadas). Essa cor é a etiqueta da camada. Mostra-se como o chip ao lado do nome da camada, e tinge as marcas de seleção no painel junto com os destaques de seleção e a caixa delimitadora desenhada na tela para objetos nessa camada. O ponto é identificação rápida: quando seleciona algo e a sua caixa fica verde, sabe de imediato que pertence à camada verde. Espalhar um documento por algumas camadas bem nomeadas e de cores diferentes torna muito mais fácil manter o controlo de onde está tudo.</p>
+
+<h2 id="layers-masks">Máscaras de recorte e opacidade</h2>
+<p>Uma camada ou grupo pode transportar a sua própria opacidade e modo de mistura, ambos definidos no painel <strong>Transparência</strong> (<strong>Janela &rsaquo; Transparência</strong>, <kbd>&#8679;&#8984;F10</kbd>). O mesmo painel contém <strong>Limitar mistura ao grupo</strong>, que mantém os modos de mistura de um grupo a misturar apenas entre si em vez do que está por baixo, e <strong>Grupo de Perfuração</strong>, onde cada objeto no grupo oculta os que estão atrás em vez de se mostrar através deles. Máscaras vão mais longe e permitem que um objeto controle onde, ou com que força, outra arte se mostra.</p>
+
+<h3 id="layers-clip">Máscaras de recorte</h3>
+<p>Uma máscara de recorte corta arte a uma forma. Selecione dois ou mais objetos e escolha <strong>Objeto &rsaquo; Máscara de Recorte &rsaquo; Criar</strong> (<kbd>&#8984;7</kbd>). O objeto mais à frente selecionado torna-se o caminho de recorte, e tudo o que está abaixo dele é mostrado apenas dentro dessa forma; o resto é cortado. O resultado é um grupo de recorte, desenhado no painel com um ícone tracejado. <strong>Libertar</strong> (<kbd>&#8997;&#8984;7</kbd>) desfaz-o e devolve os objetos. Use isto para cortar uma fotografia ou um padrão ocupado a um círculo, uma letra, ou qualquer contorno que desenhe por cima.</p>
+
+<h3 id="layers-opacity-mask">Máscaras de opacidade</h3>
+<p>Uma máscara de opacidade desvanece a arte de acordo com a claridade de outro objeto. Selecione dois ou mais objetos e escolha <strong>Objeto &rsaquo; Máscara de Recorte &rsaquo; Criar Máscara de Opacidade</strong>, ou use <strong>Criar Máscara</strong> no painel Transparência. O objeto mais à frente torna-se a máscara: onde é claro a arte abaixo mostra-se por completo, onde é escuro a arte desvanece-se até nada, com os cinzentos no meio a dar transparência parcial. <strong>Libertar Máscara de Opacidade</strong> desfaz-na de volta. Use um gradiente de branco a preto como máscara para desvanecer uma imagem até uma borda, ou para construir as suaves vinheta e misturas que um único valor de opacidade plano não consegue dar.</p>
+
+<h2 id="layers-organising">Organizando um documento</h2>
+<p>Um pouco de estrutura no início pouca muita caça mais tarde. Alguns hábitos que compensam:</p>
+<dl>
+  <dt>Uma camada por assunto</dt>
+  <dd>Mantenha o fundo, a arte principal e o texto em camadas separadas e nomeadas. Pode então ocultar, bloquear ou reordenar uma parte inteira do desenho com um único clique.</dd>
+  <dt>Bloquear o que não está a tocar</dt>
+  <dd>Bloqueie as camadas à volta daquela em que está a trabalhar para que um clique ou arrasto acidental não as perturbe, e desbloqueie-as novamente com <kbd>&#8997;&#8984;2</kbd> quando precisar.</dd>
+  <dt>Agrupar as coisas que se movem juntas</dt>
+  <dd>Ligue as partes de um único elemento num grupo para que se comporte como um objeto, e reserve camadas para as divisões maiores do documento.</dd>
+  <dt>Definir a camada ativa antes de desenhar</dt>
+  <dd>Clique na camada a que quer adicionar primeiro, para que arte nova caia no lugar certo em vez do que quer que estivesse lá.</dd>
+  <dt>Deixar as cores guiá-lo</dt>
+  <dd>Apoie-se nas cores das camadas: quando o destaque de uma seleção corresponde ao chip de uma camada, sabe exatamente onde esse objeto vive sem abrir nada.</dd>
+</dl>

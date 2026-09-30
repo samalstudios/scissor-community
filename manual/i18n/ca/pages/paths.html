@@ -1,0 +1,153 @@
+<p class="lede">Cada objecte vectorial a Scissor està construït a partir de camins: una cadena de punts d'ancoratge units per segments rectes o corbes. Aquesta pàgina cobreix com dibuixar-los, com remodelar-los punt per punt i els comandaments que els uneixen, els separen, els contornen i els combinen.</p>
+
+<p>Les dreceres estan escrites en format macOS. A Windows, llegiu <kbd>&#8984;</kbd> com a Ctrl, <kbd>&#8997;</kbd> com a Alt i <kbd>&#8679;</kbd> com a Majúscules.</p>
+
+<h2 id="paths-anchors-and-handles">Ancoratges, nanses i la forma d'un camí</h2>
+<p>Un camí és una sèrie de punts d'ancoratge. Entre dos ancoratges veïns hi ha un segment, que és recte quan cap dels dos ancoratges s'hi estén i corb quan un o tots dos ho fan. L'abast d'un ancoratge s'estableix per les seves dues nanses direccionals: la nansa d'entrada modela el segment que arriba a l'ancoratge, i la nansa de sortida modela el segment que el deixa. Arrossegant una nansa més lluny la corba sobresurt més fortament cap a ella. Un camí pot ser obert, amb dos extrems lliures, o tancat, on el darrer ancoratge s'uneix de nou al primer.</p>
+
+<h3 id="paths-corner-and-smooth">Punts de cantonada i punts suaus</h3>
+<p>Un ancoratge és o una cantonada o un punt suau. En un punt suau les dues nanses estan blocades en una línia recta a través de l'ancoratge, de manera que la corba hi passa sense cops i roman contínua. En un punt de cantonada els dos costats són independents: el camí pot canviar de direcció bruscament, i un costat pot ser recte mentre l'altre és corb. La major part de les formes barregen els dos, punts suaus al llarg de les parts fluents i punts de cantonada on una vora gira.</p>
+<dl>
+  <dt>Punt suau</dt>
+  <dd>Nanses lligades en una línia. Useu-les al llarg d'una corba que s'ha de llegir com un sol gest continu, com el costat d'una fulla o la cavada d'una lletra.</dd>
+  <dt>Punt de cantonada</dt>
+  <dd>Nanses que es mouen separadament, o un punt sense nanses. Useu-les a la punta d'una estella, a la cantonada d'una caixa, o allà on una corba ha de trobar-se amb una vora recta.</dd>
+</dl>
+
+<h3 id="paths-direct-selection">Ancoratges, nanses i eina Selecció directa</h3>
+<p>L'eina Selecció directa (<kbd>A</kbd>) treballa sobre les parts d'un camí. Feu clic a un ancoratge per seleccionar-lo, <kbd>&#8679;</kbd>-clic per afegir-lo o treure'l, o arrossegueu un rectangle de selecció sobre el buit per atrapar cada ancoratge que hi ha dins. Arrossegant els ancoratges seleccionats els moveu; <kbd>&#8679;</kbd> limita el moviment a passos de 45&deg;. Useu-la sempre que una forma és gairebé correcta i només un o dos punts necessiten ser moguts.</p>
+<p>Arrossegueu una nansa per canviar la corba al seu costat. Les nanses que pertanyen a un ancoratge suau es mouen juntes, de manera que la corba roman contínua; manteniu premut <kbd>&#8997;</kbd> mentre arrossegueu per trencar aquella lligadura i guiar un costat sol, i <kbd>&#8679;</kbd> per limitar la nansa a un angle. També podeu arrossegar un segment mateix: un segment corb es doblega sota el punter, i un recte porta amb ell els seus dos ancoratges.</p>
+<p>L'eina Selecció de grup comparteix aquesta ranura i agafa objectes sencers d'un grup en comptes d'ancoratges. Feu clic una vegada per a l'objecte més intern, feu clic de nou per sortir al grup que l'envolta.</p>
+
+<h2 id="paths-drawing">Eines de dibuix</h2>
+<p>Scissor té tres eines per crear un camí des de zero. La Ploma dóna el control exacte punt per punt, l'eina Curvatura adapta una corba suau a través dels punts que col·loqueu, i la Matita segueix lliurement la vostra mà.</p>
+<table>
+  <thead><tr><th>Eina</th><th>Drecera</th><th>Ideal per a</th></tr></thead>
+  <tbody>
+    <tr><td>Ploma</td><td><kbd>P</kbd></td><td>Contorns precisos on cada ancoratge i nansa es col·loca expressament.</td></tr>
+    <tr><td>Curvatura</td><td><kbd>&#8679;~</kbd></td><td>Corbes fluides definides per pocs punts passants, sense gestionar les nanses.</td></tr>
+    <tr><td>Matita</td><td><kbd>N</kbd></td><td>Formes lliures, dibuixades a mà i esbòsos ràpids.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="paths-pen">L'eina Ploma</h3>
+<p>L'eina Ploma (<kbd>P</kbd>) construeix un camí punt per punt. Feu clic per col·locar un ancoratge de cantonada; premeu i arrossegueu en comptes i l'ancoratge manté les nanses, de manera que el camí surt d'ell com una corba. Mantingueu premut <kbd>&#8679;</kbd> mentre arrossegueu per limitar la nansa a passos de 45&deg;, i manteniu premut <kbd>&#8997;</kbd> per moure només la nansa de sortida, que converteix l'ancoratge en una cantonada i allibera el segment següent del precedent.</p>
+<p>Mentre un camí és obert l'eina canvia a mesura que us hi moveu per sobre. Sobre el primer ancoratge tanca el camí, sobre un segment afegeix un ancoratge i sobre un ancoratge existent n'elimina un. Sense cap camí en curs, movent-vos sobre l'extrem lliure d'un camí obert repren aquell camí perquè continueu dibuixant des d'ell. <kbd>Retorn</kbd> o <kbd>Esc</kbd> finalitza el camí i el deixa obert; <kbd>Supr</kbd> elimina l'ancoratge que heu col·locat per darrere.</p>
+
+<h3 id="paths-curvature">L'eina Curvatura</h3>
+<p>L'eina Curvatura (<kbd>&#8679;~</kbd>) adapta una corba suau a través dels punts on feu clic, amb una vista prèvia que arriba al punter a mesura que avanceu. <kbd>&#8997;</kbd>-clic per col·locar un punt de cantonada en comptes d'un suau, i doble clic a qualsevol punt per alternar-lo entre els dos. Arrossegueu un punt per moure'l i la corba s'hi torna a adaptar. Feu clic al primer punt per tancar la forma, o premeu <kbd>Retorn</kbd> per acabar. <kbd>Supr</kbd> elimina el darrer punt i <kbd>Esc</kbd> abandona el camí. Useu-la quan us importa més la forma de la corba que els ancoratges exactes, atès que calcula les nanses per a vostè.</p>
+
+<h3 id="paths-pencil">L'eina Matita</h3>
+<p>L'eina Matita (<kbd>N</kbd>) dibuixa a mà lliure: premeu, dibuixeu i deixeu anar, i Scissor adapta un camí suau a través del rastre. Deixeu anar prop d'on vau començar, o manteniu premut <kbd>&#8997;</kbd> mentre acabeu, i el camí es tanca en una forma. El resultat és un camí obert amb contorn amb el color de contorn actual, de manera que està a punt per conservar-lo com a línia o emplenar-lo. Com de prop el camí adaptat segueix el vostre moviment s'estableix a la preferència Fidelitat de la matita, des de precisa, que manté més ancoratges i cada oscil·lació, a suau, que utilitza menys ancoratges i estira la línia. Useu-la per esbossar, signatures i qualsevol forma que hauria de semblar dibuixada a mà en comptes de construïda.</p>
+
+<h2 id="paths-editing-points">Editar punts sobre un camí</h2>
+
+<h3 id="paths-add-remove-convert">Afegir, eliminar i convertir punts</h3>
+<p>La Ploma comparteix la seva ranura a la barra d'eines amb Afegeix punt d'ancoratge (<kbd>+</kbd>), Elimina punt d'ancoratge (<kbd>&#8722;</kbd>) i l'eina Punt d'ancoratge (<kbd>&#8679;C</kbd>). Afegeix punt d'ancoratge col·loca un nou punt sobre un segment sense canviar la corba; Elimina punt d'ancoratge elimina el punt on feu clic i deixa que el camí tanqui el buit. Amb l'eina Punt d'ancoratge, arrossegueu des d'un ancoratge de cantonada per extreure una parella de nanses corresponents, convertint-lo en suau; arrossegueu una nansa sola per trencar la parella de manera que els dos costats es mouen separadament, convertint-lo de nou en una cantonada; i feu clic a un ancoratge suau per eliminar-ne les nanses en una cantonada neta.</p>
+<p>Objecte &rsaquo; Camí té les mateixes edicions com a comandaments que actuen sobre tota la selecció de cop. Afegeix punts d'ancoratge col·loca un nou ancoratge al centre de cada segment, duplicant el nombre de punts sense canviar la forma, cosa útil abans d'una distorsió o deformació que necessita més punts per doblegar-se nedadament. Elimina punts d'ancoratge elimina els ancoratges que heu seleccionat amb l'eina Selecció directa i torna a adaptar el camí a través del que roman.</p>
+
+<h3 id="paths-reshape-tools">Remodelar a mà: Alisa, Gomma de camí i Uneix</h3>
+<p>Tres eines tipus pinzell remodelen un camí on arrossegueu en comptes d'en un sol ancoratge. Actuen sobre els camins seleccionats, o sobre qualsevol camí sota el pinzell quan no hi ha res seleccionat, i <kbd>[</kbd> i <kbd>]</kbd> empetiteixen i engrandeixen el pinzell.</p>
+<dl>
+  <dt>Eina Alisa</dt>
+  <dd>Arrossegueu al llarg d'un camí per relaxar-lo, aprimant els ancoratges i suavitzant les irregularitats. Useu-la per calmar una línia de matita trèmula o una vora traçada.</dd>
+  <dt>Eina Gomma de camí</dt>
+  <dd>Arrossegueu al llarg d'un camí per esborrar la part que travessa, trencant-lo o escurant-lo. Useu-la per retallar una cua estranya d'una línia.</dd>
+  <dt>Eina Uneix</dt>
+  <dd>Passeu sobre dos extrets oberts i s'uneixen, estenent o escurant els camins per trobar-se nedadament en una cantonada. Useu-la per tancar un espai on dos traços haurien d'haver-se trobat.</dd>
+</dl>
+
+<h3 id="paths-cutting">Tallar un camí: Tisores i Ganivet</h3>
+<p>L'eina Tisores (<kbd>C</kbd>) talla en un sol punt. Feu clic a un segment o un ancoratge i el camí es divideix allà: un camí tancat s'obre al tall, i un camí obert es trenca en dos objectes separats. Useu-la per tallar una obertura en un cercle, o per trencar una forma perquè les meitats puguin ser estilitzades diferentment.</p>
+<p>L'eina Ganivet talla a través de la feina. Arrossegueu la fulla sobre un objecte per tallar-lo en peces separades al llarg de la línia dibuixada; manteniu premut <kbd>&#8997;</kbd> per tallar en línia recta i afegiu <kbd>&#8679;</kbd> per limitar aquella línia a passos de 45&deg;. Amb alguna cosa seleccionada, només es tallen els objectes seleccionats; altrament tot allò que la fulla travessa. Useu-la per tallar una forma emplenada en diverses peces tancades d'un sol cop.</p>
+
+<h2 id="paths-commands">Comandaments de camí</h2>
+<p>Objecte &rsaquo; Camí recull les operacions que actuen sobre camins sencers de cop.</p>
+<table>
+  <thead><tr><th>Comandament</th><th>Drecera</th><th>Què fa</th></tr></thead>
+  <tbody>
+    <tr><td>Uneix</td><td><kbd>&#8984;J</kbd></td><td>Lliga extrets oberts en un sol camí, o bé tanca un sol camí obert.</td></tr>
+    <tr><td>Mitjana&hellip;</td><td><kbd>&#8997;&#8984;J</kbd></td><td>Mou els ancoratges seleccionats a la seva posició comuna.</td></tr>
+    <tr><td>Contorna traç</td><td></td><td>Converteix un contorn en una forma emplenada del mateix perfil.</td></tr>
+    <tr><td>Camí de desplaçament&hellip;</td><td></td><td>Crea una còpia engrandida o empetita a una distància establerta.</td></tr>
+    <tr><td>Inverteix direcció del camí</td><td></td><td>Inverteix la direcció en què corre el camí.</td></tr>
+    <tr><td>Simplifica&hellip;</td><td></td><td>Redueix el nombre de punts d'ancoratge.</td></tr>
+    <tr><td>Afegeix punts d'ancoratge</td><td></td><td>Afegeix un punt al centre de cada segment.</td></tr>
+    <tr><td>Elimina punts d'ancoratge</td><td></td><td>Elimina els ancoratges seleccionats.</td></tr>
+    <tr><td>Divideix en graella&hellip;</td><td></td><td>Talla la selecció en una graella de files i columnes.</td></tr>
+    <tr><td>Neteja&hellip;</td><td></td><td>Elimina punts solts, objectes sense pintura i text buit.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="paths-join-average">Uneix i mitjana</h3>
+<p>Uneix (<kbd>&#8984;J</kbd>) funciona sobre camins oberts. Amb dos camins oberts separats seleccionats, lliga els seus extrems més propers en un sol camí; amb un sol camí obert, uneix els dos extrets lliures per tancar-lo. Extrems que ja es troben un sobre l'altre es fusionen en un únic ancoratge. Useu-lo per tancar una forma que heu dibuixat com a contorn obert, o per cosir junts dos traços dibuixats a meitat.</p>
+<p>Mitjana (<kbd>&#8997;&#8984;J</kbd>) mou els ancoratges seleccionats a la seva posició mitjana compartida. El diàleg ofereix l'eix horitzontal, que alinea els punts a una alçada comuna; l'eix vertical, que els alinea en una columna; o bé tots dos, que els apila tots en un punt. Useu-la per nivelar una fila de punts o per apropar dos extrems abans d'unir-los.</p>
+
+<h3 id="paths-simplify">Simplifica</h3>
+<p>Simplifica redibuixa els camins seleccionats amb menys punts d'ancoratge, mantenint-se dins una exactitud que establiu: una exactitud més estreta es manté prop de l'original a costa de més punts, una més àmplia alisa la forma fins a un grapat. Useu-la per netejar un camí traçat o dibuixat a mà que porta molts més punts dels que la forma necessita, cosa que el fa més lleuger d'editar i de renderitzar.</p>
+
+<h3 id="paths-offset">Camí de desplaçament</h3>
+<p>Camí de desplaçament construeix un nou camí a una distància establerta de l'original: un desplaçament positiu engrandeix el contorn cap a fora i es col·loca darrere l'original, un desplaçament negatiu l'empetiteix cap a dins i es col·loca davant. L'opció de Juntes estableix com es tracten les cantonades exteriors, com un Bisell net, un Rodó arrodonit o un Bisell pla, amb un límit de bisell que limita la llargada d'una cantonada neta abans de ser tallada. Useu-lo per dibuixar una vora uniforme al voltant d'una forma, per inserir una forma per a una clau, o per engreixar una forma prima. Camí de desplaçament també està disponible sota Efecte &rsaquo; Camí com a efecte en viu que es recalcula quan la forma canvia.</p>
+
+<h3 id="paths-outline-stroke">Contorna traç</h3>
+<p>Contorna traç substitueix un camí amb contorn per una forma emplenada que té exactament el perfil del contorn. Un cop contornat, el gruix ja no es redimensiona amb l'objecte i no es pot editar com a contorn, però el contorn es pot remodelar punt per punt, emplenar amb un degradat o combinar amb altres formes. Useu-lo quan necessiteu que el contorn es comporti com a feina: per donar a una línia una vora cònica o variada que després ajusteu a mà, o per mantenir els gruixos de línia d'un disseny fixos quan s'escala. També està disponible com a efecte en viu, sota Efecte &rsaquo; Camí.</p>
+
+<h3 id="paths-reverse">Inverteix direcció del camí</h3>
+<p>Inverteix direcció del camí inverteix l'ordre en què els ancoratges s'esdevenen, de manera que el camí recorre el camí en el sentit oposat. La direcció rarament es mostra per si mateixa, però decideix quin contorn és el forat en un camí compost i on comença i acaba un pinzell o una punta de fletxa. Useu-la quan un forat en un camí compost s'omple de color, o quan el text sobre un camí o l'inici i el final d'un contorn es troben al costat equivocat.</p>
+
+<h2 id="paths-live-shapes">Formes editables i els seus ginys</h2>
+<p>Rectangles, rectangles arrodonits, ellipses i polígons romanen vius: mantenen els seus paràmetres i reconstrueixen el seu camí cada vegada que en canvieu un. Mentre arrossegueu una forma, <kbd>&#8679;</kbd> la fa regular i <kbd>&#8997;</kbd> la dibuixa des del centre. Les fletxes també funcionen durant l'arrossegament, amunt i dreta afegeixen, avall i esquerra resten, canviant els costats d'un polígon, les puntes d'una estella o el radi de cantonada d'un rectangle arrodonit.</p>
+<p>Seleccioneu una sola forma viva i petites nanses rodones apareixen just dins les seves cantonades; s'amaguen quan la forma és massa petita a la pantalla per mostrar-les clarament. Arrossegueu-la amb l'eina Selecció (<kbd>V</kbd>) per arrodonir totes les cantonades de cop, o amb Selecció directa per arrodonir només la cantonada que agafeu. <kbd>&#8997;</kbd>-clic a una nansa de cantonada per fer-la passar entre rodona, invertida i bisellada, de nou a les quatre cantonades amb l'eina Selecció, una cantonada amb Selecció directa.</p>
+<p>Una ellipse mostra en comptes una nansa quadrada: una sobre una ellipse sencera, i una a cada extrem de la copa un cop n'heu oberta una. Arrossegueu-la per obrir un tros fora de la forma, amb <kbd>&#8679;</kbd> que fa ajustar l'angle a passos de 15&deg;; portant l'extrem de nou al punt de partida es restaura la ellipse sencera. El panell Propietats conté els mateixos valors com a números: radi i tipus de cantonada, radis per cantonada, costats del polígon i inici i fi de la copa en graus. Una forma viva manté aquests controls fins que no editeu directament el seu camí, cosa que la converteix en un camí ordinari.</p>
+
+<h2 id="paths-combining">Combinar formes: Uneix i divideix i Formes combinades</h2>
+<p>Quan dues o més formes es superposen, sovint voleu una sola forma nova d'aleshores: una unió, un forat, o la peça on s'encreuen. Scissor ofereix dues maneres d'hi arribar. Uneix i divideix és directe i visual; el panell Formes combinades aplica les mateixes operacions com a botons. Ambdues mantenen les corbes en comptes d'aplanar-les en segments de línia.</p>
+
+<h3 id="paths-shape-builder">L'eina Uneix i divideix</h3>
+<p>L'eina Uneix i divideix (<kbd>&#8679;M</kbd>) funciona sobre dos o més camins seleccionats. Divideix les seves superposicions en regions i destaca aquella sobre la qual es troba el punter; arrossegueu una línia a través de diverses regions per unir-les en un sol objecte, que assumeix l'aparença de la forma de la qual prové, o bé <kbd>&#8997;</kbd>-arrossegueu a través d'elles per eliminar-les. Useu-la per construir una forma a ull, afegint les parts que voleu i esborrant les que no, sense aturar-vos a triar un comandament per cada pas.</p>
+
+<h3 id="paths-pathfinder-shape-modes">Modes de forma de Formes combinades</h3>
+<p>El panell Formes combinades (<kbd>&#8679;&#8984;F9</kbd>) s'obre amb quatre modes de forma, cadascun dels quals substitueix els camins seleccionats per un sol camí combinat. El resultat assumeix l'aparença de l'objecte de sobre, excepte Menys davant, que manté l'aparença del de sota.</p>
+<dl>
+  <dt>Uneix</dt>
+  <dt>Uneix cada forma seleccionada en un únic contorn. Useu-la per soldar peces superposades en una sola silueta, com un núvol d'una fila de cercles.</dt>
+  <dt>Menys davant</dt>
+  <dd>Manté la forma més baixa i elimina tot el que està apilat davant. Useu-la per mossegar un tros d'una forma, com esculpir una lluna creixent de dos cercles.</dd>
+  <dt>Intersecció</dt>
+  <dd>Manté només l'àrea que cada forma seleccionada comparteix. Useu-la per retallar la feina a una regió comuna, com la lentilla on dos cercles s'encreuen.</dd>
+  <dt>Exclou</dt>
+  <dd>Manté tot excepte les superposicions, que es converteixen en forats. Useu-la per crear un anell, o unlla d'una cadena, on les parts que s'encreuen desapareixen.</dd>
+</dl>
+
+<figure class="shot">
+  <img src="img/combine.gif" width="760" height="441" loading="lazy"
+       alt="Tres formes superposades, un cercle, un quadrat arrodonit i un cercle, que s'uneixen en una sola silueta combinada." />
+  <figcaption>Uneix (o bé un arrossegament amb Uneix i divideix) uneix formes superposades en un únic contorn que manté les seves corbes.</figcaption>
+</figure>
+
+<h3 id="paths-pathfinders">Les altres operacions de Formes combinades</h3>
+<p>Sota els modes de forma hi ha sis pathfinder. Aquests us deixen amb diverses peces, recollides en un grup, en comptes d'un sol camí combinat. Menys darrere correspon al seu homònim de mode de forma però manté la forma de sobre.</p>
+<dl>
+  <dt>Divideix</dt>
+  <dd>Talla les formes en cares separades al llarg de cada línia que s'encreuen, cada cara assumint el color de la forma de sobre que la cobreix. Useu-la per trencar un disseny en peces pintables, com les cel·les d'un plafó de vidre de colors.</dd>
+  <dt>Retalla</dt>
+  <dd>Elimina la part oculta de cada forma on una forma de sobre la cobreix. Cada peça manté el seu propi emplenament i res no s'uneix; els contorns s'eliminen. Useu-la per aplanar feina plana de colors superposades de manera que cap color s'imprimeixi sobre un altre.</dd>
+  <dt>Uneix</dt>
+  <dd>Retalla les parts ocultes, després uneix les peces veïnes que comparteixen un color d'emplenament. Useu-la per ordenar una il·lustració de colors plans, unint regions del mateix color en formes individuals.</dd>
+  <dt>Retalla</dt>
+  <dd>Manté només les parts de les formes inferiors que cauen dins la forma més alta, que es descarta després. Useu-la per retallar la feina a un marc i incorporar el retall als camins, en comptes de mantenir una màscara de retall en viu.</dd>
+  <dt>Menys darrere</dt>
+  <dd>Manté la forma més alta i elimina tot allò que hi ha darrere. Useu-la quan la forma de sobre és la que cal conservar i les de sota haurien d'esculpir-s'hi.</dd>
+  <dt>Contorn</dt>
+  <dd>Converteix cada límit de regió en una línia oberta, amb el color d'emplenament del qual prové. Useu-la per extreure l'esquelet de vores d'un conjunt de formes superposades.</dd>
+</dl>
+<p>Efecte &rsaquo; Formes combinades aplica Afegeix, Intersecció, Exclou, Resta i Menys darrere com a efectes en viu sobre un grup en comptes, deixant els objectes originals intactes i editables sota. Useu les versions d'efecte quan encara podríeu voler moure les peces més endavant; useu el panell quan la forma combinada és definitiva.</p>
+
+<h2 id="paths-compound-and-masks">Camins compostos i màscares de retall</h2>
+<p>Objecte &rsaquo; Camí compost &rsaquo; Crea (<kbd>&#8984;8</kbd>) pleca els camins seleccionats en un únic objecte emplenat per la regla parell-senar, de manera que un contorn intern talla un forat a través del que l'envolta. El resultat assumeix l'aparença de l'objecte més baix de la selecció. Allibera (<kbd>&#8997;&#8679;&#8984;8</kbd>) retorna cada contorn com un camí propi. Useu un camí compost per a qualsevol forma amb un forat, com el contra de la lletra O o una roda dentada.</p>
+<p>Objecte &rsaquo; Màscara de retall &rsaquo; Crea (<kbd>&#8984;7</kbd>) utilitza l'objecte seleccionat més alt, que ha de ser un camí, per retallar tot allò que hi ha sota. Scissor els posa tots en un grup de retall i esborra l'emplenament i el contorn del camí màscara. Allibera (<kbd>&#8997;&#8984;7</kbd>) converteix el grup de retall de nou en un grup ordinari, de manera que res es retalla més i cada objecte, camí màscara inclòs, roman on era. Crea màscara d'opacitat al mateix submenú mascara per to en comptes de per contorn, de manera que les parts més clares de la màscara es veuen a través i les més fosques amaguen.</p>
+
+<h2 id="paths-smart-guides">Guies intel·ligents i ajust</h2>
+<p>Les guies intel·ligents (Visualitza &rsaquo; Guies intel·ligents, <kbd>&#8984;U</kbd>) observen la feina visible i les taules mentre dibuixeu o arrossegueu. Allò que esteu movent s'ajusta a les vores, centres i ancoratges dels seus veïns, i apareix una línia que torna a allò amb què s'ha alineat, etiquetada amb el tipus de coincidència: ancoratge, centre, cantonada o alineació.</p>
+<p>Altres dues guies apareixen per si soles. Quan l'objecte que esteu movent es trobaria a la mateixa distància dels seus veíns com ho són ells entre ells, s'ajusta allà i els dos espais iguals es dibuixen amb la mesura indicada; funciona tant per continuar una sèrie d'objectes uniformement espaiats com per centrar-ne un en l'espai entre dos. I quan arrossegueu lluny d'un punt de partida, la direcció s'ajusta sobre una línia de construcció cada 45&deg; des de l'angle de restricció, dibuixada com una línia llarga amb l'angle al costat.</p>
+<p>Ajust a punt (<kbd>&#8997;&#8984;'</kbd>) i Ajust a graella (<kbd>&#8679;&#8984;'</kbd>) són interruptors separats al menú Visualitza. Amb Ajust a graella actiu, tot cau a la subdivisió de la graella i les guies intel·ligents es fan costat.</p>

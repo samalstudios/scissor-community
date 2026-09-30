@@ -1,0 +1,153 @@
+<p class="lede">Každý vektorový objekt v Scissor je zložený z ciest: reťazca bodov ukotvenia spojených rovnými alebo zakrivenými segmentmi. Táto stránka pokrýva, ako ich kresliť, ako ich prevarovať bod po bode a príkazy, ktoré spájajú, posúvajú, obrysujú a kombinujú.</p>
+
+<p>Skratky sú zapísané v ich macOS forme. V systéme Windows čítajte <kbd>&#8984;</kbd> ako Ctrl, <kbd>&#8997;</kbd> ako Alt a <kbd>&#8679;</kbd> ako Shift.</p>
+
+<h2 id="paths-anchors-and-handles">Ukotvenia, rukoväte a tvar cesty</h2>
+<p>Cesta je rad bodov ukotvenia. Medzi dvoma susednými ukotveniami leží segment, ktorý je rovný, keď žiadne ukotvenie k nemu nesiahne, a zakrivený, keď jedno alebo obidve dosiahnu. Dosah ukotvenia je nastavený jeho dvoma smerovými rukovätami: prichádzajúca rukoväť tvaruje segment prichádzajúci k ukotveniu a odchádzajúca rukoväť tvaruje segment odchádzajúci z neho. Ťahajte rukoväť ďalej von a krivka vydutie silnejšie smerom k nej. Cesta môže byť otvorená, s dvoma voľnými koncami, alebo zatvorená, kde sa posledné ukotvenie späť spojí s prvým.</p>
+
+<h3 id="paths-corner-and-smooth">Rovné a hladké body</h3>
+<p>Ukotvenie je buď roh alebo hladký bod. V hladkom bode sú dve rukoväte zamknuté do rovnej čiary cez ukotvenie, takže krivka prechádza cez bez zlomu a zostáva spojitá. V rohovom bode sú dve strany nezávislé: cesta môže prudko zmeniť smer a jedna strana môže byť rovná, zatiaľ čo druhá je zakrivená. Väčšina tvarov mieša obidva, hladké body pozdĺž prúdiacich častí a rohové body tam, kde sa okraj otáča.</p>
+<dl>
+  <dt>Hladký bod</dt>
+  <dd>Rukoväte spojené do čiary. Použite tieto pozdĺž krivky, ktorá by sa mala čítať ako jeden spojitý zamah, ako je strana listu alebo miska písmena.</dd>
+  <dt>Rohový bod</dt>
+  <dd>Rukoväte, ktoré sa pohybujú od seba, alebo bod bez rukovätí vôbec. Použite tieto na hrote hviezdy, rohu krabice alebo kdekoľvek, kde by sa krivka mala stretnúť s rovným okrajom.</dd>
+</dl>
+
+<h3 id="paths-direct-selection">Ukotvenia, rukoväte a nástroj Priamy výber</h3>
+<p>Nástroj Priamy výber (<kbd>A</kbd>) pracuje na častiach cesty. Kliknite na ukotvenie pre jeho výber, <kbd>&#8679;</kbd>-klik pre pridanie alebo odstránenie jedného alebo ťahajte obdĺžnik naprieč prázdným priestorom pre zachytenie všetkých ukotvení vo vnútri. Ťahanie vybraných ukotvení ich presúva; <kbd>&#8679;</kbd> obmedzuje presun na 45&deg; krokov. Siahnite po ňom vždy, keď je tmer správny a len dva body potrebujú posunutie.</p>
+<p>Ťahajte rukoväť pre zmenu krivky na jej strane. Rukoväte, ktoré patria hladkému ukotveniu, sa pohybujú spoločne, takže krivka zostáva spojitá; podržte <kbd>&#8997;</kbd> počas ťahania pre rozbitie tohto spojenia a riadenie jednej strany sama a <kbd>&#8679;</kbd> pre držanie rukoväte na uhol. Môžete tiež ťahať samotný segment: zakrivený segment sa ohýba pod ukazovateľom a rovný nesie obidvoje svoje ukotvenia so sebou.</p>
+<p>Nástroj Výber skupiny zdieľa tento slot a vyberá celé objekty zo skupiny namiesto ukotvení. Kliknite raz pre najvnútornejší objekt, kliknite znova pre vystúpenie do skupiny okolo neho.</p>
+
+<h2 id="paths-drawing">Kresliace nástroje</h2>
+<p>Scissor má tri nástroje na pokladanie cesty od nuly. Pero dáva presnú kontrolu bod po bode, nástroj Krivka prispôsobí hladkú krivku bodom, ktoré umiestnite a Ceruzka nasleduje vašu ruku voľne.</p>
+<table>
+  <thead><tr><th>Nástroj</th><th>Skratka</th><th>Najlepšie pre</th></tr></thead>
+  <tbody>
+    <tr><td>Pero</td><td><kbd>P</kbd></td><td>Presné obrysy, kde je každé ukotvenie a rukoväť umiestnené zámerne.</td></tr>
+    <tr><td>Krivka</td><td><kbd>&#8679;~</kbd></td><td>Prúdiace krivky definované niekoľkými bodmi priechodu, bez zápasu rukovätí.</td></tr>
+    <tr><td>Ceruzka</td><td><kbd>N</kbd></td><td>Voľné, ručne kreslené tvary a rýchle náčrty.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="paths-pen">Nástroj Pero</h3>
+<p>Nástroj Pero (<kbd>P</kbd>) staví cestu bod po bode. Kliknite pre vloženie rohového ukotvenia; stlačte a ťahajte namiesto a ukotvenie si zachová rukoväte, takže cesta opúšťa ho ako krivka. Podržte <kbd>&#8679;</kbd> počas ťahania pre držanie rukoväte na 45&deg; krokov a podržte <kbd>&#8997;</kbd> pre pohyb len odchádzajúcej rukoväte, ktorá ukotvenie premení na roh a uvoľní ďalší segment od posledného.</p>
+<p>Kým je cesta otvorená, nástroj sa mení, keď sa ňou pohybujete. Nad prvým ukotvením ju zatvára, nad segmentom pridáva ukotvenie a nad existujúcim ukotvením ho odstraňuje. Bez cesty v priebehu, pohyb nad voľným koncom otvorenej cesty zdvihne túto cestu, aby ste mohli pokračovať v kreslení od nej. <kbd>Enter</kbd> alebo <kbd>Esc</kbd> ukončí cestu a zanechá ju otvorenú; <kbd>Delete</kbd> odstráni ukotvenie, ktoré ste naposledy umiestnili.</p>
+
+<h3 id="paths-curvature">Nástroj Krivka</h3>
+<p>Nástroj Krivka (<kbd>&#8679;~</kbd>) prispôsobí hladkú krivku bodom, na ktoré kliknete, s náhľadom bežiacim k ukazovateľu počas pohybu. <kbd>&#8997;</kbd>-klik vloží rohový bod namiesto hladkého a dvojklikom na akýkoľvek bod prepnete medzi nimi. Ťahajte bod pre jeho presunutie a krivka sa prispôsobí. Kliknite na prvý bod pre zatvorenie tvaru alebo stlačte <kbd>Enter</kbd> pre dokončenie. <kbd>Delete</kbd> odstráni posledný bod a <kbd>Esc</kbd> opustí cestu. Použite to, keď vám viac záleží na tvare krivky ako na presných ukotveniach, pretože vypočíta rukoväte za vás.</p>
+
+<h3 id="paths-pencil">Nástroj Ceruzka</h3>
+<p>Nástroj Ceruzka (<kbd>N</kbd>) kreslí voľnou rukou: stlačte, kreslite a pustite a Scissor prispôsobí hladkú cestu po stope. Pustite bližšie k tomu, kde ste začali alebo podržte <kbd>&#8997;</kbd> pri dokončovaní a cesta sa zatvorí do tvaru. Výsledkom je otvorená cesta v aktuálnej farbe obrysu, takže je pripravená zachovať ako čiara alebo vyplniť. Ako tesne prispôsobená cestka objíždí vaše pohyby, nastavuje sa v preferenciách vernosti ceruzky, od presnej, ktorá zachová viac ukotvení a každú zmenu, po hladkú, ktorá používa menej ukotvení a vyhladí čiaru. Siahnite po ňom pre skicovanie, podpisy a akýkoľvek tvar, ktorý by mal vyzerať ručne kreslený namiesto konštruovaný.</p>
+
+<h2 id="paths-editing-points">Úprava bodov na ceste</h2>
+
+<h3 id="paths-add-remove-convert">Pridávanie, odstraňovanie a konvertovanie bodov</h3>
+<p>Pero zdieľa svoj slot v paneli nástrojov s Pridať ukotvenie (<kbd>+</kbd>), Odstrániť ukotvenie (<kbd>&#8722;</kbd>) a nástrojom Ukotvenie (<kbd>&#8679;C</kbd>). Pridať ukotvenie vloží nový bod na segment bez zmeny krivky; Odstrániť ukotvenie odstráni bod, na ktorý kliknete a nechá cestu zavrieť medzeru. S nástrojom Ukotvenie ťahajte z rohového ukotvenia pre vytiahnutie zodpovedajúceho páru rukovätí, premenujúc ho na hladký; ťahajte jednu rukoväť pre rozbitie páru, takže dve strany sa pohybujú od seba, premenujúc ho späť na roh a kliknite na hladké ukotvenie pre odstránenie jeho rukovätí na ostrý roh.</p>
+<p>Objekt &rsaquo; Cesta má rovnaké úpravy ako príkazy, ktoré pracujú na celom výbere naraz. Pridať ukotvenia vloží nové ukotvenie do stredu každého segmentu, zdvojnásobujúc počet bodov bez zmeny tvaru, čo je užitočné pred skreslením alebo deformáciou, ktorá potrebuje viac bodov na ohnutie. Odstrániť ukotvenia odstráni ukotvenia, ktoré ste vybrali nástrojom Priamy výber a prispôsobí cestu cez to, čo zostane.</p>
+
+<h3 id="paths-reshape-tools">Prevarovanie od ruky: Vyhladiť, Guma na cesty a Spojiť</h3>
+<p>Tri štetce nástrojov prevarujú cestu tam, kde ťaháte, namiesto v jednom ukotvení. Pôsobia na vybrané cesty alebo na akúkoľvek cestu pod štetcom, keď nie je vybrané nič a <kbd>[</kbd> a <kbd>]</kbd> zmenšujú a zväčšujú štetec.</p>
+<dl>
+  <dt>Nástroj Vyhladiť</dt>
+  <dd>Ťahajte po ceste pre jej uvoľnenie, ztenčovanie ukotvení a zmäkčovanie hrán. Použite to na upokojenie nervóznej čiary ceruzky alebo obrysu z načrtnutia.</dd>
+  <dt>Nástroj Guma na cesty</dt>
+  <dd>Ťahajte po ceste pre vymazanie časti, ktorú prejdete, rozdelenie alebo skrátenie. Použite to na orezanie nepotrebného chvosta z čiary.</dd>
+  <dt>Nástroj Spojiť</dt>
+  <dd>Prejdite naprieč dvoma otvorenými koncami a spojia sa, predlžujúc alebo skracujúc cesty, aby sa stretli čisto v rohu. Použite to na zavretie medzery, kde sa dva ťahy mali stretnúť.</dd>
+</dl>
+
+<h3 id="paths-cutting">Strihnutie cesty: Nožnice a Nôž</h3>
+<p>Nástroj Nožnice (<kbd>C</kbd>) strihne na jednom mieste. Kliknite na segment alebo ukotvenie a cesta sa tam rozdelí: zatvorená cesta sa otvorí na reze a otvorená cesta sa rozdelí na dva samostatné objekty. Použite to na vystrihnutie otvoru v kruhu alebo na rozdelenie tvaru, aby sa polohy mohli maľovať inak.</p>
+<p>Nôž strihne priamo naprieč grafikou. Ťahajte česťou nad objektom pre jeho rozdelenie na samostatné kusy pozdĺž nakreslenej čiary; podržte <kbd>&#8997;</kbd> pre strihnutie rovnou čiarou a pridajte <kbd>&#8679;</kbd> pre držanie tejto čiary na 45&deg; krokov. S niečím vybraným sa strihnú len vybrané objekty; inak sa strihne všetko, čo česť prejde. Použite to na rozrezanie vyplneného tvaru na niekoľko zatvorených kusov v jednom ťahaní.</p>
+
+<h2 id="paths-commands">Príkazy cesty</h2>
+<p>Objekt &rsaquo; Cesta zoskupuje operácie, ktoré pôsobia na celé cesty naraz.</p>
+<table>
+  <thead><tr><th>Príkaz</th><th>Skratka</th><th>Čo robí</th></tr></thead>
+  <tbody>
+    <tr><td>Spojiť</td><td><kbd>&#8984;J</kbd></td><td>Spája voľné konce do jednej cesty alebo zatvára jednu otvorenú cestu.</td></tr>
+    <tr><td>Priemer&hellip;</td><td><kbd>&#8997;&#8984;J</kbd></td><td>Presúva vybrané ukotvenia na ich spoločnú pozíciu.</td></tr>
+    <tr><td>Obrys obrysu</td><td></td><td>Premení obrys na vyplnený tvar rovnakého obrysu.</td></tr>
+    <tr><td>Posunúť cestu&hellip;</td><td></td><td>Vytvára kópiu zväčšenú alebo zmenšenú o nastavenú vzdialenosť.</td></tr>
+    <tr><td>Otočiť smer cesty</td><td></td><td>Prepína, ktorým smerom cesta beží.</td></tr>
+    <tr><td>Zjednodušiť&hellip;</td><td></td><td>Znižuje počet bodov ukotvenia.</td></tr>
+    <tr><td>Pridať ukotvenia</td><td></td><td>Pridá bod do stredu každého segmentu.</td></tr>
+    <tr><td>Odstrániť ukotvenia</td><td></td><td>Odstráni vybrané ukotvenia.</td></tr>
+    <tr><td>Rozdeliť do mriežky&hellip;</td><td></td><td>Rozreže výber do mriežky riadkov a stĺpcov.</td></tr>
+    <tr><td>Vyčistiť&hellip;</td><td></td><td>Odstráni osamelené body, nemaľované objekty a prázdny text.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="paths-join-average">Spojenie a priemer</h3>
+<p>Spojiť (<kbd>&#8984;J</kbd>) pracuje na otvorených cestách. S dvoma samostatnými otvorenými cestami vybranými spája ich najbližšie konce do jednej cesty; s jednou otvorenou cestou spojí dva voľné konce, aby ju zatvoril. Konce, ktoré už ležia na sebe, sa zlúčia do jedného ukotvenia. Použite to na zatvorenie tvaru, ktorý ste kreslili ako otvorený obrys, alebo na zošitie dvoch napol kreslených ťahov dohromady.</p>
+<p>Priemer (<kbd>&#8997;&#8984;J</kbd>) presúva vybrané ukotvenia na ich zdieľanú priemernú pozíciu. Dialógové okno ponúka horizontálnu os, ktorá zarovná body na spoločnú výšku; vertikálnu os, ktorá ich zarovná do stĺpca; alebo obidve, ktoré ich všetky naskladajú na jedno miesto. Siahnite po ňom na vyrovnanie riadku bodov alebo na privedenie dvoch koncov k sebe predtým, ako ich spojíte.</p>
+
+<h3 id="paths-simplify">Zjednodušenie</h3>
+<p>Zjednodušiť prekresľuje vybrané cesty s menším počtom bodov ukotvenia, zostávajúc v rámci presnosti, ktorú nastavíte: tesnejšia presnosť zostáva bližšie k originálu za cenu viac bodov, voľnejšia zhladí tvar do niekoľkých. Použite to na vyčistenie načrtnutej alebo ručne kreslenej cesty, ktorá nesie oveľa viac bodov, než tvar potrebuje, čo ju robí ľahšou na úpravu a vykreslenie.</p>
+
+<h3 id="paths-offset">Posunutie cesty</h3>
+<p>Posunutie cesty staví novú cestu na nastavenú vzdialenosť od originálu: kladný posun zväčší obrys vonkajšie a sedí za originálem, záporný posun ho zmenší dovnútra a sedí pred. Nastavenie spojení rozhoduje, ako sa zaobchádza s vonkajšími rohmi, ako ostrý Miter, zaoblený Round alebo plochý Bevel, s limitom miter, ktorý obmedzuje, ako dlho môže ostrý roh bežať predtým, ako je orezaný. Použite to na nakreslenie rovnakého okraja okolo tvaru, na vloženie tvaru pre keyline alebo na zhrubnutie tenkého tvaru. Posunutie cesty je tiež dostupné pod Efekt &rsaquo; Cesta ako živý efekt, ktorý sa prepočíta, keď sa tvar zmení.</p>
+
+<h3 id="paths-outline-stroke">Obrys obrysu</h3>
+<p>Obrys obrysu nahradí otvorenú cestu vyplneným tvarom, ktorý má presne obrys obrysu. Po obrysovaní sa šírka už neškáluje s objektom a nedá sa upravovať ako obrys, ale obrys sa dá prevarovať bod po bode, vyplniť gradientom alebo kombinovať s inými tvarmi. Siahnite po ňom, keď potrebujete, aby sa obrys správal ako grafika: aby ste dali čiare zužujúci alebo rôzny okraj, ktorý potom upravíte ručne, alebo aby ste zachovali hrúbky čiar dizajnu pevné, keď sa škáluje. Je dostupný aj ako živý efekt, pod Efekt &rsaquo; Cesta.</p>
+
+<h3 id="paths-reverse">Otočenie smeru cesty</h3>
+<p>Otočenie smeru cesty prepína poradie, v ktorom ukotvenia bežia, takže cesta cestuje opačným smerom. Smer sa zriedka zobrazí sama o sebe, ale rozhoduje, ktorý obrys je diera v zloženej ceste a kde štetec alebo špička šípky začína a končí. Použite to, keď diera v zloženej ceste vyplní pevne alebo keď text na ceste alebo začiatok a koniec obrysu sedia na zlom boku.</p>
+
+<h2 id="paths-live-shapes">Editovateľné tvary a ich widgety</h2>
+<p>Obdĺžniky, zaoblené obdĺžniky, elipsy a mnohouholníky zostávajú živé: zachovávajú svoje parametre a stavajú svoju cestu znova vždy, keď jeden zmeníte. Počas ťahania tvaru von <kbd>&#8679;</kbd> ho robí pravidelným a <kbd>&#8997;</kbd> ho kreslí od stredu. Klávesy so šípkami fungujú počas ťahania tiež, hore a vpravo pridávajú, dole a vľavo odčítajú, meniac strany mnohouholníka, hroty hviezdy alebo polomer rohu zaobleného obdĺžnika.</p>
+<p>Vyberte jeden živý tvar a malé okrúhle rukoväte sa objavia tesne vnútra jeho rohov; sú skryté, keď je tvar na obrazovke príliš malý na ich jasné zobrazenie. Ťahajte jednu s nástrojom Výber (<kbd>V</kbd>) pre zaoblenie všetkich rohov naraz alebo s Priamym výberom pre zaoblenie len rohu, ktorý držíte. <kbd>&#8997;</kbd>-kliknite na rohovú rukoväť pre prechod cez zaoblený, invertovaný a skosený, opäť všetky štyri rohy s nástrojom Výber, jeden roh s Priamym výberom.</p>
+<p>Elipsa zobrazí namiesto štvorcovú rukoväť: jednu na celej elipse a jednu na každom konci píty, keď ste jednu otvorili. Ťahajte jednu pre vytiahnutie klina z tvaru, s <kbd>&#8679;</kbd> prichytávajúc uhol na 15&deg; krokov; privedenie konca späť k začiatku obnoví celú elipsu. Panel Vlastnosti drží rovnaké hodnoty ako čísla: polomer a typ rohu, polomery pre každý roh, strany mnohouholníka a začiatok a koniec píty v stupňoch. Živý tvar zachová tieto ovládacie prvky, kým neupravíte jeho cestu priamo, čo ho premení na obyčajnú cestu.</p>
+
+<h2 id="paths-combining">Kombinovanie tvarov: Zlúčenie a rozdelenie a Kombinovanie tvarov</h2>
+<p>Keď sa dva alebo viac tvarov prekrýva, často chcete z nich jeden nový tvar: zjednotenie, diera alebo kus, kde sa pretínajú. Scissor ponúka dva spôsoby, ako sa tam dostať. Zlúčenie a rozdelenie je priame a vizuálne; panel Kombinovanie tvarov používa rovnaké operácie ako tlačidlá. Oba zachovávajú krivky namiesto ich plochých segmentov.</p>
+
+<h3 id="paths-shape-builder">Nástroj Zlúčenie a rozdelenie</h3>
+<p>Nástroj Zlúčenie a rozdelenie (<kbd>&#8679;M</kbd>) pracuje na dvoch alebo viac vybraných cestáach. Rozdelí ich prekrývania na oblasti a zvýrazní tú, nad ktorou je ukazovateľ; ťahajte čiarou naprieč niekoľkými oblasťami pre ich zlúčenie do jedného objektu, ktorý vezme vzhľad tvaru, z ktorého pochádza, alebo <kbd>&#8997;</kbd>-ťahajte naprieč nimi pre ich odstránenie. Použite to na stavbu tvaru podľa oka, pridávaním častí, ktoré chcete a gumovaním tých, ktoré nie, bez zastavovania pre výber príkazu pre každý krok.</p>
+
+<h3 id="paths-pathfinder-shape-modes">Režimy tvarov Kombinovanie tvarov</h3>
+<p>Panel Kombinovanie tvarov (<kbd>&#8679;&#8984;F9</kbd>) sa otvára so štyrmi režimami tvarov, z ktorých každý nahradí vybrané cesty jednou kombinovanou cestou. Výsledok vezme vzhľad najvrchnejšieho objektu, okrem Minus Front, ktorý zachová vzhľad najnižšieho.</p>
+<dl>
+  <dt>Zjednotiť</dt>
+  <dd>Zlúči každý vybraný tvar do jedného obrysu. Použite to na zváranie prekrývajúcich sa kusov do jednej siluety, ako je oblak z radu kruhov.</dd>
+  <dt>Minus Front</dt>
+  <dd>Zachová najnižší tvar a odstráni všetko, čo je na ňom naskladané. Použite to na vykúsnutie kusu z tvaru, ako je vyrezať polmesiac z dvoch kruhov.</dd>
+  <dt>Priesečník</dt>
+  <dd>Zachová len oblasť, ktorú zdieľa každý vybraný tvar. Použite to na orezanie grafiky na spoločnú oblasť, ako je šošovka, kde sa dva kruhy pretínajú.</dd>
+  <dt>Vylúčiť</dt>
+  <dd>Zachová všetko okrem prekrývaní, ktoré sa stanú dierami. Použite to na vytvorenie prstenca alebo článka reťaza, kde sa pretínajúce kusy vypadnú.</dd>
+</dl>
+
+<figure class="shot">
+  <img src="img/combine.gif" width="760" height="441" loading="lazy"
+       alt="Tri prekrývajúce sa tvary, kruh, zaoblený štvorec a kruh, zlučujúce sa do jednej kombinovanej siluety." />
+  <figcaption>Zjednotiť (alebo ťahanie nástrojom Zlúčenie a rozdelenie) zlučuje prekrývajúce sa tvary do jedného obrysu, ktorý zachováva svoje krivky.</figcaption>
+</figure>
+
+<h3 id="paths-pathfinders">Ostatné operácie Kombinovanie tvarov</h3>
+<p>Pod režimami tvarov sedí šesť pathfinderov. Tieto vám zostanú niekoľko kusov, zoskupených do skupiny, namiesto jednej kombinovanej cesty. Minus Back zodpovedá svojmu menovi režimu tvarov, ale zachová horný tvar.</p>
+<dl>
+  <dt>Rozdeliť</dt>
+  <dd>Strihne tvary na samostatné plochy pozdĺž každej čiary, ktorou sa pretínajú, pričom každá plocha vezme farbu najvrchnejšieho tvaru, ktorý ju pokrýva. Použite to na rozdelenie dizajnu na maľovateľné kusy, ako bunky vitrážového panela.</dd>
+  <dt>Orezať</dt>
+  <dd>Odstráni skrytú časť každého tvaru, kde ho tvar nad ním pokrýva. Každý kus zachová svoju vlastnú výplň a nič sa nezlúči; obrysy sa zahodia. Použite to na zploštenie naskladanej plochofarebnej grafiky, aby sa žiadna farba tlačila na druhú.</dd>
+  <dt>Zlúčiť</dt>
+  <dd>Oreže skryté časti a potom zjednotí susedné kusy, ktoré zdieľajú farbu výplne. Použite to na upratanie plochofarebnej ilustrácie, spájaním rovnakofarebných oblastí do jednotných tvarov.</dd>
+  <dt>Orezať</dt>
+  <dd>Zachová len časti nižších tvarov, ktoré spadnú do najvrchnejšieho tvaru, ktorý je potom zahodený. Použite to na orezanie grafiky do rámu a vypákanie orezu do ciest namiesto zachovania živej masky krytia.</dd>
+  <dt>Minus Back</dt>
+  <dd>Zachová najvrchnejší tvar a odstráni všetko za ním. Použite to, keď je najvrchnejší tvar tým, ktorý zostáva a tvary pod ním by mali doň vyrezať.</dd>
+  <dt>Obrys</dt>
+  <dd>Premení každý hranicu oblasti na otvorenú čiaru, obrysúcu farbou výplne, z ktorej pochádza. Použite to na vytiahnutie kostry okrajov zo sady prekrývajúcich sa tvarov.</dd>
+</dl>
+<p>Efekt &rsaquo; Kombinovanie tvarov používa Pridať, Priesečník, Vylúčiť, Odčítať a Minus Back ako živé efekty na skupinu namiesto, zanechávajúc pôvodné objekty nedotknuté a editovateľné pod nimi. Siahnite po verziách efektu, kež stále chcete časom posúvať kusy; siahnite po paneli, keď je kombinovaný tvar finálny.</p>
+
+<h2 id="paths-compound-and-masks">Zložené cesty a masky krytia</h2>
+<p>Objekt &rsaquo; Zložená cesta &rsaquo; Vytvoriť (<kbd>&#8984;8</kbd>) zloží vybrané cesty do jedného objektu vyplneného pravidlom párne-nepárne, takže vnútorný obrys vyreže dieru v tom okolo. Výsledok vezme vzhľad najnižšieho objektu vo výbere. Uvoľniť (<kbd>&#8997;&#8679;&#8984;8</kbd>) vráti každý obrys späť ako cestu sám. Použite zloženú cestu pre akýkoľvek tvar s dierou, ako je counter písmena O alebo podložka.</p>
+<p>Objekt &rsaquo; Maska krytia &rsaquo; Vytvoriť (<kbd>&#8984;7</kbd>) používa najvrchnejší vybraný objekt, ktorý musí byť cesta, pre orezanie všetkého pod ním. Scissor ich všetky vloží do skupiny krytia a vymaže vlastnú výplň a obrys cesty masky. Uvoľniť (<kbd>&#8997;&#8984;7</kbd>) premení skupinu krytia späť na obyčajnú skupinu, takže sa už nič neoreže a každý objekt, vrátane cesty masky, zostane tam, kde bol. Vytvoriť masku krytia v rovnakej podponuke maskuje podľa tónu namiesto podľa obrysu, takže svetlejšie časti masky prechádzajú a tmavšie skrývajú.</p>
+
+<h2 id="paths-smart-guides">Inteligentné vodítka a prichytávanie</h2>
+<p>Inteligentné vodítka (Zobraziť &rsaquo; Inteligentné vodítka, <kbd>&#8984;U</kbd>) sledujú viditeľnú grafiku a plochy počas kreslenia alebo ťahania. To, čo presúvate, sa prichytí k okrajom, stredom a ukotveniam susedov a čiara sa objaví späť k tomu, čo sa zarovnalo, označené druhom zhody: ukotvenie, stred, roh alebo zarovnanie.</p>
+<p>Ďalšie dve vodítka sa objavia samy. Keď by objekt, ktorý presúvate, sedel na rovnakej vzdialenosti od susedov, ako susedia od seba, prichytí sa tam a dve rovnaké medzery sa nakreslia s meraním; to funguje jak pre pokračovanie radu rovnomerne rozložených objektov, tak pre vycentrovanie jedného v medzere medzi dvoma. A keď ťaháte od začiatočného bodu, smer sa prichytí na konštrukčnú čiaru každých 45&deg; od obmedzovacieho uhla, nakreslenú ako dlhá čiara s uhlom vedľa.</p>
+<p>Prichytiť k bodu (<kbd>&#8997;&#8984;'</kbd>) a Prichytiť k mriežke (<kbd>&#8679;&#8984;'</kbd>) sú samostatné prepínače v ponuke Zobraziť. So zapnutým Prichytávaním k mriežke všetko pristane na podmnožinu mriežky a inteligentné vodítka ustúpia.</p>

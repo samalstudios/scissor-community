@@ -1,0 +1,100 @@
+<p class="lede">Vetoritza converteix una imatge en camins vectorials: un logotip escanejat de paper, un esbós a matita o una fotografia es converteix en un conjunt de formes emplenades que podeu redimensionar, acolorir i editar com qualsevol altra cosa que dibuixeu. Aquesta pàgina cobreix què podeu traçar, el panell que l'executa, els tres modes i els seus predefinits, cada opció i com conservar o descartar el resultat.</p>
+
+<h2 id="image-trace-what">Què fa el traçat i què podeu traçar</h2>
+<p>Una imatge està feta de píxels: es difumina quan l'engrandiu i no es pot remodelar punt per punt. El traçat llegeix aquests píxels i dibuixa camins vectorials que segueixen les formes que troba, de manera que el resultat roman nítid a qualsevol mida i es pot editar, acolorir i combinar amb la resta de la vostra feina.</p>
+<p>Traieu una <strong>capa de píxels</strong>: una imatge que heu col·locat o enganxat, una imatge oberta com a taula pròpia, o bé una capa que heu pintat vostre. Porteu una imatge amb <strong>Fitxer &gt; Insereix&hellip;</strong> (<kbd>&#8679;&#8984;P</kbd>) — arriba com una capa de píxels — seleccioneu-la, després executeu el traçat. (La feina vectorial ja està feta de camins, de manera que no hi ha res a traçar; el traçat llegeix píxels.)</p>
+<p>El traçat no llença la imatge. Construeix un grup anomenat <strong>Vetoritza</strong> que conté la imatge original (ara amagada) juntament amb els nous camins, col·locada exactament sobre ella. Com que el grup recorda les configuracions amb què es va crear, el resultat roman en viu: torneu-lo a seleccionar, canvieu una configuració i es torna a traçar. Quan estigueu content <strong>Expandeix</strong> per conservar només els camins, o bé <strong>Allibera</strong> per tornar a la imatge simple.</p>
+
+<h2 id="image-trace-panel">El panell Vetoritza</h2>
+<p>Cada configuració viu al panell Vetoritza. Obriu-lo des de <strong>Oggetto &gt; Vetoritza &gt; Panell Vetoritza</strong>, o bé des de la seva pestanya a l'acoblador de panells. El panell necessita una imatge seleccionada abans de poder fer res: sense res adequat seleccionat, el botó Traça està desactivat i el panell us demana de seleccionar una imatge col·locada.</p>
+
+<h3 id="image-trace-run">Executar un traçat</h3>
+<p>Seleccioneu una imatge, trieu un predefinit o establiu mode i opcions a mà i premeu <strong>Traça</strong>. Una fila al peu del panell informa del progrés, llegint <em>Traçant&hellip;</em> mentre treballa i <em>Traçat. Expandeix per conservar només els camins.</em> quan acaba. Si la imatge no conté res del qual es pugui fer una forma, o no es pot llegir, el panell us ho diu i deixa la imatge intacta.</p>
+
+<h3 id="image-trace-preview">Vista prèvia a mesura que avanceu</h3>
+<p>La casella <strong>Traça en canviar la configuració</strong>, activa per defecte, torna a traçar en el moment en què canvieu el mode, un predefinit, un número o una casella, de manera que podeu jutjar cada ajustament respecte a la imatge immediatament. En una imatge gran o plena el redisseny triga un moment, de manera que desactiveu-la si preferiu establir primer diverses opcions i premer <strong>Traça</strong> una vegada sola. Quan torneu a seleccionar un traçat existent, el panell carrega les configuracions exactes amb què es va fer, a punt per ser ajustades i tornades a traçar.</p>
+
+<h3 id="image-trace-menu">Els comandaments del menú Objecte</h3>
+<p>Les mateixes accions es troben sota <strong>Objecte &gt; Vetoritza</strong>, cosa pràctica quan el panell està tancat.</p>
+<table>
+  <thead><tr><th>Comandament</th><th>Què fa</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Crea</strong></td><td>Traça la imatge seleccionada amb les configuracions actuals, deixant el resultat en viu.</td></tr>
+    <tr><td><strong>Crea i expandeix</strong></td><td>Traça i expandeix d'un sol pas, de manera que aneu directament als camins editables.</td></tr>
+    <tr><td><strong>Expandeix</strong></td><td>Manté els camins i descarta la imatge (vegeu a sota).</td></tr>
+    <tr><td><strong>Allibera</strong></td><td>Elimina els camins i torna a la imatge (vegeu a sota).</td></tr>
+    <tr><td><strong>Panell Vetoritza</strong></td><td>Porta el panell a primer pla.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="image-trace-modes">Els tres modes</h2>
+<p>El mode decideix com la imatge es redueix abans de ser dibuixada. És la primera opció a triar, perquè governa quines de les opcions a sota s'apliquen.</p>
+<table>
+  <thead><tr><th>Mode</th><th>Com redueix la imatge</th><th>L'opció que utilitza</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Blanc i negre</strong></td><td>Divideix tot en dos tons, tinta i paper, a una lluminositat que establiu.</td><td>Llindar</td></tr>
+    <tr><td><strong>Escala de grisos</strong></td><td>Redueix la imatge a un nombre establert de nivells de gris uniformes de negre a blanc.</td><td>Nombre de colors (com a nivells de gris)</td></tr>
+    <tr><td><strong>Color</strong></td><td>Tria una paleta dels colors més significatius de la imatge i mapeja cada píxel al més proper.</td><td>Nombre de colors</td></tr>
+  </tbody>
+</table>
+<p>Qualsevol mode que trieu, es crea una forma emplenada per to o color, i les formes s'apilen de la més gran de manera que els detalls més petits es troben sobre. Les parts completament transparents de la imatge es deixen fora, de manera que un retall sobre fons transparent es traça només en el seu subjecte.</p>
+
+<h2 id="image-trace-presets">Predefinits</h2>
+<p>Un predefinit és un punt de partida amb nom que estableix el mode i cada opció d'un cop. Trieu-ne un del menú a dalt del panell i, amb la vista prèvia activa, la imatge es traça immediatament; tracteu el resultat com a base i ajusteu des d'allà. En el moment en què canvieu qualsevol opció individual el menú predefinit passa a <strong>Personalitzat</strong>, atès que les configuracions ja no coincideixen amb el predefinit.</p>
+<table>
+  <thead><tr><th>Predefinit</th><th>Mode</th><th>Utilitzeu-lo quan</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Foto alta fidelitat</strong></td><td>Color</td><td>Voleu una fotografia mantinguda prop de l'original, amb molts colors.</td></tr>
+    <tr><td><strong>Foto baixa fidelitat</strong></td><td>Color</td><td>Una fotografia hauria de llegir-se com unes poques àmplies àrees de color pla.</td></tr>
+    <tr><td><strong>3 colors</strong></td><td>Color</td><td>Voleu un resultat audac tipus pòster de tres colors plans.</td></tr>
+    <tr><td><strong>6 colors</strong></td><td>Color</td><td>Un aspecte pla i il·lustrat amb una petita paleta ordenada.</td></tr>
+    <tr><td><strong>16 colors</strong></td><td>Color</td><td>Més gamma de colors que els predefinits plans, sense arribar a una foto completa.</td></tr>
+    <tr><td><strong>Tonalitats de gris</strong></td><td>Escala de grisos</td><td>Una imatge tonal hauria de mantenir les seves ombres però perdre el color.</td></tr>
+    <tr><td><strong>Logotip blanc i negre</strong></td><td>Blanc i negre</td><td>Convertir un signe o logotip nítid de dos tons en formes netes.</td></tr>
+    <tr><td><strong>Art esbossat</strong></td><td>Blanc i negre</td><td>Capturar un esbós a matita o tinta amb les seves línies més lliures.</td></tr>
+    <tr><td><strong>Siluetes</strong></td><td>Blanc i negre</td><td>Voleu siluetes sòlides i emplenades en comptes de línies fines.</td></tr>
+    <tr><td><strong>Art de línia</strong></td><td>Blanc i negre</td><td>Un dibuix de línia fina on els traços prims han de sobreviure.</td></tr>
+    <tr><td><strong>Dibuix tècnic</strong></td><td>Blanc i negre</td><td>Feina de línia nítida i fidel amb el màxim detall possible conservat.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="image-trace-options">Les opcions</h2>
+<p>Sota el mode es troben els controls que modelen el resultat. Quins es mostren depenen del mode: Llindar apareix només per a Blanc i negre, mentre que el nombre de colors apareix per a Escala de grisos i Color.</p>
+<dl>
+  <dt>Nombre de colors</dt>
+  <dd>Quants colors (en mode Color) o nivels de gris (en Escala de grisos) la imatge es redueix, de 2 a 64. Menys dóna un resultat més pla i gràfic amb menys formes; més manté la imatge més prop de l'original a costa de més camins. El mode Blanc i negre ignora això, atès que sempre té dos tons.</dd>
+  <dt>Llindar</dt>
+  <dd>Només per a Blanc i negre: la lluminositat, de 0 a 255, on la imatge es divideix en tinta i paper. Tot allò que és més fosc que el llindar es converteix en la forma dibuixada; tot allò que és més clar es tracta com a fons. Pugeu-lo per portar més dels tons mitjans a la forma per a un resultat més pesant, baixeu-lo per mantenir només les marques més fosques. Useu-lo per ajustar quant d'un esbós tènue es recull.</dd>
+  <dt>Camins</dt>
+  <dd>Com de prop els camins segueixen els píxels, en una escala de 0 a 100. Els valors alts abracen estretament les vores i mantenen les fines oscil·lacions, amb més punts d'ancoratge; els valors baixos relaxen l'adaptació per a camins més llisos i simples, més lleugers d'editar. Useu un valor alt quan la precisió importa i un baix quan voleu un contorn net i ordenat.</dd>
+  <dt>Cantonades</dt>
+  <dd>Com de fàcilment un gir al contorn es converteix en una cantonada neta en comptes d'una corba suau, de 0 a 100. Pugeu-lo per a feina amb angles nets, com un logotip o un lettering; baixeu-lo per a formes orgàniques que han de romandre arrodonides.</dd>
+  <dt>Soroll</dt>
+  <dd>La taca més petita, en píxels, que pot convertir-se en una forma pròpia. Tot allò que és més petit s'absorbeix al seu voltant. Pugeu-lo per eliminar gra i grana d'un escaneig o fotografia de manera que punts dispersos no es converteixin cadascun en un camí; baixeu-lo per mantenir el genuí detall fi.</dd>
+  <dt>Ignora blanc</dt>
+  <dd>Deixa fora qualsevol forma que surti gairebé blanca, de manera que el paper o el fons no es dibuixen i romanen transparents darrere les marques traçades. Actiu per defecte, i mostrat per al mode Blanc i negre. Desactiveu-lo quan una àrea blanca forma part de la feina i ha de ser una forma emplenada real.</dd>
+  <dt>Emplena</dt>
+  <dd>Dóna a cada forma traçada un emplenament sòlid amb el color amb què es va traçar. És l'opció habitual i està activa per defecte.</dd>
+  <dt>Contorns</dt>
+  <dd>Contorna cada forma traçada amb un contorn del seu propi color en comptes de, o a més d'un emplenament. Desactivat per defecte. Si desactiveu tant Emplena com Contorns els camins encara es creen però no tenen res que els pinti, de manera que deixeu-ne almenys un actiu.</dd>
+</dl>
+
+<h2 id="image-trace-finish">Conservar o desfer el resultat</h2>
+<p>Un traçat nou és en viu: els camins es troben sobre l'original amagat dins del grup Vetoritza, i podeu continuar ajustant les configuracions. Dos comandaments acaben aquest estat, tots dos al panell com a botons i sota <strong>Objecte &gt; Vetoritza</strong>. Es tornen disponibles un cop seleccionat un traçat.</p>
+<dl>
+  <dt>Expandeix</dt>
+  <dd>Manté els camins i elimina la imatge, de manera que el grup es converteix en feina vectorial ordinària. Les configuracions ja no s'apliquen i no es poden canviar, però cada camí és ara una forma normal que podeu remodelar, acolorir, combinar i organitzar. Useu-lo un cop el traçat sembla correcte i voleu treballar sobre els vectors. <strong>Crea i expandeix</strong> fa el traçat i aquest pas junts.</dd>
+  <dt>Allibera</dt>
+  <dd>Elimina els camins traçats i restaura la imatge original, de nou visible al seu antic lloc. Useu-lo per abandonar un traçat i tornar a començar de zero, o quan al final només necessitaveu la imatge.</dd>
+</dl>
+
+<h2 id="image-trace-uses">Logotips, esbòsos i fotografies</h2>
+<p>Els tres punts de partida comuns demanen configuracions diferents.</p>
+<dl>
+  <dt>Un logotip o signe net</dt>
+  <dd>Comenceu des de <strong>Logotip blanc i negre</strong>. Manteniu <strong>Ignora blanc</strong> actiu perquè el paper surti, pugeu <strong>Cantonades</strong> per a angles nets i <strong>Camins</strong> per a vores fidels, i ajusteu <strong>Llindar</strong> fins que el signe sigui sòlid sense omplir-se. Expandeix, després establiu el vostre color d'emplenament.</dd>
+  <dt>Un esbós a matita o tinta</dt>
+  <dd>Proveu <strong>Art esbossat</strong> o bé <strong>Art de línia</strong>. Baixeu el <strong>Llindar</strong> per mantenir només les línies dibuixades i deixar que el paper desaparegui, i pugeu una mica <strong>Soroll</strong> per eliminar la grana del paper. Art de línia manté els traços més prims; Art esbossat s'adapta a una mà més lliure.</dd>
+  <dt>Una fotografia</dt>
+  <dd>Utilitzeu el mode Color amb <strong>Foto alta fidelitat</strong> per una semblança propera o bé <strong>Foto baixa fidelitat</strong> per un aspecte més pla i il·lustrat, i establiu el <strong>nombre de colors</strong> al gust. Deixeu <strong>Ignora blanc</strong> desactivat perquè les àrees clares romanin. Més colors signifiquen més formes, de manera que un traçat de foto pesat pot ser gran: reduïu els colors si el resultat sembla manejable.</dd>
+</dl>

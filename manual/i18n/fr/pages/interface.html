@@ -1,0 +1,166 @@
+<p class="lede">Scissor remplit la fenêtre du navigateur avec une seule surface d'édition : une barre de menus en haut, une barre de contrôle et des onglets de document en dessous, la palette d'outils à gauche, le canevas de dessin au centre et le dock de panneaux à droite. Tout fonctionne sur votre propre machine, de sorte qu'un document reste où vous l'avez mis et rien n'est envoyé pour être ouvert.</p>
+
+  <p>Les raccourcis de cette page sont écrits sous la forme macOS. Sur Windows et Linux, lisez <kbd>⌘</kbd> comme <kbd>Ctrl</kbd> et <kbd>⌥</kbd> comme <kbd>Alt</kbd> ; <kbd>⇧</kbd> est Maj et <kbd>⌃</kbd> est Contrôle.</p>
+
+  <h2 id="interface-at-a-glance">L'espace d'un coup d'œil</h2>
+  <p>La fenêtre est construite à partir de quelques régions qui répondent chacune à une question différente. Apprenez où elles se trouvent une fois et le reste du manuel se lit plus facilement.</p>
+  <dl>
+    <dt>Barre de menus</dt>
+    <dd>La rangée de menus tout en haut, avec l'annulation et la refaire et une recherche de commandes à son extrémité droite. C'est la liste complète de tout ce que l'éditeur peut faire.</dd>
+    <dt>Barre de contrôle</dt>
+    <dd>La bande juste sous les menus. Elle affiche l'outil courant et la poignée de contrôles qui comptent pour ce que vous avez sélectionné à l'instant.</dd>
+    <dt>Onglets de document</dt>
+    <dd>À gauche de la barre de contrôle, un onglet par document ouvert. Le bouton des panneaux se trouve à l'extrémité droite de la même rangée.</dd>
+    <dt>Palette d'outils</dt>
+    <dd>La colonne étroite d'outils le long du bord gauche, avec le contrôle de fond et de contour en bas.</dd>
+    <dt>Canevas et planche</dt>
+    <dd>La grande zone au centre où vous dessinez. Les rectangles blancs sont les plans ; le contour gris est la planche.</dd>
+    <dt>Dock de panneaux</dt>
+    <dd>La colonne de panneaux à droite. Il glisse sur le canevas lorsque vous en avez besoin et rend la place quand vous le fermez.</dd>
+    <dt>Barre d'état</dt>
+    <dd>La ligne fine le long du bas de la fenêtre, indiquant l'outil courant, la sélection et la dernière action annulable.</dd>
+  </dl>
+  <figure class="shot">
+    <img src="img/app-light.png" width="1900" height="1082" loading="lazy"
+         alt="La fenêtre Scissor entière : barre de menus, barre de contrôle, palette d'outils, canevas et dock de panneaux." />
+    <figcaption>La fenêtre entière. Scissor suit le réglage clair ou sombre de votre système, et cette capture d'écran aussi.</figcaption>
+  </figure>
+
+  <h2 id="interface-menu-bar">La barre de menus</h2>
+  <p>Dix menus longent le haut. Ils rassemblent chaque commande du programme, regroupées par type de travail plutôt que par l'endroit où une fonctionnalité se trouve dans le moteur.</p>
+  <table>
+    <thead><tr><th>Menu</th><th>Ce qu'il contient</th></tr></thead>
+    <tbody>
+      <tr><td>Fichier</td><td>Nouveau, ouvrir, fermer, enregistrer, importer, exporter, scripts, configuration du document et impression.</td></tr>
+      <tr><td>Édition</td><td>Annuler et refaire, les commandes du presse-papiers, tout le menu <strong>Sélection</strong> en sous-menu, l'édition des couleurs et les Préférences.</td></tr>
+      <tr><td>Disposition</td><td>Transformation, ordre d'empilement, alignement, regroupement et verrouillage et masquage.</td></tr>
+      <tr><td>Tracé</td><td>Commandes de tracé et de tracé composé, interpolation, déformation de forme et perspective, masques de découpe, habillage de texte et développement.</td></tr>
+      <tr><td>Création</td><td>Motifs, répétitions, remplissage de région, vectorisation, maillage de dégradé, plans, tranches et les commandes de calque pixel.</td></tr>
+      <tr><td>Effets</td><td>Effets en direct : l'ensemble vectoriel (3D, déformation et transformation, combinaison de formes, stylisation, déformation et plus) et un sous-menu Raster en dessous.</td></tr>
+      <tr><td>Texte</td><td>Police, taille et glyphes, création de contours, changement de casse, flux de texte et insertion de caractères.</td></tr>
+      <tr><td>Affichage</td><td>Apparence (clair et sombre), aperçu contours et pixel, zoom, rotation de la vue, règles, repères, grille et aimantation.</td></tr>
+      <tr><td>Espace de travail</td><td>Les panneaux : les six que vous ouvrez le plus, un sous-menu Texte, un sous-menu Autres panneaux pour le reste et Réinitialiser les panneaux.</td></tr>
+      <tr><td>Aide</td><td>Nouveautés, le manuel utilisateur, installation, les Conditions d'utilisation et À propos, avec un champ de recherche en haut.</td></tr>
+    </tbody>
+  </table>
+  <p>Une coche à côté d'un élément signifie que ce réglage est activé. Un élément en gris ne peut pas être utilisé pour le moment, généralement parce que rien n'est sélectionné ou qu'aucun document n'est ouvert. Lorsqu'une commande a un raccourci, il est affiché sur le côté droit du menu.</p>
+
+  <h3 id="interface-command-search">Trouver une commande</h3>
+  <p>Vous n'avez pas à vous rappeler quel menu contient quoi. Le bouton de recherche à droite de la barre de menus, intitulé <em>Rechercher ou saisir une commande</em>, ouvre la palette de commandes ; <kbd>⌘K</kbd> l'ouvre depuis le clavier. Tapez quelques lettres et il liste chaque commande correspondante avec son chemin de menu et son raccourci, et chaque outil correspondant. Utilisez <kbd>↑</kbd> et <kbd>↓</kbd> pour naviguer dans les résultats, <kbd>Entrée</kbd> pour exécuter celui en surbrillance et <kbd>Échap</kbd> pour fermer. Utilisez-le lorsque vous savez ce que vous voulez mais pas où il se trouve, ou lorsqu'un raccourci est plus rapide à taper que à chercher. Le menu Aide possède son propre champ de recherche qui fait la même chose dans les menus.</p>
+
+  <h3 id="interface-undo-redo">Annuler et refaire</h3>
+  <p>Les flèches courbes près de la droite de la barre de menus annulent et refont, comme <kbd>⌘Z</kbd> et <kbd>⇧⌘Z</kbd>. Chaque bouton nomme l'étape qu'il inverserait lorsque vous le survolez, et la barre d'état affiche la même chose en bas de la fenêtre, de sorte que vous pouvez toujours voir ce qu'une pression supplémentaire annulerait.</p>
+
+  <h2 id="interface-tool-palette">La palette d'outils</h2>
+  <p>Les outils se trouvent dans une seule colonne le long du bord gauche. Ils sont organisés en familles : Sélection, Dessin, Texte, Ligne, Forme, Peinture, Remodelage, Construction, Échantillonnage, Symboles, Plans et Affichage. La colonne affiche un outil de chaque famille à la fois ; reposez le pointeur sur un emplacement et le reste de cette famille se déploie vers la droite, de sorte que vous pouvez choisir un outil apparenté sans que la colonne ne bouge sous votre main. Un emplacement continue d'afficher le membre de sa famille que vous avez utilisé en dernier.</p>
+  <p>Cliquez sur un emplacement pour choisir l'outil qu'il affiche. Son infobulle donne le nom de l'outil et son raccourci à touche unique, par exemple <kbd>V</kbd> pour l'outil Sélection, <kbd>P</kbd> pour la Plume ou <kbd>T</kbd> pour le Texte. Lorsque vous changez d'outil avec le clavier, l'emplacement correspondant s'illumine un instant pour que vous puissiez voir lequel est maintenant actif. Pour tout voir à la fois, un bouton près de la recherche de commandes, dessiné sous forme de trois points, ouvre un navigateur de chaque outil, regroupé par famille et filtré à mesure que vous tapez.</p>
+
+  <h3 id="interface-fill-stroke">Fond et contour</h3>
+  <p>Sous les outils se trouve le contrôle de fond et de contour : un carré rempli pour le fond, placé dans une bande qui représente le contour, avec une petite paire de flèches pour les échanger. Parce qu'il se trouve ici plutôt que uniquement dans la barre de contrôle, vous pouvez choisir une couleur avant de choisir un outil, et elle devient celle avec laquelle le prochain objet est dessiné. Cliquez sur le fond ou sur la bande pour ouvrir les onglets couleur, nuanciers et dégradé.</p>
+  <table>
+    <thead><tr><th>Touche</th><th>Action</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>X</kbd></td><td>Déplacer le focus entre le fond et le contour</td></tr>
+      <tr><td><kbd>⇧X</kbd></td><td>Échanger le fond et le contour</td></tr>
+      <tr><td><kbd>D</kbd></td><td>Revenir au par défaut : fond blanc, contour noir</td></tr>
+      <tr><td><kbd>/</kbd></td><td>Définir le côté actif sur aucun</td></tr>
+    </tbody>
+  </table>
+
+  <h3 id="interface-rail-panels">Panneaux à côté du rail</h3>
+  <p>Entre le contrôle de fond et de contour et les outils, la palette propose une courte rangée de boutons de panneau choisis pour l'outil que vous tenez : les outils de dessin amènent les panneaux Nuanciers et Contour à portée de main, les outils de texte amènent les panneaux Texte et Paragraphe, et ainsi de suite. Ceux-ci ouvrent un seul panneau exactement là où votre main se trouve déjà. Un bouton supplémentaire ouvre le dock complet. Sur une fenêtre courte, la rangée se replie en un seul bouton Panneaux qui liste les mêmes choix, de sorte que la palette ne dépasse jamais du bord inférieur.</p>
+
+  <h2 id="interface-control-bar">La barre de contrôle</h2>
+  <p>La bande sous les menus change selon ce que vous faites. Elle nomme l'outil courant à sa gauche, et à droite elle affiche uniquement les contrôles qui peuvent agir sur la sélection actuelle : le fond, le contour et l'épaisseur du contour ; les X, Y, L et H de la sélection ; et les actions qui ont du sens, telles que l'alignement, les modes de forme booléens, l'ordre d'empilement, le groupe, le dégrouper et le dupliquer. Quand il y a plus que ce qui tient, un bouton final rassemble le reste dans un menu, de sorte que la barre ne se réorganise jamais pendant que vous l'utilisez.</p>
+  <p>Tapez dans un champ numérique et appuyez sur <kbd>Entrée</kbd>, ou quittez le champ, pour appliquer la valeur ; <kbd>↑</kbd> et <kbd>↓</kbd> l'incrémentent, avec <kbd>⇧</kbd> pour dix fois l'incrément et <kbd>⌥</kbd> pour un dixième. Le petit libellé à côté d'un champ est un curseur : glissez-le vers la gauche ou la droite pour changer la valeur au toucher. Survolez le nom de l'outil pour révéler les premières options de cet outil ; cliquez sur le nom pour ouvrir ses options complètes sous la barre, avec tous ses interrupteurs et nombres.</p>
+  <p>La barre de contrôle est ancrée dans la rangée des onglets par défaut, mais vous pouvez faire glisser sa poignée pour la faire flotter sur le canevas, et double-cliquer sur la poignée (ou utiliser son bouton d'ancrage) pour la remettre en place. À côté, une barre compacte peut apparaître à côté d'un objet sélectionné ne contenant que son fond, son contour et son épaisseur, de sorte que la couleur se trouve juste à côté de l'illustration plutôt que de l'autre côté de la fenêtre.</p>
+
+  <h2 id="interface-quick-bar">La barre rapide</h2>
+  <p>Lorsque vous sélectionnez quelque chose, une petite barre flotte à côté avec les contrôles que vous utilisez le plus, de sorte que vous n'avez pas à vous déplacer jusqu'au bord de la fenêtre. Pour les formes et les tracés, elle contient le fond et le contour ; pour le texte, elle contient le fond, la taille, le gras, l'italique et l'alignement. Elle reste à l'écart pendant que vous glissez et revient quand vous relâchez. Tout ce qui s'y trouve se trouve aussi dans la barre de contrôle et les panneaux.</p>
+
+  <h2 id="interface-canvas">Le canevas et la planche</h2>
+  <p>Le centre de la fenêtre est le canevas. Les plans sont les rectangles blancs qui contiennent l'illustration que vous souhaitez conserver ; le contour gris est la planche. La planche fait partie du document, de sorte qu'une esquisse, une chute ou un test de couleur qui y est garé est enregistré avec le fichier, mais lorsque vous exportez un plan, seul ce qui tombe dans le rectangle de ce plan est écrit.</p>
+
+  <h3 id="interface-pan-zoom">Navigation et zoom</h3>
+  <p>Maintenez <kbd>Espace</kbd> pour passer à l'outil Main aussi longtemps que vous la tenez, puis glissez pour naviguer ; relâchez et votre outil revient. Glisser avec le bouton central de la souris navigue également. La molette fait défiler, et la molette avec <kbd>⌘</kbd> ou <kbd>⌥</kbd> maintenu zoome autour du pointeur.</p>
+  <table>
+    <thead><tr><th>Raccourci</th><th>Zoom</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>⌘=</kbd> / <kbd>⌘-</kbd></td><td>Avant et arrière</td></tr>
+      <tr><td><kbd>⌘0</kbd></td><td>Ajuster le plan actif dans la fenêtre</td></tr>
+      <tr><td><kbd>⌥⌘0</kbd></td><td>Ajuster tous les plans dans la fenêtre</td></tr>
+      <tr><td><kbd>⌘1</kbd></td><td>Taille réelle</td></tr>
+    </tbody>
+  </table>
+  <p>Un contrôle de zoom se trouve sur le canevas avec des boutons moins, plus et ajuster et le pourcentage actuel ; cliquez sur le pourcentage pour les mêmes commandes d'ajustement et de taille réelle dans un menu.</p>
+
+  <h3 id="interface-rulers-guides">Règles et repères</h3>
+  <p><kbd>⌘R</kbd> affiche et masque les règles, qui mesurent dans les unités du document depuis le coin supérieur gauche du plan actif et portent un marqueur qui suit le pointeur. Glissez depuis une règle pour tirer un repère sur l'illustration, et déposez un repère sur une règle pour vous en débarrasser. Vous pouvez également transformer un tracé sélectionné en repère avec Créer des repères (<kbd>⌘5</kbd>) et le transformer en retour avec Libérer les repères (<kbd>⌥⌘5</kbd>). Afficher ou masquer tous les repères avec <kbd>⌘;</kbd>. Les repères intelligents (<kbd>⌘U</kbd>) affichent des indications d'alignement et de mesure pendant que vous dessinez et glissez.</p>
+
+  <h3 id="interface-grid">La grille</h3>
+  <p>La grille est dessinée par plan et définie depuis Affichage › Grille ou depuis le panneau Grille. Afficher ou masquer avec <kbd>⌘'</kbd> et activer l'aimantation avec <kbd>⇧⌘'</kbd>. Chaque plan peut utiliser l'un des six types de grille : Orthogonale, Isométrique, Hexagonale, Oblique, Nombre d'or et Perspective. Choisir un type active la grille pour que vous puissiez la voir immédiatement. La grille est décrite en détail sur sa propre page.</p>
+
+  <h3 id="interface-history-strip">La bande d'historique</h3>
+  <p>Une colonne de petites marques apparaît dans un coin du canevas lorsque vous déplacez le pointeur près de celui-ci : c'est l'historique du document. Survolez une marque pour nommer cette étape, cliquez dessus pour y aller directement, ou appuyez et faites glisser le long des marques pour faire avancer et reculer le document afin de voir un changement aller et venir. Le panneau Historique dans le dock liste les mêmes étapes sous forme de texte.</p>
+
+  <h2 id="interface-boards">Plans et la bande de plans</h2>
+  <p>Les plans sont ce que Scissor appelle des plans de travail. Chacun porte son nom au-dessus de son coin supérieur gauche, et le plan actif est dessiné avec un cadre plus fort que les autres. Cliquez sur le nom d'un plan pour saisir l'outil Plan avec ce plan actif, prêt à le déplacer, le redimensionner ou le renommer. Si un plan a un fond perdu, il est affiché autour de celui-ci sous forme de rectangle en pointillés rouges. Ajoutez-en un depuis Création › Plans › Nouveau plan, dessinez et remodellez des plans avec l'outil Plan (<kbd>⇧O</kbd>), et définissez la taille et le nom d'un plan dans Options de plan. Réorganiser tous les plans les range en une rangée.</p>
+  <p>Une bande de vignettes de plans se trouve sur le canevas, un petit aperçu par plan plus un bouton d'ajout à la fin. Cliquez sur une vignette pour rendre ce plan actif et l'ajuster dans la fenêtre ; cliquez sur le nom en dessous pour sauter à ce plan et saisir l'outil Plan prêt à le modifier. Le panneau Plans dans le dock les liste également.</p>
+
+  <h2 id="interface-tabs">Onglets de document</h2>
+  <p>Les documents ouverts apparaissent sous forme d'onglets à gauche de la barre de contrôle. Un onglet affiche le nom du document, avec un point devant tant qu'il a des modifications non enregistrées. Cliquez sur un onglet pour passer à ce document, ou sur le × pour le fermer ; fermer un document avec du travail non enregistré demande d'abord confirmation. Cliquez avec le bouton central sur un onglet pour le fermer directement, et glissez un onglet sur un autre pour réorganiser les documents ouverts. Nouveau (<kbd>⌥⌘N</kbd>), Ouvrir (<kbd>⌘O</kbd>) et Enregistrer (<kbd>⌘S</kbd>) se trouvent dans le menu Fichier, et Fermer est <kbd>⌥⌘W</kbd>.</p>
+  <p>Les onglets se trouvent en haut par défaut. Pour les ancrer sur le côté à la place, activez <strong>Affichage &rsaquo; Onglets de document sur le côté</strong> (également dans les Préférences) ; la bande latérale peut être élargie ou rétrécie par son bord droit, et le choix est mémorisé.</p>
+
+  <h2 id="interface-status-bar">La barre d'état</h2>
+  <p>La ligne le long du bas de la fenêtre indique, de gauche à droite : un indicateur de prêt, le nom de l'outil courant, la taille de la sélection (rien de sélectionné, un objet ou un compte) et l'action que <kbd>⌘Z</kbd> annulerait. C'est un endroit discret pour confirmer ce que vous avez saisi et ce que la prochaine annulation inversera.</p>
+
+  <h2 id="interface-dock">Le dock de panneaux</h2>
+  <p>Les panneaux vivent dans la colonne de droite. Au repos, le canevas a toute la fenêtre ; demander un panneau fait glisser le dock sur le canevas, et le fermer rend la place immédiatement. Le bouton des panneaux à droite de la rangée des onglets, et la touche Échap, ouvrent et ferment le dock ; les menus Fenêtre et Espace de travail et la palette de commandes ouvrent un panneau spécifique.</p>
+  <figure class="shot">
+    <img src="img/editing.png" width="1900" height="1176" loading="lazy"
+         alt="Un document ouvert dans Scissor avec une illustration sur le plan et les panneaux Calques et Nuanciers ouverts dans le dock." />
+    <figcaption>Un document en cours d'édition, avec les panneaux Calques et Nuanciers ouverts dans le dock.</figcaption>
+  </figure>
+
+  <h3 id="interface-dock-groups">Les groupes de panneaux ancrés</h3>
+  <p>Les panneaux sont empilés en groupes, chaque groupe étant une colonne de petits onglets icônes le long de son propre bord. Reposez le pointeur sur un onglet pour voir le nom du panneau, et le panneau ouvert se nomme au-dessus de son contenu. Par défaut, les groupes rassemblent les panneaux qui ont tendance à être utilisés ensemble :</p>
+  <ul>
+    <li><strong>Propriétés, Calques, Plans, Grille</strong> : la structure du document.</li>
+    <li><strong>Couleur, Nuanciers, Dégradé, Contour</strong> : comment les choses sont peintes.</li>
+    <li><strong>Texte, Paragraphe, Glyphes</strong> : le texte.</li>
+    <li><strong>Aligner, Combinaison de formes, Transformation, Pile de peinture, Transparence, 3D</strong> : façonnage et disposition.</li>
+    <li><strong>Styles, Pinceaux, Symboles, Motifs</strong> : apparences et objets réutilisables.</li>
+    <li><strong>Navigateur, Infos, Infos document, Historique, Actions</strong> : navigation et mesure.</li>
+    <li><strong>Actifs, Variables, Sélection automatique, Vectorisation, Attributs</strong> : le reste.</li>
+  </ul>
+
+  <h3 id="interface-rearranging">Réorganiser les panneaux</h3>
+  <p>La disposition est à vous de la changer. Faites glisser un onglet le long de sa propre bande pour le réorganiser, glissez-le sur la bande d'un autre groupe pour l'y déplacer, ou glissez-le hors du dock pour le laisser flotter sur le canevas. Faites glisser la partie vide d'une bande pour sortir un groupe entier, et redéposez-le sur le dock pour le remettre en place ; un espace entre les groupes accepte un onglet déposé comme un nouveau groupe à part entière. Cliquez avec le bouton droit sur un onglet pour les mêmes déplacements par menu, y compris Fermer le panneau. Le × en haut d'une bande ferme ce groupe, et faire glisser le séparateur entre deux groupes donne de la hauteur à l'un et la prend à l'autre. Un groupe flottant peut être redimensionné depuis son coin.</p>
+
+  <h3 id="interface-gating">Les panneaux qui attendent quelque chose à faire</h3>
+  <p>Un panneau qui n'a rien à faire pour le moment ne disparaît pas : son onglet reste, seulement estompé, et son corps affiche une ligne indiquant ce qu'il attend, comme sélectionner un objet ou choisir l'outil Texte. Pour que le dock ne se réorganise pas sous votre main, cette attente est maintenue tant que le pointeur est dans le dock et se rattrape une fois le pointeur sorti.</p>
+
+  <h3 id="interface-workspace">Ouvrir, masquer et réinitialiser les panneaux</h3>
+  <p>Ouvrez un panneau depuis le menu Espace de travail, où les six plus utilisés se trouvent en haut et le reste sous Autres panneaux, ou depuis le menu Fenêtre dans le chrome classique. De nombreux panneaux ont un raccourci :</p>
+  <table>
+    <thead><tr><th>Panneau</th><th>Raccourci</th><th>Panneau</th><th>Raccourci</th></tr></thead>
+    <tbody>
+      <tr><td>Calques</td><td><kbd>F7</kbd></td><td>Couleur</td><td><kbd>F6</kbd></td></tr>
+      <tr><td>Pile de peinture</td><td><kbd>⇧F6</kbd></td><td>Infos</td><td><kbd>F8</kbd></td></tr>
+      <tr><td>Aligner</td><td><kbd>⇧F7</kbd></td><td>Transformation</td><td><kbd>⇧F8</kbd></td></tr>
+      <tr><td>Contour</td><td><kbd>⌘F10</kbd></td><td>Dégradé</td><td><kbd>⌘F9</kbd></td></tr>
+      <tr><td>Combinaison de formes</td><td><kbd>⇧⌘F9</kbd></td><td>Transparence</td><td><kbd>⇧⌘F10</kbd></td></tr>
+      <tr><td>Styles graphiques</td><td><kbd>⇧F5</kbd></td><td>Pinceaux</td><td><kbd>F5</kbd></td></tr>
+      <tr><td>Attributs</td><td><kbd>⌘F11</kbd></td><td>Symboles</td><td><kbd>⇧⌘F11</kbd></td></tr>
+      <tr><td>Caractère</td><td><kbd>⌘T</kbd></td><td>Paragraphe</td><td><kbd>⌥⌘T</kbd></td></tr>
+      <tr><td>Glyphes</td><td><kbd>⌥⇧F11</kbd></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+  <p>Le dock peut être élargi en faisant glisser son bord gauche, d'une largeur confortable de deux champs par rangée jusqu'à beaucoup plus large. Votre disposition et la largeur que vous avez laissée au dock sont mémorisées entre les sessions. Quand le dock est fermé, balayer le pointeur vers le bord droit de la fenêtre le fait apparaître, tant qu'il n'y a pas d'illustration sous le pointeur. Pour annuler toutes vos modifications de la disposition, choisissez Réinitialiser les panneaux, qui remet chaque groupe à sa place de départ.</p>
+  <p><kbd>Tab</kbd> masque la palette d'outils, la barre de contrôle, les onglets de document, la barre d'état, les panneaux et le autre chrome sur le canevas pour ne laisser que l'illustration et la barre de menus ; appuyez à nouveau pour tous les ramener.</p>
+
+  <h2 id="interface-language">Langue</h2>
+  <p>Scissor parle anglais, allemand (Deutsch), espagnol (Español), français (Français), italien (Italiano), catalan (Català), tchèque (Čeština), danois (Dansk), norvégien (Norsk), polonais (Polski), slovaque (Slovenčina), finnois (Suomi) et suédois (Svenska). La première fois que vous l'ouvrez, il utilise la langue de votre navigateur lorsqu'il s'agit de l'une de celles-ci, et l'anglais sinon. Pour en choisir une autre, cliquez sur le bouton globe dans la barre de menus ou sur l'écran de bienvenue, ou ouvrez <strong>Édition › Préférences</strong> (<kbd>&#8984;K</kbd>), allez dans <strong>Interface</strong> et choisissez-en une sous <strong>Langue</strong>. Scissor change au rechargement et mémorise le choix. Les menus, panneaux, boîtes de dialogue, infobulles, messages et Nouveautés le suivent tous, et les nombres sont affichés selon la locale, comme 12,5 en allemand, bien que vous puissiez taper une virgule ou un point. Vos documents ne sont pas affectés : les noms de calques et le texte de votre illustration restent comme vous les avez écrits. Lorsque l'interface n'est pas en anglais, les Conditions d'utilisation sont affichées traduites par commodité, et la version anglaise est celle qui s'applique.</p>
+
+  <h2 id="interface-appearance">Clair et sombre</h2>
+  <p>Scissor suit le réglage système pour le clair et le sombre. Pour le fixer d'une manière, choisissez Affichage › Apparence et sélectionnez Système, Clair ou Sombre. Le choix est mémorisé et s'applique au canevas ainsi qu'au chrome : la planche, les règles et les étiquettes de plan sont tous dessinés en fonction du thème dans lequel vous êtes.</p>

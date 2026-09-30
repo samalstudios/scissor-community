@@ -1,0 +1,95 @@
+<p class="lede">Efekt zmienia wygląd obiektu bez zmiany samego obiektu. Ścieżka, grupa lub fragment tekstu pozostaje dokładnie taki, jak go narysowałeś, a efekt jest przeliczany na górze za każdym razem, gdy przesuniesz punkt lub edytujesz wartość. Efekty układają się w panelu Stos malowania, więc możesz nakładać kilka na jeden obiekt, zmieniać ich kolejność i zdejmować dowolny z nich.</p>
+
+<figure class="shot">
+  <img src="img/effects-demo.png" width="1400" height="560" loading="lazy"
+       alt="Trzy identyczne niebieskie kafelki pokazujące trzy efekty: cień, bursztynową poświatę zewnętrzną i postrzępione krawędzie." />
+  <figcaption>Ten sam kafelek z trzema efektami: cień, poświatą zewnętrzną i Postrzęp. Każdy jest na żywo, więc kafelek pod spodem nadal jest zwykłym zaokrąglonym prostokątem.</figcaption>
+</figure>
+
+<h2 id="effects-live-and-stacked">Efekty na żywo i stos wyglądu</h2>
+<p>Każdy efekt w Scissor jest <strong>na żywo</strong> i <strong>nieniszczący</strong>. Siedzi nad wypełnieniami i obrysami obiektu w panelu <strong>Wygląd</strong> (<kbd>&#8679;F6</kbd>) i działa na całym obiekcie za każdym razem, gdy grafika lub efekt się zmienia. Ponieważ oryginalna ścieżka jest nietknięta pod spodem, możesz nadal edytować punkty kotwiczne, zamieniać kolor wypełnienia lub przepisywać słowa, a efekt podąża. Sięgaj po efekt, gdy chcesz wyglądu, cienia, zgięcia, zaokrąglonego rogu, o którym możesz się później zmienić zdanie, zamiast zobowiązywać się do niego ręcznie.</p>
+
+<h3 id="effects-order">Kolejność ma znaczenie</h3>
+<p>Efekty działają od dołu stosu w górę, a panel wymienia je od góry, nad wypełnieniami i obrysami. Kolejność zmienia wynik: rozmycie pod cieniem zmiękcza kształt przed rzuceniem cienia, podczas gdy te same dwa w odwrotnej kolejności rzucają ostry cień, a następnie rozmywają całość. Gdy efekt nie robi tego, czego oczekujesz, jego pozycja w stosie to pierwsza rzecz do sprawdzenia.</p>
+
+<h2 id="effects-using">Dodawanie, edycja i usuwanie efektów</h2>
+<h3 id="effects-add">Z menu Efekt</h3>
+<p>Zaznacz obiekt, a następnie wybierz efekt z menu <strong>Efekt</strong>. Pozycje otwierające okno dialogowe pokazują <strong>Podgląd</strong> podczas zmiany wartości, dzięki czemu możesz ocenić wynik na płótnie przed zobowiązaniem; cała edycja trafia jako pojedynczy krok w historii, a nie krok na naciśnięcie klawisza. Krótka wersja menu (Cień, Poświatę zewnętrzną i Rozmycie Gaussa, plus Wyczyść efekty) znajduje się również w menu prawego przycisku myszy na płótnie pod <strong>Efekt</strong>.</p>
+
+<h3 id="effects-appearance">W panelu Stos malowania</h3>
+<p>Każdy efekt na zaznaczonym obiekcie dostaje własny rząd w panelu Stos malowania, oznaczony odznaką <em>fx</em>. Kliknij nazwę efektu, aby ponownie otworzyć jego opcje i zmienić je. Kliknij krzyżyk na końcu rzędu, aby usunąć ten jeden efekt. Aby zdjąć wszystkie efekty z zaznaczenia naraz, użyj <strong>Efekt &rsaquo; Wyczyść efekty</strong>.</p>
+
+<h3 id="effects-panels">W panelach efektów</h3>
+<p>Grupa <strong>Okno &rsaquo; Efekty</strong> gromadzi efekty w pojedynczy panel dla każdej części menu Efekt: Stylizacja, Rozmycie, Zniekształcenia i przekształcenia, Ścieżka, Łącz kształty i Deformacja, z panelem 3D obok. Każdy panel wymienia efekty tej grupy z przełącznikiem do włączenia lub wyłączenia i jego ustawieniami tuż poniżej, wszystko edytowane na żywo na zaznaczeniu. To szybszy sposób wypróbowania efektu i dostosowania jego wartości niż otwieranie okna dialogowego za każdym razem. Wyłączenie przełącznika zdejmuje ten efekt z obiektu. Gdy obiekt niesie więcej niż jeden efekt tego samego rodzaju, panel edytuje pierwszy z nich, a panel Stos malowania nadal pokazuje cały stos.</p>
+
+<h2 id="effects-stylize">Stylizacja: cienie, poświaty i krawędzie</h2>
+<p>Podmenu <strong>Efekt &rsaquo; Stylizacja</strong> zawiera codzienne efekty wykończeniowe.</p>
+<table>
+  <thead><tr><th>Efekt</th><th>Co robi i kiedy go użyć</th><th>Główne opcje</th></tr></thead>
+  <tbody>
+    <tr><td>Cień</td><td>Rzuca przesunięte, rozmyte kopie obiektu za nim. Użyj go, aby unieść kształt, kartkę lub fragment tekstu z tła.</td><td>Przesunięcie X i Y, Rozmycie, Kolor, Krycie.</td></tr>
+    <tr><td>Poświatę zewnętrzną</td><td>Rozprowadza miękką poświatę koloru na zewnątrz od krawędzi obiektu. Sięgaj po nią dla znaku neonowego, podświetlenia lub poświaty wokół źródła światła.</td><td>Rozmycie, Kolor, Krycie.</td></tr>
+    <tr><td>Poświatę wewnętrzną</td><td>Wygładza kolor do środka od krawędzi zamiast na zewnątrz, więc światło siedzi wewnątrz kształtu. Użyj go, aby wydrążyć kształt lub zasugerować wklęsły, oświetlony rim.</td><td>Rozmycie, Kolor, Krycie.</td></tr>
+    <tr><td>Pióro</td><td>Wygładza własną krawędź obiektu do przezroczystości na promień. Użyj go dla kształtu z miękką krawędzią lub prostej winiety.</td><td>Promień pióra.</td></tr>
+    <tr><td>Zaokrąglij narożniki</td><td>Zaokrągla każdy narożnik ścieżki do jednego promienia. Użyj go, aby zmiękczyć punkty gwiazdy, wielokąta lub ręcznie rysowanej ścieżki bez jej przerywania.</td><td>Promień.</td></tr>    <tr><td>Szkicowe wypełnienie</td><td>Wypełnia kształt biegiem kreski w przód i w tył, jakby szkicowane ręcznie. Dobre do luźnego, wrysowanego wypełnienia lub wyglądu markera.</td><td>Kąt, Odstęp, Grubość kreski, Zmienność (jak bardzo kreski wędrują, 0 do 100%).</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-blur">Rozmycie</h2>
+<p><strong>Efekt &rsaquo; Rozmycie &rsaquo; Rozmycie Gaussa</strong> zmiękcza cały obiekt o <em>Promień</em>, który ustawiasz w pikselach. Ponieważ pozostaje na żywo, możesz podnieść lub obniżyć promień w dowolnym momencie. Użyj go do miękkiego, rozmytego tła lub jako szybkiej miękkiej postaci cienia samodzielnie.</p>
+
+<h2 id="effects-distort">Zniekształcanie i przekształcanie</h2>
+<p>Podmenu <strong>Efekt &rsaquo; Zniekształcenia i przekształcenia</strong> przekształca kontur, pozostawiając podstawową ścieżkę edytowalną.</p>
+<table>
+  <thead><tr><th>Efekt</th><th>Co robi i kiedy go użyć</th><th>Główne opcje</th></tr></thead>
+  <tbody>
+    <tr><td>Swobodne zniekształcenie</td><td>Przeciąga cztery rogi ramki obiektu w małym podglądzie, a grafika podąża w perspektywie. Użyj go, aby udawać perspektywę, taką jak etykieta leżąca na pochyłej powierzchni. Przełącznik Podgląd pokazuje wynik na płótnie podczas przeciągania, a Reset przywraca rogi do kwadratu.</td><td>Cztery rogi, Podgląd, Reset.</td></tr>
+    <tr><td>Ściskanie i puchnięcie</td><td>Zgina segmenty między punktami kotwicznymi albo do środka, ściskając kontur w kolce, albo na zewnętrz, puchając go w wypukłości. Użyj go do wybuchów gwiazd, plam i miękkich płatków.</td><td>Wartość, od ścisknięcia po puchnięcie.</td></tr>
+    <tr><td>Postrzęp</td><td>Rozbija kontur na małe losowe ruchy, ostre lub wygładzone. Użyj go do krawędzi przeciętego papieru lub grubszej, ręcznie rysowanej linii.</td><td>Rozmiar (jak daleko poruszają się punkty), Szczegółowość (jak gęsto), Punkty: Głądki lub Narożny.</td></tr>
+    <tr><td>Przekształć</td><td>Skaluje, przesuwa i obraca obiekt jako efekt i może zostawić zestaw kopii. Użyj go do edytowalnego rzędu lub pierścienia powtórzeń lub do popchnięcia i zmiany rozmiaru kształtu bez dotykania jego prawdziwej geometrii.</td><td>Skaluj poziomo i pionowo, Przesuń poziomo i pionowo, Obróć, Kopie (0 do 200).</td></tr>
+    <tr><td>Popraw</td><td>Przesuwa punkty kotwiczne i ich uchwyty kontrolne o losową wartość. Użyj go, aby lekko wywrócić zbyt idealny kształt.</td><td>Wartość pozioma i pionowa oraz to, czy przesunąć Punkty kotwiczne, Punkty kontrolne, czy oba.</td></tr>
+    <tr><td>Skręć</td><td>Obraca wnętrze kształtu bardziej niż jego krawędzie, nawijając je w wir. Użyj go do spirali albo wirnika.</td><td>Kąt.</td></tr>
+    <tr><td>Zygzak</td><td>Zamienia proste segmenty w regularne zygzaki (Narożny) lub fale (Gładki). Użyj go do falistej podkreślenia, ric-rac obwódki lub postrzępionej krawędzi.</td><td>Rozmiar, Grzbiety na segment, Punkty: Narożny lub Gładki.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-path">Ścieżka</h2>
+<p>Podmenu <strong>Efekt &rsaquo; Ścieżka</strong> przerabia kontur obiektu, zostawiając źródło edytowalne.</p>
+<table>
+  <thead><tr><th>Efekt</th><th>Co robi i kiedy go użyć</th><th>Główne opcje</th></tr></thead>
+  <tbody>
+    <tr><td>Ścieżka przesunięcia</td><td>Powiększa lub pomniejsza kontur o ustaloną odległość. Dodatnie przesunięcie rozprowadza go na zewnątrz, ujemne wciąga do środka. Używaj go do konturu na żywo wokół tekstu lub kształtu, który podąża podczas edycji.</td><td>Przesunięcie, Połączenia: Szpiczate, Okrągłe lub Sfazowane.</td></tr>
+    <tr><td>Kontur obiektu</td><td>Dodaje efekt Ścieżka przesunięcia ustawiony na zero, zamieniając obiekt (w tym tekst na żywo) w skonturowaną ścieżkę, aby późniejsze efekty miały prawdziwą ścieżkę do działania.</td><td>Brak.</td></tr>
+    <tr><td>Kontur obrysu</td><td>Zamienia obrys w wypełniony kształt jako efekt. Użyj go, gdy chcesz wypełnić obrys gradientem lub wygładzić lub zniekształcić obrys, który w przeciwnym razie jest zwykłą linią.</td><td>Brak.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-pathfinder">Łącz kształty</h2>
+<p>Podmenu <strong>Efekt &rsaquo; Łącz kształty</strong> łączy kształty wewnątrz grupy trybem kształtu, ale zachowuje je jako osobne, edytowalne ścieżki pod spodem. Zastosuj go do grupy, a połączony wynik to to, co widzisz, podczas gdy każdy członek nadal może być przesuwany lub przemalowywany. Użyj go, aby wypróbować połączenia bez zobowiązywania się do tego, jak zrobiłby to panel Łącz kształty.</p>
+<table>
+  <thead><tr><th>Tryb</th><th>Wynik</th></tr></thead>
+  <tbody>
+    <tr><td>Dodaj</td><td>Scala kształty grupy w jeden region.</td></tr>
+    <tr><td>Przecięcie</td><td>Zachowuje tylko to, gdzie kształty się nakładają.</td></tr>
+    <tr><td>Wyklucz</td><td>Zachowuje wszystko poza miejscami, w których się nakładają.</td></tr>
+    <tr><td>Odejmij</td><td>Usuwa przednie kształty z tylnego.</td></tr>
+    <tr><td>Od tyłu</td><td>Usuwa tylne kształty z przedniego.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-warp">Deformacja</h2>
+<p><strong>Efekt &rsaquo; Deformacja</strong> zgina obiekt wzdłuż jednego z zestawu predefiniowanych kształtów i pozostaje na żywo, dzięki czemu możesz nadal edytować grafikę pod spodem. Użyj go, aby zakrzywić nagłówek w łuk, falować baner lub wypchnąć płaski blok w wypukłość, nie rezygnując z możliwości zmiany słów lub kolorów.</p>
+<p>Menu oferuje dziesięć stylów bezpośrednio (Łuk, Ark, Wypukłość, Flaga, Fala, Ryba, Wzrost, Rybie oko, Nadmuch i Ściskanie). <strong>Opcje deformacji&#8230;</strong> otwiera pełny zestaw, który dodaje Łuk dolny, Łuk górny, Muszla dolna i Muszla górna, i pozwala wpisać wartość:</p>
+<dl>
+  <dt>Wygięcie</dt><dd>Jak silnie kształt się zgina, od -100% do 100%.</dd>
+  <dt>Poziome</dt><dd>Pochyla zgięcie na bok, od -100% do 100%.</dd>
+  <dt>Pionowe</dt><dd>Chyli zgięcie w górę lub w dół, od -100% do 100%.</dd>
+</dl>
+<p>Te same style deformacji mogą być stosowane jako koperta przekształcająca, która zmienia samą ścieżkę, zamiast pozostawać na żywo: zobacz <a href="#transform-envelope">Deformacja kształtu</a>. Narzędzie Deformacja i pozostałe narzędzia płynne przekształcają przez przeciąganie na płótnie i są opisane w <a href="#tools-width-liquify">referencji narzędzi</a>.</p>
+
+<h2 id="effects-3d">3D i Materiały</h2>
+<p><strong>Efekt &rsaquo; 3D i Materiały</strong> zamienia płaski kształt w bryłę: płaszczyznę, wyciągnięcie i fazę, obrót lub nadmuch. Jak pozostałe, jest to efekt na żywo, więc płaska ścieżka pozostaje tam do edycji, a bryła przebudowuje się, gdy ją zmienisz. Głębię, fazę, obrót, oświetlenie i powierzchnię ustawia się w panelu 3D i Materiały. Ponieważ ma więcej kontrolek niż pojedyncze okno dialogowe, 3D ma swoją własną stronę: zobacz <a href="/manual/three-d/">3D</a>.</p>
+
+<h2 id="effects-expand">Zamiana efektów w grafikę</h2>
+<p>Efekt pozostaje na żywo tak długo, jak chcesz. Gdy wygląd jest ustalony i potrzebujesz wyniku jako zwykłych, edytowalnych ścieżek, na przykład aby przekazać plik lub ręcznie przekształcić wynik efektu, wybierz <strong>Obiekt &rsaquo; Rozwiń wygląd</strong>. Wpiecze cały stos wyglądu, efekty włącznie, w zwykłą grafikę. Nie można tego później edytować jako efektu, więc rozwijaj tylko po upewnieniu się. Aby zdjąć efekty bez wypeczania czegokolwiek, usuwaj je pojedynczo w panelu Stos malowania lub wyczyść je wszystkie za pomocą <strong>Efekt &rsaquo; Wyczyść efekty</strong>.</p>
+<p>Menu Efekt wymienia również <strong>Rasteryzuj</strong>, który nie jest efektem na żywo: zamienia zaznaczenie w piksele w tym momencie. Malowanie i warstwy pikselowe są opisane na stronie <a href="/manual/pixels/">Warstwy pikselowe</a>.</p>

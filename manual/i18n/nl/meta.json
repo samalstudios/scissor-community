@@ -1,0 +1,31 @@
+{
+  "chrome": {
+    "Manual": "Handleiding",
+    "Shortcuts": "Sneltoetsen",
+    "Open the editor": "Editor openen",
+    "Skip to the content": "Naar de inhoud gaan",
+    "Search the manual": "In de handleiding zoeken",
+    "Search the manual…": "In de handleiding zoeken…",
+    "Breadcrumb": "Kruimelpad",
+    "More pages": "Meer pagina's",
+    "Previous": "Vorige",
+    "Next": "Volgende",
+    "Language": "Taal",
+    "Scissor by Samal Studios.": "Scissor door Samal Studios.",
+    "Third-party licences": "Licenties van derden",
+    "| Scissor manual": "| Scissor-handleiding",
+    "Scissor user manual: every tool, menu and shortcut": "Scissor-gebruikershandleiding: elk gereedschap, menu en sneltoets",
+    "Scissor user manual": "Scissor-gebruikershandleiding"
+  },
+  "groups": {
+    "Get started": "Aan de slag",
+    "Draw": "Tekenen",
+    "Arrange & build": "Ordenen en bouwen",
+    "Layout & pixels": "Lay-out en pixels",
+    "Panels": "Panelen",
+    "Files & reference": "Bestanden en referentie"
+  },
+  "nav": {},
+  "meta": {},
+  "keywords": {}
+}
