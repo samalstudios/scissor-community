@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#222">
+  <title>Circular Arrows</title>
+  <desc>refresh, reload, sync, cycle, rotate</desc>
+  <path d="M50 10A40 40 0 0 1 88 38H98L80 62L62 38H70A22 22 0 0 0 30 40L16 30A40 40 0 0 1 50 10Z"/><path d="M50 90A40 40 0 0 1 12 62H2L20 38L38 62H30A22 22 0 0 0 70 60L84 70A40 40 0 0 1 50 90Z"/>
+</svg>

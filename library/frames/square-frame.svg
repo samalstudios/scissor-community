@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#222">
+  <title>Square Frame</title>
+  <desc>square frame, border, outline, box, photo frame</desc>
+  <path d="M6 6H94V94H6Z M18 18V82H82V18Z" fill-rule="evenodd"/>
+</svg>

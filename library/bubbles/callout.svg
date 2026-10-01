@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#222">
+  <title>Callout</title>
+  <desc>callout, tooltip, popover, pointer, info</desc>
+  <path d="M10 8H90A6 6 0 0 1 96 14V60A6 6 0 0 1 90 66H58L50 80L42 66H10A6 6 0 0 1 4 60V14A6 6 0 0 1 10 8Z"/>
+</svg>

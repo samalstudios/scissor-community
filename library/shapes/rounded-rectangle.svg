@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#222">
+  <title>Rounded Rectangle</title>
+  <desc>rounded rectangle, button, card, pill, basic shape</desc>
+  <rect x="6" y="24" width="88" height="52" rx="14"/>
+</svg>

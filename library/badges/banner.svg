@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#222">
   <title>Banner</title>
-  <desc>banner, ribbon, title, header, label</desc>
-  <path d="M4 34h16V22h60v12h16l-8 16 8 16H80v12H20V66H4l8-16z"/>
+  <desc>banner, ribbon, title, header, scroll</desc>
+  <path d="M2 30H20V22H80V30H98L88 48L98 66H80V74H20V66H2L12 48Z"/>
 </svg>

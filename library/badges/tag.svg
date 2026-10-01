@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#222">
   <title>Tag</title>
   <desc>tag, label, price, sale, shop</desc>
-  <path d="M8 50 40 12h50v76H40zM62 50a8 8 0 1 0 0 .1z" fill-rule="evenodd"/>
+  <path d="M6 50L36 14H90a4 4 0 0 1 4 4V82a4 4 0 0 1 -4 4H36ZM38 50a7 7 0 1 0 -14 0a7 7 0 1 0 14 0z" fill-rule="evenodd"/>
 </svg>

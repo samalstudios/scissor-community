@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#222">
+  <title>Circle Frame</title>
+  <desc>circle frame, round border, avatar, ring, badge</desc>
+  <path d="M4 50a46 46 0 1 0 92 0a46 46 0 1 0 -92 0zM14 50a36 36 0 1 0 72 0a36 36 0 1 0 -72 0z" fill-rule="evenodd"/>
+</svg>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#222">
+  <title>Corner Brackets</title>
+  <desc>corner brackets, focus, viewfinder, scan, crop</desc>
+  <path d="M6 30V6H30V16H16V30Z"/><path d="M70 6H94V30H84V16H70Z"/><path d="M94 70V94H70V84H84V70Z"/><path d="M30 94H6V70H16V84H30Z"/>
+</svg>

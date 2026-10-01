@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#222">
   <title>Triangle</title>
-  <desc>triangle, delta, warning, play</desc>
-  <path d="M50 10 92 86H8z"/>
+  <desc>triangle, delta, play, pyramid, basic shape</desc>
+  <path d="M48.03471525227236 11.483913870971715Q50 8 51.96528474772764 11.483913870971715L92.03471525227236 82.51608612902828Q94 86 90 86L10 86Q6 86 7.965284747727635 82.51608612902828Z"/>
 </svg>

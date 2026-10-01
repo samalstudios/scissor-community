@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#222">
+  <title>Speech Box</title>
+  <desc>speech box, message, chat, comment, tooltip</desc>
+  <path d="M14 10H86A10 10 0 0 1 96 20V64A10 10 0 0 1 86 74H44L22 92V74H14A10 10 0 0 1 4 64V20A10 10 0 0 1 14 10Z"/>
+</svg>

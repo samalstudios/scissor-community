@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#222">
   <title>Curved Arrow</title>
-  <desc>arrow, curved, turn, redo, return</desc>
-  <path d="M16 80C16 46 38 26 66 26V8l30 28-30 28V44C46 44 32 58 32 80z"/>
+  <desc>curved arrow, turn, redo, bend, return</desc>
+  <path d="M14 88C14 48 38 28 68 28V10L96 38L68 66V48C46 48 32 62 32 88Z"/>
 </svg>

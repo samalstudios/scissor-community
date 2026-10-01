@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#222">
+  <title>Rounded Frame</title>
+  <desc>rounded frame, border, outline, card, photo frame</desc>
+  <path d="M22 6H78A16 16 0 0 1 94 22V78A16 16 0 0 1 78 94H22A16 16 0 0 1 6 78V22A16 16 0 0 1 22 6Z M26 18A8 8 0 0 0 18 26V74A8 8 0 0 0 26 82H74A8 8 0 0 0 82 74V26A8 8 0 0 0 74 18Z" fill-rule="evenodd"/>
+</svg>

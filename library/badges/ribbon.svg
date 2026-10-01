@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#222">
-  <title>Ribbon Badge</title>
-  <desc>ribbon, badge, award, medal, prize</desc>
-  <circle cx="50" cy="38" r="30"/><path d="M32 62 22 96l16-8 10 12 6-30zM68 62l10 34-16-8-10 12-6-30z"/>
+  <title>Ribbon</title>
+  <desc>ribbon, banner, swallowtail, label, title</desc>
+  <path d="M4 34H96L84 50L96 66H4L16 50Z"/>
 </svg>

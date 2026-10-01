@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#222">
   <title>Heart</title>
-  <desc>heart, love, like, valentine</desc>
-  <path d="M50 88C20 66 6 50 6 32 6 18 17 8 30 8c9 0 16 5 20 12 4-7 11-12 20-12 13 0 24 10 24 24 0 18-14 34-44 56z"/>
+  <desc>heart, love, like, valentine, basic shape</desc>
+  <path d="M50 90C22 70 6 54 6 34C6 19 18 9 31 9C40 9 46 14 50 21C54 14 60 9 69 9C82 9 94 19 94 34C94 54 78 70 50 90Z"/>
 </svg>
