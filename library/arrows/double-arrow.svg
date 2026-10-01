@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#222">
+  <title>Double Arrow</title>
+  <desc>arrow, both ways, left, right, swap, exchange</desc>
+  <path d="M4 50 30 26v16h40V26l26 24-26 24V58H30v16z"/>
+</svg>
