@@ -25,7 +25,113 @@
     "Panels": "Pannelli",
     "Files & reference": "File e riferimenti"
   },
-  "nav": {},
-  "meta": {},
+  "nav": {
+    "": "Panoramica",
+    "getting-started": "Per iniziare",
+    "interface": "L'interfaccia",
+    "documents": "Documenti e tavole",
+    "tools": "Strumenti",
+    "selecting": "Selezione",
+    "paths": "Tracciati",
+    "appearance": "Colore e aspetto",
+    "type": "Testo",
+    "layers": "Livelli",
+    "transform": "Trasforma",
+    "effects": "Effetti",
+    "three-d": "3D",
+    "grids": "Griglie",
+    "guides": "Righelli e guide",
+    "pixels": "Livelli pixel",
+    "image-trace": "Vettorializza",
+    "symbols": "Simboli e pennelli",
+    "panels-basics": "Proprietà, Livelli, Tavole",
+    "panels-color-type": "Colore e testo",
+    "panels-utility": "Pannelli di utilità",
+    "panels-effects": "Pannelli degli effetti",
+    "files": "Apri ed esporta",
+    "automation": "Automazione",
+    "shortcuts": "Scorciatoie",
+    "privacy": "Privacy"
+  },
+  "meta": {
+    "": {
+      "h1": "Manuale utente di Scissor"
+    },
+    "getting-started": {
+      "h1": "Per iniziare"
+    },
+    "interface": {
+      "h1": "L'interfaccia"
+    },
+    "documents": {
+      "h1": "Documenti e tavole"
+    },
+    "tools": {
+      "h1": "Gli strumenti"
+    },
+    "selecting": {
+      "h1": "Selezionare il lavoro"
+    },
+    "paths": {
+      "h1": "Disegnare e modificare i tracciati"
+    },
+    "appearance": {
+      "h1": "Colore, tratteggi e aspetto"
+    },
+    "type": {
+      "h1": "Testo"
+    },
+    "layers": {
+      "h1": "Livelli, gruppi e maschere"
+    },
+    "transform": {
+      "h1": "Spostare, trasformare e disporre"
+    },
+    "effects": {
+      "h1": "Effetti attivi"
+    },
+    "three-d": {
+      "h1": "3D"
+    },
+    "grids": {
+      "h1": "Griglie"
+    },
+    "guides": {
+      "h1": "Righelli, guide e aggancio"
+    },
+    "pixels": {
+      "h1": "Dipingere sui livelli pixel"
+    },
+    "image-trace": {
+      "h1": "Vettorializza"
+    },
+    "symbols": {
+      "h1": "Simboli, pennelli e motivi"
+    },
+    "panels-basics": {
+      "h1": "Proprietà, Livelli e Tavole"
+    },
+    "panels-color-type": {
+      "h1": "Pannelli colore e testo"
+    },
+    "panels-utility": {
+      "h1": "I pannelli di utilità"
+    },
+    "panels-effects": {
+      "h1": "I pannelli degli effetti"
+    },
+    "files": {
+      "h1": "Aprire, posizionare ed esportare"
+    },
+    "automation": {
+      "h1": "Automazione"
+    },
+    "shortcuts": {
+      "h1": "Scorciatoie da tastiera"
+    },
+    "privacy": {
+      "h1": "Il tuo lavoro e la tua privacy"
+    }
+  },
   "keywords": {}
 }

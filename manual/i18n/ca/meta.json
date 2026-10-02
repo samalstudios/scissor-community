@@ -25,7 +25,113 @@
     "Panels": "Panells",
     "Files & reference": "Fitxers i referència"
   },
-  "nav": {},
-  "meta": {},
+  "nav": {
+    "": "Resum",
+    "getting-started": "Primers passos",
+    "interface": "La interfície",
+    "documents": "Documents i taules",
+    "tools": "Eines",
+    "selecting": "Selecció",
+    "paths": "Camins",
+    "appearance": "Color i aparença",
+    "type": "Text",
+    "layers": "Capes",
+    "transform": "Transformar",
+    "effects": "Efectes",
+    "three-d": "3D",
+    "grids": " quadrícules",
+    "guides": "Regles i guies",
+    "pixels": "Capes de píxels",
+    "image-trace": "Vectoritzar",
+    "symbols": "Símbols i pinzells",
+    "panels-basics": "Propietats, Capes, Taules",
+    "panels-color-type": "Color i text",
+    "panels-utility": "Panquells d’utilitat",
+    "panels-effects": "Panquells d’efectes",
+    "files": "Obre i exporta",
+    "automation": "Automatització",
+    "shortcuts": "Drecers",
+    "privacy": "Privacitat"
+  },
+  "meta": {
+    "": {
+      "h1": "Manual d’usuari de Scissor"
+    },
+    "getting-started": {
+      "h1": "Primers passos"
+    },
+    "interface": {
+      "h1": "La interfície"
+    },
+    "documents": {
+      "h1": "Documents i taules"
+    },
+    "tools": {
+      "h1": "Les eines"
+    },
+    "selecting": {
+      "h1": "Seleccionar el treball"
+    },
+    "paths": {
+      "h1": "Dibuixar i editar camins"
+    },
+    "appearance": {
+      "h1": "Color, contorns i aparença"
+    },
+    "type": {
+      "h1": "Text"
+    },
+    "layers": {
+      "h1": "Capes, grups i màscares"
+    },
+    "transform": {
+      "h1": "Moure, transformar i organitzar"
+    },
+    "effects": {
+      "h1": "Efectes en viu"
+    },
+    "three-d": {
+      "h1": "3D"
+    },
+    "grids": {
+      "h1": "Quadrícules"
+    },
+    "guides": {
+      "h1": "Regles, guies i ajust"
+    },
+    "pixels": {
+      "h1": "Pintar sobre capes de píxels"
+    },
+    "image-trace": {
+      "h1": "Vectoritzar"
+    },
+    "symbols": {
+      "h1": "Símbols, pinzells i motius"
+    },
+    "panels-basics": {
+      "h1": "Propietats, Capes i Taules"
+    },
+    "panels-color-type": {
+      "h1": "Panquells de color i text"
+    },
+    "panels-utility": {
+      "h1": "Els panquells d’utilitat"
+    },
+    "panels-effects": {
+      "h1": "Els panquells d’efectes"
+    },
+    "files": {
+      "h1": "Obrir, col·locar i exportar"
+    },
+    "automation": {
+      "h1": "Automatització"
+    },
+    "shortcuts": {
+      "h1": "Drecers de teclat"
+    },
+    "privacy": {
+      "h1": "La teva feina i la teva privacitat"
+    }
+  },
   "keywords": {}
 }

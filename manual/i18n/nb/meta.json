@@ -25,7 +25,113 @@
     "Panels": "Paneler",
     "Files & reference": "Filer og referanse"
   },
-  "nav": {},
-  "meta": {},
+  "nav": {
+    "": "Oversikt",
+    "getting-started": "Kom i gang",
+    "interface": "Grensesnitt",
+    "documents": "Dokumenter & bretter",
+    "tools": "Verktøy",
+    "selecting": "Markering",
+    "paths": "Stier",
+    "appearance": "Farge & utseende",
+    "type": "Tekst",
+    "layers": "Lag",
+    "transform": "Transformér",
+    "effects": "Effekter",
+    "three-d": "3D",
+    "grids": "Rutenett",
+    "guides": "Linjaler & hjelpelinjer",
+    "pixels": "Pikselag",
+    "image-trace": "Vektorisér",
+    "symbols": "Symboler & pensler",
+    "panels-basics": "Egenskaper, Lag, Brett",
+    "panels-color-type": "Farge & tekst",
+    "panels-utility": "Verktøyrutenes paneler",
+    "panels-effects": "Effektpaneler",
+    "files": "Åpne & eksportere",
+    "automation": "Automatisering",
+    "shortcuts": "Snarveier",
+    "privacy": "Personvern"
+  },
+  "meta": {
+    "": {
+      "h1": "Brukerhåndbok for Scissor"
+    },
+    "getting-started": {
+      "h1": "Kom i gang"
+    },
+    "interface": {
+      "h1": "Grensesnittet"
+    },
+    "documents": {
+      "h1": "Dokumenter og bretter"
+    },
+    "tools": {
+      "h1": "Verktøyene"
+    },
+    "selecting": {
+      "h1": "Merkearbeid"
+    },
+    "paths": {
+      "h1": "Tegne og redigere stier"
+    },
+    "appearance": {
+      "h1": "Farge, streker og utseende"
+    },
+    "type": {
+      "h1": "Tekst"
+    },
+    "layers": {
+      "h1": "Lag, grupper og masker"
+    },
+    "transform": {
+      "h1": "Flytte, transformere og ordne"
+    },
+    "effects": {
+      "h1": "Effekter i sanntid"
+    },
+    "three-d": {
+      "h1": "3D"
+    },
+    "grids": {
+      "h1": "Rutenett"
+    },
+    "guides": {
+      "h1": "Linjaler, hjelpelinjer og festing"
+    },
+    "pixels": {
+      "h1": "Male på pikselag"
+    },
+    "image-trace": {
+      "h1": "Vektorisere"
+    },
+    "symbols": {
+      "h1": "Symboler, pensler og mønstre"
+    },
+    "panels-basics": {
+      "h1": "Egenskaper, Lag og Brett"
+    },
+    "panels-color-type": {
+      "h1": "Paneler for farge og tekst"
+    },
+    "panels-utility": {
+      "h1": "Verktøyrutepanelene"
+    },
+    "panels-effects": {
+      "h1": "Effektpanelene"
+    },
+    "files": {
+      "h1": "Åpne, plassere og eksportere"
+    },
+    "automation": {
+      "h1": "Automatisering"
+    },
+    "shortcuts": {
+      "h1": "Tastatursnarveier"
+    },
+    "privacy": {
+      "h1": "Arbeidet ditt og personvernet ditt"
+    }
+  },
   "keywords": {}
 }

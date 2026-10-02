@@ -25,7 +25,113 @@
     "Panels": "Panele",
     "Files & reference": "Pliki i odniesienia"
   },
-  "nav": {},
-  "meta": {},
+  "nav": {
+    "": "Przegląd",
+    "getting-started": "Pierwsze kroki",
+    "interface": "Interfejs",
+    "documents": "Dokumenty i plansze",
+    "tools": "Narzędzia",
+    "selecting": "Zaznaczanie",
+    "paths": "Ścieżki",
+    "appearance": "Kolor i wygląd",
+    "type": "Tekst",
+    "layers": "Warstwy",
+    "transform": "Przekształcanie",
+    "effects": "Efekty",
+    "three-d": "3D",
+    "grids": "Siatki",
+    "guides": "Linijki i prowadnice",
+    "pixels": "Warstwy pikselowe",
+    "image-trace": "Wektoryzacja",
+    "symbols": "Symbole i pędzle",
+    "panels-basics": "Właściwości, Warstwy, Plansze",
+    "panels-color-type": "Kolor i tekst",
+    "panels-utility": "Panele narzędziowe",
+    "panels-effects": "Panele efektów",
+    "files": "Otwieranie i eksport",
+    "automation": "Automatyzacja",
+    "shortcuts": "Skróty klawiszowe",
+    "privacy": "Prywatność"
+  },
+  "meta": {
+    "": {
+      "h1": "Podręcznik użytkownika Scissor"
+    },
+    "getting-started": {
+      "h1": "Pierwsze kroki"
+    },
+    "interface": {
+      "h1": "Interfejs"
+    },
+    "documents": {
+      "h1": "Dokumenty i plansze"
+    },
+    "tools": {
+      "h1": "Narzędzia"
+    },
+    "selecting": {
+      "h1": "Zaznaczanie pracy"
+    },
+    "paths": {
+      "h1": "Rysowanie i edycja ścieżek"
+    },
+    "appearance": {
+      "h1": "Kolor, obrysy i wygląd"
+    },
+    "type": {
+      "h1": "Tekst"
+    },
+    "layers": {
+      "h1": "Warstwy, grupy i maski"
+    },
+    "transform": {
+      "h1": "Przesuwanie, przekształcanie i układanie"
+    },
+    "effects": {
+      "h1": "Efekty na żywo"
+    },
+    "three-d": {
+      "h1": "3D"
+    },
+    "grids": {
+      "h1": "Siatki"
+    },
+    "guides": {
+      "h1": "Linijki, prowadnice i przyciąganie"
+    },
+    "pixels": {
+      "h1": "Malowanie na warstwach pikselowych"
+    },
+    "image-trace": {
+      "h1": "Wektoryzacja"
+    },
+    "symbols": {
+      "h1": "Symbole, pędzle i wzory"
+    },
+    "panels-basics": {
+      "h1": "Właściwości, Warstwy i Plansze"
+    },
+    "panels-color-type": {
+      "h1": "Panele koloru i tekstu"
+    },
+    "panels-utility": {
+      "h1": "Panele narzędziowe"
+    },
+    "panels-effects": {
+      "h1": "Panele efektów"
+    },
+    "files": {
+      "h1": "Otwieranie, umieszczanie i eksport"
+    },
+    "automation": {
+      "h1": "Automatyzacja"
+    },
+    "shortcuts": {
+      "h1": "Skróty klawiszowe"
+    },
+    "privacy": {
+      "h1": "Twoja praca i Twoja prywatność"
+    }
+  },
   "keywords": {}
 }
