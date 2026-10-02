@@ -25,7 +25,113 @@
     "Panels": "Paneelit",
     "Files & reference": "Tiedostot ja viitteet"
   },
-  "nav": {},
-  "meta": {},
+  "nav": {
+    "": "Yleiskatsaus",
+    "getting-started": "Aloitus",
+    "interface": "Käyttöliittymä",
+    "documents": "Asiakirjat & taustat",
+    "tools": "Työkalut",
+    "selecting": "Valinta",
+    "paths": "Polut",
+    "appearance": "Väri ja ulkoasu",
+    "type": "Teksti",
+    "layers": "Tasot",
+    "transform": "Muuntaa",
+    "effects": "Tehosteet",
+    "three-d": "3D",
+    "grids": "Ruudukot",
+    "guides": "Viivottimet ja ohjaimet",
+    "pixels": "Pikselitasot",
+    "image-trace": "Vektorointi",
+    "symbols": "Symbolit ja sivelliset",
+    "panels-basics": "Ominaisuudet, Tasot, Taustat",
+    "panels-color-type": "Väri ja teksti",
+    "panels-utility": "Apupaneelit",
+    "panels-effects": "Tehostepaneelit",
+    "files": "Avaa ja vie",
+    "automation": "Automaatio",
+    "shortcuts": "Näppäinoikotukset",
+    "privacy": "Tietosuoja"
+  },
+  "meta": {
+    "": {
+      "h1": "Scissorin käyttöopas"
+    },
+    "getting-started": {
+      "h1": "Aloitus"
+    },
+    "interface": {
+      "h1": "Käyttöliittymä"
+    },
+    "documents": {
+      "h1": "Asiakirjat ja taustat"
+    },
+    "tools": {
+      "h1": "Työkalut"
+    },
+    "selecting": {
+      "h1": "Työn valinta"
+    },
+    "paths": {
+      "h1": "Polkujen piirtäminen ja muokkaaminen"
+    },
+    "appearance": {
+      "h1": "Väri, viivat ja ulkoasu"
+    },
+    "type": {
+      "h1": "Teksti"
+    },
+    "layers": {
+      "h1": "Tasot, ryhmät ja maskit"
+    },
+    "transform": {
+      "h1": "Siirtäminen, muuntaa ja järjestäminen"
+    },
+    "effects": {
+      "h1": "Reaaliaikaiset tehosteet"
+    },
+    "three-d": {
+      "h1": "3D"
+    },
+    "grids": {
+      "h1": "Ruudukot"
+    },
+    "guides": {
+      "h1": "Viivottimet, ohjaimet ja kiinnitys"
+    },
+    "pixels": {
+      "h1": "Maalaaminen pikselitasoille"
+    },
+    "image-trace": {
+      "h1": "Vektorointi"
+    },
+    "symbols": {
+      "h1": "Symbolit, sivelliset ja kuviot"
+    },
+    "panels-basics": {
+      "h1": "Ominaisuudet, Tasot ja Taustat"
+    },
+    "panels-color-type": {
+      "h1": "Värin ja tekstin paneelit"
+    },
+    "panels-utility": {
+      "h1": "Apupaneelit"
+    },
+    "panels-effects": {
+      "h1": "Tehostepaneelit"
+    },
+    "files": {
+      "h1": "Avaaminen, sijoittaminen ja vieminen"
+    },
+    "automation": {
+      "h1": "Automaatio"
+    },
+    "shortcuts": {
+      "h1": "Näppäinoikotukset"
+    },
+    "privacy": {
+      "h1": "Työsi ja tietosuojasi"
+    }
+  },
   "keywords": {}
 }

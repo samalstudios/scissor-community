@@ -25,7 +25,113 @@
     "Panels": "Panely",
     "Files & reference": "Soubory a reference"
   },
-  "nav": {},
-  "meta": {},
+  "nav": {
+    "": "Přehled",
+    "getting-started": "Začínáme",
+    "interface": "Rozhraní",
+    "documents": "Dokumenty & plochy",
+    "tools": "Nástroje",
+    "selecting": "Výběr",
+    "paths": "Cesty",
+    "appearance": "Barva a vzhled",
+    "type": "Text",
+    "layers": "Vrstvy",
+    "transform": "Transformovat",
+    "effects": "Efekty",
+    "three-d": "3D",
+    "grids": "Mřížky",
+    "guides": "Pravítka a vodítka",
+    "pixels": "Pixelové vrstvy",
+    "image-trace": "Vektorizovat",
+    "symbols": "Symboly a štětce",
+    "panels-basics": "Vlastnosti, Vrstvy, Plochy",
+    "panels-color-type": "Barva a text",
+    "panels-utility": "Užitečné panely",
+    "panels-effects": "Panelové efekty",
+    "files": "Otevřít a exportovat",
+    "automation": "Automatizace",
+    "shortcuts": "Klávesové zkratky",
+    "privacy": "Soukromí"
+  },
+  "meta": {
+    "": {
+      "h1": "Uživatelská příručka Scissor"
+    },
+    "getting-started": {
+      "h1": "Začínáme"
+    },
+    "interface": {
+      "h1": "Rozhraní"
+    },
+    "documents": {
+      "h1": "Dokumenty a plochy"
+    },
+    "tools": {
+      "h1": "Nástroje"
+    },
+    "selecting": {
+      "h1": "Výběr práce"
+    },
+    "paths": {
+      "h1": "Kreslení a úprava cest"
+    },
+    "appearance": {
+      "h1": "Barva, obrysy a vzhled"
+    },
+    "type": {
+      "h1": "Text"
+    },
+    "layers": {
+      "h1": "Vrstvy, skupiny a masky"
+    },
+    "transform": {
+      "h1": "Přesun, transformace a uspořádání"
+    },
+    "effects": {
+      "h1": "Živé efekty"
+    },
+    "three-d": {
+      "h1": "3D"
+    },
+    "grids": {
+      "h1": "Mřížky"
+    },
+    "guides": {
+      "h1": "Pravítka, vodítka a přichytávání"
+    },
+    "pixels": {
+      "h1": "Malování na pixelových vrstvách"
+    },
+    "image-trace": {
+      "h1": "Vektorizovat"
+    },
+    "symbols": {
+      "h1": "Symboly, štětce a vzory"
+    },
+    "panels-basics": {
+      "h1": "Vlastnosti, Vrstvy a Plochy"
+    },
+    "panels-color-type": {
+      "h1": "Panely barvy a textu"
+    },
+    "panels-utility": {
+      "h1": "Užitečné panely"
+    },
+    "panels-effects": {
+      "h1": "Panely efektů"
+    },
+    "files": {
+      "h1": "Otevření, umístění a export"
+    },
+    "automation": {
+      "h1": "Automatizace"
+    },
+    "shortcuts": {
+      "h1": "Klávesové zkratky"
+    },
+    "privacy": {
+      "h1": "Vaše práce a vaše soukromí"
+    }
+  },
   "keywords": {}
 }

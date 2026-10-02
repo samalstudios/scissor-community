@@ -25,7 +25,113 @@
     "Panels": "Panelen",
     "Files & reference": "Bestanden en referentie"
   },
-  "nav": {},
-  "meta": {},
+  "nav": {
+    "": "Overzicht",
+    "getting-started": "Aan de slag",
+    "interface": "Interface",
+    "documents": "Documenten & borden",
+    "tools": "Gereedschap",
+    "selecting": "Selecteren",
+    "paths": "Paden",
+    "appearance": "Kleur en weergave",
+    "type": "Tekst",
+    "layers": "Lagen",
+    "transform": "Transformeren",
+    "effects": "Effecten",
+    "three-d": "3D",
+    "grids": "Rasters",
+    "guides": "Liniaals & hulplijnen",
+    "pixels": "Pixellagen",
+    "image-trace": "Vectoriseren",
+    "symbols": "Symbolen & penselen",
+    "panels-basics": "Eigenschappen, Lagen, Borden",
+    "panels-color-type": "Kleur & tekst",
+    "panels-utility": "Hulppanelen",
+    "panels-effects": "Effectpanelen",
+    "files": "Openen & exporteren",
+    "automation": "Automatisering",
+    "shortcuts": "Sneltoetsen",
+    "privacy": "Privacy"
+  },
+  "meta": {
+    "": {
+      "h1": "Gebruikershandleiding van Scissor"
+    },
+    "getting-started": {
+      "h1": "Aan de slag"
+    },
+    "interface": {
+      "h1": "De interface"
+    },
+    "documents": {
+      "h1": "Documenten en borden"
+    },
+    "tools": {
+      "h1": "De gereedschappen"
+    },
+    "selecting": {
+      "h1": "Werk selecteren"
+    },
+    "paths": {
+      "h1": "Paden tekenen en bewerken"
+    },
+    "appearance": {
+      "h1": "Kleur, strepen en weergave"
+    },
+    "type": {
+      "h1": "Tekst"
+    },
+    "layers": {
+      "h1": "Lagen, groepen en maskers"
+    },
+    "transform": {
+      "h1": "Verplaatsen, transformeren en rangschikken"
+    },
+    "effects": {
+      "h1": "Live-effecten"
+    },
+    "three-d": {
+      "h1": "3D"
+    },
+    "grids": {
+      "h1": "Rasters"
+    },
+    "guides": {
+      "h1": "Liniaals, hulplijnen en vastklikken"
+    },
+    "pixels": {
+      "h1": "Schilderen op pixellagen"
+    },
+    "image-trace": {
+      "h1": "Vectoriseren"
+    },
+    "symbols": {
+      "h1": "Symbolen, penselen en patronen"
+    },
+    "panels-basics": {
+      "h1": "Eigenschappen, Lagen en Borden"
+    },
+    "panels-color-type": {
+      "h1": "Panelen voor kleur en tekst"
+    },
+    "panels-utility": {
+      "h1": "De hulppanelen"
+    },
+    "panels-effects": {
+      "h1": "De effectpanelen"
+    },
+    "files": {
+      "h1": "Openen, plaatsen en exporteren"
+    },
+    "automation": {
+      "h1": "Automatisering"
+    },
+    "shortcuts": {
+      "h1": "Sneltoetsen"
+    },
+    "privacy": {
+      "h1": "Je werk en je privacy"
+    }
+  },
   "keywords": {}
 }

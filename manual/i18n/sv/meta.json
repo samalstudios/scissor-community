@@ -25,7 +25,113 @@
     "Panels": "Paneler",
     "Files & reference": "Filer och referens"
   },
-  "nav": {},
-  "meta": {},
+  "nav": {
+    "": "Översikt",
+    "getting-started": "Kom igång",
+    "interface": "Gränssnitt",
+    "documents": "Dokument & tavlor",
+    "tools": "Verktyg",
+    "selecting": "Markering",
+    "paths": "Banor",
+    "appearance": "Färg & utseende",
+    "type": "Text",
+    "layers": "Lager",
+    "transform": "Transformera",
+    "effects": "Effekter",
+    "three-d": "3D",
+    "grids": "Rutnät",
+    "guides": "Linjaler & stödlinjer",
+    "pixels": "Pixellager",
+    "image-trace": "Vektorisera",
+    "symbols": "Symboler & penslar",
+    "panels-basics": "Egenskaper, Lager, Tavlor",
+    "panels-color-type": "Färg & text",
+    "panels-utility": "Verktygspaneler",
+    "panels-effects": "Effektpaneler",
+    "files": "Öppna & exportera",
+    "automation": "Automatisering",
+    "shortcuts": "Kortkommandon",
+    "privacy": "Integritet"
+  },
+  "meta": {
+    "": {
+      "h1": "Användarhandbok för Scissor"
+    },
+    "getting-started": {
+      "h1": "Kom igång"
+    },
+    "interface": {
+      "h1": "Gränssnittet"
+    },
+    "documents": {
+      "h1": "Dokument och tavlor"
+    },
+    "tools": {
+      "h1": "Verktygen"
+    },
+    "selecting": {
+      "h1": "Markera arbete"
+    },
+    "paths": {
+      "h1": "Rita och redigera banor"
+    },
+    "appearance": {
+      "h1": "Färg, streck och utseende"
+    },
+    "type": {
+      "h1": "Text"
+    },
+    "layers": {
+      "h1": "Lager, grupper och maskar"
+    },
+    "transform": {
+      "h1": "Flytta, transformera och ordna"
+    },
+    "effects": {
+      "h1": "Liveeffekter"
+    },
+    "three-d": {
+      "h1": "3D"
+    },
+    "grids": {
+      "h1": "Rutnät"
+    },
+    "guides": {
+      "h1": "Linjaler, stödlinjer och fästning"
+    },
+    "pixels": {
+      "h1": "Måla på pixellager"
+    },
+    "image-trace": {
+      "h1": "Vektorisera"
+    },
+    "symbols": {
+      "h1": "Symboler, penslar och mönster"
+    },
+    "panels-basics": {
+      "h1": "Egenskaper, Lager och Tavlor"
+    },
+    "panels-color-type": {
+      "h1": "Paneler för färg och text"
+    },
+    "panels-utility": {
+      "h1": "Verktygspanelerna"
+    },
+    "panels-effects": {
+      "h1": "Effektpanelerna"
+    },
+    "files": {
+      "h1": "Öppna, placera och exportera"
+    },
+    "automation": {
+      "h1": "Automatisering"
+    },
+    "shortcuts": {
+      "h1": "Kortkommandon"
+    },
+    "privacy": {
+      "h1": "Ditt arbete och din integritet"
+    }
+  },
   "keywords": {}
 }

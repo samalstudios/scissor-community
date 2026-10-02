@@ -25,7 +25,113 @@
     "Panels": "Paneler",
     "Files & reference": "Filer og reference"
   },
-  "nav": {},
-  "meta": {},
+  "nav": {
+    "": "Oversigt",
+    "getting-started": "Kom i gang",
+    "interface": "Brugerflade",
+    "documents": "Dokumenter & plader",
+    "tools": "Værktøjer",
+    "selecting": "Markering",
+    "paths": "Stier",
+    "appearance": "Farve & udseende",
+    "type": "Tekst",
+    "layers": "Lag",
+    "transform": "Transformér",
+    "effects": "Effekter",
+    "three-d": "3D",
+    "grids": "Gitre",
+    "guides": "Linealer & hjælpelinjer",
+    "pixels": "Pixellag",
+    "image-trace": "Vektorisér",
+    "symbols": "Symboler & pensler",
+    "panels-basics": "Egenskaber, Lag, Plader",
+    "panels-color-type": "Farve & tekst",
+    "panels-utility": "Hjælpepaneler",
+    "panels-effects": "Effektpaneler",
+    "files": "Åbn & eksportér",
+    "automation": "Automatisering",
+    "shortcuts": "Genveje",
+    "privacy": "Privatliv"
+  },
+  "meta": {
+    "": {
+      "h1": "Brugervejledning til Scissor"
+    },
+    "getting-started": {
+      "h1": "Kom i gang"
+    },
+    "interface": {
+      "h1": "Brugerfladen"
+    },
+    "documents": {
+      "h1": "Dokumenter og plader"
+    },
+    "tools": {
+      "h1": "Værktøjerne"
+    },
+    "selecting": {
+      "h1": "Sådan markerer du arbejde"
+    },
+    "paths": {
+      "h1": "Tegn og redigér stier"
+    },
+    "appearance": {
+      "h1": "Farve, streger og udseende"
+    },
+    "type": {
+      "h1": "Tekst"
+    },
+    "layers": {
+      "h1": "Lag, grupper og masker"
+    },
+    "transform": {
+      "h1": "Flyt, transformér og arranger"
+    },
+    "effects": {
+      "h1": "Liveeffekter"
+    },
+    "three-d": {
+      "h1": "3D"
+    },
+    "grids": {
+      "h1": "Gitre"
+    },
+    "guides": {
+      "h1": "Linealer, hjælpelinjer og fastgørelse"
+    },
+    "pixels": {
+      "h1": "Mal på pixellag"
+    },
+    "image-trace": {
+      "h1": "Vektorisér"
+    },
+    "symbols": {
+      "h1": "Symboler, pensler og mønstre"
+    },
+    "panels-basics": {
+      "h1": "Egenskaber, Lag og Plader"
+    },
+    "panels-color-type": {
+      "h1": "Paneler til farve og tekst"
+    },
+    "panels-utility": {
+      "h1": "Hjælpepanelerne"
+    },
+    "panels-effects": {
+      "h1": "Effektpanelerne"
+    },
+    "files": {
+      "h1": "Åbn, placér og eksportér"
+    },
+    "automation": {
+      "h1": "Automatisering"
+    },
+    "shortcuts": {
+      "h1": "Tastaturgenveje"
+    },
+    "privacy": {
+      "h1": "Dit arbejde og dit privatliv"
+    }
+  },
   "keywords": {}
 }

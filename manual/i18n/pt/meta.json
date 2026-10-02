@@ -25,7 +25,113 @@
     "Panels": "Painéis",
     "Files & reference": "Arquivos e referência"
   },
-  "nav": {},
-  "meta": {},
+  "nav": {
+    "": "Visão geral",
+    "getting-started": "Primeiros passos",
+    "interface": "Interface",
+    "documents": "Documentos e pranchetas",
+    "tools": "Ferramentas",
+    "selecting": "Seleção",
+    "paths": "Caminhos",
+    "appearance": "Cor e aparência",
+    "type": "Texto",
+    "layers": "Camadas",
+    "transform": "Transformar",
+    "effects": "Efeitos",
+    "three-d": "3D",
+    "grids": "Grades",
+    "guides": "Réguas e guias",
+    "pixels": "Camadas de pixels",
+    "image-trace": "Vetorizar",
+    "symbols": "Símbolos e pincéis",
+    "panels-basics": "Propriedades, Camadas, Pranchetas",
+    "panels-color-type": "Cor e texto",
+    "panels-utility": "Painéis utilitários",
+    "panels-effects": "Painéis de efeitos",
+    "files": "Abrir e exportar",
+    "automation": "Automação",
+    "shortcuts": "Atalhos",
+    "privacy": "Privacidade"
+  },
+  "meta": {
+    "": {
+      "h1": "Manual do usuário do Scissor"
+    },
+    "getting-started": {
+      "h1": "Primeiros passos"
+    },
+    "interface": {
+      "h1": "A interface"
+    },
+    "documents": {
+      "h1": "Documentos e pranchetas"
+    },
+    "tools": {
+      "h1": "As ferramentas"
+    },
+    "selecting": {
+      "h1": "Selecionar o trabalho"
+    },
+    "paths": {
+      "h1": "Desenhar e editar caminhos"
+    },
+    "appearance": {
+      "h1": "Cor, traços e aparência"
+    },
+    "type": {
+      "h1": "Texto"
+    },
+    "layers": {
+      "h1": "Camadas, grupos e máscaras"
+    },
+    "transform": {
+      "h1": "Mover, transformar e organizar"
+    },
+    "effects": {
+      "h1": "Efeitos ao vivo"
+    },
+    "three-d": {
+      "h1": "3D"
+    },
+    "grids": {
+      "h1": "Grades"
+    },
+    "guides": {
+      "h1": "Réguas, guias e ajuste"
+    },
+    "pixels": {
+      "h1": "Pintar em camadas de pixels"
+    },
+    "image-trace": {
+      "h1": "Vetorizar"
+    },
+    "symbols": {
+      "h1": "Símbolos, pincéis e padrões"
+    },
+    "panels-basics": {
+      "h1": "Propriedades, Camadas e Pranchetas"
+    },
+    "panels-color-type": {
+      "h1": "Painéis de cor e texto"
+    },
+    "panels-utility": {
+      "h1": "Os painéis utilitários"
+    },
+    "panels-effects": {
+      "h1": "Os painéis de efeitos"
+    },
+    "files": {
+      "h1": "Abrir, posicionar e exportar"
+    },
+    "automation": {
+      "h1": "Automação"
+    },
+    "shortcuts": {
+      "h1": "Atalhos de teclado"
+    },
+    "privacy": {
+      "h1": "Seu trabalho e sua privacidade"
+    }
+  },
   "keywords": {}
 }
