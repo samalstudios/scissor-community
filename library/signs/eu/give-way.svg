@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <title>Give Way</title>
   <desc>give way, yield, triangle, road sign, europe</desc>
-  <path d="M4 12H96L50 94Z" fill="#C8102E"/><path d="M20 21H80L50 74Z" fill="#FFFFFF"/>
+  <path d="M8 14H92L50 90Z" fill="#C8102E" stroke="#C8102E" stroke-width="9" stroke-linejoin="round"/><path d="M25 23H75L50 69Z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round"/>
 </svg>

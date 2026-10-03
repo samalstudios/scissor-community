@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <title>Speed Limit 30</title>
   <desc>speed limit, 30, maximum speed, road sign, europe</desc>
-  <circle cx="50" cy="50" r="46" fill="#C8102E"/><circle cx="50" cy="50" r="36" fill="#FFFFFF"/><path d="M0 0.6Q0.8 0 2 0Q4 0 4 1.5Q4 3 2 3Q4 3 4 4.5Q4 6 2 6Q0.8 6 0 5.4" transform="translate(22.52 33.00) scale(5.667)" fill="none" stroke="#111111" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 0Q4 0 4 3Q4 6 2 6Q0 6 0 3Q0 0 2 0Z" transform="translate(54.82 33.00) scale(5.667)" fill="none" stroke="#111111" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="50" cy="50" r="46" fill="#C8102E"/><circle cx="50" cy="50" r="36" fill="#FFFFFF"/><path d="M0 0.6Q0.8 0 2 0Q4 0 4 1.5Q4 3 2 3Q4 3 4 4.5Q4 6 2 6Q0.8 6 0 5.4" transform="translate(28.33 37.00) scale(4.333)" fill="none" stroke="#111111" stroke-width="1.2349999999999999" stroke-linecap="square" stroke-linejoin="miter"/><path d="M2 0Q4 0 4 3Q4 6 2 6Q0 6 0 3Q0 0 2 0Z" transform="translate(54.33 37.00) scale(4.333)" fill="none" stroke="#111111" stroke-width="1.2349999999999999" stroke-linecap="square" stroke-linejoin="miter"/>
 </svg>

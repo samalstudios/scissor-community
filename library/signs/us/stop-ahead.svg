@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <title>Stop Ahead</title>
   <desc>stop ahead, warning, road sign, usa</desc>
-  <rect x="18" y="18" width="64" height="64" rx="5" transform="rotate(45 50 50)" fill="#FFCD00" stroke="#111111" stroke-width="2.5"/><path d="M54.21 27.84L60.16 33.79L60.16 42.21L54.21 48.16L45.79 48.16L39.84 42.21L39.84 33.79L45.79 27.84Z" fill="#C8102E"/><path d="M50 72V56" fill="none" stroke="#111111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 -8L7.2 2H-7.2Z" transform="translate(50 52) rotate(0)" fill="#111111"/>
+  <rect x="18" y="18" width="64" height="64" rx="5" transform="rotate(45 50 50)" fill="#FFCD00" stroke="#111111" stroke-width="2.5"/><path d="M54.21 25.84L60.16 31.79L60.16 40.21L54.21 46.16L45.79 46.16L39.84 40.21L39.84 31.79L45.79 25.84Z" fill="#C8102E"/><path d="M50 74V58" fill="none" stroke="#111111" stroke-width="6" stroke-linejoin="round"/><path d="M50.00 46.60L58.70 58.00L41.30 58.00Z" fill="#111111"/>
 </svg>

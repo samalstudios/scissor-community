@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <title>Two-Way Traffic</title>
   <desc>two way traffic, warning, arrows, road sign, usa</desc>
-  <rect x="18" y="18" width="64" height="64" rx="5" transform="rotate(45 50 50)" fill="#FFCD00" stroke="#111111" stroke-width="2.5"/><path d="M42 72V40" fill="none" stroke="#111111" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 -8L7.2 2H-7.2Z" transform="translate(42 34) rotate(0)" fill="#111111"/><path d="M58 28V60" fill="none" stroke="#111111" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 -8L7.2 2H-7.2Z" transform="translate(58 66) rotate(180)" fill="#111111"/>
+  <rect x="18" y="18" width="64" height="64" rx="5" transform="rotate(45 50 50)" fill="#FFCD00" stroke="#111111" stroke-width="2.5"/><path d="M42 74V40" fill="none" stroke="#111111" stroke-width="5.5" stroke-linejoin="round"/><path d="M42.00 29.55L49.98 40.00L34.02 40.00Z" fill="#111111"/><path d="M58 26V60" fill="none" stroke="#111111" stroke-width="5.5" stroke-linejoin="round"/><path d="M58.00 70.45L50.02 60.00L65.97 60.00Z" fill="#111111"/>
 </svg>

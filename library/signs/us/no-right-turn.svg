@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <title>No Right Turn</title>
   <desc>no right turn, prohibited, road sign, usa</desc>
-  <g transform="translate(100 0) scale(-1 1)"><rect x="18" y="8" width="64" height="84" rx="5" fill="#FFFFFF" stroke="#111111" stroke-width="2.5"/><path d="M58 70V50Q58 42 50 42H42" fill="none" stroke="#111111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 -9L8.1 2.25H-8.1Z" transform="translate(36 42) rotate(-90)" fill="#111111"/><circle cx="50" cy="50" r="26" fill="none" stroke="#C8102E" stroke-width="5.5"/><path d="M32 32L68 68" fill="none" stroke="#C8102E" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g transform="translate(100 0) scale(-1 1)"><rect x="18" y="8" width="64" height="84" rx="5" fill="#FFFFFF" stroke="#111111" stroke-width="2.5"/><path d="M58 72V52Q58 42 48 42H44" fill="none" stroke="#111111" stroke-width="6" stroke-linejoin="round"/><path d="M32.60 42.00L44.00 33.30L44.00 50.70Z" fill="#111111"/><circle cx="50" cy="50" r="26" fill="none" stroke="#C8102E" stroke-width="5.5"/><path d="M32 32L68 68" fill="none" stroke="#C8102E" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></g>
 </svg>
