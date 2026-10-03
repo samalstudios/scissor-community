@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <title>Black Rook</title>
+  <desc>chess, rook, black rook, black, chess piece, board game, game</desc>
+  <path d="M24 92H76Q79 92 79 89V86Q79 83 76 82L70 80H30L24 82Q21 83 21 86V89Q21 92 24 92Z" fill="#111111" stroke="#111111" stroke-width="3" stroke-linejoin="round"/><path d="M28 14H38V21H45V14H55V21H62V14H72V30L66 35Q65 55 69 76H31Q35 55 34 35L28 30Z" fill="#111111" stroke="#111111" stroke-width="3" stroke-linejoin="round"/><path d="M34 35H66M32 70H68" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"/>
+</svg>

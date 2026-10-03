@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <title>Black Queen</title>
+  <desc>chess, queen, black queen, black, chess piece, board game, game</desc>
+  <path d="M24 92H76Q79 92 79 89V86Q79 83 76 82L70 80H30L24 82Q21 83 21 86V89Q21 92 24 92Z" fill="#111111" stroke="#111111" stroke-width="3" stroke-linejoin="round"/><circle cx="24" cy="19" r="3.6" fill="#111111" stroke="#111111" stroke-width="2.6"/><circle cx="38" cy="13" r="3.6" fill="#111111" stroke="#111111" stroke-width="2.6"/><circle cx="50" cy="26" r="3.6" fill="#111111" stroke="#111111" stroke-width="2.6"/><circle cx="62" cy="13" r="3.6" fill="#111111" stroke="#111111" stroke-width="2.6"/><circle cx="76" cy="19" r="3.6" fill="#111111" stroke="#111111" stroke-width="2.6"/><path d="M24 22L35 33L38 16L50 30L62 16L65 33L76 22L69 49Q69 52 64 53Q62 66 69 78H31Q38 66 36 53Q31 52 31 49Z" fill="#111111" stroke="#111111" stroke-width="3" stroke-linejoin="round"/><path d="M31 49H69M36 53H64" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"/>
+</svg>

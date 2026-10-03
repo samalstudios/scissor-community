@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <title>Black King</title>
+  <desc>chess, king, black king, black, chess piece, board game, game</desc>
+  <path d="M24 92H76Q79 92 79 89V86Q79 83 76 82L70 80H30L24 82Q21 83 21 86V89Q21 92 24 92Z" fill="#111111" stroke="#111111" stroke-width="3" stroke-linejoin="round"/><path d="M46 6H54V12H60V19H54V25Q66 27 69 34Q71 42 64 50Q63 53 61 54Q60 66 68 78H32Q40 66 39 54Q37 53 36 50Q29 42 31 34Q34 27 46 25V19H40V12H46Z" fill="#111111" stroke="#111111" stroke-width="3" stroke-linejoin="round"/><path d="M36 50H64M39 54H61" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"/>
+</svg>
