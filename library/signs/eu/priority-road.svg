@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <title>Priority Road</title>
+  <desc>priority road, main road, diamond, road sign, europe</desc>
+  <g transform="rotate(45 50 50)"><rect x="18" y="18" width="64" height="64" rx="3" fill="#FFFFFF" stroke="#333" stroke-width="1.5"/><rect x="30" y="30" width="40" height="40" fill="#FFCD00"/></g>
+</svg>

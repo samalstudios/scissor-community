@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <title>Turn Right</title>
+  <desc>turn right, mandatory, arrow, road sign, europe</desc>
+  <circle cx="50" cy="50" r="46" fill="#0050A0"/><circle cx="50" cy="50" r="44" fill="none" stroke="#FFFFFF" stroke-width="2"/><path d="M40 80V56Q40 46 50 46H62" fill="none" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 -13L11.700000000000001 3.25H-11.700000000000001Z" transform="translate(70 46) rotate(90)" fill="#FFFFFF"/>
+</svg>

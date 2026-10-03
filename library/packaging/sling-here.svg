@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <title>Sling Here</title>
+  <desc>sling here, lifting point, chain, crane, package, shipping</desc>
+  <rect x="6" y="6" width="88" height="88" rx="4" fill="#FFFFFF" stroke="#111111" stroke-width="3"/><path d="M22 30Q22 18 34 18H66Q78 18 78 30" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><rect x="24" y="40" width="8" height="12" rx="4" fill="none" stroke="#111111" stroke-width="3.5"/><rect x="36" y="40" width="8" height="12" rx="4" fill="none" stroke="#111111" stroke-width="3.5"/><rect x="48" y="40" width="8" height="12" rx="4" fill="none" stroke="#111111" stroke-width="3.5"/><rect x="60" y="40" width="8" height="12" rx="4" fill="none" stroke="#111111" stroke-width="3.5"/><rect x="72" y="40" width="8" height="12" rx="4" fill="none" stroke="#111111" stroke-width="3.5"/><path d="M18 66H82" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

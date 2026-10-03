@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <title>Temperature Limits</title>
+  <desc>temperature limits, thermometer, keep cool, package, shipping</desc>
+  <rect x="6" y="6" width="88" height="88" rx="4" fill="#FFFFFF" stroke="#111111" stroke-width="3"/><path d="M26 22H40M26 78H40" fill="none" stroke="#111111" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M44 66V24A6 6 0 0 1 56 24V66A11 11 0 1 1 44 66Z" fill="none" stroke="#111111" stroke-width="4.5"/><circle cx="50" cy="74" r="6" fill="#111111"/><path d="M50 70V40" fill="none" stroke="#111111" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

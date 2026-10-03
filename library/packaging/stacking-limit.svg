@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <title>Stacking Limit</title>
+  <desc>stacking limit, maximum weight, load limit, package, shipping</desc>
+  <rect x="6" y="6" width="88" height="88" rx="4" fill="#FFFFFF" stroke="#111111" stroke-width="3"/><path d="M22 26H78" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M42 30H58V40H66L50 54L34 40H42Z" fill="#111111"/><rect x="30" y="58" width="40" height="24" fill="none" stroke="#111111" stroke-width="4" stroke-linejoin="round"/>
+</svg>

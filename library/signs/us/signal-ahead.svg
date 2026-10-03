@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <title>Signal Ahead</title>
+  <desc>traffic signal ahead, traffic lights, warning, road sign, usa</desc>
+  <rect x="18" y="18" width="64" height="64" rx="5" transform="rotate(45 50 50)" fill="#FFCD00" stroke="#111111" stroke-width="2.5"/><rect x="42" y="30" width="16" height="40" rx="4" fill="#111111"/><circle cx="50" cy="38" r="4" fill="#C8102E"/><circle cx="50" cy="50" r="4" fill="#FFCD00"/><circle cx="50" cy="62" r="4" fill="#00703C"/>
+</svg>

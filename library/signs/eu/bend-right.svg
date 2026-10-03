@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <title>Bend to the Right</title>
+  <desc>bend, curve right, warning, road sign, europe</desc>
+  <path d="M50 6L96 88H4Z" fill="#C8102E"/><path d="M50 22L82 79H18Z" fill="#FFFFFF"/><path d="M42 74V58Q42 48 52 44" fill="none" stroke="#111111" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 -8L7.2 2H-7.2Z" transform="translate(56 42) rotate(60)" fill="#111111"/>
+</svg>

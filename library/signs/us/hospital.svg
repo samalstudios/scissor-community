@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <title>Hospital</title>
+  <desc>hospital, h, medical, service, road sign, usa</desc>
+  <rect x="10" y="10" width="80" height="80" rx="7" fill="#0050A0"/><rect x="24" y="24" width="52" height="52" rx="3" fill="#FFFFFF"/><path d="M0 0V6M4 0V6M0 3H4" transform="translate(38.67 33.00) scale(5.667)" fill="none" stroke="#0050A0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

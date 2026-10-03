@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <title>Do Not Roll</title>
+  <desc>do not roll, do not tip, package, shipping</desc>
+  <rect x="6" y="6" width="88" height="88" rx="4" fill="#FFFFFF" stroke="#111111" stroke-width="3"/><rect x="36" y="34" width="28" height="28" fill="none" stroke="#111111" stroke-width="4" stroke-linejoin="round"/><path d="M28 76Q50 88 72 76" fill="none" stroke="#111111" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M72 76L62 72L66 82Z" fill="#111111"/><path d="M20 20L80 80M80 20L20 80" fill="none" stroke="#111111" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
