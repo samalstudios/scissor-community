@@ -6,6 +6,7 @@ Public home for [Scissor](https://scissor.studio), the vector and pixel design s
 - **User manual:** [scissor.studio/manual](https://scissor.studio/manual/). Its source is in [`manual/`](manual).
 - **Sample files:** [`samples/`](samples) holds the `.cut` documents offered under New ▸ Samples.
 - **Library:** [`library/`](library) holds the free shapes and drawings in Scissor's Library panel. See [its README](library/README.md) to add one.
+- **Showcase:** [`showcase/`](showcase) holds artwork made in Scissor, shown in the app's New dialog. See [its README](showcase/README.md) to share yours.
 
 ## Manual
 
@@ -23,4 +24,4 @@ The English original lives directly in `manual/pages/`. The build script (`scrip
 
 ---
 
-© Samal Studios. The manual is licensed under [CC BY-NC-ND 4.0](manual/LICENSE) the sample files under [CC BY 4.0](samples/LICENSE) and the library under [CC0 1.0](library/LICENSE); see [LICENSE.md](LICENSE.md). The Scissor application itself is proprietary.
+© Samal Studios. The manual is licensed under [CC BY-NC-ND 4.0](manual/LICENSE) the sample files under [CC BY 4.0](samples/LICENSE) and the library under [CC0 1.0](library/LICENSE). Each showcase entry carries the licence its artist chose, CC BY 4.0 or CC0 1.0, named in its `info.json`. See [LICENSE.md](LICENSE.md). The Scissor application itself is proprietary.

@@ -1,0 +1,42 @@
+name: Showcase
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+    paths:
+      - 'showcase/**'
+      - '.github/scripts/check-showcase.mjs'
+      - '.github/workflows/showcase.yml'
+      - '.github/PULL_REQUEST_TEMPLATE/showcase.md'
+  push:
+    branches: [main]
+    paths:
+      - 'showcase/**'
+      - '.github/scripts/check-showcase.mjs'
+      - '.github/workflows/showcase.yml'
+      - '.github/PULL_REQUEST_TEMPLATE/showcase.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Check submissions
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+          fetch-depth: 2
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      - name: Check the entries
+        run: node .github/scripts/check-showcase.mjs showcase
+      - name: Check the pull request checklist
+        if: ${{ !cancelled() && github.event_name == 'pull_request' }}
+        env:
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: node .github/scripts/check-showcase.mjs --checklist
