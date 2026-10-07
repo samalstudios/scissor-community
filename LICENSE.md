@@ -5,7 +5,7 @@ Copyright © Samal Studios.
 | Folder | License | In short |
 | --- | --- | --- |
 | [`manual/`](manual) | [CC BY-NC-ND 4.0](manual/LICENSE) | Share it unchanged, with credit, not for commercial use. |
-| [`samples/`](samples) | [CC BY 4.0](samples/LICENSE) | Use, change and share the artwork for any purpose, with credit to Samal Studios. |
+| [`samples/`](samples) | [CC BY 4.0](samples/LICENSE), except `berlin-isometric.cut` and its thumbnail: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | CC BY: use, change and share the artwork for any purpose, with credit to Samal Studios. Berlin Isometric is CC0: Scissor Studios waived its copyright as far as the law allows; use it for anything, no credit needed. |
 | [`library/`](library) | [CC0 1.0](library/LICENSE) | Public domain: use it for anything, no credit needed. |
 | [`showcase/`](showcase) | Each entry's own, named in its `info.json`: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) or [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | CC BY: the artist named there keeps the copyright; use it for any purpose, with credit to them. CC0: the artist waived their copyright as far as the law allows; use it for anything, no credit needed. |
 
