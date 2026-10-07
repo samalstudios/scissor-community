@@ -55,83 +55,162 @@
   },
   "meta": {
     "": {
-      "h1": "Manual de usuario de Scissor"
+      "h1": "Manual de usuario de Scissor",
+      "title": "Manual de usuario de Scissor",
+      "desc": "El manual de Scissor, el editor de diseño gratuito en el navegador: herramientas, trazados, color, texto, cuadrículas, efectos, píxeles, archivos y atajos."
     },
     "getting-started": {
-      "h1": "Primeros pasos"
+      "h1": "Primeros pasos",
+      "title": "Primeros pasos con Scissor",
+      "desc": "Abre Scissor, crea un documento, dibuja tu primera forma, guarda un archivo .cut e instala Scissor como aplicación. Sin cuenta y sin subir nada."
     },
     "interface": {
-      "h1": "La interfaz"
+      "h1": "La interfaz",
+      "title": "Interfaz: herramientas, paneles y menús",
+      "desc": "El espacio de trabajo de Scissor: barra de menús, barra de control, paleta de herramientas, lienzo, panel de acoplamiento, barra de estado y cambio de idioma."
     },
     "documents": {
-      "h1": "Documentos y mesillas"
+      "h1": "Documentos y mesillas",
+      "title": "Documentos y mesas de trabajo",
+      "desc": "Configura documentos con una o varias mesas de trabajo en Scissor: tamaño, sangrado, columnas y resolución, con la herramienta y el panel Mesas de trabajo."
     },
     "tools": {
-      "h1": "Las herramientas"
+      "h1": "Las herramientas",
+      "title": "Referencia de herramientas",
+      "desc": "Cada herramienta de Scissor: selección, Pluma y Lápiz, formas, texto, pinceles, perspectiva, malla, deformación, Fusionar y dividir, y Relleno de región."
     },
     "selecting": {
-      "h1": "Seleccionar el trabajo"
+      "h1": "Seleccionar el trabajo",
+      "title": "Seleccionar objetos",
+      "desc": "Selección en Scissor: clic y marco de selección, Seleccionar todo, Invertir selección, Volver a seleccionar, Igual por relleno o trazo, y selecciones guardadas."
     },
     "paths": {
-      "h1": "Dibujar y editar trazados"
+      "h1": "Dibujar y editar trazados",
+      "title": "Dibujar y editar trazados",
+      "desc": "Dibuja con la Pluma y el Lápiz, edita puntos de ancla y manejadores Bézier, une, simplifica, desplaza y contornea trazados, y combina formas en Scissor."
     },
     "appearance": {
-      "h1": "Color, contornos y apariencia"
+      "h1": "Color, contornos y apariencia",
+      "title": "Color, rellenos y trazos",
+      "desc": "Rellenos y trazos en Scissor: color plano, degradados y motivos, muestras, opacidad y modos de fusión, y el panel Pila de pintura para apilar varias pinturas."
     },
     "type": {
-      "h1": "Texto"
+      "h1": "Texto",
+      "title": "Texto y tipografía",
+      "desc": "Texto de punto, de área y en trazado en Scissor: fuentes y funciones OpenType, ajustes de carácter y párrafo, y cómo convertir el texto en contornos."
     },
     "layers": {
-      "h1": "Capas, grupos y máscaras"
+      "h1": "Capas, grupos y máscaras",
+      "title": "Capas, grupos y máscaras",
+      "desc": "Organiza un documento en el panel Capas: orden de apilamiento, visibilidad y bloqueo, etiquetas de color, grupos, máscaras de recorte y máscaras de opacidad."
     },
     "transform": {
-      "h1": "Mover, transformar y organizar"
+      "h1": "Mover, transformar y organizar",
+      "title": "Transformar y organizar",
+      "desc": "Mueve, escala, rota, alinea y distorsiona objetos con el panel Transformar, Transformación libre, repeticiones en vivo, Metamorfosis y Deformación de forma."
     },
     "effects": {
-      "h1": "Efectos en vivo"
+      "h1": "Efectos en vivo",
+      "title": "Efectos en vivo no destructivos",
+      "desc": "Efectos editables en Scissor: sombras, desenfoque, resplandores, calado, distorsión, deformación, esquinas redondeadas, desplazar trazado y relleno de boceto."
     },
     "three-d": {
-      "h1": "3D"
+      "h1": "3D",
+      "title": "3D: extruir, revolucionar e inflar",
+      "desc": "Convierte formas planas en objetos 3D en Scissor con Extruir, Revolucionar, Inflar y Plano, y ajusta la rotación, la perspectiva, la iluminación y el material."
     },
     "grids": {
-      "h1": "Cuadrículas"
+      "h1": "Cuadrículas",
+      "title": "Cuadrículas isométricas y de perspectiva",
+      "desc": "Cada mesa de trabajo de Scissor tiene su propia cuadrícula: cuadrada, isométrica, hexagonal, oblicua, áurea, de motivo y en perspectiva de uno a tres puntos."
     },
     "guides": {
-      "h1": "Reglas, guías y ajuste"
+      "h1": "Reglas, guías y ajuste",
+      "title": "Reglas, guías inteligentes y ajuste",
+      "desc": "Alinea con precisión en Scissor: reglas, guías de regla, guías inteligentes, ajuste a punto y a cuadrícula, y la herramienta Medición para distancias y ángulos."
     },
     "pixels": {
-      "h1": "Pintar sobre capas de píxeles"
+      "h1": "Pintar sobre capas de píxeles",
+      "title": "Capas de píxeles: pintar y retocar",
+      "desc": "Pinta, retoca, transforma y distorsiona capas de píxeles junto a tus vectores en Scissor: pinceles, selecciones, máscaras de capa, ajustes y filtros."
     },
     "image-trace": {
-      "h1": "Vectorizar"
+      "h1": "Vectorizar",
+      "title": "Vectorizar: convertir imagen en vector",
+      "desc": "Convierte una imagen en trazados vectoriales con Scissor: calco en blanco y negro, escala de grises o color, ajustes preestablecidos, fidelidad y expansión."
     },
     "symbols": {
-      "h1": "Símbolos, pinceles y patrones"
+      "h1": "Símbolos, pinceles y patrones",
+      "title": "Símbolos, pinceles y motivos",
+      "desc": "Ilustraciones reutilizables en Scissor: símbolos e instancias, pinceles que siguen un trazado y motivos en mosaico. Editas una vez y cada copia se actualiza."
     },
     "panels-basics": {
-      "h1": "Propiedades, Capas y Mesillas"
+      "h1": "Propiedades, Capas y Mesillas",
+      "title": "Propiedades, Capas y Mesas de trabajo",
+      "desc": "Los paneles que tendrás siempre abiertos en Scissor: Propiedades, que se adapta a la selección; Capas, el esquema del documento; y Mesas de trabajo."
     },
     "panels-color-type": {
-      "h1": "Paneles de color y texto"
+      "h1": "Paneles de color y texto",
+      "title": "Paneles de color y texto",
+      "desc": "Los paneles de color y texto de Scissor: Color, Muestras, Degradado y Trazo para la pintura, y Carácter y Párrafo para dar formato al texto."
     },
     "panels-utility": {
-      "h1": "Los paneles de utilidad"
+      "h1": "Los paneles de utilidad",
+      "title": "Paneles de utilidad",
+      "desc": "Los paneles de trabajo de Scissor: Alinear, Transformar, Pila de pintura, Vectorizar, Transparencia, Estilos gráficos, Pinceles, Glifos, Historial y muchos más."
     },
     "panels-effects": {
-      "h1": "Los paneles de efectos"
+      "h1": "Los paneles de efectos",
+      "title": "Paneles de efectos en vivo",
+      "desc": "Los paneles de efectos de Scissor, uno por categoría: Estilizar, Desenfocar, Distorsionar, Trazado, Combinar formas, Deformar y 3D, todos en la Pila de pintura."
     },
     "files": {
-      "h1": "Abrir, colocar y exportar"
+      "h1": "Abrir, colocar y exportar",
+      "title": "Abrir, colocar y exportar",
+      "desc": "Abre SVG, PDF, EPS, AI y PSD, exporta a SVG, PDF, PNG, JPEG y WebP, y guarda archivos .cut nativos. Todo se queda en tu dispositivo, sin subir nada."
     },
     "automation": {
-      "h1": "Automatización"
+      "h1": "Automatización",
+      "title": "Acciones, variables y scripts",
+      "desc": "Automatiza Scissor: graba y reproduce acciones, crea variantes de un diseño con variables y datos CSV, expórtalas por lotes y controla el editor con JavaScript."
     },
     "shortcuts": {
-      "h1": "Atajos de teclado"
+      "h1": "Atajos de teclado",
+      "title": "Atajos de teclado",
+      "desc": "Todos los atajos de teclado de Scissor, ordenados por herramienta y por menú, en formato macOS y con sus equivalentes para Windows y Linux."
     },
     "privacy": {
-      "h1": "Tu trabajo y tu privacidad"
+      "h1": "Tu trabajo y tu privacidad",
+      "title": "Tu trabajo y tu privacidad",
+      "desc": "Scissor no tiene servidor: el editor funciona en tu navegador y tus diseños nunca se suben. Cómo funcionan los documentos, la recuperación y la analítica."
     }
   },
-  "keywords": {}
+  "keywords": {
+    "": "editor vectorial Scissor, manual de usuario de Scissor, editor vectorial gratis, editor vectorial online, dibujo vectorial sin instalar, editar gráficos vectoriales en el navegador, editor sin cuenta ni subidas, editor SVG PDF EPS PSD, editor vectorial privado sin conexión, editor vectorial y de píxeles, atajos de teclado y herramientas",
+    "getting-started": "primeros pasos con Scissor, crear un documento nuevo, dibujar la primera forma, herramientas Rectángulo y Elipse, guardar archivo .cut, relleno y trazo, instalar como aplicación, autoguardado y recuperación, ajustes preestablecidos de documento, cómo empezar a dibujar vectores, editor vectorial sin conexión, tutorial de editor vectorial para principiantes",
+    "interface": "interfaz de Scissor, paleta de herramientas, barra de control, panel de acoplamiento, buscar comandos, deshacer y rehacer, zoom y desplazamiento del lienzo, barra de estado, organizar paneles, modo claro y oscuro, cambiar el idioma, mesas de trabajo",
+    "documents": "mesas de trabajo, configurar documento nuevo, varias mesas de trabajo en un archivo, herramienta Mesa de trabajo, opciones de mesa de trabajo, sangrado para imprenta, modo de color RGB CMYK, resolución de efectos de rasterizado, ajustes preestablecidos de documento, cómo añadir una mesa de trabajo, exportar cada mesa por separado, documento vectorial de varias páginas",
+    "tools": "herramientas de Scissor, barra de herramientas, atajos de herramientas, herramienta Selección, herramienta Selección directa, herramienta Pluma, herramientas de formas y líneas, herramientas de transformación, herramienta Cuentagotas, herramientas Degradado y Malla, herramienta Cuadrícula de perspectiva, herramientas Deformar y Anchura",
+    "selecting": "seleccionar objetos, herramienta Selección, seleccionar todo, deseleccionar, invertir selección, volver a seleccionar, mismo color de relleno, mismo color de trazo, marco de selección, selección directa, guardar selección, cómo seleccionar varios objetos",
+    "paths": "dibujar trazados, herramienta Pluma, puntos de ancla y manejadores, cómo editar un trazado, combinar formas, buscatrazos, desplazar trazado, contornear trazo, simplificar trazado, trazado compuesto, máscara de recorte, curvas Bézier",
+    "appearance": "relleno y trazo, panel Color, muestras de color, degradados, degradado lineal radial y libre, modos de fusión, máscara de opacidad, grosor y extremos del trazo, líneas discontinuas, estilos gráficos, patrones de relleno, volver a colorear ilustración",
+    "type": "añadir texto, herramienta Texto, texto de punto, texto de área, texto en trazado, panel Carácter, interlineado tracking y kerning, funciones OpenType, versalitas y ligaduras, panel Párrafo, ceñir texto, convertir texto en contornos",
+    "layers": "panel Capas, orden de apilamiento, cómo hacer una máscara de recorte, máscara de opacidad, bloquear y ocultar capas, traer al frente y enviar al fondo, agrupar y desagrupar, capa activa, etiquetas de color de capa, modo de fusión y opacidad, reordenar capas, capas en Scissor",
+    "transform": "panel Transformar, escalar y rotar objetos, reflejar y distorsionar, rotar un ángulo exacto, herramienta Transformación libre, alinear y distribuir objetos, punto de referencia, repetición radial y en espejo, metamorfosis entre formas, deformación de forma, voltear horizontal y vertical, cuadro delimitador",
+    "effects": "efectos en vivo no destructivos, sombra paralela, resplandor exterior e interior, desenfoque gaussiano, hacer áspero y zigzag, desplazar trazado, redondear esquinas, cómo añadir una sombra a un vector, panel Pila de pintura, fruncir y engordar, texto en arco, expandir aspecto",
+    "three-d": "3D y materiales, extruir y biselar, revolucionar un perfil, inflar forma 3D, cómo hacer texto 3D, rotación X Y Z y perspectiva, vista isométrica, iluminación, material plástico mate metal, profundidad y pasos de bisel, efecto 3D en vivo, texto 3D gratis online",
+    "grids": "cuadrícula isométrica, cuadrícula de perspectiva, cuadrícula hexagonal, cuadrícula de proporción áurea, cuadrícula cuadrada, ajustar a cuadrícula, cuadrícula oblicua, perspectiva de dos puntos, puntos de fuga, cómo dibujar en isométrico, rejilla por mesa de trabajo, cuadrícula de perspectiva gratis online",
+    "guides": "reglas y guías, guías inteligentes, ajustar a punto, ajustar a cuadrícula, herramienta Medición, cómo crear guías, arrastrar guías desde la regla, alinear objetos a una guía, unidades de regla píxeles mm pulgadas, crear guías a partir de objetos, distribuir objetos uniformemente, guías en Scissor",
+    "pixels": "capa de píxeles, herramienta Pincel, borrador de píxeles, pintar sobre una foto, máscara de capa, sobreexponer y subexponer, bote de pintura, niveles y tono/saturación, filtro desenfoque gaussiano, mapa de degradado, selección con marco y lazo, rasterizar vectores",
+    "image-trace": "vectorizar imagen, calco de imagen, convertir imagen en vector, vectorizar logotipo, PNG a SVG, JPG a vector, foto a vector, boceto a vector, calco en blanco y negro, ajustes preestablecidos de calco, expandir trazados calcados, vectorizador de imágenes gratis online",
+    "symbols": "panel Símbolos, instancias de símbolo, herramientas de simbolismo, dispersar símbolos, pinceles vectoriales, pincel caligráfico, pincel de dispersión, pincel de arte, pincel de motivo, herramienta Pincel, cómo crear un relleno de patrón, editar mosaico de motivo",
+    "panels-basics": "panel Propiedades, panel Capas, panel Mesas de trabajo, orden de apilamiento de capas, mostrar ocultar y bloquear capas, posición y tamaño, acciones rápidas, agrupar y desagrupar, cómo organizar capas, gestionar mesas de trabajo, cambiar nombre de mesa de trabajo, paneles de Scissor",
+    "panels-color-type": "panel Color, panel Muestras, muestras globales, panel Degradado, paradas de color del degradado, degradado lineal y radial, panel Trazo, trazo discontinuo y puntas de flecha, perfil de anchura del trazo, panel Carácter, panel Párrafo, cómo hacer un degradado",
+    "panels-utility": "panel Alinear, distribuir objetos uniformemente, combinar formas, unir menos frente e intersecar, selección automática, panel Transformar, panel Pila de pintura, estilos gráficos, panel Vectorizar, panel Transparencia, exportar recursos, paneles Historial y Acciones",
+    "panels-effects": "efecto sombra paralela, desenfoque gaussiano, resplandor interior y exterior, calar bordes, redondear esquinas, zigzag y hacer áspero, fruncir y engordar, desplazar trazado, deformar en arco y bandera, extrusión y giro 3D, efectos en vivo no destructivos, paneles de efectos de Scissor",
+    "files": "formato .cut, abrir SVG PDF AI PSD, exportar SVG PNG JPEG WebP, exportar a PDF, colocar imagen en el documento, exportar para pantallas, sectores y exportar recursos, copiar y pegar ilustraciones, rasterizar vectores, abrir archivo AI en el navegador, importar archivo EPS, editor SVG gratis online",
+    "automation": "automatización, panel Acciones, grabar y reproducir acciones, variables, gráficos basados en datos, conjuntos de datos, importar CSV, exportación por lotes, consola de scripts, API de JavaScript, ejecutar un script, combinar correspondencia",
+    "shortcuts": "atajos de teclado, lista de atajos de Scissor, atajos de herramientas, teclas rápidas Mac Windows Linux, atajo de la Pluma, tecla de la herramienta Selección, atajos de zoom, atajo para agrupar y desagrupar, deshacer y rehacer, pegar delante y detrás, atajo de máscara de recorte, hoja de referencia de atajos",
+    "privacy": "privacidad, sin subir archivos, sin cuenta ni registro, tus datos se quedan en tu dispositivo, desactivar la analítica, recuperar trabajo sin guardar, instalar Scissor como aplicación, editor vectorial sin conexión, es seguro Scissor, sin servidor, archivos .cut en tu equipo"
+  }
 }

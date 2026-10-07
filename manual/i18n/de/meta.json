@@ -55,83 +55,162 @@
   },
   "meta": {
     "": {
-      "h1": "Benutzerhandbuch zu Scissor"
+      "h1": "Benutzerhandbuch zu Scissor",
+      "title": "Scissor-Benutzerhandbuch",
+      "desc": "Das Benutzerhandbuch zu Scissor: Werkzeuge, Pfade, Farbe, Text, Raster, Effekte, Pixelebenen, Dateien und Tastenkürzel des kostenlosen Editors im Browser."
     },
     "getting-started": {
-      "h1": "Erste Schritte"
+      "h1": "Erste Schritte",
+      "title": "Erste Schritte mit Scissor",
+      "desc": "Scissor öffnen, ein Dokument anlegen, die erste Form zeichnen, eine .cut-Datei speichern und Scissor als App installieren – ohne Konto und ohne Upload."
     },
     "interface": {
-      "h1": "Die Oberfläche"
+      "h1": "Die Oberfläche",
+      "title": "Die Oberfläche von Scissor im Überblick",
+      "desc": "Der Arbeitsbereich von Scissor: Menüleiste, Kontrollleiste, Werkzeugpalette, Arbeitsfläche, Bedienfeld-Dock und Statusleiste – und wie Sie die Sprache wechseln."
     },
     "documents": {
-      "h1": "Dokumente und Tafeln"
+      "h1": "Dokumente und Tafeln",
+      "title": "Dokumente und Zeichenflächen",
+      "desc": "Dokumente und mehrere Zeichenflächen in Scissor einrichten: Größe, Anschnitt, Spalten und Auflösung, mit dem Zeichenflächen-Werkzeug und -Bedienfeld."
     },
     "tools": {
-      "h1": "Die Werkzeuge"
+      "h1": "Die Werkzeuge",
+      "title": "Alle Werkzeuge im Überblick",
+      "desc": "Jedes Werkzeug in Scissor: Auswahl, Zeichenstift und Buntstift, Formen, Text, Pinsel, Raster und Perspektive, Gitter, Verkrümmen und Bereich füllen."
     },
     "selecting": {
-      "h1": "Arbeit auswählen"
+      "h1": "Arbeit auswählen",
+      "title": "Objekte und Grafik auswählen",
+      "desc": "Grafik in Scissor auswählen: Klicken und Auswahlrahmen, Alles auswählen, Umkehren, Erneut auswählen, Gleich nach Fläche oder Kontur und gespeicherte Auswahlen."
     },
     "paths": {
-      "h1": "Pfade zeichnen und bearbeiten"
+      "h1": "Pfade zeichnen und bearbeiten",
+      "title": "Pfade zeichnen und bearbeiten",
+      "desc": "Mit Zeichenstift und Buntstift zeichnen, Ankerpunkte und Bézier-Griffe bearbeiten, Pfade zusammenfügen, vereinfachen, verschieben und Formen kombinieren."
     },
     "appearance": {
-      "h1": "Farbe, Konturen und Erscheinungsbild"
+      "h1": "Farbe, Konturen und Erscheinungsbild",
+      "title": "Farbe, Konturen und Aussehen",
+      "desc": "Fläche und Kontur in Scissor: Volltonfarben, Verläufe und Muster, Farbfelder, Deckkraft und Füllmethoden sowie das Bedienfeld „Malstapel“ für mehrere Füllungen."
     },
     "type": {
-      "h1": "Text"
+      "h1": "Text",
+      "title": "Text: Punkt-, Flächen- und Pfadtext",
+      "desc": "Punkt-, Flächen- und Pfadtext in Scissor: Schriften und OpenType-Funktionen, Zeichen- und Absatzeinstellungen und Text in Pfade umwandeln."
     },
     "layers": {
-      "h1": "Ebenen, Gruppen und Masken"
+      "h1": "Ebenen, Gruppen und Masken",
+      "title": "Ebenen, Gruppen und Masken",
+      "desc": "Ein Dokument im Ebenen-Bedienfeld ordnen: Unterebenen, Stapelreihenfolge, Ausblenden und Sperren, Gruppen, Schnittmasken und Deckkraftmasken."
     },
     "transform": {
-      "h1": "Verschieben, Transformieren und Anordnen"
+      "h1": "Verschieben, Transformieren und Anordnen",
+      "title": "Transformieren und anordnen",
+      "desc": "Grafik in Scissor verschieben, skalieren, drehen, ausrichten und verzerren: mit dem Transformieren-Bedienfeld, Frei transformieren, Morphen und Formverkrümmung."
     },
     "effects": {
-      "h1": "Live-Effekte"
+      "h1": "Live-Effekte",
+      "title": "Live-Effekte in Scissor",
+      "desc": "Nicht-destruktive Effekte in Scissor: Schlagschatten, Weichzeichnen, Schein, weiche Kante, Verzerren, Verkrümmen, Ecken abrunden und mehr – stets bearbeitbar."
     },
     "three-d": {
-      "h1": "3D"
+      "h1": "3D",
+      "title": "3D: extrudieren, kreiseln und aufblasen",
+      "desc": "Flache Formen in Scissor in 3D verwandeln – mit Extrudieren, Kreiseln, Aufblasen und Ebene – und Drehung, Perspektive, Beleuchtung und Material einstellen."
     },
     "grids": {
-      "h1": "Raster"
+      "h1": "Raster",
+      "title": "Raster: isometrisch und perspektivisch",
+      "desc": "In Scissor hat jede Zeichenfläche ein eigenes Raster: quadratisch, isometrisch, sechseckig, schräg, Goldener Schnitt, Muster oder 1- bis 3-Punkt-Perspektive."
     },
     "guides": {
-      "h1": "Lineale, Führungen und Einrasten"
+      "h1": "Lineale, Führungen und Einrasten",
+      "title": "Lineale, Hilfslinien und Einrasten",
+      "desc": "Arbeit in Scissor präzise ausrichten: mit Linealen, Hilfslinien, intelligenten Hilfslinien, Ausrichten an Punkten und am Raster sowie dem Mess-Werkzeug."
     },
     "pixels": {
-      "h1": "Auf Pixelebenen malen"
+      "h1": "Auf Pixelebenen malen",
+      "title": "Pixelebenen: malen und retuschieren",
+      "desc": "Pixelebenen neben Vektorgrafik in Scissor bemalen, retuschieren, transformieren und verzerren: mit Pinseln, Auswahlen, Masken, Korrekturen und Filtern."
     },
     "image-trace": {
-      "h1": "Vektorisieren"
+      "h1": "Vektorisieren",
+      "title": "Vektorisieren: Bild in Vektor umwandeln",
+      "desc": "Ein Bild in Scissor vektorisieren: Schwarzweiß, Graustufen und Farbe, Vorgaben, Optionen für Pfade, Ecken und Rauschen und das Umwandeln in bearbeitbare Pfade."
     },
     "symbols": {
-      "h1": "Symbole, Pinsel und Muster"
+      "h1": "Symbole, Pinsel und Muster",
+      "title": "Symbole, Pinsel und Muster",
+      "desc": "Wiederverwendbare Grafik in Scissor: Symbole und Instanzen, Pinsel entlang von Pfaden und Musterkacheln. Einmal bearbeiten, und jede Verwendung ändert sich mit."
     },
     "panels-basics": {
-      "h1": "Eigenschaften, Ebenen und Tafeln"
+      "h1": "Eigenschaften, Ebenen und Tafeln",
+      "title": "Eigenschaften, Ebenen, Zeichenflächen",
+      "desc": "Die Bedienfelder, die in Scissor meist offen bleiben: Eigenschaften folgt Ihrer Auswahl, Ebenen zeigt das ganze Dokument, Zeichenflächen listet alle Flächen."
     },
     "panels-color-type": {
-      "h1": "Bereiche für Farbe und Text"
+      "h1": "Bereiche für Farbe und Text",
+      "title": "Bedienfelder für Farbe und Text",
+      "desc": "Die Bedienfelder für Farbe und Text in Scissor: Farbe, Farbfelder, Verlauf und Kontur für Flächen und Linien sowie Zeichen und Absatz für die Typografie."
     },
     "panels-utility": {
-      "h1": "Die Werkzeugbereiche"
+      "h1": "Die Werkzeugbereiche",
+      "title": "Die Arbeits-Bedienfelder im Überblick",
+      "desc": "Die Arbeits-Bedienfelder in Scissor: Ausrichten, Transformieren, Malstapel, Vektorisieren, Transparenz, Grafikstile, Pinsel, Glyphen, Protokoll und viele mehr."
     },
     "panels-effects": {
-      "h1": "Die Effektbereiche"
+      "h1": "Die Effektbereiche",
+      "title": "Bedienfelder für Live-Effekte",
+      "desc": "Die Effekt-Bedienfelder in Scissor, eins je Kategorie: Stilisieren, Weichzeichnen, Verzerren, Pfad, Formen kombinieren, Verkrümmen und 3D – live im Malstapel."
     },
     "files": {
-      "h1": "Öffnen, Platzieren und exportieren"
+      "h1": "Öffnen, Platzieren und exportieren",
+      "title": "Öffnen, platzieren und exportieren",
+      "desc": "SVG, PDF, EPS und PSD öffnen, als SVG, PDF, PNG, JPEG und WebP exportieren und im eigenen .cut-Format speichern. Alles bleibt auf Ihrem Gerät."
     },
     "automation": {
-      "h1": "Automatisierung"
+      "h1": "Automatisierung",
+      "title": "Automatisierung: Aktionen und Skripte",
+      "desc": "Scissor automatisieren: Aktionen aufzeichnen und abspielen, Designs aus Variablen und CSV-Datensätzen erzeugen, im Stapel exportieren, mit JavaScript skripten."
     },
     "shortcuts": {
-      "h1": "Tastenkürzel"
+      "h1": "Tastenkürzel",
+      "title": "Alle Tastenkürzel von Scissor",
+      "desc": "Alle Tastenkürzel von Scissor, nach Werkzeug und Menü geordnet, in der macOS-Schreibweise mit den Entsprechungen für Windows und Linux."
     },
     "privacy": {
-      "h1": "Deine Arbeit und dein Datenschutz"
+      "h1": "Deine Arbeit und dein Datenschutz",
+      "title": "Ihre Arbeit und Ihr Datenschutz",
+      "desc": "Scissor hat keinen Server: Der Editor läuft im Browser, und Ihre Grafiken werden nie hochgeladen. So funktionieren Dokumente, Wiederherstellung und Statistik."
     }
   },
-  "keywords": {}
+  "keywords": {
+    "": "Scissor, Vektor-Editor im Browser, kostenloser Vektor-Editor online, Scissor Handbuch, Scissor Anleitung, Vektorgrafik ohne Installation, SVG-Editor online, Vektorgrafik im Browser bearbeiten, Editor ohne Konto, SVG PDF EPS PSD bearbeiten, Vektor- und Pixel-Editor, Tastenkürzel und Werkzeuge",
+    "getting-started": "Erste Schritte mit Scissor, neues Dokument erstellen, erste Form zeichnen, Rechteck-Werkzeug, Ellipse-Werkzeug, .cut-Datei speichern, Fläche und Kontur, Scissor als App installieren, automatisch speichern, Dokumentvorlagen, Vektorgrafik lernen, Vektor-Editor Tutorial für Anfänger",
+    "interface": "Scissor Oberfläche, Werkzeugpalette, Kontrollleiste, Bedienfelder, Befehle suchen, Rückgängig und Wiederholen, schwenken und zoomen, Lineale und Hilfslinien, Bedienfelder anordnen, Statusleiste, Heller und dunkler Modus, Sprache ändern",
+    "documents": "Zeichenflächen, Artboards, neues Dokument einrichten, mehrere Zeichenflächen in einer Datei, Zeichenflächen-Werkzeug, Anschnitt für den Druck, RGB CMYK Farbmodus, Auflösung der Rastereffekte, Dokumentvorlagen, Zeichenfläche hinzufügen, Zeichenflächen einzeln exportieren, mehrseitiges Vektordokument",
+    "tools": "Scissor Werkzeuge, Werkzeugleiste, Werkzeug-Tastenkürzel, Auswahl-Werkzeug, Direktauswahl-Werkzeug, Zeichenstift-Werkzeug, Form- und Linienwerkzeuge, Transformieren-Werkzeuge, Pipette-Werkzeug, Verlauf- und Gitter-Werkzeug, Perspektivenraster-Werkzeug, Breiten- und Verkrümmen-Werkzeug",
+    "selecting": "Grafik auswählen, Objekte auswählen, Auswahl-Werkzeug, Alles auswählen, Auswahl aufheben, Auswahl umkehren, erneut auswählen, gleiche Flächenfarbe auswählen, gleiche Konturfarbe auswählen, Auswahlrahmen, Direktauswahl, Auswahl speichern",
+    "paths": "Pfade zeichnen, Zeichenstift-Werkzeug, Ankerpunkte und Griffe, Eckpunkt und Übergangspunkt, Pfad bearbeiten, Formen kombinieren, Pathfinder, Pfad verschieben, Konturlinie, Pfad vereinfachen, Schnittmaske, Bézierkurven",
+    "appearance": "Fläche und Kontur, Farbfelder, Farbe-Bedienfeld, Verlauf erstellen, linearer radialer Freiform-Verlauf, Füllmethoden, Deckkraftmaske, Konturstärke Enden Ecken, gestrichelte Linie, Grafikstile, Bildmaterial neu färben, globale Farbfelder",
+    "type": "Text hinzufügen, Text-Werkzeug, Punkttext Flächentext Pfadtext, Zeichen-Bedienfeld, Schriftgröße und Schriftschnitt, Zeilenabstand Laufweite Kerning, OpenType-Funktionen, Kapitälchen und Ligaturen, Text auf Pfad, verketteter Text, Textumfluss, Text in Pfade umwandeln",
+    "layers": "Ebenen-Bedienfeld, Gruppen und Schnittmasken, Schnittmaske erstellen, Deckkraftmaske mit Verlauf, Ebenen sperren und ausblenden, Stapelreihenfolge, in den Vordergrund, in den Hintergrund, Objekte gruppieren, Gruppierung aufheben, Ebenenfarbe, Ebenen neu anordnen",
+    "transform": "Transformieren-Bedienfeld, skalieren drehen spiegeln verbiegen, um genauen Winkel drehen, Frei transformieren, Objekte ausrichten und verteilen, Referenzpunkt, Einzeln transformieren, Erneut transformieren, Live-Wiederholung radial Raster Spiegelung, Formen morphen, Formverkrümmung, horizontal und vertikal spiegeln",
+    "effects": "Live-Effekte, nicht-destruktive Effekte, Schlagschatten, Schein nach außen, Schein nach innen, Gaußscher Weichzeichner, Aufrauen und Zickzack, Ecken abrunden, Schlagschatten hinzufügen, Malstapel, Zusammenziehen und Aufblasen, Text im Bogen verkrümmen",
+    "three-d": "3D und Materialien, Extrudieren und abgeflachte Kante, Kreiseln, 3D aufblasen, 3D-Text erstellen, Drehung X Y Z, Perspektive, isometrische Ansicht, Beleuchtung, Material Kunststoff matt Metall, 3D-Effekt, 3D-Text online kostenlos",
+    "grids": "isometrisches Raster, Perspektivenraster, sechseckiges Raster, Goldener Schnitt Raster, quadratisches Raster, am Raster ausrichten, schräges Raster, Zweipunktperspektive, Fluchtpunkte, isometrisch zeichnen, Raster pro Zeichenfläche, Perspektivenraster online",
+    "guides": "Lineale und Hilfslinien, intelligente Hilfslinien, Smart Guides, an Punkt ausrichten, am Raster ausrichten, Einrasten, Mess-Werkzeug, Hilfslinien erstellen, Hilfslinie aus Lineal ziehen, Linealeinheiten Pixel mm Zoll, Hilfslinien aus Objekten, Objekte gleichmäßig verteilen",
+    "pixels": "Pixelebene, Pinsel-Werkzeug, Pixel-Radiergummi, auf Foto malen, Ebenenmaske, Abwedler Nachbelichter Schwamm, Farbeimer, Tonwerte Farbton Sättigung, Gaußscher Weichzeichner, Verlaufsumsetzung, Auswahlrechteck und Lasso, Vektorgrafik rastern",
+    "image-trace": "Bild vektorisieren, Bild in Vektor umwandeln, Logo vektorisieren, PNG zu SVG, JPG zu SVG, Foto vektorisieren, Skizze vektorisieren, Bildnachzeichner, Nachzeichnen, Schwarzweiß-Logo nachzeichnen, Vektorisieren online kostenlos, Strichzeichnung vektorisieren",
+    "symbols": "Symbole-Bedienfeld, Symbolinstanzen, Symbol-Werkzeuge, Symbol-aufsprühen-Werkzeug, Vektorpinsel, Kalligrafiepinsel, Spezialpinsel, Bildpinsel, Musterpinsel, Muster erstellen, Musterkachel bearbeiten, Symbolverknüpfung lösen",
+    "panels-basics": "Eigenschaften-Bedienfeld, Ebenen-Bedienfeld, Zeichenflächen-Bedienfeld, Stapelreihenfolge, Ebenen ein- und ausblenden, Ebenen sperren, Position und Größe, Schnellaktionen, Ebenen organisieren, Zeichenflächen verwalten, Zeichenfläche umbenennen, Bedienfeld-Dock",
+    "panels-color-type": "Farbe-Bedienfeld, Farbfelder-Bedienfeld, globale Farbfelder, Verlauf-Bedienfeld, Farbunterbrechungen, linearer radialer Verlauf, Kontur-Bedienfeld, gestrichelte Kontur Pfeilspitzen, Breitenprofil, Zeichen-Bedienfeld, Absatz-Bedienfeld, Silbentrennung",
+    "panels-utility": "Ausrichten-Bedienfeld, Objekte gleichmäßig verteilen, Formen kombinieren, Pathfinder, Automatisch auswählen, Transformieren-Bedienfeld, Malstapel, Grafikstile, Bild vektorisieren, Transparenz und Füllmethode, Glyphen-Bedienfeld, Export von Assets",
+    "panels-effects": "Schlagschatten-Effekt, Gaußscher Weichzeichner, Schein nach innen und außen, weiche Kante, Ecken abrunden, Zickzack und Aufrauen, Zusammenziehen und Aufblasen, Pfad verschieben, Verkrümmen Bogen Wölbung Flagge, 3D extrudieren kreiseln aufblasen, Live-Effekte, Effekt-Bedienfelder",
+    "files": ".cut-Dateiformat, SVG PDF AI PSD öffnen, als SVG PNG JPEG WebP exportieren, als PDF exportieren, Bild platzieren, für Bildschirme exportieren, Slices und Assets, kopieren und einfügen, Vektorgrafik rastern, AI-Datei im Browser öffnen, EPS importieren, SVG-Editor kostenlos",
+    "automation": "Automatisierung, Aktionen-Bedienfeld, Aktion aufzeichnen und abspielen, Variablen, datengesteuerte Grafiken, Datensätze, CSV importieren, Stapelexport, Datensätze exportieren, Skripte, Skriptkonsole, JavaScript-API",
+    "shortcuts": "Tastenkürzel, Scissor Tastenkürzel Liste, Werkzeug-Tastenkürzel, Tastenkombinationen Mac Windows Linux, Zeichenstift Tastenkürzel, Auswahl-Werkzeug Taste, Zoomen Tastenkürzel, Gruppieren Tastenkürzel, Rückgängig Wiederholen, Davor einfügen, Schnittmaske Tastenkürzel, Shortcuts Spickzettel",
+    "privacy": "Datenschutz, ohne Upload, ohne Konto, Daten bleiben auf dem Gerät, Google Analytics deaktivieren, Wiederherstellung nach Absturz, Scissor als App installieren, Offline-Vektor-Editor, lädt Scissor Dateien hoch, ist Scissor privat, Editor ohne Server, kostenloser Offline-Grafikeditor"
+  }
 }

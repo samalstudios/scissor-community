@@ -14,7 +14,7 @@
     "Scissor by Samal Studios.": "Scissor od Samal Studios.",
     "Third-party licences": "Licencje stron trzecich",
     "| Scissor manual": "| Podręcznik Scissor",
-    "Scissor user manual: every tool, menu and shortcut": "Podręcznik użytkownika Scissor: każde narzędzie, menu i skrót",
+    "Scissor user manual: every tool, menu and shortcut": "Podręcznik Scissor: każde narzędzie, menu i skrót",
     "Scissor user manual": "Podręcznik użytkownika Scissor"
   },
   "groups": {
@@ -55,83 +55,162 @@
   },
   "meta": {
     "": {
-      "h1": "Podręcznik użytkownika Scissor"
+      "h1": "Podręcznik użytkownika Scissor",
+      "title": "Podręcznik użytkownika Scissor",
+      "desc": "Podręcznik darmowego edytora graficznego Scissor w przeglądarce: narzędzia, ścieżki, kolor, tekst, siatki, efekty, warstwy pikselowe, pliki i skróty."
     },
     "getting-started": {
-      "h1": "Pierwsze kroki"
+      "h1": "Pierwsze kroki",
+      "title": "Pierwsze kroki w Scissor",
+      "desc": "Jak otworzyć Scissor, utworzyć dokument, narysować pierwszy kształt, zapisać plik .cut i zainstalować edytor jako aplikację. Bez konta i bez przesyłania plików."
     },
     "interface": {
-      "h1": "Interfejs"
+      "h1": "Interfejs",
+      "title": "Interfejs: narzędzia, panele i menu",
+      "desc": "Przestrzeń robocza Scissor: pasek menu, pasek sterowania, paleta narzędzi, płótno, dok paneli i pasek stanu, a także tryb jasny i ciemny oraz zmiana języka."
     },
     "documents": {
-      "h1": "Dokumenty i plansze"
+      "h1": "Dokumenty i plansze",
+      "title": "Dokumenty i obszary robocze",
+      "desc": "Konfiguracja dokumentu w Scissor: rozmiar, jednostki, spad i obsługa kolorów, a także wiele obszarów roboczych w jednym pliku i eksport każdego z nich osobno."
     },
     "tools": {
-      "h1": "Narzędzia"
+      "h1": "Narzędzia",
+      "title": "Narzędzia: pełny przegląd",
+      "desc": "Każde narzędzie Scissor ze skrótem i opisem: zaznaczanie, pióro i ołówek, kształty, tekst, pędzle, siatki i perspektywa oraz Wypełnianie obszarów."
     },
     "selecting": {
-      "h1": "Zaznaczanie pracy"
+      "h1": "Zaznaczanie pracy",
+      "title": "Zaznaczanie grafiki",
+      "desc": "Zaznaczanie w Scissor: kliknięcie i ramka zaznaczenia, Zaznacz wszystko, Odwrotność, Zaznacz ponownie, wybór według tego samego koloru i zapisane zaznaczenia."
     },
     "paths": {
-      "h1": "Rysowanie i edycja ścieżek"
+      "h1": "Rysowanie i edycja ścieżek",
+      "title": "Rysowanie i edycja ścieżek",
+      "desc": "Rysowanie piórem i ołówkiem, edycja punktów kotwicznych i uchwytów Béziera, łączenie, upraszczanie, odsuwanie i obrysowywanie ścieżek oraz Łączenie kształtów."
     },
     "appearance": {
-      "h1": "Kolor, obrysy i wygląd"
+      "h1": "Kolor, obrysy i wygląd",
+      "title": "Kolor, obrysy i wygląd",
+      "desc": "Wypełnienia i obrysy w Scissor: kolor jednolity, gradienty i wzorki, próbki, krycie i tryby mieszania, panel Stos malowania oraz style graficzne."
     },
     "type": {
-      "h1": "Tekst"
+      "h1": "Tekst",
+      "title": "Tekst i typografia",
+      "desc": "Tekst punktowy, w obszarze i na ścieżce w Scissor: fonty i funkcje OpenType, panele Znak i Akapit, oblewanie tekstem oraz zamiana tekstu na kontury."
     },
     "layers": {
-      "h1": "Warstwy, grupy i maski"
+      "h1": "Warstwy, grupy i maski",
+      "title": "Warstwy, grupy i maski",
+      "desc": "Porządkowanie dokumentu w panelu Warstwy: podwarstwy i kolejność, ukrywanie i blokowanie, grupy, etykiety kolorów, maski przycinające i maski krycia."
     },
     "transform": {
-      "h1": "Przesuwanie, przekształcanie i układanie"
+      "h1": "Przesuwanie, przekształcanie i układanie",
+      "title": "Przekształcanie i rozmieszczanie",
+      "desc": "Przesuwanie, skalowanie, obracanie, wyrównywanie i zniekształcanie w Scissor: panel Przekształć, Swobodne przekształcanie, powtórzenia, Morfing i Wypaczenie."
     },
     "effects": {
-      "h1": "Efekty na żywo"
+      "h1": "Efekty na żywo",
+      "title": "Efekty na żywo",
+      "desc": "Nieniszczące efekty w Scissor: cień, rozmycie, poświaty, wtapianie, zniekształcenia, wypaczenie, zaokrąglone narożniki i odsunięcie ścieżki, zawsze do edycji."
     },
     "three-d": {
-      "h1": "3D"
+      "h1": "3D",
+      "title": "3D: wyciąganie, obrót i nadmuchiwanie",
+      "desc": "Zamiana płaskich kształtów w bryły 3D w Scissor: wyciągnięcie z fazą, obrót bryły, nadmuchanie i płaszczyzna oraz ustawienia obrotu, oświetlenia i materiału."
     },
     "grids": {
-      "h1": "Siatki"
+      "h1": "Siatki",
+      "title": "Siatki: kwadratowa, izometryczna i inne",
+      "desc": "Każdy obszar roboczy w Scissor ma własną siatkę: kwadratową, izometryczną, sześciokątną, ukośną, złotego podziału, wzorkową lub perspektywiczną."
     },
     "guides": {
-      "h1": "Linijki, prowadnice i przyciąganie"
+      "h1": "Linijki, prowadnice i przyciąganie",
+      "title": "Linijki, prowadnice i przyciąganie",
+      "desc": "Precyzyjne wyrównywanie w Scissor: linijki, prowadnice, inteligentne prowadnice, przyciąganie do punktów i do siatki oraz pomiar odległości narzędziem Miarka."
     },
     "pixels": {
-      "h1": "Malowanie na warstwach pikselowych"
+      "h1": "Malowanie na warstwach pikselowych",
+      "title": "Warstwy pikselowe: malowanie i retusz",
+      "desc": "Malowanie i retusz na warstwach pikselowych obok grafiki wektorowej w Scissor: pędzle, zaznaczenia, maski warstw, korekty, filtry i rasteryzacja."
     },
     "image-trace": {
-      "h1": "Wektoryzacja"
+      "h1": "Wektoryzacja",
+      "title": "Wektoryzacja obrazu",
+      "desc": "Zamiana obrazu w edytowalne ścieżki wektorowe w Scissor: tryb czarno-biały, w skali szarości i kolorowy, presety, opcje dokładności i rozszerzanie wyniku."
     },
     "symbols": {
-      "h1": "Symbole, pędzle i wzory"
+      "h1": "Symbole, pędzle i wzory",
+      "title": "Symbole, pędzle i wzorki",
+      "desc": "Grafika wielokrotnego użytku w Scissor: symbole i ich wystąpienia, pędzle wzdłuż ścieżek i kafelki wzorków. Zmiana oryginału aktualizuje wszystkie kopie."
     },
     "panels-basics": {
-      "h1": "Właściwości, Warstwy i Plansze"
+      "h1": "Właściwości, Warstwy i Plansze",
+      "title": "Właściwości, Warstwy i Obszary robocze",
+      "desc": "Panele, które zwykle są stale otwarte w Scissor: kontekstowy panel Właściwości, panel Warstwy z konspektem dokumentu i lista w panelu Obszary robocze."
     },
     "panels-color-type": {
-      "h1": "Panele koloru i tekstu"
+      "h1": "Panele koloru i tekstu",
+      "title": "Panele koloru i tekstu",
+      "desc": "Panele koloru i tekstu w Scissor: Kolor, Próbki, Gradient i Obrys do malowania grafiki oraz Znak i Akapit do formatowania tekstu."
     },
     "panels-utility": {
-      "h1": "Panele narzędziowe"
+      "h1": "Panele narzędziowe",
+      "title": "Panele narzędziowe",
+      "desc": "Panele robocze Scissor: Wyrównaj, Łączenie kształtów, Przekształć, Stos malowania, Wektoryzacja, Przezroczystość, Style graficzne, Glify, Historia i inne."
     },
     "panels-effects": {
-      "h1": "Panele efektów"
+      "h1": "Panele efektów",
+      "title": "Panele efektów na żywo",
+      "desc": "Panele efektów na żywo w Scissor, po jednym na kategorię: Stylizacja, Rozmycie, Zniekształć i przekształć, Ścieżka, Łączenie kształtów, Wypaczenie i 3D."
     },
     "files": {
-      "h1": "Otwieranie, umieszczanie i eksport"
+      "h1": "Otwieranie, umieszczanie i eksport",
+      "title": "Otwieranie, umieszczanie i eksport",
+      "desc": "Otwieranie plików SVG, PDF, EPS i PSD, eksport do SVG, PDF, PNG, JPEG i WebP oraz zapis w formacie .cut. Wszystkie pliki zostają na Twoim urządzeniu."
     },
     "automation": {
-      "h1": "Automatyzacja"
+      "h1": "Automatyzacja",
+      "title": "Automatyzacja: operacje i skrypty",
+      "desc": "Automatyzacja w Scissor: nagrywanie i odtwarzanie operacji, projekty oparte na zmiennych i danych CSV z eksportem wsadowym oraz skrypty w JavaScript."
     },
     "shortcuts": {
-      "h1": "Skróty klawiszowe"
+      "h1": "Skróty klawiszowe",
+      "title": "Skróty klawiszowe",
+      "desc": "Wszystkie skróty klawiszowe Scissor według narzędzi i menu, zapisane w formacie macOS wraz z odpowiednikami dla systemów Windows i Linux."
     },
     "privacy": {
-      "h1": "Twoja praca i Twoja prywatność"
+      "h1": "Twoja praca i Twoja prywatność",
+      "title": "Twoja praca i prywatność",
+      "desc": "Scissor nie ma serwera: edytor działa w przeglądarce, a grafika nie jest nigdzie przesyłana. Jak działają dokumenty, odzyskiwanie po awarii i analityka."
     }
   },
-  "keywords": {}
+  "keywords": {
+    "": "Scissor, edytor wektorowy online, darmowy edytor wektorowy, edytor wektorowy w przeglądarce, podręcznik Scissor, jak używać Scissor, edytor SVG online, grafika wektorowa bez instalacji, edytor bez konta, edytor SVG PDF EPS PSD, edytor wektorowy i pikselowy, skróty klawiszowe i narzędzia",
+    "getting-started": "pierwsze kroki Scissor, nowy dokument, pierwszy kształt, narzędzie Prostokąt i Elipsa, zapisywanie pliku .cut, wypełnienie i obrys, instalacja Scissor jako aplikacji, autozapis i odzyskiwanie pracy, ustawienia nowego dokumentu, jak zacząć rysować wektory, edytor wektorowy offline, poradnik dla początkujących",
+    "interface": "interfejs Scissor, paleta narzędzi, pasek sterowania, dok paneli, wyszukiwanie poleceń, cofnij i ponów, przesuwanie i powiększanie płótna, pasek stanu, karty dokumentów, tryb jasny i ciemny, zmiana języka interfejsu, jak znaleźć polecenie",
+    "documents": "obszar roboczy, plansza, nowy dokument, ustawienia dokumentu, wiele obszarów roboczych w jednym pliku, narzędzie Obszar roboczy, opcje obszaru roboczego, spad do druku, tryb kolorów RGB CMYK, presety dokumentu, eksport każdego obszaru roboczego osobno, dokument wielostronicowy",
+    "tools": "narzędzia Scissor, pasek narzędzi, skróty narzędzi, narzędzie Zaznaczanie, zaznaczanie bezpośrednie, narzędzie Pióro, narzędzia kształtów i linii, narzędzia przekształcania, Kroplomierz, gradient i siatka gradientowa, siatka perspektywy, jak przełączać narzędzia",
+    "selecting": "zaznaczanie obiektów, narzędzie Zaznaczanie, zaznacz wszystko, odznacz, odwrócenie zaznaczenia, zaznacz ponownie, ten sam kolor wypełnienia, ten sam kolor obrysu, zaznaczanie prostokątne, następny obiekt powyżej i poniżej, zapisz zaznaczenie, jak zaznaczyć obiekty",
+    "paths": "rysowanie ścieżek, narzędzie Pióro, punkty kotwiczne i uchwyty, punkty narożne i gładkie, edycja ścieżki, łączenie kształtów, odsuń ścieżkę, obrys na kontur, uprość ścieżkę, ścieżka złożona, maska przycinająca, krzywe Béziera",
+    "appearance": "wypełnienie i obrys, panel Kolor, próbki, gradienty, gradient liniowy i radialny, tryby mieszania, krycie, grubość obrysu, linia przerywana, style graficzne, wzorki, zmiana kolorów grafiki",
+    "type": "dodawanie tekstu, narzędzie Tekst, tekst w obszarze, tekst na ścieżce, panel Znak, panel Akapit, interlinia światło kerning, funkcje OpenType, kapitaliki i ligatury, oblewanie tekstem, zamiana tekstu na kontury, panel Glify",
+    "layers": "panel Warstwy, grupy, maska przycinająca, jak zrobić maskę przycinającą, maska krycia, blokowanie i ukrywanie warstw, kolejność obiektów, przenieś na wierzch, grupowanie i rozgrupowanie, aktywna warstwa, etykiety kolorów warstw, zmiana kolejności warstw",
+    "transform": "panel Przekształć, skalowanie obracanie odbicie pochylenie, obrót o dokładny kąt, swobodne przekształcanie, wyrównywanie i rozmieszczanie obiektów, punkt odniesienia, przekształć każdy, powtórzenie promieniowe i lustrzane, morfing kształtów, wypaczenie kształtu, odbicie w poziomie i pionie",
+    "effects": "efekty na żywo, efekty nieniszczące, cień, poświata zewnętrzna i wewnętrzna, rozmycie gaussowskie, zygzak, odsuń ścieżkę, zaokrąglij narożniki, jak dodać cień, panel Stos malowania, wypaczenie tekstu w łuk, rozszerz wygląd",
+    "three-d": "3D i materiały, wyciągnięcie i faza, obrót bryły, nadmuchiwanie kształtu, tekst 3D z kształtu wektorowego, obrót X Y Z, perspektywa, widok izometryczny, oświetlenie, materiał plastik mat metal, efekt 3D na żywo, darmowy tekst 3D online",
+    "grids": "siatka izometryczna, siatka perspektywiczna, siatka sześciokątna, siatka złotego podziału, siatka kwadratowa, przyciąganie do siatki, siatka ukośna, perspektywa dwupunktowa, punkty zbiegu, rysunek izometryczny, siatka dla każdego obszaru roboczego, siatki Scissor",
+    "guides": "linijki i prowadnice, inteligentne prowadnice, przyciąganie do punktów, przyciąganie do siatki, narzędzie Miarka, jak dodać prowadnicę, przeciąganie prowadnic z linijki, wyrównanie do prowadnicy, jednostki linijki piksele mm cale, prowadnice z obiektów, równe odstępy między obiektami, prowadnice Scissor",
+    "pixels": "warstwa pikselowa, narzędzie Pędzel, gumka pikseli, malowanie na zdjęciu, maska warstwy, rozjaśnianie ściemnianie gąbka, wiadro z farbą, korekty poziomy barwa nasycenie, filtr rozmycie gaussowskie, mapa gradientu, zaznaczanie lassem, rasteryzacja grafiki wektorowej",
+    "image-trace": "wektoryzacja obrazu, obrys obrazu, zamiana obrazu na wektor, wektoryzacja logo, PNG do SVG, JPG do SVG, zdjęcie na wektor, szkic na wektor, presety wektoryzacji, rozszerzanie obrysu, darmowa wektoryzacja online, wektoryzacja Scissor",
+    "symbols": "panel Symbole, wystąpienia symbolu, narzędzia symbolizmu, rozrzut symboli, pędzle wektorowe, pędzel kaligraficzny, pędzel rozrzucający, pędzel artystyczny, pędzel wzorka, wypełnienie wzorkiem, edycja kafelka wzoru, przerwij łącze z symbolem",
+    "panels-basics": "panel Właściwości, panel Warstwy, panel Obszary robocze, kolejność warstw, pokaż ukryj zablokuj warstwy, pozycja i rozmiar, szybkie akcje, grupuj rozgrupuj, porządkowanie warstw, zarządzanie obszarami roboczymi, zmiana nazwy planszy, panele Scissor",
+    "panels-color-type": "panel Kolor, panel Próbki, próbki globalne, panel Gradient, punkty koloru gradientu, gradient liniowy i radialny, panel Obrys, linia przerywana i strzałki, panel Znak, rozmiar fontu interlinia kerning, panel Akapit, wyrównanie i wcięcia akapitu",
+    "panels-utility": "panel Wyrównaj, równe rozmieszczenie obiektów, łączenie kształtów, Pathfinder, automatyczne zaznaczanie, panel Przekształć, style graficzne, panel Przezroczystość, panel Glify, eksport zasobów PNG SVG, panel Zmienne, panel Historia i Operacje",
+    "panels-effects": "efekt cienia, rozmycie gaussowskie, poświata wewnętrzna i zewnętrzna, wtapianie krawędzi, zaokrąglone narożniki, zygzak i uszorstnienie, skręcanie, odsunięcie ścieżki, wypaczenie łuk wybrzuszenie flaga, 3D wyciągnięcie obrót, efekty nieniszczące, panele efektów Scissor",
+    "files": "format pliku .cut, otwieranie SVG PDF AI PSD, eksport SVG PNG JPEG WebP, eksport do PDF, umieszczanie obrazu w dokumencie, eksport na ekrany, eksport zasobów, kopiuj wytnij wklej, jak otworzyć plik AI w przeglądarce, import pliku EPS, drukowanie, darmowy edytor SVG online",
+    "automation": "automatyzacja, panel Operacje, akcje, nagrywanie poleceń, zmienne, grafika oparta na danych, zestawy danych, import CSV, eksport wsadowy, konsola skryptów, skrypty JavaScript, korespondencja seryjna",
+    "shortcuts": "skróty klawiszowe, lista skrótów Scissor, skróty narzędzi, skróty Mac Windows Linux, skrót narzędzia Pióro, klawisz narzędzia Zaznaczanie, powiększanie i pomniejszanie, skrót grupowania, cofnij ponów, wklej z przodu, skrót maski przycinającej, ściągawka skrótów",
+    "privacy": "prywatność, bez przesyłania plików, bez konta i logowania, dane zostają na urządzeniu, Google Analytics rezygnacja, odzyskiwanie niezapisanej pracy, odzyskiwanie po awarii, edytor wektorowy offline, czy Scissor przesyła pliki, czy Scissor jest prywatny, edytor bez serwera, darmowy edytor graficzny offline"
+  }
 }

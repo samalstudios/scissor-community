@@ -14,7 +14,7 @@
     "Scissor by Samal Studios.": "Scissor di Samal Studios.",
     "Third-party licences": "Licenze di terze parti",
     "| Scissor manual": "| Manuale Scissor",
-    "Scissor user manual: every tool, menu and shortcut": "Manuale utente di Scissor: ogni strumento, menu e scorciatoia",
+    "Scissor user manual: every tool, menu and shortcut": "Manuale utente di Scissor: strumenti, menu e scorciatoie",
     "Scissor user manual": "Manuale utente di Scissor"
   },
   "groups": {
@@ -55,83 +55,162 @@
   },
   "meta": {
     "": {
-      "h1": "Manuale utente di Scissor"
+      "h1": "Manuale utente di Scissor",
+      "title": "Manuale utente di Scissor",
+      "desc": "Il manuale di Scissor, l'editor grafico gratuito nel browser: strumenti, tracciati, colore, testo, griglie, effetti, livelli pixel, file e scorciatoie."
     },
     "getting-started": {
-      "h1": "Per iniziare"
+      "h1": "Per iniziare",
+      "title": "Primi passi con Scissor",
+      "desc": "Aprire Scissor, creare un documento, disegnare la prima forma, salvare un file .cut e installarlo come app. Nessun account, nulla da caricare."
     },
     "interface": {
-      "h1": "L'interfaccia"
+      "h1": "L'interfaccia",
+      "title": "L'interfaccia: strumenti, pannelli e menu",
+      "desc": "L'area di lavoro di Scissor: barra dei menu, barra di controllo, palette degli strumenti, tela, dock dei pannelli, barra di stato e lingua dell'interfaccia."
     },
     "documents": {
-      "h1": "Documenti e tavole"
+      "h1": "Documenti e tavole",
+      "title": "Documenti e tavole da disegno",
+      "desc": "Impostare documenti e più tavole da disegno: dimensioni, pagina al vivo, colonne e risoluzione, con lo strumento Tavola da disegno e il pannello omonimo."
     },
     "tools": {
-      "h1": "Gli strumenti"
+      "h1": "Gli strumenti",
+      "title": "Tutti gli strumenti di Scissor",
+      "desc": "Ogni strumento di Scissor: selezione, penna e matita, forme, testo, pennelli, Unisci e dividi, Riempimento regione, prospettiva, trama e alterazione."
     },
     "selecting": {
-      "h1": "Selezionare il lavoro"
+      "h1": "Selezionare il lavoro",
+      "title": "Selezionare gli oggetti",
+      "desc": "Selezionare in Scissor: clic e rettangolo di selezione, Seleziona tutto, Inverti, Riseleziona, Stesso per riempimento o traccia e le selezioni salvate."
     },
     "paths": {
-      "h1": "Disegnare e modificare i tracciati"
+      "h1": "Disegnare e modificare i tracciati",
+      "title": "Disegnare e modificare i tracciati",
+      "desc": "Disegnare con penna e matita, modificare ancore e maniglie di Bézier, unire, semplificare, creare tracciati offset, contornare tracce e combinare forme."
     },
     "appearance": {
-      "h1": "Colore, tratteggi e aspetto"
+      "h1": "Colore, tratteggi e aspetto",
+      "title": "Colore, tracce e aspetto",
+      "desc": "Riempimenti e tracce in Scissor: colori pieni, sfumature e pattern, campioni, opacità e metodi di fusione, stili grafici e il pannello Pila di pittura."
     },
     "type": {
-      "h1": "Testo"
+      "h1": "Testo",
+      "title": "Testo e tipografia",
+      "desc": "Testo di punto, in area e su tracciato in Scissor: font e funzioni OpenType, impostazioni Carattere e Paragrafo, conversione in profili di contorno."
     },
     "layers": {
-      "h1": "Livelli, gruppi e maschere"
+      "h1": "Livelli, gruppi e maschere",
+      "title": "Livelli, gruppi e maschere",
+      "desc": "Organizzare un documento nel pannello Livelli: ordine di sovrapposizione, nascondere e bloccare, gruppi annidati, maschere di ritaglio e di opacità."
     },
     "transform": {
-      "h1": "Spostare, trasformare e disporre"
+      "h1": "Spostare, trasformare e disporre",
+      "title": "Trasformare, allineare e disporre",
+      "desc": "Spostare, ridimensionare, ruotare, allineare e distorcere in Scissor: pannello Trasforma, Trasformazione libera, ripetizioni live, Morphing e Alterazione forma."
     },
     "effects": {
-      "h1": "Effetti attivi"
+      "h1": "Effetti attivi",
+      "title": "Effetti live non distruttivi",
+      "desc": "Effetti non distruttivi: ombre, sfocature, bagliori, bordi sfumati, distorsioni, alterazioni, angoli arrotondati, tracciato offset e riempimento schizzo."
     },
     "three-d": {
-      "h1": "3D"
+      "h1": "3D",
+      "title": "3D: estrusione, rivoluzione e gonfiaggio",
+      "desc": "Trasformare forme piatte in solidi 3D con Estrusione, Rivoluzione, Gonfia e Piano, impostando rotazione, prospettiva, illuminazione e materiale."
     },
     "grids": {
-      "h1": "Griglie"
+      "h1": "Griglie",
+      "title": "Griglie isometriche e prospettiche",
+      "desc": "Ogni tavola di Scissor ha la propria griglia: quadrata, isometrica, esagonale, obliqua, a sezione aurea, a motivo o prospettica da uno a tre punti di fuga."
     },
     "guides": {
-      "h1": "Righelli, guide e aggancio"
+      "h1": "Righelli, guide e aggancio",
+      "title": "Righelli, guide e aggancio",
+      "desc": "Allineare con precisione in Scissor: righelli, guide da righello, guide smart, aggancio ai punti e alla griglia, oltre allo strumento Misura."
     },
     "pixels": {
-      "h1": "Dipingere sui livelli pixel"
+      "h1": "Dipingere sui livelli pixel",
+      "title": "Livelli pixel: pittura e ritocco",
+      "desc": "Dipingere, ritoccare, trasformare e distorcere livelli pixel accanto alla grafica vettoriale in Scissor: pennelli, selezioni, maschere, regolazioni e filtri."
     },
     "image-trace": {
-      "h1": "Vettorializza"
+      "h1": "Vettorializza",
+      "title": "Vettorializza: da immagine a vettoriale",
+      "desc": "Convertire un'immagine in tracciati vettoriali modificabili con Scissor: modalità bianco e nero, scala di grigi o colore, predefiniti, fedeltà ed espansione."
     },
     "symbols": {
-      "h1": "Simboli, pennelli e motivi"
+      "h1": "Simboli, pennelli e motivi",
+      "title": "Simboli, pennelli e motivi",
+      "desc": "Grafica riutilizzabile in Scissor: simboli e istanze, pennelli lungo i tracciati e motivi. Basta modificare l'originale e ogni copia si aggiorna."
     },
     "panels-basics": {
-      "h1": "Proprietà, Livelli e Tavole"
+      "h1": "Proprietà, Livelli e Tavole",
+      "title": "Proprietà, Livelli e Tavole da disegno",
+      "desc": "I tre pannelli più usati di Scissor: Proprietà, che segue la selezione, Livelli, la struttura del documento, e Tavole da disegno, l'elenco delle tavole."
     },
     "panels-color-type": {
-      "h1": "Pannelli colore e testo"
+      "h1": "Pannelli colore e testo",
+      "title": "Pannelli colore e testo",
+      "desc": "I pannelli di colore e testo di Scissor: Colore, Campioni, Sfumatura e Traccia per riempimenti e tracce, Carattere e Paragrafo per la tipografia."
     },
     "panels-utility": {
-      "h1": "I pannelli di utilità"
+      "h1": "I pannelli di utilità",
+      "title": "I pannelli di utilità",
+      "desc": "I pannelli di lavoro di Scissor: Allinea, Trasforma, Pila di pittura, Vettorializza, Trasparenza, Stili grafici, Pennelli, Glifi, Simboli, Cronologia e altri."
     },
     "panels-effects": {
-      "h1": "I pannelli degli effetti"
+      "h1": "I pannelli degli effetti",
+      "title": "Pannelli effetti: ombre, sfocatura e 3D",
+      "desc": "I pannelli degli effetti live di Scissor, uno per categoria: Stilizzazione, Sfocatura, Distorci e trasforma, Tracciato, Combina forme, Alterazione e 3D."
     },
     "files": {
-      "h1": "Aprire, posizionare ed esportare"
+      "h1": "Aprire, posizionare ed esportare",
+      "title": "Aprire, inserire ed esportare",
+      "desc": "Aprire file SVG, PDF, EPS e PSD, esportare in SVG, PDF, PNG, JPEG e WebP e salvare nel formato nativo .cut. Tutto resta sul tuo dispositivo."
     },
     "automation": {
-      "h1": "Automazione"
+      "h1": "Automazione",
+      "title": "Automazione: azioni, variabili e script",
+      "desc": "Registrare e riprodurre azioni, generare varianti da variabili e dati CSV con esportazione in batch, e controllare Scissor con script JavaScript."
     },
     "shortcuts": {
-      "h1": "Scorciatoie da tastiera"
+      "h1": "Scorciatoie da tastiera",
+      "title": "Scorciatoie da tastiera di Scissor",
+      "desc": "Tutte le scorciatoie da tastiera di Scissor, elencate per strumento e per menu, nel formato macOS con gli equivalenti per Windows e Linux."
     },
     "privacy": {
-      "h1": "Il tuo lavoro e la tua privacy"
+      "h1": "Il tuo lavoro e la tua privacy",
+      "title": "Il tuo lavoro e la tua privacy",
+      "desc": "Scissor non ha server: l'editor funziona nel browser e il tuo lavoro resta sul tuo dispositivo. Come funzionano documenti, ripristino e analitiche."
     }
   },
-  "keywords": {}
+  "keywords": {
+    "": "editor vettoriale Scissor, editor vettoriale online gratis, editor vettoriale nel browser, manuale utente Scissor, come usare Scissor, programma di grafica vettoriale senza installazione, editor SVG online, editor SVG PDF EPS PSD, editor vettoriale senza account, editor vettoriale e pixel, scorciatoie da tastiera e strumenti",
+    "getting-started": "iniziare con Scissor, creare un nuovo documento, disegnare la prima forma, strumenti Rettangolo ed Ellisse, salvare un file .cut, riempimento e traccia, installare Scissor come app, salvataggio automatico e recupero, predefiniti documento, tutorial grafica vettoriale per principianti, editor vettoriale offline",
+    "interface": "interfaccia Scissor, palette degli strumenti, barra di controllo, dock dei pannelli, cercare un comando, annulla e ripeti, zoom e spostamento della tela, righelli e guide, riorganizzare i pannelli, barra di stato, tema chiaro e scuro, lingua dell'interfaccia",
+    "documents": "tavole da disegno, nuovo documento, più tavole da disegno in un file, strumento Tavola da disegno, opzioni tavola da disegno, pagina al vivo, abbondanza per la stampa, metodo colore RGB CMYK, predefiniti documento, ridisporre le tavole da disegno, esportare un file per tavola, documento vettoriale multipagina",
+    "tools": "strumenti Scissor, barra degli strumenti, scorciatoie degli strumenti, strumento Selezione, strumento Selezione diretta, strumento Penna, strumenti forma e linea, strumento Trasformazione libera, strumento Contagocce, strumento Sfumatura, strumento Trama, strumento Griglia prospettica",
+    "selecting": "selezionare oggetti, strumento Selezione, seleziona tutto, deseleziona, invertire la selezione, riseleziona, selezionare stesso riempimento, selezionare stesso colore traccia, rettangolo di selezione, selezione diretta, salvare una selezione, oggetto successivo sopra",
+    "paths": "strumento Penna, punti di ancoraggio e maniglie, curve di Bézier, punto d'angolo e punto morbido, modificare un tracciato, combina forme, elaborazione tracciati, tracciato offset, contorna traccia, semplificare un tracciato, tracciato composto, maschera di ritaglio",
+    "appearance": "riempimento e traccia, pannello Colore, campioni, creare una sfumatura, sfumatura lineare radiale e libera, metodi di fusione, maschera di opacità, spessore traccia, linea tratteggiata, stili grafici, pattern, ricolora grafica",
+    "type": "aggiungere testo, strumento Testo, testo in area, testo su tracciato, pannello Carattere, font e dimensione, interlinea spaziatura crenatura, funzioni OpenType, maiuscoletto e legature, pannello Paragrafo, testo concatenato, crea profili di contorno",
+    "layers": "pannello Livelli, gruppi e maschere di ritaglio, creare una maschera di ritaglio, maschera di opacità, bloccare e nascondere livelli, ordine di sovrapposizione, porta in primo piano porta in fondo, raggruppare e separare oggetti, livello attivo, etichette colore dei livelli, metodo di fusione e opacità, riordinare i livelli",
+    "transform": "pannello Trasforma, scala ruota rifletti e inclina, ruotare un oggetto di un angolo preciso, trasformazione libera, allineare e distribuire oggetti, punto di riferimento, trasforma singolarmente, ripeti trasformazione, ripetizione radiale griglia specchio, morphing e fusione di forme, alterazione forma e buste, capovolgere in orizzontale e verticale",
+    "effects": "effetti live non distruttivi, ombra esterna, ombra proiettata, bagliore esterno e interno, sfocatura gaussiana, irruvidisci e zig zag, tracciato offset, arrotonda angoli, riempimento schizzo, pannello Pila di pittura, increspa e gonfia, espandi aspetto",
+    "three-d": "3D e materiali, estrusione e smusso, rivoluzione di un profilo, gonfiare una forma in 3D, testo 3D da una forma vettoriale, rotazione X Y Z e prospettiva, vista isometrica, illuminazione, materiale plastica opaco metallo, effetto 3D live, 3D Scissor, testo 3D online gratis",
+    "grids": "griglia isometrica, griglia prospettica, griglia esagonale, griglia sezione aurea, griglia quadrata, aggancia alla griglia, griglia obliqua, prospettiva a due punti, punti di fuga, disegno isometrico, griglie per tavola, griglie Scissor",
+    "guides": "righelli e guide, guide smart, guide intelligenti, aggancia al punto, aggancia alla griglia, strumento Misura, come aggiungere guide, trascinare guide dal righello, allineare oggetti a una guida, unità dei righelli pixel mm pollici, creare guide da oggetti, spaziare oggetti in modo uniforme",
+    "pixels": "livello pixel, strumento Pennello, gomma per pixel, dipingere su una foto, maschera di livello, scherma brucia spugna, secchiello, regolazioni livelli tonalità saturazione, filtro sfocatura gaussiana, selezione rettangolare e lazo, rasterizzare grafica vettoriale, fotoritocco nel browser",
+    "image-trace": "vettorializzare un'immagine, vettorizzare un'immagine, ricalco immagine, convertire immagine in vettoriale, vettorializzare un logo, da PNG a SVG, foto in vettoriale, schizzo in vettoriale, ricalco in bianco e nero, espandi ricalco, vettorizzatore online gratis, Scissor Vettorializza",
+    "symbols": "pannello Simboli, istanze di simboli, strumenti simbolo, strumento Spruzzo simboli, pennelli vettoriali, pennello calligrafico, pennello diffusione, pennello artistico, pennello pattern, creare un pattern, modificare un motivo, interrompere il collegamento al simbolo",
+    "panels-basics": "pannello Proprietà, pannello Livelli, pannello Tavole da disegno, ordine di sovrapposizione dei livelli, mostrare nascondere bloccare livelli, posizione e dimensioni, azioni rapide raggruppa separa, organizzare i livelli, gestire le tavole da disegno, rinominare una tavola da disegno, dock dei pannelli",
+    "panels-color-type": "pannello Colore, pannello Campioni, campioni globali, pannello Sfumatura, fermi colore della sfumatura, sfumatura lineare e radiale, pannello Traccia, tratteggio e punte di freccia, profilo di larghezza della traccia, pannello Carattere, pannello Paragrafo, sillabazione",
+    "panels-utility": "pannello Allinea, distribuire oggetti, combina forme, elaborazione tracciati unisci meno davanti interseca, selezione automatica e tolleranza, pannello Trasforma, stili grafici, pannello Trasparenza, pannello Glifi, esportazione risorse, variabili, cronologia e azioni",
+    "panels-effects": "effetto ombra esterna, sfocatura gaussiana, bagliore interno ed esterno, sfuma bordi, arrotonda angoli, zig zag e irruvidisci, increspa e gonfia, torsione, tracciato offset, alterazione arco rigonfiamento bandiera, estrusione rivoluzione 3D, effetti live non distruttivi",
+    "files": "formato file .cut, aprire SVG PDF AI PSD, esportare in SVG PNG JPEG WebP, esportare in PDF, inserire un'immagine nel documento, esporta per schermi, sezioni ed esportazione risorse, copiare e incollare grafica, rasterizzare un vettoriale, aprire un file AI nel browser, importare un file EPS, stampare una tavola da disegno",
+    "automation": "automazione, pannello Azioni, registrare e riprodurre comandi, variabili, grafica guidata dai dati, set di dati, importare CSV, esportazione in batch, esportare set di dati, script JavaScript, console script, unione dati",
+    "shortcuts": "scorciatoie da tastiera, elenco scorciatoie Scissor, scorciatoie degli strumenti, tasti rapidi Mac Windows Linux, scorciatoia strumento Penna, tasto strumento Selezione, scorciatoie zoom avanti e indietro, scorciatoia raggruppa e separa, annulla e ripeti, incolla davanti e dietro, scorciatoia maschera di ritaglio, scelte rapide da tastiera",
+    "privacy": "privacy, nessun caricamento, senza account né registrazione, dati sul tuo dispositivo, disattivare Google Analytics, ripristino dopo un crash, installare Scissor come app, editor vettoriale offline, Scissor carica i miei file, Scissor rispetta la privacy, senza server, programma di grafica offline gratis"
+  }
 }

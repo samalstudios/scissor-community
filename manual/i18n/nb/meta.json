@@ -14,7 +14,7 @@
     "Scissor by Samal Studios.": "Scissor av Samal Studios.",
     "Third-party licences": "Tredjepartslisenser",
     "| Scissor manual": "| Scissor-håndbok",
-    "Scissor user manual: every tool, menu and shortcut": "Scissor-brukerhåndbok: hvert verktøy, meny og snarvei",
+    "Scissor user manual: every tool, menu and shortcut": "Scissor-brukerhåndbok: alle verktøy, menyer og snarveier",
     "Scissor user manual": "Scissor-brukerhåndbok"
   },
   "groups": {
@@ -55,83 +55,162 @@
   },
   "meta": {
     "": {
-      "h1": "Brukerhåndbok for Scissor"
+      "h1": "Brukerhåndbok for Scissor",
+      "title": "Scissor-brukerhåndbok",
+      "desc": "Brukerhåndboken for Scissor, det gratis vektor- og pikselprogrammet i nettleseren: verktøy, stier, farge, tekst, rutenett, effekter, filer og snarveier."
     },
     "getting-started": {
-      "h1": "Kom i gang"
+      "h1": "Kom i gang",
+      "title": "Kom i gang med Scissor",
+      "desc": "Åpne Scissor, opprett et dokument, tegn din første form, lagre en .cut-fil og installer programmet som app. Ingen konto, og ingenting lastes opp."
     },
     "interface": {
-      "h1": "Grensesnittet"
+      "h1": "Grensesnittet",
+      "title": "Grensesnittet: verktøy, paneler og menyer",
+      "desc": "Arbeidsområdet i Scissor: menylinjen, kontrollinjen, verktøypaletten, lerretet, paneldokken og statuslinjen samt lyst og mørkt tema og språkvalg."
     },
     "documents": {
-      "h1": "Dokumenter og bretter"
+      "h1": "Dokumenter og bretter",
+      "title": "Dokumenter og tegnebrett",
+      "desc": "Sett opp dokumenter med ett eller flere tegnebrett i Scissor: størrelse, utfallende kant, kolonner og oppløsning, med tegnebrettverktøyet og Tegnebrett-panelet."
     },
     "tools": {
-      "h1": "Verktøyene"
+      "h1": "Verktøyene",
+      "title": "Verktøyoversikt",
+      "desc": "Alle verktøyene i Scissor: utvalg, penn og blyant, former, tekst, pensler, rutenett og perspektiv, nett, vridning, sammenslåing og deling samt områdefyll."
     },
     "selecting": {
-      "h1": "Merkearbeid"
+      "h1": "Merkearbeid",
+      "title": "Velge grafikk og lagre utvalg",
+      "desc": "Velg grafikk i Scissor: klikk og markeringsrektangel, Velg alt, Omvendt, Velg på nytt, Samme etter fyll eller strek og lagrede utvalg."
     },
     "paths": {
-      "h1": "Tegne og redigere stier"
+      "h1": "Tegne og redigere stier",
+      "title": "Tegne og redigere stier",
+      "desc": "Tegn med penn og blyant, rediger ankerpunkter og Bézier-håndtak, og føy sammen, forenkle, forskyv og kombiner stier eller gjør streker om til konturer."
     },
     "appearance": {
-      "h1": "Farge, streker og utseende"
+      "h1": "Farge, streker og utseende",
+      "title": "Farge, streker og utseende",
+      "desc": "Fyll og strek i Scissor: ensfargede flater, fargeoverganger og mønstre, fargeprøver, opasitet og blandingsmoduser samt panelet Malingsstakk."
     },
     "type": {
-      "h1": "Tekst"
+      "h1": "Tekst",
+      "title": "Tekst og skrifttyper",
+      "desc": "Punkttekst, områdetekst og tekst på bane i Scissor: skrifttyper og OpenType-funksjoner, innstillinger for tegn og avsnitt, og tekst gjort om til konturer."
     },
     "layers": {
-      "h1": "Lag, grupper og masker"
+      "h1": "Lag, grupper og masker",
+      "title": "Lag, grupper og masker",
+      "desc": "Organiser dokumentet i Lag-panelet: nøstede lag, stabelrekkefølge, synlighet og låsing, grupper, utklippsmasker og opasitetsmasker."
     },
     "transform": {
-      "h1": "Flytte, transformere og ordne"
+      "h1": "Flytte, transformere og ordne",
+      "title": "Flytte, transformere og ordne",
+      "desc": "Flytt, skaler, roter, juster og forvreng grafikk i Scissor med Transformer-panelet, fri transformering, live-gjentakelser, Morf og formvridning."
     },
     "effects": {
-      "h1": "Effekter i sanntid"
+      "h1": "Effekter i sanntid",
+      "title": "Live-effekter: skygge, uskarphet og glød",
+      "desc": "Ikke-destruktive effekter i Scissor: slagskygge, uskarphet, glød, myk kant, forvrengning, avrundede hjørner og forskjøvet bane, som alltid kan redigeres."
     },
     "three-d": {
-      "h1": "3D"
+      "h1": "3D",
+      "title": "3D: ekstruder, roter og blås opp",
+      "desc": "Gjør flate former om til 3D i Scissor med Ekstruder og fas, Roter rundt akse, Blås opp og Plan, og still inn rotasjon, perspektiv, belysning og materiale."
     },
     "grids": {
-      "h1": "Rutenett"
+      "h1": "Rutenett",
+      "title": "Rutenett: isometrisk og perspektiv",
+      "desc": "Hvert tegnebrett i Scissor har sitt eget rutenett: kvadratisk, isometrisk, sekskantet, skrått, det gylne snitt, mønster eller ett- til trepunktsperspektiv."
     },
     "guides": {
-      "h1": "Linjaler, hjelpelinjer og festing"
+      "h1": "Linjaler, hjelpelinjer og festing",
+      "title": "Linjaler, hjelpelinjer og festing",
+      "desc": "Plasser grafikk nøyaktig i Scissor med linjaler, hjelpelinjer og smarte hjelpelinjer, festing til punkter og rutenett samt måleverktøyet."
     },
     "pixels": {
-      "h1": "Male på pikselag"
+      "h1": "Male på pikselag",
+      "title": "Piksellag: mal og retusjer",
+      "desc": "Mal, retusjer, transformer og forvreng piksellag side om side med vektorgrafikk i Scissor: pensler, utvalg, masker, justeringer og filtre."
     },
     "image-trace": {
-      "h1": "Vektorisere"
+      "h1": "Vektorisere",
+      "title": "Vektoriser: gjør bilder om til vektorer",
+      "desc": "Gjør bilder om til redigerbare vektorstier i Scissor: svart-hvitt, gråtoner eller farger, forhåndsinnstillinger, nøyaktighet og utvidelse av resultatet."
     },
     "symbols": {
-      "h1": "Symboler, pensler og mønstre"
+      "h1": "Symboler, pensler og mønstre",
+      "title": "Symboler, pensler og mønstre",
+      "desc": "Gjenbrukbar grafikk i Scissor: symboler og instanser, pensler langs stier og mønsterfliser. Rediger originalen én gang, så oppdateres alle forekomster."
     },
     "panels-basics": {
-      "h1": "Egenskaper, Lag og Brett"
+      "h1": "Egenskaper, Lag og Brett",
+      "title": "Paneler: Egenskaper, Lag og Tegnebrett",
+      "desc": "Panelene du oftest har oppe i Scissor: Egenskaper, som følger utvalget, Lag med hele dokumentets oppbygning og Tegnebrett med listen over tegnebrettene."
     },
     "panels-color-type": {
-      "h1": "Paneler for farge og tekst"
+      "h1": "Paneler for farge og tekst",
+      "title": "Paneler for farge og tekst",
+      "desc": "Farge- og tekstpanelene i Scissor: Farge, Fargeprøver, Fargeovergang og Strek for fargelegging, og Tegn og Avsnitt for skrift, linjeavstand og justering."
     },
     "panels-utility": {
-      "h1": "Verktøyrutepanelene"
+      "h1": "Verktøyrutepanelene",
+      "title": "Verktøypanelene",
+      "desc": "Arbeidspanelene i Scissor: Juster, Transformer, Malingsstakk, Vektoriser, Gjennomsiktighet, Grafikkstiler, Pensler, Glyfer, Historikk og mange flere."
     },
     "panels-effects": {
-      "h1": "Effektpanelene"
+      "h1": "Effektpanelene",
+      "title": "Effektpaneler: Stiliser, Uskarphet og 3D",
+      "desc": "Effektpanelene i Scissor, ett per kategori: Stiliser, Uskarphet, Forvreng og transformer, Bane, Kombiner former, Vri og 3D, alle redigerbare i Malingsstakk."
     },
     "files": {
-      "h1": "Åpne, plassere og eksportere"
+      "h1": "Åpne, plassere og eksportere",
+      "title": "Åpne, plassere og eksportere",
+      "desc": "Åpne SVG, PDF, EPS og PSD, eksporter SVG, PDF, PNG, JPEG og WebP, og lagre i Scissors eget .cut-format. Alt blir værende på din egen enhet."
     },
     "automation": {
-      "h1": "Automatisering"
+      "h1": "Automatisering",
+      "title": "Automatisering: handlinger og skript",
+      "desc": "Automatiser Scissor: ta opp og spill av handlinger, styr design med variabler og CSV-datasett med satsvis eksport, og skriv skript i JavaScript."
     },
     "shortcuts": {
-      "h1": "Tastatursnarveier"
+      "h1": "Tastatursnarveier",
+      "title": "Tastatursnarveier",
+      "desc": "Alle tastatursnarveier i Scissor, ordnet etter verktøy og meny, skrevet i macOS-form med de tilsvarende tastene for Windows og Linux."
     },
     "privacy": {
-      "h1": "Arbeidet ditt og personvernet ditt"
+      "h1": "Arbeidet ditt og personvernet ditt",
+      "title": "Arbeidet ditt og personvernet ditt",
+      "desc": "Scissor har ingen server bak arbeidet ditt: alt kjører i nettleseren, og filene blir hos deg. Slik virker gjenoppretting, statistikk, Studio og rapporter."
     }
   },
-  "keywords": {}
+  "keywords": {
+    "": "Scissor brukerhåndbok, hvordan bruke Scissor, vektorprogram i nettleseren, gratis vektorprogram på nett, tegneprogram uten installasjon, SVG-redigering på nett, redigere vektorgrafikk i nettleseren, uten konto og opplasting, privat vektorprogram offline, vektor- og pikselredigering, tastatursnarveier og verktøy",
+    "getting-started": "kom i gang med Scissor, opprette nytt dokument, tegne din første form, rektangel og ellipse, lagre cut-fil, fyll og strek, installere Scissor som app, automatisk gjenoppretting, dokumentmaler, lære å tegne vektorgrafikk, vektorprogram for nybegynnere",
+    "interface": "Scissor grensesnitt, verktøypalett, kontrollinje, paneldokk, kommandosøk, angre og gjør om, panorere og zoome lerretet, linjaler og hjelpelinjer, flytte og dokke paneler, statuslinje, lyst og mørkt tema, finne en kommando",
+    "documents": "tegnebrett, artboards, oppsett av nytt dokument, flere tegnebrett i én fil, tegnebrettverktøy, tegnebrettalternativer, utfallende trykk, RGB og CMYK fargemodus, oppløsning for rastereffekter, dokumentmaler, eksportere hvert tegnebrett for seg, dokument med flere sider",
+    "tools": "Scissor verktøy, verktøylinje, hurtigtaster for verktøy, valgverktøy, direktevalgverktøy, pennverktøy, form- og linjeverktøy, transformeringsverktøy, pipette, fargeovergang og nett, perspektivrutenett, bytte verktøy raskt",
+    "selecting": "velge objekter, valgverktøy, velg alt, opphev valg, omvendt utvalg, velg på nytt, samme fyllfarge, samme strekfarge, markeringsrektangel, direkte valg, neste objekt over, lagre utvalg",
+    "paths": "tegne stier, pennverktøy, ankerpunkter og håndtak, hjørnepunkter og myke punkter, redigere en sti, kombiner former, forskyv bane, konturer strek, forenkle sti, sammensatt bane, utklippsmaske, Bézier-kurver",
+    "appearance": "fyll og strek, fargepanel, fargeprøver, fargeovergang og gradient, lineær og radial fargeovergang, blandingsmodus, opasitetsmaske, strektykkelse og stiplede linjer, grafikkstiler, mønstre, omfarge grafikk, CMYK RGB HSB",
+    "type": "legge til tekst, tekstverktøy, punkttekst og områdetekst, tekst på bane, tegnpanel, skriftstørrelse og skriftvekt, linjeavstand og kerning, OpenType-funksjoner, kapitéler og ligaturer, trådet tekst, tekstbryting, lage konturer av tekst",
+    "layers": "lagpanel, grupper og utklippsmasker, lage utklippsmaske, opasitetsmaske, låse og skjule lag, flytte helt frem og helt bak, gruppere og dele opp gruppe, aktivt lag, fargemerker på lag, blandingsmodus og opasitet, utsparingsgruppe, omorganisere lag",
+    "transform": "transformeringspanel, skalere rotere speilvende og skjevstille, rotere objekt med nøyaktig vinkel, fri transformering, justere og fordele objekter, referansepunkt, transformere igjen, radial gjentakelse og speilgjentakelse, morf og overgang, formvridning, speilvende vannrett og loddrett, Scissor transformering",
+    "effects": "live-effekter, slagskygge, ytre og indre glød, gaussisk uskarphet, gjør ru og sikksakk, forskyv bane, avrund hjørner, skygge på vektorgrafikk, knip og svell, bøye tekst i en bue, utvid utseende, Scissor effekter",
+    "three-d": "3D og materialer, ekstruder og fas, roter rundt akse, blåse opp til 3D-form, lage 3D-tekst, rotasjon X Y Z og perspektiv, isometrisk visning, belysning og intensitet, plast matt metall materiale, fas og dybde, 3D-effekt, Scissor 3D",
+    "grids": "isometrisk rutenett, perspektivrutenett, sekskantet rutenett, rutenett etter det gylne snitt, kvadratisk rutenett, fest til rutenett, skrått rutenett, topunktsperspektiv, forsvinningspunkter, tegne isometrisk, rutenett per tegnebrett, Scissor rutenett",
+    "guides": "linjaler og hjelpelinjer, smarte hjelpelinjer, fest til punkt, fest til rutenett, måleverktøy, legge til hjelpelinjer, dra hjelpelinjer fra linjalen, justere objekter etter hjelpelinje, linjalenheter piksler mm tommer, hjelpelinjer fra former, fordele objekter jevnt, Scissor hjelpelinjer",
+    "pixels": "piksellag, penselverktøy, pikselviskelær, male på et foto, lagmaske, lysne brenne svamp, malingsbøtte, nivåer og fargetone/metning, fargeovergangskart, markerings- og lassoverktøy, rasterisere vektorgrafikk, bilderedigering i nettleseren",
+    "image-trace": "vektorisere bilde, bildesporing, konvertere bilde til vektor, logo til vektor, PNG til SVG, JPG til SVG, foto til vektor, skisse til vektor, svart-hvitt logo, forhåndsinnstillinger for sporing, utvide sporede stier, gratis vektorisering på nett",
+    "symbols": "symbolpanel, symbolinstanser, symbolismeverktøy, symbolspredning, vektorpensler, kalligrafisk pensel, spredningspensel, kunstpensel, mønsterpensel, lage mønster, redigere mønster, bryte kobling til symbol",
+    "panels-basics": "egenskaperpanel, lagpanel, tegnebrettpanel, stabelrekkefølge, vise skjule og låse lag, posisjon og størrelse, hurtighandlinger, gruppere og dele opp gruppe, organisere lag, administrere tegnebrett, gi tegnebrett nytt navn, Scissor paneler",
+    "panels-color-type": "fargepanel, fargeprøvepanel, globale fargeprøver, fargeovergangspanel, fargestopp, lineær og radial fargeovergang, strekpanel, stiplet strek og pilspisser, breddeprofil, tegnpanel, skriftstørrelse linjeavstand kerning, avsnittsjustering og innrykk",
+    "panels-utility": "justeringspanel, fordele objekter jevnt, kombiner former, foren minus foran snitt, automatisk valg toleranse, gjennomsiktighet og blandingsmodus, grafikkstiler, glyfer, ressurseksport PNG SVG, variabler, historikk og handlinger, Scissor paneler",
+    "panels-effects": "slagskyggeeffekt, gaussisk uskarphet, indre og ytre glød, myk kant, avrund hjørner, sikksakk og gjør ru, knip og svell, forskyv bane, vri bue bule flagg, 3D ekstruder roter blås opp, ikke-destruktive effekter, Scissor effektpaneler",
+    "files": "cut-filformat, åpne SVG PDF AI PSD, eksportere SVG PNG JPEG WebP, eksportere som PDF, plassere bilde i dokument, eksporter for skjermer, ressurseksport, kopiere og lime inn grafikk, rasterisere vektor, åpne AI-fil i nettleseren, importere EPS-fil, gratis SVG-redigering på nett",
+    "automation": "automatisering, handlingspanel, ta opp og spille av kommandoer, variabler, datadrevet grafikk, datasett, importere CSV, satsvis eksport, datafletting, skripting, skriptkonsoll, JavaScript API",
+    "shortcuts": "tastatursnarveier, Scissor snarveier, hurtigtaster for verktøy, snarveier Mac Windows Linux, snarvei til pennverktøy, tast for valgverktøy, zoome inn og ut, snarvei for gruppering, angre og gjør om, lime inn foran og bak, snarvei for utklippsmaske, oversikt over hurtigtaster",
+    "privacy": "personvern, ingen opplasting, ingen konto eller innlogging, data blir på enheten din, reservere seg mot Google Analytics, gjenopprette ulagret arbeid, installere Scissor som app, offline vektorprogram, laster Scissor opp filene mine, er Scissor privat, nettleserbasert uten server, gratis offline grafikkprogram"
+  }
 }
