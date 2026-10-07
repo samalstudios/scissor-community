@@ -1,8 +1,8 @@
 {
   "title": "Berlin Isometric",
-  "artist": "Samal Studios",
+  "artist": "Scissor Studios",
   "artistUrl": "https://scissor.studio",
-  "description": "An isometric Berlin crossroads with a tram, taxis and cyclists, and the TV Tower and Brandenburg Gate behind.",
-  "licence": "CC-BY-4.0",
-  "tags": ["isometric", "city", "berlin", "architecture"]
+  "description": "A Berlin crossroads drawn on Scissor's isometric grid: Altbau houses, a tram, cyclists, the Brandenburger Tor and the TV Tower. Every corner sits on the grid, in named layers and groups.",
+  "licence": "CC0-1.0",
+  "tags": ["isometric", "city", "berlin", "architecture", "grid"]
 }
