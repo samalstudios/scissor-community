@@ -55,83 +55,162 @@
   },
   "meta": {
     "": {
-      "h1": "Användarhandbok för Scissor"
+      "h1": "Användarhandbok för Scissor",
+      "title": "Användarhandbok för Scissor",
+      "desc": "Handboken till Scissor, den kostnadsfria designredigeraren i webbläsaren: verktyg, banor, färg, text, rutnät, effekter, pixellager, filer och kortkommandon."
     },
     "getting-started": {
-      "h1": "Kom igång"
+      "h1": "Kom igång",
+      "title": "Kom igång med Scissor",
+      "desc": "Öppna Scissor, skapa ett dokument, rita din första form, spara en .cut-fil och installera Scissor som app. Inget konto behövs och ingenting laddas upp."
     },
     "interface": {
-      "h1": "Gränssnittet"
+      "h1": "Gränssnittet",
+      "title": "Gränssnittet: verktyg, paneler och menyer",
+      "desc": "Arbetsytan i Scissor: menyraden, kontrollraden, verktygspaletten, duken, paneldockan och statusraden, och hur du byter språk i gränssnittet."
     },
     "documents": {
-      "h1": "Dokument och tavlor"
+      "h1": "Dokument och tavlor",
+      "title": "Dokument och ritytor",
+      "desc": "Ställ in dokument och flera ritytor i Scissor: storlek, utfall, kolumner och upplösning, med verktyget Rityta och panelen Ritytor."
     },
     "tools": {
-      "h1": "Verktygen"
+      "h1": "Verktygen",
+      "title": "Verktygsreferens",
+      "desc": "Alla verktyg i Scissor: markering, penna och blyertspenna, former, text, penslar, rutnät och perspektiv, nät, varp, Områdesfyllning samt Sammanfoga och dela."
     },
     "selecting": {
-      "h1": "Markera arbete"
+      "h1": "Markera arbete",
+      "title": "Markera objekt",
+      "desc": "Markera objekt i Scissor: klicka eller dra en ram, Markera alla, Omvänd, Markera igen, markera samma fyllning eller linje och spara markeringar."
     },
     "paths": {
-      "h1": "Rita och redigera banor"
+      "h1": "Rita och redigera banor",
+      "title": "Rita och redigera banor",
+      "desc": "Rita med penna och blyertspenna, redigera ankarpunkter och Bézierhandtag, sammanfoga, förenkla och förskjut banor, skapa konturlinjer och kombinera former."
     },
     "appearance": {
-      "h1": "Färg, streck och utseende"
+      "h1": "Färg, streck och utseende",
+      "title": "Färg, linjer och utseende",
+      "desc": "Fyllningar och linjer i Scissor: enfärgade ytor, övertoningar och mönster, färgrutor, opacitet, blandningslägen och panelen Målningsstapel."
     },
     "type": {
-      "h1": "Text"
+      "h1": "Text",
+      "title": "Text och teckensnitt",
+      "desc": "Punkttext, områdestext och text på bana i Scissor: teckensnitt och OpenType-funktioner, tecken- och styckeinställningar och hur du gör om text till konturer."
     },
     "layers": {
-      "h1": "Lager, grupper och maskar"
+      "h1": "Lager, grupper och maskar",
+      "title": "Lager, grupper och masker",
+      "desc": "Organisera dokumentet i panelen Lager: underlager, staplingsordning, visning och låsning, grupper, urklippsmasker och opacitetsmasker."
     },
     "transform": {
-      "h1": "Flytta, transformera och ordna"
+      "h1": "Flytta, transformera och ordna",
+      "title": "Flytta, transformera och ordna",
+      "desc": "Flytta, skala, rotera, justera och förvräng objekt i Scissor med panelen Omforma, Fri omformning, liveupprepningar, Morfa och Formvarp."
     },
     "effects": {
-      "h1": "Liveeffekter"
+      "h1": "Liveeffekter",
+      "title": "Liveeffekter: skuggor, oskärpa och glöd",
+      "desc": "Icke-förstörande effekter i Scissor: skugga, oskärpa, glöd, mjuk kant, förvrängning, varp, runda hörn, förskjuten bana och skissfyllning, alla redigerbara."
     },
     "three-d": {
-      "h1": "3D"
+      "h1": "3D",
+      "title": "3D: extrudera, rotera och blåsa upp",
+      "desc": "Gör platta former till 3D i Scissor med Extrudera, Rotera kring axel, Blås upp och Plan, och ställ in rotation, perspektiv, belysning och material."
     },
     "grids": {
-      "h1": "Rutnät"
+      "h1": "Rutnät",
+      "title": "Rutnät: rutat, isometriskt och perspektiv",
+      "desc": "Varje rityta i Scissor har sitt eget rutnät: rutat, isometriskt, sexkantigt, snett, gyllene snittet, mönster samt perspektiv med en till tre flyktpunkter."
     },
     "guides": {
-      "h1": "Linjaler, stödlinjer och fästning"
+      "h1": "Linjaler, stödlinjer och fästning",
+      "title": "Linjaler, stödlinjer och fästning",
+      "desc": "Placera allt exakt i Scissor med linjaler, stödlinjer, smarta stödlinjer, fästning mot punkter och mot rutnätet samt verktyget Mät."
     },
     "pixels": {
-      "h1": "Måla på pixellager"
+      "h1": "Måla på pixellager",
+      "title": "Pixellager: måla och retuschera",
+      "desc": "Måla, retuschera, omforma och förvräng pixellager bredvid vektorerna i Scissor: penslar, markeringar, masker, justeringar och filter."
     },
     "image-trace": {
-      "h1": "Vektorisera"
+      "h1": "Vektorisera",
+      "title": "Vektorisera: gör om bilder till vektorer",
+      "desc": "Gör om en bild till redigerbara vektorbanor i Scissor: vektorisering i svartvitt, gråskala och färg, förinställningar, återgivning och utvidgning."
     },
     "symbols": {
-      "h1": "Symboler, penslar och mönster"
+      "h1": "Symboler, penslar och mönster",
+      "title": "Symboler, penslar och mönster",
+      "desc": "Återanvändbara motiv i Scissor: symboler och instanser, penslar längs banor och mönsterplattor. Ändra originalet så uppdateras varje förekomst."
     },
     "panels-basics": {
-      "h1": "Egenskaper, Lager och Tavlor"
+      "h1": "Egenskaper, Lager och Tavlor",
+      "title": "Paneler: Egenskaper, Lager och Ritytor",
+      "desc": "Panelerna du har öppna hela tiden i Scissor: den kontextuella panelen Egenskaper, Lager som visar dokumentets struktur och Ritytor som listar varje rityta."
     },
     "panels-color-type": {
-      "h1": "Paneler för färg och text"
+      "h1": "Paneler för färg och text",
+      "title": "Paneler för färg och text",
+      "desc": "Färg- och textpanelerna i Scissor: Färg, Färgrutor, Övertoning och Linje för målning, och Tecken och Stycke för att formatera text."
     },
     "panels-utility": {
-      "h1": "Verktygspanelerna"
+      "h1": "Verktygspanelerna",
+      "title": "Arbetspaneler: Justera, Omforma, Historik",
+      "desc": "Arbetspanelerna i Scissor: Justera, Omforma, Målningsstapel, Vektorisera, Genomskinlighet, Grafiska stilar, Penslar, Glyfer, Symboler, Historik med flera."
     },
     "panels-effects": {
-      "h1": "Effektpanelerna"
+      "h1": "Effektpanelerna",
+      "title": "Effektpaneler: Stilisera, Oskärpa och 3D",
+      "desc": "Liveeffektpanelerna i Scissor, en per kategori: Stilisera, Oskärpa, Förvräng och omforma, Bana, Kombinera former, Varp och 3D, alla i Målningsstapeln."
     },
     "files": {
-      "h1": "Öppna, placera och exportera"
+      "h1": "Öppna, placera och exportera",
+      "title": "Öppna, placera och exportera",
+      "desc": "Öppna SVG, PDF, EPS och PSD, exportera till SVG, PDF, PNG, JPEG och WebP och spara egna .cut-filer. Allt stannar på din egen enhet."
     },
     "automation": {
-      "h1": "Automatisering"
+      "h1": "Automatisering",
+      "title": "Automatisering: åtgärder, variabler, skript",
+      "desc": "Automatisera Scissor: spela in och upprepa åtgärder, skapa varianter av en design med variabler och CSV-data, exportera dem i ett svep och skripta i JavaScript."
     },
     "shortcuts": {
-      "h1": "Kortkommandon"
+      "h1": "Kortkommandon",
+      "title": "Kortkommandon för verktyg och menyer",
+      "desc": "Alla kortkommandon i Scissor, ordnade efter verktyg och meny, i macOS-form med motsvarande tangenter för Windows och Linux."
     },
     "privacy": {
-      "h1": "Ditt arbete och din integritet"
+      "h1": "Ditt arbete och din integritet",
+      "title": "Ditt arbete och din integritet",
+      "desc": "Scissor har ingen server: redigeraren körs i din webbläsare och ditt arbete laddas aldrig upp. Så fungerar dokument, återställning och statistik."
     }
   },
-  "keywords": {}
+  "keywords": {
+    "": "Scissor, vektorredigerare i webbläsaren, gratis vektorprogram online, användarhandbok för Scissor, hur man använder Scissor, rita vektorgrafik utan installation, SVG-redigerare online, redigera utan konto och uppladdning, öppna SVG PDF EPS PSD, vektor- och pixelredigerare, kortkommandon och verktyg",
+    "getting-started": "kom igång med Scissor, skapa nytt dokument, rita första formen, rektangel och ellips, spara .cut-fil, fyllning och linje, installera Scissor som app, autospara och återställa, dokumentförinställningar, vektorprogram för nybörjare, rita vektorer i webbläsaren",
+    "interface": "gränssnittet i Scissor, verktygspalett, kontrollrad, paneldocka, kommandosökning, ångra och gör om, zooma och panorera, linjaler och stödlinjer, statusrad, ljust och mörkt läge, byta språk",
+    "documents": "ritytor, artboards, nytt dokument, flera ritytor i en fil, verktyget Rityta, alternativ för rityta, utfall för tryck, färgläge RGB CMYK, dokumentförinställningar, ändra storlek på rityta, exportera varje rityta, flersidigt dokument",
+    "tools": "verktyg i Scissor, verktygsfält, kortkommandon för verktyg, markeringsverktyg, direktmarkering, pennverktyget, formverktyg, pipett, övertoningsverktyg, nätverktyg, perspektivrutnät, byta verktyg",
+    "selecting": "markera objekt, markeringsverktyg, markera alla, avmarkera, omvänd markering, markera igen, markera samma fyllning, markera samma linjefärg, rammarkering, direktmarkering, spara markering, lassomarkering",
+    "paths": "rita banor, pennverktyget, ankarpunkter och handtag, hörnpunkt och slätpunkt, redigera bana, kombinera former, förskjut bana, konturlinje, förenkla bana, sammansatt bana, urklippsmask, Bézierkurvor",
+    "appearance": "fyllning och linje, färgpanel, färgrutor, övertoning, gradient, linjär och radiell övertoning, blandningslägen, opacitetsmask, linjetjocklek, streckad linje, grafiska stilar, mönsterfyllning",
+    "type": "lägga till text, textverktyget, punkttext och områdestext, text på bana, teckenpanel, teckensnitt och storlek, radavstånd och spärrning, kerning, OpenType-funktioner, kapitäler och ligaturer, textombrytning, skapa konturer av text",
+    "layers": "lagerpanelen, grupper och urklippsmasker, skapa urklippsmask, opacitetsmask, låsa och dölja lager, staplingsordning, placera längst fram, gruppera och dela upp grupp, aktivt lager, färgetiketter för lager, ändra ordning på lager, underlager",
+    "transform": "panelen Omforma, skala rotera spegla skjuva, rotera objekt i exakt vinkel, fri omformning, justera och fördela objekt, referenspunkt, transformera igen, radiell upprepning, spegelupprepning, morfa former, formvarp, vända vågrätt och lodrätt",
+    "effects": "liveeffekter, icke-förstörande effekter, skugga, yttre och inre glöd, gaussisk oskärpa, gör ojämn, förskjut bana, runda hörn, nyp och svullna, varp, utvidga utseende, lägga till skugga",
+    "three-d": "3D och material, extrudera och avfasa, rotera kring axel, blås upp, 3D-text, rotation och perspektiv, isometrisk vy, belysning, material plast matt metall, avfasning, 3D-effekt, gratis 3D-text online",
+    "grids": "isometriskt rutnät, perspektivrutnät, sexkantigt rutnät, gyllene snittet, kvadratiskt rutnät, fäst mot rutnät, snett rutnät, tvåpunktsperspektiv, flyktpunkter, rita isometriskt, rutnät per rityta, gratis perspektivrutnät online",
+    "guides": "linjaler och stödlinjer, hjälplinjer, smarta stödlinjer, fäst mot punkt, fäst mot rutnät, verktyget Mät, lägga till stödlinjer, dra stödlinje från linjalen, linjalenheter mm och pixlar, stödlinjer från objekt, fördela objekt jämnt",
+    "pixels": "pixellager, penselverktyget, radergummi, måla på foto, lagermask, efterbelys och skugga, färgburk, nivåer, nyans och mättnad, gaussisk oskärpa, rastrera vektorgrafik, pixelredigering i webbläsaren",
+    "image-trace": "vektorisera bild, bild till vektor, PNG till SVG, JPG till SVG, bildspårning, bildvektorisering, foto till vektor, skiss till vektor, vektorisera logotyp, svartvit vektorisering, förinställningar för vektorisering, gratis vektorisering online",
+    "symbols": "symbolpanelen, symbolinstanser, symbolspridning, vektorpenslar, kalligrafisk pensel, spridningspensel, konstpensel, mönsterpensel, penselverktyget, skapa mönsterfyllning, redigera mönsterplatta, symboler penslar och mönster",
+    "panels-basics": "panelen Egenskaper, lagerpanelen, panelen Ritytor, staplingsordning, visa dölja och låsa lager, position och storlek, snabbåtgärder, organisera lager, hantera ritytor, byta namn på rityta, paneldocka",
+    "panels-color-type": "färgpanel, panelen Färgrutor, globala färgrutor, övertoningspanel, färgstopp, linjär och radiell övertoning, linjepanel, streckad linje och pilspetsar, breddprofil, teckenpanel, styckepanel, avstavning och indrag",
+    "panels-utility": "panelen Justera, fördela objekt jämnt, kombinera former, förena minus främre skärning, automarkering och tolerans, panelen Omforma, målningsstapel, grafiska stilar, genomskinlighet och blandningsläge, glyfer, resursexport, historik och åtgärder",
+    "panels-effects": "skuggeffekt, gaussisk oskärpa, inre och yttre glöd, mjuk kant, runda hörn, sicksack och gör ojämn, nyp och svullna, förskjut bana, varp båge, 3D extrudera, liveeffekter, effektpaneler",
+    "files": ".cut-filformat, öppna SVG PDF PSD, öppna AI-fil, exportera SVG PNG JPEG WebP, exportera som PDF, placera bild, exportera för skärmar, resursexport, rastrera vektorgrafik, importera EPS, skriva ut rityta, gratis SVG-redigerare online",
+    "automation": "automatisering, panelen Åtgärder, spela in åtgärder, variabler, datadriven grafik, datauppsättningar, importera CSV, exportera datauppsättningar, skript, skriptkonsol, JavaScript-API, köra JS-fil",
+    "shortcuts": "kortkommandon, kortkommandon i Scissor, tangentbordsgenvägar, kortkommandon Mac Windows Linux, kortkommando pennverktyget, zooma in och ut, kortkommando gruppera, ångra och gör om, klistra in framför och bakom, kortkommando urklippsmask, byta verktyg snabbt, lista med kortkommandon",
+    "privacy": "integritet, ingen uppladdning, inget konto, data stannar på enheten, avböja Google Analytics, återställning efter krasch, installera Scissor som app, vektorprogram offline, laddar Scissor upp mina filer, webbläsarbaserat utan server, .cut-filer på datorn, gratis grafikprogram offline"
+  }
 }

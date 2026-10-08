@@ -14,7 +14,7 @@
     "Scissor by Samal Studios.": "Scissor door Samal Studios.",
     "Third-party licences": "Licenties van derden",
     "| Scissor manual": "| Scissor-handleiding",
-    "Scissor user manual: every tool, menu and shortcut": "Scissor-gebruikershandleiding: elk gereedschap, menu en sneltoets",
+    "Scissor user manual: every tool, menu and shortcut": "Scissor-handleiding: elk gereedschap, menu en sneltoets",
     "Scissor user manual": "Scissor-gebruikershandleiding"
   },
   "groups": {
@@ -55,83 +55,162 @@
   },
   "meta": {
     "": {
-      "h1": "Gebruikershandleiding van Scissor"
+      "h1": "Gebruikershandleiding van Scissor",
+      "title": "Scissor-gebruikershandleiding",
+      "desc": "De gebruikershandleiding van Scissor: gereedschappen, paden, kleur, tekst, rasters, effecten, pixellagen, bestanden en sneltoetsen van de gratis browsereditor."
     },
     "getting-started": {
-      "h1": "Aan de slag"
+      "h1": "Aan de slag",
+      "title": "Aan de slag met Scissor",
+      "desc": "Scissor openen, een document maken, uw eerste vorm tekenen, een .cut-bestand opslaan en Scissor als app installeren. Zonder account en zonder uploads."
     },
     "interface": {
-      "h1": "De interface"
+      "h1": "De interface",
+      "title": "Interface: gereedschappen en panelen",
+      "desc": "De werkruimte van Scissor: menubalk, opdrachtbalk, gereedschappen, canvas, paneeldock en statusbalk, en hoe u de taal van de interface wijzigt."
     },
     "documents": {
-      "h1": "Documenten en borden"
+      "h1": "Documenten en borden",
+      "title": "Documenten en tekengebieden",
+      "desc": "Documenten en meerdere tekengebieden instellen in Scissor: formaat, afloop, kolommen en resolutie, met het gereedschap Tekengebied en het paneel Tekengebieden."
     },
     "tools": {
-      "h1": "De gereedschappen"
+      "h1": "De gereedschappen",
+      "title": "Alle gereedschappen op een rij",
+      "desc": "Elk gereedschap in Scissor: selecteren, pen en potlood, vormen, tekst, penselen, rasters en perspectief, net, verbuigen, samenvoegen en splitsen, gebied vullen."
     },
     "selecting": {
-      "h1": "Werk selecteren"
+      "h1": "Werk selecteren",
+      "title": "Illustraties selecteren",
+      "desc": "Illustraties selecteren in Scissor: klikken en selectiekader, Alles selecteren, Omkeren, Opnieuw selecteren, Hetzelfde op vulling of lijn, opgeslagen selecties."
     },
     "paths": {
-      "h1": "Paden tekenen en bewerken"
+      "h1": "Paden tekenen en bewerken",
+      "title": "Paden tekenen en bewerken",
+      "desc": "Tekenen met pen en potlood, ankerpunten en Bézier-grepen bewerken, paden samenvoegen, vereenvoudigen en verschuiven, lijnen omtrekken en vormen combineren."
     },
     "appearance": {
-      "h1": "Kleur, strepen en weergave"
+      "h1": "Kleur, strepen en weergave",
+      "title": "Kleur, lijnen en weergave",
+      "desc": "Vulling en lijn in Scissor: effen kleuren, verlopen en patronen, stalen, dekking en overvloeimodi, en het paneel Verfstapel voor meerdere vullingen en lijnen."
     },
     "type": {
-      "h1": "Tekst"
+      "h1": "Tekst",
+      "title": "Tekst: punt-, vlak- en padtekst",
+      "desc": "Punttekst, tekst in vlak en tekst op een pad in Scissor: lettertypen en OpenType-functies, teken- en alinea-instellingen, en tekst omzetten in contouren."
     },
     "layers": {
-      "h1": "Lagen, groepen en maskers"
+      "h1": "Lagen, groepen en maskers",
+      "title": "Lagen, groepen en maskers",
+      "desc": "Een document ordenen in het paneel Lagen: sublagen, stapelvolgorde, verbergen en vergrendelen, groepen, uitknipmaskers en dekkingsmaskers."
     },
     "transform": {
-      "h1": "Verplaatsen, transformeren en rangschikken"
+      "h1": "Verplaatsen, transformeren en rangschikken",
+      "title": "Transformeren en ordenen",
+      "desc": "Illustraties verplaatsen, schalen, draaien, uitlijnen en vervormen in Scissor met het paneel Transformeren, Vrije transformatie, Morphen en Vormverbuiging."
     },
     "effects": {
-      "h1": "Live-effecten"
+      "h1": "Live-effecten",
+      "title": "Live-effecten in Scissor",
+      "desc": "Niet-destructieve effecten in Scissor: slagschaduw, vervagen, gloed, doezelaar, vervormen, verbuigen, hoeken afronden en pad verschuiven, altijd bewerkbaar."
     },
     "three-d": {
-      "h1": "3D"
+      "h1": "3D",
+      "title": "3D: extruderen, omwentelen, opblazen",
+      "desc": "Vlakke vormen omzetten in 3D in Scissor met Extruderen, Omwentelen, Opblazen en Vlak, en draaiing, perspectief, belichting en materiaal instellen."
     },
     "grids": {
-      "h1": "Rasters"
+      "h1": "Rasters",
+      "title": "Rasters: isometrisch en perspectief",
+      "desc": "Elk tekengebied in Scissor heeft een eigen raster: vierkant, isometrisch, zeshoekig, schuin, gulden snede, patroon of perspectief met één tot drie vluchtpunten."
     },
     "guides": {
-      "h1": "Liniaals, hulplijnen en vastklikken"
+      "h1": "Liniaals, hulplijnen en vastklikken",
+      "title": "Linialen, hulplijnen en uitlijnen",
+      "desc": "Werk nauwkeurig uitlijnen in Scissor met linialen, liniaalhulplijnen, slimme hulplijnen, magnetisch aan punt en aan raster, en het gereedschap Meten."
     },
     "pixels": {
-      "h1": "Schilderen op pixellagen"
+      "h1": "Schilderen op pixellagen",
+      "title": "Pixellagen: schilderen en retoucheren",
+      "desc": "Pixellagen naast vectorillustraties schilderen, retoucheren, transformeren en vervormen in Scissor: penselen, selecties, maskers, aanpassingen en filters."
     },
     "image-trace": {
-      "h1": "Vectoriseren"
+      "h1": "Vectoriseren",
+      "title": "Vectoriseren: afbeelding naar vector",
+      "desc": "Een afbeelding vectoriseren in Scissor: zwart-wit, grijswaarden of kleur, voorinstellingen, opties voor paden, hoeken en ruis, en omzetten in bewerkbare paden."
     },
     "symbols": {
-      "h1": "Symbolen, penselen en patronen"
+      "h1": "Symbolen, penselen en patronen",
+      "title": "Symbolen, penselen en patronen",
+      "desc": "Herbruikbare illustraties in Scissor: symbolen en instanties, penselen langs paden en patroontegels. Eén keer bewerken en elk gebruik wordt bijgewerkt."
     },
     "panels-basics": {
-      "h1": "Eigenschappen, Lagen en Borden"
+      "h1": "Eigenschappen, Lagen en Borden",
+      "title": "Eigenschappen, Lagen, Tekengebieden",
+      "desc": "De panelen die in Scissor meestal open blijven: Eigenschappen volgt uw selectie, Lagen toont het hele document en Tekengebieden somt alle tekengebieden op."
     },
     "panels-color-type": {
-      "h1": "Panelen voor kleur en tekst"
+      "h1": "Panelen voor kleur en tekst",
+      "title": "Panelen voor kleur en tekst",
+      "desc": "De kleur- en tekstpanelen in Scissor: Kleur, Stalen, Verloop en Lijn voor vulling en lijnen, en Teken en Alinea voor de opmaak van tekst."
     },
     "panels-utility": {
-      "h1": "De hulppanelen"
+      "h1": "De hulppanelen",
+      "title": "De hulppanelen van Scissor",
+      "desc": "De werkpanelen van Scissor: Uitlijnen, Transformeren, Verfstapel, Vectoriseren, Transparantie, Grafische stijlen, Penselen, Glyphs, Geschiedenis en meer."
     },
     "panels-effects": {
-      "h1": "De effectpanelen"
+      "h1": "De effectpanelen",
+      "title": "Effectpanelen voor live-effecten",
+      "desc": "De effectpanelen in Scissor, één per categorie: Stileren, Vervagen, Vervormen, Pad, Vormen combineren, Verbuigen en 3D, allemaal live in de Verfstapel."
     },
     "files": {
-      "h1": "Openen, plaatsen en exporteren"
+      "h1": "Openen, plaatsen en exporteren",
+      "title": "Openen, plaatsen en exporteren",
+      "desc": "SVG, PDF, EPS en PSD openen, exporteren naar SVG, PDF, PNG, JPEG en WebP, en opslaan als eigen .cut-bestand. Alles blijft op uw eigen apparaat."
     },
     "automation": {
-      "h1": "Automatisering"
+      "h1": "Automatisering",
+      "title": "Automatisering: handelingen en scripts",
+      "desc": "Scissor automatiseren: handelingen opnemen en afspelen, ontwerpen vullen met variabelen en CSV-gegevenssets, in batch exporteren en scripten in JavaScript."
     },
     "shortcuts": {
-      "h1": "Sneltoetsen"
+      "h1": "Sneltoetsen",
+      "title": "Alle sneltoetsen van Scissor",
+      "desc": "Alle sneltoetsen van Scissor, geordend per gereedschap en per menu, in de macOS-notatie met de equivalenten voor Windows en Linux."
     },
     "privacy": {
-      "h1": "Je werk en je privacy"
+      "h1": "Je werk en je privacy",
+      "title": "Uw werk en uw privacy",
+      "desc": "Scissor heeft geen server: de editor draait in uw browser en uw illustraties worden nooit geüpload. Zo werken documenten, herstel en statistieken."
     }
   },
-  "keywords": {}
+  "keywords": {
+    "": "Scissor, vectoreditor in de browser, gratis vectoreditor online, Scissor handleiding, hoe werkt Scissor, vectortekenprogramma zonder installatie, SVG-editor online, vectorafbeeldingen bewerken in de browser, editor zonder account, SVG PDF EPS PSD bewerken, vector- en pixeleditor, sneltoetsen en gereedschappen",
+    "getting-started": "aan de slag met Scissor, nieuw document maken, eerste vorm tekenen, rechthoek en ellips tekenen, .cut-bestand opslaan, vulling en lijn, Scissor als app installeren, automatisch opslaan en herstellen, documentvoorinstellingen, leren vectortekenen, vectoreditor offline, vectoreditor tutorial voor beginners",
+    "interface": "Scissor interface, gereedschappen, opdrachtbalk, paneeldock, opdrachten zoeken, ongedaan maken en opnieuw, canvas pannen en zoomen, linialen en hulplijnen, panelen verplaatsen, statusbalk, lichte en donkere modus, taal wijzigen",
+    "documents": "tekengebieden, artboards, nieuw document instellen, meerdere tekengebieden in één bestand, gereedschap Tekengebied, afloop voor drukwerk, RGB CMYK kleurmodus, resolutie rastereffecten, documentvoorinstellingen, tekengebied toevoegen, tekengebieden apart exporteren, document met meerdere pagina's",
+    "tools": "Scissor gereedschappen, gereedschapsbalk, sneltoetsen voor gereedschappen, gereedschap Selecteren, gereedschap Direct selecteren, gereedschap Pen, vorm- en lijngereedschappen, transformatiegereedschappen, gereedschap Pipet, verloop en net, gereedschap Perspectiefraster, gereedschap Verbuigen",
+    "selecting": "illustraties selecteren, objecten selecteren, gereedschap Selecteren, alles selecteren, deselecteren, selectie omkeren, opnieuw selecteren, zelfde vulkleur selecteren, zelfde lijnkleur selecteren, selectiekader, direct selecteren, selectie opslaan",
+    "paths": "paden tekenen, pengereedschap, ankerpunten en grepen, hoekpunt en vloeiend punt, pad bewerken, vormen combineren, pathfinder, pad verschuiven, lijn omtrekken, pad vereenvoudigen, uitknipmasker, Bézier-curves",
+    "appearance": "vulling en lijn, kleurpaneel, stalen, verloop maken, lineair radiaal vrij verloop, overvloeimodi, dekkingsmasker, lijndikte uiteinden hoeken, stippellijn, grafische stijlen, illustratie opnieuw kleuren, globale stalen",
+    "type": "tekst toevoegen, gereedschap Tekst, punttekst, tekst in vlak, tekst op een pad, tekenpaneel, lettergrootte en letterdikte, regelafstand spatiëring kerning, OpenType-functies, kleinkapitalen en ligaturen, tekstomloop, tekst omzetten in contouren",
+    "layers": "lagenpaneel, groepen en uitknipmaskers, uitknipmasker maken, dekkingsmasker met verloop, lagen vergrendelen en verbergen, stapelvolgorde, naar voren brengen, naar achteren brengen, objecten groeperen en degroeperen, laagkleur, lagen herschikken, Scissor lagen",
+    "transform": "paneel Transformeren, schalen roteren spiegelen schuintrekken, object draaien met exacte hoek, vrije transformatie, objecten uitlijnen en verdelen, referentiepunt, opnieuw transformeren, live herhaling radiaal raster spiegeling, vormen morphen, vormverbuiging, horizontaal en verticaal spiegelen, Scissor transformeren",
+    "effects": "live-effecten, niet-destructieve effecten, slagschaduw, gloed buiten, gloed binnen, Gaussiaans vervagen, ruw maken en zigzag, hoeken afronden, slagschaduw toevoegen, verfstapel, slinken en opblazen, tekst verbuigen in een boog",
+    "three-d": "3D en materialen, extruderen en afschuinen, omwentelen, 3D opblazen, 3D-tekst maken, rotatie X Y Z, perspectief, isometrische weergave, belichting, materiaal plastic mat metaal, 3D-effect, gratis 3D-tekst online",
+    "grids": "isometrisch raster, perspectiefraster, zeshoekig raster, gulden snede raster, vierkant raster, magnetisch aan raster, schuin raster, tweepuntsperspectief, verdwijnpunten, isometrisch tekenen, raster per tekengebied, perspectiefraster online",
+    "guides": "linialen en hulplijnen, slimme hulplijnen, magnetisch aan punt, magnetisch aan raster, gereedschap Meten, hulplijnen toevoegen, hulplijn uit liniaal slepen, uitlijnen op hulplijn, liniaaleenheden pixels mm inch, hulplijnen van objecten maken, objecten gelijkmatig verdelen, vastklikken",
+    "pixels": "pixellaag, gereedschap Penseel, pixelgum, op een foto schilderen, laagmasker, tegenhouden doordrukken spons, verfemmer, niveaus kleurtoon verzadiging, Gaussiaans vervagen, verloopkaart, selectiekader en lasso, vectorillustratie rasteren",
+    "image-trace": "afbeelding vectoriseren, afbeelding omzetten naar vector, logo vectoriseren, PNG naar SVG, JPG naar SVG, foto naar vector, schets vectoriseren, afbeelding overtrekken, zwart-wit logo overtrekken, gratis vectoriseren online, lijntekening vectoriseren, Scissor vectoriseren",
+    "symbols": "symbolenpaneel, symboolinstanties, symboolgereedschappen, symbolen spuiten, vectorpenselen, kalligrafisch penseel, verspreidingspenseel, kunstpenseel, patroonpenseel, patroon maken, patroontegel bewerken, symboolkoppeling verbreken",
+    "panels-basics": "paneel Eigenschappen, paneel Lagen, paneel Tekengebieden, stapelvolgorde, lagen tonen en verbergen, lagen vergrendelen, positie en grootte, snelacties, lagen ordenen, tekengebieden beheren, tekengebied hernoemen, paneeldock",
+    "panels-color-type": "kleurpaneel, stalenpaneel, globale stalen, verlooppaneel, kleurstops, lineair radiaal verloop, lijnpaneel, stippellijn en pijlpunten, breedteprofiel, tekenpaneel, alineapaneel, woordafbreking",
+    "panels-utility": "paneel Uitlijnen, objecten gelijkmatig verdelen, vormen combineren, pathfinder, automatisch selecteren, paneel Transformeren, verfstapel, grafische stijlen, afbeelding vectoriseren, transparantie en overvloeimodus, glyphs, assets exporteren",
+    "panels-effects": "slagschaduw-effect, Gaussiaans vervagen, gloed binnen en buiten, doezelaar, hoeken afronden, zigzag en ruw maken, slinken en opblazen, pad verschuiven, verbuigen boog bolling vlag, 3D extruderen omwentelen opblazen, live-effecten, effectpanelen",
+    "files": ".cut-bestandsformaat, SVG PDF AI PSD openen, exporteren als SVG PNG JPEG WebP, exporteren als PDF, afbeelding plaatsen, exporteren voor schermen, slices en assets, kopiëren en plakken, vector naar pixels rasteren, AI-bestand openen in browser, EPS importeren, gratis SVG-editor online",
+    "automation": "automatisering, paneel Handelingen, handelingen opnemen en afspelen, variabelen, datagestuurde afbeeldingen, gegevenssets, CSV importeren, batch-export, gegevenssets exporteren, scripts, scriptconsole, JavaScript-API",
+    "shortcuts": "sneltoetsen, Scissor sneltoetsen lijst, sneltoetsen gereedschappen, toetscombinaties Mac Windows Linux, sneltoets pen, sneltoets selecteren, inzoomen uitzoomen sneltoets, groeperen sneltoets, ongedaan maken opnieuw, vooraan plakken, sneltoets uitknipmasker, sneltoetsen overzicht",
+    "privacy": "privacy, geen upload, geen account, gegevens blijven op uw apparaat, Google Analytics uitschakelen, herstel na crash, Scissor als app installeren, offline vectoreditor, uploadt Scissor mijn bestanden, is Scissor privé, editor zonder server, gratis offline tekenprogramma"
+  }
 }

@@ -55,83 +55,162 @@
   },
   "meta": {
     "": {
-      "h1": "Manual d’usuari de Scissor"
+      "h1": "Manual d’usuari de Scissor",
+      "title": "Manual d'usuari de Scissor",
+      "desc": "El manual de Scissor, l'editor de disseny gratuït que funciona al navegador: eines, camins, color, text, quadrícules, efectes, píxels, fitxers i dreceres."
     },
     "getting-started": {
-      "h1": "Primers passos"
+      "h1": "Primers passos",
+      "title": "Primers passos amb Scissor",
+      "desc": "Obriu Scissor, creeu un document, dibuixeu la primera forma, deseu un fitxer .cut i instal·leu Scissor com a aplicació. Sense compte i sense pujar res."
     },
     "interface": {
-      "h1": "La interfície"
+      "h1": "La interfície",
+      "title": "Interfície: eines, panells i menús",
+      "desc": "L'espai de treball de Scissor: barra de menús, barra de control, paleta d'eines, llenç, acoblador de panells, barra d'estat i com canviar l'idioma."
     },
     "documents": {
-      "h1": "Documents i taules"
+      "h1": "Documents i taules",
+      "title": "Documents i taules de treball",
+      "desc": "Configureu documents amb una o diverses taules de treball a Scissor: mida, sang d'impressió, columnes i resolució, amb l'eina i el panell Taules de treball."
     },
     "tools": {
-      "h1": "Les eines"
+      "h1": "Les eines",
+      "title": "Referència d'eines",
+      "desc": "Totes les eines de Scissor: selecció, Ploma i Llapis, formes, text, pinzells, perspectiva, malla, deformació, Fusionar i dividir, i Emplenament de regió."
     },
     "selecting": {
-      "h1": "Seleccionar el treball"
+      "h1": "Seleccionar el treball",
+      "title": "Seleccionar objectes",
+      "desc": "Selecció a Scissor: clic i rectangle de selecció, Seleccionar-ho tot, Invertir la selecció, Igual per emplenament o traç, i seleccions desades."
     },
     "paths": {
-      "h1": "Dibuixar i editar camins"
+      "h1": "Dibuixar i editar camins",
+      "title": "Dibuixar i editar camins",
+      "desc": "Dibuixeu amb la Ploma i el Llapis, editeu punts d'ancoratge i nanses Bézier, i uniu, simplifiqueu, desplaceu i contornegeu camins o combineu formes a Scissor."
     },
     "appearance": {
-      "h1": "Color, contorns i aparença"
+      "h1": "Color, contorns i aparença",
+      "title": "Color, emplenaments i traços",
+      "desc": "Emplenaments i traços a Scissor: color pla, degradats i motius, mostres, opacitat i modes de fusió, i el panell Pila de pintura per apilar diverses pintures."
     },
     "type": {
-      "h1": "Text"
+      "h1": "Text",
+      "title": "Text i tipografia",
+      "desc": "Text de punt, d'àrea i en camí a Scissor: tipus de lletra i funcions OpenType, opcions de caràcter i paràgraf, i com convertir el text en contorns."
     },
     "layers": {
-      "h1": "Capes, grups i màscares"
+      "h1": "Capes, grups i màscares",
+      "title": "Capes, grups i màscares",
+      "desc": "Organitzeu un document al panell Capes: ordre de superposició, visibilitat i blocatge, etiquetes de color, grups, màscares de retall i màscares d'opacitat."
     },
     "transform": {
-      "h1": "Moure, transformar i organitzar"
+      "h1": "Moure, transformar i organitzar",
+      "title": "Transformar i organitzar",
+      "desc": "Moveu, redimensioneu, gireu i alineeu objectes a Scissor amb el panell Transformar, Transformació lliure, repeticions en viu, Metamorfosi i Deformació de forma."
     },
     "effects": {
-      "h1": "Efectes en viu"
+      "h1": "Efectes en viu",
+      "title": "Efectes en viu no destructius",
+      "desc": "Efectes editables a Scissor: ombres, desenfocament, resplendors, vores difuminades, deformació, cantonades arrodonides, desplaçar el camí i emplenament d'esbós."
     },
     "three-d": {
-      "h1": "3D"
+      "h1": "3D",
+      "title": "3D: extrusió, revolució i inflament",
+      "desc": "Convertiu formes planes en objectes 3D a Scissor amb Extrusió, Revolució, Inflar i Pla, i ajusteu la rotació, la perspectiva, la il·luminació i el material."
     },
     "grids": {
-      "h1": "Quadrícules"
+      "h1": "Quadrícules",
+      "title": "Quadrícula isomètrica i de perspectiva",
+      "desc": "Cada taula de treball de Scissor té la seva pròpia quadrícula: quadrada, isomètrica, hexagonal, obliqua, àuria, de motiu i en perspectiva d'un a tres punts."
     },
     "guides": {
-      "h1": "Regles, guies i ajust"
+      "h1": "Regles, guies i ajust",
+      "title": "Regles, guies intel·ligents i ajust",
+      "desc": "Alineeu amb precisió a Scissor: regles, guies de regle, guies intel·ligents, ajust a punts i a la quadrícula, i l'eina Mesura per a distàncies i angles."
     },
     "pixels": {
-      "h1": "Pintar sobre capes de píxels"
+      "h1": "Pintar sobre capes de píxels",
+      "title": "Capes de píxels: pintar i retocar",
+      "desc": "Pinteu, retoqueu, transformeu i distorsioneu capes de píxels al costat dels vectors a Scissor: pinzells, seleccions, màscares de capa, ajustos i filtres."
     },
     "image-trace": {
-      "h1": "Vectoritzar"
+      "h1": "Vectoritzar",
+      "title": "Vectoritzar: convertir imatge en vector",
+      "desc": "Convertiu una imatge en camins vectorials amb Scissor: vectorització en blanc i negre, escala de grisos o color, valors predefinits, fidelitat i expansió."
     },
     "symbols": {
-      "h1": "Símbols, pinzells i motius"
+      "h1": "Símbols, pinzells i motius",
+      "title": "Símbols, pinzells i motius",
+      "desc": "Elements reutilitzables a Scissor: símbols i instàncies, pinzells que segueixen un camí i motius en mosaic. Editeu l'original i totes les còpies s'actualitzen."
     },
     "panels-basics": {
-      "h1": "Propietats, Capes i Taules"
+      "h1": "Propietats, Capes i Taules",
+      "title": "Propietats, Capes i Taules de treball",
+      "desc": "Els panells que tindreu sempre oberts a Scissor: Propietats, que s'adapta a la selecció; Capes, l'esquema del document; i Taules de treball."
     },
     "panels-color-type": {
-      "h1": "Panquells de color i text"
+      "h1": "Panquells de color i text",
+      "title": "Panells de color i text",
+      "desc": "Els panells de color i text de Scissor: Color, Mostres, Degradat i Traç per a la pintura, i Caràcter i Paràgraf per donar format al text."
     },
     "panels-utility": {
-      "h1": "Els panquells d’utilitat"
+      "h1": "Els panquells d’utilitat",
+      "title": "Panells d'utilitat",
+      "desc": "Els panells de treball de Scissor: Alinear, Transformar, Pila de pintura, Vectoritzar, Transparència, Estils gràfics, Pinzells, Glifs, Historial i molts més."
     },
     "panels-effects": {
-      "h1": "Els panquells d’efectes"
+      "h1": "Els panquells d’efectes",
+      "title": "Panells d'efectes en viu",
+      "desc": "Els panells d'efectes de Scissor, un per categoria: Estilitzar, Desenfocar, Distorsionar, Camí, Combinar formes, Deformar i 3D, tots a la Pila de pintura."
     },
     "files": {
-      "h1": "Obrir, col·locar i exportar"
+      "h1": "Obrir, col·locar i exportar",
+      "title": "Obrir, col·locar i exportar",
+      "desc": "Obriu SVG, PDF, EPS, AI i PSD, exporteu a SVG, PDF, PNG, JPEG i WebP, i deseu fitxers .cut natius. Tot es queda al vostre dispositiu, sense pujar res."
     },
     "automation": {
-      "h1": "Automatització"
+      "h1": "Automatització",
+      "title": "Accions, variables i scripts",
+      "desc": "Automatitzeu Scissor amb accions enregistrades, variables i dades CSV per crear variants d'un disseny, exportació per lots i scripts en JavaScript."
     },
     "shortcuts": {
-      "h1": "Drecers de teclat"
+      "h1": "Drecers de teclat",
+      "title": "Dreceres de teclat",
+      "desc": "Totes les dreceres de teclat de Scissor, ordenades per eina i per menú, en format macOS i amb els equivalents per a Windows i Linux."
     },
     "privacy": {
-      "h1": "La teva feina i la teva privacitat"
+      "h1": "La teva feina i la teva privacitat",
+      "title": "La vostra feina i la vostra privadesa",
+      "desc": "Scissor no té servidor: l'editor funciona al navegador i la vostra feina no es puja mai. Com funcionen els documents, la recuperació i l'analítica."
     }
   },
-  "keywords": {}
+  "keywords": {
+    "": "editor vectorial Scissor, manual d'usuari de Scissor, editor vectorial gratuït, editor vectorial en línia, dibuix vectorial sense instal·lar, editar gràfics vectorials al navegador, editor sense compte ni pujades, editor SVG PDF EPS PSD, editor vectorial privat sense connexió, editor vectorial i de píxels, dreceres de teclat i eines, editor SVG en català",
+    "getting-started": "primers passos amb Scissor, crear un document nou, dibuixar la primera forma, eines Rectangle i El·lipse, desar un fitxer .cut, emplenament i traç, instal·lar com a aplicació, desament automàtic i recuperació, valors predefinits de document, com començar a dibuixar vectors, editor vectorial sense connexió, tutorial d'editor vectorial per a principiants",
+    "interface": "interfície de Scissor, paleta d'eines, barra de control, acoblador de panells, cerca de comandaments, desfer i refer, zoom i desplaçament del llenç, barra d'estat, reorganitzar panells, mode clar i fosc, canviar l'idioma, taules de treball",
+    "documents": "taules de treball, configurar un document nou, diverses taules de treball en un fitxer, eina Taula de treball, opcions de la taula de treball, sang per a impremta, mode de color RGB CMYK, resolució dels efectes ràster, valors predefinits de document, com afegir una taula de treball, exportar cada taula per separat, document vectorial de diverses pàgines",
+    "tools": "eines de Scissor, barra d'eines, dreceres de les eines, eina Selecció, eina Selecció directa, eina Ploma, eines de formes i línies, eines de transformació, eina Comptagotes, eines Degradat i Malla, eina Quadrícula de perspectiva, eines Deformar i Amplada",
+    "selecting": "seleccionar objectes, eina Selecció, seleccionar-ho tot, desseleccionar, invertir la selecció, tornar a seleccionar, mateix color d'emplenament, mateix color de traç, rectangle de selecció, selecció directa, desar la selecció, com seleccionar diversos objectes",
+    "paths": "dibuixar camins, eina Ploma, punts d'ancoratge i nanses, com editar un camí, combinar formes, buscacamins, desplaçar el camí, contornejar el traç, simplificar un camí, camí compost, màscara de retall, corbes Bézier",
+    "appearance": "emplenament i traç, panell Color, mostres de color, degradats, degradat lineal radial i lliure, modes de fusió, màscara d'opacitat, gruix i extrems del traç, línies discontínues, estils gràfics, motius d'emplenament, tornar a acolorir la il·lustració",
+    "type": "afegir text, eina Text, text de punt, text d'àrea, text en camí, panell Caràcter, interlineat i interlletratge, funcions OpenType, versaletes i lligadures, panell Paràgraf, ajustament del text, convertir text en contorns",
+    "layers": "panell Capes, ordre de superposició, com fer una màscara de retall, màscara d'opacitat, bloquejar i amagar capes, portar al davant i enviar al fons, agrupar i desagrupar, capa activa, etiquetes de color de capa, mode de fusió i opacitat, reordenar capes, capes a Scissor",
+    "transform": "panell Transformar, redimensionar i girar objectes, reflectir i inclinar, girar un angle exacte, eina Transformació lliure, alinear i distribuir objectes, punt de referència, repetició radial i en mirall, metamorfosi entre formes, deformació de forma, capgirar horitzontalment i verticalment, quadre delimitador",
+    "effects": "efectes en viu no destructius, ombra projectada, resplendor exterior i interior, desenfocament gaussià, fer aspre i ziga-zaga, desplaçar el camí, arrodonir les cantonades, com afegir una ombra a un vector, panell Pila de pintura, arrugar i inflar, text en arc, expandir l'aspecte",
+    "three-d": "3D i materials, extrusió i bisell, revolució d'un perfil, inflar una forma 3D, com fer text 3D, rotació X Y Z i perspectiva, vista isomètrica, il·luminació, material plàstic mat metàl·lic, profunditat i passos del bisell, efecte 3D en viu, text 3D gratuït en línia",
+    "grids": "quadrícula isomètrica, quadrícula de perspectiva, quadrícula hexagonal, quadrícula de proporció àuria, quadrícula quadrada, ajustar a la quadrícula, quadrícula obliqua, perspectiva de dos punts, punts de fuga, com dibuixar en isomètric, graella per taula de treball, quadrícula de perspectiva gratuïta",
+    "guides": "regles i guies, guies intel·ligents, ajustar al punt, ajustar a la quadrícula, eina Mesura, com crear guies, arrossegar guies des del regle, alinear objectes a una guia, unitats del regle píxels mm polzades, crear guies a partir d'objectes, distribuir objectes uniformement, guies a Scissor",
+    "pixels": "capa de píxels, eina Pinzell, goma de píxels, pintar sobre una foto, màscara de capa, aclarir i enfosquir, pot de pintura, nivells i to/saturació, filtre de desenfocament gaussià, mapa de degradat, selecció amb marc i llaç, rasteritzar vectors",
+    "image-trace": "vectoritzar una imatge, calc d'imatge, convertir imatge en vector, vectoritzar un logotip, PNG a SVG, JPG a vector, foto a vector, esbós a vector, vectorització en blanc i negre, valors predefinits de vectorització, expandir camins vectoritzats, vectoritzador d'imatges gratuït en línia",
+    "symbols": "panell Símbols, instàncies de símbol, eines de simbolisme, dispersió de símbols, pinzells vectorials, pinzell cal·ligràfic, pinzell de dispersió, pinzell artístic, pinzell de motiu, eina Pinzell, com crear un emplenament de motiu, editar la rajola del motiu",
+    "panels-basics": "panell Propietats, panell Capes, panell Taules de treball, ordre de les capes, mostrar amagar i bloquejar capes, posició i mida, accions ràpides, agrupar i desagrupar, com organitzar les capes, gestionar taules de treball, canviar el nom d'una taula de treball, panells de Scissor",
+    "panels-color-type": "panell Color, panell Mostres, mostres globals, panell Degradat, aturades de color del degradat, degradat lineal i radial, panell Traç, traç discontinu i puntes de fletxa, perfil d'amplada del traç, panell Caràcter, panell Paràgraf, com fer un degradat",
+    "panels-utility": "panell Alinear, distribuir objectes uniformement, combinar formes, unir menys el davant i intersecar, selecció automàtica, panell Transformar, panell Pila de pintura, estils gràfics, panell Vectoritzar, panell Transparència, exportació de recursos, panells Historial i Accions",
+    "panels-effects": "efecte d'ombra projectada, desenfocament gaussià, resplendor interior i exterior, difuminar vores, arrodonir les cantonades, ziga-zaga i fer aspre, arrugar i inflar, desplaçar el camí, deformar en arc i bandera, extrusió i revolució 3D, efectes en viu no destructius, panells d'efectes de Scissor",
+    "files": "format .cut, obrir SVG PDF AI PSD, exportar SVG PNG JPEG WebP, exportar a PDF, col·locar una imatge al document, exportar per a pantalles, sectors i exportació de recursos, copiar i enganxar il·lustracions, rasteritzar vectors, obrir un fitxer AI al navegador, importar un fitxer EPS, editor SVG gratuït en línia",
+    "automation": "automatització, panell Accions, enregistrar i reproduir accions, variables, gràfics basats en dades, conjunts de dades, importar CSV, exportació per lots, consola d'scripts, API de JavaScript, executar un script, combinació de correspondència",
+    "shortcuts": "dreceres de teclat, llista de dreceres de Scissor, dreceres de les eines, tecles ràpides Mac Windows Linux, drecera de la Ploma, tecla de l'eina Selecció, dreceres de zoom, drecera per agrupar i desagrupar, desfer i refer, enganxar al davant i al darrere, drecera de màscara de retall, full de referència de dreceres",
+    "privacy": "privacitat, privadesa de les dades, sense pujar fitxers, sense compte ni registre, les dades es queden al dispositiu, desactivar l'analítica, recuperar feina no desada, instal·lar Scissor com a aplicació, editor vectorial sense connexió, és segur Scissor, sense servidor, fitxers .cut al vostre ordinador"
+  }
 }

@@ -14,7 +14,7 @@
     "Scissor by Samal Studios.": "Scissorin tekijä Samal Studios.",
     "Third-party licences": "Kolmannen osapuolen lisenssit",
     "| Scissor manual": "| Scissor-käsikirja",
-    "Scissor user manual: every tool, menu and shortcut": "Scissorin käyttäjäopas: jokainen työkalu, valikko ja pikanäppäin",
+    "Scissor user manual: every tool, menu and shortcut": "Scissorin käyttöopas: työkalut, valikot ja pikanäppäimet",
     "Scissor user manual": "Scissorin käyttäjäopas"
   },
   "groups": {
@@ -55,83 +55,162 @@
   },
   "meta": {
     "": {
-      "h1": "Scissorin käyttöopas"
+      "h1": "Scissorin käyttöopas",
+      "title": "Scissorin käyttöopas",
+      "desc": "Opas Scissoriin, ilmaiseen selainpohjaiseen suunnitteluohjelmaan: työkalut, polut, värit, teksti, ruudukot, tehosteet, pikselitasot, tiedostot ja pikanäppäimet."
     },
     "getting-started": {
-      "h1": "Aloitus"
+      "h1": "Aloitus",
+      "title": "Scissorin käytön aloittaminen",
+      "desc": "Avaa Scissor, luo asiakirja, piirrä ensimmäinen muoto, tallenna .cut-tiedosto ja asenna se sovellukseksi. Tiliä ei tarvita eikä mitään ladata palvelimelle."
     },
     "interface": {
-      "h1": "Käyttöliittymä"
+      "h1": "Käyttöliittymä",
+      "title": "Käyttöliittymä: työkalut ja paneelit",
+      "desc": "Scissorin työtila: valikkorivi, komentorivi, työkalupalkki, piirtopinta, paneelialue ja tilarivi sekä käyttöliittymän kielen vaihtaminen."
     },
     "documents": {
-      "h1": "Asiakirjat ja taustat"
+      "h1": "Asiakirjat ja taustat",
+      "title": "Asiakirjat ja piirtoalueet",
+      "desc": "Asiakirjan ja sen piirtoalueiden määrittäminen Scissorissa: koko, leikkuuvara, sarakkeet ja tarkkuus sekä Piirtoaluetyökalu ja Piirtoalueet-paneeli."
     },
     "tools": {
-      "h1": "Työkalut"
+      "h1": "Työkalut",
+      "title": "Työkalut ja niiden pikanäppäimet",
+      "desc": "Kaikki Scissorin työkalut: valinta, kynä ja lyijykynä, muodot, teksti, siveltimet, ruudukot ja perspektiivi, verkko, vääntö, Yhdistä ja jaa sekä Alueen täyttö."
     },
     "selecting": {
-      "h1": "Työn valinta"
+      "h1": "Työn valinta",
+      "title": "Kohteiden valitseminen",
+      "desc": "Kohteiden valinta Scissorissa: napsautus ja vetäminen, Valitse kaikki, Käänteinen, Valitse uudelleen, valinta täytön tai viivan mukaan ja tallennetut valinnat."
     },
     "paths": {
-      "h1": "Polkujen piirtäminen ja muokkaaminen"
+      "h1": "Polkujen piirtäminen ja muokkaaminen",
+      "title": "Polkujen piirtäminen ja muokkaaminen",
+      "desc": "Piirrä kynällä ja lyijykynällä, muokkaa ankkureita ja Bézier-kahvoja, liitä, yksinkertaista ja siirrä polkuja, luo viivoista ääriviivat ja yhdistä muotoja."
     },
     "appearance": {
-      "h1": "Väri, viivat ja ulkoasu"
+      "h1": "Väri, viivat ja ulkoasu",
+      "title": "Väri, viivat ja ulkoasu",
+      "desc": "Täytöt ja viivat Scissorissa: tasaväri, liukuväri ja kuvio, värimallit, peittävyys ja sekoitustilat sekä Maalipino-paneeli, joka kokoaa ulkoasun."
     },
     "type": {
-      "h1": "Teksti"
+      "h1": "Teksti",
+      "title": "Teksti ja typografia",
+      "desc": "Piste-, alue- ja polkuteksti Scissorissa: fontit ja OpenType-ominaisuudet, merkki- ja kappaleasetukset sekä tekstin muuntaminen ääriviivoiksi."
     },
     "layers": {
-      "h1": "Tasot, ryhmät ja maskit"
+      "h1": "Tasot, ryhmät ja maskit",
+      "title": "Tasot, ryhmät ja maskit",
+      "desc": "Asiakirjan järjestäminen Tasot-paneelissa: alitasot, pinojärjestys, piilottaminen ja lukitseminen, ryhmät, leikkausmaskit ja peittävyysmaskit."
     },
     "transform": {
-      "h1": "Siirtäminen, muuntaa ja järjestäminen"
+      "h1": "Siirtäminen, muuntaa ja järjestäminen",
+      "title": "Muuntaminen ja järjestäminen",
+      "desc": "Siirrä, skaalaa, kierrä, tasaa ja vääristä kohteita Scissorissa: Muunna-paneeli, Vapaa muunnos, toistot, Muodonmuutos ja Muodon vääntö."
     },
     "effects": {
-      "h1": "Reaaliaikaiset tehosteet"
+      "h1": "Reaaliaikaiset tehosteet",
+      "title": "Reaaliaikaiset tehosteet",
+      "desc": "Muokattavissa pysyvät tehosteet Scissorissa: pudotusvarjo, sumennus, hehku, pehmennys, vääristys, vääntö, pyöristetyt kulmat, polun siirto ja luonnostäyttö."
     },
     "three-d": {
-      "h1": "3D"
+      "h1": "3D",
+      "title": "3D: pursota, pyöräytä ja täytä ilmalla",
+      "desc": "Tee tasaisista muodoista 3D-kappaleita toiminnoilla Pursota, Pyöräytä, Täytä ilmalla ja Taso. Säädä kiertoa, perspektiiviä, valaistusta ja materiaalia."
     },
     "grids": {
-      "h1": "Ruudukot"
+      "h1": "Ruudukot",
+      "title": "Isometriset ja perspektiiviruudukot",
+      "desc": "Jokaisella Scissorin piirtoalueella on oma ruudukko: neliö, isometrinen, kuusikulmainen, vino, kultainen leikkaus, kuvio sekä yhden–kolmen pisteen perspektiivi."
     },
     "guides": {
-      "h1": "Viivottimet, ohjaimet ja kiinnitys"
+      "h1": "Viivottimet, ohjaimet ja kiinnitys",
+      "title": "Viivaimet, apuviivat ja kohdistus",
+      "desc": "Tarkka asettelu Scissorissa: viivaimet, apuviivat, älykkäät apuviivat, kohdistus pisteisiin ja ruudukkoon sekä etäisyyksien ja kulmien mittaus."
     },
     "pixels": {
-      "h1": "Maalaaminen pikselitasoille"
+      "h1": "Maalaaminen pikselitasoille",
+      "title": "Pikselitasot: maalaus ja retusointi",
+      "desc": "Maalaa, retusoi, muunna ja vääristä pikselitasoja vektorigrafiikan rinnalla Scissorissa: siveltimet, valinnat, maskit, säädöt ja suodattimet."
     },
     "image-trace": {
-      "h1": "Vektorointi"
+      "h1": "Vektorointi",
+      "title": "Vektorointi: kuvasta vektorigrafiikaksi",
+      "desc": "Muunna kuva muokattaviksi vektoripoluiksi Scissorissa: mustavalko-, harmaasävy- ja värijäljitys, esiasetukset, tarkkuus ja tuloksen laajentaminen."
     },
     "symbols": {
-      "h1": "Symbolit, sivelliset ja kuviot"
+      "h1": "Symbolit, sivelliset ja kuviot",
+      "title": "Symbolit, siveltimet ja kuviot",
+      "desc": "Uudelleenkäytettävä grafiikka: symbolit ja esiintymät, polkua seuraavat siveltimet ja kuvioruudut. Kun muokkaat alkuperäistä, jokainen kopio päivittyy."
     },
     "panels-basics": {
-      "h1": "Ominaisuudet, Tasot ja Taustat"
+      "h1": "Ominaisuudet, Tasot ja Taustat",
+      "title": "Ominaisuudet, Tasot ja Piirtoalueet",
+      "desc": "Scissorin useimmin auki pidetyt paneelit: valinnan mukaan mukautuva Ominaisuudet, asiakirjan rakenteen näyttävä Tasot ja piirtoalueet listaava Piirtoalueet."
     },
     "panels-color-type": {
-      "h1": "Värin ja tekstin paneelit"
+      "h1": "Värin ja tekstin paneelit",
+      "title": "Väri- ja tekstipaneelit",
+      "desc": "Scissorin väri- ja tekstipaneelit: Väri, Värimallit, Liukuväri ja Viiva maalaamiseen sekä Merkki ja Kappale tekstin muotoiluun."
     },
     "panels-utility": {
-      "h1": "Apupaneelit"
+      "h1": "Apupaneelit",
+      "title": "Apupaneelit: Tasaa, Muunna, Historia",
+      "desc": "Scissorin apupaneelit: Tasaa, Muunna, Maalipino, Vektoroi, Läpinäkyvyys, Grafiikkatyylit, Siveltimet, Glyfit, Symbolit, Historia ja monta muuta."
     },
     "panels-effects": {
-      "h1": "Tehostepaneelit"
+      "h1": "Tehostepaneelit",
+      "title": "Tehostepaneelit: Sumennus, Vääntö ja 3D",
+      "desc": "Scissorin tehostepaneelit luokittain: Tyylittele, Sumennus, Vääristä ja muunna, Polku, Yhdistä muodot, Vääntö ja 3D. Jokainen tehoste näkyy Maalipinossa."
     },
     "files": {
-      "h1": "Avaaminen, sijoittaminen ja vieminen"
+      "h1": "Avaaminen, sijoittaminen ja vieminen",
+      "title": "Avaaminen, sijoittaminen ja vienti",
+      "desc": "Avaa SVG-, PDF-, EPS- ja PSD-tiedostoja, vie SVG-, PDF-, PNG-, JPEG- ja WebP-muotoon ja tallenna .cut-tiedostoja. Kaikki pysyy omalla laitteellasi."
     },
     "automation": {
-      "h1": "Automaatio"
+      "h1": "Automaatio",
+      "title": "Toiminnot, muuttujat ja komentosarjat",
+      "desc": "Automatisoi Scissor: nauhoita ja toista toimintoja, tee yhdestä mallista monta versiota muuttujilla ja CSV-datalla sekä ohjaa editoria JavaScriptillä."
     },
     "shortcuts": {
-      "h1": "Näppäinoikotukset"
+      "h1": "Näppäinoikotukset",
+      "title": "Pikanäppäimet työkaluille ja valikoille",
+      "desc": "Kaikki Scissorin pikanäppäimet työkaluittain ja valikoittain macOS-muodossa sekä vastaavat näppäinyhdistelmät Windowsille ja Linuxille."
     },
     "privacy": {
-      "h1": "Työsi ja tietosuojasi"
+      "h1": "Työsi ja tietosuojasi",
+      "title": "Työsi ja tietosuojasi",
+      "desc": "Scissorilla ei ole palvelinta: editori toimii selaimessasi eikä töitäsi ladata minnekään. Näin asiakirjat, palautus kaatumisen jälkeen ja analytiikka toimivat."
     }
   },
-  "keywords": {}
+  "keywords": {
+    "": "Scissor, vektorieditori selaimessa, ilmainen vektorigrafiikkaohjelma, Scissorin käyttöopas, Scissorin käyttö, vektoripiirto ilman asennusta, SVG-editori verkossa, vektorigrafiikan muokkaus selaimessa, ilman tiliä ja latausta, SVG PDF EPS PSD -editori, vektori- ja pikselieditori, pikanäppäimet ja työkalut",
+    "getting-started": "Scissorin käytön aloitus, uusi asiakirja, ensimmäisen muodon piirtäminen, suorakulmio ja ellipsi, .cut-tiedoston tallennus, täyttö ja viiva, Scissorin asentaminen sovellukseksi, automaattinen tallennus ja palautus, asiakirjan esiasetukset, vektoripiirtäminen aloittelijalle, vektorieditori offline",
+    "interface": "Scissorin käyttöliittymä, työkalupalkki, komentorivi, paneelit, komentohaku, kumoa ja tee uudelleen, zoomaus ja panorointi, viivaimet ja apuviivat, tilarivi, vaalea ja tumma tila, käyttöliittymän kieli",
+    "documents": "piirtoalueet, artboard, uusi asiakirja, useita piirtoalueita, piirtoaluetyökalu, piirtoalueen asetukset, leikkuuvara, väritila RGB CMYK, asiakirjan esiasetukset, piirtoalueen koon muuttaminen, piirtoalueiden vienti, monisivuinen asiakirja",
+    "tools": "Scissorin työkalut, työkalupalkki, työkalujen pikanäppäimet, valintatyökalu, suoravalintatyökalu, kynätyökalu, muototyökalut, pipettityökalu, liukuvärityökalu, verkkotyökalu, perspektiiviruudukko, vääntötyökalu",
+    "selecting": "kohteiden valinta, valintatyökalu, valitse kaikki, poista valinta, käänteinen valinta, valitse uudelleen, sama täyttöväri, sama viivan väri, suoravalinta, valinnan tallentaminen, tallennetut valinnat, lassovalinta",
+    "paths": "polkujen piirtäminen, kynätyökalu, ankkuripisteet ja kahvat, kulmapisteet, polun muokkaus, yhdistä muodot, siirrä polkua, viivan ääriviivat, yksinkertaista polkua, yhdistelmäpolku, leikkausmaski, Bézier-käyrät",
+    "appearance": "täyttö ja viiva, väripaneeli, värimallit, liukuväri, lineaarinen ja säteittäinen liukuväri, sekoitustilat, peittävyysmaski, viivan paksuus, katkoviiva, grafiikkatyylit, kuviot, piirroksen uudelleenväritys",
+    "type": "tekstin lisääminen, tekstityökalu, pisteteksti ja alueteksti, teksti polulla, merkkipaneeli, fontti ja koko, riviväli ja merkkiväli, välistys, OpenType-ominaisuudet, kapiteelit ja ligatuurit, tekstin rivitys, tekstin muuntaminen ääriviivoiksi",
+    "layers": "Tasot-paneeli, ryhmät ja leikkausmaskit, leikkausmaskin tekeminen, peittävyysmaski, tasojen lukitseminen ja piilottaminen, pinojärjestys, tuo päällimmäiseksi, ryhmitä ja pura ryhmitys, aktiivinen taso, tasojen värimerkit, tasojen järjestäminen, alitasot",
+    "transform": "Muunna-paneeli, skaalaa kierrä peilaa viistä, kierto tarkassa kulmassa, vapaa muunnos, kohteiden tasaus ja jakaminen, viitepiste, muunna uudelleen, säteittäinen toisto, peilitoisto, muodonmuutos, muodon vääntö, peilaus vaaka- ja pystysuunnassa",
+    "effects": "reaaliaikaiset tehosteet, tuhoamaton muokkaus, pudotusvarjo, ulkohehku ja sisähehku, Gaussin sumennus, karhenna, siirrä polkua, pyöristä kulmat, kutista ja paisuta, vääntö, laajenna ulkoasu, varjon lisääminen",
+    "three-d": "3D ja materiaalit, pursotus ja viiste, pyöräytys, täytä ilmalla, 3D-teksti, kierto ja perspektiivi, isometrinen näkymä, valaistus, materiaali muovi matta metalli, viisteen syvyys, 3D-tehoste, ilmainen 3D-teksti verkossa",
+    "grids": "isometrinen ruudukko, perspektiiviruudukko, kuusikulmainen ruudukko, kultainen leikkaus, neliöruudukko, kohdista ruudukkoon, vino ruudukko, kahden pisteen perspektiivi, pakopisteet, isometrinen piirtäminen, piirtoaluekohtainen ruudukko, ilmainen perspektiiviruudukko",
+    "guides": "viivaimet, viivoitin, apuviivat, älykkäät apuviivat, kohdista pisteeseen, kohdista ruudukkoon, mittaustyökalu, apuviivan lisääminen, apuviivat kohteista, viivaimen yksiköt, kohteiden tasaaminen, tasaiset välit",
+    "pixels": "pikselitaso, siveltintyökalu, pyyhekumi, valokuvaan maalaaminen, tasomaski, vaalennus ja tummennus, maaliämpäri, sävytasot, sävy ja kylläisyys, Gaussin sumennus, vektorin rasterointi, kuvankäsittely selaimessa",
+    "image-trace": "vektorointi, kuvan vektorointi, kuva vektoriksi, PNG SVG -muunnos, JPG vektoriksi, kuvan jäljitys, valokuva vektoriksi, luonnos vektoriksi, logon vektorointi, mustavalkoinen jäljitys, jäljityksen esiasetukset, ilmainen vektorointi verkossa",
+    "symbols": "Symbolit-paneeli, symboliesiintymät, symbolisuihkutyökalu, vektorisiveltimet, kalligrafiasivellin, sirottelusivellin, taidesivellin, kuviosivellin, siveltintyökalu, kuviotäyttö, kuvioruudun muokkaus, symbolit siveltimet ja kuviot",
+    "panels-basics": "Ominaisuudet-paneeli, Tasot-paneeli, Piirtoalueet-paneeli, pinojärjestys, tasojen näyttäminen ja lukitseminen, sijainti ja koko, pikatoiminnot, tasojen järjestäminen, piirtoalueiden hallinta, piirtoalueen nimeäminen, paneelialue",
+    "panels-color-type": "väripaneeli, Värimallit-paneeli, globaalit värimallit, Liukuväri-paneeli, liukuvärin väripisteet, Viiva-paneeli, katkoviiva ja nuolenkärjet, leveysprofiili, Merkki-paneeli, Kappale-paneeli, tavutus ja sisennykset, fonttikoko ja riviväli",
+    "panels-utility": "Tasaa-paneeli, kohteiden tasainen jakaminen, yhdistä muodot, automaattivalinta ja toleranssi, Muunna-paneeli, Maalipino, grafiikkatyylit, läpinäkyvyys ja sekoitustila, glyfit, resurssien vienti, muuttujat, historia ja toiminnot",
+    "panels-effects": "pudotusvarjo, Gaussin sumennus, sisä- ja ulkohehku, pehmennys, pyöristä kulmat, siksak ja karhenna, kutista ja paisuta, siirrä polkua, vääntö kaari pullistus, 3D-pursotus, reaaliaikaiset tehosteet, tehostepaneelit",
+    "files": ".cut-tiedostomuoto, SVG PDF PSD avaaminen, AI-tiedoston avaaminen, vienti SVG PNG JPEG WebP, vienti PDF-muotoon, kuvan sijoittaminen, vie näytöille, resurssien vienti, rasterointi, EPS-tuonti, piirtoalueen tulostus, ilmainen SVG-editori",
+    "automation": "automaatio, Toiminnot-paneeli, toimintojen nauhoitus, muuttujat, datapohjainen grafiikka, tietojoukot, CSV-tuonti, tietojoukkojen vienti, komentosarjat, skriptit, komentosarjakonsoli, JavaScript-rajapinta",
+    "shortcuts": "pikanäppäimet, näppäinoikotukset, Scissorin pikanäppäimet, työkalujen pikanäppäimet, Mac Windows Linux pikanäppäimet, kynätyökalun pikanäppäin, lähennä ja loitonna, ryhmityksen pikanäppäin, kumoa ja tee uudelleen, liitä eteen ja taakse, leikkausmaskin pikanäppäin, pikanäppäinluettelo",
+    "privacy": "tietosuoja, ei latausta palvelimelle, ei tiliä, tiedot pysyvät laitteella, Google Analyticsin estäminen, palautus kaatumisen jälkeen, Scissorin asentaminen, vektorieditori offline, lataako Scissor tiedostoni, selainpohjainen ilman palvelinta, .cut-tiedostot koneella, ilmainen grafiikkaohjelma offline"
+  }
 }

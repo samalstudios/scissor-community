@@ -14,7 +14,7 @@
     "Scissor by Samal Studios.": "Scissor par Samal Studios.",
     "Third-party licences": "Licences tierces",
     "| Scissor manual": "| Manuel Scissor",
-    "Scissor user manual: every tool, menu and shortcut": "Manuel utilisateur de Scissor : chaque outil, menu et raccourci",
+    "Scissor user manual: every tool, menu and shortcut": "Manuel utilisateur de Scissor : outils, menus et raccourcis",
     "Scissor user manual": "Manuel utilisateur de Scissor"
   },
   "groups": {
@@ -55,83 +55,162 @@
   },
   "meta": {
     "": {
-      "h1": "Manuel d’utilisation de Scissor"
+      "h1": "Manuel d’utilisation de Scissor",
+      "title": "Manuel utilisateur de Scissor",
+      "desc": "Le manuel de Scissor, éditeur graphique gratuit dans le navigateur : outils, tracés, couleur, texte, grilles, effets, calques de pixels, fichiers et raccourcis."
     },
     "getting-started": {
-      "h1": "Premiers pas"
+      "h1": "Premiers pas",
+      "title": "Premiers pas avec Scissor",
+      "desc": "Ouvrir Scissor, créer un document, dessiner une première forme, enregistrer un fichier .cut et installer l’application. Aucun compte, rien à téléverser."
     },
     "interface": {
-      "h1": "L’interface"
+      "h1": "L’interface",
+      "title": "L’interface : outils, panneaux et menus",
+      "desc": "L’espace de travail de Scissor : barre de menus, barre de contrôle, palette d’outils, canevas, dock de panneaux, barre d’état et langue de l’interface."
     },
     "documents": {
-      "h1": "Documents et plans de travail"
+      "h1": "Documents et plans de travail",
+      "title": "Documents et plans de travail",
+      "desc": "Configurer un document et ses plans de travail : format, fond perdu, colonnes, résolution, outil Plan de travail et panneau Plans de travail."
     },
     "tools": {
-      "h1": "Les outils"
+      "h1": "Les outils",
+      "title": "Référence des outils de Scissor",
+      "desc": "Chaque outil de Scissor : sélection, plume et crayon, formes, texte, pinceaux, Fusion et division, Remplissage de zones, perspective, filet et déformation."
     },
     "selecting": {
-      "h1": "Sélectionner le travail"
+      "h1": "Sélectionner le travail",
+      "title": "Sélectionner des objets",
+      "desc": "Sélection dans Scissor : clic et cadre de sélection, Tout sélectionner, Inverser, Resélectionner, Identique (même fond ou contour) et sélections enregistrées."
     },
     "paths": {
-      "h1": "Dessiner et modifier des tracés"
+      "h1": "Dessiner et modifier des tracés",
+      "title": "Dessiner et modifier des tracés",
+      "desc": "Tracer à la plume et au crayon, modifier les points d’ancrage et poignées de Bézier, joindre, simplifier, décaler, vectoriser les contours, combiner les formes."
     },
     "appearance": {
-      "h1": "Couleur, contours et apparence"
+      "h1": "Couleur, contours et apparence",
+      "title": "Couleur, contours et apparence",
+      "desc": "Fonds et contours dans Scissor : aplats, dégradés et motifs, opacité, modes de fusion, styles graphiques, panneaux Nuances et Pile de peinture."
     },
     "type": {
-      "h1": "Texte"
+      "h1": "Texte",
+      "title": "Texte et typographie",
+      "desc": "Texte ponctuel, captif et curviligne dans Scissor : polices et fonctions OpenType, réglages Caractère et Paragraphe, et vectorisation du texte en tracés."
     },
     "layers": {
-      "h1": "Calques, groupes et masques"
+      "h1": "Calques, groupes et masques",
+      "title": "Calques, groupes et masques",
+      "desc": "Organiser un document dans le panneau Calques : ordre d’empilement, masquage et verrouillage, groupes imbriqués, masques d’écrêtage et masques d’opacité."
     },
     "transform": {
-      "h1": "Déplacer, transformer et organiser"
+      "h1": "Déplacer, transformer et organiser",
+      "title": "Transformer, aligner et organiser",
+      "desc": "Déplacer, redimensionner, faire pivoter, aligner et déformer : panneau Transformation, Transformation manuelle, répétitions, Morphose et Déformation de forme."
     },
     "effects": {
-      "h1": "Effets dynamiques"
+      "h1": "Effets dynamiques",
+      "title": "Effets dynamiques non destructifs",
+      "desc": "Effets non destructifs dans Scissor : ombres, flou, lueurs, contour progressif, distorsion, déformation, arrondis, décalage du tracé et remplissage esquissé."
     },
     "three-d": {
-      "h1": "3D"
+      "h1": "3D",
+      "title": "3D : extrusion, révolution et gonflement",
+      "desc": "Transformer des formes planes en 3D dans Scissor avec Extrusion, Révolution, Gonflement et Plan, puis régler rotation, perspective, éclairage et matière."
     },
     "grids": {
-      "h1": "Grilles"
+      "h1": "Grilles",
+      "title": "Grilles isométriques et de perspective",
+      "desc": "Chaque plan de travail de Scissor a sa propre grille : carrée, isométrique, hexagonale, oblique, nombre d’or, motif ou perspective à un, deux ou trois points."
     },
     "guides": {
-      "h1": "Règles, repères et aimantation"
+      "h1": "Règles, repères et aimantation",
+      "title": "Règles, repères et magnétisme",
+      "desc": "Aligner son travail avec précision dans Scissor : règles, repères, repères commentés, magnétisme sur les points et sur la grille, et l’outil Mesure."
     },
     "pixels": {
-      "h1": "Peindre sur les calques pixelisés"
+      "h1": "Peindre sur les calques pixelisés",
+      "title": "Calques de pixels : peinture et retouche",
+      "desc": "Peindre, retoucher, transformer et déformer des calques de pixels à côté du vectoriel dans Scissor : pinceaux, sélections, masques, réglages et filtres."
     },
     "image-trace": {
-      "h1": "Vectoriser"
+      "h1": "Vectoriser",
+      "title": "Vectoriser : convertir une image en tracés",
+      "desc": "Convertir une image en tracés vectoriels modifiables dans Scissor : modes noir et blanc, niveaux de gris ou couleur, préréglages, fidélité et décomposition."
     },
     "symbols": {
-      "h1": "Symboles, pinceaux et motifs"
+      "h1": "Symboles, pinceaux et motifs",
+      "title": "Symboles, pinceaux et motifs",
+      "desc": "Réutiliser une illustration dans Scissor : symboles et instances, pinceaux le long des tracés, motifs. Il suffit de modifier l’original pour tout mettre à jour."
     },
     "panels-basics": {
-      "h1": "Propriétés, Calques et Plans"
+      "h1": "Propriétés, Calques et Plans",
+      "title": "Propriétés, Calques et Plans de travail",
+      "desc": "Les trois panneaux toujours à portée de main dans Scissor : Propriétés, qui suit la sélection, Calques, l’arborescence du document, et Plans de travail."
     },
     "panels-color-type": {
-      "h1": "Panneaux couleur et texte"
+      "h1": "Panneaux couleur et texte",
+      "title": "Panneaux couleur et texte",
+      "desc": "Les panneaux de couleur et de texte de Scissor : Couleur, Nuances, Dégradé et Contour pour la peinture, Caractère et Paragraphe pour la typographie."
     },
     "panels-utility": {
-      "h1": "Les panneaux utilitaires"
+      "h1": "Les panneaux utilitaires",
+      "title": "Les panneaux utilitaires",
+      "desc": "Panneaux utilitaires de Scissor : Aligner, Transformation, Pile de peinture, Vectoriser, Transparence, Styles graphiques, Glyphes et Historique, entre autres."
     },
     "panels-effects": {
-      "h1": "Les panneaux d’effets"
+      "h1": "Les panneaux d’effets",
+      "title": "Panneaux d’effets : ombres, flou et 3D",
+      "desc": "Les panneaux d’effets dynamiques de Scissor, un par catégorie : Esthétiques, Flou, Distorsion et transformation, Tracé, Combiner les formes, Déformation et 3D."
     },
     "files": {
-      "h1": "Ouvrir, placer et exporter"
+      "h1": "Ouvrir, placer et exporter",
+      "title": "Ouvrir, importer et exporter",
+      "desc": "Ouvrir des fichiers SVG, PDF, EPS et PSD, exporter en SVG, PDF, PNG, JPEG et WebP, et enregistrer au format natif .cut. Tout reste sur votre appareil."
     },
     "automation": {
-      "h1": "Automatisation"
+      "h1": "Automatisation",
+      "title": "Automatiser : actions, variables et scripts",
+      "desc": "Enregistrer et rejouer des actions, décliner un design à partir de variables et de données CSV avec export par lots, et piloter Scissor en JavaScript."
     },
     "shortcuts": {
-      "h1": "Raccourcis clavier"
+      "h1": "Raccourcis clavier",
+      "title": "Raccourcis clavier de Scissor",
+      "desc": "Tous les raccourcis clavier de Scissor, classés par outil et par menu, sous leur forme macOS avec leurs équivalents pour Windows et Linux."
     },
     "privacy": {
-      "h1": "Votre travail et votre confidentialité"
+      "h1": "Votre travail et votre confidentialité",
+      "title": "Votre travail et votre confidentialité",
+      "desc": "Scissor n’a pas de serveur : l’éditeur fonctionne dans le navigateur et vos illustrations restent sur votre appareil. Documents, récupération et statistiques."
     }
   },
-  "keywords": {}
+  "keywords": {
+    "": "éditeur vectoriel Scissor, éditeur vectoriel en ligne gratuit, éditeur vectoriel dans le navigateur, manuel utilisateur Scissor, comment utiliser Scissor, logiciel de dessin vectoriel sans installation, éditeur SVG en ligne, éditeur SVG PDF EPS PSD, éditeur vectoriel sans compte, éditeur vectoriel et pixel, raccourcis clavier et outils",
+    "getting-started": "débuter avec Scissor, créer un nouveau document, dessiner une première forme, outils Rectangle et Ellipse, enregistrer un fichier .cut, fond et contour, installer Scissor comme application, enregistrement automatique et récupération, paramètres prédéfinis de document, tutoriel dessin vectoriel débutant, éditeur vectoriel hors ligne",
+    "interface": "interface Scissor, palette d'outils, barre de contrôle, dock de panneaux, rechercher une commande, annuler et rétablir, zoom et déplacement du canevas, règles et repères, réorganiser les panneaux, barre d'état, mode clair et sombre, langue de l'interface",
+    "documents": "plans de travail, nouveau document, plusieurs plans de travail dans un fichier, outil Plan de travail, options du plan de travail, fond perdu pour l'impression, mode colorimétrique RGB CMYK, résolution des effets raster, paramètres prédéfinis de document, réorganiser les plans de travail, exporter un fichier par plan de travail, document vectoriel multipage",
+    "tools": "outils Scissor, barre d'outils, raccourcis des outils, outil Sélection, outil Sélection directe, outil Plume, outils de forme et de ligne, outil Transformation manuelle, outil Pipette, outil Dégradé, outil Filet, outil Grille de perspective",
+    "selecting": "sélectionner des objets, outil Sélection, tout sélectionner, désélectionner, inverser la sélection, resélectionner, sélectionner même fond, sélectionner même contour, cadre de sélection, sélection directe, enregistrer la sélection, objet suivant au-dessus",
+    "paths": "outil Plume, points d'ancrage et poignées, courbes de Bézier, point d'angle et point lisse, modifier un tracé, combiner les formes, pathfinder, décalage du tracé, vectoriser le contour, simplifier un tracé, tracé transparent, masque d'écrêtage",
+    "appearance": "fond et contour, panneau Couleur, nuancier, ajouter un dégradé, dégradé linéaire radial et libre, mode de fusion, masque d'opacité, épaisseur du contour, ligne pointillée, styles graphiques, motifs, redéfinir les couleurs",
+    "type": "ajouter du texte, outil Texte, texte captif, texte curviligne, panneau Caractère, police et corps, interlignage approche crénage, fonctions OpenType, panneau Paragraphe, texte chaîné, habillage de texte, vectoriser le texte",
+    "layers": "panneau Calques, groupes et masques d'écrêtage, créer un masque d'écrêtage, masque de découpe, masque d'opacité, verrouiller et masquer des calques, premier plan et arrière-plan, grouper et dissocier des objets, calque actif, couleur de calque, mode de fusion et opacité, réorganiser les calques",
+    "transform": "panneau Transformation, mise à l'échelle rotation symétrie et inclinaison, faire pivoter selon un angle précis, transformation manuelle, aligner et répartir des objets, point de référence, transformation individuelle, répéter la transformation, répétition radiale grille miroir, morphose et interpolation de formes, déformation de forme et enveloppe, retourner horizontalement",
+    "effects": "effets non destructifs, ombre portée, lueur externe et lueur interne, flou gaussien, rugosité et zigzag, décalage du tracé, arrondis, remplissage esquissé, panneau Pile de peinture, contraction et dilatation, déformation en arche, décomposer l'aspect",
+    "three-d": "3D et matières, extrusion et biseau, révolution d'un profil, gonflement 3D, texte 3D à partir d'une forme vectorielle, rotation X Y Z et perspective, vue isométrique, éclairage, matière plastique mate ou métal, effet 3D dynamique, 3D Scissor, texte 3D en ligne gratuit",
+    "grids": "grille isométrique, grille de perspective, grille hexagonale, grille nombre d'or, grille orthogonale, magnétisme de la grille, grille oblique, perspective à deux points, points de fuite, dessin isométrique, grille par plan de travail, grilles Scissor",
+    "guides": "règles et repères, repères commentés, repères intelligents, aligner sur le point, magnétisme de la grille, aimantation, outil Mesure, créer des repères, glisser un repère depuis la règle, unités des règles pixels mm pouces, créer des repères à partir d'objets, répartir des objets régulièrement",
+    "pixels": "calque de pixels, outil Pinceau, gomme, peindre sur une photo, masque de fusion, outils Densité et Éponge, pot de peinture, réglages niveaux teinte saturation, filtre flou gaussien, sélection rectangulaire et lasso, pixelliser une illustration vectorielle, retouche photo dans le navigateur",
+    "image-trace": "vectoriser une image, vectorisation de l'image, convertir une image en vectoriel, vectoriser un logo, PNG en SVG, JPG en vectoriel, photo en vectoriel, croquis en vectoriel, vectoriser en noir et blanc, décomposer la vectorisation, vectoriseur en ligne gratuit, Scissor vectoriser",
+    "symbols": "panneau Symboles, instances de symbole, outils de symbolisme, outil Pulvérisation de symboles, pinceaux vectoriels, pinceau calligraphique, forme de dispersion, forme artistique, forme de motif, créer un motif, modifier la tuile de motif, rompre le lien avec le symbole",
+    "panels-basics": "panneau Propriétés, panneau Calques, panneau Plans de travail, ordre d'empilement des calques, afficher masquer verrouiller les calques, position et taille, actions rapides grouper dissocier, organiser les calques, gérer les plans de travail, renommer un plan de travail, dock de panneaux",
+    "panels-color-type": "panneau Couleur, panneau Nuances, nuances globales, panneau Dégradé, arrêts de couleur du dégradé, dégradé linéaire et radial, panneau Contour, pointillés et pointes de flèche, profil d'épaisseur du contour, panneau Caractère, panneau Paragraphe, césure",
+    "panels-utility": "panneau Aligner, répartir des objets, combiner les formes, pathfinder réunion soustraire intersection, sélection automatique et tolérance, panneau Transformation, styles graphiques, panneau Transparence, panneau Glyphes, exportation des ressources, variables, historique et actions",
+    "panels-effects": "effet ombre portée, flou gaussien, lueur interne et externe, contour progressif, arrondis, zigzag et rugosité, contraction et dilatation, torsion, décalage du tracé, déformation arc renflement drapeau, extrusion révolution gonflement 3D, effets non destructifs",
+    "files": "format de fichier .cut, ouvrir SVG PDF AI PSD, exporter en SVG PNG JPEG WebP, exporter en PDF, importer une image dans un document, exporter pour les écrans, tranches et exportation des ressources, copier coller une illustration, pixelliser du vectoriel, ouvrir un fichier AI dans le navigateur, ouvrir un fichier EPS, imprimer un plan de travail",
+    "automation": "automatisation, panneau Actions, enregistrer et rejouer des commandes, variables, graphiques pilotés par les données, jeux de données, importer un CSV, export par lots, exporter les jeux de données, scripts JavaScript, console de scripts, fusion de données",
+    "shortcuts": "raccourcis clavier, liste des raccourcis Scissor, raccourcis des outils, raccourcis Mac Windows Linux, raccourci outil Plume, raccourci outil Sélection, raccourcis zoom avant et arrière, raccourci grouper et dissocier, annuler et rétablir, coller devant et derrière, raccourci masque d'écrêtage, aide-mémoire des raccourcis",
+    "privacy": "confidentialité, sans téléversement, sans compte ni inscription, données sur votre appareil, désactiver Google Analytics, récupération après un crash, installer Scissor comme application, éditeur vectoriel hors ligne, Scissor envoie-t-il mes fichiers, Scissor est-il privé, sans serveur, logiciel graphique hors ligne gratuit"
+  }
 }

@@ -55,83 +55,162 @@
   },
   "meta": {
     "": {
-      "h1": "Uživatelská příručka Scissor"
+      "h1": "Uživatelská příručka Scissor",
+      "title": "Uživatelská příručka Scissor",
+      "desc": "Příručka k bezplatnému grafickému editoru Scissor v prohlížeči: nástroje, cesty, barvy, text, mřížky, efekty, pixelové vrstvy, soubory a klávesové zkratky."
     },
     "getting-started": {
-      "h1": "Začínáme"
+      "h1": "Začínáme",
+      "title": "Začínáme se Scissorem",
+      "desc": "Jak otevřít Scissor, vytvořit nový dokument, nakreslit první tvar, uložit soubor .cut a nainstalovat editor jako aplikaci. Bez účtu a bez nahrávání."
     },
     "interface": {
-      "h1": "Rozhraní"
+      "h1": "Rozhraní",
+      "title": "Rozhraní: nástroje, panely a nabídky",
+      "desc": "Pracovní prostor Scissoru: nabídkový řádek, ovládací panel, paleta nástrojů, plátno, dok panelů, stavový řádek a přepnutí jazyka rozhraní."
     },
     "documents": {
-      "h1": "Dokumenty a plochy"
+      "h1": "Dokumenty a plochy",
+      "title": "Dokumenty a kreslicí plátna",
+      "desc": "Nastavení dokumentu a práce s více kreslicími plátny ve Scissoru: velikost, spadávka, sloupce, rozlišení rastrových efektů, nástroj a panel Kreslicí plátna."
     },
     "tools": {
-      "h1": "Nástroje"
+      "h1": "Nástroje",
+      "title": "Přehled všech nástrojů",
+      "desc": "Všechny nástroje Scissoru: výběr, pero a tužka, tvary, text, štětce, mřížky a perspektiva, síť, pokřivení i nástroje Sloučit a rozdělit a Vyplnit oblast."
     },
     "selecting": {
-      "h1": "Výběr práce"
+      "h1": "Výběr práce",
+      "title": "Výběr objektů",
+      "desc": "Výběr kresby ve Scissoru: kliknutí a výběr tažením, Vybrat vše, Inverzní, Znovu vybrat, Vybrat stejné podle výplně či tahu a uložené výběry."
     },
     "paths": {
-      "h1": "Kreslení a úprava cest"
+      "h1": "Kreslení a úprava cest",
+      "title": "Kreslení a úprava cest",
+      "desc": "Kreslení perem a tužkou, úprava kotevních bodů a Bézierových úchytů, spojování, zjednodušení, posun cesty, převod tahu na obrys a kombinace tvarů."
     },
     "appearance": {
-      "h1": "Barva, obrysy a vzhled"
+      "h1": "Barva, obrysy a vzhled",
+      "title": "Barva, tahy a vzhled",
+      "desc": "Výplně a tahy ve Scissoru: plné barvy, přechody a vzory, vzorník, krytí a režimy prolnutí, grafické styly a panel Zásobník malby."
     },
     "type": {
-      "h1": "Text"
+      "h1": "Text",
+      "title": "Práce s textem",
+      "desc": "Bodový text, text v oblasti a text na cestě ve Scissoru: písma a funkce OpenType, nastavení znaků a odstavců a převod textu na obrysy."
     },
     "layers": {
-      "h1": "Vrstvy, skupiny a masky"
+      "h1": "Vrstvy, skupiny a masky",
+      "title": "Vrstvy, skupiny a masky",
+      "desc": "Organizace dokumentu v panelu Vrstvy: vrstvy a vnořené skupiny, pořadí vrstvení, skrývání a zamykání, barevné štítky, ořezové masky a masky krytí."
     },
     "transform": {
-      "h1": "Přesun, transformace a uspořádání"
+      "h1": "Přesun, transformace a uspořádání",
+      "title": "Transformace a uspořádání",
+      "desc": "Přesun, změna velikosti, otáčení, zarovnání a deformace objektů ve Scissoru: panel Transformovat, Volná transformace, opakování, Morfování a Pokřivení tvaru."
     },
     "effects": {
-      "h1": "Živé efekty"
+      "h1": "Živé efekty",
+      "title": "Živé efekty",
+      "desc": "Nedestruktivní efekty ve Scissoru: stíny, rozostření, záře, prolnutí okrajů, deformace, pokřivení, zaoblení rohů, posun cesty a skicová výplň."
     },
     "three-d": {
-      "h1": "3D"
+      "h1": "3D",
+      "title": "3D: vysunutí, rotace a nafouknutí",
+      "desc": "Převod plochých tvarů do 3D ve Scissoru pomocí efektů Vysunutí, Rotace, Nafouknutí a Rovina, včetně natočení, perspektivy, osvětlení a materiálu."
     },
     "grids": {
-      "h1": "Mřížky"
+      "h1": "Mřížky",
+      "title": "Mřížky: izometrická i perspektivní",
+      "desc": "Každé kreslicí plátno ve Scissoru má vlastní mřížku: čtvercovou, izometrickou, šestiúhelníkovou, šikmou, zlatý řez, vzor či perspektivu s 1–3 úběžníky."
     },
     "guides": {
-      "h1": "Pravítka, vodítka a přichytávání"
+      "h1": "Pravítka, vodítka a přichytávání",
+      "title": "Pravítka, vodítka a přichytávání",
+      "desc": "Přesné zarovnání ve Scissoru: pravítka, vodítka z pravítek, inteligentní vodítka, přichytávání k bodům i k mřížce a nástroj Měřítko pro vzdálenosti a úhly."
     },
     "pixels": {
-      "h1": "Malování na pixelových vrstvách"
+      "h1": "Malování na pixelových vrstvách",
+      "title": "Pixelové vrstvy: malba a retuš",
+      "desc": "Malba, retuš, transformace a deformace pixelových vrstev vedle vektorové grafiky ve Scissoru: štětce, výběry, masky vrstev, úpravy a filtry."
     },
     "image-trace": {
-      "h1": "Vektorizovat"
+      "h1": "Vektorizovat",
+      "title": "Vektorizace: převod obrázku na vektor",
+      "desc": "Převod obrázku na upravitelné vektorové cesty ve Scissoru: režimy Černobílé, Stupně šedi a Barva, předvolby, věrnost a rozložení výsledku."
     },
     "symbols": {
-      "h1": "Symboly, štětce a vzory"
+      "h1": "Symboly, štětce a vzory",
+      "title": "Symboly, štětce a vzory",
+      "desc": "Opakovaně použitelná grafika ve Scissoru: symboly a jejich instance, štětce podél cest a dlaždice vzorů. Stačí upravit originál a změna se projeví všude."
     },
     "panels-basics": {
-      "h1": "Vlastnosti, Vrstvy a Plochy"
+      "h1": "Vlastnosti, Vrstvy a Plochy",
+      "title": "Vlastnosti, Vrstvy a Kreslicí plátna",
+      "desc": "Panely, které máte ve Scissoru stále po ruce: kontextový panel Vlastnosti, stromová osnova dokumentu v panelu Vrstvy a seznam kreslicích pláten."
     },
     "panels-color-type": {
-      "h1": "Panely barvy a textu"
+      "h1": "Panely barvy a textu",
+      "title": "Panely pro barvu a text",
+      "desc": "Panely ve Scissoru, které řídí barvu a text: Barva, Vzorník, Přechod a Tah pro vzhled objektů, Znaky a Odstavec pro písmo a sazbu textu."
     },
     "panels-utility": {
-      "h1": "Užitečné panely"
+      "h1": "Užitečné panely",
+      "title": "Pomocné panely",
+      "desc": "Pracovní panely Scissoru: Zarovnat, Transformovat, Zásobník malby, Vektorizovat, Průhlednost, Grafické styly, Štětce, Glyfy, Symboly, Historie a další."
     },
     "panels-effects": {
-      "h1": "Panely efektů"
+      "h1": "Panely efektů",
+      "title": "Panely efektů: stíny, rozostření a 3D",
+      "desc": "Panely živých efektů ve Scissoru, pro každou kategorii jeden: Stylizace, Rozostření, Deformace, Cesta, Kombinovat tvary, Pokřivení a 3D."
     },
     "files": {
-      "h1": "Otevření, umístění a export"
+      "h1": "Otevření, umístění a export",
+      "title": "Otevření, umístění a export",
+      "desc": "Otevírání SVG, PDF, EPS a PSD, export do SVG, PDF, PNG, JPEG a WebP a ukládání nativních souborů .cut. Vše zůstává ve vašem zařízení."
     },
     "automation": {
-      "h1": "Automatizace"
+      "h1": "Automatizace",
+      "title": "Automatizace: akce, proměnné a skripty",
+      "desc": "Automatizace ve Scissoru: nahrávání a přehrávání akcí, návrhy řízené proměnnými a datovými sadami z CSV s dávkovým exportem a skripty v JavaScriptu."
     },
     "shortcuts": {
-      "h1": "Klávesové zkratky"
+      "h1": "Klávesové zkratky",
+      "title": "Klávesové zkratky",
+      "desc": "Všechny klávesové zkratky Scissoru seřazené podle nástrojů a nabídek, zapsané pro macOS a s odpovídajícími klávesami pro Windows a Linux."
     },
     "privacy": {
-      "h1": "Vaše práce a vaše soukromí"
+      "h1": "Vaše práce a vaše soukromí",
+      "title": "Vaše práce a soukromí",
+      "desc": "Scissor nemá žádný server: editor běží ve vašem prohlížeči a kresby se nikam nenahrávají. Jak fungují dokumenty, obnova po pádu a analytika."
     }
   },
-  "keywords": {}
+  "keywords": {
+    "": "Scissor návod, vektorový editor v prohlížeči, online vektorový editor zdarma, vektorová grafika bez instalace, online editor SVG, editor bez registrace, editor SVG PDF EPS PSD, vektorový a pixelový editor, grafický editor offline, úprava vektorové grafiky online, přehled nástrojů a zkratek",
+    "getting-started": "jak začít se Scissorem, nový dokument, první tvar, nástroj obdélník a elipsa, uložení souboru .cut, výplň a tah, instalace jako aplikace, automatické ukládání, předvolby dokumentu, jak začít kreslit vektory, vektorový editor pro začátečníky, návod pro začátečníky",
+    "interface": "rozhraní Scissor, paleta nástrojů, ovládací panel, dok panelů, hledání příkazů Cmd K, zpět a znovu, posun a lupa, pravítka a vodítka, uspořádání panelů, světlý a tmavý režim, stavový řádek, jazyk rozhraní",
+    "documents": "kreslicí plátno, artboard, podložky, nový dokument, více kreslicích pláten v jednom souboru, nástroj Kreslicí plátno, spadávka pro tisk, barevný režim RGB CMYK, rozlišení rastrových efektů, předvolby dokumentu, export kreslicích pláten zvlášť, vícestránkový dokument",
+    "tools": "nástroje Scissor, panel nástrojů, klávesové zkratky nástrojů, nástroj Výběr, nástroj Přímý výběr, nástroj Pero, nástroje tvarů a čar, nástroj Kapátko, nástroj Přechod a Síť, perspektivní mřížka, nástroj Pokřivení a Šířka, jak přepínat nástroje",
+    "selecting": "výběr objektů, nástroj Výběr, vybrat vše, zrušit výběr, inverzní výběr, znovu vybrat, vybrat stejnou výplň, vybrat stejnou barvu tahu, výběr tažením, přímý výběr, uložení výběru, jak vybrat více objektů",
+    "paths": "kreslení cest, nástroj Pero, kotevní body a úchyty, rohové a hladké body, úprava cesty, kombinace tvarů, posun cesty, převod tahu na obrys, zjednodušení cesty, složená cesta, ořezová maska, Bézierovy křivky",
+    "appearance": "výplň a tah, panel Barva, vzorník, přechody, lineární a radiální přechod, režimy prolnutí, maska krytí, tloušťka tahu, přerušovaná čára, grafické styly, přebarvení kresby, jak vytvořit přechod",
+    "type": "přidání textu, nástroj Text, text v oblasti, text na cestě, panel Znaky, písmo a velikost, proklad a prostrkání, kerning, funkce OpenType, zřetězený text, obtékání textu, převod textu na obrysy",
+    "layers": "panel Vrstvy, skupiny a ořezové masky, jak vytvořit ořezovou masku, maska krytí, zamknutí a skrytí vrstev, pořadí vrstvení, přenést do popředí, seskupit a zrušit seskupení, aktivní vrstva, barevné štítky vrstev, režim prolnutí a krytí, vnořené skupiny",
+    "transform": "panel Transformovat, změna měřítka a otočení, zrcadlení a zkosení, otočení o přesný úhel, nástroj Volná transformace, zarovnání a rozmístění objektů, referenční bod, transformovat každý, živé opakování, morfování tvarů, pokřivení tvaru, překlopení vodorovně a svisle",
+    "effects": "živé efekty, nedestruktivní efekty, vržený stín, vnější a vnitřní záře, gaussovské rozostření, zdrsnění a cik cak, zaoblení rohů, posun cesty, jak přidat vržený stín, zásobník malby, pokřivení textu do oblouku, rozložení vzhledu",
+    "three-d": "3D a materiály, vysunutí a zkosení, rotace profilu, nafouknutí tvaru, jak vytvořit 3D text, natočení X Y Z, perspektiva a izometrický pohled, osvětlení, materiál plast kov mat, hloubka vysunutí, živý 3D efekt, 3D ve Scissoru",
+    "grids": "izometrická mřížka, perspektivní mřížka, šestiúhelníková mřížka, mřížka zlatého řezu, čtvercová mřížka, přichytávání k mřížce, šikmá mřížka, dvoubodová perspektiva, úběžníky, jak kreslit izometricky, mřížka pro každé plátno, mřížky Scissor",
+    "guides": "pravítka a vodítka, inteligentní vodítka, chytrá vodítka, přichytávání k bodu, přichytávání k mřížce, nástroj Měřítko, jak přidat vodítko, vodítka z objektů, jednotky pravítek px mm palce, rovnoměrné rozmístění objektů, zarovnání k vodítku, vodítka Scissor",
+    "pixels": "pixelová vrstva, nástroj Štětec, pixelová guma, malování na fotografii, maska vrstvy, zesvětlení a ztmavení, plechovka barvy, úrovně a sytost, gaussovské rozostření, mapa přechodu, laso a obdélníkový výběr, rastrování vektorů",
+    "image-trace": "vektorizace obrázku, převod obrázku na vektor, vektorizace loga, PNG na SVG, fotka na vektor, skica na vektor, černobílá vektorizace, předvolby vektorizace, práh a věrnost, rozložení vektorizace, online vektorizace zdarma, vektorizace kresby",
+    "symbols": "panel Symboly, instance symbolu, nástroje symboliky, vektorové štětce, kaligrafický štětec, rozptylový štětec, umělecký štětec, vzorový štětec, jak vytvořit vzor, úprava dlaždice vzoru, výplň vzorem, zrušení vazby na symbol",
+    "panels-basics": "panel Vlastnosti, panel Vrstvy, panel Kreslicí plátna, pořadí vrstev, zobrazit skrýt zamknout vrstvu, poloha a velikost, rychlé akce seskupit, jak uspořádat vrstvy, správa kreslicích pláten, přejmenování plátna, dok panelů",
+    "panels-color-type": "panel Barva, panel Vzorník, globální vzorky, panel Přechod, barevné zarážky přechodu, lineární a radiální přechod, panel Tah, přerušovaný tah a šipky, profil šířky tahu, panel Znaky, velikost písma a proklad, zarovnání a odsazení odstavce",
+    "panels-utility": "panel Zarovnat, rovnoměrné rozmístění objektů, kombinovat tvary, automatický výběr, panel Transformovat, zásobník malby, vektorizace obrazu, průhlednost a režim prolnutí, grafické styly, panel Glyfy, export datových zdrojů, panel Historie a Akce",
+    "panels-effects": "efekt vržený stín, gaussovské rozostření, vnitřní a vnější záře, prolnutí okrajů, zaoblení rohů, cik cak a zdrsnění, zúžit a rozšířit, posun cesty, pokřivení oblouk vlna vlajka, 3D vysunutí rotace nafouknutí, živé efekty, jak přidat stín",
+    "files": "formát .cut, otevřít SVG PDF AI PSD, export SVG PNG JPEG WebP, export do PDF, umístění obrázku, export pro obrazovky, řezy a export datových zdrojů, kopírovat a vložit kresbu, rastrování vektorů, jak otevřít soubor AI v prohlížeči, import EPS, SVG editor online zdarma",
+    "automation": "automatizace, panel Akce, nahrávání a přehrávání příkazů, proměnné, grafika řízená daty, datové sady, import CSV, dávkový export, skriptování, konzole skriptů, JavaScript API, hromadná korespondence",
+    "shortcuts": "klávesové zkratky, seznam zkratek Scissor, zkratky nástrojů, zkratky Mac Windows Linux, zkratka nástroje Pero, zkratka nástroje Výběr, přiblížení a oddálení, zkratka seskupit, zpět a znovu, vložit dopředu a na místo, zkratka ořezové masky, tahák klávesových zkratek",
+    "privacy": "soukromí, bez nahrávání souborů, bez účtu a registrace, data zůstávají v zařízení, odmítnutí analytiky, obnova neuložené práce po pádu, instalace jako aplikace, offline vektorový editor, nahrává Scissor soubory, je Scissor soukromý, editor bez serveru, grafický editor offline zdarma"
+  }
 }
