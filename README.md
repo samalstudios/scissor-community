@@ -16,9 +16,18 @@ Each page is an HTML fragment in `manual/pages/`, styled by `manual/manual.css`,
 
 The manual is translated into multiple languages. Each language has its own subdirectory under `manual/pages/`:
 
+- `manual/pages/ca/` — Catalan (Català)
+- `manual/pages/cs/` — Czech (Čeština)
 - `manual/pages/de/` — German (Deutsch)
 - `manual/pages/es/` — Spanish (Español)
 - `manual/pages/fr/` — French (Français)
+- `manual/pages/it/` — Italian (Italiano)
+- `manual/pages/nb/` — Norwegian Bokmål (Norsk bokmål)
+- `manual/pages/nl/` — Dutch (Nederlands)
+- `manual/pages/pl/` — Polish (Polski)
+- `manual/pages/pt/` — Portuguese (Português)
+- `manual/pages/sk/` — Slovak (Slovenčina)
+- `manual/pages/sv/` — Swedish (Svenska)
 
 The English original lives directly in `manual/pages/`. The build script (`scripts/build-manual.mjs` in the main Scissor repo) detects all language subdirectories and builds each into its own `/manual/<lang>/` path.
 
