@@ -57,7 +57,7 @@ a:hover { text-decoration: underline; }
 .brand-mark { display: block; width: 30px; height: 30px; border-radius: 8px; box-shadow: var(--shadow); }
 .brand b { font-weight: 800; }
 .brand span { color: inherit; }
-.top-links { margin-left: auto; display: flex; align-items: center; gap: 20px; font-size: 15px; }
+.top-links { margin-inline-start: auto; display: flex; align-items: center; gap: 20px; font-size: 15px; }
 .top-links a { color: var(--dim); }
 .top-links a:hover { color: var(--ink); text-decoration: none; }
 .top-links .cta {
@@ -72,7 +72,7 @@ a:hover { text-decoration: underline; }
 .side-nav { position: sticky; top: 74px; padding: 26px 0 48px; max-height: calc(100vh - 74px); overflow-y: auto; }
 .nav-group { margin: 20px 0 7px; padding: 0 12px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--dim); }
 .nav-group:first-child { margin-top: 4px; }
-.side-nav a { display: block; padding: 7px 12px; margin: 1px 0; border-radius: 8px; border-left: 2px solid transparent; color: var(--dim); font-size: 14.5px; line-height: 1.35; }
+.side-nav a { display: block; padding: 7px 12px; margin: 1px 0; border-radius: 8px; border-inline-start: 2px solid transparent; color: var(--dim); font-size: 14.5px; line-height: 1.35; }
 .side-nav a:hover { color: var(--ink); background: var(--accent-soft); text-decoration: none; }
 .side-nav a.here { color: var(--accent-strong); background: var(--accent-soft); border-left-color: var(--accent); font-weight: 600; }
 
@@ -109,7 +109,7 @@ h2 { font-size: 25px; margin: 44px 0 12px; padding-top: 16px; border-top: 1px so
 main > section:first-of-type > h2:first-child, main > h2:first-of-type { border-top: 0; padding-top: 0; margin-top: 6px; }
 h3 { font-size: 18px; margin: 30px 0 8px; letter-spacing: -0.01em; scroll-margin-top: 84px; }
 p, li { color: var(--ink); }
-ul, ol { padding-left: 22px; }
+ul, ol { padding-inline-start: 22px; }
 li { margin: 5px 0; }
 strong { font-weight: 650; }
 code { background: var(--panel-2); border: 1px solid var(--line); border-radius: 6px; padding: 1px 5px; font: 500 13.5px/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
@@ -119,7 +119,7 @@ dt { font-weight: 650; margin-top: 14px; }
 dd { margin: 4px 0 0; color: var(--ink); }
 
 table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 14.5px; display: block; overflow-x: auto; }
-th, td { text-align: left; padding: 10px 13px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th, td { text-align: start; padding: 10px 13px; border-bottom: 1px solid var(--line); vertical-align: top; }
 th { color: var(--dim); font-weight: 600; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.05em; }
 tbody tr:hover { background: var(--panel); }
 
@@ -153,7 +153,7 @@ figure.panel figcaption { padding: 9px 13px; font-size: 12.5px; color: var(--dim
 .pnav a { border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; color: var(--ink); background: var(--panel); }
 .pnav a:hover { border-color: var(--accent); text-decoration: none; }
 .pnav a span { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--dim); margin-bottom: 3px; }
-.pnav .next { text-align: right; }
+.pnav .next { text-align: end; }
 
 .foot { margin-top: 46px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--dim); font-size: 14px; display: flex; flex-wrap: wrap; gap: 18px; }
 .foot a { color: var(--dim); }
@@ -173,7 +173,7 @@ figure.panel figcaption { padding: 9px 13px; font-size: 12.5px; color: var(--dim
 .lang-menu[open] summary::before { transform: rotate(180deg); }
 .lang-menu summary:hover { border-color: var(--accent); background: var(--accent-soft); }
 .lang-menu .lang-list {
-  position: absolute; right: 0; top: calc(100% + 8px); z-index: 50;
+  position: absolute; inset-inline-end: 0; top: calc(100% + 8px); z-index: 50;
   background: var(--bg); border: 1px solid var(--line); border-radius: 12px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.12), 0 1px 3px rgba(0,0,0,0.08);
   padding: 6px; min-width: 200px;
@@ -191,7 +191,12 @@ figure.panel figcaption { padding: 9px 13px; font-size: 12.5px; color: var(--dim
   .shell { grid-template-columns: 1fr; gap: 0; }
   .side-nav { position: static; max-height: none; padding: 14px 0 6px; display: flex; flex-wrap: wrap; gap: 4px 6px; border-bottom: 1px solid var(--line); }
   .nav-group { width: 100%; margin: 12px 0 2px; padding: 0; }
-  .side-nav a { border-left: 0; }
+  .side-nav a { border-inline-start: 0; }
   h1 { font-size: 31px; }
   .pnav { grid-template-columns: 1fr; }
 }
+
+/* Right to left: shortcuts keep their order, and Arabic-script letters are
+   never spaced apart, which would break their joins. */
+kbd { direction: ltr; unicode-bidi: isolate; }
+:lang(ar) *, :lang(fa) *, :lang(ckb) * { letter-spacing: normal !important; }
