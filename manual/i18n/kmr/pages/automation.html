@@ -1,0 +1,39 @@
+<p class="lede">Sê amûr di Scissor de karê dubare li şûna te dikin: <strong>Çalakî</strong> rêzeke fermanan tomar dikin û dîsa dilîzin, <strong>Guhêrbar</strong> nivîs û xuyabûnê ji tabloyeke daneyan diguherînin da ku sêwiranek bibe gelek, û <strong>Skrîpt</strong> tevahiya edîtorê bi JavaScript birêve dibin. Yek ji wan ne hewceyî hesabekê ne jî serverekê ye — wek yên din ên Scissor ew li ser makîneya te bi xwe dixebitin.</p>
+
+<h2 id="automation-actions">Çalakî: carekê tomar bike, li her derê dîsa bilîze</h2>
+<p>Panela <strong>Çalakî</strong> (Pencere &rsaquo; Çalakî) tiştê ku tu dikî tomar dike û li ser hilbijartineke nû dîsa dilîze. Li <strong>Tomar Bike</strong> bixe, fermanên ku tu dixwazî bigirî bimeşîne — rêzkirin, offset, sîyek lê zêde kirin, rêze çi dibe bila bibe — paşê li <strong>Rawestîne</strong> bixe û navekî bide çalakiyê. Ew tevlî lîsteyê dibe û nîşan dide çend gavan dihewîne.</p>
+<p>Li çalakiyekê bitikîne da ku wê li ser her tiştê ku niha hilbijartî ye <strong>bilîzî</strong>; <kbd>&#8997;</kbd>-tikandina yekê wê jê dibe. Ji ber ku çalakiyek tenê lîsteyek fermanan e, ew rûtîneke tam li ser gelek objeyan dubare dike bêyî ku tu her car yek bi yek lê bitikînî.</p>
+
+<h2 id="automation-variables">Guhêrbar: sêwiranek, gelek guhertoyan</h2>
+<p>Panela <strong>Guhêrbar</strong> (Pencere &rsaquo; Guhêrbar) sêwiraneke sabît dike şablonek ku ji hêla daneyan ve tê birêvebirin. Du tişt li ser objeyekê dikarin dînamîk bibin:</p>
+<dl>
+  <dt>Nivîsê Dînamîk Bike</dt><dd>Peyvên objeyeke nivîsê bi guhêrbarekê ve girê dide, da ku komên daneyan ên cuda karibin nivîsên cuda li heman cihî bi cih bikin.</dd>
+  <dt>Xuyabûnê Dînamîk Bike</dt><dd>Xuyabûna objeyekê girê dide, da ku komek karibe beşên sêwiranê vêxe an vemirîne.</dd>
+</dl>
+<p><strong>Girêdanê Rake</strong> objeyeke girêdayî dîsa sabît dike.</p>
+
+<h3 id="automation-datasets">Komên daneyan</h3>
+<p><strong>Komeke daneyan</strong> rêzek nirxan e ji bo wan guhêrbaran — nîşaneyek, qertek, çarçoveyek. <strong>Bigire</strong> nirxên niha wek komeke nû tomar dike; tîr ji komekê derbasî ya din dibin û sêwiran li gorî wê nû dibe. <strong>CSV Bîne…</strong> komeke tevahî bi carekê dixwîne — ji bo her guhêrbarekê stûnek, ji bo her komekê rêzek — û <strong>CSV Derxe</strong> komên daneyan dîsa dinivîse da ku di tabloyeke hesabkirinê de werin sererastkirin.</p>
+
+<h3 id="automation-batch">Derxistina hemû koman bi carekê</h3>
+<p><strong>Komên Daneyan Derxe…</strong> tabloya çalak ji bo her komeke daneyan carekê çêdike û hemûyan di yek derbasbûnê de dinivîse, wek PNG, JPEG, WebP an SVG. Pelek nîşaneyên navan, komek banerên herêmîkirî an rêzek qertên medyaya civakî wek komeke rêkûpêk a pelan derdikevin, her yek bi daneyên xwe dagirtî.</p>
+
+<h2 id="automation-scripts">Skrîpt: Scissor bi JavaScript birêve bibe</h2>
+<p>Ji bo her tiştê ku menûyek nikare bîne ziman, skrîptek dikare. <strong>Pel &rsaquo; Skrîpt &rsaquo; Konsola Skrîptan…</strong> edîtorekê vedike ku tu tê de JavaScript dinivîsî û li ser belgeya vekirî dimeşînî; <strong>Skrîpteke Din…</strong> (<kbd>&#8984;F12</kbd>) pelekî <code>.js</code> ji dîskê dimeşîne. Skrîpt di Web Workerekê de, dûrî rûpelê, dixebite, ji ber vê yekê ew nikare dest bide navrûyê an pelên te ji bilî bi rêya objeya <code>scissor</code> ku jê re tê dayîn — her bang li ser motorê tê kirin û bersiv lê tê vegerandin.</p>
+<p>Objeya <code>scissor</code> karên hevpar digire:</p>
+<dl>
+  <dt>Teşe û nivîs çêke</dt><dd><code>scissor.rect</code>, <code>roundedRect</code>, <code>ellipse</code>, <code>polygon</code>, <code>star</code>, <code>path</code> û <code>text</code> berheman xêz dikin; her yek cih û mezinahiyekê û objeyeke vebijarkan ji bo <code>fill</code>, <code>stroke</code> û <code>strokeWidth</code> digire (reng her rengekî CSS dikarin bin).</dd>
+  <dt>Belgeyê bixwîne</dt><dd><code>await scissor.document()</code> sepan, hilbijartin, tebeqe û tabloyan wek ku panel wan dibînin vedigerîne; <code>scissor.selection()</code> tenê tiştê hilbijartî vedigerîne.</dd>
+  <dt>Li ser wê tevbigere</dt><dd><code>scissor.select</code>, <code>group</code> û <code>undo</code>, û <code>scissor.run(command)</code> ji bo her fermaneke motorê — heman fermanên ku menû dişînin.</dd>
+  <dt>Bersiv bide</dt><dd><code>scissor.log</code> li konsolê çap dike; <code>scissor.alert</code> peyamekê nîşan dide.</dd>
+</dl>
+<p>Mînakeke kurt — xelekek ji xalên rengîn û binnivîsek:</p>
+<pre><code>const doc = await scissor.document();
+scissor.log('Boards:', doc.artboards.length);
+for (let i = 0; i &lt; 12; i++) {
+  const a = (i / 12) * Math.PI * 2;
+  await scissor.ellipse(300 + Math.cos(a) * 120, 260 + Math.sin(a) * 120, 36, 36,
+    { fill: `hsl(${i * 30} 80% 60%)` });
+}
+await scissor.text(230, 270, 'Hello, Scissor', { size: 24 });</code></pre>
+<p>Konsola Skrîptan koda dawî ya ku te meşandiye diparêze, ji ber vê yekê skrîpteke ku dixebite li wir e dema tu vedigerî.</p>
