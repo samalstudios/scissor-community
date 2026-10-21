@@ -1,0 +1,120 @@
+<p class="lede">Belgeyeke Scissor dikare digel rêç û nivîsên xwe yên xêzkirî pîkselên boyaxkirî jî bigire, ji ber vê yekê yek pel dikare tevneke nerm a bi firçeyê, wêneyek û logoyeke zelal bi hev re hilgire. Ev rûpel şirove dike ka qata pîkselan çi ye, meriv çawa li ser wê boyax dike, û ew wekî tiştekî di belgeyê de çawa tevdigere.</p>
+
+<h2 id="pixels-vector-vs-raster">Pîksel li hember karê hunerî yê vektorî</h2>
+<p>Belgeyeke Scissor du cure karê hunerî li kêleka hev digire. Rêç û nivîs <em>xêzkirî</em> ne: ew di her mezinahiyê de tûj dimînin ji ber ku bi şeklê xwe têne şirovekirin, û Scissor her gava ku hûn zoom dikin an pîvan dikin wan ji nû ve xêz dike. <strong>Qata pîkselan</strong> <em>boyaxkirî</em> ye: ew toreke xalên rengîn e, wekî wêneyekî an tabloyeke bi firçeyê, û mezinkirina wê wan xalan mezintir dike li şûna ku hûrguliyan zêde bike. Yek belge dikare ji her yekê çend ku hûn bixwazin bigire, bi her rêzê, û ew di panela Qat de bi hev re li ser hev rêz dibin.</p>
+<p>Dema ku şekilek bi tenê têra xwe nake qateke pîkselan bikar bînin: sîbereke bi destan boyaxkirî, tevneke hişk li pişt nivîseke paqij, pelek reng ku ne hewce ye rêçeke guherbar be, an sererastkirin li ser wêneyekî bicihkirî. Logo, diyagram û her tiştê ku hûn ê paşê mezinahiya wê biguherînin wekî vektor biparêzin, û pîkselan ji bo beşên ku hesta boyaxê dixwazin bikar bînin.</p>
+<p>Wêneyekî bicihkirî tiştekî têkildar lê cuda ye. <strong>Pel &gt; Bi cih bike…</strong> (<kbd>&#8679;&#8984;P</kbd>) wêneyekî heyî wekî wêneyekî bicihkirî tîne nav belgeyê; qata pîkselan rûyek e ku hûn di hundirê Scissor de ji sifirê li ser boyax dikin. Her du ji pîkselan pêk tên û her du dikarin bi dilopkerê werin nimûnekirin, lê tenê qata pîkselan xêzên firçeyê digire.</p>
+
+<h2 id="pixels-new">Çêkirina qateke pîkselan</h2>
+<p><strong>Tişt &gt; Qata Pîkselan &gt; Qata Pîkselan a Nû</strong> rûyekî vala ku tabloya çalak digire zêde dike. Lê ne hewce ye ku hûn pêşî yekê çêkin: Firçeyê hilbijêrin û boyax bikin, û Scissor gava ku xêza yekem dadikeve qatê ji bo we çêdike. Bi her awayî qat li ser tabloyê tê bicihkirin, ji ber vê yekê pîksel bi tabloyê re rêz dibin bi kîjan çareseriyê ku hatibin çêkirin.</p>
+<p>Ew çareserî ji mîhenga <strong>Efektên Raster</strong> di <strong>Pel &gt; Sazkirina Belgeyê…</strong> (<kbd>&#8997;&#8984;P</kbd>) de tê: Ekran (72&nbsp;ppi), Navîn (150&nbsp;ppi) an Bilind (300&nbsp;ppi). Mîhengeke bilindtir ji qateke pîkselan a nû re ji bo her xalê bêtir pîksel dide, ji ber vê yekê karê firçeyê dema ku berhem tê çapkirin an mezin tê dîtin nerm dimîne. Wê berî ku hûn qatê çêkin saz bikin, ji ber ku hejmara pîkselan dema rû tê çêkirin sabît dibe.</p>
+<p>Di şêla nûjen de hûn dikarin qatekê ji barê vebijarkên amûrê jî zêde bikin: dema ku Firçe an Jêbira Pîkselan çalak e, bişkokeke <strong>Qata pîkselan a nû</strong> li dawiya barê ye.</p>
+<p><strong>Bicihkirina wêneyekî jî qateke pîkselan çêdike.</strong> Wêneyekî bavêjin ser kanvasê, <strong>Pel &gt; Bi cih bike…</strong> bikar bînin, an yekê ji panoyê pêve bikin, û ew wekî qateke pîkselan a guherbar bi mezinahiya xwe tê li şûna wêneyekî qefilkirî — ji ber vê yekê hûn dikarin yekser li ser wê boyax bikin, maske bikin, sererast bikin û parzûn bikin. Vekirina wêneyekî bi <strong>Pel &gt; Veke</strong> belgeyeke nû bi yek tabloyê bi mezinahiya wêneyê çêdike, ku bi qata pîkselan tijî ye. Wêneyên pir mezin têne biçûkkirin da ku di nav budceya pîkselan de cih bigirin. <strong>SVG</strong> vektor dimîne — rêçên wê guherbar dimînin — ji ber vê yekê tenê wêneyên bitmap (PNG, JPEG, GIF, WebP û yên wekî wan) dibin qatên pîkselan.</p>
+<p>Pelek <strong><code>.psd</code></strong> a bi qatan dewlemendtir tê: vekirina yekê stûna wê wekî qatên pîkselan ên cuda ji nû ve ava dike, <strong>maskeya</strong> her qatê diparêze, û nivîs, şekil û efektên qatê tîne, da ku pel nêzîkî ka li cihê ku hatiye çêkirin çawa xuya dikir dakeve li şûna yek wêneyekî pehn. Ew riya herî tam e ji bo karê pîkselan, û her tiştê li ser vê rûpelê paşê li ser qatên ku tên derbas dibe.</p>
+
+<h2 id="pixels-painting">Boyaxkirin</h2>
+
+<h3 id="pixels-brush">Firçe û Jêbira Pîkselan</h3>
+<p>Du amûr li ser qatên pîkselan dixebitin.</p>
+<table>
+  <thead><tr><th>Amûr</th><th>Li ku ye</th><th>Çi dike</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Amûra Firçeyê</strong></td><td>Cihekî bi Firçeya Boyaxê (<kbd>B</kbd>) û Firçeya Dagirtinê (<kbd>&#8679;B</kbd>) re parve dike</td><td>Rengê ku dibe beşek ji wêneyê datîne</td></tr>
+    <tr><td><strong>Amûra Jêbira Pîkselan</strong></td><td>Cihekî bi Jêbirê (<kbd>&#8679;E</kbd>), Meqes û Kêrê re parve dike</td><td>Boyaxê paqij dike da ku her tiştê li binê wê xuya bibe</td></tr>
+  </tbody>
+</table>
+<p>Ji bo gihîştina her yekê, amûra xuya ya di darikê amûran de pêl bikin û bigirin, an bi tikandina rastê li ser wê bitikînin, û amûra pîkselan ji lîsteyê hilbijêrin. Wan bi cîranên wan ên vektorî re tevlihev nekin: Firçeya Boyaxê rêçekê xêz dike ku hûn dikarin paşê şeklê wê biguherînin, dema ku Firçe pîkselên ku nikarin ji nû ve werin xalbendîkirin boyax dike. Her du amûrên pîkselan li ser kanvasê xelekekê bi mezinahiya ku dê boyax bikin nîşan didin, û her du nîşankerekî xaçî bikar tînin.</p>
+<p>Bikişînin da ku boyax bikin an jê bibin. Nîşan bêyî valahiyan li pey nîşankerê tê çiqas zû hûn dilivin jî, ji ber ku Scissor rêzek lêdanên girover li ser xêzê datîne û wan bi navberên yeksan dihêle heta dema ku nîşanker diqefize. Jêbira Pîkselan alfayê radike li şûna ku li ser boyax bike, ji ber vê yekê tiştê ku paqij dike bi temamî zelal dibe; kaşiyeke ku heta tunebûnê hatiye jêbirin tê avêtin, ji ber vê yekê jêbirin giraniyê li paş nahêle.</p>
+
+<h3 id="pixels-colour">Boyaxkirin bi rengê dagirtinê</h3>
+<p>Firçe bi rengê <strong>dagirtinê</strong> yê niha boyax dike. Wê bi heman awayî saz bikin ku hûn her dagirtinê saz dikin: panela Reng, mosterek, an, dema ku Firçe di şêla nûjen de çalak e, çîpa <strong>Reng</strong> di barê vebijarkên amûrê de. Heke dagirtin vala be Firçe vedigere rengê xêzê, û heke ti reng tune be bo reş. Dema ku hûn dixwazin boyaxeke ku berê hatiye danîn bigirin, bi Dilopkerê rengekî rasterast ji qateke pîkselan hilbijêrin.</p>
+
+<h3 id="pixels-controls">Mezinahî, hişkî û herikîn</h3>
+<p>Dema ku Firçe an Jêbira Pîkselan çalak e, barê vebijarkên amûrê mîhengên ku şeklê nîşanê didin hildigire. Ew di vebijarkên we de jî hene, ji ber vê yekê ji danişînekê bo ya din tên.</p>
+<dl>
+  <dt>Mezinahî</dt><dd>Qûtra firçeyê, ji 1 heta 2500 pîkselan. <kbd>[</kbd> bitikînin da ku firçeyê biçûktir bikin û <kbd>]</kbd> da ku mezintir bikin; her pêlkirin mezinahiyê bi pêncyekê diguherîne, ji ber vê yekê gav bi firçeyê re mezin dibe. Xeleka li ser kanvasê mezinahiya niha nîşan dide.</dd>
+  <dt>Hişkî</dt><dd>Qirax li ku dest bi kalbûnê dike, wekî rêjeya sedî. Li 100% qirax zelal e; wê kêm bikin û lêdan ber bi qiraxa xwe ve bi daketineke nerm û bê xelekeke xuya nerm dibe. Ji bo sîber û ronahiyan firçeyeke nerm, ji bo şekilên hişk yeke hişk bikar bînin.</dd>
+  <dt>Herikîn</dt><dd>Her lêdan çiqas boyax datîne, tenê ji bo Firçeyê. Li jêr 100% reng dema ku hûn dîsa di ser qadekê re derbas dibin hêdî hêdî kom dibe, ku ji bo sîberkirin û tevlihevkirinên hêdî guncav e. Jêbira Pîkselan kontrola herikînê tune.</dd>
+</dl>
+
+<h2 id="pixels-retouch">Ronîkirin, şewitandin û sûngerkirin</h2>
+<p>Sê firçeyên sererastkirinê di nav pîkselên ku berê hene de dixebitin li şûna ku rengekî deynin, û di darikê amûran de yek cihî parve dikin. Ew wekî Firçeyê boyax dikin — heman mezinahî, hişkî û xeleka kanvasê — û dema hûn dîsa di ser qadekê re derbas dibin kom dibin, ji ber vê yekê destdaneke sivik hêdî ye û yeke bi hêz bilez e.</p>
+<dl>
+  <dt>Ronîkirin</dt><dd>Li her cihê ku hûn boyax dikin ronî dike, sîberan radike û ronahiyên tîrêjî zêde dike.</dd>
+  <dt>Şewitandin</dt><dd>Li her cihê ku hûn boyax dikin tarî dike, sîber û qiraxan kûrtir dike.</dd>
+  <dt>Sûnger</dt><dd>Têrbûnê bilind dike, û rengan çiqas hûn bêtir di ser wan re derbas bibin dewlemendtir dike.</dd>
+</dl>
+<p>Her yek pîkselên zelal bêdestdan dihêle, dema ku hilbijartinek hebe di hundirê wê de dimîne, û tevahiya xêzê bi yek gavê vedigere.</p>
+
+<h2 id="pixels-more-tools">Satil, şekil û gradyan</h2>
+<p>Boyaxkirin ne tenê Firçe ye. Li ser qateke pîkselan sê amûrên din reng datînin: <strong>Satilka Boyaxê</strong> qadeke girêdayî ya bi rengê wekhev ji cihê ku hûn lê dikin tijî dike; <strong>amûrên şekil</strong> çargoşeyek, hêlîkek, stêrkek an pirgoşeyek rasterast di nav pîkselan de mohr dikin li şûna xêzkirina rêçekê; û <strong>amûra Gradyanê</strong> tevlihevkirineke xêzikî an tîrêjî li ser rûyê boyax dike. Her yek rêzê li hilbijartina niha digire, ji ber vê yekê hûn dikarin dagirtinekê an gradyanekê bi herêmeke hilbijartî sînordar bikin.</p>
+
+<h2 id="pixels-selecting">Hilbijartina pîkselan</h2>
+<p><strong>Hilbijartineke pîkselan</strong> — çarçoveyek — her boyaxkirin û guhertinê bi herêma di hundirê wê de sînordar dike, wekî ku şablonek dike. Sê amûr yekê çêdikin, ku cihê hilbijartina pîkselan parve dikin: <strong>Çarçoveya Çargoşe</strong> û <strong>Hêlîkî</strong>, û <strong>Çarçoveya Kemendî</strong> ya bi destê azad ku hûn bi destan dişopînin. Bikişînin da ku hilbijartinekê xêz bikin; kişandineke sade ya niha diguherîne.</p>
+<p><strong>Hilbijartina Bixweber</strong> li şûna şekil li gorî rengê hildibijêre: li ser qateke pîkselan bitikînin û ew perçeya girêdayî ya rengê li dora cihê ku we lê kir digire, û xêzikeke mêşên rêwî li dora wê dişopîne — ji bo rakirina paşperdeyeke pehn an qadeke yek rengî bi kêr tê. Rengek divê çiqas nêzîk be da ku were girtin <strong>Tolerans</strong> e li ser vebijarkên Hilbijartina Bixweber, heman mîhenga ku li ser tiştên vektorî bikar tîne; wê zêde bikin da ku bêtir kom bike, kêm bikin da ku li lihevhatineke nêzîk bimîne. Qulên di perçeyê de ji hilbijartinê têne derxistin.</p>
+<p>Hilbijartin dikarin werin hevgirtin, ji ber vê yekê şekilek dikare ji çend xêz an tikandinan were avakirin: <kbd>&#8679;</kbd> bigirin da ku li hilbijartinê <strong>zêde bikin</strong>, <kbd>&#8997;</kbd> da ku <strong>kêm bikin</strong>, û her du bi hev re da ku tenê <strong>cihê li ser hev</strong> biparêzin — çarçove û Hilbijartina Bixweber hemû bi heman awayî têne hevgirtin. <strong>Hilbijartin &gt; Hemû</strong> (<kbd>&#8984;A</kbd>) her pîkselê hildibijêre, <strong>Hilbijartin &gt; Berevajî</strong> çarçoveyê diqulibîne, û <strong>Hilbijartinê Rake</strong> — <kbd>&#8984;D</kbd> li ser qateke pîkselan — wê radike. Xêzikeke mêşên rêwî hilbijartinê li ser kanvasê nîşan dide.</p>
+
+<h2 id="pixels-editing-selection">Livandin, birîn û kopîkirina pîkselan</h2>
+<p>Dema ku hilbijartinek hatibe sazkirin, Amûra Hilbijartinê pîkselên di hundirê wê de dilivîne: ji hundirê çarçoveyê bikişînin û boyaxa hilbijartî radibe û diçe, cihê ku lê bû paqij dike û çarçoveyê bi xwe re dibe. Dema dikişînin <kbd>&#8997;</kbd> bigirin da ku orîjînalê di cih de bihêlin û <strong>kopiyekê</strong> bilivînin.</p>
+<p>Amûrên veguherînê jî li ser hilbijartinê dixebitin. Dema ku çarçoveyek hatibe sazkirin, qutiya sînor a Amûra Hilbijartinê û <strong>Amûra Veguherîna Azad</strong> (<kbd>E</kbd>) çarçoveyê dipêçin, ne tevahiya qatê, ji ber vê yekê hûn dikarin tenê wê beşa wêneyê pîvan bikin, bizivirînin an bilivînin; <strong>Tişt &gt; Veguherîn</strong> û bişkokên tîran bi heman awayî li ser wê dixebitin. Pîkselên rakirî dema hûn dixebitin li ser qatê diherikin, ji ber vê yekê hûn dikarin wan dîsa û dîsa bikişînin bêyî ku ti hûrgulî winda bibe. <kbd>Enter</kbd> bitikînin, amûreke din hilbijêrin, an hilbijartineke nû çêkin da ku wan deynin, ku yek gav e ji bo vegerandinê, an <kbd>Escape</kbd> bitikînin da ku her tiştî vegerînin cihê ku bû. Livandineke bi pîkselên tevahî wan tam wekî ku bûn diparêze; pîvandin an zivirandin wan carekê, dema têne danîn, ji nû ve nimûne dike.</p>
+<p><strong>Çewtkirina Azad</strong> û <strong>Çewtkirina Perspektîfê</strong> ya Amûra Veguherîna Azad li ser pîkselan jî dixebitin, li ser çarçoveyekê an li ser qateke tevahî: quncikeke qutiyê bikişînin (an di moda Veguherîna Azad de dema yekê dikişînin <kbd>&#8984;</kbd> bigirin) da ku wêneyê ji rastiyê derxînin, bo nimûne da ku wêneyekî li ser ekranekê an tabelayeke ku bi goşeyekê tê dîtin bînin. Dema ku hûn dikişînin, Scissor pêşdîtineke bilez bi mezinahiya ekranê nîşan dide, ji ber vê yekê ew heta li ser wêneyekî mezin jî nerm dimîne; pîksel bi xwe carekê, bi çareseriya tam, têne kişandin dema ku hûn <kbd>Enter</kbd> dikin an derbas dibin, û çarçove li pey şeklê nû tê.</p>
+<p>Kopî bike (<kbd>&#8984;C</kbd>) û Bibire (<kbd>&#8984;X</kbd>) li ser pîkselên di hundirê çarçoveyekê de dixebitin: kopîkirin qatê wekî xwe dihêle, birîn pîkselan derdixe. Pêve bike (<kbd>&#8984;V</kbd>) wan dixe ser <strong>qateke pîkselan a nû</strong> hema li ser ya ku jê hatine, tam li heman cihî, amade ne ku bi serê xwe werin livandin an veguherandin. Heman ferman di <strong>Çêke &gt; Qata Pîkselan</strong> de ne, û hilbijartin fermanên rûyê jî rêve dibe: <strong>Bi Rengê Dagirtinê Tijî Bike</strong> tenê herêma hilbijartî tijî dike, <strong>Paqij Bike</strong> û <strong>Jê bibe</strong> wê jê dibin, û bê hilbijartin her yek li ser tevahiya qatê dixebite.</p>
+
+<h2 id="pixels-adjustments">Sererastkirin</h2>
+<p>Binmenûya <strong>Tişt &gt; Qata Pîkselan &gt; Sererastkirin</strong> rengê qateke pîkselan sererast dike, bi hilbijartinê sînordar dema yek hebe. Her yek diyalogekê vedike ku dema hûn dikişînin li ser kanvasê pêşdîtin dide.</p>
+<dl>
+  <dt>Ronahî / Kontrast, Ast</dt><dd>Ronîtî û kontrasta giştî saz bikin, an xala reş, xala spî û gamayê ji bo kontrola tonê ya hûrtir ji nû ve nexşe bikin.</dd>
+  <dt>Ton / Têrbûn, Zindîtî</dt><dd>Tonê biguherînin û têrbûnê li her derê bilind an nizm bikin, an Zindîtiyê bikar bînin da ku rengên kal xurt bikin û yên berê zindî bêdestdan bihêlin.</dd>
+  <dt>Hevsengiya Rengan</dt><dd>Tonên navîn ber bi sayan an sor, mor an kesk, zer an şîn ve bibin.</dd>
+  <dt>Nexşeya Gradyanê</dt><dd>Qatê li gorî ronahiya wê ji nû ve reng bikin, sîberan bi rengekî û ronahiyên tîrêjî bi yekî din re nexşe bikin.</dd>
+  <dt>Bêreng Bike, Berevajî Bike</dt><dd>Hemû rengan bikin gewr, an her rengî biqulibînin dijberê wî.</dd>
+  <dt>Sînor, Posterîze</dt><dd>Wêneyê li asteke hilbijartî bikin reş û spiyê saf, an bikin hejmareke biçûk a tonan ji bo her kanalekê.</dd>
+</dl>
+
+<h2 id="pixels-filters">Parzûn</h2>
+<p>Binmenûya <strong>Parzûn</strong> şeklê pîkselan bi xwe diguherîne, dîsa di nav hilbijartinê de.</p>
+<dl>
+  <dt>Şêlûkirina Gaussî</dt><dd>Qatê bi rêjeyeke yeksan û sererastbar nerm dike.</dd>
+  <dt>Tûj Bike, Maskeya Netûj</dt><dd>Hûrguliyan zelal dikin — Maskeya Netûj kontrolê li ser tîrêj, rêje û sînorekî dide ku qadên pehn û dengê hûr diparêze.</dd>
+  <dt>Pîkselîze Bike</dt><dd>Wêneyê dike kaşiyên çargoşe ji bo mozaîkê.</dd>
+  <dt>Dengê Zêde Bike</dt><dd>Gewherê li ser boyaxê belav dike.</dd>
+  <dt>Qiraxan Bibîne, Bilind Bike</dt><dd>Cihê ku reng diguhere wekî xetên ronî li ser tarî, an wekî rêlyefeke gewr dişopînin.</dd>
+</dl>
+<p><strong>Parzûn &gt; Pêşdîtinên Efektan</strong> qata we wekî toreke wêneyên biçûk ên zindî nîşan dide, ku li ser her yekê sererastkirinek an parzûnek hatiye sepandin, da ku hûn bi çavan hilbijêrin li şûna bi navan. Hilbijartina wêneyekî biçûk pencereyê vekirî dihêle. Mîhengên efektê li kêleka torê xuya dibin, û kanvas dema hûn wan diguherînin encamê pêşdîtin dide. Tiştek nayê sepandin heta ku hûn li ser <strong>Bisepîne</strong> bitikînin (an <kbd>Enter</kbd> bikin). <strong>Betal bike</strong> an <kbd>Esc</kbd> wêneyê vedigerîne, û yek vegerandin efekteke sepandî radike. Hûn dikarin pencereyê bi sernavê wê bikişînin da ku kanvasa li pişt wê bibînin.</p>
+
+<h2 id="pixels-undo">Vegerandina bilez a li ser bingeha kaşiyan</h2>
+<p>Xêzeke tevahî bi yek gavê vedigere, çiqas dirêj bûbe jî: carekê <kbd>&#8984;Z</kbd> bitikînin û nîşana dawîn çûye, û <kbd>&#8679;&#8984;Z</kbd> wê vedigerîne. Heke xêza yekem neçar bû qata xwe çêbike, ew qat bi xêzê re vedigere li şûna ku vala li paş bimîne.</p>
+<p>Li pişt perdeyê qateke pîkselan wekî toreke kaşiyên biçûk tê parastin, û xêzek tenê kaşiyên ku bi rastî dest dayê kopî dike. Vegerandin wêneyên tevahî yên belgeyê diparêze, lê xêzek tenê kaşiyên xwe dixwaze li şûna tevahiya rûyê, ji ber vê yekê boyaxkirina li ser qateke mezin bilez dimîne û danişîneke dirêj a karê firçeyê bîrê tijî nake. Qadên pehn ên yek rengî bi awayekî kompakt têne tomarkirin, ji ber vê yekê qateke ku bi piranî yek reng e hema cih nagire.</p>
+
+<h2 id="pixels-treating">Qateke pîkselan wekî her tiştekî</h2>
+<p>Qateke pîkselan di belgeyê de tişt e, ji ber vê yekê her tiştê ku hûn berê dizanin derbas dibe. Wê hilbijêrin, bilivînin, û ji <strong>Tişt &gt; Veguherîn</strong>, qutiya sînor an Amûra Veguherîna Azad pîvan bikin, bizivirînin, neynik bikin an xwar bikin. Bê çarçove, qutî pîkselên boyaxkirî yên qatê dipêçe li şûna tevahiya rûyê wê, û veguherînek li ser wan pîkselan dixebite: livandin wan bêdestdan dihêle, dema ku pîvandin an zivirandin di nav pîkselan de tê sabîtkirin dema ku hûn <kbd>Enter</kbd> dikin, amûreke din hildibijêrin an tiştekî din hildibijêrin, ji ber vê yekê qat rast dimîne û xêza firçeyê ya din bi aliyê rast ve dadikeve. Nezelaliya wê saz bikin û ji panela Zelalî yek ji şazdeh modên tevlihevkirinê bidinê da ku rengê boyaxkirî li ser karê hunerî yê xêzkirî yê li jêr rûne. Tikandin qatê tenê li cihê ku boyax heye hildibijêre, ji ber vê yekê quncikeke zelal dihêle hûn rasterast li ser tiştê li binê wê bitikînin. <strong>Dubare Bike</strong> qateke pîkselan wekî her tiştekî kopî dike — bi erzanî, ji ber ku kopî kaşiyên xwe parve dike heta ku yek ji wan were boyaxkirin.</p>
+<p><strong>Tişt &gt; Qata Pîkselan &gt; Ber bi Jêr ve Yek Bike</strong> qateke pîkselan li ser qata pîkselan a rasterast li binê wê pehn dike û ya jorîn radike, û yek qatê dihêle ku her du bi hev re hatine pêkanîn. Heke qat di bin veguherînên cuda de bin — bo nimûne yek hatibe zivirandin — ya jorîn dema ku tê yekkirin di tora ya jêrîn de ji nû ve tê nimûnekirin.</p>
+<p>Du ferman bi carekê li ser tevahiya rûyê dixebitin:</p>
+<dl>
+  <dt>Tişt &gt; Qata Pîkselan &gt; Bi Rengê Dagirtinê Tijî Bike</dt><dd>Tevahiya rûyê bi rengê dagirtinê yê niha tijî dike. Wê bikar bînin da ku berî boyaxkirinê qateke bingehîn deynin, an qateke ku li pişt hunerê din e tijî bikin.</dd>
+  <dt>Tişt &gt; Qata Pîkselan &gt; Paqij Bike</dt><dd>Rûyê vala dike bêyî rakirina qatê, ji ber vê yekê hûn dikarin boyaxkirinê ji nû ve dest pê bikin û cih, veguherîn, nezelalî û moda tevlihevkirinê ya qatê biparêzin.</dd>
+</dl>
+<p>Her du ferman di bin <strong>Efekt &gt; Qata Pîkselan</strong> de jî xuya dibin.</p>
+
+<h2 id="pixels-masks">Maskeyên qatê</h2>
+<p><strong>Maskeya qatê</strong> beşên qateke pîkselan vedişêre bêyî ku wan jê bibe: qat li cihê ku maske spî ye xuya dibe û li cihê ku reş e veşartî ye, bi gewriyan di navberê de ji bo zelaliya qismî. Ji ber ku tiştek nayê jêbirin, hûn dikarin maskeyê çend caran bixwazin paş û pêş boyax bikin. Ferman di bin <strong>Tişt &gt; Qata Pîkselan</strong> de ne.</p>
+<dl>
+  <dt>Maskeya Qatê Zêde Bike</dt><dd>Maskeyek girê dide ku di destpêkê de her tiştî nîşan dide, amade ye ku li ser were boyaxkirin.</dd>
+  <dt>Maskeya Qatê ji Hilbijartinê Zêde Bike</dt><dd>Maskeyê ji hilbijartina pîkselan a niha ava dike: tiştê di hundir de dimîne, tiştê li derve tê veşartin. Riyeke bilez e ji bo birîna şekilekî ji wêneyekî bêyî xirakirinê.</dd>
+  <dt>Maskeyê Biguherîne</dt><dd>Boyaxkirina maskeyê vedike û digire. Heta ku vekirî ye, Firçe, Jêbir û Satilka Boyaxê li şûna qatê maskeyê boyax dikin: bi reş (an rengekî tarî) boyax bikin da ku veşêrin, bi spî da ku nîşan bidin, bi gewr da ku kal bikin. Firçe ronîtiya rengê dagirtinê yê niha bikar tîne, ji ber vê yekê reş vedişêre û spî nîşan dide.</dd>
+  <dt>Maskeya Qatê Bisepîne</dt><dd>Maskeyê bi awayekî daîmî di qatê de sabît dike — pîkselên veşartî zelal dibin — û maskeyê radike.</dd>
+  <dt>Maskeya Qatê Jê Bibe</dt><dd>Maskeyê davêje û tevahiya qatê dîsa bêdestdan nîşan dide.</dd>
+</dl>
+<p>Qateke maskekirî bi maskeyeke berê sepandî tê derxistin û tomarkirin, û wekî her qateke din tevlihev dibe û tê veguherandin.</p>
+
+<h2 id="pixels-rasterize">Kirina hunera vektorî pîksel: Rasterîze Bike</h2>
+<p><strong>Tişt &gt; Rasterîze Bike</strong> hilbijartina niha bi wêneyekî bicihkirî yê wê bi xwe diguherîne, û rêç, nivîs û her efektê di nav pîkselên sabît de diçespîne. Dema ku hûn dixwazin encameke vektorî êdî neyê guhertin, dema ku efektek wekî wêneyekî pehn hêsantir e ku were kirin, an ji bo radestkirina perçeyekê ku divê li her derê wekî hev xuya bike bêyî ku avakirina xwe ya zindî hilgire, vê bikar bînin. Encam wêneyekî bicihkirî ye li şûna qateke pîkselan a boyaxbar, ji ber vê yekê heke dibe ku hûn hewce bin dîsa wê biguherînin kopiyeke karê hunerî yê orîjînal biparêzin. <strong>Dîtin &gt; Pêşdîtina Pîkselan</strong> (<kbd>&#8997;&#8984;Y</kbd>) dihêle hûn berî pejirandinê kontrol bikin ka hunera vektorî dê çawa li ser tora pîkselan dakeve.</p>
+
+<h2 id="pixels-saving">Tomarkirin û derxistin</h2>
+<p>Belgeyên <code>.cut</code> qatên pîkselan digel karê hunerî yê din diparêzin, bi awayekî pêçayî ku qadên pehn hema cih nagirin û tam wekî ku hatine boyaxkirin ji nû ve vedibin.</p>
+<p>Qatên pîkselan çawa ji belgeyê derdikevin bi formatê ve girêdayî ye:</p>
+<dl>
+  <dt>PNG, JPEG û WebP</dt><dd>Tevahiya belgeyê dikin pîksel, ji ber vê yekê karê boyaxkirî û xêzkirî dibin yek bitmap. PNG dikare zelaliyê biparêze; ji bo encameke tûjtir bi @2x derxînin.</dd>
+  <dt>SVG û PDF</dt><dd>Rûyê boyaxkirî wekî wêneyekî bicihkirî di nav hunera vektorî de dinivîsin, ji ber vê yekê belgeyeke ku karê xêzkirî û boyaxkirî tevlihev dike wekî yek pel bi şekilên xwe yên hîn zelal diçe.</dd>
+</dl>
+<p>Ji ber ku raster û vektor di heman belgeyê de dijîn û bi hev re têne derxistin, hûn dikarin berhemekê bi awayê xwezayî ava bikin: şekil û nivîsên paqij wekî vektor, û beşên ku hesta boyaxê dixwazin, ronahiyeke nerm, şûştineke bi tevn, wêneyekî sererastkirî, wekî qatên pîkselan ên di nav wan de li ser hev.</p>

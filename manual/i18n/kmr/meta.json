@@ -1,0 +1,216 @@
+{
+  "chrome": {
+    "Manual": "Rêbername",
+    "Shortcuts": "Kurterê",
+    "Open the editor": "Edîtorê veke",
+    "Skip to the content": "Here naverokê",
+    "Search the manual": "Di rêbernameyê de bigere",
+    "Search the manual…": "Di rêbernameyê de bigere…",
+    "Breadcrumb": "Rêya rûpelê",
+    "More pages": "Rûpelên din",
+    "Previous": "Berê",
+    "Next": "Pêş",
+    "Language": "Ziman",
+    "Scissor by Samal Studios.": "Scissor ji hêla Samal Studios ve.",
+    "Third-party licences": "Lîsansên aliyên sêyem",
+    "| Scissor manual": "| Rêbernameya Scissor",
+    "Scissor user manual: every tool, menu and shortcut": "Rêbernameya bikarhêner a Scissor: her amûr, menû û kurterê",
+    "Scissor user manual": "Rêbernameya bikarhêner a Scissor"
+  },
+  "groups": {
+    "Get started": "Destpêkirin",
+    "Draw": "Xêzkirin",
+    "Arrange & build": "Rêkxistin & avakirin",
+    "Layout & pixels": "Layout & pîksel",
+    "Panels": "Panel",
+    "Files & reference": "Pel & referans"
+  },
+  "nav": {
+    "": "Nihêrîna giştî",
+    "getting-started": "Destpêkirin",
+    "interface": "Navrû",
+    "documents": "Belge & tablo",
+    "tools": "Amûr",
+    "selecting": "Hilbijartin",
+    "paths": "Rêç",
+    "appearance": "Reng & xuyang",
+    "type": "Nivîs",
+    "layers": "Tebeqe",
+    "transform": "Veguherîn",
+    "effects": "Efekt",
+    "three-d": "3D",
+    "grids": "Tor",
+    "guides": "Rastek & rêber",
+    "pixels": "Tebeqeyên pîkselan",
+    "image-trace": "Vektorkirin",
+    "symbols": "Sembol & firçe",
+    "panels-basics": "Taybetmendî, Tebeqe, Tablo",
+    "panels-color-type": "Reng & nivîs",
+    "panels-utility": "Panelên alîkar",
+    "panels-effects": "Panelên efektan",
+    "files": "Vekirin & derxistin",
+    "automation": "Otomasyon",
+    "shortcuts": "Kurteriyên klavyeyê",
+    "privacy": "Nihênî"
+  },
+  "meta": {
+    "": {
+      "h1": "Rêbernameya bikarhêner a Scissor",
+      "title": "Rêbernameya bikarhêner a Scissor",
+      "desc": "Rêbernameya bikarhêner a Scissor: amûr, rêç, reng, nivîs, tor, efekt, tebeqeyên pîkselan, pel û kurteriyên klavyeyê yên edîtorê belaş di gerokê de."
+    },
+    "getting-started": {
+      "h1": "Destpêkirin",
+      "title": "Destpêkirina bi Scissor re",
+      "desc": "Scissor veke, belgeyekê çêke, teşeya xwe ya yekem xêz bike, pelekî .cut tomar bike û Scissor wek sepanekê saz bike – bê hesab û bê barkirin."
+    },
+    "interface": {
+      "h1": "Navrû",
+      "title": "Navrûya Scissor bi nihêrînekê",
+      "desc": "Qada xebatê ya Scissor: darika menûyê, darika kontrolê, paleta amûran, kanvas, doka panelan û darika rewşê – û çawa ziman biguherînî."
+    },
+    "documents": {
+      "h1": "Belge û tablo",
+      "title": "Belge û tablo",
+      "desc": "Di Scissor de belge û gelek tabloyan saz bike: mezinahî, perav, stûn û çareserî, bi amûra Tablo û panela Tablo."
+    },
+    "tools": {
+      "h1": "Amûr",
+      "title": "Hemû amûr bi nihêrînekê",
+      "desc": "Her amûr di Scissor de: hilbijartin, pênûs û qelem, teşe, nivîs, firçe, tor û perspektîf, tora rengan, badan û dagirtina herêmê."
+    },
+    "selecting": {
+      "h1": "Hilbijartina xebatê",
+      "title": "Hilbijartina obje û berheman",
+      "desc": "Di Scissor de berheman hilbijêre: tikandin û çarçoveya hilbijartinê, Hemûyan Hilbijêre, Berevajî Bike, Dîsa Hilbijêre, Heman li gorî dagirtin an xêzikê û hilbijartinên tomarkirî."
+    },
+    "paths": {
+      "h1": "Xêzkirin û sererastkirina rêçan",
+      "title": "Xêzkirin û sererastkirina rêçan",
+      "desc": "Bi pênûs û qelemê xêz bike, xalên lengerê û destikên Bézier sererast bike, rêçan bi hev ve girê bide, sade bike, bilivîne û teşeyan bike yek."
+    },
+    "appearance": {
+      "h1": "Reng, xêzik û xuyang",
+      "title": "Reng, xêzik û xuyang",
+      "desc": "Dagirtin û xêzik di Scissor de: rengên hişk, gradyan û nexş, nimûneyên rengan, nezelalî û modên tevlihevkirinê, û panela Stûna Boyaxê ji bo gelek dagirtinan."
+    },
+    "type": {
+      "h1": "Nivîs",
+      "title": "Nivîs: xalî, qadî û li ser rêçê",
+      "desc": "Nivîsa xalî, qadî û li ser rêçê di Scissor de: font û taybetmendiyên OpenType, mîhengên tîp û paragrafê, û kirina nivîsê rêç."
+    },
+    "layers": {
+      "h1": "Tebeqe, kom û maske",
+      "title": "Tebeqe, kom û maske",
+      "desc": "Belgeyekê di panela Tebeqe de rêk bixe: binetebeqe, rêza li ser hev, veşartin û kilîtkirin, kom, maskeyên birînê û maskeyên nezelaliyê."
+    },
+    "transform": {
+      "h1": "Livandin, veguherîn û rêkxistin",
+      "title": "Veguherîn û rêkxistin",
+      "desc": "Di Scissor de berheman bilivîne, mezin bike, bizivirîne, rêz bike û xwar bike: bi panela Veguherîn, Veguherîna Azad, morfkirin û Badana Teşeyê."
+    },
+    "effects": {
+      "h1": "Efektên zindî",
+      "title": "Efektên zindî di Scissor de",
+      "desc": "Efektên neruxîner di Scissor de: sîya avêtî, şêlûkirin, biriqîn, nermkirina keviyan, xwarkirin, badan, goşeyên girover û hêj bêtir – her dem sererastkirî."
+    },
+    "three-d": {
+      "h1": "3D",
+      "title": "3D: derxistin, zivirandin û perçimandin",
+      "desc": "Di Scissor de teşeyên deştî bike 3D – bi derxistin, zivirandin, perçimandin û rûxê – û zivirandin, perspektîf, ronahî û materyalê diyar bike."
+    },
+    "grids": {
+      "h1": "Tor",
+      "title": "Tor: îzometrîk û perspektîf",
+      "desc": "Di Scissor de her tablo tora xwe heye: çargoşe, îzometrîk, şeşgoşe, xwar, rêjeya zêrîn, nexş an perspektîfa 1 heta 3 xalan."
+    },
+    "guides": {
+      "h1": "Rastek, xêzên rêberiyê û zeliqandin",
+      "title": "Rastek, xêzên rêberiyê û zeliqandin",
+      "desc": "Di Scissor de xebatê bi hûrbînî rêz bike: bi rastek, xêzên rêberiyê, rêberên jîr, zeliqandina bi xal û torê ve, û amûra Pîvanê."
+    },
+    "pixels": {
+      "h1": "Boyaxkirina li ser tebeqeyên pîkselan",
+      "title": "Tebeqeyên pîkselan: boyaxkirin û rastkirin",
+      "desc": "Di Scissor de tebeqeyên pîkselan li kêleka berhemên vektorî boyax bike, rast bike, veguherîne û xwar bike: bi firçe, hilbijartin, maske, eyarkirin û fîltreyan."
+    },
+    "image-trace": {
+      "h1": "Vektorkirin",
+      "title": "Vektorkirin: wêneyekê bike vektor",
+      "desc": "Di Scissor de wêneyekê vektor bike: reş û spî, gewr û reng, pêşmîheng, vebijarkên rêç, goşe û dengê, û kirina wê rêçên sererastkirî."
+    },
+    "symbols": {
+      "h1": "Sembol, firçe û nexş",
+      "title": "Sembol, firçe û nexş",
+      "desc": "Berhemên ji nû ve bikaranînê di Scissor de: sembol û mînakên wan, firçeyên li ser rêçan û kaşiyên nexşê. Carekê sererast bike, û her bikaranîn bi wê re diguhere."
+    },
+    "panels-basics": {
+      "h1": "Taybetmendî, tebeqe û tablo",
+      "title": "Taybetmendî, Tebeqe, Tablo",
+      "desc": "Panelên ku di Scissor de bi gelemperî vekirî dimînin: Taybetmendî li pey hilbijartina te diçe, Tebeqe tevahiya belgeyê nîşan dide, Tablo hemû tabloyan lîste dike."
+    },
+    "panels-color-type": {
+      "h1": "Panelên reng û nivîsê",
+      "title": "Panelên reng û nivîsê",
+      "desc": "Panelên reng û nivîsê di Scissor de: Reng, Nimûneyên rengan, Gradyan û Xêzik ji bo dagirtin û xêzan, û Tîp û Paragraf ji bo tîpnivîsînê."
+    },
+    "panels-utility": {
+      "h1": "Panelên alîkar",
+      "title": "Panelên xebatê bi nihêrînekê",
+      "desc": "Panelên xebatê di Scissor de: Rêzkirin, Veguherîn, Stûna Boyaxê, Vektorkirin, Şefafî, Şêweyên Grafîkî, Firçe, Glîf, Dîrok û gelekên din."
+    },
+    "panels-effects": {
+      "h1": "Panelên efektan",
+      "title": "Panelên efektên zindî",
+      "desc": "Panelên efektan di Scissor de, ji bo her kategoriyekê yek: Şêwedan, Şêlûkirin, Xwarkirin, Rêç, Teşeyan Bike Yek, Badan û 3D – zindî di Stûna Boyaxê de."
+    },
+    "files": {
+      "h1": "Vekirin, bicihkirin û derxistin",
+      "title": "Vekirin, bicihkirin û derxistin",
+      "desc": "SVG, PDF, EPS û PSD veke, wek SVG, PDF, PNG, JPEG û WebP derxe û bi formata .cut a xwemalî tomar bike. Her tişt li ser cîhaza te dimîne."
+    },
+    "automation": {
+      "h1": "Otomasyon",
+      "title": "Otomasyon: çalakî û skrîpt",
+      "desc": "Scissor otomatîk bike: çalakiyan tomar bike û bilîze, sêwiranan ji guhêrbar û komên daneyan ên CSV çêke, bi komî derxe, bi JavaScript skrîpt binivîse."
+    },
+    "shortcuts": {
+      "h1": "Kurteriyên klavyeyê",
+      "title": "Hemû kurteriyên klavyeyê yên Scissor",
+      "desc": "Hemû kurteriyên klavyeyê yên Scissor, li gorî amûr û menûyê rêzkirî, bi nivîsandina macOS û hevtayên ji bo Windows û Linux."
+    },
+    "privacy": {
+      "h1": "Xebata te û nihêniya te",
+      "title": "Xebata te û nihêniya te",
+      "desc": "Scissor server nîne: edîtor di gerokê de dixebite, û berhemên te qet nayên barkirin. Belge, vegerandin û statîstîk bi vî awayî dixebitin."
+    }
+  },
+  "keywords": {
+    "": "Scissor, edîtora vektorî di gerokê de, edîtora vektorî ya belaş a serhêl, rêbernameya Scissor, fêrkirina Scissor, grafîka vektorî bê sazkirin, edîtora SVG ya serhêl, sererastkirina grafîka vektorî di gerokê de, edîtor bê hesab, sererastkirina SVG PDF EPS PSD, edîtora vektor û pîkselan, kurterê û amûr",
+    "getting-started": "Destpêkirina bi Scissor re, çêkirina belgeyeke nû, xêzkirina teşeya yekem, amûra Çargoşe, amûra Hêlîk, tomarkirina pelê .cut, dagirtin û xêzik, sazkirina Scissor wek sepan, tomarkirina xweber, şablonên belgeyê, fêrbûna grafîka vektorî, rêbera edîtora vektorî ji bo destpêkeran",
+    "interface": "Navrûya Scissor, paleta amûran, darika kontrolê, panel, lêgerîna fermanan, vegerandin û dîsa kirin, kişandin û mezinkirin, rastek û xêzên rêberiyê, rêzkirina panelan, darika rewşê, moda ronî û tarî, guhertina ziman",
+    "documents": "Tablo, artboard, sazkirina belgeyeke nû, gelek tablo di pelekî de, amûra Tablo, perav ji bo çapê, moda rengan RGB CMYK, çareseriya efektên rasterî, şablonên belgeyê, zêdekirina tabloyê, derxistina tabloyan yek bi yek, belgeya vektorî ya pir-rûpelî",
+    "tools": "Amûrên Scissor, darika amûran, kurteriyên amûran, amûra Hilbijartin, amûra Hilbijartina Rasterast, amûra Pênûs, amûrên teşe û xêzan, amûrên veguherînê, amûra Dilopker, amûrên Gradyan û torê, amûra tora perspektîfê, amûrên firehî û badanê",
+    "selecting": "Hilbijartina berheman, hilbijartina objeyan, amûra Hilbijartin, Hemûyan Hilbijêre, rakirina hilbijartinê, berevajîkirina hilbijartinê, dîsa hilbijartin, hilbijartina heman rengê dagirtinê, hilbijartina heman rengê xêzikê, çarçoveya hilbijartinê, hilbijartina rasterast, tomarkirina hilbijartinê",
+    "paths": "Xêzkirina rêçan, amûra Pênûs, xalên lengerê û destik, xala goşe û xala nerm, sererastkirina rêçê, Teşeyan Bike Yek, pathfinder, livandina rêçê, xêza derve, sadekirina rêçê, maskeya birînê, kevanên Bézier",
+    "appearance": "Dagirtin û xêzik, nimûneyên rengan, panela Reng, çêkirina gradyanê, gradyana xêzî tîrêjî azad, modên tevlihevkirinê, maskeya nezelaliyê, stûrî serik goşeyên xêzikê, xêza perçeperçe, şêweyên grafîkî, ji nû ve rengkirina berheman, nimûneyên rengan ên global",
+    "type": "Zêdekirina nivîsê, amûra Nivîs, nivîsa xalî qadî û li ser rêçê, panela Tîp, mezinahî û şêweyê fontê, navbera rêzan tracking kerning, taybetmendiyên OpenType, tîpên mezin ên biçûk û lîgatur, nivîs li ser rêçê, nivîsa girêdayî, pêçana nivîsê, kirina nivîsê rêç",
+    "layers": "Panela Tebeqe, kom û maskeyên birînê, çêkirina maskeya birînê, maskeya nezelaliyê bi gradyanê, kilîtkirin û veşartina tebeqeyan, rêza li ser hev, anîna herî pêş, şandina herî paş, komkirina objeyan, belavkirina komê, rengê tebeqeyê, ji nû ve rêzkirina tebeqeyan",
+    "transform": "Panela Veguherîn, mezinkirin zivirandin neqandin xwarkirin, zivirandin bi goşeyeke tam, Veguherîna Azad, rêzkirin û belavkirina objeyan, xala referansê, veguherîna yek bi yek, dîsa veguherîn, dubarekirina zindî tîrêjî tor neqandin, morfkirina teşeyan, Badana Teşeyê, neqandina asoyî û stûnî",
+    "effects": "Efektên zindî, efektên neruxîner, sîya avêtî, biriqîna derve, biriqîna hundir, şêlûkirina Gauss, ziwirkirin û zîkzak, goşeyên girover, zêdekirina sîyê, Stûna Boyaxê, guvaştin û werimandin, badana nivîsê bi kevan",
+    "three-d": "3D û materyal, derxistin û qelişandin, zivirandin, perçimandina 3D, çêkirina nivîsa 3D, zivirandina X Y Z, perspektîf, dîtina îzometrîk, ronahî, materyal plastîk mat metal, efekta 3D, nivîsa 3D ya belaş a serhêl",
+    "grids": "Tora îzometrîk, tora perspektîfê, tora şeşgoşe, tora rêjeya zêrîn, tora çargoşe, zeliqandina bi torê ve, tora xwar, perspektîfa du-xalî, xalên windabûnê, xêzkirina îzometrîk, tor ji bo her tabloyê, tora perspektîfê ya serhêl",
+    "guides": "Rastek û xêzên rêberiyê, rêberên jîr, smart guides, zeliqandina bi xalê ve, zeliqandina bi torê ve, zeliqandin, amûra Pîvanê, çêkirina xêzên rêberiyê, kişandina xêza rêberiyê ji rastekê, yekeyên rastekê pîksel mm înç, xêzên rêberiyê ji objeyan, belavkirina objeyan bi wekhevî",
+    "pixels": "Tebeqeya pîkselan, amûra Firçe, jêbirê pîkselan, boyaxkirina li ser wêneyê, maskeya tebeqeyê, dodge burn sponge, satilê boyaxê, ast reng têrbûn, şêlûkirina Gauss, nexşeya gradyanê, çarçoveya hilbijartinê û lasso, rasterîkirina grafîka vektorî",
+    "image-trace": "Vektorkirina wêneyê, kirina wêneyê vektor, vektorkirina logoyê, PNG bo SVG, JPG bo SVG, vektorkirina wêneyê fotografî, vektorkirina skêçê, şopandina wêneyê, image trace, vektorkirina logoya reş û spî, vektorkirina belaş a serhêl, vektorkirina xêzkirina xêzan",
+    "symbols": "Panela Sembol, mînakên sembolan, amûrên sembolan, amûra rijandina sembolan, firçeyên vektorî, firçeya kalîgrafî, firçeya belavker, firçeya hunerî, firçeya nexşî, çêkirina nexşê, sererastkirina kaşiya nexşê, şikandina girêdana sembolê",
+    "panels-basics": "Panela Taybetmendî, panela Tebeqe, panela Tablo, rêza li ser hev, nîşandan û veşartina tebeqeyan, kilîtkirina tebeqeyan, cih û mezinahî, çalakiyên bilez, rêkxistina tebeqeyan, rêveberiya tabloyan, guhertina navê tabloyê, doka panelan",
+    "panels-color-type": "Panela Reng, panela Nimûneyên rengan, nimûneyên rengan ên global, panela Gradyan, rawestgehên rengan, gradyana xêzî tîrêjî, panela Xêzik, xêzika perçeperçe serikên tîran, profîla firehiyê, panela Tîp, panela Paragraf, kertkirina peyvan",
+    "panels-utility": "Panela Rêzkirin, belavkirina objeyan bi wekhevî, Teşeyan Bike Yek, pathfinder, Xweber-Hilbijartin, panela Veguherîn, Stûna Boyaxê, şêweyên grafîkî, vektorkirina wêneyê, şefafî û moda tevlihevkirinê, panela Glîf, derxistina asetan",
+    "panels-effects": "Efekta sîya avêtî, şêlûkirina Gauss, biriqîna hundir û derve, nermkirina keviyan, goşeyên girover, zîkzak û ziwirkirin, guvaştin û werimandin, livandina rêçê, badan kevan werimandin al, 3D derxistin zivirandin perçimandin, efektên zindî, panelên efektan",
+    "files": "Formata pelê .cut, vekirina SVG PDF AI PSD, derxistin wek SVG PNG JPEG WebP, derxistin wek PDF, bicihkirina wêneyê, derxistin ji bo ekranan, perçe û aset, kopîkirin û pêvekirin, rasterîkirina grafîka vektorî, vekirina pelê AI di gerokê de, anîna EPS, edîtora SVG ya belaş",
+    "automation": "Otomasyon, panela Çalakî, tomarkirin û lîstina çalakiyê, guhêrbar, grafîkên li ser bingeha daneyan, komên daneyan, anîna CSV, derxistina bi komî, derxistina komên daneyan, skrîpt, konsola skrîptan, API ya JavaScript",
+    "shortcuts": "Kurteriyên klavyeyê, lîsteya kurteriyên Scissor, kurteriyên amûran, hevgirtinên bişkokan Mac Windows Linux, kurteriyên pênûsê, bişkoka amûra Hilbijartin, kurteriyên mezinkirinê, kurteriya komkirinê, vegerandin dîsa kirin, pêvekirin li pêş, kurteriya maskeya birînê, pelê alîkariyê yê kurteriyan",
+    "privacy": "Nihênî, bê barkirin, bê hesab, dane li ser cîhazê dimînin, neçalakkirina Google Analytics, vegerandin piştî têkçûnê, sazkirina Scissor wek sepan, edîtora vektorî ya bê înternet, gelo Scissor pelan bar dike, gelo Scissor taybet e, edîtor bê server, edîtora grafîkî ya belaş a bê înternet"
+  }
+}
