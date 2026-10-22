@@ -1,0 +1,57 @@
+<p class="lede">Scissor では、アートボードごとに独自のグリッドを持つため、ドキュメントの部分ごとに異なるガイドに沿って描けます。グリッドは描画の補助です。画面には表示されますが、印刷や書き出しはされません。スナップをオンにすると、ポイントがグリッドの線に吸着します。グリッドをオンにするには、<strong>表示 &rsaquo; グリッド &rsaquo; グリッドを表示</strong>（<kbd>&#8984;'</kbd>）を選びます。</p>
+
+<h2 id="grids-choosing">グリッドを選ぶ</h2>
+<p><strong>表示 &rsaquo; グリッド</strong>で種類を選び、<strong>グリッドパネル</strong>を開いて、間隔、主線の間の分割数、角度、アートボード上の原点の位置を設定します。グリッドはアートボードに属するので、複数のアートボードを持つドキュメントでは、それぞれの作業に合ったグリッドを設定できます。<strong>グリッドにスナップ</strong>（<kbd>&#8679;&#8984;'</kbd>）をオンにすると、新しいポイント、シェイプの角、ドラッグしたオブジェクトが最も近い線に揃います。</p>
+
+<h2 id="grids-square">正方形（直交）</h2>
+<p>最も基本的なグリッドで、等間隔の水平線と垂直線からなります。レイアウト、UI のモックアップ、ピクセル風の作品、アイコンなど、一定の寸法に揃えたいものに使います。</p>
+<figure class="shot">
+  <img src="img/grid-orthogonal.png" width="1300" height="934" loading="lazy" alt="Scissor のアートボード上にある、等間隔の水平線と垂直線からなる正方形のグリッド。" />
+  <figcaption>正方形のグリッド。レイアウトや寸法を測る作業のための、均等な行と列です。</figcaption>
+</figure>
+
+<h2 id="grids-isometric">等角（アイソメトリック）</h2>
+<p>30&deg; の 3 組の線が立方体の 3 つの軸を表すので、実際の 3D を使わなくても、部屋、パッケージ、ゲームのタイル、テクニカルイラストなどを立体的に見えるように描けます。どの壁も 3 つの軸のいずれかに沿うため、箱がきれいに積み重なり、接します。グリッドを表示している間、シェイプツールはその軸に沿って描きます。</p>
+<figure class="shot">
+  <img src="img/isometric-example.png" width="1600" height="1149" loading="lazy" alt="Scissor の等角グリッド上に描いた、窓のある色とりどりの建物が並ぶ小さな町。すべての辺がグリッドの線に沿っています。" />
+  <figcaption>等角グリッド上の小さな町。すべての壁と垂直の辺がグリッドの線に沿っているので、建物が正しく収まっています。</figcaption>
+</figure>
+<figure class="shot">
+  <img src="img/iso-build.gif" width="820" height="589" loading="lazy" alt="グリッド上で建物を 1 つずつ積み上げて作る等角の町。各ブロックがグリッドの線に沿っています。" />
+  <figcaption>同じ町をブロックごとに組み立てていく様子。各建物は置かれると同時にグリッドにスナップします。</figcaption>
+</figure>
+
+<h2 id="grids-hexagonal">六角形</h2>
+<p>六角形が並ぶハニカム状のグリッドです。ボードゲームのマップ、タイルパターン、6 辺のセルで構成するレイアウトに適しています。間隔は、六角形 1 つの平らな辺から平らな辺までの幅です。</p>
+<figure class="shot">
+  <img src="img/grid-hexagonal.png" width="1300" height="934" loading="lazy" alt="Scissor のアートボード上にある、六角形のハニカムグリッド。" />
+  <figcaption>六角形のグリッド。マップやタイル作業のためのハニカムです。</figcaption>
+</figure>
+
+<h2 id="grids-oblique">斜投影</h2>
+<p>水平線の組と、指定した角度で傾いた線の組からなります。1 つの軸による側面からの投影になるので、カバリエ図法風の図や、傾いた文字のガイドに便利です。傾きはグリッドパネルで設定します。</p>
+<figure class="shot">
+  <img src="img/grid-oblique.png" width="1300" height="934" loading="lazy" alt="斜投影のグリッド。水平線と、傾いた線の組が交差しています。" />
+  <figcaption>斜投影のグリッド。水平線と、設定した傾きの線が交差します。</figcaption>
+</figure>
+
+<h2 id="grids-golden">黄金比</h2>
+<p>アートボードに合わせた黄金長方形を、正方形とより小さな長方形に分割し、黄金螺旋を描く四分円の弧を重ねたものです。焦点となる位置を決めたり、要素を古典的な比率で配置したりするのに使います。固定の間隔ではなく、アートボードに合わせて拡大・縮小されます。</p>
+<figure class="shot">
+  <img src="img/grid-golden.png" width="1300" height="813" loading="lazy" alt="黄金比のグリッド。アートボードが黄金比で分割され、黄金螺旋を描く四分円の弧が表示されています。" />
+  <figcaption>黄金比のグリッド。構図のための比率の線と螺旋です。</figcaption>
+</figure>
+
+<h2 id="grids-pattern">パターン</h2>
+<p>パターングリッドは、パターンスウォッチをアートボード全体に敷き詰めてアートワークの背後に表示します。パターンが背景と整列ガイドを兼ねるので、リピート柄の上にアートワークを配置したり、タイルの継ぎ目が揃っているかを確認したり、参考用のテクスチャの上で作業したりするのに便利です。<strong>表示 &rsaquo; グリッド &rsaquo; パターン</strong>で選びます。タイルには現在のパターンスウォッチが使われます。パターンスウォッチの作成と編集については、<a href="/manual/symbols/">シンボルとブラシ</a>のページで説明しています。他のグリッドと同じくアートボードに属するので、アートボードごとに異なるパターンの背景を設定できます。</p>
+
+<h2 id="grids-perspective">遠近法</h2>
+<p>地平線上の 1 つ、2 つ、または 3 つの消失点に向かうガイドで、奥行きのある場面を描けます。<strong>遠近グリッドツール</strong>（<kbd>&#8679;P</kbd>）で設定します。消失点をドラッグし、上下にドラッグすると地平線が移動します。<kbd>1</kbd>〜<kbd>4</kbd> を押して描画する面を選びます。<strong>グリッドパネル</strong>の <strong>1 点</strong>、<strong>2 点</strong>、<strong>3 点</strong>ボタンで設定を切り替えます。グリッド上に描いたシェイプは、同じ遠近法を共有します。</p>
+<figure class="shot">
+  <img src="img/grid-perspective.png" width="1300" height="813" loading="lazy" alt="2 点透視の遠近グリッド。ガイドが地平線の両側にある消失点に向かって収束しています。" />
+  <figcaption>2 点透視の遠近グリッド。ガイドが両側の消失点に向かって収束します。</figcaption>
+</figure>
+<figure class="shot">
+  <img src="img/perspective-grid.png" width="1700" height="969" loading="lazy" alt="グリッド上に 2 点透視で描いた 3 つの色付きの箱。辺が消失点に向かって収束しています。" />
+  <figcaption>2 点透視のグリッド上に描いた箱。辺が消失点に向かうので、同じ遠近法を共有しています。</figcaption>
+</figure>
