@@ -1,0 +1,39 @@
+<p class="lede">Scissor には、繰り返しの作業を代わりに行う 3 つの機能があります。一連のコマンドを記録して再生する<strong>アクション</strong>、データの表からテキストと表示状態を差し替えて 1 つのデザインから多数のバリエーションを作る<strong>変数</strong>、そして JavaScript からエディター全体を操作する<strong>スクリプト</strong>です。どれもアカウントやサーバーは不要で、Scissor の他の機能と同じく、あなた自身のコンピューター上で動作します。</p>
+
+<h2 id="automation-actions">アクション：一度記録して、どこでも再生</h2>
+<p><strong>アクション</strong>パネル（ウィンドウ &rsaquo; アクション）は、操作を記録し、新しい選択範囲に対して再生します。<strong>記録</strong>を押し、記録したいコマンド（整列、オフセット、シャドウの追加など、どんな手順でもかまいません）を実行してから<strong>停止</strong>を押し、アクションに名前を付けます。アクションはリストに追加され、含まれるステップ数が表示されます。</p>
+<p>アクションをクリックすると、現在選択しているものに対して<strong>再生</strong>されます。<kbd>&#8997;</kbd> を押しながらクリックすると削除されます。アクションは単なるコマンドのリストなので、毎回クリックして操作しなくても、多数のオブジェクトに同じ手順を正確に繰り返せます。</p>
+
+<h2 id="automation-variables">変数：1 つのデザインから多数のバージョンを</h2>
+<p><strong>変数</strong>パネル（ウィンドウ &rsaquo; 変数）は、固定されたデザインをデータで動くテンプレートに変えます。オブジェクトの次の 2 つの要素を動的にできます。</p>
+<dl>
+  <dt>テキストを動的に設定</dt><dd>テキストオブジェクトの文字を変数に結び付けます。データセットごとに、同じ場所に異なるテキストを入れられます。</dd>
+  <dt>表示を動的に設定</dt><dd>オブジェクトを表示するかどうかを結び付けます。データセットごとに、デザインの一部をオンまたはオフにできます。</dd>
+</dl>
+<p><strong>バインドを解除</strong>すると、結び付けたオブジェクトが再び固定されます。</p>
+
+<h3 id="automation-datasets">データセット</h3>
+<p><strong>データセット</strong>は、変数に対する 1 行分の値です。バッジ 1 枚、カード 1 枚、フレーム 1 つに相当します。<strong>キャプチャ</strong>は現在の値を新しいデータセットとして保存します。矢印でデータセットを順に切り替えると、それに合わせてデザインが更新されます。<strong>CSV を読み込み…</strong>は、変数ごとに 1 列、データセットごとに 1 行の形式で、まとめて一度に読み込みます。<strong>CSV を書き出し</strong>は、データセットを書き出してスプレッドシートで編集できるようにします。</p>
+
+<h3 id="automation-batch">すべてのデータセットを一度に書き出す</h3>
+<p><strong>データセットを書き出し…</strong>は、アクティブなアートボードをデータセットごとに 1 回ずつレンダリングし、PNG、JPEG、WebP、SVG のいずれかの形式で一度にすべて書き出します。名札のシート、各言語向けのバナー一式、SNS 用カードのシリーズなどが、それぞれのデータが入った整ったファイル一式として出力されます。</p>
+
+<h2 id="automation-scripts">スクリプト：JavaScript で Scissor を操作する</h2>
+<p>メニューで表現できないことも、スクリプトなら実現できます。<strong>ファイル &rsaquo; スクリプト &rsaquo; スクリプトコンソール…</strong>を選ぶとエディターが開き、JavaScript を書いて開いているドキュメントに対して実行できます。<strong>その他のスクリプト…</strong>（<kbd>&#8984;F12</kbd>）は、ディスク上の <code>.js</code> ファイルを実行します。スクリプトはページから切り離された Web Worker の中で動作するため、渡された <code>scissor</code> オブジェクトを通さなければ、インターフェイスにもファイルにも触れられません。すべての呼び出しはエンジン上で実行され、その結果が返されます。</p>
+<p><code>scissor</code> オブジェクトは、よく使う操作をひととおり備えています。</p>
+<dl>
+  <dt>シェイプとテキストを作る</dt><dd><code>scissor.rect</code>、<code>roundedRect</code>、<code>ellipse</code>、<code>polygon</code>、<code>star</code>、<code>path</code>、<code>text</code> でアートワークを描きます。どれも位置とサイズ、そして <code>fill</code>、<code>stroke</code>、<code>strokeWidth</code> を指定するオプションオブジェクトを受け取ります（カラーには任意の CSS カラーを使えます）。</dd>
+  <dt>ドキュメントを読む</dt><dd><code>await scissor.document()</code> は、アプリ、選択範囲、レイヤー、アートボードをパネルと同じ形で返します。<code>scissor.selection()</code> は選択しているものだけを返します。</dd>
+  <dt>ドキュメントを操作する</dt><dd><code>scissor.select</code>、<code>group</code>、<code>undo</code>、そしてあらゆるエンジンコマンドを実行する <code>scissor.run(command)</code> があります。メニューが送るのと同じコマンドです。</dd>
+  <dt>結果を伝える</dt><dd><code>scissor.log</code> はコンソールに出力し、<code>scissor.alert</code> はメッセージを表示します。</dd>
+</dl>
+<p>短い例として、色の付いた点の輪とキャプションを描くスクリプトを示します。</p>
+<pre><code>const doc = await scissor.document();
+scissor.log('Boards:', doc.artboards.length);
+for (let i = 0; i &lt; 12; i++) {
+  const a = (i / 12) * Math.PI * 2;
+  await scissor.ellipse(300 + Math.cos(a) * 120, 260 + Math.sin(a) * 120, 36, 36,
+    { fill: `hsl(${i * 30} 80% 60%)` });
+}
+await scissor.text(230, 270, 'Hello, Scissor', { size: 24 });</code></pre>
+<p>スクリプトコンソールは最後に実行したコードを保持するので、次に開いたときも動作するスクリプトがそのまま残っています。</p>

@@ -1,0 +1,57 @@
+<p class="lede">Scissor 中的每个画板都带有自己的网格，因此文档的不同部分可以对照不同的参考来绘制。网格是一种绘图辅助：它显示在屏幕上，永远不会被打印或导出；开启吸附后，它会把你的点拉到网格线上。使用<strong>视图 &rsaquo; 网格 &rsaquo; 显示网格</strong>（<kbd>&#8984;'</kbd>）开启网格。</p>
+
+<h2 id="grids-choosing">选择网格</h2>
+<p>在<strong>视图 &rsaquo; 网格</strong>下选择网格类型，然后打开<strong>网格面板</strong>，设置其间距、主网格线之间的细分数、角度以及原点在画板上的起始位置。由于网格属于画板，包含多个画板的文档可以为每个画板配上适合其内容的网格。<strong>吸附到网格</strong>（<kbd>&#8679;&#8984;'</kbd>）会让新建的点、形状的角点以及拖动的对象落在最近的网格线上。</p>
+
+<h2 id="grids-square">方形（正交）</h2>
+<p>最基本的网格：等距的水平线和垂直线。适用于版面布局、UI 模型、像素风格作品、图标，以及任何需要按固定尺度对齐的内容。</p>
+<figure class="shot">
+  <img src="img/grid-orthogonal.png" width="1300" height="934" loading="lazy" alt="Scissor 画板上由等距水平线和垂直线组成的方形网格。" />
+  <figcaption>方形网格。均匀的行和列，适合版面布局和需要精确度量的作品。</figcaption>
+</figure>
+
+<h2 id="grids-isometric">等轴测</h2>
+<p>三组成 30&deg; 的线代表立方体的三条轴，因此你无需真正的 3D 就能绘制出具有立体感的房间、包装、游戏图块和技术插图。每面墙都沿三条轴之一延伸，因此方块可以整齐地堆叠和衔接。显示网格时，形状工具会沿网格的轴绘制。</p>
+<figure class="shot">
+  <img src="img/isometric-example.png" width="1600" height="1149" loading="lazy" alt="在 Scissor 等轴测网格上绘制的带窗户的彩色建筑小镇，每条边都沿网格线延伸。" />
+  <figcaption>等轴测网格上的小镇。每面墙和每条垂直边都沿网格线延伸，因此建筑物端正稳固。</figcaption>
+</figure>
+<figure class="shot">
+  <img src="img/iso-build.gif" width="820" height="589" loading="lazy" alt="在网格上逐栋搭建的等轴测小镇，每个方块都沿网格线排列。" />
+  <figcaption>同一个小镇逐块搭建起来。每栋建筑落下时都会吸附到网格上。</figcaption>
+</figure>
+
+<h2 id="grids-hexagonal">六边形</h2>
+<p>由六边形组成的蜂窝。适用于桌游地图、拼贴图案以及任何由六边形单元构成的布局。间距设定的是一个六边形从一条平边到对边的宽度。</p>
+<figure class="shot">
+  <img src="img/grid-hexagonal.png" width="1300" height="934" loading="lazy" alt="Scissor 画板上由六边形组成的蜂窝网格。" />
+  <figcaption>六边形网格。用于地图和拼贴作品的蜂窝结构。</figcaption>
+</figure>
+
+<h2 id="grids-oblique">斜角</h2>
+<p>一组水平线和一组按你所选角度倾斜的线。它提供单轴的侧视投影，便于绘制斜二测风格的示意图和倾斜字体的参考线。在网格面板中设置倾斜角度。</p>
+<figure class="shot">
+  <img src="img/grid-oblique.png" width="1300" height="934" loading="lazy" alt="斜角网格：水平线与一组倾斜的线相交。" />
+  <figcaption>斜角网格。水平线与你设定的倾斜线相交。</figcaption>
+</figure>
+
+<h2 id="grids-golden">黄金比例</h2>
+<p>与画板相适应的黄金矩形，被分割为正方形和较小的矩形，并带有描绘黄金螺旋的四分之一圆弧。用它来安排视觉焦点，并按经典比例确定元素的大小。它随画板缩放，而不是按固定间距排列。</p>
+<figure class="shot">
+  <img src="img/grid-golden.png" width="1300" height="813" loading="lazy" alt="黄金比例网格：按黄金比例分割的画板，以及描绘黄金螺旋的四分之一圆弧。" />
+  <figcaption>黄金比例网格。用于构图的比例线和螺旋线。</figcaption>
+</figure>
+
+<h2 id="grids-pattern">图案</h2>
+<p>图案网格将图案色板平铺在整个画板上，并绘制在图稿下方，使图案同时充当背景和对齐参考——便于将图稿排布到重复图案上、检查拼贴是否对齐，或在参考纹理上作画。在<strong>视图 &rsaquo; 网格 &rsaquo; 图案</strong>下选择它；拼贴来自当前的图案色板，图案色板的制作和编辑方法见<a href="/manual/symbols/">符号与画笔</a>页面。与所有网格一样，它属于画板，因此不同的画板可以使用不同的图案背景。</p>
+
+<h2 id="grids-perspective">透视</h2>
+<p>延伸到地平线上一个、两个或三个消失点的参考线，让你可以绘制具有真实纵深的场景。使用<strong>透视网格工具</strong>（<kbd>&#8679;P</kbd>）进行设置：拖动消失点，上下拖动其中一个以移动地平线，按 <kbd>1</kbd> 到 <kbd>4</kbd> 选择要在其上绘制的平面。<strong>网格面板</strong>中的<strong>一点</strong>、<strong>两点</strong>和<strong>三点</strong>按钮用于在不同设置之间切换。在网格上绘制的形状共享同一个透视。</p>
+<figure class="shot">
+  <img src="img/grid-perspective.png" width="1300" height="813" loading="lazy" alt="两点透视网格，其参考线汇聚到地平线两侧的消失点。" />
+  <figcaption>两点透视网格。参考线汇聚到两侧的消失点。</figcaption>
+</figure>
+<figure class="shot">
+  <img src="img/perspective-grid.png" width="1700" height="969" loading="lazy" alt="在网格上以两点透视绘制的三个彩色盒子，其边缘汇聚到消失点。" />
+  <figcaption>在两点网格上绘制的盒子。它们的边缘延伸到消失点，因此共享同一个透视。</figcaption>
+</figure>

@@ -1,0 +1,39 @@
+<p class="lede">Scissor 中有三个工具可以替你完成重复性工作：<strong>动作</strong>录制一系列命令并重放，<strong>变量</strong>根据数据表替换文本和可见性，让一个设计变成许多个，<strong>脚本</strong>则用 JavaScript 驱动整个编辑器。它们都不需要账户或服务器——与 Scissor 的其他部分一样，它们在你自己的电脑上运行。</p>
+
+<h2 id="automation-actions">动作：录制一次，随处重放</h2>
+<p><strong>动作</strong>面板（窗口 &rsaquo; 动作）会录制你的操作，并在新的选择上回放。按<strong>录制</strong>，执行你想捕获的命令——对齐、偏移、添加投影，无论是什么序列都可以——然后按<strong>停止</strong>并为动作命名。它会加入列表，并显示其中包含的步骤数。</p>
+<p>单击一个动作即可在当前所选内容上<strong>播放</strong>它；按住 <kbd>&#8997;</kbd> 单击则删除它。由于动作只是一个命令列表，它可以在许多对象上重复完全相同的操作流程，而无需你每次逐一点击。</p>
+
+<h2 id="automation-variables">变量：一个设计，多个版本</h2>
+<p><strong>变量</strong>面板（窗口 &rsaquo; 变量）将固定的设计变成由数据驱动的模板。对象上有两样东西可以设为动态：</p>
+<dl>
+  <dt>将文本设为动态</dt><dd>将文字对象的文字绑定到变量，这样不同的数据组就能在同一位置放入不同的文本。</dd>
+  <dt>将可见性设为动态</dt><dd>绑定对象是否显示，这样数据组就能打开或关闭设计中的某些部分。</dd>
+</dl>
+<p><strong>取消绑定</strong>会使已绑定的对象重新变为固定。</p>
+
+<h3 id="automation-datasets">数据组</h3>
+<p><strong>数据组</strong>是这些变量的一行值——一个胸牌、一张卡片、一帧画面。<strong>捕捉</strong>将当前值存为新的数据组；箭头可从一个数据组切换到下一个，设计会随之更新。<strong>导入 CSV…</strong>一次读取一整批数据——每个变量一列，每个数据组一行——<strong>导出 CSV</strong>则将数据组写出，以便在电子表格中编辑。</p>
+
+<h3 id="automation-batch">一次导出所有数据组</h3>
+<p><strong>导出数据组…</strong>为每个数据组渲染一次当前画板，并一次性将它们全部写出为 PNG、JPEG、WebP 或 SVG。一整页姓名胸牌、一组本地化横幅或一系列社交媒体卡片，都会以整齐的一批文件输出，每个文件都填入了各自的数据。</p>
+
+<h2 id="automation-scripts">脚本：用 JavaScript 驱动 Scissor</h2>
+<p>凡是菜单无法表达的，脚本都可以做到。<strong>文件 &rsaquo; 脚本 &rsaquo; 脚本控制台…</strong>会打开一个编辑器，你可以在其中编写 JavaScript 并对打开的文档运行它；<strong>其他脚本…</strong>（<kbd>&#8984;F12</kbd>）则运行磁盘上的 <code>.js</code> 文件。脚本在 Web Worker 中运行，与页面隔离，因此除了通过提供给它的 <code>scissor</code> 对象之外，它无法接触界面或你的文件——每个调用都由引擎执行并返回结果。</p>
+<p><code>scissor</code> 对象涵盖了常用功能：</p>
+<dl>
+  <dt>创建形状和文字</dt><dd><code>scissor.rect</code>、<code>roundedRect</code>、<code>ellipse</code>、<code>polygon</code>、<code>star</code>、<code>path</code> 和 <code>text</code> 用于绘制图稿；每个函数都接受位置和尺寸，以及一个包含 <code>fill</code>、<code>stroke</code> 和 <code>strokeWidth</code> 的选项对象（颜色可以是任何 CSS 颜色）。</dd>
+  <dt>读取文档</dt><dd><code>await scissor.document()</code> 返回应用、选择、图层和画板，与面板所见一致；<code>scissor.selection()</code> 只返回所选内容。</dd>
+  <dt>对文档进行操作</dt><dd><code>scissor.select</code>、<code>group</code> 和 <code>undo</code>，以及可执行任意引擎命令的 <code>scissor.run(command)</code>——与菜单发送的命令相同。</dd>
+  <dt>反馈信息</dt><dd><code>scissor.log</code> 输出到控制台；<code>scissor.alert</code> 显示一条消息。</dd>
+</dl>
+<p>一个简短的示例——一圈彩色圆点和一行说明文字：</p>
+<pre><code>const doc = await scissor.document();
+scissor.log('Boards:', doc.artboards.length);
+for (let i = 0; i &lt; 12; i++) {
+  const a = (i / 12) * Math.PI * 2;
+  await scissor.ellipse(300 + Math.cos(a) * 120, 260 + Math.sin(a) * 120, 36, 36,
+    { fill: `hsl(${i * 30} 80% 60%)` });
+}
+await scissor.text(230, 270, 'Hello, Scissor', { size: 24 });</code></pre>
+<p>脚本控制台会保留你上次运行的代码，所以当你回来时，可用的脚本仍在那里。</p>

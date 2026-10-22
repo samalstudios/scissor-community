@@ -1,0 +1,34 @@
+<p class="lede">在更改任何内容之前，你必须先指明要更改什么。本页介绍如何选择图稿：使用选择工具快速单击，以及整个<strong>选择</strong>菜单——它可以按对象的构成来挑选对象、在堆叠顺序中逐个切换，并存储所选对象以便日后恢复。在下面的快捷键中，<kbd>&#8984;</kbd> 在 Windows 和 Linux 上为 <kbd>Ctrl</kbd>，<kbd>&#8997;</kbd> 为 <kbd>Alt</kbd>，<kbd>&#8679;</kbd> 为 Shift。</p>
+
+<h2 id="selecting-basics">单击与框选</h2>
+<p>大多数选择操作都从<strong>选择工具</strong>（<kbd>V</kbd>）开始。单击对象即可选中它；按住 <kbd>&#8679;</kbd> 单击另一个对象可将其加入选区，单击已选中的对象则会将其移出。在画布的空白处拖动可拉出一个<em>选框</em>，它触及的所有对象都会被选中。<strong>直接选择工具</strong>（<kbd>A</kbd>）则深入对象内部：它选择单个锚点和路径段，而不是整个对象；<strong>编组选择工具</strong>则一次深入编组的一个层级。这些工具在<a href="/manual/tools/">工具</a>和<a href="/manual/paths/">路径</a>页面中介绍；本页其余部分介绍选择菜单，它能完成单击无法做到的挑选。</p>
+
+<h2 id="selecting-whole-document">全部、取消选择与反向</h2>
+<table>
+  <thead><tr><th>命令</th><th>快捷键</th><th>选择的内容</th></tr></thead>
+  <tbody>
+    <tr><td><strong>选择 &rsaquo; 全部</strong></td><td><kbd>&#8984;A</kbd></td><td>文档中所有未锁定的对象。</td></tr>
+    <tr><td><strong>现用画板上的全部对象</strong></td><td><kbd>&#8997;&#8984;A</kbd></td><td>仅选择你正在处理的画板上的图稿——这是在多画板文件中快速选取一页的方法。</td></tr>
+    <tr><td><strong>取消选择</strong></td><td><kbd>&#8679;&#8984;A</kbd></td><td>不选择任何内容；清除当前所选对象。</td></tr>
+    <tr><td><strong>反向</strong></td><td></td><td>将所选对象换成之前<em>未</em>选中的所有对象。</td></tr>
+    <tr><td><strong>重新选择</strong></td><td><kbd>&#8984;6</kbd></td><td>恢复你清除之前的所选对象。</td></tr>
+  </tbody>
+</table>
+
+<h2 id="selecting-stack">在堆叠顺序中逐个切换</h2>
+<p>当对象相互重叠时，<strong>选择 &rsaquo; 上方的下一个对象</strong>（<kbd>&#8997;&#8984;]</kbd>）和<strong>下方的下一个对象</strong>（<kbd>&#8997;&#8984;[</kbd>）会在同一位置的对象堆中将所选对象逐个上移或下移。这是选中被其他形状掩埋的形状的可靠方法，无需把上面的对象拖开。</p>
+
+<h2 id="selecting-same">相同：按共同属性挑选</h2>
+<p>选择一个对象，然后使用<strong>选择 &rsaquo; 相同</strong>，即可选中文档中在某一属性上与之相同的所有其他对象。可以用它一次性为所有使用同一填色的形状重新着色，或一次选取所有细描边。</p>
+<dl>
+  <dt>外观</dt><dd>整体外观——相同的填色、描边和效果堆栈。</dd>
+  <dt>填色和描边</dt><dd>填色和描边同时相同。</dd>
+  <dt>填充颜色 / 描边颜色</dt><dd>填充颜色相同，或描边颜色相同。</dd>
+  <dt>描边粗细</dt><dd>描边宽度相同。</dd>
+  <dt>不透明度</dt><dd>不透明度相同。</dd>
+  <dt>混合模式</dt><dd>混合模式相同。</dd>
+  <dt>形状</dt><dd>对象类型相同——例如所有椭圆，或所有文字。</dd>
+</dl>
+
+<h2 id="selecting-saved">存储所选对象</h2>
+<p>来之不易的选区值得保留。<strong>选择 &rsaquo; 存储所选对象…</strong>会以一个名称存储当前选中的对象集；之后它会出现在<strong>选择 &rsaquo; 已存储的所选对象</strong>下，在那里选择它就会重新精确选中这些对象，无论你之后单击过什么。<strong>编辑所选对象…</strong>可重命名或删除已存储的项。已存储的所选对象保存在 <code>.cut</code> 文档中，因此下次打开文件时它们依然存在。</p>
