@@ -1,0 +1,39 @@
+<p class="lede">Scissor에는 반복 작업을 대신 처리하는 기능이 세 가지 있습니다. <strong>작업</strong>은 일련의 명령을 기록해 재생하고, <strong>변수</strong>는 데이터 표에 따라 텍스트와 표시 여부를 바꿔 하나의 디자인을 여러 버전으로 만들며, <strong>스크립트</strong>는 JavaScript로 편집기 전체를 제어합니다. 어느 것도 계정이나 서버가 필요 없으며, Scissor의 다른 기능과 마찬가지로 사용자의 컴퓨터에서 실행됩니다.</p>
+
+<h2 id="automation-actions">작업: 한 번 기록하고 어디서나 재생</h2>
+<p><strong>작업</strong> 패널(창 &rsaquo; 작업)은 사용자가 하는 작업을 기록해 새로운 선택 항목에 재생합니다. <strong>기록</strong>을 누르고 기록하려는 명령(정렬, 패스 이동, 그림자 추가 등 어떤 순서든)을 실행한 다음, <strong>정지</strong>를 누르고 작업에 이름을 붙입니다. 작업이 목록에 추가되고, 몇 단계로 이루어져 있는지 표시됩니다.</p>
+<p>작업을 클릭하면 지금 선택한 대상에 <strong>재생</strong>되고, <kbd>&#8997;</kbd>-클릭하면 삭제됩니다. 작업은 명령의 목록일 뿐이므로, 매번 일일이 클릭하지 않고도 여러 오브젝트에 똑같은 절차를 반복할 수 있습니다.</p>
+
+<h2 id="automation-variables">변수: 하나의 디자인, 여러 버전</h2>
+<p><strong>변수</strong> 패널(창 &rsaquo; 변수)은 고정된 디자인을 데이터로 움직이는 템플릿으로 바꿉니다. 오브젝트에서 두 가지를 동적으로 만들 수 있습니다.</p>
+<dl>
+  <dt>텍스트를 동적으로 만들기</dt><dd>문자 오브젝트의 글을 변수에 연결하여, 데이터 세트마다 같은 자리에 다른 텍스트를 넣을 수 있게 합니다.</dd>
+  <dt>표시 여부를 동적으로 만들기</dt><dd>오브젝트의 표시 여부를 연결하여, 데이터 세트가 디자인의 일부를 켜거나 끌 수 있게 합니다.</dd>
+</dl>
+<p><strong>바인딩 해제</strong>는 연결된 오브젝트를 다시 고정 상태로 되돌립니다.</p>
+
+<h3 id="automation-datasets">데이터 세트</h3>
+<p><strong>데이터 세트</strong>는 그 변수들에 대한 값 한 행입니다. 배지 하나, 카드 하나, 프레임 하나에 해당합니다. <strong>캡처</strong>는 현재 값을 새 세트로 저장하고, 화살표로 세트 사이를 이동하면 디자인이 그에 맞게 갱신됩니다. <strong>CSV 가져오기…</strong>는 변수마다 열 하나, 세트마다 행 하나로 된 데이터를 한꺼번에 읽어 들이고, <strong>CSV 내보내기</strong>는 세트를 다시 파일로 내보내 스프레드시트에서 편집할 수 있게 합니다.</p>
+
+<h3 id="automation-batch">모든 세트를 한 번에 내보내기</h3>
+<p><strong>데이터 세트 내보내기…</strong>는 데이터 세트마다 활성 아트보드를 한 번씩 렌더링하여, 한 번의 작업으로 PNG, JPEG, WebP 또는 SVG 파일로 모두 저장합니다. 이름표 한 장, 현지화된 배너 한 벌, 소셜 카드 여러 장이 각자의 데이터가 채워진 깔끔한 파일 묶음으로 만들어집니다.</p>
+
+<h2 id="automation-scripts">스크립트: JavaScript로 Scissor 제어하기</h2>
+<p>메뉴로 표현할 수 없는 작업도 스크립트로는 할 수 있습니다. <strong>파일 &rsaquo; 스크립트 &rsaquo; 스크립트 콘솔…</strong>을 선택하면 JavaScript를 작성해 열린 문서에 실행할 수 있는 편집기가 열리고, <strong>기타 스크립트…</strong>(<kbd>&#8984;F12</kbd>)는 디스크의 <code>.js</code> 파일을 실행합니다. 스크립트는 페이지와 분리된 Web Worker에서 실행되므로, 전달받은 <code>scissor</code> 오브젝트를 통하지 않고는 인터페이스나 파일에 접근할 수 없습니다. 모든 호출은 엔진에서 처리된 뒤 응답이 돌아옵니다.</p>
+<p><code>scissor</code> 오브젝트는 자주 쓰는 기능을 제공합니다.</p>
+<dl>
+  <dt>모양과 문자 만들기</dt><dd><code>scissor.rect</code>, <code>roundedRect</code>, <code>ellipse</code>, <code>polygon</code>, <code>star</code>, <code>path</code>, <code>text</code>로 아트워크를 그립니다. 각각 위치와 크기, 그리고 <code>fill</code>, <code>stroke</code>, <code>strokeWidth</code>를 위한 옵션 오브젝트를 받습니다(색상은 모든 CSS 색상을 사용할 수 있습니다).</dd>
+  <dt>문서 읽기</dt><dd><code>await scissor.document()</code>는 앱, 선택 항목, 레이어, 아트보드를 패널에서 보는 그대로 반환하고, <code>scissor.selection()</code>은 선택한 항목만 반환합니다.</dd>
+  <dt>문서에 작업하기</dt><dd><code>scissor.select</code>, <code>group</code>, <code>undo</code>, 그리고 어떤 엔진 명령이든 실행하는 <code>scissor.run(command)</code>가 있습니다. 메뉴가 보내는 것과 같은 명령입니다.</dd>
+  <dt>결과 알리기</dt><dd><code>scissor.log</code>는 콘솔에 출력하고, <code>scissor.alert</code>는 메시지를 표시합니다.</dd>
+</dl>
+<p>짧은 예제로, 색색의 점으로 된 고리와 캡션을 그립니다.</p>
+<pre><code>const doc = await scissor.document();
+scissor.log('Boards:', doc.artboards.length);
+for (let i = 0; i &lt; 12; i++) {
+  const a = (i / 12) * Math.PI * 2;
+  await scissor.ellipse(300 + Math.cos(a) * 120, 260 + Math.sin(a) * 120, 36, 36,
+    { fill: `hsl(${i * 30} 80% 60%)` });
+}
+await scissor.text(230, 270, 'Hello, Scissor', { size: 24 });</code></pre>
+<p>스크립트 콘솔은 마지막으로 실행한 코드를 기억하므로, 다시 돌아왔을 때 작동하던 스크립트가 그대로 있습니다.</p>

@@ -1,0 +1,57 @@
+<p class="lede">Scissor의 모든 아트보드에는 저마다의 격자가 있으므로, 한 문서 안에서도 부분마다 다른 격자를 기준으로 그릴 수 있습니다. 격자는 그리기 보조 도구입니다. 화면에는 표시되지만 인쇄되거나 내보내지지 않으며, 물리기를 켜면 점이 격자선에 끌려갑니다. 격자를 켜려면 <strong>보기 &rsaquo; 격자 &rsaquo; 격자 표시</strong>(<kbd>&#8984;'</kbd>)를 선택하십시오.</p>
+
+<h2 id="grids-choosing">격자 선택하기</h2>
+<p><strong>보기 &rsaquo; 격자</strong>에서 종류를 선택한 다음 <strong>격자 패널</strong>을 열어 간격, 주 격자선 사이의 세분 개수, 각도, 아트보드에서 원점이 시작되는 위치를 설정합니다. 격자는 아트보드에 속하므로, 아트보드가 여러 개인 문서에서는 각 아트보드에 그 작업에 맞는 격자를 지정할 수 있습니다. <strong>격자에 물리기</strong>(<kbd>&#8679;&#8984;'</kbd>)를 켜면 새 점, 모양의 모서리, 드래그한 개체가 가장 가까운 격자선에 놓입니다.</p>
+
+<h2 id="grids-square">정사각형(직교)</h2>
+<p>가장 기본적인 격자로, 가로선과 세로선이 일정한 간격으로 놓입니다. 레이아웃, UI 목업, 픽셀 스타일 작업, 아이콘 등 일정한 치수에 맞춰 정렬해야 하는 모든 작업에 사용하십시오.</p>
+<figure class="shot">
+  <img src="img/grid-orthogonal.png" width="1300" height="934" loading="lazy" alt="Scissor의 아트보드에 일정한 간격의 가로선과 세로선으로 이루어진 정사각형 격자가 표시된 모습." />
+  <figcaption>정사각형 격자. 레이아웃과 치수에 맞춘 작업을 위한 일정한 행과 열.</figcaption>
+</figure>
+
+<h2 id="grids-isometric">등각</h2>
+<p>30&deg; 각도의 세 가지 선 세트가 정육면체의 세 축을 나타내므로, 실제 3D 없이도 입체적으로 보이는 방, 포장재, 게임 타일, 기술 일러스트레이션을 그릴 수 있습니다. 모든 벽이 세 축 중 하나를 따르므로 상자들이 깔끔하게 쌓이고 맞물립니다. 격자가 표시된 상태에서는 모양 도구가 격자의 축을 따라 그립니다.</p>
+<figure class="shot">
+  <img src="img/isometric-example.png" width="1600" height="1149" loading="lazy" alt="Scissor의 등각 격자 위에 창문이 있는 색색의 건물로 이루어진 작은 마을이 그려져 있으며, 모든 모서리가 격자선을 따르는 모습." />
+  <figcaption>등각 격자 위의 작은 마을. 모든 벽과 세로 모서리가 격자선을 따르므로 건물이 반듯하게 섭니다.</figcaption>
+</figure>
+<figure class="shot">
+  <img src="img/iso-build.gif" width="820" height="589" loading="lazy" alt="격자 위에 건물을 하나씩 지어 올리는 등각 마을로, 각 블록이 격자선을 따르는 모습." />
+  <figcaption>같은 마을을 블록 하나씩 지어 올리는 모습. 각 건물이 놓일 때 격자에 물립니다.</figcaption>
+</figure>
+
+<h2 id="grids-hexagonal">육각형</h2>
+<p>육각형으로 이루어진 벌집 모양입니다. 보드게임 지도, 타일 패턴, 그리고 육각형 칸으로 구성된 모든 레이아웃에 적합합니다. 간격은 육각형 하나의 폭, 즉 평평한 변에서 맞은편 평평한 변까지의 거리를 설정합니다.</p>
+<figure class="shot">
+  <img src="img/grid-hexagonal.png" width="1300" height="934" loading="lazy" alt="Scissor의 아트보드에 표시된 육각형 벌집 격자." />
+  <figcaption>육각형 격자. 지도와 타일 작업을 위한 벌집 모양.</figcaption>
+</figure>
+
+<h2 id="grids-oblique">기울임꼴</h2>
+<p>가로선 한 세트와, 지정한 각도로 기울어진 선 한 세트로 이루어집니다. 한 축만 기울인 측면 투영을 제공하므로, 캐벌리어 투영 방식의 도해나 기울어진 레터링 안내선에 유용합니다. 기울기는 격자 패널에서 설정합니다.</p>
+<figure class="shot">
+  <img src="img/grid-oblique.png" width="1300" height="934" loading="lazy" alt="기울임꼴 격자: 가로선과 기울어진 선 세트가 교차하는 모습." />
+  <figcaption>기울임꼴 격자. 가로선과 직접 설정한 기울기의 선이 교차합니다.</figcaption>
+</figure>
+
+<h2 id="grids-golden">황금비</h2>
+<p>아트보드에 맞춘 황금 사각형을 정사각형과 더 작은 사각형으로 나누고, 황금 나선을 그리는 사분원 호를 함께 표시합니다. 시선이 모이는 지점을 배치하고 요소의 크기를 고전적인 비율로 정할 때 사용하십시오. 고정된 간격이 아니라 아트보드에 맞춰 크기가 조절됩니다.</p>
+<figure class="shot">
+  <img src="img/grid-golden.png" width="1300" height="813" loading="lazy" alt="황금비 격자: 아트보드를 황금 비율로 나누고 황금 나선을 그리는 사분원 호를 표시한 모습." />
+  <figcaption>황금비 격자. 구도를 위한 비율선과 나선.</figcaption>
+</figure>
+
+<h2 id="grids-pattern">패턴</h2>
+<p>패턴 격자는 패턴 견본을 아트보드 전체에 타일처럼 반복하여 아트워크 아래에 그립니다. 따라서 패턴이 배경이자 정렬 안내선 역할을 함께 하므로, 반복 패턴 위에 아트워크를 배치하거나, 타일이 제대로 맞물리는지 확인하거나, 참고용 텍스처 위에서 작업할 때 편리합니다. <strong>보기 &rsaquo; 격자 &rsaquo; 패턴</strong>에서 선택하십시오. 타일은 현재 패턴 견본에서 가져오며, 패턴 견본을 만들고 편집하는 방법은 <a href="/manual/symbols/">심볼 및 브러시</a> 페이지에 설명되어 있습니다. 다른 격자와 마찬가지로 아트보드에 속하므로, 아트보드마다 다른 패턴 배경을 둘 수 있습니다.</p>
+
+<h2 id="grids-perspective">원근</h2>
+<p>지평선 위의 소실점 한 개, 두 개 또는 세 개로 모이는 안내선으로, 실제 깊이감이 있는 장면을 그릴 수 있습니다. <strong>원근 격자 도구</strong>(<kbd>&#8679;P</kbd>)로 설정합니다. 소실점을 드래그하고, 소실점을 위아래로 드래그하여 지평선을 옮기며, <kbd>1</kbd>에서 <kbd>4</kbd>까지 눌러 그릴 평면을 선택합니다. <strong>격자 패널</strong>의 <strong>1개 점</strong>, <strong>2점</strong>, <strong>3점</strong> 버튼으로 설정을 전환합니다. 격자 위에 그린 모양들은 하나의 원근을 공유합니다.</p>
+<figure class="shot">
+  <img src="img/grid-perspective.png" width="1300" height="813" loading="lazy" alt="2점 원근 격자로, 안내선이 지평선 양쪽의 소실점으로 모이는 모습." />
+  <figcaption>2점 원근 격자. 안내선이 양쪽의 소실점으로 모입니다.</figcaption>
+</figure>
+<figure class="shot">
+  <img src="img/perspective-grid.png" width="1700" height="969" loading="lazy" alt="격자 위에 2점 원근으로 그린 색색의 상자 세 개로, 모서리가 소실점으로 모이는 모습." />
+  <figcaption>2점 격자 위에 그린 상자들. 모서리가 소실점을 향하므로 하나의 원근을 공유합니다.</figcaption>
+</figure>
