@@ -1,0 +1,39 @@
+<p class="lede">Scissor'daki üç araç tekrarlayan işleri sizin yerinize yapar: <strong>Eylemler</strong> bir komut dizisini kaydedip yeniden oynatır, <strong>Değişkenler</strong> bir veri tablosundan metni ve görünürlüğü değiştirerek tek bir tasarımdan birçok sürüm üretir, <strong>Komut Dosyaları</strong> ise tüm düzenleyiciyi JavaScript ile yönetir. Hiçbiri hesap ya da sunucu gerektirmez — Scissor'ın geri kalanı gibi kendi bilgisayarınızda çalışırlar.</p>
+
+<h2 id="automation-actions">Eylemler: bir kez kaydedin, her yerde oynatın</h2>
+<p><strong>Eylemler</strong> paneli (Pencere &rsaquo; Eylemler) yaptıklarınızı kaydeder ve yeni bir seçim üzerinde yeniden oynatır. <strong>Kaydet</strong> düğmesine basın, yakalamak istediğiniz komutları çalıştırın — hizalama, kaydırma, gölge ekleme, dizi ne olursa olsun — ardından <strong>Kaydı Durdur</strong> düğmesine basın ve eyleme bir ad verin. Eylem, içerdiği adım sayısıyla birlikte listeye eklenir.</p>
+<p>Bir eylemi o anda seçili olan öğe üzerinde <strong>oynatmak</strong> için ona tıklayın; silmek için <kbd>&#8997;</kbd> tuşuyla tıklayın. Bir eylem yalnızca bir komut listesi olduğundan, aynı rutini birçok nesne üzerinde her seferinde tek tek tıklamanıza gerek kalmadan birebir tekrarlar.</p>
+
+<h2 id="automation-variables">Değişkenler: tek tasarım, birçok sürüm</h2>
+<p><strong>Değişkenler</strong> paneli (Pencere &rsaquo; Değişkenler) sabit bir tasarımı veriyle yönetilen bir şablona dönüştürür. Bir nesnenin iki özelliği dinamik hâle getirilebilir:</p>
+<dl>
+  <dt>Metni Dinamik Yap</dt><dd>Bir yazı nesnesinin sözcüklerini bir değişkene bağlar; böylece farklı veri kümeleri aynı yere farklı metinler yerleştirebilir.</dd>
+  <dt>Görünürlüğü Dinamik Yap</dt><dd>Bir nesnenin görünüp görünmeyeceğini bağlar; böylece bir küme tasarımın bölümlerini açıp kapatabilir.</dd>
+</dl>
+<p><strong>Çöz</strong>, bağlanmış bir nesneyi yeniden sabit hâle getirir.</p>
+
+<h3 id="automation-datasets">Veri kümeleri</h3>
+<p><strong>Veri kümesi</strong>, bu değişkenler için tek bir değer satırıdır — bir yaka kartı, bir kart, bir kare. <strong>Yakala</strong> geçerli değerleri yeni bir küme olarak kaydeder; oklar bir kümeden diğerine geçer ve tasarım buna göre güncellenir. <strong>CSV İçe Aktar…</strong> bütün bir grubu tek seferde okur — her değişken için bir sütun, her küme için bir satır — <strong>CSV Dışa Aktar</strong> ise kümeleri bir elektronik tabloda düzenlemeniz için yeniden dosyaya yazar.</p>
+
+<h3 id="automation-batch">Tüm kümeleri tek seferde dışa aktarma</h3>
+<p><strong>Veri Kümelerini Dışa Aktar…</strong>, etkin çalışma yüzeyini her veri kümesi için bir kez işler ve hepsini tek geçişte PNG, JPEG, WebP veya SVG olarak yazar. Bir sayfa dolusu isim kartı, yerelleştirilmiş bir dizi afiş ya da bir seri sosyal medya kartı, her biri kendi verisiyle doldurulmuş düzenli bir dosya grubu olarak çıkar.</p>
+
+<h2 id="automation-scripts">Komut dosyaları: Scissor'ı JavaScript ile yönetin</h2>
+<p>Bir menünün ifade edemediği her şeyi bir komut dosyası yapabilir. <strong>Dosya &rsaquo; Komut Dosyaları &rsaquo; Komut Dosyası Konsolu…</strong>, JavaScript yazıp açık belge üzerinde çalıştırabileceğiniz bir düzenleyici açar; <strong>Diğer Komut Dosyası…</strong> (<kbd>&#8984;F12</kbd>) diskteki bir <code>.js</code> dosyasını çalıştırır. Komut dosyası sayfadan ayrı olarak bir Web Worker içinde çalışır; bu yüzden kendisine verilen <code>scissor</code> nesnesi dışında arayüze ya da dosyalarınıza dokunamaz — her çağrı motorda yürütülür ve yanıtı geri gönderilir.</p>
+<p><code>scissor</code> nesnesi yaygın ihtiyaçları karşılar:</p>
+<dl>
+  <dt>Şekil ve yazı oluşturma</dt><dd><code>scissor.rect</code>, <code>roundedRect</code>, <code>ellipse</code>, <code>polygon</code>, <code>star</code>, <code>path</code> ve <code>text</code> çizim oluşturur; her biri bir konum ve boyutun yanı sıra <code>fill</code>, <code>stroke</code> ve <code>strokeWidth</code> için bir seçenekler nesnesi alır (renkler herhangi bir CSS rengi olabilir).</dd>
+  <dt>Belgeyi okuma</dt><dd><code>await scissor.document()</code> uygulamayı, seçimi, katmanları ve çalışma yüzeylerini panellerin gördüğü biçimde döndürür; <code>scissor.selection()</code> yalnızca seçili olanı döndürür.</dd>
+  <dt>Belge üzerinde işlem yapma</dt><dd><code>scissor.select</code>, <code>group</code> ve <code>undo</code>; ayrıca herhangi bir motor komutu için <code>scissor.run(command)</code> — menülerin gönderdiği komutların aynısı.</dd>
+  <dt>Geri bildirim verme</dt><dd><code>scissor.log</code> konsola yazar; <code>scissor.alert</code> bir ileti gösterir.</dd>
+</dl>
+<p>Kısa bir örnek — renkli noktalardan bir halka ve bir başlık:</p>
+<pre><code>const doc = await scissor.document();
+scissor.log('Boards:', doc.artboards.length);
+for (let i = 0; i &lt; 12; i++) {
+  const a = (i / 12) * Math.PI * 2;
+  await scissor.ellipse(300 + Math.cos(a) * 120, 260 + Math.sin(a) * 120, 36, 36,
+    { fill: `hsl(${i * 30} 80% 60%)` });
+}
+await scissor.text(230, 270, 'Hello, Scissor', { size: 24 });</code></pre>
+<p>Komut Dosyası Konsolu en son çalıştırdığınız kodu saklar; böylece geri döndüğünüzde çalışan komut dosyanız sizi bekliyor olur.</p>

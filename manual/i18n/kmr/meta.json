@@ -71,12 +71,12 @@
     },
     "documents": {
       "h1": "Belge û tablo",
-      "title": "Belge û tablo",
+      "title": "Belge û tablo: mezinahî û teşenê",
       "desc": "Di Scissor de belge û gelek tabloyan saz bike: mezinahî, perav, stûn û çareserî, bi amûra Tablo û panela Tablo."
     },
     "tools": {
       "h1": "Amûr",
-      "title": "Hemû amûr bi nihêrînekê",
+      "title": "Referansa amûran: hemû amûrên xêzkirinê",
       "desc": "Her amûr di Scissor de: hilbijartin, pênûs û qelem, teşe, nivîs, firçe, tor û perspektîf, tora rengan, badan û dagirtina herêmê."
     },
     "selecting": {
@@ -91,7 +91,7 @@
     },
     "appearance": {
       "h1": "Reng, xêzik û xuyang",
-      "title": "Reng, xêzik û xuyang",
+      "title": "Reng, gradyan, xêzik û xuyang",
       "desc": "Dagirtin û xêzik di Scissor de: rengên hişk, gradyan û nexş, nimûneyên rengan, nezelalî û modên tevlihevkirinê, û panela Stûna Boyaxê ji bo gelek dagirtinan."
     },
     "type": {
@@ -101,12 +101,12 @@
     },
     "layers": {
       "h1": "Tebeqe, kom û maske",
-      "title": "Tebeqe, kom û maske",
+      "title": "Tebeqe, kom û maskeyên birînê",
       "desc": "Belgeyekê di panela Tebeqe de rêk bixe: binetebeqe, rêza li ser hev, veşartin û kilîtkirin, kom, maskeyên birînê û maskeyên nezelaliyê."
     },
     "transform": {
       "h1": "Livandin, veguherîn û rêkxistin",
-      "title": "Veguherîn û rêkxistin",
+      "title": "Livandin, mezinkirin û zivirandin",
       "desc": "Di Scissor de berheman bilivîne, mezin bike, bizivirîne, rêz bike û xwar bike: bi panela Veguherîn, Veguherîna Azad, morfkirin û Badana Teşeyê."
     },
     "effects": {
@@ -131,7 +131,7 @@
     },
     "pixels": {
       "h1": "Boyaxkirina li ser tebeqeyên pîkselan",
-      "title": "Tebeqeyên pîkselan: boyaxkirin û rastkirin",
+      "title": "Tebeqeyên pîkselan: boyax û rastkirin",
       "desc": "Di Scissor de tebeqeyên pîkselan li kêleka berhemên vektorî boyax bike, rast bike, veguherîne û xwar bike: bi firçe, hilbijartin, maske, eyarkirin û fîltreyan."
     },
     "image-trace": {
@@ -141,7 +141,7 @@
     },
     "symbols": {
       "h1": "Sembol, firçe û nexş",
-      "title": "Sembol, firçe û nexş",
+      "title": "Sembol, firçe û nimûneyên nexşan",
       "desc": "Berhemên ji nû ve bikaranînê di Scissor de: sembol û mînakên wan, firçeyên li ser rêçan û kaşiyên nexşê. Carekê sererast bike, û her bikaranîn bi wê re diguhere."
     },
     "panels-basics": {
@@ -151,7 +151,7 @@
     },
     "panels-color-type": {
       "h1": "Panelên reng û nivîsê",
-      "title": "Panelên reng û nivîsê",
+      "title": "Panelên reng, nimûneyên rengan û nivîsê",
       "desc": "Panelên reng û nivîsê di Scissor de: Reng, Nimûneyên rengan, Gradyan û Xêzik ji bo dagirtin û xêzan, û Tîp û Paragraf ji bo tîpnivîsînê."
     },
     "panels-utility": {
@@ -161,7 +161,7 @@
     },
     "panels-effects": {
       "h1": "Panelên efektan",
-      "title": "Panelên efektên zindî",
+      "title": "Panelên efektan: şêlûkirin û 3D",
       "desc": "Panelên efektan di Scissor de, ji bo her kategoriyekê yek: Şêwedan, Şêlûkirin, Xwarkirin, Rêç, Teşeyan Bike Yek, Badan û 3D – zindî di Stûna Boyaxê de."
     },
     "files": {
@@ -181,7 +181,7 @@
     },
     "privacy": {
       "h1": "Xebata te û nihêniya te",
-      "title": "Xebata te û nihêniya te",
+      "title": "Xebata te û nihêniya te di Scissor de",
       "desc": "Scissor server nîne: edîtor di gerokê de dixebite, û berhemên te qet nayên barkirin. Belge, vegerandin û statîstîk bi vî awayî dixebitin."
     }
   },

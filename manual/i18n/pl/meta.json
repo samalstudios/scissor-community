@@ -61,7 +61,7 @@
     },
     "getting-started": {
       "h1": "Pierwsze kroki",
-      "title": "Pierwsze kroki w Scissor",
+      "title": "Pierwsze kroki: Twój pierwszy rysunek",
       "desc": "Jak otworzyć Scissor, utworzyć dokument, narysować pierwszy kształt, zapisać plik .cut i zainstalować edytor jako aplikację. Bez konta i bez przesyłania plików."
     },
     "interface": {
@@ -76,32 +76,32 @@
     },
     "tools": {
       "h1": "Narzędzia",
-      "title": "Narzędzia: pełny przegląd",
+      "title": "Narzędzia: wszystkie narzędzia rysowania",
       "desc": "Każde narzędzie Scissor ze skrótem i opisem: zaznaczanie, pióro i ołówek, kształty, tekst, pędzle, siatki i perspektywa oraz Wypełnianie obszarów."
     },
     "selecting": {
       "h1": "Zaznaczanie pracy",
-      "title": "Zaznaczanie grafiki",
+      "title": "Zaznaczanie grafiki i zapis zaznaczeń",
       "desc": "Zaznaczanie w Scissor: kliknięcie i ramka zaznaczenia, Zaznacz wszystko, Odwrotność, Zaznacz ponownie, wybór według tego samego koloru i zapisane zaznaczenia."
     },
     "paths": {
       "h1": "Rysowanie i edycja ścieżek",
-      "title": "Rysowanie i edycja ścieżek",
+      "title": "Rysowanie i edycja ścieżek Piórem",
       "desc": "Rysowanie piórem i ołówkiem, edycja punktów kotwicznych i uchwytów Béziera, łączenie, upraszczanie, odsuwanie i obrysowywanie ścieżek oraz Łączenie kształtów."
     },
     "appearance": {
       "h1": "Kolor, obrysy i wygląd",
-      "title": "Kolor, obrysy i wygląd",
+      "title": "Kolor, gradienty, obrysy i wygląd",
       "desc": "Wypełnienia i obrysy w Scissor: kolor jednolity, gradienty i wzorki, próbki, krycie i tryby mieszania, panel Stos malowania oraz style graficzne."
     },
     "type": {
       "h1": "Tekst",
-      "title": "Tekst i typografia",
+      "title": "Tekst: czcionki i funkcje OpenType",
       "desc": "Tekst punktowy, w obszarze i na ścieżce w Scissor: fonty i funkcje OpenType, panele Znak i Akapit, oblewanie tekstem oraz zamiana tekstu na kontury."
     },
     "layers": {
       "h1": "Warstwy, grupy i maski",
-      "title": "Warstwy, grupy i maski",
+      "title": "Warstwy, grupy i maski przycinające",
       "desc": "Porządkowanie dokumentu w panelu Warstwy: podwarstwy i kolejność, ukrywanie i blokowanie, grupy, etykiety kolorów, maski przycinające i maski krycia."
     },
     "transform": {
@@ -111,7 +111,7 @@
     },
     "effects": {
       "h1": "Efekty na żywo",
-      "title": "Efekty na żywo",
+      "title": "Efekty na żywo: cień, rozmycie, poświata",
       "desc": "Nieniszczące efekty w Scissor: cień, rozmycie, poświaty, wtapianie, zniekształcenia, wypaczenie, zaokrąglone narożniki i odsunięcie ścieżki, zawsze do edycji."
     },
     "three-d": {
@@ -136,12 +136,12 @@
     },
     "image-trace": {
       "h1": "Wektoryzacja",
-      "title": "Wektoryzacja obrazu",
+      "title": "Wektoryzacja: z obrazu do wektorów",
       "desc": "Zamiana obrazu w edytowalne ścieżki wektorowe w Scissor: tryb czarno-biały, w skali szarości i kolorowy, presety, opcje dokładności i rozszerzanie wyniku."
     },
     "symbols": {
       "h1": "Symbole, pędzle i wzory",
-      "title": "Symbole, pędzle i wzorki",
+      "title": "Symbole, pędzle i próbki wzorków",
       "desc": "Grafika wielokrotnego użytku w Scissor: symbole i ich wystąpienia, pędzle wzdłuż ścieżek i kafelki wzorków. Zmiana oryginału aktualizuje wszystkie kopie."
     },
     "panels-basics": {
@@ -151,17 +151,17 @@
     },
     "panels-color-type": {
       "h1": "Panele koloru i tekstu",
-      "title": "Panele koloru i tekstu",
+      "title": "Panele Kolor, Próbki, Obrys i Tekst",
       "desc": "Panele koloru i tekstu w Scissor: Kolor, Próbki, Gradient i Obrys do malowania grafiki oraz Znak i Akapit do formatowania tekstu."
     },
     "panels-utility": {
       "h1": "Panele narzędziowe",
-      "title": "Panele narzędziowe",
+      "title": "Panele: Wyrównaj, Przekształć, Historia",
       "desc": "Panele robocze Scissor: Wyrównaj, Łączenie kształtów, Przekształć, Stos malowania, Wektoryzacja, Przezroczystość, Style graficzne, Glify, Historia i inne."
     },
     "panels-effects": {
       "h1": "Panele efektów",
-      "title": "Panele efektów na żywo",
+      "title": "Panele efektów: rozmycie, wypaczenie i 3D",
       "desc": "Panele efektów na żywo w Scissor, po jednym na kategorię: Stylizacja, Rozmycie, Zniekształć i przekształć, Ścieżka, Łączenie kształtów, Wypaczenie i 3D."
     },
     "files": {
@@ -176,12 +176,12 @@
     },
     "shortcuts": {
       "h1": "Skróty klawiszowe",
-      "title": "Skróty klawiszowe",
+      "title": "Skróty klawiszowe narzędzi i poleceń",
       "desc": "Wszystkie skróty klawiszowe Scissor według narzędzi i menu, zapisane w formacie macOS wraz z odpowiednikami dla systemów Windows i Linux."
     },
     "privacy": {
       "h1": "Twoja praca i Twoja prywatność",
-      "title": "Twoja praca i prywatność",
+      "title": "Twoja praca i prywatność w Scissor",
       "desc": "Scissor nie ma serwera: edytor działa w przeglądarce, a grafika nie jest nigdzie przesyłana. Jak działają dokumenty, odzyskiwanie po awarii i analityka."
     }
   },

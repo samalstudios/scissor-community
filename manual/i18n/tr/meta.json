@@ -1,0 +1,216 @@
+{
+  "chrome": {
+    "Manual": "Kılavuz",
+    "Shortcuts": "Kısayollar",
+    "Open the editor": "Düzenleyiciyi açın",
+    "Skip to the content": "İçeriğe geç",
+    "Search the manual": "Kılavuzda ara",
+    "Search the manual…": "Kılavuzda ara…",
+    "Breadcrumb": "İçerik yolu",
+    "More pages": "Diğer sayfalar",
+    "Previous": "Önceki",
+    "Next": "Sonraki",
+    "Language": "Dil",
+    "Scissor by Samal Studios.": "Scissor, Samal Studios ürünüdür.",
+    "Third-party licences": "Üçüncü taraf lisansları",
+    "| Scissor manual": "| Scissor kılavuzu",
+    "Scissor user manual: every tool, menu and shortcut": "Scissor kullanım kılavuzu: her araç, menü ve kısayol",
+    "Scissor user manual": "Scissor kullanım kılavuzu"
+  },
+  "groups": {
+    "Get started": "Başlarken",
+    "Draw": "Çizim",
+    "Arrange & build": "Düzenleme ve oluşturma",
+    "Layout & pixels": "Yerleşim ve pikseller",
+    "Panels": "Paneller",
+    "Files & reference": "Dosyalar ve başvuru"
+  },
+  "nav": {
+    "": "Genel bakış",
+    "getting-started": "Başlarken",
+    "interface": "Arayüz",
+    "documents": "Belgeler ve çalışma yüzeyleri",
+    "tools": "Araçlar",
+    "selecting": "Seçim",
+    "paths": "Yollar",
+    "appearance": "Renk ve görünüm",
+    "type": "Yazı",
+    "layers": "Katmanlar",
+    "transform": "Dönüştürme",
+    "effects": "Efektler",
+    "three-d": "3D",
+    "grids": "Izgaralar",
+    "guides": "Cetveller ve kılavuzlar",
+    "pixels": "Piksel katmanları",
+    "image-trace": "Vektörleştirme",
+    "symbols": "Semboller ve fırçalar",
+    "panels-basics": "Özellikler, Katmanlar, Çalışma Yüzeyleri",
+    "panels-color-type": "Renk ve yazı",
+    "panels-utility": "Yardımcı paneller",
+    "panels-effects": "Efekt panelleri",
+    "files": "Açma ve dışa aktarma",
+    "automation": "Otomasyon",
+    "shortcuts": "Kısayollar",
+    "privacy": "Gizlilik"
+  },
+  "meta": {
+    "": {
+      "h1": "Scissor kullanım kılavuzu",
+      "title": "Kullanım kılavuzu: her araç, menü, kısayol",
+      "desc": "Tarayıcıda çalışan ücretsiz tasarım düzenleyicisi Scissor'ın kullanım kılavuzu: araçlar, yollar, renk, yazı, ızgaralar, efektler, piksel katmanları, dosyalar ve kısayollar."
+    },
+    "getting-started": {
+      "h1": "Başlarken",
+      "title": "Başlarken: ilk Scissor çiziminiz",
+      "desc": "Scissor'ı açın, bir belge oluşturun, ilk şeklinizi çizin, bir .cut dosyası kaydedin ve uygulama olarak yükleyin. Hesap ya da karşıya yükleme gerekmez."
+    },
+    "interface": {
+      "h1": "Arayüz",
+      "title": "Arayüz: araçlar, paneller ve menüler",
+      "desc": "Scissor çalışma alanı: menü çubuğu, denetim çubuğu, araç paneli, tuval, panel yuvası, durum çubuğu ve arayüz dilini değiştirme."
+    },
+    "documents": {
+      "h1": "Belgeler ve çalışma yüzeyleri",
+      "title": "Belgeler ve çalışma yüzeyleri: taşma payı",
+      "desc": "Scissor'da belgeleri ve birden fazla çalışma yüzeyini ayarlayın: boyut, taşma payı, sütunlar, çözünürlük, Çalışma Yüzeyi Aracı ve Çalışma Yüzeyleri paneli."
+    },
+    "tools": {
+      "h1": "Araçlar",
+      "title": "Araç başvurusu: tüm çizim araçları",
+      "desc": "Scissor'daki her araç: seçim, kalem ve kurşun kalem, şekiller, yazı, fırçalar, ızgaralar ve perspektif, ağ, bükme, birleştirme ve bölme, bölge boyama."
+    },
+    "selecting": {
+      "h1": "Çizim seçme",
+      "title": "Çizim seçme ve seçimleri kaydetme",
+      "desc": "Scissor'da çizim seçin: tıklama ve seçim çerçevesi, Tümünü Seç, seçimi ters çevirme, yeniden seçme, aynı dolgu ya da konturu seçme ve seçimleri kaydetme."
+    },
+    "paths": {
+      "h1": "Yol çizme ve düzenleme",
+      "title": "Kalem Aracı ile yol çizme ve düzenleme",
+      "desc": "Scissor'da kalem ve kurşun kalemle çizin, bağlantı noktalarını ve Bézier tutamaçlarını düzenleyin; yolları birleştirin, basitleştirin, kaydırın, dış hatlara dönüştürün ve şekilleri birleştirin."
+    },
+    "appearance": {
+      "h1": "Renk, kontur ve görünüm",
+      "title": "Renk, degradeler, konturlar ve görünüm",
+      "desc": "Scissor'da dolgu ve kontur: düz renkler, degradeler, desenler, renk örnekleri, opaklık ve karışım modları ile Boya Yığını paneli."
+    },
+    "type": {
+      "h1": "Yazı",
+      "title": "Yazı: metin, yazı tipleri ve OpenType",
+      "desc": "Scissor'da nokta yazısı, alan yazısı ve yol üzerinde yazı: yazı tipleri ve OpenType özellikleri, paragraf ve karakter ayarları, metni dış hatlara dönüştürme."
+    },
+    "layers": {
+      "h1": "Katmanlar, gruplar ve maskeler",
+      "title": "Katmanlar, gruplar ve opaklık maskeleri",
+      "desc": "Belgenizi Katmanlar paneliyle düzenleyin: alt katmanlar, istifleme sırası, gizleme ve kilitleme, gruplar, kırpma maskeleri ve opaklık maskeleri."
+    },
+    "transform": {
+      "h1": "Taşıma, dönüştürme ve düzenleme",
+      "title": "Taşıma, ölçekleme, döndürme ve hizalama",
+      "desc": "Scissor'da Dönüştür paneli, serbest dönüştürme, canlı tekrar, biçim dönüştürme ve şekil bükme ile çizimi taşıyın, ölçekleyin, döndürün, hizalayın ve biçimlendirin."
+    },
+    "effects": {
+      "h1": "Canlı efektler",
+      "title": "Canlı efektler: gölge, bulanıklık, bükme",
+      "desc": "Scissor'daki tahribatsız efektler: gölgeler, bulanıklık, parlamalar, yumuşatma, yol bozma, bükme, köşeleri yuvarlatma, yolu kaydırma ve karalama dolgusu. Hepsi düzenlenebilir."
+    },
+    "three-d": {
+      "h1": "3D",
+      "title": "3D çizim: ekstrüzyon, döndürme, şişirme",
+      "desc": "Scissor'da düz şekilleri ekstrüzyon, döndürme, şişirme ve düzlem ile 3D'ye dönüştürün; dönüş, perspektif, aydınlatma ve malzemeleri ayarlayın."
+    },
+    "grids": {
+      "h1": "Izgaralar",
+      "title": "Izgaralar: kare, izometrik, perspektif",
+      "desc": "Scissor'da her çalışma yüzeyinin kendi ızgarası vardır: kare, izometrik, altıgen, eğik, altın oran, desen ve bir ile üç noktalı perspektif."
+    },
+    "guides": {
+      "h1": "Cetveller, kılavuzlar ve yaslama",
+      "title": "Cetveller, akıllı kılavuzlar ve yaslama",
+      "desc": "Scissor'da çalışmanızı cetveller, cetvel kılavuzları, akıllı kılavuzlar, noktalara ve ızgaraya yaslama ve Ölçüm Aracı ile hizalayın."
+    },
+    "pixels": {
+      "h1": "Piksel katmanlarında boyama",
+      "title": "Piksel katmanları: boyama ve rötuş",
+      "desc": "Scissor'da vektör çizimin yanında piksel katmanlarını boyayın, rötuşlayın ve dönüştürün: fırçalar, seçimler, maskeler, ayarlamalar ve filtreler."
+    },
+    "image-trace": {
+      "h1": "Vektörleştirme",
+      "title": "Vektörleştir: görüntüleri vektöre çevirin",
+      "desc": "Scissor'da görüntüleri düzenlenebilir vektör yollarına dönüştürün: siyah beyaz, gri tonlama ve renkli izleme, ön ayarlar, ayrıntı düzeyi ve genişletme."
+    },
+    "symbols": {
+      "h1": "Semboller, fırçalar ve desenler",
+      "title": "Semboller, fırçalar ve desen örnekleri",
+      "desc": "Scissor'da yeniden kullanılabilir çizim: semboller ve örnekleri, yol boyunca fırçalar ve desen döşemeleri. Bir kez düzenleyin, her kullanım güncellensin."
+    },
+    "panels-basics": {
+      "h1": "Özellikler, Katmanlar ve Çalışma Yüzeyleri",
+      "title": "Paneller: Özellikler, Katmanlar, Yüzeyler",
+      "desc": "Scissor'da açık tuttuğunuz paneller: bağlama duyarlı Özellikler paneli, belgenin ana hattını gösteren Katmanlar paneli ve çalışma yüzeyleri listesi."
+    },
+    "panels-color-type": {
+      "h1": "Renk ve yazı panelleri",
+      "title": "Renk, Renk Örnekleri, Kontur ve Yazı",
+      "desc": "Scissor'ın renk ve yazı panelleri: boyama için Renk, Renk Örnekleri, Degrade ve Kontur; yazı için Karakter ve Paragraf."
+    },
+    "panels-utility": {
+      "h1": "Yardımcı paneller",
+      "title": "Yardımcı paneller: Hizala, Dönüştür, Geçmiş",
+      "desc": "Scissor'ın çalışma panelleri: Hizala, Dönüştür, Boya Yığını, Vektörleştir, Saydamlık, stiller, fırçalar, glifler, semboller, Geçmiş ve daha fazlası."
+    },
+    "panels-effects": {
+      "h1": "Efekt panelleri",
+      "title": "Efekt panelleri: Stilize, Bulanıklık, 3D",
+      "desc": "Scissor'ın her kategori için bir canlı efekt paneli: Stilize, Bulanıklık, Yol Bozma, Yol, Şekilleri Birleştir, Bükme ve 3D. Hepsi Boya Yığını'nda canlı çalışır."
+    },
+    "files": {
+      "h1": "Açma, yerleştirme ve dışa aktarma",
+      "title": "SVG, PDF, PNG ve PSD açma ve dışa aktarma",
+      "desc": "SVG, PDF, EPS ve PSD açın; SVG, PDF, PNG, JPEG ve WebP olarak dışa aktarın ve yerel .cut dosyalarını kaydedin. Her şey cihazınızda kalır."
+    },
+    "automation": {
+      "h1": "Otomasyon",
+      "title": "Otomasyon: eylemler, değişkenler, betikler",
+      "desc": "Scissor'ı otomatikleştirin: eylemleri kaydedip oynatın, değişkenler ve CSV veri kümeleriyle tasarımları değiştirip toplu dışa aktarın, düzenleyiciyi JavaScript ile betikleyin."
+    },
+    "shortcuts": {
+      "h1": "Klavye kısayolları",
+      "title": "Araç ve komutlar için klavye kısayolları",
+      "desc": "Scissor'daki tüm klavye kısayolları; araçlara ve menülere göre, macOS biçiminde ve Windows ile Linux karşılıklarıyla listelenmiştir."
+    },
+    "privacy": {
+      "h1": "Çalışmanız ve gizliliğiniz",
+      "title": "Scissor'da çalışmanız ve gizliliğiniz",
+      "desc": "Scissor'ın sunucusu yoktur: düzenleyici tarayıcınızda çalışır ve çizim hiçbir zaman karşıya yüklenmez. Belgelerin, kurtarmanın ve analizlerin nasıl işlediğini öğrenin."
+    }
+  },
+  "keywords": {
+    "": "Scissor vektör düzenleyici, tarayıcıda vektör düzenleyici, ücretsiz çevrimiçi vektör düzenleyici, Scissor kullanım kılavuzu, Scissor nasıl kullanılır, kurulum gerektirmeyen vektör çizim uygulaması, istemci taraflı SVG düzenleyici, tarayıcıda vektör grafik düzenleme, hesapsız ve yüklemesiz düzenleyici, SVG PDF EPS PSD düzenleyici, gizli çevrimdışı vektör düzenleyici, vektör ve piksel düzenleyici, klavye kısayolları ve araç başvurusu",
+    "getting-started": "Scissor ile başlarken, yeni belge oluşturma, ilk şekli çizme, dikdörtgen aracı elips aracı, cut dosyası kaydetme, dolgu kontur renk örnekleri, Scissor'ı uygulama olarak yükleme, otomatik kaydetme ve çizimi kurtarma, yeni belge hazır ayarları, vektör çizimi öğrenme, çevrimdışı tarayıcı vektör düzenleyici, yeni başlayanlar için vektör düzenleyici eğitimi",
+    "interface": "Scissor arayüzü, araç paneli, denetim çubuğu, panel yuvası, komut paleti, cmd k komut arama, geri al ve yinele, tuvali kaydırma ve yakınlaştırma, cetveller kılavuzlar akıllı kılavuzlar, panelleri yerleştirme ve sıralama, durum çubuğu, geçmiş şeridi, açık ve koyu mod, komut nasıl bulunur, çalışma yüzeyi şeridi",
+    "documents": "çalışma yüzeyleri, yeni belge ayarları, tek dosyada birden fazla çalışma yüzeyi, çalışma yüzeyi aracı, çalışma yüzeyi seçenekleri, baskı için taşma payı, RGB CMYK renk modu, raster efekt çözünürlüğü, belge hazır ayarları, çalışma yüzeyini yeniden boyutlandırma ve taşıma, tüm çalışma yüzeylerini sığdırma, çalışma yüzeyi başına dışa aktarma, çalışma yüzeyi nasıl eklenir, çok sayfalı vektör belgesi",
+    "tools": "Scissor araç başvurusu, vektör düzenleyici araç çubuğu, araç klavye kısayolları, seçim aracı, doğrudan seçim aracı, kalem aracı, şekil ve çizgi araçları, dönüştürme ve sıvılaştırma araçları, damlalık aracı, degrade ve ağ aracı, perspektif ızgarası aracı, araç çubuğunda araç değiştirme, bükme ve genişlik araçları",
+    "selecting": "çizim seçme, seçim aracı, tümünü seç, seçimi kaldır, seçimi ters çevir, yeniden seç, aynı dolguyu seç, aynı kontur rengini seç, aynı şekli seç, seçim çerçevesi, doğrudan seçim, üstteki ve alttaki nesne, seçimi kaydet, kaydedilen seçimler, nesneler nasıl seçilir",
+    "paths": "yol çizme, kalem aracı, bağlantı noktaları ve tutamaçlar, köşe noktası ve yumuşak nokta, yol nasıl düzenlenir, şekilleri birleştir yol bulucu, yolu kaydır, konturu dış hatlara dönüştür, yolu basitleştir, bileşik yol, kırpma maskesi, Bézier eğrileri, makas ve bıçak aracı, akıllı kılavuzlar ve yaslama, ücretsiz çevrimiçi vektör yol düzenleyici",
+    "appearance": "dolgu ve kontur, renk paneli, renk örnekleri, degradeler, doğrusal dairesel serbest biçimli degrade, karışım modları, opaklık maskesi, kontur kalınlığı uçlar birleşimler, kesik çizgi, grafik stilleri, desenler, çizimi yeniden renklendirme, spot ve genel renk örnekleri, CMYK RGB HSB renk modelleri, degrade nasıl eklenir",
+    "type": "metin ekleme, yazı aracı, nokta alan ve yol üzerinde yazı, karakter paneli, yazı tipi kalınlığı ve boyutu, satır aralığı izleme karakter aralığı, OpenType özellikleri, küçük büyük harfler ve bitişik harfler, paragraf ayarları, yol üzerinde metin, metin bağlama, metni sarma, metni dış hatlara dönüştürme, dikey ve Arapça metin, glifler paneli",
+    "layers": "katmanlar paneli, gruplar ve kırpma maskeleri, kırpma maskesi nasıl yapılır, degradeyle solan opaklık maskesi, katmanları kilitleme ve gizleme, istifleme sırası en öne en arkaya, nesneleri gruplama ve grubu çözme, etkin katman, katman renk etiketleri, karışım modu ve opaklık, boşaltma grubu, katmanları yeniden sıralama, Scissor katmanlar paneli",
+    "transform": "dönüştür paneli, ölçekleme döndürme yansıtma eğme, nesneyi tam açıyla döndürme, serbest dönüştürme aracı, nesneleri hizalama ve dağıtma, dönüştürme referans noktası, tek tek dönüştürme ve yineleme, canlı tekrar dairesel ızgara ayna, şekil dönüştürme ve karıştırma, şekil bükme zarf, sınırlayıcı kutu tutamaçları, yatay ve dikey çevirme, Scissor dönüştürme araçları",
+    "effects": "canlı tahribatsız efektler, alt gölge, dış parlama iç parlama, Gauss bulanıklığı, pürüzlendirme ve zikzak, yolu kaydırma, köşeleri yuvarlatma, vektör çizime alt gölge ekleme, görünüm Boya Yığını paneli, büzme ve şişirme, metni yay biçiminde bükme, görünümü genişletme, Scissor efektleri, ücretsiz çevrimiçi alt gölge",
+    "three-d": "3D ve malzemeler, ekstrüzyon ve eğim, döndürme profili, şekli 3D şişirme, vektör şekillerden 3D metin oluşturma, X Y Z dönüşü ve perspektif, izometrik görünüm, aydınlatma yoğunluğu ve ortam ışığı, plastik mat metal malzeme, derinlik ve eğim adımları, 3D ekstrüzyon canlı efekti, Scissor 3D, ücretsiz çevrimiçi 3D metin",
+    "grids": "izometrik ızgara, perspektif ızgarası, altıgen ızgara, altın oran ızgarası, kare dik ızgara, ızgaraya yaslama, eğik ızgara, iki noktalı perspektif çizimi, kaçış noktaları, izometrik çizim nasıl yapılır, çalışma yüzeyi başına ızgara, Scissor ızgaraları, ücretsiz çevrimiçi perspektif ızgarası",
+    "guides": "cetveller ve kılavuzlar, akıllı kılavuzlar, noktaya yaslama, ızgaraya yaslama, ölçüm aracı, kılavuz nasıl eklenir, cetvelden kılavuz sürükleme, nesneleri kılavuza hizalama, cetvel birimleri piksel mm inç, şekillerden kılavuz oluşturma, nesneleri eşit aralıkla yerleştirme, bir sürükleme için yaslamayı yok sayma, Scissor kılavuzları",
+    "pixels": "piksel katmanları, fırça aracı, piksel silgisi, fotoğraf üzerine boyama, katman maskesi, soldurma yakma sünger, boya kovası aracı, ayarlamalar düzeyler ton doygunluk, Gauss bulanıklığı filtresi, degrade eşleme, seçim çerçevesi ve kement, vektör çizimi rasterleştirme, karışım modları, Scissor piksel katmanları, tarayıcıda raster düzenleme",
+    "image-trace": "görüntü izleme, görüntüyü vektörleştirme, görüntüyü vektöre dönüştürme, logoyu vektöre izleme, PNG'den SVG'ye, fotoğrafı vektöre, eskizi vektöre, siyah beyaz logo izleme, görüntü izleme ön ayarları, eşik köşeler yollar gürültü, izlenen yolları genişletme, Scissor vektörleştirme, ücretsiz çevrimiçi görüntü vektörleştirme, çizgi çizimi izleme",
+    "symbols": "semboller paneli, sembol örnekleri, sembol araçları, sembol püskürtme aracı, vektör fırçalar, kaligrafik fırça, saçma fırçası, resim fırçası, desen fırçası, boya fırçası aracı, desen dolgusu nasıl yapılır, desen döşemesini düzenleme, sembol bağlantısını kesme, Scissor semboller fırçalar desenler",
+    "panels-basics": "özellikler paneli, katmanlar paneli, çalışma yüzeyleri paneli, katmanlar ve istifleme sırası, katmanları gösterme gizleme kilitleme, dönüştürme konum boyut, hızlı işlemler gruplama grubu çözme, katmanlar nasıl düzenlenir, çalışma yüzeylerini yönetme, çalışma yüzeyini yeniden adlandırma, katman hedefleme ve seçme, Scissor panel yuvası",
+    "panels-color-type": "renk paneli, renk örnekleri paneli, genel renk örnekleri, degrade paneli, degrade durakları, doğrusal dairesel degrade, kontur paneli, kesik çizgiler ve oklar, genişlik profilleri, karakter paneli, yazı tipi boyutu satır aralığı karakter aralığı, paragraf hizalama girinti, heceleme, degrade nasıl yapılır, Scissor renk ve yazı panelleri",
+    "panels-utility": "hizala paneli, nesneleri eşit aralıkla dağıtma, şekilleri birleştir yol bulucu, birleştir önü çıkar kesiştir, otomatik seç aracı tolerans, dönüştür paneli, boya yığını dolgu kontur, grafik stilleri, vektörleştirme görüntü izleme, saydamlık karışım modları, opaklık maskeleri, glifler paneli, varlıkları PNG SVG olarak dışa aktarma, değişkenler veriye dayalı grafikler, gezgin geçmiş eylemler, Scissor yardımcı panelleri",
+    "panels-effects": "alt gölge efekti, Gauss bulanıklığı, iç ve dış parlama, kenar yumuşatma, köşeleri yuvarlatma, zikzak ve pürüzlendirme, büzme şişirme burgu, yolu kaydırma, bükme yay tümsek bayrak, 3D ekstrüzyon döndürme şişirme, canlı tahribatsız efektler, alt gölge nasıl eklenir, Scissor efekt panelleri",
+    "files": "cut dosya biçimi, SVG PDF AI PSD açma, SVG PNG JPEG WebP olarak dışa aktarma, PDF olarak dışa aktarma, belgeye görüntü yerleştirme, ekranlar için dışa aktarma, dilimler ve varlıklar paneli, çizimi kopyalama kesme yapıştırma, vektörü piksele rasterleştirme, AI dosyası tarayıcıda nasıl açılır, EPS dosyası içe aktarma, çalışma yüzeyini yazdırma, çalışmayı çevrimdışı kaydetme, ücretsiz çevrimiçi SVG düzenleyici",
+    "automation": "otomasyon, eylemler paneli, komutları kaydetme ve oynatma, değişkenler, veriye dayalı grafikler, veri kümeleri, CSV içe aktarma, toplu dışa aktarma, veri kümelerini dışa aktarma, betikler, betik konsolu, JavaScript API, Scissor betikleri, JS dosyası çalıştırma, veri birleştirme, çevrimiçi değişken veri grafikleri",
+    "shortcuts": "klavye kısayolları, Scissor kısayol listesi, araç kısayolları, Mac Windows Linux kısayol tuşları, kalem aracı kısayolu, seçim aracı tuşu, yakınlaştırma ve uzaklaştırma tuşları, gruplama ve grubu çözme kısayolu, geri al ve yinele, öne arkaya ve yerine yapıştır, kırpma maskesi kısayolu, araçlar arasında hızlı geçiş, kısayol tuşları özet tablosu",
+    "privacy": "gizlilik, istemci tarafında ve yüklemesiz, hesapsız ve oturum açmadan, veriler cihazınızda kalır, Google Analytics devre dışı bırakma, çökmeden sonra kaydedilmemiş işi kurtarma, Scissor'ı uygulama olarak yükleme, çevrimdışı vektör düzenleyici, Scissor dosyaları karşıya yükler mi, Scissor gizli mi, sunucusuz tarayıcı tabanlı, bilgisayardaki cut dosyaları, ücretsiz çevrimdışı grafik düzenleyici"
+  }
+}

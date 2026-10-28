@@ -1,0 +1,153 @@
+<p class="lede">Scissor'daki her vektör nesnesi yollardan oluşur: düz ya da eğri parçalarla birbirine bağlanan bir bağlantı noktaları zinciri. Bu sayfa yolların nasıl çizileceğini, nokta nokta nasıl yeniden şekillendirileceğini ve onları birleştiren, kaydıran, anahatlara çeviren ve bir araya getiren komutları anlatır.</p>
+
+<p>Kısayollar macOS biçiminde yazılmıştır. Windows'ta <kbd>&#8984;</kbd> tuşunu Ctrl, <kbd>&#8997;</kbd> tuşunu Alt ve <kbd>&#8679;</kbd> tuşunu Shift olarak okuyun.</p>
+
+<h2 id="paths-anchors-and-handles">Bağlantı noktaları, tutamaklar ve bir yolun şekli</h2>
+<p>Yol, art arda dizilmiş bağlantı noktalarından oluşur. Komşu iki bağlantı noktası arasında bir parça bulunur; iki nokta da ona doğru uzanmıyorsa parça düzdür, biri ya da ikisi uzanıyorsa eğridir. Bir bağlantı noktasının uzanımını iki yön tutamağı belirler: gelen tutamak noktaya ulaşan parçayı, giden tutamak ise noktadan çıkan parçayı şekillendirir. Bir tutamağı daha dışarı sürüklediğinizde eğri ona doğru daha güçlü biçimde bombelenir. Bir yol iki serbest ucu olan açık bir yol ya da son bağlantı noktası ilkine geri bağlanan kapalı bir yol olabilir.</p>
+
+<h3 id="paths-corner-and-smooth">Köşe ve yumuşak noktalar</h3>
+<p>Bir bağlantı noktası ya köşe noktasıdır ya da yumuşak nokta. Yumuşak noktada iki tutamak, noktadan geçen düz bir çizgi üzerinde birbirine kilitlenir; böylece eğri kırılmadan geçer ve kesintisiz kalır. Köşe noktasında ise iki taraf birbirinden bağımsızdır: yol keskin biçimde yön değiştirebilir, bir taraf düz kalırken diğeri eğri olabilir. Çoğu şekil ikisini karıştırır: akıcı bölümlerde yumuşak noktalar, kenarın döndüğü yerlerde köşe noktaları.</p>
+<dl>
+  <dt>Yumuşak nokta</dt>
+  <dd>Tutamaklar bir çizgi üzerinde birbirine bağlıdır. Bir yaprağın kenarı ya da bir harfin göbeği gibi tek ve kesintisiz bir kavis olarak okunması gereken eğrilerde bunları kullanın.</dd>
+  <dt>Köşe noktası</dt>
+  <dd>Birbirinden ayrı hareket eden tutamaklar ya da hiç tutamağı olmayan bir nokta. Bir yıldızın ucunda, bir kutunun köşesinde ya da bir eğrinin düz bir kenarla buluştuğu her yerde bunları kullanın.</dd>
+</dl>
+
+<h3 id="paths-direct-selection">Bağlantı noktaları, tutamaklar ve Doğrudan Seçim Aracı</h3>
+<p>Doğrudan Seçim Aracı (<kbd>A</kbd>) bir yolun parçaları üzerinde çalışır. Bir bağlantı noktasını seçmek için tıklayın, eklemek ya da çıkarmak için <kbd>&#8679;</kbd> ile tıklayın veya içindeki tüm bağlantı noktalarını yakalamak için boş alan üzerinde bir seçim çerçevesi sürükleyin. Seçili bağlantı noktalarını sürüklemek onları taşır; <kbd>&#8679;</kbd> taşımayı 45&deg;'lik adımlarla sınırlar. Bir şekil neredeyse doğruysa ve yalnızca bir iki noktanın biraz kaydırılması gerekiyorsa bu araca başvurun.</p>
+<p>Bir tutamağı sürükleyerek o taraftaki eğriyi değiştirin. Yumuşak bir bağlantı noktasına ait tutamaklar birlikte hareket eder, böylece eğri kesintisiz kalır; bu bağı koparıp tek bir tarafı ayrı yönlendirmek için sürüklerken <kbd>&#8997;</kbd> tuşunu, tutamağı bir açıda sabitlemek için <kbd>&#8679;</kbd> tuşunu basılı tutun. Bir parçanın kendisini de sürükleyebilirsiniz: eğri bir parça işaretçinin altında bükülür, düz bir parça ise iki bağlantı noktasını da beraberinde taşır.</p>
+<p>Grup Seçim Aracı aynı yuvayı paylaşır ve bağlantı noktaları yerine bir grubun içinden nesnelerin tamamını seçer. En içteki nesne için bir kez tıklayın, onu çevreleyen gruba çıkmak için yeniden tıklayın.</p>
+
+<h2 id="paths-drawing">Çizim araçları</h2>
+<p>Scissor'da sıfırdan yol çizmek için üç araç vardır. Kalem her noktada tam denetim sağlar, Eğri aracı yerleştirdiğiniz noktalardan yumuşak bir eğri geçirir, Kurşun Kalem ise elinizi serbestçe izler.</p>
+<table>
+  <thead><tr><th>Araç</th><th>Kısayol</th><th>En uygun olduğu iş</th></tr></thead>
+  <tbody>
+    <tr><td>Kalem</td><td><kbd>P</kbd></td><td>Her bağlantı noktasının ve tutamağın bilerek yerleştirildiği hassas anahatlar.</td></tr>
+    <tr><td>Eğri</td><td><kbd>&#8679;~</kbd></td><td>Birkaç geçiş noktasıyla tanımlanan, tutamaklarla uğraşmayı gerektirmeyen akıcı eğriler.</td></tr>
+    <tr><td>Kurşun Kalem</td><td><kbd>N</kbd></td><td>Serbest, elle çizilmiş şekiller ve hızlı eskizler.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="paths-pen">Kalem Aracı</h3>
+<p>Kalem Aracı (<kbd>P</kbd>) bir yolu nokta nokta oluşturur. Bir köşe bağlantı noktası bırakmak için tıklayın; bunun yerine basıp sürüklerseniz nokta tutamaklarını korur ve yol oradan bir eğri olarak çıkar. Tutamağı 45&deg;'lik adımlarda tutmak için sürüklerken <kbd>&#8679;</kbd> tuşunu basılı tutun; yalnızca giden tutamağı taşımak için <kbd>&#8997;</kbd> tuşunu basılı tutun. Bu, noktayı bir köşeye dönüştürür ve sonraki parçayı bir öncekinden bağımsız kılar.</p>
+<p>Bir yol açıkken, üzerinde gezindikçe araç değişir. İlk bağlantı noktasının üzerinde yolu kapatır, bir parçanın üzerinde bağlantı noktası ekler, var olan bir bağlantı noktasının üzerinde ise onu kaldırır. Devam eden bir yol yokken açık bir yolun serbest ucunun üzerine geldiğinizde o yolu alır, böylece çizmeye oradan devam edersiniz. <kbd>Enter</kbd> ya da <kbd>Esc</kbd> yolu bitirir ve açık bırakır; <kbd>Delete</kbd> en son yerleştirdiğiniz bağlantı noktasını kaldırır.</p>
+
+<h3 id="paths-curvature">Eğri Aracı</h3>
+<p>Eğri Aracı (<kbd>&#8679;~</kbd>) tıkladığınız noktalardan yumuşak bir eğri geçirir ve ilerledikçe işaretçiye kadar uzanan bir önizleme gösterir. Yumuşak nokta yerine köşe noktası bırakmak için <kbd>&#8997;</kbd> ile tıklayın; herhangi bir noktayı ikisi arasında değiştirmek için ona çift tıklayın. Bir noktayı taşımak için sürükleyin, eğri yeniden uyarlanır. Şekli kapatmak için ilk noktaya tıklayın ya da bitirmek için <kbd>Enter</kbd> tuşuna basın. <kbd>Delete</kbd> son noktayı kaldırır, <kbd>Esc</kbd> ise yoldan vazgeçer. Tutamakları sizin yerinize hesapladığı için, tam bağlantı noktalarından çok eğrinin şekli önemli olduğunda bu aracı kullanın.</p>
+
+<h3 id="paths-pencil">Kurşun Kalem Aracı</h3>
+<p>Kurşun Kalem Aracı (<kbd>N</kbd>) serbest çizim yapar: basın, çizin ve bırakın; Scissor izden yumuşak bir yol geçirir. Başladığınız yerin yakınında bırakırsanız ya da bitirirken <kbd>&#8997;</kbd> tuşunu basılı tutarsanız yol kapanarak bir şekle dönüşür. Sonuç, geçerli kontur renginde konturlu açık bir yoldur; çizgi olarak bırakılmaya ya da doldurulmaya hazırdır. Uyarlanan yolun hareketinize ne kadar sıkı bağlı kalacağını Kurşun Kalem Hassasiyeti tercihi belirler: daha çok bağlantı noktası ve her titremeyi koruyan hassas ayardan, daha az bağlantı noktası kullanıp çizgiyi düzleştiren yumuşak ayara kadar. Eskizler, imzalar ve kurgulanmış değil elle çizilmiş görünmesi gereken her şekil için bu araca başvurun.</p>
+
+<h2 id="paths-editing-points">Bir yol üzerindeki noktaları düzenleme</h2>
+
+<h3 id="paths-add-remove-convert">Nokta ekleme, kaldırma ve dönüştürme</h3>
+<p>Kalem, araç çubuğundaki yuvasını Bağlantı Noktası Ekleme (<kbd>+</kbd>), Bağlantı Noktası Silme (<kbd>&#8722;</kbd>) ve Bağlantı Noktası Aracı (<kbd>&#8679;C</kbd>) ile paylaşır. Bağlantı Noktası Ekleme, eğriyi değiştirmeden bir parçaya yeni bir nokta bırakır; Bağlantı Noktası Silme tıkladığınız noktayı kaldırır ve yolun boşluğu kapatmasını sağlar. Bağlantı Noktası Aracı ile bir köşe noktasından sürükleyerek eşleşmiş bir çift tutamak çekip onu yumuşak noktaya çevirin; iki tarafın ayrı hareket etmesi için tek bir tutamağı sürükleyip çifti bozarak onu yeniden köşeye çevirin; yumuşak bir noktaya tıklayarak tutamaklarını kaldırın ve keskin bir köşe elde edin.</p>
+<p>Nesne &rsaquo; Yol, aynı düzenlemeleri tüm seçim üzerinde bir kerede çalışan komutlar olarak sunar. Bağlantı Noktaları Ekle her parçanın ortasına yeni bir bağlantı noktası koyar ve şekli değiştirmeden nokta sayısını iki katına çıkarır; düzgün bükülmek için daha fazla noktaya ihtiyaç duyan bir bozma ya da bükme işleminden önce işe yarar. Bağlantı Noktalarını Kaldır, Doğrudan Seçim Aracı ile seçtiğiniz bağlantı noktalarını çıkarır ve yolu kalan noktalardan yeniden geçirir.</p>
+
+<h3 id="paths-reshape-tools">Elle yeniden şekillendirme: Yumuşatma, Yol Silgisi ve Birleştirme araçları</h3>
+<p>Fırça tarzındaki üç araç, bir yolu tek bir bağlantı noktasında değil, sürüklediğiniz yerde yeniden şekillendirir. Seçili yollar üzerinde ya da hiçbir şey seçili değilse fırçanın altındaki herhangi bir yol üzerinde çalışırlar; <kbd>[</kbd> ve <kbd>]</kbd> fırçayı küçültüp büyütür.</p>
+<dl>
+  <dt>Yumuşatma Aracı</dt>
+  <dd>Bir yolu gevşetmek için onun boyunca sürükleyin; bağlantı noktaları seyrelir, çıkıntılar yumuşar. Titrek bir kurşun kalem çizgisini ya da vektörleştirilmiş bir kenarı sakinleştirmek için kullanın.</dd>
+  <dt>Yol Silgisi Aracı</dt>
+  <dd>Üzerinden geçtiğiniz kısmı silmek için bir yol boyunca sürükleyin; yol bölünür ya da kısalır. Bir çizginin başıboş ucunu kırpmak için kullanın.</dd>
+  <dt>Birleştirme Aracı</dt>
+  <dd>İki açık ucun üzerinden fırçayla geçin; uçlar birleşir, yollar bir köşede temiz biçimde buluşacak şekilde uzatılır ya da kırpılır. Buluşması gereken iki kontur arasındaki boşluğu kapatmak için kullanın.</dd>
+</dl>
+
+<h3 id="paths-cutting">Bir yolu kesme: Makas ve Bıçak</h3>
+<p>Makas Aracı (<kbd>C</kbd>) tek bir yerden keser. Bir parçaya ya da bağlantı noktasına tıklayın, yol orada bölünür: kapalı bir yol kesim yerinden açılır, açık bir yol ise iki ayrı nesneye ayrılır. Bir dairede açıklık oluşturmak ya da yarıları farklı biçimlendirilebilsin diye bir şekli ikiye ayırmak için kullanın.</p>
+<p>Bıçak, çizimi baştan sona dilimler. Bıçağı bir nesnenin üzerinden sürükleyerek onu çizdiğiniz çizgi boyunca ayrı parçalara kesin; düz bir çizgide kesmek için <kbd>&#8997;</kbd> tuşunu basılı tutun, bu çizgiyi 45&deg;'lik adımlarda tutmak için <kbd>&#8679;</kbd> tuşunu ekleyin. Seçili bir şey varsa yalnızca seçili nesneler kesilir; yoksa bıçağın geçtiği her şey kesilir. Dolgulu bir şekli tek hamlede birkaç kapalı parçaya ayırmak için kullanın.</p>
+
+<h2 id="paths-commands">Yol komutları</h2>
+<p>Nesne &rsaquo; Yol, yolların tamamı üzerinde bir kerede çalışan işlemleri bir araya getirir.</p>
+<table>
+  <thead><tr><th>Komut</th><th>Kısayol</th><th>Ne yapar</th></tr></thead>
+  <tbody>
+    <tr><td>Birleştir</td><td><kbd>&#8984;J</kbd></td><td>Açık uçları tek bir yolda birleştirir ya da tek bir açık yolu kapatır.</td></tr>
+    <tr><td>Ortala&hellip;</td><td><kbd>&#8997;&#8984;J</kbd></td><td>Seçili bağlantı noktalarını ortak konumlarına taşır.</td></tr>
+    <tr><td>Konturu Anahatlara Çevir</td><td></td><td>Bir konturu aynı anahatta dolgulu bir şekle dönüştürür.</td></tr>
+    <tr><td>Yolu Kaydır&hellip;</td><td></td><td>Belirli bir mesafe kadar büyütülmüş ya da küçültülmüş bir kopya oluşturur.</td></tr>
+    <tr><td>Yol Yönünü Ters Çevir</td><td></td><td>Yolun ilerleme yönünü tersine çevirir.</td></tr>
+    <tr><td>Basitleştir&hellip;</td><td></td><td>Bağlantı noktalarının sayısını azaltır.</td></tr>
+    <tr><td>Bağlantı Noktaları Ekle</td><td></td><td>Her parçanın ortasına bir nokta ekler.</td></tr>
+    <tr><td>Bağlantı Noktalarını Kaldır</td><td></td><td>Seçili bağlantı noktalarını kaldırır.</td></tr>
+    <tr><td>Izgaraya Böl&hellip;</td><td></td><td>Seçimi satır ve sütunlardan oluşan bir ızgaraya böler.</td></tr>
+    <tr><td>Temizle&hellip;</td><td></td><td>Başıboş noktaları, boyanmamış nesneleri ve boş metinleri siler.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="paths-join-average">Birleştir ve Ortala</h3>
+<p>Birleştir (<kbd>&#8984;J</kbd>) açık yollar üzerinde çalışır. İki ayrı açık yol seçiliyken en yakın uçlarını tek bir yolda birleştirir; tek bir açık yolla ise iki serbest ucu birleştirerek yolu kapatır. Zaten üst üste duran uçlar tek bir bağlantı noktasında birleştirilir. Açık bir anahat olarak çizdiğiniz bir şekli kapatmak ya da yarım çizilmiş iki konturu birbirine dikmek için kullanın.</p>
+<p>Ortala (<kbd>&#8997;&#8984;J</kbd>) seçili bağlantı noktalarını ortak ortalama konumlarına taşır. İletişim kutusu, noktaları ortak bir yüksekliğe hizalayan yatay ekseni, onları bir sütunda hizalayan dikey ekseni ya da hepsini tek bir noktada toplayan her ikisini birden sunar. Bir sıra noktayı düzlemek ya da birleştirmeden önce iki ucu bir araya getirmek için başvurun.</p>
+
+<h3 id="paths-simplify">Basitleştir</h3>
+<p>Basitleştir, seçili yolları belirlediğiniz bir doğruluk sınırı içinde kalarak daha az bağlantı noktasıyla yeniden çizer: daha sıkı bir doğruluk, daha fazla nokta pahasına özgün şekle yakın kalır; daha gevşek bir doğruluk ise şekli bir avuç noktaya indirerek yumuşatır. Şeklin ihtiyacından çok daha fazla nokta taşıyan vektörleştirilmiş ya da elle çizilmiş bir yolu temizlemek için kullanın; bu, yolun düzenlenmesini ve çizilmesini hafifletir.</p>
+
+<h3 id="paths-offset">Yolu Kaydır</h3>
+<p>Yolu Kaydır, özgün yoldan belirli bir mesafede yepyeni bir yol oluşturur: pozitif bir ofset anahattı dışa doğru büyütür ve özgün yolun arkasına yerleşir, negatif bir ofset ise onu içe doğru küçültür ve önüne yerleşir. Birleşimler ayarı, dışa bakan köşelerin keskin bir Gönye, yuvarlatılmış bir Yuvarlak ya da düzleştirilmiş bir Eğim olarak nasıl ele alınacağını belirler; gönye sınırı da keskin bir köşenin kırpılmadan önce ne kadar uzayabileceğini sınırlar. Bir şeklin çevresine eşit bir kenarlık çizmek, bir şekli ince bir çerçeve çizgisi için içe almak ya da ince bir formu kalınlaştırmak için kullanın. Yolu Kaydır, şekil değiştiğinde yeniden hesaplanan canlı bir efekt olarak Efekt &rsaquo; Yol altında da bulunur.</p>
+
+<h3 id="paths-outline-stroke">Konturu Anahatlara Çevir</h3>
+<p>Konturu Anahatlara Çevir, konturlu bir yolu tam olarak konturun anahattına sahip dolgulu bir şekille değiştirir. Anahatlara çevrildikten sonra genişlik artık nesneyle birlikte ölçeklenmez ve kontur olarak düzenlenemez; ancak anahat nokta nokta yeniden şekillendirilebilir, degradeyle doldurulabilir ya da başka şekillerle birleştirilebilir. Konturun bir çizim gibi davranması gerektiğinde buna başvurun: bir çizgiye daha sonra elle ayarlayacağınız sivrilen ya da değişken bir kenar vermek veya bir tasarım ölçeklendiğinde çizgi kalınlıklarını sabit tutmak için. Efekt &rsaquo; Yol altında canlı bir efekt olarak da bulunur.</p>
+
+<h3 id="paths-reverse">Yol Yönünü Ters Çevir</h3>
+<p>Yol Yönünü Ters Çevir, bağlantı noktalarının dizilme sırasını tersine çevirir; böylece yol öbür yönde ilerler. Yön tek başına nadiren görünür, ancak bileşik bir yolda hangi konturun delik olacağına ve bir fırçanın ya da ok ucunun nerede başlayıp bittiğine karar verir. Bileşik bir yoldaki delik tamamen dolu göründüğünde ya da yol üzerindeki yazı veya bir konturun başlangıcı ile bitişi yanlış tarafta durduğunda kullanın.</p>
+
+<h2 id="paths-live-shapes">Düzenlenebilir şekiller ve denetimleri</h2>
+<p>Dikdörtgenler, yuvarlatılmış dikdörtgenler, elipsler ve çokgenler canlı kalır: parametrelerini korur ve siz birini değiştirdiğinizde yollarını yeniden oluştururlar. Bir şekli sürükleyerek çizerken <kbd>&#8679;</kbd> onu düzgün yapar, <kbd>&#8997;</kbd> ise merkezden çizer. Ok tuşları sürükleme sırasında da çalışır: yukarı ve sağ artırır, aşağı ve sol azaltır; böylece bir çokgenin kenar sayısını, bir yıldızın uç sayısını ya da yuvarlatılmış bir dikdörtgenin köşe yarıçapını değiştirirsiniz.</p>
+<p>Tek bir canlı şekil seçtiğinizde köşelerinin hemen içinde küçük yuvarlak tutamaklar belirir; şekil ekranda onları net gösteremeyecek kadar küçükse gizlenirler. Tüm köşeleri birden yuvarlatmak için birini Seçim Aracı (<kbd>V</kbd>) ile, yalnızca tuttuğunuz köşeyi yuvarlatmak için Doğrudan Seçim ile sürükleyin. Bir köşe tutamağına <kbd>&#8997;</kbd> ile tıklayarak onu sırayla yuvarlak, ters ve pah türlerine geçirin; yine Seçim Aracı ile dört köşenin tamamı, Doğrudan Seçim ile tek bir köşe değişir.</p>
+<p>Elips ise bunun yerine kare bir tutamak gösterir: bütün bir elipste bir tane, bir pasta dilimi açtığınızda ise dilimin her iki ucunda birer tane. Şekilden bir dilim açmak için birini sürükleyin; <kbd>&#8679;</kbd> açıyı 15&deg;'lik adımlara yaslar. Ucu yeniden başlangıca getirdiğinizde elips bütün hâline döner. Özellikler paneli aynı değerleri sayı olarak tutar: yarıçap ve köşe türü, köşe başına yarıçaplar, çokgen kenarları ve derece cinsinden pasta başlangıcı ile bitişi. Canlı bir şekil, yolunu doğrudan düzenleyene kadar bu denetimleri korur; doğrudan düzenleme onu sıradan bir yola dönüştürür.</p>
+
+<h2 id="paths-combining">Şekilleri bir araya getirme: Birleştir ve Böl ile Şekilleri Birleştir</h2>
+<p>İki ya da daha fazla şekil üst üste bindiğinde, çoğu zaman onlardan tek bir yeni şekil elde etmek istersiniz: bir birleşim, bir delik ya da kesiştikleri parça. Scissor buna ulaşmanın iki yolunu sunar. Birleştir ve Böl doğrudan ve görseldir; Şekilleri Birleştir paneli ise aynı işlemleri düğmeler olarak uygular. Her ikisi de eğrileri düz çizgi parçalarına indirgemeden korur.</p>
+
+<h3 id="paths-shape-builder">Birleştir ve Böl Aracı</h3>
+<p>Birleştir ve Böl Aracı (<kbd>&#8679;M</kbd>) seçili iki ya da daha fazla yol üzerinde çalışır. Örtüşmelerini bölgelere ayırır ve işaretçinin üzerinde olduğu bölgeyi vurgular; birkaç bölgeyi, geldiği şeklin görünümünü alan tek bir nesnede birleştirmek için üzerlerinden bir çizgi sürükleyin ya da onları silmek için üzerlerinden <kbd>&#8997;</kbd> ile sürükleyin. Her adım için bir komut seçmeye ara vermeden, istediğiniz parçaları ekleyip istemediklerinizi silerek bir şekli gözle oluşturmak için kullanın.</p>
+
+<h3 id="paths-pathfinder-shape-modes">Şekilleri Birleştir şekil modları</h3>
+<p>Şekilleri Birleştir paneli (<kbd>&#8679;&#8984;F9</kbd>) dört şekil moduyla açılır; her biri seçili yolları birleştirilmiş tek bir yolla değiştirir. Sonuç en üstteki nesnenin görünümünü alır; yalnızca Önü Çıkar en alttaki nesnenin görünümünü korur.</p>
+<dl>
+  <dt>Birleştir</dt>
+  <dd>Seçili tüm şekilleri tek bir anahatta birleştirir. Bir sıra daireden bir bulut gibi, örtüşen parçaları tek bir siluette kaynaştırmak için kullanın.</dd>
+  <dt>Önü Çıkar</dt>
+  <dd>En arkadaki şekli korur ve önünde istiflenen her şeyi ondan kesip çıkarır. İki daireden bir hilal oyar gibi, bir şekilden bir parça koparmak için kullanın.</dd>
+  <dt>Kesiştir</dt>
+  <dd>Yalnızca seçili tüm şekillerin paylaştığı alanı korur. İki dairenin kesiştiği mercek gibi, çizimi ortak bir bölgeye kırpmak için kullanın.</dd>
+  <dt>Hariç Tut</dt>
+  <dd>Delik hâline gelen örtüşmeler dışında her şeyi korur. Kesişen kısımların düştüğü bir halka ya da zincir halkası yapmak için kullanın.</dd>
+</dl>
+
+<figure class="shot">
+  <img src="img/combine.gif" width="760" height="441" loading="lazy"
+       alt="Bir daire, yuvarlatılmış bir kare ve bir daireden oluşan, örtüşen üç şeklin birleştirilmiş tek bir siluette birleşmesi." />
+  <figcaption>Birleştir (ya da Birleştir ve Böl ile bir sürükleme), örtüşen şekilleri eğrilerini koruyan tek bir anahatta birleştirir.</figcaption>
+</figure>
+
+<h3 id="paths-pathfinders">Diğer Şekilleri Birleştir işlemleri</h3>
+<p>Şekil modlarının altında altı yol bulucu işlemi yer alır. Bunlar size birleştirilmiş tek bir yol yerine, bir grupta toplanmış birkaç parça bırakır. Arkayı Çıkar, şekil modundaki adaşıyla aynı işi yapar ancak üstteki şekli korur.</p>
+<dl>
+  <dt>Böl</dt>
+  <dd>Şekilleri, kesiştikleri her çizgi boyunca ayrı yüzlere böler; her yüz, onu örten en üstteki şeklin rengini alır. Bir vitray panelin hücreleri gibi, bir tasarımı boyanabilir parçalara ayırmak için kullanın.</dd>
+  <dt>Kırp</dt>
+  <dd>Her şeklin, üstteki bir şeklin örttüğü gizli kısmını kaldırır. Her parça kendi dolgusunu korur ve hiçbir şey birleştirilmez; konturlar atılır. Hiçbir rengin bir başkasının üzerine basılmaması için istiflenmiş düz renkli çizimleri düzleştirmek amacıyla kullanın.</dd>
+  <dt>Birleştir</dt>
+  <dd>Gizli kısımları kırpar, ardından aynı dolgu rengini paylaşan komşu parçaları birleştirir. Aynı renkteki bölgeleri tek şekillerde toplayarak düz renkli bir illüstrasyonu toparlamak için kullanın.</dd>
+  <dt>Kırp</dt>
+  <dd>Alttaki şekillerin yalnızca en üstteki şeklin içine düşen kısımlarını korur; en üstteki şekil daha sonra atılır. Canlı bir kırpma maskesi tutmak yerine, çizimi bir çerçeveye kırpıp kırpmayı yollara kalıcı olarak işlemek için kullanın.</dd>
+  <dt>Arkayı Çıkar</dt>
+  <dd>En öndeki şekli korur ve arkasındaki her şeyi ondan kesip çıkarır. Üstteki şekil korunacak olan olduğunda ve alttaki şekillerin onu oyması gerektiğinde kullanın.</dd>
+  <dt>Anahat</dt>
+  <dd>Her bölge sınırını, geldiği dolgu renginde konturlanmış açık bir çizgiye dönüştürür. Örtüşen bir dizi şeklin kenar iskeletini çıkarmak için kullanın.</dd>
+</dl>
+<p>Efekt &rsaquo; Şekilleri Birleştir ise Ekle, Kesiştir, Hariç Tut, Çıkar ve Arkayı Çıkar işlemlerini bir grup üzerinde canlı efektler olarak uygular; özgün nesneler altta bozulmadan ve düzenlenebilir olarak kalır. Parçaları daha sonra hâlâ taşımak isteyebilecekseniz efekt sürümlerine, birleştirilmiş şekil kesinleştiğinde ise panele başvurun.</p>
+
+<h2 id="paths-compound-and-masks">Bileşik yollar ve kırpma maskeleri</h2>
+<p>Nesne &rsaquo; Bileşik Yol &rsaquo; Oluştur (<kbd>&#8984;8</kbd>), seçili yolları çift-tek kuralıyla doldurulan tek bir nesnede toplar; böylece içteki bir kontur, onu çevreleyen konturda bir delik açar. Sonuç, seçimdeki en alttaki nesnenin görünümünü alır. Serbest Bırak (<kbd>&#8997;&#8679;&#8984;8</kbd>) her konturu kendi başına bir yol olarak geri verir. O harfinin iç boşluğu ya da bir pul gibi delikli her şekil için bileşik yol kullanın.</p>
+<p>Nesne &rsaquo; Kırpma Maskesi &rsaquo; Oluştur (<kbd>&#8984;7</kbd>), altındaki her şeyi kırpmak için seçili en üstteki nesneyi kullanır; bu nesnenin bir yol olması gerekir. Scissor hepsini bir kırpma grubuna koyar ve maske yolunun kendi dolgusunu ve konturunu temizler. Serbest Bırak (<kbd>&#8997;&#8984;7</kbd>) kırpma grubunu yeniden sıradan bir gruba dönüştürür; böylece artık hiçbir şey kırpılmaz ve maske yolu da dahil her nesne olduğu yerde kalır. Aynı alt menüdeki Opaklık Maskesi Oluştur ise anahatla değil tonla maskeler; böylece maskenin açık kısımları içeriği gösterir, koyu kısımları gizler.</p>
+
+<h2 id="paths-smart-guides">Akıllı kılavuzlar ve yaslama</h2>
+<p>Akıllı kılavuzlar (Görünüm &rsaquo; Akıllı Kılavuzlar, <kbd>&#8984;U</kbd>) siz çizerken ya da sürüklerken görünür çizimleri ve çalışma yüzeylerini izler. Taşıdığınız şey komşularının kenarlarına, merkezlerine ve bağlantı noktalarına yaslanır; hizalandığı öğeye doğru bir çizgi belirir ve bu çizgi eşleşmenin türüyle etiketlenir: bağlantı noktası, merkez, köşe ya da hizalama.</p>
+<p>İki kılavuz daha kendiliğinden belirir. Taşıdığınız nesne komşularına, onların birbirine olan uzaklığıyla aynı mesafede duracak olduğunda oraya yaslanır ve iki eşit boşluk ölçüsüyle birlikte çizilir; bu hem eşit aralıklı nesnelerden oluşan bir diziyi sürdürürken hem de bir nesneyi iki nesne arasındaki boşlukta ortalarken çalışır. Ayrıca bir başlangıç noktasından uzağa sürüklediğinizde yön, sınırlama açısından itibaren her 45&deg;'de bir yer alan bir yapı çizgisine yaslanır; bu çizgi, yanında açısıyla birlikte uzun bir çizgi olarak gösterilir.</p>
+<p>Noktaya Yasla (<kbd>&#8997;&#8984;'</kbd>) ve Izgaraya Yasla (<kbd>&#8679;&#8984;'</kbd>), Görünüm menüsünde ayrı anahtarlardır. Izgaraya Yasla açıkken her şey ızgaranın alt bölümlerine oturur ve akıllı kılavuzlar devre dışı kalır.</p>

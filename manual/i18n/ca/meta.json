@@ -56,12 +56,12 @@
   "meta": {
     "": {
       "h1": "Manual d’usuari de Scissor",
-      "title": "Manual d'usuari de Scissor",
+      "title": "Manual d'usuari: eines, menús i dreceres",
       "desc": "El manual de Scissor, l'editor de disseny gratuït que funciona al navegador: eines, camins, color, text, quadrícules, efectes, píxels, fitxers i dreceres."
     },
     "getting-started": {
       "h1": "Primers passos",
-      "title": "Primers passos amb Scissor",
+      "title": "Primers passos: el teu primer dibuix",
       "desc": "Obriu Scissor, creeu un document, dibuixeu la primera forma, deseu un fitxer .cut i instal·leu Scissor com a aplicació. Sense compte i sense pujar res."
     },
     "interface": {
@@ -76,17 +76,17 @@
     },
     "tools": {
       "h1": "Les eines",
-      "title": "Referència d'eines",
+      "title": "Referència de totes les eines de dibuix",
       "desc": "Totes les eines de Scissor: selecció, Ploma i Llapis, formes, text, pinzells, perspectiva, malla, deformació, Fusionar i dividir, i Emplenament de regió."
     },
     "selecting": {
       "h1": "Seleccionar el treball",
-      "title": "Seleccionar objectes",
+      "title": "Seleccionar objectes i desar seleccions",
       "desc": "Selecció a Scissor: clic i rectangle de selecció, Seleccionar-ho tot, Invertir la selecció, Igual per emplenament o traç, i seleccions desades."
     },
     "paths": {
       "h1": "Dibuixar i editar camins",
-      "title": "Dibuixar i editar camins",
+      "title": "Dibuixar i editar camins amb la Ploma",
       "desc": "Dibuixeu amb la Ploma i el Llapis, editeu punts d'ancoratge i nanses Bézier, i uniu, simplifiqueu, desplaceu i contornegeu camins o combineu formes a Scissor."
     },
     "appearance": {
@@ -96,17 +96,17 @@
     },
     "type": {
       "h1": "Text",
-      "title": "Text i tipografia",
+      "title": "Text: tipus de lletra i funcions OpenType",
       "desc": "Text de punt, d'àrea i en camí a Scissor: tipus de lletra i funcions OpenType, opcions de caràcter i paràgraf, i com convertir el text en contorns."
     },
     "layers": {
       "h1": "Capes, grups i màscares",
-      "title": "Capes, grups i màscares",
+      "title": "Capes, grups, retall i màscares d'opacitat",
       "desc": "Organitzeu un document al panell Capes: ordre de superposició, visibilitat i blocatge, etiquetes de color, grups, màscares de retall i màscares d'opacitat."
     },
     "transform": {
       "h1": "Moure, transformar i organitzar",
-      "title": "Transformar i organitzar",
+      "title": "Moure, escalar, girar i alinear objectes",
       "desc": "Moveu, redimensioneu, gireu i alineeu objectes a Scissor amb el panell Transformar, Transformació lliure, repeticions en viu, Metamorfosi i Deformació de forma."
     },
     "effects": {
@@ -141,7 +141,7 @@
     },
     "symbols": {
       "h1": "Símbols, pinzells i motius",
-      "title": "Símbols, pinzells i motius",
+      "title": "Símbols, pinzells i mostres de motiu",
       "desc": "Elements reutilitzables a Scissor: símbols i instàncies, pinzells que segueixen un camí i motius en mosaic. Editeu l'original i totes les còpies s'actualitzen."
     },
     "panels-basics": {
@@ -151,22 +151,22 @@
     },
     "panels-color-type": {
       "h1": "Panquells de color i text",
-      "title": "Panells de color i text",
+      "title": "Panells Color, Mostres, Traç i Text",
       "desc": "Els panells de color i text de Scissor: Color, Mostres, Degradat i Traç per a la pintura, i Caràcter i Paràgraf per donar format al text."
     },
     "panels-utility": {
       "h1": "Els panquells d’utilitat",
-      "title": "Panells d'utilitat",
+      "title": "Panells: Alinear, Transformar, Historial",
       "desc": "Els panells de treball de Scissor: Alinear, Transformar, Pila de pintura, Vectoritzar, Transparència, Estils gràfics, Pinzells, Glifs, Historial i molts més."
     },
     "panels-effects": {
       "h1": "Els panquells d’efectes",
-      "title": "Panells d'efectes en viu",
+      "title": "Panells d'efectes: desenfocament i 3D",
       "desc": "Els panells d'efectes de Scissor, un per categoria: Estilitzar, Desenfocar, Distorsionar, Camí, Combinar formes, Deformar i 3D, tots a la Pila de pintura."
     },
     "files": {
       "h1": "Obrir, col·locar i exportar",
-      "title": "Obrir, col·locar i exportar",
+      "title": "Obrir i exportar SVG, PDF, PNG i PSD",
       "desc": "Obriu SVG, PDF, EPS, AI i PSD, exporteu a SVG, PDF, PNG, JPEG i WebP, i deseu fitxers .cut natius. Tot es queda al vostre dispositiu, sense pujar res."
     },
     "automation": {
@@ -176,7 +176,7 @@
     },
     "shortcuts": {
       "h1": "Drecers de teclat",
-      "title": "Dreceres de teclat",
+      "title": "Dreceres de teclat per a eines i ordres",
       "desc": "Totes les dreceres de teclat de Scissor, ordenades per eina i per menú, en format macOS i amb els equivalents per a Windows i Linux."
     },
     "privacy": {

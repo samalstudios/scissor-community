@@ -56,12 +56,12 @@
   "meta": {
     "": {
       "h1": "Brukerhåndbok for Scissor",
-      "title": "Scissor-brukerhåndbok",
+      "title": "Brukerhåndbok: verktøy, menyer og snarveier",
       "desc": "Brukerhåndboken for Scissor, det gratis vektor- og pikselprogrammet i nettleseren: verktøy, stier, farge, tekst, rutenett, effekter, filer og snarveier."
     },
     "getting-started": {
       "h1": "Kom i gang",
-      "title": "Kom i gang med Scissor",
+      "title": "Kom i gang: din første tegning i Scissor",
       "desc": "Åpne Scissor, opprett et dokument, tegn din første form, lagre en .cut-fil og installer programmet som app. Ingen konto, og ingenting lastes opp."
     },
     "interface": {
@@ -71,42 +71,42 @@
     },
     "documents": {
       "h1": "Dokumenter og bretter",
-      "title": "Dokumenter og tegnebrett",
+      "title": "Dokumenter og bretter: størrelse og utfall",
       "desc": "Sett opp dokumenter med ett eller flere tegnebrett i Scissor: størrelse, utfallende kant, kolonner og oppløsning, med tegnebrettverktøyet og Tegnebrett-panelet."
     },
     "tools": {
       "h1": "Verktøyene",
-      "title": "Verktøyoversikt",
+      "title": "Verktøyoversikt: alle tegneverktøyene",
       "desc": "Alle verktøyene i Scissor: utvalg, penn og blyant, former, tekst, pensler, rutenett og perspektiv, nett, vridning, sammenslåing og deling samt områdefyll."
     },
     "selecting": {
       "h1": "Merkearbeid",
-      "title": "Velge grafikk og lagre utvalg",
+      "title": "Velge grafikk og lagre utvalgene dine",
       "desc": "Velg grafikk i Scissor: klikk og markeringsrektangel, Velg alt, Omvendt, Velg på nytt, Samme etter fyll eller strek og lagrede utvalg."
     },
     "paths": {
       "h1": "Tegne og redigere stier",
-      "title": "Tegne og redigere stier",
+      "title": "Tegne og redigere stier med pennverktøyet",
       "desc": "Tegn med penn og blyant, rediger ankerpunkter og Bézier-håndtak, og føy sammen, forenkle, forskyv og kombiner stier eller gjør streker om til konturer."
     },
     "appearance": {
       "h1": "Farge, streker og utseende",
-      "title": "Farge, streker og utseende",
+      "title": "Farge, fargeoverganger, streker og utseende",
       "desc": "Fyll og strek i Scissor: ensfargede flater, fargeoverganger og mønstre, fargeprøver, opasitet og blandingsmoduser samt panelet Malingsstakk."
     },
     "type": {
       "h1": "Tekst",
-      "title": "Tekst og skrifttyper",
+      "title": "Tekst: skrifttyper og OpenType-funksjoner",
       "desc": "Punkttekst, områdetekst og tekst på bane i Scissor: skrifttyper og OpenType-funksjoner, innstillinger for tegn og avsnitt, og tekst gjort om til konturer."
     },
     "layers": {
       "h1": "Lag, grupper og masker",
-      "title": "Lag, grupper og masker",
+      "title": "Lag, grupper, utklipps- og opasitetsmasker",
       "desc": "Organiser dokumentet i Lag-panelet: nøstede lag, stabelrekkefølge, synlighet og låsing, grupper, utklippsmasker og opasitetsmasker."
     },
     "transform": {
       "h1": "Flytte, transformere og ordne",
-      "title": "Flytte, transformere og ordne",
+      "title": "Flytte, skalere, rotere og justere grafikk",
       "desc": "Flytt, skaler, roter, juster og forvreng grafikk i Scissor med Transformer-panelet, fri transformering, live-gjentakelser, Morf og formvridning."
     },
     "effects": {
@@ -131,7 +131,7 @@
     },
     "pixels": {
       "h1": "Male på pikselag",
-      "title": "Piksellag: mal og retusjer",
+      "title": "Piksellag: male, retusjere og justere",
       "desc": "Mal, retusjer, transformer og forvreng piksellag side om side med vektorgrafikk i Scissor: pensler, utvalg, masker, justeringer og filtre."
     },
     "image-trace": {
@@ -141,7 +141,7 @@
     },
     "symbols": {
       "h1": "Symboler, pensler og mønstre",
-      "title": "Symboler, pensler og mønstre",
+      "title": "Symboler, pensler og mønsterfargeprøver",
       "desc": "Gjenbrukbar grafikk i Scissor: symboler og instanser, pensler langs stier og mønsterfliser. Rediger originalen én gang, så oppdateres alle forekomster."
     },
     "panels-basics": {
@@ -151,12 +151,12 @@
     },
     "panels-color-type": {
       "h1": "Paneler for farge og tekst",
-      "title": "Paneler for farge og tekst",
+      "title": "Panelene Farge, Fargeprøver, Strek og Tekst",
       "desc": "Farge- og tekstpanelene i Scissor: Farge, Fargeprøver, Fargeovergang og Strek for fargelegging, og Tegn og Avsnitt for skrift, linjeavstand og justering."
     },
     "panels-utility": {
       "h1": "Verktøyrutepanelene",
-      "title": "Verktøypanelene",
+      "title": "Paneler: Juster, Transformer og Historikk",
       "desc": "Arbeidspanelene i Scissor: Juster, Transformer, Malingsstakk, Vektoriser, Gjennomsiktighet, Grafikkstiler, Pensler, Glyfer, Historikk og mange flere."
     },
     "panels-effects": {
@@ -166,7 +166,7 @@
     },
     "files": {
       "h1": "Åpne, plassere og eksportere",
-      "title": "Åpne, plassere og eksportere",
+      "title": "Åpne og eksportere SVG, PDF, PNG og PSD",
       "desc": "Åpne SVG, PDF, EPS og PSD, eksporter SVG, PDF, PNG, JPEG og WebP, og lagre i Scissors eget .cut-format. Alt blir værende på din egen enhet."
     },
     "automation": {
@@ -176,7 +176,7 @@
     },
     "shortcuts": {
       "h1": "Tastatursnarveier",
-      "title": "Tastatursnarveier",
+      "title": "Tastatursnarveier for verktøy og kommandoer",
       "desc": "Alle tastatursnarveier i Scissor, ordnet etter verktøy og meny, skrevet i macOS-form med de tilsvarende tastene for Windows og Linux."
     },
     "privacy": {

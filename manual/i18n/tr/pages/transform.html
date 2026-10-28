@@ -1,0 +1,165 @@
+<p class="lede">Bir nesnenin nerede durduğunu, ne kadar büyük olduğunu ya da hangi yöne baktığını değiştiren her şey burada: elle taşıma ve ölçekleme, sayısal değerlerle tam dönüştürmeler, hizalama ve istifleme, canlı tekrarlar, dönüşümler, zarflar ve düz bir şekli katı bir cisme çevirme.</p>
+
+<p>Aşağıdaki kısayollar macOS biçiminde yazılmıştır. Windows ve Linux'ta <kbd>⌘</kbd> yerine Ctrl, <kbd>⌥</kbd> yerine Alt ve <kbd>⇧</kbd> yerine Shift tuşunu kullanın.</p>
+
+<h2 id="transform-select-move">Seçme ve taşıma</h2>
+<p>Herhangi bir şeyi dönüştürmeden önce neyi dönüştüreceğinizi belirtmeniz gerekir. İlk olarak bunlara başvurun: bir sürüklemenin, sayısal bir komutun ya da bir panel alanının neye etki edeceğini seçim araçları belirler.</p>
+
+<h3 id="transform-selection-tools">Seçim araçları</h3>
+<table>
+  <thead><tr><th>Araç</th><th>Kısayol</th><th>Neyi seçer</th></tr></thead>
+  <tbody>
+    <tr><td>Seçim Aracı</td><td><kbd>V</kbd></td><td>Nesnelerin ve grupların tamamını.</td></tr>
+    <tr><td>Doğrudan Seçim Aracı</td><td><kbd>A</kbd></td><td>Tek tek bağlantı noktalarını ve yol parçalarını.</td></tr>
+    <tr><td>Grup Seçim Aracı</td><td></td><td>Bir grubun içindeki tek bir nesneyi; her yeni tıklama seçimi onu çevreleyen gruba genişletir.</td></tr>
+  </tbody>
+</table>
+<p>Shift tuşuyla tıklamak bir nesneyi seçime ekler ya da yeniden seçimden çıkarır. Tuvalin boş bir yerinde sürükleyerek dikdörtgen bir seçim çerçevesi çizin; <kbd>⇧</kbd> tuşunu basılı tutarsanız çerçevenin yakaladığı her şey zaten seçili olanlara eklenir. Seçim Aracı ile bir gruba çift tıklamak grubun içine girer; böylece grubu çözmeden tek bir üyesi üzerinde çalışabilirsiniz.</p>
+
+<h3 id="transform-moving">Seçimi taşıma</h3>
+<p>Seçili bir nesneyi taşımak için sürükleyin. <kbd>⌥</kbd> tuşunu basılı tutmak geride bir kopya bırakır ve onun yerine kopyayı sürükler; bu, tek bir hareketle yerinde çoğaltıp yeniden konumlandırmanın hızlı yoludur. <kbd>⇧</kbd> tuşunu basılı tutmak taşımayı Tercihler'de ayarlanan sınırlama açısından ölçülen 45°'lik adımlarla sınırlar ve yaslamayı kapatır; <kbd>⇧</kbd> olmadan seçim yakındaki kenarlara, merkezlere ve açılara yaslanır. Ok tuşları seçimi klavye artış değeri kadar kaydırır, <kbd>⇧</kbd> ile birlikte bir ok tuşu bunun on katı kadar kaydırır, <kbd>⌥</kbd> ile birlikte bir ok tuşu ise bir kopyayı kaydırır.</p>
+
+<h3 id="transform-bounding-box">Sınırlayıcı kutu: elle ölçekleme ve döndürme</h3>
+<p>Seçimin sınırlayıcı kutusunda sekiz tutamaç bulunur. Ölçeklemek için birini sürükleyin: <kbd>⇧</kbd> oranları korur, <kbd>⌥</kbd> ise karşıdaki tutamaç yerine merkez etrafında ölçekler. Bir köşenin hemen dışında işaretçi döndürme bölgesine girer; seçimi kutunun merkezi etrafında döndürmek için orada sürükleyin, <kbd>⇧</kbd> ise 45°'ye yaslar. Döndürmeden sonra kutu, çizimle birlikte eğik kalır. <strong>Nesne &rsaquo; Dönüştür &rsaquo; Sınırlayıcı Kutuyu Sıfırla</strong> kutuyu yeniden düzeltir; böylece sonraki genişlik ve yükseklik düzenlemeleri sayfa eksenleri boyunca okunur.</p>
+
+<h2 id="transform-numeric">Sayısal dönüştürmeler</h2>
+<p>Sürüklemek hızlıdır ama yaklaşıktır. Bir değerin tam olması ya da pek çok nesnede aynı olması gerektiğinde onu yazın. Dönüştür paneli seçimin anlık değerlerini gösterir, <strong>Nesne &rsaquo; Dönüştür</strong> alt menüsü ise Kopyala seçeneği bulunan tek seferlik komutları içerir.</p>
+
+<h3 id="transform-panel">Dönüştür paneli</h3>
+<p>Dönüştür paneli (<kbd>⇧F8</kbd>), seçimin X, Y, W ve H değerlerini piksel cinsinden gösterir; bir değer yazıp Return tuşuna basarak onu ayarlayın. Bunların altında ⟳ alanı seçimi bir açı kadar döndürür, ⧄ alanı ise bir açı kadar eğer; her ikisi de uygulandıktan sonra sıfıra döner. Panelin çalışması için bir şeyin seçili olması gerekir; hiçbir şey seçili değilse soluklaşır ve bunu belirtir.</p>
+<p>Özellikler paneli X, Y, W ve H değerlerini bir döndürme alanıyla ve seçimi kendi merkezi etrafında yatay ya da dikey olarak çeviren iki düğmeyle birlikte yineler; böylece en sık yapılan hareketler ikinci bir panel açmadan elinizin altındadır.</p>
+
+<h3 id="transform-commands">Taşı, Döndür, Yansıt, Ölçekle ve Eğ</h3>
+<p><strong>Nesne &rsaquo; Dönüştür</strong> sayısal komutları içerir. Her biri küçük bir iletişim kutusu açar ve her biri (düz bir yer değiştirme olan Taşı dışında) referans noktası etrafında dönüştürür. Her iletişim kutusundaki Kopyala kutusu değişikliği bir kopyaya uygular ve özgün nesneye dokunmaz; aynalanmış bir çifti ya da ölçeklenmiş bir yankıyı tek adımda bu şekilde oluşturursunuz.</p>
+<table>
+  <thead><tr><th>Komut</th><th>Kısayol</th><th>Alanlar</th></tr></thead>
+  <tbody>
+    <tr><td>Taşı…</td><td><kbd>⇧⌘M</kbd></td><td>Yatay, Dikey, Kopyala.</td></tr>
+    <tr><td>Döndür…</td><td></td><td>Açı, Kopyala.</td></tr>
+    <tr><td>Yansıt…</td><td></td><td>Eksen (Yatay ya da Dikey), Açı, Kopyala.</td></tr>
+    <tr><td>Ölçekle…</td><td></td><td>Yatay %, Dikey %, Kopyala.</td></tr>
+    <tr><td>Eğ…</td><td></td><td>Eğme Açısı, Eksen Açısı, Kopyala.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="transform-each-again">Her Birini Dönüştür ve Yeniden Dönüştür</h3>
+<p><strong>Her Birini Dönüştür…</strong> (<kbd>⌥⇧⌘D</kbd>), seçili her nesneyi seçimin ortak merkezi yerine <em>kendi</em> merkezi etrafında ölçekler, taşır, döndürür ve yansıtır. İletişim kutusunda Ölçek Y ve D, Y ve D Taşı, bir Döndür açısı, X Yansıt ve Y Yansıt onay kutuları ile Kopyala bulunur. Bir nesne kümesini rastgele dağıtmak ya da yelpaze gibi açmak için kullanın; böylece her biri grubun çevresinde dolanmak yerine kendi yerinde döner ve büyür.</p>
+<p><strong>Yeniden Dönüştür</strong> (<kbd>⌘D</kbd>), son dönüştürmeyi geçerli seçimde yineler. Bir nesneyi taşıyın, ardından <kbd>⌘D</kbd> tuşuna birkaç kez basın; eşit adımlarla dizilmiş bir sıra elde edersiniz. Bunu <kbd>⌥</kbd> ile bir kopya sürüklemekle birleştirerek tekrarlanan desenleri elle oluşturabilirsiniz.</p>
+
+<h2 id="transform-tools">Dönüştürme araçları ve referans noktası</h2>
+<p>Döndürme (<kbd>R</kbd>), Yansıtma (<kbd>O</kbd>), Ölçekleme (<kbd>S</kbd>) ve Eğme araçlarının her biri, küçük bir artı işareti olarak çizilen bir referans noktası etrafında çalışır. Bu nokta seçimin merkezinde başlar; onu taşımak için tuvalde herhangi bir yere tıklayın; başka bir şey seçtiğinizde nokta yeni merkeze geri döner. Ardından o nokta etrafında döndürmek, aynalamak, ölçeklemek ya da eğmek için tuvalde sürükleyin.</p>
+<p><kbd>⇧</kbd> her aracı sınırlar: Döndür ve Yansıt için 45°'lik adımlar, Ölçekle için eşit yatay ve dikey oran, Eğ için tek eksen. Sürükleme sırasında <kbd>⌥</kbd> tuşunu basılı tutmak bir kopyayı dönüştürür ve özgün nesneyi yerinde bırakır. <kbd>⌥</kbd> ile tıklamak referans noktasını yerleştirir ve o aracın sayısal iletişim kutusunu nokta önceden ayarlanmış olarak açar; böylece bir şekli bir köşesi etrafında tam bir açıyla döndürebilirsiniz.</p>
+
+<h2 id="transform-free">Serbest Dönüştürme Aracı</h2>
+<p>Serbest Dönüştürme Aracı (<kbd>E</kbd>), taşımayı, ölçeklemeyi, döndürmeyi, eğmeyi ve iki tür bozulmayı tek bir sınırlayıcı kutuda toplar. Taşımak için kutunun içinde sürükleyin, ölçeklemek için bir tutamacı sürükleyin, döndürmek için de bir köşenin hemen dışında sürükleyin; <kbd>⇧</kbd> 45°'ye yaslar. Araç değiştirmeden tek bir hareketle birkaç farklı değişikliği denemek istediğinizde kullanın.</p>
+<p>Seçim Aracı'nın kutusu da bozulma yapabilir: köşe tutamaçlarından birini sürüklerken <kbd>Ctrl</kbd> (ya da <kbd>&#8984;</kbd>) tuşunu basılı tutarsanız ölçekleme yerine yalnızca o köşe hareket eder. Bu, şekillerde de fotoğraflarda da çalışır; piksellerde sürüklemeyi hızlı bir önizleme izler ve sonuç <kbd>Enter</kbd> tuşuna bastığınızda hesaplanır.</p>
+
+<h3 id="transform-free-widget">Araç kutucuğu</h3>
+<p>Kutunun yanında dört düğmeli küçük bir araç kutucuğu durur; üzerine geldiğinizde her düğme adını gösterir: <strong>Sınırla</strong>, <strong>Serbest Dönüştür</strong>, <strong>Perspektif Bozulması</strong> ve <strong>Serbest Bozulma</strong>. Sınırla, <kbd>⇧</kbd> tuşunu basılı tutmadan ölçeklemeyi orantılı yapar; bu açıkken <kbd>⇧</kbd> tersine oranları serbest bırakır. İki bozulma kipinde çekilecek yalnızca dört köşe tutamacı kalır.</p>
+
+<h3 id="transform-free-keys">Klavyeyle bozma</h3>
+<p>Aynı bozulmalara varsayılan kipten çıkmadan da ulaşabilirsiniz. Bir kenar tutamacında <kbd>⌘</kbd> tuşunu basılı tutarak o kenar boyunca eğin. Bir köşede <kbd>⌘</kbd> tuşunu basılı tutarak o köşeyi tek başına serbestçe bozun; köşenin hareketini 45°'ye sınırlamak için <kbd>⇧</kbd> ekleyin. Perspektif için bir köşede <kbd>⌘⌥⇧</kbd> tuşlarını basılı tutun; komşu köşe sürüklemeyi aynalar. Sürüklemenin ortasında bir değiştirici tuşa basmak ya da onu bırakmak işlemi hemen değiştirir ve işlemin son aldığı ad (Ölçekle, Eğ, Perspektif Bozulması ya da Serbest Bozulma), sonrasında Geçmiş panelinde o adımın adı olur. Yazılar, yerleştirilmiş görüntüler ve sembol örnekleri bozulamaz; olduğu gibi bırakılırlar ve bir sürükleme onları atladığında Scissor bunu size bildirir.</p>
+
+<h3 id="transform-free-reference">Referans noktası</h3>
+<p>Referans noktası kutunun ortasında bir artı işareti olarak durur ve onu istediğiniz yere sürükleyebilirsiniz; tek başına hiçbir şeyi hareket ettirmez. Kutu bundan sonra bu nokta etrafında döner ve ölçeklenir; seçimi taşıdığınızda nokta da çizimle birlikte hareket eder. Noktayı kutunun dokuz noktasından birinin (dört köşe, dört kenar ortası ya da merkez) yakınına bırakırsanız o noktaya oturur. Ölçeklerken <kbd>⌥</kbd> tuşunu basılı tutmak yerleştirilmiş referans noktasını yok sayar ve merkez etrafında ölçekler. Bir kenarı <kbd>⌘</kbd> ile eğmek de yerleştirilmiş referans noktasını sabit tutar.</p>
+
+<h3 id="transform-free-pins">Tutamaçları yerleştirme</h3>
+<p>Serbest Dönüştür etkinken hızlı çubukta <strong>Tutamaçları Düzenle</strong> düğmesine tıklayın, ardından bir köşe tutamacını şeklinizin herhangi bir noktasına sürükleyin; bir bağlantı noktasının yakınında tutamaç o noktaya oturur. Çizim hareket etmez. <strong>Uygula</strong> (Enter) tutamaçları koyduğunuz yerde tutar, <strong>İptal Et</strong> (Esc) onları kutunun üzerine geri koyar, <strong>Sıfırla</strong> ise aynısını kipten çıkmadan yapar. Yerleştirilmiş bir tutamaç bundan sonra her kipte çalışır: Serbest Dönüştür'de onu sürüklemek şekli, o nokta işaretçiyi izleyecek biçimde ölçekler (⇧ oranları korur); Perspektif Bozulması ve Serbest Bozulma'da şekil, tutamaçların bulunduğu dört noktadan çekilir ve bozulma Uygula ya da İptal Et için bekler. Yerleştirilmiş tutamaçlar çizimle birlikte hareket eder.</p>
+
+<h2 id="transform-align-arrange">Hizalama, düzenleme ve gruplama</h2>
+<p>Bu komutlar nesnelerin birbirine göre nasıl hizalanacağını, hangisinin hangisinin önünde duracağını ve geri kalanı üzerinde çalışırken hangilerinin bir araya toplanacağını, kilitleneceğini ya da gizleneceğini belirler.</p>
+
+<h3 id="transform-align">Hizalama ve dağıtma</h3>
+<p>Hizala panelinde (<kbd>⇧F7</kbd>) üç sıra bulunur. <strong>Nesneleri Hizala</strong>, seçimi sola, ortaya ya da sağa ve üste, ortaya ya da alta hizalar. <strong>Nesneleri Dağıt</strong>, üç ya da daha fazla nesneyi üst kenarları, merkezleri, alt kenarları, sol kenarları, merkezleri ya da sağ kenarları eşit aralıklara düşecek biçimde yayar. <strong>Aralığı Dağıt</strong>, nesnelerin arasına dikey ya da yatay olarak eşit boşluk koyar. Paneldeki menü, her şeyin seçime mi yoksa çalışma yüzeyine mi hizalanacağını seçer. Hizalama için en az bir nesne gerekir (tek bir nesne çalışma yüzeyine hizalanır); dağıtma için üç nesne gerekir ve bu sayıya ulaşana kadar panel ilgili düğmeleri soluk gösterir. Altı hizalama <strong>Nesne &rsaquo; Hizala</strong> altında da bulunur.</p>
+
+<h3 id="transform-arrange">Düzenle: istifleme sırası</h3>
+<p>Her nesne istifte bir düzeyde durur ve <strong>Nesne &rsaquo; Düzenle</strong> seçimi bu istif içinde hareket ettirir.</p>
+<table>
+  <thead><tr><th>Komut</th><th>Kısayol</th></tr></thead>
+  <tbody>
+    <tr><td>En Öne Getir</td><td><kbd>⇧⌘]</kbd></td></tr>
+    <tr><td>Öne Getir</td><td><kbd>⌘]</kbd></td></tr>
+    <tr><td>Geri Gönder</td><td><kbd>⌘[</kbd></td></tr>
+    <tr><td>En Arkaya Gönder</td><td><kbd>⇧⌘[</kbd></td></tr>
+  </tbody>
+</table>
+
+<h3 id="transform-grouping">Gruplama, kilitleme ve gizleme</h3>
+<dl>
+  <dt><strong>Grupla</strong> (<kbd>⌘G</kbd>) ve <strong>Grubu Çöz</strong> (<kbd>⇧⌘G</kbd>)</dt>
+  <dd>Nesneleri tek bir bütün olarak taşınıp dönüştürülecek biçimde bir araya toplar ya da yeniden ayırır. Bir grubun içine, Seçim Aracı ile ona çift tıklayarak girilebilir.</dd>
+  <dt><strong>Kilitle &rsaquo; Seçim</strong> (<kbd>⌘2</kbd>) ve <strong>Tümünün Kilidini Aç</strong> (<kbd>⌥⌘2</kbd>)</dt>
+  <dd>Kilitleme nesneleri seçilemez hâle getirir; böylece siz üzerlerinde çalışırken yerlerinde kalırlar. Tümünün Kilidini Aç, kilitli olan her şeyi serbest bırakır.</dd>
+  <dt><strong>Gizle &rsaquo; Seçim</strong> (<kbd>⌘3</kbd>) ve <strong>Tümünü Göster</strong> (<kbd>⌥⌘3</kbd>)</dt>
+  <dd>Gizleme, nesneleri silmeden tuvalden kaldırır; bu da kalabalık bir sahneyi düzenlediğiniz kısma kadar sadeleştirir. Tümünü Göster onları geri getirir.</dd>
+</dl>
+
+<h2 id="transform-repeat">Canlı tekrarlar</h2>
+<p><strong>Nesne &rsaquo; Tekrarla</strong>, tek bir nesneden çok sayıda kopya oluşturur ve bunları canlı tutar: özgün nesneyi düzenlediğinizde her kopya onu izler. Çizim düzenli olduğunda, örneğin birbirinin aynı taç yapraklardan oluşan bir çiçek ya da döşenmiş bir simge ızgarası söz konusu olduğunda tekrara başvurun; böylece tek bir öğeyi biçimlendirir, geri kalanların onu izlemesine izin verirsiniz.</p>
+<dl>
+  <dt><strong>Radyal…</strong></dt>
+  <dd>Kopyaları bir merkezin çevresinde halka biçiminde dizer. İletişim kutusu Örnekler ve Yarıçap değerlerini ayarlar.</dd>
+  <dt><strong>Izgara…</strong></dt>
+  <dd>Kopyaları satırlar ve sütunlar hâlinde yerleştirir. İletişim kutusu Sütunlar, Satırlar, Yatay Aralık ve Dikey Aralık değerlerini ayarlar.</dd>
+  <dt><strong>Yansıt…</strong></dt>
+  <dd>Kopyaları bir eksene göre yansıtır. İletişim kutusu ekseni (dikey ya da yatay) ve bir Ofset değerini ayarlar.</dd>
+</dl>
+<p>Bir tekrar seçiliyken Özellikler paneli, sonradan ince ayar yapabilmeniz için aynı denetimleri sunar: radyal tekrar için örnek sayısı ve yarıçap; ızgara için sütunlar, satırlar ve yatay ile dikey aralık; yansıtma için de ofset ve yansıtma ekseni. İşiniz bittiğinde <strong>Serbest Bırak</strong>, kopyaları ayrı ayrı düzenlenebilen sıradan çizimlere dönüştürür.</p>
+<figure class="shot">
+  <img src="img/repeat.gif" width="640" height="640" loading="lazy"
+       alt="Radyal bir tekrarla bir merkezin çevresinde yinelenen tek bir mavi taç yaprak; sayı arttıkça on iki yapraklı bir çiçeğe dönüşüyor." />
+  <figcaption>Tek bir taç yaprak ve radyal bir tekrar. Sayı birden on ikiye çıktıkça çiçek dolar; tek yaprağı yeniden biçimlendirdiğinizde bütün çiçek onunla birlikte değişir.</figcaption>
+</figure>
+
+<h2 id="transform-morph">Dönüşümler</h2>
+<p>Bir dönüşüm, iki nesne arasındaki boşluğu, her biri bir sonrakine biraz daha yaklaşan bir dizi ara şekille doldurur. Renkler arasında gölgeli geçişler ve bir yol boyunca eşit aralıklı tekrarlar oluşturmanın aracıdır.</p>
+<p>Dönüşüm Aracı (<kbd>W</kbd>) bir nesneyi diğerine dönüştürür: önce birinciye, sonra ikinciye tıklayın. Üçüncüye tıklamak zinciri sürdürür, var olan bir dönüşümün içine tıklamak ise o nesneyi dönüşüme ekler. Geri kalanı <strong>Nesne &rsaquo; Dönüştür</strong> altındadır:</p>
+<table>
+  <thead><tr><th>Komut</th><th>Kısayol</th><th>Ne yapar</th></tr></thead>
+  <tbody>
+    <tr><td>Oluştur</td><td><kbd>⌥⌘B</kbd></td><td>Seçili nesneleri birbirine dönüştürür.</td></tr>
+    <tr><td>Serbest Bırak</td><td><kbd>⌥⇧⌘B</kbd></td><td>Anahtar nesneleri geri verir ve ara adımları kaldırır.</td></tr>
+    <tr><td>Dönüşüm Seçenekleri…</td><td></td><td>Aralığı ve yönlendirmeyi ayarlar (aşağıya bakın).</td></tr>
+    <tr><td>Genişlet</td><td></td><td>Ara adımları gerçek, düzenlenebilir nesnelere dönüştürür.</td></tr>
+    <tr><td>Omurgayı Değiştir</td><td></td><td>Adım dizisini seçili bir yol boyunca büker.</td></tr>
+    <tr><td>Omurgayı Ters Çevir</td><td></td><td>Her anahtar nesnenin omurganın hangi ucunda durduğunu değiştirir.</td></tr>
+    <tr><td>Önden Arkaya Ters Çevir</td><td></td><td>Adımların istifleme sırasını tersine çevirir.</td></tr>
+  </tbody>
+</table>
+<p><strong>Dönüşüm Seçenekleri…</strong>, Aralık değerini Belirtilen Adımlar (sabit sayıda ara şekil), Belirtilen Mesafe (piksel cinsinden sabit bir boşluk; sığabildiği kadar ara şekille doldurulur) ya da Yumuşak Renk (yumuşak bir renk geçişi için gereken sayıda adım) olarak, Yönlendirme değerini de Sayfaya Hizala ya da Yola Hizala olarak ayarlar. Bir dönüşüm canlı kalır ve anahtar nesnelerini izler; bu yüzden uçlardan herhangi birini düzenlemek bütün diziyi yeniden düzenler.</p>
+<figure class="shot">
+  <img src="img/morph.gif" width="760" height="316" loading="lazy"
+       alt="Giderek uzayan bir ara şekil dizisiyle kehribar renkli bir daireye dönüşen mavi bir yıldız." />
+  <figcaption>Bir yıldızdan bir daireye dönüşüm. Adım sayısı arttıkça boşluğu daha fazla ara şekil doldurur; her biri bir sonrakine biraz daha yakındır.</figcaption>
+</figure>
+
+<h2 id="transform-envelope">Şekil Bükme</h2>
+<p><strong>Nesne &rsaquo; Şekil Bükme</strong>, çizimi bir şekle uyacak biçimde büker ve alttaki çizimi düzenlenebilir tutar. Bir logoyu bir afişe uydurmak, bir yazı satırını kavislendirmek ya da düz bir deseni şişkin bir biçime sokmak için kullanın. Bir bükme oluşturmanın üç yolu vardır.</p>
+<dl>
+  <dt><strong>Bükme ile Oluştur…</strong> (<kbd>⌥⇧⌘W</kbd>)</dt>
+  <dd>Seçimi yerleşik bükme stillerinden biriyle (Yay, Kemer, Şişkinlik, Bayrak, Dalga, Balık, Yükselen, Balık Gözü, Şişir, Sıkıştır ile kabuk ve yay çeşitleri) büker; Bükme, Yatay ve Dikey değerleriyle denetlenir.</dd>
+  <dt><strong>Üstteki Nesneyle Oluştur</strong> (<kbd>⌥⌘C</kbd>)</dt>
+  <dd>En öndeki seçili şekli zarf olarak kullanır ve altındaki her şeyi o dış hatların içine akıtır. İki ya da daha fazla nesne gerekir: üstte kap, altında çizim.</dd>
+  <dt><strong>Ağ ile Oluştur…</strong> (<kbd>⌥⌘M</kbd>)</dt>
+  <dd>Seçimin üzerine istediğiniz sayıda satır ve sütundan oluşan bir ızgara yerleştirir. Izgara canlı kalır: Doğrudan Seçim Aracı'na (<kbd>A</kbd>) geçin ve içindekileri bükmek için ağın herhangi bir kesişim noktasını istediğiniz kadar sürükleyin.</dd>
+</dl>
+<p><strong>Serbest Bırak</strong>, çizimi zarf şekliyle birlikte önceki hâliyle geri verir; <strong>Genişlet</strong> ise bükmeyi korur, zarfı kaldırır ve geriye bozulmuş yollar bırakır.</p>
+
+<h2 id="transform-3d">Vektör bir şekilden 3B</h2>
+<p><strong>Efekt &rsaquo; 3B ve Malzemeler</strong>, düz bir şekli katı bir cisme dönüştürür. Canlı bir efekt olarak kalır; özgün yol düzenlemeniz için hâlâ oradadır ve ekrandaki kopya, yolu her değiştirdiğinizde yeniden oluşturulur.</p>
+<dl>
+  <dt><strong>Kalıp ve Eğim</strong></dt>
+  <dd>Şekle derinlik verir; isterseniz pahlı bir kenar da ekler.</dd>
+  <dt><strong>Döndürerek Oluştur</strong></dt>
+  <dd>Bir profili bir eksen etrafında döndürerek tornalanmış bir biçim oluşturur.</dd>
+  <dt><strong>Şişir</strong></dt>
+  <dd>Şekli içi doldurulmuş gibi şişirir.</dd>
+  <dt><strong>Düzlem</strong></dt>
+  <dd>Düz şekli derinlik eklemeden uzayda eğer.</dd>
+</dl>
+<p>3B ve Malzemeler paneli nesneyi X, Y ve Z eksenleri üzerinde döndürür, ışığın dönüşünü ve yüksekliğini ayarlar ve plastik, mat ya da metal bir yüzey seçer; ekstrüzyon için Derinlik ve Eğim alanları da vardır.</p>
+<figure class="shot">
+  <img src="img/3d-extrude.gif" width="620" height="620" loading="lazy"
+       alt="Üç boyutlu bir yıldıza dönüştürülen ve derinliğini göstermek için çevrilen düz bir vektör yıldız." />
+  <figcaption>Kalıp ve Eğim, düz bir şekilden canlı olarak derinlik oluşturur. Yıldız, altta düzenlenebilir bir yol olarak kalır.</figcaption>
+</figure>

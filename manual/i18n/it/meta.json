@@ -56,12 +56,12 @@
   "meta": {
     "": {
       "h1": "Manuale utente di Scissor",
-      "title": "Manuale utente di Scissor",
+      "title": "Manuale utente: strumenti, menu, scorciatoie",
       "desc": "Il manuale di Scissor, l'editor grafico gratuito nel browser: strumenti, tracciati, colore, testo, griglie, effetti, livelli pixel, file e scorciatoie."
     },
     "getting-started": {
       "h1": "Per iniziare",
-      "title": "Primi passi con Scissor",
+      "title": "Primi passi: il tuo primo disegno in Scissor",
       "desc": "Aprire Scissor, creare un documento, disegnare la prima forma, salvare un file .cut e installarlo come app. Nessun account, nulla da caricare."
     },
     "interface": {
@@ -71,7 +71,7 @@
     },
     "documents": {
       "h1": "Documenti e tavole",
-      "title": "Documenti e tavole da disegno",
+      "title": "Documenti e tavole: formato e pagina al vivo",
       "desc": "Impostare documenti e più tavole da disegno: dimensioni, pagina al vivo, colonne e risoluzione, con lo strumento Tavola da disegno e il pannello omonimo."
     },
     "tools": {
@@ -81,7 +81,7 @@
     },
     "selecting": {
       "h1": "Selezionare il lavoro",
-      "title": "Selezionare gli oggetti",
+      "title": "Selezionare oggetti e salvare le selezioni",
       "desc": "Selezionare in Scissor: clic e rettangolo di selezione, Seleziona tutto, Inverti, Riseleziona, Stesso per riempimento o traccia e le selezioni salvate."
     },
     "paths": {
@@ -91,17 +91,17 @@
     },
     "appearance": {
       "h1": "Colore, tratteggi e aspetto",
-      "title": "Colore, tracce e aspetto",
+      "title": "Colore, sfumature, tracce e aspetto",
       "desc": "Riempimenti e tracce in Scissor: colori pieni, sfumature e pattern, campioni, opacità e metodi di fusione, stili grafici e il pannello Pila di pittura."
     },
     "type": {
       "h1": "Testo",
-      "title": "Testo e tipografia",
+      "title": "Testo: caratteri, font e funzioni OpenType",
       "desc": "Testo di punto, in area e su tracciato in Scissor: font e funzioni OpenType, impostazioni Carattere e Paragrafo, conversione in profili di contorno."
     },
     "layers": {
       "h1": "Livelli, gruppi e maschere",
-      "title": "Livelli, gruppi e maschere",
+      "title": "Livelli, gruppi e maschere di ritaglio",
       "desc": "Organizzare un documento nel pannello Livelli: ordine di sovrapposizione, nascondere e bloccare, gruppi annidati, maschere di ritaglio e di opacità."
     },
     "transform": {
@@ -111,7 +111,7 @@
     },
     "effects": {
       "h1": "Effetti attivi",
-      "title": "Effetti live non distruttivi",
+      "title": "Effetti live: ombre, sfocatura e bagliore",
       "desc": "Effetti non distruttivi: ombre, sfocature, bagliori, bordi sfumati, distorsioni, alterazioni, angoli arrotondati, tracciato offset e riempimento schizzo."
     },
     "three-d": {
@@ -126,7 +126,7 @@
     },
     "guides": {
       "h1": "Righelli, guide e aggancio",
-      "title": "Righelli, guide e aggancio",
+      "title": "Righelli, guide, guide smart e aggancio",
       "desc": "Allineare con precisione in Scissor: righelli, guide da righello, guide smart, aggancio ai punti e alla griglia, oltre allo strumento Misura."
     },
     "pixels": {
@@ -141,7 +141,7 @@
     },
     "symbols": {
       "h1": "Simboli, pennelli e motivi",
-      "title": "Simboli, pennelli e motivi",
+      "title": "Simboli, pennelli e campioni pattern",
       "desc": "Grafica riutilizzabile in Scissor: simboli e istanze, pennelli lungo i tracciati e motivi. Basta modificare l'originale e ogni copia si aggiorna."
     },
     "panels-basics": {
@@ -151,12 +151,12 @@
     },
     "panels-color-type": {
       "h1": "Pannelli colore e testo",
-      "title": "Pannelli colore e testo",
+      "title": "Pannelli Colore, Campioni, Traccia e Testo",
       "desc": "I pannelli di colore e testo di Scissor: Colore, Campioni, Sfumatura e Traccia per riempimenti e tracce, Carattere e Paragrafo per la tipografia."
     },
     "panels-utility": {
       "h1": "I pannelli di utilità",
-      "title": "I pannelli di utilità",
+      "title": "Pannelli Allinea, Trasforma e Cronologia",
       "desc": "I pannelli di lavoro di Scissor: Allinea, Trasforma, Pila di pittura, Vettorializza, Trasparenza, Stili grafici, Pennelli, Glifi, Simboli, Cronologia e altri."
     },
     "panels-effects": {
@@ -166,7 +166,7 @@
     },
     "files": {
       "h1": "Aprire, posizionare ed esportare",
-      "title": "Aprire, inserire ed esportare",
+      "title": "Aprire ed esportare SVG, PDF, PNG e PSD",
       "desc": "Aprire file SVG, PDF, EPS e PSD, esportare in SVG, PDF, PNG, JPEG e WebP e salvare nel formato nativo .cut. Tutto resta sul tuo dispositivo."
     },
     "automation": {
