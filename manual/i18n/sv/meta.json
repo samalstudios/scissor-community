@@ -56,12 +56,12 @@
   "meta": {
     "": {
       "h1": "Användarhandbok för Scissor",
-      "title": "Användarhandbok för Scissor",
+      "title": "Handbok: alla verktyg, menyer och genvägar",
       "desc": "Handboken till Scissor, den kostnadsfria designredigeraren i webbläsaren: verktyg, banor, färg, text, rutnät, effekter, pixellager, filer och kortkommandon."
     },
     "getting-started": {
       "h1": "Kom igång",
-      "title": "Kom igång med Scissor",
+      "title": "Kom igång: din första teckning i Scissor",
       "desc": "Öppna Scissor, skapa ett dokument, rita din första form, spara en .cut-fil och installera Scissor som app. Inget konto behövs och ingenting laddas upp."
     },
     "interface": {
@@ -71,42 +71,42 @@
     },
     "documents": {
       "h1": "Dokument och tavlor",
-      "title": "Dokument och ritytor",
+      "title": "Dokument och tavlor: storlek och utfall",
       "desc": "Ställ in dokument och flera ritytor i Scissor: storlek, utfall, kolumner och upplösning, med verktyget Rityta och panelen Ritytor."
     },
     "tools": {
       "h1": "Verktygen",
-      "title": "Verktygsreferens",
+      "title": "Verktygsreferens: alla ritverktyg",
       "desc": "Alla verktyg i Scissor: markering, penna och blyertspenna, former, text, penslar, rutnät och perspektiv, nät, varp, Områdesfyllning samt Sammanfoga och dela."
     },
     "selecting": {
       "h1": "Markera arbete",
-      "title": "Markera objekt",
+      "title": "Markera objekt och spara markeringar",
       "desc": "Markera objekt i Scissor: klicka eller dra en ram, Markera alla, Omvänd, Markera igen, markera samma fyllning eller linje och spara markeringar."
     },
     "paths": {
       "h1": "Rita och redigera banor",
-      "title": "Rita och redigera banor",
+      "title": "Rita och redigera banor med Penna",
       "desc": "Rita med penna och blyertspenna, redigera ankarpunkter och Bézierhandtag, sammanfoga, förenkla och förskjut banor, skapa konturlinjer och kombinera former."
     },
     "appearance": {
       "h1": "Färg, streck och utseende",
-      "title": "Färg, linjer och utseende",
+      "title": "Färg, övertoningar, linjer och utseende",
       "desc": "Fyllningar och linjer i Scissor: enfärgade ytor, övertoningar och mönster, färgrutor, opacitet, blandningslägen och panelen Målningsstapel."
     },
     "type": {
       "h1": "Text",
-      "title": "Text och teckensnitt",
+      "title": "Text: teckensnitt och OpenType-funktioner",
       "desc": "Punkttext, områdestext och text på bana i Scissor: teckensnitt och OpenType-funktioner, tecken- och styckeinställningar och hur du gör om text till konturer."
     },
     "layers": {
       "h1": "Lager, grupper och maskar",
-      "title": "Lager, grupper och masker",
+      "title": "Lager, grupper, urklipps- och opacitetsmasker",
       "desc": "Organisera dokumentet i panelen Lager: underlager, staplingsordning, visning och låsning, grupper, urklippsmasker och opacitetsmasker."
     },
     "transform": {
       "h1": "Flytta, transformera och ordna",
-      "title": "Flytta, transformera och ordna",
+      "title": "Flytta, skala, rotera och justera objekt",
       "desc": "Flytta, skala, rotera, justera och förvräng objekt i Scissor med panelen Omforma, Fri omformning, liveupprepningar, Morfa och Formvarp."
     },
     "effects": {
@@ -141,7 +141,7 @@
     },
     "symbols": {
       "h1": "Symboler, penslar och mönster",
-      "title": "Symboler, penslar och mönster",
+      "title": "Symboler, penslar och mönsterfärgrutor",
       "desc": "Återanvändbara motiv i Scissor: symboler och instanser, penslar längs banor och mönsterplattor. Ändra originalet så uppdateras varje förekomst."
     },
     "panels-basics": {
@@ -151,7 +151,7 @@
     },
     "panels-color-type": {
       "h1": "Paneler för färg och text",
-      "title": "Paneler för färg och text",
+      "title": "Panelerna Färg, Färgrutor, Linje och Text",
       "desc": "Färg- och textpanelerna i Scissor: Färg, Färgrutor, Övertoning och Linje för målning, och Tecken och Stycke för att formatera text."
     },
     "panels-utility": {
@@ -166,7 +166,7 @@
     },
     "files": {
       "h1": "Öppna, placera och exportera",
-      "title": "Öppna, placera och exportera",
+      "title": "Öppna och exportera SVG, PDF, PNG och PSD",
       "desc": "Öppna SVG, PDF, EPS och PSD, exportera till SVG, PDF, PNG, JPEG och WebP och spara egna .cut-filer. Allt stannar på din egen enhet."
     },
     "automation": {
@@ -181,7 +181,7 @@
     },
     "privacy": {
       "h1": "Ditt arbete och din integritet",
-      "title": "Ditt arbete och din integritet",
+      "title": "Ditt arbete och din integritet i Scissor",
       "desc": "Scissor har ingen server: redigeraren körs i din webbläsare och ditt arbete laddas aldrig upp. Så fungerar dokument, återställning och statistik."
     }
   },

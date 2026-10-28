@@ -61,7 +61,7 @@
     },
     "getting-started": {
       "h1": "Primeiros passos",
-      "title": "Primeiros passos no Scissor",
+      "title": "Primeiros passos: seu primeiro desenho",
       "desc": "Como abrir o Scissor, criar um documento, desenhar a primeira forma, salvar um arquivo .cut e instalar o editor como app. Sem cadastro e sem enviar nada."
     },
     "interface": {
@@ -71,7 +71,7 @@
     },
     "documents": {
       "h1": "Documentos e pranchetas",
-      "title": "Documentos e pranchetas",
+      "title": "Documentos e pranchetas: tamanho e sangria",
       "desc": "Configuração de documentos no Scissor: tamanho, unidades, sangria e cor, além de várias pranchetas em um só arquivo, cada uma exportada separadamente."
     },
     "tools": {
@@ -81,37 +81,37 @@
     },
     "selecting": {
       "h1": "Selecionar o trabalho",
-      "title": "Selecionar a arte",
+      "title": "Selecionar a arte e salvar seleções",
       "desc": "Seleção no Scissor: clique e seleção em área, Selecionar tudo, Inverter seleção, Selecionar novamente, seleção pela mesma cor e seleções salvas."
     },
     "paths": {
       "h1": "Desenhar e editar caminhos",
-      "title": "Desenhar e editar caminhos",
+      "title": "Desenhar e editar caminhos com a Caneta",
       "desc": "Desenhe com caneta e lápis, edite âncoras e alças Bézier, una, simplifique, desloque e contorne caminhos e combine formas no Scissor."
     },
     "appearance": {
       "h1": "Cor, traços e aparência",
-      "title": "Cor, traçados e aparência",
+      "title": "Cor, degradês, traçados e aparência",
       "desc": "Preenchimentos e traçados no Scissor: cor sólida, degradê e padrão, amostras, opacidade e modos de mesclagem, o painel Pilha de pintura e estilos gráficos."
     },
     "type": {
       "h1": "Texto",
-      "title": "Texto e tipografia",
+      "title": "Texto: fontes e recursos OpenType",
       "desc": "Texto de ponto, de área e no caminho no Scissor: fontes e recursos OpenType, painéis Caractere e Parágrafo, disposição de texto e conversão em contornos."
     },
     "layers": {
       "h1": "Camadas, grupos e máscaras",
-      "title": "Camadas, grupos e máscaras",
+      "title": "Camadas, grupos e máscaras de corte",
       "desc": "Organize o documento no painel Camadas: subcamadas e ordem de empilhamento, ocultar e bloquear, grupos, etiquetas de cor, máscaras de corte e de opacidade."
     },
     "transform": {
       "h1": "Mover, transformar e organizar",
-      "title": "Transformar e organizar",
+      "title": "Mover, dimensionar, girar e alinhar",
       "desc": "Mova, dimensione, gire, alinhe e distorça a arte no Scissor com o painel Transformar, a Transformação livre, repetições, Metamorfose e Deformação de forma."
     },
     "effects": {
       "h1": "Efeitos ao vivo",
-      "title": "Efeitos ao vivo",
+      "title": "Efeitos ao vivo: sombra, desfoque e brilho",
       "desc": "Efeitos não destrutivos no Scissor: sombra projetada, desfoque, brilhos, difusão, distorções, deformação, cantos arredondados e deslocar caminho, tudo editável."
     },
     "three-d": {
@@ -126,7 +126,7 @@
     },
     "guides": {
       "h1": "Réguas, guias e ajuste",
-      "title": "Réguas, guias e ajuste",
+      "title": "Réguas, guias inteligentes e ajuste",
       "desc": "Alinhamento preciso no Scissor: réguas, guias, guias inteligentes, ajuste ao ponto e à grade, e a ferramenta Medida para ler distâncias e ângulos."
     },
     "pixels": {
@@ -141,7 +141,7 @@
     },
     "symbols": {
       "h1": "Símbolos, pincéis e padrões",
-      "title": "Símbolos, pincéis e padrões",
+      "title": "Símbolos, pincéis e amostras de padrão",
       "desc": "Arte reutilizável no Scissor: símbolos e instâncias, pincéis ao longo de caminhos e ladrilhos de padrão. Edite o original e todas as cópias se atualizam."
     },
     "panels-basics": {
@@ -151,12 +151,12 @@
     },
     "panels-color-type": {
       "h1": "Painéis de cor e texto",
-      "title": "Painéis de cor e texto",
+      "title": "Painéis Cor, Amostras, Traçado e Texto",
       "desc": "Os painéis de cor e texto do Scissor: Cor, Amostras, Degradê e Traçado para a pintura da arte, e Caractere e Parágrafo para formatar o texto."
     },
     "panels-utility": {
       "h1": "Os painéis utilitários",
-      "title": "Painéis utilitários",
+      "title": "Painéis Alinhar, Transformar e Histórico",
       "desc": "Os painéis de trabalho do Scissor: Alinhar, Combinar formas, Transformar, Pilha de pintura, Vetorizar, Transparência, Estilos gráficos, Glifos, Histórico etc."
     },
     "panels-effects": {
@@ -166,7 +166,7 @@
     },
     "files": {
       "h1": "Abrir, posicionar e exportar",
-      "title": "Abrir, inserir e exportar",
+      "title": "Abrir e exportar SVG, PDF, PNG e PSD",
       "desc": "Abra SVG, PDF, EPS e PSD, exporte em SVG, PDF, PNG, JPEG e WebP e salve arquivos .cut nativos. Tudo fica no seu dispositivo, sem envio para servidores."
     },
     "automation": {
@@ -176,7 +176,7 @@
     },
     "shortcuts": {
       "h1": "Atalhos de teclado",
-      "title": "Atalhos de teclado",
+      "title": "Atalhos de teclado para ferramentas",
       "desc": "Todos os atalhos de teclado do Scissor, organizados por ferramenta e por menu, no formato do macOS e com os equivalentes para Windows e Linux."
     },
     "privacy": {

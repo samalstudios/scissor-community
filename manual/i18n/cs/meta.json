@@ -56,12 +56,12 @@
   "meta": {
     "": {
       "h1": "Uživatelská příručka Scissor",
-      "title": "Uživatelská příručka Scissor",
+      "title": "Uživatelská příručka: nástroje a zkratky",
       "desc": "Příručka k bezplatnému grafickému editoru Scissor v prohlížeči: nástroje, cesty, barvy, text, mřížky, efekty, pixelové vrstvy, soubory a klávesové zkratky."
     },
     "getting-started": {
       "h1": "Začínáme",
-      "title": "Začínáme se Scissorem",
+      "title": "Začínáme: vaše první kresba ve Scissoru",
       "desc": "Jak otevřít Scissor, vytvořit nový dokument, nakreslit první tvar, uložit soubor .cut a nainstalovat editor jako aplikaci. Bez účtu a bez nahrávání."
     },
     "interface": {
@@ -71,47 +71,47 @@
     },
     "documents": {
       "h1": "Dokumenty a plochy",
-      "title": "Dokumenty a kreslicí plátna",
+      "title": "Dokumenty a plochy: velikost a spadávka",
       "desc": "Nastavení dokumentu a práce s více kreslicími plátny ve Scissoru: velikost, spadávka, sloupce, rozlišení rastrových efektů, nástroj a panel Kreslicí plátna."
     },
     "tools": {
       "h1": "Nástroje",
-      "title": "Přehled všech nástrojů",
+      "title": "Přehled nástrojů: všechny kreslicí nástroje",
       "desc": "Všechny nástroje Scissoru: výběr, pero a tužka, tvary, text, štětce, mřížky a perspektiva, síť, pokřivení i nástroje Sloučit a rozdělit a Vyplnit oblast."
     },
     "selecting": {
       "h1": "Výběr práce",
-      "title": "Výběr objektů",
+      "title": "Výběr objektů a ukládání výběrů",
       "desc": "Výběr kresby ve Scissoru: kliknutí a výběr tažením, Vybrat vše, Inverzní, Znovu vybrat, Vybrat stejné podle výplně či tahu a uložené výběry."
     },
     "paths": {
       "h1": "Kreslení a úprava cest",
-      "title": "Kreslení a úprava cest",
+      "title": "Kreslení a úprava cest nástrojem Pero",
       "desc": "Kreslení perem a tužkou, úprava kotevních bodů a Bézierových úchytů, spojování, zjednodušení, posun cesty, převod tahu na obrys a kombinace tvarů."
     },
     "appearance": {
       "h1": "Barva, obrysy a vzhled",
-      "title": "Barva, tahy a vzhled",
+      "title": "Barva, přechody, tahy a celkový vzhled",
       "desc": "Výplně a tahy ve Scissoru: plné barvy, přechody a vzory, vzorník, krytí a režimy prolnutí, grafické styly a panel Zásobník malby."
     },
     "type": {
       "h1": "Text",
-      "title": "Práce s textem",
+      "title": "Text: písmo, typografie a funkce OpenType",
       "desc": "Bodový text, text v oblasti a text na cestě ve Scissoru: písma a funkce OpenType, nastavení znaků a odstavců a převod textu na obrysy."
     },
     "layers": {
       "h1": "Vrstvy, skupiny a masky",
-      "title": "Vrstvy, skupiny a masky",
+      "title": "Vrstvy, skupiny, ořezové a krycí masky",
       "desc": "Organizace dokumentu v panelu Vrstvy: vrstvy a vnořené skupiny, pořadí vrstvení, skrývání a zamykání, barevné štítky, ořezové masky a masky krytí."
     },
     "transform": {
       "h1": "Přesun, transformace a uspořádání",
-      "title": "Transformace a uspořádání",
+      "title": "Přesun, škálování, otáčení a zarovnání",
       "desc": "Přesun, změna velikosti, otáčení, zarovnání a deformace objektů ve Scissoru: panel Transformovat, Volná transformace, opakování, Morfování a Pokřivení tvaru."
     },
     "effects": {
       "h1": "Živé efekty",
-      "title": "Živé efekty",
+      "title": "Živé efekty: stíny, rozostření a záře",
       "desc": "Nedestruktivní efekty ve Scissoru: stíny, rozostření, záře, prolnutí okrajů, deformace, pokřivení, zaoblení rohů, posun cesty a skicová výplň."
     },
     "three-d": {
@@ -141,7 +141,7 @@
     },
     "symbols": {
       "h1": "Symboly, štětce a vzory",
-      "title": "Symboly, štětce a vzory",
+      "title": "Symboly, štětce a vzory ve vzorníku",
       "desc": "Opakovaně použitelná grafika ve Scissoru: symboly a jejich instance, štětce podél cest a dlaždice vzorů. Stačí upravit originál a změna se projeví všude."
     },
     "panels-basics": {
@@ -151,12 +151,12 @@
     },
     "panels-color-type": {
       "h1": "Panely barvy a textu",
-      "title": "Panely pro barvu a text",
+      "title": "Panely Barva, Vzorník, Tah a Text",
       "desc": "Panely ve Scissoru, které řídí barvu a text: Barva, Vzorník, Přechod a Tah pro vzhled objektů, Znaky a Odstavec pro písmo a sazbu textu."
     },
     "panels-utility": {
       "h1": "Užitečné panely",
-      "title": "Pomocné panely",
+      "title": "Pomocné panely: Zarovnat, Transformovat",
       "desc": "Pracovní panely Scissoru: Zarovnat, Transformovat, Zásobník malby, Vektorizovat, Průhlednost, Grafické styly, Štětce, Glyfy, Symboly, Historie a další."
     },
     "panels-effects": {
@@ -166,7 +166,7 @@
     },
     "files": {
       "h1": "Otevření, umístění a export",
-      "title": "Otevření, umístění a export",
+      "title": "Otevření a export SVG, PDF, PNG a PSD",
       "desc": "Otevírání SVG, PDF, EPS a PSD, export do SVG, PDF, PNG, JPEG a WebP a ukládání nativních souborů .cut. Vše zůstává ve vašem zařízení."
     },
     "automation": {
@@ -176,12 +176,12 @@
     },
     "shortcuts": {
       "h1": "Klávesové zkratky",
-      "title": "Klávesové zkratky",
+      "title": "Klávesové zkratky nástrojů a příkazů",
       "desc": "Všechny klávesové zkratky Scissoru seřazené podle nástrojů a nabídek, zapsané pro macOS a s odpovídajícími klávesami pro Windows a Linux."
     },
     "privacy": {
       "h1": "Vaše práce a vaše soukromí",
-      "title": "Vaše práce a soukromí",
+      "title": "Vaše práce a vaše soukromí ve Scissoru",
       "desc": "Scissor nemá žádný server: editor běží ve vašem prohlížeči a kresby se nikam nenahrávají. Jak fungují dokumenty, obnova po pádu a analytika."
     }
   },

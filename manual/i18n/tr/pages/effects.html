@@ -1,0 +1,94 @@
+<p class="lede">Efekt, nesnenin kendisini değiştirmeden nasıl göründüğünü değiştirir. Yol, grup ya da yazı parçası tam olarak çizdiğiniz gibi kalır ve bir noktayı her taşıdığınızda ya da bir değeri her düzenlediğinizde efekt bunun üzerinde yeniden hesaplanır. Efektler Boya Yığını panelinde üst üste dizilir; böylece bir nesneye birkaç efekt uygulayabilir, sıralarını değiştirebilir ve herhangi birini yeniden kaldırabilirsiniz.</p>
+
+<figure class="shot">
+  <img src="img/effects-demo.png" width="1400" height="560" loading="lazy"
+       alt="Üç efekt gösteren üç özdeş mavi karo: bir gölge, kehribar renginde bir dış parlama ve pürüzlendirilmiş kenarlar." />
+  <figcaption>Üç efektle aynı karo: gölge, dış parlama ve Pürüzlendir. Her biri canlıdır; bu yüzden alttaki karo hâlâ sade, köşeleri yuvarlatılmış bir dikdörtgendir.</figcaption>
+</figure>
+
+<h2 id="effects-live-and-stacked">Canlı efektler ve görünüm yığını</h2>
+<p>Scissor'daki her efekt <strong>canlıdır</strong> ve <strong>tahribatsızdır</strong>. <strong>Görünüm</strong> panelinde (<kbd>&#8679;F6</kbd>) nesnenin dolgu ve konturlarının üstünde durur ve çizim ya da efekt her değiştiğinde nesnenin tamamı üzerinde yeniden çalışır. Özgün yol altta dokunulmadan kaldığı için bağlantı noktalarını düzenlemeyi sürdürebilir, dolgu rengini değiştirebilir ya da sözcükleri yeniden yazabilirsiniz; efekt de buna uyar. Sonradan fikrinizi değiştirebileceğiniz bir görünüm, bir gölge, bir bükülme ya da yuvarlatılmış bir köşe istediğinizde, bunu elle kalıcı hâle getirmek yerine bir efekte başvurun.</p>
+
+<h3 id="effects-order">Sıra önemlidir</h3>
+<p>Efektler yığının altından yukarıya doğru çalışır ve panel onları en üsttekinden başlayarak, dolgu ve konturların üstünde listeler. Sıra sonucu değiştirir: bir gölgenin altındaki bulanıklık, gölge düşmeden önce şekli yumuşatır; aynı ikisi ters sırada ise keskin bir gölge düşürür ve ardından her şeyi bulanıklaştırır. Bir efekt beklediğiniz gibi davranmıyorsa ilk denetlemeniz gereken şey yığındaki konumudur.</p>
+
+<h2 id="effects-using">Efekt ekleme, düzenleme ve kaldırma</h2>
+<h3 id="effects-add">Efekt menüsünden</h3>
+<p>Bir nesne seçin, ardından <strong>Efekt</strong> menüsünden bir efekt seçin. İletişim kutusu açan öğeler, değerlerini değiştirdikçe bir <strong>Önizleme</strong> gösterir; böylece onaylamadan önce sonucu tuval üzerinde değerlendirebilirsiniz; düzenlemenin tamamı geçmişe, her tuş vuruşu için ayrı bir adım yerine tek bir adım olarak kaydedilir. Menünün kısa bir sürümü (Gölge, Dış Parlama ve Gauss Bulanıklığı ile Efektleri Temizle) tuvalin sağ tıklama menüsünde de <strong>Efekt</strong> altında yer alır.</p>
+<h3 id="effects-appearance">Boya Yığını panelinde</h3>
+<p>Seçili nesnedeki her efekt, Boya Yığını panelinde bir <em>fx</em> işaretiyle belirtilen kendi satırını alır. Seçeneklerini yeniden açıp değiştirmek için efektin adına tıklayın. Yalnızca o efekti kaldırmak için satırın sonundaki çarpıya tıklayın. Seçimdeki tüm efektleri bir kerede kaldırmak için <strong>Efekt &rsaquo; Efektleri Temizle</strong> komutunu kullanın.</p>
+<h3 id="effects-panels">Efekt panellerinde</h3>
+<p><strong>Pencere &rsaquo; Efektler</strong> grubu, efektleri Efekt menüsünün her bölümü için birer panelde toplar: Stilize Et, Bulanıklaştır, Bozulma ve Dönüştürme, Yol, Şekilleri Birleştir ve Bük; yanında da 3B paneli bulunur. Her panel o grubun efektlerini, birini açıp kapatmaya yarayan bir anahtar ve hemen altında ayarlarıyla listeler; hepsi seçim üzerinde canlı olarak düzenlenir. Bir efekti denemenin ve değerlerini ayarlamanın, her seferinde bir iletişim kutusu açmaktan daha hızlı bir yoludur. Bir anahtarı kapatmak, o efekti nesneden kaldırır. Bir nesnede aynı türden birden fazla efekt varsa panel bunların ilkini düzenler; Boya Yığını paneli ise yığının tamamını göstermeye devam eder.</p>
+
+<h2 id="effects-stylize">Stilize Et: gölgeler, parlamalar ve kenarlar</h2>
+<p><strong>Efekt &rsaquo; Stilize Et</strong> alt menüsü, günlük son dokunuş efektlerini içerir.</p>
+<table>
+  <thead><tr><th>Efekt</th><th>Ne yapar, ne zaman kullanılır</th><th>Başlıca seçenekler</th></tr></thead>
+  <tbody>
+    <tr><td>Gölge</td><td>Nesnenin kaydırılmış, bulanıklaştırılmış bir kopyasını arkasına düşürür. Bir şekli, bir kartı ya da bir yazı parçasını arka plandan ayırıp kaldırmak için kullanın.</td><td>X ve Y kaydırması, Bulanıklık, Renk, Opaklık.</td></tr>
+    <tr><td>Dış Parlama</td><td>Nesnenin kenarından dışa doğru yumuşak bir renk halesi yayar. Neon bir tabela, bir vurgu ya da bir ışık kaynağının çevresindeki parıltı için başvurun.</td><td>Bulanıklık, Renk, Opaklık.</td></tr>
+    <tr><td>İç Parlama</td><td>Bir rengi kenardan dışa değil içe doğru soldurur; böylece ışık şeklin içinde durur. Bir şekli oymak ya da içe gömülü, aydınlık bir kenar izlenimi vermek için kullanın.</td><td>Bulanıklık, Renk, Opaklık.</td></tr>
+    <tr><td>Yumuşat</td><td>Nesnenin kendi kenarını belirli bir yarıçap boyunca saydama doğru soldurur. Yumuşak kenarlı bir şekil ya da basit bir vinyet için kullanın.</td><td>Yumuşatma Yarıçapı.</td></tr>
+    <tr><td>Köşeleri Yuvarla</td><td>Yolun her köşesini tek bir yarıçapla yuvarlar. Bir yıldızın, bir çokgenin ya da elle çizilmiş bir yolun uçlarını yeniden çizmeden yumuşatmak için kullanın.</td><td>Yarıçap.</td></tr>
+    <tr><td>Eskiz Dolgusu</td><td>Şekli, elle karalanmış gibi gidip gelen bir dizi konturla doldurur. Serbest, çizilmiş bir dolgu ya da keçeli kalem görünümü için uygundur.</td><td>Açı, Aralık, Kontur Genişliği, Varyasyon (konturların ne kadar saptığı, %0 ile %100 arasında).</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-blur">Bulanıklaştır</h2>
+<p><strong>Efekt &rsaquo; Bulanıklaştır &rsaquo; Gauss Bulanıklığı</strong>, nesnenin tamamını piksel cinsinden belirlediğiniz bir <em>Yarıçap</em> kadar yumuşatır. Canlı kaldığı için yarıçapı istediğiniz zaman artırıp azaltabilirsiniz. Yumuşak, odak dışı bir arka plan için ya da tek başına hızlı bir yumuşak gölge şekli olarak kullanın.</p>
+
+<h2 id="effects-distort">Bozulma ve dönüştürme</h2>
+<p><strong>Efekt &rsaquo; Bozulma ve Dönüştürme</strong> alt menüsü, alttaki yolu düzenlenebilir tutarak anahattı yeniden biçimlendirir.</p>
+<table>
+  <thead><tr><th>Efekt</th><th>Ne yapar, ne zaman kullanılır</th><th>Başlıca seçenekler</th></tr></thead>
+  <tbody>
+    <tr><td>Serbest Bozulma</td><td>Nesnenin kutusunun dört köşesini küçük bir önizlemede sürüklemenizi sağlar; çizim de perspektif içinde onu izler. Eğimli bir yüzeye yapışmış bir etiket gibi sahte bir perspektif oluşturmak için kullanın. Önizleme anahtarı siz sürüklerken sonucu tuval üzerinde gösterir; Sıfırla ise köşeleri yeniden dik konumuna getirir.</td><td>Dört köşe tutamacı, Önizleme, Sıfırla.</td></tr>
+    <tr><td>Sıkıştır ve Şişir</td><td>Bağlantı noktaları arasındaki parçaları ya içe doğru büker ve anahattı sivri uçlara sıkıştırır ya da dışa doğru büker ve şişkinliklere dönüştürür. Yıldız patlamaları, damlamsı şekiller ve yumuşak taç yaprağı şekilleri için kullanın.</td><td>Miktar, sıkıştırılmıştan şişirilmişe kadar.</td></tr>
+    <tr><td>Pürüzlendir</td><td>Anahattı keskin ya da yumuşatılmış küçük rastgele hareketlere böler. Yırtık kâğıt kenarı ya da daha pürüzlü, elle çizilmiş bir çizgi için kullanın.</td><td>Boyut (noktaların ne kadar uzağa gittiği), Ayrıntı (ne kadar sık olduğu), Nokta: Yumuşat veya Köşe.</td></tr>
+    <tr><td>Dönüştür</td><td>Nesneyi bir efekt olarak ölçekler, taşır ve döndürür; ardında bir dizi kopya da bırakabilir. Düzenlenebilir bir tekrar sırası ya da halkası için veya bir şeklin gerçek geometrisine dokunmadan onu hafifçe kaydırıp yeniden boyutlandırmak için kullanın.</td><td>Yatay ve Dikey Ölçekle, Yatay ve Dikey Taşı, Döndür, Kopyalar (0 ile 200 arası).</td></tr>
+    <tr><td>Ayarla</td><td>Bağlantı noktalarını ve kontrol tutamaçlarını rastgele bir miktarda kaydırır. Fazla kusursuz bir şekli biraz bozmak için kullanın.</td><td>Yatay ve Dikey miktar ile Bağlantı Noktaları'nın, Kontrol Noktaları'nın ya da her ikisinin taşınıp taşınmayacağı.</td></tr>
+    <tr><td>Bük</td><td>Şeklin içini kenarlarından daha çok döndürerek onu bir girdaba sarar. Bir sarmal ya da bir anafor için kullanın.</td><td>Açı.</td></tr>
+    <tr><td>Zikzak</td><td>Düz parçaları düzenli zikzaklara (Köşe) ya da dalgalara (Yumuşat) dönüştürür. Dalgalı bir alt çizgi, tırtıllı bir kenarlık ya da sivri dişli bir kenar için kullanın.</td><td>Boyut, Parça başına sırt sayısı, Nokta: Köşe veya Yumuşat.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-path">Yol</h2>
+<p><strong>Efekt &rsaquo; Yol</strong> alt menüsü, kaynağı düzenlenebilir bırakarak nesnenin anahattını yeniden işler.</p>
+<table>
+  <thead><tr><th>Efekt</th><th>Ne yapar, ne zaman kullanılır</th><th>Başlıca seçenekler</th></tr></thead>
+  <tbody>
+    <tr><td>Yolu Kaydır</td><td>Anahattı belirli bir mesafe kadar büyütür ya da küçültür. Pozitif bir ofset onu dışa doğru yayar, negatif bir ofset içe doğru çeker. Yazının ya da bir şeklin çevresinde, siz düzenledikçe ona ayak uyduran canlı bir anahat için kullanın.</td><td>Ofset, Birleşimler: Gönye, Yuvarlak veya Eğim.</td></tr>
+    <tr><td>Nesneyi Anahatlara Çevir</td><td>Sıfıra ayarlı bir Yolu Kaydır efekti ekleyerek nesneyi (canlı yazı da dahil) anahatlı bir yola dönüştürür; böylece sonraki efektlerin üzerinde çalışabileceği gerçek bir yol olur.</td><td>Yok.</td></tr>
+    <tr><td>Konturu Anahatlara Çevir</td><td>Konturu bir efekt olarak dolgulu bir şekle dönüştürür. Bir konturu degradeyle doldurmak ya da normalde düz bir çizgi olan bir konturu yumuşatmak veya bozmak istediğinizde kullanın.</td><td>Yok.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-pathfinder">Şekilleri Birleştir</h2>
+<p><strong>Efekt &rsaquo; Şekilleri Birleştir</strong> alt menüsü, bir grubun içindeki şekilleri bir şekil moduyla birleştirir, ancak onları altta ayrı ve düzenlenebilir yollar olarak tutar. Bir gruba uyguladığınızda gördüğünüz şey birleşik sonuçtur, ama her üye yine taşınabilir ya da yeniden renklendirilebilir. Şekilleri Birleştir panelinin yaptığı gibi kalıcı hâle getirmeden bir birleşimi denemek için kullanın.</p>
+<table>
+  <thead><tr><th>Mod</th><th>Sonuç</th></tr></thead>
+  <tbody>
+    <tr><td>Ekle</td><td>Grubun şekillerini tek bir bölgede birleştirir.</td></tr>
+    <tr><td>Kesiştir</td><td>Yalnızca şekillerin çakıştığı yeri tutar.</td></tr>
+    <tr><td>Hariç Tut</td><td>Çakıştıkları yer dışındaki her şeyi tutar.</td></tr>
+    <tr><td>Çıkar</td><td>Öndeki şekilleri arkadakinden çıkarır.</td></tr>
+    <tr><td>Arkayı Çıkar</td><td>Arkadaki şekilleri öndekinden çıkarır.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="effects-warp">Bük</h2>
+<p><strong>Efekt &rsaquo; Bük</strong>, nesneyi bir dizi hazır şekilden birine göre büker ve canlı kalır; böylece alttaki çizimi düzenlemeyi sürdürebilirsiniz. Bir başlığı kemer biçiminde kıvırmak, bir pankartı dalgalandırmak ya da düz bir bloğu şişkinliğe itmek için, sözcükleri ya da renkleri değiştirme olanağından vazgeçmeden kullanın.</p>
+<p>Menü on stili doğrudan sunar (Yay, Kemer, Şişkinlik, Bayrak, Dalga, Balık, Yükselen, Balık Gözü, Şişir ve Sıkıştır). <strong>Bükme Seçenekleri&#8230;</strong> tüm seti açar; buna Alt Yay, Üst Yay, Alt Deniz Kabuğu ve Üst Deniz Kabuğu eklenir ve miktarı ayarlamanızı sağlar:</p>
+<dl>
+  <dt>Bükme</dt><dd>Şeklin ne kadar güçlü büküleceği, %-100 ile %100 arasında.</dd>
+  <dt>Yatay</dt><dd>Bükülmeyi bir yana yatırır, %-100 ile %100 arasında.</dd>
+  <dt>Dikey</dt><dd>Bükülmeyi yukarı ya da aşağı eğer, %-100 ile %100 arasında.</dd>
+</dl>
+<p>Aynı bükme stilleri, canlı kalmak yerine yolun kendisini değiştiren bir yeniden biçimlendirme zarfı olarak da uygulanabilir: bkz. <a href="#transform-envelope">Şekil Bükme</a>. Bükme Aracı ve diğer sıvılaştırma araçları tuval üzerinde sürükleyerek yeniden biçimlendirir ve <a href="#tools-width-liquify">araçlar başvurusunda</a> ele alınır.</p>
+
+<h2 id="effects-3d">3B ve Malzemeler</h2>
+<p><strong>Efekt &rsaquo; 3B ve Malzemeler</strong>, düz bir şekli katı bir cisme dönüştürür: düzlem, kalıp ve eğim, döndürerek oluşturma ya da şişirme. Diğerleri gibi canlı bir efekttir; düz yol düzenlenmek üzere yerinde kalır ve onu değiştirdiğinizde katı cisim yeniden oluşur. Derinlik, eğim, döndürme, aydınlatma ve yüzey 3B ve Malzemeler panelinde ayarlanır. Tek bir iletişim kutusundan daha fazla denetimi olduğu için 3B'nin kendi sayfası vardır: bkz. <a href="/manual/three-d/">3B</a>.</p>
+
+<h2 id="effects-expand">Efektleri çizime dönüştürme</h2>
+<p>Bir efekt, siz istediğiniz sürece canlı kalır. Görünüm netleştiğinde ve sonucu sade, düzenlenebilir yollar olarak istediğinizde, örneğin dosyayı başkasına vermek ya da efektin çıktısını elle yeniden biçimlendirmek için, <strong>Nesne &rsaquo; Görünümü Genişlet</strong> komutunu seçin. Bu komut, efektler dahil tüm görünüm yığınını sıradan çizime dönüştürür. Sonradan efekt olarak düzenlenemez; bu yüzden yalnızca emin olduğunuzda genişletin. Hiçbir şeyi kalıcılaştırmadan efektleri kaldırmak için onları Boya Yığını panelinde tek tek kaldırın ya da <strong>Efekt &rsaquo; Efektleri Temizle</strong> ile hepsini temizleyin.</p>
+<p>Efekt menüsünde ayrıca canlı bir efekt olmayan <strong>Rasterleştir</strong> de bulunur: seçimi o anda piksellere dönüştürür. Boyama ve piksel katmanları <a href="/manual/pixels/">Piksel katmanları</a> sayfasında ele alınmaktadır.</p>

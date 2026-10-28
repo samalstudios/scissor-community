@@ -61,7 +61,7 @@
     },
     "getting-started": {
       "h1": "Začíname",
-      "title": "Začíname s editorom Scissor",
+      "title": "Začíname: vaša prvá kresba v Scissor",
       "desc": "Ako otvoriť Scissor, vytvoriť nový dokument, nakresliť prvý tvar, uložiť súbor .cut a nainštalovať editor ako aplikáciu. Bez účtu a bez nahrávania."
     },
     "interface": {
@@ -71,47 +71,47 @@
     },
     "documents": {
       "h1": "Dokumenty a plochy",
-      "title": "Dokumenty a kresliace plochy",
+      "title": "Dokumenty a plochy: veľkosť a spadávka",
       "desc": "Nastavenie dokumentu a práca s viacerými kresliacimi plochami v editore Scissor: veľkosť, spadávka, stĺpce, rozlíšenie, nástroj a panel Kresliace plochy."
     },
     "tools": {
       "h1": "Nástroje",
-      "title": "Prehľad všetkých nástrojov",
+      "title": "Prehľad všetkých kresliacich nástrojov",
       "desc": "Všetky nástroje editora Scissor: výber, pero a ceruzka, tvary, text, štetce, perspektíva, sieť, pokrivenie aj nástroje Zlúčiť a rozdeliť a Výplň oblasti."
     },
     "selecting": {
       "h1": "Výber práce",
-      "title": "Výber objektov",
+      "title": "Výber objektov a ukladanie výberov",
       "desc": "Výber kresby v editore Scissor: kliknutie a výber ťahaním, Vybrať všetko, Invertovať výber, Znova vybrať, výber rovnakej výplne či ťahu a uložené výbery."
     },
     "paths": {
       "h1": "Kreslenie a úprava ciest",
-      "title": "Kreslenie a úprava ciest",
+      "title": "Kreslenie a úprava ciest nástrojom Pero",
       "desc": "Kreslenie perom a ceruzkou, úprava kotviacich bodov a Bézierových rukovätí, spájanie, zjednodušenie, posun cesty, obrys ťahu a kombinovanie tvarov."
     },
     "appearance": {
       "h1": "Farba, obrysy a vzhľad",
-      "title": "Farba, ťahy a vzhľad",
+      "title": "Farba, prechody, ťahy a celkový vzhľad",
       "desc": "Výplne a ťahy v editore Scissor: plné farby, prechody a vzory, vzorkovníky, krytie a režimy prelínania, grafické štýly a panel Zásobník maľby."
     },
     "type": {
       "h1": "Text",
-      "title": "Práca s textom",
+      "title": "Text: písmo, typografia a funkcie OpenType",
       "desc": "Bodový text, text v oblasti a text na ceste v editore Scissor: písma a funkcie OpenType, nastavenie znakov a odsekov a prevod textu na obrysy."
     },
     "layers": {
       "h1": "Vrstvy, skupiny a masky",
-      "title": "Vrstvy, skupiny a masky",
+      "title": "Vrstvy, skupiny a orezové masky",
       "desc": "Organizácia dokumentu v paneli Vrstvy: vrstvy a vnorené skupiny, poradie vrstiev, skrývanie a zamykanie, farebné označenie, orezové masky a masky krytia."
     },
     "transform": {
       "h1": "Presun, transformácia a usporiadanie",
-      "title": "Transformácia a usporiadanie",
+      "title": "Presun, zmena mierky, otáčanie a zarovnanie",
       "desc": "Presun, zmena veľkosti, otáčanie, zarovnanie a deformácia objektov v editore Scissor: panel Transformovať, Voľná transformácia, Morfovanie a Pokrivenie tvaru."
     },
     "effects": {
       "h1": "Živé efekty",
-      "title": "Živé efekty",
+      "title": "Živé efekty: tiene, rozostrenie a žiara",
       "desc": "Nedeštruktívne efekty v editore Scissor: tiene, rozostrenie, žiary, rozmazanie okraja, deformácia, pokrivenie, zaoblenie rohov, posun cesty a skicová výplň."
     },
     "three-d": {
@@ -141,7 +141,7 @@
     },
     "symbols": {
       "h1": "Symboly, štetce a vzory",
-      "title": "Symboly, štetce a vzory",
+      "title": "Symboly, štetce a vzory vo vzorkovníku",
       "desc": "Opakovane použiteľná grafika v editore Scissor: symboly a ich inštancie, štetce pozdĺž ciest a dlaždice vzorov. Stačí upraviť originál a zmena sa prejaví všade."
     },
     "panels-basics": {
@@ -151,12 +151,12 @@
     },
     "panels-color-type": {
       "h1": "Panely farby a textu",
-      "title": "Panely pre farbu a text",
+      "title": "Panely Farba, Vzorkovníky, Ťah a Text",
       "desc": "Panely editora Scissor, ktoré riadia farbu a text: Farba, Vzorkovníky, Prechod a Ťah pre vzhľad objektov, Znak a Odsek pre písmo a sadzbu textu."
     },
     "panels-utility": {
       "h1": "Užitočné panely",
-      "title": "Pomocné panely",
+      "title": "Pomocné panely: Zarovnať, Transformovať",
       "desc": "Pracovné panely editora Scissor: Zarovnať, Transformovať, Zásobník maľby, Vektorizovať, Priehľadnosť, Grafické štýly, Štetce, Glyfy, Symboly, História a ďalšie."
     },
     "panels-effects": {
@@ -176,12 +176,12 @@
     },
     "shortcuts": {
       "h1": "Klávesové skratky",
-      "title": "Klávesové skratky",
+      "title": "Klávesové skratky nástrojov a príkazov",
       "desc": "Všetky klávesové skratky editora Scissor zoradené podľa nástrojov a ponúk, zapísané pre macOS a s príslušnými klávesmi pre Windows a Linux."
     },
     "privacy": {
       "h1": "Vaša práca a vaše súkromie",
-      "title": "Vaša práca a súkromie",
+      "title": "Vaša práca a vaše súkromie v Scissor",
       "desc": "Scissor nemá žiadny server: editor beží vo vašom prehliadači a kresby sa nikam nenahrávajú. Ako fungujú dokumenty, obnova po páde a analytika."
     }
   },

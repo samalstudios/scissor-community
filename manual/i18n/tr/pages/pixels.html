@@ -1,0 +1,120 @@
+<p class="lede">Bir Scissor belgesi, çizilmiş yolların ve yazının yanında boyanmış pikseller de barındırabilir; böylece tek bir dosya yumuşak, fırçayla boyanmış bir dokuyu, bir fotoğrafı ve keskin bir logoyu bir arada taşıyabilir. Bu sayfa piksel katmanının ne olduğunu, üzerine nasıl boyama yapılacağını ve belgede bir nesne olarak nasıl davrandığını anlatır.</p>
+
+<h2 id="pixels-vector-vs-raster">Piksel ve vektör çizim</h2>
+<p>Bir Scissor belgesi iki tür çizimi yan yana barındırır. Yollar ve yazı <em>çizilir</em>: şekilleriyle tanımlandıkları için her boyutta keskin kalırlar ve Scissor siz yakınlaştırdıkça ya da ölçeklendirdikçe onları yeniden çizer. Bir <strong>piksel katmanı</strong> ise <em>boyanır</em>: bir fotoğraf ya da fırçayla yapılmış bir resim gibi renkli noktalardan oluşan bir ızgaradır ve onu büyütmek ayrıntı eklemek yerine bu noktaları büyütür. Bir belge her ikisinden de istediğiniz kadarını, istediğiniz sırada barındırabilir ve hepsi Katmanlar panelinde birlikte yığılır.</p>
+<p>Tek başına bir şeklin yetmediği durumlarda piksel katmanına başvurun: elle boyanmış bir gölge, temiz yazının arkasında pürüzlü bir doku, düzenlenebilir bir yol olması gerekmeyen bir renk sıçraması ya da yerleştirilmiş bir fotoğraf üzerinde rötuş. Logoları, diyagramları ve sonradan yeniden boyutlandıracağınız her şeyi vektör olarak tutun; pikselleri boya hissi isteyen bölümler için kullanın.</p>
+<p>Yerleştirilmiş bir fotoğraf ilişkili ama ayrı bir şeydir. <strong>Dosya &gt; Yerleştir…</strong> (<kbd>&#8679;&#8984;P</kbd>) mevcut bir görüntüyü belgeye gömülü bir resim olarak getirir; piksel katmanı ise Scissor içinde sıfırdan boyadığınız bir yüzeydir. İkisi de piksellerden oluşur ve ikisinden de damlalıkla renk alınabilir, ancak yalnızca piksel katmanı fırça darbelerini kabul eder.</p>
+
+<h2 id="pixels-new">Piksel katmanı oluşturma</h2>
+<p><strong>Nesne &gt; Piksel Katmanı &gt; Yeni Piksel Katmanı</strong> etkin çalışma yüzeyini kaplayan boş bir yüzey ekler. Yine de önce bir katman oluşturmanız gerekmez: Fırça'yı seçip boyamaya başlayın, ilk darbe düştüğü anda Scissor katmanı sizin için oluşturur. Her iki durumda da katman çalışma yüzeyine eşlenir; böylece pikseller hangi çözünürlükte oluşturulmuş olursa olsun çalışma yüzeyiyle hizalanır.</p>
+<p>Bu çözünürlük, <strong>Raster Efektleri</strong> ayarından gelir; bu ayar <strong>Dosya &gt; Belge Ayarları…</strong> (<kbd>&#8997;&#8984;P</kbd>) içinde bulunur:Ekran (72&nbsp;ppi), Orta (150&nbsp;ppi) ya da Yüksek (300&nbsp;ppi). Daha yüksek bir ayar yeni piksel katmanına punto başına daha çok nokta verir; böylece iş basıldığında ya da büyük boyutta görüntülendiğinde fırça çalışması pürüzsüz kalır. Piksel sayısı yüzey oluşturulurken sabitlendiği için bu ayarı katmanı oluşturmadan önce yapın.</p>
+<p>Modern arayüzde araç seçenekleri çubuğundan da katman ekleyebilirsiniz: Fırça ya da Piksel Silgi etkinken çubuğun sonunda bir <strong>Yeni piksel katmanı</strong> düğmesi bulunur.</p>
+<p><strong>Bir resim yerleştirmek de piksel katmanı oluşturur.</strong> Tuvale bir görüntü bırakın, <strong>Dosya &gt; Yerleştir…</strong> komutunu kullanın ya da panodan bir görüntü yapıştırın; görüntü kilitli bir resim olarak değil, kendi boyutunda düzenlenebilir bir piksel katmanı olarak gelir. Böylece üzerine hemen boyama yapabilir, onu maskeleyebilir, ayarlayabilir ve filtreleyebilirsiniz. Bir görüntüyü <strong>Dosya &gt; Aç</strong> ile açmak, resim boyutunda tek bir çalışma yüzeyi olan ve piksel katmanıyla dolu yeni bir belge oluşturur. Çok büyük fotoğraflar piksel bütçesine sığacak şekilde küçültülür. Bir <strong>SVG</strong> vektör olarak kalır, yolları düzenlenebilir kalır; bu yüzden yalnızca bitmap görüntüler (PNG, JPEG, GIF, WebP ve benzerleri) piksel katmanına dönüşür.</p>
+<p>Katmanlı bir <strong><code>.psd</code></strong> dosyası daha zengin gelir: açıldığında yığını ayrı piksel katmanları olarak yeniden kurulur, her katmanın <strong>maskesi</strong> korunur ve yazı, şekiller ve katman efektleri de aktarılır; böylece dosya tek bir düz resim olarak değil, oluşturulduğu yerdeki görünümüne yakın biçimde açılır. Piksel çalışmasına girmenin en kapsamlı yoludur ve bu sayfadaki her şey gelen katmanlar için de geçerlidir.</p>
+
+<h2 id="pixels-painting">Boyama</h2>
+
+<h3 id="pixels-brush">Fırça ve Piksel Silgi</h3>
+<p>Piksel katmanları üzerinde iki araç çalışır.</p>
+<table>
+  <thead><tr><th>Araç</th><th>Nerede bulunur</th><th>Ne yapar</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Fırça Aracı</strong></td><td>Boya Fırçası (<kbd>B</kbd>) ve Dolgu Fırçası (<kbd>&#8679;B</kbd>) ile aynı yuvayı paylaşır</td><td>Resmin parçası hâline gelen renk sürer</td></tr>
+    <tr><td><strong>Piksel Silgi Aracı</strong></td><td>Silgi (<kbd>&#8679;E</kbd>), Makas ve Bıçak ile aynı yuvayı paylaşır</td><td>Boyayı silerek altta ne varsa onun görünmesini sağlar</td></tr>
+  </tbody>
+</table>
+<p>Bunlardan birine ulaşmak için araç çubuğundaki görünen aracı basılı tutun ya da sağ tıklayın ve listeden piksel aracını seçin. Bunları vektör komşularıyla karıştırmayın: Boya Fırçası sonradan yeniden şekillendirebileceğiniz bir yol çizer, Fırça ise noktaları yeniden düzenlenemeyen pikseller boyar. Her iki piksel aracı da tuvalde boyayacakları boyutta bir halka gösterir ve artı işareti biçiminde bir işaretçi kullanır.</p>
+<p>Boyamak ya da silmek için sürükleyin. İşaretçiyi ne kadar hızlı hareket ettirirseniz ettirin iz boşluk bırakmadan onu izler, çünkü Scissor darbe boyunca bir dizi yuvarlak damga bırakır ve işaretçi sıçradığında bile bunları eşit aralıklı tutar. Piksel Silgi üzerine boyamak yerine alfayı azaltır, bu yüzden temizlediği yer tamamen saydam olur; tamamen silinen bir döşeme atılır, böylece silme işlemi geride yük bırakmaz.</p>
+
+<h3 id="pixels-colour">Dolgu rengiyle boyama</h3>
+<p>Fırça geçerli <strong>dolgu</strong> rengiyle boyar. Bu rengi herhangi bir dolguyu ayarladığınız gibi ayarlayın: Renk paneli, bir renk örneği ya da modern arayüzde Fırça etkinken araç seçenekleri çubuğundaki <strong>Renk</strong> çipi. Dolgu boşsa Fırça kontur rengine, hiç renk yoksa siyaha geri döner. Zaten sürülmüş bir boyayla eşleştirmek istediğinizde Damlalık ile bir piksel katmanından doğrudan renk alın.</p>
+
+<h3 id="pixels-controls">Boyut, sertlik ve akış</h3>
+<p>Fırça ya da Piksel Silgi etkinken araç seçenekleri çubuğu izin biçimini belirleyen ayarları taşır. Bu ayarlar tercihlerinizde de saklanır, böylece bir oturumdan diğerine taşınır.</p>
+<dl>
+  <dt>Boyut</dt><dd>Fırçanın çapı, 1 ile 2500 piksel arasında. Fırçayı küçültmek için <kbd>[</kbd>, büyütmek için <kbd>]</kbd> tuşuna basın; her basış boyutu beşte bir oranında değiştirir, böylece adım fırçayla birlikte büyür. Tuvaldeki halka geçerli boyutu gösterir.</dd>
+  <dt>Sertlik</dt><dd>Kenarın solmaya başladığı yer, yüzde olarak. %100'de kenar keskindir; değeri düşürdükçe damga, görünür bir halka olmadan yumuşak bir geçişle kenarına doğru yumuşar. Gölgeler ve parlamalar için yumuşak, dolu şekiller için sert bir fırça kullanın.</dd>
+  <dt>Akış</dt><dd>Her damganın ne kadar boya bıraktığı; yalnızca Fırça için. %100'ün altında, bir alanın üzerinden yeniden geçtikçe renk yavaş yavaş birikir; bu da gölgelendirmeye ve yavaş geçişlere uygundur. Piksel Silgi'nin akış denetimi yoktur.</dd>
+</dl>
+
+<h2 id="pixels-retouch">Soldurma, yakma ve süngerleme</h2>
+<p>Araç çubuğunda tek bir yuvayı paylaşan üç rötuş fırçası, renk sürmek yerine zaten var olan pikseller üzerinde çalışır. Fırça gibi boyarlar (aynı boyut, sertlik ve tuval halkası) ve bir alanın üzerinden yeniden geçtikçe etkileri birikir; böylece hafif bir dokunuş kademeli, güçlü bir dokunuş hızlı sonuç verir.</p>
+<dl>
+  <dt>Soldurma</dt><dd>Boyadığınız her yeri açar; gölgeleri kaldırır ve vurgular ekler.</dd>
+  <dt>Yak</dt><dd>Boyadığınız her yeri koyulaştırır; gölgeleri ve kenarları derinleştirir.</dd>
+  <dt>Sünger</dt><dd>Doygunluğu artırır; üzerlerinden geçtikçe renkler zenginleşir.</dd>
+</dl>
+<p>Her biri saydam piksellere dokunmaz, bir seçim varsa onun içinde kalır ve darbenin tamamı tek adımda geri alınır.</p>
+
+<h2 id="pixels-more-tools">Kova, şekiller ve degradeler</h2>
+<p>Boyama yalnızca Fırça'dan ibaret değildir. Bir piksel katmanında üç araç daha renk sürer: <strong>Boya Kovası</strong> tıkladığınız yerden başlayarak benzer renkteki bitişik bir alanı doldurur; <strong>şekil araçları</strong> yol çizmek yerine dikdörtgen, elips, yıldız ya da çokgeni doğrudan piksellere basar; <strong>Degrade Aracı</strong> da yüzey boyunca doğrusal ya da radyal bir geçiş boyar. Her biri geçerli seçime uyar, böylece bir dolguyu ya da degradeyi seçtiğiniz bir bölgeyle sınırlayabilirsiniz.</p>
+
+<h2 id="pixels-selecting">Piksel seçme</h2>
+<p>Bir <strong>piksel seçimi</strong> (seçim çerçevesi), tıpkı bir şablon gibi tüm boyama ve düzenlemeleri içindeki bölgeyle sınırlar. Piksel seçimi yuvasını paylaşan üç araç seçim oluşturur: <strong>Dikdörtgen</strong> ve <strong>Eliptik Seçim Çerçevesi</strong> ile elle çizdiğiniz serbest bir <strong>Kement Seçim Çerçevesi</strong>. Seçim çizmek için sürükleyin; düz bir sürükleme geçerli seçimin yerini alır.</p>
+<p><strong>Otomatik Seç</strong> şekle göre değil renge göre seçer: bir piksel katmanına tıklayın, tıkladığınız yerin çevresindeki bitişik renk alanını alır ve çevresine yürüyen karıncalar biçiminde bir anahat çizer. Düz bir arka planı ya da renkli tek bir alanı ayırmak için kullanışlıdır. Bir rengin alınması için ne kadar yakın olması gerektiğini Otomatik Seç seçeneklerindeki <strong>Tolerans</strong> belirler; bu, vektör nesnelerde kullandığı ayarın aynısıdır. Daha fazlasını toplamak için artırın, yakın eşleşmelerle sınırlı kalmak için azaltın. Alandaki delikler seçimin dışında bırakılır.</p>
+<p>Seçimler birleşir; böylece bir şekli birkaç darbeyle ya da tıklamayla oluşturabilirsiniz: <kbd>&#8679;</kbd> tuşunu basılı tutarak seçime <strong>ekleyin</strong>, <kbd>&#8997;</kbd> tuşuyla seçimden <strong>çıkarın</strong>, ikisini birlikte basılı tutarak da yalnızca <strong>kesişimi</strong> bırakın. Seçim çerçeveleri ve Otomatik Seç hep aynı şekilde birleşir. <strong>Seç &gt; Tümü</strong> (<kbd>&#8984;A</kbd>) tüm pikselleri seçer, <strong>Seç &gt; Seçimi Ters Çevir</strong> seçim çerçevesini tersine çevirir, <strong>Seçimi Kaldır</strong> ise (piksel katmanında <kbd>&#8984;D</kbd>) onu kaldırır. Yürüyen karıncalar biçimindeki bir anahat seçimi tuvalde gösterir.</p>
+
+<h2 id="pixels-editing-selection">Pikselleri taşıma, kesme ve kopyalama</h2>
+<p>Bir seçim varken Seçim Aracı, içindeki pikselleri taşır: seçim çerçevesinin içinden sürükleyin; seçili boya kalkar ve hareket eder, bulunduğu yeri boşaltır ve seçim çerçevesini de beraberinde götürür. Sürüklerken <kbd>&#8997;</kbd> tuşunu basılı tutarsanız orijinal yerinde kalır ve bir <strong>kopyası</strong> taşınır.</p>
+<p>Dönüştürme araçları da seçim üzerinde çalışır. Bir seçim çerçevesi varken Seçim Aracı'nın sınırlayıcı kutusu ve <strong>Serbest Dönüştürme Aracı</strong> (<kbd>E</kbd>) katmanın tamamını değil seçim çerçevesini sarar; böylece resmin yalnızca o bölümünü ölçekleyebilir, döndürebilir ya da taşıyabilirsiniz. <strong>Nesne &gt; Dönüştür</strong> ve ok tuşları da onun üzerinde aynı şekilde çalışır. Siz çalışırken kaldırılan pikseller katmanın üzerinde yüzer; böylece hiçbir ayrıntı kaybetmeden onları tekrar tekrar sürükleyebilirsiniz. Onları yerine bırakmak için <kbd>Enter</kbd> tuşuna basın, başka bir araç seçin ya da yeni bir seçim yapın; bu, tek adımda geri alınır. Her şeyi eski yerine koymak için <kbd>Escape</kbd> tuşuna basın. Tam piksel adımlarıyla yapılan bir taşıma pikselleri olduğu gibi korur; ölçekleme ya da döndürme ise onları yerlerine bırakıldıklarında bir kez yeniden örnekler.</p>
+<p>Serbest Dönüştürme Aracı'nın <strong>Serbest Bozulma</strong> ve <strong>Perspektif Bozulması</strong> seçenekleri de pikseller üzerinde, bir seçim çerçevesinde ya da katmanın tamamında çalışır: resmi düzlemden çıkarmak için kutunun bir köşesini sürükleyin (ya da Serbest Dönüştür kipinde bir köşeyi sürüklerken <kbd>&#8984;</kbd> tuşunu basılı tutun); örneğin bir fotoğrafı açılı görülen bir ekrana ya da tabelaya oturtmak için. Siz sürüklerken Scissor ekran boyutunda hızlı bir önizleme gösterir, böylece büyük bir fotoğrafta bile akıcı kalır; pikseller ise <kbd>Enter</kbd> tuşuna bastığınızda ya da devam ettiğinizde tam çözünürlükte bir kez çekilir ve seçim çerçevesi yeni şekli izler.</p>
+<p>Kopyala (<kbd>&#8984;C</kbd>) ve Kes (<kbd>&#8984;X</kbd>) bir seçim çerçevesinin içindeki pikseller üzerinde çalışır: kopyalamak katmanı olduğu gibi bırakır, kesmek pikselleri çıkarır. Yapıştır (<kbd>&#8984;V</kbd>) onları geldikleri katmanın hemen üstündeki <strong>yeni bir piksel katmanına</strong>, tam olarak aynı yere koyar; böylece kendi başlarına taşınmaya ya da dönüştürülmeye hazır olurlar. Aynı komutlar <strong>Oluştur &gt; Piksel Katmanı</strong> içinde de bulunur ve seçim yüzey komutlarını da yönlendirir: <strong>Dolgu Rengiyle Doldur</strong> yalnızca seçili bölgeyi doldurur, <strong>Temizle</strong> ve <strong>Sil</strong> onu siler; seçim yoksa her biri katmanın tamamına uygulanır.</p>
+
+<h2 id="pixels-adjustments">Ayarlamalar</h2>
+<p><strong>Nesne &gt; Piksel Katmanı &gt; Ayarlamalar</strong> alt menüsü bir piksel katmanının rengini rötuşlar; bir seçim varsa onunla sınırlı kalır. Her biri, siz sürükledikçe tuvalde önizleme yapan bir iletişim kutusu açar.</p>
+<dl>
+  <dt>Parlaklık / Kontrast, Düzeyler</dt><dd>Genel açıklığı ve kontrastı ayarlayın ya da daha ince ton denetimi için siyah noktayı, beyaz noktayı ve gamayı yeniden eşleyin.</dd>
+  <dt>Renk Tonu / Doygunluk, Canlılık</dt><dd>Renk tonunu kaydırın ve doygunluğu genel olarak artırın ya da azaltın; veya zaten canlı olanlara dokunmadan soluk renkleri güçlendirmek için Canlılık'ı kullanın.</dd>
+  <dt>Renk Dengesi</dt><dd>Orta tonları camgöbeği ya da kırmızıya, eflatun ya da yeşile, sarı ya da maviye doğru itin.</dd>
+  <dt>Degrade Haritası</dt><dd>Katmanı parlaklığına göre yeniden renklendirin; gölgeleri bir renge, vurguları başka bir renge eşleyin.</dd>
+  <dt>Doygunluğu Azalt, Ters Çevir</dt><dd>Tüm rengi griye indirin ya da her rengi karşıtına çevirin.</dd>
+  <dt>Eşik, Posterleştir</dt><dd>Görüntüyü seçilen bir düzeyde saf siyah ve beyaza ya da kanal başına az sayıda tona indirin.</dd>
+</dl>
+
+<h2 id="pixels-filters">Filtreler</h2>
+<p><strong>Filtreler</strong> alt menüsü yine seçimin içinde kalarak piksellerin kendisini yeniden biçimlendirir.</p>
+<dl>
+  <dt>Gauss Bulanıklığı</dt><dd>Katmanı eşit ve ayarlanabilir bir miktarda yumuşatır.</dd>
+  <dt>Keskinleştir, Keskinliği Azaltma Maskesi</dt><dd>Ayrıntıyı belirginleştirir; Keskinliği Azaltma Maskesi yarıçap, miktar ve düz alanları ve ince gürültüyü koruyan bir eşik üzerinde denetim sağlar.</dd>
+  <dt>Pikselleştir</dt><dd>Mozaik etkisi için görüntüyü kare döşemelere böler.</dd>
+  <dt>Gürültü Ekle</dt><dd>Boyanın üzerine gren serper.</dd>
+  <dt>Kenarları Bul, Kabartma</dt><dd>Rengin değiştiği yerleri koyu zemin üzerinde parlak çizgiler olarak ya da gri bir kabartma olarak çizer.</dd>
+</dl>
+<p><strong>Filtreler &gt; Efekt Önizlemeleri</strong> katmanınızı, her birine tek bir ayarlama ya da filtre uygulanmış canlı küçük resimlerden oluşan bir ızgara olarak gösterir; böylece adına göre değil gözünüzle seçebilirsiniz. Bir küçük resmi seçmek pencereyi açık tutar. Efektin ayarları ızgaranın yanında görünür ve siz onları değiştirdikçe tuval sonucu önizler. Siz <strong>Uygula</strong> düğmesine tıklayana (ya da <kbd>Enter</kbd> tuşuna basana) kadar hiçbir şey uygulanmaz. <strong>İptal</strong> ya da <kbd>Esc</kbd> resmi eski hâline getirir; tek bir geri alma da uygulanmış bir efekti kaldırır. Arkasındaki tuvali görmek için pencereyi başlığından sürükleyebilirsiniz.</p>
+
+<h2 id="pixels-undo">Hızlı, döşeme tabanlı geri alma</h2>
+<p>Bir darbe, ne kadar uzun olursa olsun tek adımda geri alınır: <kbd>&#8984;Z</kbd> tuşuna bir kez basın, son iz kaybolur; <kbd>&#8679;&#8984;Z</kbd> onu geri getirir. İlk darbenin katmanını kendisinin oluşturması gerektiyse o katman da boş olarak geride kalmak yerine darbeyle birlikte geri alınır.</p>
+<p>Perde arkasında bir piksel katmanı küçük döşemelerden oluşan bir ızgara olarak saklanır ve bir darbe yalnızca gerçekten dokunduğu döşemeleri kopyalar. Geri alma tüm belgenin anlık görüntülerini tutar, ancak bir darbe yüzeyin tamamına değil yalnızca kendi döşemelerine mal olur; bu sayede büyük bir katman üzerinde boyamak hızlı kalır ve uzun bir fırça oturumu belleği doldurmaz. Tek renkli düz alanlar sıkıştırılarak saklanır, bu yüzden çoğunlukla tek renkten oluşan bir katman neredeyse hiç yer kaplamaz.</p>
+
+<h2 id="pixels-treating">Piksel katmanını herhangi bir nesne gibi kullanma</h2>
+<p>Piksel katmanı belgedeki bir nesnedir, bu yüzden zaten bildiğiniz her şey onun için de geçerlidir. Onu seçin, taşıyın ve <strong>Nesne &gt; Dönüştür</strong>, sınırlayıcı kutu ya da Serbest Dönüştürme Aracı ile ölçekleyin, döndürün, yansıtın veya eğin. Seçim çerçevesi yoksa kutu, katmanın tüm yüzeyini değil boyanmış piksellerini sarar ve dönüştürme bu pikseller üzerinde çalışır: taşımak onlara dokunmaz; ölçekleme ya da döndürme ise <kbd>Enter</kbd> tuşuna bastığınızda, başka bir araç seçtiğinizde ya da başka bir şey seçtiğinizde piksellere işlenir. Böylece katman dik kalır ve bir sonraki fırça darbesi doğru yönde düşer. Boyanmış rengi alttaki çizimin üzerine oturtmak için Saydamlık panelinden opaklığını ayarlayın ve on altı karışım modundan birini verin. Tıklamak katmanı yalnızca boyalı olduğu yerlerde seçer; böylece saydam bir köşeden tıklayarak doğrudan alttaki nesneye ulaşabilirsiniz. <strong>Çoğalt</strong> bir piksel katmanını herhangi bir nesne gibi kopyalar; üstelik ucuza, çünkü döşemelerden biri boyanana kadar kopya döşemelerini paylaşır.</p>
+<p><strong>Nesne &gt; Piksel Katmanı &gt; Aşağı Birleştir</strong> bir piksel katmanını hemen altındaki piksel katmanının üzerine düzleştirir ve üsttekini kaldırır; geriye ikisinin birleştirildiği tek bir katman kalır. Katmanlar farklı dönüşümler altındaysa (örneğin biri döndürülmüşse), birleşme sırasında üstteki katman alttakinin ızgarasına göre yeniden örneklenir.</p>
+<p>İki komut yüzeyin tamamına birden uygulanır:</p>
+<dl>
+  <dt>Nesne &gt; Piksel Katmanı &gt; Dolgu Rengiyle Doldur</dt><dd>Yüzeyin tamamını geçerli dolgu rengiyle doldurur. Üzerine boyamadan önce bir astar katı sürmek ya da diğer çizimlerin arkasına yerleştirilmiş bir katmanı doldurmak için kullanın.</dd>
+  <dt>Nesne &gt; Piksel Katmanı &gt; Temizle</dt><dd>Katmanı kaldırmadan yüzeyi boşaltır; böylece katmanın yerini, dönüşümünü, opaklığını ve karışım modunu koruyarak boyamaya yeniden başlayabilirsiniz.</dd>
+</dl>
+<p>Her iki komut <strong>Efekt &gt; Piksel Katmanı</strong> altında da bulunur.</p>
+
+<h2 id="pixels-masks">Katman maskeleri</h2>
+<p>Bir <strong>katman maskesi</strong>, piksel katmanının bazı bölümlerini silmeden gizler: katman, maskenin beyaz olduğu yerlerde görünür, siyah olduğu yerlerde gizlenir; aradaki griler kısmi saydamlık sağlar. Hiçbir şey silinmediği için maskeyi istediğiniz kadar ileri geri boyayabilirsiniz. Komutlar <strong>Nesne &gt; Piksel Katmanı</strong> altındadır.</p>
+<dl>
+  <dt>Katman Maskesi Ekle</dt><dd>Başlangıçta her şeyi gösteren, üzerine boyamaya hazır bir maske ekler.</dd>
+  <dt>Seçimden Katman Maskesi Ekle</dt><dd>Maskeyi geçerli piksel seçiminden oluşturur: içerisi kalır, dışarısı gizlenir. Bir fotoğraftan bir şekli tahribatsız biçimde kesmenin hızlı bir yolu.</dd>
+  <dt>Maskeyi Düzenle</dt><dd>Maske boyamayı açar ve kapatır. Açıkken Fırça, Silgi ve Boya Kovası katman yerine maskeyi boyar: gizlemek için siyahla (ya da koyu bir renkle), göstermek için beyazla, soldurmak için griyle boyayın. Fırça geçerli dolgu renginin açıklığını kullanır, bu yüzden siyah gizler, beyaz gösterir.</dd>
+  <dt>Katman Maskesini Uygula</dt><dd>Maskeyi katmana kalıcı olarak işler (gizli pikseller saydam olur) ve maskeyi kaldırır.</dd>
+  <dt>Katman Maskesini Sil</dt><dd>Maskeyi atar ve katmanın tamamını, hiç dokunulmamış olarak yeniden gösterir.</dd>
+</dl>
+<p>Maskeli bir katman, maske zaten uygulanmış olarak dışa aktarılır ve kaydedilir; diğer katmanlar gibi karışır ve dönüştürülür.</p>
+
+<h2 id="pixels-rasterize">Vektör çizimi piksele dönüştürme: Rasterleştir</h2>
+<p><strong>Nesne &gt; Rasterleştir</strong> geçerli seçimi, kendisinin gömülü bir resmiyle değiştirir; yolları, yazıyı ve tüm efektleri sabit piksellere işler. Bir vektör sonucunun artık düzenlenebilir olmamasını istediğinizde, bir efekti düz bir görüntü olarak ele almak daha kolay olduğunda ya da canlı yapısını taşımadan her yerde aynı görünmesi gereken bir işi teslim ederken kullanın. Sonuç, üzerine boyanabilen bir piksel katmanı değil, gömülü bir görüntüdür; bu yüzden yeniden düzenlemeniz gerekebilecekse orijinal çizimin bir kopyasını saklayın. <strong>Görünüm &gt; Piksel Önizlemesi</strong> (<kbd>&#8997;&#8984;Y</kbd>) karar vermeden önce vektör çizimin piksel ızgarasına nasıl oturacağını kontrol etmenizi sağlar.</p>
+
+<h2 id="pixels-saving">Kaydetme ve dışa aktarma</h2>
+<p><code>.cut</code> belgeleri piksel katmanlarını çizimin geri kalanıyla birlikte saklar; düz alanlar neredeyse hiç yer kaplamayacak şekilde paketlenir ve tam boyandığı gibi yeniden açılır.</p>
+<p>Piksel katmanlarının belgeden nasıl çıktığı biçime bağlıdır:</p>
+<dl>
+  <dt>PNG, JPEG ve WebP</dt><dd>Belgenin tamamını piksellere düzleştirir; böylece boyanmış ve çizilmiş işler tek bir bitmapte birleşir. PNG saydamlığı koruyabilir; daha keskin bir sonuç için @2x olarak dışa aktarın.</dd>
+  <dt>SVG ve PDF</dt><dd>Boyanmış yüzeyi vektör çizimin arasına yerleştirilmiş gömülü bir resim olarak yazar; böylece çizilmiş ve boyanmış işleri karıştıran bir belge, şekilleri keskin kalarak tek bir dosya hâlinde taşınır.</dd>
+</dl>
+<p>Raster ve vektör aynı belgede yaşadığı ve birlikte dışa aktarıldığı için bir işi doğal yoldan kurabilirsiniz: temiz şekiller ve yazı vektör olarak; boya hissi isteyen bölümler, yani yumuşak bir parlama, dokulu bir lavi ya da rötuşlanmış bir fotoğraf ise aralarına yığılmış piksel katmanları olarak.</p>

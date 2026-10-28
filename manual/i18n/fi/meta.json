@@ -56,7 +56,7 @@
   "meta": {
     "": {
       "h1": "Scissorin käyttöopas",
-      "title": "Scissorin käyttöopas",
+      "title": "Käyttöopas: kaikki työkalut ja valikot",
       "desc": "Opas Scissoriin, ilmaiseen selainpohjaiseen suunnitteluohjelmaan: työkalut, polut, värit, teksti, ruudukot, tehosteet, pikselitasot, tiedostot ja pikanäppäimet."
     },
     "getting-started": {
@@ -71,7 +71,7 @@
     },
     "documents": {
       "h1": "Asiakirjat ja taustat",
-      "title": "Asiakirjat ja piirtoalueet",
+      "title": "Asiakirjat ja taustat: koko ja leikkuuvara",
       "desc": "Asiakirjan ja sen piirtoalueiden määrittäminen Scissorissa: koko, leikkuuvara, sarakkeet ja tarkkuus sekä Piirtoaluetyökalu ja Piirtoalueet-paneeli."
     },
     "tools": {
@@ -81,7 +81,7 @@
     },
     "selecting": {
       "h1": "Työn valinta",
-      "title": "Kohteiden valitseminen",
+      "title": "Kohteiden valinta ja valintojen tallennus",
       "desc": "Kohteiden valinta Scissorissa: napsautus ja vetäminen, Valitse kaikki, Käänteinen, Valitse uudelleen, valinta täytön tai viivan mukaan ja tallennetut valinnat."
     },
     "paths": {
@@ -91,17 +91,17 @@
     },
     "appearance": {
       "h1": "Väri, viivat ja ulkoasu",
-      "title": "Väri, viivat ja ulkoasu",
+      "title": "Väri, liukuvärit, viivat ja ulkoasu",
       "desc": "Täytöt ja viivat Scissorissa: tasaväri, liukuväri ja kuvio, värimallit, peittävyys ja sekoitustilat sekä Maalipino-paneeli, joka kokoaa ulkoasun."
     },
     "type": {
       "h1": "Teksti",
-      "title": "Teksti ja typografia",
+      "title": "Teksti: fontit ja OpenType-ominaisuudet",
       "desc": "Piste-, alue- ja polkuteksti Scissorissa: fontit ja OpenType-ominaisuudet, merkki- ja kappaleasetukset sekä tekstin muuntaminen ääriviivoiksi."
     },
     "layers": {
       "h1": "Tasot, ryhmät ja maskit",
-      "title": "Tasot, ryhmät ja maskit",
+      "title": "Tasot, ryhmät ja peittävyysmaskit",
       "desc": "Asiakirjan järjestäminen Tasot-paneelissa: alitasot, pinojärjestys, piilottaminen ja lukitseminen, ryhmät, leikkausmaskit ja peittävyysmaskit."
     },
     "transform": {
@@ -111,7 +111,7 @@
     },
     "effects": {
       "h1": "Reaaliaikaiset tehosteet",
-      "title": "Reaaliaikaiset tehosteet",
+      "title": "Reaaliaikaiset tehosteet: varjo, sumennus",
       "desc": "Muokattavissa pysyvät tehosteet Scissorissa: pudotusvarjo, sumennus, hehku, pehmennys, vääristys, vääntö, pyöristetyt kulmat, polun siirto ja luonnostäyttö."
     },
     "three-d": {
@@ -151,7 +151,7 @@
     },
     "panels-color-type": {
       "h1": "Värin ja tekstin paneelit",
-      "title": "Väri- ja tekstipaneelit",
+      "title": "Paneelit: Väri, Värimallit, Viiva, Teksti",
       "desc": "Scissorin väri- ja tekstipaneelit: Väri, Värimallit, Liukuväri ja Viiva maalaamiseen sekä Merkki ja Kappale tekstin muotoiluun."
     },
     "panels-utility": {
@@ -181,7 +181,7 @@
     },
     "privacy": {
       "h1": "Työsi ja tietosuojasi",
-      "title": "Työsi ja tietosuojasi",
+      "title": "Työsi ja tietosuojasi Scissorissa",
       "desc": "Scissorilla ei ole palvelinta: editori toimii selaimessasi eikä töitäsi ladata minnekään. Näin asiakirjat, palautus kaatumisen jälkeen ja analytiikka toimivat."
     }
   },

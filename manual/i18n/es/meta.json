@@ -61,7 +61,7 @@
     },
     "getting-started": {
       "h1": "Primeros pasos",
-      "title": "Primeros pasos con Scissor",
+      "title": "Primeros pasos: tu primer dibujo",
       "desc": "Abre Scissor, crea un documento, dibuja tu primera forma, guarda un archivo .cut e instala Scissor como aplicación. Sin cuenta y sin subir nada."
     },
     "interface": {
@@ -76,37 +76,37 @@
     },
     "tools": {
       "h1": "Las herramientas",
-      "title": "Referencia de herramientas",
+      "title": "Referencia de todas las herramientas",
       "desc": "Cada herramienta de Scissor: selección, Pluma y Lápiz, formas, texto, pinceles, perspectiva, malla, deformación, Fusionar y dividir, y Relleno de región."
     },
     "selecting": {
       "h1": "Seleccionar el trabajo",
-      "title": "Seleccionar objetos",
+      "title": "Seleccionar objetos y guardar selecciones",
       "desc": "Selección en Scissor: clic y marco de selección, Seleccionar todo, Invertir selección, Volver a seleccionar, Igual por relleno o trazo, y selecciones guardadas."
     },
     "paths": {
       "h1": "Dibujar y editar trazados",
-      "title": "Dibujar y editar trazados",
+      "title": "Dibujar y editar trazados con la Pluma",
       "desc": "Dibuja con la Pluma y el Lápiz, edita puntos de ancla y manejadores Bézier, une, simplifica, desplaza y contornea trazados, y combina formas en Scissor."
     },
     "appearance": {
       "h1": "Color, contornos y apariencia",
-      "title": "Color, rellenos y trazos",
+      "title": "Color, degradados, trazos y apariencia",
       "desc": "Rellenos y trazos en Scissor: color plano, degradados y motivos, muestras, opacidad y modos de fusión, y el panel Pila de pintura para apilar varias pinturas."
     },
     "type": {
       "h1": "Texto",
-      "title": "Texto y tipografía",
+      "title": "Texto: fuentes y funciones OpenType",
       "desc": "Texto de punto, de área y en trazado en Scissor: fuentes y funciones OpenType, ajustes de carácter y párrafo, y cómo convertir el texto en contornos."
     },
     "layers": {
       "h1": "Capas, grupos y máscaras",
-      "title": "Capas, grupos y máscaras",
+      "title": "Capas, grupos, recortes y máscaras",
       "desc": "Organiza un documento en el panel Capas: orden de apilamiento, visibilidad y bloqueo, etiquetas de color, grupos, máscaras de recorte y máscaras de opacidad."
     },
     "transform": {
       "h1": "Mover, transformar y organizar",
-      "title": "Transformar y organizar",
+      "title": "Mover, escalar, rotar y alinear objetos",
       "desc": "Mueve, escala, rota, alinea y distorsiona objetos con el panel Transformar, Transformación libre, repeticiones en vivo, Metamorfosis y Deformación de forma."
     },
     "effects": {
@@ -151,22 +151,22 @@
     },
     "panels-color-type": {
       "h1": "Paneles de color y texto",
-      "title": "Paneles de color y texto",
+      "title": "Paneles Color, Muestras, Trazo y Texto",
       "desc": "Los paneles de color y texto de Scissor: Color, Muestras, Degradado y Trazo para la pintura, y Carácter y Párrafo para dar formato al texto."
     },
     "panels-utility": {
       "h1": "Los paneles de utilidad",
-      "title": "Paneles de utilidad",
+      "title": "Paneles: Alinear, Transformar, Historial",
       "desc": "Los paneles de trabajo de Scissor: Alinear, Transformar, Pila de pintura, Vectorizar, Transparencia, Estilos gráficos, Pinceles, Glifos, Historial y muchos más."
     },
     "panels-effects": {
       "h1": "Los paneles de efectos",
-      "title": "Paneles de efectos en vivo",
+      "title": "Paneles de efectos: desenfoque, 3D y más",
       "desc": "Los paneles de efectos de Scissor, uno por categoría: Estilizar, Desenfocar, Distorsionar, Trazado, Combinar formas, Deformar y 3D, todos en la Pila de pintura."
     },
     "files": {
       "h1": "Abrir, colocar y exportar",
-      "title": "Abrir, colocar y exportar",
+      "title": "Abrir y exportar SVG, PDF, PNG y PSD",
       "desc": "Abre SVG, PDF, EPS, AI y PSD, exporta a SVG, PDF, PNG, JPEG y WebP, y guarda archivos .cut nativos. Todo se queda en tu dispositivo, sin subir nada."
     },
     "automation": {
@@ -176,12 +176,12 @@
     },
     "shortcuts": {
       "h1": "Atajos de teclado",
-      "title": "Atajos de teclado",
+      "title": "Atajos de teclado para herramientas",
       "desc": "Todos los atajos de teclado de Scissor, ordenados por herramienta y por menú, en formato macOS y con sus equivalentes para Windows y Linux."
     },
     "privacy": {
       "h1": "Tu trabajo y tu privacidad",
-      "title": "Tu trabajo y tu privacidad",
+      "title": "Tu trabajo y tu privacidad en Scissor",
       "desc": "Scissor no tiene servidor: el editor funciona en tu navegador y tus diseños nunca se suben. Cómo funcionan los documentos, la recuperación y la analítica."
     }
   },

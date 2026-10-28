@@ -1,0 +1,134 @@
+<p class="lede">Bir şeklin nasıl göründüğü onun <em>görünümüdür</em>: anahattının içindeki dolgu, boyunca çizilen kontur ve arkasındaki her şeyin üzerine nasıl oturacağını belirleyen opaklık ile karışım. Bunların her biri düz bir renk, bir degrade ya da bir desen olabilir ve bir nesne her birinden aynı anda birden fazlasını taşıyabilir. Bu sayfa boya denetimlerini, renk modellerini, renk örneklerini, degradeleri, konturları, saydamlığı, Boya Yığını panelini ve grafik stillerini anlatır.</p>
+
+<p>Aşağıdaki kısayollar macOS biçiminde yazılmıştır. Windows'ta <kbd>&#8984;</kbd> tuşunu Ctrl, <kbd>&#8997;</kbd> tuşunu Alt ve <kbd>&#8679;</kbd> tuşunu Shift olarak okuyun.</p>
+
+<figure class="shot">
+  <img src="img/artwork-landscape.png" width="1700" height="967" loading="lazy"
+       alt="Scissor'da düz dolgulu şekillerle oluşturulmuş dağlar, gökyüzü ve gölden oluşan vektörel bir manzara." />
+  <figcaption>Tamamı dolgulu şekillerle kurulmuş bir sahne. Her renk şeridi kendi dolgusuna sahip bir yoldur.</figcaption>
+</figure>
+
+<h2 id="appearance-fill-and-stroke">Dolgular ve konturlar</h2>
+<p>Bir yol, şekil ya da yazı parçası bir <strong>dolgu</strong> (anahattının içindeki boya) ve bir <strong>kontur</strong> (o anahat boyunca çizilen çizgi) taşıyabilir. Dolgu düz bir renk, bir degrade ya da bir desen olabilir; kontur ise kendi kalınlığı ve kesik çizgi düzeniyle düz bir renk ya da bir degrade olabilir. Her iki taraf da yok olarak ayarlanabilir; böylece yalnızca konturu ya da yalnızca dolgusu olan bir şekil çizebilirsiniz.</p>
+
+<h3 id="appearance-the-paint-chips">Dolgu ve kontur çipleri</h3>
+<p>Araç çubuğunun altındaki üst üste binen iki çip dolguyu ve konturu tutar. Bir renk seçici açmak için herhangi birine tıklayın; önde olan, tuşların ve Renk, Degrade ve Renk Örnekleri panellerinin etki ettiği taraftır. Diğer tarafı öne getirmek için <kbd>X</kbd>, iki boyayı yer değiştirmek için <kbd>&#8679;X</kbd>, öndeki tarafı yok olarak ayarlamak için <kbd>/</kbd>, varsayılanlara dönmek için de <kbd>D</kbd> tuşuna basın: beyaz bir dolgu, siyah bir kontur ve 1 pt kalınlık. Aynı dolgu, kontur, kalınlık, opaklık ve karışım modu Özellikler panelinde de bir arada durur; hepsini tek bir yerde istediğinizde kullanışlıdır.</p>
+<p>Hiçbir şey seçili değilken bu denetimler, çizeceğiniz bir sonraki nesnenin alacağı stili ayarlar; böylece rengi çizdikten sonra değil, çizmeden önce seçebilirsiniz.</p>
+
+<h3 id="appearance-eyedropper">Damlalık ile boya kopyalama</h3>
+<p>Damlalık (<kbd>I</kbd>) tıkladığınız nesnenin görünümünün tamamını seçime kopyalar. Yalnızca dolgu ya da kontur rengini etkin tarafa almak için <kbd>&#8679;</kbd> tuşunu, bunun yerine seçimin görünümünü işaretçinin altındaki nesneye aktarmak için <kbd>&#8997;</kbd> tuşunu basılı tutun. Yerleştirilmiş bir görüntüye ya da bir piksel katmanına tıklamak, işaretçinin altındaki rengi etkin tarafa alır; böylece bir fotoğraftan doğrudan renk alabilirsiniz. İki nesnenin eşleşmesi gerektiğinde Damlalık'a başvurun: birinden örnek alın, diğeri tek tıklamayla aynı boyayı alsın.</p>
+
+<h2 id="appearance-colour">Renk</h2>
+<p>Renk her çipteki küçük açılır seçiciden ya da daha fazla denetimle Renk panelinden seçilir.</p>
+
+<h3 id="appearance-color-panel">Renk paneli</h3>
+<p><strong>Renk</strong> paneli (<kbd>F6</kbd>) etkin tarafın boyasını bir dizi kaydırıcı, onaltılık bir alan ve bir spektrum olarak gösterir. Üstteki dolgu ve kontur çipleri hangi tarafı düzenlediğinizi seçer. Spektrumda renk tonları yatay olarak dizilir, üstte beyaz, altta siyah yer alır; seçmek için içine tıklayın ya da sürükleyin. Yanındaki üç hızlı renk örneği tek tıklamayla Yok, Beyaz ve Siyah ayarlar; <em>Ters Çevir</em> ve <em>Tamamlayıcı</em> düğmeleri de geçerli rengi yeniden işler (Tamamlayıcı, doygunluğunu ve parlaklığını koruyarak renk tonunu yarım tur döndürür).</p>
+<p>Renk modeli menüsü panelin hangi kaydırıcıları göstereceğini belirler. Seçim oturum boyunca korunur ve yeni renk örnekleri bu modelde oluşturulur.</p>
+<dl>
+  <dt>Gri Tonlama</dt><dd>%0'da beyazdan %100'de siyaha uzanan tek bir K kaydırıcısı.</dd>
+  <dt>RGB</dt><dd>0 ile 255 arasında kırmızı, yeşil ve mavi; ekran işleri için kullanılan model.</dd>
+  <dt>HSB</dt><dd>Derece cinsinden renk tonu, ardından yüzde olarak doygunluk ve parlaklık: bir rengin karakterini bozmadan onu hafifçe değiştirmenin çoğu zaman en hızlı yolu.</dd>
+  <dt>CMYK</dt><dd>Baskı için yüzde olarak camgöbeği, eflatun, sarı ve siyah.</dd>
+  <dt>Web Güvenli RGB</dt><dd>216 web güvenli renge yaslanmış RGB. Geçerli renk bunlardan biri değilse bir uyarı üçgeni belirir; en yakın web güvenli renge yaslamak için üçgene tıklayın.</dd>
+</dl>
+<p>Etkin taraf global bir renk örneğiyle boyanmışsa kaydırıcıların üstünde bir renk tonu satırı belirir: renk örneğinin adını gösterir ve rengi doğrudan düzenlemek yerine %0 ile %100 arasında bir ton ayarlamanızı sağlar; böylece çizim renk örneğine bağlı kalır.</p>
+
+<h2 id="appearance-swatches">Renk örnekleri ve renk grupları</h2>
+<p>Renk örneği, belgeyle birlikte kaydedilen adlandırılmış bir renktir. Değer yazmak yerine renk örnekleriyle boyamak paleti tutarlı tutar; global renk örneklerinde ise tek bir rengi düzenleyerek tüm belgenin stilini değiştirmenizi sağlar.</p>
+
+<h3 id="appearance-swatches-panel">Renk Örnekleri paneli</h3>
+<p><strong>Renk Örnekleri</strong> paneli (<strong>Pencere &rsaquo; Renk Örnekleri</strong> ile açın) belgenin renk örneklerini bir ızgara ya da liste olarak gösterir; liste görünümü her renk örneğinin renk modelini de gösterir. Düz bir tıklama etkin tarafı boyar. <kbd>&#8679;</kbd> ile tıklama bir dizi renk örneğini seçer, <kbd>&#8984;</kbd> ile tıklama ise seçime tek bir örnek ekler ya da çıkarır; böylece birkaçı üzerinde birden işlem yapabilirsiniz. Alt kısımda görünümü değiştirme, panel menüsünü açma, renk örneği seçeneklerini gösterme, renk grubu oluşturma, yeni renk örneği oluşturma ve seçileni silme düğmeleri bulunur.</p>
+<p>Panel menüsü daha fazlasını ekler: <em>Kullanılan Renkleri Ekle</em> ve <em>Seçili Renkleri Ekle</em>, belgede ya da yalnızca seçimde zaten bulunan renkleri renk örneklerine dönüştürür; <em>Kullanılmayanların Tümünü Seç</em> hiçbir şeyin boyanmadığı tüm renk örneklerini silinmeye hazır olarak seçer; <em>Renkleri Yeniden Eşle&#8230;</em> ise aşağıda anlatılan yeniden renklendirme iletişim kutusunu açar.</p>
+
+<h3 id="appearance-process-spot-global">Proses, spot ve global renk örnekleri</h3>
+<p>Rengin türünü belirlediğiniz Renk Örneği Seçenekleri için bir renk örneğine çift tıklayın.</p>
+<dl>
+  <dt>Proses</dt><dd>İş için karıştırılmış sıradan bir renk. Düz bir proses renk örneği yalnızca saklanmış bir renktir: onu düzenlemek, bu renkle zaten boyanmış çizime dokunmaz.</dd>
+  <dt>Global</dt><dd>Global olarak işaretlenmiş bir proses renk örneği çizimi kendisine bağlı tutar; böylece renk örneğini yeniden renklendirmek onunla boyanmış her şeyi bir kerede yeniden boyar. Global renk örnekleri renk tonu olarak uygulanabilir.</dd>
+  <dt>Spot</dt><dd>Kendi kalıbına basılmak üzere adlandırılmış bir mürekkep. Spot renkler her zaman globaldir.</dd>
+</dl>
+<p>Her belge ayrıca sabit bir <strong>[Kayıt İşareti]</strong> renk örneğiyle başlar; bunun kendine ait bir renk türü yoktur, silinemez ve sürüklenemez. Bir renk birçok kez kullanılıyor ve değişebilecekse global ya da spot bir renk örneği kullanın: nesneleri tek tek aramak yerine tek bir düzenleme hepsini günceller.</p>
+
+<h3 id="appearance-colour-groups">Renk grupları</h3>
+<p>Renk grupları, tek bir ton ailesi ya da bir projenin paleti gibi ilişkili renk örneklerini bir arada toplar. Renk örneklerini bir gruba eklemek için gruba sürükleyin ya da birkaçını seçip panelin Yeni Renk Grubu düğmesiyle onlardan bir grup oluşturun. Seçenekleri için bir grubun başlığına çift tıklayın. Her çipteki renk seçicide her grup tek bir satır olarak görünür; böylece bir aile, bir çip duvarı yerine tonlardan oluşan bir geçiş olarak okunur.</p>
+
+<h2 id="appearance-gradients">Degradeler</h2>
+<p>Bir degrade iki ya da daha fazla renk arasında geçiş yapar. Scissor doğrusal, radyal ve serbest biçimli degradeler oluşturur; bunları hem panel hem de tuval üzerindeki araç kurabilir ve şekillendirebilir. Düz bir şekle derinlik, bir arka plana yumuşak bir renk geçişi ya da bir düğmeye parlaklık vermek için bir degradeye başvurun.</p>
+
+<h3 id="appearance-gradient-panel">Degrade paneli</h3>
+<p><strong>Degrade</strong> paneli (<kbd>&#8984;F9</kbd>) degradenin tamamını yönetir. Etkin tarafı doldurmak için küçük resme tıklayın, tür menüsünden Doğrusal, Radyal ya da Serbest Biçim'i seçin ve geçişi uçtan uca çevirmek için ters çevirme düğmesini kullanın. Duraklar geçiş çubuğunun üzerinde durur: orada zaten bulunan renkte bir durak eklemek için çubuğa tıklayın, bir durağı taşımak için sürükleyin ve iki rengin buluştuğu yeri kaydırmak için iki durak arasındaki baklavayı sürükleyin. Seçili durağın kendi renk örneği, bir <em>Opaklık</em> alanı ve bir <em>Konum</em> alanı vardır; <em>Durağı Sil</em> onu kaldırır. <em>Açı</em> doğrusal ya da radyal bir degradeyi döndürür, <em>En Boy Oranı</em> (yalnızca radyal) ise radyal bir degradeyi elipse dönüşecek şekilde basıklaştırır.</p>
+<figure class="shot">
+  <img src="img/gradient.gif" width="340" height="340" loading="lazy"
+       alt="Yönü çevresinde dönen, maviden kehribar rengine doğrusal bir degradeyle doldurulmuş yuvarlak köşeli bir kare." />
+  <figcaption>Maviden kehribar rengine doğrusal bir degrade. Degrade eksenini sürüklemek ya da açısını değiştirmek geçişi şeklin çevresinde döndürür.</figcaption>
+</figure>
+
+<h3 id="appearance-gradient-tool">Degrade Aracı</h3>
+<p>Degrade Aracı (<kbd>G</kbd>) ile aynı denetimler çizimin üzerinde yer alır. Ekseni yerleştirmek için bir nesnenin üzerinden sürükleyin; 45&deg;'lik adımlarla sınırlamak için <kbd>&#8679;</kbd> tuşunu basılı tutun. Eksenin başında yuvarlak, sonunda kare bir tutamaç bulunur; o ucu taşımak için herhangi birini sürükleyin. Orada zaten bulunan renkte bir durak eklemek için eksene tıklayın, bir durağı eksen boyunca sürükleyin ve atmak için bir durağı eksenden iyice uzağa çekin. Orta noktayı taşımak için bir baklavayı sürükleyin. <kbd>Delete</kbd> en son dokunduğunuz durağı kaldırır.</p>
+
+<h3 id="appearance-freeform">Serbest biçimli degradeler</h3>
+<p>Serbest biçimli bir degrade, renk noktalarını tek bir eksen boyunca değil şeklin herhangi bir yerine yerleştirir; böylece geçiş çizimin biçimini izleyebilir. Degrade Aracı ile bir renk noktası bırakmak için çizime tıklayın, taşımak için bir noktayı sürükleyin ve kaldırmak için <kbd>Delete</kbd> tuşuna basın. Noktaları çizgilerle birleştirmek için paneldeki <em>Noktaları çizgilerle birleştir</em> seçeneğini işaretleyin; bu, bir rengi tek bir noktadan dışa doğru değil bir hat boyunca yayar. Düz bir geçişin veremeyeceği yumuşak, organik gölgelendirme için serbest biçimli bir degrade kullanın.</p>
+
+<h2 id="appearance-patterns">Desenler</h2>
+<p>Desen, döşeme olarak yinelenen ve dolgu olarak kullanılan bir çizimdir. Bir seçimi <strong>Nesne &rsaquo; Desen &rsaquo; Oluştur</strong> ile döşemeye dönüştürün, ardından <strong>Desenler</strong> panelinden herhangi bir şekli onunla doldurun: doldurmak için bir döşemeye tıklayın, düzenlemek için çift tıklayın ve silmek için <kbd>&#8997;</kbd> ile tıklayın. <em>Döşeme Seçenekleri</em> döşeme türünü, tuğla kaymasını, boyutu ve aralığı, ayrıca döşemenin çizimle birlikte boyutlanıp taşınıp taşınmayacağını ayarlar. <strong>Deseni Düzenle</strong> döşemeyi yerinde açar ve siz çalışırken kopyaları çevresinde yinelenir; döşeme istediğiniz gibi olduğunda Desenler panelinde <em>Düzenlemeyi Bitir</em> düğmesine tıklayın. Desenler; çizgiler, noktalar, örgüler ve arka planlar gibi elle çizmesi zahmetli olacak yinelenen dokular için uygundur.</p>
+
+<h2 id="appearance-strokes">Konturlar</h2>
+<p><strong>Kontur</strong> paneli (<kbd>&#8984;F10</kbd>) bir yol boyunca çizilen çizgiyi şekillendirir.</p>
+
+<h3 id="appearance-stroke-options">Kalınlık, uçlar, birleşimler ve hizalama</h3>
+<p><em>Kalınlık</em> konturun kalınlığını punto cinsinden ayarlar. <em>Uç</em> düğmeleri açık bir yolun nasıl biteceğini belirler: düz (bağlantı noktasında kare olarak kesilir), yuvarlak ya da çıkıntılı (kare, ancak bağlantı noktasını kalınlığın yarısı kadar aşar). <em>Köşe</em> düğmeleri konturun bir köşeyi nasıl döneceğini belirler: gönye (sivri bir uç), yuvarlak ya da eğimli (düz bir kesik); en sivri uçları dışarı taşmasınlar diye eğimli hâle getiren bir gönye <em>Sınır</em> değeri de vardır. <em>Hizala</em> konturu yolun ortasına ya da tamamen içine veya dışına yerleştirir; bu, bir şeklin komşularına tam olarak dayanması gerektiğinde önemlidir.</p>
+
+<h3 id="appearance-dashes">Kesikli çizgiler</h3>
+<p>Konturu kesiklere bölmek için <em>Kesikli Çizgi</em> seçeneğini işaretleyin. Altındaki üç kesik ve boşluk çifti düzeni belirler: ilk alan bir kesik uzunluğu, sonraki bir boşluktur ve bu böyle devam ederek yol boyunca yinelenir. Basit, eşit bir kesik için sonraki çiftleri boş bırakın.</p>
+
+<h3 id="appearance-width-profiles">Genişlik profilleri ve Genişlik aracı</h3>
+<p>Genişlik profili, konturu tek bir kalınlıkta tutmak yerine uzunluğu boyunca inceltir. Panelin menüsünden bir profil seçin; küçük bir önizleme oluşturduğu şekli gösterir. Yanındaki düğmeler profili ters yönde uygular, geçerli konturu yeni bir profil olarak kaydeder ya da oluşturduğunuz bir profili siler. Elle şekillendirdiğiniz bir kontur menüde <em>Özel</em> olarak görünür.</p>
+<p>Genişlik aracı (<kbd>&#8679;W</kbd>) bir konturu doğrudan tuval üzerinde şekillendirir: o noktada genişletmek için yoldan uzağa, daraltmak için yola doğru sürükleyin; geride sonradan yeniden sürükleyebileceğiniz bir genişlik noktası kalır. Çizilmiş bir çizgiye fırçanın ya da kalem ucunun şişkinliğini ve incelmesini vermek için kullanın.</p>
+
+<h3 id="appearance-brushes">Fırçalar</h3>
+<p><strong>Fırçalar</strong> paneli (<kbd>F5</kbd>) konturları düz bir çizgi yerine bir şekille boyar. Kaligrafik, dağılım, sanat, kıl ve desen fırçalarını barındırır. Seçili yollara uygulamak için bir fırçaya tıklayın; Boya Fırçası hangi fırça geçerliyse onu kullanır. Seçenekleri için bir fırçaya çift tıklayın, yeni bir fırça oluşturmak için <em>Yeni Fırça&#8230;</em> komutunu kullanın (dağılım, sanat ve desen fırçaları seçili çizimden oluşturulur) ve bir konturu düz çizgiye döndürmek için <em>Fırçayı Kaldır</em> komutunu kullanın.</p>
+
+<h2 id="appearance-opacity-blending">Opaklık ve karışım</h2>
+<p>Opaklık ve karışım modu, bir nesnenin altındaki her şeyle nasıl birleşeceğini belirler. Bunlar <strong>Saydamlık</strong> panelinde (<kbd>&#8679;&#8984;F10</kbd>) ve ayrıca Özellikler panelinde bulunur.</p>
+
+<h3 id="appearance-blend-modes">Karışım modları</h3>
+<p>Opaklık %0 (görünmez) ile %100 (tam dolu) arasında değişir. Mod menüsü on altı karışım modu sunar; bunlar gruplara ayrılır: koyulaştıran modlar, açıklaştıran modlar, kontrast modları, karşılaştırma modları ve bir rengin tek bir bileşenini ödünç alan dört mod.</p>
+<table>
+  <thead><tr><th>Mod</th><th>Ne yapar</th></tr></thead>
+  <tbody>
+    <tr><td>Normal</td><td>Karışım olmadan alttakinin üzerine boyar.</td></tr>
+    <tr><td>Koyulaştır</td><td>Kanal kanal, hangi renk daha koyuysa onu tutar.</td></tr>
+    <tr><td>Çarp</td><td>İki rengi çarpar ve her zaman koyulaştırır; beyaz tabanı değiştirmez.</td></tr>
+    <tr><td>Renk Yanığı</td><td>Tabanı, karışım rengini alacak şekilde koyulaştırır.</td></tr>
+    <tr><td>Açıklaştır</td><td>Hangi renk daha açıksa onu tutar.</td></tr>
+    <tr><td>Ekran</td><td>Çarp'ın tersi, her zaman açıklaştırır; siyah tabanı değiştirmez.</td></tr>
+    <tr><td>Renk Soldurma</td><td>Tabanı, karışım rengini alacak şekilde parlatır.</td></tr>
+    <tr><td>Kaplama</td><td>Tabana bağlı olarak çarpar ya da ekranlar ve kontrastı artırır.</td></tr>
+    <tr><td>Yumuşak Işık</td><td>Çizimin üzerine yumuşak bir ışık tutulmuş gibi hafif bir soldurma ya da yakma.</td></tr>
+    <tr><td>Sert Işık</td><td>Karışım rengine bağlı olarak çarpar ya da ekranlar; sert bir spot ışığı gibi.</td></tr>
+    <tr><td>Fark</td><td>Koyu rengi açık renkten çıkarır; beyaz tabanı tersine çevirir, siyahın etkisi yoktur.</td></tr>
+    <tr><td>Dışlama</td><td>Fark gibi, ancak daha yumuşak ve daha düşük kontrastlı.</td></tr>
+    <tr><td>Renk Tonu</td><td>Karışımın renk tonu ile tabanın doygunluğu ve parlaklığı.</td></tr>
+    <tr><td>Doygunluk</td><td>Karışımın doygunluğu ile tabanın renk tonu ve parlaklığı.</td></tr>
+    <tr><td>Renk</td><td>Karışımın renk tonu ve doygunluğu ile tabanın parlaklığı: gri tonlamalı çizimi renklendirmek için idealdir.</td></tr>
+    <tr><td>Parlaklık</td><td>Karışımın parlaklığı ile tabanın renk tonu ve doygunluğu.</td></tr>
+  </tbody>
+</table>
+<p>Bir grup için iki anahtar grubun nasıl karışacağını değiştirir. <em>Karışımı grupla sınırla</em> grubun modlarını kendi içinde tutar; böylece üyeleri birbirleriyle karışır ama grubun arkasındaki çizimle karışmaz. <em>Boşaltma Grubu</em> ise grup içindeki her üyenin, alttakilerle karışmak yerine onları gizlemesini sağlar.</p>
+
+<h3 id="appearance-opacity-masks">Opaklık maskeleri</h3>
+<p>Opaklık maskesi çizimi tonuna göre soldurur. Çizimi ve onun üstünde maske olarak kullanılacak şekli seçin, ardından <em>Maske Oluştur</em> düğmesine tıklayın (ya da <strong>Nesne &rsaquo; Kırpma Maskesi &rsaquo; Opaklık Maskesi Oluştur</strong>). Üstteki nesne maske olur: açık olduğu yerlerde çizim görünür, koyu olduğu yerlerde solar; böylece beyazdan siyaha bir degrade yumuşak bir geçiş oluşturur. <em>Serbest Bırak</em> iki nesneyi geri verir. Sert bir kırpmanın veremeyeceği yumuşak bir kenar ya da vinyet için maske kullanın.</p>
+
+<h2 id="appearance-appearance-panel">Boya Yığını paneli</h2>
+<p><strong>Boya Yığını</strong> paneli (<kbd>&#8679;F6</kbd>) bir nesneye boyanmış her şeyi listeler: dolgularını ve konturlarını, bunların üstünde de varsa canlı efektleri. Bir nesne birkaç dolgu ve kontur taşıyabildiği için onları üst üste dizdiğiniz yer burasıdır; örneğin bir dış çizgi oluşturmak için ince ve açık bir konturun altına geniş ve koyu bir kontur ya da farklı opaklıklarda iki dolgu.</p>
+<p>Yığın, boyanma sırasına uygun olarak en üstten başlayarak çizilir. Her dolgu ya da kontur satırında onu gizlemek için bir göz, renk seçiciyi açan bir boya çipi, bir opaklık alanı, konturlar için bir kalınlık alanı, yığında yukarı ya da aşağı taşımak için oklar ve onu kaldırmak için bir düğme bulunur. <em>Dolgu Ekle</em> ve <em>Kontur Ekle</em> en üste bir tane daha koyar. Efektler dolguların ve konturların üstünde bir <em>fx</em> rozetiyle görünür; seçeneklerini düzenlemek için bir efekte tıklayın ya da satırından kaldırın. Katmanlı görünüm tamamlandığında <strong>Nesne &rsaquo; Görünümü Genişlet</strong> yığının tamamını düz bir çizime dönüştürür.</p>
+
+<h2 id="appearance-graphic-styles">Grafik Stilleri</h2>
+<p>Grafik stili, başka nesnelere uygulayabileceğiniz kaydedilmiş bir görünümdür. <strong>Grafik Stilleri</strong> paneli (<kbd>&#8679;F5</kbd>) bunları çipler olarak tutar; her çip dolgusunu, konturu da çipin kenarlığı olarak gösterir. Bir nesne seçin ve dolgularını ve konturlarını kaydetmek için <em>Yeni Stil</em> düğmesine tıklayın; o stili seçime uygulamak için bir çipe tıklayın, silmek için de bir çipe <kbd>&#8997;</kbd> ile tıklayın. Kurumsal bir düğme tasarımı ya da bir etiket stili gibi aynı görünümün birçok nesneye uygulanması ve tutarlı kalması gerektiğinde stil oluşturmaya değer.</p>
+
+<h2 id="appearance-overprint">Üst baskı</h2>
+<p><strong>Nitelikler</strong> paneli (<kbd>&#8984;F11</kbd>) baskı işleri için üst baskıyı ayarlar. <em>Dolguyu Üst Bas</em> ve <em>Konturu Üst Bas</em>, o mürekkebin alttaki renkleri boşaltmak yerine onların üzerine basılmasını sağlar; bu, tuzaklama için ve alttakinin yerini almak yerine üzerine basılan bir siyah gibi efektler için kullanılır. Ekranda görmek için <strong>Görünüm &rsaquo; Üst Baskı Önizlemesi</strong> seçeneğini açın; PDF dışa aktarımı bu ayarı korur.</p>
+
+<h2 id="appearance-recolour">Çizimi yeniden renklendirme</h2>
+<p><strong>Düzen &rsaquo; Renkleri Düzenle &rsaquo; Renkleri Yeniden Eşle&#8230;</strong> seçimdeki her rengi ne sıklıkla kullanıldığıyla birlikte listeler. O rengin neye dönüşeceğini seçmek için bir satırın sağındaki çipe, o rengi olduğu gibi bırakmak için iki çip arasındaki oka tıklayın. Renk Tonu, Doygunluk ve Parlaklık kaydırıcıları tüm rengi birlikte kaydırır; iki düğme de yeni renkleri rastgele yeniden sıralar ya da doygunluklarını ve parlaklıklarını rastgele değiştirir; bu, farklı çeşitlemeleri denemenin hızlı bir yoludur. Siz çalıştıkça çizim güncellenir ve <em>Sıfırla</em> başlangıçtaki renklere döner.</p>
+<p>Aynı alt menü tek adımlık değişiklikler de sunar: <em>Önden Arkaya Karıştır</em> bir dizi rengi en öndeki ve en arkadaki nesneler arasında yayar, <em>Gri Tonlamaya Dönüştür</em> tüm rengi kaldırır, <em>Renkleri Ters Çevir</em> her birini tersine çevirir ve <em>Doygunlaştır&#8230;</em> seçim genelinde doygunluğu artırır ya da azaltır.</p>

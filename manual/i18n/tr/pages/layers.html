@@ -1,0 +1,85 @@
+<p class="lede">Katmanlar paneli bir belgenin haritasıdır: her katman, grup ve nesne, sayfada durdukları sırayla istiflenmiş olarak tek bir listede yer alır. Göstermek ve gizlemek, kilitlemek, yeniden adlandırmak, yeniden sıralamak ve seçmek için, ayrıca herhangi bir nesnenin hangi katmanda bulunduğunu bir bakışta görmek için onu kullanın.</p>
+
+<p>Aşağıdaki kısayollar macOS biçiminde yazılmıştır. Windows ve Linux'ta <kbd>&#8984;</kbd> tuşunu Ctrl, <kbd>&#8997;</kbd> tuşunu Alt ve <kbd>&#8679;</kbd> tuşunu Shift olarak okuyun.</p>
+
+<h2 id="layers-panel">Katmanlar paneli</h2>
+<p>Paneli <strong>Pencere &rsaquo; Katmanlar</strong> (<kbd>F7</kbd>) ile açın. Liste, katmanlarınızı en üst düzeyde, her katmanın içeriğini de onun altında iç içe gösterir: gruplar, yollar, yazılar, görüntüler ve piksel katmanları, açıp kapatabileceğiniz bir ağaç olarak çizilir. Bir kapsayıcının (katman ya da grup) satırının solunda küçük bir üçgen bulunur; kapsayıcıyı katlamak ya da açmak için ona tıklayın. Üzerinde çalışmadığınız bölümleri daraltabildiğiniz için derin belgeler bile okunaklı kalır.</p>
+<p>Panelin alt kısmında iki düğme bulunur. <strong>Yeni Katman Oluştur</strong>, o anda etkin olan katmanın hemen üstüne boş bir katman ekler ve yeni katmanı etkin yapar. <strong>Seçimi Sil</strong>, seçili olan her şeyi kaldırır; bir belgede her zaman en az bir katman kalır, bu nedenle kalan son katman bu yolla silinemez. Herhangi bir katmanı, grubu ya da nesneyi yeniden adlandırmak için listedeki adına çift tıklayın, yazın ve <kbd>Enter</kbd> tuşuna basın. Kalabalık bir belgenin parçalarını adlandırmak, onda kolayca gezinebilmenin en hızlı yoludur.</p>
+
+<h3 id="layers-row">Her satırda neler görünür</h3>
+<p>Bir satırı soldan sağa okuduğunuzda:</p>
+<table>
+  <thead><tr><th>Bölüm</th><th>Ne yapar</th></tr></thead>
+  <tbody>
+    <tr><td>Göz</td><td>O katmanı, grubu ya da nesneyi gösterir veya gizler. Gözü kapalı bir satır çizilmez, yazdırılmaz ve dışa aktarılmaz.</td></tr>
+    <tr><td>Kilit</td><td>Satırı kilitler ya da kilidini açar. Kilitli bir nesne tuvalde seçilemez ve düzenlenemez.</td></tr>
+    <tr><td>Renk etiketi</td><td>Yalnızca katman satırlarında: katmanın renk etiketidir; o katmanın seçim işaretlerini ve vurgularını renklendirmek için kullanılır.</td></tr>
+    <tr><td>Üçgen</td><td>Yalnızca kapsayıcılarda: içinde ne olduğunu göstermek için katmanı ya da grubu açar veya kapatır.</td></tr>
+    <tr><td>Tür simgesi</td><td>Grupları ve kırpma gruplarını işaretler (kırpma grubu kesikli bir dış hatla çizilir).</td></tr>
+    <tr><td>Ad</td><td>Ad ya da bir öğe adsız olduğunda <code>&lt;Path&gt;</code> veya <code>&lt;Group&gt;</code> gibi açılı ayraç içinde bir yer tutucu. Yeniden adlandırmak için çift tıklayın.</td></tr>
+    <tr><td>Seçim karesi</td><td>Sağ kenarda: geçerli seçimin bir bölümünü barındıran her satırda beliren, katman renginde küçük bir kare.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="layers-groups">Katmanlar ve gruplar</h2>
+<p>Katmanlar bir belgenin en üst düzeydeki bölmeleridir. Çizimin birbiriyle ilgisiz parçalarını ayrı tutmak için vardırlar: arka plan bir katmanda, ana çizim bir başkasında, etiketler üçüncüsünde. Bir katman ağacın kökünde durduğundan onu gizlemek, kilitlemek ya da yeniden sıralamak, içerdiği her şeyi tek adımda etkiler.</p>
+<p>Grup ise bir katmanın (ya da başka bir grubun) içinde yaşayan ve çizimle birlikte hareket eden daha küçük bir kapsayıcıdır. Gruplama, bir logonun ya da simgenin parçaları gibi tek bir şeyin parçalarını birbirine bağlamanın yoludur; böylece birlikte taşınır, ölçeklenir ve istiflenirler. Gruplar da panelde tıpkı katmanlar gibi kendi üçgenleriyle açılıp kapanır.</p>
+<p>Katmanlar ve gruplar önemli bir açıdan aynı davranır: her biri gösterilebilir ya da gizlenebilir, kilitlenebilir ya da kilidi açılabilir ve her biri içindeki her şeye uygulanan kendi opaklığını ve karışım modunu taşıyabilir. Aradaki fark rolle ilgilidir: katmanlar tüm belgeyi düzenler, gruplar ise tek tek nesneleri birbirine bağlar.</p>
+
+<h3 id="layers-grouping">Gruplama ve grubu çözme</h3>
+<p>İki veya daha fazla nesne seçip onları bir grupta toplamak için <strong>Nesne &rsaquo; Grupla</strong> (<kbd>&#8984;G</kbd>) komutunu seçin. <strong>Nesne &rsaquo; Grubu Çöz</strong> (<kbd>&#8679;&#8984;G</kbd>), seçili bir grubun nesnelerini yeniden dışarı çıkarır. Gruplar iç içe olabilir, yani grupların oluşturduğu bir grup da sorun değildir; her <kbd>&#8679;&#8984;G</kbd> bir düzeyi soyar. Aynı birkaç nesneyi tekrar tekrar seçtiğinizi fark ettiğinizde bir gruba başvurun.</p>
+
+<h2 id="layers-stacking">İstifleme sırası: ön ve arka</h2>
+<p>Nesneler arkadan öne doğru çizilir; bu yüzden öne daha yakın bir nesne, üst üste bindikleri yerde arkasındakileri örter. Panel bu sırayı doğrudan gösterir: en üstteki satır en öndeki nesnedir, en alttaki satır ise en arkadakidir. Bir nesnenin sırasını değiştirmek, neyin neyi örttüğünü değiştirir.</p>
+<p>Yeniden sıralamanın en hızlı yolu sürüklemektir: bir satırı tutup istif içinde taşımak için listede daha yukarı ya da aşağı bırakın veya nesneyi bir katmanın ya da grubun <em>içine</em> taşımak için onun üzerine bırakın. Seçili bir nesneyi başka bir katmana taşımanın yolu da sürüklemektir; kesip yapıştırmaya gerek yoktur.</p>
+<p>Bir seçimi <strong>Nesne &rsaquo; Düzenle</strong> ile istif içinde taşıyın:</p>
+<table>
+  <thead><tr><th>Komut</th><th>Kısayol</th><th>Etkisi</th></tr></thead>
+  <tbody>
+    <tr><td>En Öne Getir</td><td><kbd>&#8679;&#8984;]</kbd></td><td>Katmanının en önüne kadar.</td></tr>
+    <tr><td>Öne Getir</td><td><kbd>&#8984;]</kbd></td><td>Öne doğru bir adım.</td></tr>
+    <tr><td>Geri Gönder</td><td><kbd>&#8984;[</kbd></td><td>Arkaya doğru bir adım.</td></tr>
+    <tr><td>En Arkaya Gönder</td><td><kbd>&#8679;&#8984;[</kbd></td><td>Katmanının en arkasına kadar.</td></tr>
+  </tbody>
+</table>
+<p>İhtiyacınız olan bir şekil başka birinin arkasında kaldığında ya da bir arka plan çizimin üstüne çıktığında bunları kullanın. Üst üste duran nesneler arasında ilerlemek için <strong>Seç &rsaquo; Üstteki Sonraki Nesne</strong> (<kbd>&#8997;&#8984;]</kbd>) ve <strong>Alttaki Sonraki Nesne</strong> (<kbd>&#8997;&#8984;[</kbd>) seçimi istifte yukarı ve aşağı kaydırır; bu, başka çizimlerin altına gömülmüş bir şeye ulaşmak için kullanışlıdır.</p>
+
+<h2 id="layers-visibility">Gösterme ve gizleme</h2>
+<p>Herhangi bir satırdaki göze tıklayarak o katmanı, grubu ya da nesneyi gizleyin; geri getirmek için yeniden tıklayın. Gizli bir satır çizime, yazdırmaya ya da dışa aktarmaya katılmaz; bu nedenle gizlemek, bir şeyi silmeden aradan çekmenin güvenli yoludur. Bir ayrıntının iki sürümünü karşılaştırmak ya da kalabalık bir tuvali yalnızca üzerinde çalıştığınız bölüme indirmek için kullanın.</p>
+<p>Menü, geçerli seçim için de aynısını sunar: <strong>Nesne &rsaquo; Gizle &rsaquo; Seçim</strong> (<kbd>&#8984;3</kbd>) seçili olanı gizler, <strong>Nesne &rsaquo; Tümünü Göster</strong> (<kbd>&#8997;&#8984;3</kbd>) ise gizlenmiş her şeyi yeniden gösterir.</p>
+
+<h2 id="layers-locking">Kilitleme</h2>
+<p>Bir satırı kilitlemek için üzerindeki kilide tıklayın. Kilitli bir nesne görünür kalır ancak tuvalde seçilemez ve değiştirilemez; böylece etrafında çalışırken zarar görmez. Bir katmanı kilitlemek, üzerindeki her şeyi aynı anda korur. Üzerine çizim yaparken arka planı ya da başıboş bir sürüklemenin yerinden oynatamaması için bitmiş bir öğeyi kilitleyin.</p>
+<p>Menüden <strong>Nesne &rsaquo; Kilitle &rsaquo; Seçim</strong> (<kbd>&#8984;2</kbd>) seçili olanı kilitler, <strong>Nesne &rsaquo; Tümünün Kilidini Aç</strong> (<kbd>&#8997;&#8984;2</kbd>) ise her şeyi yeniden serbest bırakır. Seçili bir nesneyi kilitlemek onu seçimden de çıkarır, çünkü kilitli bir şey artık üzerinde işlem yapabileceğiniz bir şey değildir.</p>
+
+<h2 id="layers-selecting">Seçim ve etkin katman</h2>
+<p>Bir nesneyi tuvalde seçmek için paneldeki satırına tıklayın. Seçime başka bir nesne eklemek için tıklarken <kbd>&#8679;</kbd>, <kbd>&#8984;</kbd> ya da <kbd>Ctrl</kbd> tuşunu basılı tutun; böylece sayfadaki küçük şekilleri aramadan seçimi listeden oluşturabilirsiniz.</p>
+<p>Bir <em>katman</em> satırına tıklamak ise farklı bir şey yapar: o katmanı, sol kenarı boyunca renkli bir çubukla işaretlenen etkin katman yapar. Çizdiğiniz, yerleştirdiğiniz ya da yapıştırdığınız yeni çizim etkin katmana eklenir; bu yüzden başlamadan önce bir katmana tıklamak, o çalışmanın nereye düşeceğini belirler. Yeni bir katman oluşturmak onu hemen etkin yapar.</p>
+<p>Her satırın sağındaki seçim karesi paneli tuvale bağlar. Geçerli seçimin bir bölümünü barındıran her satırda katmanın renginde belirir ve tam olarak seçili olan nesnelerde içi dolu görünür. İşaret ağaçta yukarı doğru taşındığından, listeye bir göz atmak hem neyin seçili olduğunu hem de bu nesnelerin hangi katman ve gruplarda bulunduğunu gösterir.</p>
+
+<h2 id="layers-colours">Renk etiketleri</h2>
+<p>Her katmana sabit bir diziden bir renk verilir (açık mavi, kırmızı, yeşil, mavi, sarı ve benzeri, toplam on iki renk; siz katman ekledikçe döngüyle tekrarlanır). Bu renk katmanın etiketidir. Katman adının yanındaki renk etiketi olarak görünür ve paneldeki seçim işaretlerini, o katmandaki nesneler için tuvalde çizilen seçim vurgularını ve sınırlayıcı kutuyu renklendirir. Amaç hızlı tanımadır: bir şeyi seçtiğinizde kutusu yeşil görünüyorsa, onun yeşil katmana ait olduğunu hemen bilirsiniz. Bir belgeyi iyi adlandırılmış, farklı renkli birkaç katmana yaymak, her şeyin nerede olduğunu izlemeyi çok kolaylaştırır.</p>
+
+<h2 id="layers-masks">Kırpma ve opaklık maskeleri</h2>
+<p>Bir katman ya da grup kendi opaklığını ve karışım modunu taşıyabilir; ikisi de <strong>Saydamlık</strong> panelinde (<strong>Pencere &rsaquo; Saydamlık</strong>, <kbd>&#8679;&#8984;F10</kbd>) ayarlanır. Aynı panelde, bir grubun karışım modlarının alttakiyle değil yalnızca birbiriyle karışmasını sağlayan <strong>Karışımı grupla sınırla</strong> seçeneği ve gruptaki her nesnenin arkasındakileri içinden göstermek yerine gizlediği <strong>Boşaltma Grubu</strong> seçeneği bulunur. Maskeler bir adım daha ileri gider ve bir nesnenin, diğer çizimlerin nerede ya da ne kadar güçlü görüneceğini denetlemesine olanak tanır.</p>
+
+<h3 id="layers-clip">Kırpma maskeleri</h3>
+<p>Kırpma maskesi, çizimi bir şekle göre kırpar. İki veya daha fazla nesne seçip <strong>Nesne &rsaquo; Kırpma Maskesi &rsaquo; Oluştur</strong> (<kbd>&#8984;7</kbd>) komutunu seçin. Seçili en üstteki nesne kırpma yolu olur ve altındaki her şey yalnızca bu şeklin içinde görünür; geri kalanı kırpılır. Sonuç, panelde kesikli bir simgeyle çizilen bir kırpma grubudur. <strong>Serbest Bırak</strong> (<kbd>&#8997;&#8984;7</kbd>) bunu geri alır ve nesneleri geri verir. Bir fotoğrafı ya da kalabalık bir deseni bir daireye, bir harfe ya da üstüne çizdiğiniz herhangi bir dış hatta göre kırpmak için buna başvurun.</p>
+
+<h3 id="layers-opacity-mask">Opaklık maskeleri</h3>
+<p>Opaklık maskesi, çizimi başka bir nesnenin açıklığına göre soldurur. İki veya daha fazla nesne seçip <strong>Nesne &rsaquo; Kırpma Maskesi &rsaquo; Opaklık Maskesi Oluştur</strong> komutunu seçin ya da Saydamlık panelindeki <strong>Maske Oluştur</strong> düğmesini kullanın. En üstteki nesne maske olur: açık olduğu yerde alttaki çizim tamamen görünür, koyu olduğu yerde çizim tamamen solar, aradaki griler ise kısmi saydamlık verir. <strong>Opaklık Maskesini Serbest Bırak</strong> onu yeniden ayırır. Bir resmi bir kenara doğru soldurmak ya da tek ve düz bir opaklık değerinin veremeyeceği yumuşak vinyetleri ve geçişleri oluşturmak için maske olarak beyazdan siyaha bir degrade kullanın.</p>
+
+<h2 id="layers-organising">Belgeyi düzenleme</h2>
+<p>Başta kurulan biraz düzen, sonradan çok fazla arama yapmaktan kurtarır. Karşılığını veren birkaç alışkanlık:</p>
+<dl>
+  <dt>Her konu için bir katman</dt>
+  <dd>Arka planı, ana çizimi ve yazıyı ayrı, adlandırılmış katmanlarda tutun. Böylece çizimin bütün bir bölümünü tek tıklamayla gizleyebilir, kilitleyebilir ya da yeniden sıralayabilirsiniz.</dd>
+  <dt>Dokunmadığınızı kilitleyin</dt>
+  <dd>Başıboş bir tıklama ya da sürükleme onları bozmasın diye üzerinde çalıştığınız katmanın çevresindeki katmanları kilitleyin ve gerektiğinde <kbd>&#8997;&#8984;2</kbd> ile kilitlerini yeniden açın.</dd>
+  <dt>Birlikte hareket edenleri gruplayın</dt>
+  <dd>Tek bir öğenin parçalarını tek bir nesne gibi davranması için bir grupta birleştirin ve katmanları belgenin daha büyük bölümleri için ayırın.</dd>
+  <dt>Çizmeden önce etkin katmanı belirleyin</dt>
+  <dd>Yeni çizim, orada ne varsa onun üstüne değil doğru yere düşsün diye önce eklemek istediğiniz katmana tıklayın.</dd>
+  <dt>Renkler size yol göstersin</dt>
+  <dd>Katman renklerinden yararlanın: bir seçimin vurgusu bir katmanın renk etiketiyle eşleştiğinde, hiçbir şeyi açmadan o nesnenin tam olarak nerede bulunduğunu bilirsiniz.</dd>
+</dl>

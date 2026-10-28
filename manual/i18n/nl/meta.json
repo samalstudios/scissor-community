@@ -61,7 +61,7 @@
     },
     "getting-started": {
       "h1": "Aan de slag",
-      "title": "Aan de slag met Scissor",
+      "title": "Aan de slag: je eerste tekening",
       "desc": "Scissor openen, een document maken, uw eerste vorm tekenen, een .cut-bestand opslaan en Scissor als app installeren. Zonder account en zonder uploads."
     },
     "interface": {
@@ -81,17 +81,17 @@
     },
     "selecting": {
       "h1": "Werk selecteren",
-      "title": "Illustraties selecteren",
+      "title": "Selecteren en selecties opslaan",
       "desc": "Illustraties selecteren in Scissor: klikken en selectiekader, Alles selecteren, Omkeren, Opnieuw selecteren, Hetzelfde op vulling of lijn, opgeslagen selecties."
     },
     "paths": {
       "h1": "Paden tekenen en bewerken",
-      "title": "Paden tekenen en bewerken",
+      "title": "Paden tekenen en bewerken met de Pen",
       "desc": "Tekenen met pen en potlood, ankerpunten en Bézier-grepen bewerken, paden samenvoegen, vereenvoudigen en verschuiven, lijnen omtrekken en vormen combineren."
     },
     "appearance": {
       "h1": "Kleur, strepen en weergave",
-      "title": "Kleur, lijnen en weergave",
+      "title": "Kleur, verlopen, lijnen en weergave",
       "desc": "Vulling en lijn in Scissor: effen kleuren, verlopen en patronen, stalen, dekking en overvloeimodi, en het paneel Verfstapel voor meerdere vullingen en lijnen."
     },
     "type": {
@@ -101,17 +101,17 @@
     },
     "layers": {
       "h1": "Lagen, groepen en maskers",
-      "title": "Lagen, groepen en maskers",
+      "title": "Lagen, groepen en uitknipmaskers",
       "desc": "Een document ordenen in het paneel Lagen: sublagen, stapelvolgorde, verbergen en vergrendelen, groepen, uitknipmaskers en dekkingsmaskers."
     },
     "transform": {
       "h1": "Verplaatsen, transformeren en rangschikken",
-      "title": "Transformeren en ordenen",
+      "title": "Verplaatsen, schalen, draaien, uitlijnen",
       "desc": "Illustraties verplaatsen, schalen, draaien, uitlijnen en vervormen in Scissor met het paneel Transformeren, Vrije transformatie, Morphen en Vormverbuiging."
     },
     "effects": {
       "h1": "Live-effecten",
-      "title": "Live-effecten in Scissor",
+      "title": "Live-effecten: schaduw, vervagen, gloed",
       "desc": "Niet-destructieve effecten in Scissor: slagschaduw, vervagen, gloed, doezelaar, vervormen, verbuigen, hoeken afronden en pad verschuiven, altijd bewerkbaar."
     },
     "three-d": {
@@ -181,7 +181,7 @@
     },
     "privacy": {
       "h1": "Je werk en je privacy",
-      "title": "Uw werk en uw privacy",
+      "title": "Je werk en je privacy in Scissor",
       "desc": "Scissor heeft geen server: de editor draait in uw browser en uw illustraties worden nooit geüpload. Zo werken documenten, herstel en statistieken."
     }
   },

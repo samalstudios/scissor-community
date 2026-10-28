@@ -56,12 +56,12 @@
   "meta": {
     "": {
       "h1": "Manuel d’utilisation de Scissor",
-      "title": "Manuel utilisateur de Scissor",
+      "title": "Manuel utilisateur : outils et raccourcis",
       "desc": "Le manuel de Scissor, éditeur graphique gratuit dans le navigateur : outils, tracés, couleur, texte, grilles, effets, calques de pixels, fichiers et raccourcis."
     },
     "getting-started": {
       "h1": "Premiers pas",
-      "title": "Premiers pas avec Scissor",
+      "title": "Premiers pas : votre premier dessin Scissor",
       "desc": "Ouvrir Scissor, créer un document, dessiner une première forme, enregistrer un fichier .cut et installer l’application. Aucun compte, rien à téléverser."
     },
     "interface": {
@@ -71,7 +71,7 @@
     },
     "documents": {
       "h1": "Documents et plans de travail",
-      "title": "Documents et plans de travail",
+      "title": "Documents, plans de travail et fond perdu",
       "desc": "Configurer un document et ses plans de travail : format, fond perdu, colonnes, résolution, outil Plan de travail et panneau Plans de travail."
     },
     "tools": {
@@ -81,7 +81,7 @@
     },
     "selecting": {
       "h1": "Sélectionner le travail",
-      "title": "Sélectionner des objets",
+      "title": "Sélection d’objets et sélections enregistrées",
       "desc": "Sélection dans Scissor : clic et cadre de sélection, Tout sélectionner, Inverser, Resélectionner, Identique (même fond ou contour) et sélections enregistrées."
     },
     "paths": {
@@ -91,17 +91,17 @@
     },
     "appearance": {
       "h1": "Couleur, contours et apparence",
-      "title": "Couleur, contours et apparence",
+      "title": "Couleur, dégradés, contours et apparence",
       "desc": "Fonds et contours dans Scissor : aplats, dégradés et motifs, opacité, modes de fusion, styles graphiques, panneaux Nuances et Pile de peinture."
     },
     "type": {
       "h1": "Texte",
-      "title": "Texte et typographie",
+      "title": "Texte : polices et fonctions OpenType",
       "desc": "Texte ponctuel, captif et curviligne dans Scissor : polices et fonctions OpenType, réglages Caractère et Paragraphe, et vectorisation du texte en tracés."
     },
     "layers": {
       "h1": "Calques, groupes et masques",
-      "title": "Calques, groupes et masques",
+      "title": "Calques, groupes et masques d’écrêtage",
       "desc": "Organiser un document dans le panneau Calques : ordre d’empilement, masquage et verrouillage, groupes imbriqués, masques d’écrêtage et masques d’opacité."
     },
     "transform": {
@@ -126,7 +126,7 @@
     },
     "guides": {
       "h1": "Règles, repères et aimantation",
-      "title": "Règles, repères et magnétisme",
+      "title": "Règles, repères commentés et magnétisme",
       "desc": "Aligner son travail avec précision dans Scissor : règles, repères, repères commentés, magnétisme sur les points et sur la grille, et l’outil Mesure."
     },
     "pixels": {
@@ -141,7 +141,7 @@
     },
     "symbols": {
       "h1": "Symboles, pinceaux et motifs",
-      "title": "Symboles, pinceaux et motifs",
+      "title": "Symboles, pinceaux et nuances de motif",
       "desc": "Réutiliser une illustration dans Scissor : symboles et instances, pinceaux le long des tracés, motifs. Il suffit de modifier l’original pour tout mettre à jour."
     },
     "panels-basics": {
@@ -151,12 +151,12 @@
     },
     "panels-color-type": {
       "h1": "Panneaux couleur et texte",
-      "title": "Panneaux couleur et texte",
+      "title": "Panneaux Couleur, Nuances, Contour et Texte",
       "desc": "Les panneaux de couleur et de texte de Scissor : Couleur, Nuances, Dégradé et Contour pour la peinture, Caractère et Paragraphe pour la typographie."
     },
     "panels-utility": {
       "h1": "Les panneaux utilitaires",
-      "title": "Les panneaux utilitaires",
+      "title": "Panneaux Aligner, Transformation, Historique",
       "desc": "Panneaux utilitaires de Scissor : Aligner, Transformation, Pile de peinture, Vectoriser, Transparence, Styles graphiques, Glyphes et Historique, entre autres."
     },
     "panels-effects": {
@@ -166,7 +166,7 @@
     },
     "files": {
       "h1": "Ouvrir, placer et exporter",
-      "title": "Ouvrir, importer et exporter",
+      "title": "Ouvrir et exporter SVG, PDF, PNG et PSD",
       "desc": "Ouvrir des fichiers SVG, PDF, EPS et PSD, exporter en SVG, PDF, PNG, JPEG et WebP, et enregistrer au format natif .cut. Tout reste sur votre appareil."
     },
     "automation": {
@@ -176,7 +176,7 @@
     },
     "shortcuts": {
       "h1": "Raccourcis clavier",
-      "title": "Raccourcis clavier de Scissor",
+      "title": "Raccourcis clavier des outils et commandes",
       "desc": "Tous les raccourcis clavier de Scissor, classés par outil et par menu, sous leur forme macOS avec leurs équivalents pour Windows et Linux."
     },
     "privacy": {

@@ -56,12 +56,12 @@
   "meta": {
     "": {
       "h1": "Benutzerhandbuch zu Scissor",
-      "title": "Scissor-Benutzerhandbuch",
+      "title": "Benutzerhandbuch: Werkzeuge, Menüs, Kürzel",
       "desc": "Das Benutzerhandbuch zu Scissor: Werkzeuge, Pfade, Farbe, Text, Raster, Effekte, Pixelebenen, Dateien und Tastenkürzel des kostenlosen Editors im Browser."
     },
     "getting-started": {
       "h1": "Erste Schritte",
-      "title": "Erste Schritte mit Scissor",
+      "title": "Erste Schritte: erste Zeichnung in Scissor",
       "desc": "Scissor öffnen, ein Dokument anlegen, die erste Form zeichnen, eine .cut-Datei speichern und Scissor als App installieren – ohne Konto und ohne Upload."
     },
     "interface": {
@@ -71,17 +71,17 @@
     },
     "documents": {
       "h1": "Dokumente und Tafeln",
-      "title": "Dokumente und Zeichenflächen",
+      "title": "Dokumente und Tafeln: Größe und Anschnitt",
       "desc": "Dokumente und mehrere Zeichenflächen in Scissor einrichten: Größe, Anschnitt, Spalten und Auflösung, mit dem Zeichenflächen-Werkzeug und -Bedienfeld."
     },
     "tools": {
       "h1": "Die Werkzeuge",
-      "title": "Alle Werkzeuge im Überblick",
+      "title": "Werkzeugreferenz: alle Zeichenwerkzeuge",
       "desc": "Jedes Werkzeug in Scissor: Auswahl, Zeichenstift und Buntstift, Formen, Text, Pinsel, Raster und Perspektive, Gitter, Verkrümmen und Bereich füllen."
     },
     "selecting": {
       "h1": "Arbeit auswählen",
-      "title": "Objekte und Grafik auswählen",
+      "title": "Grafik auswählen und Auswahlen speichern",
       "desc": "Grafik in Scissor auswählen: Klicken und Auswahlrahmen, Alles auswählen, Umkehren, Erneut auswählen, Gleich nach Fläche oder Kontur und gespeicherte Auswahlen."
     },
     "paths": {
@@ -91,7 +91,7 @@
     },
     "appearance": {
       "h1": "Farbe, Konturen und Erscheinungsbild",
-      "title": "Farbe, Konturen und Aussehen",
+      "title": "Farbe, Verläufe, Konturen und Aussehen",
       "desc": "Fläche und Kontur in Scissor: Volltonfarben, Verläufe und Muster, Farbfelder, Deckkraft und Füllmethoden sowie das Bedienfeld „Malstapel“ für mehrere Füllungen."
     },
     "type": {
@@ -101,17 +101,17 @@
     },
     "layers": {
       "h1": "Ebenen, Gruppen und Masken",
-      "title": "Ebenen, Gruppen und Masken",
+      "title": "Ebenen, Gruppen, Schnitt- & Deckkraftmasken",
       "desc": "Ein Dokument im Ebenen-Bedienfeld ordnen: Unterebenen, Stapelreihenfolge, Ausblenden und Sperren, Gruppen, Schnittmasken und Deckkraftmasken."
     },
     "transform": {
       "h1": "Verschieben, Transformieren und Anordnen",
-      "title": "Transformieren und anordnen",
+      "title": "Verschieben, skalieren, drehen, ausrichten",
       "desc": "Grafik in Scissor verschieben, skalieren, drehen, ausrichten und verzerren: mit dem Transformieren-Bedienfeld, Frei transformieren, Morphen und Formverkrümmung."
     },
     "effects": {
       "h1": "Live-Effekte",
-      "title": "Live-Effekte in Scissor",
+      "title": "Live-Effekte: Schatten, Schein, Verkrümmen",
       "desc": "Nicht-destruktive Effekte in Scissor: Schlagschatten, Weichzeichnen, Schein, weiche Kante, Verzerren, Verkrümmen, Ecken abrunden und mehr – stets bearbeitbar."
     },
     "three-d": {
@@ -141,7 +141,7 @@
     },
     "symbols": {
       "h1": "Symbole, Pinsel und Muster",
-      "title": "Symbole, Pinsel und Muster",
+      "title": "Symbole, Pinsel und Musterfelder",
       "desc": "Wiederverwendbare Grafik in Scissor: Symbole und Instanzen, Pinsel entlang von Pfaden und Musterkacheln. Einmal bearbeiten, und jede Verwendung ändert sich mit."
     },
     "panels-basics": {

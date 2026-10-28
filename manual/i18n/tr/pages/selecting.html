@@ -1,0 +1,34 @@
+<p class="lede">Bir şeyi değiştirebilmek için önce neyi değiştireceğinizi belirtmeniz gerekir. Bu sayfa çizimleri seçmeyi anlatır: seçim araçlarıyla yapılan hızlı tıklamaları ve nesneleri neyden oluştuklarına göre seçen, istif içinde adım adım ilerleyen ve bir seçimi daha sonra geri çağırmak üzere saklayan <strong>Seç</strong> menüsünün tamamını. Aşağıdaki kısayollarda <kbd>&#8984;</kbd>, Windows ve Linux'ta <kbd>Ctrl</kbd>, <kbd>&#8997;</kbd> <kbd>Alt</kbd> ve <kbd>&#8679;</kbd> ise Shift anlamına gelir.</p>
+
+<h2 id="selecting-basics">Tıklama ve seçim çerçevesi</h2>
+<p>Seçimlerin çoğu <strong>Seçim Aracı</strong> (<kbd>V</kbd>) ile başlar. Bir nesneyi seçmek için tıklayın; başka bir nesneyi eklemek için <kbd>&#8679;</kbd> tuşunu basılı tutup tıklayın ya da seçili bir nesneyi çıkarmak için ona tıklayın. Boş tuval üzerinde sürükleyerek bir <em>seçim çerçevesi</em> çizin; çerçevenin dokunduğu her şey seçilir. <strong>Doğrudan Seçim Aracı</strong> (<kbd>A</kbd>) ise nesnenin içine ulaşır: nesnelerin tamamı yerine tek tek bağlantı noktalarını ve yol parçalarını seçer. <strong>Grup Seçim Aracı</strong> da bir grubun içine her seferinde bir düzey iner. Bu araçlar <a href="/manual/tools/">Araçlar</a> ve <a href="/manual/paths/">Yollar</a> sayfalarında anlatılır; bu sayfanın geri kalanı, tıklamanın yapamadığı seçimleri yapan Seç menüsüyle ilgilidir.</p>
+
+<h2 id="selecting-whole-document">Tümü, hiçbiri ve tersi</h2>
+<table>
+  <thead><tr><th>Komut</th><th>Kısayol</th><th>Neyi seçer</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Seç &rsaquo; Tümü</strong></td><td><kbd>&#8984;A</kbd></td><td>Belgedeki kilitli olmayan tüm nesneler.</td></tr>
+    <tr><td><strong>Etkin Çalışma Yüzeyindeki Tümü</strong></td><td><kbd>&#8997;&#8984;A</kbd></td><td>Yalnızca üzerinde çalıştığınız çalışma yüzeyindeki çizimler; çok sayfalı bir dosyanın tek bir sayfasını almanın hızlı yolu.</td></tr>
+    <tr><td><strong>Seçimi Kaldır</strong></td><td><kbd>&#8679;&#8984;A</kbd></td><td>Hiçbir şey; geçerli seçimi temizler.</td></tr>
+    <tr><td><strong>Seçimi Ters Çevir</strong></td><td></td><td>Seçimi, seçili <em>olmayan</em> her şeyle değiştirir.</td></tr>
+    <tr><td><strong>Yeniden Seç</strong></td><td><kbd>&#8984;6</kbd></td><td>Temizlemeden hemen önceki seçiminizi geri getirir.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="selecting-stack">İstif içinde ilerleme</h2>
+<p>Nesneler üst üste bindiğinde <strong>Seç &rsaquo; Üstteki Sonraki Nesne</strong> (<kbd>&#8997;&#8984;]</kbd>) ve <strong>Alttaki Sonraki Nesne</strong> (<kbd>&#8997;&#8984;[</kbd>), seçimi aynı noktadaki yığın içinde her seferinde bir nesne olmak üzere yukarı ya da aşağı taşır. Başka şekillerin altına gömülmüş bir şekle, üsttekileri sürükleyip kenara çekmeden ulaşmanın güvenilir yoludur.</p>
+
+<h2 id="selecting-same">Aynı: ortak özelliklere göre seçme</h2>
+<p>Bir nesne seçin; ardından <strong>Seç &rsaquo; Aynı</strong>, belgede ona tek bir özellik bakımından uyan diğer tüm nesneleri toplar. Aynı dolguya sahip her şekli tek seferde yeniden renklendirmek ya da tüm ince konturları bir anda seçmek için kullanın.</p>
+<dl>
+  <dt>Görünüm</dt><dd>Görünümün tamamı: aynı dolgu, kontur ve efekt yığını.</dd>
+  <dt>Dolgu ve Kontur</dt><dd>Aynı dolgu ve aynı kontur birlikte.</dd>
+  <dt>Dolgu Rengi / Kontur Rengi</dt><dd>Aynı dolgu rengi ya da aynı kontur rengi.</dd>
+  <dt>Kontur Kalınlığı</dt><dd>Aynı kontur genişliği.</dd>
+  <dt>Opaklık</dt><dd>Aynı opaklık.</dd>
+  <dt>Karışım Modu</dt><dd>Aynı karışım modu.</dd>
+  <dt>Şekil</dt><dd>Aynı türden nesneler; örneğin tüm elipsler ya da tüm yazılar.</dd>
+</dl>
+
+<h2 id="selecting-saved">Bir seçimi kaydetme</h2>
+<p>Zahmetli bir seçimi saklamaya değer. <strong>Seç &rsaquo; Seçimi Kaydet…</strong> geçerli kümeyi bir adla saklar; seçim daha sonra <strong>Seç &rsaquo; Kaydedilen Seçimler</strong> altında görünür ve onu oradan seçtiğinizde, o arada nereye tıklamış olursanız olun, tam olarak aynı nesneler yeniden seçilir. <strong>Seçimi Düzenle…</strong> kaydettiğiniz seçimleri yeniden adlandırır ya da kaldırır. Kaydedilen seçimler <code>.cut</code> belgesinin içinde taşınır; böylece dosyayı bir sonraki açışınızda da yerlerinde dururlar.</p>

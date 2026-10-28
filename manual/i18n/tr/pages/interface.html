@@ -1,0 +1,166 @@
+<p class="lede">Scissor, tarayıcı penceresini tek bir düzenleme yüzeyiyle doldurur: üstte bir menü çubuğu, onun altında bir kontrol çubuğu ve belge sekmeleri, solda araç paleti, ortada çizim tuvali ve sağda panel yuvası. Her şey kendi bilgisayarınızda çalışır; böylece bir belge onu koyduğunuz yerde kalır ve açılmak için hiçbir yere gönderilmez.</p>
+
+  <p>Bu sayfadaki kısayollar macOS biçiminde yazılmıştır. Windows ve Linux'ta <kbd>⌘</kbd> yerine <kbd>Ctrl</kbd>, <kbd>⌥</kbd> yerine <kbd>Alt</kbd> kullanın; <kbd>⇧</kbd> Shift, <kbd>⌃</kbd> ise Control tuşudur.</p>
+
+  <h2 id="interface-at-a-glance">Bir bakışta çalışma alanı</h2>
+  <p>Pencere, her biri farklı bir soruyu yanıtlayan birkaç bölgeden oluşur. Bunların yerini bir kez öğrendiğinizde kılavuzun geri kalanını okumak kolaylaşır.</p>
+  <dl>
+    <dt>Menü çubuğu</dt>
+    <dd>En üstteki menü satırı; sağ ucunda geri al ve yinele düğmeleri ile bir komut araması bulunur. Düzenleyicinin yapabildiği her şeyin tam listesi buradadır.</dd>
+    <dt>Kontrol çubuğu</dt>
+    <dd>Menülerin hemen altındaki şerit. Geçerli aracı ve o anda seçtiğiniz öğe için önemli olan birkaç denetimi gösterir.</dd>
+    <dt>Belge sekmeleri</dt>
+    <dd>Kontrol çubuğunun solunda, her açık belge için bir sekme. Paneller düğmesi aynı satırın en sağında durur.</dd>
+    <dt>Araç paleti</dt>
+    <dd>Sol kenar boyunca uzanan dar araç sütunu; alt kısmında dolgu ve kontur denetimi bulunur.</dd>
+    <dt>Tuval ve çalışma alanı kenar boşluğu</dt>
+    <dd>Ortadaki, çizim yaptığınız geniş alan. Beyaz dikdörtgenler çalışma yüzeyleridir; çevredeki gri alan ise kenar boşluğudur.</dd>
+    <dt>Panel yuvası</dt>
+    <dd>Sağdaki panel sütunu. İhtiyacınız olduğunda tuvalin üzerine kayarak açılır, kapattığınızda alanı geri verir.</dd>
+    <dt>Durum çubuğu</dt>
+    <dd>Pencerenin altındaki ince satır; geçerli aracı, seçimi ve geri alınabilecek son eylemi bildirir.</dd>
+  </dl>
+  <figure class="shot">
+    <img src="img/app-light.png" width="1900" height="1082" loading="lazy"
+         alt="Scissor penceresinin tamamı: menü çubuğu, kontrol çubuğu, araç paleti, tuval ve panel yuvası." />
+    <figcaption>Pencerenin tamamı. Scissor, sisteminizin açık ya da koyu ayarını izler; bu ekran görüntüsü de onu izler.</figcaption>
+  </figure>
+
+  <h2 id="interface-menu-bar">Menü çubuğu</h2>
+  <p>Üst kısımda on menü yer alır. Programdaki her komutu, bir özelliğin motorun içinde nerede bulunduğuna göre değil, yaptığınız işin türüne göre gruplayarak bir araya getirirler.</p>
+  <table>
+    <thead><tr><th>Menü</th><th>İçerdikleri</th></tr></thead>
+    <tbody>
+      <tr><td>Dosya</td><td>Yeni, aç, kapat, kaydet, yerleştir, dışa aktar, komut dosyaları, belge ayarları ve yazdır.</td></tr>
+      <tr><td>Düzen</td><td>Geri al ve yinele, pano komutları, alt menü olarak <strong>Seç</strong> menüsünün tamamı, renk düzenleme ve Tercihler.</td></tr>
+      <tr><td>Düzenle</td><td>Dönüştürme, yığın sırası, hizalama, gruplama, kilitleme ve gizleme.</td></tr>
+      <tr><td>Yol</td><td>Yol ve bileşik yol komutları, biçim dönüştürme, Şekil Bükme ve perspektif, kırpma maskeleri, metin kaydırma ve genişletme.</td></tr>
+      <tr><td>Oluştur</td><td>Desenler, yinelemeler, Bölge Dolgusu, Vektörleştir, degrade ağı, çalışma yüzeyleri, dilimler ve piksel katmanı komutları.</td></tr>
+      <tr><td>Efektler</td><td>Canlı efektler: vektör seti (3B, bozma ve dönüştürme, Şekilleri Birleştir, stilize etme, bükme ve daha fazlası) ve bunların altında bir Raster alt menüsü.</td></tr>
+      <tr><td>Yazı</td><td>Yazı tipi, boyut ve glifler, anahat oluşturma, büyük/küçük harf değiştirme, metin akışı ve karakter ekleme.</td></tr>
+      <tr><td>Görünüm</td><td>Görünüm (açık ve koyu), anahat ve piksel önizleme, yakınlaştırma, görünümü döndürme, cetveller, kılavuzlar, ızgara ve yaslama.</td></tr>
+      <tr><td>Çalışma Alanı</td><td>Paneller: en sık açtığınız altı panel, bir Yazı alt menüsü, geri kalanlar için bir Diğer Paneller alt menüsü ve Panelleri Sıfırla.</td></tr>
+      <tr><td>Yardım</td><td>Yenilikler, kullanım kılavuzu, yükleme, Kullanım Koşulları ve Hakkında; en üstte bir arama alanıyla.</td></tr>
+    </tbody>
+  </table>
+  <p>Bir öğenin yanındaki onay işareti, o ayarın açık olduğunu gösterir. Gri çizilmiş bir öğe şu anda kullanılamaz; bunun nedeni genellikle hiçbir şeyin seçili olmaması ya da açık belge bulunmamasıdır. Bir komutun kısayolu varsa menünün sağ tarafında gösterilir.</p>
+
+  <h3 id="interface-command-search">Bir komut bulma</h3>
+  <p>Hangi menünün neyi içerdiğini ezberlemeniz gerekmez. Menü çubuğunun sağındaki, <em>Arayın veya bir komut yazın</em> etiketli arama düğmesi komut paletini açar; klavyeden <kbd>⌘K</kbd> ile de açılır. Birkaç harf yazın; palet eşleşen her komutu menü yolu ve kısayoluyla, eşleşen her aracı da listeler. Sonuçlar arasında gezinmek için <kbd>↑</kbd> ve <kbd>↓</kbd>, vurgulananı çalıştırmak için <kbd>Enter</kbd>, kapatmak için <kbd>Esc</kbd> tuşunu kullanın. Ne istediğinizi bildiğiniz ama nerede olduğunu bilmediğiniz durumlarda ya da bir kısayolu yazmak onu aramaktan daha hızlı olduğunda buna başvurun. Yardım menüsünün de menülerin tamamında aynı işi yapan kendi arama alanı vardır.</p>
+
+  <h3 id="interface-undo-redo">Geri al ve yinele</h3>
+  <p>Menü çubuğunun sağına yakın kavisli oklar, <kbd>⌘Z</kbd> ve <kbd>⇧⌘Z</kbd> ile aynı şekilde geri alır ve yineler. Her düğme, üzerine geldiğinizde tersine çevireceği adımın adını verir; durum çubuğu da pencerenin altında aynı bilgiyi gösterir. Böylece bir kez daha basmanın neyi geri alacağını her zaman görebilirsiniz.</p>
+
+  <h2 id="interface-tool-palette">Araç paleti</h2>
+  <p>Araçlar sol kenar boyunca tek bir sütunda yer alır. Aileler hâlinde düzenlenmişlerdir: Seç, Çiz, Yazı, Çizgi, Şekil, Boya, Yeniden Şekillendir, Oluştur, Örnek Al, Semboller, Çalışma Yüzeyleri ve Görünüm. Sütun her aileden aynı anda yalnızca bir araç gösterir; işaretçiyi bir yuvanın üzerinde tuttuğunuzda o ailenin geri kalanı sağa doğru açılır, böylece sütun elinizin altında kaymadan bir kardeş aracı seçebilirsiniz. Her yuva, ailesinden en son kullandığınız aracı göstermeye devam eder.</p>
+  <p>Gösterdiği aracı seçmek için bir yuvaya tıklayın. Araç ipucu aracın adını ve tek tuşluk kısayolunu verir; örneğin Seçim aracı için <kbd>V</kbd>, Kalem için <kbd>P</kbd> ya da Yazı için <kbd>T</kbd>. Klavyeyle araç değiştirdiğinizde, hangisinin etkin olduğunu görebilmeniz için eşleşen yuva kısa bir süre yanar. Hepsini aynı anda görmek için komut aramasının yakınındaki, üç nokta biçiminde çizilmiş bir düğme, ailelere göre gruplanmış ve siz yazdıkça süzülen tüm araçların bulunduğu bir tarayıcı açar.</p>
+
+  <h3 id="interface-fill-stroke">Dolgu ve kontur</h3>
+  <p>Araçların altında dolgu ve kontur denetimi bulunur: konturu temsil eden bir bandın içine yerleştirilmiş, dolguyu gösteren dolu bir kare ve ikisinin yerini değiştirmek için küçük bir çift ok. Yalnızca kontrol çubuğunda değil burada da yer aldığından, bir araç seçmeden önce bir renk seçebilirsiniz; bu renk bir sonraki nesnenin çizileceği renk olur. Renk, renk örnekleri ve degrade sekmelerini açmak için dolguya ya da banda tıklayın.</p>
+  <table>
+    <thead><tr><th>Tuş</th><th>Eylem</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>X</kbd></td><td>Odağı dolgu ile kontur arasında değiştirir</td></tr>
+      <tr><td><kbd>⇧X</kbd></td><td>Dolgu ile konturun yerini değiştirir</td></tr>
+      <tr><td><kbd>D</kbd></td><td>Varsayılana döner: beyaz dolgu, siyah kontur</td></tr>
+      <tr><td><kbd>/</kbd></td><td>Etkin tarafı yok olarak ayarlar</td></tr>
+    </tbody>
+  </table>
+
+  <h3 id="interface-rail-panels">Rayın yanındaki paneller</h3>
+  <p>Dolgu ve kontur denetimi ile araçlar arasında palet, elinizdeki araca göre seçilmiş kısa bir panel düğmeleri satırı sunar: çizim araçları renk örnekleri ve kontur panellerini, yazı araçları yazı ve paragraf panellerini erişilebilir kılar ve bu böyle devam eder. Bu düğmeler tek bir paneli tam elinizin olduğu yerde açar. Bir başka düğme ise yuvanın tamamını açar. Kısa bir pencerede satır, aynı seçenekleri listeleyen tek bir Paneller düğmesine katlanır; böylece palet hiçbir zaman alt kenardan taşmaz.</p>
+
+  <h2 id="interface-control-bar">Kontrol çubuğu</h2>
+  <p>Menülerin altındaki şerit yaptığınız işe göre değişir. Sol tarafında geçerli aracın adını gösterir, sağında ise yalnızca geçerli seçim üzerinde işlem yapabilen denetimleri gösterir: dolgu, kontur ve kontur kalınlığı; seçimin X, Y, W ve H değerleri; hizalama, Boole şekil modları, yığın sırası, grupla, grubu çöz ve çoğalt gibi anlamlı eylemler. Sığmayacak kadar çok şey olduğunda, son bir düğme geri kalanları bir menüde toplar; böylece çubuk siz kullanırken yeniden akmaz.</p>
+  <p>Herhangi bir sayı alanına yazın ve değeri uygulamak için <kbd>Enter</kbd> tuşuna basın ya da alandan çıkın; <kbd>↑</kbd> ve <kbd>↓</kbd> değeri adım adım değiştirir, <kbd>⇧</kbd> ile on kat, <kbd>⌥</kbd> ile onda bir adım atılır. Bir alanın yanındaki küçük etiket bir kaydırıcıdır: değeri sezgisel olarak değiştirmek için onu sola ya da sağa sürükleyin. Aracın ilk birkaç seçeneğini görmek için aracın adının üzerine gelin; tüm anahtarları ve sayılarıyla birlikte seçeneklerin tamamını çubuğun altında açmak için ada tıklayın.</p>
+  <p>Kontrol çubuğu varsayılan olarak sekmeler satırına yerleşiktir, ancak tutamacını sürükleyerek tuvalin üzerinde serbestçe yüzdürebilir, yerine geri koymak için de tutamaca çift tıklayabilir (ya da yerleştirme düğmesini kullanabilirsiniz). Bunun yanında, seçili bir nesnenin yanında yalnızca dolgusunu, konturunu ve kalınlığını taşıyan kompakt bir çubuk belirebilir; böylece renk, pencerenin öbür ucunda değil çizimin hemen yanında olur.</p>
+
+  <h2 id="interface-quick-bar">Hızlı çubuk</h2>
+  <p>Bir şey seçtiğinizde, en sık başvurduğunuz denetimleri içeren küçük bir çubuk yanında belirir; böylece pencerenin kenarına gitmeniz gerekmez. Şekiller ve yollar için dolguyu ve konturu, yazı için dolguyu, boyutu, kalın, italik ve hizalamayı içerir. Siz sürüklerken yoldan çekilir, bıraktığınızda geri gelir. Üzerindeki her şey kontrol çubuğunda ve panellerde de bulunur.</p>
+
+  <h2 id="interface-canvas">Tuval ve kenar boşluğu</h2>
+  <p>Pencerenin ortası tuvaldir. Çalışma yüzeyleri, saklamak istediğiniz çizimi barındıran beyaz dikdörtgenlerdir; çevredeki gri alan ise kenar boşluğudur. Kenar boşluğu belgenin bir parçasıdır; bu yüzden oraya bıraktığınız bir eskiz, bir artık parça ya da bir renk denemesi dosyayla birlikte kaydedilir, ancak bir çalışma yüzeyini dışa aktardığınızda yalnızca o yüzeyin dikdörtgeninin içine düşenler yazılır.</p>
+
+  <h3 id="interface-pan-zoom">Kaydırma ve yakınlaştırma</h3>
+  <p>Basılı tuttuğunuz sürece El aracına geçmek için <kbd>Space</kbd> tuşunu basılı tutun, ardından kaydırmak için sürükleyin; bıraktığınızda aracınız geri gelir. Orta fare düğmesiyle sürüklemek de kaydırır. Fare tekerleği kaydırır; <kbd>⌘</kbd> ya da <kbd>⌥</kbd> basılıyken tekerlek, işaretçinin çevresinde yakınlaştırır.</p>
+  <table>
+    <thead><tr><th>Kısayol</th><th>Yakınlaştırma</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>⌘=</kbd> / <kbd>⌘-</kbd></td><td>Yakınlaştır ve uzaklaştır</td></tr>
+      <tr><td><kbd>⌘0</kbd></td><td>Etkin çalışma yüzeyini pencereye sığdır</td></tr>
+      <tr><td><kbd>⌥⌘0</kbd></td><td>Tüm çalışma yüzeylerini pencereye sığdır</td></tr>
+      <tr><td><kbd>⌘1</kbd></td><td>Gerçek boyut</td></tr>
+    </tbody>
+  </table>
+  <p>Tuvalin üzerinde eksi, artı ve sığdır düğmeleri ile geçerli yüzdeyi içeren bir yakınlaştırma denetimi durur; aynı sığdırma ve gerçek boyut komutlarını bir menü olarak görmek için yüzdeye tıklayın.</p>
+
+  <h3 id="interface-rulers-guides">Cetveller ve kılavuzlar</h3>
+  <p><kbd>⌘R</kbd> cetvelleri gösterir ve gizler; cetveller, etkin çalışma yüzeyinin sol üst köşesinden itibaren belgenin birimleriyle ölçer ve işaretçiyi izleyen bir işaret taşır. Çizimin üzerine bir kılavuz çekmek için bir cetvelden dışarı doğru sürükleyin; bir kılavuzdan kurtulmak için onu cetvelin üzerine geri bırakın. Ayrıca seçili bir yolu Kılavuz Oluştur (<kbd>⌘5</kbd>) ile kılavuza dönüştürebilir, Kılavuzları Serbest Bırak (<kbd>⌥⌘5</kbd>) ile geri çevirebilirsiniz. Tüm kılavuzları <kbd>⌘;</kbd> ile gösterin veya gizleyin. Akıllı Kılavuzlar (<kbd>⌘U</kbd>), siz çizerken ve sürüklerken hizalama ve ölçü ipuçları gösterir.</p>
+
+  <h3 id="interface-grid">Izgara</h3>
+  <p>Izgara her çalışma yüzeyi için ayrı çizilir ve Görünüm › Izgara ya da Izgara panelinden ayarlanır. <kbd>⌘'</kbd> ile gösterin veya gizleyin, <kbd>⇧⌘'</kbd> ile ızgaraya yaslamayı açıp kapatın. Her çalışma yüzeyi altı ızgara türünden birini kullanabilir: Dik, İzometrik, Altıgen, Eğik, Altın Oran ve Perspektif. Bir tür seçmek ızgarayı açar, böylece onu hemen görebilirsiniz. Izgara kendi sayfasında ayrıntılı olarak anlatılmaktadır.</p>
+
+  <h3 id="interface-history-strip">Geçmiş şeridi</h3>
+  <p>İşaretçiyi tuvalin bir köşesine yaklaştırdığınızda orada küçük çentiklerden oluşan bir sütun belirir: bu, belgenin geçmişidir. Bir adımın adını görmek için çentiğin üzerine gelin, doğrudan oraya gitmek için birine tıklayın ya da bir değişikliğin gelip gidişini izleyebilmek için basılı tutup çentikler boyunca kaydırarak belgeyi ileri geri oynatın. Panel yuvasındaki Geçmiş paneli aynı adımları metin olarak listeler.</p>
+
+  <h2 id="interface-boards">Çalışma yüzeyleri ve çalışma yüzeyi şeridi</h2>
+  <p>Çalışma yüzeyleri, Scissor'ın artboard'lara verdiği addır. Her biri adını sol üst köşesinin üzerinde taşır; etkin çalışma yüzeyi diğerlerinden daha belirgin bir çerçeveyle çizilir. Bir çalışma yüzeyinin adına tıklamak, o yüzey etkin hâldeyken onu taşımaya, yeniden boyutlandırmaya ya da yeniden adlandırmaya hazır biçimde Çalışma Yüzeyi Aracı'nı seçer. Bir çalışma yüzeyinin taşma payı varsa, çevresinde kırmızı kesikli bir dikdörtgen olarak gösterilir. Oluştur › Çalışma Yüzeyleri › Yeni Çalışma Yüzeyi ile yeni bir tane ekleyin, Çalışma Yüzeyi Aracı (<kbd>⇧O</kbd>) ile çalışma yüzeyleri çizip yeniden şekillendirin ve bir yüzeyin boyutunu ve adını Çalışma Yüzeyi Seçenekleri'nde ayarlayın. Tüm Çalışma Yüzeylerini Yeniden Düzenle, onları düzenli bir sıraya dizer.</p>
+  <p>Tuvalin üzerinde, her çalışma yüzeyi için küçük bir önizleme ve sonunda bir ekleme düğmesi bulunan bir küçük resim şeridi durur. O çalışma yüzeyini etkinleştirip pencereye sığdırmak için bir küçük resme tıklayın; o yüzeye gidip onu düzenlemeye hazır biçimde Çalışma Yüzeyi Aracı'nı seçmek için altındaki ada tıklayın. Panel yuvasındaki Çalışma Yüzeyleri paneli de bunları listeler.</p>
+
+  <h2 id="interface-tabs">Belge sekmeleri</h2>
+  <p>Açık belgeler, kontrol çubuğunun solunda sekmeler olarak görünür. Bir sekme belgenin adını gösterir; kaydedilmemiş değişiklikler varken adın önünde bir nokta bulunur. O belgeye geçmek için bir sekmeye, kapatmak için × işaretine tıklayın; kaydedilmemiş çalışma içeren bir belgeyi kapatmadan önce onay istenir. Bir sekmeyi hemen kapatmak için orta tıklayın; açık belgeleri yeniden sıralamak için bir sekmeyi başka bir sekmenin üzerine sürükleyin. Yeni (<kbd>⌥⌘N</kbd>), Aç (<kbd>⌘O</kbd>) ve Kaydet (<kbd>⌘S</kbd>) Dosya menüsündedir; Kapat ise <kbd>⌥⌘W</kbd> kısayoluyla çalışır.</p>
+  <p>Sekmeler varsayılan olarak üst kısımda yer alır. Onları yan tarafa yerleştirmek için <strong>Görünüm &rsaquo; Belge Sekmeleri Yanda</strong> seçeneğini açın (Tercihler'de de bulunur); yan şerit sağ kenarından sürüklenerek genişletilip daraltılabilir ve bu tercih hatırlanır.</p>
+
+  <h2 id="interface-status-bar">Durum çubuğu</h2>
+  <p>Pencerenin altındaki satır soldan sağa şunları bildirir: bir hazır göstergesi, geçerli aracın adı, seçimin boyutu (hiçbir şey seçili değil, bir nesne ya da bir sayı) ve <kbd>⌘Z</kbd> tuşunun geri alacağı eylem. Neyi seçtiğinizi ve bir sonraki geri almanın neyi tersine çevireceğini doğrulamak için sakin bir yerdir.</p>
+
+  <h2 id="interface-dock">Panel yuvası</h2>
+  <p>Paneller sağdaki sütunda bulunur. Boştayken tuval pencerenin tamamını kaplar; bir panel istemek yuvayı tuvalin üzerine kaydırarak açar, kapatmak ise alanı hemen geri verir. Sekmeler satırının sağındaki paneller düğmesi ve Escape tuşu yuvayı açıp kapatır; Pencere ve Çalışma Alanı menüleri ile komut paleti belirli bir paneli açar.</p>
+  <figure class="shot">
+    <img src="img/editing.png" width="1900" height="1176" loading="lazy"
+         alt="Scissor'da açık bir belge: çalışma yüzeyinde çizim, panel yuvasında Katmanlar ve Renk Örnekleri panelleri açık." />
+    <figcaption>Düzenlenmekte olan bir belge; panel yuvasında Katmanlar ve Renk Örnekleri panelleri açık.</figcaption>
+  </figure>
+
+  <h3 id="interface-dock-groups">Yerleşik panel grupları</h3>
+  <p>Paneller gruplar hâlinde istiflenir; her grup kendi kenarı boyunca küçük simge sekmelerinden oluşan bir sütundur. Panelin adını görmek için işaretçiyi bir sekmenin üzerinde tutun; açık panel de içeriğinin üzerinde kendi adını gösterir. Varsayılan olarak gruplar, birlikte kullanılma eğiliminde olan panelleri bir araya getirir:</p>
+  <ul>
+    <li><strong>Özellikler, Katmanlar, Çalışma Yüzeyleri, Izgara</strong>: belgenin yapısı.</li>
+    <li><strong>Renk, Renk Örnekleri, Degrade, Kontur</strong>: nesnelerin nasıl boyandığı.</li>
+    <li><strong>Yazı, Paragraf, Glifler</strong>: metin.</li>
+    <li><strong>Hizala, Şekilleri Birleştir, Dönüştür, Boya Yığını, Saydamlık, 3B</strong>: şekillendirme ve düzenleme.</li>
+    <li><strong>Stiller, Fırçalar, Semboller, Desenler</strong>: yeniden kullanılabilir görünümler ve nesneler.</li>
+    <li><strong>Gezgin, Bilgi, Belge Bilgileri, Geçmiş, Eylemler</strong>: gezinme ve ölçme.</li>
+    <li><strong>Varlıklar, Değişkenler, Otomatik Seç, Vektörleştir, Nitelikler</strong>: geri kalanlar.</li>
+  </ul>
+
+  <h3 id="interface-rearranging">Panelleri yeniden düzenleme</h3>
+  <p>Yerleşimi dilediğiniz gibi değiştirebilirsiniz. Bir sekmeyi yeniden sıralamak için kendi şeridi boyunca sürükleyin, başka bir gruba taşımak için o grubun şeridine sürükleyin ya da tuvalin üzerinde serbestçe yüzmesi için yuvanın dışına sürükleyin. Bütün bir grubu dışarı almak için şeridin boş kısmını sürükleyin; yerine koymak için de onu yuvanın üzerine geri bırakın. Gruplar arasındaki bir boşluk, üzerine bırakılan bir sekmeyi kendi başına yeni bir grup olarak kabul eder. Paneli Kapat da dahil olmak üzere aynı işlemleri menüden yapmak için bir sekmeye sağ tıklayın. Bir şeridin üst kısmındaki × işareti o grubu kapatır; iki grup arasındaki ayırıcıyı sürüklemek ise birine yükseklik verip diğerinden alır. Yüzen bir grup köşesinden yeniden boyutlandırılabilir.</p>
+
+  <h3 id="interface-gating">Yapacak bir iş bekleyen paneller</h3>
+  <p>Şu anda üzerinde işlem yapacak bir şeyi olmayan bir panel kaybolmaz: sekmesi yalnızca soluklaşarak yerinde kalır ve gövdesinde, bir nesne seçmek ya da Yazı aracını almak gibi neyi beklediğini söyleyen bir satır görünür. Yuvanın elinizin altında yeniden karışmaması için bu bekleme, işaretçi yuvanın içindeyken askıda tutulur ve işaretçi ayrıldığında güncellenir.</p>
+
+  <h3 id="interface-workspace">Panelleri açma, gizleme ve sıfırlama</h3>
+  <p>Bir paneli, en çok kullanılan altısının en üstte, geri kalanların Diğer Paneller altında yer aldığı Çalışma Alanı menüsünden ya da klasik arayüzde Pencere menüsünden açın. Birçok panelin bir kısayolu vardır:</p>
+  <table>
+    <thead><tr><th>Panel</th><th>Kısayol</th><th>Panel</th><th>Kısayol</th></tr></thead>
+    <tbody>
+      <tr><td>Katmanlar</td><td><kbd>F7</kbd></td><td>Renk</td><td><kbd>F6</kbd></td></tr>
+      <tr><td>Boya Yığını</td><td><kbd>⇧F6</kbd></td><td>Bilgi</td><td><kbd>F8</kbd></td></tr>
+      <tr><td>Hizala</td><td><kbd>⇧F7</kbd></td><td>Dönüştür</td><td><kbd>⇧F8</kbd></td></tr>
+      <tr><td>Kontur</td><td><kbd>⌘F10</kbd></td><td>Degrade</td><td><kbd>⌘F9</kbd></td></tr>
+      <tr><td>Şekilleri Birleştir</td><td><kbd>⇧⌘F9</kbd></td><td>Saydamlık</td><td><kbd>⇧⌘F10</kbd></td></tr>
+      <tr><td>Grafik Stilleri</td><td><kbd>⇧F5</kbd></td><td>Fırçalar</td><td><kbd>F5</kbd></td></tr>
+      <tr><td>Nitelikler</td><td><kbd>⌘F11</kbd></td><td>Semboller</td><td><kbd>⇧⌘F11</kbd></td></tr>
+      <tr><td>Karakter</td><td><kbd>⌘T</kbd></td><td>Paragraf</td><td><kbd>⌥⌘T</kbd></td></tr>
+      <tr><td>Glifler</td><td><kbd>⌥⇧F11</kbd></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+  <p>Yuva, sol kenarı sürüklenerek, satır başına iki alanın rahatça sığdığı genişlikten çok daha geniş bir boyuta kadar genişletilebilir. Düzeniniz ve yuvayı ne genişlikte bıraktığınız oturumlar arasında hatırlanır. Yuva kapalıyken işaretçiyi pencerenin sağ kenarına götürmek, işaretçinin altında çizim olmadığı sürece yuvanın kısaca görünmesini sağlar. Yerleşimde yaptığınız tüm değişiklikleri geri almak için her grubu başlangıçtaki yerine geri koyan Panelleri Sıfırla komutunu seçin.</p>
+  <p><kbd>Tab</kbd> tuşu araç paletini, kontrol çubuğunu, belge sekmelerini, durum çubuğunu, panelleri ve tuval üzerindeki diğer arayüz öğelerini gizler; böylece yalnızca çizim ve menü çubuğu kalır. Hepsini geri getirmek için tuşa yeniden basın.</p>
+
+  <h2 id="interface-language">Dil</h2>
+  <p>Scissor İngilizce, Almanca (Deutsch), İspanyolca (Español), Fransızca (Français), İtalyanca (Italiano), Katalanca (Català), Çekçe (Čeština), Danca (Dansk), Norveççe (Norsk), Lehçe (Polski), Slovakça (Slovenčina), Fince (Suomi) ve İsveççe (Svenska) konuşur. İlk açtığınızda, tarayıcınızın dili bunlardan biriyse onu, değilse İngilizceyi kullanır. Başka bir dil seçmek için menü çubuğundaki ya da karşılama ekranındaki küre düğmesine tıklayın veya <strong>Düzen › Tercihler</strong> (<kbd>&#8984;K</kbd>) bölümünü açın, <strong>Arayüz</strong> sekmesine gidin ve <strong>Dil</strong> altında bir dil seçin. Scissor yeniden yüklendiğinde dili değiştirir ve tercihinizi hatırlar. Menüler, paneller, iletişim kutuları, araç ipuçları, iletiler ve Yenilikler bu dili izler; sayılar da yerel biçimde gösterilir (örneğin Almancada 12,5), ancak virgül ya da nokta yazabilirsiniz. Belgeleriniz bundan etkilenmez: katman adları ve çiziminizdeki metinler yazdığınız gibi kalır. Arayüz İngilizce değilken Kullanım Koşulları kolaylık sağlamak amacıyla çevrilmiş olarak gösterilir; geçerli olan ise İngilizce sürümdür.</p>
+
+  <h2 id="interface-appearance">Açık ve koyu</h2>
+  <p>Scissor, açık ve koyu görünüm için sistem ayarınızı izler. Bunu tek bir seçenekte sabitlemek için Görünüm › Görünüm komutunu seçin ve Sistem, Açık ya da Koyu'yu belirleyin. Tercih hatırlanır ve yalnızca arayüze değil tuvale de yansır: kenar boşluğu, cetveller ve çalışma yüzeyi etiketleri, içinde bulunduğunuz temaya uygun şekilde çizilir.</p>
